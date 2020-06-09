@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="gcd"/>
+    <title>gcd</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>gcd</h1>
+
+<p><b>Definition 2.2.1</b>. Given <i>a, b ∈ ℤ</i>. An element <i>d ∈ ℤ</i> is said to be a <i>greatest common divisor</i> of <i>a</i> and <i>b</i> if</p>
+
+<ol type="i">
+ <li><p><i>d</i>|<i>a</i>, <i>d</i>|<i>b</i></p></li>
+ <li><p>If <i>d'</i>|<i>a, d'</i>|<i>b</i>, then <i>d'</i>|<i>d</i>.</p></li>
+</ol>
+
+<p>The gcd can be indicated as:</p>
+
+<div class="eq">
+<p>gcd (a,b) &emsp; or &emsp; (a,b)</p>
+</div>
+
+<p>For example, gcd (3,-10) = 1, gcd(<i>a,b</i>) = gcd(<i>b,a</i>) = gcd(|<i>a</i>|,|<i>b</i>|), gcd(<i>ab,ac</i>) = |a| gcd(<i>b,c</i>), gcd(<i>0,a</i>) = |a| &forall; a &in; ℤ, a &ne; 0. It is not defined gcd(0,0), because each <i>x &in; ℤ</i>, divides 0, thus there is no <i>greatest</i> divisor.</p>
+
+<p><b>Lemma 2.3</b>: Let <i>a, b</i>, and <i>c</i> be positive integers with gcd(<i>a, c</i>) = 1. Then gcd(<i>ab, c</i>) = gcd(<i>b, c</i>).</p>
+
+<p><i>Proof</i>: Let <i>d<sub>1</sub></i> = gcd(<i>b, c</i>) and <i>d<sub>2</sub></i> = gcd(<i>ab, c</i>). Now <i>d<sub>1</sub></i> = gcd(<i>b, c</i>) ⇒[(d<sub>1</sub> divides <i>b</i>) and (d<sub>1</sub> divides c)]. Consequently, <i>d<sub>1</sub></i> divides <i>ab</i>, and so it follows that <i>d<sub>1</sub></i> divides <i>d<sub>2</sub></i>. <br> With gcd(<i>a, c</i>) = 1, there exist integers <i>x</i> and <i>y</i> so that <i>ax + cy = 1</i>. Therefore, <i>abx + bcy = b</i>. Now d<sub>2</sub> = gcd(ab, c) ⇒ [(d<sub>2</sub> divides <i>ab</i>) and (d<sub>2</sub> divides <i>c</i>)], so d<sub>2</sub> divides <i>(ab)x + b(c)y = b</i>. Then [(d<sub>2</sub> divides b) and (d<sub>2</sub> divides c)] ⇒ [d<sub>2</sub> divides d<sub>1</sub>]. Finally, since d<sub>1</sub> divides d<sub>2</sub>, and d<sub>2</sub> divides <i>d<sub>1</sub></i>, and <i>d<sub>1</sub>, d<sub>2</sub></i> are positive, we have <i>d<sub>1</sub> = d<sub>2</sub></i> — or gcd(<i>ab, c</i>) = gcd(<i>b, c</i>).□</p>
+
+<p><b>Lemma 2.4</b>: Let <i>a</i> and <i>b</i> be two integers, then gcd(<i>a,b</i>) = gcd(<i>a,a&pm;b</i>).</p>
+
+<p><i>Proof</i>. We prove something stronger: every integer which is a common divisor of <i>a</i> and <i>b</i> is also a common divisor of
+<i>a</i> and <i>a + b</i>; viceversa, every integer which is a common divisor of <i>a</i> and <i>a + b</i> is also a common divisor of <i>a</i> and <i>b</i>. In math language we show that the two sets:</p>
+
+<div class="eq">
+<p><i>A<sub>1</sub></i> = {<i>d</i> ∈ ℤ | <i>d</i>|<i>a</i> and <i>d</i>|<i>b</i>}</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>A<sub>2</sub></i> = {<i>d</i> ∈ ℤ | <i>d</i>|<i>a</i> and <i>d</i>|<i>a+b</i>}</p>
+</div>
+
+<p>are the same. To prove that the two sets are the same we will show that if we pick an element <i>x</i> in <i>A<sub>1</sub></i> then <i>x</i> is also an element of <i>A<sub>2</sub></i> and if we pick an element <i>y</i> ∈ <i>A<sub>2</sub></i> then <i>y</i> is also an element of <i>A<sub>1</sub></i>: in mathematical language we prove that <i>A<sub>1</sub> ⊆ A<sub>2</sub></i> and <i>A<sub>2</sub> ⊆ A<sub>1</sub></i>. So we need to prove two statements:</p>
+
+<ol>
+	<li><p>If <i>x</i>|<i>a</i> and <i>x</i>|<i>b</i> then <i>x</i>|<i>a+b</i>;</p></li>
+	<li><p>If <i>x</i>|<i>a</i> and <i>x</i>|<i>a + b</i> then <i>x</i>|<i>b</i>.</p></li>
+</ol>
+
+<p>We know from <a href="Z_divisibilità.html#lemma_219">Lemma 2.19</a> and its corollary that this is true.□</p>
+
+<section>
+<a href="Z_divisibilità.html">&#171;Divisibility in ℤ</a>
+<a href="index.html">Index</a>
+<a href="euclid_algorithm.html.html">Algoritmo di Euclide &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
