@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Fundamental theorems on sequences"/>
+    <title>Fundamental theorems on sequences</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Fundamental theorems on sequences</h1>
+
+<div class="def">
+<p><b>Theorem 2.1</b> (<i>Uniqueness of the limit</i>). If {<i>a<sub>n</sub></i>} is a convergent sequence with limit ℓ, there are no other limits.</p>
+
+<p><b>Proof</b>. Suppose there exist two limits ℓ<sub>1</sub> and ℓ<sub>2</sub> for the same sequence. By using triangular inequality:</p>
+
+<div class="eq">
+<p>|<i>ℓ<sub>1</sub> − ℓ<sub>2</sub></i>|  = |<i>ℓ<sub>1</sub> − a<sub>n</sub> + a<sub>n</sub> − ℓ<sub>2</sub></i>| &le; |<i>ℓ<sub>1</sub> − a<sub>n</sub></i>| + |<i>a<sub>n</sub> − ℓ<sub>2</sub></i>| &lt; 2&epsilon;</p>
+</div>
+
+<p>Since &epsilon; is a real positive number (can be chosen to be arbitrarily small), this inequality can only hold if ℓ<sub>1</sub> = ℓ<sub>2</sub>.□</p>
+
+</div>
+
+<div class="def" id="comparison">
+<p><b>Theorem 2.2</b> - (<i>Comparison test</i>). Let {<i>a<sub>n</sub></i>}, {<i>b<sub>n</sub></i>} and {<i>c<sub>n</sub></i>} three 
+convergent sequences with limit ℓ. If</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub> &le; b<sub>n</sub> &le; c<sub>n</sub>, &emsp; a<sub>n</sub> →  ℓ, c<sub>n</sub> →  ℓ ⇒ b<sub>n</sub> → ℓ</p>
+</div>
+
+<p><b>Proof</b>: Let &epsilon; &gt; 0. By the definition of limit:</p>
+
+<div class="eq">
+<p><i>ℓ - &epsilon; &lt; a<sub>n</sub> &lt; ℓ + &epsilon;</i>; &emsp; ℓ - &epsilon; &lt; c<sub>n</sub> &lt; ℓ + &epsilon;</i></p>
+</div>
+
+<p>it follows that</p>
+
+<div class="eq">
+<p><i>ℓ - &epsilon; &lt; a<sub>n</sub> &le; b<sub>n</sub> &le; c<sub>n</sub> &lt; ℓ + &epsilon;</i></p>
+</div>
+
+<p>and definetly</p>
+
+<div class="eq">
+<p><i>ℓ - &epsilon; &lt; b<sub>n</sub> &lt; ℓ + &epsilon;</i></p>
+</div>
+
+<p>Thus <i>b<sub>n</sub> &rarr; ℓ.</i>□</p>
+
+</div>
+
+<div class="def" id="permanence">
+<p><b>Theorem 2.3</b> - (<i>permanence of sing</i>). If a sequence {<i>a<sub>n</sub></i>} has limit ℓ &ne; 0, its terms starting from an index &nu; on, have the same sign of ℓ.</p>
+
+<p><b>Proof</b>. Let <i>&epsilon;= ℓ/2</i>. By the definition of limit:</p>
+
+<div class="eq">
+<p><i>ℓ - |ℓ|/2 &lt; a<sub>n</sub> &lt; ℓ + |ℓ|/2</i></p>
+</div>
+
+<p>&forall; <i>n &gt; &nu;</i>, given a certain &nu; (whose value depends on the choice of &epsilon;). Thus if <i>ℓ &gt; 0</i> it follows (from the first inequality)</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub> &gt; ℓ/2 &gt; 0</i></p>
+</div>
+
+<p>or if <i>ℓ &lt; 0</i> it follows (from the second inequality)</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub> &lt; ℓ/2 &lt; 0. □</i></p>
+</div>
+
+</div>
+
+<section>
+<a href="successioni.html">&#171;Successioni</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The Intermediate Zero Theorem"/>
+    <title>The Intermediate Zero Theorem</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>The Intermediate Zero Theorem</h1>
+
+<div class="def">
+
+<p><b>Theorem 5.1</b>. If the <i>f</i> is continuous on a closed interval [<i>a,b</i>] and if f(a) and f(b) have opposite signs, then there exists a number <i>x<sub>0</sub></i> between <i>a</i> and <i>b</i> such that f(<i>x<sub>0</sub></i>) = 0. If <i>f</i> is also strictly monotonous, the zero is unique.</p>
+
+<p><b>Proof</b>: Assume (with no loss of generality) that <i>f(a) &lt; 0 &lt; f(b)</i>. Let</p>
+
+<div class="eq">
+<p><i>S</i> = {<i>x</i> &in; [<i>a,b</i>]: <i>f</i>(<i>x</i>) &lt; 0}</p>
+</div>
+
+<p>this set is not empty, since <i>a &in; S</a></i> is in it. Moreover is bounded above by <i>b</i>, so it has a least upper bound, <i>x<sub>0</sub></i> in <i>S</i></p>
+
+<div class="eq">
+<p><i>x<sub>0</sub></i> = sup <i>S</i></p>
+</div>
+
+<p>it must be <i>f</i>(<i>x<sub>0</sub></i>) = 0; If it was <i>f</i> (<i>x<sub>0</sub></i>) &gt; 0 owning to <a href="limits_theorems.html#permanenza_segno">Corollary 6.16 (<i>permanennce of sign</i>)</a>, it would exists an interval (<i>x<sub>0</sub> -&delta;, x<sub>0</sub> + &delta;</i>): <i>f</i>(<i>x</i>) &gt; 0 &forall;x &in; (<i>x<sub>0</sub> -&delta;, x<sub>0</sub> + &delta;</i>), but this contradicts the hypothesis <i>x<sub>0</sub></i> = sup <i>S</i>. If it was <i>f</i> (<i>x<sub>0</sub></i>) &lt; 0 for the same reason, there would be an interval (<i>x<sub>0</sub> -&sigma;, x<sub>0</sub> + &sigma;</i>): <i>f</i>(<i>x</i>) &lt; 0 &forall;x &in; (<i>x<sub>0</sub> -&sigma;, x<sub>0</sub> + &sigma;</i>), but this also contradicts the initial hypothesis <i>x<sub>0</sub></i> = sup <i>S</i>, then <i>f</i>(<i>x<sub>0</sub></i>) = 0. □</p>
+
+</div>
+
+<p>there exists also a proof base on the bisection methos.</p>
+
+<div class="def">
+
+<p><b>Dimostrazione (II)</b>. The bisection method is iterative and based on two steps:</p>
+
+<p><b>Step I</b> Let <i>c</i> be middle point of the interval [<i>a,b</i>]:</p>
+
+<div class="eq">
+<p><i>c</i> = (<i>a+b</i>)/2</p>
+</div>
+
+<p>if <i>f</i>(<i>c</i>) = 0 = <i>f</i> (<i>x<sub>0</sub></i>) we are lucky and the theorem is proved. If it is not the case we continue with the 2nd step:</p>
+
+<p><b>Step II</b></p>
+
+<ul>
+
+    <li><p>If f(a)*f (c) &lt; 0; then x<sub>0</sub> is located in the left half of the interval <i>x<sub>0</sub></i> &in; [<i>a,c</i>], cwe build up a new interval [<i>a,b</i>] with <i>b = c</i></p></li>
+    
+    <li><p>If f(b)*f (c) &lt; 0; then x<sub>0</sub> is located in the right half of the interval x<sub>0</sub> &in; [<i>c,b</i>]; we build up a new interval [<i>a,b</i>] with <i>a = c</i></p></li>
+    
+</ul>
+
+<p>By considering the sequence {<i>a<sub>n</sub></i>} made by extrems <i>a</i> of each interval of each iteration and that {<i>b<sub>n</sub></i>} made up by the extrems <i>b</i>, {<i>a<sub>n</sub></i>} will be increasing and {<i>b<sub>n</sub></i>} decreasing. The lenght of the interval at the <i>n</i>-th step is equal to</p>
+
+<div class="eq">
+<p><i>b<sub>n</sub></i> − <i>a<sub>n</sub></i> = (<i>a + b</i>) / 2<sup>n</sup></p>
+</div>
+
+<p>by taking the limit for <i>n</i> → ∞</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> → ∞</sub> <i>b<sub>n</sub></i> − <i>a<sub>n</sub></i> = lim<sub><i>n</i> → ∞</sub>(<i>a + b</i>) / 2<sup>n</sup> = 0</p>
+</div>
+
+<p>i.e.</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> → ℓ<sub>1</sub>, &emsp; <i>b<sub>n</sub></i> → ℓ<sub>2</sub>, &emsp; for &emsp; <i>n</i> → ∞</sub> ⇒ ℓ<sub>1</sub> = ℓ<sub>2</sub></p>
+</div>
+
+<p>Given that at each step <i>f</i>(<i>a</i>) ⋅ <i>f</i> (<i>b</i>) &le; 0, by the <a href="sequnces_theorems.html#permanenza">theorem on permanence of sign</a> it must result ℓ<sub>1</sub> = ℓ<sub>2</sub> = 0.□</p>
+</div>
+
+<section>
+<a href="limiti.html">&#171;Definizione di limite</a>
+<a href="index.html">Index</a>
+<a href="weierstrass.html">Proprietà topologiche delle funzioni continue &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

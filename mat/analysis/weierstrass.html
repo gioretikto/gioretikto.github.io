@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The Weierstrass theorems"/>
+    <title>The Weierstrass theorem</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>The Weierstrass theorem</h1>
+
+<p>Not every function has a maximum/minimum. For example, the function <i>f</i>(<i>x</i>) = x<sup>2</sup> (for -∞ &lt; <i>x</i> &lt; +∞ ) has no maximum or minimum. Also, even though the function <i>f</i>(<i>x</i>) = arctan(<i>x</i>) has values which are arbitrarily close to &pi;/2, this value in never achieved for any real value of <i>x</i>. </p>
+
+<div class="def">
+<p><b>Definition 5.1</b> - A real-valued function <i>f</i> is called <b>bounded</b> if the following holds:</p>
+
+<div class="eq">
+<p>∃ <i>m,M</i> ∈ ℝ: <i>m</i> ≤ <i>f</i>(<i>x</i>) ≤ <i>M</i>, &emsp; ∀<i>x</i> ∈ Dom <i>f</i></p>
+</div>
+</div>
+
+<p>If in the above definition we only require the existence of <i>M</i> then we say f is <b>upper bounded</b>; and if we only require the existence of <i>m</i> then say that <i>f</i> is <b>lower bounded</b>.</p>
+
+<p>So a function can be continuous and bounded, <b>yet</b> if <i>M</i> = Sup {<i>f</i>(<i>x</i>): <i>x</i> ∈ Dom <i>f</i>} and <i>m</i> = Inf {<i>f</i>(<i>x</i>) :<i>x</i> ∈ Dom <i>f</i>}, <b>there may be no</b> <i>x</i> value in <i>dom f</i> such that <i>f</i>(x) = <i>M</i> or <i>f</i>(<i>x</i>) = <i>m</i>.</p>
+
+<p>The next theorem gives the conditions that guarantee that a given function has both maximum and minimum value.</p>
+
+<div class="def">
+
+<p><b>Theorem 5.0</b> (<i>The Weierstrass theorem</i>). If <i>f</i>: [<i>a, b</i>] →  ℝ</i>, is continuous on [<i>a,b</i>], then .</p>
+
+<ol type="i">
+ <li><p><i>f</i> is bounded on [<i>a,b</i>].</p></li>
+ <li><p><i>f</i> has both a maximum and minimum on [<i>a,b</i>].</p></li>
+ <img src="img/funzioni/weierstrass.png" alt="teorema di Weierestrass" />
+</ol>
+
+<p><b>Proof.</b> Proposition <i>i)</i> is proved observing that there exists a sequence {<i>x<sub>n</sub></i>} &in; [<i>a,b</i>]  &forall;<i>n</i> &in; ℕ, convergent to a bound, considering the upper one:</p>
+
+<img src="img/funzioni/sup.png" alt="Weierestrass theorem proof" />
+
+<p>it is enough to consider a sequence {<i>x<sub>n</sub></i>} for the following two cases:</p>
+
+<ul>
+    <div class="eq">
+    <p><i>f</i>(<i>x<sub>n</sub></i>) &gt; n &emsp; if &emsp; sup <i>f</i>(I) = +∞</p>
+    </div>
+    
+    <div class="eq">
+    <p><i>f</i>(<i>x<sub>n</sub></i>) &gt; s − 1/n &emsp; if &emsp; sup <i>f</i>(I) = s &lt; +∞</p>
+    </div>
+</ul>
+
+<p>in the case of the upper bounded interval, it follows from the definition of upper bound that:</p>
+
+    <div class="eq">
+    <p><i>s − 1/n</i> &lt; <i>f</i>(x<sub>n</sub>) &le; <i>s</i></p>
+    </div>
+
+<p>For <i>n</i> tending to +&infin;, from the <a href="sequnces_theorems.html#comparison">comparison test</a> follows the convergence of <i>f</i>(<i>x<sub>n</sub></i>) to <i>s</i>.</p>
+
+<p>To prove <i>ii)</i>, we note that {<i>x<sub>n</sub></i>} is bounded because contained in [<i>a, b</i>] and by the <a href="bolzanoweierstrass.html">Theorem of Bolzano-Weierstrass</a> that each bounded sequence has a convergent subsequence {<i>x<sub>n<sub>k</sub></sub></i>}. Since all <i>x<sub>n<sub>k</sub></sub></i> are within [<i>a,b</i>] the limit, let call it <i>x<sub>M</sub></i> will be also in the same interval <i>x<sub>M</sub></i> &in; [<i>a,b</i>]. By the <a href="subsequences.html">convergenza delle sottosuccessioni</a> and from the continuity of <i>f</i>:</p>
+
+<img src="img/funzioni/dimoweierstrass.png" alt="Dimostrazione teorema di Weierestrass" />
+
+<p>This relation would be a contradiction in case sup <i>f</i>(I) = &infin;. Moreover, given that &xi; &in; Im <i>f</i>, the followin is true:</p>
+
+<img src="img/funzioni/max.png" alt="massimo di una funzione" />
+
+</div>
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="zero_theorem.html">The Intermediate Zero Theorem&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

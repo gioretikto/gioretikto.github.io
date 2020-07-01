@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The Mean Value Theorem"/>
+    <title>The Mean Value Theorem</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Multivariable Calculus</a></li>
+        <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>The Mean Value Theorem</h1>
+
+<div class="def">
+<p><b>Theorem 1.1</b> (<i>Mean Value Theorem</i>) - If <i>f: ℝ<sup>n</sup> → ℝ</i> is differentiable, then for every <i><b>x,y</b> ∈ ℝ<sup>n</sup></i> there exists <i><b>z</b></i> ∈ [<i><b>x,y</b></i>] such that</p>
+
+<div class="eq">
+<p><i>f</i>(<b><i>y</i></b>) − <i>f</i>(<i><b>x</b></i>) = ∇<i>f</i>(<i><b>z</i></b>) ⋅ (<i><b>y</b></i> − <i><b>x</b></i>)</p>
+</div>
+
+<p><b>Proof</b> - Set <i>φ</i>(<i>t</i>) = <i>f</i>(<i><b>x</i></b> + <i>t</i>(<i><b>y</i></b> − <b><i>x</i></b>)). By <a href="composite.html#proposition12">proposition 1.2</a> by applying the chain rule we obtain:</p>
+
+<div class="eq">
+<p><i>φ′</i>(<i>t</i>) = ∇<i>f</i>(<i><b>x</i></b> + <i>t</i>(<i><b>y</i></b> − <b><i>x</i></b>)) ⋅ (<i><b>y</b></i> − <i><b>x</b></i>)</p>
+</div>
+
+<p>It results that φ: [0, 1] → ℝ is differentiable in ]0, 1[ and continuous in [0, 1] with <i>φ</i>(0) = <i>f</i>(<i><b>x</b></i>), <i>φ</i>(1) = f(<b><i>y</i></b>). By the <a href="../analysis/lagrange.html">one-dimensional mean value theorem</a> there exists <span class="overline">t</span> ∈ (0,1) such that</p>
+
+<div class="eq">
+<p><i>φ</i>(1) − <i>φ</i> (0) = <i>φ′</i>(<span class="overline">t</span> )(1 − 0)</p>
+</div>
+
+<p>or equivalently,</p>
+
+<div class="eq">
+<p><i>f</i>(<b><i>y</i></b>) − <i>f</i>(<i><b>x</b></i>) = ∇<i>f</i>(<i><b>z</b></i>) ⋅ (<i><b>y</b></i> − <i><b>x</b></i>)</i></p>
+</div>
+
+<p>where <i><b>z</b></i> = <i><b>x</b></i> + <i>t</i> (<i><b>y</b></i> − <i><b>x</b></i>).□</p>
+
+</div>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="mvt.html">The Mean Value Theorem &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

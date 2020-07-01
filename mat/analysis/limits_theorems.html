@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Fundamentals theorems on limits"/>
+    <title>Fundamentals theorems on limits</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+    
+<h1>Fundamentals theorems on limits</h1>
+
+<div class="def">
+<p><b>Teorema 6.15</b> (<i>Uniqueness of the limit</i>). Suppose f admits (finite or infinite) limit ℓ for <i>x</i> → <i>x<sub>0</sub></i>. Then <i>f</i> admits not other limit for <i>x</i> → <i>x<sub>0</sub></i>.</p>
+
+<p><b>Proof</b>. We employ a proof by contradiction, showing that the existence of a second limit ℓ' &ne; ℓ will lead to an absurd. We consider the case  of finite ℓ' and ℓ: the other cases can be derived in a similar manner. Since ℓ' &ne; ℓ, there exists a neighborhood I(ℓ') for ℓ' and one I(ℓ) for ℓ which are disjoint, i.e.</p>
+
+<div class="eq">
+<p>I(ℓ') ∩ I(ℓ) = ∅</p>
+</div>
+
+<p>It is enough to consider for each point a neighborhood of ray &epsilon; less or equal to the semidistance between the centers, i.e.</p>
+
+<div class="eq">
+<p>&epsilon; &le; |ℓ - ℓ'|/2</p>
+</div>
+
+<p>Considering the neighborhood I(ℓ) of ℓ, from the hypothesis lim<sub>x → x<sub>0</sub></sub> <i>f</i>(<i>x</i>) = ℓ follows there exists a neighborhood I'(<i>x<sub>0</sub></i>) of x<sub>0</sub> such that</p>
+
+<div class="eq">
+<p>&forall;x &in; dom f, &emsp; x &in; I(ℓ) \ {x<sub>0</sub>} ⇒ f(x) &in; I(ℓ)</p>
+</div>
+
+<p>Similarly considering a neighborhood I(ℓ') of ℓ', from lim<sub>x → x<sub>0</sub></sub> <i>f</i>(<i>x</i>) = ℓ', follows</p>
+
+<div class="eq">
+<p>&forall;x &in; dom f, &emsp; x &in; I(ℓ') \ {x<sub>0</sub>} ⇒ f(x) &in; I(ℓ')</p>
+</div>
+
+<p>The intersection of the two neighborhoods I(ℓ') e I(ℓ) is still a neighborhood of <i>x<sub>0</sub></i>, containing infinite elements of dom <i>f</i>, because <i>f</i> is defined across the whole neighborhood of <i>x<sub>0</sub></i> (not necessarily in <i>x<sub>0</sub></i>). Thus if <i>x*</i> &in; dom <i>f</i> is a generic element belonging to both neighborhoods and different from <i>x<sub>0</sub></i>, it results</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x*</i>) &in; I(ℓ') ∩ I(ℓ)</i></p>
+</div>
+
+<p>thus the two neighborhoods I(ℓ') and I(ℓ) are disjoint. But this is contradiction because I(ℓ') ∩ I(ℓ) = ∅.□</p>
+
+</div>
+
+<div class="def">
+<p><b>Corollary 6.15</b> Let <i>f</i> be continuos on the closed interval [<i>a,b</i>], then <i>f</i> is bounded in [<i>a,b</i>].</p>
+</div>
+
+<p>The following corollary precices what's the sign of <i>f</i> in the neighborhood of <i>x<sub>0</sub></i>.</p>
+
+<div class="def" id="permanenza_segno">
+
+<p><b>Corollary 6.16</b> (<i>permanennce of sign</i>) Suppose <i>f</i> admits (finite or infinite) limit ℓ for <i>x</i> → <i>x<sub>0</sub></i>. If ℓ &gt; 0 or ℓ = +∞, there exists a neighborhood I(<i>x<sub>0</sub></i>) of <i>x<sub>0</sub></i> such that <i>f</i> is striclty positive in I(x<sub>0</sub>) \ {x<sub>0</sub>}. An analogous result is found for the negative sign.</p>
+
+<p><b>Proof</b>. Suppose ℓ to finite and positive. Consider the neighborhood I<sub>&epsilon;</sub>(ℓ) of ℓ with ray &epsilon; ℓ/2 &gt; 0. By the definition of limit, there exists a neighborhood I(x<sub>0</sub>) of <i>x<sub>0</sub></i> such that</p>
+
+<div class="eq">
+<p>&forall;<i>x</i> &in; dom <i>f</i>, &emsp; <i>x</i> &in; I(x<sub>0</sub>) \ {<i>x<sub>0</sub></i>} ⇒ <i>f</i>(<i>x</i>) &in; I<sub>&epsilon;</sub>(ℓ)</p>
+</div>
+
+<p>Observing that I<sub>&epsilon;</sub>(ℓ) = (ℓ/2, 3ℓ/2) (0, +∞), we conclude that all values of <i>f</i> are strictly positives.</p>
+<p>If ℓ = +∞, it is enough to single out a neighborhood I<sub>A</sub> (+∞) = (A, +∞) of +∞ (with A &gt; 0) and apply the definition of limit.□</p>
+
+</div>
+
+<section>
+<a href="limiti.html">&#171;Definizione di limite</a>
+<a href="index.html">Index</a>
+<a href="weierstrass.html">Proprietà topologiche delle funzioni continue &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

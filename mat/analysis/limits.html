@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Limiti"/>
+    <title>Limiti</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Search</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>         
+</nav>
+      
+<div class="content">
+
+<h1>Limiti</h1>
+
+<div class="def">
+
+<p><b>Definizione</b> (<i>limite di una funzione</i>). Sia <i>f: D &rarr; ℝ </i> e sia <i>x<sub>0</sub></i> un punto di accumulazione di <i>D &sube; ℝ</i>.
+Si dice che <i>f</i> ha limite <i>ℓ ∈ ℝ</i> (finito o infinito) per <i>x</i> tendente a <i>x<sub>0</sub></i>, e si scrive</p>
+
+<img src="img/limiti/limite.png" alt="limite di una funzione" />
+
+<p>se per ogni &epsilon; &gt; 0 esiste un &delta; (<i>x<sub>0</sub> , &epsilon;) &gt; 0</i> tale che</p>
+
+<img src="img/limiti/def_limite.png" alt="defizione limite"/>
+
+</div>
+
+<p>Nella defizione di limite si esclude il punto <i>x = x<sub>0</sub></i> tramite la condizione <i> 0 &lt; |x - x<sub>0</sub>|</i>.</p>
+<p> La funzione <i>f</i> può non essere definita nel punto <i>x<sub>0</sub></i> e comunque il valore eventualmente assunto nel punto è inessenziale perchè il punto non viene coinvolto nella definizione di limite.</p>
+
+<p>Il concetto di limite può anche essere introdotto considerando una successione di punti <i>{ x<sub>n</sub> }</i> convergente ad <i>x<sub>0</sub></i> a cui si associa una successione delle uscite <i>f ( x<sub>n</sub> )</i>. Vale il seguente teorema:</p>
+
+<div class="def">
+
+<p><b>Teorema</b>. Si ha</p>
+
+<img src="img/limiti/limite.png" alt="limite di una funzione" />
+
+<p>se e solo se per ogni successione <i>{x<sub>n</sub>}</i> convergente a <i>x<sub>0</sub></i> e tale che <i>x<sub>n</sub>∈ D \ { x<sub>0</sub> }</i>, abbiamo</p>
+
+<img src="img/limiti/lim_succ.png" alt="limite funzione successione" />
+
+<p><b>Dimostrazione</b>. Se il limite di <i>f(x)</i> esiste, allora esistono &epsilon;&gt; 0 e &delta; &gt; 0 tali che |f(x) - ℓ| &lt; &epsilon; se</p>
+<p>0 &lt; |x- x<sub>0</sub>| &lt; &delta;. Siccome x<sub>n</sub> converge ad x<sub>0</sub> esiste <i>n<sub>0</sub> ∈ ℕ</i> tale che  per n &gt; n<sub>0</sub> si abbia: 0 &lt; |x<sub>n</sub>- x<sub>0</sub>| &lt; &delta;; da cui segue</p>
+
+<p>|f(x<sub>n</sub>) - ℓ| &lt; &epsilon;. Dimostriamo ora che il contrario non è vero, cioè che per ogni x<sub>n</sub> &rarr; x<sub>0</sub> per 
+ <i>n</i> &rarr; &infin; non implica necessariamente f(x<sub>n</sub>)&rarr; ℓ per <i>n</i> &rarr; &infin;.</p> 
+ 
+<p>Per dimostrarlo assumiamo che il limite di <i>f</i> non esista o non sia uguale ad ℓ. Questo significa che esiste &epsilon; &gt; 0  e un punto <i>x ∈ D</i> tale che |x- x<sub>0</sub>| &lt; &delta; e |f(x) - ℓ| &ge; &epsilon;. Prendendo &delta;<sub>n</sub> = 1/<i>n</i> si troverebbero punti x<sub>n</sub> per cui si avrebbe:</p>
+
+<img src="img/limiti/teo.png" alt="Definizione successionale limite" />
+
+<p>Abbiamo così trovato una successione {x<sub>n</sub>} che convergea <i>x<sub>0</sub></i> ma per la quale <i>f(x<sub>n</sub>)</i> non converge a ℓ. Quindi l'asserto inverso del teorema non è vero.</p>
+
+</div>
+
+<p>Il teorema ora dimostrato può essere utile per dimostrare l'esistenza del limite di una funzione</p>
+
+<p><b>Esempio 1.</b> Si consideri la funzione <i>f(x) = cos<sup>2</sup>(1/x)</i> definita per x &ne; 0; le due successioni:</p>
+
+<img src="img/limiti/seq1.png" alt="successioni convergenti" />
+<p>sono entrambe convergenti a 0 ma</p>
+<img src="img/limiti/cosine.png" alt="coseni" />
+<p>quindi il limite di <i>f</i> per <i>x</i> tendente a 0, non esiste.</p>
+
+<p><b>Esempio 2.</b> Il seguente limite
+<img src="img/limiti/sin.png" alt="limite seno x infinito" />
+
+<p>non esiste. Per dimostrarlo basta considerare due successioni divergenti come:</p>
+<img src="img/limiti/seq2.png" alt="successioni divergenti" />
+<p>in corrispondenza di tali successioni si ha</p>
+<img src="img/limiti/seni.png" alt="successioni" />
+<p>dunque la definizione di limite non è soddisfatta. </p>
+
+
+<p><b>Esempio 3.</b>. Data la funzione <i>f(x) = e<sup>-1/x</sup>, D = R \ { 0 }</i> e <i>x<sub>0</sub> = 0</i>.</p>
+<p>Considerando le successioni </p>
+<img src="img/limiti/seq3.png" alt="successioni convergenti" />
+
+<p>si ha per entrambe <i>a<sub>n</sub>, b<sub>n</sub> &rarr; 0</i> per <i>n</i> &rarr; &infin; </p>
+<p>Per la prima successione <i>f(a<sub>n</sub>) = e<sup> - n</sup> &rarr; 0</i> per n &rarr; &infin; mentre per la seconda <i>f(b<sub>n</sub>) = e<sup>n</sup></i>
+&rarr; &infin; per <i>n &rarr; &infin;</i>.</p>
+<p>Abbiamo quindi due successioni che tendono entrambe a <i>x<sub>0</sub></i> in corrispondenza delle quali <i>f(x<sub>n</sub>)</i> tende
+a due limiti diversi.</p>
+
+
+<p>Oltre al caso <i>ℓ ∈ ℝ</i> si può verificare il caso <i>ℓ = &pm; &infin;</i>. Una tale funzione si dice divergente. Bisogna sottolineare che al simbolo &infin; non è associato nessun
+numero. Il significato di limite infinito è introdotto dalla seguente definizione:</p>
+<div class="def">
+<p>Sia <i>f</i> una funzione definita in un intorno di <i>x<sub>0</sub>∈ ℝ</i>, tranne eventualmente nel punto <i>x<sub>0</sub></i>.
+Si dice che <i>f</i> ha limite +&infin; (o tende a +&infin;) per <i>x</i> tendende a <i>x<sub>0</sub></i>, e si scrive</p>
+<img src="img/limiti/lim_infin.png" alt="limite infinito" />
+<p>se per ogni <i>A &gt; 0</i> esiste un <i>&delta; &gt;0</i> tale che</p>
+<img src="img/limiti/lim_infin2.png" alt="limite infinito" />
+</div>
+<p>La definizione di</p>
+<img src="img/limiti/meno_inf.png" alt="limite meno infinito" />
+<p>si ottiene dalla precedente con la condizione <i>f(x) &lt; -A</i>.</p>
+
+<p>Un esempio di funzione tendente a infinito è quello di <i>f(x)=1/x<sup>2</sup></i> per <i>x</i> che tende a 0</p>
+<img src="img/limiti/1x2.png" alt="grafico 1/x^2" />
+
+<p>La funzione iperbole <i>f(x)=1/x</i>, al contrario non ha limite per <i>x</i> tendente a 0, infatti la funzione intorno a 0, assume
+sia valori positivi che negativi.</p>
+
+<img src="img/limiti/disegno.png" alt="grafico limite"/>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Differentiating composite functions"/>
+    <title>Differentiating composite functions</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Multivariable Calculus</a></li>
+        <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Differentiating composite functions</h1>
+
+<div class="def">
+<p><b>Theorem 1.0</b> - Let <i>f(x,y)</i> differentiable in open set <i>A</i> of ℝ<sup>2</sup> and</p>
+
+<div class="eq">
+<p><i>x</i> = <i>x</i>(<i>t</i>), &emsp; <i>y</i> = <i>y</i>(<i>t</i>), &emsp; <i>t</i> &in; [<i>a,b</i>] &emsp; (1.0)</p>
+</div>
+
+<p>two differentiable functions in the interval <i>a &le; t &le; b</i> with (<i>x(t),y(t)</i>) &in; <i>A</i>, then &forall;<i>t</i> &in; [<i>a,b</i>] there is a unique value <i>f(x(t),y(t)) = F(t)</i>; the function <i>F</i> is a composite function, differentiable in [<i>a,b</i>] such that</p>
+
+<div class="eq">
+<p><i>F'</i>(<i>t</i>) = <i>f<sub>x</sub></i> (<i>x(t),y(t)</i>) ⋅ <i>x'</i>(<i>t</i>) + <i>f<sub>y</sub></i> (<i>x(t),y(t)</i>) ⋅ <i>y'</i>(<i>t</i>) &emsp; (1.1)</p>
+</div>
+
+<p>this relation is also known as the <b>chain rule</b> for differentiating composite maps.</p>
+
+<p><b>Proof</b> - The increments of the functions <i>x</i> and <i>y</i> are</p>
+
+<div class="eq">
+<p><i>h</i> = <i>x</i>(<i>t + dt</i>) − <i>x</i>(<i>t</i>); &emsp; <i>k</i> = <i>y</i>(<i>t</i> + d<i>t</i>) − <i>y</i>(<i>t</i>)</i></p>
+</div>
+
+<p>From the differentiability of <i>f</i>, we can write</p>
+
+<div class="eq">
+<p><i>F</i>(<i>t</i>+d<i>t</i>) − <i>F</i>(<i>t</i>) = <i>f</i>(<i>x + h</i>, <i>y + k</i>) − <i>f</i>(<i>x,y</i>) = <i>f<sub>x</sub></i>(<i>x, y</i>) <i>h</i> + <i>f<sub>y</sub></i>(<i>x, y</i>) <i>k</i> + o[√(h<sup>2</sup> + k<sup>2</sup>)]</i></p>
+</div>
+
+<p>From the differentiability of <i>x</i> and <i>y</i>, follows</p>
+
+<div class="eq">
+<p><i>h = x'(t) ⋅ dt + o(dt); &emsp; k = y'(t) ⋅ dt + o(dt)</i></p>
+</div>
+
+<p>Thus</p>
+
+<div class="eq">
+<p><i>F(t+dt) − F(t) = [f<sub>x</sub> ⋅ x' + f<sub>y</sub> ⋅ y'] ⋅ dt + o(dt). □</p>
+</div>
+
+</div>
+
+<p>We can think the functions <i>x(t)</i> and <i>y(t)</i> as components of a regular curve.</p>
+
+<div class="def">
+
+<p><b>Proposition 1.0</b> - Consider a curve <b>γ</b>: I ⊆ ℝ → ℝ<sup>2</sup> of differentiable components (<i>x(t),y(t)</i>), together with a differentiable map <i>f: ℝ<sup>2</sup> → ℝ</i>. Let <i>h</i> = <i>f</i> ◦ <i><b>γ</b></i>: I → ℝ</i> be the composition</p>
+
+<div class="eq">
+<p><i>h(t) = f(<b>&gamma;</b>(t)) = f(x(t),y(t))</i></p>
+</div>
+
+<p>Then it follows from eq. (1.1) that</p>
+
+<div class="eq">
+<p><i>h'</i>(<i>t</i>) = ∇<i>f</i>(<i><b>γ</b></i>(<i>t</i>)) · <b>γ'</b>(<i>t</i>)</p>
+</div>
+
+</div>
+
+<div class="def">
+<p><b>Proposition 1.1</b> - Let <i>f: ℝ<sup>2</sup> → ℝ</i> differentiable , and <i>f(x,y) = c</i>, the equation of one of its level set. Suppose that this level set admits a regular parametric representation by the function <i><b>γ</b> = <b>γ</b>(t)</i>. Then setting</p>
+
+<div class="eq">
+<p><i>h</i>(<i>t</i>) = <i>f</i>(<i><b>γ</b></i>)</p>
+</div>
+
+<p>It results from the definition, <i>f</i>(<i>t</i>) = <i>c</i>, thus <i>h'</i>(<i>t</i>) = 0. Then it follows from eq. (1.1) that</p>
+
+<div class="eq">
+<p><i>h'</i>(<i>t</i>) = ∇<i>f</i>(<i><b>γ</b></i>(<i>t</i>)) · <b>γ'</b>(<i>t</i>)</p>
+</div>
+
+<p>This relation tells us that the gradient of <i>f</i> and the vector tangent to the level set <i><b>γ'</b>(<i>t</i>)</i> are orthogonal along a curve level.</p>
+
+</div>
+
+<div class="def" id="proposition12">
+<p><b>Proposition 1.2</b> - Let <i><b>u, v</b></i> ∈ ℝ<sup>n</sup> be given points and suppose <i>f</i> is differentiable at <i><b>u </b> + t<sub>0</sub> <b>v</b></i> with <i>t<sub>0</sub></i> ∈ ℝ. Then the map</p>
+
+<div class="eq">
+<p><i>φ</i>(<i>t</i>) = <i>f</i>(<i><b>u</b> + t<b>v</b></i>) &emsp; (1.4)</p>
+</div>
+
+<p>is differentiable at <i>t<sub>0</sub></i>, and</p>
+
+<div class="eq">
+<p><i>φ'</i> (<i>t<sub>0</sub></i>) = ∇<i>f</i> (<i><b>u</b></i> + <i>t<sub>0</sub><b>v</b></i>) · <i><b>v</b></i> &emsp; (1.5)</i></p>
+</div>
+
+<p><b>Proof</b> - (1.5) follows from applying the chain rule (1.1) to (1.4) □.</p>
+</div>
+
+</div>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="mvt.html">The Mean Value Theorem &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

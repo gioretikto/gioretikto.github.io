@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Directional Derivatives"/>
+    <title>Directional Derivatives</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Directional Derivatives</h1>
+
+<p><b>Partial derivatives</b> measure the instantaneous rate of change of the function when moving parallel to the x- and y-axes, respectively. <b>Directional derivatives</b> allow us to find the instantaneous rate of change of <i>f</i> in any direction specified by a versor <b>v</b> = (<i>cos &theta;, sin &theta;)</i> at a given point <i><b>p<sub>0</sub></b></i> = (<i>x<sub>0</sub>,y<sub>0</sub></i>)</p>
+
+<p>By varying the real parameter <i>t</i>, the points of the line <i><b>p</b> = <b>p<sub>0</sub></b> + t<b>v</b></i> are obtained. This line can be represented by the parametric equations:</p>
+
+<div class="eq">
+<p><i>x  = x<sub>0</sub> + t cos&theta;</i></p>
+<p><i>y  = x<sub>0</sub> + t sin&theta;</i></p>
+</div>
+
+<p>For a displacement <i>t</i> over this line, the function <i>f</i> is icremented by:</p>      
+
+<div class="eq">
+<p><i>&Delta;f</i> = <i>f</i> (<i>x<sub>0</sub> + t cos&theta;, y<sub>0</sub> + t sin &theta;</i>) - <i>f</i> (<i>x<sub>0</sub>, y<sub>0</sub></i>)</p>
+</div>
+
+<p>The rate of change is thus one-dimensional. The directional derivative along <b>v</b> is equal to the rate of change <i>f</i> over the rate of change of <i>t</i>, with <i>t</i> tending to zero.</p>
+
+<div class="def">
+
+<p><b>Definition 1.6</b> Suppose <i>f</i> is <i>C</i><sup>1</sup> in a non empty open set <i>A</i> &in; ℝ<sup>2</sup> and let <i><b>x</b></i> be a point &in; <i>A</i>, with <b>v</b> a unit-vector and <i>t</i> &in; ℝ. The local rate of change of <i>f</i> along <b>v</b>, at <b>x</b>, is defined as the limit:</p>
+
+<img src="img/directional.png" alt="directional derivative"/>
+
+<p>when the limit exists, is called the <i>directional derivative</i> of <i>f</i>. Another notation for the <i>directional derivative</i> is D<sub><b>v</b></sub><i>f</i> (<i><b>x</b></i>).</p>
+
+</div>
+
+<p>We see that if <i><b>v</b> = <b>i</b> = (1, 0)</i>, then <i>D<sub><b>i</b></sub> f =f<usb>x</sub></i> and if <i><b>v</b> = <b>j</b> = (0, 1)</i>, then <i>D<sub><b>j</b></sub> f = f<sub>y</sub></i>. In other words, the partial derivatives of <i>f</i> with respect to <i>x</i> and <i>y</i> are just special cases of the directional derivative.</p>
+
+<p>Therefore the concept of <i>directional derivative</i> generalizes the notion of a partial derivative, we have</p>
+
+<div class="eq">
+<p><i>F<sub>x</sub></i>(<i>x<sub>0</sub>,y<sub>0</sub></i>) = D<sub><b>v</b></sub>(<i>x<sub>0</sub>,y<sub>0</sub></i>) &emsp; con <b>v</b> = <b>i</b>, &emsp; cioè &theta; = 0.</p>
+<p><i>F<sub>y</sub></i>(<i>x<sub>0</sub>,y<sub>0</sub></i>) = D<sub><b>v</b></sub>(<i>x<sub>0</sub>,y<sub>0</sub></i>) &emsp; con <b>v</b> = <b>j</b>, &emsp; cioè &theta; = &pi;/2.</p>
+</div>
+
+<div class="def" id="gradiente">
+
+<p><b>Theorem 1.2</b> (Gradient Formula) Suppose <i>f</i> is <i>C</i><sup>1</sup>(<i>A</i>) with <i>A</i> a non empty open set of ℝ<sup>2</sup>. For every vector <b>v</b> there exists the directional derivative given by:</p>
+
+<div class="eq">
+<p><i>D<b><sub>v</sub></b> f(x,y) = ∇f(x,y) ⋅ <b>v</b></i></p>
+</div>
+
+<p><b>Proof</b> - It follows directly from differentiability. In the case <i>n = 2</i> considering the direction pointed by the unit vector <b>v</b> = (cos &theta;, sin &theta;)</p>
+
+<img src="img/gradientedim.png" alt="dimostrazione formula gradiente"/>
+
+<p>□</p>
+
+</div>
+
+<p>The directional derivative can thus be expressed as the dot product between the <i>gradient</i> and <i><b>v</b></i>. From this relation it is clear that directional derivatives are linear combinations of partial derivatives. In the two-dimensional <i>n = 2</i> the relation can be expressed as:</p>
+
+<img src="img/formulagradiente2d.png" alt="formula del gradiente bidimensionale"/>
+
+<p>This relation allows also to find the direction along which the maximum rate of change of the function occurs. We have</p>
+
+<div class="eq">
+<p><i>D<b><sub>v</sub></b> f</i>(<i>x,y</i>) = ∇<i>f</i>(<i>x,y)</i> ⋅ <b>v</b> = ||∇<i>f</i>(<i>x,y</i>)|| cos &theta;</p>
+</div>
+
+<p>The directional derivative is maximized when &theta; = 0: thus when the <b>v</b> vector is parellel to the gradient and can be expressed by:</p>
+
+<div class="eq">
+<p><i><b>v</b></i> = ∇<i>f</i>(<i>x,y)</i> / ||∇<i>f</i>(<i>x,y)</i>||</p>
+</div>
+
+<p>The following propositions hold:</p>
+
+<div class="def">
+<p><b>Proposition 1.1</b> At points <i><b>x<sub>0</sub></b></i> where the gradient of <i>f</i> does not vanish, <i>f</i> has the greatest rate of increase, starting from <i><b>x<sub>0</sub></b></i>, in the direction of the gradient, and the greatest decrease in the opposite direction.</p>
+</div>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index</a>
+<a href="composite.html">Differentiating composite functions &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
