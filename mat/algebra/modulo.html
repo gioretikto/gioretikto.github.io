@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Aritmetica modulare"/>
+ <title>Aritmetica modulare</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Aritmetica modulare</h1>
+
+<p>We focus in this paragraph on an important relation in ℤ, <i>the congruence relation modulo a positive integer n</i>. This relation identifies two integers if and only if their difference is a multiple of <i>n</i>. Questa relazione quindi si può pensare come un'uguaglianza a meno di multipli di <i>n</i>.</p>
+
+<p><b>Definition 4.0</b> - Let <i>n</i> be a given natural number. The <i>Congruence modulo relation</i> is defined thus:</p>
+
+<div class="eq">
+<p><i>a ≡ b</i> (modulo <i>n</i>) &emsp; ⇔ &emsp; <i>a</i> − <i>b</i> = <i>nh</i> &emsp; for some <i>h</i> &in; ℤ</p>
+</div>
+
+<p>For example, we can write</p>
+
+<p>38 ≡ 14 &emsp; (mod 12)</p>
+
+<p>because 38 − 14 = 24, which is a multiple of 12.</p>
+
+<p><b>Proposition 4.1</b>. Every integer <i>a</i> is congruent modulo <i>n</i> to a unique integer <i>r</i> such that 0 ≤ <i>r</i> &lt; <i>n</i>.</p>
+
+<p><b>Proof</b>. As we may always divide an integer <i>a</i> by <i>n</i> (see <a href="gcd.html#divisionZ">proposition 2.3</a>), if we denote by <i>r</i> the remainder of the division every integer <i>a</i> is congruent modulo <i>n</i> to an integer <i>r</i> such that 0 &le; <i>r</i> &lt; <i>n</i>, in fact <i>a</i> = <i>r</i> + <i>nh</i> ⇒ <i>a − r</i> = <i>nh</i>.□</p>
+
+<p>The set of <i>the integers congruent modulo n</i> (with <i>n</i> &gt; 1) forms a <a href="gruppo.html">group</a>. Consideriamo ad esempio il gruppo degli interi modulo 6. Questo gruppo consiste nell'insieme di sei elementi,</p>
+
+<div class="eq">
+<p><i>{0, 1, 2, 3, 4, 5</i>}</p>
+</div>
+
+<p>e di un'operazione chiamata <i>addizione modulo 6</i>, che può essere descritta nel modo seguente: Si immaginino i numeri compresi tra 0 e 5 distribuiti attorno la circonferenza di un cerchio. Per sommare due numeri <i>h</i> e <i>k</i>, si inizi con <i>h</i> e ci si muova in senso orario di <i>k</i> unità attorno al cerchio: <i>h + k</i> è il punto finale. Ad esmpio, 3 + 3 = 0, 3 + 5 = 2, e così via. L'insieme {0, 1, 2, 3, 4, 5} con questa operazione è chiamato <i>gruppo degli interi modulo 6</i> ed è rappresentato dal simbolo ℤ<sub>6</sub>.</p>
+
+<img src="img/Z6.png" alt="gruppo ℤ<sub>6</sub>"/>
+
+<div class="def">
+
+<p><b>Example</b> - Suppose you look at a clock and want to know what time it will be five hours from now. If it is currently 10 o'clock you do not say "15 o' clock" but rather "3 o' clock". What you do when intepreting a clock is to subtract multiples of 12 when necessary. 54 hours form now it will be "6 o' clock". In fact all you are concerned with the <i>remainder</i> after division by 12:</p>
+
+<div class="eq">
+<p>10 + 44 = 54 = 4 * 12 + 6.</p>
+</div>
+
+<p>we write</p>
+
+<p>44 + 10 ≡ 6 (mod 12)</p>
+
+</div>
+
+<p>The next proposition shows that the modular operator ≡ is an equivalence relation.</p>
+
+<div class="def">
+<p><b>Proposition 4.2</b>. For any integer <i>n &gt; 0</i>. The congruent modulo <i>n</i> relation (≡<sub>n</sub>) on ℤ is an equivalence relation.</p>
+
+<p><b>Proof</b>. To show that congruent modulo <i>n</i> is an equivalent relation, we must prove that ≡<sub>n</sub> is reflexive, symmetric and transitive.</p>
+
+<p><u>Reflexive</u>. If a &in; ℤ, we need to show that <i>a ≡ a</i>. We must show that there is a <i>h</i> &in; ℤ such that <i>a − a = hn</i>. This is simply <i>k = 0</i>.</p>
+
+<p><u>Symmetric</u>. Let <i>a, b</i> &in; ℤ, assume that <i>a ≡ b</i>. We have to show that <i>b ≡ a</i>. If there exists an integer <i>h</i> &in; ℤ so that <i>a − b = hn</i> then <i>b − a = −hn</i> holds true because (−h) is also an integer, so ≡ is symmetric.</p>
+
+<p><u>Transitive</u>. Let <i>a, b</i> &in; ℤ, assume that <i>a ≡ b</i> and <i>b ≡ c</i>, we have to show that <i>a ≡ c</i>. We know from the definition of ≡ that there are integers <i>h<sub>1</sub></i> and <i>h<sub>2</sub></i> such that</p>
+
+<div class="eq">
+<p><i>a − b = h<sub>1</sub>n</i> &emsp; and &emsp; <i>b − c = h<sub>2</sub>n</i></p>
+</div>
+
+<p>Adding these two equations gives <i>a − c</i> = (<i>h<sub>1</sub> + h<sub>2</sub></i>)<i>n</i></p>
+
+<p>Since <i>h<sub>1</sub> + h<sub>2</sub></i> &in; ℤ; ≡<sub>n</sub> is transitive.□</p>
+</div>
+
+<p>Notice that an integer is congruent to every other integer modulo 1, that is to say congruence modulo 1 is a trivial equivalence relation; for this reason in what follows we shall in general assume <i>n</i> &gt; 1.</p>
+
+<div class="def">
+<p><b>Proposition 4.3</b>. Let <i>a, b, c, d</i> &in; ℤ. For any integer <i>n &gt; 0</i> the following properties hold</p>
+
+<p>a ≡ b (mod n), &emsp; c ≡ d (mod n)</p>
+
+<p>&emsp;⇓</p>
+
+<ul>
+	<li><p>a + c ≡ b + d (mod n)</p></li>
+	<li><p>ac ≡ bd (mod n)</p></li>
+</ul>
+
+<p><b>Proof</b>.</p>
+
+<div class="eq">
+<p>a ≡ b (mod n) ⇔ <i>a − b = hn</i></p>
+<p>c ≡ d (mod n) ⇔ <i>c − d = kn</i></p>
+</div>
+
+<p>by adding up the two relations: <i>a + c</i> − (<i>b + d</i>) = (<i>h + k</i>)<i>n</i> cioè <i>a + c ≡ b + d</i> (mod <i>n</i>). Analogously <i>ac − bd = ac − ad + ad − bd = a</i>(<i>c − d</i>) + (<i>a − b</i>) = <i>akn + hnd</i> = (<i>ak + hd</i>)<i>n</i> thus <i>ac ≡ bd</i> (mod <i>n</i>).□</p>
+
+</div>
+
+<h2>Equivalence classes</h2>
+
+<p><a href="relazioni.html#equivalence_class">Equivalence classese</a> are known as <b>congruence classes</b> modulo <i>n</i>
+
+<p>Given an integer <i>a</i>, we shall denote by [<i>a</i>]<sub><i>n</i></sub>, or, if no confusion may possibly arise, by [<i>a</i>], or by ā, the congruence class of <i>a</i> modulo <i>n</i>, that is,</p>
+
+<div class="eq">
+<p>[<i>a</i>]<sub>n</sub> = {<i>b</i> ∈ ℤ | <i>b</i> ≡<sub>n</sub> <i>a</i>} = { <i>a + hn</i> | <i>h</i> ∈ ℤ } = {..., <i>a −2n, a −n, a, a + n, a + 2n</i>, ...}.</p>
+</div>
+
+<p>i.e.: congruent integers to <i>a</i> modulo <i>n</i> are those that may written in the form <i>a + nh</i> for a particular <i>h</i> ∈ ℤ. Indeed, if <i>b ≡<sub>n</sub> a</i> thus <i>b − a</i> is a multiple of <i>n</i>, so <i>b − a = nh</i> for a particular <i>h</i> ∈ ℤ, i.e.: <i>b = a + nh</i>. This is the reason why equivalence classes modulo <i>n</i> are also called <b>residue
+classes</b> modulo <i>n</i>.</p>
+
+<p>In base alla teoria vista nel capitolo precedente, tale relazione ripartisce allora ℤ in classi di equivalenza non vuote e disgiunte: in ogni classe vi sono tutti i numeri interi che hanno lo stesso resto quando li si divide per <i>n</i>. Dal momento che il resto <i>r</i> della divisione per <i>n</i> deve soddisfare <i>0 ≤ r &lt; n</i>, i possibili resti sono 0, 1, 2, . . . , <i>n</i> − 1, quindi avremo esattamente <i>n</i> classi di equivalenza.</p>
+
+<div class="def">
+<p><b>Definition 4.4</b>. An <b>equivalence class</b> modulo <i>n</i> consists of those integers which have the same remainder on division by <i>n</i>.</p>
+
+<ul>
+	<li><p>[0] = {integers that, divided by <i>n</i>, give a remainder equal to 0} = {<i>kn</i> | <i>k</i> ∈ ℤ} = {multiples of <i>n</i>};</p></li>
+	<li><p>[1] ={integers that, divided by <i>n</i>, give a remainder equal to 1} = { <i>kn</i> + 1  | <i>k</i> ∈ ℤ}</p></li>
+	<li><p>[2] = {integers that, divided by <i>n</i>, give a remainder equal to 1 = = {<i>kn</i> + 2 | <i>k</i> ∈ ℤ}</p></li>
+	<li><p>[n-1] = {integers that, divided by n, give a remainder equal to n − 1} = = { <i>kn + n</i> − 1 | <i>k</i> ∈ ℤ}.</p></li>
+</ul>
+</div>
+
+<p><p>If <i>n</i> = 2, we only two possible remainder, 0 and 1 and consequently two classes, [0] e [1]: the first contains all integers {<i>2k</i> | <i>k</i> ∈ ℤ} the second all integers <i>2k</i> + 1 | <i>k</i> ∈ ℤ }, i.e. the <a href="relazioni.html#partizione">partition</a> induced on ℤ is that of even and odd numbers.</p>
+
+<p>For example the class [2]<sub>9</sub> is made by integers of the form 2 + 9<i>h</i> al variare di <i>h</i> ∈ ℤ; per <i>h</i> uguale a 0, 1, 2, 3, etc. otteniamo cosı̀ 2 = 2 + 9 · 0, 11 = 2 + 9 · 1, 20 = 2 + 9 · 2, 29 = 2 + 9 · 3, e cosı̀ via, for negative <i>h</i> we obtain −7 = 2 + 9 · (−1), −16 = 2 + 9 · (−2), −25 = 2 + 9 · (−3), and so on. We have thus:</p>
+
+<div class="eq"> 
+<p>[2]<sub>9</sub> = {... , −25, −16, −7, 2, 11, 20, 29, 38, ...};</p>
+</div>
+
+<p>possiamo visualizzare la classe di resto di 2 modulo 9 come l’insieme costituito dai numeri che incontriamo partendo da 2 ed percorrendo l’intera lista dei numeri interi facendo passi di lunghezza 9, sia nel verso positivo che in quello negativo. Le altri classi sono:</p>
+
+<p>[0]<sub>9</sub> = ..., 0, 9, 18, 27, 36, ... ≡ 0 (mod 9)</br>
+[1]<sub>9</sub> = ..., 1, 10, 19, 28, 37, ... ≡ 1 (mod 9)</br>
+[2]<sub>9</sub> = ..., 2, 11, 20, 29, 38, ... ≡ 2 (mod 9)</br>
+[3]<sub>9</sub> = ..., 3, 12, 21, 30, 39, ... ≡ 3 (mod 9)</br>
+[4]<sub>9</sub> = ..., 4, 13, 22, 31, 40, ... ≡ 4 (mod 9)</br>
+[5]<sub>9</sub> = ..., 5, 14, 23, 32, 41, ... ≡ 5 (mod 9)</br>
+[6]<sub>9</sub> = ..., 6, 15, 24, 33, 42, ... ≡ 6 (mod 9)</br>
+[7]<sub>9</sub> = ..., 7, 16, 25, 34, 43, ... ≡ 7 (mod 9)</br>
+[8]<sub>9</sub> = ..., 8, 17, 26, 35, 44, ... ≡ 8 (mod 9)</br>
+..</br>
+[20]<sub>9</sub> = ..., 20, 29, 38, 46, 55, ... ≡ 20 (mod 9)</br>
+..</br>
+</p>
+
+<p>Every number falls into one of the first nine groups, from [0]<sub>9</sub> to [8]<sub>9</sub> and no number falls into more than one group.</p>
+
+<p>Possiamo visualizzare la classe di resto di 2 modulo 9 come l’insieme costituito dai numeri che incontriamo partendo da 2 ed percorrendo l’intera lista dei numeri interi facendo passi di lunghezza 9, sia nel verso positivo che in quello negativo. Scegliamo un qualsiasi altro numero in [2]<sub>9</sub> , ad esempio 20. Qual è la classe di resto di 20 modulo 9? Se ci pensiamo un attimo, ci accorgiamo che è la stessa classe trovata per 2. Infatti ci possiamo spostare da 20 a 2 (con due passi “all’indietro” di lunghezza 9) e da qui, sempre con passi di lunghezza 9, raggiungere tutti i numeri in [2]<sub>9</sub> (per esempio, siccome con cinque passi all’indietro, da 2 si raggiunge −43 = 2 + 9(−5), si potrà raggiungere −43 da 20 effettuando sette passi all’indietro; i primi due passi portano a 2, con i rimanenti cinque si arriva a −43). Vediamo cosı̀ che ogni numero in [2]<sub>9</sub> è anche in [20]<sub>9</sub>. Viceversa, ragionando in modo analogo ma invertendo i ruoli di 20 e 2, scopriamo che, partendo da 2 ed muovendoci solo con passi di lunghezza 9, siccome possiamo raggiungere 20 possiamo anche raggiungere ogni numero in [20]<sub>9</sub>, quindi ogni numero in [20]<sub>9</sub> è anche in [2]<sub>9</sub>. Mettendo insieme questa informazione con la precedente, concludiamo che [20]<sub>9</sub> = [2]<sub>9</sub>. Questa è una regola generale, si ha infatti, per ogni coppia di interi <i>a</i> e <i>b</i> e per ogni intero positivo <i>n</i>:</p>
+
+<div class="eq">
+<p>a ≡<sub>n</sub> b &emsp;⇐⇒&emsp; [a]<sub>n</sub> = [b]<sub>n</sub></p>
+</div>
+
+<p>The set of these residue classes is the quotient set of ℤ indicated with ℤ<sub>n</sub>, which consists of <i>n</i> distinct residue classes modulo n::</p>
+
+<div class="eq">
+<p>ℤ<sub>n</sub> = {[0]<sub>n</sub>, [1]<sub>n</sub>, [2]<sub>n</sub>, . . . , [<i>n</i> − 1]<sub>n</sub>}</p>
+</div>
+
+<p>Thus, using the congruence relation modulo <i>n</i></p>
+
+<div class="eq">
+<p>we passed from the infinite set ℤ to the finite set ℤ<sub>n</sub>.</p>
+</div>
+
+<p>This passage from infinite to finite is often very useful, especially when calculations or checks are to be performed with a computer which, as is well known, only works with finitely many objects.</p>
+
+<p>Come tutte le relazioni di equivalenza, la relazione di congruenza è una sorta di “uguaglianza in senso largo”: consideriamo due numeri “uguali” se lo sono “a meno di mutipli di <i>n</i>”. The symbol ≡ has been introduced by Gauss in the <i>Disquisitiones</i>, by virtue of the analogy with the equality relation. Ora, la relazione di equivalenza per eccellenza, l’uguaglianza, verifica l’ovvia proprietà che se <i>a = b</i> e <i>a′ = b′</i> allora <i>a + a′ = b + b′</i> e <i>aa′ = bb′</i>: vediamo ora che anche la congruenza modulo <i>n</i> si comporta esattamente nello stesso modo.</p>
+
+<p>Notiamo anche che ciascuna delle classi di resto si può rappresentare in tanti (addirittura infiniti) modi diversi, ad esempio [2]<sub>6</sub> = [14]<sub>6</sub> = [6000002]<sub>6</sub>, (6000002 = 2 (mod 6)) quindi anche ℤ<sub>n</sub> si potrà descrivere in molti modi. Ad esempio,</p>
+
+<div class="eq">
+<p>ℤ<sub>n</sub> = {[1]<sub>n</sub>, [2]<sub>n</sub>, ..., [<i>n</i> − 1]<sub>n</sub> , [<i>n</i>]<sub>n</sub>},</p>
+</div>
+
+<h2>Operations on ℤ<sub>n</sub></h2>
+
+<div class="def">
+<p><b>Definition 4.6</b>. Let [<i>a</i>] and [<i>b</i>] be elements of ℤ<sub>n</sub>, then By proposition 4.2 the following operations can be defined</p>
+
+<div class="eq">
+<p>[<i>a</i>]<sub>n</sub> + [<i>b</i>]<sub>n</sub> := [<i>a + b</i>]<sub>n</sub></p>
+<p>[<i>a</i>]<sub>n</sub> ⋅ [<i>b</i>]<sub>n</sub> := [<i>a x b</i>]<sub>n</sub></p>
+</div>
+
+<p>for each <i>a, b</i> ∈ ℤ. These operations are well defined, and do not depend on the representative elements chosen.</p>
+
+<p>Cosa significa? La somma tra due classi di resto A e B (modulo <i>n</i>) si ottiene prendendo un numero <i>a</i> in <i>A</i> ed uno <i>b</i> in <i>B</i>, sommando questi due numeri e considerando come risultato la classe a cui appartiene <i>a + b</i>. Infatti, come abbiamo visto sopra, se <i>a ∈ A</i> e <i>b ∈ B</i> allora <i>A</i>= [<i>a</i>]<sub>n</sub> e <i>B</i> = [<i>b</i>]<sub>n</sub>, e la classe a cui appartiene <i>a + b</i> è [<i>a + b</i>]<sub>n</sub>. Ripetiamolo ancora una volta: questa “classe somma” non dipende dalla scelta di quale particolare elemento a abbiamo selezionato in <i>A</i> e quale <i>b</i> in <i>B</i>: se a 0 ∈ [a]<sub>n</sub> e <i>b</i> 0 ∈ [<i>b</i>]<sub>n</sub> allora <i>a ≡<sub>n</sub> a'</i> e <i>b ≡<sub>n</sub> b'</i>, then by Proposition 4.2, a + b ≡<sub>n</sub> a' + b', cioè [<i>a' + b'</i>]<sub>n</sub> = [<i>a + b</i>]<sub>n</sub>. Analogo discorso vale per la moltiplicazione.</p>
+
+</div>
+
+<p>Quando si opera con gruppi finiti, è utile scrivere la "tavola delle operazioni". Per esempio, la tavola for ℤ<sub>4</sub> and ℤ<sub>5</sub> è</p>
+
+<h4>ℤ<sub>4</sub></h4>
+
+<section>
+<table>
+<thead>
+<tr><th>+</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th>  </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td>  </tr>
+<tr><th>1</th> <td>1</td> <td>2</td> <td>3</td> <td>0</td>  </tr>
+<tr><th>2</th> <td>2</td> <td>3</td> <td>0</td> <td>1</td>  </tr>
+<tr><th>3</th> <td>3</td> <td>0</td> <td>1</td> <td>2</td>  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>⋅</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th>  </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>0</td> <td>0</td> <td>0</td>  </tr>
+<tr><th>1</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td>  </tr>
+<tr><th>2</th> <td>0</td> <td>2</td> <td>0</td> <td>2</td>  </tr>
+<tr><th>3</th> <td>0</td> <td>3</td> <td>2</td> <td>1</td>  </tr>
+</tbody>
+</table>
+</section>
+
+<h4>ℤ<sub>5</sub></h4>
+
+<section>
+<table>
+<thead>
+<tr><th>+</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+<tr><th>1</th> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>0</td> </tr>
+<tr><th>2</th> <td>2</td> <td>3</td> <td>4</td> <td>0</td> <td>1</td> </tr>
+<tr><th>3</th> <td>3</td> <td>4</td> <td>0</td> <td>1</td> <td>2</td> </tr>
+<tr><th>4</th> <td>4</td> <td>0</td> <td>1</td> <td>2</td> <td>3</td> </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>⋅</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr>
+<tr><th>1</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+<tr><th>2</th> <td>0</td> <td>2</td> <td>4</td> <td>1</td> <td>3</td> </tr>
+<tr><th>3</th> <td>0</td> <td>3</td> <td>1</td> <td>4</td> <td>2</td> </tr>
+<tr><th>4</th> <td>0</td> <td>4</td> <td>3</td> <td>2</td> <td>1</td> </tr>
+</tbody>
+</table>
+</section>
+
+<p>La prima tabella descrive l’addizione, la seconda la moltiplicazione in ℤ<sub>n</sub>. In entrambe, per motivi di leggibilità, abbiamo scritto 0, 1, 2, 3, 4 piuttosto che [0]<sub>5</sub>, [1]<sub>5</sub>, [2]<sub>5</sub>, [3]<sub>5</sub>, [4]<sub>5</sub>. Come sono composte e come vanno lette queste tabelle? Molto semplice: nella prima tabella, incrociando una riga, intestata da <i>i</i>, con una colonna, intestata da <i>j</i>, otteniamo un numero che rappresenta la classe [<i>i + j</i>]<sub>5</sub>. Ad esempio, la terza riga (quella intestata da 2) ha uno zero nella quarta posizione (colonna intestata da 3). Questo esprime il fatto che [2]<sub>5</sub> + [3]<sub>5</sub> = [0]<sub>5</sub> = [3+2]<sub>5</sub>. La seconda tabella è costruita allo stesso modo ma con riferimento alla moltiplicazione: nella stessa posizione in cui prima abbiamo trovato uno zero abbiamo ora 1, perché [2]<sub>5</sub> · [3]<sub>5</sub> = [1]<sub>5</sub>. La prima riga (intestata da 0) della tabella per l’addizione riproduce la riga delle intestazioni, perché descrive le somme tra [0]<sub>5</sub> e gli elementi di ℤ<sub>5</sub>, che coincidono con gli elementi stessi: [0]<sub>5</sub> + [<i>j</i>]<sub>5</sub> = [<i>j</i>]<sub>5</sub> per ogni scelta di <i>j</i>; questa proprietà si esprime dicendo che [0]<sub>5</sub> è elemento neutro per l’operazione +. Lo stesso vale per la seconda riga (quella intestata da 1) della tabella per la moltiplicazione: [1]<sub>5</sub> è elemento neutro per l’operazione · in ℤ<sub>5</sub>. Notiamo la simmetria delle tabelle rispetto alla diagonale dall’angolo in alto a sinistra a quello opposto. Sia ha questa simmetria precisamente perché le operazioni considerate verificano la proprità commutativa;</p>
+
+<p>Notice the different structure of ℤ<sub>4</sub> and ℤ<sub>5</sub>, the first set has zero divisors (see <a href="Z_divisibility.html#commutative_ring">Definition 2.4</a>) whilst ℤ<sub>5</sub> is not. Thus ℤ<sub>4</sub> is not an <a href="Z_divisibility.html#integral_domain">integral domain</a>, but ℤ<sub>5</sub> is.</p>
+
+<p>Confrontiamo le tavole di Cayley per ℤ<sub>5</sub> con quelle per ℤ<sub>6</sub>:</p>
+
+<section>
+<table>
+<thead>
+<tr><th>+</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> </tr>
+<tr><th>1</th> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>0</td> </tr>
+<tr><th>2</th> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>0</td> <td>1</td> </tr>
+<tr><th>3</th> <td>3</td> <td>4</td> <td>5</td> <td>0</td> <td>1</td> <td>2</td> </tr>
+<tr><th>4</th> <td>4</td> <td>5</td> <td>0</td> <td>1</td> <td>2</td> <td>3</td> </tr>
+<tr><th>5</th> <td>5</td> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>⋅</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td></tr>
+<tr><th>1</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td></tr>
+<tr><th>2</th> <td>0</td> <td>2</td> <td>4</td> <td>0</td> <td>2</td> <td>4</td></tr>
+<tr><th>3</th> <td>0</td> <td>3</td> <td>0</td> <td>3</td> <td>0</td> <td>3</td></tr>
+<tr><th>4</th> <td>0</td> <td>4</td> <td>2</td> <td>0</td> <td>4</td> <td>2</td> </tr>
+<tr><th>5</th> <td>0</td> <td>5</td> <td>4</td> <td>3</td> <td>2</td> <td>1</td> </tr>
+</tbody>
+</table>
+</section>
+
+<p>Vediamo che mentre la tavola per l’addizione è molto simile a quella che abbiamo costruito per ℤ<sub>5</sub>, quella
+relativa alla moltiplicazione è molto diversa. Nel caso di ℤ<sub>5</sub>, esclusa la riga intestata da zero, che contiene
+solo zeri, in ogni riga sono rappresentati (una ed una sola volta) tutti gli elementi di ℤ<sub>5</sub>. Nel caso di ℤ<sub>6</sub>,
+invece, questo accade solo per la seconda e l’ultima riga, quelle intestate da 1 e 5, non per le altre. Questa differenza è molto significativa: ci dice che ℤ<sub>5</sub> e ℤ<sub>6</sub> sono strutture algebriche molto diverse tra loro. In ℤ<sub>5</sub> ogni elemento diverso dallo zero è, come si dice, <b>invertibile</b>, cioè moltiplicato per un opportuno elemento dà [1]<sub>5</sub>, che è, come accennato sopra, elemento neutro rispetto alla moltiplicazione in ℤ<sub>5</sub>. Questo si vede dalla tavola di Cayley per la moltiplicazione di ℤ<sub>5</sub>: in ogni riga, esclusa quella intestata da 0, appare 1. Ad esempio, nella riga intestata da 2 abbiamo trovato 1 in corrispondenza della colonna intestata da 3, perché [2]<sub>5</sub> · [3]<sub>5</sub> = [1]<sub>5</sub>; possiamo esprimere questo fatto dicendo, appunto, che [2]<sub>5</sub> è invertibile in ℤ<sub>5</sub> e che [3]<sub>5</sub> è inverso di [2]<sub>3</sub>. In questo ℤ<sub>5</sub> si comporta come l’<b>anello</b> ℚ dei numeri razionali o quello ℝ dei numeri reali (anelli di questo tipo si chiamano <b>campi</b>), in cui tutti gli elementi diversi da zero hanno inverso (il reciproco) o, equivalentemente, in cui è sempre possibile dividere un elemento per un elemento diverso da zero, e non come ℤ, in cui queste proprietà non valgono. Al contrario, ℤ<sub>6</sub>, ha proprietà più deboli di quelle che valgono in ℤ. Ad esempio, in ℤ (come in ℚ ed in ℝ, ed anche in ℤ<sub>5</sub>) vale la legge di annullamento del prodotto: se il prodotto tra due numeri è zero, uno dei due numeri deve essere zero. Questo non vale in ℤ<sub>6</sub>, come si vede anche dalla tabella; ad esempio [2]<sub>6</sub>· [3]<sub>6</sub> = [0]<sub>6</sub>, benché [2]<sub>6</sub> &ne; [0]<sub>6</sub> &ne; [3]<sub>6</sub>. Vediamo quindi che ℤ, ℤ<sub>5</sub> e ℤ<sub>6</sub> sono strutture algebriche di natura molto diversa tra loro. Senza entrare in dettagli che qui sarabbero fuori luogo, diciamo che la natura dei singoli anelli ℤ<sub>n</sub> è determinata dalle proprietà aritmetiche dei numeri <i>n</i> che li definiscono. Ad esempio, si dimostra che ℤ<sub>n</sub> è un campo se e solo se <i>n</i> è un numero primo.</p>
+
+<h2>The integral domain ℤ<sub>n</sub> when <i>n</i> is a prime</h2>
+
+<div class="def">
+<p><b>Proposition 4.8</b>. For <i>n</i> &gt; 1, ℤ<sub>n</sub> is an integral domain if and only if <i>n</i> is a prime.</p>
+
+<p><b>Proof</b>. Suppose first that <i>n</i> is a prime. Let [<i>a</i>] &ne; [0] in ℤ<sub>n</sub>, and suppose [<i>a</i>][<i>b</i>] = 0 for some [<i>b</i>] in ℤ<sub>n</sub>. Now [<i>a</i>][<i>b</i>] = 0 implies that [<i>ab</i>] = 0, and therefore, <i>n</i>| <i>ab</i>. However, [<i>a</i>] &ne; 0 means that <i>n</i> ∤ <i>a</i>. Thus <i>n</i> | <i>ab</i> and <i>n</i> ∤ <i>a</i> imply by <a href="gcd.html#euclid_lemma">Euclid's lemma</a> that <i>n</i>|<i>b</i>, that is [<i>b</i>] = 0. We have shown that if [<i>a</i>] &ne; [0], the only way that [<i>a</i>][<i>b</i>] = 0 can be [0] is for [<i>b</i>] to be [0]. Therefore, ℤ<sub>n</sub> has no zero divisors and is an integral domain.</p>
+
+<p>Suppose now that <i>n</i> is not a prime and [<i>a</i>][<i>b</i>] = 0 holds true. Then <i>n</i> has divisors other than &pm; 1 and &pm; <i>n</i>, so there are integers <i>a</i> and <i>b</i> such that</p>
+
+<div class="eq">
+<p><i>n = ab</i> &emsp; where 1 &lt; a &lt; n &emsp; and &emsp; 1 &lt; b &lt; n</i></p>
+</div>
+
+<p>This means that [<i>a</i>] &ne; [0], [<i>b</i>] &ne; 0, but</p>
+
+<div class="eq">
+<p>[<i>a</i>] [<i>b</i>] = [<i>ab</i>] = [<i>n</i>] = [0]</p>
+</div>
+
+<p>Therefore, [<i>a</i>] is a zero divisor in ℤ<sub>n</sub>, and ℤ<sub>n</sub> is not an integral domain. Combining the two cases, we see that <i>n</i> is a prime if and only if ℤ<sub>n</sub> is an integral domain.□</p>
+</div>
+
+<p>However, it would be wrong to assume that every property holding for the equality holds for congruences as well. For instance, in Z we have the following cancellation property:</p>
+
+<div class="eq">
+<p><i>ac = bc</i> &emsp; implies &emsp; <i>a = b</i>,</p>
+</div>
+
+<p>as long as <i>c</i> &ne;0. In other words, ℤ is an <b>integral domain</b>. This property does not hold, in general, for congruences, as the following example shows:</p>
+
+<div class="eq">
+<p>2 · 3 = 6 ≡<sub>6</sub> 12 = 4 · 3, &emsp; but 2 &ne;<sub>6</sub> 4.</p>
+</div>
+
+<p>Nevertheless, the following result holds:</p>
+
+<p><b>Proposition 4.8</b>. Let <i>n &gt; 1</i> be an integer. If <i>ac ≡<sub>n</sub> bc</i> and if <i>c</i> and <i>n</i> are
+coprime, that is if GCD(<i>c, n</i>) = 1, then <i>a ≡<sub>n</sub> b</i>.</p>
+
+<p><b>Proof</b>. If <i>ac ≡<sub>n</sub> bc</i>, then <i>n</i> | (<i>a − b</i>)<i>c</i>. As GCD(<i>c, n</i>) = 1, there exist <i>s, t</i> such that 1 = <i>sc + tn</i> and by multiplying both members by <i>a − b</i>, it is possible to write</p>
+
+<div class="eq">
+<p> <i>a − b</i> = (<i>a − b</i>) <i>sc</i> + (<i>a − b</i>) <i>tn</i> = (<i>a − b</i>) <i>c ⋅ s</i> + (<i>a − b</i>)<i>tn</i></p>
+</div>
+
+<p>thus <i>n</i> | <i>a − b</i>, because it divides the second member, consequenlty <i>a ≡<sub>n</sub> b</i>.□</p>
+
+<p><b>Proposition 4.9</b>. Let <i>n</i> &gt; 1 be an integer. If <i>ac ≡ bc</i> (mod <i>n</i>), then <i>a ≡ b</i>
+(mod <i>n/d</i>), where <i>d</i> = GCD(<i>c, n</i>).</p>
+
+<p><b>Proof</b>. The proposition says that it's possible to simplify a congruence eliminating a term, <i>but</i> the module must be changed accordingly. <i>ac ≡ bc</i> (mod <i>n</i>) ⇐⇒ (<i>a − b</i>) <i>c = kn</i>, from which dividing by <i>d</i> = GCD(<i>c, n</i>), we find that</p>
+
+<div class="eq">
+<p>(<i>a − b</i>) <i>c/d</i> = k(<i>n/d</i>)</p>
+</div>
+
+<p>(the fraction <i>c/d</i> and <i>n/d</i> are integers numbers). Thus <i>n/d</i> divides the product (<i>a − b</i>) <i>c/d</i> and <i>n/d</i> and <i>c/d</i> are coprime: f = c/d, m = n/d, d = gcd(c,n) so gcd(f,m) = gcd(c,n)/d = 1, and so <i>n/d</i> divides <i>a − b</i>, thus <i>a ≡<sub>n/d</sub> b</i>. □</p>
+
+<p>For instance, 21 = 3 · 7 ≡<sub>9</sub> 30 = 3 · 10 and 7 ≢ 10 (mod 9), while 7 ≡ 10 (mod 3). </p>
+
+<p>5 ≢ 8 (mod 9), 5 ≡ 8 (mod 9/3).</p> 
+
+<p><b>Remark 4.10</b>. As a consequence of the above, we may see, for instance, that in ℤ<sub>5</sub> the same cancellation property holds as in Z; in other words, ℤ<sub>5</sub> is, like ℤ, an integral domain, and consequently, since it is finite, a field (see Exercise A1.48). Indeed, if ā· b̄ = <span class="overline">0</span> with ā, b̄ ∈ ℤ<sub>5</sub> and b̄ &ne; = <span class="overline">0</span>, then ā = <span class="overline">0</span> by Proposition 4.8, as GCD(b, 5) = 1. So ℤ<sub>5</sub> is an integral domain. On the other hand, the same results say nothing about ℤ<sub>4</sub> . In fact, in ℤ<sub>4</sub> there are zero-divisors: we have <span class="overline">2</span> ·<span class="overline">2</span> = <span class="overline">0</span> con <span class="overline">2</span> &ne; <span class="overline">0</span>.</p>
+
+<p><b>Proposition 4.10</b>. The following properties hold:</p>
+
+<ol>
+	<li><p>if <i>a ≡<sub>n</sub> b</i> and <i>d</i> | <i>n</i>, then <i>a ≡<sub>d</sub> b</i>;</p></li>
+	<li><p>if <i>a ≡<sub>n</sub> b</i> and <i>a ≡<sub>m</sub> b</i>, then <i>a ≡ b</i> (mod lcm(<i>n, m</i>)).</p></li>
+</ol>
+
+<p><b>Proof</b>. They follow directly from the definition of congruence.□</p>
+
+<div class="def">
+<p><b>Exercise 4.0</b> - On the set ℤ consider the following two equivalence relations:</p>
+
+<ol>
+	<li><p><i>a ≡ b</i> (mod <i>n</i>), that is <i>a𝓡b</i> if and only if <i>a − b = nh</i> for some integer <i>h</i>.</p>
+	<li><p><i>a𝓢b</i> if and only if if <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
+</ol>
+
+<p>Show that <i>a ≡ b</i> (mod <i>n</i>) if and only if <i>a𝓢b</i>; and the two equivalence relations determine the same classes.</p>
+
+<p><b>Solution</b>. We prove first that <i>a ≡ b</i> (mod <i>n</i>), implies <i>a𝓢b</i>. If</p>
+
+<div class="eq">
+<p><i>a − b = hn</i> &emsp; for some integer <i>h</i> &emsp; (2.0)</p>
+</div>
+
+<p>then <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>. Suppose that <i>a</i> has been divided by <i>n</i>, producing the quotient <i>q</i> and the remainder <i>r</i> with 0 &le; r &lt; n. This means that <i>a = nq +r</i>. Replacing <i>a</i> in (2.0) with <i>nq + r</i> yields</p>
+
+<div class="eq">
+<p><i>b = a − hn</i> = (<i>nq + r</i>) − <i>hn</i> = <i>n</i>(<i>q − h</i>) + <i>r</i></p>
+</div>
+
+<p>Let's now divide <i>b</i> by <i>n</i>:</p>
+
+<div class="eq">
+<p><i>b / n</i> = [<i>n</i>(<i>q − h</i>) + <i>r</i>]/<i>n</i> = (<i>q − h</i>) + <i>r/n</i></p>
+</div>
+
+<p>This means that the quotient of the division is the integer <i>q − h</i>, and the remainder is <i>r</i>. Thus, <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
+
+<p>Let’s now prove the converse: <i>a𝓢b</i>, implies <i>a ≡<sub>n</sub> b</i>. By hypothesis <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>; call this common remainder <i>r</i>. Then <i>a = nh + r</i> and <i>b = nk + r</i> with <i>h</i> and <i>k</i> integers, and <i>0 ≤ r &lt; n</i>. To prove that <i>a ≡<sub>n</sub> b</i> we need to check whether <i>a − b</i> is divisible by <i>n</i>. Using the information we have for <i>a</i> and <i>b</i> we obtain</p>
+
+<div class="eq">
+<p><i>a − b</i> = (<i>nh + r</i>) − (<i>nk + r</i>) = <i>nh − nk</i> = <i>n</i>(<i>h − k</i>)</p>
+</div>
+
+<p>The number <i>h − k</i> is an integer because <i>h</i> and <i>k</i> are integers. Thus <i>a ≡<sub>n</sub> b</i>.</p>
+
+<p><i>Part 2</i>. We must prove that the relations "≡<sub>m</sub>" and "𝓢" are equal. By definition [<i>a</i>]<sub>m</sub> = {<i>b</i> ∈ ℤ| <i>b ≡ a</i> (mod <i>m</i>)} and [<i>a</i>]<sub>𝓢</sub> = {<i>b</i> ∈ ℤ|<i>b𝓢a</i>}. Let <i>b</i> ∈ [0]<sub>m</sub>, or equivalently, let <i>a ≡<sub>m</sub> b</i>. By part 1 this is equivalent to stating that <i>a𝓢b</i>. In turn, this is equivalent to saying that <i>b</i> ∈ [<i>a</i>]<sub>𝓢</sub>. Since <i>b</i> ∈ [<i>a</i>]<sub>m</sub> if and only if <i>b</i> ∈ [<i>a</i>]<sub>m</sub>, the two equivalence classes are identical.□</p>
+
+</div>
+
+<p>It is important to know when two relations produce the same equivalence classes, because it is then possible to use either one of the two relations, depending on which one is handier in a given setting.</p>
+
+<section>
+<a href="isomorfismo.html">&#171; Isomorfismo</a>
+<a href="index.html">Index</a>
+<a href="prova_nove.html">Prova del nove &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
