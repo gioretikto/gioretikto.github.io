@@ -54,7 +54,7 @@
 
 <p><i>a&ge; 0</i>. By applying the induction principle in the form 𝕀  with regards to <i>a</i>. If <i>a = 0</i>, it enough to put <i>q = r = 0</i>, and thus <i>P</i>(0) is true.</p>
 
-<p>Let <i>a &gt; 0</i>. Let's see if the hypothesis <i>P(k)</i> true for all <i>k</i> such <i>0 &le; k &lt; a</i> implies <i>P</i>(<i>a</i>) true. If |<i>b</i>| &gt; <i>a</i>, it is enough to put <i>q = 0</i> and <i>r = a</i>. So we can suppose <i>a</i> &ge; |<i>b</i>|. Then <i>a &gt; a</i> − |<i>b</i>| &ge;0 and by the inductive hypothesis <i>P</i>(<i>a</i> − |<i>b</i>|) is true. This means there exist two integers <i>q',r'</i> such that <i>a</i> − |<i>b</i>| = <i>bq'+r', 0 &le; r' &lt;</i> |<i>b</i>|, from which we can deduce <i>a</i> = |<i>b</i>| + <i>bq'+r'</i>. In the case <i>b &gt; 0</i> or <i>b&lt; 0</i> we'll have respectevely <i>a = b(q'+1) + r'</i> or <i>a = b</i>(<i>q − 1</i>) + <i>r'</i>, with  0 &le; r' &lt; |b|, i.e. <i>P</i>(<i>a</i>) is true, with <i>q = q' + 1</i>, <i>r = r'</i>, in the case <i>b</i> &gt; 0, and <i>q = q' − 1</i>, <i>r = r'</i>, if <i>b</i> &lt; 0. Owing to the inductive principle, <i>P</i>(<i>a</i>) is true for every <i>a</i>.</p>
+<p>Let <i>a &gt; 0</i>. Let's see if the hypothesis <i>P</i>(<i>k</i>) true for all <i>k</i> such <i>0 &le; k &lt; a</i> implies <i>P</i>(<i>a</i>) true. If |<i>b</i>| &gt; <i>a</i>, it is enough to put <i>q = 0</i> and <i>r = a</i>. So we can suppose <i>a</i> &ge; |<i>b</i>|. Then <i>a &gt; a</i> − |<i>b</i>| &ge;0 and by the inductive hypothesis <i>P</i>(<i>a</i> − |<i>b</i>|) is true. This means there exist two integers <i>q',r'</i> such that <i>a</i> − |<i>b</i>| = <i>bq'+r', 0 &le; r' &lt;</i> |<i>b</i>|, from which we can deduce <i>a</i> = |<i>b</i>| + <i>bq'+r'</i>. In the case <i>b &gt; 0</i> or <i>b&lt; 0</i> we'll have respectevely <i>a</i> = <i>b</i>(<i>q' + 1</i>) + <i>r'</i> or <i>a = b</i>(<i>q − 1</i>) + <i>r'</i>, with  0 &le; r' &lt; |<i>b</i>|, i.e. <i>P</i>(<i>a</i>) is true, with <i>q = q' + 1</i>, <i>r = r'</i>, in the case <i>b</i> &gt; 0, and <i>q = q' − 1</i>, <i>r = r'</i>, if <i>b</i> &lt; 0. Owing to the inductive principle, <i>P</i>(<i>a</i>) is true for every <i>a</i>.</p>
 
 <p><i>a &lt; 0</i>. In this case we get <i>−a</i> &gt; 0. There exist thus, from what we have proved in the first part two integers <i>r*</i> and <i>q*</i> such that <i>−a = bq* - r*</i>, with 0 &le; r* &lt; |b|</i>.</p>
 
@@ -146,7 +146,7 @@ are 1 and <i>p</i> itself. Then Theorem 2.17 implies that <i>p</i> | <i>b</i>. T
 
 <p><b>Proof</b>. If <i>a</i> and <i>b</i> are coprime, we have gcd(<i>a, b</i>) = 1 and the claim follows from Bézout’s identity. On the other hand, suppose equation (2.16) holds. Let <i>d</i> be a common divisor of <i>a</i> and <i>b</i>. Then clearly <i>d</i> divides <i>αa + βb</i> too, and so divides 1. Thus either <i>d</i> = 1 or <i>d</i> = −1, and consequently <i>a</i> and <i>b</i> are relatively prime.□</p>
 
-<p><b>Proposition 2.22</b>. Let <i>a</i> and <i>b</i> be two positive integers and let <i>d</i> = gcd(<i>a, b</i>). If <i>a = dn</i> e <i>b = dm</i>, we have gcd(<i>n, m</i>) = 1.</p>
+<p><b>Corollary 2.22</b>. Let <i>a</i> and <i>b</i> be two positive integers and let <i>d</i> = gcd(<i>a, b</i>). If <i>a = dn</i> e <i>b = dm</i>, we have gcd(<i>n, m</i>) = 1.</p>
 
 <p><b>Proof</b>. Equation (2.15) may now be written as</p>
 
@@ -160,9 +160,25 @@ are 1 and <i>p</i> itself. Then Theorem 2.17 implies that <i>p</i> | <i>b</i>. T
 <p><i>αn + βm = 1</i></p>
 </div>
 
-<p>and by applying Proposition 2.20 we conclude that <i>n</i> and <i>m</i> are relatively prime. □</p>
+<p>and by applying Proposition 2.21 we conclude that <i>n</i> and <i>m</i> are relatively prime. □</p>
 
-<p><b>Lemma 2.22</b>: Let <i>a</i> and <i>b</i> be two integers, then gcd(<i>a,b</i>) = gcd(<i>a,a&pm;b</i>).</p>
+<p><b>Corollary 2.23</b>. Let <i>a, b<sub>1</sub></i>, and <i>b<sub>2</sub></i> be integers such that <i>a</i> and <i>b<sub>1</sub></i> are coprime, and so are <i>a</i> and <i>b<sub>2</sub></i>. Then <i>a</i> is coprime with <i>b<sub>1</sub>b<sub>2</sub></i>.</p>
+
+<p><b>Proof</b>. We can write</p>
+
+<div class="eq">
+<p>1 = <i>αa + β<sub>1</sub> b<sub>1</sub></i>, &emsp; 1 = <i>α'a + β<sub>2</sub> b<sub>2</sub></i></p>
+</div>
+
+<p>By multiplying them, we get</p>
+
+<div class="eq">
+<p>1 = (<i>αα'a + αβ<sub>2</sub> b<sub>2</sub> + α' β<sub>1</sub>b<sub>1</sub></i>)<i>a</i> + (<i>β<sub>1</sub> β<sub>2</sub></i>)(<i>b<sub>1</sub> b<sub>2</sub></i>)</p>
+</div>
+
+<p>proving the claim.□</p>
+
+<p><b>Lemma 2.24</b>: Let <i>a</i> and <i>b</i> be two integers, then gcd(<i>a,b</i>) = gcd(<i>a,a&pm;b</i>).</p>
 
 <p><b>Proof</b>. We prove something stronger: every integer which is a common divisor of <i>a</i> and <i>b</i> is also a common divisor of <i>a</i> and <i>a &pm; b</i>; viceversa, every integer which is a common divisor of <i>a</i> and <i>a &pm; b</i> is also a common divisor of <i>a</i> and <i>b</i>. In math language we show that the two sets:</p>
 
