@@ -48,14 +48,14 @@
 <p>Thus φ(12) = 4 because the numbers less than 12 coprime to 12 are 1, 5, 7, 11.</p>
 <p>φ(20) = 8 because because the numbers less than 20 are 1, 3, 7, 9, 11, 13, 14, 17.</p>
 
-<p>Euler discovered that, by using this function φ(n), he could generalize Fermat’s little theorem to include composite numbers <i>n</i>.  For example, we observe that 5 is relatively prime to 12 and that 5<sup>φ(12)</sup> ≡ 1 (mod 12); that is, 5<sup>4</sup> ≡ 1 (mod 12), which we can easily verify, since 5<sup>4</sup> = (5<sup>2</sup>)<sup>2</sup> = (25)<sup>2</sup> ≡ 1<sup>2</sup> = 1 (mod 12).</p>
+<p>Euler discovered that, by using this function φ(<i>n</i>), he could generalize Fermat’s little theorem to include composite numbers <i>n</i>.  For example, we observe that 5 is relatively prime to 12 and that 5<sup>φ(12)</sup> ≡ 1 (mod 12); that is, 5<sup>4</sup> ≡ 1 (mod 12), which we can easily verify, since 5<sup>4</sup> = (5<sup>2</sup>)<sup>2</sup> = (25)<sup>2</sup> ≡ 1<sup>2</sup> = 1 (mod 12).</p>
 
 <p>The following propositions allow us to calcula the Euler function <i>for every integer n of which its factorisation is known</i>.</p>
 
 <p><b>Proposition 4.28</b>. Let <i>n = p<sub>1</sub><sup>h<sub>1</sub></sup> p<sub>2</sub><sup>h<sub>2</sub></sup> ··· p<sub>s</sub><sup>h<sub>s</sub></sup></i>, the factorisation of <i>n</i> with <i>p<sub>i</sub></i> distinct prime numbers for <i>i</i> = 1, . . ., s,. Then</p>
 
 <div class="eq">
-<p>&phi;(<i>n</i>) = &phi;(p<sub>1</sub><sup>h<sub>1</sub></sup>) &phi;(p<sub>2</sub><sup>h<sub>2</sub></sup>) ··· &phi;(p<sub>s</sub><sup>h<sub>s</sub></sup>)</p>
+<p>&phi;(<i>n</i>) = &phi;(p<sub>1</sub><sup>h<sub>1</sub></sup>) &phi;(p<sub>2</sub><sup>h<sub>2</sub></sup>) ··· &phi;(p<sub>s</sub><sup>h<sub>s</sub></sup>) &emsp; (<b>4.8</b>)</p>
 </div>
 
 <p><b>Proof</b>. We have to prove that <i>φ</i> is <i>multiplicative</i> i.e.</p>
@@ -83,6 +83,105 @@
 </div>
 
 <p>Where <i>U<sub>k</sub></i> denotes the set of invertible congruence classes in ℤ<sub>k</sub>, consequently |<i>U<sub>mn</sub></i>| =&phi;(<i>mn</i>) = |<i>U<sub>m</sub></i>| ⋅ |<i>U<sub>n</sub></i>| = &phi;(<i>n</i>)⋅&phi;(<i>m</i>).□</p>
+
+<p><b>Proposition 4.29</b>. If <i>p</i> is a prime number, then</p>
+
+<div class="eq">
+<p><i>φ(p<sup>h</sup>) = p<sup>h</sup> − p<sup>h−1</sup></i></p>
+</div>
+
+<p><b>Proof</b>. It is sufficient to note that the only numbers that are not coprime with <i>p<sup>h</sup></i> are the multiples of <i>p</i>, which are of the form</p>
+
+<div class="eq">
+<p><i>p · i</i>, &emsp; with 1 ≤ <i>i</i> ≤ <i>p<sup>h−1</sup></i></p>
+</div>
+
+<p>so there are <i>p<sup>h−1</sup></i> of them.□</p>
+
+<p>The last two proposition allow us to compute Euler function for every integer <i>n</i> for which the prime decomposition is known. For instance,</p>
+
+<div class="eq">
+<p>φ(72) = φ(2<sup>3</sup> · 3<sup>2</sup>) = φ(2<sup>3</sup>) φ(3<sup>2</sup>) = φ(2<sup>3</sup> − 2<sup>2</sup>) (3<sup>2</sup> − 3) = 24</p>
+<p>φ(108) = φ(2<sup>2</sup> · 3<sup>3</sup>) = φ(2<sup>2</sup>)φ(3<sup>3</sup>) = (2<sup>2</sup> − 2)(3<sup>3</sup>− 3<sup>2</sup>) = 36.
+</div>
+
+<p>Even though we are able to calculare φ(<i>n</i>) when the factorisation is known, for large numbers to find all primes that divide <i>n</i> becomes a challenging task.</p>
+
+<p><b>Theorem 4.30</b> (<i>Euler’s Theorem</i>). If (<i>a,n</i>) = 1, then</p>
+
+<div class="eq">
+<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>n</i>).</p>
+</div>
+
+<p><b>Proof</b>. We first prove that</p>
+
+<div class="eq">
+<p><i>a<sup>φ(p<sup>k</sup>)</sup></i> ≡ 1 &emsp;(mod <i>p<sup>k</sup></i>) &emsp; (<b>4.9</b>)</p></p>
+</div>
+
+<p>We use induction on <i>k</i>. For <i>k</i> = 1</p>
+
+<div class="eq">
+<p><i>a<sup>φ(p)</sup> = a<sup>p − 1</sup></i> ≡ 1 &emsp;(mod <i>p</i>).</p>
+</div>
+
+<p>this is Fermat's little theorem we already proved. Assuming (4.9) is true for <i>k</i> we prove it for <i>k + 1</i>. Equation (4.9) can be written as</p>
+
+<div class="eq">
+<p><i>a<sup>φ(p<sup>k</sup>)</sup> = 1 + hp<sup>k</sup></i></p>
+</div>
+
+<p>for some <i>h</i> &in; ℤ. Not also that</p>
+
+<div class="eq">
+<p><i>a<sup>φ(p<sup>k + 1</sup>)</sup> = p<sup>k + 1</sup> − p<sup>k</sup> = p(p<sup>k</sup> − p<sup>k − 1</sup>) = p · φ(p<sup>k</sup>)</i></p>
+</div>
+
+<p>then</p>
+
+<div class="eq">
+<p><i>a<sup>φ(p<sup>k + 1</sup>)</sup> = a<sup>p · φ(p<sup>k</sup>)</sup> = (1 + hp<sup>k</sup>)<sup>p</sup></i></p>
+<p>= 1 + <i>C<sub>p,1</sub> ⋅ hp<sup>k</sup> + C<sub>p,2</sub> ⋅ (hp<sup>k</sup>)<sup>2</sup> + ... + C<sub>p,p − 1</sub> ⋅ (hp<sup>k</sup>)<sup>p − 1</sup> + (hp<sup>k</sup>)<sup>p</sup></i></p>
+<p>≡ 1 + <i>C<sub>p,1</sub> ⋅ hp<sup>k</sup></i> ≡ 1 &emsp; (mod p<sup>k + 1</sup>)</i></p>
+</div>
+
+<p>Because <i>C<sub>p,1</sub> ⋅ hp<sup>k</sup></i> is a multiple of <i>p<sup>k + 1</sup></i> and the other terms are all ≡ 0 (mod <i>p<sup>k+1</sup></i>).</p>
+
+<p>Now we prove the general case. Let (<i>a,n</i>) = 1 and let</p>
+
+<div class="eq">
+<p><i>n = p<sub>1</sub><sup>h<sub>1</sub></sup> p<sub>2</sub><sup>h<sub>2</sub></sup> ···p<sub>s</sub><sup>h<sub>s</sub></sup></i></p></div>
+
+<p>For what we proved in the first part for all <i>i</i> we have</p>
+
+<div class="eq">
+<p><i>a<sup>φ(p<sub>i</sub><sup>k<sub>i</sub></sup>)</sup></i> ≡ 1 &emsp;(mod p<sub>i</sub><sup>k<sub>i</sub></sup>) &emsp; <i>i</i> = 1, 2, ..., <i>s</i> &emsp; (<b>4.10</b>)</p></p>
+</div>
+
+<p>From the multiplicative property of &phi; follows</p>
+
+<div class="eq">
+<p><i>φ(p<sub>i</sub><sup>k<sub>i</sub></sup></i>)</sup> | &phi;(<i>n</i>) &emsp; &forall;i</p>
+</div>
+
+<p>thus elevating both hands of (4.10) by the power &phi;(n)/φ(p<sub>i</sub><sup>k<sub>i</sub></sup>) we have</p>
+
+<div class="eq">
+<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>p<sub>i</sub><sup>k<sub>i</sub></sup></i>) &emsp; <i>i</i> = 1, 2, ..., <i>s</i></p>
+</div>
+
+<p>which implies</p>
+
+<div class="eq">
+<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>p<sub>1</sub><sup>k<sub>1</sub></sup> p<sub>2</sub><sup>k<sub>2</sub></sup> ···p<sub>s</sub><sup>k<sub>s</sub></sup></i>) &emsp; <i>i</i> = 1, 2, ..., <i>s</i></p>
+</div>
+
+<p>and thus</p>
+
+<div class="eq">
+<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>n</i>).□</p>
+</div>
+
 
 <section>
 <a href="chinese.html">&#171;Chinese remainder theorem</a>
