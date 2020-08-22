@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Primality test; Wilson's Theorem"/>
+ <title>Primality test; Wilson's Theorem</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+
+<div class="content">
+
+<h1>Primality test; Wilson's Theorem</h1>
+
+<p><a href="fermat_little.html">Fermat’s little theorem</a> may be used as a primality test, to verify if a number is not prime. We have seen that if <i>p</i> is a prime number whatever <i>a</i> we have</p>
+
+<div class="eq">
+<p><i>a<sup>p</sup></i> ≡ <i>a</i> &emsp;(mod <i>p</i>) &emsp; (4.4)</p>
+</div>
+
+<p>Then we can state the following proposition</p>
+
+<p><b>Proposition 4.31</b>. If there exists a number <i>a</i> such that</p>
+
+<div class="eq">
+<p><i>a<sup>n</sup> ≢ a</i> &emsp; (mod <i>n</i>),</p>
+</div>
+
+<p>then <i>n</i> is not prime.</p>
+
+<p>For instance, <i>n</i> = 6 is not prime because 2<sup>6</sup> ≢ 2 (mod 6).</p>
+
+<p><b>Proposition 4.32</b>. (<i>Wilson's Theorem</i>) If <i>p</i> is prime, then</p>
+
+<div class="eq">
+<p>(<i>p</i> − 1)! ≡ −1 &emsp; (mod <i>p</i>)</p>
+</div>
+
+<p><b>Proof</b>. For <i>p</i> = 2 and <i>p</i> = 3 the theorem is obvious. So, assume <i>p</i> &gt; 3. Consider the congruence <i>ax</i> ≡ 1 (mod <i>p</i>), where <i>a</i> is one of the integers 1 &le; a &le; <i>p</i>−1. As GCD(<i>a, p</i>) = 1, this congruence admits exactly one solution <i>a'</i> modulo <i>p</i>, with 1 ≤ <i>a'</i> &lt; <i>p</i>. For which values of <i>a</i> does <i>a = a'</i> hold? When <i>a = a'</i> the congruence becomes a<sup>2</sup> ≡ 1 (mod <i>p</i>), which amounts to saying that <i>p</i> divides (<i>a</i> + 1)(<i>a</i> − 1). So, either <i>p</i> divides <i>a</i> + 1 or <i>p</i> divides <i>a</i> − 1. It follows that either <i>a</i> − 1 ≡ 0 (mod <i>p</i>), that is, <i>a</i> = 1, or <i>a</i> + 1 ≡ 0, that is, <i>a</i> = <i>p</i> − 1. Leaving out these two extremal values, the other elements 2, 3, ..., <i>p</i> − 2 can be paired up into (<i>p</i> − 3)/2 pairs {<i>a, a'</i>}, with <i>a &ne; a'</i> such that <i>aa'</i> ≡ 1 (mod <i>p</i>). By multiplying together all the congruences, we obtain 2 · 3 ··· · (<i>p</i> − 2) = (<i>p</i> − 2)! ≡ 1 (mod <i>p</i>). Now, by multiplying both sides by <i>p</i> − 1 ≡ −1 (mod <i>p</i>), we find that (<i>p</i> − 1)! ≡ <i>p</i> − 1 (mod <i>p</i>), which is our claim.□</p>
+
+
+<section>
+<a href="euler.html">&#171; Euler's function and theorem</a>
+<a href="index.html">Index</a>
+<a href="cryptology.html">Cryptology &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
