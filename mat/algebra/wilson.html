@@ -79,8 +79,24 @@
 
 <p>Similarly to Fermat’s little theorem, Wilson’s theorem provides a primality test. In principle, the test works as follows: given <i>n</i>, compute (<i>n</i> − 1)! + 1 and verify whether it is divisible by <i>n</i> or not. If it is not, and only in this case, <i>n</i> is prime.</p>
 
+<div class="eq">
+<p><b><i>n</i> is prime &emsp; ⇐⇒ &emsp; (<i>n</i> − 1)! + 1 is divisible by <i>n</i></b></p>
+</div>
+
 <p>However such a test is unfeasible in practive, (<i>n</i> − 1)! is exponential and we do not an algorithm for its rapid calculation.</p>
 
+<p>The algorithms used to recognise whether a given number is prime or not are know as <i>primality tests</i>. The most natural, but by far not the most efficient way to determine whether a number <i>n</i> is prime consists in verifying that it is not divisible by any number preceding it, that is to say, by 2, 3, 4, . . ., <i>n</i> − 1. A method that reduces the number of division, one of the most ancient method is the so-called <b>sieve of Eratosthenes</b> based on the Fundamental Theorem of Arithmetic, allows in principle, to determine all prime numbers smaller than or equal to a fixed positive integer number <i>n</i>.</p>
+
+<p><b>Proposition 4.34</b>. (<i>sieve of Eratosthenes</i>) If a positive integer <i>n</i> is not divisible by any prime number 
+ smaller than or equal to √<i>n</i>, then <i>n</i> is prime.</p>
+
+<p><b>Proof</b>. Assume <i>n</i> to be reducible, that is to say that <i>n = ab</i> with <i>a</i> and <i>b</i> integers such that 1 &lt; <i>a</i> &lt; <i>n</i> and 1 &lt; <i>b</i> &lt; <i>n</i>. One of the factors, <i>a</i> or <i>b</i>, is necessarily smaller than or equal to <i>n</i>: otherwise we would have <i>n = ab</i> &gt; √<i>n</i> · √<i>n</i> = <i>n</i>, which is impossible. So <i>n</i> has a factor, say <i>b</i>, smaller than or equal to <i>n</i>. If it is prime, the proposition is proved. Otherwise, <i>b</i> has a prime factor <i>p</i>, and <i>p &lt; b ≤ √n</i>.□</p>
+
+<p><b>Example 4.35</b>. To prove that the number 173 is prime, it is sufficient to prove that it is not divisible by any prime smaller than or equal to √173, that is to say that it is not divisible by 2, 3, 5, 7, 11, 13. The reader may easily check that this is the case.</p>
+
+<p>In order to use the <i>sieve of Eratosthenes</i>, however, we need to know the prime numbers smaller than or equal to √<i>n</i>, and this may result incovinient, there are no known recurrence formulas to compute prime numbers, and so there is no efficient
+method to generate prime numbers. So we may use the method in a weaker form, and check if <i>n</i> is divisible by 2, 3, 4, 5, ..., [√<i>n</i>], that is, by all integer numbers smaller than or equal to <i>n</i>. By the way, this is not an efficient method, as its complexity is exponential.</p>
+ 
 <section>
 <a href="euler.html">&#171; Euler's function and theorem</a>
 <a href="index.html">Index</a>

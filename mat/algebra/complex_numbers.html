@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Complex Numbers"/>
+    <title>Complex Numbers</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Algebra</a></li>
+        <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Complex Numbers</h1>
+
+<p>On set of ordered pairs of reals numbers</p>
+
+<div class="eq">
+<p>ℂ = ℝ x ℝ</p>
+</div>
+
+<p>we define the following two operations</p>
+
+<div class="eq">
+<p>(<i>a,b</i>) + (<i>c,d</i>) := (<i>a+c, b+d</i>)</p>
+<p>(<i>a,b</i>) ⋅ (<i>c,d</i>) := (<i>ac − bd, ad + bc</i>)</p>
+</div>
+
+<p>This set is a <a href="Q.html#field">field</a>: the pair (0,0) is the neuter element for addition, (1,0) is the neuter element for multiplication and the pair</p>
+
+<div class="eq">
+<p>(a/(a<sup>2</sup> + b<sup>2</sup>), −b/(a<sup>2</sup> + b<sup>2</sup>))</p>
+</div>
+
+<p>is the inverse of the pair (<i>a,b</i>). The set of pairs (<i>a</i>,0), a &in; ℝ, is the set of reals numbers, because the mapping</p>
+
+<div class="eq">
+<p><i>f</i>: ℝ ⟶ ℂ</p>
+<p><i>r</i> ⟼ (<i>r</i>, 0)</p>
+</div>
+
+<p>is injective and such that <i>f</i>(<i>r + r'</i>) = <i>f</i>(<i>r</i>) + <i>f</i>(<i>r'</i>) and <i>f</i>(<i>r ⋅ r'</i>)  = <i>f</i>(<i>r</i>) ⋅ <i>f</i>(<i>r'</i>) &forall;<i>r,r'</i> &in; ℝ.</p>
+
+<p><b>Definition 4.37</b> A <i>complex number</i> is an ordered pair of real numbers, i.e. an element of ℂ = ℝ x ℝ. With respect to the operations defined above ℂ is a field, containing the real field.</p>
+
+<p>If we indicate the pair (0,1) with the symbol <i>i</i>, we can write</p>
+
+<div class="eq">
+<p>(<i>a,b</i>) = (<i>a</i>,0) + (0,<i>b</i>) = (<i>a</i>, 0) + (0,1)(<i>b</i>,0) = <i>a + ib</i></p>
+<p>i<sup>2</sup> = (0,1)(0,1) = −1</p>
+</div>
+
+<p>The element <i>i</i> &in; ℂ is known as <i>imaginary unit</i>. Using this notation we have</p>
+
+<div class="eq">
+<p>(<i>a + ib</i>) + (<i>c + id</i>) = (<i>a + c</i>) + i (<i>b+d</i>)</p>
+<p>(<i>a + ib</i>) ⋅ (<i>c + id</i>) = (<i>ac −bd</i>) + i (<i>ad+bc</i>)</p>
+</div>
+
+<p>Give <i>z = x + iy</i>, we call <b>complex conjugate</b> of <i>z</i> and we denote it by z̄ the number</p>
+
+<div class="eq">
+<p><i>z̄ = x − iy</i></p>
+</div>
+
+<p>Given <i>z, z<sub>1</sub></i> and <i>z<sub>2</sub></i> the following identities hold</p>
+
+<div class="eq">
+<ol>
+	<li><p><span class="overline">(z̄)</span> = <i>z</i></p></li>
+	<li><p><span class="overline">(<i>z<sub>1</sub> + <sub>2</sub></i>)</span> = <i>z̄<sub>1</sub> + z̄<sub>2</sub></i></p></li>
+	<li><p><span class="overline">(<i>z<sub>1</sub>z<sub>2</sub></i>)</span> = <i>z̄<sub>1</sub>z̄<sub>2</sub></i></p></li>
+	<li><p><i>z = z̄ &emsp;⇐⇒&emsp; z</i> &in; ℝ</p></li>
+	<li><p><i>zz̄ = x<sup>2</sup> + y<sup>2</sup></i> &emsp; is a real number &ge;0; if <i>z</i> &ne; 0, <i>zz̄</i> &gt; 0</p></li>
+</ol>
+</div>
+
+<p>The real number  <i>zz̄</i> is known as <i>norm</i> of the complex number <i>z</i> and its square root √(zz̄) is = (x<sup>2</sup> + y<sup>2</sup>)<sup>1/2</sup> is knwon as <i>module</i> of <i>z</i> and indicated by |<i>z</i>|.</p>
+
+<p>The following properties hold</p>
+
+<div class="eq">
+<ol>
+	<li><p>|<i>z<sub>1</sub>z<sub>2</sub></i>| = |<i>z̄<sub>1</sub></i>|   |<i>z̄<sub>2</sub></i>|</p></li>
+	<li><p>|<i>z<sub>1</sub> + z<sub>2</sub></i>| = |<i>z̄<sub>1</sub></i>| + |<i>z̄<sub>2</sub></i>|</p></li>
+</ol>
+</div>
+
+<p>The last identity is known as <i>Triangle Inequality</i>. If we identify the complex number <i>z = x +iy</i> as the point of the plane <i>P</i>(<i>x,y</i>) the module |<i>z</i>| represents the lenght of the segment O<i>P</i>. </p>
+
+<p>Geometrically, the right-hand part of the triangle inequality states that the sum of the lengths of any two sides of a triangle is greater than the length of the remaining side.</p>
+
+<figure>
+<img src="img/triangle_inequality.png" alt="triangle inequality"/>
+<figcaptin>Geometric representation of triangle inequality</figpcation>
+</figure>
+
+<h2>Trigonometric form</h2>
+
+<p>From the geometric representation of complex numbers</p>
+
+<img src="img/complex_number.png" alt="complex number in plane"/>
+
+<p>let <i>&theta;</i> be the angle subtended between the positive real axis and the line segment <i>OP</i>, and let <i>r<sup>2</sup></i> = x<sup>2</sup> + y<sup>2</sup>, we have the following relations</p>
+
+<div class="eq">
+<p><i>x = r cos <i>&theta;</i> &emsp;y = r sin &theta;</i></p>
+</div>
+
+<p>Thus we can represent the complex number <i>x + iy</i> in the following <i>trigonometric form</i></p>
+
+<div class="eq">
+<p><i>x + iy</i> = <i>r</i>(cos &theta; + <i>i</i> sin &theta;)</p>
+</div>
+
+<p>The angle <i>&theta;</i> is known as the <i>argument</i> of the complex number <i>z</i>, the number <i>r</i> corresponds to the module of <i>z</i>: <i>r</i> = |<i>z</i>| = (x<sup>2</sup> + y<sup>2</sup>)<sup>1/2</sup>. The module, <i>r</i>, is unique, but the angle &theta; is not unique since there are many angles in standard position with <i>P</i> on their terminal side.</p>
+
+<p>If <i>z</i> and <i>z'</i> have the following representation <i>z = r</i>(cos&theta; + <i>i</i> sin&theta;) and <i>z' = r'</i>(cos&theta;' + <i>i</i> sin&theta;') then as it can be easily verified</p>
+
+<div class="eq">
+<p><i>z ⋅ z' = rr'</i>(cos (&theta; + &theta;') + <i>i</i> sin(&theta; + &theta;'))</p>
+</div>
+
+<p>so that the product of two complex numbers in trigonometric form is equal to a complex number having as argument the sum of the arguments and as module the product of moduli. The trigonometric form of a complex number is particularly useful to calculate the powers; for every integer <i>n</i>&gt; 0, we have the following relation known as <i>De Moivre Formula</i></p>
+
+<div class="eq">
+<p><i>z<sup>n</sup> = r<sup>n</sup></i> (cos <i>n</i>&theta;) + <i>i</i> sin <i>n</i>&theta;) &emsp; (<b>4.14</b>)</p>
+</div>
+
+<p>it results also</p>
+
+<div class="eq">
+<p>[<i>r</i>(cos <i>&theta;</i> + <i>i</i> sin &theta;)]<sup>−1</sup> = r<sup>−1</sup> (cos (−<i>&theta;</i>) + <i>i</i>(−sin <i>&theta;</i>)</p>
+</div>
+
+<p>then (4.14) can be extended to arbitrary integers.</p>
+
+<p>If <i>n</i> is a positive integer greater than 1, <i>u</i> and <i>z</i> two complex numbers, if</p>
+
+<div class="eq">
+<p><i>z<sup>n</sup> = u</i> &emsp; (<b>4.15</b>)</p>
+</div>
+
+<p>then <i>z</i> is called an <b>nth root of u</b>. Let</p>
+
+<div class="eq">
+<p><i>u</i> = <i>r</i>(cos &theta; + <i>i</i> sin &theta;), &emsp; <i>z</i> = <i>&rho;</i>(cos &phi; + <i>i</i> sin &phi;)</p>
+</div>
+
+<p>since <i>z<sup>n</sup> = u</i>, we can deduce that <i>r = &rho;<sup>n</sup></i>, i.e. <i>&rho; = r<sup>1/n</sup></i>, thus &rho; is the unique real positive number such that the <i>n</i>-th power is <i>r</i>. Moreover from <i>z<sup>n</sup> = u</i> we can deduce as well that: cos <i>n&phi;</i> = cos &theta; and sin <i>n</i>&phi; = sin &theta;, then <i>n&phi;</i> = &theta; + 2<i>k&pi;</i>, i.e.</p>
+
+<div class="eq">
+<p>&phi; = (&theta; + 2<i>k&pi;</i>) / <i>n</i></p>
+</div>
+
+<p>For an arbitrary integer <i>k</i> &in; ℤ, we obtain the complex number</p>
+
+<div class="eq">
+<p><i>z<sub>k</sub></i> = <i>r<sup>1/n</sup></i> [cos (&theta; + 2<i>k&pi;</i>)/ <i>n</i>  + <i>i</i> sin (&theta; + 2<i>k&pi;</i>)/<i>n</i>]</p>
+</div>
+
+<p>For <i>k</i> = 0, 1, <i>n</i>−1 the <i>z<sub>k</sub></i> are all distincts and represent the distinct <i>n</i>-th roots of <i>u</i>. For <i>u</i> = 0 there is a unique root which is zero.</p>
+
+<p>For <i>u</i> = 1, we have 1 = cos(<i>n&theta;</i>) + <i>i</i> sin(<i>n&theta;</i>), and hence cos(<i>n&theta;</i>) = 1 and sin(<i>n&theta;</i>) = 0. The only way this can happen if <i>n&theta;</i> is an integer multiple of 2&pi;, or equivalently <i>&theta; = 2k&pi;/n</i> for some integer <i>k</i>. So the <i>n</i>-th roots of unity are cos(2<i>k&pi;/n</i>) + <i>i</i> sin(2<i>k&pi;/n</i>), for <i>k</i> = 0,...,<i>n</i>−1. Let</p>
+
+<div class="eq">
+<p>&zeta;<sub><i>n</i>,1</sub> = &zeta; = cos(<i>2k&pi;/n</i>) + <i>i</i> sin(<i>2k&pi;/n</i>), &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
+</div>
+
+<p>Then every <i>n</i>-th root of the unit is equal by De Moivre formula, to the <i>k</i>-th power of &zeta;, i.e.</p>
+
+<div class="eq">
+<p>&zeta;<sub><i>n</i>,k</sub> = &zeta;<sup>k</sup>, &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
+</div>
+
+<p>It can be easily seen that indicated with <i>z<sub>0</sub></i> a root of eq (4.15) all the other roots can be obtained multiplying <i>z<sub>0</sub></i> by the <i>n</i>-th roots of the unit, i.e.</p>
+
+<div class="eq">
+<p><i>z<sub>0</sub>, z<sub>0</sub>&zeta;, z<sub>0</sub>&zeta;<sup>2</sup>,..., z<sub>0</sub>&zeta;<sup>n − 1</sup></i>&emsp; (<b>4.16</b>)</p>
+</div>
+
+<p>In the complex plane, the <i>n</i>-th roots of unity correspond to the <i>n</i> vertices of a regular <i>n</i> - sided polygon inscribed inside the unit circle. We view the vertices of the pentagon as the five 5th roots of unity, that is, the five roots of <i>z<sup>5</sup></i> − 1 = 0.</p></p>
+
+<img src="img/complex_polygon.png" alt="sided polygon inscribed inside the unit circle"/>
+
+<section>
+<a href="different_bases.html">&#171;Representation of numbers in arbitrary bases</a>
+<a href="index.html">Index of Algebra</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

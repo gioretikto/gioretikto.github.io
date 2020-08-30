@@ -116,7 +116,31 @@ congruent to one of them. Assume by contradiction that two of the solutions (4.4
 
 <p><b>Example 4.20</b>. Consider the conguence 3x ≡ 12 (mod 15). So we have gcd(3, 15) = 3 which divides 12. One easy solution is <i>x<sub>0</sub></i> = 4. We have n/d = 5, so the solutions listed in (4.4) in this example are: <i>x<sub>0</sub></i> = 4; <i>x<sub>0</sub></i> + 1*5 = 9, <i>x<sub>0</sub></i> + 2*5 = 14. Now let's take some other value for <i>h</i> &ge; 3, for example <i>h</i> = 4: So <i>x<sub>0</sub></i> + 4*5 = 24. But 24 mod 15 = 9, that means <i>x<sub>0</sub></i> + 4*5 is congruent to <i>x<sub>0</sub></i> + 1*5. Any solution is congruent to ONE of those solutions: The solution with <i>h</i> = 3 is congruent to the one with <i>h</i> = 0; 19-5 = 15.</p>
 
-<p><b>Corollary 4.21</b>. If <i>a</i> and <i>n</i> are relatively prime gcd(<i>a,n</i>) = 1, then the congruence <i>ax ≡ b</i> (mod <i>n</i>) admits exactly one solution modulo <i>n</i>.</p>
+<p><b>Corollary 4.21</b>. If <i>a</i> and <i>n</i> are relatively prime gcd(<i>a,n</i>) = 1, then the congruence <i>ax ≡ b</i> (mod <i>n</i>) admits exactly one solution modulo <i>n</i>: and any two solutions in ℤ are congruent modulo <i>n</i>.</p>
+
+<p><b>Proof.</b> Since a and n are relatively prime, there exist integers s and t such that</p>
+
+<div class="eq">
+<p>1 = as ≡ nt</p>
+<p>⇒&emsp; b = asb + ntb</p>
+<p>⇒&emsp; a(sb) − b = n(−tb)</p>
+<p>⇒&emsp; n | [a(sb) − b]</p>
+<p>⇒&emsp; a(sb) ≡ b (mod n).</p>
+</div>
+
+<p><i>Uniqueness</i>. Thus <i>x = sb</i> is a solution to <i>ax ≡ b</i> (mod <i>n</i>). To complete the proof, suppose that both x and y are integers that are solutions to ax ≡ b (mod n). Then we have</p>
+
+<div class="eq">
+<p><i>ax ≡ b</i> (mod <i>n</i>) &emsp; and &emsp; <i>ay ≡ b</i> (mod <i>n</i>).</p>
+</div>
+
+<p>Using the symmetric and transitive properties of congruence modulo n, we conclude that these relations imply</p>
+
+<div class="eq">
+<p><i>ax ≡ ay</i> (mod <i>n</i>). </p>
+</div>
+
+<p>Since (<i>a, n</i>) = 1, this requires that <i>x ≡ y</i> (mod <i>n</i>), by <a href="congruence_classes.html">Proposition 4.12</a>. Hence any two solutions in ℤ are congruent modulo <i>n</i>.</p>
 
 <p><b>Theorem 4.22.</b> If <i>a ≡ b</i> (mod <i>m</i>) and <i>a ≡ b</i> (mod <i>n</i>), where gcd(<i>m,n</i>) = 1, then <i>a ≡ b</i> (mod <i>mn</i>).</p>
 
