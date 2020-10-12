@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Cyclotomic polynomials"/>
+ <title>Cyclotomic polynomials</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Cyclotomic polynomials</h1>
+
+<p>Recall that the roots of unity for some integer <i>n</i> (i.e. the solutions of <i>x<sup>n</sup></i> − 1 = 0) are the <i>n</i> complex numbers <i>&zeta;<sub>n,0</sub>, &zeta;<sub>n,1</sub>, ..., &zeta;<sub>n,n-1</sub></i>, where</p>
+
+<div class="eq">
+<p><i>&zeta;<sub>n,k</sub> = cos 2&pi;k/n + i sin2&pi;k/n</i>, &emsp; 0 &le; k &lt; <i>n</i></p>
+</div>
+
+<p><b>Definition 4.25</b>. We define the <i>order</i> of the <i>n</i>-th roots of unity, &zeta;, the smallest integer <i>m</i> such that <i>&zeta;<sup>m</sup></i> = 1 and &zeta;<sup>h</sup> &ne; 1 &forall; <i>h = 1,...,m-1</i>. </p>
+
+<p><b>Lemma 4.26</b>. Let &zeta; a root of unity such that for some <i>t &gt; 0</i>, t &in; ℕ, <i>&zeta;<sup>t</sup></i> = 1. Then the order <i>m</i> of &zeta; is a divisor of <i>t</i>.</p>
+
+<p><b>Proof</b>. If <i>m</i> divides <i>t</i>, then <i>t = mc</i> for some integer <i>c</i>, and since <i>&zeta;<sup>m</sup></i> = 1 by the definition of order, it readily follows from <i>&zeta;<sup>t</sup></i> = (<i>&zeta;<sup>m</sup></i>)<sup>c</sup> = 1.□</p>
+
+<p><b>Definition 4.27</b>. A <i>n</i>-th <b>primitive root</b> of unity is an <i>n</i>-th root of unity of order <i>n</i>.</p>
+
+<p>We'll indicate by <i>&zeta;<sub>n</sub></i> the <i>n</i>-root of unity corresponding to <i>k</i> = 1, i.e. <i>&zeta;<sub>n</sub> = &zeta;<sub>n,1</sub> = cos (2&pi;/n) + i sin(2&pi;/n)</i>. It is a root of unity because for (<i>h = 1, ..., n-1</i>) by De Moivre formula</p>
+
+<div class="eq">
+<p><i>&zeta;<sub>n</sub><sup>h</sup> = cos (2<i>h&pi;/n</i>) + i sin(2<i>h&pi;/n</i>) = &zeta;<sub>n,h</sub></i></p>
+</div>
+
+<p>which is different from 1. Raising <i>&zeta;<sub>n</sub></i> to the power of <i>h</i> leads to all the other roots of unity.</p>
+
+<p><b>Proposition 4.28</b>. If <i>&zeta;</i> is a <i>n</i>-root of unity different from 1.</p>
+
+<div class="eq">
+<p><i>1 + &zeta; + &zeta;<sup>2</sup> + ... + &zeta;<sup>n−1</sup></i> = 0</p>
+</div>
+
+<p><b>Proof.</b> We have</p>
+
+<div class="eq">
+<p>(<i>x<sup>n</sup></i> − 1) = (<i>x</i> − 1) (<i>x<sup>n−1</sup> + x<sup>n−2</sup> + ... + x + 1</i>)</p>
+</div>
+
+<p>letting <i>x = &zeta; &ne; 1</i>, yields to</p>
+
+<div class="eq">
+<p>(<i>&zeta;<sup>n−1</sup> + &zeta;<sup>n−2</sup> + ... + &zeta; + 1</i>) = 0.□</p>
+</div>
+
+<p>We've found a single <i>n</i>-th primitive root of unit, and now we want to determine them all. For this task we calculate the order of all <i>n</i>-th roots and isolate the ones which have <i>n</i> as order. We start by an arbitrary  <i>n</i>-th primitive root of unit and we'll calculate the order of all its powers.</p>
+
+<p><b>Proposition 4.29</b>. Let <i>ζ</i> be a primitive <i>n</i>-th root of unity and let <i>k</i> be an integer, then <i>ζ<sup>k</sup></i> has order <i>n</i>/(<i>n,k</i>).</p>
+
+<p><b>Proof.</b> let &delta; = GCD(<i>n,k</i>), <i>k = &delta;k<sub>1</sub></i> and <i>n = &delta;n<sub>1</sub></i>, then (n<sub>1</sub>,k<sub>1</sub>) = 1. We want to determine the order <i>m = m</i>(<i>k</i>) of <i>ζ<sup>k</sup></i>. We have</p>
+
+<div class="eq">
+<p>(<i>ζ<sup>k</sup></i>)<sup>n<sub>1</sub></sup> = (<i>ζ<sup>k<sub>1</sub>&delta;</sup></i>)<sup>n/&delta; = (<i>ζ<sup>n</sup></i>)<sup>k<sub>1</sub></sup> = 1</p>
+</div>
+
+<p>hence</p>
+
+<div class="eq">
+<p><i>m</i> | <i>n<sub>1</sub></i> &emsp; (<b>4.30</b>)</p>
+</div>
+
+<p>We have also</p>
+
+<div class="eq">
+<p><i>&zeta;<sup>km</sup> = (&zeta;<sup>k</sup>)<sup>m</sup> = 1</p>
+</div>
+
+<p>being <i>ζ</i> a primitive <i>n</i>-th root of unity and hence of period <i>n</i> it follows that <i>n</i> | <i>km</i> ⇒ <i>n<sub>1</sub>&delta;</i> | <i>n<sub>1</sub> &delta;m</i>, which yields to <i>n<sub>1</sub></i> | k<sub>1</sub>m</i>. Since (<i>n,k<sub>1</sub></i>) = 1</p>
+
+<div class="eq">
+<p><i>n<sub>1</sub></i> | <i>m</i> &emsp; (<b>4.31</b>)</p>
+</div>
+
+<p>Both (4.30) and (4.31) imply that <i>m = n<sub>1</sub> = n/&delta;</i>.□</p>
+
+<p><b>Corollary 4.32</b>. The primitive <i>n</i>-th roots of unity are</p>
+
+<div class="eq">
+<p><i>&zeta;<sub>n,k</sub></i> = cos <i>2&pi;k/n</i> + i <i>sin2&pi;k/n = &zeta;<sub>n</sub><sup>k</sup></i></p>
+</div>
+
+<p>with 0 &le; <i>k &lt; n</i> and (<i>n,k</i>) = 1 and hence they are <i>&phi;</i>(<i>n</i>), with <i>&phi;</i> Euler's totient function.</p>
+
+<p><b>Proof.</b> Let <i>ζ</i> be a primitive <i>n</i>-th root of unity. Since</p>
+
+<div class="eq">
+<p>(<i>ζ<sup>k</sup></i>)<sup><i>n/&delta;</i></sup></p>
+</div>
+
+<p>follows that <i>ζ<sup>k</sup></i> is primitive if and only if <i>&delta;</i> = 1. Moreover, if <i>k &ge; n</i>, <i>&zeta;<sub>n,k</sub></i> would be one of the roots with index less than <i>k</i> given the periodicity of sin and cos.□</p>
+ 
+<section>
+<a href="polynomials.html">&#171;Polynomials: general properties</a>
+<a href="index.html">Index</a>
+<a href="pol_gcd.html">gcd of polynomials &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
