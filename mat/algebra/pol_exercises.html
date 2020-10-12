@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Exercise on polynomials"/>
+ <title>Exercise on polynomials</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Exercise on polynomials</h1>
+
+<p><b>Exercise 1</b>. Determine GCD(<i>x<sup>4</sup> + x −1, x<sup>3</sup> − 2</i>)</p>
+
+<p><b>Solution</b>.</p>
+
+<div class="eq">
+<p>x<sup>4</sup> + x − 1 = (x<sup>3</sup> − 2) ⋅ x + (3x − 1)
+<p>x<sup>3</sup> − 2 = (3x − 1) (x<sup>2</sup>/3 + x/9 + 1/27) − 53/27</p>
+<p>3x − 1 = 53/27 (27⋅3/53 ⋅ x - 27/53)</p>
+</div>
+
+<p>The last non-zero remainder is −53/27, which is the polynomial (-53/27)⋅x<sup>0</sup>, and we make it monic by dividing by -53/27, 1x<sup>0</sup> = 1.</p>
+
+<p><b>Exercise 2</b>. Determine GCD(<i>x<sup>5</sup> −x<sup>3</sup> +x<sup>2</sup> −2x +1 , x<sup>4</sup> +x<sup>3</sup> + 2x<sup>2</sup> + x +1)</i></p>
+
+<p>Solution</b>.</p>
+
+<div class="eq">
+<p><i>x<sup>5</sup> − x<sup>3</sup> +x<sup>2</sup> −2x +1</i> = (x − 1) ⋅ (x<sup>4</sup> +x<sup>3</sup> + 2x<sup>2</sup> + x +1) + (−2x<sup>3</sup> + 2x<sup>2</sup> − 2x + 2)</p>
+<p>(x<sup>4</sup> + x<sup>3</sup> + 2x<sup>2</sup> + x + 1) = (−x/2 − 1) ⋅ (−2x<sup>3</sup> + 2x<sup>2</sup> − 2x+2) + (3x<sup>2</sup> + 3)</p>
+<p>(-2<i>x<sup>3</sup> + 2x<sup>2</sup> − 2x + 2</i>) = (−2<i>x</i>/3 + 2/3)⋅(3<i>x<sup>2</sup></i>+3)</p>
+</div>
+
+<p>so the last non-zero remainder is 3<i>x</i><sup>2</sup> + 3, and we turn it to a monic per convention: <i>x<sup>2</sup></i> + 1.</p>
+
+<p><b>Exercise 3</b>. Calculate GCD(<i>x<sup>3</sup> + x<sup>2</sup> -6x +1, x<sup>4</sup> −2x<sup>3</sup> -2x -1</i>) with coefficients in ℤ<sub>7</sub> (ℤ<sub>7</sub>[<i>x</i>] means poly whose coeffs are from ℤ<sub>7</sub>).</p>
+
+<p><b>Solution</b>. x<sup>4</sup> −2x<sup>3</sup> in ℤ<sub>7</sub>[<i>x</i>] is -2x − 1 is x<sup>4</sup> + 5x<sup>3</sup> + 5x +6. The coefficient 5 is obtained because −2 ≡ 5 (mod 7). We have</p>
+
+<div class="eq">
+<p>x<sup>4</sup> + 5x<sup>3</sup> + 5x +6 = (x+4)(x<sup>3</sup> + x<sup>2</sup> + x +1) + (2x<sup>2</sup> + 2)</p>
+<p>(x<sup>3</sup> + x<sup>2</sup> + x +1) = (4x+3)(2x<sup>2</sup> + 2)</p>
+</div>
+
+<p>so 2x<sup>2</sup> + 2 -> x<sup>2</sup>+1</p>
+
+<p><b>Exercise 4.</b> Find if they exist <i>h</i>(<i>x</i>) and <i>k</i>(<i>x</i>) such that</p>
+
+<div class="eq">
+<p><i>h</i>(<i>x</i>) (<i>x</i><sup>2</sup> + 1) + <i>k</i>(<i>x</i>) (<i>x</i><sup>3</sup> −3) = 20</p>
+</div>
+
+<p><b>Solution</b>. By the Euclidean division algorithm</p>
+
+<div class="eq">
+<p><i>x</i><sup>3</sup>  − 3 = <i>x</i>(<i>x</i><sup>2</sup> + 1) −<i>x</i> −3</p>
+<p>(<i>x</i><sup>2</sup> + 1) = (−<i>x</i> − 3) (−<i>x</i> + 3) + 10</p>
+<p>(−<i>x</i> − 3) = 1/10 (−<i>x</i> −3) · 1/10</p>
+</div>
+
+<p>by substituting −x − 3 = (x<sup>3</sup> − 3) − x · (x<sup>2</sup> + 1), into (<i>x</i><sup>2</sup> + 1) = (−<i>x</i> − 3) (−<i>x</i> + 3) + 10.</p>
+
+<div class="eq">
+<p>(<i>x</i><sup>2</sup> + 1) =[x<sup>3</sup> − 3 − x · (x<sup>2</sup> + 1)] (−x+3) + 10</p>
+<p>(<i>x</i><sup>2</sup> + 1) = (x<sup>3</sup> − 3) (−x  + 3) −x (x<sup>2</sup> + 1) (−x+3) + 10</p>
+<p>(<i>x</i><sup>2</sup> + 1) +x (x<sup>2</sup> + 1) (−x + 3) + (x<sup>3</sup> − 3) (−x  + 3) = 10</p>
+<p>(<i>x</i><sup>2</sup> + 1) + [1 + x (−x + 3)] + (x<sup>3</sup> − 3) (x − 3) = 10</p>
+</div>
+
+<p>if we multiply by 2 we get</p>
+
+<div class="eq">
+<p><i>20 = (x<sup>2</sup> + 1) (−2x +6x +2) + (x<sup>3</sup> − 3) (2x − 6)</i></p>
+</div>
+
+<p>so we obtain <i>h</i>(<i>x</i>) = <i>−2x +6x +2</i> and <i>k</i>(<i>x</i>) = (2x − 6).</p>
+
+<p><b>Note</b>. In ℚ, 10 is 10x<sup>0</sup>, if we take the monic we can write gcd(<i>x<sup>2</sup> + 1, x</i><sup>3</sup> −3</i>) =1.</p>
+
+<section>
+<a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>
+<a href="index.html">Index</a>
+<a href="fund_theorem_alg.html">Irreducibility of polynomials; Fundamental theorem of algebra &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
