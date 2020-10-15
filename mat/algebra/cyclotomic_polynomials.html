@@ -38,7 +38,7 @@
 <p>We'll indicate by <i>&zeta;<sub>n</sub></i> the <i>n</i>-root of unity corresponding to <i>k</i> = 1, i.e. <i>&zeta;<sub>n</sub> = &zeta;<sub>n,1</sub> = cos (2&pi;/n) + i sin(2&pi;/n)</i>. It is a root of unity because for (<i>h = 1, ..., n-1</i>) by De Moivre formula</p>
 
 <div class="eq">
-<p><i>&zeta;<sub>n</sub><sup>h</sup> = cos (2<i>h&pi;/n</i>) + i sin(2<i>h&pi;/n</i>) = &zeta;<sub>n,h</sub></i></p>
+<p><i>&zeta;<sub>n</sub><sup>h</sup></i> = cos (2<i>h&pi;/n</i>) + i sin(2<i>h&pi;/n</i>) = <i>&zeta;<sub>n,h</sub></i></p>
 </div>
 
 <p>which is different from 1. Raising <i>&zeta;<sub>n</sub></i> to the power of <i>h</i> leads to all the other roots of unity.</p>
@@ -80,10 +80,10 @@
 <p>We have also</p>
 
 <div class="eq">
-<p><i>&zeta;<sup>km</sup> = (&zeta;<sup>k</sup>)<sup>m</sup> = 1</p>
+<p><i>&zeta;<sup>km</sup></i> = (<i>&zeta;<sup>k</sup></i>)<sup><i>m</i></sup> = 1</p>
 </div>
 
-<p>being <i>ζ</i> a primitive <i>n</i>-th root of unity and hence of period <i>n</i> it follows that <i>n</i> | <i>km</i> ⇒ <i>n<sub>1</sub>&delta;</i> | <i>n<sub>1</sub> &delta;m</i>, which yields to <i>n<sub>1</sub></i> | k<sub>1</sub>m</i>. Since (<i>n,k<sub>1</sub></i>) = 1</p>
+<p>being <i>ζ</i> a primitive <i>n</i>-th root of unity and hence of period <i>n</i> it follows that <i>n</i> | <i>km</i> ⇒ <i>n<sub>1</sub>&delta;</i> | <i>n<sub>1</sub> &delta;m</i>, which yields to <i>n<sub>1</sub></i> | <i>k<sub>1</sub>m</i>. Since (<i>n,k<sub>1</sub></i>) = 1</p>
 
 <div class="eq">
 <p><i>n<sub>1</sub></i> | <i>m</i> &emsp; (<b>4.31</b>)</p>
@@ -99,13 +99,102 @@
 
 <p>with 0 &le; <i>k &lt; n</i> and (<i>n,k</i>) = 1 and hence they are <i>&phi;</i>(<i>n</i>), with <i>&phi;</i> Euler's totient function.</p>
 
-<p><b>Proof.</b> Let <i>ζ</i> be a primitive <i>n</i>-th root of unity. Since</p>
+<p><b>Proof.</b> Let <i>ζ</i> be a primitive <i>n</i>-th root of unity. If <i>ζ<sup>k</sup></i> is primitive then <i>(ζ<sup>k</sup>)<sup>n</sup></i> = 1. This implies that from</p>
 
 <div class="eq">
-<p>(<i>ζ<sup>k</sup></i>)<sup><i>n/&delta;</i></sup></p>
+<p>(<i>ζ<sup>k</sup></i>)<sup><i>n/&delta;</i> = 1</sup></p>
 </div>
 
-<p>follows that <i>ζ<sup>k</sup></i> is primitive if and only if <i>&delta;</i> = 1. Moreover, if <i>k &ge; n</i>, <i>&zeta;<sub>n,k</sub></i> would be one of the roots with index less than <i>k</i> given the periodicity of sin and cos.□</p>
+<p><i>ζ<sup>k</sup></i> is primitive if and only if <i>&delta;</i> = 1. Moreover, if <i>k &ge; n</i>, <i>&zeta;<sub>n,k</sub></i> would be one of the roots with index less than <i>k</i> given the periodicity of sin and cos.□</p>
+
+<p><b>Corollary 4.33</b>. We've seen that the powers of <i>ζ<sub>n,1</sub></i> are all the primitive <i>n</i>-th roots of the unit. This is true for any primitive <i>n</i>-th root of the unit, which can be used to generate all <i>n</i>-th roots of the unit.</p>
+
+<p>Consider the polynomial</p>
+
+<div class="eq">
+<p><i>&Phi;<sub>n</sub></i>(<i>x</i>) = (<i>x - &zeta;<sub>1</sub></i>) (<i>x - &zeta;<sub>2</sub></i>) ⋅⋅⋅  (<i>x - &zeta;<sub>&phi;(<i>n</i>)</sub></i>)</p>
+</div>
+
+<p>This polynomial is known as <i>n-th cyclotomic polynomial</i>, because of their relation with the division of the circle; <i>&zeta;<sub>1</sub>, &zeta;<sub>2</sub>, ..., &zeta;<sub>n</sub></i> are the &phi;(<i>n</i>) primitive <i>n</i>-th roots of unit. It is evident that the degree of <i>&Phi;<sub>n</sub></i> is <i>&phi;</i>(<i>n</i>). Any of the φ(n) primitive nth roots of unity generate all <i>n</i>th roots of unity (primtive or not) so the &zeta;<sub>i</sub> that appear in the cyclotomic polynomial can be expressed as &zeta;<sup>i</sup> for <i>i</i> such that 1 &le; <i>i</i> &lt; <i>n</i>.</p>
+
+<p>Moreover for every divisor <i>d</i> of <i>n</i> there exists a n-th root of the unit having <i>d</i> as order (consider <i>&zeta;<sup>n/d</sup></i> and see <a href="pol_cyclo_ex.html">exercise 3</a>. Every <i>n</i>-th root of unity is then an d-th primitive root of the unity with <i>d</i> its order dividng <i>n</i>. We can group all n-th roots of the unit based on their order <i>d</i> and indicate with <i>&Phi;<sub>d</sub></i>(<i>x</i>) the d-th cyclotomic polynomial (whose roots are all the dth primitive roots of the unity).
+
+<p><b>Example 4.34</b> - Consider x<sup>4</sup> − 1. There are four roots {1,-1,<i>i,-i</i>}; 1 and -1 are not primitive roots of the unity, because by definition of order even if 1<sup>4</sup> = 1 or -1<sup>4</sup> = 1 we have 1<sup>2</sup> = 1 and -1<sup>2</sup> = 1. Only <i>i</i> and <i>−i</i> are primitive because no power smaller than 4 gives <i>i<sup>m</sup></i> = 1, or (−<i>i</i>)<i><sup>m</sup></i> = 1. So that</p> 
+
+<div class="eq">
+<p><i>&Phi;</i><sub>4</sub> (<i>x</i>)= (x-i) (x+i) = x<sup>2</sup> + 1</p>
+</div>
+
+<p>The polynomial <i>x<sup>n</sup></i> − whose roots are all the <i>n</i>-th roots of the unit can be factorized as</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup> − 1</i> = ∏<sub><sub><i>d</i>|<i>n</i></sub></sub> &Phi;<sub>d</sub>(<i>x</i>) &emsp; (<b>4.35</b>)</p>
+</div>
+
+<p>this relation yields to</p>
+
+<div class="eq">
+<p><i>n</i> = ∑<sub><i>d|n</i></sub><i> &phi;</i>(<i>d</i>)</p>
+</div>
+
+<p>which is a property of Euler's totient function and can be demostrated without resorting to cyclotomic polynomials.</p>
+
+<p><b>Example 4.36</b> - When <i>n</i> = 2, the only primitive square root of unit is −1 (note that 1 has order 1, i.e. not primitive), so that <i>&Phi;</i><sub>2</sub>(<i>x</i>) = <i>x</i> + 1. When <i>n</i> = 4, the primitive fourth roots of unity are <i>i</i> and <i>-i</i>, so that</p>
+
+<div class="eq">
+<p><i>&Phi;</i><sub>4</sub> = (x−i) (x+i) = x<sup>2</sup> + 1</p>
+</div>
+
+<p>Since <i>&Phi;</i><sub>1</sub> = x −1, we get the factorization</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup> − 1</i> = <i>&Phi;</i><sub>1</sub>(<i>x</i>) <i>&Phi;</i><sub>2</sub>(<i>x</i>) <i>&Phi;</i><sub>4</sub>(<i>x</i>) = (x −1) (x +1) (x<sup>2</sup> +1)</p>
+</div>
+
+<p>Equation 4.35 can be written as well as</p>
+
+<div class="eq">
+<p><i>&Phi;</i><sub>n</sub>(<i>x</i>) = <i>x<sup>n</sup> − 1</i> / ∏<sub><sub><i>d</i>|<i>n</i>,<i>d&ne; n</i></sub></sub> <i>&Phi;</i><sub>d</sub>(<i>x</i>) </p>
+</div>
+
+<p>With this inductive method we can calculate the first cyclotomic polynomials</p>
+
+<div class="eq">
+<p><i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x − 1</i></p>
+<p><i>&Phi;</i><sub>2</sub>(<i>x</i>) = <i>x<sup>2</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x</i> + 1</p>
+<p><i>&Phi;</i><sub>3</sub>(<i>x</i>) = <i>x<sup>3</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x<sup>2</sup> + x </i> + 1</p>
+<p><i>&Phi;</i><sub>4</sub>(<i>x</i>) = <i>x<sup>4</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>)<i>&Phi;</i><sub>2</sub>(<i>x</i>) = <i>x<sup>4</sup></i> − 1 /(<i>x−1</i>)(<i>x+1</i>) = <i>x<sup>2</sup> +1</i></p>
+<p><i>&Phi;</i><sub>5</sub>(<i>x</i>) = <i>x<sup>5</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x<sup>4</sup> +x<sup>3</sup> + x<sup>2</sup> + x + 1</i></p>
+<p><i>&Phi;</i><sub>6</sub>(<i>x</i>) = <i>x<sup>6</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>)<i>&Phi;</i><sub>2</sub>(<i>x</i>)<i>&Phi;</i><sub>3</sub>(<i>x</i>) = <i>x<sup>6</sup> -1</i> /(x−1)(x+1)(x<sup>2</sup>+x+1) = x<sup>2</sup> −x +1</p>
+<p><i>&Phi;</i><sub>7</sub>(<i>x</i>) = <i>x<sup>7</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = x<sup>6</sup> + x<sup>5</sup> + x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x + 1</p>
+<p><i>&Phi;</i><sub>8</sub>(<i>x</i>) = <i>x<sup>8</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>)<i>&Phi;</i><sub>2</sub>(<i>x</i>)<i>&Phi;</i><sub>4</sub>(<i>x</i>) = <i>x<sup>8</sup> -1</i>/(<i>x−1</i>)(<i>x+1</i>)(<i>x<sup>2</sup>+1</i>) = <i>x<sup>4</sup> + 1</i></p>
+<p><i>&Phi;</i><sub>9</sub>(<i>x</i>) = <i>x<sup>9</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) <i>&Phi;</i><sub>3</sub>(<i>x</i>) = <i>x<sup>6</sup> + x<sup>3</sup> + 1</i></p>
+</div>
+
+<p>In general, if <i>p</i> is prime</p>
+
+<div class="eq">
+<p><i>x<sup>p−1</sup></i> = <i>&Phi;</i><sub>1</sub>(<i>x</i>)&Phi;<sub>p</sub>(<i>x</i>).</p>
+<p><i>&Phi;</i><sub>p</sub> (<i>x</i>) = <i>1 + x + x<sup>2</sup> + ... + x<sup>p−2</sup> + x<sup>p−1</sup></i></p>
+</div>
+
+<p>Moreover, for <i>n = p<sup>h</sup></i></p>
+
+<div class="eq">
+<p><i>&Phi;<sub>p<sup>h</sup></sub></i> (<i>x</i>) = <i>1 + x<sup>p<sup>h−1</sup></sup> + (x<sup>h−1</sup>)<sup>p−1</sup></i></p>
+</div>
+
+<p>Indeed</p>
+
+<div class="eq">
+<p><i>x<sup>p<sup>h</sup></sup></i> − 1 = <i>&Phi;<sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub>p<sup>h −1</sup></sub>&Phi;<sub>p<sup>h</sup></sub></i></p>
+</div>
+
+<p>which yields to</p>
+
+<div class="eq">
+<p><i>&Phi;<sub>p<sup>h</sup></sub> = x<sup>p<sup>h</sup></sup> − 1 / &Phi;<sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub>p<sup>h −1</sup></sub> = x<sup>p<sup>h</sup></sup> − 1 / x<sup>p<sup>h− 1</sup></sup> − 1  = 1 + ... + x<sup>p<sup>h−1</sup></sup> + </i>(<i>x<sup>p<sup>h−1</sup>)<sup>p−1</sup></i></p>
+</div>
  
 <section>
 <a href="polynomials.html">&#171;Polynomials: general properties</a>
