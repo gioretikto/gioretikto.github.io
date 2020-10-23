@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Cubic equation and Cardano's Formula"/>
+ <title>Cubic equation and Cardano's Formula</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Cubic equation and Cardano's Formula</h1>
+
+<p>We know the quadratic formula for the solution of degree two equations</p>
+
+<div class="eq">
+<p><i>ax<sup>2</sup> + bx + c = 0</i></p>
+</div>
+
+<p>with <i>a,b,c</i> in a field containing rationals. A formula for the solution of such equations expresses the roots of the equations as functions of the coefficients through square root extraction operations</p>
+
+<div class="eq">
+<p><i>x</i> = [−<i>b &pm; (b<sup>2</sup> − 4ac)<sup>1/2</sup></i>]/2<i>a</i></p>
+</div>
+
+<p>We now focus on the resolution of cubic equations with complex coefficients. Then we study a formula for solving cubic equations with real coefficients.</p>
+
+<p>We start from the following cubin equation</p>
+
+<div class="eq">
+<p><i>ax<sup>3</sup> + ax<sup>2</sup> + bx + c = 0</i> &emsp; (<b>4.38</b>)</p>
+</div>
+
+<p>First, the change of variable substituting <i>x = y − a/3</i> gives:</p>
+
+<div class="eq">
+<p>(<i>y − a/3</i>)<sup>3</sup> + a(<i>y − a/3</i>) + b(<i>y − a/3</i>) + c = y<sup>3</sup> + (<i>b −a<sup>2</sup>/3</i>)<i>y</i> + <i>c − ab/3 + 2a<sup>3</sup>/27</i> = 0</p>
+</div>
+
+<div class="eq">
+<p><i>y<sup>3</sup> + py + q = 0</i> &emsp; (<b>4.39</b>)</p>
+</div>
+
+<p>where</p>
+
+<div class="eq">
+<p><i>p = b - a<sup>2</sup>/3, &emsp; q = c − ab/3 + 2a<sup>3</sup>/27</i></p>
+</div>
+
+<p>which is called the <i>reduced cubic equation</i> or <i>depressed cubic</i>, a reduction due to Cardano and Ferrari.</p>
+
+<p>Hence solving 4.38 is equivalent to solve a cubic equation in which the squared term is missing. The first step towards solving this is involves noting that</p>
+
+<div class="eq">
+<p>(<i>u + v</i>)<sup>3</sup> = <i>u<sup>3</sup> + 3u<sup>2</sup>v + 3uv<sup>2</sup> + v<sup>3</sup> = 3uv</i>(<i>u + v</i>) + (<i>u<sup>3</sup> + v<sup>3</sup></i>)</p>
+<p>(<i>u + v</i>)<sup>3</sup> − <i>3uv</i>(<i>u + v</i>) − <i>v<sup>3</sup> − u<sup>3</sup></i> = 0</p>
+</div>
+
+<p>Comparing this to (4.39), pattern matching suggests that if we are able to find two numbers <i>u</i> and <i>v</i> such that</p>
+
+<div class="eq">
+<p><i>−3uv = p, &emsp; −u<sup>3</sup> − v<sup>3</sup> = q</i> &emsp; (<b>4.40</b>)</p>
+</div>
+
+<p>then the number <i>u+v</i> is a solution of 4.39. We can rewrite these two conditions as</p>
+
+<div class="eq">
+<p><i>u<sup>3</sup>v<sup>3</sup> = −p<sup>3</sup>/27, &emsp; u<sup>3</sup> + v<sup>3</sup> = −q</i></p>
+</div>
+
+<p>Since the following equations are the product and sum of u<sup>3</sup> and v<sup>3</sup> then there is a quadratic equation with roots <i>u<sup>3</sup></i> and <i>v<sup>3</sup></i>. Indeed consider the quadratic eqation</p>
+
+<div class="eq">
+<p>(<i>x − u<sup>3</sup></i>) (<i>x − v<sup>3</sup></i>) = <i>x<sup>2</sup> − xv<sup>3</sup> − xu<sup>3</sup> − v<sup>3</sup>u<sup>3</sup> = x<sup>2</sup> − x</i>(<i>u<sup>3</sup> + v<sup>3</sup></i>) + <i>v<sup>3</sup>u<sup>3</sup></i></p>
+</div>
+
+<p>this equation has clearly the solutions <i>v<sup>3</sup></i> and <i>u<sup>3</sup></i>. We can write it as</p>
+
+<div class="eq">
+<p><i>t<sup>2</sup> + qt −p<sup>3</sup>/27 = 0</i></p>
+</div>
+
+<p>whose roots are</p>
+
+<div class="eq">
+<p>−<i>q/2</i> &pm; (<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>)<sup>1/2</sup></p>
+</div>
+
+<p>thus</p>
+
+<div class="eq">
+<p><i>u<sup>3</sup></i> = −<i>q/2</i> + (<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>)<sup>1/2</sup> &emsp; (<b>4.41</b>)</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>v<sup>3</sup></i> = −<i>q/2</i> − (<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>)<sup>1/2</sup> &emsp; (<b>4.42</b>)</p>
+</div>
+
+<p>Let <i>u<sub>1</sub>,u<sub>2</sub>, u<sub>3</sub></i> and <i>v<sub>1</sub>,v<sub>2</sub>, v<sub>3</sub></i> the roots of 4.41. and 4.42 respectively, we have</p>
+
+<div class="eq">
+<p><i>u<sub>1</sub></i> = (−<i>q/2</i> + (<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>)<sup>1/2</sup>)<sup>1/3</sup>, &emsp; <i>u<sub>2</sub> = &omega;u<sub>1</sub>, &emsp; u<sub>3</sub> = &omega;<sup>2</sup>u<sub>1</sub></i></p>
+</div>
+
+<div class="eq">
+<p><i>v<sub>1</sub></i> = (−<i>q/2</i> − (<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>)<sup>1/2</sup>)<sup>1/3</sup> &emsp; <i>v<sub>2</sub> = &omega;v<sub>1</sub>, &emsp; v<sub>3</sub> = &omega;<sup>2</sup>v<sub>1</sub></i></p>
+</div>
+
+<p>with <i>&omega;</i> primitive cubic root of unity, <i>&omega; = −1/2 +√3<sup>1/2</sup>i/2</i>, <i>&omega;<sup>2</sup> = −1/2 − √3<sup>1/2</sup>i/2</i>.</p>
+
+<p>The roots of <i>y<sup>3</sup> + pt + q</i> = 0 are thus given by the following formula, known as <i>Cardano's formula</i> publichsed by Cardano in his <i>Ars Magna</i> of 1545:</p>
+
+<div class="eq">
+<p><i>y = u + v</i> = (−<i>q/2</i> + (<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>)<sup>1/2</sup>)<sup>1/3</sup> + (−<i>q/2</i> − (<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>)<sup>1/2</sup>)<sup>1/3</sup></p>
+</div>
+
+<p>where <i>u</i> and <i>v</i> are two solutions of of 4.41. and 4.42. Out of the nine combinations of these values of <i>u</i> and <i>v</i>, only three cases of <i>u + v</i> will satisfy 4.40.</p>
+
+<p>Let <i>u<sub>1</sub></i> one of the three possible values of <i>u</i> and let <i>v<sub>1</sub></i> the corresponding value such that <i>u<sub>1</sub>v<sub>1</sub> = −p/3</i>. Then the value of <i>v</i> corresponding to <i>u<sub>2</sub></i> is <i>v<sub>3</sub></i>, because</p>
+
+<div class="eq">
+<p><i>u<sub>2</sub>v<sub>3</sub> = u<sub>1</sub>&omega; ⋅ u<sub>1</sub>&omega;<sup>2</sup> = u<sub>1</sub>v<sub>2</sub>&omega;<sup>3</sup> = u<sub>1</sub>v<sub>1</sub> = −p/3</i></p>
+</div>
+
+<p>whilst for any other choice we do not obtain the desired result</p>
+
+<div class="eq">
+<p><i>u<sub>2</sub>v<sub>2</sub> = u<sub>1</sub>&omega;v<sub>1</sub> = u<sub>1</sub>&omega;v<sub>1</sub> = −p/3 &omega;<sup>2</sup> &ne; −p/3</i></p>
+</div>
+
+<p>Analogously the value of <i>v</i> corresponding to <i>u<sub>3</sub></i> is <i>v<sub>2</sub></i>. The three roots of the depressed equation are thus</p>
+
+<div class="eq">
+<p><i>y<sub>1</sub> = u<sub>1</sub> + v<sub>1</sub>, &emsp; y<sub>2</sub> = u<sub>1</sub>&omega; + v<sub>1</sub>&omega;<sup>2</sup>, &emsp; y<sub>3</sub> = u<sub>1</sub>&omega;<sup>2</sup> + v<sub>1</sub>&omega;</i></p>
+</div>
+
+<h3>Cubic equations with real coefficients</h3>
+
+<p>The nature of the roots of a cubic equation with real coefficients can be found studying the sign of the expression</p>
+
+<div class="eq">
+<p><i>q<sup>2</sup>/4 + p<sup>3</suP>/27</i></p>
+</div>
+
+<p>which appears under the square root. The discriminant of the depressed cubic equation is</p>
+
+<div class="eq">
+<p><i>&Delta; = −4p<sup>3</sup> − 27q<sup>2</sup></i> = −108(<i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>) </p>
+</div>
+
+<p>the discriminant has opposite sign to <i>q<sup>2</sup>/4 + p<sup>3</sup>/27</i>.</p>
+
+<p>Let's examine the three cases that can be found using Cardano's formula.</p>
+
+<ol>
+	<li><p><i>&Delta; &lt; 0</i>: In this case we have a positive sign under the square root, we thus have to extract the cube root of a real number that we know lead to a real solution and two complex conjugate values. Indicating with <i>u<sub>1</sub></i> the real value the corresponding value <i>v<sub>1</sub></i> has to be real as well to have <i>u<sub>1</sub>v<sub>1</sub> = −p/3</i> &in; ℝ. Hence <i>u<sub>1</sub> + v<sub>1</sub></i> is real. The other two roots are</p>
+	
+	<div class="eq">
+	<p><i>y<sub>2</sub> = u<sub>1</sub>&omega; + v<sub>1</sub>&omega;<sup>2</sup> = u<sub>1</sub></i> (−1/2 + i√3/2) + <i>v<sub>1</sub></i> (−1/2 − i√3/2) = −(<i>u<sub>1</sub> + v<sub>1</sub></i>)/2 + i√3 (<i>u<sub>1</sub> − v<sub>1</sub></i>)/2</p>
+	<p><i>y<sub>3</sub> = u<sub>1</sub>&omega;<sup>2</sup> + v<sub>1</sub>&omega;</i> = (<i>u<sub>1</sub> + v<sub>1</sub></i>)/2 − i√3 (<i>u<sub>1</sub> − v<sub>1</sub></i>)/2</p>
+	</div>
+	
+	<p>they are complex conjugate (and not real).</p></li>
+	
+	<li><p><i>&Delta; = 0</i>, In this case </p>
+	
+	<div class="eq">
+	<p><i>u</i> = (−<i>q/2</i>)<sup>1/3</sup>, &emsp; <i>v</i> = (−<i>q/2</i>)<sup>1/3</sup></p>
+	</div>
+	
+	<p>If <i>u<sub>1</sub></i> is the real value of the cubic root, the correponding <i>v<sub>1</sub></i> value is real as well, since <i>u<sub>1</sub>v<sub>1</sub> = −p/3</i> and <i>u<sub>1</sub> = v<sub>1</sub></i>. The roots are</p>
+	
+	<div class="eq">
+	<p><i>y<sub>1</suB> = u<sub>1</sub> + v<sub>1</sub> = 2u<sub>1</sub>, &emsp; y<sub>2</sub> = u<sub>1</sub></i>(<i>&omega; + &omega;<sub>2</sub></i>) = −u<sub>1</sub> &emsp; y<sub>3</sub> = u<sub>1</sub>(<i>&omega;<sup>2</sup> + &omega;</i>) = −u<sub>1</sub>.</p>
+	</div>
+	
+	<p>All the roots are real and two are equal.</p></li>
+	</li>
+	
+	<li><p><i>&Delta; &lt; 0</i>. In this case the expression under the square root is negative, so we extract the cubic root of a complex number, which are complex as well. Thus all values <i>u+v</i> are be complex. A cubic equation always has at least one real root. Suppose this real root to be <i>y<sub>1</sub> = u<sub>1</sub> + v<sub>1</sub></i>. Then <i>u<sub>1</sub></i> and <i>v<sub>1</sub></i> are complex conjugate, since both their product and sum are real numbers. Similarly are complex conjugate also <i>u<sub>1</sub>&omega;</i> with <i>v<sub>1</sub>&omega;<sup>2</sup></i>, and <i>u<sub>1</sub>&omega;<sup>2</sup></i> with <i>v<sub>1</sub>&omega;</i>. Thus <i>y<sub>1</sub> = u<sub>1</sub> + v<sub>1</sub>, y<sub>2</sub> = u<sub>1</sub>&omeha; + u<sub>1</sub>&omega;<sup>2</sup></i> and <i>y<sub>3</sub> = u<sub>1</sub>&omega;<sup>2</sup> + v<sub>1</sub>&omega;</i> are all real and distinct: indeed if we take <i>y<sub>2</sub> = y<sub>3</sub></i> we would have u<sub>1</sub>(&omega; - &omega;<sup>2</sup>) = v<sub>1</sub>(&omega; - &omega;<sup>2</sup>) implying <i>u<sub>1</sub> = v<sub>1</sub></i> which is an absurd. Hence in this case <i>all roots are real and distincts</i>.</p></li>
+		
+</ol>
+
+<p>Focusing one this last case  of a <i>cubic equations with all real roots</i>, Cardano's formula led us to the extraction of cubic roots of complex numbers that we are able to find thanks to the trigonometric representation of complex numbers. For this reason the pratical applicability of Cardano's formula is limited. This case has historically been known as the “<i>casus irreducibilis</i>”, because of the difficulty in showing that these immaginary terms reduce to real terms.</p>
+
+<p><b>Example 4.43</b>. If we take the depressed cubic equation <i>x<sup>3</sup> = 7x</i> + 6, and use the standard recipe for its solution, we obtain a negative number under the sign of the square root i.e. the <i>casus irreducibilis</i>. It is easy to find out the roots −1,−2 and 3. Cardano's formula with p = −7 and q = −6 give us the roots</p>
+
+<div class="eq">
+<p><i>[3 + (36/4 − 343/27)<sup>1/2</sup>)]<sup>1/3</sup> + [3 − (36/4 - 343/27)<sup>1/2</sup>)]<sup>1/3</sup> = [3 + (−100/27)<sup>1/2</sup>)]<sup>1/3</sup> + [3 − (−100/27)<sup>1/2</sup>)]<sup>1/3</sup></i></p>
+</div>
+
+
+<p>To sum up</p>
+
+<div class="def">
+<p>The roots of y<sup>3</sup> + py + q = 0, p,q &in; ℝ with <i>&Delta; = −4p<sup>3</sup> − 27q<sup>2</sup></i></p>
+
+<ul>
+	<li><p>&Delta; &lt; 0 &emsp; one real root and two non-real complex conjugate roots.</p></li>
+	<li><p>&Delta; = 0 &emsp; all real roots with two equal.</p></li>
+	<li><p>&Delta; &gt; 0 &emsp;  the cubic has three distinct real roots</p></li>
+</ul>
+
+</div>
+
+<h2>Quartic Equations</h2>
+
+<p>The solution of quartic equations was found soon after that of cubic equations. It is due to Ludovico Ferrari (1522–1565), a pupil of Cardano, and
+it first appeared in Cardano’s “Ars Magna.”</p>
+
+<p>Let</p>
+
+<div class="eq">
+<p><i>x<sup>4</sup> + ax<sup>3</sup> + bx<sup>2</sup> + cx + d = 0</i></p>
+</div>
+
+<p>be an arbitrary quartic equation. By the change of variable <i>x = y −a/4</i> the cubic term cancels out, and the equation becomes</p>
+
+<div class="eq">
+<p><i>y<sup>4</sup> + py<sup>2</sup> + qy + r = 0</i> &emsp; (<b>4.44</b>)</p>
+</div>
+
+<p>with</p>
+
+<div class="eq">
+<p><i>p = b −6(a/4)<sup>2</sup></i></p>
+<p><i>q = c − ba/2 + (a/2)<sup>2</sup></i></p>
+<p><i>r = d − ac/4 + (a/4)<sup>2</sup>b − 3(a/4)<sup>4</sup></i></p>
+</div>
+
+<p>Moving the linear terms of (4.44) to the right-hand side and completing the square on the left-hand side, we obtain</p>
+
+<div class="eq">
+<p>(<i>y<sup>2</sup> + p/2</i>)<sup>2</sup> = −<i>qy −r</i> + (<i>p</i>/2)<sup>2</sup></p>
+</div>
+
+<p>If we add a quantity <i>u</i> to the expression squared in the left-hand side, we get</p>
+
+<div class="eq">
+<p>(<i>y<sup>2</sup> + p/2 + u</i>)<sup>2</sup> = −<i>qy −r</i> + (<i>p</i>/2)<sup>2</sup> + <i>2uy<sup>2</sup> + pu + u<sup>2</sup></i>&emsp; (<b>4.45</b>)</p>
+</div>
+
+<p>The idea is to determine <i>u</i> in such a way that the right-hand side also is easily seen becomes a square. Looking at the terms in y<sup>2</sup> and in <i>y</i>, it is easily seen that if the right-hand side is a square, then it is the square of √(2u)y − q/2√q 2u; therefore, we should have</p>
+
+<div class="eq">
+<p>−qy −r + (p/2)<sup>2</sup> + 2uy<sup>2</sup> + pu +u<sup>2</sup> = [√(2u)y − q/2√(2u)]<sup>2</sup>&emsp; (<b>4.46</b>)</p>
+</div>
+
+<p>Equating the constant terms, we see that this equation holds if and only if</p>
+
+<div class="eq">
+<p>−<i>r</i> + (<i>p</i>/2)<sup>2</sup> + <i>pu + u<sup>2</sup> = q<sup>2</sup>/8u</i></p>
+</div>
+
+<p>or equivalently, rearranging terms</p>
+
+<div class="eq">
+<p><i>8u<sup>3</sup> + 8pu<sup>2</sup></i> + (2<i>p<sup>2</sup> −8r</i>)<i>u −q<sup>2</sup></i> = 0&emsp; (<b>4.47</b>)</p>
+</div>
+
+<p>So, by solving this cubic equation, we can find a quantity <i>u</i> for which equation (4.46) holds. Returning to equation (4.45), we then have</p>
+
+<div class="eq">
+<p>(<i>y<sup>2</sup> + p/2 + u</i>)<sup>2</sup> = [(2u)<sup>1/2</sup> − q/(2(2u)<sup>1/2</sup>]<sup>2</sup>.</p>
+</div>
+
+<p>hence</p>
+
+<div class="eq">
+<p><i>y<sup>2</sup> + p/2 + u</i> = &pm; [(2u)<sup>1/2</sup> − q/(2(2u)<sup>1/2</sup>]<sup>2</sup>.</p>
+</div>
+
+<p>To complete the discussion, it remains to consider the case where <i>u = 0</i> is a root of equation (4.47), since the calculations above implicitly assume <i>u &ne; 0</i>. But this case occurs only if <i>q = 0</i> and then the initial equation (4.44) is</p>
+
+<div class="eq">
+<p><i>y<sup>4</sup> + py<sup>2</sup> + r</i> = 0</p>
+</div>
+
+<p>which can be easily solved, since it is a quadratic equation in <i>y<sup>2</sup></i>.</p>
+
+<p>To sum up solutions of <i>x<sup>4</sup> + ax<sup>3</sup> + bx<sup>2</sup> + cx + d = 0</i> are if <i>q &ne; 0</i></p>
+
+<div class="eq">
+<p><i>x</i> = &epsilon; (u/2)<sup>1/2</sup> + &epsilon;']-u/2 - p/2 -&epsilon;q/(2(2u)<sup>1/2</sup>1/2</sup> - a/4</p>
+</div>
+
+<p>where ε and ε' can be independently &pm;1. If <i>q = 0</i>, the solutions are</p>
+
+<div class="eq">
+<p><i>x</i> = <i>&epsilon;</i> [−<i>p/2 -&epsilon;'</i>(p/2))<sup>2</sup> −r]<sup>1/2</sup> − a/4</p>
+</div>
+
+<p>Having solved the cubic and quartic by radicals, mathematicians turned to finding a solution by radicals of the quintic 
+
+<p>Paolo Ruffini and Niels-Henrik Abel prove (in 1799 and 1829, respectevely) the unsolvability by radicals "of the general equation" of degree <i>n</i>  for <i>every</i> <i>n &gt; 4</i>. Although the <i>general equation</i> is unsolvable by radicals, some specific equations of this form are solvable; for example <i>x<sup>n</sup> -1 = 0</i> is solvable by radicals for every <i>n &gt; 4</i>. Galois characterized those equations that are solvable by radicals in terms of <i>group theory</i>. We'll cover this later.</p>
+
+<section>
+<a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>
+<a href="index.html">Index</a>
+<a href="symmetric_polynomials.html">Symmetric Polynomials &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
