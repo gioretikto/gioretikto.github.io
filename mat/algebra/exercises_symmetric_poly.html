@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Exercises on symmetric polynomials"/>
+ <title>Exercises on symmetric polynomials</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Exercises on symmetric polynomials</h1>
+
+<p><b>Exercise 1</b>. Prove that the ring 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>] with 𝕂 a field, is an integral domain.</p>
+
+<p><b>Solution</b>. We can represent an element of 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>] as</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>) = ∑ <i>a<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> x<sub>1</sub><sup>i<sub>1</sub></sup> x<sub>2</sub><sup>i<sub>2</sub></sup> ... x<sub>n</sub><sup>i<sub>n</sub></sup></i></p>
+</div>
+
+<p>with deg <i>f = m</i>. The zero  element is the polynomial with all <i>c<sub>k</sub></i> = 0 and the multiplicative identity 1, has <i>c<sub>0</sub></i> = 1, <i>c<sub>k</sub></i>= 0 for <i>k</i> &gt; 0. Every nonzero polynomial has a degree.</p>
+
+<p>If we take a second polynomial <i>g</i> = ∑ <i>b<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> x<sub>1</sub><sup>i<sub>1</sub></sup> x<sub>2</sub><sup>i<sub>2</sub></sup> ... x<sub>n</sub><sup>i<sub>n</sub></sup></i>, deg <i>g = n</i> and consider the product <i>f·g</i>, then</p>
+
+<div class="eq">
+<p>deg(<i>f·g</i>) = deg(<i>f</i>) + deg(<i>g</i>), &emsp; for <i>f,g</i> &ne; 0 in 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>]</p>
+</div>
+
+<p>follows because the leading nonzero term of <i>f·g</i> is <i>a<sub>m</sub> b<sub>n</sub> x<sup>m+n</sup></i>, with <i>a<sub>m</sub>,b<sub>n</sub></i> &ne; 0. Obviously 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>] has no zero divisors and is an integral domain.</p>
+
+<p><b>Exercise 2</b>. Express (<i>if possible</i>) the following polynomials in terms of symmetric elementary functions.</p>
+
+<ol>
+	<li><p><i>x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>2</sub><sup>2</sup>x<sub>3</sub> + x<sub>3</sub><sup>2</sup>x<sub>1</sub></i></p></li>
+	<li><p><i>x<sub>1</sub><sup>3</sup> + x<sub>2</sub><sup>2</sup> + x<sub>2</sub><sup>3</sup> + x<sub>3</sub><sup>2</sup> + x<sub>3</sub><sup>3</sup> + x<sub>1</sub><sup>2</sup></i></p></li>
+	<li><p><i>x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> + x<sub>3</sub><sup>2</sup></i></p></li>
+	<li><p><i>x<sub>1</sub><sup>2</sup>x<sub>2</sub><sup>2</sup> + x<sub>1</sub><sup>2</sup>x<sub>3</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup>x<sub>3</sub><sup>2</sup></i></p></li>
+</ol>
+
+<p><b>Solution</b>.</p>
+
+<ol>
+	<li><p>It is not symmetric (the combination of elementary symmetric function is a symmetric function).</p></li>
+	
+	<li><p>It's a symmetric polynomial with highest term <i>x<sub>1</sub><sup>3</sup></i>, i.e. 300. <i>&phi;<sub>1</sub> = &sigma;<sub>1</sub><sup>3</sup> </i>= (<i>x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub></i>)<sup>3</sup>, <i>f<sub>1</sub> = f − &phi;<sub>1</sub></i> .</p>
+
+<p>&phi;<sub>1</sub> = (<i>x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub></i>)<sup>3</sup> = <i>x<sub>1</sub><sup>3</sup> + x<sub>2</sub><sup>3</sup> + x<sub>3</sub><sup>3</sup></i> + 3(<i>x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>2</sub><sup>2</sup>x<sub>3</sub> + x<sub>3</sub><sup>2</sup>x<sub>1</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup> + x<sub>2</sub>x<sub>3</sub><sup>2</sup> + x<sub>3</sub>x<sub>1</sub><sup>2</sup></i>) + 6<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i></p>
+
+<p><i>f<sub>1</sub> = f − &phi;<sub>1</sub></i> = −3(<i>x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>2</sub><sup>2</sup>x<sub>3</sub> + x<sub>3</sub><sup>2</sup>x<sub>1</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup> + x<sub>2</sub>x<sub>3</sub><sup>2</sup> + x<sub>3</sub>x<sub>1</sub><sup>2</sup></i>) − 6<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i> = −3∑<sub><sub>i ≠ j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub> − 6<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i></p>
+
+<p>whose highest term is −3<i>x<sub>1</sub><sup>2</sup>x<sub>2</sub></i> hence 210.</p>
+
+<p><i>&phi;<sub>2</sub> = −3&sigma;<sub>1</sub>&sigma;<sub>2</sub></i> = −3(<i>x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub></i>)(<i>x<sub>1</sub> x<sub>2</sub> + x<sub>1</sub>x<sub>3</sub> + x<sub>2</sub>x<sub>3</sub></i>) = −3∑<sub><sub><i>i ≠ j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub> − 9x<sub>1</sub> x<sub>2</sub> x<sub>3</sub></i>.</p>
+
+<p><i>f<sub>2</sub></i> = −3∑<sub><sub><i>i ≠ j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub> − 6x<sub>1</sub>x<sub>2</sub>x<sub>3</sub> + 3∑<sub><sub>i ≠ j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub> + 9x<sub>1</sub> x<sub>2</sub> x<sub>3</sub> = 3<i>x<sub>1</sub> x<sub>2</sub> x<sub>3</sub></i>.</p>
+
+<p><i>&phi;<sub>3</sub></i> = 3&sigma;<sub>1</sub><sup>1−0</sup> &sigma;<sub>2</sub> <sup>1−1</sup> &sigma;<sub>3</sub><sup>1−0</sup> = 3&sigma;<sub>3</sub> = + 3x<sub>1</sub> x<sub>2</sub> x<sub>3</sub></i>.</p>
+
+<p><i>f<sub>3</sub> = 3x<sub>1</sub> x<sub>2</sub> x<sub>3</sub> − 3x<sub>1</sub> x<sub>2</sub> x<sub>3</sub></i> = 0</p>
+
+<p><i>f = &phi;<sub>1</sub> + &phi;<sub>2</sub> + &phi;<sub>3</sub> = σ<sub>1</sub><sup>3</sup> − 3σ<sub>1</sub>σ<sub>2</sub> + 3&sigma;<sub>3</sub></i>.</p></li>
+
+<li><p>The leading term is <i>x<sub>1</sub><sup>2</sup></i> hence 200.</p>
+
+<p><i>&phi;<sub>1</sub> = &sigma;<sub>1</sub><sup>2</sup></i> = (<i>x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub></i>)<sup>2</sup> = <i>x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> + x<sub>3</sub><sup>2</sup></i> + 2(<i>x<sub>1</sub>x<sub>2</sub> + x<sub>2</sub>x<sub>3</sub> + x<sub>1</sub>x<sub>3</sub></i>) </p>
+
+<p><i>f<sub>1</sub> = f − &sigma;<sub>1</sub><sup>2</sup></i> = 2(<i>x<sub>1</sub>x<sub>2</sub> + x<sub>2</sub>x<sub>3</sub> + x<sub>1</sub>x<sub>3</sub></i>)
+</p>
+
+<p>with leading term 2<i>x<sub>1</sub>x<sub>2</sub></i> hence 110.</p>
+
+<p><i>&phi;<sub>2</sub></i> = 2&sigma;<sub>1</sub><sup>1-1</sup></i> &sigma;<sub>2</sub><sup>1-0</sup> = 2&sigma;<sub>2</sub> = 2(<i>x<sub>1</sub>x<sub>2</sub> + x<sub>2</sub>x<sub>3</sub> + x<sub>1</sub>x<sub>3</sub></i>)</p>
+<p>And <i>f<sub>3</sub> = f<sub>2</sub> −&phi;<sub>2</sub> = 0</i></p>
+
+<p>Thus <i>f = &phi;<sub>1</sub> + &phi;<sub>2</sub> = &sigma;<sub>1</sub><sup>2</sup> + 2&sigma;<sub>2</sub></i></p>
+
+</li>
+
+<li>It's not a symmetric polynomial.</p></li>
+</ol>
+
+<section>
+<a href="symmetric polynomials.html">&#171;Symmetric Polynomials</a>
+<a href="index.html">Index</a>
+<a href="relations.html">Relations &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

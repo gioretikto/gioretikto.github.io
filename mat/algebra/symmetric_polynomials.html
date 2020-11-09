@@ -23,7 +23,7 @@
 
 <p>We introduced 𝕂[<i>x</i>] the ring of polynomials in one indeterminate with coefficients over 𝕂. This definition can be extended to a case in which the coefficients vary over a commutative ring (e.g: ℤ) rather than a field. In this case we have a <i>ring of polynomials with coefficients in a ring R</i> and will be indicated by <i>R</i>[<i>x</i>].</p>
 
-<p><b>4.47. Definition</b>. The ring <i>R</i> of polynomials with <i>n</i> indeterminates and coefficients over the field 𝕂  is defined inductively in the following way</p>
+<p><b>4.47. Definition</b>. The ring <i>R</i> of polynomials in <i>n</i> indeterminates and coefficients over the field 𝕂  is defined inductively in the following way</p>
 
 <div class="eq">
 <p><i>R<sub>1</sub></i> ≡ 𝕂[<i>x</i>], &emsp; <i>R<sub>n</sub> ≡ R<sub>n − 1</sub></i>[<i>x</i>]</p>
@@ -136,7 +136,7 @@
 <p><i>a<sub>2</sub></i> = <i>r<sub>1</sub>r<sub>2</sub> + r<sub>1</sub>x<sub>3</sub> + ... + r<sub>1</sub>x<sub>n</sub> + r<sub>2</sub>x<sub>3</sub> + ... + r<sub>n−1</sub> r<sub>n</sub></i></p>
 <p><i>a<sub>3</sub></i> = −(<i>r<sub>1</sub>r<sub>2</sub>x<sub>3</sub> + r<sub>1</sub>r<sub>2</sub>x<sub>4</sub> + ... + r<sub>n−2</sub>x<sub>n−1</sub> x<sub>n</sub></i>)</p>
 <p>...</p>
-<p><i>a<sub>n</sub></i> = (−1)<sup>n</sup> <i>r<sub>1</sub>x<sub>2</sub>⋅⋅⋅r<sub>n</sub></i></p>
+<p><i>a<sub>n</sub></i> = (−1)<i><sup>n</sup> r<sub>1</sub>x<sub>2</sub>⋅⋅⋅r<sub>n</sub></i></p>
 </div>
 
 <p>The above relations are known as the <i>Viète formulas</i>: they relate the coefficients of a polynomial to sums and products of its roots. </p>
@@ -179,13 +179,13 @@ with coefficients in 𝕂.</p>
 
 <p>which is again a monomial of <i>f</i>(<i>x<sub>1</sub>,x<sub>2</sub>, ..., x<sub>n</sub></i>), being <i>f</i> by hyphothesis symmetric.</p>
 
-<p>Consider now the symmetric polynomial (in <i>x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub></i>)</p>
+<p>Consider now the symmetric polynomial (in <i>x<sub>1</sub>,x<sub>2</sub>, ...,x<sub>n</sub></i>)</p>
 
 <div class="eq">
 <p><i>&phi;<sub>1</sub> = &alpha;&sigma;<sub>1</sub><sup>h<sub>1</sub>−h<sub>2</sub></sup>&sigma;<sub>2</sub><sup>h<sub>2</sub>−h<sub>3</sub></sup> ⋅⋅⋅ &sigma;<sub>n−1</sub><sup>h<sub>n−1</sub>−h<sub>n</sub></sup> &sigma;<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
-<p>The leading term of &phi;<sub>1</sub> is given by the product of &alpha; for the leading terms of each &sigma;<sub>i</sub> raised to the power <i>h<sub>1</sub> - h<sub>2</sub>, h<sub>2</sub>-h<sub>3</sub></i>, .., ecc. respectively.</p>
+<p>The leading term of &phi;<sub>1</sub> is given by the product of &alpha; for the leading terms of each &sigma;<sub>i</sub> raised to the power <i>h<sub>1</sub> − h<sub>2</sub>, h<sub>2</sub>−h<sub>3</sub></i>, .., ecc. respectively.</p>
 
 <div class="eq">
 <p><i>&alpha;x<sub>1</sub><sup>h<sub>1</sub>−h<sub>2</sub></sup>(x<sub>1</sub>x<sub>2</sub>)<sup>h<sub>2</sub>−h<sub>3</sub></sup> ⋅⋅⋅(x<sub>1</sub>x<sub>2</sub>⋅⋅⋅x<sub>n</sub>)<sup>h<sub>n</sub></sup> = &alpha;x<sub>1</sub><sup>h<sub>1</sub></sup>x<sub>2</sub><sup>h<sub>2</sub></sup> ⋅⋅⋅ x<sub>n</sub><sup>h<sub>n</sub></sup></p>
@@ -201,15 +201,17 @@ with coefficients in 𝕂.</p>
 <p><i>f = &phi;<sub>1</sub> + &phi;<sub>2</sub> + ... + &phi;<sub>m</sub></i></p>
 </div>
 
-<p>Each &phi;<sub>i</sub>, is a product of the <i>σ</i>, to various powers, which proves that <i>f</i> is a polynomial in the elementary symmetric polynomials. 
+<p>Each &phi;<sub>i</sub>, is a product of the <i>σ</i>, to various powers, which proves that <i>f</i> is a polynomial in the elementary symmetric polynomials. </p>
 
-<p>To prove the uniqueness of the expression we have to prove that if a polynomial (symmetri) can be written in two forms as</p>
+<p><b>Uniqueness</b>. The uniquenesse of the expression follows from the <i>algebraic independence</i> of the elementary symmetric functions. 
+
+<p>To prove the uniqueness of the expression we have to prove that if a polynomial (symmetric) can be written in two forms as</p>
 
 <div class="eq">
 <p>∑ <i>&alpha;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> &sigma;<sub>1</sub><sup>i<sub>1</sub></sup> &sigma;<sub>2</sub><sup>i<sub>2</sub></sup> ... &sigma;<sub>n</sub><sup>i<sub>n</sub></sup></i> = ∑ <i>&beta;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> &sigma;<sub>1</sub><sup>i<sub>1</sub></sup> &sigma;<sub>2</sub><sup>i<sub>2</sub></sup> ... &sigma;<sub>n</sub><sup>i<sub>n</sub></sup></i></p>
 </div>
 
-<p>then <i>&alpha;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> = &beta;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub></i> for all index <i>i<sub>j</sub>, j=1,...,n</i>. It is suffient to prove that if <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) = 0 then all coefficients of  <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) are zero i.e. the polynomial <i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>) in the indeterminates <i>z<sub>i</sub></i> è the zero polynomial. This is equivalent to say that the &sigma;<sub>i</sub> are algebrically independent. In other words we have to prove that</p>
+<p>then <i>&alpha;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> = &beta;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub></i> for all index <i>i<sub>j</sub>, j=1,...,n</i>. It is sufficient to prove that if <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) = 0 then all coefficients of <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) are zero i.e. the polynomial <i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>) in the indeterminates <i>z<sub>i</sub></i> is the zero polynomial. This is equivalent to say that the &sigma;<sub>i</sub> are algebrically independent. In other words we have to prove that</p>
 
 <div class="eq">
 <p><i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>) &ne; 0 &emsp; ⇒ &emsp; <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) &ne; 0</p>
@@ -227,13 +229,114 @@ with coefficients in 𝕂.</p>
 <p><i>ax<sub>1</sub><sup>h<sub>1</sub> + h<sub>2</sub> + ... + h<sub>n</sub></sup> x<sub>2</sub><sup>h<sub>1</sub> + h<sub>2</sub> + ... +h<sub>n</sub></sup>x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
-
 <p>which has a non-zero coefficient and cannot vanish by combination with any other monomial. This completes the proof.□</p>
+
+<p>This theorem asserts that the ring of all symmetric polynomials <b><i>S</i></b>, in <i>n</i> indeterminates is</p>
+
+<div class="eq">
+<p><b><i>S</i></b> = 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>]</p>
+</div>
+
+<div class="def">
+<p><b>Example 4.50</b> Write the symmetric polynomial in 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub></i>]</p>
+
+<div class="eq">
+<p><i>f = ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub> = x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub><sup>2</sup>x<sub>3</sub> + x<sub>2</sub><sup>2</sup>x<sub>1</sub> + x<sub>2</sub><sup>2</sup>x<sub>3</sub> + x<sub>3</sub><sup>2</sup>x<sub>1</sub> + x<sub>3</sub><sup>2</sup>x<sub>2</sub></i></p>
+</div>
+
+<p>in terms of elementary symmetric polynomials <i>&sigma;<sub>k</sub></i>.</p>
+
+<p><b>Solution</b>. We use the same method applied to prove theorem 4.49. The highest degree monomial is <i>x<sub>1</sub><sup>2</sup>x<sub>2</sub></i> with <i>h<sub>1</sub> = 2, h<sub>2</sub> = 1, h<sub>3</sub> = 0</i>. <i>&phi;<sub>1</sub> = &sigma;<sub>1</sub><sup>2−1</sup> &sigma;<sub>2</sub><sup>1</sup> =  &sigma;<sub>1</sub> &sigma;<sub>2</sub></i></p>
+
+<div class="eq">
+<p><i>f<sub>1</sub> = f − &phi;<sub>1</sub> = ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub></i> − (<i>x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub></i>)(<i>x<sub>1</sub> x<sub>2</sub> + x<sub>1</sub>x<sub>3</sub> + x<sub>2</sub>x<sub>3</sub></i>) = ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub></i> − ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub></i> − 3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>)</p>
+</div>
+
+<p>The highest monomial of <i>f<sub>1</sub></i> is −3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>) so <i>h<sub>1</sub> = 1, h<sub>2</sub> = 1, h<sub>3</sub> = 1</i>. We have</p>
+
+<div class="eq">
+<p><i>&phi;<sub>2</sub> = −3&sigma;<sub>1</sub><sup>1−1</sup> &sigma;<sub>2</sub><sup>1−1</sup> &sigma;<sub>3</sub> = −3&sigma;<sub>3</sub></i> = −3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>)</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>f<sub>2</sub> = f<sub>1</sub> − &phi;<sub>2</sub></i> = −3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>) +3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>) = 0</p>
+</div>
+
+<p>thus <i>f = &phi;<sub>1</sub> + &phi;<sub>2</sub> = &sigma;<sub>1</sub>&sigma;<sub>2</sub> −3&sigma;<sub>3</sub></i>.</p>
+</div>
+
+<p>The ring of polynoamials in <i>n</i> indeterminates is a field 𝕂 is an integral domain (see <a href="exercises_symmetric_poly.html">exercise 1</a>).</p>
+
+<h2>Rational functions</h2>
+
+<p>In the set of ordered couples of 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>] x 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>]\{0} we define the following equivalence relation</p>
+
+<div class="eq">
+<p>(<i>f</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>), <i>g</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>)) &rho; (<i>f*</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>), <i>g*</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>)) <br>⇐⇒<br> <i>f</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>) ⋅ <i>g*</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>) = <i>f*</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>) ⋅ <i>g</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>)</p>
+</div>
+
+<p>which leads to the following definition</p>
+
+<p><b>4.51 Definition</b>. A <i>rational function</i> in the <i>n</i> indeterminates <i>x<sub>1</sub>,..., x<sub>n</sub></i>, is defined as an element of the quotient set</p>
+
+<div class="eq">
+<p>𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>] x 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>] \ {0}/ &rho;</p>
+</div>
+
+<p>and indicated as</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>) / <i>g</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>), &emsp; <i>g</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>) &ne; 0</p>
+</div>
+
+<p>As previuosly done on the field of rational numbers, we introduce on 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>] the two following operations</p>
+
+<div class="eq">
+<p><i>f/g + h/k</i> := (<i>fk+gh</i>)/(<i>k+g</i>) &emsp; (addition)</p>
+<p><i>f/g ⋅ h/k := fh/gh</i> &emsp; (multiplication)</p>
+</div>
+
+<p>hence the set 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>] becomes a field which is the quotient field of the ring 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>].</p>
+
+<p><b>4.52 Definition</b>. A <i>rational symmetric function</i> is a rational function invariable with respect to any permutation of its indeterminates.</p>
+
+<p>This definition is well-defined since does not depend on the particular represenetative of the class.</p>
+
+<p>We can exten the fundamental theorem on symmetric functions to rational functions</p>
+
+<p><b>4.53 Theorem</b>. (<i>Fundamental theorem of rational symmetric functions</i>). Every symmetric rational function in the indeterminates <i>x<sub>1</sub>, ..., x<sub>n</sub></i> with coefficients in the field 𝕂 can be represented as rational function in terms of elementary symmetric polynomials <i>&sigma;<sub>1</sub>, &sigma;<sub>2</sub>, ..., &sigma;<sub>n</sub></i> with coefficients in 𝕂.</p>
+
+<p><b>Prove</b>. Let</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>) / <i>g</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>), <i>g</i>(<i>x<sub>1</sub>,..., x<sub>n</sub></i>) ≠ 0</p>
+</div>
+
+<p>a rational symmetric function in <i>x<sub>1</sub>,..., x<sub>n</sub></i>.</p>
+
+<p>If we are able to represent <i>f/g</i> as an equivalent rational function p/q we are done, since it would be sufficient then to express the numerator and denominator in terms of elementary symmetric functions using the fundamental theorem of symmetric polynomials.</p>
+
+<p>Let <i>g<sub>1</sub>, ..., g<sub>n!-1</sub></i> be the <i>n!-1</i> various distinct polynomials (other than <i>g</i>) obtained from <i>g</i> by permutation of the indeterminates. The product <i>g g<sub>1</sub>g<sub>n!-1</sub></i> is then symmetric since any permutation of the indeterminates merely permutes the factors. By multiplying both numerator of <i>f/g</i> by this product of function, we have</p>
+
+<div class="eq">
+<p><i>f⋅g<sub>1</sub>⋅g<sub>n!-1</sub> / g⋅g<sub>1</sub>⋅g<sub>n!-1</sub></i></p>
+</div>
+
+<p>the denominator is clearly a symmetric polynomial. Since this rational function is equivalent to the initial one itfollows that the polynomial <i>fg<sub>1</sub>g<sub>n!-1</sub></i> is symmetric too. □</p>
+
+<p>The set S̃ of all symmetric rational functions with coefficients in the field 𝕂  in the indeterminates <i>x<sub>1</sub>,..., x<sub>n</sub></i>
+is a <i>field</i> contained in 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>]. We just proved that</p>
+
+<div class="eq">
+<p>S̃ = 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>]</p>
+</div>
 
 <section>
 <a href="cardano.html">&#171;Solutions of Cubic and Quartic equations</a>
 <a href="index.html">Index</a>
-<a href="fund_theorem_alg.html">Irreducibility of polynomials; Fundamental theorem of algebra &#187;</a>
+<a href="exercises_symmetric_poly.html">Exercises on symmetric polynomials &#187;</a>
 </section>
 
 </div>
