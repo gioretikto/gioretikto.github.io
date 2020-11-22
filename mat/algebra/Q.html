@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="ℚ: Rational numbers"/>
+  <title>ℚ: Rational numbers</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a class="navbar" href="../../index.html">Home</a></li>
+    <li><a class="navbar" href="index.html">Algebra</a></li>
+  </ul>
+</nav>
+   
+<div class="content">
+
+<h1>ℚ: Rational numbers</h1>
+
+<p>We are able to solve equations such as <i>x</i> + 2 = 0 in ℤ, but we cannot solve 2<i>x</i> = 7. For the purpos of solving equations such as</p>
+
+<div class="eq">
+<p><i>ax =  b, &emsp; a,b &in; ℤ, a &ne; 0</i></p>
+</div>
+
+<p>We are going to extend the set of integers to that of rational numbers ℚ. As we've done for the construction of integers from natural numbers, consider the cartesian product ℤ x ℤ \{0}, made up by the ordered integer pairs, in which the second element of the pair is different from zero. The following relation is introduced in the set</p>
+
+<div class="eq">
+<p>(<i>a,b</i>) &rho; (<i>c,d</i>) ⇔ <i>ad = bc</i></p>
+</div>
+
+<p>It is an equivalence relation. We prove only transitivity as the other properties are self-evident. Let (<i>a,b</i>) &rho; (<i>c,d</i>), and (<i>c,d</i>) &rho; (<i>e,f</i>), it follows</p>
+
+<div class="eq">
+<p><i>ad = bc, &emsp; cf = de</i></p>
+</div>
+
+<p>by multiplying the first equality on the right by <i>f</i> (&ne; 0) and the second equality on the left by <i>b</i> (&ne; 0 as well) we obtain by comparison</p>
+
+<div class="eq">
+<p><i>adf = bde</i></p>
+</div>
+
+<p>The commutativity of multiplication and the cancellation law, which hold true in ℤ, (remember that <i>d</i> &ne; 0), allow us to conclude that <i>af = be</i>, that is (<i>a,b</i>) &rho; (<i>e,f</i>).</p>
+
+<p>We set</p>
+
+<div class="eq">
+<p>ℚ := ℤ x ℤ \ {0} / &rho;</p>
+</div>
+
+<p>The elements of ℚ are thus equivalence classes that we indicate as</p>
+
+<div class="eq">
+<p><span class="overline">(<i>a,b</i>)</span> &emsp; All (<i>x,y</i>) that are equivalent to (<i>a,b</i>)</p>
+</div>
+
+<p>Some of the elements of ℚ, i.e equivalence classes in ℤ x ℤ \ {0} are depicted below.</p>
+
+<img src="img/Q.png" alt="classi equivalenza razionali"/>
+
+<p>We define in ℚ the following two operations </p>
+
+<div class="eq">
+<p><span class="overline">(<i>a,b</i>)</span> + <span class="overline">(<i>c,d</i>)</span> := <span class="overline">(<i>ad+bc,bd</i>)</span></p>
+<p><span class="overline">(<i>a,b</i>)</span> ⋅ <span class="overline">(<i>c,d</i>)</span> := <span class="overline">(<i>ac,bd</i>)</span></p>
+</div>
+
+<p>Observe first, the couples (<i>ad+bc,bd</i>) and (<i>ac,bd</i>) are both in ℤ x ℤ \ {0}, since ℤ \ {0} has no zero divisors. It remains to prove that the operations are well-defined, that is, even if are defined through representative of the classes they do not depend on the particul choice:</p>
+
+<p>Let</p>
+
+<div class="eq">
+<p>(<i>a,b</i>) &rho; (<i>a',b'</i>) &emsp; (<i>c,d</i>) &rho; (<i>c',d'</i>)</p>
+</div>
+
+<p>We have to prove that</p>
+
+<div class="eq">
+<p>(<i>ad + bc,bd</i>) &rho; (<i>a'd'+b'c',b'd'</i>), &emsp; that is &emsp; (<i>ad+bc</i>)<i>b'd'</i> = <i>bd</i>(<i>a'd' + b'c'</i>)</p>
+</div>
+
+<p>Remembering that <i>ab' = ba'</i> and <i>cd' = dc'</i>, we immediately notice the relation is verified. Analogously for multiplication.</p>
+
+<p>The classes</p>
+
+<div class="eq">
+<p>0 := <span class="overline">(<i>0,1</i>)</span> = <span class="overline">(<i>0,b</i>)</span></p>
+<p>1 := <span class="overline">(<i>1,1</i>)</span> = <span class="overline">(<i>a,a</i>)</span></p>
+</div>
+
+<p>are <i>nuter elements respectevely for addition</i> and <i>for multiplication</i>. With regards to these operations ℚ is a commutative ring with unit. There is also another important property</p>
+
+<div class="eq">
+<p><span class="overline">(<i>a, b</i>)</span> ⋅ <span class="overline">(<i>b, a</i>)</span> = <span class="overline">(<i>ab, ba</i>)</span> = <span class="overline">(<i>1, 1</i>)</span> &emsp; &forall;<span class="overline">(<i>b, a</i>)</span>, such that <i>a</i> &ne; 0, <i>b</i> &ne; 0</p>
+</div>
+
+<p>Notice that (<i>b,a</i>) &in; ℤ x ℤ \ {0}, since we supposed <i>a &ne; 0</i>. The element <span class="overline">(<i>b,a</i>)</span> is known as <i>inverse</i> of the element <span class="overline">(<i>a,b</i>)</span>.</p>
+
+<div id="field">
+<p><b>Definition 3.0</b>. A commutative ring with unit in which every non-null element has a multiplicative inverse is known as <i>field</i>.</p>
+</div>
+
+<p>We have the following result</p>
+
+<p><b>Definition 3.1</b>. The set</p>
+
+<div class="eq">
+<p>ℚ = ℤ x ℤ \ {0} / &rho;
+</div>
+
+<p>is a field</p>
+
+<p>We want to prove the following result:</p>
+
+<p><b>Proposition 3.2</b>. The field ℚ is an extension of ℤ. Moreover every element of ℚ can be written as <i>uv<sup>−1</sup></i>, with <i>u,v &in; ℤ</i></p>
+
+<p><b>Proof</b>. We must find in ℚ a copy of ℤ. To this end we notice that the applicaton</p>
+
+<div class="eq">
+<p><i>&phi;</i>: ℤ → ℚ</p>
+<p><i>&emsp;&emsp;&emsp; a</i> ↦ <span class="overline">(<i>a, 1</i>)</span></p>
+</div>
+
+<p>is injective. To prove it <span class="overline">(<i>a,1</i>)</span> ≠ <span class="overline">(<i>b,1</i>)</span>. But that means in particular that (<i>a,1</i>) is not equivalent to (<i>b,1</i>). So we have <i>a*1 ≠ b*1</i>, which is exactly what we wanted.</p>
+
+<p>Moreover the image  <i>&phi;</i> of the sum of two elements of ℤ is the sum of the images (in ℚ), and the same thing for the product. This gurantee us that the image of ℤ in ℚ is the copy of ℤ inside ℚ.</p>
+
+<p>Every element <span class="overline">(<i>a, b</i>)</span> &in; ℚ can be written in the form</p>
+
+<div class="eq">
+<p><span class="overline">(<i>a, b</i>)</span> = <span class="overline">(<i>a, 1</i>)</span> ⋅ <span class="overline">(<i>a, b</i>)</span></p>
+</div>
+
+<p>where <span class="overline">(<i>a, 1</i>)</span> ⋅ <span class="overline">(<i>a, b</i>)</span> can be mapped through <i>&phi;</i> to elements of ℤ thus <span class="overline">(<i>1, b</i>)</span> is the inverse of an element in ℤ. Every element of ℚ is of the form <i>uv<sup>−1</sup>, u,v &in; ℤ, v &ne; 0</i>.□</p>
+
+<div id="field_quotients">
+<p>Since that any element of ℚ can be written in the form <i>uv<sup>−1</sup>, u,v &in; ℤ, v &ne; 0</i>, ℚ is known as <i>field of quotients</i> of ℤ. We can write the elements of ℚ in the usual form</p>
+
+<div class="eq">
+<p><span class="overline">(<i>a, b</i>)</span> = <span class="overline">(<i>a, 1</i>)</span> ⋅ <span class="overline">(<i>a, b</i>)</span> = <i>a</i> / <i>b</i></p>
+</div>
+
+<p>that is as fractions.</p>
+</div>
+
+<p>In partiular, every equation such as</p>
+
+<div class="eq">
+<p><i>ax =  b, &emsp; a,b &in; ℤ, a &ne; 0</i></p>
+</div>
+
+<p>is solvable in ℚ. We have solved our initial problem.</p>
+
+<section>
+<a href="lcm.html">&#171;Least Common Multiple</a>
+<a href="index.html">Index</a>
+<a href="fibonacci.html">Fibonacci's numbers&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
