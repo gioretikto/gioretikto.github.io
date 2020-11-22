@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Rings"/>
+ <title>Rings</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Rings</h1>
+
+<p>Different sets are naturally endowed with two binary operations: addition and multiplication. Examples that quickly come to mind are the integers, the integers modulo <i>n</i>, the real numbers, matrices, and polynomials. The <i>notion</i> of Rings describing this kind of sets was originated in the
+mid-19th century by Richard Dedekind.</p>
+ 
+<p><b>4.54 Definition</b> A ring (<i>R</i>, +, ⋅) is a set equipped with <i>two binary operations</i> indicated by + and ·,</p>
+
+<div class="eq">
+<p><i>R x R ⟶ R</i> &emsp;&emsp; <i>R x R ⟶ R</i></p>
+<p>(<i>a,b</i>) ⟼ <i>a + b</i> &emsp;&emsp; (<i>a,b</i>) ⟼ <i>a ⋅ b</i></p>
+</div>
+
+<p>satisfying the following three sets of axioms, called the ring axioms</p>
+
+<ol type="i">
+
+<li><ol type="a">
+	<li><p>+ is <i>associative</i>: (<i>a + b</i>) + <i>c = a</i> + (<i>b + c</i>) &forall;<i>a, b, c &in; R</i></p></li>
+	<li><p>There is an element 0 in <i>R</i> such that <i>a + 0 = a &forall;a &in; R</i> (that is, 0 is the additive identity).</p></li>
+	<li><p>&forall;<i>a &in; R</i> there exists −<i>a &in; R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
+	<li><p>+ is <i>commutative</i>: <i>a + b = b + a</i> &forall; <i>a, b</i> &in; <i>R</i></p></li>
+</ol>
+</li>
+
+	<li><p>· is <i>associative</i>: (<i>a · b</i>) · <i>c = a</i> · (<i>b · c</i>) &forall; <i>a, b, c</i> &in; <i>R</i></p></li>
+	<li><p>Multiplication is distributive with respect to addition, meaning that:</p>
+		<div class="eq">
+		<p><i>a</i> · (<i>b + c</i>) = <i>a · b + a · c</i>, &emsp; (<i>a+b</i>) · c</i> = <i>a · c + b · c</i> &emsp; &forall; <i>a,b,c &in; R</i></p>
+		</div>
+	</li>
+</ol>
+
+<p>From now on we'll write <i>ab</i> instead of <i>a · b</i>. A set satisfying a), b), c) is called <i>group</i>: hence (<i>R</i>, +) is a group. If d) is also satisfied we have a <i>commutative group</i> or <i>abelian group</i>. (<i>R</i>, +) is oftentimes referred as additive group of the ring.</p>
+
+<p>A <i>commutative ring</i> is a ring in which the multiplication operation is commutative.</p>
+
+<h3>Examples of rings and non-rings</h3>
+
+<ul>
+	<li><p>The set of natural numbers ℕ with the usual operations is not a ring, since (ℕ, +) is not even a group (the elements are not all invertible with respect to addition). For instance, there is no natural number which can be added to 2 to get 0 as a result.</p></li>
+</ul>
+
+<p>Examples of rings</p>
+
+<ul>
+	<li><p>ℤ, ℚ, ℝ, ℂ, with respect to addition and multiplication.</p></li>
+	
+	<li><p>𝕂[<i>x</i>], 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>] with respect to addition and multiplication defined for this rings.</p></li>
+	
+	<li><p>The set ℤ<sub>n</sub> of congruence class modulo <i>n</i> with respect to the operations defined in previuos chapters.</p></li>
+	
+	<li><p>The set <i>M<sub>n</sub></i>(𝕂) of square matrices <i>n x n</i>, over a field 𝕂, along with the standard matrix addition and multiplication.</p></li>
+	
+	<li><p>The power set of a set is a commutative ring under the natural operations of union and intersection</p>
+	
+		<div class="eq">
+		<p><i>A + B</i> := (<i>A ⋃ B</i>) ⋂ 𝐶(<i>A ⋂ B</i>), &emsp; <i>A · B := A ⋂ B</i></p>
+		</div>
+		
+		<p>it is easy to notice that it is an abelian group with respect to the first operation (the nueter element is ∅ and the inverse of an A &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributives properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent</i> i.e. <i>A<sup>2</sup> = A · A = A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
+		
+		<li><p>The set of continuos functions, in one variable <i>x &in; X</i></p>
+		
+		<div class="eq">
+		<p><i>R<sup>X</sup></i> := {<i>f: X ⟶ R</i>}</p>
+		</div>
+		
+		<p>with the addition and multiplication defined by</p>
+		
+		<div class="eq">
+		<p>(<i>f+g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) := <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) &emsp; &forall;<i>f,g &in; R<sup>X</sup>, &forall;x &in; X</i></p>
+		</div>
+		
+		<p>(<i>R<sup>X</sup></i>, +, ·) is a ring: it is a commutative ring only if <i>R</i> is communtative; it is unitary only if <i>R</i> is unitary as well. The unit function is that mapping every element of <i>X</i> to the unit of <i>R</i>.</p>
+		</li>
+		
+		<li><p>Let <i>R<sub>1</sub>, R<sub>2</sub> , ... , R<sub>n</sub></i> be rings. We can use these to construct a new ring by cartesian product</p>
+		
+		<div class="eq">
+		<p><i>R<sub>1</sub> x R<sub>2</sub> x R<sub>n</sub></i></p>
+		</div>
+		
+		<p>and perform componentwise addition and multiplication, defined as</p>
+		
+		<div class="eq">
+		<p>(<i>a<sub>1</sub> , a<sub>2</sub>, ... , a<sub>n</sub></i>) + (<i>b<sub>1</sub> , b<sub>2</sub>, ... , b<sub>n</sub></i>) = (<i>a<sub>1</sub> + b<sub>1</sub>, a<sub>2</sub> + b<sub>2</sub> , ... , a<sub>n</sub> + b<sub>n</sub></i>)</p>
+		</div>
+		
+		<p>and</p>
+		
+		<div class="eq">
+		<p>(<i>a<sub>1</sub> , a<sub>2</sub>, ... , a<sub>n</sub></i>) (<i>b<sub>1</sub> , b<sub>2</sub>, ... , b<sub>n</sub></i>) = (<i>a<sub>1</sub> b<sub>1</sub>, a<sub>2</sub>b<sub>2</sub> , ... , a<sub>n</sub>b<sub>n</sub></i>)</p>
+		</div>
+		
+		<p>This ring is called the <i>direct sum</i> of <i>R<sub>1</sub>, R<sub>2</sub> , ... , R<sub>n</sub></i> and usually indicated as</p>
+		</li>
+		
+		<div class="eq">
+		<p><i>R<sub>1</sub> ⊕ R<sub>2</sub> ⊕ ... ⊕ R<sub>n</sub></i></p>
+		</div>
+		
+	</ul>
+
+<p>The following properties follow from ring axiomes, we do not prove them since we've already proved it in the case of <a href="Z.html">integers</a> (without making it specific for integers alone).</p>
+
+<ol type="i">
+	<li><p><i>a ⋅ 0 = 0 ⋅ a = 0;</i></p></li>
+	<li><p><i>(−a) ⋅ b = −(a⋅b);</i></p></li>
+</ol>
+
+<p><b>4.55 Definition.</b> An isomorphism <i>&phi;</i> between two rings <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
+
+<div class="eq">
+<p><i>&phi;(<i>a+b</i>) = &phi;(<i>a</i>) + &phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>&phi;(<i>ab</i>) = &phi;(<i>a</i>)&phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
+</div>
+
+<p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R ≅ R'</i>. The relation of being isomorphic is an equivalence relation.</p>
+
+<p>Any algebraic property that holds on <i>R</i> is also true on <i>R'</i> and viceversa owning to the bijective map, hence from an algebraic point of view they are identical. When we'll study a particular ring we'll refer to its isomorphism class containing all rings isomorphic to the first.</p>
+
+<h3>Examples of ring isomorphisms</h3>
+
+<ul>
+	<li><p>The isomorphism between the ring 𝕂[<i>x</i>] of polynomials with coefficients over 𝕂  and the ring of sequences having from a point on all 0 terms. We the operations we defined when discussing <a href="polynomials.html#isomo_pol_seq">polynomiasl</a></p></li>
+
+	<li><p>The map from ℂ to ℂ of complex numbers to their complex conjugates.</p></li>
+</ul>
+
+<p>Some properties satisfied by rings do not appear among ring axioms and are used to further characterize rings</p>
+
+<ul>
+	<li><p>A <i>commutative ring</i> satisfies the commutative property for multiplication.</p></li>
+	<li><p>A <i>commutative ring with unit</i> is a ring with a nonzero element that is an identity under multiplication.</p></li>
+	<li><p>An <i>integral domain</i> is a commutative ring with unity and no ­zero-­divisors i.e. <i>ab = 0 ⇒ a</i> = 0 or <i>b</i> = 0.</p></li>
+	<li><p>A <i>field</i> is a <i>multiplicative ring with unit</i> having a multiplicative inverse for every non zero element.</p>
+	<li><p>A <i>division ring</i> is a ring with identity (not necessarily commutative).</p></li>
+</ul>
+
+<p>The property "has a unit" = "has a multiplicative inverse".</p>
+
+<p>It is clear that only that rings the properties mentioned above cannot be considered isomorphic e.g. a ring with unit cannot be isomorphic to a ring without unit. For example for any integer <i>n</i> &in; ℕ, let</p>
+
+<div class="eq">
+<p><i>n</i>ℤ = {<i>nk : k &in; ℤ</i>}</p>
+</div>
+
+<p>be the set of integer multiplies of <i>n</i>. The set <i>nℤ</i> is a subset of ℤ and inherits addition and multiplication from ℤ. If we take two elements from <i>nℤ</i>, say <i>nh</i> and <i>nk</i> we can see that</p>
+
+<div class="eq">
+<p><i>nk + nh = n</i> (<i>k + h</i>) &emsp; and &emsp; (<i>nk</i>)(<i>nh</i>) = <i>n</i>(<i>knh</i>)</p>
+</div>
+
+<p>by distributivity and associativity. Addition and multiplication are both associative in <i>n</i>ℤ and multiplication is distributive with respect to addition. In <i>n</i>ℤ, 0 is the additive identity. However, there is no multiplicative identity in <i>n</i>ℤ unless <i>n</i> = &pm; 1. There are also no multiplicative inverse for <i>nk</i> unless <i>n</i>  = &pm; 1 and <i>k</i> = &pm; 1.</p>
+
+<p>As a consequence ℤ is not isomorphic to 2ℤ. We can view <i>nℤ</i> as a "substructure" of ℤ.</p>
+
+<p><b>4.56 Definition.</b> Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a called a <b>subring</b> of <i>R</i> if <i>S</i> is a ring with respect to the same operations of <i>R</i>.</p>
+
+<p>For <i>S</i> to be a subring of the ring <i>R, S</i> must be an <i>additive subgroup</i> of the group (<i>R</i>, +), i.e. (<i>S</i>, +) must be a group.</p>
+
+<p>The following is a criterion to verify if a subset of a ring is a subring.</p>
+
+<p><b>4.57 Proposition</b>. Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a subring of <i>R</i> if and only if</p>
+
+<div class="eq">
+<p><i>a − b &in; S, &emsp; ab &in; S &emsp; &forall;a,b &in; S</i> &emsp; (<b>4.58</b>)</p>
+</div>
+
+<p>A nonempty subset S of a ring R is a subring if S is closed under subtraction and multiplication—that is, if a and b and ab are in S whenever a and b are in S.</p>
+
+<p>If <i>S</i> is a subring the condition above is certainly satisfied. Viceversa suppose that for all <i>a</i> and <i>b</i> in <i>S</i>, we have <i>a − b &in; S &emsp; ab &in; S</i>: we have to prove that (<i>S</i>, +) is an additive group i.e. that it satisfies:</p>
+
+<ul>
+	<li><p><i>a+b &in; S</i></p></li>
+	<li><p>0 &in; S</i></p>
+	<li><p>−<i>a &in; S</i></p>
+</ul>
+
+<p>(the associativity with respect to + is automatically verified). Since condition (4.8) is true for every <i>a,b &in; S</i> it also hold true for <i>a = b</i> hence <i>a −a = 0 &in; S</i>. If we take the elements <i>a</i> and 0, it follows that <i>0−a = −a &in; S</i>. It is also true that given <i>a,b &in; S</i> also <i>a</i> and <i>−b</i> are in <i>S</i> and thus follows <i>a</i>−(−<i>b</i>) = <i>a + b &in; S</i>.□</p>
+
+<h2>Example of subrings</h2>
+
+<ul>
+	<li><p>Every ring posseses two subrings, known as <i>trivial subrings</i>: the whole ring and the ring containing only 0.</p></li>
+	<li><p>In <i>R = ℤ</i>, <i>S = nℤ</i> (<i>n</i> &in; ℕ) is a subring of ℤ. Take <i>a,b &in; nℤ</i>; let <i>a = nx, b = ny</i>, for some integers <i>x,y</i> &in; ℤ. Then</p>
+	
+	<div class="eq">
+		<p><i>a−b = n</i>(<i>x − y</i>) &in; <i>nℤ</i></p>
+		<p><i>ab = n</i> (<i>nxy</i>) &in; <i>nℤ</i></p>
+	</div>
+	
+	<p>so, <i>nℤ</i> passes the test of Proposition 4.57.</p>
+	
+	<p>Proposition 4.18 shows that any subring of ℤ is of this form.</p></li>
+	
+	<li><p>Let <i>R</i> a ring and <i>a &in; R</i>. Let</p>
+	
+	<div class="eq">
+	<p><i>S<sub>a</sub></i> = {<i>x &in; R</i> | <i>xa = ax</i>}</p>
+	</div>
+	
+	<p><i>S<sub>a</sub></i> is a subring of <i>R</i>.</p></li>
+	
+	<li><p>In the ring 𝕂[<i>x</i>] the subset of polynomials with costant term equal to zero is a subring.</p></li>
+	
+	<li><p>The intersection of an arbitrary family of subrings of a ring <i>R</i> is a subring of <i>R</i>.</p></li>
+	
+</ul>
+
+<p><b>4.59 Proposition</b>. Every subring of ℤ is of the form <i>n</i>ℤ, with <i>n</i> &in; ℕ.</p>
+
+<p><b>Proof.</b> We previouslt showed that <i>nℤ</i> is a subring of ℤ. Now we show that <i>all</i> subrings are of this form. Let <i>S</i> be a subring of ℤ. Certainly 0 &in; <i>S</i>. If <i>S</i> = {0}, the <i>S</i> = 0ℤ is of the required form. Suppose it is not. If <i>n &in; S</i>, the also <i>−n &in; S</i>; so <i>S</i> must contain positive integer. Let <i>m</i> be the smallest positive integer in <i>S</i>. We will prove that <i>S = nℤ</i>. Since <i>S ⊇ nℤ</i>, it is sufficien to prove to opposite inclusion. Dividing <i>h</i> by <i>m</i> we have <i>h = mq + r</i> with 0 &le; <i>r &lt; m</i>. Since <i>r &in; S</i> it must necessairly be <i>r = 0</i> to avoid the contradiction of <i>m</i> being the smallest positive integer in <i>S</i>. Hence any element of <i>S</i> is a multiple of <i>m</i>.□</p>
+
+<p>We've seen that there exist integral domain which are not fields such as ℤ. However there are no <i>finite integral domains</i> which are not fields as the following propisition proves.</p>
+
+<p><b>4.60 Proposition</b>. A finite integral domain (an integral domain with only a finite number of elements) is a field.</p>
+
+<p><b>Proof</b>. Let <i>D</i> be a finite integral domain with unity denoted by 1 and <i>D*</i> = {<i>a<sub>1</sub>,...,a<sub>n</sub></i>} the nonzero elements of the integral domain. We must show that every nonzero element of the integral domain has a multiplicative inverse. Consider an arbitrary element <i>a &in; D*</i> and define</p>
+
+<div class="eq">
+<p><i>&Psi;: D* ⟶ D*</i></p>
+<i>&emsp; a<sub>1</sub> ⟶ aa<sub>1</sub></i></p>
+</div>
+
+<p>by <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>aa<sub>i</sub></i>. If <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>&Psi;</i>(<i>a<sub>j</sub></i>) then <i>aa<sub>i</sub> = aa<sub>j</sub></i>, so by the cancellation property, <i>a<sub>i</sub> = a<sub>j</sub></i> hence the <i>n</i> products <i>aa<sub>i</sub></i> are all distinct and the set {<i>aa<sub>1</sub>, ...,aa<sub>n</sub></i>} coincides with the set <i>D*</i>. Thus we see that <i>&Psi;</i> is a one-to-one function. Since <i>D*</i> is finite, the mapping <i>&Psi;</i> is onto <i>D*</i>. But one of the elements of <i>D*</i> is the multiplicative identity 1. Therefore, <i>&Psi;</i>(<i>a<sub>k</sub></i>) = 1 for some <i>a<sub>k</sub> &in; D*</i>; that is <i>aa<sub>k</sub></i> = 1. This shows that <i>a</i> has a multiplicative inverse and hence <i>D</i> is a field. Note that since <i>D</i> is commutative that <i>aa<sub>j</sub> = a<sub>j</sub>a</i>.□</p>
+
+<section>
+<a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>
+<a href="index.html">Index</a>
+<a href="exercises_rings.html">Exercises on rings &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
