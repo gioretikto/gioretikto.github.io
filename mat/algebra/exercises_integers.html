@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Exercises on integers"/>
+ <title>Exercises on integers</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Exercises on integers</h1>
+
+<p><b>Exercise 1</b>. Prove that the relation</p>
+
+<div class="eq">
+<p>(<i>n, m</i>) ρ (<i>n', m'</i>)   ⇐⇒   <i>n + m' = m + n'</i></p>
+</div>
+
+<p>define on ℕ x ℕ is an equivalence relation.</p>
+
+<p><b>Exercise 2</b>. Prove that addition and multiplication defined on ℤ are well-defined.</p>
+
+<h2>Solution</h2>
+
+<ol>
+	<li>
+	<ol type="a">
+		<li><p>If (<i>n,m</i>) &in; ℕ x ℕ  (<i>n, m</i>) ρ (<i>n, m</i>) because <i>n + m = m + n</i>, (+ is commutative). This says that ~ is reflexive.</p></li>
+		<li><p>(<i>n, m</i>) ρ (<i>n', m'</i>) ⇒ (n', m') ρ (<i>n, m</i>). Indeed because (<i>n,m</i>) ρ (<i>n',m'</i>)   ⇐⇒   <i>n + m' = m + n'</i> ⇐⇒ <i>n' + m = m' + n</i> ⇐⇒ (<i>n',m'</i>) ρ (<i>n, m</i>). This says that ~ is symmetric.<p></li>
+		
+		<li><p>(<i>n,m</i>) ρ (<i>p,q</i>) ⇐⇒ <i>n + q = m + p</i>, (<i>p,q</i>) ρ (<i>r,s</i>) ⇐⇒ <i>p + s = q + r</i>. Summing up both equations we have <i>n + q + p + s = m + p + q + r</i> and by semplifying <i>n + s = m + r</i> i.e. (<i>n,m</i>) ρ (<i>r,s</i>). This says that ~ is transitive.<p></li>
+		</ol>
+
+<li>
+	<p>Let S be a set, ~ an equivalence relation over <i>S</i>, · : S × S ⟶ S</i>, then we say · is well defined on <i>S</i>/~ if for <i>x~x', y~y'</i> we have <i>x·y ~ x'·y'</i>.</p>
+	<p>Assume (<i>a, b</i>) ~ (<i>a', b'</i>) and (<i>c,d</i>) ~ (<i>c', d'</i>), we must show that (<i>a, b</i>) + (<i>c,d</i>) ~ (<i>a', b'</i>) + (<i>c', d'</i>).</p>
+	
+	<p>(<i>a, b</i>) + (<i>c,d</i>) = (<i>a + c, b + d</i>).</p>
+	<p>(<i>a', b'</i>) + (<i>c', d'</i>) = (<i>a' + c', b' + d'</i>)</p>
+	<p>(<i>a + c, b + d</i>) ~ (<i>a' + c', b' + d'</i>) ⇐⇒ <i>a + c + b' + d' = b + d + a' + c'</i>
+
+<p>which is true since</p>
+
+<p>(<i>a,b</i>) ~ (<i>a', b'</i>) ⇐⇒ a + b'= b + a' &emsp; and &emsp; (<i>c,d</i>) ~ (<i>c', d'</i>) ⇐⇒ <i>c+d' = d+c'</i></p>
+
+<p>Let's show now that (<i>a, b</i>)(<i>c, d</i>) ~ (<i>a', b'</i>)(<i>c', d'</i>); we start by showing that (<i>a, b</i>)·(<i>c,d</i>) ~ (<i>a, b</i>)·(<i>c', d'</i>). By expanding ·, it is equivalent to show that (<i>ac + bd, ad + bc</i>) ~ (<i>ac + bd, ad + bc</i>), which by the definition of ~ is the same as showing that <i>ac + bd + ad' + bc = ad + bc + ac' + bd'</i>.</p></li>
+
+<p>Multiplying <i>c + d' = d + c'</i> by <i>a</i> yields</p>
+
+<p><i>ac + ad' = ad + ac'</i>.</p>
+
+<p>Multiplying <i>d + c' = c + d'</i> by <i>b</i> yields</p>
+
+<p><i>bd + bc' = bc + bd'</i></p>
+
+<p>Summing up the two equations to get the original one.</p>
+
+<p>We show now the product is commutative</p>
+
+<p>(<i>a, b</i>)(<i>c, d</i>) = (<i>ac + bd, cb + ad</i>)</p>
+
+<p>and (<i>c, d</i>)(<i>a, b</i>) = (<i>ca + db, ad + cb</i>)</p>
+
+<p>Using commutativity on ℕ of + and · we have</p>
+
+<p>(<i>ac + bd, cb + ad</i>) = (<i>ca + db, ad + cb</i>)</p>
+
+<p>By commutativity of the product, we have also (<i>a, b</i>)·(<i>c, d</i>) ~ (<i>a, b</i>)·(<i>c', d'</i>) = (<i>c', d'</i>)·(<i>a, b</i>) ~ (<i>c', d'</i>)·(<i>a', b'</i>) = (<i>a', b'</i>)·(<i>c', d'</i>).</p>
+
+</li>
+</ol>
+
+<section>
+<a href="rings.html">&#171;Ring and ring's isomorphisms</a>
+<a href="index.html">Index</a>
+<a href="homomorphism.html">Ring homomorphisms &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

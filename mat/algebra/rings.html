@@ -24,7 +24,7 @@
 <p>Different sets are naturally endowed with two binary operations: addition and multiplication. Examples that quickly come to mind are the integers, the integers modulo <i>n</i>, the real numbers, matrices, and polynomials. The <i>notion</i> of Rings describing this kind of sets was originated in the
 mid-19th century by Richard Dedekind.</p>
  
-<p><b>4.54 Definition</b> A ring (<i>R</i>, +, ⋅) is a set equipped with <i>two binary operations</i> indicated by + and ·,</p>
+<p><b>6.1.1 Definition</b> A ring (<i>R</i>, +, ⋅) is a set equipped with <i>two binary operations</i> indicated by + and ·,</p>
 
 <div class="eq">
 <p><i>R x R ⟶ R</i> &emsp;&emsp; <i>R x R ⟶ R</i></p>
@@ -75,7 +75,7 @@ mid-19th century by Richard Dedekind.</p>
 	<li><p>The power set of a set is a commutative ring under the natural operations of union and intersection</p>
 	
 		<div class="eq">
-		<p><i>A + B</i> := (<i>A ⋃ B</i>) ⋂ 𝐶(<i>A ⋂ B</i>), &emsp; <i>A · B := A ⋂ B</i></p>
+		<p><i>A + B</i> := (<i>A</i> ⋃ <i>B</i>) ⋂ 𝐶(<i>A</i> ⋂ <i>B</i>), &emsp; <i>A · B := A</i> ⋂ <i>B</i></p>
 		</div>
 		
 		<p>it is easy to notice that it is an abelian group with respect to the first operation (the nueter element is ∅ and the inverse of an A &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributives properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent</i> i.e. <i>A<sup>2</sup> = A · A = A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
@@ -129,19 +129,21 @@ mid-19th century by Richard Dedekind.</p>
 	<li><p><i>(−a) ⋅ b = −(a⋅b);</i></p></li>
 </ol>
 
-<p><b>4.55 Definition.</b> An isomorphism <i>&phi;</i> between two rings <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
+<p><b>6.1.2 Definition.</b> Let [<i>R</i>;+,⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
 
 <div class="eq">
-<p><i>&phi;(<i>a+b</i>) = &phi;(<i>a</i>) + &phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
+<p><i>&phi;(<i>a+b</i>) = &phi;(<i>a</i>) +' &phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p><i>&phi;(<i>ab</i>) = &phi;(<i>a</i>)&phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
+<p><i>&phi;(<i>a⋅b</i>) = &phi;(<i>a</i>) ⋅' &phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
 </div>
 
 <p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R ≅ R'</i>. The relation of being isomorphic is an equivalence relation.</p>
+
+<img src="img/isomorphism.png" alt="ring isomorphism"/>
 
 <p>Any algebraic property that holds on <i>R</i> is also true on <i>R'</i> and viceversa owning to the bijective map, hence from an algebraic point of view they are identical. When we'll study a particular ring we'll refer to its isomorphism class containing all rings isomorphic to the first.</p>
 
@@ -181,21 +183,19 @@ mid-19th century by Richard Dedekind.</p>
 
 <p>As a consequence ℤ is not isomorphic to 2ℤ. We can view <i>nℤ</i> as a "substructure" of ℤ.</p>
 
-<p><b>4.56 Definition.</b> Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a called a <b>subring</b> of <i>R</i> if <i>S</i> is a ring with respect to the same operations of <i>R</i>.</p>
+<p><b>6.1.3 Definition.</b> Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a called a <b>subring</b> of <i>R</i> if <i>S</i> is a ring with respect to the same operations of <i>R</i>.</p>
 
 <p>For <i>S</i> to be a subring of the ring <i>R, S</i> must be an <i>additive subgroup</i> of the group (<i>R</i>, +), i.e. (<i>S</i>, +) must be a group.</p>
 
 <p>The following is a criterion to verify if a subset of a ring is a subring.</p>
 
-<p><b>4.57 Proposition</b>. Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a subring of <i>R</i> if and only if</p>
+<p><b>6.1.4 Proposition</b>. Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a subring of <i>R</i> if and only if <i>S</i> is closed under subtraction and under multiplication that is:</p>
 
 <div class="eq">
 <p><i>a − b &in; S, &emsp; ab &in; S &emsp; &forall;a,b &in; S</i> &emsp; (<b>4.58</b>)</p>
 </div>
 
-<p>A nonempty subset S of a ring R is a subring if S is closed under subtraction and multiplication—that is, if a and b and ab are in S whenever a and b are in S.</p>
-
-<p>If <i>S</i> is a subring the condition above is certainly satisfied. Viceversa suppose that for all <i>a</i> and <i>b</i> in <i>S</i>, we have <i>a − b &in; S &emsp; ab &in; S</i>: we have to prove that (<i>S</i>, +) is an additive group i.e. that it satisfies:</p>
+<p>If <i>S</i> is a subring the condition above is certainly satisfied. Viceversa suppose that for all <i>a</i> and <i>b</i> in <i>S</i>, we have <i>a − b &in; S, ab &in; S</i>: we have to prove that (<i>S</i>, +) is an additive group i.e. that it satisfies:</p>
 
 <ul>
 	<li><p><i>a+b &in; S</i></p></li>
@@ -216,7 +216,7 @@ mid-19th century by Richard Dedekind.</p>
 		<p><i>ab = n</i> (<i>nxy</i>) &in; <i>nℤ</i></p>
 	</div>
 	
-	<p>so, <i>nℤ</i> passes the test of Proposition 4.57.</p>
+	<p>so, <i>nℤ</i> passes the test of Proposition 6.1.4.</p>
 	
 	<p>Proposition 4.18 shows that any subring of ℤ is of this form.</p></li>
 	
@@ -234,13 +234,13 @@ mid-19th century by Richard Dedekind.</p>
 	
 </ul>
 
-<p><b>4.59 Proposition</b>. Every subring of ℤ is of the form <i>n</i>ℤ, with <i>n</i> &in; ℕ.</p>
+<p><b>6.1.5 Proposition</b>. Every subring of ℤ is of the form <i>n</i>ℤ, with <i>n</i> &in; ℕ.</p>
 
 <p><b>Proof.</b> We previouslt showed that <i>nℤ</i> is a subring of ℤ. Now we show that <i>all</i> subrings are of this form. Let <i>S</i> be a subring of ℤ. Certainly 0 &in; <i>S</i>. If <i>S</i> = {0}, the <i>S</i> = 0ℤ is of the required form. Suppose it is not. If <i>n &in; S</i>, the also <i>−n &in; S</i>; so <i>S</i> must contain positive integer. Let <i>m</i> be the smallest positive integer in <i>S</i>. We will prove that <i>S = nℤ</i>. Since <i>S ⊇ nℤ</i>, it is sufficien to prove to opposite inclusion. Dividing <i>h</i> by <i>m</i> we have <i>h = mq + r</i> with 0 &le; <i>r &lt; m</i>. Since <i>r &in; S</i> it must necessairly be <i>r = 0</i> to avoid the contradiction of <i>m</i> being the smallest positive integer in <i>S</i>. Hence any element of <i>S</i> is a multiple of <i>m</i>.□</p>
 
 <p>We've seen that there exist integral domain which are not fields such as ℤ. However there are no <i>finite integral domains</i> which are not fields as the following propisition proves.</p>
 
-<p><b>4.60 Proposition</b>. A finite integral domain (an integral domain with only a finite number of elements) is a field.</p>
+<p><b>6.1.6 Proposition</b>. A finite integral domain (an integral domain with only a finite number of elements) is a field.</p>
 
 <p><b>Proof</b>. Let <i>D</i> be a finite integral domain with unity denoted by 1 and <i>D*</i> = {<i>a<sub>1</sub>,...,a<sub>n</sub></i>} the nonzero elements of the integral domain. We must show that every nonzero element of the integral domain has a multiplicative inverse. Consider an arbitrary element <i>a &in; D*</i> and define</p>
 

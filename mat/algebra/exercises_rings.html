@@ -22,27 +22,384 @@
 <h1>Exercises on rings</h1>
 
 <p><b>Exercise 1</b>. Prove that if <i>R</i> is a ring with unit, the unit is unique.</p>
-
-<p><b>Proof</b>. Suppose <i>e</i> and <i>e'</i> are two units. Then <i>ee' = e'e = e</i> (because e' is a unit). It is also true that <i>ee' = e'e = e</i>
- because <i>e</i> is also unit. Thus <i>e = e'</i>.</p>
  
-<p><b>Exercise 1</b>. Let (A,+,) an abelian group. Consider the set</p>
+<p><b>Exercise 2</b>. Let (<i>A</i>,+,) an abelian group. Consider the set</p>
 
 <div class="eq">
-<p>A<sup>A</sup> := {<i>f: A ⟶ A</i>}</p>
+<p><i>A<sup>A</sup></i> := {<i>f: A ⟶ A</i>}</p>
 </div>
 
-<p>&forall;f,g &in; A<sup>A</sup> let</p>
+<p>&forall;<i>f,g &in; A<sup>A</sup></i> let</p>
 
 		<div class="eq">
 		<p>(<i>f+g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>f∘g</i>)(<i>x</i>) := <i>f</i>(<i>g</i>(<i>x</i>))</p>
 		</div>
 
-<p>Prove that (<i>A<sup>A</sup></i>, +, ∘) in <i>not</i> a ring. Explain for which property of ring axiomes is not satisfied.</p>
+<p>Prove that (<i>A<sup>A</sup></i>, +, ∘) in <i>not</i> a ring. Explain which property of ring axiomes is not satisfied.</p>
 
-<p><b>Solution</b>. Consider the distributive properties of ring axiomes.</p>
+<p>Considering the set</p>
 
-<p>f∘(g+h) = f∘g + f∘h, &emsp; (f+g)∘h = f∘h + g∘h</p>
+<div class="eq">
+<p>End(<i>A</i>) := {<i>f: A ⟶ A</i> | <i>f</i>(<i>x+y</i>) = <i>f</i>(<i>x</i>) + <i>f</i>(<i>y</i>)}</p>
+</div>
+
+<p>of the <i>endomorphism</i> of the abelian group <i>A</i>, with the same operations defined above. Prove that End(<i>A</i>, +, ∘) is a ring.</p>
+
+<p><b>Exercise 3</b>. Prove the ring End(ℤ) with the operation above defined is isomorphic to the ring ℤ.</p>
+
+<p><b>Exercise 4</b>. Prove the ring End(ℚ) with the operation above defined is isomorphic to the ring ℚ.</p>
+
+<p><b>Exercise 5</b>. Prove that a ring <i>R</i> such that &forall;<i>x &in; R, x<sup>2</sup> = x</i>, is such that <i>2x = 0, &forall;x &in; R</i>
+and commutative.</p>
+
+<p><b>Exercise 6</b>. Verify if the following are rings</p>
+
+<div class="eq">
+<p>(ℝ</i>, ⊕, ⋅), &emsp; (ℝ, ⊕', ⋅')</p>
+</div>
+
+<p>ℝ is the real set; ⋅ the ordinary multiplication. The other operations are defined as follows</p>
+
+<div class="eq">
+<p><i>a ⊕ b</i> := (<i>a<sup>2</sup> + b<sup>2</sup></i>)<sup>1/2</sup></p>
+<p><i>a ⊕' b</i> := (<i>a<sup>3</sup> + b<sup>3</sup></i>)<sup>1/3</sup></p>
+</div>
+
+<p><b>Exercise 7</b>. Prove that the set <i>A</i> of the matrix</p>
+
+<div class="eq">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mo>(</mo>
+    <mtable columnalign="center center" rowspacing="4pt" columnspacing="1em">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+</math>
+</div>
+
+<p>with <i>a,b</i> &in; ℤ<sub>3</sub> is a subring of the ring of all matrix 2x2 with elements in ℤ<sub>3</sub>. Prove that <i>A</i> is a field</p>
+
+<p><b>Exercise 8</b>. Let <i>C</i>[-1, 1] the ring of continuous functions defined in the real interval [-1,1] with real value, with respect to the operations</p>
+
+<div class="eq">
+<p>(<i>f + g</i>)(<i>x</i>) = <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) = <i>f</i>(<i>x</i>) <i>g</i>(<i>x</i>)</p>
+</div>
+
+<p>Prove that <i>C</i>[-1, 1] is not an integral domain.</p>
+
+<p><b>Exercise 9</b>. Prove that the inverse of an isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is an isomorphism (between <i>R</i> and <i>R'</i>).</p>
+
+<h2>Solutions</h2>
+
+<ol>
+
+<li><p>Suppose <i>e</i> and <i>e'</i> are two units. Then <i>ee' = e'e = e</i> (because <i>e'</i> is a unit). It is also true that <i>ee' = e'e = e</i>
+ because <i>e</i> is also unit. Thus <i>e = e'</i>.</p></li>
+
+<li><p>Consider the distributive properties of ring axiomes</p>
+
+<p><i>f</i>∘(<i>g+h</i>) = <i>f∘g + f∘h</i>, &emsp; (<i>f+g</i>)∘<i>h = f∘h + g∘h</i>, &emsp; &forall;<i>f,g &in; A<sup>A</sup></i></p>
+
+<p><i>f</i> needs to be an additive map to verify the distributive property: <i>f</i>(<i>g + h</i>) = <i>f</i>(<i>g</i>(<i>x</i>)) + <i>f</i>(<i>h</i>(<i>x</i>)), i.e. f(<i>x+y</i>) = <i>f</i>(<i>x</i>) + <i>f</i>(<i>y</i>) (in this case the set A<sup>A</sup> is called <a href="group_homomorphism.html">group homorphism</a>; they'll be covered in the next chapters). This is the case in the case of End(<i>A</i>) by its definition.</p>
+
+<p>Notice that if <i>f</i>: ℤ → ℤ is a group homorphism then for all <i>n</i> ∈ ℤ, <i>f</i>(<i>n</i>)= <i>nf</i>(1) thus <i>f</i> is entirely determined by the value of <i>f</i>(1). Let <i>&phi;</i>: End(ℤ) ⟶ ℤ; defined as <i>&phi;</i>(f) = f(1), then because of what said above <i>ϕ</i> is injective, it is also surjective because for all <i>a</i> ∈ ℤ, <i>ϕ</i>(<i>n→na</i>) = <i>a</i>. It remains to verify that <i>ϕ</i> ring homorphism axioms are satisfied, i.e.</p>
+
+<p><i>&phi;</i>(<i>f+g</i>) = <i>&phi;</i>(<i>f</i>) + <i>&phi;</i>(<i>g</i>) = <i>f</i>(1) + <i>g</i>(1);</p>
+
+<p>Let <i>h = f + g</i> defiend as <i>h</i>(<i>n</i>) = <i>n</i>(<i>f</i>(1) + <i>g</i>(1)) so <i>&phi;</i>(<i>h</i>) = <i>f</i>(1) + <i>g</i>(1); hence the first axiom is satisfied.</p>
+
+<p><i>&phi;</i>(<i>f∘g</i>) = <i>&phi;</i>(<i>f</i>) <i>&phi;</i>(<i>g</i>) = <i>f</i>(1) <i>g</i>(1);</p>
+
+<p>Let <i>k = f+g</i> defiend as <i>h</i>(<i>n</i>) = <i>f</i>((<i>g</i>(<i>n</i>))) = <i>n⋅g</i>(1)⋅<i>f</i>(1), <i>&phi;</i>(<i>k</i>) = g(1)⋅f(1), thus <i>&phi;</i> is indeed a ring isomorphism.</p></li>
+
+<li><p>Use the same method as in the previous exercise.</p></li>
+
+<li><p>For each <i>a &in; R</i> (<i>a + a</i>)<sup>2</sup> = a + a</i>, writing the square as <i>a<sup>2</sup> + a<sup>2</sup> + a<sup>2</sup> + a<sup>2</sup> + a<sup>2</sup> = a + a</i>. Since <i>a<sup>2</sup> = 1</i> we have <i>2a = 0</i> hence every element has an additive inverse. From (<i>a + b</i>)<sup>2</sup> = <i>a+b</i> it follows that <i>a<sup>2</sup> + b<sup>2</sup> + ab + ba = a + b</i>, and from <i>a<sup>2</sup> = a</i> and <i>b<sup>2</sup> = b</i> we have <i>ab + ba = 0</i>. Since any element is equal to its inverse <i>ba + ba = 0</i> thus <i>ab = ba</i> for all <i>a,b &in;R</i>. </p>
+</li>
+
+<li><p>(ℝ</i>, ⊕, ⋅) is not a subring because it has not the neuter element. 0 is the neuter element only for positive real numbers. Instead (ℝ</i>, ⊕', ⋅) is a commutative ring.</p></li>
+
+<li><p>Proving that <i>A</i> is subring boils down to notice that ℤ<sub>n</sub> is closed under addition and multiplication. It is a commutative ring since</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mo>(</mo>
+    <mtable columnalign="center center" rowspacing="4pt" columnspacing="1em">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+  <mrow>
+    <mo>(</mo>
+    <mtable columnalign="center center" rowspacing="4pt" columnspacing="1em">
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow>
+    <mo>(</mo>
+    <mtable columnalign="center center" rowspacing="4pt" columnspacing="1em">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+          <mi>c</mi>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>b</mi>
+          <mi>d</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;<!-- − --></mo>
+          <mo stretchy="false">(</mo>
+          <mi>b</mi>
+          <mi>c</mi>
+          <mo>+</mo>
+          <mi>a</mi>
+          <mi>d</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>b</mi>
+          <mi>c</mi>
+          <mo>+</mo>
+          <mi>a</mi>
+          <mi>d</mi>
+        </mtd>
+        <mtd>
+          <mi>a</mi>
+          <mi>c</mi>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>b</mi>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow>
+    <mo>(</mo>
+    <mtable columnalign="center center" rowspacing="4pt" columnspacing="1em">
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+  <mrow>
+    <mo>(</mo>
+    <mtable columnalign="center center" rowspacing="4pt" columnspacing="1em">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+</math>
+
+<p>and it has unit (1 0; 0 1). Every non-zero element is invertible: we have det (<i>a -b; b a</i>) = <i>a<sup>2</sup> + b<sup>2</sup>, a, b</i> &in; ℤ<sub>3</sub>. In ℤ<sub>3</sub> the only square elements are [0] and [1] so <i>a<sup>2</sup> + b<sup>2</sup></i> = 0 iff <i>a = b = 0</i> and only in this case the matrix is null. Thus every non null matrix has determinat different for zero and is invertible.</p></li>
+
+<li><p><b>Solution</b>. Consider the functions</p>
+<section>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>f</mi>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow>
+    <mo>{</mo>
+    <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+      <mtr>
+        <mtd>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>x</mi>
+          <mo>&#x2208;<!-- ∈ --></mo>
+          <mo stretchy="false">(</mo>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          <mo>,</mo>
+          <mn>0</mn>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mi>x</mi>
+          <mo>&#x2208;<!-- ∈ --></mo>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mo>+</mo>
+          <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+&emsp; &emsp;&emsp; &emsp;
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+  <mi>f</mi>
+  <mn>2</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow>
+    <mo>{</mo>
+    <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mi>x</mi>
+          <mo>&#x2208;<!-- ∈ --></mo>
+          <mo stretchy="false">(</mo>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          <mo>,</mo>
+          <mn>0</mn>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mi>x</mi>
+          <mo>&#x2208;<!-- ∈ --></mo>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mo>+</mo>
+          <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+</section>
+</li>
+
+<li><p>Since <i>x' = &phi;</i>(<i>x</i>) and <i>y' = &phi;</i>(<i>y</i>) for one and only one <i>x &in; R</i> and <i>y &in; R</i>, then</p>
+
+<p><i>&phi;</i><sup>−1</sup></i>(<i>x' + y'</i>) = <i>&phi;</i><sup>−1</sup></i>(<i>&phi;</i>(<i>x</i>) + &phi;(<i>y</i>)) = <i>&phi;</i><sup>−1</sup></i>(&phi;(<i>x + y</i>)) = <i>x + y = &phi;</i><sup>−1</sup>(<i>x'</i>) + <i>&phi;</i><sup>−1</sup>(<i>y'</i>).</p>
+
+<p>Same argument for the product.</p></li>
+
+</ol>
 
 <section>
 <a href="rings.html">&#171;Rings</a>
