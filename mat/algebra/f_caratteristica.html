@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Funzione caratteristica"/>
+    <title>Funzione caratteristica</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Funzione caratteristica</h1>
+
+<p>Notazione 6.10. Si usa la scrittura “<i>B<sup>A</sup></i>”, o anche “<i>Fun(A,B)</i>”, per denotare l’insieme {<i>f | f: A → B</i>}. In particolare si definisce con il simbolo <b>2</b> l'insieme {0,1}.</p>
+      
+<p>Un'importante classe di funzioni è la seguente:</p>
+
+<p>DEFINIZIONE 6.11. Dato un insieme <i>S</i>, la <i>funzione caratteristica</i> di un suo sottoinsieme <i>A ⊆ S</i> è la funzione &chi;<sub>A</sub>: S → <b>2</b> così definita:</p>
+
+<img src="img/funzione_caratteristica.png" alt="funzione caratteristica"/>
+
+<div class="def">
+<p><b>Esempio</b></p>
+<p>L'insieme <i>S</i> è composto dai seguenti elementi</p>
+
+<div class="eq">
+<p><i>S={1,2,3,4,5,6,7}</i></p>
+</div>
+
+<p>Il sottoinsieme <i>A</i> è composto dagli elementi <i>A={4,5,6}</i>. La funzione caratteristica è la sua funzione caratteristica &chi;<sub>A</sub> è la seguente:</p>
+
+<p>1 ↦ 0 &emsp; 2 ↦ 0 &emsp; 3 ↦ 0 &emsp; 3 ↦ 0 &emsp; 4 ↦ 1</p>
+<p>5 ↦ 1 &emsp; 6 ↦ 1 &emsp; 7 ↦ 0</p>
+</div>
+
+<p>1.3.7 TEOREMA. Sia <i>S</i> un insieme e sia <b>2</b>: {0,1}. Esiste una corrispondenza biunivoca tra 𝓟 (S) e l'insieme <b>2</b><sup>S</sup> di tutte le funzioni da <i>S</i> a {0,1} ossia <i>f: S → {0,1}</i>.</p>
+
+<p><i>Dimostrazione</i>. Sia <i>B</i> un sottoinsieme di <i>S</i>. 
+
+<p>Ebbene, l'applicazione</p>
+
+<div class="eq">
+<p><i>F: 𝓟 (S) → <b>2</b><sup>S</sup></i></p>
+</div>
+
+<p>che associa ad ogni elemento <i>B</i> di <i>𝓟 (S)</i> la sua funzione caratteristica &chi;<sub>B</sub>:</p>
+
+<div class="eq">
+<p><i>B → &chi;<sub>B</sub></i></p>
+</div>
+
+<p>è biunivoca.</p>
+
+<p>Diamo un esempio, sia S = {1,2,3} e sia B = {1,2} un sottoinsieme di <i>S</i>; ebbene a <i>B</i> corrisponde la funzione caratteristica <i>f(1) = 1, f(2) = 1, f(3) = 0</i>.</p>
+
+<p>Per provare la suriettività, supponiamo che <i>f &in; {0,1}<sup>S</sup></i> definiamo un sottoinsieme <i>B</i> di 𝓟 (S) come:</p>
+
+<div class="eq">
+<p><i>B = {a &in; S: f(s) =1}</i></p>
+</div>
+
+<p>la funzione caratteristica <i>&chi;<sub>B</sub></i> di <i>B</i> assume gli stessi valori di <i>f</i>:</p>
+
+<div class="eq">
+<p><i>&chi;<sub>B</sub> = f</i></p>
+</div>
+
+<p> e la suriettività di <i>F</i> è così dimostrata.</p>
+
+<p>Per provare che sia iniettiva, supponiamo che <i>B<sub>1</sub>, B<sub>2</sub> &subseteq; S</i> e <i>&chi;<sub>B<sub>1</sub></sub> = &chi;<sub>B<sub>2</sub></sub></i>, questo significa che le funzioni caratteristiche di <i>B<sub>1</sub>, B<sub>2</sub></i> sono identiche. Per definizione <i>s &in; B<sub>1</sub></i> se e solo se <i>&chi;<sub>B</sub><sub>1</sub> = 1</i> e lo stesso per <i>B<sub>2</sub></i>. L'uguaglianza delle funzioni caratteristiche implica quindi l'uguaglianza degli insiemi, dunque <i>B<sub>1</sub> = B<sub>2</sub></i> e l'iniettività è provata.□</p>
+
+<p><i>PROPRIETÀ 1.1</i>. Se <i>|A| = n</i> e <i>|B| = m</i>, allora <i>B<sup>A</sup></i> ha cardinalità m<sup>n</sup>.</p>
+
+<p><i>Dimostrazione</i>. Ogni funzione associa ad ogni elemento di <i>A</i> uno ed un solo elemento di <i>B</i>; posso scegliere <i>m</i> possibili elementi per <i>f(a<sub>i</sub>)</i>, &forall;i &in; n</i>, perciò posso costruire in totale <i>m * m * ...* m = m<sup>n</sup></i>  funzioni <i>f: A →
+B</i>.□</p>
+
+<p>COROLLARIO 1.2. Dato un insieme <i>A</i> di cardinalità <i>n</i>, l'insieme delle parti (o insieme potenza) <i>𝓟 (A) = {B |B ⊆ A}</i> ha cardinalità |𝓟 (A)| = 2<sup>n</sup>.</p>
+
+<p><i>Dimostrazione</i>. Per ogni sottoinsieme <i>B ⊆ A</i> definisco la funzione caratteristica &chi;<sub>B</sub> che identifica univocamente un sottoinsieme di <i>A</i>, perciò il numero dei sottoinsiemi di <i>A</i> è pari al numero delle funzioni da <i>n</i> in {0,1}, cioè per la proprietà precedente 2<sup>n</sup>.□</p>
+
+<section>
+<a href="composte.html">&#171;Funzioni composte</a>
+<a href="index.html">Index</a>
+<a href="ker.html">Immagine e nucleo di una trasformazione &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

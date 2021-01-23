@@ -22,8 +22,7 @@
 
 <h1>Sets</h1>
 
-<p>We assume as primitive the notion of <b>set</b> (we must accept without definition some terms that are basic objects
-in our mathematical systems.) as a collection of objects named <b>elements</b>, about which it is possible to determine whether or not a particular object is a member of the set. Sets are usually denoted by capital letters <i>A, B, X, . . .</i> and its elements with lower case letters <i>a, b, x</i>, ...
+<p>We assume as primitive the notion of <b>set</b> (we must accept without definition some terms that are basic objects in our mathematical systems.) as a collection of objects named <b>elements</b>, about which it is possible to determine whether or not a particular object is a member of the set. Sets are usually denoted by capital letters <i>A, B, X, . . .</i> and its elements with lower case letters <i>a, b, x</i>, ...
 <br>
 To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we write</p>
 
@@ -59,12 +58,12 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 </thead>
 
 <tbody>
-<tr><td>&forall;</td> <td>per ogni, qualsiasi</td></tr>
-<tr><td>&Exists; (&nexists;)</td> <td>esiste (non esiste)</td></tr>
-<tr><td>&Exists;!</td> <td>esiste uno e un solo</td></tr>
-<tr><td>&in; (&notin;)</td> <td>appartiene (non appartiene)</td></tr>
-<tr><td>&sube; (&nsube;)</td> <td>è contenuto (non è contenuto)</td></tr>
-<tr><td>&rArr; (&nrArr;)</td> <td>implica (non implica)</td></tr>
+<tr><td>&forall;</td> <td> for “all”, “every”, "each"</td></tr>
+<tr><td>&Exists; (&nexists;)</td> <td>there exists (there does not exist,)</td></tr>
+<tr><td>&Exists;!</td> <td>there exists one and only one</td></tr>
+<tr><td>&in; (&notin;)</td> <td>belongs to (does not belong to)</td></tr>
+<tr><td>&sube; (&nsube;)</td> <td>is a subset (is not a subset)</td></tr>
+<tr><td>&rArr; (&nrArr;)</td> <td>implies (does not implies)</td></tr>
 <tr><td>&hArr;</td> <td>if and only if</td></tr>
 <tr><td>| o :</td> <td>such that</td></tr>
 <tr><td>:=</td> <td>equal by definition</td></tr>
@@ -80,24 +79,28 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 
 <p>Due insiemi sono uguali se contengono gli stessi elementi; scriveremo</p>
 
-<p align="center"><i>A = B</i></p>
+<div class="eq">
+<p><i>A = B</i></p>
+</div>
 
-<p>Se <i>B</i> è un insieme i cui elementi appartengono ad un insieme <i>A</i> si dice che <i>B</i> è contenuto in <i>A</i> o che è <i>sottoinsieme</i> di <i>A</i> </p>
+<p>If <i>B</i> is a set whose elements are included in a set <i>A</i> we say that <i>B</i> is included in <i>A</i> or that <i>B</i> <i>subset</i> of <i>A</i> </p>
 
-<p align="center"><i>B ⊆ A</i></p>
+<div class="eq">
+<p><i>B ⊆ A</i></p>
+</div>
 
-<p>Se si vuole escludere che B coincida con <i>A</i>, cioè prevedere che esistono elementi
-di <i>A</i> non contenuti in <i>B</i>, si usa la notazione:</p>
+<p>To exclude the possibility of equality between <i>B</i> and <i>A</i> i.e. if there are elements of <i>A</i> not within <i>B</i> we use the notation</p>
 
-<p align="center"><i>B ⊂ A</i></p>
+<div class="eq">
+<p><i>B ⊂ A</i></p>
+</div>
 
-<p>L’insieme vuoto è l'insieme che non contiene nessun elemento. Si indica con i simboli ∅, o con due parentesi graffe, { }.
-L'insieme vuoto è sottoinsieme di qualsiasi altro insieme (incluso se stesso).</p>
+<p>The empty set does not contain elements, indicated with ∅, or simly as { }. The empty set is a subset of every set (included itself).</p>
 
 <p>Dati due insiemi <i>A</i> e <i>B</i>, si definisce loro <i>intersezione</i> e si indica con <i>A &cap; B</i>, l'insieme di tutti gli elementi che appartengono ad <i>A</i> o a <i>B</i>. In simboli</p>
 
 <div class="eq">
-<p>A &cap; B := {x | x &in; A e x &in; B}</p>
+<p><i>A &cap; B</i> := {<i>x</i> | <i>x &in; A</i> and <i>x &in; B</i>}</p>
 </div>
 
 <p>L'<i>unione</i> di due insiemi <i>A</i> e <i>B</i>, che si indica con <i>A &cup; B</i>, è l'insieme degli elementi che appartengono ad <i>A</i> o a <i>B</i>. In simboli</p>
@@ -110,7 +113,7 @@ L'insieme vuoto è sottoinsieme di qualsiasi altro insieme (incluso se stesso).<
 <p><b>Example</b> Let <i>A</i> = {<i>a,b,c,d,e,f</i>} and <i>B</i> = {<i>a, d, l, m, n</i>}. Thus</p>
 
 <div class="eq">
-<p>A &cap; B = {a, d}, &emsp; A &cup; B = {a, b, c, d, e, f, l, m, n }</p>
+<p><i>A &cap; B</i> = {<i>a, d</i>}, &emsp; <i>A &cup; B</i> = {<i>a, b, c, d, e, f, l, m, n</i>}</p>
 </div>
 </div>
 
@@ -120,10 +123,10 @@ L'insieme vuoto è sottoinsieme di qualsiasi altro insieme (incluso se stesso).<
 <p><i>A \ B</i> = {<i>x &in; A</i> | <i>x &notin; B</i>}</p>
 </div>
 
-<p>Sia ora <i>U</i> un insieme contenente tutti gli elementi che ci possono interessare, chiamiamolo <i>universo</i>. Si defisce <i>complemento</i> di un insieme <i>A</i> (rispetto all'universo <i>U</i>) l'insieme di tutti gli elementi di <i>U</i> che non appartengono ad <i>A</i>. Esso si indica con <i>A<sup>C</sup></i>, o con <img class="inline" src="img/insiemi/CA.svg" alt="complemento di A"/> </p>
+<p>Sia ora <i>U</i> un insieme contenente tutti gli elementi che ci possono interessare, chiamiamolo <i>universo</i>. Si defisce <i>complemento</i> di un insieme <i>A</i> (with respect to the universe set <i>U</i>) the set of all elements of <i>U</i> which do not belong to <i>A</i>. Esso si indica con <i>A<sup>C</sup></i>, o con <img class="inline" src="img/insiemi/CA.svg" alt="complemento di A"/> </p>
 
 <div class="eq">
-<p><i>A<sup>C</sup></i> := U \ A</p>
+<p><i>A<sup>C</sup> := U \ A</i></p>
 </div>
 
 <p>More formally as</p>
@@ -132,32 +135,22 @@ L'insieme vuoto è sottoinsieme di qualsiasi altro insieme (incluso se stesso).<
 <p><i>A<sup>C</sup></i> := {<i>x &in; U</i> | <i>x &notin; A</i>}</p>
 </div>
 
-<p>I seguenti sono noti come <i>diagrammi di Venn</i>, e rappresentano le definizione date</p>
+<p>The following are known as <i>Venn's Diagrams</i>, and represent the definitions given above</p>
 
 <figure>
-<img src="img/venn.png" alt="diagrammi di Venn"/>
+<img src="img/venn.png" alt="Venn's diagrams"/>
 <figcaption>Diagrammi di Venn</figcaption>
 </figure>
 
-<h2>Proprietà delle operazioni</h2>
+<h2>Properties of set operations</h2>
+
+<p>The operations of forming unions, intersections, and complements of events obey certain rules not dissimilar to the rules of algebra. We list a few of these.</p>
+
+<p><b>Commutative law</b> <i>E</i> ∪ <i>F = F</i> ∪ <i>E</i></p>
+<p><b>Associative law</b> (<i>E</i> ∪ <i>F</i>) ∪ <i>G = E</i> ∪ (<i>F ∪ G</i>)</p>
+<p><b>Distributive law</b> (<i>E</i> ∪ <i>F</i>)<i>G = EG</i> ∪ <i>FG</i></p>
 
 <p>There is a resemblance between the properties of the union and intersection with the faminial distributive property x(y + z) = xy + xz for numbers as well for the associative and commutative properties.</p>
-
-<p><b>Commutative</b>:</p>
-
-<p><i>A ⋃ B = B ⋃ A</i></p>
-
-<p>A &Intersection; B = B &Intersection; A</p>
-
-<p><b>Associative</b>:</p>
-
-<p>(A ⋃ B) ⋃ C = A ⋃ (B ⋃ C)</p>
-
-<p>(<i>A</i> &Intersection; <i>B</i>) &Intersection; <i>C = A</i> &Intersection; (<i>B &Intersection; C</i>)</p>
-
-<p><b>Distributive</b></p>
-
-<p>A &Intersection; (B ⋃ C) = (A &Intersection; B) &bigcup; (A &Intersection; C)</p>
 
 <p>To prove the distributive property, we denote the right and left member with <i>E</i> and <i>F</i> respectively. Supposing that <i>x &in; E</i>. Then <i>x &in; A</i> and <i>x &in; B &bigcup; C</i> i.e. <i>x &in; B</i> or <i>x &in; C</i> (possibily both). Thus <i>x &in; A &Intersection; B</i> or <i>x &in; A &Intersection; C</i>), so that <i>x &in; F</i>. Thus <i>E &subset; F</i>. Supposing also that <i>x &in; F</i>. Then <i>x &in; A &Intersection; B</i> or <i>x &in; A &Intersection; C</i>, i.e., <i>x &in; A e x &in; B &bigcup; C</i>. Thus <i>x &in; A &Intersection;</i> (B &bigcup; C), so that <i>F &subest; E</i>. It follows that <i>E = F</i>. </p>
 

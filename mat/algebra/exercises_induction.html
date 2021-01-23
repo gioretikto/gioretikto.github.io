@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Exercises on natural numbers"/>
+ <title>Exercises on natural numbers</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Exercises on natural numbers</h1>
+
+<p><b>Exercise 2</b>. Prove by induction that for every positive integer <i>n</i>, ∑<sup><i>n</i></sup><sub><sub><i>k</i>=0</sub></sub> (<i>4k + 1</i>) = (2<i>n</i> + 1)(<i>n</i> + 1)</p>
+
+<p><b>Solution</b>. For <i>n</i> = 0, we have 1 = 1. We suppose the relation true for <i>n−1</i> and we prove it for <i>n</i>. </p>
+
+<p>∑<sup><i>n</i></sup><sub><sub><i>k</i>=0</sub></sub> (<i>4k + 1</i>) = ∑<sup><i>n−1</i></sup><sub><sub><i>k</i>=0</sub></sub> (<i>4k + 1</i>) + 4n +1 = (2<i>n</i> + 1)(<i>n</i> + 1) (2<i>n</i> + 1)(<i>n</i> + 1)[2(<i>n</i>−1) + 1] ⋅ <i>n</i> + 4<i>n</i> + 1 = (2<i>n</i> − 1) ⋅ <i>n + 4n</i> + 1 = 2n<sup>2</sup> −n + 4n +1 = 2n<sup>2</sup> + 3n +1 = (2n+1) ⋅ (n+1)</p>
+
+<p><b>Exercise 3</b>. Prove by induction that for every positive integer <i>n</i></p>
+
+<div class="eq">
+<p>1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> + ... + <i>n</i><sup>2</sup> = <i>n</i>(<i>n</i>+1)(2<i>n</i>+1)/6</p>
+</div>
+
+<p><b>Solution</b>. For <i>n = 1</i> is true. We suppose 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> + ... + (<i>n</i> − 1)<sup>2</sup> = ((<i>n</i>−1)<i>n</i>(2(<i>n</i>−1) + 1))/6 and prove it for <i>n</i>.</p>
+
+<div class="eq">
+<p>1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> + ... + <i>n</i><sup>2</sup> = ((<i>n</i>−1)<i>n</i>(2(<i>n</i>−1) + 1))/6 + <i>n</i><sup>2</sup> = <i>n</i>(<i>n</i>+1)(2<i>n</i>+1)/6.</p>
+</div>
+
+<p><b>Exercise 4</b>. Prove by induction that for every positive integer <i>n</i>, the power set 𝓟(<i>X</i>) of a finite set <i>X</i> with <i>n</i> elements has 2<i><sup>n</sup></i> elements.</p>
+
+<p><b>Solution</b>. It's true for <i>n</i> = 0, you could use that as the base case, <i>X</i> has exact one (= 2<sup>0</sup>) the empty subset. We suppose true that every set <i>X</i> with <i>n−1</i> elements has 2<sup><i>n</i>−1</sup> subsets. The set {<i>X</i>} \ {<i>x</i>} has <i>n−1</i> elements, hence it has 2<sup><i>n</i>−1</sup> subsets. To obtain the subsets of <i>X</i> we must add to each of these 2<sup><i>n</i>−1</sup> subsests the element <i>x</i>, obtaining another 2<sup><i>n</i>−1</sup> subsests thus in total 2<sup><i>n</i>−1</sup> + 2<sup><i>n</i>−1</sup> = 2<sup><i>n</i></sup> subsests.</p>
+
+<p><b>Exercise 5</b>. All students get the same marks in their exams. If n=1 is obvious the only student has the same marks of himself. Let the students be 1,..., n, by induction the students 1,...,n-1 have all the same marks as also the n-1 students from 2,..,n. But then, the students from 2 to n-1 belonging to different groups will have the same marks of the student of the first and second group. Hence all students have the same marks. Why is this reasoning faulty? </p>
+
+<p><b>Exercise 6</b>.
+
+<section>
+<a href="sets.html">&#171;Set theory</a>
+<a href="index.html">Index</a>
+<a href="relations.html">Relations &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
+

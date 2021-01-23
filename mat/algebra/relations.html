@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Relations"/>
+    <title>Relations</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Algebra</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Relations</h1>
+
+<p>Si ha spesso necessità di mettere in relazione gli elementi di un insieme con quelli di un altro o con altri elementi dello stesso insieme: si pensi alla relazione di disuguaglianza che mette in relazione tra loro gli elementi di uno stesso insieme numerico. A tal fine è utile presentare il concetto matematico di <i>relazione</i></p>
+
+<div class="def">
+<p><b>Definition 1.0</b>. <i>(Relazione</i>). Se <i>A</i> e <i>B</i> sono due insiemi non vuoti, si definisce <i>relazione</i> indicato con &real; il sottoinsieme <i>&real;⊆ A x B</i></p>
+</div>
+
+<p>Quando <i>A = B</i>, allora si parla di relazione &real;, definita su <i>A</i>. Intuitivamente una relazione &real; in <i>A</i> è una legge che fa corrispondere a ciascun elemento di un sottoinsieme <i>A</i> (che potrebbe essere anche tutto <i>A</i>), uno o più elementi di <i>A</i> stesso.</p>
+
+<p>Invece che scrivere che la coppia (<i>a,b</i>) sta in &real; (ossia che (<i>a,b</i>) &in; &real;, si usa scrivere <i>a &real; b</i>.</p>
+
+<p>Quando si costruisce un insieme scegliendo solo alcuni elementi del prodotto scalare stiamo costruendo una <i>relazione</i>. Si consideri il seguente esempio dal prodottto cartesiano [<i>a,b</i>] x [1,3]:</p>
+
+<img src="img/relazione.png" alt="relazione Relazioni" />
+
+<p>Prendendo alcune coppie del prodotto scalare otteniamo un sottoinsieme (relazione) come quello racchiuso in blu &real;= { (2a), (2b), (3a), (3b) }. Il termine <i>relazione</i> è così giustificato poichè si realizza una connessione tra gli elementi.</p>
+
+<div class="def">
+<p><b>Definition 1.1</b> - Sia <i>A</i> un insieme. Una relazione &real; su <i>A</i> è un sottoinsieme di <i>A x A</i>. Se <i>(a,b) ∈ &real;</i> allora si scrive a&real;b e si dice che <i>a</i> è in relazione con <i>b</i> tramite la relazione &real;.</p>
+</div>
+
+<h4>Examples</h4>
+
+<ul>
+	<li><p>the relation &le;, defined on ℕ.</p></li>
+	<li><p>the relation of <i>being friend of</i>, defined on a given group <i>A</i> of people.</p></li>
+	<li><p>la relazione &real; costituita da tutte le coppie <i>(a,b)</i> di ℝ x ℝ tali che <i>a + b = 1</i>: geometricamente, questa relazione coincide con la retta <i>x + y = 1</i> del piano ℝ x ℝ.</p></li>
+</ul>
+
+<p>Di relazioni ne esistono molteplici e si suole categorizzarle in base alle proprietà cui soddisfano in:</p>
+
+<ul>
+    <li><p><i>Relazione funzionale</i></p></li>
+    <li><p><i>Relazione d'ordine</i></p></li>
+    <li><p><i>Relazione di equivalenza</i></p></li>
+</ul>
+
+<p>Per relazione funzionale si intende semplicemente una <a href="funzioni.html">funzione</a>, quindi un abbinamento in cui il secondo elemento è univocamente determinato dal primo: ad esempio nella coppia (<i>a,b</i>) l'elemento <i>b</i> è unico rispetto ad <i>a</i>.</p>
+
+<h3>Relazione di equivalenza</h3>
+
+<div class="def">
+
+<p><b>Definition 1.2</b>. Una relazione di equivalenza ∼ (che si legge "equivalente a", procedendo da sinistra verso destra) è una relazione binaria tra elementi di un insieme <i>A</i> riflessiva, simmetrica e transitiva. Esplicitamente, tale relazione soddisfa le seguenti proprietà:</p>
+
+<ul>
+    <li><p><i>x ∼ x</i> &emsp; ∀x ∈ A</p></li>
+    <li><p><i>x ~ y</i> implica y ~ x &emsp;  ∀ x,y ∈ A</p></li>
+    <li><p><i>x ∼ y</i> e y ~ z implicaco x ∼ z &emsp; ∀ <i>x,y,z</i> ∈ A</p></li>    
+</ul>
+</div>
+
+<p>Due elementi tra i quali sussiste una relazione di equivalenza si dicono equivalenti per la relazione ∼: la proprietà di simmetria consente infatti di prescindere dall'ordine con cui quegli elementi compaiono all'interno della relazione.</p>
+
+<div class="def" id="equivalence_class">
+
+<p><b>Definition 1.3</b>. If <i>A</i> is a set and if ~ is an equivalence relation on <i>A</i>, then the <b>equivalence class</b> in A is the subset of all those elements of <i>A</i> which are related to <i>a</i> by the relation ~. Usually it is indicated by [<i>x</i>]<sub>∼</sub> or {<i>x</i>}<sub>∼</sub>. Symbolically</p>
+
+<div class="eq">
+<p>[<i>a</i>] = {<i>x &in; A</i> | <i>a ~ x</i>}</p>
+</div>
+
+<p>Observe that equivalence class is never empty as <i>a</i> &in; [<i>a</i>].</p>
+</div>
+
+<p>Grazie a una relazione di equivalenza <i>R</i>, l’insieme <i>I</i> può dividersi in classi, dette classi di equivalenza, riunendo elementi equivalenti in una stessa classe;</p>
+
+<p>The set of equivalence classes under ∼ is called the <b>quotient set</b> of <i>A</i> with respect to ∼; it is usually indicated as <i>A</i> / ∼. An equivalence relation on a set induces a partition on it, and any partition induces an equivalence relation.</p>
+
+<p>per indicare le relazioni di equivalenza si utilizza spesso il simbolo ~. Quindi (<i>x, y</i>) <i>&in; &real;</i>, può essere espresso tramite la notazione <i>x ~ y</i>.</p>
+
+<h4>Esempi di relazione di equivalenza</h4>
+
+<ul>
+	<li><p>La relazione di uguaglianza definita su un insieme <i>A</i></p></li>
+	<li><p>Considerando l'insieme degli abitanti di una nazione, la relazione "abita nella stessa città" è di equivalenza: infatti è contemporaneamente riflessiva, simmetrica e transitiva</p></li>
+	<li><p>Considerando i numeri naturali, la relazione "è maggiore od uguale a" non è di equivalenza: è riflessiva e transitiva, ma non è simmetrica (è antisimmetrica)</p></li>
+	<li><p>Considerando una famiglia, la relazione "è fratello di", è di equivalenza: infatti è riflessiva, simmetrica e transitiva.</p></li>
+	<li><p>Considerando una famiglia, la relazione "è padre di", non è di equivalenza: infatti non è riflessiva né simmetrica né transitiva.</p></li>
+	<li><p>La relazione <i>P</i> di parallelismo nell'insieme delle rette del piano, dove r P s significa "la retta <i>r</i> è parallela alla retta <i>s</i>, è una relazione di equivalenza.</p></li>
+</ul>
+
+<p><b>Definition 1.4</b>. Un sottoinsieme di <i>S</i> che contiene tutti e soli gli elementi equivalenti a un qualche elemento <i>a</i> di <i>S</i> prende il nome di classe di equivalenza di <i>a</i>  per la relazione ∼, (o classe di equivalenza modulo ~). Denotiamo con C<sub>a</sub> o con [a], la classe di equivalenza di un elemento <i>a &in; S</i>:</p>
+
+<div class="eq">
+<p>[<i>a</i>] := {<i>b &in; S</i> | <i>b ~ a</i>}</p>
+</div>
+
+<p>per la proprietà riflessiva <i>a &in; C<sub>a</sub></i>. Quindi le classi <i>C<sub>a</sub></i> sono non vuote. </p>
+
+<p>Ad esempio se <i>P</i> è la relazione di parallelelismo delle rette del paino e <i>r</i> una retta, la classe di equivalenza C<sub>r</sub> è l'insieme delle rette del piano parallele a <i>r</i>.</p>
+
+<p>Determinanre una relazione di equivalenza su un insieme <i>A</i> equivale a determinare una sua partizione. Vale infatti il seguente teorema:</p>
+
+<div class="def">
+<p><b>Theorem 1.5</b>. Sia &real; una relazione di equivalenza su un insieme <i>A</i>. L'insieme delle classi di equivalenza distinte rispetto a &real;  costituisce una partizione di <i>A</i>. </p>
+
+<p><b>Proof.</b> Occorre dimostrare che se C<sub>a</sub> e C<sub>b</sub> hanno un elemento in comune, <i>x</i>, allora C<sub>a</sub> = C<sub>b</sub>. Se risulta a ~ b, deve anche essere C<sub>a</sub> = C<sub>b</sub>. </p>
+
+<p>Sia <i>x &in; C<sub>b</sub></i>. Allora x ~ b. Poiichè a ~ b, allora segue a ~ x, dunque x &in; C<sub>a</sub>. Pertando C<sub>b</sub> ⊂ C<sub>a</sub>. L'inclusione opposta, C<sub>a</sub> ⊂ C<sub>b</sub>, si ottiene scambiando i ruoli di <i>a</i> e <i>b</i>. Pertato si ha la tesi.□</p>
+
+</div>
+
+<h3>Relazione d'ordine</h3>
+
+<div class="def">
+
+<p><b>Definition 1.6</b>. Dato un insieme <i>A</i>, una relazione si dice <b>relazione d'ordine</b> (<i>ordinamento</i>) in <i>A</i> se essa presenta le seguenti proprietà:</p>
+
+<ol type="i">
+    <li><p>antisimmetrica: <i>(x, y) &in; &real;</i> implica <i>(y, x)</i> &notin; &real;</p></li>
+    <li><p>transitiva: <i>(x, y) &in; &real;</i> e <i>(y, z)</i> &in; &real; implicano <i>(x, z)</i> &in; &real;</p></li>
+</ol>
+
+</div>
+
+<p>Scriveremo più semplicemente al posto di <i>(x, y) &in; &real;</i>:</p>
+
+<div class="eq">
+<p><i>x ≺ y; &emsp; oppure y ≻ x</i></p>
+</div>
+
+<p>che va letta come "x precede y" oppure "y segue x". L'insieme <i>A</i> è detto <b>parzialmente ordinato</b>, se <i>A</i> è dotato di una relazione di ordine <img class="inline" src="img/insiemi/prec.png" class="line" alt="precede"/>. Per denotare una tale insieme si si usa talvota la notazione (A, <img class="inline" src="img/insiemi/prec.png" class="line" alt="precede"/>).</p>
+
+<h3>Ordinamento Totale</h3>
+
+<div class="def" id="ordinamento_totale">
+
+<p><b>Definition 1.7</b>. (<i>Ordinamento totale</i>). Un <i>ordinamento</i> in <i>A</i> viene detto <b>totale</b> se oltre alle proprietà <i>transitiva</i> e <i>antisimmetrica</i> gode anche della seguente:</p>
+
+<p>Per ogni coppia (<i>x, y</i>) &in; <i>A</i> con <i>x &ne; y</i> sussiste una delle due relazioni:</p>
+
+<div class="eq">
+<p>(<i>x,y</i>) &in; ℜ , &emsp;  (<i>y, x</i>) &in; ℜ</i></p>
+</div>
+
+</div>
+
+<p>Consideriamo un insieme <i>A</i> di <i>n</i> elementi. Si può realizzare una corrispondenza biunivoca tra <i>A</i> e l'insieme dei numeri naturali <i>{1, 2, .., n}</i>. Tramite questa corrispondenza possiamo indicizzare gli elementi di <i>A</i>:</p>
+
+<img src="img/insiemi/elementi.png" alt="corrispondenza biunivoca naturali" />
+
+<p>In questo modo, l'insieme <i>A</i> risulta essere totalmente ordinato rispetto alla realzione d'ordine:</p>
+
+<img src="img/insiemi/ordine.png" alt="relazione d'ordine" />
+
+<p>Chiaramente esistono altri ordinamenti possibili. Si chiama <a href="permutazioni.html">permutazione</a> dell'insieme <i>A</i> di <i>n</i> elementi, l'insieme <i>A</i> a cui è stata assoiata una relazione d'ordine.</p>
+
+<h2>L'ordinamento dei numeri reali</h2>
+
+<p>I numeri reali diversi da zero si dividono in positivi che generano il sottoinsieme ℝ<sub>+</sub> e negativi quello ℝ<sub>-</sub>, abbiamo quindi la partizione:</p>
+
+<div class="eq">
+<p>ℝ = ℝ<sub>-</sub> ∪ 0 ∪ ℝ<sub>+</sub></p>
+</div>
+
+<p>è utile definire anche</p>
+
+<div class="eq">
+<p>ℝ<sub>*</sub> = 0 ∪ ℝ<sub>+</sub></p>
+</div>
+
+<p>piuttosto che scrivere <i>x &in; ℝ<sub>+</sub></i> scriveremo più semplicemente <i>x &gt; 0</i></p>
+
+<p>Si può quindi definire un ordinamento tra numeri reali, scrivendo:</p>
+
+<img src="img/insiemi/xminorey.png" alt="ordinamento reali" />
+
+<p>L'insieme ℝ è quindi totalmente ordinato in quanto presi comunque due numeri reali distinti <i>x</i> e <i>y</i> è sempre vera una sola delle due condizioni :</p>
+
+<div class="eq">
+<p>x &lt; y &emsp;oppure &emsp; y &gt; x</p>
+</div>
+
+<p>ed inoltre:</p>
+
+<div class="eq">
+<p>x &le; y &emsp; ⇔ &emsp; x &lt; y oppure &emsp; x = y</p>
+</div>
+
+<p><b>Proposition 1.8</b>. Sia <i>E</i> una relazione di equivalenza definita su un insieme <i>A</i>. Siano <i>a,b</i> &in; <i>A</i>. Allora</p>
+
+<div class="eq">
+<p>[a] = [b] &emsp;⇐⇒  &emsp; aEb altrimenti aɆ b</p>
+</div>
+
+<p><b>Proof</b>. Sia <i>aEb</i> (da cui anche <i>bEa</i>). Proviamo che [<i>a</i>] &subseteq; [b] ([b] &subseteq; [a]) segue allora da bEa, invertendo i ruoli di <i>a</i> e <i>b</i>; così si conclude [a] = [b]). Sia <i>c</i> &in; [<i>a</i>]. Allora aEc; da bEa e dalla proprietà transitiva, bEc; segue c &in; [b]. Sia ora aɆ b, cioè <i>a</i> non sia in relazione <i>E</i> con <i>b</i>. Se esiste c &in; [a] &cap; [b], vale sia aEc che bEc, dunque aEB: un assurdo. Così deve essere [a] &cap; [b] = ∅.□</p>
+
+<p><b>Proposition 1.9</b>. Sia &rho; una relazione di equivalenza definita su un insieme <i>A</i>. Si definisce <i>insieme quoziente</i> di <i>A</i> rispetto a &rho;, e si indica con <i>A / &rho;</i>, l'insieme di tutte le classi di equivalenza modulo &rho;. In simboli</p>
+
+<div class="eq">
+<p><i>A/&rho;</i> := {[<i>a</i>] | <i>a &in; A</i>}</p>
+</div>
+
+<p>La proposizione precedente dice che elementi <i>a</i> che erano <i>equivalenti</i> in <i>A</i> si trasformano in un unico elemento,<i>[a]</i>, di <i>A/&rho;</i>.</p>
+
+<h2>Partizioni</h2>
+
+<div class="def" id="partizione">
+<p><b>Definition 1.10</b>. Dicesi <i>partizione</i> di un insieme <i>A</i> una suddivisione di tale insieme in sottoinsiemi A<sub>&alpha;</sub> disgiunti: Ossia tali che</p>
+
+<ol>
+	<li><p>U<sub>&alpha;</sub> <i>A<sub>&alpha;</sub> = A</i> (le parti ricoprono <i>A</i>)</p></li>
+	<li><p><i>A<sub>&alpha;</sub> ⋂ A<sub>&beta;</sub></i> &ne; 0 ⇐⇒ <i>A<sub>&alpha;</sub> = A<sub>&beta;</sub></i> (le parti o <i>coincidono</i> o sono <i>disgiunte</i>)</p></li>
+</ol>
+</div>
+
+<p>si ha quindi:</p>
+
+<p><i>A</i> = unione di sottoinsiemi non vuoti disgiunti</p>
+
+<p>Per esempio gli insiemi</p>
+
+<p>{2,3}, {1,5}, {4}</p>
+
+<p>formano una partizione dell'insieme {1,2,4,5}</p>
+
+<p>I due insiemi, degli interi pari e degli interi dispari, formano una partizione dell'insieme ℤ di tutti gli interi.</p>
+
+<p>Una partizione di un insieme <i>A</i> è qundi un insieme &Pi; di sottoinsiemi, tali che ogni elemento di <i>A</i> appartiene ad uno e un solo dei sottoinsiemi dati.</p>
+
+<p><b>Theorem 1.2.11</b>. Sia &rho; una relazione di equivalenza in <i>A</i>. Le classi di equivalenza di <i>A</i> modulo &rho; costituiscono una partizione di <i>A</i>.</p>
+
+<p><b>Proof</b>. (1) Ricoprono <i>A</i>: infatti, essendo <i>a &rho; a</i> per ogni <i>a &in; A</i>, ogni <i>a &in; A</i>, appartiene alla sua classe di equivalenza. (2) Le classi di equivalenza o coincidono o sono disgiunte: sia <i>z</i> &in; [<i>a</i>] &Cup; [<i>b</i>], cioè siano [<i>a</i>] e [<i>b</i>] non disgiunte. Allora <i>z &rho; a</i> e <i>z &rho; b</i>, da cui, per simmetria e transitività, <i>a &rho; b</i>. In base alla Proposizione 1.8, [a] = [b], ossia le due classi coincidono.□</p>
+
+<p><b>Theorem 1.2.12</b>. Ogni partizione di un insieme <i>A</i> determina su <i>A</i> una relazione di equivalenza, per la quale i sottoinsiemi della partizione sono le classi di equivalenza.</p>
+
+<p><b>Proof</b>. Indicati con <i>A</i><sub>&alpha;</sub> i sottoinsiemi della partizione, </p>
+
+<p>I due teoremi precedenti asseriscono che i concetti di partizione e di relazione di equivalenza sono equivalenti.</p>
+
+<p>In definitiva, le proprietà di riflessività, simmetria e transitività, proprie delle relazioni di equivalenza, caratterizzano oggetti che <i>non sono</i> (necessariamente) <i>uguale</i>, ma che tali possono venir considerati limitamente a particolari scopi.</p>
+
+<p>Esistono altre proprietà che confrontano oggetti tra loro diversi e dicono ad esempio quando uno dei due oggetti è "più grande" o "più piccolo" di un altro. Precisiamo tali proprietà e le relazioni ad esse legate.</p>
+
+
+<p><b>Definition 1.2.13</b>. Una relazione &rho; definita su un insieme <i>A</i> si dice <i>antisimmetrica</i> se</p>
+
+<div class="eq">
+<p>a &rho; b, &nbsp; b &rho; a &emsp; ⇒ &emsp; a = b</p>
+</div>
+
+<p><b>Definition 1.2.14</b>. Una relazione &rho; definita su di un insieme <i>A</i> si dice <i>relazione di ordine parziale</i> se è riflessiva, antisimmetrica e transitiva. L'insieme <i>A</i> dicesi allora <i>insieme parzialemente ordinato</i> dalla relazione &rho;</p> 
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="funzioni.html">Funzioni &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -23,7 +23,7 @@
 
 <p>In the previous paragraph we studied the notion of isomorphism between rings. We turn our attention now to ring <i>homomorphisms</i>. A ring <i>homomorphism</i> is a mapping from one ring to another that preserves both ring operations but which is not bijective.</p>
 
-<p><b>4.61 Definition</b>. Give two rings (<i>R</i>, +, ·) and (<i>R'</i>, +, ·) we define homomorphism between <i>R</i> and <i>R'</i> a mapping between <i>&phi;</i> between <i>R</i> and <i>R'</i> such that</p>
+<p><b>4.2.0 Definition</b>. Give two rings (<i>R</i>, +, ·) and (<i>R'</i>, +, ·) we define homomorphism between <i>R</i> and <i>R'</i> a mapping between <i>&phi;</i> between <i>R</i> and <i>R'</i> such that</p>
 
 <div class="eq">
 <p><i>&phi;</i>(<i>r<sub>1</sub> + r<sub>2</sub></i>) = <i>&phi;</i>(<i>r<sub>1</sub></i>) + <i>&phi;</i>(<i>r<sub>2</sub></i>)</p>
@@ -69,11 +69,11 @@
 
 <p>When an homomorphism is injective is called <b>monomorphism</b>, when it is onto is called <b>epimorphism</b>.</p>
 
-<p><b>4.62 Proposition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, then the image of the zero of <i>R</i> is the zero of <i>R'</i>.</p>
+<p><b>4.2.1 Proposition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, then the image of the zero of <i>R</i> is the zero of <i>R'</i>.</p>
 
 <p><b>Proof.</b> Indeed <i>&phi;</i>(0<sub>R</sub>) = <i>&phi;</i>(0<sub>R</sub> + 0<sub>R</sub>) = <i>&phi;</i>(0<sub>R</sub>) + <i>&phi;</i>(0<sub>R</sub>) and it follows <i>&phi;</i>(0<sub>R</sub>) = 0<sub>R'</sub>.□</p>
 
-<p><b>4.63 Corollary</b>. <i>&phi;</i>(−<i>a</i>) = − <i>&phi;</i>(<i>a</i>), &forall; <i>a &in; R</i>.</p>
+<p><b>4.2.2 Corollary</b>. <i>&phi;</i>(−<i>a</i>) = − <i>&phi;</i>(<i>a</i>), &forall; <i>a &in; R</i>.</p>
 
 <p>If two rings R and <i>R'</i> have a unit, in general the &phi;(1<sub>R</sub>) &ne; 1<sub>R'</sub>. For example, let</p>
 
@@ -228,7 +228,7 @@
 
 <p>The only elements of <i>R'</i> that are hit by <i>&phi;</i> are of the form [<i>r</i> 0; 0 0], hence the map is not onto. Nevertheless the following is true.</p>
 
-<p><b>4.64 Proposition</b>. Let <i>&phi;</i> a non-null homomorphism between two rings <i>R</i> and <i>R'</i> with unity. If <i>R'</i> is an integral domain or <i>&phi;</i> is an epimorphism, then the image of the unity of <i>R</i> is the uniti of <i>R'</i>.</p>
+<p><b>4.2.3 Proposition</b>. Let <i>&phi;</i> a non-null homomorphism between two rings <i>R</i> and <i>R'</i> with unity. If <i>R'</i> is an integral domain or <i>&phi;</i> is an epimorphism, then the image of the unity of <i>R</i> is the uniti of <i>R'</i>.</p>
 
 <p><b>Proof.</b> If <i>&phi;</i> is surjective every <i>r' &in; R'</i> is equal to <i>&phi;</i>(<i>r</i>) for some <i>r &in; R</i>, thus</p>
 
@@ -238,7 +238,7 @@
 
 <p>hence <i>&phi;</i>(<i>1<sub>R</sub></i>) represents the right unity for <i>R'</i>. Analogously we can notice it is also a left unity. If <i>R'</i> is an integral domain <i>&phi;</i>(<i>r</i>) = <i>&phi;</i>(<i>r</i>) <i>&phi;</i>(<i>1<sub>R</sub></i>) implies that (with <i>&phi;</i>(<i>r</i>) &ne; 0) by the cancellation property <i>&phi;</i>(<i>1<sub>R</sub></i>) = <i>1<sub>R'</sub></i>.□</p>
 
-<p><b>4.65 Definition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, the <b>kernel</b> of <i>&phi;</i> is the subset of the elements of <i>R</i> which are mapped onto the zero element of <i>R'</i></p>
+<p><b>4.2.4 Definition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, the <b>kernel</b> of <i>&phi;</i> is the subset of the elements of <i>R</i> which are mapped onto the zero element of <i>R'</i></p>
 
 <div class="eq">
 <p>Ker <i>&phi;</i> := {<i>r &in; R</i> | <i>&phi;</i>(<i>r</i>) = 0<i><sub>R'</sub></i>}</p>
@@ -254,7 +254,15 @@
 
 <p>The subrings of <i>R</i> satisfying the above properties are known as <i>ideals</i>.</p>
 
-<p><b>4.66 Definition</b>. For an arbitrary ring (<i>R</i>, + , ⋅ ). A <i>left ideal</i> <i>I</i>, of <i>R</i> is an additive subgroup such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ar &in; I</i>. <br>Similarly a <i>right ideal</i> is an additive subgroup <i>I</i> of <i>R</i> such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ra &in; I</i>. <br> If <i>I</i> is both a left and right ideal of <i>R</i> is is called a <i>two-sided ideal</i>, or simply an ideal of <i>R</i>.</p>
+<p><b>4.2.5 Proposition</b>. The homomorphism <i>&phi;</i> is a <i>monomorphism</i> (injective) if and only if Ker <i>&phi;</i> = {0<sub>R</sub>}</p>
+
+<p><b>Proof</b>. Let Ker <i>&phi;</i> = {0<sub>R</sub>} and <i>a,b &in; R</i>, <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>). Now <i>&phi;</i>(<i>a - b</i>) = <i>&phi;</i>(<i>a</i>) - <i>&phi;</i>(<i>b</i>) = 0. So <i>a-b</i> &in; Ker <i>&phi;</i> = {0<sub>R</sub>}, i.e. a-b = 0 or <i>a = b</i>. Hence <i>&phi;</i> is injective. So <i>&phi;</i> is a monomorphism, from <i>R</i>, onto &phi;(<i>R</i>).</p>
+
+<p><b>4.2.6 Definition</b>. For an arbitrary ring (<i>R</i>, + , ⋅ ). A <i>left ideal</i> <i>I</i>, of <i>R</i> is an additive subgroup such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ar &in; I</i>. <br>Similarly a <i>right ideal</i> is an additive subgroup <i>I</i> of <i>R</i> such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ra &in; I</i>. <br> If <i>I</i> is both a left and right ideal of <i>R</i> is is called a <i>two-sided ideal</i>, or simply an ideal of <i>R</i> and it is indicated as</p>
+
+<div class="eq">
+<p><i>I ⊲̲ R</i></p>
+</div>
 
 <h3>Examples of ideals</h3>
 
@@ -264,9 +272,11 @@
 	<li><p>The polynomials 𝕂[<i>x</i>] with zero constant term.</p></li>
 </ul>
 
-<p>The kernel of an homomorphim between rings is an ideal. A left or right ideal is a subring of <i>R</i> but the viceversa is not true consider for example <i>S<sub>a</sub></i> = {<i>x &in; R</i> | <i>ax = xa</i>} is a subring but not an ideal.</p>
+<p><b>4.2.7 Lemma</b>. If <i>&phi;: R ⟶ R'</i> is a homomorphim, then Ker <i>&phi;</i> is an ideal of <i>R</i>.</p>
 
-<section>
+<p>A left or right ideal is a subring of <i>R</i> but the viceversa is not true consider for example <i>S<sub>a</sub></i> = {<i>x &in; R</i> | <i>ax = xa</i>} is a subring but not an ideal.</p>
+
+<section aria-label="End">
 <a href="exercises_rings.html">&#171;Exercises on rings</a>
 <a href="index.html">Index</a>
 <a href="exercises_homomorphism.html">Exercises on ring homomorphism &#187;</a>

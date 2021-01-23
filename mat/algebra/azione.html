@@ -1,0 +1,120 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Azione"/>
+    <title>Azione</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Azione</h1>
+
+<p>Dati un <a href="gruppi.html">gruppo</a> <i>G</i> ed un insieme <i>S</i>. Si definisce azione di <i>G</i> su <i>S</i> una legge che associa ad elementi <i>g &in; G</i> e <i>s &in; S</i> un elemento <i>gs</i> di <i>S</i>. In altre parole è un'applicazione</p>
+
+<div class="eq">
+<p><i>G x S ⟶ S</i></p>
+</div>
+
+<p>che scriveremo come una moltiplicazione: <i>(g,s) &mapsto; g⋅s</i></p>
+
+<p>Si richiede che tale legge soddisfi i seguenti assiomi:</p>
+
+<ul>
+    <li><p><i>1<sub>G</sub> ⋅ s = s, &forall;  s &in; S</i></p></li>
+    <li><p><i>(gg') ⋅ s = g ⋅ (g's)</i>, per ogni <i>g,g' &in; G</i> e <i>s &in;S</i></p>
+</ul>
+
+<p>L'ultima proprietà non va confusa con quella associativa che è definita solo per elementi di uno stesso insieme, mentre <i>g, g'</i> e <i>s</i> appartengono a insiemi diversi. Un insieme <i>S</i> con un'azione <i>G</i> è chiamato spesso <i>G-insieme</i>.</p>
+
+
+<div class="def">
+<p><b>Esempio 1</b> Azione di <i>S<sub>n</sub></i> su {1,2,...,n}</p>
+
+<p><i>S<sub>n</sub></i> agisce su {1,...,n} tramite la legge di composizione <i>σ·k=σ(k)</i>. Per osservare che questa è un'azione, dati σ<sub>1</sub>,σ<sub>2</sub> ∈ S<sub>n</sub> e x&in; {1,2,...,n}, si ha:</p>
+
+<img src="img/azioneSn.png" alt="azione gruppo simmetrico"/>
+<!-- \sigma_1 \cdot (\sigma_2 \cdot x) = \sigma_1 \cdot (\sigma_2(x)) = \sigma_1(\sigma_2(x)) = (\sigma_1 \circ \sigma_2)(x) = (\sigma_1 \circ \sigma_2) \cdot x  -->
+
+<div class="eq">
+<p>&sigma;<sub>1</sub> ⋅ (&sigma;<sub>2</sub> ⋅ x) = &sigma;<sub>1</sub> ⋅ (&sigma;<sub>2</sub>(x)) = &sigma;<sub>1</sub> (&sigma;<sub>1</sub>(x)) = (&sigma;<sub>1</sub> ∘ &sigma;<sub>2</sub>) (x) = (&sigma;<sub>1</sub> ∘ &sigma;<sub>2</sub>) ⋅ x.</p>
+</div>
+
+<p>si ha inoltre id · x = &sigma;(1) · x = x, &forall; x.</p>
+
+<p>A titolo di esempio si consideri la permutazione <i>&sigma; &in; S<sub>4</sub></i> definita come 1↦1, 2↦3, 3↦4, 4↦2; se la si fa agire sul numero <i>x=3</i>, si ottiene:</p>
+
+<p><i>σ · 3 = σ(3) = 4</i></p>
+
+</div>
+
+<h2>Orbita</h2>
+
+<p>L’orbita di <i>s &in; S</i> per l'azione di <i>G</i>, <i>O<sub>G</sub>(s)</i>, è l’insieme dei trasformati di <i>s</i> tramite tutti gli elementi di <i>G</i>, ossia il sottoinsieme di S:</p>
+
+<div class="eq">
+<p><i>O<sub>s</sub></i> = {<i>s' &in; S, g &in; G</i> | <i>s' = gs</i>}</p>
+</div>
+
+<p>Data una permutazione &tau; in <i>S<sub>n</sub></i> per <i>i &in; {1,2,...,n}</i>, l'orbita di <i>i</i>, per azione di &tau; è <i>{i,&tau;(i),&tau;<sup>2</sup>(i),..., &tau;<sup>s-1</sup>}</i>, dove </p>
+
+<div class="def">
+<p><b>Esempio</b>- Per il gruppo di permutazione G<sub>1</sub> = {(1234), (2134), (1243), (2143)}, le orbite di <i>1</i> e <i>2</i> sono {1,2} e le  orbite di <i>3</i> e <i>4</i> sono {3,4}. </p>
+</div>
+
+<div class="def">
+
+<p><b>Proposizione O.1</b> - Le orbite relative all'azione di un gruppo sono classi di equivalenza rispetto alla relazione:</p>
+
+<div class="eq">
+<p><i>a ~ b</i>, if <i>b = ga</i> &emsp; for some <i>g &in; G</i></p>
+</div>
+
+<p><b>Dim.</b> - Dimostriamo che a l'orbita sono pertinenti le prorpeità della classe di equivalenza:</p>
+
+<ol>
+    <li><p><i>Riflessività (a ~ a) &forall; a &in; S</i>: Per azione dell'identità si ha: <i>1<sub>G</sub> ⋅ a = a</i>.</p></li>
+    <li><p><i>Simmetrica</i> (se <i>a~b</i> allora <i>b~a</i>): Se <i>a</i> e <i>b</i> sono nella stessa orbita si ha a = gb e b = ga. Infatti &Exists; <i>g<sup>-1</sup> &in; G</i> tale che:</p>
+    <p>g<sup>-1</sup> a = g<sup>-1</sup> (gb) = 1<sub>G</sub> b</p></li>
+    <li><p><i>Transitività</i> (se <i>a~b</i> e <i>b~c</i>, allora <i>a~c</i>)</i>: Assumendo che <i>a</i> è nella stessa orbita di <i>b</i> e che <i>b</i> si trova nella stessa orbita di <i>c</i>, si ha <i>a = gb</i> e <i>b = hc</i>, con <i>g,h &in; G</i>. Segue quindi che</p>
+    <p><i>x = gb = ghc</i> = (gh)c</i>, dunque <i>a</i> e <i>c</i> sono nella stessa orbita.</p></li>
+</ol>
+
+</div>
+
+<p>Essendo classi di equivalenza, le orbite costituiscono una partizione dell'insieme <i>S</i>.</p>
+
+<div class="def">
+
+<p><b>Proposizione O.2</b> <i>S</i> è un'insieme di orbite disgiunte.</p>
+
+</div>
+
+<p>Un elemento <i>g &in; G</i> permuta gli elementi di ciascuna orbita e non porta elementi di un'orbita in un'altra orbita.</p>
+
+<p>Si definisce inoltre lo stabilizzatore di un elemento <i>s &in; S</i> come il sottogruppo <i>G<sub>s</sub></i> di <i>G</i>, costituito dagli elementi che lasciano fisso <i>s</i>:</p>
+
+<div class="eq">
+<p>Stab<sub>G<sub>s</sub></sub> = {<i>g &in; G</i> | <i>gs = s</i>}</p>
+</div>
+
+<section>
+<a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>
+<a href="index.html">Index</a>
+<a href="relations.html">Relations &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

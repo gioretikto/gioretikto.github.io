@@ -3,8 +3,8 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- <meta name="description" content="gcd of polynomials"/>
- <title>gcd of polynomials</title>
+ <meta name="description" content="GCD of polynomials"/>
+ <title>GCD of polynomials</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -19,18 +19,20 @@
   
 <div class="content">
 
-<h1>gcd of polynomials</h1>
+<h1>GCD of polynomials</h1>
 
-<p><b>Definition 4.7</b>. Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>]. We define the <i>greatest common divisor</i> between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) and indicate as GCD(<i>g</i>(<i>x</i>), <i>f</i>(<i>x</i>)) or simply by (<i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>)), the polynomial <i>d</i>(<i>x</i>) such that</p>
+<p><b>Definition 4.7</b>. A polynomial with 1 as its leading coefficient is called a <b>monic</b> polynomial.</p>
+
+<p><b>Definition 4.8</b>. Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>]. We define the <i>greatest common divisor</i> between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) and indicate as GCD(<i>g</i>(<i>x</i>), <i>f</i>(<i>x</i>)) or simply by (<i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>)), the polynomial <i>d</i>(<i>x</i>) such that</p>
 
 <ul>
 	<li><p><i>d</i>(<i>x</i>) | <i>f</i>(<i>x</i>), &emsp; <i>d</i>(<i>x</i>)| <i>g</i>(<i>x</i>)</p></li>
 	<li><p>if <i>d'</i>(<i>x</i>) | <i>f</i>(<i>x</i>), <i>d'</i>(<i>x</i>) | <i>g</i>(<i>x</i>), &emsp; then &emsp; d'</i>(<i>x</i>) | <i>d</i>(<i>x</i>)</p></li>
 </ul>
 
-<p>The same euclidean algorithm used for finding the gcd of two integers can be used for polynomials and guarantes the existence of a gcd of two non-zer polynomials.</p>
+<p>The same euclidean algorithm used for finding the GCD of two integers can be used for polynomials and guarantes the existence of a GCD of two non-zero polynomials. One of the conditions that we place on a greatest common divisor of two polynomials is that it be monic. Without this condition, the greatest common divisor of two polynomials would not be unique.</p>
 
-<p><b>Proposition 4.7</b>. (<i>Euclid's Algorithm)</i> Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>], we successively divide in the following way</p>
+<p><b>Proposition 4.9</b>. (<i>Euclid's Algorithm)</i> Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>], we successively divide in the following way</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) <i>q<sub>0</sub></i>(<i>x</i>) + <i>r<sub>0</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>0</sub></i>(<i>x</i>) < ∂<i>g</i>(<i>x</i>)</p>
@@ -44,7 +46,7 @@
 
 <p>Applying the same procedure as in ℤ, the last non-null remainder in the sequence of the divisions is the gcd.</p>
 
-<p><b>Example 1</b> Compute the greatest common divisor of the polynomials <i>f</i>(<i>x</i>) = x<sup>3</sup> + 1, <i>g</i>(<i>x</i>) = x<sup>2</sup> + 1 on ℚ. We have</p>
+<p><b>Example 4.10</b> Compute the greatest common divisor of the polynomials <i>f</i>(<i>x</i>) = x<sup>3</sup> + 1, <i>g</i>(<i>x</i>) = x<sup>2</sup> + 1 on ℚ. We have</p>
 
 <div class="eq">
 <p><i>x<sup>3</sup> + 1 = x(x<sup>2</sup> + 1) − x + 1</i>,</p>
@@ -54,13 +56,13 @@
 
 <p>and so GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 2.</p>
 
-<p><b>Definition 4.8</b>. Two elements <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] such that <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) are said <i>associates</i> if there exists an inverible element <i>a</i> of 𝕂[<i>x</i>] such that</p>
+<p><b>Definition 4.11</b>. Two elements <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] such that <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) are said <i>associates</i> if there exists an inverible element <i>a</i> of 𝕂[<i>x</i>] such that</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) ⋅ <i>a</i></p>
 </div>
 
-<p>The relation of being <i>associates</i> is an equivalence relation and in each equivalence class there is exactly one monic polynomial: A polynomial where the highest power of its single variable has a coefficient of 1, which we regard as the canonical representative of the class. For example 4<i>x</i><sup>2</sup> + 8<i>x</i><sup>2</sup> +4 is associated to the monic polynomial x<sup>2</sup> + 2<i>x</i> + 1. Any polynomial is an associate of exactly one monic polynomial.</p>
+<p>The relation of being <i>associates</i> is an equivalence relation and in each equivalence class there is exactly one monic polynomial, which we regard as the canonical representative of the class. For example 4<i>x<sup>2</sup> + 8x<sup>2</sup> + 4</i> is associated to the monic polynomial <i>x<sup>2</sup> + 2x + 1</i>. Any polynomial is an associate of exactly one monic polynomial.</p>
 
 <p>Let <i>d'</i>(<i>x</i>) and <i>d</i>(<i>x</i>) two elements verifying both the condition of being gcd between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>). It is easy to see that they are associates. Then we can say that <i>the</i> greatest common divisor between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) is the unique monic polynomial.</p>
 
@@ -70,18 +72,17 @@
 <p><i>d</i>(<i>x</i>) = <i>h</i>(<i>x</i>) <i>f</i>(<i>x</i>) + <i>k</i>(<i>x</i>) <i>g</i>(<i>x</i>)</p>
 </div>
 
-<p><b>Definition 4.9</b>. Two polynomials are said coprime if</p>
+<p><b>Definition 4.12</b>. Two polynomials are said coprime if</p>
 
 <div class="eq">
 <p>GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 1</p>
 </div>
 
-<p><b>Definition 4.10</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>) <i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>]), then it divides one of the two factors.</p>
+<p><b>Definition 4.13</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>) <i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>]), then it divides one of the two factors.</p>
 
-<p><b>Proposition 4.11</b>. A polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is irreducible  if and only if is <i>prime</i>.</p>
+<p><b>Proposition 4.14</b>. A polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is irreducible  if and only if is <i>prime</i>.</p>
 
-<p><b>Theorem 4.12</b>. Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in 𝕂[<i>x</i>] can be factorised as a finite product 
-of irreducible elements. Such a factorisation is unique, that is</p>
+<p><b>Theorem 4.15</b>. Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in 𝕂[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>p<sub>1</sub></i>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)  = <i>q<sub>1</sub></i>(<i>x</i>) <i>q<sub>2</sub></i>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>) </p>
@@ -91,21 +92,21 @@ of irreducible elements. Such a factorisation is unique, that is</p>
 <i>q<sub>j</sub></i>(<i>x</i>) corresponds to <i>p<sub>i</sub></i>(<i>x</i>), then <i>p<sub>i</sub></i>(<i>x</i>) is associated to 
 <i>q<sub>j</sub></i>(<i>x</i>).</p>
 
-<p><b>Theorem 4.13</b>. (<i>Ruffini's Theorem</i>) If <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] and &alpha; &in;  𝕂[<i>x</i>] is such that <i>f</i>(&alpha;) = 0 then (<i>x − &alpha;</i>) | <i>f</i>(<i>x</i>).</p>
+<p><b>Theorem 4.16</b>. (<i>Ruffini's Theorem</i>) If <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] and &alpha; &in;  𝕂[<i>x</i>] is such that <i>f</i>(&alpha;) = 0 then (<i>x − &alpha;</i>) | <i>f</i>(<i>x</i>).</p>
 
 <p><b>Proof</b>. We think of <i>f</i>(<i>x</i>) as a polynomial function since we are evaluating its value in &alpha;. By dividing <i>f</i>(<i>x</i>) by (<i>x − &alpha;</i>) we have</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = (<i>x − &alpha;</i>) <i>q</i>(<i>x</i>) + <i>r</i>(<i>x</i>), &emsp; with ∂<i>r</i>(<i>x</i>) < (<i>x − &alpha;</i>) = 1 &emsp; (<b>4.1</b>)</p>
+<p><i>f</i>(<i>x</i>) = (<i>x − &alpha;</i>) <i>q</i>(<i>x</i>) + <i>r</i>(<i>x</i>), &emsp; with ∂<i>r</i>(<i>x</i>) < (<i>x − &alpha;</i>) = 1 &emsp; (<b>4.17</b>)</p>
 </div>
 
-<p>Hence <i>r</i>(<i>x</i>) must be an element <i>r</i> of 𝕂[<i>x</i>]. Evaluating eq. (4.1) for <i>x = &alpha;</i> we have <i>f</i>(<i>&alpha;</i>) = 0 = (&alpha; - &alpha;)<i>q</i>(<i>x</i>) + <i>r</i>, thus <i>r</i> must be equal to zero, so <i>f</i>(<i>x</i>) is divisible by (<i>x − &alpha;</i>).□</p>
+<p>Hence <i>r</i>(<i>x</i>) must be an element <i>r</i> of 𝕂[<i>x</i>]. Evaluating eq. (4.17) for <i>x = &alpha;</i> we have <i>f</i>(<i>&alpha;</i>) = 0 = (&alpha; - &alpha;)<i>q</i>(<i>x</i>) + <i>r</i>, thus <i>r</i> must be equal to zero, so <i>f</i>(<i>x</i>) is divisible by (<i>x − &alpha;</i>).□</p>
 
-<p><b>Definition 4.14</b>. Let <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>]. An element &alpha; &in;  𝕂[<i>x</i>] such that <i>f</i>(<i>&alpha;</i>) = 0 is said <i>root</i> of <i>f</i>(<i>x</i>).</p>
+<p><b>Definition 4.18</b>. Let <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>]. An element &alpha; &in;  𝕂[<i>x</i>] such that <i>f</i>(<i>&alpha;</i>) = 0 is said <i>root</i> of <i>f</i>(<i>x</i>).</p>
 
-<p><b>Definition 4.15</b>. A root <i>α</i> ∈ 𝕂 of <i>f</i>(<i>x</i>) ∈ 𝕂[<i>x</i>] is said to be <i>simple</i> if (<i>x − α</i>) | <i>f</i>(<i>x</i>) but (<i>x − α</i>)<sup>2</sup> ∤ <i>f</i>(<i>x</i>). It is said to be of multiplicity <i>m</i> if (<i>x − α</i>)<sup>m</sup> | <i>f</i>(<i>x</i>), but (<i>x − α</i>)<sup>m+1</sup> ∤ <i>f</i>(<i>x</i>). A root of multiplicity <i>m</i> > 1 is said to be a <i>multiple</i> root.</p>
+<p><b>Definition 4.19</b>. A root <i>α</i> ∈ 𝕂 of <i>f</i>(<i>x</i>) ∈ 𝕂[<i>x</i>] is said to be <i>simple</i> if (<i>x − α</i>) | <i>f</i>(<i>x</i>) but (<i>x − α</i>)<sup>2</sup> ∤ <i>f</i>(<i>x</i>). It is said to be of multiplicity <i>m</i> if (<i>x − α</i>)<sup>m</sup> | <i>f</i>(<i>x</i>), but (<i>x − α</i>)<sup>m+1</sup> ∤ <i>f</i>(<i>x</i>). A root of multiplicity <i>m</i> > 1 is said to be a <i>multiple</i> root.</p>
 
-<p><b>Theorem 4.16</b>. Let 𝕂 a field. A nonzero polynomial <i>f</i>(<i>x</i>) of degree <i>n</i> in 𝕂[<i>x</i>], has at most <i>n</i> roots &in; 𝕂, counted with their multiplicity.</p>
+<p><b>Theorem 4.20</b>. Let 𝕂 a field. A nonzero polynomial <i>f</i>(<i>x</i>) of degree <i>n</i> in 𝕂[<i>x</i>], has at most <i>n</i> roots &in; 𝕂, counted with their multiplicity.</p>
 
 <p><b>Proof.</b> We proceed by induction on <i>n</i>. If <i>n</i> = 0, <i>f</i>(<i>x</i>) is a non-zero constant withoug roots, hence the theorem is true. We suppose true the theorem for any polynomial of degree &lt; <i>n</i>. Let <i>f</i>(<i>x</i>) of degree <i>n</i>. If <i>f</i>(<i>x</i>) has a root &alpha; of multiplicity <i>m</i> &ge; 1, <i>m &le; n</i>, then</p>
 
@@ -115,7 +116,7 @@ of irreducible elements. Such a factorisation is unique, that is</p>
 
 <p>If &beta; is another root of <i>f</i>(<i>x</i>) then 0 = <i>f</i>(&beta;) = (<i>&beta; − &alpha;</i>)<sup>m</sup> q(&beta;). Since &beta; &alpha; we must have <i>q</i>(&beta;) = 0, because 𝕂 has no zero-divisors. Thus the only roots of <i>f</i>(<i>x</i>) are &alpha; (with multiplicity <i>m</i>) and the roots of <i>q</i>(<i>x</i>). For the induction hypothesis, <i>q</i>(<i>x</i>) has at last <i>n − m</i> roots (= degree ∂<i>q</i>(<i>x</i>)). Hence <i>f</i>(<i>x</i>) can have at last <i>m</i> + (<i>n − m</i>) = <i>n</i> roots in 𝕂. □</p>
 
-<p><b>Corollary 4.17</b>. Let 𝕂 a field with infinitely many elements and <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) two polynomials &in; 𝕂[<i>x</i>]. Then they are equal as polynomials <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) only if they are equal as polynomial functions <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) on 𝕂.</p>
+<p><b>Corollary 4.21</b>. Let 𝕂 a field with infinitely many elements and <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) two polynomials &in; 𝕂[<i>x</i>]. Then they are equal as polynomials <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) only if they are equal as polynomial functions <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) on 𝕂.</p>
 
 <p><b>Proof</b>. If <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) as polynomials, then they will obviuosly equal as polynomial function. Conversely, suppose that <i>f</i>(<i>&alpha;</i>) = <i>g</i>(<i>&alpha;</i>), &forall;&alpha; &in; 𝕂. Then the polynomial <i>h</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>) is the polynomial with the property that <i>h</i>(<i>&alpha;</i>) = 0, &forall;&alpha; &in; 𝕂. If <i>h</i>(<i>x</i>) wasn't the zero polynomial, it would have degree <i>n</i> &in; ℕ. Since 𝕂 has infinite elements, <i>h</i>(<i>x</i>) would be a polynomial with infinite roots. Then <i>h</i>(<i>&alpha;</i>) must be the zero-polynomial and <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) as polynomials.□</p>
 

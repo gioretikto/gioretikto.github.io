@@ -97,7 +97,7 @@
 <p><i>&zeta;<sub>n,k</sub></i> = cos <i>2&pi;k/n</i> + i <i>sin2&pi;k/n = &zeta;<sub>n</sub><sup>k</sup></i></p>
 </div>
 
-<p>with 0 &le; <i>k &lt; n</i> and (<i>n,k</i>) = 1 and hence they are <i>&phi;</i>(<i>n</i>), with <i>&phi;</i> Euler's totient function.</p>
+<p>with 0 &le; <i>k &lt; n</i> and (<i>n,k</i>) = 1 and hence they are &Phi;(<i>n</i>), with &Phi; Euler's totient function.</p>
 
 <p><b>Proof.</b> Let <i>ζ</i> be a primitive <i>n</i>-th root of unity. If <i>ζ<sup>k</sup></i> is primitive then <i>(ζ<sup>k</sup>)<sup>n</sup></i> = 1. This implies that from</p>
 
@@ -112,17 +112,17 @@
 <p>Consider the polynomial</p>
 
 <div class="eq">
-<p><i>&Phi;<sub>n</sub></i>(<i>x</i>) = (<i>x - &zeta;<sub>1</sub></i>) (<i>x - &zeta;<sub>2</sub></i>) ⋅⋅⋅  (<i>x - &zeta;<sub>&phi;(<i>n</i>)</sub></i>)</p>
+<p>&Phi;<i><sub>n</sub></i>(<i>x</i>) = (<i>x − &zeta;<sub>1</sub></i>) (<i>x - &zeta;<sub>2</sub></i>) ⋅⋅⋅  (<i>x − &zeta;<sub>&phi;(<i>n</i>)</sub></i></p>
 </div>
 
-<p>This polynomial is known as <i>n-th cyclotomic polynomial</i>, because of their relation with the division of the circle; <i>&zeta;<sub>1</sub>, &zeta;<sub>2</sub>, ..., &zeta;<sub>n</sub></i> are the &phi;(<i>n</i>) primitive <i>n</i>-th roots of unit. It is evident that the degree of <i>&Phi;<sub>n</sub></i> is <i>&phi;</i>(<i>n</i>). Any of the φ(n) primitive nth roots of unity generate all <i>n</i>th roots of unity (primtive or not) so the &zeta;<sub>i</sub> that appear in the cyclotomic polynomial can be expressed as &zeta;<sup>i</sup> for <i>i</i> such that 1 &le; <i>i</i> &lt; <i>n</i>.</p>
+<p>This polynomial is known as <i>n-th cyclotomic polynomial</i>, because of their relation with the division of the circle; <i>&zeta;<sub>1</sub>, &zeta;<sub>2</sub>, ..., &zeta;<sub>n</sub></i> are the &phi;(<i>n</i>) primitive <i>n</i>-th roots of unit. It is evident that the degree of &Phi;<sub>n</sub></i> is &Phi;(<i>n</i>). Any of the φ(n) primitive nth roots of unity generate all <i>n</i>th roots of unity (primtive or not) so the &zeta;<sub>i</sub> that appear in the cyclotomic polynomial can be expressed as <i>&zeta;<sup>i</sup></i> for <i>i</i> such that 1 &le; <i>i &lt; n</i>.</p>
 
-<p>Moreover for every divisor <i>d</i> of <i>n</i> there exists a n-th root of the unit having <i>d</i> as order (consider <i>&zeta;<sup>n/d</sup></i> and see <a href="pol_cyclo_ex.html">exercise 3</a>. Every <i>n</i>-th root of unity is then an d-th primitive root of the unity with <i>d</i> its order dividng <i>n</i>. We can group all n-th roots of the unit based on their order <i>d</i> and indicate with <i>&Phi;<sub>d</sub></i>(<i>x</i>) the d-th cyclotomic polynomial (whose roots are all the dth primitive roots of the unity).
+<p>Moreover for every divisor <i>d</i> of <i>n</i> there exists a n-th root of the unit having <i>d</i> as order (consider <i>&zeta;<sup>n/d</sup></i> and see <a href="pol_cyclo_ex.html">exercise 3</a>. Every <i>n</i>-th root of unity is then an d-th primitive root of the unity with <i>d</i> its order dividng <i>n</i>. We can group all n-th roots of the unit based on their order <i>d</i> and indicate with &Phi;<sub>d</sub></i>(<i>x</i>) the d-th cyclotomic polynomial (whose roots are all the dth primitive roots of the unity).
 
 <p><b>Example 4.34</b> - Consider x<sup>4</sup> − 1. There are four roots {1,-1,<i>i,-i</i>}; 1 and -1 are not primitive roots of the unity, because by definition of order even if 1<sup>4</sup> = 1 or -1<sup>4</sup> = 1 we have 1<sup>2</sup> = 1 and -1<sup>2</sup> = 1. Only <i>i</i> and <i>−i</i> are primitive because no power smaller than 4 gives <i>i<sup>m</sup></i> = 1, or (−<i>i</i>)<i><sup>m</sup></i> = 1. So that</p> 
 
 <div class="eq">
-<p><i>&Phi;</i><sub>4</sub> (<i>x</i>)= (x-i) (x+i) = x<sup>2</sup> + 1</p>
+<p>&Phi;<sub>4</sub> (<i>x</i>)= (x-i) (x+i) = x<sup>2</sup> + 1</p>
 </div>
 
 <p>The polynomial <i>x<sup>n</sup></i> − whose roots are all the <i>n</i>-th roots of the unit can be factorized as</p>
@@ -134,68 +134,127 @@
 <p>this relation yields to</p>
 
 <div class="eq">
-<p><i>n</i> = ∑<sub><i>d|n</i></sub><i> &phi;</i>(<i>d</i>)</p>
+<p><i>n</i> = ∑<sub><i>d</i>|<i>n</i></sub> &Phi;(<i>d</i>)</p>
 </div>
 
 <p>which is a property of Euler's totient function and can be demostrated without resorting to cyclotomic polynomials.</p>
 
-<p><b>Example 4.36</b> - When <i>n</i> = 2, the only primitive square root of unit is −1 (note that 1 has order 1, i.e. not primitive), so that <i>&Phi;</i><sub>2</sub>(<i>x</i>) = <i>x</i> + 1. When <i>n</i> = 4, the primitive fourth roots of unity are <i>i</i> and <i>-i</i>, so that</p>
+<p><b>Example 4.36</b> - When <i>n</i> = 2, the only primitive square root of unit is −1 (note that 1 has order 1, i.e. not primitive), so that &Phi;<sub>2</sub>(<i>x</i>) = <i>x</i> + 1. When <i>n</i> = 4, the primitive fourth roots of unity are <i>i</i> and <i>-i</i>, so that</p>
 
 <div class="eq">
-<p><i>&Phi;</i><sub>4</sub> = (x−i) (x+i) = x<sup>2</sup> + 1</p>
+<p>&Phi;<sub>4</sub> = (x−i) (x+i) = x<sup>2</sup> + 1</p>
 </div>
 
-<p>Since <i>&Phi;</i><sub>1</sub> = x −1, we get the factorization</p>
+<p>Since &Phi;<sub>1</sub> = x −1, we get the factorization</p>
 
 <div class="eq">
-<p><i>x<sup>n</sup> − 1</i> = <i>&Phi;</i><sub>1</sub>(<i>x</i>) <i>&Phi;</i><sub>2</sub>(<i>x</i>) <i>&Phi;</i><sub>4</sub>(<i>x</i>) = (x −1) (x +1) (x<sup>2</sup> +1)</p>
+<p><i>x<sup>n</sup> − 1</i> = &Phi;<sub>1</sub>(<i>x</i>) &Phi;<sub>2</sub>(<i>x</i>) &Phi;<sub>4</sub>(<i>x</i>) = (x −1) (x +1) (x<sup>2</sup> +1)</p>
 </div>
 
 <p>Equation 4.35 can be written as well as</p>
 
 <div class="eq">
-<p><i>&Phi;</i><sub>n</sub>(<i>x</i>) = <i>x<sup>n</sup> − 1</i> / ∏<sub><sub><i>d</i>|<i>n</i>,<i>d&ne; n</i></sub></sub> <i>&Phi;</i><sub>d</sub>(<i>x</i>) </p>
+<p>&Phi;<i><sub>n</sub></i>(<i>x</i>) = <i>x<sup>n</sup></i> − 1 / ∏<sub><sub><i>d</i>|<i>n</i>,<i>d&ne;n</i></sub></sub> &Phi;<sub>d</sub>(<i>x</i>) </p>
 </div>
 
 <p>With this inductive method we can calculate the first cyclotomic polynomials</p>
 
 <div class="eq">
-<p><i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x − 1</i></p>
-<p><i>&Phi;</i><sub>2</sub>(<i>x</i>) = <i>x<sup>2</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x</i> + 1</p>
-<p><i>&Phi;</i><sub>3</sub>(<i>x</i>) = <i>x<sup>3</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x<sup>2</sup> + x </i> + 1</p>
-<p><i>&Phi;</i><sub>4</sub>(<i>x</i>) = <i>x<sup>4</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>)<i>&Phi;</i><sub>2</sub>(<i>x</i>) = <i>x<sup>4</sup></i> − 1 /(<i>x−1</i>)(<i>x+1</i>) = <i>x<sup>2</sup> +1</i></p>
-<p><i>&Phi;</i><sub>5</sub>(<i>x</i>) = <i>x<sup>5</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = <i>x<sup>4</sup> +x<sup>3</sup> + x<sup>2</sup> + x + 1</i></p>
-<p><i>&Phi;</i><sub>6</sub>(<i>x</i>) = <i>x<sup>6</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>)<i>&Phi;</i><sub>2</sub>(<i>x</i>)<i>&Phi;</i><sub>3</sub>(<i>x</i>) = <i>x<sup>6</sup> -1</i> /(x−1)(x+1)(x<sup>2</sup>+x+1) = x<sup>2</sup> −x +1</p>
-<p><i>&Phi;</i><sub>7</sub>(<i>x</i>) = <i>x<sup>7</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) = x<sup>6</sup> + x<sup>5</sup> + x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x + 1</p>
-<p><i>&Phi;</i><sub>8</sub>(<i>x</i>) = <i>x<sup>8</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>)<i>&Phi;</i><sub>2</sub>(<i>x</i>)<i>&Phi;</i><sub>4</sub>(<i>x</i>) = <i>x<sup>8</sup> -1</i>/(<i>x−1</i>)(<i>x+1</i>)(<i>x<sup>2</sup>+1</i>) = <i>x<sup>4</sup> + 1</i></p>
-<p><i>&Phi;</i><sub>9</sub>(<i>x</i>) = <i>x<sup>9</sup> − 1</i>/<i>&Phi;</i><sub>1</sub>(<i>x</i>) <i>&Phi;</i><sub>3</sub>(<i>x</i>) = <i>x<sup>6</sup> + x<sup>3</sup> + 1</i></p>
+<p>&Phi;<sub>1</sub>(<i>x</i>) = <i>x − 1</i></p>
+<p>&Phi;<sub>2</sub>(<i>x</i>) = <i>x<sup>2</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>) = <i>x</i> + 1</p>
+<p>&Phi;<sub>3</sub>(<i>x</i>) = <i>x<sup>3</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>) = <i>x<sup>2</sup> + x </i> + 1</p>
+<p>&Phi;<sub>4</sub>(<i>x</i>) = <i>x<sup>4</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>)&Phi;<sub>2</sub>(<i>x</i>) = <i>x<sup>4</sup></i> − 1 /(<i>x−1</i>)(<i>x+1</i>) = <i>x<sup>2</sup> +1</i></p>
+<p>&Phi;<sub>5</sub>(<i>x</i>) = <i>x<sup>5</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>) = <i>x<sup>4</sup> +x<sup>3</sup> + x<sup>2</sup> + x + 1</i></p>
+<p>&Phi;<sub>6</sub>(<i>x</i>) = <i>x<sup>6</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>)&Phi;<sub>2</sub>(<i>x</i>)&Phi;<sub>3</sub>(<i>x</i>) = <i>x<sup>6</sup> -1</i> /(x−1)(x+1)(x<sup>2</sup>+x+1) = x<sup>2</sup> −x +1</p>
+<p>&Phi;<sub>7</sub>(<i>x</i>) = <i>x<sup>7</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>) = x<sup>6</sup> + x<sup>5</sup> + x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x + 1</p>
+<p>&Phi;<sub>8</sub>(<i>x</i>) = <i>x<sup>8</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>)&Phi;<sub>2</sub>(<i>x</i>)&Phi;<sub>4</sub>(<i>x</i>) = <i>x<sup>8</sup> -1</i>/(<i>x−1</i>)(<i>x+1</i>)(<i>x<sup>2</sup>+1</i>) = <i>x<sup>4</sup> + 1</i></p>
+<p>&Phi;<sub>9</sub>(<i>x</i>) = <i>x<sup>9</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>) &Phi;<sub>3</sub>(<i>x</i>) = <i>x<sup>6</sup> + x<sup>3</sup> + 1</i></p>
 </div>
 
 <p>In general, if <i>p</i> is prime</p>
 
 <div class="eq">
-<p><i>x<sup>p−1</sup></i> = <i>&Phi;</i><sub>1</sub>(<i>x</i>)&Phi;<sub>p</sub>(<i>x</i>).</p>
-<p><i>&Phi;</i><sub>p</sub> (<i>x</i>) = <i>1 + x + x<sup>2</sup> + ... + x<sup>p−2</sup> + x<sup>p−1</sup></i></p>
+<p><i>x<sup>p−1</sup></i> = &Phi;<sub>1</sub>(<i>x</i>)&Phi;<sub>p</sub>(<i>x</i>).</p>
+<p>&Phi;<sub>p</sub> (<i>x</i>) = <i>1 + x + x<sup>2</sup> + ... + x<sup>p−2</sup> + x<sup>p−1</sup></i></p>
 </div>
 
 <p>Moreover, for <i>n = p<sup>h</sup></i></p>
 
 <div class="eq">
-<p><i>&Phi;<sub>p<sup>h</sup></sub></i>(<i>x</i>) = <i>1 + x<sup>p<sup>h−1</sup></sup> + (x<sup>h−1</sup>)<sup>p−1</sup></i></p>
+<p>&Phi;<i><sub>p<sup>h</sup></sub></i>(<i>x</i>) = <i>1 + x<sup>p<sup>h−1</sup></sup> + (x<sup>h−1</sup>)<sup>p−1</sup></i></p>
 </div>
 
 <p>Indeed</p>
 
 <div class="eq">
-<p><i>x<sup>p<sup>h</sup></sup></i> − 1 = <i>&Phi;<sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub>p<sup>h −1</sup></sub>&Phi;<sub>p<sup>h</sup></sub></i></p>
+<p><i>x<sup>p<sup>h</sup></sup></i> − 1 = &Phi;<sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub>p<sup>h −1</sup></sub>&Phi;<sub>p<sup>h</sup></sub></i></p>
 </div>
 
 <p>which yields to</p>
 
 <div class="eq">
-<p><i>&Phi;<sub>p<sup>h</sup></sub> = x<sup>p<sup>h</sup></sup> − 1 / &Phi;<sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub>p<sup>h −1</sup></sub> = x<sup>p<sup>h</sup></sup> − 1 / x<sup>p<sup>h− 1</sup></sup> − 1  = 1 + ... + x<sup>p<sup>h−1</sup></sup> + </i>(<i>x<sup>p<sup>h−1</sup>)<sup>p−1</sup></i></p>
+<p>&Phi;<i><sub>p<sup>h</sup></sub></i> = <i>x<sup>p<sup>h</sup></sup> − 1</i> / &Phi;<sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub>p<sup>h −1</sup></sub> = <i>x<sup>p<sup>h</sup></sup> − 1 / x<sup>p<sup>h− 1</sup></sup> − 1</i> = 1 + <i>x<sup>p<sup>h−1</sup></sup> + ... </i>(<i>x<sup>p<sup>h−1</sup>)<sup>p−1</sup></i></p>
 </div>
+
+<p><b>Example 4.37</b> - Cyclotomic polynomials have the following properties:</p>
+
+<ol type="a">
+	<li><p>every &Phi;<sub>n</sub>(<i>x</i>) is monic with integers coefficients;</p></li>
+	<li><p>the degree &Phi;<sub>n</sub>(<i>x</i>) is &Phi;(<i>n</i>);</p></li>
+	<li><p>every &Phi;<sub>n</sub>(<i>x</i>) is irreducile over ℚ;</p></li>
+</ol>
+
+<p><b>Proof</b>. a) We proceed by induction over <i>n</i>. for <i>n</i> = 1, &Phi;<sub>1</sub>(<i>x</i>) = <i>x − 1</i> which is monic and with integers coefficients. We suppose the same to hold true for &Phi;<sub>m</sub>(<i>x</i>) with <i>m&lt; n</i> and we prove it for &Phi;<sub>n</sub>(<i>x</i>). We have</p>
+
+<div class="eq">
+<p>&Phi;<sub>n</sub></i>(<i>x</i>) = <i>x<sup>n</sup> − 1</i> / ∏<sub><sub><i>d</i>|<i>n</i>,<i>d&ne; n</i></sub></sub> &Phi;<sub>d</sub>(<i>x</i>) </p>
+</div>
+
+<p>Dividing <i>x<sup>n</sup> − 1</i> by ∏<sub><sub><i>d</i>|<i>n</i>,<i>d&ne; n</i></sub></sub> &Phi;<sub>d</sub>(<i>x</i>), we obtain a <i>monic</i> polynomial with integer coefficients.</p>
+
+<p>b) It follows from the construction of &Phi;<i><sub>n</sub></i>(<i>x</i>.)</p>
+
+<p>c) We'll prove this property only for <i>n = p<sup>h</sup></i>, with <i>p</i> prime number. As we have already seen</p>
+
+<div class="eq">
+<p>&Phi;<i><sub>p<sup>h</sup></sub></i>(<i>x</i>) = <i>1 + x<sup>p<sup>h−1</sup></sup> + (x<sup>h−1</sup>)<sup>p−1</sup></i> = <i>x<sup>p<sup>h</sup></sup> − 1 / x<sup>p<sup>h− 1</sup></sup> − 1</i></p>
+</div>
+
+<p>To prove the irreducibility of &Phi;<i><sub>p<sup>h</sup></sub></i> we canno apply direclty <a href="pol_irr_Q.html#Eisenstein">Eisenstein criterion</a>. We make the substitution <i>x = y +1</i> which yields to a neq polynomial in <i>y</i></p>
+
+<div class="eq">
+<p>&Psi;(<i>y</i>) = &Phi;<i><sub>p<sup>h</sup></sub></i> (<i>y+1</i>) = 1 + (<i>y + 1</i>)<sup><i>p<sup>h−1</sup></i></sup> + ... + ((<i>y+1</i>)<sup><i>p<sup>h−1</i></sup>)<sup><i>p−1</i></sup> = <i>(y+1)<sup>p<sup>h</sup></sup> − 1 / (y+1)<sup>p<sup>h− 1</sup></sup> − 1</i> = y<sup>p<sup>h</sup></sup> + <i>pf</i>(<i>y</i>) / <i>y<sup>p</sup><sup>h−1</sup></i> + <i>pg</i>(<i>y</i>)</p>
+</div>
+
+<p>We employed Newton binomial formula and grouped the addedends multiple of <i>p</i> in <i>pf</i>(<i>y</i>) and <i>pg</i>(<i>y</i>). We have then</p>
+
+<div class="eq">
+<p>[1 + (<i>y + 1</i>)<sup><i>p<sup>h−1</sup></i></sup> + ... + ((<i>y+1</i>)<sup><i>p<sup>h−1</i></sup>)<sup><i>p−1</i></sup>][<i>y<sup>p</sup><sup>h−1</sup></i> + <i>pg</i>(<i>y</i>)] = <i>y<sup>p<sup>h</sup></sup> + pf</i>(<i>y</i>)</p>
+</div>
+
+<p>by grouping the highest degree terms in each polynomial, we obtain</p>
+
+<div class="eq">
+<p>[(<i>y + 1</i>)<sup><i>p<sup>h−1</sup></i></sup> + ∑ <i>&alpha;<sub>i</sub> y<sup>i</sup></i>] [<i>y<sup>p</sup><sup>h−1</sup></i> + <i>pg</i>(<i>y</i>)] = <i>y<sup>p<sup>h</sup></sup> + pf</i>(<i>y</i>)</p>
+</div>
+
+<p>doing the calculations and grouping the terms which are multiple of <i>p</i> yields</p>
+
+<div class="eq">
+<p><i>y<sup>p<sup>h−1</sup></sup></i> ∑ <i>&alpha;<sub>i</sub> y<sup>i</sup> + y<sup>p<sup>h−1</i>(<i>p</i>−1)</sup></sup> ⋅ <i>y<sup>p<sup>h−1</sup></sup> = y<sup>p<sup>h</sup></sup> + pf̄</i>(<i>y</i>)</p>
+</div>
+
+<p>in this form we are sure that all coefficients <i>&alpha;<sub>i</sub></i> different from the leading coefficients (which is 1) of &Psi;(<i>y</i>) are multiples of <i>p</i>. To apply Eisenstein criterion we only need to prove that <i>p<sup>2</sup></i> does not divide the constant term. This is true since theconstant term of &Psi;(<i>y</i>) is obtained by putting <i>y</i> = 0, and hence it is equal to <i>p</i> times 1 i.e. <i>p</i>. We have proved trhat &Psi;(<i>y</i>) is irreducible and thus &Psi;<sub><i>h</i></sub>(<i>y</i>) as well.</p>
+
+<p>This result tells us that cyclotomic polynomials are irreducible over ℚ, and we can use them to find the factorization of x<sup>n</sup>-1. We have</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup> − 1</i> = ∏<sub><sub><i>d</i>|<i>n</i></sub></sub> &Phi;<sub>d</sub>(<i>x</i>) &emsp; (<b>4.35</b>)</p>
+</div>
+
+<p>From the cyclotomic polynomials we've written above it may seem that their coefficient are all  either 0 ri &pm;1. This is not true as it can be shown that for polynomials with higher <i>n</i> (about 100) other coefficients start to appear.</p>
  
+
 <section>
 <a href="polynomials.html">&#171;Polynomials: general properties</a>
 <a href="index.html">Index</a>

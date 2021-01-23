@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Modular Arithmetic"/>
+ <title>Modular Arithmetic</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Modular Arithmetic</h1>
+
+<p>The finite set ℤ<sub><i>n</i></sub>, is closely related to the infinite set ℤ. So it is natural to ask if it is possible to define addition and multiplication in ℤ<sub><i>n</i></sub> and do some reasonable kind of arithmetic there. To define addition in ℤ<sub><i>n</i></sub>, we must have some way of taking two classes in ℤ<sub><i>n</i></sub> and producing another class− their sum. Because addition of integers <i>is</i> defined, the following <i>tentative</i> definition seems worth investigating: The sum of the classes [<i>a</i>] and [<i>c</i>] is the class containing <i>a + c</i> or, in symbols,</p>
+
+<div class="def">
+<p><b>Definition 4.6</b>. Let [<i>a</i>] and [<i>b</i>] be elements of ℤ<sub><i>n</i></sub>, then By proposition 4.2 the following operations can be defined</p>
+
+<div class="eq">
+<p>[<i>a</i>]<sub><i>n</i></sub> + [<i>b</i>]<sub><i>n</i></sub> := [<i>a + b</i>]<sub><i>n</i></sub></p>
+<p>[<i>a</i>]<sub><i>n</i></sub> ⋅ [<i>b</i>]<sub><i>n</i></sub> := [<i>a x b</i>]<sub><i>n</i></sub></p>
+</div>
+</div>
+
+<div class="def">
+<p><b>Example 1</b>. In ℤ<sub>5</sub>; we have [3] + [4] = [3 + 4] = [7] = [2] and [3] ⋅ [2] = [3 ⋅ 2] = [6] =  [1].</p>
+</div>
+
+<div class="def">
+
+<p><b>Proposition 4.7</b>. Addition and multiplication ℤ<sub><i>n</i></sub> x ℤ<sub><i>n</i></sub> → ℤ<sub><i>n</i></sub> are <a href="functions.html#welldefined">well defined functions</a>: that is independent of which class representative is chosen.</p>
+
+<p><b>Proof</b>. It is clear that the rule [<i>a</i>]<sub><i>n</i></sub> + [<i>b</i>]<sub><i>n</i></sub> yields an element of ℤ<sub><i>n</i></sub>  (closure of the operation), but the uniqueness of this result needs to be verified. In other words, closure is obvious, but we need to show that the operation is well-defined. To do this, suppose that [<i>a</i>] = [<i>c</i>] and [<i>b</i>] = [<i>d</i>]. Then</p>
+
+<div class="eq">
+<p>[<i>a</i>] = [<i>c</i>] ⇒ <i>a ≡ c</i> (mod <i>n</i>) &emsp;and &emsp; [<i>b</i>] = [<i>d</i>] ⇒ <i>b ≡ d</i> (mod <i>n</i>).</p>
+</div>
+
+<p>By <a href="modulo.html">Proposition 4.0.5</a>,</p>
+
+<div class="eq">
+<p><i>a + b ≡ c + d</i> (mod <i>n</i>),</p>
+</div>
+
+<p>and therefore [<i>a + b</i>]<sub><i>n</i></sub> = [<i>c + d</i>]<sub><i>n</i></sub>. A similar argument holds true for multiplication.□</p>
+
+</div>
+
+<h2>New Notation</h2>
+
+<p>We have been very careful to distinguish integers in ℤ and classes in ℤ<sub><i>n</i></sub>, and have even used dilferent symbols for the operations in the two systems. By now, however, you should be reasonably comfortable with the fundamental ideas and familiar with arithmetic in ℤ<sub><i>n</i></sub>. So we shall adopt a new notation that is widely used in mathematics, even though it has the flaw that the same symbol represents two totally different entities. Whenever the context makes clear that we are dealing with ℤ<sub><i>n</i></sub> we shall abbreviate the class notation "[<i>a</i>]" and write simply "<i>a</i>". In ℤ<sub>6</sub> for instance, we might say 6 = 0, which is certainly true for classes in ℤ<sub>6</sub> even though it is nonsense if 6 and 0 are ordinary integers. We shall use an ordinary plus sign for addition in ℤ<sub><i>n</i></sub>, and either a small dot or juxtaposition for multiplication. For example, in ℤ<sub>5</sub> we may write things like</p>
+
+<p>4 + 1 = 0 &emsp; or &emsp; 3 ⋅ 4 = 2 &emsp; or &emsp; 4 + 4 = 3</p>
+
+<p>On those few occasions where this usage might cause confusion, we will returo to the brackets notation for classes.</p>
+
+<p>When dealing with finite groups, is useful to write down a table representing the operations. For example the tables for ℤ<sub>4</sub> and ℤ<sub>5</sub> are</p>
+
+<h4>ℤ<sub>4</sub></h4>
+
+<section>
+<table>
+<thead>
+<tr><th>+</th> <th>[0]<sub>4</sub></th> <th>[1]<sub>4</sub></th> <th>[2]<sub>4</sub></th> <th>[3]<sub>4</sub></th>  </tr>
+</thead>
+
+<tbody>
+<tr><th>[0]<sub>4</sub></th> <td>[0]<sub>4</sub></td> <td>[1]<sub>4</sub></td> <td>[2]<sub>4</sub></td> <td>[3]<sub>4</sub></td> </tr>
+<tr><th>[1]<sub>4</sub></th> <td>[1]<sub>4</sub></td> <td>[2]<sub>4</sub></td> <td>[3]<sub>4</sub></td> <td>[0]<sub>4</sub></td> </tr>
+<tr><th>[2]<sub>4</sub></th> <td>[2]<sub>4</sub></td> <td>[3]<sub>4</sub></td> <td>[0]<sub>4</sub></td> <td>[1]<sub>4</sub></td>  </tr>
+<tr><th>[3]<sub>4</sub></th> <td>[3]<sub>4</sub></td> <td>[0]<sub>4</sub></td> <td>[1]<sub>4</sub></td> <td>[2]<sub>4</sub></td>  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>⋅</th> <th>[0]<sub>4</sub></th> <th>[1]<sub>4</sub></th> <th>[2]<sub>4</sub></th> <th>[3]<sub>4</sub></th> </tr>
+</thead>
+
+<tbody>
+<tr><th>[0]<sub>4</sub></th> <td>[0]<sub>4</sub></td> <td>[0]<sub>4</sub></td> <td>[0]<sub>4</sub></td> <td>[0]<sub>4</sub></td> </tr>
+<tr><th>[1]<sub>4</sub></th> <td>[0]<sub>4</sub></td> <td>[1]<sub>4</sub></td> <td>[2]<sub>4</sub></td> <td>[3]<sub>4</sub></td> </tr>
+<tr><th>[2]<sub>4</sub></th> <td>[0]<sub>4</sub></td> <td>[2]<sub>4</sub></td> <td>[0]<sub>4</sub></td> <td>[2]<sub>4</sub></td> </tr>
+<tr><th>[3]<sub>4</sub></th> <td>[0]<sub>4</sub></td> <td>[3]<sub>4</sub></td> <td>[2]<sub>4</sub></td> <td>[1]<sub>4</sub></td> </tr>
+</tbody>
+</table>
+</section>
+
+<h4>ℤ<sub>5</sub></h4>
+
+<section>
+<table>
+<thead>
+<tr><th>+</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+<tr><th>1</th> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>0</td> </tr>
+<tr><th>2</th> <td>2</td> <td>3</td> <td>4</td> <td>0</td> <td>1</td> </tr>
+<tr><th>3</th> <td>3</td> <td>4</td> <td>0</td> <td>1</td> <td>2</td> </tr>
+<tr><th>4</th> <td>4</td> <td>0</td> <td>1</td> <td>2</td> <td>3</td> </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>⋅</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr>
+<tr><th>1</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+<tr><th>2</th> <td>0</td> <td>2</td> <td>4</td> <td>1</td> <td>3</td> </tr>
+<tr><th>3</th> <td>0</td> <td>3</td> <td>1</td> <td>4</td> <td>2</td> </tr>
+<tr><th>4</th> <td>0</td> <td>4</td> <td>3</td> <td>2</td> <td>1</td> </tr>
+</tbody>
+</table>
+</section>
+
+<h4>ℤ<sub>6</sub></h4>
+
+<section>
+<table>
+<thead>
+<tr><th>+</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> </tr>
+<tr><th>1</th> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>0</td> </tr>
+<tr><th>2</th> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>0</td> <td>1</td> </tr>
+<tr><th>3</th> <td>3</td> <td>4</td> <td>5</td> <td>0</td> <td>1</td> <td>2</td> </tr>
+<tr><th>4</th> <td>4</td> <td>5</td> <td>0</td> <td>1</td> <td>2</td> <td>3</td> </tr>
+<tr><th>5</th> <td>5</td> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>⋅</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> </tr>
+</thead>
+
+<tbody>
+<tr><th>0</th> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td></tr>
+<tr><th>1</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td></tr>
+<tr><th>2</th> <td>0</td> <td>2</td> <td>4</td> <td>0</td> <td>2</td> <td>4</td></tr>
+<tr><th>3</th> <td>0</td> <td>3</td> <td>0</td> <td>3</td> <td>0</td> <td>3</td></tr>
+<tr><th>4</th> <td>0</td> <td>4</td> <td>2</td> <td>0</td> <td>4</td> <td>2</td> </tr>
+<tr><th>5</th> <td>0</td> <td>5</td> <td>4</td> <td>3</td> <td>2</td> <td>1</td> </tr>
+</tbody>
+</table>
+</section>
+
+<p>The first table relats to addition and the secondo to multiplication in ℤ<sub><i>n</i></sub>. We've written for sake of simplicity, 0, 1, 2, 3, 4 instead of [0]<sub>5</sub>, [1]<sub>5</sub>, [2]<sub>5</sub>, [3]<sub>5</sub>, [4]<sub>5</sub>. Come sono composte e come vanno lette queste tabelle? Molto semplice: nella prima tabella, incrociando una riga, intestata da <i>i</i>, con una colonna, intestata da <i>j</i>, otteniamo un numero che rappresenta la classe [<i>i + j</i>]<sub>5</sub>. Ad esempio, la terza riga (quella intestata da 2) ha uno zero nella quarta posizione (colonna intestata da 3). Questo esprime il fatto che [2]<sub>5</sub> + [3]<sub>5</sub> = [0]<sub>5</sub> = [3+2]<sub>5</sub>. La seconda tabella è costruita allo stesso modo ma con riferimento alla moltiplicazione: nella stessa posizione in cui prima abbiamo trovato uno zero abbiamo ora 1, perché [2]<sub>5</sub> · [3]<sub>5</sub> = [1]<sub>5</sub>. La prima riga (intestata da 0) della tabella per l’addizione riproduce la riga delle intestazioni, perché descrive le somme tra [0]<sub>5</sub> e gli elementi di ℤ<sub>5</sub>, che coincidono con gli elementi stessi: [0]<sub>5</sub> + [<i>j</i>]<sub>5</sub> = [<i>j</i>]<sub>5</sub> per ogni scelta di <i>j</i>; questa proprietà si esprime dicendo che [0]<sub>5</sub> è elemento neutro per l’operazione +. Lo stesso vale per la seconda riga (quella intestata da 1) della tabella per la moltiplicazione: [1]<sub>5</sub> è elemento neutro per l’operazione · in ℤ<sub>5</sub>. Notiamo la simmetria delle tabelle rispetto alla diagonale dall’angolo in alto a sinistra a quello opposto. Sia ha questa simmetria precisamente perché le operazioni considerate verificano la proprità commutativa;</p>
+
+<p>Notice the different structure of ℤ<sub>4</sub> and ℤ<sub>5</sub>, the first set has zero divisors (see <a href="Z_divisibility.html#commutative_ring">Definition 2.4</a>) whilst ℤ<sub>5</sub> is not. Thus ℤ<sub>4</sub> is not an <a href="Z_divisibility.html#integral_domain">integral domain</a>, but ℤ<sub>5</sub> is. If we compare Cayley's table for ℤ<sub>5</sub> and ℤ<sub>6</sub>, we note that the addition table of ℤ<sub>6</sub> ℤ<sub>5</sub> is similar to that of ℤ<sub>5</sub> but the multiplicative tables are different. In ℤ<sub>5</sub>, esclusa la riga intestata da zero, che contiene solo zeri, in ogni riga sono rappresentati (una ed una sola volta) tutti gli elementi di ℤ<sub>5</sub>. Nel caso di ℤ<sub>6</sub>, invece, questo accade solo per la seconda e l’ultima riga, quelle intestate da 1 e 5, non per le altre. Questa differenza è molto significativa: ci dice che ℤ<sub>5</sub> e ℤ<sub>6</sub> sono strutture algebriche molto diverse tra loro. In ℤ<sub>5</sub> any element different from zero is <b>invertibile</b>, i.e. multiplied for a specific element yields [1]<sub>5</sub>, which is, the neuter element with regards to multiplication in ℤ<sub>5</sub>. Questo si vede dalla tavola di Cayley per la moltiplicazione di ℤ<sub>5</sub>: in ogni riga, esclusa quella intestata da 0, appare 1. Ad esempio, nella riga intestata da 2 abbiamo trovato 1 in corrispondenza della colonna intestata da 3, perché [2]<sub>5</sub> · [3]<sub>5</sub> = [1]<sub>5</sub>; possiamo esprimere questo fatto dicendo, appunto, che [2]<sub>5</sub> è invertibile in ℤ<sub>5</sub> e che [3]<sub>5</sub> is the inverse of [2]<sub>3</sub>. In questo ℤ<sub>5</sub> behaves as the <b>ring</b> ℚ of rational numbers or ℝ of real numbers (rings of this kind are known as <b>fields</b>), in cui tutti gli elementi diversi da zero hanno inverso (il reciproco) o, equivalentemente, in cui è sempre possibile dividere un elemento per un elemento diverso da zero, e non come ℤ, in cui queste proprietà non valgono. Al contrario, ℤ<sub>6</sub>, ha proprietà più deboli di quelle che valgono in ℤ. Ad esempio, in ℤ (come in ℚ ed in ℝ, ed anche in ℤ<sub>5</sub>) vale la legge di annullamento del prodotto: se il prodotto tra due numeri è zero, uno dei due numeri deve essere zero. Questo non vale in ℤ<sub>6</sub>, come si vede anche dalla tabella; ad esempio [2]<sub>6</sub>· [3]<sub>6</sub> = [0]<sub>6</sub>, benché [2]<sub>6</sub> &ne; [0]<sub>6</sub> &ne; [3]<sub>6</sub>. Vediamo quindi che ℤ, ℤ<sub>5</sub> e ℤ<sub>6</sub> sono strutture algebriche di natura molto diversa tra loro. Senza entrare in dettagli che qui sarabbero fuori luogo, diciamo che la natura dei singoli anelli ℤ<sub><i>n</i></sub> è determinata dalle proprietà aritmetiche dei numeri <i>n</i> che li definiscono. For example, we can prove that ℤ<sub><i>n</i></sub> is a field only if <i>n</i> is a prime number.</p>
+
+<h2>Multiplicative Inverses in ℤ<sub><i>n</i></sub></h2>
+
+<p><b>Thorem 4.7</b>. An element [<i>a</i>] of ℤ<sub><i>n</i></sub> has a multiplicative inverse in ℤ<sub><i>n</i></sub> if and only if <i>a</i> and <i>n</i> are relatively prime.</p>
+
+<p><b>Proof</b> Suppose first that [<i>a</i>] has a multiplicative inverse [<i>b</i>] in ℤ<sub><i>n</i></sub>. Then</p>
+
+<div class="eq">
+<p>[<i>a</i>] [<i>b</i>] = [1]</p>
+</div>
+
+<p>This means that</p>
+
+<div class="eq">
+<p>[<i>ab</i>] = [1] &emsp; and &emsp; ab ≡ 1 &emsp; (mod <i>n</i>)</p>
+</div>
+
+<p>Therefore,</p>
+
+<div class="eq">
+<p><i>ab − 1 = nk</i></p>
+</div>
+
+<p>for some integer <i>k</i>, and</p>
+
+<div class="eq">
+<p><i>a</i>(<i>b</i>) + <i>n</i>(−<i>k</i>) = 1.</p>
+</div>
+
+<p>By <a href="linear_congruences.html">Corollary 4.21</a>, we have (<i>a,n</i>) = 1.</p>
+
+<p>Converserly, if (<i>a,n</i>) = 1, then <a href="gcd.html">Theorem 2.16</a> guarantess the existence of a solution <i>s</i> to the congruence</p>
+
+<div class="eq">
+<p>as ≡ 1 &emsp; mod <i>n</i></p>
+</div>
+
+<p>Thus</p>
+
+<div class="eq">
+<p>[<i>a</i>] [<i>s</i>] = [1]</p>
+</div>
+
+<p>and [<i>a</i>] has a multiplicative inverse [<i>s</i>] in ℤ<sub><i>n</i></sub>.□</p>
+
+<p><b>Proposition 4.8</b>. Every nonzero element of ℤ<sub><i>n</i></sub> has a multiplicative inverse if and only if <i>n</i> is a prime.</p>
+
+<p><b>Proof.</b> The corollary follows from the fact that <i>n</i> is a prime if and only if every integer <i>a</i> such that 1 &le; <i>a</i> &lt; <i>n</i> is relatively prime to <i>n</i>.</p>
+
+<p><b>Example 4.9</b>. The elements of ℤ<sub>15</sub> that have multiplicative inverses can be listed by writing down those [<i>a</i>] that are such that (<i>a</i>, 15) = 1. These elements are [1], [2], [4], [7], [8], [11], [13], [14].</p>
+
+<p>The set of invertible residue classes modulo <i>n</i> by (ℤ/<i>n</i>ℤ)*.</p>
+
+<p><b>Definition 4.10</b>. The number of invertible congruence classes modulo <i>m</i> is denoted by φ(<i>m</i>). Here φ is called <a href="euler.html">Euler’s function</a>.</p>
+
+<section>
+<a href="isomorfismo.html">&#171; Isomorfismo</a>
+<a href="index.html">Index</a>
+<a href="Zp.html">ℤ<sub><i>p</i></sub>: The integral domain ℤ<sub><i>n</i></sub> when <i>n</i> is a prime &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

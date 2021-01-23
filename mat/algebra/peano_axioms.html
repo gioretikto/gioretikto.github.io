@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Peano axioms"/>
+  <title>Peano axioms</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">  
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href=/index.html">Algebra</a></li>
+    </ul>
+</nav>
+   
+<div class="content">
+
+<h1>Peano axioms</h1>
+
+<p>The arithmetic of the integers, like the geometry of the plane, can be made to depende on a few axioms. As early as 1891 G. Peano showed that all the properties of the natural numbers can be derived from five axioms, which now bear his name .</p>
+
+<p>We take the natural numbers to be elements of any set ℕ, defined by the triple (ℕ, &sigma;, 0) where ℕ is a set, <i>&sigma;</i> an application from ℕ to ℕ and 0 an element of ℕ with the following properties (<i>Peano axioms</i>):</p>
+
+<p>ℕ<sub>1</sub> &sigma; is injective: Every number <i>n</i> has precisely one successor <i>n'</i>.</p></li>
+<p>ℕ<sub>2</sub> 0 &ne; Im &sigma;</p></li>
+<p>ℕ<sub>3</sub> (<i>Assioma di induzione</i>): every subset <i>U</i> of ℕ such that</p>
+
+<ol type="a">
+<li><p>0 &in; <i>U</i></p></li>
+<li><p><i>k &in; U ⇒ &sigma;</i>(<i>k</i>) &in; <i>U</i> &emsp; &forall;k</i></p></li>
+</ol>
+
+<p>coincide con tutto ℕ.</p>
+
+<p>Given an element <i>n &in; ℕ</i>, the element <i>&sigma;</i>(<i>n</i>) is said <i>successor</i> of <i>n</i>. Resta definita in ℕ allora in modo naturale una <i>relazione d'ordine</i>, &le;. Il postulato ℕ<sub>3</sub> è noto come il <p>principio di induzione matematica</i>. Si può dimostrare che se (𝔸, &sigma;,0) e (𝔸',&sigma;',0') sono due terne che verificano i postulati precedenti, allora esse sono "sostanzialmente identiche", nel senso che esiste una corrispondenza biunivoca &phi; tra 𝔸 e 𝔸' tale che &sigma;'(&phi;(n)) = &phi;(&sigma;(n)), cioè il successivo del trasformato è il trasformato del successivo. Quindi si può dire che i <i>postulati di Peano caratterizzano i numeri naturali</i>. Quello che si deve <i>postulare</i> (cioè accettare senza dimostrazione) è l'esistenza di un insieme ℕ verificante gli assiomi di Peano. L'intero edificio matematico è pertanto basato sull'accettazione dell'esistenza dei numeri naturali. Knonecker espresse questo fatto con la famosa frase:</p>
+
+<blockquote>Die ganzen Zahlen hat der liebe Gott gemacht, alles andere ist Menschenwerk. (Kronecker)</blockquote>
+
+<p>Ora, dai soli postulati di Peano è possibile ricavare tutte le proprietà ben note dei numeri naturali. Ci serviamo di alcune definizioni.</p>
+
+<p><b>Definition 1.4</b>. Una <i>operazione binaria</i> in un insieme <i>S</i> è un'applicazione da <i>S x S </i> in <i>S</i>, ossia una legge che associa ad ogni coppia di elementi di <i>S</i> un ben determinato elemento di <i>S</i>.</p>
+
+<p>Ad esempio, l'unione tra sottoinsiemi di un insieme <i>X</i> è un'operazione binaria definita in <i>𝓟(X)</i>:</p>
+
+<div class="eq">
+<p><i>U : 𝓟(X) x 𝓟(X) → 𝓟(X)</i></p>
+<p><i>(A,B) ↦ A U B</i></p>
+</div>
+
+<p>L'ordinaria addizione tra interi è un'operazione binaria definita in:</p>
+
+<div class="eq">
+<p>+ : ℤ x ℤ → ℤ</p>
+<p>(a,b) ↦ a +b</p>
+</div>
+
+<p>Il risultato dell'operazione di addizione, ossia l'elemento a+b &in; ℤ, prende il nome di <i>somma</i> di <i>a</i> e <i>b</i>.</p>
+
+<p>Si parla anche di operazioni <i>n</i>-arie per vari <i>n= 1,2,...</i>. Si tratta di applicazioni da <i>S x S x ... x S</i> in <i>S</i>. Per <i>n = 1</i> un'operazione 1-aria definita su <i>S</i> è un'applicazione da <i>S</i> a <i>S</i>. Se <i>S = P(X)</i>, un esempio di applicazione 1-aria è l'applicazione che associa ad ogni sottoinsieme di <i>X</i> il suo complementare.</p>
+
+<p><b>Definition 1.5</b>. Una <i>struttura algebrica</i> è un insieme <i>A</i> dotato di una o più operazioni <i>n</i>-arie definite su <i>A</i> che soddisfano ad eventuali assiomi.</p>
+
+<p>È importante evidenziare che, dagli assiomi di Peano, discendono tutte le ben note propriet`a dell’insieme dei numeri naturali. In particolare le operazioni di somma e prodotto e le ben note proprietà di tali operazioni possono essere dedotte dagli assiomi di Peano.</p>
+
+<p><b>Definition 1.6</b>. Si definisce <i>somma</i> di due numeri naturali <i>n</i> ed <i>m</i> il numero naturale <i>n +m</i> dove</p>
+
+<img src="img/somma.png" alt="somma di due numeri naturali"/>
+
+<!--
+n+m\stackrel{\text{def}}{=}
+\begin{cases}
+\underbrace{\sigma(\sigma(\ldots\sigma}_{m\text{ volte}}(n))) & \text{se $m>0$}\\
+  n & \text{se $m=0$}.
+ \end{cases}
+-->
+<p>Da questa definizione risulta ovviamente <i>&sigma;(n) = n+1</i>, dove <i>1 = &sigma;(0)</i>.</p>
+
+<p><b>Definition 1.7</b>. Si definisce <i>prodotto</i> di due numeri naturali <i>n</i> ed <i>m</i> il numero naturale <i>n + m</i> dove</p>
+
+<img src="img/prodotto.png" alt="prodotto di due numeri naturali"/>
+
+<!--
+n \cdot m \stackrel{\text{def}}{=}\begin{cases}
+  \underbrace{n+n+\ldots+n}_\text{m \text{volte}} & \text{se } m>0 \\
+  0 & \text{se } m=0.
+ \end{cases}
+-->
+
+<p>In genere saremo interessati solo ad operazioni <i>binarie</i>, che chiameremo senz'altro operazioni, omettendo la specificazione "binarie".</p>
+
+<h2>The principle of mathematical induction</h2>
+
+<p>Il terzo assioma di Peano ℕ<sub>3</sub> è alla base del principio di induzione. Esso sostanzialmente dice che se un sottoinsieme <i>U</i> di ℕ è tale che contiene lo zero e, accanto ad ogni elemento, contiene anche il successivo, allora necessariamente U coincide con tutto ℕ. L'accettazione di questo assioma fornisce "gratuitamente" un metodo di dimostrazione per induzione che è di fondamentale importanza matematica. Vediamo in che cosa consiste. Supponiamo che per ogni intero <i>n &ge; 0</i> si possa formulare una proposizione <i>P(n)</i>, dipendente dall'interno <i>n</i>, ad esempio la proposizione seguente: "se un insieme finito <i>S</i> ha <i>n</i> elementi, allora l'insieme delle parti di <i>S</i> ha 2<sup>n</sup> elementi". Supponiamo di voler provare che la proposizione <i>P(n)</i> è vera per ogni <i>n</i>: si tratta di dimostrare infinite proposizioni! Ebbene il metodo di dimostrazione per induzione permette di ottenere questi <i>infinit</i> risultati con due soli passi. Si procede nel modo seguente:</p>
+
+<ol>
+	<li><p>Base dell'induzione: Dimostrare che è vera <i>P(0)</i></p></li>
+	<li><p>Passo induttivo: Dimostrare che per ogni <i>k</i>, dall'essere vera <i>P(k)</i> segue che è vera <i>P(k+1)</i>.</p></li>
+</ol>
+
+<p>Allora si può concludere di aver dimostrato che <i>P(n)</i> è vero per ogni <i>n</i>. Infatti posto <i>U = { n &in; ℕ | P(n)</i> è vera}, risulta 0 &in; U perché è stato provato che <i>P(0)</i> è vera. Inoltre, <i>k &in; U</i>, cioè se <i>P(k)</i> è vera, allora <i>P(k+1)</i> è vera, (passo induttivo) e quindi <i>k+1 &in; U</i>, da cui segue, in virtù di ℕ<sub>3</sub>, <i>U = ℕ</i>, ossia <i>P(n)</i> è vera per ogni <i>n</i>.</p>
+
+<p>Si notiche che se vogliamo dimostrare una proposizione <i>P(n)</i> non per tutti gli <i>n</i>, ma per tutti gli <i>n &ge; n<sub>0</sub></i>, basta provare come base dell'induzione <i>P(n<sub>0</sub>)</i> anziché <i>P(0)</i>.</p>
+
+<div class="def">
+<p>Provare che per ogni intero positivo <i>n</i> la somma dei cubi dei primi <i>n</i> numeri pari è data da</p>
+<div class="eq">
+<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2n)<sup>3</sup> = 2n<sup>2</sup> (n+1)<sup>2</sup></i></p>
+</div>
+
+<p><b>Proof</b> - Dovremo provare:</p>
+
+<ol>
+	<li><p>La base dell'induzione: <i>P(1)</i> è verificata perché per <i>n = 1</i> entrambi i membri si riducono a 2<sup>3</sup>.</p></li>
+	<li><p>Il passo induttivo: Supposta vera <i>P(n-1)</i>, dimostriamo <i>P(n)</i>. La <i>P(n-1)</i> (che stiamo supponendo vera) è:</p>
+	<div class="eq">
+	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2n-1)<sup>3</sup> = 2n(n-1)<sup>2</sup>n<sup>2</sup></i></p>
+	</div>
+	<p>Aggiungendo ad ambo i membri dell'ultima equazione (2n)<sup>3</sup> si ha</p>
+	<div class="eq">
+	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2n-1)<sup>3</sup> = 2n(n-1)<sup>2</sup>n<sup>2</sup> + (2n)<sup>3</sup> = 2n<sup>2</sup>[(n-1)<sup>2</sup> + 4n] = 2n<sup>2</sup> (n+1)<sup>2</sup></i></p>
+	</div>
+	<p>che è esattamente <i>P(n)</i>.□</p>
+</ol>	
+
+</div>
+
+<p>Diamo qui di seguito due formulazioni <i>equivalenti</i> del principio di induzione ℕ<sub>3</sub> perché, a seconda dei casi che si presentano, può essere conveniente utilizzare una formulazione invece di un'altra. Consideriamo le seguenti due asserzioni, 𝕀 e 𝕄:</p>
+
+<div class="def" id="I">
+<p><b>Definition 1.8</b> (<i>Induction principle 𝕀: strong induction</i>) Every subset <i>V</i> of ℕ satisfying the following properties:</p>
+
+<ol type="a">
+	<li><p>0 &in; <i>V</i></p></li>
+	<li><p>if <i>V</i> contains all numbers less than <i>n</i> then it also contains <i>n</i>, concisely:<p>
+	<div class="eq">
+	<p><i>n &in; V</i> &emsp; if <i>k &in; V</i>, &forall;k such that 0 &le; k &lt; n</p>
+	</div>
+	</li>
+</ul>
+
+<p>then <i>V</i> coincides with ℕ.</p>
+</div>
+
+<div class="def">
+<p><b>Theorem 1.9</b> (<i>𝕄: The Well-Ordering Theorem</i> or <i>of the least element</i>) Every nonempty set <i>T</i> of ℕ contains a least element. That is, there is an element <i>t &in; T</i> such that <i>t &le; x</i> &forall; <i>x &in; T</i></p>
+</div>
+
+<p>Un insieme parzialmente ordinato <i>X</i> si dice <i>ben ordinato</i> se ogni sottoinsieme non vuoto di <i>X</i> ha un elemento minimo.</p>
+
+<div class="def">
+<p><b>Proposition 1.10</b> Il principio del buon ordinamento e il principio di induzione forte sono equivalenti.</p>
+
+<p><b>Proof</b> - Assumiano vero il principio di induzione forte e proviamo il principio del buon ordinamento. Supponiamo che <i>S</i> sia un sottoinsieme non vuoto di ℕ. Sia <i>T = ℕ \ S</i>. Supponiamo per assurdo che <i>S</i> non abbia elemento minimo. Allora <i>1 &ne; S</i>, perché se lo avesse allora sarebbe sicuramente l'elemento minimo di <i>S</i> poichè è l'elemento minimo di ℕ. Allora <i>1 &in; T</i>. Si suponsa che per un <i>k</i>, si abbia <i>1 &le; i &le; k, i &in; T</i>. Si consideri <i>k+1</i>. Se <i>k+1</i> fosse in <i>S</i>, sarebbe l'elemento minimo di <i>S</i> perchè nessun <i>i</i> compreso tra 1 e <i>k</i> si trova in <i>S</i>. Siccome stiamo assumento che <i>S</i> non abbia elemento minimo, si deve avere <i>k+1 &in; T</i>. Per il principio di induzione forte, <i>T</i> deve contenere tutti i numeri naturali e quindi essere uguale ad ℕ. Segue che <i>S = ∅</i>. Questa è una contraddizione, concludiano quindi che <i>S</i> possiede elemento minimo.</p>
+
+<p>Adesso si supponga che il principio del buon ordinamento sia vero e proviamo il principio di induzione forte. Sia <i>U</i> un sottoinsieme di ℕ verificante le ipotesi di 𝕀 e supponiamo per assurdo che U &ne; ℕ. Allora detto <i>V = N \ U</i>, risulta <i>V &ne; ∅</i>. Per la 𝕄 esiste un minimo <i>m &in; V</i>, che sarà maggiore di zero, perchè <i>0 &in; U</i>. Essendo <i>m</i> minimo per <i>V</i>, ogni <i>k</i> tale che sia <i>0 &le; k &lt; m</i> sta in <i>U</i>. Ma allora per la (b) di 𝕀, <i>m &in; U</i>, che è un assurdo.□</p>
+
+</div>
+
+<p>Mettiamo subito in pratica questi metodi di dimostrazione, per esempio, per provare la seguente proposizione riguardante la divisione in ℕ.</p>
+
+<div class="def">
+<p>1.4.7 Proposizione. Siano <i>a,b &in; ℕ, b &ne; 0</i>. Allora esistono due numeri naturali <i>q,r</i> tali che</p>
+<div class="eq">
+<p><i>a = bq + r</i>, &ensp; 0 &le; r &lt; b</i></p>
+</div>
+
+<p><b>Dimostrazione</b>. Utilizziamo il principio del buon ordinamento: sia <i>q + 1</i> il pià piccolo intero tale che <i>b(q+1) &gt; a</i> (tale minimo esiste sicuramente, considerando l'insieme non vuoto <i>T = {x &in; ℕ| bx &gt; a})</i></p>
+
+<p>Si ha pertanto</p>
+
+<div class="eq">
+<p><i>bq &le; a &lt; b(q+1)</i></p>
+</div>
+
+<p>da cui</p>
+
+<div class="eq">
+<p><i>0 &le; a - bq &lt; b</i></p>
+</div>
+
+<p>Posto <i>r = a - bq</i>, si ha <i>a = bq + r</i>, 0 &le; r &lt; b</i>. □</p>
+
+</div>
+
+
+<section>
+<a href="isomorfismo.html">&#171; Isomorfismo</a>
+<a href="index.html">Index</a>
+<a href="cardinalità.html">Cardinalità &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

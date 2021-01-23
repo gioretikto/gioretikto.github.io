@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -22,7 +22,7 @@
 
 <h1>Complex Numbers</h1>
 
-<p>On set of ordered pairs of reals numbers</p>
+<p>Over ther set of ordered pairs of reals numbers</p>
 
 <div class="eq">
 <p>ℂ = ℝ x ℝ</p>
@@ -124,16 +124,18 @@
 
 <p>The angle <i>&theta;</i> is known as the <i>argument</i> of the complex number <i>z</i>, the number <i>r</i> corresponds to the module of <i>z</i>: <i>r</i> = |<i>z</i>| = (x<sup>2</sup> + y<sup>2</sup>)<sup>1/2</sup>. The module, <i>r</i>, is unique, but the angle &theta; is not unique since there are many angles in standard position with <i>P</i> on their terminal side.</p>
 
-<p>If <i>z</i> and <i>z'</i> have the following representation <i>z = r</i>(cos&theta; + <i>i</i> sin&theta;) and <i>z' = r'</i>(cos&theta;' + <i>i</i> sin&theta;') then as it can be easily verified</p>
+<h2>De Moivre’s formula</h2>
+
+<p>If <i>z</i> and <i>z'</i> have the following representation <i>z = r</i>(cos<i>&theta;</i> + <i>i</i> sin&theta;) and <i>z' = r'</i>(cos&theta;' + <i>i</i> sin&theta;') then as it can be easily verified</p>
 
 <div class="eq">
 <p><i>z ⋅ z' = rr'</i>(cos (&theta; + &theta;') + <i>i</i> sin(&theta; + &theta;'))</p>
 </div>
 
-<p>so that the product of two complex numbers in trigonometric form is equal to a complex number having as argument the sum of the arguments and as module the product of moduli. The trigonometric form of a complex number is particularly useful to calculate the powers; for every integer <i>n</i>&gt; 0, we have the following relation known as <i>De Moivre Formula</i></p>
+<p>the product of two complex numbers in trigonometric form is equal to a complex number having as argument the sum of the arguments and as module the product of moduli. The trigonometric form of a complex number is particularly useful to calculate the powers; for every integer <i>n</i>&gt; 0, we have the following relation known as <i>De Moivre Formula</i>, valid for every integer <i>n</i> and every <i>&theta;</i> ∈ ℝ</p>
 
 <div class="eq">
-<p><i>z<sup>n</sup> = r<sup>n</sup></i> (cos <i>n</i>&theta;) + <i>i</i> sin <i>n</i>&theta;) &emsp; (<b>4.14</b>)</p>
+<p><i>z<sup>n</sup> = r<sup>n</sup></i> (cos <i>n&theta;</i>) + <i>i</i> sin <i>n&theta;</i>) &emsp; (<b>4.14</b>)</p>
 </div>
 
 <p>it results also</p>
@@ -141,8 +143,6 @@
 <div class="eq">
 <p>[<i>r</i>(cos <i>&theta;</i> + <i>i</i> sin &theta;)]<sup>−1</sup> = r<sup>−1</sup> (cos (−<i>&theta;</i>) + <i>i</i>(−sin <i>&theta;</i>)</p>
 </div>
-
-<p>then (4.14) can be extended to arbitrary integers.</p>
 
 <p>If <i>n</i> is a positive integer greater than 1, <i>u</i> and <i>z</i> two complex numbers, if</p>
 
@@ -182,7 +182,11 @@
 <p>&zeta;<sub><i>n</i>,k</sub> = &zeta;<sup>k</sup>, &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
 </div>
 
-<p>It can be easily seen that indicated with <i>z<sub>0</sub></i> a root of eq (4.15) all the other roots can be obtained multiplying <i>z<sub>0</sub></i> by the <i>n</i>-th roots of the unit, i.e.</p>
+<p>It can be easily seen that indicated with <i>z<sub>0</sub></i> a root of <i>z<sup>n</sup> = u</i> all the other roots can be obtained multiplying <i>z<sub>0</sub></i> by the <i>n</i>-th roots of the unit, i.e.</p>
+
+<div class="eq">
+<p>(<i>z<sub>0</sub> * &zeta;<sup>n</sup></i>)<i><sup>n</sup> = u</i></p>
+</div>
 
 <div class="eq">
 <p><i>z<sub>0</sub>, z<sub>0</sub>&zeta;, z<sub>0</sub>&zeta;<sup>2</sup>,..., z<sub>0</sub>&zeta;<sup>n − 1</sup></i>&emsp; (<b>4.16</b>)</p>
@@ -192,10 +196,22 @@
 
 <img src="img/complex_polygon.png" alt="sided polygon inscribed inside the unit circle"/>
 
+<p><b>Exercise 4.38</b>. Calculate the module of the following complex numbers</p>
+
+<ol>
+	<li><p>1 + i + i<sup>2</sup> + i<sup>3</sup> + i<sup>4</sup> + i<sup>5</sup></p></li>
+	<li><p>(1 + i)<sup>2</sup></p></li>
+</ol>
+
+<p><b>Solutions</b>.</p>
+
+<ol>
+	<li><p>(1 + i)<sup>2</sup> = (1 + 2i −1) = 2i, thus the module is (0+2<sup>2</sup>)<sup>1/2</sup> = 2.</p>
+
 <section>
 <a href="different_bases.html">&#171;Representation of numbers in arbitrary bases</a>
 <a href="index.html">Index of Algebra</a>
-<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+<a href="polynomial.html">Polynomial &#187;</a>
 </section>
 
 </div>

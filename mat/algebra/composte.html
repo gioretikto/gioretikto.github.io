@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Funzioni composte"/>
+    <title>Funzioni composte</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Algebra</a></li>
+        <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Funzioni Composte</h1>
+      
+<p>Una funzione composta è una funzione che ha per dominio il codomio di un'altra funzione. Date due funzioni</p>
+
+<div class="eq">
+<p><i>f: I → ℝ &emsp; g: F → ℝ</i></p>
+</div>
+
+<p>se <i>f(I) ⊆ F</i> (cioè se per ogni <i>x</i> &in; <i>I</i> si ha che <i>f(x) &in; F</i>) si può definire la funzione <b>composta</b> <i>h: I → ℝ</i> di <i>f</i> e <i>g</i>, che si denota col simbolo <i>g ∘ f</i> e dalla relazione:</p>
+
+<div class="eq">
+<p><i>h(x) = (g ∘ f) (x) = g[f(x)]</i></p>
+</div>
+
+<p>In genere il prodotto di composizione non è commutativo</p>
+
+<img src="img/composte2.png" alt="funzioni composte"/>
+
+<div class="eq">
+<p><i>f ∘ g &ne; g ∘ f</i></p>
+</div>
+
+<p><b>Esempio</b> Sia <i>f(x) = x<sup>2</sup></i> e <i>g(x) = sin (x)</i>. La funzione composta g ∘ f è</p>
+
+<div class="eq">
+<p><i>h(x) = g[f(x)] = sin(x<sup>2</sup>)</i></p>
+</div>
+
+<p>Essendo <i>g</i> ben definita su tutto ℝ lo è anche <i>h</i>. Anche la funzione <i>k = f ∘ g</i> è ben definita tramite la relazione:</p>
+
+<div class="eq">
+<p><i>k(x) = f[g(x)] = [sin(x)]<sup>2</sup></i></p>
+</div>
+
+<p>L'operazione di composizione tra applicazioni è <b>associativa</b>, nel senso che se <i>f, g,</i> e <i>h</i> sono applicazioni rispettivamente da <i>A</i> a <i>B</i>, da <i>B</i> a <i>C</i> e da <i>C</i> a <i>D</i>, allora risulta:</p>
+
+<div class="eq">
+<p><i>h ∘ (g ∘ f) = (h ∘ g) ∘ f</i></p>
+</div>
+
+<h2>Funzione inversa</h2>
+
+<p>Ogni applicazione <i>biiettiva</i> <i>f</i> da <i>A</i> a <i>B</i> determina quindi una (unica) applicazione da <i>B</i> ad <i>A</i>, che si indica con <i>f<sup>-1</sup></i> e che prende il nome di <i>applicazione inversa</i> della <i>f</i>, definita, per ogni <i>b &in; B</i>, da</p>
+
+<div class="eq">
+
+<p><i>f<sup>-1</sup> (b) := a &emsp; dove a è l'unico elemento &in; A tale che f(a) = b</i></p>
+
+</div>
+
+<p>L'applicazione <i>i<sub>&chi;</sub></i> da <i>X</i> in <i>X</i> tale che <i>i<sub>X</sub>(x) = x</i> per ogni <i>x &in; X</i> prende il nome di <i>applicazione identica</i> di <i>X</i>. Se <i>f</i> è un'applicazione biiettiva da <i>A</i> a <i>B</i>, allora risulta</p>
+
+<div class="eq">
+<p><i>f<sup>-1</sup> ∘ f = i<sub>A</sub>, &emsp; f<sup>-1</sup> ∘ f = i<sub>B</sub></i></p>
+</div>
+
+<section>
+<a href="rappresentazione.html">&#171;Rappresentazione matriciale delle trasformazioni</a>
+<a href="index.html">Index</a>
+<a href="f_caratteristica.html">Funzione caratteristica &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

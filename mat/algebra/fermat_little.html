@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Fermat's Little theorem"/>
+ <title>Fermat's Little theorem</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Fermat's Little theorem</h1>
+
+<p>We present now some notable congruence relations</p>
+
+<p><b>Proposition 4.16.</b> For any prime <i>p</i> and <i>x,y</i> &in; ℤ the following relation holds</p>
+
+<div class="eq">
+<p>(<i>x + y</i>)<sup><i>p</i></sup> ≡ <i>x<sup><i>p</i></sup> + y<sup>p</sup></i> &emsp;(mod <i>p</i>)</p>
+</div>
+
+<p><b>Proof</b>. From the binomial identity</p>
+
+<img src="img/binomial_identity.png" alt="binomial identity"/>
+
+<p>it is enough to prove that the summation is divisbile by <i>p</i>. This is true because it results <i>k &lt;p</i> and <i>p − k  &lt; p</i>, so each binomial coeefficient is an integer with <i>p</i> as factor.□</p>
+
+<div id="fermat">
+<p><b>Theorem 4.17.</b> (<i>Fermat's Little theorem</i>) - Let <i>a</i> an integer and <i>p</i> a prime number. Then</p>
+
+<div class="eq">
+<p><i>a<sup>p</sup></i> ≡ <i>a</i> &emsp;(mod <i>p</i>) &emsp; (4.4)</p>
+</div>
+
+<p>If <i>a</i> is divisible by <i>p</i>, then (4.4) is trivially true, as <i>a<sup>p</sup> ≡ <i>a</i> ≡ 0</i> (mod <i>p</i>). If <i>a</i> is not divisible by <i>p</i>, then suppose <i>a</i> &ge; 0, we use induction using <i>a</i> itself as induction variable. If <i>a</i> = 0 the result is obviuos. Supposing true the result for <i>a &gt; 0</i> we prove it for <i>a</i> + 1. Owing to eq (4.4)</p>
+
+<div class="eq">
+<p>(<i>a + 1</i>)<sup><i>p</i></sup> ≡ <i>a<sup>p</sup></i> + 1<sup><i>p</i></sup> &emsp;(mod <i>p</i>)</p>
+</div>
+
+<p>Since 1<sup><i>p</i></sup> ≡ 1 and <i>a<sup>p</sup></i> ≡ <i>a</i> for the inductive hypothesis, it follows</p>
+
+<div class="eq">
+<p>(<i>a + 1</i>)<sup><i>p</i></sup> ≡ <i>a</i> + 1 &emsp;(mod <i>p</i>)</p>
+</div>
+
+<p>the expected result.</p>
+
+<p>We suppose now <i>a</i> &lt; 0. Thus 0 ≡ <i>0<sup>p</sup></i> = (<i>a</i> + (−<i>a</i>))<sup><i>p</i></sup> ≡ <i>a<sup>p</sup></i> + (−<i>a</i>)<sup><i>p</i></sup> (mod <i>p</i>). Since <i>−a</i> &gt;0, for what we already proved in the first part: (−<i>a</i>)<sup><i>p</i></sup>  ≡ −<i>a</i>, thus 0 ≡ <i>a<sup>p</sup></i> <i>−a</i>, i.e. <i>a<sup>p</sup></i> ≡ <i>a</i>. □</p>
+</div>
+
+<p><b>Corollary 4.18.</b> If gcd(<i>a, p</i>) = 1, then</p>
+
+<div class="eq">
+<p><i>a<sup>p−1</sup></i> ≡ 1 &emsp; (mod <i>p</i>)</p>
+</div>
+
+<p>From proposition 4.17, <i>p</i> | <i>a<sup>p</sup> − a</i> = <i>a</i>(<i>a</i><sup><i>p</i>−1</sup> − 1) and if gcd(<i>a, p</i>) = 1, then <i>p</i> | <i>a</i><sup><i>p</i>−1</sup> − 1.□</p>
+
+<section>
+<a href="prova_nove.html">&#171; Casting out nines; Divisibility criteria</a>
+<a href="index.html">Index</a>
+<a href="fermat_little.html">Fermat's Little theorem &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

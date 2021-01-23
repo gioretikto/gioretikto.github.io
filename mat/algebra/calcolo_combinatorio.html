@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Calcolo Combinatorio"/>
+  <title>Calcolo Combinatorio</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+  <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+ </ul>
+</nav>
+   
+<div class="content">
+
+<h1>Calcolo Combinatorio</h1>
+
+<p>Scopo di questo paragrafo è rispondere alla domanda: <i>quanti sono?</i>. Ossia saremo interessati a <i>contare</i> gli oggetti di certi insiemi finiti. Diamo alcuni esempi.</p>
+
+<p>1.6.1 ESEMPI</p>
+
+<ol type="a">
+<li><p>Uno studente vuole sedersi durante cinque giorni di lezione con cinque compagni diversi (ogni banco ha due posti). Quante sono le possibilità di scelta? Il primo giono ha cinque possibilità di scelta, il secondo giorno ne ha quattro, il terzo ne ha tre, e così via sino all'ultimo giorno, in cui ha un'unica possibiltà. In totale il numero di possibili scelte è</p>
+
+<div class="eq">
+<p><i>5 ⋅ 4 ⋅ 3 ⋅ 2 ⋅ 1 = 120</i></p>
+</div>
+
+</li>
+
+<li><p>Quante targhe si possono formare utilizzando quattro cifre seguite da tre lettere (scelte tra 26)? Ci sono 10 ⋅ 10 ⋅ 10 ⋅ 10 possibili numeri a quattro cifre. Ci sono 26 ⋅ 26 ⋅ 26 possibili modi utilizzare tre lettere. In tutto quindi il numero di targhe che si possono ottenere è:</p>
+
+<div class="eq">
+<p><i>10<sup>4</sup> ⋅ 26<sup>3</sup> = 17576 ⋅ 10<sup>4</sup></i></p>
+</div>
+
+<p>Per risolvere questo genere di problemi è conveniente introdurre alcune notazioni:</p>
+
+<p>Dato un intero positivo <i>n</i>, si indica con <i>n!</i>, e si legge <i>n fattoriale</i>, il seguente intero:</p>
+
+<div class="eq">
+<p><i>n! := n ⋅ (n - 1) ⋅ (n - 2) ⋅⋅⋅ 3 ⋅ 2 ⋅ 1; &emsp; 0! := 1</i></p>
+</div>
+
+<p>Ad esempio 6! = 6 ⋅ 5 ⋅ 4 ⋅ 3 ⋅ 2 ⋅ 1 = 720. </p>
+
+<p>Alcune proprietà del fattoriala, di facile verifica sono:</p>
+
+<div class="eq">
+<p><i>n! = n ⋅ (n − 1)!</i></p>
+</div>
+
+<div class="eq">
+<p><i>n</i>!/(<i>n−k</i>)! = n ⋅ (n−1) ⋅ (n−2) ⋅⋅⋅ (n−k+1) &emsp; if 0 &lt; <i>k &lt; n</i>.</p>
+</div>
+
+<p>Si osservi come la funzione fattoriale cresca molto rapidamente. Nei calcoli, quando si ha a che fare ad esempio con quozienti di fattoriali, conviene procedere alla loro cancellazione, tenendo conto della (C.3):</p>
+
+<p>Ad esempio se si deve dividere 1000! per 997! conviene scrivere:</p>
+
+<div class="eq">
+<p><i>1000! / 997! = 1000 ⋅ 999 ⋅ 998 ⋅997</i></p>
+</div>
+
+<p>Dati due insiemi <i>A</i> e <i>B</i> con <i>n</i> elementi ciascuno, il numero di corrispondenze biunivoche tra <i>A</i> e <i>B</i> è precisamente n!. Infatti, per individuare un'applicazione <i>f</i> basa assegnare i valori <i>f(x<sub>1</sub>), f(x<sub>2</sub>), f(x<sub>3</sub>),..., f(x<sub>3</sub>)</i>, dove <i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>, sono gli <i>n</i> elementi di <i>A</i>. Data un'applicazione biettiva arbitraria <i>f</i> da <i>A</i> a <i>B</i>, <i>f(x<sub>1</sub>)</i> piò essere uno qualunque degli <i>n</i> elementi di <i>B</i>, cioè può assumere <i>n</i> valori, <i>f(x<sub>2</sub>)</i> può coincidere con uno qualsiasi degli elementi di <i>B</i> purché diverso da <i>f(x<sub>1</sub>)</i> (per l'iniettività), quindi può assumere <i>(n-1)</i> valori, e così via. Si possono fare quindi in tutto <i>n ⋅ (n - 1) ⋅ (n - 2) ⋅⋅⋅ 2 ⋅ 1 = n!</i> scelte, e scelte diverse danno origine ad applicazioni biunivoche diverse tra <i>A</i> e <i>B</i>. <br> Nel caso in cui sia <i>A = B</i>, le corrispondenze biunivoche di <i>A</i> in sé prendono il nome di <i>permutazioni</i>. L'insieme di tutte le permutazioni di un insieme <i>X</i> si indica con <i>𝓢(X)</i>. Se si prende in corrispondenza la composizione di applicazioni, la composizione di elementi di <i>𝓢(X)</i>. Inoltre tale composizione è associativa, esiste un elemento <i>i<sub>X</sub> neutro</i> rispetto alla composizione, tale cioè che <i>i<sub>X</sub> ∘ f = f ∘ i<sub>X</sub> = f</i> per ogni <i>f &in; S(X)</i>. Inoltre dato comunque un elemento <i>f &in; 𝓢(X)</i> esiste l'applicazione inversa <i>f<sup>-1</sup></i> che sta ancora in <i>𝓢(X)</i>, tale che <i>f ∘ f<sup>-1</sup> = f<sup>-1</sup> ∘ f = i<sub>X</sub></i>. L'insieme <i>𝓢(X)</i> rispetto alla composizione di applicazioni ha una <i>struttura algebrica</i> che prende il nome di <a href="gruppo.html">gruppo</a>. Tale insieme rivestirà un'importanza fondamentale nel seguito, quando studieremo in dettaglio i gruppo. 
+</p>
+
+<p>Dati due insiemi <i>A</i> e <i>B</i> di <i>n</i> e <i>m</i> elementi rispettivamente, il numero di applicazioni tra <i>A</i> e <i>B</i> è <i>m<sup>n</sup></i>. Ad esempio se <i>A = {a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>}</i>  e <i>B = {b<sub>1</sub>, b<sub>2</sub>}</i>, tutte le possibili applicazioni tra <i>A</i> e <i>B</i> sono le 2<sup>3</sup> seguenti:</p>
+
+
+<p><i>&emsp;&emsp; a<sub>1</sub> → b<sub>1</sub>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>1</sub> → b<sub>1</sub></i></p>
+<p><i>f<sub>1</sub>: &emsp;a<sub>1</sub> → b<sub>1</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; f<sub>2</sub>:&emsp; a<sub>1</sub> → b<sub>1</sub></i></p>
+<p><i>&emsp;&emsp; a<sub>3</sub> → b<sub>1</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>1</sub> → b<sub>1</sub></i></p>
+<br>
+
+<p><i>&emsp;&emsp; a<sub>1</sub> → b<sub>1</sub>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>1</sub> → b<sub>2</sub></i></p>
+<p><i>f<sub>3</sub>: &emsp;a<sub>2</sub> → b<sub>2</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; f<sub>4</sub>:&emsp; a<sub>2</sub> → b<sub>1</sub></i></p>
+<p><i>&emsp;&emsp; a<sub>3</sub> → b<sub>1</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>3</sub> → b<sub>1</sub></i></p>
+<br>
+
+<p><i>&emsp;&emsp; a<sub>1</sub> → b<sub>2</sub>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>1</sub> → b<sub>2</sub></i></p>
+<p><i>f<sub>5</sub>: &emsp;a<sub>2</sub> → b<sub>2</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; f<sub>6</sub>:&emsp; a<sub>2</sub> → b<sub>2</sub></i></p>
+<p><i>&emsp;&emsp; a<sub>3</sub> → b<sub>2</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>3</sub> → b<sub>1</sub></i></p>
+<br>
+
+<p><i>&emsp;&emsp; a<sub>1</sub> → b<sub>2</sub>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>1</sub> → b<sub>1<sub></i></p>
+<p><i>f<sub>7</sub>: &emsp;a<sub>2</sub> → b<sub>1</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; f<sub>8</sub>:&emsp; a<sub>2</sub> → b<sub>2</sub></i></p>
+<p><i>&emsp;&emsp; a<sub>3</sub> → b<sub>2</sub> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a<sub>3</sub> → b<sub>2</sub></i></p>
+<br>
+
+<h2>Numero di sottoinsiemi</h2>
+
+<p>Supponiamo di voler contare quanti sono i sottoinsiemi con <i>k</i> elementi di un insieme <i>A</i> (<i>k &le; n</i>). Conviene contare prima quante sono le <i>k</i>-ple ordinate di elementi distinti di <i>A</i>: si noti che due <i>k</i>-ple che hanno gli stessi elementi, ma in ordine diverso, sono da considerarsi diverse. Ora, il primo elemento della <i>k</i>-pla si può scegliere in <i>n</i> modi, il secondo in <i>n-1</i>, l'ultimo, ossia il <i>k</i>-esimo, <i>n - k + 1</i> modi. Le <i>k</i>-ple ordinate sono quindi i numero <i>n ⋅ (n - 1) ⋅⋅⋅ (n - k + 1)</i>. Ora, ogni sottoinsieme di <i>A</i> con <i>k</i> elementi ha esattamente <i>k!</i> ordinamenti, quind corrisponde a <i>k!</i> <i>k</i>-ple distinte. Se si vuole pertanto il numero di <i>sottoinsiemi</i> di <i>A</i> con <i>k</i> elementi, si dve dividere per <i>k!</i> il numero totale di <i>k</i>-ple. Quindi il numero di sottonsiemi con <i>k</i> elementi di un insieme con <i>n</i> elementi è dato da:</p>
+
+<img src="img/combinazioni_semplici.png" alt="combinazioni semplici"/>
+
+<p>Ebbene, tale numero, conta il numero di sottoinsiemi con <i>k</i> elementi che si possono formare partendo da un insieme con <i>n</i> elementi; Per esempio se abbiamo quattro oggetti dell'insieme {1, 2, 3, 4}, ci saranno (4 2) = 6 modi per scegliere 2 elementi tra questi, ossia</p>
+
+<div class="eq">
+<p><i>{1, 2}, {1 , 3}, {1, 4}, {2, 3}, {2, 4}, {3, 4}</i></p>
+</div>
+
+<p>Rrappresenta inoltre le combinazioni di <i>n</i> elementi a <i>k</i> a <i>k</i> elementi, prende il nome di <i>coefficiente binomiale</i> e si indica con il seguente simbolo:</p>
+
+<img src="img/simbolo_combinazioni.png" alt="simbolo combinazioni"/>
+
+<p>quindi per la (C.3)</p>
+
+<img src="img/def_combinazioni_semplici.png" alt="definizione combinazioni semplici"/>
+
+<p>Dalla definizione e dal significato di (n k) appare chiaro che</p>
+
+<img src="img/binomiale_proprietà1.png" alt="proprietà coefficiente binomiale"/>
+
+<p>e che</p>
+
+<img src="img/binomiale_proprietà2.png" alt="proprietà coefficiente binomiale"/>
+
+<p>infatti</p>
+
+<img src="img/stifel.gif" alt="formula stifel dimostrazione"/>
+
+<p>Quest'ultima relazione permette di calcolare i numeri (n+1 k) a partire dai valori (n k) e (n k-1). In tal modo si costruisce il cosiddetto <i>trianolo di Tartaglia</i> (o di <i>Pascal</i>); in cima al triangolo si pone (0 0)=1.</p>
+
+<img src="img/tartaglia.png" alt="triangolo Tartaglia"/>
+
+<p>Il motivo per cui gli interi (n k) prendono il nome di coefficienti binomiali è che essi compaiono come coefficienti nella formula che dà lo sviluppo della potenza di un binomio (<i>a + b</i>)<sup>n</sup></i>:</p>
+
+<img src="img/newton.png" alt="binomio newton"/>
+
+<p>Esaminiamo i primi valori di <i>n</i>:</p>
+
+<div class="eq">
+<p>(<i>a + b</i>)<sup>0</sup> = 1a<sup>0</sup>b<sup>0</sup></p>
+<p>(<i>a + b</i>)<sup>1</sup> = 1a<sup>1</sup>b<sup>0</sup> + 1a<sup>0</sup>b<sup>1</sup></p>
+<p>(<i>a + b</i>)<sup>2</sup> = 1a<sup>2</sup>b<sup>0</sup> + 2a<sup>1</sup>b<sup>1</sup> + 1a<sup>0</sup>b<sup>2</sup></p>
+<p>(<i>a + b</i>)<sup>3</sup> = 1a<sup>3</sup>b<sup>0</sup> + 3a<sup>2</sup>b<sup>1</sup> + 3a<sup>1</sup>b<sup>2</sup> + 1a<sup>0</sup>b<sup>3</sup></p>
+</div>
+
+<p>In generale, sviluppando la potenza</p>
+
+<div class="eq">
+<p>(<i>a + b</i>)<sup>n</sup> = (a + b) (a + b) ... (a + b)</p>
+</div>
+
+<p>si ottiene una somma di termini della forma a<sup>n-k</sup>b<sup>k</sup>. Se in un fattore <i>y</i> compare <i>k</i> volte, allora in quello stesso fattore <i>a</i> compare <i>n-k</i> volte. Il coefficiente di ogni termine sarà il numero di modi di scegliere <i>k</i> degli <i>n</i> binomi (a+b), ossia il coefficiente binomilae (n k). Ad esempio in (<i>x + y</i>)^3 = (x,y)*(x,y)*(x,y), there are 3 ways to form the term 3x^2y si possono prendere le due x:</p>
+
+<ul>
+	<li><p>dai primi due binomi;</p>
+	<li><p>Dagli ultimi due binomi</p></li>
+	<li><p>dal primo e ultimo binomio</p></li>
+</ul>
+
+<section>
+<a href="defective.html">&#171;Defective Verbs</a>
+<a href="index.html">Index</a>
+<a href="proprietàCalcolo Combinatorio.html">Proprietà dei Calcolo Combinatorio&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

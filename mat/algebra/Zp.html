@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="ℤ<sub><i>p</i></sub>: The integral domain ℤ<sub><i>p</i></sub> when <i>p</i> is a prime"/>
+ <title>ℤ<sub><i>p</i></sub>: The integral domain ℤ<sub><i>p</i></sub> when <i>p</i> is a prime</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>ℤ<sub><i>p</i></sub>: The integral domain ℤ<sub><i>n</i></sub> when <i>n</i> is a prime</h1>
+
+<p>Some of the ℤ<sub><i>n</i></sub>, do not share all the nice properties of ℤ. For instance, the product of nonzero integers in ℤ is always nonzero, but in ℤ<sub>6</sub> we have 2 · 3 = 0 even though 2 &ne; 0 and 3 &ne; 0. On the other hand, the multiplication table in the previous paragraph shows that the product of nonzero elements in ℤ<sub>5</sub> is always nonzero. Indeed, ℤ<sub>5</sub> has a much stronger property than ℤ. When <i>a</i> &ne; 0 the equation <i>ax</i> = 1 has a solution in Z if and only if <i>a</i> = ± 1. But the multiplication table for ℤ<sub>5</sub> shows that, for any <i>a</i> &ne; 0, the equation <i>ax</i> = 1 has a solution in ℤ<sub>5</sub> for example,</p>
+
+<div class="eq">
+<p><i>x = 3</i> &emsp; is a solution of <i>2x = 1</i><br>
+<p><i>x = 4</i> &emsp; is a solution of <i>4x = 1</i></p>
+</div>
+
+<p>More generally, whenever <i>n</i> is prime, ℤ<sub><i>n</i></sub> has special properties:</p>
+
+<div class="def">
+<p><b>Proposition 4.11</b>. For <i>n</i> &gt; 1, ℤ<sub><i>n</i></sub> is an integral domain if and only if <i>n</i> is a prime.</p>
+
+<p><b>Proof</b>. Suppose first that <i>n</i> is a prime. Let [<i>a</i>] &ne; [0] in ℤ<sub><i>n</i></sub>, and suppose [<i>a</i>][<i>b</i>] = 0 for some [<i>b</i>] in ℤ<sub><i>n</i></sub>. Now [<i>a</i>][<i>b</i>] = 0 implies that [<i>ab</i>] = 0, and therefore, <i>n</i>| <i>ab</i>. However, [<i>a</i>] &ne; 0 means that <i>n</i> ∤ <i>a</i>. Thus <i>n</i> | <i>ab</i> and <i>n</i> ∤ <i>a</i> imply by <a href="gcd.html#euclid_lemma">Euclid's lemma</a> that <i>n</i>|<i>b</i>, that is [<i>b</i>] = 0. We have shown that if [<i>a</i>] &ne; [0], the only way that [<i>a</i>][<i>b</i>] = 0 can be [0] is for [<i>b</i>] to be [0]. Therefore, ℤ<sub><i>n</i></sub> has no zero divisors and is an integral domain.</p>
+
+<p>Suppose now that <i>n</i> is not a prime and [<i>a</i>][<i>b</i>] = 0 holds true. Then <i>n</i> has divisors other than &pm; 1 and &pm; <i>n</i>, so there are integers <i>a</i> and <i>b</i> such that</p>
+
+<div class="eq">
+<p><i>n = ab</i> &emsp; where 1 &lt; a &lt; n &emsp; and &emsp; 1 &lt; b &lt; n</i></p>
+</div>
+
+<p>This means that [<i>a</i>] &ne; [0], [<i>b</i>] &ne; 0, but</p>
+
+<div class="eq">
+<p>[<i>a</i>] [<i>b</i>] = [<i>ab</i>] = [<i>n</i>] = [0]</p>
+</div>
+
+<p>Therefore, [<i>a</i>] is a zero divisor in ℤ<sub><i>n</i></sub>, and ℤ<sub><i>n</i></sub> is not an integral domain. Combining the two cases, we see that <i>n</i> is a prime if and only if ℤ<sub><i>n</i></sub> is an integral domain.□</p>
+</div>
+
+<p>However, it would be wrong to assume that every property holding for the equality holds for congruences as well. For instance, in ℤ we have the following cancellation property:</p>
+
+<div class="eq">
+<p><i>ac = bc</i> &emsp; implies &emsp; <i>a = b</i>,</p>
+</div>
+
+<p>as long as <i>c</i> &ne;0. In other words, ℤ is an <b>integral domain</b>. This property does not hold, in general, for congruences, as the following example shows:</p>
+
+<div class="eq">
+<p>3 · 5 ≡ 3 · 8, &emsp; mod 9</p>
+</div>
+
+<p>Nevertheless, the following result holds:</p>
+
+<p><b>Proposition 4.12</b>. (<i>Cancellation Law</i>) Let <i>n &gt; 1</i> be an integer. If <i>ac ≡<sub><i>n</i></sub> bc</i> and (<i>c, n</i>) = 1, then</p>
+
+<div class="eq">
+<p><i>a ≡<sub><i>n</i></sub> b</i>.</p>
+</div>
+
+<p><b>Proof</b>. If <i>ac ≡<sub><i>n</i></sub> bc</i>, then <i>n</i> | (<i>a − b</i>)<i>c</i>. As GCD(<i>c, n</i>) = 1, there exist <i>s, t</i> such that 1 = <i>sc + tn</i> and by multiplying both members by <i>a − b</i>, it is possible to write</p>
+
+<div class="eq">
+<p> <i>a − b</i> = (<i>a − b</i>) <i>sc</i> + (<i>a − b</i>) <i>tn</i> = (<i>a − b</i>) <i>c ⋅ s</i> + (<i>a − b</i>)<i>tn</i></p>
+</div>
+
+<p>thus <i>n</i> | <i>a − b</i>, because it divides the second member, consequenlty <i>a ≡<sub><i>n</i></sub> b</i>.□</p>
+
+<p><b>Proposition 4.13</b>. Let <i>n</i> &gt; 1 be an integer. If <i>ac ≡ bc</i> (mod <i>n</i>), then <i>a ≡ b</i>
+(mod <i>n/d</i>), where <i>d</i> = GCD(<i>c, n</i>).</p>
+
+<p><b>Proof</b>. The proposition says that it's possible to simplify a congruence eliminating a term, <i>but</i> the module must be changed accordingly. <i>ac ≡ bc</i> (mod <i>n</i>) ⇐⇒ (<i>a − b</i>) <i>c = kn</i>, from which dividing by <i>d</i> = GCD(<i>c, n</i>), we find that</p>
+
+<div class="eq">
+<p>(<i>a − b</i>) <i>c/d</i> = k(<i>n/d</i>)</p>
+</div>
+
+<p>(the fraction <i>c/d</i> and <i>n/d</i> are integers numbers). Thus <i>n/d</i> divides the product (<i>a − b</i>) <i>c/d</i> and <i>n/d</i> and <i>c/d</i> are coprime: f = c/d, m = n/d, d = gcd(c,n) so gcd(f,m) = gcd(c,n)/d = 1, and so <i>n/d</i> divides <i>a − b</i>, thus <i>a ≡<sub>n/d</sub> b</i>. □</p>
+
+<p>For instance, 21 = 3 · 7 ≡<sub>9</sub> 30 = 3 · 10 and 7 ≢ 10 (mod 9), while 7 ≡ 10 (mod 3). </p>
+
+<p>5 ≢ 8 (mod 9), 5 ≡ 8 (mod 9/3).</p> 
+
+<p><b>Remark 4.14</b>. As a consequence of the above, we may see, for instance, that in ℤ<sub>5</sub> the same cancellation property holds as in ℤ; in other words, ℤ<sub>5</sub> is, like ℤ, an integral domain, and consequently, since it is finite, a field (see Exercise A1.48). Indeed, if ā· b̄ = <span class="overline">0</span> with ā, b̄ ∈ ℤ<sub>5</sub> and b̄ &ne; = <span class="overline">0</span>, then ā = <span class="overline">0</span> by Proposition 4.8, as GCD(b, 5) = 1. So ℤ<sub>5</sub> is an integral domain. On the other hand, the same results say nothing about ℤ<sub>4</sub>. In fact, in ℤ<sub>4</sub> there are zero-divisors: we have <span class="overline">2</span> ·<span class="overline">2</span> = <span class="overline">0</span> con <span class="overline">2</span> &ne; <span class="overline">0</span>.</p>
+
+<p><b>Proposition 4.15</b>. The following properties hold:</p>
+
+<ol>
+	<li><p>if <i>a ≡<sub><i>n</i></sub> b</i> and <i>d</i> | <i>n</i>, then <i>a ≡<sub>d</sub> b</i>;</p></li>
+	<li><p>if <i>a ≡<sub><i>n</i></sub> b</i> and <i>a ≡<sub>m</sub> b</i>, then <i>a ≡ b</i> (mod lcm(<i>n, m</i>)).</p></li>
+</ol>
+
+<p><b>Proof</b>. They follow directly from the definition of congruence.□</p>
+
+<div class="def">
+<p><b>Exercise 4.13</b> - On the set ℤ consider the following two equivalence relations:</p>
+
+<ol>
+	<li><p><i>a ≡ b</i> (mod <i>n</i>), that is <i>a𝓡b</i> if and only if <i>a − b = nh</i> for some integer <i>h</i>.</p>
+	<li><p><i>a𝓢b</i> if and only if if <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
+</ol>
+
+<p>Show that <i>a ≡ b</i> (mod <i>n</i>) if and only if <i>a𝓢b</i>; and the two equivalence relations determine the same classes.</p>
+
+<p><b>Solution</b>. We prove first that <i>a ≡ b</i> (mod <i>n</i>), implies <i>a𝓢b</i>. If</p>
+
+<div class="eq">
+<p><i>a − b = hn</i> &emsp; for some integer <i>h</i> &emsp; (2.0)</p>
+</div>
+
+<p>then <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>. Suppose that <i>a</i> has been divided by <i>n</i>, producing the quotient <i>q</i> and the remainder <i>r</i> with 0 &le; <i>r &lt; n</i>. This means that <i>a = nq +r</i>. Replacing <i>a</i> in (2.0) with <i>nq + r</i> yields</p>
+
+<div class="eq">
+<p><i>b = a − hn</i> = (<i>nq + r</i>) − <i>hn</i> = <i>n</i>(<i>q − h</i>) + <i>r</i></p>
+</div>
+
+<p>Let's now divide <i>b</i> by <i>n</i>:</p>
+
+<div class="eq">
+<p><i>b / n</i> = [<i>n</i>(<i>q − h</i>) + <i>r</i>]/<i>n</i> = (<i>q − h</i>) + <i>r/n</i></p>
+</div>
+
+<p>This means that the quotient of the division is the integer <i>q − h</i>, and the remainder is <i>r</i>. Thus, <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
+
+<p>Let’s now prove the converse: <i>a𝓢b</i>, implies <i>a ≡<sub><i>n</i></sub> b</i>. By hypothesis <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>; call this common remainder <i>r</i>. Then <i>a = nh + r</i> and <i>b = nk + r</i> with <i>h</i> and <i>k</i> integers, and <i>0 ≤ r &lt; n</i>. To prove that <i>a ≡<sub><i>n</i></sub> b</i> we need to check whether <i>a − b</i> is divisible by <i>n</i>. Using the information we have for <i>a</i> and <i>b</i> we obtain</p>
+
+<div class="eq">
+<p><i>a − b</i> = (<i>nh + r</i>) − (<i>nk + r</i>) = <i>nh − nk</i> = <i>n</i>(<i>h − k</i>)</p>
+</div>
+
+<p>The number <i>h − k</i> is an integer because <i>h</i> and <i>k</i> are integers. Thus <i>a ≡<sub><i>n</i></sub> b</i>.</p>
+
+<p><i>Part 2</i>. We must prove that the relations "≡<sub>m</sub>" and "𝓢" are equal. By definition [<i>a</i>]<sub>m</sub> = {<i>b</i> ∈ ℤ| <i>b ≡ a</i> (mod <i>m</i>)} and [<i>a</i>]<sub>𝓢</sub> = {<i>b</i> ∈ ℤ|<i>b𝓢a</i>}. Let <i>b</i> ∈ [0]<sub>m</sub>, or equivalently, let <i>a ≡<sub>m</sub> b</i>. By part 1 this is equivalent to stating that <i>a𝓢b</i>. In turn, this is equivalent to saying that <i>b</i> ∈ [<i>a</i>]<sub>𝓢</sub>. Since <i>b</i> ∈ [<i>a</i>]<sub>m</sub> if and only if <i>b</i> ∈ [<i>a</i>]<sub>m</sub>, the two equivalence classes are identical.□</p>
+
+</div>
+
+<p>It is important to know when two relations produce the same equivalence classes, because it is then possible to use either one of the two relations, depending on which one is handier in a given setting.</p>
+
+<section>
+<a href="isomorfismo.html">&#171; Isomorfismo</a>
+<a href="index.html">Index</a>
+<a href="prova_nove.html">Prova del nove &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
