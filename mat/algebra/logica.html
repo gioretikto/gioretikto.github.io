@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Loigica"/>
+    <title>Loigica</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href=/index.html">Algebra</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Loigica</h1>
+
+<h2>Proposizione</h2>
+
+<p>Una <b>proposizione logica</b> è un enunciato del quale si può inequivocabilmente dire, in un certo contesto, se è vero o falso. Dunque una proposizione logica porta con sé un <i>valore di verità</i>, Vero o Falso; tale valore può venir rappresentato in vari modi, ad esempio attraverso il valore binario di un bit di memoria (1 oppure 0), o attraverso lo stato di un circuito elettrico (chiuso oppure aperto). Esempi di proposizioni logiche sono: ‘7 è un numero dispari’ (Vero), ‘3 &gt; √12’ (Falso), ‘Venere è una stella’ (Falso), ‘questo testo è scritto in italiano’ (Vero), etc. Invece, l’enunciato ‘Milano è lontana da Roma’ non è una proposizione logica, in assenza di precisazioni sul concetto di lontananza; lo è però l’espressione ‘Milano è più lontana 
+di Torino da Roma’. Indicheremo le proposizioni logiche con lettere minuscole <i>p,q,r</i>....</p>
+
+<h2>Connettivi Logici</h2>
+
+<p>A partire da proposizioni logiche, possiamo ottenerne altre attraverso operazioni logiche, espresse da simboli detti <i>connettivi logici</i>. L'operazione più semplice è la <b>negazione logica</b>: con il simbolo ¬p (che leggiamo ‘non p’), indichiamo la proposizione logica che è vera se <i>p</i> è falsa, ed è falsa se <i>p</i> è vera. Ad esempio, se p = ‘7 è un numero razionale’, allora ¬p = ‘7 è un numero irrazionale’.</p>
+
+<p>La <b>congiunzione logica</b> di due proposizioni <i>p</i> e <i>q</i> è la proposizione <i>p ∧ q</i> (che leggiamo ‘<i>p</i> e <i>q</i>’), la quale è vera se <i>p</i> e <i>q</i> sono entrambe vere, ed è falsa in tutti gli altri casi. Invece, la <b>disgiunzione logica</b> di p c q è la proposizione <i>p ∨ q</i> (che leggiamo ‘p oppure q’), la quale è falsa se p e q sono entrambe false, ed è vera in tutti gli altri casi. Ad esempio, siano p ='7 è un numero razionale’ e q = ‘7 è un numero pari’: la proposizione <i>p ∧ q</i> = ‘7 è un numero razionale pari’ è falsa perché q è falsa, mentre la proposizione p ∨ q = ‘7 è un numero razionale oppure un numero pari’ è vera perché <I>p</i> è vera.</p>
+
+<p>Molti degli enunciati in Matematica sono del tipo: ‘Se è vera l’ipotesi <i>p</i>, allora è vera la tesi <i>q</i>’, altrimenti espresso come ‘Condizione sufficiente affinché sia vera la tesi <i>q</i> è che sia vera l'ipotesi <i>p</i>’, oppure ancora come ‘Condizione necessaria. affinché sia vera l’ipotesi p è che sia vera la tesi g°. Tali enunciati sono forme linguistiche diverse della stessa proposizione logica p ⇒ q (che leggiamo ‘p implica g°), detta implicazione logica. Per definizione, la proposizione p ⇒ q è falsa se p è vera e q è falsa, mentre è vera in tutti gli altri casi. In altri termini, l’implicazione logica esclude che da una premessa vera si possa dedurre una conclusione falsa, mentre non esclude che la conclusione sia vera anche se la premessa è falsa. Così, la proposizione ‘se piove, allora esco con l’ombrello’ mi impedisce di uscire senza ombrello quando piove, ma non condiziona il mio comportamento se il cielo è sereno. Si può verificare facilmente, considerando tutti i valori di verità possibili delle proposizioni <i>p</i> e <i>q</i>, che la proposizione p ⇒ q ha gli stessi valori di verità della proposizione ¬p ∨ q. Pertanto, il connettivo logico ⇒ può essere espresso in funzione dei connettivi primari ¬ e ∨.</p>
+
+<p>Altri enunciati ricorrenti in Matematica sono del tipo: 'La tesi <i>q</i> è vera se e solo se l'ipotesi <i>p</i> è vera', oppure 'Condizione necessaria e sufficiente affiché sia vera la tesi <i>q</i> è che sia vera l'ipotesi <i>p</i>'. Tali enunciati corrispondono alla proposizione logica <i>p ⇔ q</i> (che leggiamo 'p equivale a q'), detta <b>equivalenza logica</b>. Essa è vera se <i>p</i> e <i>q</i> hanno gli stessi valori di verità, ed è falsa se <i>p</i> e <i>q</i> hanno valori di verità divers. Un esempio è l'enunciato 'un numero naturale è dispari se e solo se il suo quadrato è dispari'. La proposizione logica <i>p ⇔ q</i> è la congiunzione delle due proposizioni <i>p ⇒ q</i> e <i>q ⇒ p</i>, vale a dire le proposizioni <i>p ⇔ q</i> e (<i>p ⇒ q</i>) ∧ (<i>q ⇒ p</i>) hanno gli stessi valori di verità; dunque, connettivo ⇔ è esprimibile in funzione dei connettivi primari ¬, ∨ e ∧. </p>
+
+<p>La proposizione <i>p ⇒ q</i> (cioè un enunciato del tipo 'se è vero <i>p</i>, allora è vero <i>q</i>') può essere espressa in varie altre forme, logicamente equivalenti ad essa. Tali forme rappresentano delle <i>regole di dimostrazione</i> per ottenere l'implicazione precedente. Ad esempio <i>p ⇒ q</i> è logicamente equivalente alla proposizione <i>¬q ⇒ p</i>, detta la sua <i>contronominale</i>; in formule, possiamo scrivere</p>
+
+<div class="eq">
+<p>(<i>p ⇒ q</i>) &emsp; ⇐⇒ (<i>¬q ⇒ p</i>)</p>
+</div>
+
+<p>La verifica è facile: per definizione di <i>p ⇒ q</i> è falsa solo quando <i>p</i> è vera e <i>q</i> è falsa, cioè quando <i>¬q</i> è vera e <i>¬p</i> è falsa; ma quest'ultima situazione corrisponde precisamente al fatto che l'implicazione <i>¬q ⇒ ¬p</i>  è falsa. Dunque, abbiamo stabilito la seguente regola di dimostrazione: per dimostrare che se è vera l'ipotesi <i>p</i> allora è vera la tesi <i>q</i>, possiamo supporre falsa la tesi <i>q</i> e da ciò dedurre che è falsa l'ipotesi <i>p</i>. Ad esempio, se vogliamo dimostrare l'implicazione 'se un numero naturale è dispari, allora non è divisibile per 10', possiamo supporre che il numero sia un multiplo di 10 e da ciò dedurre che il numero è pari.</p>
+
+<p>Un altra regola di dimostrazione è la <b>dimostrazione per assurbo</b>, essa si esprime come</p>
+
+<div class="eq">
+<p>(<i>p ⇒ q</i>) &emsp; ⇐⇒ (<i>p ∧ q ⇒ ¬p</i>)</p>
+</div>
+
+<p>Ciò significa che per dimostrare l'implicazione <i>p ⇒ q</i> possiamo equivalentemente procedere nel seguente modo: supponiamo che sia vera l'ipotesi <i>p</i> e che sia falsa la tesi <i>q</i> e usando ciò deduciamo l'assurdo che l'ipotesi <i>p</i> dev'essere anche falsa. Una forma più generale della dimostrazione per assurdo è espressa dalla formula /p>
+
+<div class="eq">
+<p>(<i>p ⇒ q</i>) &emsp; ⇐⇒ (<i>p ∧ ¬q ⇒ r ∧ r</i>)</p>
+</div>
+
+<p>dove <i>r</i> è un'altra proposizione logica: l'implicazione <i>p ⇒ q</i> equivale a supporre vera l'ipotesi <i>p</i> e falsa la tesi <i>q</i>, e a dedurre da ciò che una certa affermazione <i>r</i> risulta contemporaneamente vera e falsa (nota che la proposizione r ∧ ¬r è sempre falsa, qualunque sia il valore di verità di <i>r</i>).</p>
+
+<h2>Predicati</h2>
+
+<p>Introduciamo il concetto di <b>predicato logico</b>, un enunciato p(x,..) dipendente da uno o più argomenti <i>x,..</i> variabili in opportuni insiemi, il quale diventa una proposizione logica (cioè assume valori di verità, Vero o Falso;).</p>
+
+<p>Ad esempio se <i>x</i> varia nell'insieme dei numeri naturali, l'enunciato p(x) = '<i>x</i> è un numero dispari' è un predicato: p(7) è vero, p(10) è falso e così via. Se <i>p</i>(<i>x,y</i>) = '<i>x</i> e <i>y</i> sono compagni di scuola', è un predicato.</p>
+
+<p>Notiamo che le operazioni logiche possono essere applicate anche ai predicati, dando luogo a nuovi predicati (ad esempio ¬p(x), p(x) v q(x), eccetera). Cioè tra l'altro stabilisce un preciso legame tra i connettivi logici primari ¬, ∨, ∧ e le operazioni insiemistiche. Tornando alla definizione A = { x &in; X | p(x)} di sottoinsieme <i>A</i> di un certo insieme ambiene <i>X</i>, la 'proprietà carratteristica' p(x) degli elementi di <i>A</i> null'altro è se non un predicato logico, che è vero per tutti e soli gli elementi di <i>A</i>. Il complementare 𝐶<i>A</i> è allora ottenuto negando la proprietà caratteristica,</p>
+
+<div class="eq">
+<p>𝐶<i>A</i> = {x &in; X | ¬p(x)}</p>
+</div>
+
+<p>mentre l'intersezione e l'unione di <i>A</i> con un secondo sottoinsieme <i>B</i> = {<i>x</i> &in; X | q(x)} sono ottenuti rispettivamente congiungendo e disgiungendo le proprietà caratteristiche:</p>
+
+<div class="eq">
+<p><i>A ∩ B</i> := {x | p(x) ∧ q(x)} &emsp; <i>A ∪ B</i> := {<i>x</i> | p(x) ∨ q(x)}</p>
+</div>
+
+<p>Le proprietà delle operazioni insiemistiche corrispondono ad analoghe proprietà delle operazioni logiche.</p>
+
+<h2>Quantificatori</h2>
+
+<p>Dato un predicato <i>p</i>(<i>x</i>) con <i>x</i> variabile in un certo insieme <i>X</i>, è naturale chiedersi se l'enunciato <i>p</i>(<i>x</i>) sia vero <i>per tutti</i> gli elementi <i>x</i>, oppure chiedersi se <i>esista almeno un elemento x</i> per cui 
+<i>p</i>(<i>x</i>) sia vero. Quando ci poniamo tali domande, stiamo considerando le due proposizione logiche</p>
+
+<div class="eq">
+<p>&forall; x &in; <i>X</i>, <i>p</i>(<i>x</i>) &emsp; (che leggiamo 'per ogni x, è vero p(x)')
+</div>
+
+<p>e</p>
+
+<div class="eq">
+<p>∃<i>x</i> &in; <i>X</i>, <i>p</i>(<i>x</i>) &emsp; (che leggiamo 'esiste almeno un x, per cui è vero p(x)')
+</div>
+
+<p>Il simbolo &forall; ('per ogni') viene detto <b>quantificatore universale</b>, mentre il simbolo ∃ (‘esiste almeno’) viene detto <b>quantificatore esistenziale</b>. (Talvolta si usa un terzo quantificatore, I!, che significa ‘esiste esattamente un elemento’ o ‘esiste ed è unico'.)</p>
+
+<p>Sottolineiamo il fatto che l’applicazione di un quantificatore a un predicato lo trasforma in una proposizione logica, della quale si può stabilire il valore di verità. Ad esempio, se consideriamo il predicato p(x) = ‘x è strettamente minore di 7’, la
+proposizione ‘&forall;<i>x</i> &in; ℕ,  <i>p</i>(<i>x</i>)' è falsa (perché, ad esempio, p(8) è falsa), mentre la proposizione ‘∃x &in; ℕ, <i>p</i>(<i>x</i>)' è vera (ad esempio x = 6 soddisfa l’enunciato).</p>
+
+<p>È utile soffermarsi sull’effetto della negazione logica su un predicato quantificato. Supponiamo ad esempio che x indichi il generico studente di un liceo e sia <i>p</i>(<i>x</i>) = ‘<i>x</i> è di nazionalità italiana’. La proposizione ‘&forall;x, p(x)’ (cioè, ‘tutti gli studenti del liceo sono di nazionalità italiana’) è falsa. Pertanto, la sua negazione logica, ‘¬(&forall;<i>x</i>, p(x))' è vera; ma, attenzione!: essa non afferma che tutti gli studenti del Liceo sono stranieri, bensì che ‘esiste almeno uno studente del Liceo che non è italiano’. Dunque, la negazione della proposizione ‘&forall;x, p(x)' è la proposizione ‘∃x, ¬p(x)’. In formule possiamo scrivere</p>
+
+<div class="eq">
+<p>¬(&forall;<i>x</i>, p(x)) ⇐⇒ ∃x, ¬p(x)</p>
+</div>
+
+<p>In modo analogo, è facile convincersi che vale l’equivalenza logica</p>
+
+<div class="eq">
+<p>¬(∃<i>x</i>, p(x)) ⇐⇒ &forall;x, ¬p(x)</p>
+</div>
+
+<p>Se un predicato dipende da due o più argomenti, ciascuno di essi può essere quantificato. Tuttavia, l'<i>ordine</i> in cui compaiono i quantificatori può essere importante. Precisamente, due quantificatori dello stesso tipo (universale o esistenziale) possono essere scambiati senza modificare il valore di verità della proposizione; in altri termini, si ha</p>
+
+<div class="eq">
+<p>&forall;<i>x</i>,<i>y</i> p(x, y)) ⇐⇒ &forall;x,&forall;y, p(x,y)</p>
+<p>∃<i>x</i>,<i>y</i> p(x, y)) ⇐⇒ ∃x,∃y, <i>p</i>(<i>x,y</i>)</p>
+</div>
+
+<p>Al contrario, lo scambio di due quantificatori di tipo diverso in genere porta a due proposizioni logiche diverse; pertanto, bisogna essere molto attenti nell’elencare i quantificatori.</p>
+
+<p>A titolo di esempio, consideriamo il predicato p(x,y) = ‘x &ge; y’, dove <i>x</i> e <i>y</i> variano nell’insieme dei numeri naturali. La proposizione ‘&forall;x &forall;y, p(x,y)’ significa ‘presi due numeri naturali qualunque, ciascuno è maggiore o uguale all’altro’ ed è palesemente falsa. La proposizione ‘&forall;x &forall;y, <i>p</i>(<i>x,y</i>)”, che significa ‘preso un qualunque intero <i>x</i>, esiste un intero y minore o uguale a <i>x</i>’, è vera: ad esempio, possiamo scegliere y = x. Invece la proposizione ‘∃<i>x</i>, ∃<i>y</i>, <i>p</i>(<i>x,y</i>)', che significa ‘esiste un intero <i>x</i> maggiore o uguale di tutti gli interi’, è falsa: ogni intero x ammette il successore <i>x</i> + 1, strettamente maggiore di x. Infine, la proposizione ‘∃<i>x</i>,∃<i>y</i>, <i>p</i>(<i>x,y</i>)' (‘esistono almeno due interi, l’uno maggiore o uguale all’altro’) è banalmente vera.</p>
+
+<section>
+<a href="inverse.html">&#171;Solving linear congruences; Inverses</a>
+<a href="index.html">Index</a>
+<a href="euclid_algorithm.html">Euclidean Algorithm &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Ruffini's Theorem"/>
+ <title>Ruffini's Theorem</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Ruffini's Theorem</h1>
+
+<p><b>Theorem 4.16</b>. (<i>Ruffini's Theorem</i>) If <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] and &alpha; &in;  𝕂[<i>x</i>] is such that <i>f</i>(&alpha;) = 0 then (<i>x − &alpha;</i>) | <i>f</i>(<i>x</i>).</p>
+
+<p><b>Proof</b>. We think of <i>f</i>(<i>x</i>) as a polynomial function since we are evaluating its value in &alpha;. By dividing <i>f</i>(<i>x</i>) by (<i>x − &alpha;</i>) we have</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = (<i>x − &alpha;</i>) <i>q</i>(<i>x</i>) + <i>r</i>(<i>x</i>), &emsp; with ∂<i>r</i>(<i>x</i>) < (<i>x − &alpha;</i>) = 1 &emsp; (<b>4.17</b>)</p>
+</div>
+
+<p>Hence <i>r</i>(<i>x</i>) must be an element <i>r</i> of 𝕂[<i>x</i>]. Evaluating eq. (4.17) for <i>x = &alpha;</i> we have <i>f</i>(<i>&alpha;</i>) = 0 = (&alpha; - &alpha;)<i>q</i>(<i>x</i>) + <i>r</i>, thus <i>r</i> must be equal to zero, so <i>f</i>(<i>x</i>) is divisible by (<i>x − &alpha;</i>).□</p>
+
+<p><b>Definition 4.18</b>. Let <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>]. An element &alpha; &in;  𝕂[<i>x</i>] such that <i>f</i>(<i>&alpha;</i>) = 0 is said <i>root</i> of <i>f</i>(<i>x</i>).</p>
+
+<p><b>Definition 4.19</b>. A root <i>α</i> ∈ 𝕂 of <i>f</i>(<i>x</i>) ∈ 𝕂[<i>x</i>] is said to be <i>simple</i> if (<i>x − α</i>) | <i>f</i>(<i>x</i>) but (<i>x − α</i>)<sup>2</sup> ∤ <i>f</i>(<i>x</i>). It is said to be of multiplicity <i>m</i> if (<i>x − α</i>)<sup>m</sup> | <i>f</i>(<i>x</i>), but (<i>x − α</i>)<sup>m+1</sup> ∤ <i>f</i>(<i>x</i>). A root of multiplicity <i>m</i> > 1 is said to be a <i>multiple</i> root.</p>
+
+<p><b>Theorem 4.20</b>. Let 𝕂 a field. A nonzero polynomial <i>f</i>(<i>x</i>) of degree <i>n</i> in 𝕂[<i>x</i>], has at most <i>n</i> roots &in; 𝕂, counted with their multiplicity.</p>
+
+<p><b>Proof.</b> We proceed by induction on <i>n</i>. If <i>n</i> = 0, <i>f</i>(<i>x</i>) is a non-zero constant withoug roots, hence the theorem is true. We suppose true the theorem for any polynomial of degree &lt; <i>n</i>. Let <i>f</i>(<i>x</i>) of degree <i>n</i>. If <i>f</i>(<i>x</i>) has a root &alpha; of multiplicity <i>m</i> &ge; 1, <i>m &le; n</i>, then</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = (<i>x − &alpha;</i>)<sup>m</sup> <i>q</i>(<i>x</i>), &emsp; ∂<i>q</i>(<i>x</i>) = <i>n − m</i></p>
+</div>
+
+<p>If &beta; is another root of <i>f</i>(<i>x</i>) then 0 = <i>f</i>(&beta;) = (<i>&beta; − &alpha;</i>)<sup>m</sup> q(&beta;). Since &beta; &alpha; we must have <i>q</i>(&beta;) = 0, because 𝕂 has no zero-divisors. Thus the only roots of <i>f</i>(<i>x</i>) are &alpha; (with multiplicity <i>m</i>) and the roots of <i>q</i>(<i>x</i>). For the induction hypothesis, <i>q</i>(<i>x</i>) has at last <i>n − m</i> roots (= degree ∂<i>q</i>(<i>x</i>)). Hence <i>f</i>(<i>x</i>) can have at last <i>m</i> + (<i>n − m</i>) = <i>n</i> roots in 𝕂. □</p>
+
+<p><b>Corollary 4.21</b>. Let 𝕂 a field with infinitely many elements and <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) two polynomials &in; 𝕂[<i>x</i>]. Then they are equal as polynomials <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) only if they are equal as polynomial functions <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) on 𝕂.</p>
+
+<p><b>Proof</b>. If <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) as polynomials, then they will obviuosly equal as polynomial function. Conversely, suppose that <i>f</i>(<i>&alpha;</i>) = <i>g</i>(<i>&alpha;</i>), &forall;&alpha; &in; 𝕂. Then the polynomial <i>h</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>) is the polynomial with the property that <i>h</i>(<i>&alpha;</i>) = 0, &forall;&alpha; &in; 𝕂. If <i>h</i>(<i>x</i>) wasn't the zero polynomial, it would have degree <i>n</i> &in; ℕ. Since 𝕂 has infinite elements, <i>h</i>(<i>x</i>) would be a polynomial with infinite roots. Then <i>h</i>(<i>&alpha;</i>) must be the zero-polynomial and <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) as polynomials.□</p>
+
+<p>With the last we have proved that the notions of polynomial functions and polynomials are the same.</p>
+
+<section aria-label="End">
+<a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>
+<a href="index.html">Index</a>
+<a href="pol_exercises.html">Exercises on Polynomials &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

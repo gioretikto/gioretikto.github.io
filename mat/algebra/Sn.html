@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="The symmetric group 𝓢<sub>n</sub>"/>
+  <title>The symmetric group 𝓢<sub>n</sub></title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+   
+<div class="content">
+
+<h1>The symmetric group 𝓢<sub>n</sub></h1>
+
+<p>We have introduced the group 𝓢(<i>X</i>, ∘) of all <i>bijections</i> from <i>X</i> to itself. When the number of elements of <i>X</i> is finite the group 𝓢(<i>X</i>) is indicated by 𝓢<sub><i>n</i></sub>, with <i>n</i> representing the cardinality of of <i>X</i> = {<i>x<sub>1</sub>, x<sub>2</sub>, ...,x<sub>n</sub></i>}, and is known as <i>symmetric group of degree n</i>.</p>
+
+<p>Let <i>X</i> = {1, 2, ..., <i>n</i>}. Every element <i>&sigma;</i> of 𝓢<sub><i>n</i></sub> is a <i>bijections</i> from <i>X</i> to itself, represent a <b>permutation</b> of {1, 2, ..., <i>n</i>}. Thus the cardinality of 𝓢<sub><i>n</i></sub> is</p>
+
+<div class="eq">
+<p>|𝓢<sub><i>n</i></sub>| = <i>n</i>!</p>
+</div>
+
+<p>You may be familiar with the notion of a permutation of a set as a rearrangement of the elements of the set. Thus for the set {1, 2, 3, 4, 5}, a rearrangement of the elements that could be for example the new arrangement {5, 2, 4, 3, 1}. </p>
+
+<p>Let <i>n</i> = 6, <i>X</i> = {1,2,3,4,5,6} and let <i>&sigma;</i> the bijective mapping the act in the following way:</p>
+
+<div class="eq">
+<p><i>&sigma; : X ⟶ X</i><br>
+1 ⟼ 5<br>
+2 ⟼ 1<br>
+3 ⟼ 4<br>
+4 ⟼ 6<br>
+5 ⟼ 2<br>
+6 ⟼ 3<br>
+</p>
+</div>
+
+
+<p>A <i>permutation</i> is thus a function mapping of each element listed in the left column into a single (not necessarily different) element from the same set listed at the right. Thus 1 is carried into 5, 2 is mapped into 1, and so on. Furthermore, to be a permutation of the set, this mapping must be such that each element appears in the right column once and only once.</p>
+
+<p>We shall write <i>&sigma;</i> as 2 x 6 matrix</p>
+
+<div class="eq">
+<p>
+|1 2 3 4 5 6|<br>
+|5 1 4 6 2 3|
+</p>
+</div>
+
+<p>since the <i>&sigma;</i> is bijective in the bottom row, which contains the images of the elements of <i>X</i> we have all the elements of the first row in a different order. This means that</p>
+
+<div class="eq">
+<p>σ(1) = 5, σ(2) = 1, σ(3) = 4, σ(4) = 6, σ(5) = 2, σ(6) = 3.</p>
+</div>
+
+<p>In general an element of 𝓢<sub><i>n</i></sub> is indicated by a 2 x <i>n</i> matrix</p>
+
+<table class="noborder">
+<tr><td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>...</td> <td>n|</td> </tr>
+<tr><td>|i<sub>1</sub></td> <td>i<sub>2</sub></td> <td>i<sub>3</sub></td> <td>i<sub>4</sub></td> <td>...</td> <td>i<sub>n</sub>|</td></tr>
+</table>
+
+<p>The composition of two permutations <i>&sigma; ◦ &tau;</i>, or <i>&sigma;&tau;</i> where for example <i>&sigma;</i> is the permutation above and <i>&tau;</i> is the following permutation</p>
+
+<table class="noborder">
+<tr><td rowspan="2">&tau; = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td></tr>
+</table>
+
+<p>is the permutation obtained applying first &tau; on <i>X</i> then <i>&sigma;</i>: Remember that the action of <i>στ</i> on <i>X</i> must be read in right-to-left order: first apply <i>τ</i> and then <i>σ</i> that is</p>
+
+<table class="noborder">
+<tr><td rowspan="2"><i>&sigma; ◦ &tau;</i> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|1</td> <td>5</td> <td>2</td> <td>4</td> <td>6</td> <td>3|</td></tr>
+<table>
+
+<p>if we reverse the order the reuslt is</p>
+
+<table class="noborder">
+<tr><td rowspan="2"><i>&tau; ◦ &sigma;</i> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|4</td> <td>2</td> <td>3</td> <td>6</td> <td>1</td> <td>5|</td></tr>
+</table>
+
+<p>The group 𝓢<sub><i>n</i></sub> is thus not Abelian. Now permutation multiplication is defined as function composition, we showed that function composition is associative. The identity elementd indicated by id of 𝓢<sub><i>n</i></sub> is the permutation</p>
+
+<table class="noborder">
+<tr><td rowspan="2">id =</td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+</table>
+
+<p>The inverse of a permutation is the permutation that reverses the direction of the mapping σ, that is, <i>σ<sup>−1</sup></i>(<i>a</i>) is the element <i>a'</i> of <i>X</i> such that <i>a = σ</i> (<i>a'</i>), thus swapping the two rows and then reordering the first row. The inverse of the permutation</p>
+
+<table class="noborder">
+<tr><td rowspan="2">&tau; = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td></tr>
+</table>
+
+<p>is the permutation</p>
+
+<table class="noborder">
+<tr> <td rowspan="2">&tau;<sup>−1</sup> =</td> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td> </td> <td rowspan="2"> = </td>  <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td></tr>
+<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td></tr>
+</table>
+
+<p>Starting fromt a permutation <i>&sigma;</i> we can obtain its powers <i>&sigma;<sup>k</sup></i> with k &in; ℤ. Let <i>r</i> the least positive integer such that <i>&sigma;<sup>r</sup></i> = id. Such an integer surely exists and it is the <i>order</i> of the permutation.</p>
+
+<p><b>7.4.1 Example</b>. Calculate the order of the permutation</p>
+
+<table class="noborder">
+<tr> <td rowspan="2">&tau; = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|2</td> <td>3</td> <td>4</td> <td>6</td> <td>5</td> <td>1|</td></tr>
+</table>
+
+<p>The powers of <i>&tau;</i> are:</p>
+
+<section>
+<table class="noborder">
+<tr> <td rowspan="2">&tau;<sup>2</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> &ne; id</td> </tr>
+<tr> <td>|3</td> <td>4</td> <td>6</td> <td>1</td> <td>5</td> <td>2|</td> </tr>
+</table>
+
+<table class="noborder">
+<tr><td rowspan="2">&tau;<sup>3</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> &ne; id</td></tr>
+<tr> <td>|4</td> <td>6</td> <td>1</td> <td>2</td> <td>5</td> <td>3|</td></tr>
+</table>
+
+</section>
+
+<section>
+
+<table class="noborder">
+<tr><td rowspan="2">&tau;<sup>4</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> &ne; id</td></tr>
+<tr> <td>|6</td> <td>1</td> <td>2</td> <td>3</td> <td>5</td> <td>4|</td></tr>
+</table>
+
+<table class="noborder">
+<tr><td rowspan="2">&tau;<sup>5</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> = id</td></tr>
+<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td></tr>
+</table>
+</section>
+
+<p>Thus the period of <i>&tau;</i> is 5.</p>
+
+<p>Let <i>X</i> be a set and let <i>σ ∈ 𝓢<sub>n</sub></i>. We define in <i>X</i> the following relation:</p>
+
+<div class="eq">
+<p><i>x ≡<sub>&sigma;</sub> y &emsp; ⇐⇒ &emsp; y  = &sigma;<sup>i</sup></i>(<i>x</i>), &emsp; for some <i>i</i> &in; ℤ.</p>
+</div>
+
+<p>it can be easily proved it is an equivalence relation, thus <i>X</i> is parted into equivalence classes.</p>
+
+<p><b>7.4.2 Definition</b>. For a fixed <i>x ∈ X</i>, the set</p>
+
+<div class="eq">
+<p>𝓞<sub>σ</sub>(<i>x</i>) = {<i>y &in; X</i> | <i>y = σ<sup>i</sup></i>(<i>x</i>) for some <i>i</i> ∈ ℤ}</p>
+</div>
+
+<p>is the <b>orbit</b> of <i>x</i> under σ.</p>
+
+<p>Since <i>X</i> is finite, given a <i>x &in; X</i>, there must exist given the invertibility of the permutation, a least positive integer <i>m = m</i>(<i>x</i>) sucht that <i>σ<sup>m</sup></i>(<i>x</i>) = <i>x</i>: indeed, there must exist two distinct integers <i>h</i> and <i>k</i> (<i>h &gt; k</i>) such that <i>σ<sup>h</sup></i>(<i>x</i>) = <i>σ<sup>k</sup></i>(<i>x</i>), from which applying σ<sup>−k</sup>(<i>x</i>) to both sides, we obtain</p>
+
+<div class="eq">
+<p><i>&sigma;<sup>h−k</sup></i>(<i>x</i>) = <i>x</i></p>
+</div>
+
+<p><b>7.4.3 Proposition</b>. Let <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub>. Given <i>m = m</i>(<i>x</i>) the least positive integer such that <i>σ<sup>m</sup></i>(<i>x</i>) = <i>x</i>, the orbit of the element <i>x</i> under <i>&sigma;</i> is the subset of <i>X</i>.</p>
+
+<div class="eq">
+<p>𝓞<sub>σ</sub>(<i>x</i>) = {<i>x = σ<sup>0</sup></i>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>), ..., <i>σ<sup>m−1</sup></i>(<i>x</i>)}</p>
+</div>
+
+<p><b>Proof</b>. We have to prove that each <i>σ<sup>i</sup></i>(<i>x</i>), with <i>i</i> ∈ ℤ, coincides to one of the <i>m</i> elements <i>x = σ<sup>0</sup></i>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>), ..., <i>σ<sup>m−1</sup></i>(<i>x</i>) of <i>X</i>. From <i>i = mq + r, 0 &le; r &lt; m</i>, we obtain</p>
+
+<div class="eq">
+<p><i>&sigma;<sup>i</sup> = &sigma;<sup>mq + r</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(<i>&sigma;<sup>m</sup></i>)<i><sup>q</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(&sigma;<sup>&pm;m</sup>(<i>&sigma;<sup>&pm;m</sup></i> ⋅  ⋅  ⋅ (<i>&sigma;<sup>&pm;m</sup></i>(<i>x</i>))) = <i>&sigma;<sup>r</sup></i>(<i>x</i>). &emsp; □</p>
+
+<p><b>Note</b>: <i>m</i> &gt; 0 so if <i>q</i> &lt; 0 then <i>qm</i> &lt;0 and <i>qm = &sigma;<sup>−m</sup>(<i>&sigma;<sup>−m</sup></i> ⋅  ⋅  ⋅ (<i>&sigma;<sup>−m</sup></i>(<i>x</i>)))</i>, hence |<i>qm</i>| iterations of the inverse map <i>&sigma;<sup>−1</sup></i>, or |<i>q</i>| iterations of the inverse of <i>&sigma;<sup>m</sup></i>, since both &sigma;<sup>m</sup> and its inverse map (denoted &sigma;<sup>-m</sup>) send <i>x</i> to <i>x</i>.</p>
+</div>
+
+<p><b>7.4.4 Definition</b>. A <i>cycle</i> of <i>&sigma;</i> is the ordered set</p>
+
+<div class="eq">
+<p>(<i>x = σ<sup>0</sup></i>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>), ..., <i>σ<sup>m−1</sup></i>(<i>x</i>))</p>
+</div>
+
+<p>The integer <i>m</i> is said <i>lenght</i> of the permutation.</p>
+
+<p><b>7.4.5 Example</b>.  Let <i>&sigma;</i> &in; 𝓢<sub>6</sub>, the permutation</p>
+
+<table class="noborder">
+<tr> <td rowspan="2"><i>&sigma;</i> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|3</td> <td>1</td> <td>2</td> <td>5</td> <td>6</td> <td>4|</td></tr>
+</table>
+
+<p>starting from 1 &in; <i>X</i>, the orbit of 1 under <i>&sigma;</i> is the subset <i>X</i></p>
+
+<div class="eq">
+<p>𝓞<sub>σ</sub>(1) = {1, 2, 3}</p>
+</div>
+
+<p>Notice that the same orbit could be represented as the subset {1,2,3} since the order of the elements does not matter. If we <i>order</i> the elements of 𝓞<sub>σ</sub> in a way that every element is the transformed of the previous element, we obtain a <i>cycle</i> of the permutation <i>&sigma;</i>. In this case the cycle obtained starting from element 1 is</p>
+
+<div class="eq">
+<p>(1, 3, 2)</p>
+</div>
+
+<p>We use () when we are refferring to a cycle. Also (3,2,1) represents the same cycle as well as (2,1,3), but it's not the case for the cycle (1,2,3) as the element 2, since &sigma;(1) = 3.</p>
+
+<p>Not every permutation is a cycle, <i>e.g.</i></p>
+
+<table class="noborder">
+<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4|</td> </tr>
+<tr> <td>|4</td> <td>3</td> <td>2</td> <td>1|</td></tr>
+</table>
+
+<p>but as we shall we it can always be written as product of two cycle (1 4)(2 3).</p>
+
+<p>If we pick an element not contained in the orbit 𝓞<sub>σ</sub>(1), say 5, its orbit under &sigma; is</p>
+
+<div class="eq">
+<p>𝓞<sub>σ</sub>(5) = {4, 5, 6}</p>
+</div>
+
+<p>The correspondent cycle is</p>
+
+<div class="eq">
+<p>(5, 6, 4) = (6, 4, 5) = (4, 5, 6)</p>
+</div>
+
+<p>There no more elements of <i>X</i> that are not already contained in the two cycles above, thus the cycle of the permutation <i>&sigma;</i> are (1,3,2) and (5,6,4).</p>
+
+<p>Not as each cycle <i>represents a permutation </i>: the one that sends every element in the next one, and the last one in the first element, while leaving all the other elements fixed. Thus</p>
+
+<table class="noborder">
+<tr><td rowspan="2"><i>&gamma;</i><sub>1</sub> = (1,3,2) = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|3</td> <td>1</td> <td>2</td> <td>4</td> <td>5</td> <td>6|</td></tr>
+</table>
+
+<p>and</p>
+
+<table class="noborder">
+<tr><td rowspan="2"><i>&gamma;</i><sub>2</sub> = (5,6,4) = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
+<tr> <td>|1</td> <td>2</td> <td>3</td> <td>5</td> <td>6</td> <td>4|</td></tr>
+</table>
+
+<p>What is remarkable is that the original permutation <i>&sigma;</i> can be obtained as a product of the two disjoint cycle <i>&gamma;<sub>1</sub></i> and <i>&gamma;<sub>2</sub></i></p>
+
+<table class="noborder">
+<tr> <td rowspan="2"><i>&sigma;</i> =</td> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td> <td rowspan="2"> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td></tr>
+<tr> <td>|3</td> <td>1</td> <td>2</td> <td>4</td> <td>5</td> <td>6|</td> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td> <td>|1</td> <td>2</td> <td>3</td> <td>5</td> <td>6</td> <td>4|</td></tr>
+</table>
+
+<p>we could write direclty</p>
+
+<table class="noborder">
+<tr> <td rowspan="2"><i>&sigma;</i> =</td> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td>  <td rowspan="2"> = <i>&gamma;<sub>1</sub>&gamma;<sub>2</sub></i> = (1,3,2)(5,6,4) = <i>&gamma;<sub>2</sub>&gamma;<sub>1</sub></i> = (5,6,4)(1,3,2)</tr>
+<tr> <td>|3</td> <td>1</td> <td>2</td> <td>5</td> <td>6</td> <td>4|</td> </tr>
+</table>
+
+<p>What we presented can be generalized in the following proposition.</p>
+
+<p><b>7.4.6 Proposition</b>. Every permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub> is the product of its cycles (which are disjoint).</p>
+
+<p><b>Proof</b>. Let <i>&gamma;<sub>1</sub>, &gamma;<sub>2</sub>, ⋅  ⋅  ⋅, &gamma;<sub>k</sub></i> the disjoint cycles of <i>&sigma;</i>, to prove that <i>&sigma; = &gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i> we have to prove that for each <i>x &in; X</i> = {1,2...,<i>n</i>} we have</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>x</i>) = (<i>&gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>)(<i>x</i>)</p>
+</div>
+
+<p>Every <i>x &in; X</i> is contained only in one cycle <i>&gamma;<sub>i</sub></i> = (<i>x, σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>) ⋅  ⋅  ⋅ <i>σ<sup>m−1</sup></i>(<i>x</i>)}. Moreover, for every <i>j &ne; i</i> and every <i>y = &sigma;<sup>h</sup></i>(<i>x</i>) (<i>i.e</i> for every <i>y &in; &gamma;<sub>i</sub></i>)</p>
+
+<div class="eq">
+<p><i>&gamma;</i><sub>j</sub>(<i>y</i>) = <i>y</i></p>
+</div>
+
+<p>Then for every <i>x &in; X</i></p>
+
+<div class="eq">
+<p>(<i>&gamma;<sub>1</sub>&gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>)(<i>x</i>) = (<i>&gamma;<sub>1</sub>&gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>i</sub></i>)(<i>x</i>) = <i>&gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>i−1</sub></i>(<i>&sigma;</i>(<i>x</i>)) = <i>&sigma;</i>(<i>x</i>)</p>
+</div>
+
+<p>Thus <i>&sigma; = &gamma;<sub>1</sub>&gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>. &emsp; □</p>
+
+<h3>Transpositions and the sign of a permutation</h3>
+
+<p>A 2-<i>cycles</i> (i, j) is a permutation that interchanges the two elements <i>i</i> and <i>j</i> while leaving all the other elements fixed. Thus, a 2-cycle is also called a <b>transposition</b>.</p>
+
+<p><b>7.4.7 Proposition</b>. Every cycle can be written as product of transpositions <i>i.e</i>.</p>
+
+<div class="eq">
+<p>(1,2,3, ..., <i>m</i>) = (1, <i>m</i>) ∘ (1, <i>m</i> − 1) ∘ (1, <i>m</i> − 2) ⋅⋅⋅ (1,3) ∘ (1,2)</p>
+</div>
+
+<p><b>Proof</b>. We use the method of induction on <i>m</i>.</p>
+
+<p><b>Basic step</b>. When <i>m</i> = 2, then the cycle becomes (1,2) which is in required form.</p>
+<p><b>Induction step</b>. Let the result true for <i>k</i>, Let as assume that (<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>h</sub>, x<sub>k+1</sub></i>) is a cycle of lenght <i>k</i> + 1. Then we have</p>
+
+<div class="eq">
+<p>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>k</sub>, x<sub>k+1</sub></i>) = (<i>x<sub>1</sub>, x<sub>k+1</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>2</sub>, ...., x<sub>k</sub></i>) &emsp; (<i>i</i>)</p>
+</div>
+
+<p>as can be verified by computingn the composition.</p>
+
+<p>Now by the induction composition</p>
+
+<div class="eq">
+<p>(<i>x<sub>1</sub>, x<sub>2</sub>, ...., x<sub>k</sub></i>) = (<i>x<sub>1</sub>,x<sub>k</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>k-1</sub></i>) ∘ ... ∘ (<i>x<sub>1</sub>, x<sub>2</sub></i>) &emsp; (<i>ii</i>)</p>
+</div>
+
+<p>Substituting (ii) into (i), we have</p>
+
+<div class="eq">
+<p>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>k</sub>, x<sub>k+1</sub></i>) = (<i>x<sub>1</sub>, x<sub>k+1</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>k</sub></i>) ∘ ... ∘ (<i>x<sub>1</sub>, x<sub>3</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>2</sub></i>) &emsp; □</p>
+</div>
+
+<p><b>7.4.8 Example</b>. Write the cycle (<i>a, b, c, d, e, f</i>) on the set <i>A</i> ={a,b,c,d,e,f) as a product of transpositions.</p>
+
+<p><b>Solutions</b>. The cycle (<i>a, b, c, d, e, f</i>) = (<i>a,f</i>) ∘ (<i>a, e</i>) ∘ (<i>a, d</i>) ∘ (<i>a, c</i>) ∘ (<i>a,b</i>)</p>
+
+<p>Notice how a cycle of lenght <i>m</i> has period <i>m</i>.</p>
+
+<p><b>7.4.9 Proposition</b>. The period of a permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub> is the least common multiple of the lenght of its cycles.</p>
+
+<p><b>Proof</b>. If <i>&sigma; = &gamma;<sub>1</sub>, &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>, indicated with <i>m<sub>i</sub></i> the order of the <i>i<sup>th</sup></i> cycle and with <i>M</i> = lcm (<i>m<sub>1</sub>, m<sub>2</sub> ⋅  ⋅  ⋅ m<sub>k</sub></i>), we have to prove that <i>M</i> is equal to the period <i>N</i> of <i>&sigma;</i>. Indeed</p>
+
+<div class="eq">
+<p><i>&sigma;<sup>M</sup></i> = (<i>&gamma;<sub>1</sub>, &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>)<sup><i>M</i></sup> = <i>&gamma;<sub>1</sub><sup>M</sup> &gamma;<sub>2</sub><sup>M</sup> ⋅  ⋅  ⋅ &gamma;<sub>k</sub><sup>M</sup></i> = id</p>
+</div>
+
+<p>hence <i>N</i>|<i>M</i>, furthermore</p>
+
+<div class="eq">
+<p>id = <i>&sigma;<sup>N</sup> = &gamma;<sub>1</sub><sup>N</sup> &gamma;<sub>2</sub><sup>N</sup> ⋅⋅⋅ &gamma;<sub>k</sub><sup>N</sup></i> = id ⋅ id ⋅ id  ⋅ id</p>
+</div>
+
+<p>Then <i>m<sub>i</sub></i> | <i>N</i> &forall;<i>i</i> = 1, ..., <i>k</i>, from which <i>M</i>|<i>N</i>, thus <i>N = M</i>.&emsp; □</p>
+
+<p><b>7.4.10 Corollary</b>. Every permutation is the product of 2-<i>cycles</i> (or <i>transpositions</i>).</p>
+
+<p><b>Proof</b>. Every cycle can be written as product of transpositions; For example</p>
+
+<div class="eq">
+<p>(1,2,3, ..., <i>m</i>) = (1, <i>m</i>) (1, <i>m</i> − 1) (1, <i>m</i> − 2) ⋅⋅⋅ (1,3) (1,2)</p>
+</div>
+
+<p>Since every permutation is the product of its cycles, and every cycle is a product of transpositions, the corollary is proved. &emsp; □</p>
+
+<p>The writing of a permutation as the product of transpositions is not unique. For example</p>
+
+<p>(1, 3, 2, 4) (1, 7, 6, 2) = (1, 4)(1, 2)(1, 3)(1, 2)(1, 6)(1, 7)</p>
+
+<p>and also as</p>
+
+<p>(1, 3, 2, 4) (1, 7, 6, 2) = (1, 7, 6, 4)(2, 3)<br>
+= (1, 4)(1, 6)(1, 7)(2, 3).</p>
+
+<p><b>7.4.11 Definition</b>. A permutation is said <i>even</i> if product of an even number of transposition, <i>odd</i> if product of an odd number of transpositions.</p>
+
+<p><b>Remark</b>. Although the expression of a permutation as a product of transpositions is not unique, the number of transpositions used for a certain permutation is either <i>always odd</i> or else
+<i>always even</i>.</p>
+
+<p><b>7.4.12 Proposition</b>. (<i>Always Even or Always Odd</i>) If a permutation can be written as product of an even number (<i>odd</i>) of transpositions, every other expression of the permutation contain an <i>even</i> (<i>odd</i>) number 
+of transpositions.</p>
+
+<p><b>Proof</b>. We prove the theorem taking in consideration a polynomial <i>P</i> defined as follows</p>
+
+<div class="eq">
+<p><i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>) := ∏<sub><sub><i>i &lt; j</i></sub></sub> (<i>x<sub>i</sub> − x<sub>j</sub></i>)</p>
+</div>
+
+<p>with 1 &le; <i>i &lt; j &le; n</i>.</p>
+
+<p>Let <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub>, then <i>&sigma;</i> is applied to <i>p</i> by the rule</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>)) := <i>p</i>(<i>x<sub>&sigma;(1)</sub>, x<sub>&sigma;(2)</sub>, ..., x<sub>&sigma;(n)</sub></i>)
+</div>
+
+<p>For example, if <i>n</i> = 4 and <i>&sigma;</i> = (2,3,4), then</p>
+
+<div class="eq">
+<p><i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub></i>) = (<i>x<sub>1</sub> − x<sub>2</sub></i>) (<i>x<sub>1</sub> − x<sub>3</sub></i>) (<i>x<sub>1</sub> − x<sub>4</sub></i>) (<i>x<sub>2</sub> − x<sub>3</sub></i>) (<i>x<sub>2</sub> − x<sub>4</sub></i>) (<i>x<sub>3</sub> − x<sub>4</sub></i>) &emsp; (<b>7.4.1</b>)</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub></i>)) = (<i>x<sub>1</sub> − x<sub>3</sub></i>) (<i>x<sub>1</sub> − x<sub>4</sub></i>) (<i>x<sub>1</sub> − x<sub>2</sub></i>) (<i>x<sub>3</sub> − x<sub>4</sub></i>) (<i>x<sub>3</sub> − x<sub>2</sub></i>) (<i>x<sub>4</sub> − x<sub>2</sub></i>)</p>
+</div>
+
+<p>we are going to prove that starting from a <i>transposition, &tau;</i>, then</p>
+
+<div class="eq">
+<p><i>&tau;</i>(<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>n</sub></i>)) = −<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ... , x<sub>n</sub></i>)</p>
+</div>
+
+<p>To illustrate the underlying reasoning let us apply the transposition <i>&tau;</i> = (2, 4) to the polynomial (<b>7.4.1</b>), we have</p>
+
+<div class="eq">
+<p><i>&tau;</i>(<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub></i>)) = (<i>x<sub>1</sub> − x<sub>4</sub></i>) (<i>x<sub>1</sub> − x<sub>3</sub></i>) (<i>x<sub>1</sub> − x<sub>2</sub></i>) (<i>x<sub>4</sub> − x<sub>3</sub></i>) (<i>x<sub>4</sub> − x<sub>2</sub></i>) (<i>x<sub>3</sub> − x<sub>2</sub></i>)</p>
+</div>
+
+<p>since 2 and 4 are interchanged by <i>&tau;</i>. Analyzing this result, we observe the following:</p>
+
+<ol>
+	<li><p>The factor (<i>x<sub>2</sub> − x<sub>4</sub></i>) in <i>p</i> is changed to (<i>x<sub>4</sub> − x<sub>2</sub></i>) in <i>&tau;</i>(<i>p</i>), so this factor changes sign.</p></li>
+	<li><p>The factor (<i>x<sub>1</sub> − x<sub>3</sub></i>) is unchanged.</p></li>
+	<li><p>The remaining factors in <i>&tau;</i>(<i>p</i>) may be grouped in pairs as</p>
+	<div class="eq">
+	<p>(<i>x<sub>1</sub> − x<sub>4</sub></i>) (<i>x<sub>1</sub> − x<sub>2</sub></i>) and (<i>x<sub>4</sub> − x<sub>3</sub></i>)(<i>x<sub>3</sub> − x<sub>2</sub></i>) = (<i>x<sub>3</sub> − x<sub>4</sub></i>)(<i>x<sub>2</sub> − x<sub>3</sub></i>) </p>
+	</div>
+	<p>The products of these pairs are unchanged by <i>&tau;</i>.</p>
+	</li>
+</ol>
+
+<p>Thus<i>&tau;</i>(<i>p</i>) = −<i>p</i>, in this particular case, and we are going to show it valid in general.</p>
+
+<p>The factors of <i>&tau;</i>(<i>p</i>) may be analyzed as follows:</p>
+
+<ol>
+	<li><p>The factor (<i>x<sub>r</sub> − x<sub>s</sub></i>) in <i>p</i> is changed to (<i>x<sub>s</sub> − x<sub>r</sub></i>) in <i>&tau;</i>(<i>p</i>) so this factor changes sign.</p></li>
+	<li><p>The factors (<i>x<sub>i</sub> − x<sub>j</sub></i>) in <i>p</i> with both subscripts different from <i>r</i> and <i>s</i> are unchanged by <i>&tau;</i>.</p></li>
+	<li><p>The remaining factors in <i>p</i> have exactly one subscript <i>k</i> different from <i>r</i> and <i>s</i> and may be grouped into pairs according to the following plan.</p>
+	<ol type="a">
+		<li><p>If <i>k &lt; r &lt; s</i>, the pair (<i>x<sub>k</sub> − x<sub>r</sub></i>) (<i>x<sub>k</sub> − x<sub>s</sub></i>) becomes (<i>x<sub>k</sub> − x<sub>s</sub></i>) (<i>x<sub>k</sub> − x<sub>r</sub></i>), and their product is unchanged by the transposition <i>&tau;</i>.</p></li>
+		<li><p>Similarly, if <i>r &lt; s &lt; k</i>, the product (<i>x<sub>r</sub> − x<sub>k</sub></i>) (<i>x<sub>k</sub> − x<sub>s</sub></i>) is also unchanged by <i>&tau;</i>.</p></li>
+		<li><p>Finally, if <i>r &lt; k &lt; s</i>, then the pair (<i>x<sub>r</sub> − x<sub>k</sub></i>) (<i>x<sub>k</sub> − x<sub>s</sub></i>) is unchanged by <i>&tau;</i> since</p>
+		
+		<div class="eq">
+		<p>(<i>x<sub>s</sub> − x<sub>k</sub></i>) (<i>x<sub>k</sub> − x<sub>r</sub></i>) = [−(<i>x<sub>k</sub> − x<sub>s</sub></i>)] [−(<i>x<sub>r</sub> − x<sub>k</sub></i>)]<br>
+		 = (<i>x<sub>k</sub> − x<sub>s</sub></i>) (<i>x<sub>r</sub> − x<sub>k</sub></i>)</p>
+		</div>
+		</li>
+	</ol>
+	</ol>
+
+<p>Thus<i>&tau;</i>(<i>p</i>) = −<i>p</i>, and the proof is complete. With this fact it's clear that a permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub>, we have</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>n</sub></i>)) = &pm;<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>n</sub></i>)</p>
+</div>
+
+<p>depending on whether the permutation can be expressed as a product of an even or odd number of transpositions. Thus a permutation <i>&sigma;</i> cannot be written both as product of even and odd number of transpositions. &emsp; □</p>
+
+<p><b>7.4.13 Definition</b>. The <b>alternating group</b> <i>A<sub>n</sub></i> is the subgroup of 𝓢<sub><i>n</i></sub> that consists of all even permutations in 𝓢<sub><i>n</i></sub>.</p>
+
+<div class="eq">
+<p><i>A<sub>n</sub></i> := {even permutation of 𝓢<sub><i>n</i></sub>}</p>
+</div>
+
+<p><i>A<sub>n</sub></i> is a subgroup of 𝓢<sub><i>n</i></sub>. Let determine the number of elements in <i>A<sub>n</sub></i>.</p>
+
+<p>Let</p>
+
+<div class="eq">
+<p><i>&pi;<sub>1</sub>, &pi;<sub>2</sub>, ..., &pi;<sub>k</sub></i></p>
+</div>
+
+<p>the <i>k</i> permutations even (all distinct) we want to count. Let <i>&tau;</i> an arbitraty transposition. Then the following permutations</p>
+
+<div class="eq">
+<p><i>&pi;<sub>1</sub>&tau;, &pi;<sub>2</sub>&tau;, ..., &pi;<sub>k</sub>&tau;</i></p>
+</div>
+
+<p>are all <i>odd</i> and <i>distinct</i>. Suppose by contradiction that</p>
+
+<div class="eq">
+<p><i>&pi;<sub>i</sub>&tau; = &pi;<sub>j</sub>&tau;</i></p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p><i>&pi;<sub>i</sub>&tau;&tau;<sup>−1</sup> = &pi;<sub>j</sub>&tau;&tau;<sup>−1</sup> &emsp; ⇒ &emsp; &pi;<sub>i</sub> = &pi;<sub>j</sub></i></p>
+</div>
+
+<p>which is the <i>cancellation law</i> for groups. Since the group is not Abelian, it is important that &tau; is always on the same side.</p>
+
+<p>Let us consider now odd permutations</p>
+
+<div class="eq">
+<p><i>&delta;<sub>1</sub>, &delta;<sub>2</sub>, ..., &delta;<sub>h</sub></i></p>
+</div>
+
+<p>the <i>h</i> odd permutations. Then</p>
+
+<div class="eq">
+<p><i>&delta;<sub>1</sub>&tau;, &delta;<sub>2</sub>&tau;, ..., &delta;<sub>h</sub>&tau;</i></p>
+</div>
+
+<p>are <i>h</i> even permutations. By comparing with the previous relations we have <i>k = h</i>; We use this fact to prove the following</p>
+
+<p><b>7.4.14 Proposition</b>. The order of the subgroup <i>A<sub>n</sub></i> (its cardinality) of 𝓢<sub><i>n</i></sub> is</p>
+
+<div class="eq">
+<p><i>n</i>!/2</p>
+</div>
+
+<p><b>Proof.</b> For each odd permutation <i>&alpha;</i>, the permutation (12)<i>&alpha;</i> is even and, by the cancellation property in groups, (12)<i>&alpha;</i> &ne; (12)<i>&beta;</i> when <i>&alpha; &ne; &beta;</i>. Thus, there are at least as many even permutations as there are odd ones. On the other hand, for each even permutation <i>&alpha;</i>, the permutation (12)<i>&alpha;</i> is odd and (12)<i>&alpha;</i> &ne; (12)<i>&beta;</i> when <i>&alpha; &ne; &beta;</i>. Thus, there are at least as many odd permutations as there are even ones. It follows that there are equal numbers of even and odd permutations. Since |𝓢<sub><i>n</i></sub>| = <i>n</i>!, we have |<i>A<sub>n</sub></i>| = <i>n</i>! /2. &emsp; □</p>
+
+<p><b>7.4.15 Example</b>. The group 𝓢<sub>3</sub> has six elements that we write in the cycle notation</p>
+
+<div class="eq">
+<p>𝓢<sub>3</sub> = {id, (1,2,3), (1,3,2),(1,2),(1,3),(2,3)}</p>
+</div>
+
+<p>The group multiplicative table is the following</p>
+
+<table>
+<tr><th>∘</th> <th>id</th> <th>(1,2,3)</th> <th>(1,3,2)</th> <th>(1,2)</th> <th>(1,3)</th> <th>(2,2)</th></tr>
+<tr><th>id</td> <td>id</td> <td>(1,2,3)</td> <td>(1,3,2)</td> <td>(1,2)</td> <td>(1,3)</td> <td>(2,3)</td></tr>
+<tr><th>(1,2,3)</th> <td>(1,2,3)</td> <td>(1,3,2)</td> <td>id</td> <td>(1,3)</td> <td>(2,3)</td> <td>(1,2)</td></tr>
+<tr><th>(1,3,2)</th> <td>(1,3,2)</td> <td>id</td> <td>(1,2,3)</td>  <td>(2,3)</td> <td>(1,2)</td> <td>(1,3)</td></tr>
+<tr><th>(1,2)</th> <td>(1,2)</td> <td>(2,3)</td> <td>(1,3)</td> <td>id</td> <td>(1,3,2)</td> <td>(1,2,3)</td>
+<tr><th>(1,3)</th> <td>(1,3)</td> <td>(1,2)</td> <td>(2,3)</td> <td>(1,2,3)</td> <td>id</td> <td>(1,3,2)</td> </tr>
+<tr><th>(2,3)</th> <td>(2,3)</td> <td>(1,3)</td> <td>(1,2)</td> <td>(1,3,2)</td> <td>(1,2,3)</td> <td>id</td></tr>
+</table>
+
+<p>The alternating subgroup <i>A</i><sub>3</sub> is</p>
+
+<div class="eq">
+<p><i>A</i><sub>3</sub></i> = {id, (1,2,3), (1,3,2)}</p>
+</div>
+
+<p>Other groups of 𝓢<sub>3</sub> are the following</p>
+
+<div class="eq">
+<p><i>H</i><sub>1</sub> = {id}</p>
+<p><i>H</i><sub>2</sub> = {id, (1,2)} = ⟨(1,2)⟩ </p>
+<p><i>H</i><sub>3</sub> = {id, (1,3)} = ⟨(1,3)⟩ </p>
+<p><i>H</i><sub>4</sub> = {id, (2,3)} = ⟨(2,3)⟩ </p>
+<p><i>A</i><sub>3</sub> = {id, (2,3)} = ⟨(2,3)⟩ </p>
+<p>𝓢<sub>3</sub></p>
+</div>
+
+<p>The first and last in list are the <i>trivial</i> subgroups.</p>
+
+<section aria-label="End">
+<a href="transformation_group.html">&#171;The transformation group</a>
+<a href="index.html">Index</a>
+<a href="exercises_groups.html">Exercises on permutations&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

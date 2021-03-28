@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Field of quotients of an integral domain"/>
+ <title>Field of quotients of an integral domain</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+  
+<div class="content">
+
+<h1>Field of quotients of an integral domain</h1>
+
+<p>Any integral domain <i>D</i> can be <i>embedded</i> in a field <i>F</i>, known as <i>quotient field</i> of <i>D</i>. As we have studied ℤ can be embdedded in ℚ which is its quotient field and the ring of polynomials can be embedded in the field of rational functions. As you may remember the definition of quotient field is the following:</p>
+
+<p><b>4.7.1 Definition</b>. Let <i>R</i> a subring of a field <i>F</i>. We say that <i>F</i> is a <i>quotient field</i> of <i>R</i> is every element <i>a &in; F</i> can be written in the form <i>a = r ⋅ s<sup>−1</sup></i>, with <i>r</i> and <i>s</i> in <i>R, s &ne; 0</i>.</p>
+
+<p><b>Remark</b>. The ring ℤ of integers is a subring of the field ℝ of real numbers but this latter is not the quotient field of ℤ, since it is not true that any real number can be written as quotient of two integers (with the second not null). We know the quotient field of ℤ to be ℚ.</p>
+
+<p>It is evident that if a ring <i>R</i> is contained in a field, <i>R</i> is necessarily an integral domain. We are interested in understanding if for every integral domain <i>D</i> there exists a field <i>F</i>, having <i>D</i> as subring and such that <i>F</i> is the quotient field of <i>D</i>. We now explain why this is the case by the following theorem.</p>
+
+<p><b>4.7.1 Theorem</b>. Let <i>D</i> an integral domain. Then there exists a field <i>Q</i>(<i>D</i>) containing a subring <i>&Dcaron;</i>; isomorphic to <i>D</i> and such that every element of <i>Q</i>(<i>D</i>) is of the form <i>ab<sup>−1</sup></i>, with <i>a,b &in; &Dcaron;, b &ne; 0</i>.</p>
+
+<p><b>Proof.</b> Consider the set <i>D x D*</i>, the Cartesian product of <i>D</i> with itself-in which the second component is not allowed to be 0. Introduce in this set the following relation</p>
+
+<div class="eq">
+<p>(<i>a,b</i>) &rho; (<i>c,d</i>) &emsp; ⇐⇒ &emsp; <i>ad = bc</i></p>
+</div>
+
+<p>This relation is an equivalence one, hence we can consider the quotient set</p>
+
+<div class="eq">
+<p><i>Q</i>(<i>D</i>) := (<i>D x D*</i>)/ <i>&rho;</i>.</p>
+</div>
+
+<p>To show that <i>Q</i>(<i>D</i>) is a field, we must endow it with an addition and multiplication. We define in <i>Q</i>(<i>D</i>) the following operations:</p>
+
+<div class="eq">
+<p><span class="overline">(<i>a,b</i>)</span> + <span class="overline">(<i>c,d</i>)</span> := <span class="overline">(<i>ad + bc, bd</i>)</span></p>
+<p><span class="overline">(<i>a,b</i>)</span> ⋅ <span class="overline">(<i>c,d</i>)</span> := <span class="overline">(<i>ac,bd</i>)</span></p>
+</div>
+
+<p>The two operations are well-defined and with respect to these operations, <i>Q</i>(<i>D</i>) is a <i>field</i>. What acts as 1 in <i>Q</i>(<i>D</i>)? We claim that for any <i>a &ne; 0, b</i> &ne; 0 in <i>D</i>, <span class="overline">(<i>a,a</i>)</span>) = <span class="overline">(<i>b,b</i>)</span> (since <i>ab = ba</i>) and (<i>c, d</i>) (<i>a, a</i>) = (<i>ca, da</i>) = (<i>c, d</i>) , since (ca)d = (da)c. So (<i>a, a</i>) acts as 1, and we write it simply as 1 = (<i>a, a</i>) (for all a &ne; 0 in <i>D</i>). Notice how (<i>b,a</i>) is the multiplicative inverse of (<i>a,b</i>) and (−a,b] is the additive inverse for (
+a,b) in <i>Q</i>(<i>D</i>).</p>
+
+<p>The application</p>
+
+<div class="eq">
+<p><i>&phi;</i>: <i>D</i> ⟶ <i>Q</i>(<i>D</i>)</p>
+<p>&nbsp;&emsp;<i>a</i> ⟼ <span class="overline">(<i>ax,x</i>)</span></p>
+</div>
+
+<p>The map <i>&phi;</i> is a monomorphism of <i>D</i> into <i>Q</i>(<i>D</i>): Let <i>a</i> &ne; 0, It is certainly 1-1, for if <i>&phi;</i>(<i>a</i>) = (<i>ax, x</i>) = 0, then <i>xa</i> = 0, so <i>x</i> = 0, since <i>D</i> is an integral domain. This means that <i>&phi;</i> a ring homomorphism with kernel 0, (trivial kernel "only" means injective mappings). By restricting the codomain to the image of the mapping i.e. letting <i>Ď</i> = Im <i>&phi;</i>, <i>Ď</i> we have a surjective mapping (If <i>f:X -> Y</i> is any injective set map, then <i>f</i> is also a bijection of X with the set Im f = f(X)  (a certain subset of Y) ). Thus, <i>Ď</i> is isomorphic to <i>D</i>. Hence <i>Q</i>(<i>D</i>) contains a copy of <i>D</i>, that is <i>D</i> is <i>embedded</i> in the field <i>Q</i>(<i>D</i>).</p>
+
+<p>To prove that <i>Q</i>(<i>D</i>) is a quotient field of <i>D</i>, we must show that each element <span class="overline">(<i>a,b</i>)</span> &in; <i>Q</i>(<i>D</i>) can be written as quotient of two elements of <i>Ď</i></p>
+
+<div class="eq">
+<p><span class="overline">(<i>a,b</i>)</span> = <span class="overline">(<i>ax,x</i>)</span> ⋅ <span class="overline">(<i>x,bx</i>)</span> = <span class="overline">(<i>ax,x</i>)</span> <span class="overline">(<i>bx,x</i>)</span><sup>−1</sup> = <i>&phi;</i>(<i>a</i>) ⋅ <i>&phi;</i>(<i>b</i>)<sup>−1</sup>, &emsp; <i>x</i> &ne; 0.□ </p>
+</div>
+
+<p><b>4.7.2 Theorem</b>. The quotient fields of two isomorphic integral domains are isomorphic.</p>
+
+<p><b>Proof</b>. Let <i>D</i> and <i>C</i> be isomorphic integral domains and <i>f</i>: D → C an isomorphism. Consider the map <i>&phi;</i>: F → F' defined by</p>
+
+<div class="eq">
+<p><i>&phi;</i>(a/b) = <i>f</i>(<i>a</i>)/<i>f</i>(<i>b</i>) &emsp; &forall;a/b &in; <i>F</i></p>
+</div>
+
+<p>First we shall show that the mapping <i>&phi;</i> is well defined i.e., if</p>
+
+<div class="eq">
+<p><i>a/b = c/d</i> &emsp; then <i>&phi;</i>(<i>a/b</i>) = <i>&phi;</i>(<i>c/d</i>).</p>
+</div>
+
+<p>We have</p>
+
+<div class="eq">
+<p><i>a/b = c/d</i>  &emsp; ⇒ &emsp; <i>ad = bc</i></p>
+<p>f(ad) = f(bc) ⇒ f(a)f(d) = f(b) f(c)</p>
+<p><i>f</i>(<i>a</i>)/<i>f</i>(<i>b</i>) = <i>f</i>(<i>c</i>)/<i>f</i>(<i>d</i>) &emsp; ⇒ &emsp; <i>&phi;</i>(<i>a/b</i>) = <i>&phi;</i>(<i>c/d</i>).</p>
+</div>
+
+<p>thus <i>&phi;</i> is well-defined.</p>
+
+<p>&phi; is one-one as</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>a/b</i>) = <i>&phi;</i>(<i>c/d</i>) &emsp; ⇒ &emsp; <i>f</i>(<i>a</i>)/<i>f</i>(<i>b</i>) = <i>f</i>(<i>c</i>)/<i>f</i>(<i>d</i>).</p>
+<p>f(a) f(d) = f(b) f(c) ⇒ f(ad) = f(bc)</p>
+<p><i>ad = bc</i></p>
+<p><i>a/b = c/d</i></p>
+</div>
+
+<p>Also <i>&phi;</i> is onto <i>F'</i>. If <i>f</i>(<i>a</i>)/<i>f</i>(<i>b</i>) &in; <i>F'</i>, then</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>a/b</i>) = <i>f</i>(<i>a</i>)/<i>f</i>(<i>b</i>) &emsp; with <i>a/b &in; F</i></p>
+</div>
+
+<p>Let <i>c/d, d</i> &ne; 0, be anything at all in <i>F'</i>. Since <i>f</i> isomorphism, there must exist <i>a, b</i> in <i>F</i> with <i>b</i> nonzero (this uses f being injective)  such that <i>f</i>(<i>a</i>) = <i>c</i>, <i>f</i>(<i>b</i>) = <i>d</i>. Thus <i>&phi;</i>(<i>a/b</i>) = <i>f</i>(<i>a</i>)/<i>f</i>(<i>b</i>) = <i>c/d</i>. Hence <i>&phi;</i> is onto.</p>
+
+<p>Further</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mrow>
+    <mo>(</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mi>b</mi>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mi>c</mi>
+      <mi>d</mi>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mrow>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>a</mi>
+        <mi>d</mi>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mi>c</mi>
+      </mrow>
+      <mrow>
+        <mi>b</mi>
+        <mi>d</mi>
+      </mrow>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mi>d</mi>
+      <mo>+</mo>
+      <mi>b</mi>
+      <mi>c</mi>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mrow>
+    <mo>(</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mi>b</mi>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+  <mo>+</mo>
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mrow>
+    <mo>(</mo>
+    <mfrac>
+      <mi>c</mi>
+      <mi>d</mi>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+</math>
+
+<p>Also</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mrow>
+    <mo>(</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mi>b</mi>
+    </mfrac>
+    <mfrac>
+      <mi>c</mi>
+      <mi>d</mi>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mrow>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>a</mi>
+        <mi>c</mi>
+      </mrow>
+      <mrow>
+        <mi>b</mi>
+        <mi>d</mi>
+      </mrow>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>d</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mo stretchy="false">(</mo>
+  <mfrac>
+    <mi>a</mi>
+    <mi>b</mi>
+  </mfrac>
+  <mo stretchy="false">)</mo>
+  <mi>&#x03D5;<!-- ϕ --></mi>
+  <mo stretchy="false">(</mo>
+  <mfrac>
+    <mi>c</mi>
+    <mi>d</mi>
+  </mfrac>
+  <mo stretchy="false">)</mo>
+</math>
+
+<p>thus <i>&phi;</i> is an homomorphism of <i>F</i> onto <i>F'</i>.□</p>
+
+<p><b>4.7.3 Corollary</b>. For any integral domain <i>D</i>, the quotient field <i>Q</i>(<i>D</i>) is unique (up to isomorphim).</p>
+
+<section aria-label="End">
+<a href="rings.html">&#171;Ring and ring's isomorphisms</a>
+<a href="index.html">Index</a>
+<a href="exercises_ideal_generated.html">Exercises on ideals generated by a subset &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
