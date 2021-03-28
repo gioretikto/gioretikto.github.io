@@ -8,7 +8,7 @@
     font-style: italic;
 }
 
-.overline{ /*Barra orrizontale sopra due lettere indica segmento AB */
+.overline{ /* horizontal line over a word */
 text-decoration: overline;
 }
 
@@ -18,7 +18,7 @@ section{
 }
 
 p{
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.618em;
     margin-bottom: 1.618em;
     margin-top: 0;
@@ -233,22 +233,19 @@ table {
   
 table tr th {
   background: #d1d1d1;
-  border-bottom-style: none; 
 }
 
-table tr th,
-table tr th a,
 table tr th a:hover {
   color: #751414;
   font-weight: normal;
-  font-style: italic; }
+}
 
 table tbody tr th {
-  vertical-align: top; }
+  vertical-align: middle; }
 
 tr td,tr th {
+  border: solid 1px; 
   padding: 9px 9px;
-  border: 1px solid #fff;
   text-align: center;
   /* LTR */
   /* Tablet Styles */ }
@@ -258,25 +255,23 @@ tr td,tr th {
       padding: 2px;
       font-size: 10px; } }
 
-tr.odd {
-  background: #d1d1d1;
-  background: rgba(0, 0, 0, 0.105); }
-
-tr, tr.even {
-background:#d1d1d1;
-  background: rgba(0, 0, 0, 0.063); 
-}
-
 table ul.links {
   margin: 0px;
   padding: 0;
   font-size: 1em; 
-}
-  
+}  
 
 table ul.links li {
-  padding: 0 1em 0 0; 
-    
+  padding: 0 1em 0 0;    
+}
+
+.centertable { margin: 0 auto; }
+
+.noborder {
+  border-spacing: 0;  
+}
+.noborder tr td { /* !!! */
+  border-width: 0;
 }
 
 th.case, td.case {
@@ -287,12 +282,6 @@ th.case, td.case {
     th.case, td.case {
       width: auto; } }
 
-.ricerca{
-          padding:5px;
-          margin-top:20px;
-          margin-left:100px;
-}
-
 h2{
     margin-top:40px;    
 }
@@ -301,7 +290,6 @@ img{
     display: block;
     margin: auto;
     margin-bottom:20px;
-
 }
 
 figcaption{
