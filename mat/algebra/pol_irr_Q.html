@@ -23,7 +23,7 @@
 
 <p>We were able to characterize irreducible polynoials on ℝ and ℂ, but we won't able to to the same on ℚ. The factorisation on ℚ is striclty related to that on ℤ. So we are going to study polynomials on ℤ. We already studied diffferent properties of polynomials on a field 𝕂. We can as well define polynomials with coeffients in a communitative ring with unit as ℤ, even though some of the properties that hold true for fields do not hold as well for commutative rings. </p>
 
-<p><b>Lemma 4.21</b>. Let <i>f</i>(<i>x</i>) &in; ℚ[<i>x</i>]. Then</p>
+<p><b>Lemma 4.6.1</b>. Let <i>f</i>(<i>x</i>) &in; ℚ[<i>x</i>]. Then</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = d/m <i>f*</i>(<i>x</i>)</p>
@@ -34,7 +34,7 @@
 <p><b>Proof.</b> Let <i>f</i>(<i>x</i>) = <i>q<sub>0</sub> + q<sub>1</sub> x + q<sub>2</sub>x<sup>2</sup> + ... + q<sub>n</sub>x<sup>n</sup></i>, <i>q<sub>i</sub> = b<sub>i</sub>/c<sub>i</sub></i> &in; ℚ &forall;<i>i</i> e <i>b<sub>i</sub>,c<sub>i</sub></i> &in; ℤ. Thus,</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = b<sub>0</sub>/c<sub>0</sub></i> + b<sub>1</sub>/c<sub>1</sub>x</i> + ...+ b<sub>n</sub>/c<sub>n</sub> x<sup>n</sup></i></p>
+<p><i>f</i>(<i>x</i>) = <i>b<sub>0</sub>/c<sub>0</sub> + b<sub>1</sub>/c<sub>1</sub>x + ...+ b<sub>n</sub>/c<sub>n</sub> x<sup>n</sup></i></p>
 </div>
 
 <p>Let  <i>m'</i> the lcm(<i>c<sub>0</sub>,c<sub>1</sub>,...,c<sub>n</sub></i>), the polynomial <i>m'f</i>(<i>x</i>) = <i>b'<sub>0</sub> + b<sub>1</sub>'x + ...+ b'<sub>n</sub>x<sup>n</sup></i> is a polynomial with integer coefficients. Let <i>d '</i> = GCD(<i>b'<sub>0</sub>,b'<sub>1</sub>,...,b'<sub>n</sub></i>) then <i>m'f</i>(<i>x</i>) = <i>d'</i> (<i>a<sub>0</sub> + a<sub>1</sub>x + ...+ a<sub>n</sub>x<sup>n</sup></i>) with <i>a<sub>i</sub></i> &in; ℤ and GCD(<i>a<sub>0</sub> + a<sub>1</sub>x + ...+ a<sub>n</sub>x<sup>n</sup></i>) = 1. If necessary we divide by GCD(<i>d',m'</i>) both sides and get</p>
@@ -45,13 +45,13 @@
 
 <p>which is the claim. □</p>
 
-<p><b>Definition 4.22</b>. Let <i>f</i>(<i>x</i>) &in; ℤ[<i>x</i>]. The GCD of the coefficients of <i>f</i>(<i>x</i>) is known as <i>content</i> or <i>divisor</i> of <i>f</i>(<i>x</i>).</p>
+<p><b>Definition 4.6.2</b>. Let <i>f</i>(<i>x</i>) &in; ℤ[<i>x</i>]. The GCD of the coefficients of <i>f</i>(<i>x</i>) is known as <i>content</i> or <i>divisor</i> of <i>f</i>(<i>x</i>).</p>
 
-<p><b>Definition 4.23</b>. A polynomial <i>f</i>(<i>x</i>) = ∑<sup>n</sup><sub><sub>i=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i>. &in; ℤ[<i>x</i>] is said <i>primitive</i>.</p>
+<p><b>Definition 4.6.3</b>. A polynomial <i>f</i>(<i>x</i>) = ∑<sup>n</sup><sub><sub>i=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i>. &in; ℤ[<i>x</i>] is said <i>primitive</i>.</p>
 
 <p>The lemma above states that if <i>f</i>(<i>x</i>) &in; ℚ[<i>x</i>] then there exists in ℤ[<i>x</i>] a primitive polynomial <i>f*</i>(<i>x</i>) associate to <i>f</i>(<i>x</i>) .</p>
 
-<p><b>Example 4.24</b>. Consider the following polynomial with coefficients in ℚ</p>
+<p><b>Example 4.6.4</b>. Consider the following polynomial with coefficients in ℚ</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = 5/7 + 5/8 ⋅<i>x</i> − 10/3 ⋅ <i>x</i><sup>2</sup></p>
@@ -60,19 +60,20 @@
 <p>m = 7⋅8⋅3 = 168. Then</p>
  
 <div class="eq">
-<p>168 <i>f</i>(<i>x</i>) = 24⋅5 + 21⋅5<i>x</i> −56 ⋅ 10x<sup>2</sup> = 5(24+21<i>x</i>−112x<sup>2</sup>)</p>
+<p>168 <i>f</i>(<i>x</i>) = 24⋅5 + 21⋅5<i>x</i> −56 ⋅ 10<i>x<sup>2</sup></i> = 5(24+21<i>x</i> − 112<i>x<sup>2</sup></i>)</p>
 </div>
 
 <p>as GCD(24, 21, 112) = 1, <i>f*</i>(<i>x</i>) = 24 + 21<i>x</i> − 112<i>x</i> is primitive and associate to <i>f</i>(<i>x</i>).</p>
 
 <p>What presented shows that when we want to factorize a polynomial <i>f</i>(<i>x</i>) &in; ℚ[<i>x</i>], we can always suppose that the polynomial is in ℤ[<i>x</i>] primitive or not depending on cases.</p>
 
-<p><b>Lemma 4.25</b> (<i>Gaus Lemma</i>). The product of two primitive polynomials is again a primitive polynomial.</p>
+<div id="gauss_lemma">
+<p><b>Lemma 4.6.5</b> (<i>Gauss's Lemma</i>). The product of two primitive polynomials is again a primitive polynomial.</p>
 
 <p><b>Proof</b>. Let</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = a<sub>0</sub> + a<sub>1</sub>x + ⋅⋅⋅ + a<sub>n</sub>x<sup>n</sup>, &emsp; <i>g</i>(<i>x</i>) = b<sub>0</sub> + b<sub>1</sub>x + ⋅⋅⋅ + b<sub>n</sub>x<sup>m</sup>, &emsp; <i>a<sub>i</sub>,b<sub>i</sub></i> &in; ℤ</p>
+<p><i>f</i>(<i>x</i>) = <i>a<sub>0</sub> + a<sub>1</sub>x + ⋅⋅⋅ + a<sub>n</sub>x<sup>n</sup></i>, &emsp; <i>g</i>(<i>x</i>) = <i>b<sub>0</sub> + b<sub>1</sub>x + ⋅⋅⋅ + b<sub>n</sub>x<sup>m</sup></i>, &emsp; <i>a<sub>i</sub>,b<sub>i</sub></i> &in; ℤ</p>
 </div>
 
 <p>be the two primitive polynomials. Assume by contradiction that <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) is not primitive. Then there exists a prime number <i>p</i> dividing all the coefficients of <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>). This element <i>p</i> cannot divide all the coefficients of <i>f</i>(<i>x</i>) and of <i>g</i>(<i>x</i>) by the hypothesis of primitivity. Let <i>a<sub>h</sub></i> and <i>b<sub>k</sub></i> be the smallest-indexed coefficients of <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>), respectively, that are not divided by <i>p</i>. Look at the coefficient with index <i>h + k</i> in <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>). It is</p>
@@ -83,9 +84,10 @@
 
 <p>Now, <i>p</i> divides <i>c<sub>h+k</sub></i> and both summands in the parentheses, and so it divides <i>a<sub>h</sub> b<sub>k</sub></i>. Thus, it divides one of the two factors, contradicting the hypothesis.□</p>
 
-<p><b>Corollary 4.26</b>. The content of the product of two polynomials equals the product of the contents of the two polynomials.</p>
+<p><b>Corollary 4.6.6</b>. The content of the product of two polynomials equals the product of the contents of the two polynomials.</p>
 
 <p><b>Proof</b>. Let <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with <i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; ℤ[<i>x</i>]. Let's extract the content of the polynomials</p>
+</div>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>df*</i>(<i>x</i>) = <i>d</i><sub>1</sub><i>g*</i>(<i>x</i>) <i>d</i><sub>2</sub><i>h*</i>(<i>x</i>) = <i>d<sub>1</sub>d<sub>2</sub></i> · <i>g*</i>(<i>x</i>)<i>h*</i>(<i>x</i>)</p>
@@ -93,15 +95,15 @@
 
 <p>Since <i>g*</i>(<i>x</i>)<i>h*</i>(<i>x</i>) is primitive, we have <i>d=d<sub>1</sub>d<sub>2</sub></i>, which means that the content of the product is the product of the content of the single polynomials.□</p>
 
-<p><b>4.26 (Gauss theorem)</b>. If a polynomial <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>] factors as a product of two polynomials <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) with rational coefficients, then it also factors as the product of two polynomials of the same degree with integer coefficients.</p>
+<p><b>4.6.7 (Gauss's theorem)</b>. If a polynomial <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>] factors as a product of two polynomials <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) with rational coefficients, then it also factors as the product of two polynomials of the same degree with integer coefficients.</p>
 
-<p><b>Proof</b>. Assume first that <i>f</i>(<i>x</i>) is primitive. So let <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) ∈ ℚ[<i>x</i>]. By lemma 4.21, we have</p>
+<p><b>Proof</b>. Assume first that <i>f</i>(<i>x</i>) is primitive. So let <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) ∈ ℚ[<i>x</i>]. By lemma 4.6.1, we have</p>
 
 <div class="eq">
 <p><i>g</i>(<i>x</i>) = <i>d<sub>1</sub>/m</i><sub>1</sub> <i>g*</i>(<i>x</i>), &emsp;<i>h</i>(<i>x</i>) = <i>d<sub>2</sub>/m</i><sub>2</sub> <i>h*</i>(<i>x</i>)</p>
 </div>
 
-<p>with <i>g*</i>(<i>x</i>) and <i>h*</i>(<i>x</i>) &in; ℤ[<i>x</i>] primitive polynomials in ℤ[<i>x</i>] and <i>d<sub>i</sub>, m<sub>i</sub></i> integers. As a consequence, <i>f</i>(<i>x</i>) = (<i>d/m</i>)<i>g*</i>(<i>x</i>)<i>h*</i>(<i>x</i>), d = d<sub>1</sub> d<sub>2</sub>, <i>m = m<sub>1</sub> m<sub>2</sub></i>. By Gauss lemma, the polynomial <i>f*</i>(<i>x</i>)= <i>g*</i>(<i>x</i>)<i>h*</i>(<i>x</i>) is primitive and we have</p>
+<p>with <i>g*</i>(<i>x</i>) and <i>h*</i>(<i>x</i>) &in; ℤ[<i>x</i>] primitive polynomials in ℤ[<i>x</i>] and <i>d<sub>i</sub>, m<sub>i</sub></i> integers. As a consequence, <i>f</i>(<i>x</i>) = (<i>d/m</i>)<i>g*</i>(<i>x</i>)<i>h*</i>(<i>x</i>), <i>d = d<sub>1</sub> d<sub>2</sub>, m = m<sub>1</sub> m<sub>2</sub></i>. By Gauss lemma, the polynomial <i>f*</i>(<i>x</i>)= <i>g*</i>(<i>x</i>)<i>h*</i>(<i>x</i>) is primitive and we have</p>
 
 <div class="eq">
 <p><i>mf</i>(<i>x</i>) = <i>df*</i>(<i>x</i>) &emsp; with <i>f</i>(<i>x</i>) and <i>f*</i>(<i>x</i>) primitive</p>
@@ -124,13 +126,13 @@
 <p>is a factorisation over ℚ[<i>x</i>] and <i>f*</i>(<i>x</i>) is primitive. Thus, by what has already been proved, <i>f*</i>(<i>x</i>) is factorisable over ℤ as well, that is,</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = <i>ḡ</i>(<i>x</i>)<i>h̄</i>(<i>x</i>), &emsp; <i>ḡ</i>(<i>x</i>), h̄(<i>x</i>) &in; ℤ[<i>x</i>] </p>
+<p><i>f</i>(<i>x</i>) = <i>ḡ</i>(<i>x</i>)<i>h̄</i>(<i>x</i>), &emsp; <i>ḡ</i>(<i>x</i>), <i>h̄</i>(<i>x</i>) &in; ℤ[<i>x</i>] </p>
 </div>
 
 <p>by replacing in the original expression for <i>f</i>(<i>x</i>)</p>
 
 <div class="eq">
-<p><i>f*</i>(<i>x</i>) = <i>df*</i>(<i>x</i>) = <i>dḡ</i>(<i>x</i>) h̄(<i>x</i>)</p>
+<p><i>f*</i>(<i>x</i>) = <i>df*</i>(<i>x</i>) = <i>dḡ</i>(<i>x</i>) <i>h̄</i>(<i>x</i>)</p>
 </div>
 
 <p>is a factorisation of <i>f</i>(<i>x</i>) in ℤ.□</p>
@@ -141,7 +143,7 @@
 
 <p>Gauss theorem states that if a polynomial with coefficients in ℤ can be factored over ℚ, then is factorasable over ℤ as well, or equivalently if it is irreducible over ℤ then is irreducible over ℚ. Now somebody might want to venture the hypothesis that a polynomial with coefficients in ℤ is irreducible if and only if it is irreducible over ℚ, that's what happens for polynomials in ℚ[<si>x</i>] which are also irreducible over ℝ. Beware! This is not true. Let us demonstrate this point with an example:</p>
 
-<p><b>4.27 Example</b>. Consider the polynomial</p>
+<p><b>4.6.8 Example</b>. Consider the polynomial</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = 3<i>x</i><sup>2</sup> + 6,</p>
@@ -149,19 +151,19 @@
 
 <p>which is irreducible over ℚ, as it is associate to the polynomial <i>x</i><sup>2</sup> + 2 which is irreducible over ℚ. However, <i>f</i>(<i>x</i>) is reducible over ℤ, as the factorisation 3x<sup>2</sup> + 6 = 3(<i>x</i><sup>2</sup> + 2) is a non-trivial factorisation over ℤ because 3 is not invertible over ℤ!</p>
 
-<p>In other words, the two polynomials 3<i>x</i><sup>2</sup> + 6 and x<sup>2</sup> + 2 are not associate in ℤ[x], as the invertible elements in ℤ[x] are not all non-zero constants, but only ±1. It should now be clear why <i>reducibility of polynomials over ℤ does not imply their reducibility over ℚ</i>. On the other hand, if a polynomial is reducible over ℚ, then it is reducible over ℝ. Indeed, both ℚ and ℝ are fields, one contained in the other, and an element of ℚ is invertible in ℚ if and only if it is invertible in ℝ. Thus, if a polynomial in ℚ[x] is irreducible over ℝ it is obviously also irreducible over ℚ.</p>
+<p>In other words, the two polynomials 3<i>x</i><sup>2</sup> + 6 and x<sup>2</sup> + 2 are not associate in ℤ[<i>x</i>], as the invertible elements in ℤ[x] are not all non-zero constants, but only ±1. It should now be clear why <i>reducibility of polynomials over ℤ does not imply their reducibility over ℚ</i>. On the other hand, if a polynomial is reducible over ℚ, then it is reducible over ℝ. Indeed, both ℚ and ℝ are fields, one contained in the other, and an element of ℚ is invertible in ℚ if and only if it is invertible in ℝ. Thus, if a polynomial in ℚ[x] is irreducible over ℝ it is obviously also irreducible over ℚ.</p>
 
 </div>
 
 <p>Even if over ℤ the claim "a polynomial is irreducible <i>if and only if</i> it is irreducible over ℚ" is not in general valid, it is for primitive polynomials as the following lemma states:</p>
 
-<p><b>Lemma 4.27</b>. A primitive polynomial <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>] is irreducible over ℤ if and only if it is irreducible over ℚ.□</p>
+<p><b>Lemma 4.6.9</b>. A primitive polynomial <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>] is irreducible over ℤ if and only if it is irreducible over ℚ.□</p>
 
 <p><b>Proof</b>. In case of a primitive polynomial, it can't have a factorisation in which one of the factor is an element of ℤ &ne; &pm;1.</p>
 
 <p>In order to decide about the reducibility of a polynomial <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>] over ℚ it is useful in the first place to have a criterion to establish whether the polynomial has roots in ℚ or not. If it has roots, it is sure to be reducible. The following proposition teaches us something useful in this regard.</p>
 
-<p><b>Proposition 4.28</b>. Let <i>f</i>(<i>x</i>) = <i>a<sub>0</sub> + a<sub>1</sub> x + a<sub>2</sub> x<sup>2</sup> + ··· + a<sub>n</sub> x<sup>n</sup></i> ∈ ℤ[<i>x</i>]. Let <i>α = r/s</i> ∈ ℚ be a root of <i>f</i>(<i>x</i>), with <i>r</i> and <i>s</i> relatively prime. Then <i>r</i> | a<sub>0</sub> and <i>s</i> | <i>a<sub>n</sub></i>.</p>
+<p><b>Proposition 4.6.10</b>. Let <i>f</i>(<i>x</i>) = <i>a<sub>0</sub> + a<sub>1</sub> x + a<sub>2</sub> x<sup>2</sup> + ··· + a<sub>n</sub> x<sup>n</sup></i> ∈ ℤ[<i>x</i>]. Let <i>α = r/s</i> ∈ ℚ be a root of <i>f</i>(<i>x</i>), with <i>r</i> and <i>s</i> relatively prime. Then <i>r</i> | a<sub>0</sub> and <i>s</i> | <i>a<sub>n</sub></i>.</p>
 
 <p><b>Proof</b>. If <i>α = r/s</i> is a root of <i>f</i>(<i>x</i>), we find 0 = <i>f</i>(<i>r/s</i>) = a<sub>0</sub> + a<sub>1</sub> (<i>r/s</i>) + ··· + a<sub>n</sub> (<i>r/s</i>)<sup>n</sup>. Multiplying by <i>s<sup>n</sup></i> we get</p>
 
@@ -172,9 +174,9 @@
 
 <p>From the relation 0 = <i>s</i>(<i>s<sup>n−1</sup> a<sub>0</sub> + s<sup>n−2</sup> a<sub>1</sub> r + ··· + a<sub>n−1</sub> r<sup>n−1</sup></i>) + a<sub>n</sub> r<sup>n</sup>, it follows that <i>s</i> | <i>a<sub>n</sub> r<sup>n</sup></i>, and from <i>0 = s<sup>n</sup>a<sub>0</sub> + r</i>(<i>s<sup>n−1</sup> a<sub>1</sub> + ··· + a<sub>n</sub> r<sup>n−1</sup></i>) it follows that <i>r</i> | <i>s<sup>n</sup>a<sub>0</sub></i>. As GCD(<i>r, s</i>) = 1, we may conclude that <i>s</i> | <i>a<sub>n</sub></i> and <i>r</i> | <i>a<sub>0</sub></i>.□</p>
 
-<p>Proposition 4.28 gives a set of elements of ℚ which are candidates to be roots of the polynomial <i>f</i>(<i>x</i> ∈ ℤ[<i>x</i>], these are of the form <i>r/s</i>, where <i>r</i> varies in the set of divisors of <i>a<sub>0</sub></i> and <i>s</i> is among the set of divisors of <i>a<sub>n</sub></i>.</p>
+<p>Proposition 4.6.10 gives a set of elements of ℚ which are candidates to be roots of the polynomial <i>f</i>(<i>x</i> ∈ ℤ[<i>x</i>], these are of the form <i>r/s</i>, where <i>r</i> varies in the set of divisors of <i>a<sub>0</sub></i> and <i>s</i> is among the set of divisors of <i>a<sub>n</sub></i>.</p>
 
-<p><b>Example 4.29</b>. Determine whether the polynomial</p>
+<p><b>Example 4.6.11</b>. Determine whether the polynomial</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = 3<i>x</i><sup>3</sup> − 4<i>x</i><sup>2</sup> + 2</p>
@@ -186,7 +188,7 @@
 <p>{&pm;1, &pm;2, &pm;1/3, &pm;2/3}</p>
 </div>
 
-<p><b>Corollary 4.30</b>. If a monic polynomial with integer coefficients has a rational root, this is a an integer.</p>
+<p><b>Corollary 4.6.12</b>. If a monic polynomial with integer coefficients has a rational root, this is a an integer.</p>
 
 <p><b>Proof.</b> Monic means <i>a<sub>n</sub></i> = 1. <i>s</i>|1 i.e. <i>s</i> = 1 and <i>r/s</i> = <i>r</i>.</p>
 
@@ -205,7 +207,7 @@
 
 <p>Then <i>f</i>(<i>x</i>) is irreducible over ℚ.</p>
 
-<p><b>Proof</b>. Proof. By Gauss theorem it is sufficient to prove that <i>f</i>(<i>x</i>) is irreducible over ℤ. Assume by contradiction that <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with </p>
+<p><b>Proof</b>. By Gauss theorem it is sufficient to prove that <i>f</i>(<i>x</i>) is irreducible over ℤ. Assume by contradiction that <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with </p>
 
 <div class="eq">
 <p><i>g</i>(<i>x</i>) = <i>b<sub>0</sub> + b<sub>1</sub>x + ··· + b<sub>r</sub>x<sup>r</sup></i>, &emsp; <i>h</i>(<i>x</i>) = <i>c<sub>0</sub> + c<sub>1</sub> + ··· + c<sub>s</sub>x<sup>s</sup></i></p>
@@ -218,7 +220,7 @@
 <p>If Eisenstein’s criterion does not directly apply to a polynomial, it might nevertheless be possible to apply it after having suitably modified the polynomial. Given a constant <i>α</i>, it is for instance possible to consider, rather than the polynomial <i>f</i>(<i>x</i>), a new polynomial <i>f</i>(<i>x − α</i>) or, for <i>α</i> &ne; 0, the polynomial <i>f</i>(<i>x/α</i>), by observing that <i>f</i>(x) ∈ 𝕂[<i>x</i>] is irreducible over the field 𝕂 if and only if <i>f</i>(<i>x − α</i>) and <i>f</i>(<i>x/α</i>) with <i>α</i> ∈ 𝕂 are as well. As an application of this idea, we prove the following result:</p>
 </div>
 
-<p><b>Proposition 4.32</b>. If <i>p</i> is a prime number, the polynomial <i>x<sup>p−1</sup> + x<sup>p−2</sup> + ··· + x<sup>2</sup> + x + 1</i> is irreducible over ℚ. So, substituting <i>x</i> + 1 for <i>x</i>, we get</p>
+<p><b>Proposition 4.32</b>. If <i>p</i> is a prime number, the polynomial <i>x<sup>p−1</sup> + x<sup>p−2</sup> + ··· + x<sup>2</sup> + x</i> + 1 is irreducible over ℚ. So, substituting <i>x</i> + 1 for <i>x</i>, we get</p>
 
 <div class="eq">
 <p>(<i>x</i> + 1)<sup>p−1</sup> + (<i>x</i> + 1)<sup>p−2</sup> + ··· + (<i>x</i> + 1)<sup>2</sup> + (<i>x</i> + 1) + 1 = (<i>x</i> + 1)<sup>p − 1</sup>/ [(<i>x</i> + 1) − 1] = <br> = (∑<sup><i>p</i></sup><sub><sub>k=0</sub></sub> (p k) x<sup>p-k</sup> − 1) x<sup>−1</sup> = x<sup>p − 1</sup> + (p 1) x<sup>p − 2</sup> + (p 2) x<sup>p − 3</sup> + ... + <i>p</i></p>
@@ -237,12 +239,11 @@
 <p>where either both plus signs or both minus signs will be chosen. The system obtained by equating the coefficients is</p>
 
 <div class="eq">
-<p><i>a + b = 0</i></p>
-<p>ab = &pm;2</p>
+<p><i>a + b</i> = 0</p>
+<p><i>ab</i> = &pm;2</p>
 </div>
 
-<p>which does not admit integer solutions. Notice that, over ℝ, <i>x<sup>4</sup></i> + 1 factors as <i>x<sup>4</sup></i> + 1 =
-(<i>x<sup>2</sup> + √2x + 1</i>)(<i>x<sup>2</sup> − √2x + 1</i>). This method is not at all computationally efficient: in particular, it becomes more and more infeasible as the degree of the polynomial increases.</p>
+<p>which does not admit integer solutions. Notice that, over ℝ, <i>x<sup>4</sup></i> + 1 factors as <i>x<sup>4</sup></i> + 1 = (<i>x<sup>2</sup> + √2x</i> + 1)(<i>x<sup>2</sup> − √2x</i> + 1). This method is not at all computationally efficient: in particular, it becomes more and more infeasible as the degree of the polynomial increases.</p>
 
 <p>Another useful method is the following. Let <i>f</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub>i=0</sub></sub> <i>a<sub>i</sub>x</i> be a primitive polynomial with coefficients in ℤ. Reduce the coefficients modulo a prime number <i>p</i>, that is to say, consider the polynomial <i>f</i>(<i>x</i>) as having coefficients in ℤ<sub>p</sub>. Denote by <i>f̄</i>(<i>x</i>) ∈ Z<sub>p</sub> [<i>x</i>] the new polynomial, which we shall call the <i>reduction</i> of <i>f</i>(<i>x</i>) modulo <i>p</i>. Notice that if we choose a value of <i>p</i> not dividing <i>a<sub>n</sub></i>, then <i>f</i>(<i>x</i>) and <i>f̄</i>(<i>x</i>) have the same degree. If <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) of positive degree in ℤ[<i>x</i>], then we also have <i>f̄</i>(<i>x</i>) = ḡ(x) h̄(x). If <i>p ∤ a<sub>n</sub></i>, then <i>p</i> does not divide the leading coefficients of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), so <i>ḡ</i>(<i>x</i>) and <i>h̄</i>(<i>x</i>) have positive degree too. In conclusion, if <i>f</i>(<i>x</i>) is reducible in ℚ, then <i>f̄</i>(<i>x</i>) it is reducible in ℤ<sub>p</sub> [<i>x</i>]. So we may deduce that:</p>
 
@@ -252,18 +253,18 @@
 
 <p><b>Example 4.33</b>. We have seen that <i>x<sup>4</sup></i> + 1 is irreducible over ℚ. Still, <i>x<sup>4</sup></i> + 1 is reducible over ℤ<sub>2</sub>; indeed, <i>x<sup>4</sup></i> + 1 = (x<sup>2</sup> + 1)(x<sup>2</sup> + 1) in ℤ<sub>2</sub>[<i>x</i>].</p>
 
-<p>Since, the irreducibility test in ℤ<sub>p</sub>[x] is a finite test, working modulo <i>p</i> is convenient and not computationally expensive</p>
+<p>Since, the irreducibility test in ℤ<sub>p</sub>[<i>x</i>] is a finite test, working modulo <i>p</i> is convenient and not computationally expensive</p>
 
 <p><b>Example 4.34</b>. Let us see an example to show how this method works, by verifying that the polynomial 5<i>x<sup>4</sup> −2x<sup>3</sup> + 9x−1</i> is irreducible over ℚ. If we consider it as a polynomial with coefficients in ℤ<sub>2</sub>, the polynomial is <i>x<sup>4</sup> + x</i> + 1. This polynomial has no roots in ℤ<sub>2</sub>, so, if it factors, it does so into the product of two second degree factors: that is, we would get</p>
 
 <div class="eq">
-<p><i>x<sup>4</sup> + x</i> + 1 = (x<sup>2</sup> + ax + 1)(x<sup>2</sup> + bx + 1),</p>
+<p><i>x<sup>4</sup> + x</i> + 1 = (<i>x<sup>2</sup> + ax</i> + 1)(<i>x<sup>2</sup> + bx</i> + 1),</p>
 </div>
 
 <p>or</p>
 
 <div class="eq">
-<p><i>x<sup>4</sup> + x</i> + 1 = x<sup>4</sup> + (a + b)x<sup>3</sup> + abx<sup>2</sup> + (<i>a + b</i>)<i>x</i> + 1,</p>
+<p><i>x<sup>4</sup> + x + 1 = x<sup>4</sup></i> + (<i>a + b</i>)<i>x<sup>3</sup> + abx<sup>2</sup></i> + (<i>a + b</i>)<i>x</i> + 1,</p>
 </div>
 
 <p>which is clearly impossible. So <i>x<sup>4</sup> + x</i> + 1 is irreducible over ℤ<sub>2</sub>, which implies that the originary polynomial is irreducible over ℚ.□</p>
@@ -271,22 +272,21 @@
 <h2>Methods to study the irreducibility of a polynomial over ℚ</h2>
 
 <ul>
-	<li><p>consider without loss of generality only primitive polynomials <i>f</i>(<i>x</i>) ∈ ℤ[x];</p></li>
+	<li><p>consider without loss of generality only primitive polynomials <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>];</p></li>
 	
 	<li><p>If <i>f</i>(<i>x</i>) is of degree 2 or 3, it is irreducible over ℚ if and only if it has no roots in ℚ;</p></li>
 	
-	<li><p>Use the test for the existence of rational roots based upon Proposition 4.28 to conclude that <i>f</i>(<i>x</i>) is <i>reducible</i>: the existence of roots implies the reducibility of the polynomial;</p></li>
+	<li><p>Use the test for the existence of rational roots based upon Proposition 4.6.10 to conclude that <i>f</i>(<i>x</i>) is <i>reducible</i>: the existence of roots implies the reducibility of the polynomial;</p></li>
 	
 	<li><p>If possible, especially for low degrees, look for a factorisation into polynomials with integer coefficients;</p></li>
 apply Eisenstein’s criterion, when there is a prime <i>p</i> verifying the hypotheses, to conclude that <i>f</i>(<i>x</i>) is irreducible over ℚ;</p></li>
 
 	<li><p>use transformations of the form <i>x → x + α</i> to be able to apply Eisenstein’s criterion;</p></li>
 	
-	<li><p>consider <i>f̄</i>(<i>x</i>) ∈ ℤ<sub>p</sub>[<i>x</i>] rather than <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>]: if there exists a <i>p</i> not dividing the leading coefficient of <i>f</i>(<i>x</i>) and such that <i>f̄</i>(<i>x</i>) is irreducible over ℤ<sub>p</sub>, then <i>f</i>(<i>x</i>) is irreducible over Q.</p></li>
+	<li><p>consider <i>f̄</i>(<i>x</i>) ∈ ℤ<sub>p</sub>[<i>x</i>] rather than <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>]: if there exists a <i>p</i> not dividing the leading coefficient of <i>f</i>(<i>x</i>) and such that <i>f̄</i>(<i>x</i>) is irreducible over ℤ<sub>p</sub>, then <i>f</i>(<i>x</i>) is irreducible over ℚ.</p></li>
 </ul>
 
-
-<section>
+<section aria-label="End">
 <a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>
 <a href="index.html">Index</a>
 <a href="pol_irr_Q.html">Irreducibility of polynomials on ℚ&#187;</a>

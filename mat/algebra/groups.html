@@ -23,11 +23,11 @@
 
 <p>In this section, we introduce a different kind of algebraic structure called a <i>group</i>, that uses a single operation rather than two as in rings. L'origine del concetto di gruppo risale all'inizio dell'Ottocento, ed è dovuta ad un'idea del giovane matematico francese Evariste Galois (1811-1832). La prima definizione formale di gruppo comparirà però solo nel 1893, in un articolo di Heinrich Weber.</p>
 
-<p><b>Definition 7.1.1</b>. A group (<i>G</i>, *) is a nonempty set <i>G</i> equipped with a binary operation *,
+<p><b>Definition 7.1.1</b>. A group (<i>G</i>, *) is a nonempty set <i>G</i> equipped with a binary operation *,</p>
 
 <div class="eq">
-<p><i>G x G ⟶ G</i></p>
-<p>(<i>a,b</i>) ⟼ <i>a * b</i></p>
+<p><i>G x G ⟶ G</i><br>
+&emsp;(<i>a,b</i>) ⟼ <i>a * b</i></p>
 </div>
 
 <p>that satisfies the following axioms.</p>
@@ -35,49 +35,247 @@
 <ol type="a">
 	<li><p>* is associative, i.e.</p>
 		<div class="eq">
-			<p>(<i>a *b</i>) * <i>c  = a</i> * (<i>b * c</i>) &emsp; &forall; <i>a,b,c &in; G</i>;</p>
+			<p>(<i>a * b</i>) * <i>c  = a</i> * (<i>b * c</i>) &emsp; &forall; <i>a,b,c &in; G</i>;</p>
 		</div>
 	</li>
 	<li><p>There exists an element <i>e &in; G</i> (called the identity element) such that <i>a * e = a = e * a</i> for every <i>a &in; G</i>.</p></li>
 	<li><p>For each <i>a &in; G</i>, there is an element <i>d &in; G</i> (called the inverse of <i>a</i>) such that <i>a * d = e</i> and <i>d * a = e</i>.</p></li>
 	<p>A group is said to be <b>abelian</b> if it also satisfies this axiom:</p>
 	
-	<li><p>Commutativity: <i>a * b = b *a</i> &forall; <i>a,b &in; G</i>.</p></li>
+	<li><p>Commutativity: <i>a * b = b * a</i>, &emsp; &forall;<i>a,b &in; G</i>.</p></li>
 </ol>
 
+<p>Abelian groups are named after the Norwegian mathematician Niels Henrik Abel (1802–1829) who, in spite of his short life, made fundamental contributions to mathematics.</p>
 
-<p>A group Gis said to be finite (or of finite order) if it has a finite number of elements. In this case, the number of elements in <i>G</i> is called the order of <i>G</i> and is denoted |<i>G</i>|. A group with infinitely many elements is said to have infinite order.</p>
+<p>Functional notation <i>p</i> = <i>f</i>(<i>a,b</i>) isn't very convenient for laws of composition. Instead, the element obtained by applying the law to a pair (<i>a,b</i>) is usually denoted using a notation resembling those used for multiplication or addition:</p>
+
+<div class="eq">
+<p><i>p = ab, a x b, a ∘ b, a ⋅ b, a +b</i>, and so on,</p>
+</div>
+
+<p>We call the element <i>p</i> the <i>product</i> or <i>sum</i> of <i>a</i> and <i>b</i>, depending on the notation chosen.</p>
 
 <div class="def">
-<p><b>Esempio 2</b> </p>
-
-<p>L'insieme (&Zopf;, +), con l'operazione + di somma, costituisce un gruppo. Infatti</p>
+<p><b>Examples 7.1.2</b>. The set (&Zopf;, +), is a group. Indeed</p>
 
 <ol>
-  <li><p>&forall; <i>a, b, c &in; &Zopf;, a + (b+c) = (a+b) + c</i>, (+ è associativa).</p></li>
-  <li><p>&forall; <i>a &in; &Zopf;, a + 0 = 0 + a = a</i>, (0 è l'elemento neutro).</p></li>
-  <li><p>&forall; <i>a &in; &Zopf;, a + (-a) = -a +a = 0</i>, (<i>-a</i> è l'inverso di <i>a</i>).</p></li>
+  <li><p>&forall;<i>a, b, c &in; &Zopf;, a</i> + (<i>b + c</i>) = (<i>a + b</i>) + <i>c</i>, (+ is asociative).</p></li>
+  <li><p>&forall;<i>a &in; &Zopf;, a + 0 = 0 + a = a</i>, (0 is the identity).</p></li>
+  <li><p>&forall;<i>a &in; &Zopf;, a</i> + (−<i>a</i>) = −<i>a + a</i> = 0, (<i>−a</i> is the inverse of <i>a</i>).</p></li>
 </ol>
 
-<p>Inoltre il gruppo è <i>abeliano</i>:</p>
+<p>Moreover the group is <i>abelian</i>:</p>
 
-<p>&forall; <i>a, b &in; &Zopf;</i>, <i>a + b = b + a</i> (+ è commutativa).</p>
+<p>&forall;<i>a, b &in; &Zopf;, a + b = b + a</i> (+ is commutative).</p>
 
-<p>Sono gruppi abeliani, rispetto alle usuali addizioni, anche il campo dei numeri razionali &Qopf;, il campo dei numeri reali &Ropf; ed il campo dei numeri complessi &Copf;.</p>
+<p>(&Zopf;, ⋅), is not a group with respect to multiplication, even if the associative property holds true and there exists the identity 1, each element of the group has not inverse.</p>
 
-<p>(&Zopf;, ⋅), con l'operazione di prodotto non è un gruppo, pur valendo la proprietà associativa e l'esistenza dell'elemento neutro, che è 1, non vale la proprietà dell'esistenza degli inversi.</p>
+<p>Also the following rings are abelian groups: (&Qopf;,+), (&Ropf;,+), (&Copf;,+), (ℤ[<i>i</i>],+), (ℤ[√<i>n</i>],+),  (ℤ[<sub><i>n</i></sub>,+),  (<i>R</i>[<i>x</i>],+), with <i>R</i> commutative ring with identity.</p>
+
+<p>Other examples of groups are:</p>
+
+<ul>
+	<li><p>Nonnull elements of a field with respect to multiplication: (&Qopf;\{0},⋅), (&Ropf;\{0},⋅), (&Copf;\{0},⋅), (ℤ<sub><i>p</i></sub>,⋅), (<i>p</i> primo)</p></li>
+	<li><p>The set (<i>M<sub>mn</sub></i>(<i>R</i>), +) := {of matrices <i>m</i> x <i>n</i> on a ring <i>R</i>}.</p></li>
+	<li><p>The set (<i>M<sub>n</sub></i>(<i>R</i>), +) := {square matrices <i>n</i> x <i>n</i> on a ring <i>R</i>}.</p></li>
+	<li><p>(GL<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A &in; M<sub>n</sub></i>(ℝ) | det <i>A</i> &ne; 0} = real linear general group. In linear algebram this is the group of all invertible matrices <i>n × n</i>, with real values, with positive <i>n</i>.</p></li>
+	<li><p>(SL<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A &in; M<sub>n</sub></i>(ℝ) | det <i>A</i> = 1} = real linear special group.</p></li>
+	<li><p>(O<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A &in; M<sub>n</sub></i>(ℝ) | det <i>A<sup>T</sup> = A<sup>−1</sup></i>} = orthogonal group.</p></li>
+	<li><p>(SO<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A</i> &in; O<sub><i>n</i></sub>(ℝ)| det <i>A</i> = 1}</p></li>
+</ul>
+
+<p>The first two groups are abelian, whilst the others are not for <i>n</i> &ge; 2.</p>
 </div>
 
-<div class="def">
-<p><b>Esempio 2</b> </p>
+<p><b>Proposition 7.1.2</b>. Let (<i>G</i>, ⋅) a group. Then the identity element <i>e &in; G</i>, is unique.</p>
 
-<p>In matematica, e più precisamente in algebra lineare, il gruppo lineare generale è il gruppo di tutte le matrici invertibili <i>n × n</i> a valori in un campo K, dove n è un numero intero positivo. Il gruppo lineare generale viene indicato con GL(n, K) oppure con <i>GL<sub>n</sub>(K)</i>, e si dice anche gruppo di matrici. </p>
+<p><b>Proof</b>. Suppose that <i>e</i> and <i>u</i> both serve as identities in <i>G</i>. Then</p>
+
+<div class="eq">
+<p><i>eg = ge = g &emsp; &forall;g &in; G</i></p>
+<p><i>ug = gu = g &emsp; &forall;g &in; G</i></p>
 </div>
 
-<section>
-<a href="defective.html">&#171;Defective Verbs</a>
+<p>The relations</p>
+
+<div class="eq">
+<p><i>eu = ue = e</i></p>
+<p><i>ug = gu = u</i></p>
+</div>
+
+<p>imply <i>u = e</i>.□</p>
+
+<p><b>Proposition 7.1.3</b>. Let (<i>G</i>, ⋅) a group. Then the inverse of every element <i>a &in; G</i>, is unique.</p>
+
+<p><b>Proof</b>. Suppose that <i>a'</i> and <i>a''</i> are both inverses of <i>a &in; G</i>. Then</p>
+
+<div class="eq">
+<p><i>a' = ea'</i> = (<i>a''a</i>)<i>a</i>' = <i>a''</i>(<i>aa'</i>) = <i>a''e = a''</i>. &emsp;□</p>
+</div>
+
+<p><b>Corollary 7.1.4</b>. For each <i>a,b &in; G</i>, the inverse of the product of two elements of <i>G</i> is the product of their inverses in reverse order, that is</p>
+
+<div class="eq">
+<p>(<i>ab</i>)<sup>−1</sup></i> = <i>b<sup>−1</sup>a<sup>−1</sup></i></p>
+</div>
+
+<p><b>Proof</b>. We have to show that the product of <i>b<sup>−1</sup>a<sup>−1</sup></i> and <i>ab</i> (in both orders) is equal to the identity <i>e</i> of the group. We have</p>
+
+<div class="eq">
+<p>(<i>ab</i>) (<i>b<sup>−1</sup>a<sup>−1</sup></i>)= <i>a<sup>−1</sup> ⋅ (<i>b<sup>−1</sup>b</i>) ⋅ <i>a</i><sup>−1</sup> = a<sup>−1</sup> ⋅ e ⋅ a</i><sup>−1</sup> = a<sup>−1</sup> ⋅ a = e</i>.</p> 
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>(<i>b<sup>−1</sup>a<sup>−1</sup></i>)(<i>ab</i>) = <i>b<sup>−1</sup> ⋅ (<i>a<sup>−1</sup>a</i>) ⋅ <i>b</i> = b<sup>−1</sup> ⋅ e ⋅ b = b<sup>−1</sup> ⋅ b = e</i>.</p>
+</div>
+
+<p>Hence by definition (<i>ab</i>)<sup>−1</sup> = <i>b<sup>−1</sup>a<sup>−1</sup></i>. □</p>
+
+<p><b>Corollary 7.1.5</b>. A subgroup <i>S</i> of a group <i>G</i> a nonempty subset of <i>G</i> that is itself a group under the same operation as <i>G</i>.</p>
+
+<p>Then a subset <i>S</i> of a group (<i>G</i>, ⋅) is a subgroup if and only if</p>
+
+<ol type="a">
+	<li><p>the identity <i>e</i> of <i>G</i> belongs to <i>S</i>;</p></li>
+	<li><p><i>S</i> is closed under the operation of <i>G</i>, that is &forall;<i>s,t &in; S</i>, we have <i>st &in; S</i>; in other words the operation of ⋅ of <i>G</i> is also the operation of <i>S</i>, <i>i.e.</i></p>
+	<div class="eq">
+	<p>⋅ : <i>S</i> x <i>S</i> ⟶ <i>S</i></p>
+	</div>
+	</li>
+	
+	<li><p>for all <i>s</i> in <i>S</i>, <i>s</sup><sup>−1</sup></i> &in; <i>S</i>.</p>
+</ol>
+
+<p><b>Remark</b>. <i>S</i> = {−1, 1} is a nonempty subset of ℚ, and it is a group with respect to multiplication that is a subgroup (ℚ,*), but it is not a subgroup of (ℚ,+).</p>
+
+<p>Every group G automatically has two obvious subgroups, namely <i>G</i> itself and the subgroup consisting of the identity element, <i>e</i>, alone. These two subgroups we call <i>trivial subgroups</i>. Our interest will be in the remaining ones, the <i>proper subgroups</i> of <i>G</i>.</p>
+
+<p>Subgroup <i>S</i> of a group <i>G</i> is indicated with the following notations</p>
+
+<div class="eq">
+<p><i>H</i> &le; <i>G</i>, &emsp; or &emsp; <i>H</i> &lt; <i>G</i> &emsp; (if <i>H</i> &ne; <i>G</i>)</p>
+</div>
+
+<p><b>Corollary 7.1.6</b>. (<i>Subgroup Theorem</i>) A non-empty subset <i>S</i> of a group <i>G</i> is a subgroup if and only if whenever <i>a, b ∈ S</i>, then <i>ab<sup>−1</sup> ∈ S</i>.</p>
+
+<p><b>Proof</b>. The condition is obviuosly necessary. We now show that is also sufficient. If <i>S</i> is reduced to the identity element, it is automatically a subgroup. Let <i>a = x</i> and <i>b = x</i> both in <i>S</i>, in the hyphothesis, we have <i>e = xx<sup>−1</sup> = ab<sup>−1</sup></i> is in <i>S</i>. Taking the two elements <i>a = e &in; S</i> and <i>b = x &in; S</i> in the statement of the theorem, we have <i>ex<sup>−1</sup> = x<sup>−1</sup> &in; S</i>. Finally, the proof will be comple when we show that <i>S</i> is closed; that is, if <i>x,y</i> belong to <i>S</i>, we muest show that <i>xy &in; S</i> also. We have already shown that <i>y<sup>−1</sup></i> &in; <i>S</i> whnever <i>y</i> is; so, letting <i>a = x</i>, and <i>b = y<sup>−1</sup></i>, we have <i>xy = x</i>(<i>y<sup>−1</sup></i>)<sup>−1</sup> = <i>ab<sup>−1</sup></i> is in <i>S</i>.  &emsp;□</p>
+
+<p><b>7.1.7 Definition</b>. Let (<i>G</i>, ⋅) a group. The <i>center</i> of <i>G</i> is the subset</p>
+
+<div class="eq">
+<p><i>Z</i>(<i>G</i>) = {<i>g &in;  G</i> | <i>gx = xg &emsp; &forall;x &in; G</i>}</p>
+</div>
+
+<p>The notation <i>Z</i>(<i>G</i>) comes from the fact that the German word for center is <i>Zentrum</i>. The term was coined by J. A. de Séguier in 1904.]</p>
+
+<p><b>7.1.8 Proposition</b>. The center of a group <i>G</i> is a subgroup of <i>G</i>.</p>
+
+<p><b>Proof</b>. Clearly, <i>e &in; Z</i>(<i>G</i>), so <i>Z</i>(<i>G</i>) is nonempty. Now, suppose <i>a, b &in; Z</i>(<i>G</i>). Then (<i>ab</i>)<i>x</i> = <i>a</i>(<i>bx</i>) = <i>a</i>(<i>xb</i>) = (<i>ax</i>)<i>b</i> = (<i>xa</i>)<i>b</i> = <i>x</i>(<i>ab</i>) for all <i>x &in; G</i>; and, therefore, <i>ab &in; Z</i>(<i>G</i>), so that <i>Z</i>(<i>G</i>) satisfies the first axiom (associativity) for groups. Furthermore, multiplying both sides of the equation <i>xg = gx</i> first on the right side then on the left by <i>x<sup>−1</sup></i>, we deduce that <i>gx<sup>−1</sup> = x<sup>−1</sup>g</i>, which shows that <i>x<sup>−1</sup> &in; Z</i>(<i>G</i>). Satisfying all axioms, we conclude <i>Z</i>(<i>G</i>) is a subgroup of <i>G</i>. &emsp;□</p>
+
+<p><b>7.1.9 Definition</b>. Let (<i>G</i>, ⋅) a group, and let <i>g &in; G</i>. and <i>i</i> &in; ℤ. We define power <i>g<sup>i</sup></i> of <i>g</i> with exponent <i>i</i> the following element of <i>G</i>:</p>
+
+<table class="noborder centertable">
+<tr> <td rowspan="3"> <i>g<sup>i</sup> =</td> <td>g ⋅ g ⋅ ⋅⋅⋅ ⋅ g</i> <br><i>i</i> times</td> <td>if <i>i</i> &gt; 0</td></tr>
+<tr> <td><i>e</i></td> <td>if <i>i</i> = 0</td></tr>
+<tr> <td><i>g<sup>−1</sup> ⋅  ⋅⋅⋅ ⋅ g<sup>−1</sup></i> <br><i>i</i> times</td> <td>if <i>i</i> &lt; 0</td></tr>
+</table>
+
+<p>The usual rules for manipulation of powers hold:</p>
+
+<div class="eq">
+<p><i>g<sup>i</sup> ⋅ g<sup>j</sup> = g<sup>i+j</sup></i> &emsp; and &emsp; (<i>g<sup>i</sup></i>)<i><sup>j</sup> = g<sup>ij</sup></i></p>
+</div>
+
+<p>On the other hand, (<i>gh</i>)<sup>i</sup> &ne; <i>g<sup>i</sup>h<sup>i</sup></i> in general.</p>
+
+<p><b>7.1.10 Definition</b>. Let <i>X</i> be a subset of a group <i>G</i>. We define <i>subgroup generated by X</i>, denoted by ⟨<i>X</i>⟩, the smallest subgroup of <i>G</i> containing <i>X</i>. It coincides with the intersection of all the subgroups of <i>G</i> containing <i>X</i>. It is indicated with ⟨<i>X</i>⟩. Thus</p>
+
+<div class="eq">
+<p>⟨<i>X</i>⟩ := ⋂<sub><sub><i>X ⊆ H ⊆ G</i></sub></sub> <i>H</i></p>
+</div>
+
+<p>In the case in which <i>X</i> = {<i>g</i>} ⊆ <i>G</i> is made by a single element, then</p>
+
+<div class="eq">
+<p>⟨<i>g</i>⟩ ={<i>g<sup>i</sup></i> | <i>i</i> &in; ℤ}</p>
+</div>
+
+<p>The subgroup ⟨<i>g</i>⟩  is called the <i>cyclic subgroup of G</i> generated by <i>g</i>.</p>
+
+<p>We show now that the subgroup ⟨<i>S</i>⟩ is the smallest subgroup containing <i>S</i>. Let <i>S</i> be a subset of <i>G</i>. Consider the famili 𝓔 of all subgroups of <i>G</i> containing <i>S</i>. That is</p>
+
+<div class="eq">
+<p>𝓔 = {<i>A</i> | <i>A</i> is a subgroup of <i>G, S ⊂ A</i>}</p>
+</div>
+
+<p>Since <i>G</i> is in 𝓔, 𝓔  is not empty. Let <i>M</i> be the intersection of all subgroups <i>A</i> in 𝓔. Then <i>M</i> is a subgroup of <i>G</i> and <i>S ⊂ M</i>. If <i>M'</i> is a subgroup and <i>S ⊂ M'</i>, then <i>M'</i> &in; 𝓔. Hence, <i>M ⊂ M'</i>. Therefore <i>M</i> is the smallest subgroup containing <i>S</i>.</p>
+
+<p>More generally, a subset <i>X</i> of a group <i>G</i> 'generates' <i>G</i> if every element of <i>G</i> may be written as a product of elements of <i>X</i> and of inverses of elements of <i>X</i> (where repetitions are allowed).</p>
+
+<p><b>7.1.11 Proposition</b>. Let <i>X</i> = {<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>} a subset (finite or infinite) of a group <i>G</i>. Then</p>
+
+<div class="eq">
+<p>⟨<i>X</i>⟩ = {<i>t<sub>1</sub> ⋅ t<sub>2</sub> ⋅⋅⋅⋅ t<sub>r</sub></i>| <i>t<sub>i</sub> &in; X ∪ X<sup>−1</sup>, r</i> &in; ℕ}</p>
+</div>
+
+<p>with <i>X<sup>−1</sup></i> = {<i>x<sup>−1</sup></i> | <i>x &in; X</i>}.</p>
+
+<p><b>Proof</b>. Clearly <i>X</i> ⊂ ⟨<i>X</i>⟩. For any two elements <i>a = t<sub>1</sub> ⋅ t<sub>2</sub> ⋅⋅⋅⋅ t<sub>r</sub></i> and <i>b = s<sub>1</sub> ⋅ s<sub>2</sub> ⋅⋅⋅⋅ s<sub>r</sub></i> in <i>X</i>,</p>
+
+<div class="eq">
+<p><i>ab<sup>−1</sup> = t<sub>1</sub> ⋅ t<sub>2</sub> ⋅⋅⋅⋅ t<sub>r</sub><sup>−1</sup> ⋅⋅⋅⋅t<sub>1</sub><sup>−1</sup> ⋅ t<sub>2</sub><sup>−1</sup> ⋅⋅⋅⋅ t<sub>r</sub><sup>−1</sup></i></p>
+</div>
+
+<p>Hence, ⟨<i>X</i>⟩, is a subgroup of <i>G</i>. Let <i>M'</i> be any subgroup of <i>G</i> containing <i>X</i>. Then for each <i>x &in; X, x &in; M'</i>. Hence <i>x<sub>1</sub><sup>−1</sup> &in; M'</i>. Therefore <i>M'</i> contains all finite products <i>t<sub>1</sub> ⋅ t<sub>2</sub> ⋅⋅⋅⋅ t<sub>r</sub></i> such that <i>x<sub>i</sub> &in; X</i> or <i>x<sup>−1</sup> &in; X, i</i>=1,...,<i>n</i>. Hence, <i>M ⊂ M'</i>, proving that <i>M</i> is the samellest subgroup containing <i>X</i> and, therefore, the subgroup generated by <i>X</i>. &emsp;□</p>
+
+<p>Let's see some examples of groups generated by a subset of <i>G</i> and study the difference between abelian and non-abelian groups.</p>
+
+<p>In the abelian case (ℤ[<i>i</i>],+) the subgroup generated by the elements 2 and 3 is ⟨2,3⟩  = {2<i>s</i> + 3<i>t</i>| <i>s,t</i> &in; ℤ} which is coincident with ℤ, this is indeed the same as {<i>t<sub>1</sub> + t<sub>2</sub> + ... + t<sub>n</sub></i> | <i>t<sub>i</sub></i> &in; {2,3} ∪ {2,3}<sup>−1</sup>}.</p>
+
+<p>If <i>X</i> ={<i>amb</i>), the elements of ⟨<i>X</i>⟩  would be of the form</p>
+
+<div class="eq">
+<p><i>ab<sup>−1</sup>baaab<sup>−1</sup>aab<sup>−1</sup></i> &emsp; (<b>7.1.1</b>)</p>
+</div>
+
+<p>that can be seen as words of different lengt formed by the letters <i>a, b, a<sup>−1</sup>, b<sup>−1</sup></i>. Notice that cancellation between adjacent terms is possible (such as <i>baa<sup>−1</sup>b = bb</i>). Moreover the product of adjacent letters can be expressed as power (<i>e.g.</i> if <i>a</i> is repeated <i>k</i> times: <i>aaaa⋅⋅⋅⋅a</i> = a<sup>k</sup>). Hence we can rewrite  7.1.1 as <i>ab<sup>−1</sup>ba<sup>3</sup>b<sup>−1</sup>a<sup>2</sup>b<sup>−1</sup></i>. Depending of the particular group we're dealing with further semplifications are possible <i>e.g.</i> if the group is Abelian, or if one of the generators raised to a certain power gives as result <i>e</i>, the identity of the group.</p>
+
+<p>Let <i>g</i> an element of a group (<i>G</i>, ⋅). It can happen that for some <i>k</i> &in; ℕ, <i>g<sup>k</sup> = e</i>. (identity of <i>G</i>): this happens for certain in the case of finite <i>G</i>. Indeed if the subgroup ⟨<i>g</i>⟩  = {<i>g<sup>i</sup></i> | <i>i</i> &in; ℤ} must be finite, there exist two integer powers <i>s,t</i> (<i>s &gt; t</i>) such that <i>g<sup>s</sup> = g<sup>t</sup></i>, from which letting <i>k = s − t</i> &in; ℕ, we have <i>g<sup>k</sup> = e</i>. It makes sense to introduce the following definition.</p>
+
+<p><b>7.1.12 Definition</b>. Let (<i>G</i>, ⋅) a group and <i>g &in; G</i>, we define <b>order</b> of <i>g</i> the least positive integer <i>n</i>, if there exists, such that <i>g<sup>n</sup> = e</i>. If such an integer does not exist, we sat that <i>g</I> has <b>infinite order</b>. The order of an element <i>g</i> is denoted by |<i>g</i>|.</p>
+
+<p>For example in (ℤ<sub>4</sub>, +) the class 1̅  has order 4, the class 2̅ has order 2. In (ℤ, +), every nonnull element has infinite ordeer. In (&Copf;\{0},⋅), the element <i>i</i> has order 4. The identity of any group has order 1.</p>
+
+<p><b>7.1.13 Definition</b>. A group <i>G</i> is said to be finite (or of finite order) if it has a finite number of elements. In this case, the number of elements in <i>G</i> is called the order of <i>G</i> and is denoted |<i>G</i>|. A group with infinitely many elements is said to have infinite order.</p>
+
+<p><b>7.1.14 Proposition</b>. Let <i>G</i> a group. If <i>g &in; G</i> has infinite order and if <i>h &ne; k</i>, then <i>g<sup>h</sup> &ne; g<sup>k</sup></i>, and thus ⟨<i>g</i>⟩  is a infinite cyclic subgroup. If <i>g</i> has order <i>n</i>, then</p>
+
+<div class="eq">
+<p>⟨<i>g</i>⟩ = {<i>e, g, g<sup>2</sup>, ..., g<sup>n−1</sup></i>}</p>
+</div>
+
+<p>thus the cardinality of ⟨<i>g</i>⟩ is <i>n</i>. Moreover <i>g<sup>h</sup> = g<sup>k</sup></i> if and only if <i>h ≡ k</i> (mod <i>n</i>).</p>
+
+<p><b>Proof</b>. Let <i>g</i> of infinite period. Then <i>g<sup>h</sup> = g<sup>k</sup></i> (<i>i.e. g<sup>h−k</sup> = e</i>) implies <i>h = k</i>, by definition of infinite period. Let now <i>n</i> be the period of <i>g</i>. We notice first of all that all the elements {<i>e, g, g<sup>2</sup>, ..., g<sup>n−1</sup></i>} are distinct; For if <i>g<sup>h</sup> = g<sup>k</sup></i> with 0 &le; <i>h &lt; k &lt; n</i> then <i>g<sup>h−k</sup> = e</i> with <i>h − k &lt; n</i> contradicting the minimality of <i>n</i>. To prove that ⟨<i>g</i>⟩ = {<i>e, g, g<sup>2</sup>, ..., g<sup>n−1</sup></i>} it suffices to show that any power <i>g<sup>k</sup></i> &in; {<i>e, g, g<sup>2</sup>, ..., g<sup>n−1</sup></i>} &forall;<i>k</i> &in; ℤ. Indeed by dividing <i>k</i> by <i>n: k = nq + r, 0 &le; r &lt; n</i>, from which <i>g<sup>k</sup> = g<sup>nq+r</i> = (g<sup>n</sup>)<sup>q</sup> = eg<sup>r</sup> = eg<sup>r</sup> = g<sup>r</sup></i>. Hence <i>g<sup>k</sup></i> &in; {<i>e, g, g<sup>2</sup>, ..., g<sup>n−1</sup></i>} &forall;<i>k</i> &in; ℤ.</p> 
+
+<p>Suppose now that <i>g<sup>h</sup> = g<sup>k</sup></i>. Then <i>g<sup>h−k</sup> = e</i>. By dividing <i>h − k</sup></i> by <i>n</i> we have</p>
+
+<div class="eq">
+<p><i>h − k = nq + r, &emsp; 0 &le; r &lt; n</i></p>
+</div>
+
+<p>from which <i>g<sup>h − k</sup></i> = (<i>g<sup>n</sup></i>)<i><sup>q</sup> = g<sup>r</sup> = e</i>. Thus <i>h ≡ k</i> (mod <i>n</i>).</p>
+
+<p>Conversely if <i>h ≡ k</i> (mod <i>n</i>) then <i>g<sup>h−k</i> = g<sup>nq</sup></i> = (<i>g<sup>n</sup></i>)<i><sup>q</sup> = e</i>, thus <i>g<sup>h</sup> = g<sup>k</sup></i>.  &emsp;□</p>
+
+<p>Thus every element of a group, generates a cyclic subgroup of <i>G</i>. Generally such a subgroup will be properly contained in <i>G</i>.</p>
+
+<section aria-label="End">
+<a href="characteristic_integral_domain.html">&#171;The characteristic of an integral domain</a>
 <a href="index.html">Index</a>
-<a href="proprietàgruppi.html">Proprietà dei gruppi&#187;</a>
+<a href="cyclic_groups.html">Cyclic groups&#187;</a>
 </section>
 
 </div>

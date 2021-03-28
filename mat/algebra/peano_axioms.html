@@ -55,10 +55,10 @@
 
 <div class="eq">
 <p>+ : ℤ x ℤ → ℤ</p>
-<p>(a,b) ↦ a +b</p>
+<p>(<i>a,b</i>) ↦ <i>a + b</i></p>
 </div>
 
-<p>Il risultato dell'operazione di addizione, ossia l'elemento a+b &in; ℤ, prende il nome di <i>somma</i> di <i>a</i> e <i>b</i>.</p>
+<p>Il risultato dell'operazione di addizione, ossia l'elemento <i>a + b</i> &in; ℤ, prende il nome di <i>somma</i> di <i>a</i> e <i>b</i>.</p>
 
 <p>Si parla anche di operazioni <i>n</i>-arie per vari <i>n= 1,2,...</i>. Si tratta di applicazioni da <i>S x S x ... x S</i> in <i>S</i>. Per <i>n = 1</i> un'operazione 1-aria definita su <i>S</i> è un'applicazione da <i>S</i> a <i>S</i>. Se <i>S = P(X)</i>, un esempio di applicazione 1-aria è l'applicazione che associa ad ogni sottoinsieme di <i>X</i> il suo complementare.</p>
 
@@ -94,7 +94,7 @@ n \cdot m \stackrel{\text{def}}{=}\begin{cases}
 
 <h2>The principle of mathematical induction</h2>
 
-<p>Il terzo assioma di Peano ℕ<sub>3</sub> è alla base del principio di induzione. Esso sostanzialmente dice che se un sottoinsieme <i>U</i> di ℕ è tale che contiene lo zero e, accanto ad ogni elemento, contiene anche il successivo, allora necessariamente U coincide con tutto ℕ. L'accettazione di questo assioma fornisce "gratuitamente" un metodo di dimostrazione per induzione che è di fondamentale importanza matematica. Vediamo in che cosa consiste. Supponiamo che per ogni intero <i>n &ge; 0</i> si possa formulare una proposizione <i>P(n)</i>, dipendente dall'interno <i>n</i>, ad esempio la proposizione seguente: "se un insieme finito <i>S</i> ha <i>n</i> elementi, allora l'insieme delle parti di <i>S</i> ha 2<sup>n</sup> elementi". Supponiamo di voler provare che la proposizione <i>P(n)</i> è vera per ogni <i>n</i>: si tratta di dimostrare infinite proposizioni! Ebbene il metodo di dimostrazione per induzione permette di ottenere questi <i>infinit</i> risultati con due soli passi. Si procede nel modo seguente:</p>
+<p>Il terzo assioma di Peano ℕ<sub>3</sub> è alla base del principio di induzione. Esso sostanzialmente dice che se un sottoinsieme <i>U</i> di ℕ è tale che contiene lo zero e, accanto ad ogni elemento, contiene anche il successivo, allora necessariamente U coincide con tutto ℕ. L'accettazione di questo assioma fornisce "gratuitamente" un metodo di dimostrazione per induzione che è di fondamentale importanza matematica. Vediamo in che cosa consiste. Supponiamo che per ogni intero <i>n &ge; 0</i> si possa formulare una proposizione <i>P(n)</i>, dipendente dall'interno <i>n</i>, ad esempio la proposizione seguente: "se un insieme finito <i>S</i> ha <i>n</i> elementi, allora l'insieme delle parti di <i>S</i> ha 2<sup><i>n</i></sup> elementi". Supponiamo di voler provare che la proposizione <i>P(n)</i> è vera per ogni <i>n</i>: si tratta di dimostrare infinite proposizioni! Ebbene il metodo di dimostrazione per induzione permette di ottenere questi <i>infinit</i> risultati con due soli passi. Si procede nel modo seguente:</p>
 
 <ol>
 	<li><p>Base dell'induzione: Dimostrare che è vera <i>P(0)</i></p></li>
@@ -108,7 +108,7 @@ n \cdot m \stackrel{\text{def}}{=}\begin{cases}
 <div class="def">
 <p>Provare che per ogni intero positivo <i>n</i> la somma dei cubi dei primi <i>n</i> numeri pari è data da</p>
 <div class="eq">
-<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2n)<sup>3</sup> = 2n<sup>2</sup> (n+1)<sup>2</sup></i></p>
+<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i>)<sup>3</sup> = 2n<sup>2</sup> (n+1)<sup>2</sup></i></p>
 </div>
 
 <p><b>Proof</b> - Dovremo provare:</p>
@@ -146,7 +146,7 @@ n \cdot m \stackrel{\text{def}}{=}\begin{cases}
 </div>
 
 <div class="def">
-<p><b>Theorem 1.9</b> (<i>𝕄: The Well-Ordering Theorem</i> or <i>of the least element</i>) Every nonempty set <i>T</i> of ℕ contains a least element. That is, there is an element <i>t &in; T</i> such that <i>t &le; x</i> &forall; <i>x &in; T</i></p>
+<p><b>Theorem 1.9</b> (<i>𝕄: The Well-Ordering Theorem</i> or <i>of the least element</i>) Every nonempty set <i>T</i> of ℕ contains a least element. That is, there is an element <i>t &in; T</i> such that <i>t &le; x</i> &forall;<i>x &in; T</i></p>
 </div>
 
 <p>Un insieme parzialmente ordinato <i>X</i> si dice <i>ben ordinato</i> se ogni sottoinsieme non vuoto di <i>X</i> ha un elemento minimo.</p>
@@ -154,7 +154,7 @@ n \cdot m \stackrel{\text{def}}{=}\begin{cases}
 <div class="def">
 <p><b>Proposition 1.10</b> Il principio del buon ordinamento e il principio di induzione forte sono equivalenti.</p>
 
-<p><b>Proof</b> - Assumiano vero il principio di induzione forte e proviamo il principio del buon ordinamento. Supponiamo che <i>S</i> sia un sottoinsieme non vuoto di ℕ. Sia <i>T = ℕ \ S</i>. Supponiamo per assurdo che <i>S</i> non abbia elemento minimo. Allora <i>1 &ne; S</i>, perché se lo avesse allora sarebbe sicuramente l'elemento minimo di <i>S</i> poichè è l'elemento minimo di ℕ. Allora <i>1 &in; T</i>. Si suponsa che per un <i>k</i>, si abbia <i>1 &le; i &le; k, i &in; T</i>. Si consideri <i>k+1</i>. Se <i>k+1</i> fosse in <i>S</i>, sarebbe l'elemento minimo di <i>S</i> perchè nessun <i>i</i> compreso tra 1 e <i>k</i> si trova in <i>S</i>. Siccome stiamo assumento che <i>S</i> non abbia elemento minimo, si deve avere <i>k+1 &in; T</i>. Per il principio di induzione forte, <i>T</i> deve contenere tutti i numeri naturali e quindi essere uguale ad ℕ. Segue che <i>S = ∅</i>. Questa è una contraddizione, concludiano quindi che <i>S</i> possiede elemento minimo.</p>
+<p><b>Proof</b> - Assumiano vero il principio di induzione forte e proviamo il principio del buon ordinamento. Supponiamo che <i>S</i> sia un sottoinsieme non vuoto di ℕ. Sia <i>T = ℕ \ S</i>. Supponiamo per assurdo che <i>S</i> non abbia elemento minimo. Allora <i>1 &ne; S</i>, perché se lo avesse allora sarebbe sicuramente l'elemento minimo di <i>S</i> poichè è l'elemento minimo di ℕ. Allora <i>1 &in; T</i>. Si suponsa che per un <i>k</i>, si abbia 1 &le; <i>i</i> &le; <i>k, i &in; T</i>. Si consideri <i>k+1</i>. Se <i>k+1</i> fosse in <i>S</i>, sarebbe l'elemento minimo di <i>S</i> perchè nessun <i>i</i> compreso tra 1 e <i>k</i> si trova in <i>S</i>. Siccome stiamo assumento che <i>S</i> non abbia elemento minimo, si deve avere <i>k+1 &in; T</i>. Per il principio di induzione forte, <i>T</i> deve contenere tutti i numeri naturali e quindi essere uguale ad ℕ. Segue che <i>S = ∅</i>. Questa è una contraddizione, concludiano quindi che <i>S</i> possiede elemento minimo.</p>
 
 <p>Adesso si supponga che il principio del buon ordinamento sia vero e proviamo il principio di induzione forte. Sia <i>U</i> un sottoinsieme di ℕ verificante le ipotesi di 𝕀 e supponiamo per assurdo che U &ne; ℕ. Allora detto <i>V = N \ U</i>, risulta <i>V &ne; ∅</i>. Per la 𝕄 esiste un minimo <i>m &in; V</i>, che sarà maggiore di zero, perchè <i>0 &in; U</i>. Essendo <i>m</i> minimo per <i>V</i>, ogni <i>k</i> tale che sia <i>0 &le; k &lt; m</i> sta in <i>U</i>. Ma allora per la (b) di 𝕀, <i>m &in; U</i>, che è un assurdo.□</p>
 

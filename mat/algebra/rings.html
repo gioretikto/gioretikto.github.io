@@ -21,8 +21,7 @@
 
 <h1>Rings</h1>
 
-<p>Different sets are naturally endowed with two binary operations: addition and multiplication. Examples that quickly come to mind are the integers, the integers modulo <i>n</i>, the real numbers, matrices, and polynomials. The <i>notion</i> of Rings describing this kind of sets was originated in the
-mid-19th century by Richard Dedekind.</p>
+<p>Different sets are naturally endowed with two binary operations: addition and multiplication. Examples that quickly come to mind are the integers, the integers modulo <i>n</i>, the real numbers, matrices, and polynomials. The <i>notion</i> of Rings describing this kind of sets was originated in the mid-19th century by Richard Dedekind.</p>
  
 <p><b>6.1.1 Definition</b> A ring (<i>R</i>, +, ⋅) is a set equipped with <i>two binary operations</i> indicated by + and ·,</p>
 
@@ -95,6 +94,8 @@ mid-19th century by Richard Dedekind.</p>
 		<p>(<i>R<sup>X</sup></i>, +, ·) is a ring: it is a commutative ring only if <i>R</i> is communtative; it is unitary only if <i>R</i> is unitary as well. The unit function is that mapping every element of <i>X</i> to the unit of <i>R</i>.</p>
 		</li>
 		
+		<div id="direct_sum">
+		
 		<li><p>Let <i>R<sub>1</sub>, R<sub>2</sub> , ... , R<sub>n</sub></i> be rings. We can use these to construct a new ring by cartesian product</p>
 		
 		<div class="eq">
@@ -119,7 +120,7 @@ mid-19th century by Richard Dedekind.</p>
 		<div class="eq">
 		<p><i>R<sub>1</sub> ⊕ R<sub>2</sub> ⊕ ... ⊕ R<sub>n</sub></i></p>
 		</div>
-		
+		</div>
 	</ul>
 
 <p>The following properties follow from ring axiomes, we do not prove them since we've already proved it in the case of <a href="Z.html">integers</a> (without making it specific for integers alone).</p>
@@ -159,104 +160,92 @@ mid-19th century by Richard Dedekind.</p>
 
 <ul>
 	<li><p>A <i>commutative ring</i> satisfies the commutative property for multiplication.</p></li>
-	<li><p>A <i>commutative ring with unit</i> is a ring with a nonzero element that is an identity under multiplication.</p></li>
-	<li><p>An <i>integral domain</i> is a commutative ring with unity and no ­zero-­divisors i.e. <i>ab = 0 ⇒ a</i> = 0 or <i>b</i> = 0.</p></li>
+	<li><p>A <i>commutative ring with identity</i> is a ring with a nonzero element, 1 &in; <i>R</i>, that is an identity under multiplication i.e. if 1 ⋅ <i>a = a</i> &forall;<i>a</i> &in; <i>R</i>.</p>
+	
+	<p>Let <i>R</i> be a ring with identity. The element <i>a ∈ R</i> is a <b>unit</b> or <b>invertible elements</b>, if it has a multiplicative inverse in <i>R</i>, that is if there exists <i>b ∈ R</i> such that <i>ab = ba</i> = 1, that is <i>a</i> divides 1. The element <i>b</i> is called the <b>inverse</b> of <i>a</i>, and is written <i>a<sup>−1</sup></i>. It is unique; for if <i>b</i> and <i>c</i> are both inverses of <i>a</i>, then</p>
+	<div class="eq">
+	<p><i>c = 1c</i> = (<i>ba</i>)<i>c</i> = <i>b</i>(<i>ac</i>) = <i>b ⋅ 1 = b</i>.</p>
+	</div>
+	<p>The units in ℤ are 1 and −1.</p>
+	<p><b>Remark</b> Let <i>u &in; R</i> be a unit with inverse <i>v</i>, so that <i>uv</i> = 1. For any <i>b &in; R</i>  we have <i>u</i>(<i>vb</i>) = (<i>uv</i>)<i>b</i> = 1<i>b = b</i>. Therefore</p>
+	
+	<div class="eq">
+	<p>a unit divides every element of <i>R</i></p>
+	</div>
+	
+	</li>
+	
+	<li><p>An <i>integral domain</i> is a commutative ring with identity and no ­zero-­divisors <i>i.e. ab = 0 ⇒ a</i> = 0 or <i>b</i> = 0.</p></li>
 	<li><p>A <i>field</i> is a <i>multiplicative ring with unit</i> having a multiplicative inverse for every non zero element.</p>
 	<li><p>A <i>division ring</i> is a ring with identity (not necessarily commutative).</p></li>
 </ul>
 
-<p>The property "has a unit" = "has a multiplicative inverse".</p>
+<p><b>6.1.3 Prposition.</b> Let <i>R</i> be a ring with identity.</p>
 
-<p>It is clear that only that rings the properties mentioned above cannot be considered isomorphic e.g. a ring with unit cannot be isomorphic to a ring without unit. For example for any integer <i>n</i> &in; ℕ, let</p>
+<ol type="a">
+	<li><p>The identity is a unit; it is equal to its inverse.</p></li>
+	<li><p>If <i>a</i> is a unit, then so is <i>a</i><sup>−1</sup>; its inverse is a.</p></li>
+	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b<sup>−1</sup></i> <i>a<sup>−1</sup></i>.</p></li>
+</ol>
 
-<div class="eq">
-<p><i>n</i>ℤ = {<i>nk : k &in; ℤ</i>}</p>
+<p><b>Proof</b>.</p>
+
+<ol type="a">
+	<li><p>1⋅ 1 = 1</p></li>
+	<li><p>This is shown by the equation <i>aa<sup>−1</sup> = a<sup>−1</sup> a</i> = 1</p></li>
+	<li><p>We have (<i>ab</i>)(<i>b<sup>−1</sup>a<sup>−1</sup></i>) = <i>a</i> (<i>bb<sup>−1</sup></i>) <i>a<sup>−1</sup>= aa<sup>−1</sup></i> = 1.</p>
+	<p>and, similarly, (<i>b<sup>−1</sup> a<sup>−1</sup></i>)(<i>ab</i>) = 1.□</p></li>
+</ol>
+
+<div id="associates">
+
+<p><b>6.1.4 Definition.</b> Two elements <i>a, b</i> of the integral domain <i>R</i> are said to be <b>associates</b> if there is a unit <i>u ∈ R</i> such that <i>b = au</i>.
+This is not a different proposition from the one we already gave when studying the integers: Two elemens <i>a</i> and <i>b</i> of ℤ such that <i>a</i>|<i>b</i> e <i>b</i>|<i>a</i> are said associates</p>
+
+<p>If <i>a</i> and b are associates, <i>a = cb</i> and <i>b = da</i>, hence <i>a = cda</i>. The cancellation law gives 1 = <i>cd</i>, so both <i>c</i> and <i>d</i> are units. </p>
+
+<p>Note that, by the above Proposition, it follows that being associates is an equivalence relation: it is</p>
+
+<ul>
+	<li><p><i>reflexive</i>, since <i>a = a</i>1;</p></li>
+	<li><p><i>symmetric</i>, since <i>b = au</i> implies <i>a = bu<sup>−1</sup></i>;</p></li>
+	<li><p><i>transitive</i>, since <i>b = au</i> and <i>c = bv</i> imply <i>c = a</i>(<i>uv</i>).</p></li>
+</ul>
+
+
+<p><i>R</i> is partitioned into equivalence classes, called <b>associate classes</b>. For example, in ℤ, the associate classes are the sets {<i>n, −n</i>} for all non-negative integers <i>n</i>.</p>
 </div>
 
-<p>be the set of integer multiplies of <i>n</i>. The set <i>nℤ</i> is a subset of ℤ and inherits addition and multiplication from ℤ. If we take two elements from <i>nℤ</i>, say <i>nh</i> and <i>nk</i> we can see that</p>
+<p><b>6.1.5 Proposition.</b> Every field <i>F</i> is an integral domain</p>
+
+<p><b>Proof.</b> Let <i>F</i> be a field. Supposte that <i>a,b &in; F</i>, where <i>a</i> &ne; 0 and <i>a ⋅ b </i>= 0. Since <i>a</i> &ne; 0, there exists a multiplicative inverse <i>a<sup>−1</sup></i> to <i>a</i>. By the associativity of the multiplication, we have</p>
+
+<div class="eq">
+<p><i>a<sup>−1</sup></i> ⋅ (<i>a⋅b</i>) = (<i>a<sup>−1</sup> ⋅ a</i>) ⋅ <i>b = 1 ⋅  b</i>= 0</p>
+</div>
+
+<p>and hence <i>b = 0</i>. Thus, we have an integral domain.□</p>
+
+<p>It is clear that only that rings the properties mentioned above cannot be considered isomorphic <i>e.g.</i> a ring with unit cannot be isomorphic to a ring without unit. For example for any integer <i>n</i> &in; ℕ, let</p>
+
+<div class="eq">
+<p><i>n</i>ℤ = {<i>nk : k</i> &in; ℤ}</p>
+</div>
+
+<p>be the set of integer multiplies of <i>n</i>. The set <i>n</i>ℤ is a subset of ℤ and inherits addition and multiplication from ℤ. If we take two elements from <i>n</i>ℤ, say <i>nh</i> and <i>nk</i> we can see that</p>
 
 <div class="eq">
 <p><i>nk + nh = n</i> (<i>k + h</i>) &emsp; and &emsp; (<i>nk</i>)(<i>nh</i>) = <i>n</i>(<i>knh</i>)</p>
 </div>
 
-<p>by distributivity and associativity. Addition and multiplication are both associative in <i>n</i>ℤ and multiplication is distributive with respect to addition. In <i>n</i>ℤ, 0 is the additive identity. However, there is no multiplicative identity in <i>n</i>ℤ unless <i>n</i> = &pm; 1. There are also no multiplicative inverse for <i>nk</i> unless <i>n</i>  = &pm; 1 and <i>k</i> = &pm; 1.</p>
+<p>by distributivity and associativity. Addition and multiplication are both associative in <i>n</i>ℤ and multiplication is distributive with respect to addition. In <i>n</i>ℤ, 0 is the additive identity. However, there is no multiplicative identity in <i>n</i>ℤ unless <i>n</i> = &pm; 1. There are also no multiplicative inverse for <i>nk</i> unless <i>n</i> = &pm; 1 and <i>k</i> = &pm; 1.</p>
 
-<p>As a consequence ℤ is not isomorphic to 2ℤ. We can view <i>nℤ</i> as a "substructure" of ℤ.</p>
-
-<p><b>6.1.3 Definition.</b> Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a called a <b>subring</b> of <i>R</i> if <i>S</i> is a ring with respect to the same operations of <i>R</i>.</p>
-
-<p>For <i>S</i> to be a subring of the ring <i>R, S</i>, it must be an <i>additive subgroup</i> of the group (<i>R</i>, +), i.e. (<i>S</i>, +) must be a group.</p>
-
-<p>The following is a criterion it is necessary and sufficient for <i>S</i> to be a subring.</p>
-
-<p><b>6.1.4 Proposition</b>. Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a subring of <i>R</i> if and only if <i>S</i> is closed under subtraction and under multiplication that is:</p>
-
-<div class="eq">
-<p><i>a − b &in; S, &emsp; ab &in; S &emsp; &forall;a,b &in; S</i> &emsp; (<b>4.58</b>)</p>
-</div>
-
-<p>If <i>S</i> is a subring the condition above is certainly satisfied. Viceversa suppose that for all <i>a</i> and <i>b</i> in <i>S</i>, we have <i>a − b &in; S, ab &in; S</i>: we have to prove that (<i>S</i>, +) is an additive group i.e. that it satisfies:</p>
-
-<ul>
-	<li><p><i>a+b &in; S</i></p></li>
-	<li><p>0 &in; S</i></p>
-	<li><p>−<i>a &in; S</i></p>
-</ul>
-
-<p>(the associativity with respect to + is automatically verified). Since condition (4.8) is true for every <i>a,b &in; S</i> it also hold true for <i>a = b</i> hence <i>a −a = 0 &in; S</i>. If we take the elements <i>a</i> and 0, it follows that <i>0−a = −a &in; S</i>. It is also true that given <i>a,b &in; S</i> also <i>a</i> and <i>−b</i> are in <i>S</i> and thus follows <i>a</i>−(−<i>b</i>) = <i>a + b &in; S</i>.□</p>
-
-<p>For example, (ℤ, +, ·) is a subring of (R, +, ·), (2ℤ, +, ·) is a subring of (Z, +, ·).</p>
-
-<h2>Example of subrings</h2>
-
-<ul>
-	<li><p>Every ring posseses two subrings, known as <i>trivial subrings</i>: the whole ring and the ring containing only 0.</p></li>
-	<li><p>In <i>R = ℤ</i>, <i>S = nℤ</i> (<i>n</i> &in; ℕ) is a subring of ℤ. Take <i>a,b &in; nℤ</i>; let <i>a = nx, b = ny</i>, for some integers <i>x,y</i> &in; ℤ. Then</p>
-	
-	<div class="eq">
-		<p><i>a−b = n</i>(<i>x − y</i>) &in; <i>nℤ</i></p>
-		<p><i>ab = n</i> (<i>nxy</i>) &in; <i>nℤ</i></p>
-	</div>
-	
-	<p>so, <i>nℤ</i> passes the test of Proposition 6.1.4.</p>
-	
-	<p>Proposition 4.18 shows that any subring of ℤ is of this form.</p></li>
-	
-	<li><p>Let <i>R</i> a ring and <i>a &in; R</i>. Let</p>
-	
-	<div class="eq">
-	<p><i>S<sub>a</sub></i> = {<i>x &in; R</i> | <i>xa = ax</i>}</p>
-	</div>
-	
-	<p><i>S<sub>a</sub></i> is a subring of <i>R</i>.</p></li>
-	
-	<li><p>In the ring 𝕂[<i>x</i>] the subset of polynomials with costant term equal to zero is a subring.</p></li>
-	
-	<li><p>The intersection of an arbitrary family of subrings of a ring <i>R</i> is a subring of <i>R</i>.</p></li>
-	
-</ul>
-
-<p><b>6.1.5 Proposition</b>. Every subring of ℤ is of the form <i>n</i>ℤ, with <i>n</i> &in; ℕ.</p>
-
-<p><b>Proof.</b> We previouslt showed that <i>nℤ</i> is a subring of ℤ. Now we show that <i>all</i> subrings are of this form. Let <i>S</i> be a subring of ℤ. Certainly 0 &in; <i>S</i>. If <i>S</i> = {0}, the <i>S</i> = 0ℤ is of the required form. Suppose it is not. If <i>n &in; S</i>, the also <i>−n &in; S</i>; so <i>S</i> must contain positive integer. Let <i>m</i> be the smallest positive integer in <i>S</i>. We will prove that <i>S = nℤ</i>. Since <i>S ⊇ nℤ</i>, it is sufficien to prove to opposite inclusion. Dividing <i>h</i> by <i>m</i> we have <i>h = mq + r</i> with 0 &le; <i>r &lt; m</i>. Since <i>r &in; S</i> it must necessairly be <i>r = 0</i> to avoid the contradiction of <i>m</i> being the smallest positive integer in <i>S</i>. Hence any element of <i>S</i> is a multiple of <i>m</i>.□</p>
-
-<p>We've seen that there exist integral domain which are not fields such as ℤ. However there are no <i>finite integral domains</i> which are not fields as the following propisition proves.</p>
-
-<p><b>6.1.6 Proposition</b>. A finite integral domain (an integral domain with only a finite number of elements) is a field.</p>
-
-<p><b>Proof</b>. Let <i>D</i> be a finite integral domain with unity denoted by 1 and <i>D*</i> = {<i>a<sub>1</sub>,...,a<sub>n</sub></i>} the nonzero elements of the integral domain. We must show that every nonzero element of the integral domain has a multiplicative inverse. Consider an arbitrary element <i>a &in; D*</i> and define</p>
-
-<div class="eq">
-<p><i>&Psi;: D* ⟶ D*</i></p>
-<i>&emsp; a<sub>1</sub> ⟶ aa<sub>1</sub></i></p>
-</div>
-
-<p>by <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>aa<sub>i</sub></i>. If <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>&Psi;</i>(<i>a<sub>j</sub></i>) then <i>aa<sub>i</sub> = aa<sub>j</sub></i>, so by the cancellation property, <i>a<sub>i</sub> = a<sub>j</sub></i> hence the <i>n</i> products <i>aa<sub>i</sub></i> are all distinct and the set {<i>aa<sub>1</sub>, ...,aa<sub>n</sub></i>} coincides with the set <i>D*</i>. Thus we see that <i>&Psi;</i> is a one-to-one function. Since <i>D*</i> is finite, the mapping <i>&Psi;</i> is onto <i>D*</i>. But one of the elements of <i>D*</i> is the multiplicative identity 1. Therefore, <i>&Psi;</i>(<i>a<sub>k</sub></i>) = 1 for some <i>a<sub>k</sub> &in; D*</i>; that is <i>aa<sub>k</sub></i> = 1. This shows that <i>a</i> has a multiplicative inverse and hence <i>D</i> is a field. Note that since <i>D</i> is commutative that <i>aa<sub>j</sub> = a<sub>j</sub>a</i>.□</p>
+<p>As a consequence ℤ is not isomorphic to 2ℤ. We can view <i>n</i>ℤ as a "substructure" of ℤ.</p>
 
 <section aria-label="End">
 <a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>
 <a href="index.html">Index</a>
-<a href="exercises_rings.html">Exercises on rings &#187;</a>
+<a href="subrings.html">Subrings &#187;</a>
 </section>
 
 </div>

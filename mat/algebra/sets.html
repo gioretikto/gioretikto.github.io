@@ -22,7 +22,9 @@
 
 <h1>Sets</h1>
 
-<p>We assume as primitive the notion of <b>set</b> (we must accept without definition some terms that are basic objects in our mathematical systems.) as a collection of objects named <b>elements</b>, about which it is possible to determine whether or not a particular object is a member of the set. Sets are usually denoted by capital letters <i>A, B, X, . . .</i> and its elements with lower case letters <i>a, b, x</i>, ...
+<p>We assume as primitive the notion of <b>set</b> (we must accept without definition some terms that are basic objects in our mathematical systems). Suppose, we define the term <i>set</i> as “A set is a well-defined collection of objects.” One naturally asks what is meant by a collection. We could define it as “A collection is an aggregate of things.” What, then, is an aggregate? Now our language is finite, so after some time we will run out of new words to use and have to repeat some words already examined. The definition is then circular and obviously worthless. Mathematicians realize that there must be some undefined or primitive concept with which to start. At the moment, they have agreed that <i>set</i> shall be such a primitive concept. We shall not define set, but shall just hope that when such expressions as “the set of all natural numbers” or “the set of all students of a school” are used, people’s various ideas of what is meant are sufficiently similar to make communication feasible.</p>
+
+<p>A set <i>A</i> is a collection of objects named <b>elements</b>, about which it is possible to determine whether or not a particular object is a member of the set. Sets are usually denoted by capital letters <i>A, B, X, . . .</i> and its elements with lower case letters <i>a, b, x</i>, ...
 <br>
 To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we write</p>
 
@@ -50,7 +52,7 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 
 <p>The vertical slash is shorthand for “such that,” and we read: <i>A</i> is the set of all <i>n</i> of ℕ such that <i>n</i> is less than 10.</p>
 
-<p>Di seguito vengono elencati i principali simboli, che sono fondamentali nel linguaggio matematico, becauese they allow to write permettono di scrivere in forma compatta statements otherwise too long to express:</p>
+<p>The following are the fundamentals symbols used in mathematics, which allow to write long statements in a concise symbolic way otherwise too long to express:</p>
 
 <table>
 <thead>
@@ -63,27 +65,17 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 <tr><td>&Exists;!</td> <td>there exists one and only one</td></tr>
 <tr><td>&in; (&notin;)</td> <td>belongs to (does not belong to)</td></tr>
 <tr><td>&sube; (&nsube;)</td> <td>is a subset (is not a subset)</td></tr>
+<tr><td>⊂ (⊊)</td> <td>is properly contained</td></tr>
 <tr><td>&rArr; (&nrArr;)</td> <td>implies (does not implies)</td></tr>
 <tr><td>&hArr;</td> <td>if and only if</td></tr>
 <tr><td>| o :</td> <td>such that</td></tr>
 <tr><td>:=</td> <td>equal by definition</td></tr>
+<tr><td>The symbol ⇐⇒ and the word “iff” both mean “if and only if.”</td></tr>
 </tbody>
 
 </table>
 
-<p>Per simboli logici intendiamo i seguenti simboli:</p>
-
-<ul>
-	<li><p>Connettivi: negazione: ¬ (“non”); congiunzione: ∧ (“e”); disgiunzione: ∨(“o”);</p></li>
-</ul>
-
-<p>Due insiemi sono uguali se contengono gli stessi elementi; scriveremo</p>
-
-<div class="eq">
-<p><i>A = B</i></p>
-</div>
-
-<p>If <i>B</i> is a set whose elements are included in a set <i>A</i> we say that <i>B</i> is included in <i>A</i> or that <i>B</i> <i>subset</i> of <i>A</i> </p>
+<p>If <i>B</i> is a set whose elements are included in a set <i>A</i> we say that <i>B</i> is included in <i>A</i> or that <i>B</i> <i>subset</i> of <i>A</i></p>
 
 <div class="eq">
 <p><i>B ⊆ A</i></p>
@@ -92,18 +84,34 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 <p>To exclude the possibility of equality between <i>B</i> and <i>A</i> i.e. if there are elements of <i>A</i> not within <i>B</i> we use the notation</p>
 
 <div class="eq">
-<p><i>B ⊂ A</i></p>
+<p><i>A ⊊ B</i> &emsp; or&emsp;<i>A ⊂ B</i></p>
 </div>
+
+<p><b>Proper inclusion</b>: The assertion "A ⊊ B" (A is a proper subset of B) means that every element of A is an element of B, but there is at least one element of B that is not an element of A so <i>A ≠ B</i>. Symbolically</p>
+
+<div class="eq">
+<p><i>A ⊊ B</i>  &emsp; ⇐⇒ &emsp; [&forall;<i>a, a &in; A ⇒ a &in; B</i>, and ∃<i>b &in; B</i> | <i>b &ne; A</i>]</p>
+</div>
+
+<p>For example, ℤ ⊊ ℝ because every integer is a real number but there are real numbers that are not integers.</p>
+
+<p>Two sets are said to be <i>equal</i>, if every element of one set is in the other set and vice-versa, we write</p>
+
+<div class="eq">
+<p><i>A = B</i></p>
+</div>
+
+<p>There is a simple way to show that two sets are equal, to show that <i>A = B</i>, show first that <i>B ⊂ A</i> and then that <i>B ⊃ A</i>. This means that <i>A</i> is included in <i>B</i> and <i>B</i> is included in <i>A</i> and thus arise the term <i>double-inclusion</i>.</p>
 
 <p>The empty set does not contain elements, indicated with ∅, or simly as { }. The empty set is a subset of every set (included itself).</p>
 
-<p>Dati due insiemi <i>A</i> e <i>B</i>, si definisce loro <i>intersezione</i> e si indica con <i>A &cap; B</i>, l'insieme di tutti gli elementi che appartengono ad <i>A</i> o a <i>B</i>. In simboli</p>
+<p>The <i>intersection</i> of two sets <i>A</i> and <i>B</i> is the set of all those elements that belong to both <i>A</i> and <i>B</i> and it is indicated as <i>A &cap; B</i>, symbolically</p>
 
 <div class="eq">
 <p><i>A &cap; B</i> := {<i>x</i> | <i>x &in; A</i> and <i>x &in; B</i>}</p>
 </div>
 
-<p>L'<i>unione</i> di due insiemi <i>A</i> e <i>B</i>, che si indica con <i>A &cup; B</i>, è l'insieme degli elementi che appartengono ad <i>A</i> o a <i>B</i>. In simboli</p>
+<p>Their <b>union</b> of two sets <i>A</i> and <i>B</i>, is the set of elements that belong to either or both of them <i>A &cup; B</i>,</p>
 
 <div class="eq">
 <p><i>A &cup; B</i> := {<i>x</i> | <i>x &in; A ∨ x &in; B</i>}</p>
@@ -150,7 +158,7 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 <p><b>Associative law</b> (<i>E</i> ∪ <i>F</i>) ∪ <i>G = E</i> ∪ (<i>F ∪ G</i>)</p>
 <p><b>Distributive law</b> (<i>E</i> ∪ <i>F</i>)<i>G = EG</i> ∪ <i>FG</i></p>
 
-<p>There is a resemblance between the properties of the union and intersection with the faminial distributive property x(y + z) = xy + xz for numbers as well for the associative and commutative properties.</p>
+<p>There is a resemblance between the properties of the union and intersection with the faminial distributive property <i>x</i>(<i>y + z</i>) = <i>xy + xz</i> for numbers as well for the associative and commutative properties.</p>
 
 <p>To prove the distributive property, we denote the right and left member with <i>E</i> and <i>F</i> respectively. Supposing that <i>x &in; E</i>. Then <i>x &in; A</i> and <i>x &in; B &bigcup; C</i> i.e. <i>x &in; B</i> or <i>x &in; C</i> (possibily both). Thus <i>x &in; A &Intersection; B</i> or <i>x &in; A &Intersection; C</i>), so that <i>x &in; F</i>. Thus <i>E &subset; F</i>. Supposing also that <i>x &in; F</i>. Then <i>x &in; A &Intersection; B</i> or <i>x &in; A &Intersection; C</i>, i.e., <i>x &in; A e x &in; B &bigcup; C</i>. Thus <i>x &in; A &Intersection;</i> (B &bigcup; C), so that <i>F &subest; E</i>. It follows that <i>E = F</i>. </p>
 
@@ -202,7 +210,7 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 
 <p>The following are the statements of <b>De Morgan’s Laws</b></p>
 
-<p>(A &bigcup; B)<sup>c</sup> = A<sup>c</sup> &Intersection; B<sup>c</sup></p>
+<p>(<i>A</i> &bigcup; <i>B</i>)<sup>c</sup> = A<sup>c</sup> &Intersection; B<sup>c</sup></p>
 
 <p>(A &Intersection; B)<sup>c</sup> = A<sup>c</sup> &bigcup; B<sup>c</sup></p>
 
@@ -210,13 +218,13 @@ To indicate that a particular element <i>a</i> belongs to the set <i>A</i>, we w
 
 <h2>Cartesian Product</h2>
 
-<p>Un'altra operazione tra due insiemi è il <i>prodotto cartesiano</i> che si indica con <i>A x B</i>. Esso consiste di tutte le coppie ordinate (<i>a, b</i>), dove il primo elemento varia in <i>A</i> e il secondo in <i>B</i>. Per coppia ordinata <i>(a, b)</i>, si intende la coppia formata dai due elementi nell'ordine dato: prima <i>a</i> poi <i>b</i>.</p>
+<p>Another operation between sets is the Cartesian product of two sets <i>A</i> and <i>B</i>, denoted <i>A</i> × <i>B</i>, which is the set of all ordered pairs (<i>a, b</i>) where the first element of the couple <i>a</i> is in <i>A</i> and the second <i>b</i> is in <i>B</i>. In terms of set-builder notation, that is</p>
 
 <div class="eq">
-<p><i>A x B</i> := {(<i>a,b</i>) | <i>a</i> &in; <i>A, b &in; B</i>}</p>
+<p><i>A</i> x <i>B</i> := {(<i>a,b</i>) | <i>a</i> &in; <i>A, b &in; B</i>}</p>
 </div>
 
-<p>In the figure below is indicated the cartesian product <i>A x B</i>:</p>
+<p>In the figure below is indicated the cartesian product <i>A</i> x <i>B</i>:</p>
 
 <ul>
     <li><p>between <i>X</i> = [1,2], <i>Y</i> = [2,5] (left)</p></li>

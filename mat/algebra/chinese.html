@@ -23,21 +23,21 @@
 
 <p>A clever method appearted first in the bookd <i>The Art of War</i>, by Sun Tsu, in the 3rd century AD, allows one to deduce an integer from its approximate size and its least nonnegative remainder modulo <i>m</i>, for a few small <i>m</i>. One early application was to count soldiers. It is sufficient to request the soldiers to line up 5 abreast, then 8, then 19, and to count each time how many soldiers are not lined up: these remainders <i>r<sub>i</sub></i>, for <i>i</i> = 1, 2 and 3, are smaller than 5, 8, and 19, respectively.</p>
 
-<p><b>Theorem 4.23</b> (<i>Chinese remainder theorem</i>). A systems of congruences,</p>
+<p><b>Theorem 4.23</b> (<i>Chinese remainder theorem</i>). Let <i>r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>n</sub></i> positive integers such that gcd(<i>r<sub>i</sub>, r<sub>j</sub></i>) = 1 for all pairs (<i>i, j</i>) with <i>i &ne; j</i>. Then the systems of congruences</p>
 
 <div class="eq">
-<p><i>x ≡ c<sub>1</sub></i> &emsp;mod r<sub>1</sub></p>
-<p>&emsp;&emsp;&emsp;&emsp;<i>x ≡ c<sub>2</sub></i> &emsp; mod <i>r</i><sub>2</sub> &emsp; (<b>4.6</b>)</p>
+<p><i>x</i> ≡ <i>c<sub>1</sub></i> &emsp;mod <i>r<sub>1</sub></i></p>
+<p>&emsp;&emsp;&emsp;&emsp;<i>x</i> ≡ <i>c<sub>2</sub></i> &emsp; mod <i>r</i><sub>2</sub></i> &emsp; (<b>4.6</b>)</p>
 <p>...</p>
-<p><i>x ≡ c<sub>3</sub></i> &emsp; mod r<sub>s</sub></p>
+<p><i>x</i> ≡ <i>c<sub>3</sub></i> &emsp; mod <i>r<sub>s</sub></i></p>
 </div>
 
-<p>with gcd(<i>r<sub>i</sub>, r<sub>j</sub></i>) = 1 for all pairs (i, j) with <i>i &ne; j</i>, admits a solution. This solution is unique modulo <i>R = r<sub>1</sub> r<sub>2</sub> ··· r<sub>s</sub></i> (any two solutions <i>x</i> and <i>y</i> are congruent modulo <i>R</i>).</p>
+<p>admits a unique solution modulo <i>R = r<sub>1</sub> r<sub>2</sub> ··· r<sub>s</sub></i> (any two solutions <i>x</i> and <i>y</i> are congruent modulo <i>R</i>).</p>
 
 <p><b>Proof</b>. Let <i>R<sub>k</sub> = R/r<sub>k</sub></i>; the hyphotesis gcd(<i>r<sub>i</sub>, r<sub>j</sub></i>) = 1 implies that gcd(<i>R<sub>k</sub>, r<sub>k</sub></i>) = 1. So the <i>k</i>-th congruence</p>
 
 <div class="eq">
-<p><i>R<sub>k</sub> x ≡ c<sub>k</sub></i> &emsp; (mod r<sub>k</sub>)</p>
+<p><i>R<sub>k</sub> x</i> ≡ <i>c<sub>k</sub></i> &emsp; (mod r<sub>k</sub>)</p>
 </div>
 
 <p>admits as unique solution, <i>x̄<sub>k</sub></i>, modulo <i>r<sub>k</sub></i> (as stated in <a href="linear_congruences.html">Proposition 4.18</a>), the number</p>
@@ -58,7 +58,7 @@
 <p><i>x̄ ≡ R<sub>1</sub>x̄<sub>1</sub> ≡ c<sub>1</sub></i> &emsp;mod r<sub>1</sub></p>
 <p>&emsp;&emsp;&emsp;&emsp;<i>x̄ ≡ R<sub>2</sub>x̄<sub>2</sub> ≡ c<sub>2</sub></i> &emsp; mod r<sub>2</sub> &emsp; (<b>4.7</b>)</p>
 <p>...</p>
-<p><i>x̄ ≡ R<sub>3</sub>x̄<sub>3</sub> ≡ c<sub>3</sub></i> &emsp; mod r<sub>s</sub></p>
+<p><i>x̄ ≡ R<sub>3</sub>x̄<sub>3</sub> ≡ c<sub>3</sub></i> &emsp; mod <i>r<sub>s</sub></i></p>
 </div>
 
 <p>thus x̄ is a solution of the system.</p>
@@ -66,7 +66,7 @@
 <p>As to the unicity modulo <i>R</i>, let <i>ȳ</i> be another solution of the system; in other words, assume that</p>
 
 <div class="eq">
-<p><i>x̄ ≡ c<sub>k</sub> ≡ ȳ</i> &emsp; (mod <i>r<sub>k</sub></i>),  &emsp; for <i>k</i> = 1, ..., s.</p>
+<p><i>x̄ ≡ c<sub>k</sub> ≡ ȳ</i> &emsp; (mod <i>r<sub>k</sub></i>),  &emsp; for <i>k</i> = 1, ..., <i>s</i>.</p>
 </div>
 
 <p>so ȳ ≡ x̄ (mod <i>r<sub>k</sub></i>) for each <i>k</i>. Thus <i>r<sub>k</sub></i> | (<i>x̄ − ȳ</i>) for each <i>k</i>. But
@@ -86,9 +86,9 @@ x</i> ≡ 8 (mod 13).
 <p>By the Chinese remainder theorem, it admits a unique solution modulo <i>R</i> = 7 ⋅ 10 ⋅ 13 = 910. We have <i>R<sub>1</sub></i> = 10 ⋅ 13 = 130; <i>R<sub>2</sub></i> = 7 ⋅ 13 = 91; <i>R<sub>3</sub></i> = 7 ⋅ 10 = 70. Thus we need to solve the following congruences</p>
 
 <div class="eq">
-<p>130 ⋅ x ≡ 1 (mod 7)</p>
-<p>91 ⋅ x ≡ 3 (mod 10)</p>
-<p>70 ⋅ x ≡ 8 (mod 13)</p>
+130 ⋅ <i>x</i> ≡ 1 (mod 7)</p>
+91 ⋅ <i>x</i> ≡ 3 (mod 10)</p>
+70 ⋅<i>x</i> ≡ 8 (mod 13)</p>
 </div>
 
 <p>The solution of the first congruence x = 2;</p>
@@ -191,7 +191,7 @@ x</i> ≡ 8 (mod 13).
 
 <p>Therefore <i>f</i> is a bijections. This ends the proof of the theorem.□</p>
 
-<section>
+<section aria-label="End">
 <a href="chinese.html">&#171;Chinese remainder theorem</a>
 <a href="index.html">Index</a>
 <a href="euler.html">Euler function and theorem &#187;</a>

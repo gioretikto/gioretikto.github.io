@@ -21,9 +21,9 @@
 
 <h1>Euclidean algorithm</h1>
 
-<p>We introduce now <i>Euclid's Algorithm</i>, or <i>algoritmo euclideo delle divisioni successive</i>, which offers a method for the calculation of the greatest common divisor of two integers <i>a</i> and <i>b</i>, che sappiamo esistere in virtù della proposizione precedente, and allow us to determine a Bézout identity. Si osservi che se vogliamo determinare il gcd(<i>a,b</i>), possiamo senz'altro porre a &ge; b &gt; 0.</p>
+<p>We introduce now <i>Euclid's Algorithm</i>, or <i>algoritmo euclideo delle divisioni successive</i>, which offers a method for the calculation of the greatest common divisor of two integers <i>a</i> and <i>b</i>, che sappiamo esistere in virtù della proposizione precedente, and allow us to determine a Bézout identity. We want to determine the gcd(<i>a,b</i>), we can without doubt let <i>a &ge; b</i> &gt; 0.</p>
 
-<p><b>2.25 ALGORITHM</b>. In quel che segue scriveremo in neretto gli elementi che dovranno essere divisi nella divisione successiva, in modo da evidenziarli: esssi verranno quindi spostati a sinistra nelle divisione successiva. Siano <b>a, b</b> &in; ℤ e sia <i><b>a</b> &ge; <b>b</b> &gt; 0</i>. Operiamo le seguenti divisioni:</p>
+<p><b>2..4.1 ALGORITHM</b>. We write in bold the elements that are going to be divided in the next division. Let <b>a, b</b> &in; ℤ e sia <i><b>a</b> &ge; <b>b</b> &gt; 0</i>. Operiamo le seguenti divisioni:</p>
 
 <div class="eq">
 <p>a = <b>b</b>q<sub>1</sub> + <b>r</b><sub>1</sub></i> &emsp; 0 &lt;<i>r<sub>1</sub></i> &lt; b</p>
@@ -44,7 +44,7 @@
 	<li><p>Ogni divisore comune di <i>a</i> e <i>b</i> è anche divisore di <i>r<sub>1</sub></i>, perché se un numero divide <i>a</i> e <i>b</i> allora ne divide anche la differenza (<a href="Z_divisibility.html#lemma_219">Lemma 2.19</a>). Tale ragionamento vale per tutti i resti delle divisioni successive fino al resto <i>r<sub>n</sub></i>, che è l’ultimo diverso da 0. Dunque ogni divisore comune di <i>a</i> e <i>b</i> deve dividere anche <i>r<sub>n</sub></i>. Mettendo insieme 1) e 2) <i>r<sub>n</sub></i>= MCD(<i>a,b</i>).</p>
 </ol>
 
-<p>Calcoliamo gcd(34, 19) tramite l'algoritmo di Euclide:</p>
+<p>Let's calculate gcd(34, 19) with the Euclidean algorithm.</p>
 
 <pre>
 34 = 19 ⋅ 1 + 15
@@ -56,7 +56,7 @@
 
 <p>Quindi, gcd(34, 19) = 1.</p>
 
-<p>Inoltre, queste relazioni ci offrono un modo di scrivere il gcd(a,b) come identità di Bézout nella forma d = MCD(a,b) = sa + tb. Per trovare l'identità di Bézout for per gcd(34, 19) = 1 = d, operiamo a ritroso.</p> 
+<p>Inoltre, queste relazioni ci offrono un modo di scrivere il gcd(a,b) as Bézout's identity in the form <i>d</i> = gcd(<i>a,b</i>) = <I>sa + tb</i>. Per trovare l'identità di Bézout for per gcd(34, 19) = 1 = d, operiamo a ritroso.</p> 
 
 <pre>1 = 4 - 1⋅3
 = 4 - 1(15 - 4⋅3) = 4⋅4 - 1⋅15
@@ -66,7 +66,7 @@
 
 <p>Thus Bézout's identity for <i>a</i> = 34 and <i>b</i> = 19 is 1 = 34(-5) + 19 ⋅ 9</p>
 
-<section>
+<section aria-label="End">
 <a href="gcd.html">&#171;gcd: The greatest common divisor</a>
 <a href="index.html">Index</a>
 <a href="diophantine.html">Linear Diophantine equations &#187;</a>

@@ -33,20 +33,21 @@
 <p><i>a<sup>&phi;(n)</sup></i> ≡ 1  &emsp; (mod <i>n</i>)</p>
 </div>
 
-<p>We now focus on finding this function &phi;(<i>n</i>), that in the case of <i>n</i> prime number bust be equal to <i>p</i> −1.</p>
+<p>We now focus on finding this function <i>&phi;</i>(<i>n</i>), that in the case of <i>n</i> prime number bust be equal to <i>p</i> −1.</p>
 
-<p><b>Definition 4.27</b>. For all <i>n</i> ≥ 1, denote by φ(<i>n</i>) the number of positive integers smaller than <i>n</i> that are coprime to <i>n</i>. The function φ: ℕ → ℕ defined in this way is called <i>Euler function</i> or <i>φ function</i>.</p>
+<p><b>Definition 4.27</b>. For all <i>n</i> ≥ 1, denote by <i>φ</i>(<i>n</i>) the number of positive integers smaller than <i>n</i> that are coprime to <i>n</i>. The function <i>φ</i>: ℕ → ℕ defined in this way is called <i>Euler function</i> or <i>φ function</i>.</p>
 
 <p>As we saw the set of invertible residue classes modulo <i>n</i> by (ℤ/n)* is</p>
 
 <div class="eq">
-<p>(ℤ/n)* = {<i>x</i> &in; ℤ/n | gcd (<i>x,n</i>) = 1}</p>
+<p>(ℤ/<i>n</i>)* = {<i>x</i> &in; ℤ/<i>n</i> | gcd (<i>x,n</i>) = 1}</p>
 </div>
 
-<p>so &phi;(n) = |(ℤ/n)*|.</p>
+<p>so &phi;(<i>n</i>) = |(ℤ/<i>n</i>)*|.</p>
 
 <p>Thus φ(12) = 4 because the numbers less than 12 coprime to 12 are 1, 5, 7, 11.</p>
 <p>φ(20) = 8 because because the numbers less than 20 are 1, 3, 7, 9, 11, 13, 14, 17.</p>
+<p>φ(3) = 2, φ(4) = 2, φ(5) = 4, φ(6) = 2, φ(7) = 6.</p>
 
 <p>Euler discovered that, by using this function φ(<i>n</i>), he could generalize Fermat’s little theorem to include composite numbers <i>n</i>.  For example, we observe that 5 is relatively prime to 12 and that 5<sup>φ(12)</sup> ≡ 1 (mod 12); that is, 5<sup>4</sup> ≡ 1 (mod 12), which we can easily verify, since 5<sup>4</sup> = (5<sup>2</sup>)<sup>2</sup> = (25)<sup>2</sup> ≡ 1<sup>2</sup> = 1 (mod 12).</p>
 
@@ -55,19 +56,19 @@
 <p><b>Proposition 4.28</b>. Let <i>n = p<sub>1</sub><sup>h<sub>1</sub></sup> p<sub>2</sub><sup>h<sub>2</sub></sup> ··· p<sub>s</sub><sup>h<sub>s</sub></sup></i>, the factorisation of <i>n</i> with <i>p<sub>i</sub></i> distinct prime numbers for <i>i</i> = 1, . . ., s,. Then</p>
 
 <div class="eq">
-<p>&phi;(<i>n</i>) = &phi;(p<sub>1</sub><sup>h<sub>1</sub></sup>) &phi;(p<sub>2</sub><sup>h<sub>2</sub></sup>) ··· &phi;(p<sub>s</sub><sup>h<sub>s</sub></sup>) &emsp; (<b>4.8</b>)</p>
+<p><i>&phi;</i>(<i>n</i>) = <i>&phi;</i>(<i>p<sub>1</sub><sup>h<sub>1</sub></sup></i>) <i>&phi;</i>(<i>p<sub>2</sub><sup>h<sub>2</sub></sup></i>) ··· <i>&phi;</i>(<i>p<sub>s</sub><sup>h<sub>s</sub></sup></i>) &emsp; (<b>4.8</b>)</p>
 </div>
 
 <p><b>Proof</b>. We have to prove that <i>φ</i> is <i>multiplicative</i> i.e.</p>
 
 <div class="eq">
-<p>φ(<i>mn</i>) = φ(<i>m</i>)φ(<i>m</i>) &emsp; &forall; <i>m,n</i> such that (<i>m,n</i>) = 1</p>
+<p><i>φ</i>(<i>mn</i>) = <i>φ</i>(<i>m</i>)φ(<i>m</i>) &emsp; &forall; <i>m,n</i> such that (<i>m,n</i>) = 1</p>
 </div>
 
 <p>We now from <a href="chinese.html#chinese2">Proposition 4.26</a> that</p>
 
 <div class="eq">
-<p><i>f: ℤ<sub>mn</sub> → ℤ<sub>m</sub> × ℤ<sub>n</sub>,</i></p>
+<p><i>f: ℤ<sub><i>mn</i></sub> → ℤ<sub><i>m</i></sub> × ℤ<sub><i>n</i></sub>,</i></p>
 </div>
 
 <p>defined by</p>
@@ -126,22 +127,22 @@
 <p><i>a<sup>φ(p)</sup> = a<sup>p − 1</sup></i> ≡ 1 &emsp;(mod <i>p</i>).</p>
 </div>
 
-<p>this is Fermat's little theorem we already proved. Assuming (4.9) is true for <i>k</i> we prove it for <i>k + 1</i>. Equation (4.9) can be written as</p>
+<p>this is Fermat's little theorem we already proved. Assuming (4.9) is true for <i>k</i> we prove it for <i>k</i> + 1. Equation (4.9) can be written as</p>
 
 <div class="eq">
-<p><i>a<sup>φ(p<sup>k</sup>)</sup> = 1 + hp<sup>k</sup></i></p>
+<p><i>a<sup>φ</i>(<i>p<sup>k</sup></i>)</sup> = 1 + <i>hp<sup>k</sup></i></p>
 </div>
 
 <p>for some <i>h</i> &in; ℤ. Not also that</p>
 
 <div class="eq">
-<p><i>a<sup>φ(p<sup>k + 1</sup>)</sup> = p<sup>k + 1</sup> − p<sup>k</sup> = p(p<sup>k</sup> − p<sup>k − 1</sup>) = p · φ(p<sup>k</sup>)</i></p>
+<p><i>a<sup>φ</i>(<i>p<sup>k + 1</sup></i>)</sup> = <i>p<sup>k + 1</sup> − p<sup>k</sup> = p</i>(<i>p<sup>k</sup> − p<sup>k − 1</sup></i>) = <i>p · φ</i>(<i>p<sup>k</sup></i>)</p>
 </div>
 
 <p>then</p>
 
 <div class="eq">
-<p><i>a<sup>φ(p<sup>k + 1</sup>)</sup> = a<sup>p · φ(p<sup>k</sup>)</sup> = (1 + hp<sup>k</sup>)<sup>p</sup></i></p>
+<p><i>a<sup>φ(p<sup>k + 1</sup>)</sup> = a<sup>p · φ(p<sup>k</sup>)</sup> = (1 + <i>hp<sup>k</sup></i>)<sup><i>p</i></sup></p>
 <p>= 1 + <i>C<sub>p,1</sub> ⋅ hp<sup>k</sup> + C<sub>p,2</sub> ⋅ (hp<sup>k</sup>)<sup>2</sup> + ... + C<sub>p,p − 1</sub> ⋅ (hp<sup>k</sup>)<sup>p − 1</sup> + (hp<sup>k</sup>)<sup>p</sup></i></p>
 <p>≡ 1 + <i>C<sub>p,1</sub> ⋅ hp<sup>k</sup></i> ≡ 1 &emsp; (mod p<sup>k + 1</sup>)</i></p>
 </div>
@@ -162,19 +163,19 @@
 <p>From the multiplicative property of &phi; follows</p>
 
 <div class="eq">
-<p><i>φ(p<sub>i</sub><sup>k<sub>i</sub></sup></i>)</sup> | &phi;(<i>n</i>) &emsp; &forall;i</p>
+<p><i>φ</i>(<i>p<sub>i</sub><sup>k<sub>i</sub></sup></i>)</sup> | <i>&phi;</i>(<i>n</i>) &emsp; &forall;i</p>
 </div>
 
-<p>thus elevating both hands of (4.10) by the power <i>&phi;(n)/φ(p<sub>i</sub><sup>k<sub>i</sub></sup>)</i> we have</p>
+<p>thus elevating both hands of (4.10) by the power <i>&phi;</i>(<i>n</i>)/<i>φ</i>(<i>p<sub>i</sub><sup>k<sub>i</sub></sup></i>) we have</p>
 
 <div class="eq">
-<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>p<sub>i</sub><sup>k<sub>i</sub></sup></i>) &emsp; <i>i</i> = 1, 2, ..., <i>s</i></p>
+<p><i>a<sup>φ</i>(<i>n</i>)</sup></i> ≡ 1 &emsp;(mod <i>p<sub>i</sub><sup>k<sub>i</sub></sup></i>) &emsp; <i>i</i> = 1, 2, ..., <i>s</i></p>
 </div>
 
 <p>which implies</p>
 
 <div class="eq">
-<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>p<sub>1</sub><sup>k<sub>1</sub></sup> p<sub>2</sub><sup>k<sub>2</sub></sup> ···p<sub>s</sub><sup>k<sub>s</sub></sup></i>) &emsp; <i>i</i> = 1, 2,..., <i>s</i></p>
+<p><i>a<sup>φ</i>(<i>n</i>)</sup> ≡ 1 &emsp;(mod <i>p<sub>1</sub><sup>k<sub>1</sub></sup> p<sub>2</sub><sup>k<sub>2</sub></sup> ···p<sub>s</sub><sup>k<sub>s</sub></sup></i>) &emsp; <i>i</i> = 1, 2,..., <i>s</i></p>
 </div>
 
 <p>and thus</p>
@@ -184,7 +185,7 @@
 </div>
 </div>
 
-<section>
+<section aria-label="End">
 <a href="chinese.html">&#171;Chinese remainder theorem</a>
 <a href="index.html">Index</a>
 <a href="wilson.html">Primality test; Wilson's Theorem &#187;</a>

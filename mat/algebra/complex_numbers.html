@@ -50,20 +50,20 @@
 
 <p>is injective and such that <i>f</i>(<i>r + r'</i>) = <i>f</i>(<i>r</i>) + <i>f</i>(<i>r'</i>) and <i>f</i>(<i>r ⋅ r'</i>)  = <i>f</i>(<i>r</i>) ⋅ <i>f</i>(<i>r'</i>) &forall;<i>r,r'</i> &in; ℝ.</p>
 
-<p><b>Definition 4.37</b> A <i>complex number</i> is an ordered pair of real numbers, i.e. an element of ℂ = ℝ x ℝ. With respect to the operations defined above ℂ is a field, containing the real field.</p>
+<p><b>Definition 4.13.1</b> A <i>complex number</i> is an ordered pair of real numbers, i.e. an element of ℂ = ℝ x ℝ. With respect to the operations defined above ℂ is a field, containing the real field.</p>
 
 <p>If we indicate the pair (0,1) with the symbol <i>i</i>, we can write</p>
 
 <div class="eq">
 <p>(<i>a,b</i>) = (<i>a</i>,0) + (0,<i>b</i>) = (<i>a</i>, 0) + (0,1)(<i>b</i>,0) = <i>a + ib</i></p>
-<p>i<sup>2</sup> = (0,1)(0,1) = −1</p>
+<p><i>i<sup>2</sup></i> = (0,1)(0,1) = −1</p>
 </div>
 
 <p>The element <i>i</i> &in; ℂ is known as <i>imaginary unit</i>. Using this notation we have</p>
 
 <div class="eq">
-<p>(<i>a + ib</i>) + (<i>c + id</i>) = (<i>a + c</i>) + i (<i>b+d</i>)</p>
-<p>(<i>a + ib</i>) ⋅ (<i>c + id</i>) = (<i>ac −bd</i>) + i (<i>ad+bc</i>)</p>
+<p>(<i>a + ib</i>) + (<i>c + id</i>) = (<i>a + c</i>) + <i>i</i> (<i>b+d</i>)</p>
+<p>(<i>a + ib</i>) ⋅ (<i>c + id</i>) = (<i>ac −bd</i>) + <i>i</i> (<i>ad+bc</i>)</p>
 </div>
 
 <p>Give <i>z = x + iy</i>, we call <b>complex conjugate</b> of <i>z</i> and we denote it by z̄ the number</p>
@@ -72,11 +72,31 @@
 <p><i>z̄ = x − iy</i></p>
 </div>
 
+<p>Complex conjugates give us another way to interpret <b>reciprocals</b>. You can easily verify that a complex number <i>z = x + yi</i> times its conjugate <i>x – yi</i> is the square of its absolute value |<i>z</i>|<sup>2</sup>.</p>
+
+<div class="eq">
+<p><i>zz̄</i> = |<i>z</i>|<sup>2</sup>
+</div>
+
+<p>Therefore, 1/<i>z</i> is the conjugate of <i>z</i> divided by the square of its absolute value |<i>z</i>|<sup>2</sup>.</p>
+
+<div class="eq">
+<p>1/<i>z = z̄</i> / |<i>z</i>|<sup>2</sup></p>
+</div>
+
+<h3>Division of complex numbers</h3>
+
+<p>Consider 11 + 6<i>i</i> divided by 2 + 3<i>i</i>: 11 + 6<i>i</i> / 2 + 3<i>i</i>; this ratio can be written as a complex number in the form <i>a + bi</i> if we multiply numnerator and denominator by 2 − 3<i>i</i></p>
+
+<div class="eq">
+<p>(11 + 6<i>i</i>) / (2 + 3<i>i</i>) = (11 + 6<i>i</i>) (2 − 3<i>i</i>)/(2 + 3<i>i</i>) (2 − 3<i>i</i>) = 40 − 21<i>i</i> / 13 = 40/13 − 21<i>i</i>/13</p>
+</div>
+
 <p>Given <i>z, z<sub>1</sub></i> and <i>z<sub>2</sub></i> the following identities hold</p>
 
 <div class="eq">
 <ol>
-	<li><p><span class="overline">(z̄)</span> = <i>z</i></p></li>
+	<li><p><span class="overline">(<i>z̄</i>)</span> = <i>z</i></p></li>
 	<li><p><span class="overline">(<i>z<sub>1</sub> + <sub>2</sub></i>)</span> = <i>z̄<sub>1</sub> + z̄<sub>2</sub></i></p></li>
 	<li><p><span class="overline">(<i>z<sub>1</sub>z<sub>2</sub></i>)</span> = <i>z̄<sub>1</sub>z̄<sub>2</sub></i></p></li>
 	<li><p><i>z = z̄ &emsp;⇐⇒&emsp; z</i> &in; ℝ</p></li>
@@ -84,18 +104,32 @@
 </ol>
 </div>
 
-<p>The real number  <i>zz̄</i> is known as <i>norm</i> of the complex number <i>z</i> and its square root √(zz̄) is = (x<sup>2</sup> + y<sup>2</sup>)<sup>1/2</sup> is knwon as <i>module</i> of <i>z</i> and indicated by |<i>z</i>|.</p>
+<div id="norm">
+<p>The real number <i>zz̄</i> is known as <i>norm</i> of the complex number <i>z</i> and its square root √(<i>zz̄</i>) is = (<i>x<sup>2</sup> + y<sup>2</sup></i>)<sup>1/2</sup> is knwon as <i>module</i> of <i>z</i> and indicated by |<i>z</i>|.</p>
+</div>
 
+<p><b>Definition 4.13.1</b>  For any complex number <i>z<sub>1</sub></i> = <i>a</i> + b<i>i</i> and <i>z<sub>2</sub></i> = <i>c</i> + <i>di</i></p>
+
+<div class="eq">
+<p>|<i>z<sub>1</sub>z<sub>2</sub></i>| = |<i>z<sub>1</sub></i>| |<i>z<sub>2</sub></i>|</p>
+</div>
+
+<p><b>Proof</b>. Suppose <i>z<sub>1</sub></i> = <i>a</i> + b<i>i</i> and <i>z<sub>2</sub></i> = <i>c</i> + <i>di</i> are complex numbers. Then</p>
+
+	<div class="eq">
+	<p>|<i>z<sub>1</sub>z<sub>2</sub></i>| = |(<i>ac</i> − <i>bd</i>) + (<i>ad + bc</i>)|<sup>2</sup> = (<i>ac − bd</i>)<sup>2</sup> + (<i>ad + bc</i>)<sup>2</sup><br>=
+	<i>a<sup>2</sup>c<sup>2</sup> + b<sup>2</sup>d<sup>2</sup> + a<sup>2</sup>d<sup>2</sup> + b<sup>2</sup>c<sup>2</sup></i> = (<i>a<sup>2</sup> + b<sup>2</sup></i>) (<i>c<sup>2</sup> + d<sup>2</sup></i>)<br>
+	= |<i>z<sub>1</sub></i>|<sup>2</sup> |<i>z<sub>2</sub></i>|<sup>2</sup>.□</p>
+	</div>
+	
 <p>The following properties hold</p>
 
 <div class="eq">
-<ol>
-	<li><p>|<i>z<sub>1</sub>z<sub>2</sub></i>| = |<i>z̄<sub>1</sub></i>|   |<i>z̄<sub>2</sub></i>|</p></li>
-	<li><p>|<i>z<sub>1</sub> + z<sub>2</sub></i>| = |<i>z̄<sub>1</sub></i>| + |<i>z̄<sub>2</sub></i>|</p></li>
-</ol>
+<p>|<i>z<sub>1</sub> + z<sub>2</sub></i>| = |<i>z<sub>1</sub></i>| + |<i>z<sub>2</sub></i>|</p>
 </div>
 
-<p>The last identity is known as <i>Triangle Inequality</i>. If we identify the complex number <i>z = x +iy</i> as the point of the plane <i>P</i>(<i>x,y</i>) the module |<i>z</i>| represents the lenght of the segment O<i>P</i>. </p>
+
+<p>The last identity is known as <i>Triangle Inequality</i>. If we identify the complex number <i>z = x + iy</i> as the point of the plane <i>P</i>(<i>x,y</i>) the module |<i>z</i>| represents the lenght of the segment O<i>P</i>. </p>
 
 <p>Geometrically, the right-hand part of the triangle inequality states that the sum of the lengths of any two sides of a triangle is greater than the length of the remaining side.</p>
 
@@ -126,10 +160,10 @@
 
 <h2>De Moivre’s formula</h2>
 
-<p>If <i>z</i> and <i>z'</i> have the following representation <i>z = r</i>(cos<i>&theta;</i> + <i>i</i> sin&theta;) and <i>z' = r'</i>(cos&theta;' + <i>i</i> sin&theta;') then as it can be easily verified</p>
+<p>If <i>z</i> and <i>z'</i> have the following representation <i>z = r</i>[cos<i>&theta;</i> + <i>i</i> sin&theta;] and <i>z' = r'</i>(cos<i>&theta;' + i</i> sin<i>&theta;'</i>) then as it can be easily verified</p>
 
 <div class="eq">
-<p><i>z ⋅ z' = rr'</i>(cos (&theta; + &theta;') + <i>i</i> sin(&theta; + &theta;'))</p>
+<p><i>z ⋅ z' = rr'</i>(cos (&theta; + &theta;') + <i>i</i> sin(<i>&theta; + &theta;'</i>))</p>
 </div>
 
 <p>the product of two complex numbers in trigonometric form is equal to a complex number having as argument the sum of the arguments and as module the product of moduli. The trigonometric form of a complex number is particularly useful to calculate the powers; for every integer <i>n</i>&gt; 0, we have the following relation known as <i>De Moivre Formula</i>, valid for every integer <i>n</i> and every <i>&theta;</i> ∈ ℝ</p>
@@ -173,13 +207,13 @@
 <p>For <i>u</i> = 1, we have 1 = cos(<i>n&theta;</i>) + <i>i</i> sin(<i>n&theta;</i>), and hence cos(<i>n&theta;</i>) = 1 and sin(<i>n&theta;</i>) = 0. The only way this can happen if <i>n&theta;</i> is an integer multiple of 2&pi;, or equivalently <i>&theta; = 2k&pi;/n</i> for some integer <i>k</i>. So the <i>n</i>-th roots of unity are cos(2<i>k&pi;/n</i>) + <i>i</i> sin(2<i>k&pi;/n</i>), for <i>k</i> = 0,...,<i>n</i>−1. Let</p>
 
 <div class="eq">
-<p>&zeta;<sub><i>n</i>,1</sub> = &zeta; = cos(<i>2k&pi;/n</i>) + <i>i</i> sin(<i>2k&pi;/n</i>), &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
+<p><i>&zeta;<sub><i>n</i>,1</sub> = &zeta;</i> = cos(<i>2k&pi;/n</i>) + <i>i</i> sin(<i>2k&pi;/n</i>), &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
 </div>
 
 <p>Then every <i>n</i>-th root of the unit is equal by De Moivre formula, to the <i>k</i>-th power of &zeta;, i.e.</p>
 
 <div class="eq">
-<p>&zeta;<sub><i>n</i>,k</sub> = &zeta;<sup>k</sup>, &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
+<p><i>&zeta;<sub><i>n</i>,k</sub> = &zeta;<sup>k</sup>, &emsp; k = 0, ..., n</i> − 1.</p>
 </div>
 
 <p>It can be easily seen that indicated with <i>z<sub>0</sub></i> a root of <i>z<sup>n</sup> = u</i> all the other roots can be obtained multiplying <i>z<sub>0</sub></i> by the <i>n</i>-th roots of the unit, i.e.</p>
@@ -196,19 +230,55 @@
 
 <img src="img/complex_polygon.png" alt="sided polygon inscribed inside the unit circle"/>
 
+<p><b>Definition</b> Let <i>n</i> be a positive integer. A <b>primitive  nth root of unity</b> is an nth root of unity that is not a kth root of unity for any positive <i>k &lt; n</i>. That is, ζ is a primitive nth root of unity if and only if</p>
+
+<div class="eq">
+<p>ζ<sup>n</sup> = 1, and ζ<sup>k</sup> ≠ 1 for any positive integer <i>k &lt; n</i>.</p>
+</div>
+
+<p>There are four4th roots of unity given by ±1,±i. Two of these, namely ±i, are primitive. The other two are not: 1<sup>1</sup>=1 and (−1)<sup>2</sup> = 1.</p>
+
 <p><b>Exercise 4.38</b>. Calculate the module of the following complex numbers</p>
 
 <ol>
-	<li><p>1 + i + i<sup>2</sup> + i<sup>3</sup> + i<sup>4</sup> + i<sup>5</sup></p></li>
-	<li><p>(1 + i)<sup>2</sup></p></li>
+	<li><p>1 + <i>i + i<sup>2</sup> + i<sup>3</sup> + i<sup>4</sup> + i<sup>5</sup></i></p></li>
+	<li><p>(1 + <i>i</i>)<sup>2</sup></p></li>
+	<li><p>(1 + <i>i</i>)(1 - <i>i</i>)</p></li>
 </ol>
 
 <p><b>Solutions</b>.</p>
 
 <ol>
-	<li><p>(1 + i)<sup>2</sup> = (1 + 2i −1) = 2i, thus the module is (0+2<sup>2</sup>)<sup>1/2</sup> = 2.</p>
+	<li><p>|1 + <i>i</i> -1 + -<i>i</i> + 1 + <i>i</i>| = |1 + <i>i</i>| = √2</p></li>
+	<li><p>(1 + i)<sup>2</sup> = (1 + 2i −1) = 2i, thus the module is (0+2<sup>2</sup>)<sup>1/2</sup> = 2.</p></li>
+	<li><p>|(1 + <i>i</i>)(1 - <i>i</i>)| = |1 -<i>i + i</i> +1| = |2| = 2.</p>
+</ol>
 
-<section>
+<p><b>Exercise 4.39</b>. Calculate</p>
+
+<ol type="a">
+	<li><p>The 4-th roots of <i>i</i>.</p></li>
+	<li><p>The cube roots of the unity.</p></li>
+	<li><p>The primitive 6th roots of the unity</p></li>
+</ol>
+
+<p><b>Solutions</b>.</p>
+
+<ol>
+	<li><p><i>i = r</i> (cos <i>&theta;</i> + <i>i</i> sin <i>&theta;</i>) con <i>&theta; = &pi;</i>/2, <i>r</i> =1 . The four roots are <i>z<sub>k</sub></i> = cos (<i>&theta; + 2k&pi;</i>/4) + <i>i</i> sin (<i>&theta; + 2k&pi;</i>/4), with <i>k</i> = 0,1,2,3. Replacing <i>&theta; = &pi;</i>/2: <i>z<sub>k</sub></i> = cos (<i>&pi;/2 + k&pi;</i>/2) + <i>i</i> sin (<i>&pi;/2 + k&pi;</i>/2), with <i>k</i> = 0,1,2,3 </p></li>
+	<li><p><i>z<sub>k</sub></i> = cos (2<i>k&pi;</i>/3) + <i>i</i> sin (2<i>k&pi;</i>/3), with <i>k</i> = 0,1,2. Hence we have</p>
+	
+	<ul>
+	 <li><p><i>z<sub>0</sub></i> = 1;</p></li>
+	 <li><p><i>z<sub>1</sub></i> = cos(2<i>&pi;</i>/3) + <i>i</i> sin(2<i>&pi;</i>/3) = (-1 + <i>i</i>√3)/2.</p></li>
+	 <li><p><i>z<sub>2</sub></i> = cos(4<i>&pi;</i>/3) + <i>i</i> sin(4<i>&pi;</i>/3) = (-1 - <i>i</i>√3)/2</p></li>
+	</ul>
+	</li>
+	
+	<li><p><i>z<sub>k</sub></i> = cos (2<i>k&pi;</i>/6) + <i>i</i> sin (2<i>k&pi;</i>/6), with <i>k</i> = 0,1,2,3,4,5. The primitive roots are those satisfying <i>z<sup>k</sup></i> &ne; 1, namely those for k=1, k=5. </p></li>
+</ol>
+
+<section aria-label="End">
 <a href="different_bases.html">&#171;Representation of numbers in arbitrary bases</a>
 <a href="index.html">Index of Algebra</a>
 <a href="polynomial.html">Polynomial &#187;</a>

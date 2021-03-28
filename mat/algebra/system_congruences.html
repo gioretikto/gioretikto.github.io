@@ -24,47 +24,128 @@
 <p>We now focus on the solution of a <i>system</i> of conguences. We look for a simultaneous solution for all congruences in the system. Let</p>
 
 <div class="eq">
-<p><i>
-x</i> ≡ 2 (mod 3);<br>
-x</i> ≡ 3 (mod 5);<br>
-x</i> ≡ 2 (mod 7).
+<p><i>x</i> ≡ 2 (mod 3);<br>
+<i>x</i> ≡ 3 (mod 5);<br>
+<i>x</i> ≡ 2 (mod 7).
 </p>
 </div>
 
 <p>The first congruence means <i>x</i> = 2, 5, 8, 11, 14, 17, 20, 23, 26, ..., are possible solutions; the second congruence yields <i>x</i> = 3, 8, 13, 18, 23, 28, 33, 38, ... ; and the third produces <i>x</i> = 2, 9, 16, 23, 30, 37, 44, ... . Since 23 appears on all three lists, <i>x</i> = 23 is the solution of the system. Moreover, if you were to extend each of these lists as far as 100, you would see that 23 is the only number that is common to all three lists, that is, 23 is the unique solution to this system of congruences modulo 105.</p>
 
-<p><b>Lemma 4.22</b>. Let</p>
+<p><b>4.8.1 Lemma</b>. Let <i>m</i> and <i>n</i> be relatively prime and <i>a</i> and <i>b</i> integers. There exists an integer <i>x</i> that satisfies
+the system of congruences</p>
 
 <div class="eq">
-<p><i>a<sub>1</sub>x ≡ b<sub>1</sub></i> &emsp;mod n<sub>1</sub></p>
-<p>&emsp;&emsp;&emsp;&emsp;<i>a<sub>2</sub>x ≡ b<sub>2</sub></i> &emsp;mod <i>n<sub>2</sub></i> &emsp; (<b>4.5</b>)</p>
+<p><i>x ≡ a</i> (mod <i>m</i>)
+<br><i>x ≡ b</i> (mod <i>n</i>).</p>
+</div>
+
+<p>Furthermore, any two solutions <i>x</i> and <i>y</i> are congruent modulo <i>mn</i>.</p>
+
+<p><b>Proof</b>. Suppose (<i>m, n</i>) = 1. Let <i>x</i> be a solution to the first congruence in the system. Thus <i>x = a + mk</i> for some integer <i>k</i>, and this <i>k</i> must be such that</p>
+
+<div class="eq">
+<p><i>a + mk</i> ≡ <i>b</i> (mod <i>n</i>)</p>
+</div>
+
+<p>or</p>
+
+<div class="eq">
+<p><i>mk</i> ≡ <i>b − a</i> (mod <i>n</i>).</p>
+</div>
+
+<p>Since (<i>m, n</i>) = 1, (<a href="linear_congruences.html">Proposition 4.6.4</a>) guarantees the existence of such an integer <i>k</i>, and <i>x = a + mk</i> satisfies the system.</p>
+
+<p><i>Uniqueness</i>. Now let <i>y</i> be another solution to the system of congruences; that is,</p>
+
+<div class="eq">
+<p><i>y</i> ≡ <i>a</i> (mod <i>m</i>)
+<br><i>y</i> ≡ <i>b</i> (mod <i>n</i>).</p>
+</div>
+
+<p>Owning to transitivity of modulo operation</p>
+
+<div class="eq">
+<p><i>x</i> ≡ <i>y</i> (mod <i>m</i>)
+<br><i>x</i> ≡ <i>y</i> (mod <i>n</i>).</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>m</i>| <i>x − y</i> &emsp; and &emsp; <i>n</i> | <i>x−y</i></p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p><i>mn</i> | <i>x−y</i></p>
+</div>
+
+<p>So <i>x ≡ y</i> (mod <i>mn</i>).□</p>
+
+<p><b>4.8.2 Example</b> Since (7, 5) = 1, we use Lemma 4.8.1 to solve the system of congruences</p>
+
+<div class="eq">
+<p><i>x</i>≡ 5 (mod 7)
+<br><i>x</i> ≡ 3 (mod 5).</p>
+</div>
+
+<p>From the first congruence we write <i>x</i> = 5 + 7<i>k</i> for some integer <i>k</i> and substitute this expression for <i>x</i> into the second congruence.</p>
+
+<div class="eq">
+<p>5 + 7<i>k</i> ≡ 3 (mod 5)</p>
+</div>
+
+<p>or</p>
+
+<div class="eq">
+<p>7<i>k</i> ≡ −2 (mod 5)<br>
+⇒ 2<i>k</i> ≡ −2 (mod 5)<br>
+⇒ <i>k</i> ≡  −1 (mod 5)<br>
+⇒ <i>k</i> ≡  4 (mod 5). </p>
+</div>
+
+<p>since (2, 5) = 1 there exists such integer <i>k</i></p>
+
+<p>Thus <i>x</i> = 5+7(4+5<i>j</i>) ⟶  <i>x</i> = 33 + 35j ⟶ and <i>x</i> ≡  33 (mod 7 ⋅ 5=35) gives all solutions to the system of congruences.</p>
+
+<p>We now study how a system can be transformed into another.</p>
+
+<p><b>Lemma 4.8.3</b>. Let</p>
+
+<div class="eq">
+<p><i>a<sub>1</sub>x ≡ b<sub>1</sub></i> &emsp;mod <i>n<sub>1</sub></i></p>
+<p>&emsp;&emsp;&emsp;&emsp;<i>a<sub>2</sub>x</i> ≡ <i>b<sub>2</sub></i> &emsp;mod <i>n<sub>2</sub></i> &emsp; (<b>4.5</b>)</p>
 <p>...</p>
-<p><i>a<sub>s</sub>x ≡ b<sub>3</sub></i> &emsp; mod <i>n<sub>s</sub></i></p>
+<p><i>a<sub>s</sub>x</i> ≡ <i>b<sub>3</sub></i> &emsp; mod <i>n<sub>s</sub></i></p>
 </div>
 
 <p>with (<i>n<sub>i</sub>,n<sub>j</sub></i>) = 1, for <i>i &ne; j</i>, will suppose also that (<i>n<sub>i</sub>,n<sub>j</sub></i>) = 1, for <i>i &ne; j</i> in which every congruence adimits solutions. This system can be equally represented (in the sense, they both admits the same solutions), as</p>
 
 <div class="eq">
-<p><i>x ≡ c<sub>1</sub></i> &emsp;mod <i>n</i>'<sub>1</sub></p>
-<p>&emsp;&emsp;&emsp;&emsp;<i>x ≡ c<sub>2</sub></i> &emsp; mod n'<sub>2</sub> &emsp; (<b>4.6</b>)</p>
+<p><i>x</i> ≡ <i>c<sub>1</sub></i> &emsp;mod <i>n</i>'<sub>1</sub></p>
+<p>&emsp;&emsp;&emsp;&emsp;<i>x</i> ≡ <i>c<sub>2</sub></i> &emsp; mod n'<sub>2</sub> &emsp; (<b>4.6</b>)</p>
 <p>...</p>
-<p><i>x ≡ c<sub>3</sub></i> &emsp; mod n<sub>s</sub></p>
+<p><i>x</i> ≡ <i>c<sub>3</sub></i> &emsp; mod <i>n<sub>s</sub></i></p>
 </div>
 
 <p>with (<i>n'<sub>i</sub>,n'<sub>j</sub></i>) = 1, for <i>i &ne; j</i>.</p>
 
-<p><b>Proof</b>. System 4.5 is solvable if for every <i>k</i> = 1,...,<i>s</i>, <i>d<sub>k</sub></i> = gcd(<i>a<sub>k</sub>,n<sub>k</sub></i>)|<i>b<sub>k</sub></i> (<a href="linear_congruences.html">Proposition 4.18</a>). In this case, it is possible to divide the <i>k</i>-th congruence by <i>d<sub>k</sub></i>, obtaining the new system equivalent to the first</p>
+<p><b>Proof</b>. System 4.5 is solvable if for every <i>k</i> = 1,...,<i>s</i>, <i>d<sub>k</sub></i> = gcd(<i>a<sub>k</sub>,n<sub>k</sub></i>)|<i>b<sub>k</sub></i> (<a href="linear_congruences.html">Proposition 4.6.4</a>). In this case, it is possible to divide the <i>k</i>-th congruence by <i>d<sub>k</sub></i>, obtaining the new system equivalent to the first</p>
 
 <div class="eq">
-<p><i>a'<sub>1</sub>x ≡ b'<sub>1</sub></i> &emsp;mod n'<sub>1</sub></p>
-<p>&emsp;&emsp;&emsp;&emsp;<i>a'<sub>2</sub>x ≡ b'<sub>2</sub></i> &emsp;mod n'<sub>2</sub> &emsp; (<b>4.5'</b>)</p>
+<p><i>a'<sub>1</sub>x</i> ≡ <i>b'<sub>1</sub></i> &emsp;mod <i>n'<sub>1</sub></i></p>
+<p>&emsp;&emsp;&emsp;&emsp;<i>a'<sub>2</sub>x</i> ≡ <i>b'<sub>2</sub></i> &emsp;mod <i>n'<sub>2</sub></i> &emsp; (<b>4.5'</b>)</p>
 <p>...</p>
-<p><i>a'<sub>s</sub>x ≡ b'<sub>3</sub></i> &emsp; mod <i>n'<sub>s</sub></i></p>
+<p><i>a'<sub>s</sub>x</i> ≡ <i>b'<sub>3</sub></i> &emsp; mod <i>n'<sub>s</sub></i></p>
 </div>
 
 <p>where <i>a<sub>k</sub>'</i> = a<sub>k</sub>/d<sub>k</sub>, b<sub>k</sub>'</i> = b<sub>k</sub>/d<sub>k</sub></i> and <i>n<sub>k</sub>'</i> = n<sub>k</sub>/d<sub>k</sub></i> and with the condition (<i>n'<sub>i</sub>,n'<sub>j</sub></i>) = 1, for <i>i &ne; j</i> still holding. Now by noting that for each congruence of the system <i>k</i> = 1,...,<i>s</i> we have that (<i>a'<sub>k</sub>,n'<sub>k</sub></i>) = 1, by Corollary 4.21 the system admits a unique solution <i>c<sub>k</sub></i> modulo <i>n'<sub>k</sub></i>. For this we can replace the system 4.5' with 4.6. Thus we proved that any system of the form 4.5 can be reduced to one of the form 4.5'. □</p>
 
-<section>
+<p><b>4.8.3 Example</b> In systems such as <i>x</i> ≡ 1 mod 6, <i>x</i> ≡ 2 mod 3, even if each single congruence is solvable, the system has no solutions. Solving the first congruence gives <i>x</i> = 6<i>k</i> + 1 and substituting that into the second gives 6<i>k</i> + 1 ≡ 2 (mod 3) that is 6<i>k</i> ≡ 1 (mod 3) this system has no solutions, since 3 = gcd(3,6) does not divide 1.</p>
+
+<section aria-label="End">
 <a href="inverse.html">&#171;Solving linear congruences; Inverses</a>
 <a href="index.html">Index</a>
 <a href="chinese.html">The Chinese remainder theorem &#187;</a>
