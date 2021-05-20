@@ -38,10 +38,10 @@
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) <i>q<sub>0</sub></i>(<i>x</i>) + <i>r<sub>0</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>0</sub></i>(<i>x</i>) < ∂<i>g</i>(<i>x</i>)</p>
 <p><i>g</i>(<i>x</i>) = <i>r<sub>0</sub></i>(<i>x</i>) <i>q<sub>1</sub></i>(<i>x</i>) + <i>r<sub>2</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>1</sub></i>(<i>x</i>) < ∂<i>r<sub>0</sub></i>(<i>x</i>)</p>
 <p>...</p>
-<p><i>r<sub>i</sub></i>(<i>x</i>) = <i>r<sub>i+1</sub></i>(<i>x</i>) <i>q<sub>i+2</sub></i>(<i>x</i>) + <i>r<sub>i+2</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>i+2</sub></i>(<i>x</i>) < ∂<i>r<sub>i+1</sub></i>(<i>x</i>)</p>
+<p><i>r<sub>i</sub></i>(<i>x</i>) = <i>r<sub>i+1</sub></i>(<i>x</i>) <i>q<sub>i+2</sub></i>(<i>x</i>) + <i>r</i><sub>i+2</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>i+2</sub>(<i>x</i>) < ∂<i>r<sub>i+1</sub></i>(<i>x</i>)</p>
 <p>...</p>
-<p><i>r<sub>n-2</sub></i>(<i>x</i>) = <i>r<sub>n-1</sub></i>(<i>x</i>) <i>q<sub>n</sub></i>(<i>x</i>) + <i>r<sub>n</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>n</sub></i>(<i>x</i>) < ∂<i>r<sub>n-1</sub></i>(<i>x</i>)</p>
-<p><i>r<sub>n-1</sub></i>(<i>x</i>) = <i>r<sub>n</sub></i>(<i>x</i>) <i>q<sub>n+1</sub></i>(<i>x</i>) + 0.</p>
+<p><i>r</i><sub>n-2</sub>(<i>x</i>) = <i>r</i><sub>n-1</sub>(<i>x</i>) <i>q</i><sub>n</sub>(<i>x</i>) + <i>r</i><sub>n</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>n</sub>(<i>x</i>) < ∂<i>r<sub>n-1</sub></i>(<i>x</i>)</p>
+<p><i>r</i><sub>n-1</sub>(<i>x</i>) = <i>r</i><sub>n</sub>(<i>x</i>) <i>q</i><sub>n+1</sub>>(<i>x</i>) + 0.</p>
 </div>
 
 <p>Applying the same procedure as in ℤ, the last non-null remainder in the sequence of the divisions is the gcd.</p>
@@ -49,20 +49,19 @@
 <p><b>Example 4.10</b> Find the gcd of x<sup>2</sup> + 7<i>x</i> + 6 and <i>x<sup>2</sup> − 5x</i> − 6:</p>
 
 <div class="eq">
-<p><i>x<sup>2</sup> + 7x</i> + 6 = 1 ⋅ (x<sup>2</sup> − 5x − 6) + (12x + 12)</p>
-<p><i>x<sup>2</sup> − 5x</i> − 6 = (12 x + 12) (1/12 x − 1/2) + 0</p>
+<p><i>x<sup>2</sup> + 7x</i> + 6 = 1 ⋅ (<i>x</i><sup>2</sup> − 5<i>x</i> − 6) + (12<i>x</i> + 12)</p>
+<p><i>x<sup>2</sup> − 5x</i> − 6 = (12<i>x</i> + 12) (1/12 <i>x</i> − 1/2) + 0</p>
 </div>
 
 <p>Since 12<i>x</i> + 12 is the last nonzero remainder, it is a GCD of the original polynomials, and the monic GCD is <i>x</i> + 1. </p>
 
-<p><b>Example 4.11</b> Compute the greatest common divisor of the polynomials <i>f</i>(<i>x</i>) = x<sup>3</sup> + 1, <i>g</i>(<i>x</i>) = x<sup>2</sup> + 1 on ℚ. We have</p>
+<p><b>Example 4.11</b> Compute the greatest common divisor of the polynomials <i>f</i>(<i>x</i>) = x<sup>3</sup> + 1, <i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 1 on ℚ. We have</p>
 
 <div class="eq">
-<p><i>x<sup>3</sup> + 1 = x(x<sup>2</sup> + 1) − x + 1</i>,</p>
-<p><i>x<sup>2</sup> + 1 = (−x − 1)(−x + 1) + 2</i>,</p>
-<p><i>−x + 1 = − 1/2 · (x − 1) · 2</i>,</p>
+<p><i>x</i><sup>3</sup> + 1 = <i>x</i>(<i>x</i><sup>2</sup> + 1) − <i>x</i> + 1</i>,</p>
+<p><i>x</i><sup>2</sup> + 1 = (−<i>x</i> − 1)(−x + 1) + 2</i>,</p>
+<p>−<i>x</i> + 1 = − 1/2 · (<i>x</i> − 1) · 2,</p>
 </div>
-
 
 <p>and so GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 2.</p>
 
@@ -72,7 +71,7 @@
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) ⋅ <i>a</i></p>
 </div>
 
-<p>The relation of being <i>associates</i> is an equivalence relation and in each equivalence class there is exactly one monic polynomial, which we regard as the canonical representative of the class. For example 4<i>x<sup>2</sup> + 8x<sup>2</sup> + 4</i> is associated to the monic polynomial <i>x<sup>2</sup> + 2x + 1</i>. Any polynomial is an associate of exactly one monic polynomial.</p>
+<p>The relation of being <i>associates</i> is an equivalence relation and in each equivalence class there is exactly one monic polynomial, which we regard as the canonical representative of the class. For example 4<i>x</i><sup>2</sup> + 8<i>x</i><sup>2</sup> + 4 is associated to the monic polynomial <i>x</i><sup>2</sup> + 2<i>x</i> + 1</i>. Any polynomial is an associate of exactly one monic polynomial.</p>
 
 <p>Let <i>d'</i>(<i>x</i>) and <i>d</i>(<i>x</i>) two elements verifying both the condition of being gcd between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>). It is easy to see that they are associates. Then we can say that <i>the</i> greatest common divisor between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) is the unique monic polynomial.</p>
 
@@ -82,25 +81,33 @@
 <p><i>d</i>(<i>x</i>) = <i>h</i>(<i>x</i>) <i>f</i>(<i>x</i>) + <i>k</i>(<i>x</i>) <i>g</i>(<i>x</i>)</p>
 </div>
 
-<p><b>Definition 4.12</b>. Two polynomials are said coprime if</p>
+<p><b>Definition 4.12</b>. Two polynomials are said <i>coprime</i> if</p>
 
 <div class="eq">
 <p>GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 1</p>
 </div>
 
-<p><b>Definition 4.13</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>) <i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>]), then it divides one of the two factors.</p>
+<p><b>Definition 4.13</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>irreducible</i> on 𝕂, if</p>
 
-<p><b>Proposition 4.14</b>. A polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is irreducible  if and only if is <i>prime</i>.</p>
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), &emsp; <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>] ⇒ <i>g</i>(<i>x</i>) or <i>h</i>(<i>x</i>) invertible.</p>
+</div>
 
-<p><b>Theorem 4.15</b>. Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in 𝕂[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
+<p>For example <i>x</i><sup>2</sup> + 5 is irreducible in ℤ<sub>11</sub> because <i>x</i><sup>2</sup> + 5 = (2)(6<i>x</i><sup>2</sup> + 8) and 2 is the unit in 𝕂[<i>x</i>].</p>
+
+<p><b>Definition 4.14</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>]), then it divides one of the two factors.</p>
+
+<p>Irreducible polynomials play a role in the factorization of polynomials corresponding to the role that prime integers play in the factorization of integers.</p>
+
+<p><b>Proposition 4.15</b>. A polynomial in 𝕂[<i>x</i>] is irreducible iff is <i>prime</i>.</p>
+
+<p><b>Theorem 4.16</b> (<i>Unique Factorization Theorem</i>) Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in 𝕂[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>p<sub>1</sub></i>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)  = <i>q<sub>1</sub></i>(<i>x</i>) <i>q<sub>2</sub></i>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>) </p>
 </div>
 
-<p><i>p<sub>i</sub></i>(<i>x</i>) and <i>q<sub>j</sub></i>(<i>x</i>) are irreducible in 𝕂[<i>x</i>], then <i>s = t</i> and there exists a biunique correspondence between {<i>p<sub>1</sub></i>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)} and {<i>q<sub>1</sub></i>(<i>x</i>) <i>q<sub>2</sub></i>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>)} such that if 
-<i>q<sub>j</sub></i>(<i>x</i>) corresponds to <i>p<sub>i</sub></i>(<i>x</i>), then <i>p<sub>i</sub></i>(<i>x</i>) is associated to 
-<i>q<sub>j</sub></i>(<i>x</i>).</p>
+<p><i>p<sub>i</sub></i>(<i>x</i>) and <i>q<sub>j</sub></i>(<i>x</i>) are irreducible in 𝕂[<i>x</i>], then <i>s = t</i> and there exists a biunique correspondence between {<i>p<sub>1</sub></i>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)} and {<i>q<sub>1</sub></i>(<i>x</i>) <i>q<sub>2</sub></i>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>)} such that if <i>q<sub>j</sub></i>(<i>x</i>) corresponds to <i>p<sub>i</sub></i>(<i>x</i>), then <i>p<sub>i</sub></i>(<i>x</i>) is associated to <i>q<sub>j</sub></i>(<i>x</i>).</p>
 
 <section aria-label="End">
 <a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>

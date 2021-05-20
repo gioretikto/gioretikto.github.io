@@ -23,18 +23,126 @@
 
 <p>As in the case of rings, we can have a homomorphism between groups</p>
 
-<p><b>7.5.0 Definition</b>. Let (<i>G, *</i>) and (<i>G', ⋅</i>) two groups. A function <i>&phi;: G ⟶ G'</i> is said to be a <i>homomorphism</i> if</p>
+<p><b>7.5.0 Definition</b>. Let (<i>G</i>, *) and (<i>G</i>', ⋅) two groups. A function <i>&phi;: G ⟶ G'</i> is said to be a <i>homomorphism</i> if</p>
 
 	<div class="eq">
 		<p><i>φ</i>(<i>a*b</i>) = <i>φ</i>(<i>a</i>) ⋅ <i>φ</i>(<i>b</i>) &emsp; &forall;<i>a,b ∈ G</i></p>
 	</div>
 	
-<p>Every isomorphism is a homomorphism, but a homomorphism need not be an isomorphism.</p>
+<p>An homomorphism is thus a function between groups that preserves the operation.</p>
+
+<p>By way of analogy with ring theory, we define two subgroups of <i>G</i> and <i>G</i>' the kernel of <i>φ</i> and the image, as follows</p>
+
+<div class="eq">
+<p>Ker <i>&phi;</i> := {<i>g &in; G</i> | <i>&phi;</i>(<i>g</i>) = <i>e<sub>G'</sub></i>}<br>
+Im <i>&phi;</i> := {<i>g' &in; G'</i> | <i>g</i>' = <i>&phi;</i>(<i>g</i>) for some <i>g &in; G</i>}</p>
+</div>
+
+<p><b>7.9.1 Proposition</b>. Let <i>&phi;</i> be a homomorphism from the group <i>G</i> to the group <i>G</i>'. If e denotes the identity in <i>G</i>, and er denotes the identity in <i>G</i>', then
+
+<ol type="a">
+	<li><p><i>&phi;</i>(<i>e</i>) = <i>e'</i>,</p></li>
+	<li><p><i>&phi;</i>(<i>g</i><sup>&minus;1</sup>) = [<i>&phi;</i>(<i>g</i>)]<sup>&minus;1</sup>, for all <i>g</i> in <i>G</i>.</p></li>
+</ol>
+
+<p><b>Proof</b>. Parts (a) and (b) are proved just as in the ring case.□</p>
+
+<p>If <i>G = G</i>', the homomorphism <i>&phi;</i> is an endomorphism. A homomorphism <i>&phi;</i> is called an <b>epimorphism</b> if <i>&phi;</i> is onto, and a <b>monomorphism</b> if <i>&phi;</i> is one-to-one. If <i>&phi;</i> is both on-to and injective is an <b>isomorphism</b>. </p>
+
+<p><b>7.9.2 Proposition</b>. Let <i>&phi;</i> an homomorphism between two groups <i>G</i> and <i>G</i>', then <i>&phi;</i> is a monomorphism if and only if Ker <i>&phi;</i> = {<i>e</i>}.</p>
+
+<p>Let <i>&phi;</i> an homomorphism between two groups <i>G</i> and <i>G</i>', with kernel <i>K</i> = Ker <i>&phi;</i>. Since <i>K</i> is a subgroup of <i>G</i> we can construct its right cosets modulo <i>K</i> in the following way</p>
+
+<div class="eq">
+<p><i>a &rho;<sub>r</sub> b &emsp; ⇐⇒ &emsp;ab<sup>&minus;1</sup> &in; K &emsp;⇐⇒ &emsp;&phi;</i>(<i>ab<sup>&minus;1</sup></i>) = <i>e &emsp; ⇐⇒ &emsp; &phi;</i>(<i>a</i>)<i>&phi;</i>(<i>b</i>)<sup>&minus;1</sup> = <i>e' &emsp;⇐⇒ &emsp; &phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>)</p>
+</div>
+
+<p>Thus two element <i>a,b &in; G</i> are related through &rho;<sub>r</sub> modulo Ker <i>&phi;</i> iff they possess the same image through <i>&phi;</i>. The cardinality of Im<i>&phi;</i> is thus the <a href="cosets.html#index">index</a> of <i>K</i> in <i>G</i>.</p>
+
+<p><b>7.9.3 Example</b>.</p>
+
+<ol type="a">
+	<li><p>Consider the following mapping</p>
+
+<div class="eq">
+<p><i>&phi;</i>: (GL<sub>n</sub>(ℝ), ⋅) ⟶ (ℝ \{0, }⋅)<br>
+&emsp; <i>A</i> ⟼ det <i>A</i></p>
+</div>
+
+<p>This is a homomorphism whose kernel is given by SL<sub>n</sub>(ℝ) = {<i>A</i> &in; GL<sub>n</sub>(ℝ) | det <i>A</i> = 1}. The image of <i>&phi;</i> is made by all real numbers different from zero. Two matrices are in the same right coset only if they have the same image through <i>&phi; i.e.</i> only oif they have the same determinant. This is because <i>A &rho; B ⇐⇒ AB</i><sup>&minus;1</sup> &in; in SL<sub><i>n</i></sub>(ℝ) and det(AB<sup>&minus;1</sup>) = det A/det B = 1. </p></li>
+
+<li><p>The mapping</p>
+
+<div class="eq">
+<p><i>&phi;</i>: (ℝ \{0}, ⋅) ⟶(ℝ \{0}, ⋅)<br>
+&emsp; <i>&phi;</i>(<i>x</i>) = 1/|<i>x</i>|</p>
+</div>
+
+<p>is a homomorphism, such that Ker <i>&phi;</i> = {&pm;1}, Im<i>&phi;</i> = ℝ<sup>+</sup>.</p></li>
+</ol>
+
+<p><b>7.9.4 Proposition</b>. Let <i>&phi;</i> a homomorphism between two groups <i>G</i> and <i>G</i>'. Then:</p>
+
+<ol type="a">
+	<li><p>If <i>G</i> is finite, the order of Im<i>&phi;</i> divides the order of <i>G</i> (and the order of <i>G</i>' as well if <i>G</i>' is also finite).</p></li>
+	<li><p>If <i>G</i> is cyclic, then Im<i>&phi;</i> is also cyclic.</p></li>
+	<li><p>If <i>g</i> has finite order, then the order of <i>&phi;</i>(<i>g</i> divides the order of <i>g</i>.</p></li>
+</ol>
+
+<p><b>Proof</b>. </p>
+
+<ol type="a">
+	<li><p>As we showed earlier on |Im<i>&phi;</i>| is equal to the index of <i>K</i> in <i>G</i>, which is a divisor of <i>G</i> by Lagrange Theorem.</p></li>
+	<li><p>If <i>G</i> = ⟨<i>g</i>⟩ = {<i>g</i><sup>k</sup>| <i>k</i> &in; ℤ}, then Im<i>&phi;</i> = {<i>&phi;</i>(<i>g</i><sup>k</sup></i>) | <i>k</i> &in; ℤ} = {<i>&phi;</i>(<i>g</i>)<sup>k</sup> | <i>k</i> &in; ℤ} = 
+⟨<i>&phi;</i>(<i>g</i>)⟩.</p></li>
+
+	<li><p>Let <i>g</i> an element of order <i>n</i>. Then</p>
+	<div class="eq">
+	<p><i>&phi;</i>(<i>g</i>)<sup>n</sup> = <i>&phi;</i>(<i>g</i><sup>n</sup>) =  <i>&phi;</i>(<i>e</i>) = <i>e</i>'</p>
+	</div>
 	
-<section>
-<a href="rings.html">&#171;Ring and ring's isomorphisms</a>
+	<p>Then, if <i>h</i> is the order of <i>&phi;</i>(<i>g</i>), from <i>n = hq + r</i> with <i>0 &le; r &lt; h</i> we have</p>
+	
+	<li><p>Let <i>g</i> an element of order <i>n</i>. Then</p>
+	<div class="eq">
+	<p><i>e'</i> = <i>&phi;</i>(<i>g</i>)<sup><i>n</i></sup> = <i>&phi;</i>(<i>g<sup>h</sup></i>)<sup><i>q</i></sup> ⋅  <i>&phi;</i>(<i>g</i>)<sup><i>r</i></sup></p>
+	</div>
+	
+	<p>implies that <i>&phi;</i>(<i>g</i>)<sup><i>r</i></sup> = <i>e</i>', thus <i>r</i> = 0, hence <i>h</i> divides <i>n</i> &emsp; □.</p></li>
+	
+</ol>
+
+<h2>Exercises</h2>
+
+<ol>
+	<li><p>Prove that if <i>&phi;</i> is an isomorphism between two groups <i>G</i> and <i>G</i>', then for each <i>g &in; G</i> the order <i>g</i> is equal to the order <i>&phi;</i>(<i>g</i>).</p></li>
+	<li><p>What is the number of isomorphisms between two cyclic groups with the same order <i>G</i> and <i>G</i>'?.</p></li>
+	<li><p>Find all the group homomorphisms from (ℚ,+) into (ℤ,+).</p></li>
+	<li><p>Let <i>&phi;</i> a homomorphism between two groups <i>G</i> and <i>G</i>'. Prove that if <i>G</i> is abelian than Im <i>&phi;</i> is abelian too.</p></li>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>Let <i>n</i> the order of <i>g</i>. By Proposition 7.9.4, we know that the order <i>&phi;</i>(<i>g</i>) divides <i>n</i>. We suppose by contradiction that the order of <i>&phi;</i>(<i>g</i>) is <i>m</i>, 0 &lt; <i>m</i> &lt; <i>n</i>. Then <i>e = &phi;</i>(<i>g</i>)<sup>m</sup> = <i>&phi;</i>(<i>g<sup>m</sup></i>): owing to injectivity we must have <i>g<sup>m</sup> = e</i>, which is absurd. &emsp;■</p></li>
+	
+	<li><p>If <i>ϕ: G → G</i>′ is an isomorphism, then consider where an arbitrary element of <i>G</i> is sent. An arbitrary element of <i>G</i> is of the form <i>g<sup>k</sup></i>, so <i>ϕ</i>(<i>g<sup>k</sup></i>)=ϕ(<i>g</i>)<sup>k</sup>. Since ϕ is a bijection, the elements of G′ are precisely <i>ϕ</i>(<i>g</i>), <i>ϕ</i>(<i>g</i>)<sup>2</sup>, … , <i>ϕ</i>(<i>g</i>)<sup>n</sup>. Thus a generator of <i>G</i> is mapped to a generator of <i>G</i>'. For any isomorphism f(a*a ... *a) = f(a)*f(a) ...*f(a): Once you map a generator somewhere you fix where every other element in the group goes. Thus the number of isomorphisms is equal to the number of generators. <b>Lemma</b>. Let <i>G</i> be cyclic group of order <i>n</i>. Then <i>G</i> contains exactly <i>&phi;</i>(<i>n</i>) generators. <b>Proof</b>: Let <i>g</i> be a generator of <i>G</i>, so <i>G</i> = {<i>g,...,g<sup>n</sup></i> = 1}. Then <i>g<sup>k</sup></i> generates <i>G</i> if and only if <i>g<sup>km</sup> = g</i> for some <i>m</i>, which happens when <i>km</i> ≡ 1 (mod <i>n</i>), that is <i>k</i> must be a unit in ℤ<sub><i>n</i></sub>, thus there are <i>&phi;</i>(<i>n</i>) values of <i>k</i> for which <i>g<sup>k</sup></i> is a generator. &emsp;∎</p></li>
+	
+	<li><p>Suppose there exists a homomorphism <i>f</i>: (ℚ,+) ⟶ (ℤ,+) such that <i>f</i>(<i>x</i>) = <i>k</i>, with <i>k</i> &in; ℤ, then there exists some <i>q = x/k</i> &in; ℚ such that <i>f</i>(<i>x/k</i>) = 1, because when you add <i>x/k</i> to itself <i>k</i> times, you need to get <i>x</i>, hence <i>f</i>(<i>x</i>) = <i>k</i>. But</p>
+	
+	<div class="eq">
+	<p>2<i>x</i> = <i>x + x</i> = <i>f</i>(<i>q</i>/2) + <i>f</i>(<i>q</i>/2) = <i>f</i>(<i>q</i>/2 + <i>q</i>/2) = <i>f</i>(<i>q</i>) = 1</p>
+	</div>
+	
+	<p>which is impossible. Therefore there is no such homomorphism <i>f</i>. &emsp;∎</p></li>
+	
+	<li><p>Let <i>a',b'</i> &in; Im <i>&phi;</i>. Then <i>a' = &phi;</i>(<i>a</i>), <i>b' = &phi;</i>(<i>b</i>), for some <i>a,b &in; G</i>. <i>a'b' = &phi;</i>(<i>a</i>)<i>&phi;</i>(<i>b</i>) = <i>&phi;</i>(<i>ab</i>) = <i>&phi;</i>(<i>ba</i>) = <i>&phi;</i>(<i>a</i>)<i>&phi;</i>(<i>b</i>) = <i>b'a'</i>. &emsp; ∎</p></li>
+</ol>
+
+<section aria-label="End">
+<a href="group_isomorphism.html">&#171;Group isomorphisms</a>
 <a href="index.html">Index</a>
-<a href="homomorphism.html">Ring homomorphisms &#187;</a>
+<a href="normal_subgroups.html">Normal subgroups &#187;</a>
 </section>
 
 </div>

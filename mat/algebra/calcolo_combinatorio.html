@@ -97,9 +97,11 @@
 
 <h2>Numero di sottoinsiemi</h2>
 
-<p>Supponiamo di voler contare quanti sono i sottoinsiemi con <i>k</i> elementi di un insieme <i>A</i> (<i>k &le; n</i>). Conviene contare prima quante sono le <i>k</i>-ple ordinate di elementi distinti di <i>A</i>: si noti che due <i>k</i>-ple che hanno gli stessi elementi, ma in ordine diverso, sono da considerarsi diverse. Ora, il primo elemento della <i>k</i>-pla si può scegliere in <i>n</i> modi, il secondo in <i>n-1</i>, l'ultimo, ossia il <i>k</i>-esimo, <i>n - k + 1</i> modi. Le <i>k</i>-ple ordinate sono quindi i numero <i>n ⋅ (n - 1) ⋅⋅⋅ (n - k + 1)</i>. Ora, ogni sottoinsieme di <i>A</i> con <i>k</i> elementi ha esattamente <i>k!</i> ordinamenti, quind corrisponde a <i>k!</i> <i>k</i>-ple distinte. Se si vuole pertanto il numero di <i>sottoinsiemi</i> di <i>A</i> con <i>k</i> elementi, si dve dividere per <i>k!</i> il numero totale di <i>k</i>-ple. Quindi il numero di sottonsiemi con <i>k</i> elementi di un insieme con <i>n</i> elementi è dato da:</p>
+<p>Supponiamo di voler contare quanti sono i sottoinsiemi con <i>k</i> elementi di un insieme <i>A</i> (<i>k &le; n</i>). Conviene contare prima quante sono le <i>k</i>-ple ordinate di elementi distinti di <i>A</i>: si noti che due <i>k</i>-ple che hanno gli stessi elementi, ma in ordine diverso, sono da considerarsi diverse. Ora, il primo elemento della <i>k</i>-pla si può scegliere in <i>n</i> modi, il secondo in <i>n-1</i>, l'ultimo, ossia il <i>k</i>-esimo, <i>n - k + 1</i> modi. Le <i>k</i>-ple ordinate sono quindi i numero <i>n ⋅ (n - 1) ⋅⋅⋅ (n - k + 1)</i>. Ora, ogni sottoinsieme di <i>A</i> con <i>k</i> elementi ha esattamente <i>k!</i> ordinamenti, quind corrisponde a <i>k!</i> <i>k</i>-ple distinte. Se si vuole pertanto il numero di <i>sottoinsiemi</i> di <i>A</i> con <i>k</i> elementi, si dve dividere per <i>k</i>! il numero totale di <i>k</i>-ple. Quindi il numero di sottonsiemi con <i>k</i> elementi di un insieme con <i>n</i> elementi è dato da:</p>
 
-<img src="img/combinazioni_semplici.png" alt="combinazioni semplici"/>
+<div class="eq">
+<p><i>n</i>(<i>n</i> &minus; 1) ⋅⋅⋅ (<i>n &minus; k</i> + 1)/<i>k</i>!</p>
+</div>
 
 <p>Ebbene, tale numero, conta il numero di sottoinsiemi con <i>k</i> elementi che si possono formare partendo da un insieme con <i>n</i> elementi; Per esempio se abbiamo quattro oggetti dell'insieme {1, 2, 3, 4}, ci saranno (4 2) = 6 modi per scegliere 2 elementi tra questi, ossia</p>
 
@@ -109,7 +111,17 @@
 
 <p>Rrappresenta inoltre le combinazioni di <i>n</i> elementi a <i>k</i> a <i>k</i> elementi, prende il nome di <i>coefficiente binomiale</i> e si indica con il seguente simbolo:</p>
 
-<img src="img/simbolo_combinazioni.png" alt="simbolo combinazioni"/>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <mrow>
+              <mi>C<sub>n,k</sub></mi>
+              <mo>=</mo>
+                <mo>(</mo>
+                <mfrac linethickness="0">
+                  <mi>n</mi>
+                  <mi>k</mi>
+                </mfrac>
+                <mo>)</mo>
+</math>
 
 <p>quindi per la (C.3)</p>
 
@@ -127,11 +139,11 @@
 
 <img src="img/stifel.gif" alt="formula stifel dimostrazione"/>
 
-<p>Quest'ultima relazione permette di calcolare i numeri (n+1 k) a partire dai valori (n k) e (n k-1). In tal modo si costruisce il cosiddetto <i>trianolo di Tartaglia</i> (o di <i>Pascal</i>); in cima al triangolo si pone (0 0)=1.</p>
+<p>Quest'ultima relazione permette di calcolare i numeri (<i>n</i> + 1 <i>k</i>) a partire dai valori (n k) e (n k&minus;1). In tal modo si costruisce il cosiddetto <i>trianolo di Tartaglia</i> (o di <i>Pascal</i>); in cima al triangolo si pone (0 0)=1.</p>
 
 <img src="img/tartaglia.png" alt="triangolo Tartaglia"/>
 
-<p>Il motivo per cui gli interi (n k) prendono il nome di coefficienti binomiali è che essi compaiono come coefficienti nella formula che dà lo sviluppo della potenza di un binomio (<i>a + b</i>)<sup>n</sup></i>:</p>
+<p>Il motivo per cui gli interi (<i>n k</i>) prendono il nome di coefficienti binomiali è che essi compaiono come coefficienti nella formula che dà lo sviluppo della potenza di un binomio (<i>a + b</i>)<sup>n</sup></i>:</p>
 
 <img src="img/newton.png" alt="binomio newton"/>
 
@@ -147,10 +159,10 @@
 <p>In generale, sviluppando la potenza</p>
 
 <div class="eq">
-<p>(<i>a + b</i>)<sup>n</sup> = (a + b) (a + b) ... (a + b)</p>
+<p>(<i>a + b</i>)<sup>n</sup> = (a + b) ⋅ (a + b) ⋅ ... ⋅ (a + b)</p>
 </div>
 
-<p>si ottiene una somma di termini della forma a<sup>n-k</sup>b<sup>k</sup>. Se in un fattore <i>y</i> compare <i>k</i> volte, allora in quello stesso fattore <i>a</i> compare <i>n-k</i> volte. Il coefficiente di ogni termine sarà il numero di modi di scegliere <i>k</i> degli <i>n</i> binomi (a+b), ossia il coefficiente binomilae (n k). Ad esempio in (<i>x + y</i>)^3 = (x,y)*(x,y)*(x,y), there are 3 ways to form the term 3x^2y si possono prendere le due x:</p>
+<p>si ottiene una somma di termini della forma a<sup>n-k</sup>b<sup>k</sup>. Se in un fattore <i>y</i> compare <i>k</i> volte, allora in quello stesso fattore <i>a</i> compare <i>n &minus; k</i> volte. Il coefficiente di ogni termine sarà il numero di modi di scegliere <i>k</i> degli <i>n</i> binomi (a+b), ossia il coefficiente binomilae (n k). Ad esempio in (<i>x + y</i>)<sup>3</sup> = (x + y)(x + y)(x + y), there are 3 ways to form the term 3x^2y si possono prendere le due x:</p>
 
 <ul>
 	<li><p>dai primi due binomi;</p>

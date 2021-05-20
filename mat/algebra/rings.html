@@ -36,16 +36,16 @@
 
 <li><ol type="a">
 	<li><p>+ is <i>associative</i>: (<i>a + b</i>) + <i>c = a</i> + (<i>b + c</i>) &forall;<i>a, b, c &in; R</i></p></li>
-	<li><p>There is an element 0 in <i>R</i> such that <i>a + 0 = a &forall;a &in; R</i> (that is, 0 is the additive identity).</p></li>
+	<li><p>There is an element 0 in <i>R</i> such that <i>a</i> + 0 = <i>a &forall;a &in; R</i> (that is, 0 is the additive identity).</p></li>
 	<li><p>&forall;<i>a &in; R</i> there exists −<i>a &in; R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
-	<li><p>+ is <i>commutative</i>: <i>a + b = b + a</i> &forall; <i>a, b</i> &in; <i>R</i></p></li>
+	<li><p>+ is <i>commutative</i>: <i>a + b = b + a</i> &forall;<i>a, b &in; R</i></p></li>
 </ol>
 </li>
 
-	<li><p>· is <i>associative</i>: (<i>a · b</i>) · <i>c = a</i> · (<i>b · c</i>) &forall; <i>a, b, c</i> &in; <i>R</i></p></li>
+	<li><p>· is <i>associative</i>: (<i>a · b</i>) · <i>c = a</i> · (<i>b · c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
 	<li><p>Multiplication is distributive with respect to addition, meaning that:</p>
 		<div class="eq">
-		<p><i>a</i> · (<i>b + c</i>) = <i>a · b + a · c</i>, &emsp; (<i>a+b</i>) · c</i> = <i>a · c + b · c</i> &emsp; &forall; <i>a,b,c &in; R</i></p>
+		<p><i>a</i> · (<i>b + c</i>) = <i>a · b + a · c</i>, &emsp; (<i>a + b</i>) · <i>c</i> = <i>a · c + b · c</i> &emsp; &forall;<i>a,b,c &in; R</i></p>
 		</div>
 	</li>
 </ol>
@@ -126,11 +126,11 @@
 <p>The following properties follow from ring axiomes, we do not prove them since we've already proved it in the case of <a href="Z.html">integers</a> (without making it specific for integers alone).</p>
 
 <ol type="i">
-	<li><p><i>a ⋅ 0 = 0 ⋅ a = 0;</i></p></li>
-	<li><p><i>(−a) ⋅ b = −(a⋅b);</i></p></li>
+	<li><p><i>a</i> ⋅ 0 = 0 ⋅ <i>a</i> = 0;</p></li>
+	<li><p>(−<i>a</i>) ⋅ <i>b</i> = −(<i>a ⋅ b</i>);</i></p></li>
 </ol>
 
-<p><b>6.1.2 Definition.</b> Let [<i>R</i>;+,⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
+<p><b>6.1.2 Definition.</b> Let [<i>R</i>, +, ⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
 
 <div class="eq">
 <p><i>&phi;(<i>a+b</i>) = &phi;(<i>a</i>) +' &phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
@@ -175,8 +175,19 @@
 	
 	</li>
 	
-	<li><p>An <i>integral domain</i> is a commutative ring with identity and no ­zero-­divisors <i>i.e. ab = 0 ⇒ a</i> = 0 or <i>b</i> = 0.</p></li>
-	<li><p>A <i>field</i> is a <i>multiplicative ring with unit</i> having a multiplicative inverse for every non zero element.</p>
+	<li><p>An <i>integral domain</i> is a commutative ring with identity and no ­zero-­divisors <i>i.e. ab</i> = 0 ⇒ <i>a</i> = 0 or <i>b</i> = 0.</p></li>
+	
+	<div id="field">
+	<li><p>A ring <i>F</i>, is a <b>field</b> provided these conditions hold:</p></li>
+	
+		<ol>
+			<li><p><i>F</i> is a commutative ring.</p></li>
+			<li><p><i>F</i> has a unity <i>e</i>, and <i>e</i> &ne; 0.</p></li>
+			<li><p>Every nonzero element of <i>F</i> has a multiplicative inverse.</p></li>
+		</ol>
+
+	<p>Another way to look at the definition of a <i>field</i> is t his: It is a commutative ring in which one can always solve equations of the form <i>ax = b</i> (when <i>a</i> &ne; 0). The solution is, of course, <i>x = a<sup>−1</sup> b</i>. In other words: In all rings we can add, subtract, and multiply, but in fields we can also divide. Or to say this yet another way, a field is a commutative ring with unity for which all non-zero elements are <i>associates</i> of one another. ℚ, ℝ and ℂ, are familiar examples of <i>fields</i>. We have seen that if <i>p</i> is a prime, then ℤ<sub><i>p</i></sub> is a field.</p></div></li>
+
 	<li><p>A <i>division ring</i> is a ring with identity (not necessarily commutative).</p></li>
 </ul>
 
@@ -184,8 +195,8 @@
 
 <ol type="a">
 	<li><p>The identity is a unit; it is equal to its inverse.</p></li>
-	<li><p>If <i>a</i> is a unit, then so is <i>a</i><sup>−1</sup>; its inverse is a.</p></li>
-	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b<sup>−1</sup></i> <i>a<sup>−1</sup></i>.</p></li>
+	<li><p>If <i>a</i> is a unit, then so is <i>a</i><sup>−1</sup>; its inverse is <i>a</i>.</p></li>
+	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b<sup>−1</sup> a<sup>−1</sup></i>.</p></li>
 </ol>
 
 <p><b>Proof</b>.</p>
@@ -193,7 +204,7 @@
 <ol type="a">
 	<li><p>1⋅ 1 = 1</p></li>
 	<li><p>This is shown by the equation <i>aa<sup>−1</sup> = a<sup>−1</sup> a</i> = 1</p></li>
-	<li><p>We have (<i>ab</i>)(<i>b<sup>−1</sup>a<sup>−1</sup></i>) = <i>a</i> (<i>bb<sup>−1</sup></i>) <i>a<sup>−1</sup>= aa<sup>−1</sup></i> = 1.</p>
+	<li><p>We have (<i>ab</i>)(<i>b<sup>−1</sup>a<sup>−1</sup></i>) = <i>a</i> (<i>bb<sup>−1</sup></i>) <i>a<sup>−1</sup> = aa<sup>−1</sup></i> = 1.</p>
 	<p>and, similarly, (<i>b<sup>−1</sup> a<sup>−1</sup></i>)(<i>ab</i>) = 1.□</p></li>
 </ol>
 
@@ -224,7 +235,7 @@ This is not a different proposition from the one we already gave when studying t
 <p><i>a<sup>−1</sup></i> ⋅ (<i>a⋅b</i>) = (<i>a<sup>−1</sup> ⋅ a</i>) ⋅ <i>b = 1 ⋅  b</i>= 0</p>
 </div>
 
-<p>and hence <i>b = 0</i>. Thus, we have an integral domain.□</p>
+<p>and hence <i>b</i> = 0. Thus, we have an integral domain.□</p>
 
 <p>It is clear that only that rings the properties mentioned above cannot be considered isomorphic <i>e.g.</i> a ring with unit cannot be isomorphic to a ring without unit. For example for any integer <i>n</i> &in; ℕ, let</p>
 

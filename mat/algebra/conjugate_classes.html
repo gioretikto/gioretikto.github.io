@@ -23,7 +23,6 @@
 
 <p>The concept of conjugate elements and conjugate classes in a group is basic to the study of normal subgroups.</p>
 
-
 <p><b>7.5.1 Definition</b> Let <i>&sigma;</i> and <i>&sigma;'</i> two permutations of 𝓢<sub><i>n</i></sub>. We say that the permutation <i>&sigma;</i> is conjugate to the permutation <i>&sigma;'</i> if there exists a permutation <i>&tau;</i> in 𝓢<sub><i>n</i></sub> such that</p>
 
 <div class="eq">
@@ -72,74 +71,34 @@
 
 <p><b>Remark</b>. It is possible that two permutations of <i>A<sub>n</sub></i> which are conjugated in 𝓢<sub><i>n</i></sub> are not conjugated in <i>A<sub>n</sub></i>, because there is not <i>&tau;</i> in <i>A<sub>n</sub></i> such that <i>&sigma;'= &tau;&sigma;&tau;<sup>&minus;1</sup></i>, that is the <i>&tau;</i>s permutations are in 𝓢<sub><i>n</i></sub> but not in <i>A<sub>n</sub></i>.</p>
 
-<p><b>7.5.3 Example</b>. Given</p>
+<p><b>7.5.3 Example</b>. In 𝓢<sub>7</sub> let</p>
+
+<div class="eq">
+<p><i>&sigma;</i> = (1,5) (2,3,4), &emsp; <i>&tau;</i> = (1,4,3)(2,6,7,5)</p>
+</div>
+
+<p>We have that</p>
+
+<div class="eq">
+<p><i>&tau;&sigma;&tau;<sup>&minus;1</sup></i> = (4,2)(6,1,3)</p>
+</div>
+
+<p>Since we have that (&tau;(1), &tau;(5)) (&tau;(2), &tau;(3), &tau;(4)) = (4,2)(6,1,3).</p>
+
+<p><b>7.5.4 Example</b>. Given</p>
 
  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
-    <mtr>
-      <mtd>
-<mi>&sigma;<!-- sigma --></mi>
-      </mtd>
-      <mtd>
-<mi></mi>
-<mo>=</mo>
-<mo stretchy="false">(</mo>
-<mn>3</mn>
-<mo>,</mo>
-<mn>4</mn>
-<mo>,</mo>
-<mn>5</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>1</mn>
-<mo>,</mo>
-<mn>2</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>7</mn>
-<mo>,</mo>
-<mn>8</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>6</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>9</mn>
-<mo stretchy="false">)</mo>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-<mi>&sigma;'<!-- sigma'--></mi>
-      </mtd>
-      <mtd>
-<mi></mi>
-<mo>=</mo>
-<mo stretchy="false">(</mo>
-<mn>1</mn>
-<mo>,</mo>
-<mn>6</mn>
-<mo>,</mo>
-<mn>2</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>3</mn>
-<mo>,</mo>
-<mn>5</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>8</mn>
-<mo>,</mo>
-<mn>9</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>4</mn>
-<mo stretchy="false">)</mo>
-<mo stretchy="false">(</mo>
-<mn>7</mn>
-<mo stretchy="false">)</mo>
-      </mtd>
-    </mtr>
+    <mtr>  <mtd> <mi>&sigma;<!-- sigma --></mi>  </mtd>    <mtd> <mi></mi> <mo>=</mo><mo stretchy="false">(</mo> <mn>3</mn> <mo>,</mo> <mn>4</mn> <mo>,</mo> <mn>5</mn> <mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo> <mn>1</mn> <mo>,</mo> <mn>2</mn> <mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo> <mn>7</mn> <mo>,</mo><mn>8</mn> <mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo> <mn>6</mn> <mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo> <mn>9</mn> <mo stretchy="false">)</mo> </mtd>  </mtr>
+
+<mtr>  <mtd> <mi>&sigma;'<!-- sigma'--></mi>       </mtd>       <mtd> <mi></mi> <mo>=</mo> <mo stretchy="false">(</mo> <mn>1</mn> <mo>,</mo> <mn>6</mn> <mo>,</mo> <mn>2</mn> <mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo> <mn>3</mn> <mo>,</mo> <mn>5</mn> <mo stretchy="false">)</mo> <mo stretchy="false">(</mo> <mn>8</mn> <mo>,</mo> <mn>9</mn> <mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo> <mn>4</mn> <mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo> <mn>7</mn> <mo stretchy="false">)</mo> </mtd> </mtr>
   </mtable>
   <mtext>&#xA0;so&#xA0;</mtext>
   <mi>&#x03C4;<!-- τ --></mi>
@@ -147,12 +106,9 @@
   <mrow>
     <mo>[</mo>
     <mtable rowspacing="4pt" columnspacing="1em">
-      <mtr>
-<mtd>
- <mn>3</mn>
-</mtd> <mtd>  <mn>4</mn> </mtd> <mtd>  <mn>5</mn> </mtd> <mtd>  <mn>1</mn> </mtd> <mtd>  <mn>2</mn> </mtd> <mtd>  <mn>7</mn> </mtd> <mtd>  <mn>8</mn> </mtd> <mtd>  <mn>6</mn> </mtd> <mtd> <mn>9</mn></mtd> </mtr>
+      <mtr> <mtd> <mn>3</mn> </mtd> <mtd> <mn>4</mn> </mtd> <mtd>  <mn>5</mn> </mtd> <mtd>  <mn>1</mn> </mtd> <mtd>  <mn>2</mn> </mtd> <mtd>  <mn>7</mn> </mtd> <mtd>  <mn>8</mn> </mtd> <mtd>  <mn>6</mn> </mtd> <mtd> <mn>9</mn></mtd> </mtr>
 <mtr><mtd> <mn>1</mn></mtd><mtd> <mn>6</mn></mtd><mtd> <mn>2</mn></mtd><mtd> <mn>3</mn></mtd> <mtd> <mn>5</mn></mtd><mtd> <mn>8</mn></mtd><mtd> <mn>9</mn></mtd><mtd> <mn>4</mn></mtd><mtd>
- <mn>7</mn></mtd>      </mtr>
+ <mn>7</mn></mtd> </mtr>
     </mtable>
     <mo>]</mo>
   </mrow>
@@ -178,7 +134,7 @@
 
 <p>It is well known that an equivalence relation provides a unique way to classify the elements of a set.</p>
 
-<p><b>7.5.4 Proposition</b>. There are as many conjugate classes in 𝓢<sub><i>n</i></sub> as different cyclic structures.</p>
+<p><b>7.5.5 Proposition</b>. There are as many conjugate classes in 𝓢<sub><i>n</i></sub> as different cyclic structures.</p>
 
 <p>In 𝓢<sub>3</sub>, 𝓢<sub>4</sub> and 𝓢<sub>5</sub> the different cyclic structures</p>
 
@@ -205,7 +161,7 @@
 
 <p>Let's count now the number of permutations in each conjugate class. It suffices to count the number of distinct <i>r</i>-cycles, <i>r</i> = 1, ..., <i>n</i> and the cyclic products in 𝓢<sub><i>n</i></sub>.</p>
 
-<p><b>7.5.5 Proposition</b>. The number of <i>r</i>-cycles in the symmetric group 𝓢<sub><i>n</i></sub> is given, for 1 ≤ <i>r ≤ n</i>, by the following equivalent formula</p>
+<p><b>7.5.6 Proposition</b>. The number of <i>r</i>-cycles in the symmetric group 𝓢<sub><i>n</i></sub> is given, for 1 ≤ <i>r ≤ n</i>, by the following equivalent formula</p>
 
 <div class="eq">
 <p><i>n</i>!/<i>r</i>(<i>n − r</i>)!</p>
@@ -217,9 +173,9 @@
 <p><i>C<sub>n, r</sub></i> ⋅ (<i>r</i> − 1)! = <i>n</i>!/<i>r</i>(<i>n − r</i>)! □</p>
 </div>
 
-<p>With a similar reasoning we can derive the number of permutations in 𝓢<sub><i>n</i></sub> whose cycle structure consists of <i>r<sub>i</sub>i</sub></i> cycles of a given lenght.</p>
+<p>With a similar reasoning (see also the <a href="exercises_conjugate_classes.html">Exercises</a>) we can derive the number of permutations in 𝓢<sub><i>n</i></sub> whose cycle structure consists of <i>r<sub>i</sub>i</sub></i> cycles of a given lenght.</p>
 
-<p><b>7.5.8 Proposition</b>. The number of permutations in 𝓢<sub><i>n</i></sub> whose cycle structure consists of <i>r<sub>i</sub></i> cycles of lenght <i>k<sub>i</sub></i>, for <i>i</i> = 1, ..., <i>m</i> is</p>
+<p><b>7.5.7 Proposition</b>. The number of permutations in 𝓢<sub><i>n</i></sub> whose cycle structure consists of <i>r<sub>i</sub></i> cycles of lenght <i>k<sub>i</sub></i>, for <i>i</i> = 1, ..., <i>m</i> is</p>
 
 <div class="eq">
 <p><i>n</i>!/ (<i>k<sub>1</sub><sup>r<sub>1</sub></sup> ⋅⋅⋅ k<sub>m</sub><sup>r<sub>m</sup> r<sub>1</sub>! ⋅⋅⋅ r<sub>m</sub>!</i>)</p>
@@ -240,7 +196,7 @@
 <tr><td>(−,−)</td>  <td>C<sub>4,2</sub> = 6 (To construct a transposition (<i>a,b</i>) we choose 2 of 4 elements, and this can be done in 6 ways.</td></tr>
 <tr><td>(−,−,−)</td> <td>C<sub>4,3</sub> ⋅ 2! = 8 (To construct a 3-cycle, we choose 3 of 4 elements, but then each choice can be arranged in two different ways).</td></tr>
 <tr><td>(−,−,−,−)</td> <td>C<sub>4,4</sub> ⋅ (4 - 1)! = 6</td></tr>
-<tr><td>(−,−)(−,−)</td> <td>[C<sub>4,2</sub> ⋅  (2-1)! ⋅ C<sub>2,2</sub>⋅ (2-1)!]/ 2! = 3 or equivalently (4!)/(4 ⋅ 2!) = 3</td></tr>
+<tr><td>(−,−)(−,−)</td> <td>[C<sub>4,2</sub> ⋅  (2-1)! ⋅ C<sub>2,2</sub> ⋅ (2 - 1)!]/ 2! = 3 or equivalently (4!)/(4 ⋅ 2!) = 3</td></tr>
 </table>
 
 <p>If you try to count permutations of type (-,-)(-,-)(-,-) in 𝓢<sub>6</sub> you select the pairs forming the 2-cycles in three stages. Because you don't care about the ordering of the stages, the answer is
@@ -248,7 +204,7 @@
 
 <p>Based on the two previous examples we can state the following proposition.</p>
 
-<p><b>7.5.9 Definition</b>. Let <i>n</i> an integer, we say that the sequence of positive integers <i>n<sub>1</sub>,n<sub>2</sub> ⋅⋅⋅  n<sub>t</sub></i> with <i>n<sub>1</sub> &gt; n<sub>2</sub> &gt; n<sub>3</sub> ⋅⋅⋅  &gt; n<sub>t</sub></i> is a partition of the integer <i>n</i>.</p>
+<p><b>7.5.8 Definition</b>. Let <i>n</i> an integer, we say that the sequence of positive integers <i>n<sub>1</sub>,n<sub>2</sub> ⋅⋅⋅  n<sub>t</sub></i> with <i>n<sub>1</sub> &gt; n<sub>2</sub> &gt; n<sub>3</sub> ⋅⋅⋅  &gt; n<sub>t</sub></i> is a partition of the integer <i>n</i>.</p>
 
 <div class="eq">
 <p><i>n = n<sub>1</sub> + n<sub>2</sub> + ... + n<sub>t</sub></i></p>
@@ -267,7 +223,7 @@
 
 <p>you will notice that each parition of the integer 4, corresponds to one of the five cyclic structure of 𝓢<sub>4</sub>, (the last corresponds to the identity, the first to a 4-cycle).</p>
 
-<p><b>7.5.10 Proposition</b>. The number of Conjugacy class 𝓢<sub><i>n</i></sub> is the same as the paritions of the integer <i>n</i>.</p>
+<p><b>7.5.9 Proposition</b>. The number of Conjugacy class 𝓢<sub><i>n</i></sub> is the same as the paritions of the integer <i>n</i>.</p>
 
 <section aria-label="End">
 <a href="transformation_group.html">&#171;The transformation group</a>

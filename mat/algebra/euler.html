@@ -30,14 +30,14 @@
 <p>Euler's theorem is a generalization of this result to arbitrary modules <i>n</i> not only prime modules.</p>
 
 <div class="eq">
-<p><i>a<sup>&phi;(n)</sup></i> ≡ 1  &emsp; (mod <i>n</i>)</p>
+<p><i>a<sup>&phi;</i>(<i>n</i>)</sup> ≡ 1  &emsp; (mod <i>n</i>)</p>
 </div>
 
 <p>We now focus on finding this function <i>&phi;</i>(<i>n</i>), that in the case of <i>n</i> prime number bust be equal to <i>p</i> −1.</p>
 
-<p><b>Definition 4.27</b>. For all <i>n</i> ≥ 1, denote by <i>φ</i>(<i>n</i>) the number of positive integers smaller than <i>n</i> that are coprime to <i>n</i>. The function <i>φ</i>: ℕ → ℕ defined in this way is called <i>Euler function</i> or <i>φ function</i>.</p>
+<p><b>Definition 4.9.1</b>. For all <i>n</i> ≥ 1, denote by <i>φ</i>(<i>n</i>) the number of positive integers smaller than <i>n</i> that are coprime to <i>n</i>. The function <i>φ</i>: ℕ → ℕ defined in this way is called <i>Euler function</i> or <i>φ function</i>.</p>
 
-<p>As we saw the set of invertible residue classes modulo <i>n</i> by (ℤ/n)* is</p>
+<p>As we saw the set of invertible residue classes modulo <i>n</i> by (ℤ/<i>n</i>)* is</p>
 
 <div class="eq">
 <p>(ℤ/<i>n</i>)* = {<i>x</i> &in; ℤ/<i>n</i> | gcd (<i>x,n</i>) = 1}</p>
@@ -49,11 +49,11 @@
 <p>φ(20) = 8 because because the numbers less than 20 are 1, 3, 7, 9, 11, 13, 14, 17.</p>
 <p>φ(3) = 2, φ(4) = 2, φ(5) = 4, φ(6) = 2, φ(7) = 6.</p>
 
-<p>Euler discovered that, by using this function φ(<i>n</i>), he could generalize Fermat’s little theorem to include composite numbers <i>n</i>.  For example, we observe that 5 is relatively prime to 12 and that 5<sup>φ(12)</sup> ≡ 1 (mod 12); that is, 5<sup>4</sup> ≡ 1 (mod 12), which we can easily verify, since 5<sup>4</sup> = (5<sup>2</sup>)<sup>2</sup> = (25)<sup>2</sup> ≡ 1<sup>2</sup> = 1 (mod 12).</p>
+<p>Euler discovered that, by using this function φ(<i>n</i>), he could generalize Fermat’s little theorem to include composite numbers <i>n</i>. For example, we observe that 5 is relatively prime to 12 and that 5<sup>φ(12)</sup> ≡ 1 (mod 12); that is, 5<sup>4</sup> ≡ 1 (mod 12), which we can easily verify, since 5<sup>4</sup> = (5<sup>2</sup>)<sup>2</sup> = (25)<sup>2</sup> ≡ 1<sup>2</sup> = 1 (mod 12).</p>
 
 <p>The following propositions allow us to calcula the Euler function <i>for every integer n of which its factorisation is known</i>.</p>
 
-<p><b>Proposition 4.28</b>. Let <i>n = p<sub>1</sub><sup>h<sub>1</sub></sup> p<sub>2</sub><sup>h<sub>2</sub></sup> ··· p<sub>s</sub><sup>h<sub>s</sub></sup></i>, the factorisation of <i>n</i> with <i>p<sub>i</sub></i> distinct prime numbers for <i>i</i> = 1, . . ., s,. Then</p>
+<p><b>Proposition 4.9.2</b>. Let <i>n = p<sub>1</sub><sup>h<sub>1</sub></sup> p<sub>2</sub><sup>h<sub>2</sub></sup> ··· p<sub>s</sub><sup>h<sub>s</sub></sup></i>, the factorisation of <i>n</i> with <i>p<sub>i</sub></i> distinct prime numbers for <i>i</i> = 1, . . ., s,. Then</p>
 
 <div class="eq">
 <p><i>&phi;</i>(<i>n</i>) = <i>&phi;</i>(<i>p<sub>1</sub><sup>h<sub>1</sub></sup></i>) <i>&phi;</i>(<i>p<sub>2</sub><sup>h<sub>2</sub></sup></i>) ··· <i>&phi;</i>(<i>p<sub>s</sub><sup>h<sub>s</sub></sup></i>) &emsp; (<b>4.8</b>)</p>
@@ -68,7 +68,7 @@
 <p>We now from <a href="chinese.html#chinese2">Proposition 4.26</a> that</p>
 
 <div class="eq">
-<p><i>f: ℤ<sub><i>mn</i></sub> → ℤ<sub><i>m</i></sub> × ℤ<sub><i>n</i></sub>,</i></p>
+<p><i>f</i>: ℤ<sub><i>mn</i></sub> → ℤ<sub><i>m</i></sub> × ℤ<sub><i>n</i></sub></p>
 </div>
 
 <p>defined by</p>
@@ -85,10 +85,10 @@
 
 <p>Where <i>U<sub>k</sub></i> denotes the set of invertible congruence classes in ℤ<sub>k</sub>, consequently |<i>U<sub>mn</sub></i>| =&phi;(<i>mn</i>) = |<i>U<sub>m</sub></i>| ⋅ |<i>U<sub>n</sub></i>| = &phi;(<i>n</i>)⋅&phi;(<i>m</i>).□</p>
 
-<p><b>Proposition 4.29</b>. If <i>p</i> is a prime number, then</p>
+<p><b>Proposition 4.9.3</b>. If <i>p</i> is a prime number, then</p>
 
 <div class="eq">
-<p><i>φ(p<sup>h</sup>) = p<sup>h</sup> − p<sup>h−1</sup></i></p>
+<p><i>φ</i>(<i>p<sup>h</sup></i>) = <i>p<sup>h</sup> − p<sup>h−1</sup></i></p>
 </div>
 
 <p><b>Proof</b>. It is sufficient to note that the only numbers that are not coprime with <i>p<sup>h</sup></i> are the multiples of <i>p</i>, which are of the form</p>
@@ -97,22 +97,24 @@
 <p><i>p · i</i>, &emsp; with 1 ≤ <i>i</i> ≤ <i>p<sup>h−1</sup></i></p>
 </div>
 
-<p>so there are <i>p<sup>h−1</sup></i> of them.□</p>
+<p>so there are <i>p<sup>h−1</sup></i> of them. &emsp;□</p>
 
 <p>The last two proposition allow us to compute Euler function for every integer <i>n</i> for which the prime decomposition is known. For instance,</p>
 
 <div class="eq">
-<p>φ(72) = φ(2<sup>3</sup> · 3<sup>2</sup>) = φ(2<sup>3</sup>) φ(3<sup>2</sup>) = φ(2<sup>3</sup> − 2<sup>2</sup>) (3<sup>2</sup> − 3) = 24</p>
-<p>φ(108) = φ(2<sup>2</sup> · 3<sup>3</sup>) = φ(2<sup>2</sup>)φ(3<sup>3</sup>) = (2<sup>2</sup> − 2)(3<sup>3</sup>− 3<sup>2</sup>) = 36.
+<p><i>φ</i>(72) = <i>φ</i>(2<sup>3</sup> · 3<sup>2</sup>) = φ(2<sup>3</sup>) <i>φ</i>(3<sup>2</sup>) = (2<sup>3</sup> − 2<sup>2</sup>) (3<sup>2</sup> − 3) = 24</p>
+<p><i>φ</i>(108) = <i>φ</i>(2<sup>2</sup> · 3<sup>3</sup>) = φ(2<sup>2</sup>) <i>φ</i>(3<sup>3</sup>) = (2<sup>2</sup> − 2)(3<sup>3</sup>− 3<sup>2</sup>) = 36.
 </div>
 
-<p>Even though we are able to calculare φ(<i>n</i>) when the factorisation is known, for large numbers to find all primes that divide <i>n</i> becomes a challenging task.</p>
+<p>Even though we are able to calculare <i>φ</i>(<i>n</i>) when the factorisation is known, for large numbers to find all primes that divide <i>n</i> becomes a challenging task.</p>
+
+<p>We prove now Euler's thorem. The proof that we provide now is not very elegant, but once we would have studied groups we shall provide another proof of the <a href="cosets.html#Euler">Euler's theorem</a><p>
 
 <div id="theorem">
 <p><b>Theorem 4.30</b> (<i>Euler’s Theorem</i>). If (<i>a,n</i>) = 1, then</p>
 
 <div class="eq">
-<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>n</i>).</p>
+<p><i>a<sup>φ</i>(<i>n</i>)</sup> ≡ 1 &emsp;(mod <i>n</i>).</p>
 </div>
 
 <p><b>Proof</b>. We first prove that</p>
@@ -124,7 +126,7 @@
 <p>We use induction on <i>k</i>. For <i>k</i> = 1</p>
 
 <div class="eq">
-<p><i>a<sup>φ(p)</sup> = a<sup>p − 1</sup></i> ≡ 1 &emsp;(mod <i>p</i>).</p>
+<p><i>a</i><sup><i>φ</i>(<i>p</i>)</sup> = <i>a</i><sup><i>p</i> − 1</sup> ≡ 1 &emsp;(mod <i>p</i>).</p>
 </div>
 
 <p>this is Fermat's little theorem we already proved. Assuming (4.9) is true for <i>k</i> we prove it for <i>k</i> + 1. Equation (4.9) can be written as</p>
@@ -157,7 +159,7 @@
 <p>For what we proved in the first part for all <i>i</i> we have</p>
 
 <div class="eq">
-<p><i>a<sup>φ(p<sub>i</sub><sup>k<sub>i</sub></sup>)</sup></i> ≡ 1 &emsp;(mod p<sub>i</sub><sup>k<sub>i</sub></sup>) &emsp; <i>i</i> = 1, 2, ..., <i>s</i> &emsp; (<b>4.10</b>)</p></p>
+<p><i>a</i><sup><i>φ</i>(p<sub>i</sub><sup>k<sub>i</sub></sup>)</sup></i> ≡ 1 &emsp;(mod p<sub>i</sub><sup>k<sub>i</sub></sup>) &emsp; <i>i</i> = 1, 2, ..., <i>s</i> &emsp; (<b>4.10</b>)</p></p>
 </div>
 
 <p>From the multiplicative property of &phi; follows</p>
@@ -181,8 +183,20 @@
 <p>and thus</p>
 
 <div class="eq">
-<p><i>a<sup>φ(n)</sup></i> ≡ 1 &emsp;(mod <i>n</i>).□</p>
+<p><i>a</i><sup><i>φ</i>(<i>n</i>)</sup> ≡ 1 &emsp;(mod <i>n</i>).□</p>
 </div>
+
+<p>The Euler function will be, very important for other aspect we shall in encounter in the next chapters. At present we remark that, as ℤ<sub><i>n</i></sub> = {[0], [1], . . . , [<i>n</i> − 1]}, the multiplicative group <i>U</i>(ℤ<sub><i>n</i></sub>) of invertible elements of ℤ<sub><i>n</i></sub> consists of all classes [<i>a</i>], with 0 &lt; <i>a</i> &lt; <i>n</i> such that a is coprime to <i>n</i> (see <a href="linear_congruences.html#invertible">Corollary 4.5.9</a>. So <i>U</i>(ℤ<sub><i>n</i></sub>) has order <i>φ</i>(<i>n</i>).</p>
+
+<p><b>Example 4.9.4</b>. Let us see some examples of <i>U</i>(ℤ<sub><i>n</i></sub>) for some <i>n</i>:</p>
+
+<div class="eq">
+<p>ℤ<sub>4</sub> = {0̄, 1̄, 2̄, 3̄}, &emsp; <i>U</i>(ℤ<sub>4</sub>) = {1̄, 3̄},<br>
+ℤ<sub>6</sub> = {0̄, 1̄, 2̄, 3̄, 4̄, 5̄}, &emsp; <i>U</i>(ℤ<sub>6</sub>) = {1̄, 5̄},<br>
+ℤ<sub>8</sub> = {0̄, 1̄, 2̄, 3̄, 4̄, 5̄, 6̄, 7̄}, &emsp; <i>U</i>(ℤ<sub>8</sub>) = {1̄, 3̄, 5̄, 7̄}.</p>
+</div>
+ 
+<p>Notice that <i>φ</i>(4) = |<i>U</i>(ℤ<sub>4</sub>)| = 2, <i>φ</i>(6) = |<i>U</i>(ℤ<sub>6</sub>)| = 2, and <i>φ</i>(8) = |<i>U</i>(ℤ<sub>8</sub>)| = 4.</p>
 </div>
 
 <section aria-label="End">
