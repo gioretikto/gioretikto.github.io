@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Entropy, reversibility, and irreversibility"/>
+    <title>Entropy, reversibility, and irreversibility</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Entropy, reversibility, and irreversibility</h1>
+
+<p>The entropy change on going from state 1 to state 2 is given by integrating d<i>S</i> = d<i>q<sub>rev</sub></i>/d<i>T</i> from state 1 to 2 to obtain &Delta;<i>S = S<sub>2</sub> &minus; S<sub>1</sub></i> = ∫<sub>1</sub><sup>2</sup> &ensp; d<i>q<sub>rev</sub>/T</i>, where <i>T</i> is the absolute temperature. For an irreversible process, we cannot integrate dq<sub>irr</sub>/<i>T</i> to obtain &Delta;<i>S</i> because d<i>S</i> equals d<i>q<sub>rev</sub>/T</i> only for reversible processes. For an irreversible process, d<i>S</i> is not necessarily equal to d<i>q<sub>irr</sub>/T</i>. However, <i>S</i> is a state function, and therefore &Delta;<i>S</i> depends only on the initial and final states. To calculate &Delta;<i>S = S<sub>2</sub> &minus; S<sub>1</sub></i>, we devise a reversible path from state 1 to state 2 and we use</p>
+
+<div class="eq">
+<p>&Delta;<i>S</i> = ∫<sub>1</sub><sup>2</sup> &ensp; d<i>q<sub>rev</sub>/T</i>.</p>
+</div>
+
+<p>To evaluate this integral, there are two possible scenarios. For a reversible isothermal process (including reversible phase changes), we take 1/T outside the integral. For constant-pressure heating without a phase change, we use C<sub>P</sub> = dq<sub>P</sub> /d<i>T</i> to write dq = C<sub>P</sub> dT and then integrate (C<sub>P</sub> /T). For a process in an ideal gas, we use the first law to write dq = dU &minus; d<i>w = C<sub>V</sub></i> d<i>T = P</i> d<i>V</i>, substitute this into the &Delta;<i>S</i> equation, use <i>PV = nRT</i> to express P/T as a function of V, and integrate.</p>
+
+<p>So far, we have focused on the entropy change of an isolated system and can properly label the &Delta;<i>S</i> as &Delta;<i>S</i><sub>sys</sub>?. What about the entropy change of nonisolated systems, and the concurrent change in the entropy of the surroundings, labeled &Delta;<i>S</i><sub>surr</sub>? Typically, the surroundings are much larger than the system of interest, and the temperature of the relatively large surroundings can be taken as constant. Thus, we suggest parrallel to the variation of entropy for the system the equation d<i>S</i><sub>surr</i> = dq<sub>surr</sub> /T<sub>surr</sub> which integrates to</p>
+
+<div class="eq">
+<p>&Delta;<i>S</i> =  dq<sub>surr</sub> /T<sub>surr</sub></p>
+</div>
+
+<h3>Reversible Processes</h3>
+
+<p>In a reversible process, any heat flow between system and surroundings must occur with no finite temperature difference; otherwise the heat flow would be irreversible. Let &delta;<i>q<sub>rev</sub></i> be the heat flow into the system from the surroundings during an infinitesimal part of the reversible process. The corresponding heat flow into the surroundings is −&delta;<i>q<sub>rev</sub></i>. We have</p>
+
+<div class="eq">
+<p>d<i>S<sub>univ</sub></i> = d<i>S<sub>sys</sub></i> + d<i>S<sub>surr</sub></i> = &delta;<i>q<sub>rev</sub>/T<sub>sys</sub></i> + (−<i>&delta;q<sub>rev</sub>/T<sub>surr</sub></i>) = &delta;<i>q<sub>rev</sub>/T<sub>syst</sub></i> −&delta;<i>q<sub>syst</sub>/T<sub>syst</sub></i> = 0</p>
+</div>
+
+<h3>Irreversible Processes</h3>
+
+<p>Many irreversible transformations begin with the system in one equlibrium or metastable state and end with the system in another equilibrium state. Since entropy is a state function, we can calculate ∆<i>S</i> for an irreversible process that is not reversible so long as it has equilibrium or metastable initial and final states by calculating on a reversible path with the same initial and final states. For the calculation of the entropy change of the surroundings a separate calculation is necessary, since the final state of the surroundings will not necessarily be the same in the reversible as in the irreversible process.</p>
+
+<p>Consider an adiabatic irreversible process in a closed system. The system undergoes an irreversible adiabatic transformation from state 1 to state 2. The disconnected line segments from 1 to 2 in Fig. 1 indicate the irreversibility and the fact that an irreversible process cannot in general be plotted on a <i>P-V</i> diagram since it usually involves non-equilibrium states.</p>
+
+<figure>
+<img src="img/rev_irr.png" alt="Entropy, reversibility, and irreversibility"/>
+<figcaption><b>Fig.1</b>. Irreversible and reversible paths between states 1 and 2.</figcaption>
+</figure>
+
+<p>To evaluate &Delta;<i>S<sub>syst</sub> = S<sub>2</sub> − S<sub>1</sub></i>, we connect states 1 and 2 by the following reversible path: From state 2, we do work adiabatically and reversibly on the system to increase its temperature to <i>T<sub>hr</sub></i>, the temperature of a certain heat reservoir. This brings the system to state 3. Since there is no heat exchange, &Delta;<i>S</i> is zero: the transformation is an <b>isentrop</b> for a reversible adiabatic process. Hence <i>S<sub>2</sub> = S<sub>3</sub></i>. Next we either add or withdraw enough heat <i>q<sub>3→4</sub></i> isothermally and reversibly at temperature <i>T<sub>hr</sub></i> to make the entropy of the system equal to <i>S<sub>1</sub></i>, bringing the system to state 4 with <i>S<sub>4</sub> = S<sub>1</sub></i>. From state 4 to state 1 we have another isentrop. The variation of entropy for the whole reversible transformation from 2 to 1, is given only by the contribution of the reversible isothermal process from 3 to 4; We have</p>
+
+<div class="eq">
+<p>&Delta;<i>S<sub>syst</sub> = <i>S<sub>4</sub> − S<sub>3</sub></i> = 1/T ∫<sub><sub>3</sub></sub></sub><sup>4</sup> &delta;q<sub>rev</sub>/T</i> = <i>1/T<sub>hr</sub> ∫<sub><sub>3</sub></sub></sub><sup>4</sup></i> &delta;<i>q<sub>rev</sub> = q<sub>3→4</sub>/T<sub>hr</sub></i></p>
+</div>
+
+<p>Since <i>S</i> is a state function, we have for the cycle 1 → 2 → 3 → 4 → 1</p>
+
+<div class="eq">
+<p>0 = ∮d<i>S</i><sub>syst</sub></i> = (<i>S<sub>2</sub> − S<sub>1</sub></i>) + (<i>S<sub>3</sub> − S<sub>2</sub></i>) + (<i>S<sub>4</sub> − S<sub>3</sub></i>) + (<i>S<sub>1</sub> −  S<sub>4</sub></i>)</p>
+<p>∮d<i>S</i><sub>syst</sub> = (<i>S<sub>2</sub> − S<sub>1</sub></i>) + 0 + <i>q<sub>3→4</sub>/T<sub>hr</sub></i> + 0</p>
+<p>(<i>S<sub>2</sub> − S<sub>1</sub></i>) = −<i>q<sub>3→4</sub>/T<sub>hr</sub></i></p>
+</div>
+
+<p>Which is the desidere entropy variation for the irreversible adiabatic process from 1 to 2.</p>
+
+<p>Since <i>U</i> is a state function &Delta;<i>U</i> = 0 for the cycle, and the work done on the system in the cycle is thus <i>w = −q<sub>3→4</sub></i>. The work done by the system on the surroundings is −<i>w = q<sub>3→4</sub></i>. Suppose <i>q<sub>3→4</sub></i> were positive. Then the work <i>w</i> done on the surroundings would be positive, and we would have a cycle (1 → 2 → 3 → 4 → 1) whose sole effect is extraction of heat <i>q<sub>3→4</sub></i> from a reservoir and its complete conversion to work −<i>w = q<sub>3→4</sub></i> &gt; 0. Such a cycle is impossible, since it violates the second law. Hence <i>q<sub>3→4</sub></i> cannot be positive: <i>q<sub>3→4</sub></i> &lt; 0. Hence</p>
+
+<div class="eq">
+<p><i>S<sub>2</sub> − S<sub>1</sub> = −q<sub>3→4</sub>/T<sub>hr</sub></i> &ge; 0</p>
+</div>
+
+<p>As requested for an irreversible adiabatic process.</p>
+
+<p>We now show that an irreversible adiabatic process must lead to a higher temperature than the reversible adiabatic process starting at the same initial state (state 1). We'll prove that the cycle depicted in Fig.2a is an absurdum; it is composed by: an adiabatic irreversible expansion (1 ⟶ 2), followed by a reversible constant volume temperature rise to state 3, and then by a reversible adiabatic compression 3 ⟶ 1, completing the cycle.</p>
+
+<figure>
+<img src="img/ad_rev_irr.png" alt="reversible and irreversiable adiabats"/>
+<figcaption><b>Fig 2</b>. a) An impossible transformation because temperature at the end of the reversible transformation is higher compared to irrev. b) Correct transformation.</figcaption>
+</figure>
+
+<p>For the constant volume process in Fig.2(a), the heat absorbed by the system, during the path 2 ⟶ 3. is</p>
+
+<div class="eq">
+<p><i>Q<sub>2</sub></i> = ∫<sub><sub>2</sub></sub><sup>3</sup> <i>C<sub>v</sub> dT</i></p>
+</div>
+
+<p>The heat capacity of a system is always positive. Therefore Q<sub>2</sub> &gt; 0, as the state 3 is at a higher temperature then the state 2. The cucle is then completed by a reversible adiabatic process 3 ⟶ 1. We may then write</p>
+
+<div class="eq">
+<p><i>Q<sub>cycle</sub></i> = Q<sub>2</sub></i> &gt; 0</p>
+</div>
+
+<p>Since <i>U</i> is a state function we have &Delta;U<sub>cycle</sub> = 0. The net work done on the surroundings over the cycle is</p>
+
+<div class="eq">
+<p><i>w<sub>surr</sub></i> = −&Delta;<i>U<sub>cycle</sub> + Q<sub>2</sub></i> = Q<sub>2</sub></i> &gt; 0</p>
+</div>
+
+<p>This meas that the heat transferred to the system has been completely completely converted into work done on the surroundings; this is a violation of the second law. An irreversible adiabatic process cannot therefore, lead to a state that is lower in temperature than the reversible adiabat.</p>
+
+<p>If state 2 is above the reversible adiabat Fig.(2b), we carry out a constant volule reversible step from state 2 to state 3, and an adiabatic reversible step from state 3 to state 1. Since state 2 is at a higher temperature than state 3, and since the heat capacity is positive</p>
+
+<div class="eq">
+<p><i>Q<sub>cycle</sub></i> = Q<sub>2</sub></i> &lt; 0</p>
+</div>
+
+<p>hence</p>
+
+<div class="eq">
+<p><i>w<sub>surr</sub></i> = −&Delta;<i>U<sub>cycle</sub> + Q<sub>2</sub></i> = Q<sub>2</sub></i> &lt; 0</p>
+</div>
+
+<p>In this case, heat transferred to the surroundings has been turned completely into work done on the system. This does not violate the second law of thermodynamics because the surroundings do not undergo a cyclic process.</p>
+
+<blockquote>The final temperature for an irreversible adiabatic process cannot be lower than for a reversible adiabatic process with the same
+final volume, but it can be higher.</blockquote>
+
+<p>Consider now the entropy change for the irreversible adiabatic process, depicted in Figure 2b. Because <i>S</i> is a state function,</p>
+
+<div class="eq">
+<p>∆S<sub>cycle</sub> = ∆S<sub>1</sub> + ∆S<sub>2</sub> + ∆S<sub>3</sub> = 0</p>
+</div>
+
+<p>Because step 3 is reversible and adiabatic, ∆<i>S<sub>3</sub></i> = 0, and</p>
+
+<div class="eq">
+<p>∆S<sub>1</sub> = −∆S<sub>2</sub></p>
+</div>
+
+<p>Because step 2 is reversible, we can integrate and get the variation of entropy for this step:</p>
+
+<div class="eq">
+<p>∆S<sub>2</sub> = ∫<sub><sub>T<sub>2</sub></sub></sub><sup>T<sub>3</sub></sup> &delta;q<sub>rev</sub>/T = ∫<sub><sub>T<sub>2</sub></sub></sub><sup>T<sub>3</sub></sup> <i>C<sub>v</sub> dT/T &lt; 0</i> &emsp; (T decrease during this change)</p>
+</div>
+
+<p>The inequality comes from the fact that the temperature and the heat capacity are both positive and the fact that the temperature of state 2 must be greater than that of state 3. Because ∆<i>S<sub>1</sub></i> = −∆<i>S<sub>2</sub></i>, ∆<i>S<sub>1</sub></i> must be positive. Therefore,</p>
+
+<div class="eq">
+<p>∆<i>S<sub>irrev</sub> = ∆S<sub>1</sub></i> &gt; 0 &emsp; (irreversible adiabatic process)</p>
+</div>
+
+<p>For an adiabatic process we have</p>
+
+<div class="eq">
+<p>∆<i>S</i> ≥ 0 &emsp;(any adiabatic process)</p>
+</div>
+
+<p>where the equality holds for reversible processes. For any adiabatic process, the entropy of the system cannot decrease. This is the most important consequence of the second law of thermodynamics. Because we define the universe to include all objects that interact with each other, the universe can undergo only adiabatic processes. In any reversible process, the entropy of the universe remains constant. In any irreversible process, the entropy of the universe increases.</p>
+
+<h2>Adiabatic Irreversible expansion</h2>
+
+<p>If we consider adiabatic reversible and irreversible processes, then starting from the same initial state one cannot reach the same final sate by the two paths. If the initial state of a gas corresponds to <i>P<sub>1</sub>,V<sub>1</sub>,T<sub>1</sub></i> after adiabatic reversible expansion the state will correspon to <i>P<sub>2</sub>,V<sub>2</sub>,T<sub>2</sub></i>. For an adiabatic <i>irreversible</i> process, if the final volume is still <i>V<sub>2</sub></i>, the pressure and temperature will not be <i>P<sub>2</sub></i> and <i>T<sub>2</sub></i>. They will be <i>P<sub>irr</sub></i> and <i>T<sub>irr</sub></i>. This implies that we could not go from state 1 to 2 in Fig.1 with a reversible transformation. If it is an expansion, <i>P<sub>irr</sub></i> will be greater than <i>P<sub>2</sub></i> and <i>T<sub>irr</sub></i> will be greater than <i>T<sub>2</sub></i>. So the pressure-volume work done in the irreversible adiabatic change is not equal to d<i>U</i> and the relationship d<i>U</i> = <i>n C<sub>v</sub></i>(<i>T<sub>2</sub>/T<sub>1</sub></i>) = −<i>R</i>ln(<i>V<sub>2</sub>/V<sub>1</sub></i>) does not apply for the irreversible adiabatic change, even though &delta;<i>q</i> is zero.</p>
+
+<p>If the pressure exerted on the gas in now suddenly decreased from <i>P<sub>A</sub></i> to <i>P<sub>B</sub></i>, then the state of the gas is out of equilibrium and the expansion occurs irreversibly and will not follow the path <i>PV<sup>&gamma;</sup></i> = constant.</p>
+
+<p>In this case entropy is produced by the process. This change in entropy is due to internal generation of heat by fluid friction and since the gas is contained adiabatically, this heat does not leave the system and the final temperature of the gas will be higher than the temperature reached by the reversible process.</p>
+
+<p><b>Example 1</b>. 3 mol of an ideal monoatomic gas &gamma; = 1.67 at 300 K and 10.19 ⋅ 10<sup>5</sup> Nm<sup>-2</sup> is allowed to expand to 1.019 ⋅ 10<sup>5</sup> Nm<sup>-2</sup> by, (a) a reversible adiabatic process and, (b) an irreversible adiabatic process. Calculate in each case the final temperature, final volume, <i>w, q, &Delta;U</i> and <i>&Delta;H</i> (C<sub>p,m</sub> = 20.79 JK<sup>-1</sup> mol<sup>-1</sup> and <i>C<sub>V,m</sub></i> = 13.47 JKmol<sup>-1</sup>).</p>
+
+<p><b>Solution</b>. a) Here <i>q</i> = 0, hence <i>&Delta;U = w = nC<sub>V</sub></i>(<i>T<sub>2</sub> - T<sub>1</sub></i>); By using eq (2.4)</p>
+
+<div class="eq">
+<p><i>T<sub>2</sub> = T<sub>1</sub></i> (<i>P<sub>2</sub>/P<sub>1</sub></i>)<sup>(1-&gamma;)/&gamma;</sup></p>
+
+<p><i>T<sub>2</sub></i> = 300 (10)<sup>-0.401</sup> = 119.1 K</p>
+
+<p><i>&Delta;U = w</i> = 3 ⋅ 13.47 (119.1 - 300) = −6767 J</p>
+
+<p><i>&Delta;H</i> = -3 ⋅ 20.79 (119.1 - 300) = −11282 J</p>
+</div>
+
+<p>The ideal gas law can be used to calculate the final volume</p>
+
+<p><i>P<sub>1</sub>V<sub>1</sub>/T<sub>1</sub> = P<sub>2</sub>V<sub>2</sub>/T<sub>2</sub></i></p>
+<p><i>V<sub>2</sub> = 119.1/300 ⋅ 10/1 ⋅ 4.9424 ⋅ 10<sup>-3</sup> = 19.55 ⋅ 10<sup>-3</sup>m<sup>3</sup></i></p>
+
+<p><b>b)</b> (<i>Adiabatic irreversible expansion</i>) The final temperature will be higher than that of the reversible process. The final temperature can ebe calculated from eqn (2.5)</p>
+
+<div class="eq">
+<p><i>T<sub>2</sub></i> = 300/ 20.79(12.47 + 8.134 * 1/10) = 192 K</p>
+</div>
+
+<p>The variation of internal energy</p>
+
+<div class="eq">
+<p><i>&Delta;U</i> = <i>w</i> =  3 * 12.47(192-300) = -4040J</p>
+<p><i>&Delta;H</i> = -6736 J</p>
+</div>
+
+<p>The final volume can be calculated using the equation of state of the perfect gas as before</p>
+
+<div class="eq">
+<p><i>V<sub>2</sub></i> = (192/300)⋅(10/1)⋅4.924⋅10<sup>-3</sup> = 31.5136 ⋅ 10<sup>-3</sup> m<sup>-3</sup></p>
+</div>
+
+<section aria-label="End">
+<a href="second_law.html">&#171;Second law of thermodynamics</a></p>
+<a href="index.html">Index</a>
+<a href="entropy_isothermal.html">Entropy Changes of Isothermal Processes &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

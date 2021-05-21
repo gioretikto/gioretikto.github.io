@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Temperatura Termodinamica"/>
+    <title>Temperatura Termodinamica</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Temperatura Termodinamica</h1>
+
+<p>In Chp 1 it was pointed out that the zeroth law of thermodynamics establishes the basis for the measurement of temperature, but an empirical temperature scale must be defined in term of the thermometric property of a specific substance and thermometer, such as the <a href="T_gas_ideale.html">ideal-gas temperature scale</a> using the constant-volume gas thermometer.</p>
+
+<p>A temprature scale that is independent of the nature of the working substance, which is called an <b>absolute</b> or <b>thermodynamic</b> temperature scale, would be most desirable. A Carnot engine absorbing |Q<sub>h</sub>| units of heat from a reservoir at a higher temperature T<sub>h</sub> and rejecting |Q<sub>L</sub>| units of heat to a reservoir at a lowe temperature T<sub>L</su> has an efficiency &eta;<sub>R</sub> that is indpependent of the nature of the working substance</p>
+
+<p>The efficiency depends only on the two temperatures of the reservoirs,</p>
+
+<div class="eq">
+<p>&eta;<sub>R</sub> = &phi;(T<sub>h</sub>,T<sub>L</sub>)</p>
+</div>
+
+<p>where &phi;(T<sub>h</sub>,T<sub>L</sub>) is an unknown function of the two temperature. Rearranging the above two equations, we get</p>
+
+<div class="eq">
+<p>|Q<sub>H</sub>| / |Q<sub>L</sub>| = 1/ (1 - &phi;(T<sub>h</sub>,T<sub>L</sub>)) = f(T<sub>H</sub>, T<sub>L</sub>) &emsp; (5.3)</p>
+</div>
+
+<p>where f(T<sub>H</sub>, T<sub>L</sub>) is also an unknown function of the two temperatures. Let us apply Eq. 5.3 to the three Carnot engines operating between the three reservoirs shown in Fig., where T<sub>1</sub> &gt; T<sub>3</sub> &gt; T<sub>2</sub>. For enginge R<sub>A</sub></p>
+
+<img src="img/T_abs.png" alt="T absolute"/>
+
+<div class="eq">
+<p>|Q<sub>1</sub>| / |Q<sub>2</sub>| = f(T<sub>1</sub>, T<sub>2</sub>)</p>
+</div>
+
+<p>Now consider the second Carnot engine R<sub>B</sub> and third Carnot engine R<sub>C</sub>. Since the heat |Q<sub>3</sub>| rejected by the second Carnot engine R<sub>B</sub> is absorbed by the third Carnot engine R<sub>C</sub>, both engines working together are equivalent to the first Carnot engine R<sub>A</sub>. Thus, engine R<sub>B</sub> absorbs the same heat |Q<sub>1</sub>| from the reservoir at T<sub>1</sub> that engine R<sub>A</sub> absorbs. So, for engine R<sub>B</sub></p>
+
+<div class="eq">
+<p>|Q<sub>1</sub>| / |Q<sub>3</sub>| = f(T<sub>1</sub>, T<sub>3</sub>)</p>
+</div>
+
+<p>Engine R<sub>A</sub>, rejects heat |Q<sub>2</sub>| to the low-temperature reservoir, so engine R<sub>C</sub> must also reject hear |Q<sub>2</sub>| to the low-temperature reservoir. Thus, for engine R<sub>C</sub></p>
+
+<div class="eq">
+<p>|Q<sub>3</sub>| / |Q<sub>2</sub>| = f(T<sub>3</sub>, T<sub>2</sub>)</p>
+</div>
+
+<p>Since</p>
+
+<div class="eq">
+<p>|Q<sub>1</sub>| / |Q<sub>2</sub>| = (|Q<sub>1</sub>| / |Q<sub>3</sub>|) / (|Q<sub>2</sub>| / |Q<sub>3</sub>|)</p>
+</div>
+
+<p>we have the result that</p>
+
+<div class="eq">
+<p> f(T<sub>1</sub>, T<sub>2</sub>) = f(T<sub>1</sub>, T<sub>3</sub>) / f(T<sub>2</sub>, T<sub>3</sub>) &emsp; (5.4)</p>
+</div>
+
+<p>Now the temperature T<sub>3</sub> is arbitrarily chosen; and since it does not appear in the left-hand member of Eq (5.4), T<sub>3</sub> must, therefore, drop out of the ratio on the right. After it has been canceled, the numerator can be written &psi;(T<sub>1</sub>) and the denominator &psi;(T<sub>2</sub>), where &psi; is another unknown function of one temperature. Thus,</p>
+
+<div class="eq">
+<p>|Q<sub>1</sub>| / |Q<sub>2</sub>| = &psi;(T<sub>1</sub>)/ &psi;(T<sub>2</sub>)&emsp; (5.5)</p>
+</div>
+
+<p>We now use (5.5) to define a temperature scale in terms of the Carnot-cycle ratio |Q<sub>1</sub>| / |Q<sub>2</sub>|. To do so, we choose a specific function for &psi;. The simplest choice for &psi; is “take the first power.” This choice gives the <b>thermodynamic temperature scale</b>. Temperature ratios on the thermodynamic scale are thus defined by</p>
+
+<div class="eq">
+<p>|Q<sub>1</sub>| / |Q<sub>2</sub>| = T<sub>1</sub>/ T<sub>2</sub> &emsp; (5.6)</p>
+</div>
+
+<p>Thus, <i>two temperatures on the thermodynamic scale are to each other as the absolute values of the heats absorbed adn rejected, respectively, by a Carno engine operating between reservoirs at these temperature</i></p>
+
+<p>It is seen that the thermodynamic temperature scale is independent of the specific characteristics of any particular substance. Thus, the Carnot engine supplies the universality that is lacking in the ideal-gas temperatura scale.</p>
+
+<p>In 1848 Kelvin was forced to choose a linear function for the &psi; because all the scientific and engineering data had been obtained from the mercury-in-glass thermometer, which is essentially linear over its useful range.</p>
+
+<p>To complete the definition of the thermodynamic scale, we proceed to assign the arbitrary value of 273.16 K to the temperature of the triple point of water T<sub>tr</sub>, as in Chp 1 thus:</p>
+
+<div class="eq">
+<p>T<sub>tr</sub> = 273.16 K</p>
+</div>
+
+<p>For a Carnot engine operating between reservoirs at the temperatures T and T<sub>tr</sub>, it holds</p>
+
+<div class="eq">
+<p>|Q| / |Q<sub>tr</sub>| = T/ T<sub>tr</sub></p>
+</div>
+
+<p>or</p>
+
+<div class="eq">
+<p>T = 273.16 K |Q| / |Q<sub>tr</sub>| = T/ T<sub>tr</sub> &emsp; (5.7)</p>
+</div>
+
+<p>Comparing Eq 5.7 with the corresponding equation for the ideal-gas temperature:</p>
+
+<div class="eq">
+<p>T = 273.16 K ⋅ lim<sub>P<sub>tr</sub> → 0</sub> P / |P<sub>tr</sub>| (5.7)</p>
+</div>
+
+<p>It is seen that, in the thermodynamic scale |Q| plays the role of a "thermometric property" for a Carnot cycle, just as pressure in the thermometric property for a constant-volume gas thermometer. Heat Does not, however have the objection attached to the thermodynamic coordinate pressure of the arbitarily chosen gas-thermometer, inasmuch as the behavior of a Carnot engine is independent of the nature of the working substance.</P>
+
+
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

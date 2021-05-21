@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Gibbs Energy"/>
+    <title>Gibbs Energy</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Gibbs Energy</h1>
+
+<p>Non è possibile predire la spontaneità di un processo in base alla conoscenze della sola variazione di <a href="entropy.html">entropia</a> di un sistema. Ad esempio,<sub>2</sub> mol di H<sub>2</sub> e<sub>1</sub> mol di O<sub>2</sub>, quando una scintilla le innesca, reagiscono per formare 2 mol di H<sub>2</sub>O; nelle due molecole di acqua, tre atomi di ciascuna sono sono forzati a stare insieme, e quandi presentano un ordine superiore rispetto alle tre molecole biatomiche libere.</p>
+      
+<p>La maggior parte delle reazioni chimiche avvengono a pressione costante, quella atmosferica, poichè sono aperte all'ambiente. Consideriamo un sistema nel quale la temperatura e la pressione vegono mantenuti costanti. Una trasformazione del sistema comporta una variazione di entropia, che segue la <a href="clausius_inequality.html">Clausius inequality</a>:</p>
+
+<div class="eq">
+<p>d<i>S</i> &ge; δ<i>q/T</i></p>
+</div>
+
+<p>se la trasformazione avviene a pressione costante, abbiamo che</p>
+
+<div class="eq">
+<p>δ<i>q<sub>P</sub></i> = d<i>H</i></p>
+</div>
+
+<p>che sostituita nella disuguaglianza di Clausius, porta a:</p>
+
+<div class="eq">
+<p><i>T</i>d<i>S</i> &ge; d<i>H</i></p>
+<p><i>T</i>d<i>S</i> − d<i>H</i> ≥ 0</p>
+</div>
+
+<p>Introduciamo la grandezza chiamata <b>energia di Gibbs</b>, defita come</p>
+
+<div class="eq">
+<p><i>G = H − TS</i></p>
+</div>
+
+<p>notiamo che il differenziale di <i>G</i> a <i>T</i> costante, vale:</p>
+
+<div class="eq">
+<p>d<i>G</i> = d<i>H</i> − <i>T</i>d<i>S</i></p>
+</div>
+
+<p>Quindi la 4.5 può essere espressa in funzione dell'energia di Gibbs come:</p>
+
+<div class="eq">
+<p>d<i>G<sub>T,P</sub></i> &le; 0</p>
+</div>
+
+<p>possiamo concludere che in un sistema a <i>T</i> e <i>P</i> costanti, l'energia di Gibbs decresce per effetto di ogni processo spontaneo, finchè il sistema raggiunge l'equilibrio. All'equilibrio vale:</p>
+
+<div class="eq">
+<p>d<i>G</i> = 0</p>
+</div>
+
+<p>The Gibbs energy (the ‘free energy’) is more common in chemistry than the Helmholtz energy because, at least in laboratory chemistry, we are usually more interested in changes occurring at constant pressure than at constant volume.</p>
+
+<p>Tutti i processi per cui &Delta;H&lt;0 e &Delta;S &gt;0 sono sicuramente spontanei poichè &Delta;G &lt;0. Analogamente un processo che non è sicuramente spontaneo prevede  &Delta;H&gt;0 e &Delta;S &lt;0. In tutti gli altri casi occorre valutare il peso dato dalla temperatura. </p>
+
+<p><b>Esempio.</b> Determinare la temperatura alla quale l'evaporazione dell'acqua è un processo spontaneo, alla pressione di<sub>1</sub> atm, sapendo che l'entalpia di evaporazione è pari a &Delta; H = 40.65 kJ/mol⋅K e l'entropia di evaporazione &Delta;<i>S</i> =<sub>1</sub>09 J/mol⋅K</p>
+
+<p><b>Soluzione</b>. Il processo di evaporazione sarà spontaneo alle temperature per cui si ha &Delta;G &lt; 0 </p>
+
+<div class="eq">
+<p>&Delta;<i>G</i> = &Delta;<i>H</i> − <i>T</i> &Delta;<i>S</i></p>
+</div>
+
+<p>quindi</p>
+
+<div class="eq">
+<p><i>T</i> = &Delta;<i>H</i> / &Delta;<i>S</i> = 40.65kJ ⋅ mol<sup>−1</sup>/109 J ⋅ mol<sup>−1</sup> ⋅ K<sup>−1</sup> = 373 K</p>
+</div>
+
+<p><i>T</i> = 373 K, equivale a <i>T</i> = 100 °C, come già sapevamo dall'esperienza. Per temperature inferiori è invece spontaneo il processo opposto di condensazione.</p>
+
+<p>Se un processo è spontaneo ad una data temperatura il processo inverso non lo è. La fusione del ghiaccio è endotermica è spontanea a temperature superiori 0 °C:</p>
+
+<div class="eq">
+<p>H<sub>2</sub>O(s) ⟶ H<sub>2</sub>O(l) &emsp;  &Delta;<sub>r</sub>H° = 6.010 kJ mol<sup>−1</sup></p>
+</div>
+
+<p>Il processo inevrso è spontaneo ed esotermico a temperature al di sotto dei 0 °C:</p>
+
+<div class="eq">
+<p>H<sub>2</sub>O(l) ⟶ H<sub>2</sub>O(s) &emsp;  &Delta;<sub>r</sub>H° = −6.010 kJ mol<sup>−1</sup></p>
+</div>
+
+<h2>Maximum non-expansion work</h2>
+
+<p>Because <i>H = U + PV</i>, for a general change in conditions, the change in enthalpy is</p>
+
+<div class="eq"> 
+<p>d<i>H</i> = d<i>q</i> + d<i>w</i> + d(<i>PV</i>)</p>
+</div>
+
+<p>The corresponding change in Gibbs energy (<i>G = H − TS</i>) is</p>
+
+<div class="eq">
+<p>dG = dH − TdS − SdT = dq + dw + d(<i>PV</i>) − TdS − SdT</p>
+</div>
+
+<p>When the change is isothermal we can set d<i>T</i> = 0; then</p>
+
+<div class="eq">
+<p>d<i>G</i> = d<i>q</i> + d<i>w</i> + d(<i>PV</i>) − <i>T</i>d<i>S</i></p>
+</div>
+
+<p>When the change is reversible, d<i>w</i> = d<i>w</i><sub>rev</sub> and d<i>q</i> = dq<sub>rev</sub> = <i>T</i>d<i>S</i>, so for a reversible, isothermal process</p>
+
+<div class="eq">
+<p>dG = TdS + dw rev + d(<i>PV</i>) − TdS = d<i>w</i><sub>rev</sub> + d(<i>PV</i>)</p>
+</div>
+
+<p>The work consists of expansion work, which for a reversible change is given by −pdV, and possibly some other kind of work (for instance, the electrical work of pushing electrons through a circuit or of raising a column of liquid); this additional work we denote <b>d<i>w</i><sub>add</sub></b> . Therefore, with d(<i>PV</i>) = <i>P</i>d<i>V</i> + Vd<i>P</i>,</p>
+
+<div class="eq">
+<p>d<i>G</i> = (−<i>P</i>d<i>V</i> + dw<sub>add,rev</sub></i>) + <i>pP</i>d<i>V</i> + Vd<i>p</i> = d<i>w</i><sub>add,rev</sub> + VdP</p>
+</div>
+
+<p>If the change occurs at constant pressure (as well as constant temperature), we can set d<i>P</i> = 0 and obtain d<i>G</i> = d<i>w</i><sub>add,rev</sub>. Therefore, at constant temperature and pressure, dw<sub>add,rev</sub> = d<i>G</i>. However, because the process is reversible, the work done must now have its maximum value.</p>
+
+<p>Thus the change in Gibbs energy in a process at constant temperature and pressure is equal to the work other than that expressed by &minus;PV namely, the net work or useful work. Note that P&Delta;V in any process, ordinarily under atmospheric pressure, is used up in exchanging work with the atmosphere and this quantity of work is not <i>useful</i>. For example, a reversible galvanicl cell operating at constant temperature and atmospheric pressure, for which the chemical reaction is</p>
+
+<div class="eq">
+<p>Zn(s) + 2H<sup>+</sup> = Zn<sup>2+</sup> + H<sub>2</sub>(g)</p>
+</div>
+
+<p>produces hydrogen and yields a certan quantity of electricity capable of doing useful work.</p>
+
+<section aria-label="End">
+<a href="A.html">&#171;Helmholtz Energy</a>
+<a href="index.html">Index</a>
+<a href="Gibbs_Helmholtz.html">Gibbs–Helmholtz equation &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

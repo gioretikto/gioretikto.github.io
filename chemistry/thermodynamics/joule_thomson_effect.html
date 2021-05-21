@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The Joule–Thomson effect"/>
+    <title>The Joule–Thomson effect</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Themodynamics</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Joule–Thomson effect</h1>
+
+<p>In 1853 Joule and William Thomson (in later life Lord Kelvin) did an experiment similar to the Joule experiment but allowing far more accurate results to be obtained.</p>
+
+<figure>
+<img src="img/joule_thomson_apparatus.png" alt="Joule thomson apparatus"/>
+<figcaption><b>Figure 1.0</b> - Schematic of Joule–Thomson expansion through a porous plug</figcaption>
+</figure>
+
+<p>The <b>Joule–Thomson experiment</b> involves the slow throttling of a gas through a rigid, porous plug. An idealized sketch of the experiment is shown in Fig. 1.0. The system is enclosed in adiabatic walls, imposing the constraint of constant enthalpy, so that the process is <b>isenthalpic</b>. The left piston is held at a fixed pressure <i>P<sub>1</sub></i>. The right piston is held at a fixed pressure <i>P<sub>2</sub> &lt; P<sub>1</sub></i>. The partition B is porous but not greatly so. This allows the gas to be slowly forced from one chamber to the other. Because the throttling process is slow, pressure equilibrium is maintained in each chamber. Essentially all the pressure drop from <i>P<sub>1</sub></i> to <i>P<sub>2</sub></i> occurs in the porous plug. In general there is a change in temperature (<i>T<sub>1</sub> &ne; T<sub>2</sub></i>) whenever the gas is real. Measurement of the temperature change <i>&Delta;T = T<sub>2</sub> - T<sub>1</sub></i> in the Joule–Thomson experiment gives &Delta;T/&Delta;P at constant <i>H</i>. We define the <b>Joule–Thomson coefficient</b>, <i>&mu;</i> by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3BC;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>J</mi>
+      <mi>T</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2261;</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>P</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>H</mi>
+  </msub>
+</math>
+
+<p>Real gases have nonzero Joule–Thomson coefficients. Depending on the identity of the gas, the pressure, the relative magnitudes of the attractive and repulsive intermolecular forces (see Molecular interpretation 2.1), and the temperature, the sign of the coefficient may be either positive or negative (Fig. 1.1). A positive sign implies that <i>dT</i> is negative when <i>dP</i> is negative, in which case the <b>gas cools on expansion</b>. In the case of real gases, &mu; is itself a function of temperature and pressure and is only positive in certain ranges of these variables. Gases that show a heating effect (<i>μ<sub>JT</sub></i> &lt; 0) at one temperature show a cooling effect (<i>&mu;<sub>JT</sub></i> &gt; 0) when the temperature is below their upper <b>inversion temperature</b>, <i>T<sub>I</sub></i>. A gas typically has two inversion temperatures, one at high temperature and the other at low.</p>
+
+<p>In a gas expansion the pressure decreases, so the sign of ∂P is negative by definition. With that in mind: If the gas temperature is below the inversion temperature it cools if it is above the inversion temperature it warms up.</p>
+
+<p>Helium and hydrogen are two gases whose Joule–Thomson inversion temperatures at a pressure of one atmosphere are very low (e.g., about 45 K (−228 °C) for helium). Thus, helium and hydrogen warm when expanded at constant enthalpy at typical room temperatures. On the other hand, nitrogen and oxygen, the two most abundant gases in air, have inversion temperatures of 621 K (348 °C) and 764 K (491 °C) respectively: these gases can be cooled from room temperature by the Joule–Thomson effect.</p>
+
+<p>Figure 1.1 plots characteristic lines of constant enthalpy (isenthalps) on a <i>T-P</i> diagram. In the shaded region, the slopes of the curves are positive; therefore, <i>&mu;<sub>JT</sub> &gt; 0</i>. In this region, the temperature will decrease as the pressure decreases during the throttling process. Since the decrease in temperature as the pressure drops corresponds to a decrease in molecular kinetic energy, the molecular potential energy must be increasing or else energy conservation would be violated. We can say the molecules are more stable when they are closer together at the higher pressure and, consequently, that attractive forces are dominant in this region. Conversely, in the nonshaded region, the slopes of the isenthalps are negative; therefore <i>&mu;<sub>JT</sub> &lt; 0</i>. The temperature will increase as pressure decreases, indicating that repulsive forces dominate the behavior in this region. These two regions are separated by the <b>inversion line</b>, where the slope of <i>T</i> vs. <i>P</i> is zero and where attractive and repulsive interactions exactly balance. For a given pressure, the temperature at which these interactions balance is known as the <b>Boyle temperature</b>.</p>
+
+<figure>
+<img src="img/joule_thomson_T_P.png" alt="Joule thomson T-P"/>
+<figcaption><b>Figure 1.1</b> - Typical lines of constant enthalpy on a <i>PT</i> diagram. The inversion line separates the region of positive and negative Joule–Thomson coefficients.</figcaption>
+</figure>
+
+<p>We want to calculate <i>w</i>, the work done on the gas in throttling it through the plug. The overall process is irreversible since <i>P<sub>1</sub></i> exceeds <i>P<sub>2</sub></i> by a finite amount, and an infinitesimal change in pressures cannot reverse the process. However, the pressure drop occurs almost completely in the plug. The plug is rigid, and the gas does no work on the plug, or vice versa. The exchange of work between system and surroundings occurs solely at the two pistons. Since pressure equilibrium is maintained at each piston, we can use <i>dw<sub>rev</sub> = PdV</i> to calculate the work at each piston.</p>
+
+<p>The Joule-Thomson experiment must be carefully distinguished from the <a href="adiabatic_expansion.html">adiabatic expansion of a gas</a> in a piston and cylinder. The latter process normally leads to a cooling, on account of the decrease in internal energy consequent on the performance of work. On the other hand, the Joule-Thomson effect gives rise to a cooling only when <i>&mu;<sub>JT</sub></i> is positive.</p>
+
+<p>Because all changes to the gas occur adiabatically, <i>q = 0</i>, which implies <i>∆U = w</i> Consider the work done as the gas passes through the barrier. We focus on the passage of a fixed amount of gas from the high pressure side, where the pressure is <i>P<sub>i</sub></i>, the temperature <i>T<sub>i</sub></i>, and the gas occupies a volume <i>V<sub>i</sub></i>. The gas emerges on the low pressure side, where the same amount of gas has a pressure <i>P<sub>f</sub></i>, a temperature <i>T<sub>f</sub></i> , and occupies a volume <i>V<sub>f</sub></i>. The gas on the left is compressed isothermally by the upstream gas acting as a piston. The relevant pressure is <i>P<sub>i</sub></i> and the volume changes from <i>V<sub>i</sub></i> to 0; therefore, the work done on the gas is</p>
+
+<div class="eq">
+<p><i>w<sub>1</sub> = &minus;P<sub>i</sub></i> (0 &minus; V<sub>i</sub>) = P<sub>i</sub>V<sub>i</sub></i></p>
+</div>
+
+<p>The gas expands isothermally on the right of the barrier (but possibly at a different constant temperature) against the pressure <i>P<sub>f</sub></i> provided by the downstream gas acting as a piston to be driven out. The volume changes from 0 to <i>V<sub>f</sub></i> , so the work done on the gas in this stage is</p>
+
+<div class="eq">
+<p><i>w<sub>2</sub> = &minus;P<sub>f</sub></i> (<i>V<sub>f</sub></i> &minus; 0) = &minus;P<sub>f</sub>V<sub>f</sub></i></p>
+</div>
+
+<p>The total work done on the gas is the sum of these two quantities, or</p>
+
+<div class="eq">
+<p><i>w = w<sub>1</sub> + w<sub>2</sub> = P<sub>i</sub>V<sub>i</sub> &minus; P<sub>f</sub> V<sub>f</sub></i></p>
+</div>
+
+<p>It follows that the change of internal energy of the gas as it moves adiabatically from one side of the barrier to the other is</p>
+
+<div class="eq">
+<p><i>U<sub>f</sub> + U<sub>i</sub> = w = P<sub>i</sub>V<sub>i</sub> -P<sub>f</sub> V<sub>f</sub></i></p>
+</div>
+
+<p>Reorganization of this expression gives</p>
+
+<div class="eq">
+<p><i>U<sub>f</sub> + P<sub>f</sub>V<sub>f</sub> = U<sub>i</sub> + P<sub>i</sub> V<sub>i</sub></i></p>
+</div>
+
+<p>or</p>
+
+<div class="eq">
+<p><i>H<sub>f</sub> = H<sub>i</sub></i></p>
+</div>
+
+<p>An isenthalpic process.</p>
+
+<h2>Measurament of &mu;</h2>
+
+<p>The modern method of measuring <i>μ<sub>JT</sub></i> is indirect, and involves measuring the isothermal Joule–Thomson coefficient, the quantity</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3BC;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>T</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2261;</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>H</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>P</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>T</mi>
+  </msub>
+</math>
+
+<p>which is the slope of a plot of enthalpy against pressure at constant temperature. The first step in obtaining these results is to note that the Joule–Thomson coefficient involves the three variables <i>T, P</i>, and <i>H</i>. A useful result is immediately obtained by applying the <a href="../../mat/multivariable_calculus/euler_identity.html#euler_identity">Triple Product rule</a>; in terms of these three variables that rule may be written:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>P</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>H</mi>
+  </msub>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>H</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>P</mi>
+  </msub>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>P</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>H</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>T</mi>
+  </msub>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+</math>
+
+<p>it results that</p>
+
+<div class="eq">
+<p><i>μ<sub>T</sub> = -C<sub>P</sub> ⋅ μ<sub>JT</sub></i></p>
+</div>
+
+<p>To measure <i>μ<sub>T</sub></i>, the gas is pumped continuously at a steady pressure through a heat exchanger (which brings it to the required temperature), and then through a porous plug inside a thermally insulated container. The steep pressure drop is measured, and the cooling effect is exactly offset by an electric heater placed immediately after the plug (Fig. 2.30). The energy provided by the heater is monitored. Because the energy transferred as heat can be identified with the value of <i>∆H</i> for the gas (because ∆H = q<sub>p</sub>), and the pressure change ∆p is known, we can find <i>μ<sub>T</sub></i> from the limiting value of <i>∆H/∆p</i> as <i>∆p → 0</i>, and then convert it to <i>μ</i>. Table 2.9 lists some values obtained in this way</p>
+
+<h2>Molecular interpretation</h2>
+
+<p>An ideal gas becomes neither cooler nor warmer when passing through an expansion valve because there is no interaction, neither attractive nor repulsive, between ideal gas molecules, for an ideal gas, μ<sub>JT</sub> is always equal to zero: ideal gases neither warm nor cool upon being expanded at constant enthalpy. But all real gases can interact. If the net interaction between gas molecules is attractive, increasing the distance between the molecules upon the expansion of the gas through the valve costs energy. Since this energy must come from the gas itself, cooling results. If the net interaction between gas molecules is repulsive, increasing the distance between the molecules upon the expansion of the gas through the valve yields energy. So warming results. At low temperatures, attractive interactions dominate because the gas molecules are moving slowly enough to be somewhat bonded to each other. At high temperatures gas molecules move too fast to notice any tendency to bond, so repulsion dominates. The cooling effect, which corresponds to μ &gt; 0, is observed under conditions when attractive interactions are dominant (Z &lt; 1), because the molecules have to climb apart against the attractive force in order for them to travel more slowly. For molecules under conditions when repulsions are dominant (Z > 1), the Joule–Thomson effect results in the gas becoming warmer, or μ &lt; 0.</p>
+
+<h2>Linde refrigerator</h2>
+
+<p>The ‘Linde refrigerator’ makes use of Joule–Thompson expansion to liquefy gases (Fig. 2.33). The gas at high pressure is allowed to expand through a throttle; it cools and is circulated past the incoming gas. That gas is cooled, and its subsequent expansion cools it still further. There comes a stage when the circulating gas becomes so cold that it condenses to a liquid. For a perfect gas, <i>μ = 0</i>; hence, the temperature of a perfect gas is unchanged by Joule–Thomson expansion. This characteristic points clearly to the involvement of intermolecular forces in determining the size of the effect. However, the Joule–Thomson coefficient of a real gas does not necessarily approach zero as the pressure is reduced even though the equation of state of the gas approaches that of a perfect gas. The coefficient depends on derivatives and not on <i>p, V</i>, and <i>T</i> themselves.</p>
+
+<section aria-label="End">
+<a href="dlconfiguration.html">&#171;D- and L- configuration</a>
+<a href="index.html">Index</a>
+<a href="apposition.html">Internal Accusative&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

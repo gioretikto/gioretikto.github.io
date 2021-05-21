@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The Carnot Cycle and Efficiency"/>
+    <title>The Carnot Cycle and Efficiency</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Carnot Cycle and Efficiency</h1>
+
+<p>We introduce l'<a href="entropia.html">entropia</a>, <i>S</i>, as a state function without proving it. If <i>S</i>, is a state function its variation along a cycle is null; We must prove that</p>
+
+<div class="eq">
+<p>∮ d<i>S</i> = &delta;<i>q</i><sub>rev</sub>/<i>T</i> = 0</p>
+</div>
+
+<p>We consider thus a reversible cyclic transformation which is known as <b>the Carnot Cycle</b>, in which the system (an heat engine) works between two heat sinks on at T<sub>h</sub> and the other <i>T<sub>c</sub></i> (hot and cold respectively). The cycle is made by four reversible processes:</p>
+
+<ol>
+	<li><p>An isothermal expansion from <i>A</i> to <i>B</i> at <i>T<sub>h</sub></i>; The variation of entropy is d<i>S</i> = <i>q<sub>h</sub>/T<sub>h</sub></i>, where q<sub>h</sub> is the heat absorbed by the system from the source at <i>T<sub>h</sub></i>.</p></li>
+
+	<li><p>An adiabatic reversible transformation from <i>B</i> to <i>C</i>. Temperature is lowered from <i>T<sub>h</sub></i> to <i>T<sub>c</sub></i>. Since in a adiabatic process <i>q</i> = 0 thys d<i>S</i> = 0.</p></li>
+
+	<li><p>A reversible isothermal compression from <i>C</i> to <i>D</i>, at <i>T<sub>c</sub></i>. The system transfers to the source at <i>T<sub>c</sub></i> the heat <i>q<sub>c</sub></i>, thus d<i>S</i> = <i>q<sub>c</sub>/T<sub>c</sub></i>, where <i>q<sub>c</sub></i> is negative.</p></li>
+
+	<li><p>Reversible adiabatic compression from <i>D</i> to <i>A</i>, thus <i>q</i> = 0. The temperature of the system increases from <i>T<sub>c</sub></i> to <i>T<sub>h</sub></i>.</p></li>
+</ol>
+
+<p>All stages are depicted in the following <i>P-V</i> diagramm</p>
+
+<img src="img/carnot.png" alt="ciclo di Carnot"/>
+
+<p>The variation of entropy with temperature along the cycle</p>
+
+<figure>
+<img src="img/TScarnot.png" alt="temperatura entropia ciclo di Carnot"/>
+<figcaption><b>Fig. 5</b> <i>T-S</i> diagramm of a Carnot cycle</figcaption>
+</figure>
+
+<p>From Fig. 5, heat absorbed in the reversible isothermal process from <i>A → B</i> is</p>
+
+<div class="eq">
+<p><i>q<sub>h</sub> = T<sub>h</sub></i>(<i>S<sub>2</sub> &minus; S<sub>1</sub></i>)</p>
+</div>
+
+<p>mentre il calore ceduto nel passaggio <i>C</i> → <i>D</i>, è</p>
+
+<div class="eq">
+<p><i>q<sub>c</sub> = T<sub>c</sub></i>(<i>S<sub>2</sub> &minus; S<sub>1</sub></i>)</p>
+</div>
+
+<p>No heat transfer occurs during the adiabatic processes B → C and C → D. For the first law of thermodynamics the wrok done along the cycle is:</p>
+
+<div class="eq">
+<p><i>w = q<sub>h</sub> &minus; q<sub>c</sub> = T<sub>h</sub></i>(<i>S<sub>2</sub> &minus; S<sub>1</sub></i>) &minus; T<sub>c</sub></i>(<i>S<sub>2</sub> &minus; S<sub>1</sub></i>)</p>
+</div>
+
+<p>The total entropy variation along the cycle is</p>
+
+<div class="eq">
+<p>∮ d<i>S = q<sub>h</sub>/T<sub>h</sub> + q<sub>c</sub>/T<sub>c</sub></i> = 0</p>
+</div>
+
+<p>The efficiency of the Carnot engine is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3B7;</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mi>w</mi>
+    <msub>
+      <mi>q</mi>
+      <mi>h</mi>
+    </msub>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>T</mi>
+        <mi>h</mi>
+      </msub>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>T</mi>
+        <mi>c</mi>
+      </msub>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>S</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>S</mi>
+        <mn>1</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>T</mi>
+        <mi>h</mi>
+      </msub>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>S</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>S</mi>
+        <mn>1</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<p>which can be simplified to</p>
+
+<div class="eq">
+<p>&eta; = (<i>T<sub>h</sub> &minus; T<sub>c</sub></i>)/<i>T<sub>h</sub></i></p>
+</div>
+
+<p>The efficiency depends on the temperature of the low- and high-temperature reservoirs the engine is operating</p>
+
+<p>Vale inoltre</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3B7;</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>q</mi>
+        <mi>h</mi>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>q</mi>
+        <mi>c</mi>
+      </msub>
+    </mrow>
+    <msub>
+      <mi>q</mi>
+      <mi>h</mi>
+    </msub>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mfrac>
+    <msub>
+      <mi>q</mi>
+      <mi>c</mi>
+    </msub>
+    <msub>
+      <mi>q</mi>
+      <mi>h</mi>
+    </msub>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msub>
+      <mi>T</mi>
+      <mi>c</mi>
+    </msub>
+    <msub>
+      <mi>T</mi>
+      <mi>h</mi>
+    </msub>
+  </mfrac>
+</math>
+
+<p>First, the efficiency of an ­engine is very simply related to the ratio of the low- and high-temperature reservoirs. The smaller this ratio is, the more efficient an engine is. Thus, high efficiencies are
+favored by high <i>T</i> high values and low <i>T</i> low values.</p>
+
+<p>Finally, unless the temperature of the low-temperature reservoir is absolute zero (or <i>q<sub>c</sub></i> = 0), the efficiency of an engine will always be less than 1, <i>i.e</i> less than 100%. We postualae that absolute zero is physically unobtainable, which is equal to say that</p>
+
+<blockquote>No cyclic engine can ever be 100% efficient.</blockquote>
+
+<p>This is known as <b>Kelvin-Planck postulate</b> and represents a statement of the second law of thermodynamics.</p>
+
+<p>The first law of thermodynamics places no limitation on the possibility of transforming heat into work or work into heat, provided that the total amount of heat is equivalent to the total amount of work, hence, energy is conserved in the process. The second law of thermodynamics, however, places a define limitation on the possibility of transforming heat into work.</p>
+
+<p>An engine that violates <i>elvin-Planck postulate</i>, is called a <i>perpetual motion machine of the second kind</i> (A perpetual-motion machine of the <i>first kind</i> violates the first law of thermodynamics, that is, the conservation of energy principle).</p>
+
+<p>It is important to note that the Kelvin-Planck postulate does not say that it is impossible to convert all heat into work in a one-way proces but only in a cyclic process. For an ideal gas, in an isothermal process, Δ<i>U</i> = 0 = <i>q − w</i>, so <i>q = w</i>.</p>
+
+<p>We will prove next <a href="carnot_theorem.html">Carnot’s principle</a> that states: No heat engine can be more efficient than a reversible heat engine when both engines work between the same pair of temperatures <i>T<sub>h</sub></i> and <i>T<sub>c</sub></i>.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="refrigerators.html">Refrigerators and heat pumps; Clausius statement of the 2nd law &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
