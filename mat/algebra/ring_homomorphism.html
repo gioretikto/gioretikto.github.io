@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Ring Homomorphisms"/>
  <title>Ring Homomorphisms</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-  
+
 <div class="content">
 
 <h1>Ring Homomorphisms</h1>
@@ -241,13 +241,13 @@
 <p><b>4.2.4 Definition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, the <b>kernel</b> of <i>&phi;</i> is the subset of the elements of <i>R</i> which are mapped onto the zero element of <i>R'</i></p>
 
 <div class="eq">
-<p>Ker <i>&phi;</i> := {<i>r &in; R</i> | <i>&phi;</i>(<i>r</i>) = 0<i><sub>R'</sub></i>}</p>
+<p>Ker <i>&phi;</i> := {<i>r &in; R</i> | <i>&phi;</i>(<i>r</i>) = 0<sub><i>R</i>'</sub>}</p>
 </div>
 
-<p>alternatively, the kernel of φ is</p>
+<p>alternatively, the kernel of <i>φ</i> is</p>
 
 <div class="eq">
-<p>φ<sup>−1</sup>(0) = {<i>r ∈ R</i>: <i>φ</i>(<i>r</i>) = 0};</p>
+<p><i>φ</i><sup>−1</sup>(0) = {<i>r ∈ R</i>: <i>φ</i>(<i>r</i>) = 0};</p>
 </div>
 
 <p>As you can notice Ker <i>&phi;</i> is a subring; By multiplying an element of Ker <i>&phi;</i> by an element of <i>R</i> from right or left the result is again an element of Ker <i>&phi;</i>. Indeed let <i>k</i> &in; Ker <i>&phi;</i> and <i>r &in; R</i>, we have</p>
@@ -258,15 +258,15 @@
 
 <p>from which follows <i>k⋅r</i> &in; Ker <i>&phi;</i>. Left multiplication leads to <i>r⋅k</i> &in; Ker <i>&phi;</i>.</p>
 
-<p><b>Example 4.2.5</b>. The kernel of <i>φ</i>: ℤ → ℤ/<i>n</i>ℤ sending <i>a</i> to [<i>a</i>] is {<i>kn</i>| <i>k</i> &in; ℤ}, in  other  words, the set of all multiples of <i>n</i>. This is because [<i>kn</i>] = [0].</p>
-
-<p>The subrings of <i>R</i> satisfying the above properties are known as <i>ideals</i>.</p>
+<p><b>Example 4.2.5</b>. The kernel of <i>φ</i>: ℤ → ℤ/<i>n</i>ℤ sending <i>a</i> to [<i>a</i>] is {<i>kn</i>| <i>k</i> &in; ℤ}, in other  words, the set of all multiples of <i>n</i>. This is because [<i>kn</i>] = [0]. &emsp; ■</p>
 
 <p><b>4.2.5 Proposition</b>. The homomorphism <i>&phi;</i> is a <i>monomorphism</i> (injective) if and only if Ker <i>&phi;</i> = {0<sub>R</sub>}</p>
 
-<p><b>Proof</b>. Let Ker <i>&phi;</i> = {0<sub>R</sub>} and <i>a,b &in; R</i>, <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>). Now <i>&phi;</i>(<i>a - b</i>) = <i>&phi;</i>(<i>a</i>) - <i>&phi;</i>(<i>b</i>) = 0. So <i>a-b</i> &in; Ker <i>&phi;</i> = {0<sub>R</sub>}, i.e. a-b = 0 or <i>a = b</i>. Hence <i>&phi;</i> is injective. So <i>&phi;</i> is a monomorphism, from <i>R</i>, onto &phi;(<i>R</i>).</p>
+<p><b>Proof</b>. Let Ker <i>&phi;</i> = {0<sub>R</sub>} and <i>a,b &in; R</i>, <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>). Now <i>&phi;</i>(<i>a - b</i>) = <i>&phi;</i>(<i>a</i>) - <i>&phi;</i>(<i>b</i>) = 0. So <i>a-b</i> &in; Ker <i>&phi;</i> = {0<sub>R</sub>}, i.e. a-b = 0 or <i>a = b</i>. Hence <i>&phi;</i> is injective. So <i>&phi;</i> is a monomorphism, from <i>R</i>, onto &phi;(<i>R</i>). &emsp; □</p>
 
-<p><b>4.2.6 Definition</b>. For an arbitrary ring (<i>R</i>, + , ⋅ ). A <i>left ideal</i> <i>I</i>, of <i>R</i> is an additive subgroup such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ar &in; I</i>. <br>Similarly a <i>right ideal</i> is an additive subgroup <i>I</i> of <i>R</i> such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ra &in; I</i>. <br> If <i>I</i> is both a left and right ideal of <i>R</i> is is called a <i>two-sided ideal</i>, or simply an ideal of <i>R</i> and it is indicated as</p>
+<p>The property of the kernel of a ring homomorphism −that is closed under multiplication by arbitrary elements of the ring−is abstracted in the conept of an <b>ideal</b>.</p>
+
+<p><b>4.2.6 Definition</b>. For an arbitrary ring (<i>R</i>, + , ⋅ ). A <i>left ideal, I</i>, of <i>R</i> is an additive subgroup such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ar &in; I</i>. <br>Similarly a <i>right ideal</i> is an additive subgroup <i>I</i> of <i>R</i> such that &forall;<i>a &in; I</i> and <i>r &in; R</i>, <i>ra &in; I</i>. <br> If <i>I</i> is both a left and right ideal of <i>R</i> is is called a <i>two-sided ideal</i>, or simply an ideal of <i>R</i> and it is indicated as</p>
 
 <div class="eq">
 <p><i>I ⊲̲ R</i></p>

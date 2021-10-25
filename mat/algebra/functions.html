@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Functions"/>
     <title>Functions</title>
     <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -15,12 +15,12 @@
         <li><a class="navbar" href=/index.html">Algebra</a></li>
     </ul>
 </nav>
-            
+
 <div class="content">
 
 <h1>Functions</h1>
 
-<p><b>Definition 1.4.0</b>. A mapping (or a function) <i>f</i> from a set <i>A</i> to a set <i>B</i> is a rule that for each element of <i>A</i> associates a uniquely determined element of <i>B</i>. This is usually written:</p>
+<p><b>Definition 1.4.0</b>. A mapping (or a function) <i>f</i> from a set <i>A</i> to a set <i>B</i> is a rule that for each element of <i>A</i> associates a uniquely determined element of <i>B</i>. The set <i>A</i> is called <b>domain</b> of the function <i>f</i>, the set <i>B</i> is the <i>codomain</i> of the function. This is usually written:</p>
 
 <div class="eq">
 <p><i>f: A → B</i></p>
@@ -28,69 +28,31 @@
 
 <p>if <i>a &in; A</i> then the unique element <i>b&in; B</i>, which corresponds to <i>a</i> is denoted by <i>f</i>(<i>a</i>). We say that <i>b</i> = <i>f</i>(<i>a</i>) is an <i>image</i> of <i>a</i> through <i>f</i>, and <i>a</i> is a <i>preimage</i> or <i>inverse image</i> of <i>b</i> through <i>f</i>.</p>
 
-<p>The set <i>A</i> is called <b>domain</b> of the mapping <i>f</i>, while the set of all images of all elements <i>a</i> is a subset of <i>B</i> called <b>range</b> of <i>f</i> which we denote by Im(<i>f</i>). The set <i>B</i> is usually called the <i>codomain</i> of <i>f</i>.</p>
+<p>The function is thus specified by three objects: the <i>rule</i> that establishes the correpondence, its <i>domain</i>, and its <i>codomain</i>. Changing any one of them will change the function, and it will determine wheter a correspondence is a function.</p>
 
 <div class="def">
 <p><b>Example 1.4.1</b>. Let <i>X</i> = {1,2,3,4} and <i>Y</i> = {<i>D,B,C,E</i>}. The law <i>f: X → Y</i> defined as <i>f</i>(1)=<i>D</i>, <i>f</i>(2) = B, <i>f</i>(3) = <i>C</i>, <i>f</i>(4) = <i>C</i> is a function. We can represent it with the following diagram</p>
 <img src="img/surjective2.png" alt="surjective function"/>
 </div>
 
-<div id="image">
-<p>Let <i>f: A →B</i></p>
-<div class="eq">
-<p>Im <i>f</i> = <i>f</i>(<i>A</i>) := {<i>b &in; B</i> | <i>b = f</i>(<i>a</i>) for some <i>a &in; A</i>}</p>
-</div>
-
-<p>Now <i>S</i> and <i>T</i> two subsets of <i>A</i> and <i>B</i> respectively. The <b>inverse image</b> or <b>preimage</b> of a set <i>T ⊆ B</i> under <i>f</i>, is the subset of <i>A</i> defined by</p>
+<p>Let <i>f: A →B</i>; The set of all images of all elements <i>a &in; A</i> is a subset of <i>B</i> called <b>range</b> or <b>image</b> of <i>f</i> which we denote by Im(<i>f</i>) or <i>f</i>(<i>A</i>).</p>
 
 <div class="eq">
-<p><i>f<sup>−1</sup></i>(<i>T</i>) = {<i>a</i> &in; <i>A</i>| <i>f</i>(<i>a</i>) &in; <i>T</i>}</p>
+<p>Range <i>f</i> = Im <i>f</i> = <i>f</i>(<i>A</i>) := {<i>b &in; B</i> | <i>b = f</i>(<i>a</i>) for some <i>a &in; A</i>} &subseteq; <i>B</i></p>
 </div>
 
-<p>other notation include <i>f<sup>−1</sup></i>[<i>T</i>].</p>
+<p>One can observe that in Example 1.4.1, there are elements in the domain that are associated with the same element of the codomain, <i>e.g.</i> <i>f</i>(3) = <i>C</i>, <i>f</i>(4) = <i>C</i>. This does not contradict the definition of function, because the definition does not state that the different elements of <i>A</i> can't be mapped to a same element of <i>B</i>. This is an additional property that defines <i>injective functions</i>.</p>
 
-<p><b>Note</b>. Don't confuse <i>f<sup>−1</sup></i>(<i>T</i>) with the inverse function <i>f<sup>−1</sup></i> that will be introduced later on. The <i>preimage</i> is a set and exists even if the inverse does not.</p>
-
-<p><b>Example 1.4.2</b>. Let <i>f: X → Y</i> defined as in the example above, and let <i>X<sub>1</sub></i> = {2,4} and <i>B<sub>1</sub></i> = {<i>B,C,E</i>} then <i>f</i>(<i>X<sub>1</sub></i>) = {<i>B,C</i>} and <i>f<sup>−1</sup></i>(<i>B<sub>1</sub></i>) = {2,3,4}.</p>
-
-<p><b>Example 1.4.3</b>. Consider the function <i>f</i>: ℝ → ℝ defined as <i>f</i>(<i>x</i>) = <i>x<sup>2</sup></i>. Note that <i>f</i>({0,1,2}) = {0,1,4} and <i>f<sup>−1</sup></i>({0,1,4}) = {−2,−1,0,1,2}. This shows that <i>f<sup>−1</sup></i>(<i>f</i>(<i>X</i>)) ≠ <i>X</i> in general, it is only when injective.</p>
-
-<p><b>Proposition 1.4.4</b>. Consider f<i>: A → B</i>, then</p>
-
-	<ul><li><p><i>f</i> is injective if and only if <i>X = f<sup>−1</sup></i>(<i>f</i>(<i>X</i>)) for all <i>X ⊆ A</i>.</p></li>
-		<li><p><i>f</i> is surjective if and only if  <i>f</i>(<i>f<sup>−1</sup></i>(<i>Y</i>)) = <i>Y</i> for all Y ⊆ B</i>.</p></li>
-	</ul>
-
-</div> <!-- <div id="image"> -->
-
-<h2>Graph of a function</h2>
-
-<p>A function ca be thought of as a <i>correspondence</i> between sets <i>A</i> and <i>B</i> and in particular as a set of ordered pairs (<i>a,b</i>) where the first element <i>a</i> of the pair belongs to the domain <i>A</i> and the second element <i>b</i> to the codomain <i>B</i>. Thus each correspondence is a subset of the cartesian product <i>A x B</i>.</p>
-
-<p><b>Definition 1.4.5</b>. The subset <i>F</i> of <i>A x B</i> (i.e. the <i>relation</i> <i>F</i> from <i>A</i> to <i>B</i>) given by</p>
-
-<div class="eq">
-<p><i>F</i> = {(<i>a, f</i>(<i>a</i>)) | <i>a &in; A</i>}</p>
-</div>
-
-<p>is known as the <i>graph of the function</i>.</p>
-
-<p>Note that not every correspondende can serve as the graph of a function, only a set of ordered pairs in which each element of the domain has only <i>one</i> element associated with it in the range is the graph of a function.</p>
-
-<p>Note also that a function is a (particular) relation, while not every relation is a function. If <i>A = B</i> we will say there is a <i>binary relation</i> between the elements of <i>A</i>.</p>
-
-<div class="def">
-<p><b>Definition 1.4.6.</b> A function <i>f</i>: <i>X → Y</i> is <b>injective</b> (or <i>one-to-one</i>) if, for all <i>a</i> and <i>b</i> in <i>X</i>, <i>f</i>(<i>a</i>) = <i>f</i>(<i>b</i>) implies that <i>a = b</i>. We say in this case that <i>f</i> is a <i>one-to-one mapping</i> for <i>X</i> to <i>Y</i>.</p>
+<p><b>Definition 1.4.2</b> A function <i>f</i>: <i>X → Y</i> is <b>injective</b> (or <i>one-to-one</i>) if, for all <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> in <i>X</i>, <i>f</i>(<i>x</i><sub>1</sub>) = <i>f</i>(<i>x</i><sub>2</sub>) implies <i>x</i><sub>1</sub> = <i>x</i><sub>2</sub>. We say in this case that <i>f</i> is a <i>one-to-one mapping</i> for <i>X</i> to <i>Y</i>.</p>
 
 <figure>
 <img src="img/injective.png" alt="injective function" />
 <figcaption><b>Fig.1</b> - Example of injective function</figcaption>
 </figure>
 
-</div>
+<p>Not all the elements of <i>B</i> have to correspond to elements of <i>A</i>, but when it happens then the codomain of a function is also its range, <i>i.e.</i> when Im(<i>f</i>) = <i>B</i>, and the function is said to be <b>onto</b> or <b>surjective</b>.</p>
 
-<div class="def">
-<p><b>Definition 1.4.7</b> A function <i>f</i>: <i>X → Y</i>  is <b>surjective</b> (or onto) if, for all <i>y</i> &in; <i>Y</i>, there exists an <i>x</i> &in; <i>X</i> such that <i>f</i>(<i>x</i>) = <i>y</i>. Simbolically &forall;<i>y &in; Y, &Exists; x &in; X, f</i>(<i>x</i>) = <i>y</i>. In this case we say that <i>f maps X onto Y</i> and we write Im <i>f = Y</i>.</p>
+<p><b>Definition 1.4.3</b> A function <i>f</i>: <i>X → Y</i>  is <b>surjective</b> (or onto) if, for all <i>y</i> &in; <i>Y</i>, there exists an <i>x</i> &in; <i>X</i> such that <i>f</i>(<i>x</i>) = <i>y</i>. Simbolically &forall;<i>y &in; Y, &Exists; x &in; X, f</i>(<i>x</i>) = <i>y</i>. In this case we say that <i>f maps X onto Y</i> and we write Im <i>f = Y</i>.</p>
 
 <section>
     <figure>
@@ -104,10 +66,37 @@
     </figure>
 </section>
 
+<p>The function <i>f</i>: ℝ → ℝ defined by <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> is not <i>surjective</i>, since the squares of real numbers are all positives. However, the function <i>g</i>: ℝ → ℝ<sub>&ge;0</sub> defined by <i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> (with the restricted codomain) is surjective, since for every <i>y</i> in the nonnegative real codomain, there is at least one <i>x</i> in the real domain, such that x<sup>2</sup> = <i>y</i>.</p>
+
+<p><b>Definition 1.4.3</b>. Let <i>S</i> and <i>T</i> two subsets of <i>A</i> and <i>B</i> respectively. The <b>inverse image</b> or <b>preimage</b> of a set <i>T ⊆ B</i> under <i>f</i>, is the subset of <i>A</i> defined by</p>
+
+<div class="eq">
+<p><i>f<sup>−1</sup></i>(<i>T</i>) = {<i>a</i> &in; <i>A</i>| <i>f</i>(<i>a</i>) &in; <i>T</i>}</p>
+</div>
+
+<p>other notation include <i>f</i><sup>−1</sup>[<i>T</i>].</p>
+
+<p>The inverse image of the dicrect image, for any <i>S</i> ⊂ <i>A</i>,</p>
+
+<div class="eq">
+<p><i>f</i><sup>&minus;1</sup>(<i>f</i>(<i>S</i>)) ⊇ <i>S</i>, &emsp; equality holds if <i>f</i> is injective.&emsp; <b>1.4.1</b></p>
+</div>
+
+<p>The direct image of an inverse image, for any <i>T</i> ⊂ B, is</p>
+
+<div class="eq">
+<p><i>f</i>(<i>f</i><sup>&minus;1</sup>((<i>T</i>)) ⊇ <i>T</i>, &emsp; equality holds if <i>f</i> is surjective.&emsp; <b>1.4.2</b></p>
+</div>
+
+<p>If <i>f: X → Y</i> is both injective and surhective, then <i>f</i> is said to be injective. If <i>f</i> is bijective, then <i>y = f</i>(<i>x</i>) has a unique solution <i>x &in; X</i> for each <i>y</i> &in; <i>Y</i>, and the unique <i>x</i> is denoted by <i>x</i> = <i>f</i><sup>&minus;1</sup> (<i>y</i>). If <i>f</i> is bijective, then Eqns. 1.4.1 and 1.4.2 we have</p>
+
+<div class="eq">
+<p><i>f</i><sup>&minus;1</sup>(<i>f</i>(<i>S</i>)) = <i>S</i>, &emsp; for any <i>S</i> ⊂ <i>X</i></p>
+<p><i>f</i>(<i>f</i><sup>&minus;1</sup>((<i>T</i>)) = <i>T</i>, &emsp; for any <i>T</i> ⊂ <i>Y</i>.</p>
 </div>
 
 <div class="def">
-<p><b>Definition 1.4.8.</b> A function <i>f</i>: <i>X → Y</i> is <b>biunique</b> when each <i>y &in; Y</i> has one counterimage in <i>X</i>. In thica case <i>f</i> is both injective and surjective.</p>
+<p><b>Definition 1.4.8.</b> A function <i>f</i>: <i>X → Y</i> is <b>biunique</b> when each <i>y &in; Y</i> has one counterimage in <i>X</i>. In this case <i>f</i> is both injective and surjective.</p>
 
 <figure>
     <img src="img/biunivoca.png" alt="funzione biunivoca" />
@@ -116,17 +105,62 @@
 
 </div>
 
-<p>Bijective functions (iniettive e suriettive) are peculiar because relate two sets with same cardinality. To each element of the domain corresponds one and only one element of the codomain and viceversa. This property leads to the definition of a new function: the <b>inverse function</b> indicated by <i>f <sup>-1</sup></i>.</p>
-
-<p><p><b>Definition 1.4.9.</b> If <i>f: A → B</i> a bijective function, then is also <b>invertible</b>. That is there exists the function <i>f<sup>−1</sup>: B → A</i> such that every <i>y &in; B</i> is mapped to a unique element <i>x &in; A</i>; we have that:</p>
+<p><p><b>Definition 1.4.9.</b> If <i>f: A → B</i> a bijective function, then is also <b>invertible</b>. That is there exists the function <i>f</i><sup>−1</sup>: B → A such that every <i>y &in; B</i> is mapped to a unique element <i>x &in; A</i>; we have that:</p>
 
 <div class="eq">
-<p><i>f <sup>−1</sup></i> (<i>f</i>(<i>x</i>)) = <i>x</i>, &emsp; &forall;<i>x</i> &in; <i>A</i>; &emsp; <i>f</i>(<i>f <sup>−1</sup></i> (<i>y</i>)) = <i>y</i>, &emsp;  &forall;<i>y</i> &in; <i>Y</i>;</p>
+<p><i>f</i> <sup>−1</sup> (<i>f</i>(<i>x</i>)) = <i>x</i>, &emsp; &forall;<i>x</i> &in; <i>A</i>; &emsp; <i>f</i>(<i>f</i> <sup>−1</sup> (<i>y</i>)) = <i>y</i>, &emsp;  &forall;<i>y</i> &in; <i>Y</i>;</p>
 </div>
+
+<p>Assigning the unique inverse image <i>x</i> to each <i>y &in; Y</i> defines a map <i>f</i><sup>&minus;1</sup> of <i>Y</i> into <i>X</i>, which is called the inverse of <i>f</i>. By definition <i>f</i>(<i>f</i><sup>&minus;1</sup>)(<i>b</i>)(<i>b</i>) = <i>b</i> for every <i>b</i> &in; <i>B</i> and <i>f</i><sup>&minus;1</sup>(<i>f</i>(<i>a</i>)) = <i>a</i> for every <i>a</i> &in; <i>X</i>. For a function to have an inverse, it must be bijective. The inverse function <i>f</i><sup>−1</sup></i> is unique if exists. For example the function <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> of ℝ into ℝ is bijective and <i>f</i><sup>&minus;1</sup>(<i>x</i>) = <i>x</i><sup>1/3</sup>.</p>
+
+<p><b>Note</b>. Don't confuse <i>f</i><sup>−1</sup></i>(<i>T</i>) with the inverse function <i>f</i><sup>−1</sup>. The inverse function cannot be defined for any function, whereas the pre-image can always be defined. </p>
+
+<p><b>Example 1.4.2</b>. Let <i>f: X → Y</i> defined as in the example above, and let <i>X<sub>1</sub></i> = {2,4} and <i>B<sub>1</sub></i> = {<i>B,C,E</i>} then <i>f</i>(<i>X<sub>1</sub></i>) = {<i>B,C</i>} and <i>f<sup>−1</sup></i>(<i>B<sub>1</sub></i>) = {2,3,4}.</p>
+
+<p><b>Example 1.4.3</b>. Consider the function <i>f</i>: ℝ → ℝ defined as <i>f</i>(<i>x</i>) = <i>x<sup>2</sup></i>. Note that <i>f</i>({0,1,2}) = {0,1,4} and <i>f<sup>−1</sup></i>({0,1,4}) = {−2,−1,0,1,2}. This shows that <i>f<sup>−1</sup></i>(<i>f</i>(<i>X</i>)) ≠ <i>X</i> in general, it is only when injective.</p>
+
+<p><b>Proposition 1.4.4</b>. Consider f<i>: A → B</i>, then</p>
+
+	<ul><li><p><i>f</i> is injective if and only if <i>X = f</i><sup>−1</sup>(<i>f</i>(<i>X</i>)) for all <i>X ⊆ A</i>.</p></li>
+		<li><p><i>f</i> is surjective if and only if  <i>f</i>(<i>f</i><sup>−1</sup>(<i>Y</i>)) = <i>Y</i> for all Y ⊆ B</i>.</p></li>
+	</ul>
+
+<h2>Graph of a function</h2>
+
+<p>A function ca be thought of as a <i>correspondence</i> between sets <i>A</i> and <i>B</i> and in particular as a set of ordered pairs (<i>a,b</i>) where the first element <i>a</i> of the pair belongs to the domain <i>A</i> and the second element <i>b</i> to the codomain <i>B</i>. Thus each correspondence is a subset of the cartesian product <i>A x B</i>.</p>
+
+<p><b>Definition 1.4.5</b>. The subset <i>F</i> of <i>A x B</i> (i.e. the <i>relation</i> <i>F</i> from <i>A</i> to <i>B</i>) given by</p>
+
+<div class="eq">
+<p><i>F</i> = {(<i>a, f</i>(<i>a</i>)) | <i>a &in; A</i>}</p>
+</div>
+
+<p>is known as the <i>graph of the function</i>.</p>
+
+<p>Note that not every correspondendence can serve as the graph of a function, only a set of ordered pairs in which each element of the domain has only <i>one</i> element associated with it in the range is the graph of a function.</p>
+
+<p>Note also that a function is a (particular) relation, while not every relation is a function. If <i>A = B</i> we will say there is a <i>binary relation</i> between the elements of <i>A</i>.</p>
+
+<h2>Graph of <i>f</i><sup>&minus;1</sup></h2>
+
+<p>We want to represent the grap of <i>f</i> and<i>f</i><sup>&minus;1</sup> on the same cartesian plane. Since <i>f</i>(<i>a</i>) = <i>b</i> iff <i>f</i><sup>&minus;1</sup>(<i>b</i>) = <i>a</i>, the point (<i>a,b</i>) belongs to the graph of <i>f</i> iff (<i>b,a</i>) belongs to the graph of <i>f</i><sup>&minus;1</sup>. The point (<i>b,a</i>) is obtained from (<i>a,b</i>) by reflection about the line <i>y = x</i></p>
+
+<img src="img/inverse_function_graph.png" alt="graph of the inverse function"/>
+
+<p>Some examples of function and inverse functions are the following</p>
+
+<ul>
+	<li><p>The exponential function <i>x ↦ a<sup>x</sup></i> with its inverse, the logarithmic function <i>x</i> ↦ ln<sub><i>a</i></sub> <i>x</i>.</p>
+	<img src="img/exp_log_functions.png" alt="exponential logarithmic functions"/>
+	
+	</li>
+	<li><p>The trigonometric functions x ↦ sin x, x ↦ cos x and x ↦ tan x, with the inverses <i>x</i> ↦ arcsin x, x ↦ arccos x and x ↦ arctan x.</p></li>
+	<li><p>The power function x ↦ x<sup>n</sup>, for <i>n</i> &ge; 1, integer, with its inverse function: x ↦ x<sup>1/<i>n</i></sup>.</p></li>
+</ul>
 
 <p><b>1.4.10 Examples</b>.</p>
 
-<p>The function <i>f</i>: ℝ → ℝ, defined as <i>f</i>(<i>x</i>) = <i>x<sup>2</sup></i> is not injective (for example <i>f</i>(1) = <i>f</i>(−1) = 1) and not even surjective. The function f:[0,+inf) → ℝ with <i>f</i>(<i>x</i>) = <i>x<sup>2</sup></i> is injective..</p>
+<p>The function <i>f</i>: ℝ → ℝ, defined as <i>f</i>(<i>x</i>) = <i>x<sup>2</sup></i> is not injective (for example <i>f</i>(1) = <i>f</i>(−1) = 1) and not even surjective. The function f:[0,+inf) → ℝ with <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup></i> is injective. Also the function <i>h</i> ℕ → ℕ, defined as <i>h</i>(<i>x</i>) = <i>x</i><sup>2</sup> for each <i>x</i> &in; ℕ is not surjective since there is no natural number <i>x</i> such that <i>x</i><sup>2</sup> = 2. </p>
 
 <p>The function <i>f</i>: ℝ → ℝ</i>, defined as <i>f</i>(<i>x</i>) = x<sup>3</sup></i>, is both injective and surjective since from <i>x<sub>1</sub> &ne; x<sub>2</sub></i> follows <i>x<sub>1</sub><sup>3</sup> &ne; x<sub>2</sub><sup>3</sup></i> </p>
 

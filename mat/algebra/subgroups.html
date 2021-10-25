@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Subgroups"/>
+  <title>Subgroups</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+
+<div class="content">
+
+<h1>Subgroups</h1>
+
+<p>A natural question to ask is whether we can have a smaller group inside of a particular group. We begin by saying that <i>S</i> is a subset of a group <i>G</i>, denoted <i>S</i> ⊆ <i>G</i>, if <i>S</i> consists only of the elements of <i>G</i>. The empty set { } is always considered to be a subset, but we will restrict our attention to non-empty subsets.</p>
+
+<p><b>Definition 7.2.1</b>. A subgroup <i>S</i> of a group <i>G</i> is a non-empty subset of <i>G</i> which is itself a group under the same operation as <i>G</i>.</p>
+
+<p>Then a subset <i>S</i> of a group (<i>G</i>, ⋅) is a subgroup if and only if</p>
+
+<ol type="a">
+	<li><p>the identity <i>e</i> of <i>G</i> belongs to <i>S</i>;</p></li>
+	<li><p><i>S</i> is closed under the operation of <i>G</i>, that is &forall;<i>s,t &in; S</i>, we have <i>st &in; S</i>; in other words the operation of ⋅ of <i>G</i> is also the operation of <i>S</i>, <i>i.e.</i></p>
+	<div class="eq">
+	<p>⋅ : <i>S</i> x <i>S</i> ⟶ <i>S</i></p>
+	</div>
+	</li>
+	
+	<li><p>for all <i>s</i> in <i>S</i>, <i>s</sup><sup>−1</sup></i> &in; <i>S</i>.</p>
+</ol>
+
+<p><b>Remark</b>. <i>S</i> = {−1, 1} is a nonempty subset of ℚ, and it is a group with respect to multiplication that is a subgroup (ℚ,*), but it is not a subgroup of (ℚ,+).</p>
+
+<p>Every group G automatically has two obvious subgroups, namely <i>G</i> itself and the subgroup consisting of the identity element, <i>e</i>, alone. These two subgroups we call <i>trivial subgroups</i>. Our interest will be in the remaining ones, the <i>proper subgroups</i> of <i>G</i>.</p>
+
+<p>Subgroup <i>S</i> of a group <i>G</i> is indicated with the following notations</p>
+
+<div class="eq">
+<p><i>H</i> &le; <i>G</i>, &emsp; or &emsp; <i>H</i> &lt; <i>G</i> &emsp; (if <i>H</i> &ne; <i>G</i>)</p>
+</div>
+
+<p>The conditions required in the definition of subgroup can be combined into one simple test.</p>
+
+<p><b>Proposition 7.2.2</b>. (<i>Subgroup Theorem</i>) A non-empty subset <i>S</i> of a group <i>G</i> is a subgroup if and only if whenever <i>a, b ∈ S</i>, then <i>ab</i><sup>−1</sup> ∈ <i>S</i>.</p>
+
+<p><b>Proof</b>. The condition is obviuosly necessary. We now show that is also sufficient. If <i>S</i> is reduced to the identity element, it is automatically a subgroup. Let <i>a = x</i> and <i>b = x</i> both in <i>S</i>, in the hyphothesis, we have <i>e = xx</i><sup>−1</sup> = ab<sup>−1</sup></i> is in <i>S</i>. Taking the two elements <i>a = e &in; S</i> and <i>b = x &in; S</i> in the statement of the theorem, we have <i>ex</i><sup>−1</sup> = <i>x</i><sup>−1</sup> &in; <i>S</i>. Finally, the proof will be comple when we show that <i>S</i> is closed; that is, if <i>x,y</i> belong to <i>S</i>, we muest show that <i>xy &in; S</i> also. We have already shown that <i>y</i><sup>−1</sup></i> &in; <i>S</i> if <i>y</i> &in; <i>S</i>; so, letting <i>a = x</i>, and <i>b = y</i><sup>−1</sup>, we have <i>xy = x</i>(<i>y</i><sup>−1</sup>)<sup>−1</sup> = <i>ab</i><sup>−1</sup> is in <i>S</i>.  &emsp;□</p>
+
+<div id="center">
+<p><b>7.2.3 Definition</b>. Let (<i>G</i>, ⋅) a group. The <i>center</i> of <i>G</i> is the subset of <i>G</i> consinsting of all those elements that commute with every element of <i>G</i> <i>i.e.</i></p>
+
+<div class="eq">
+<p><i>Z</i>(<i>G</i>) = {<i>g &in;  G</i> | <i>gx = xg</i> &emsp; &forall;<i>x</i> &in; <i>G</i>}</p>
+</div>
+
+<p>The notation <i>Z</i>(<i>G</i>) comes from the fact that the German word for center is <i>Zentrum</i>. The term was coined by J. A. de Séguier in 1904. Note that the centre of G is equal to <i>G</i> if and only if <i>G</i> is abelian.</p>
+
+<p><b>7.2.4 Proposition</b>. The center of a group <i>G</i> is a subgroup of <i>G</i>.</p>
+
+<p><b>Proof</b>. Clearly, <i>e &in; Z</i>(<i>G</i>), so <i>Z</i>(<i>G</i>) is nonempty. Now, suppose <i>a, b &in; Z</i>(<i>G</i>). Then (<i>ab</i>)<i>x</i> = <i>a</i>(<i>bx</i>) = <i>a</i>(<i>xb</i>) = (<i>ax</i>)<i>b</i> = (<i>xa</i>)<i>b</i> = <i>x</i>(<i>ab</i>) for all <i>x &in; G</i>; and, therefore, <i>ab &in; Z</i>(<i>G</i>), so that <i>Z</i>(<i>G</i>) satisfies the first axiom (associativity) for groups. Furthermore, multiplying both sides of the equation <i>xg = gx</i> first on the right side then on the left by <i>x<sup>−1</sup></i>, we deduce that <i>gx</i><sup>−1</sup> = <i>x</i><sup>−1</sup><i>g</i>, which shows that <i>x</i><sup>−1</sup> &in; <i>Z</i>(<i>G</i>). Satisfying all axioms, we conclude <i>Z</i>(<i>G</i>) is a subgroup of <i>G</i>. &emsp;□</p>
+</div>
+
+<p><b>7.2.5 Definition</b>. Let (<i>G</i>, ⋅) a group, and let <i>g &in; G</i>. and <i>i</i> &in; ℤ. We define power <i>g<sup>i</sup></i> of <i>g</i> with exponent <i>i</i> the following element of <i>G</i>:</p>
+
+<table class="noborder centertable">
+<tr> <td rowspan="3"> <i>g<sup>i</sup> =</td> <td>g ⋅ g ⋅ ⋅⋅⋅ ⋅ g</i> <br><i>i</i> times</td> <td>if <i>i</i> &gt; 0</td></tr>
+<tr> <td><i>e</i></td> <td>if <i>i</i> = 0</td></tr>
+<tr> <td><i>g<sup>−1</sup> ⋅  ⋅⋅⋅ ⋅ g<sup>−1</sup></i> <br><i>i</i> times</td> <td>if <i>i</i> &lt; 0</td></tr>
+</table>
+
+<p>The usual rules for manipulation of powers hold:</p>
+
+<div class="eq">
+<p><i>g<sup>i</sup> ⋅ g<sup>j</sup> = g<sup>i+j</sup></i> &emsp; and &emsp; (<i>g<sup>i</sup></i>)<i><sup>j</sup> = g<sup>ij</sup></i></p>
+</div>
+
+<p>On the other hand, (<i>gh</i>)<sup><i>i</i></sup> &ne; <i>g<sup>i</sup>h<sup>i</sup></i> in general.</p>
+
+<section aria-label="End">
+<a href="groups.html">&#171;Abstract groups</a>
+<a href="index.html">Index</a>
+<a href="cyclic_groups.html">Cyclic groups&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

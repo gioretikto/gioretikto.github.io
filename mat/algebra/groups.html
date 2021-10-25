@@ -23,7 +23,7 @@
 
 <p>In this section, we introduce a different kind of algebraic structure called a <i>group</i>, that uses a single operation rather than two as in rings. L'origine del concetto di gruppo risale all'inizio dell'Ottocento, ed è dovuta ad un'idea del giovane matematico francese Evariste Galois (1811-1832). La prima definizione formale di gruppo comparirà però solo nel 1893, in un articolo di Heinrich Weber.</p>
 
-<p><b>Definition 7.1.1</b>. A group (<i>G</i>, *) is a nonempty set <i>G</i> equipped with a binary operation *,</p>
+<p><b>7.1.1 Definition</b>. A group (<i>G</i>, *) is a nonempty set <i>G</i> equipped with a binary operation *,</p>
 
 <div class="eq">
 <p><i>G x G ⟶ G</i><br>
@@ -50,7 +50,7 @@
 <p>Functional notation <i>p</i> = <i>f</i>(<i>a,b</i>) isn't very convenient for laws of composition. Instead, the element obtained by applying the law to a pair (<i>a,b</i>) is usually denoted using a notation resembling those used for multiplication or addition:</p>
 
 <div class="eq">
-<p><i>p = ab, a x b, a ∘ b, a ⋅ b, a +b</i>, and so on,</p>
+<p><i>p = ab, a x b, a ∘ b, a ⋅ b, a + b</i>, and so on</p>
 </div>
 
 <p>We call the element <i>p</i> the <i>product</i> or <i>sum</i> of <i>a</i> and <i>b</i>, depending on the notation chosen.</p>
@@ -80,14 +80,14 @@
 	<li><p>The set (<i>M<sub>n</sub></i>(<i>R</i>), +) := {square matrices <i>n</i> x <i>n</i> on a ring <i>R</i>}.</p></li>
 	<li><p>(GL<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A &in; M<sub>n</sub></i>(ℝ) | det <i>A</i> &ne; 0} = real linear general group. In linear algebram this is the group of all invertible matrices <i>n × n</i>, with real values, with positive <i>n</i>.</p></li>
 	<li><p>(SL<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A &in; M<sub>n</sub></i>(ℝ) | det <i>A</i> = 1} = real linear special group.</p></li>
-	<li><p>(O<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A &in; M<sub>n</sub></i>(ℝ) | det <i>A<sup>T</sup> = A<sup>−1</sup></i>} = orthogonal group.</p></li>
+	<li><p>(O<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A &in; M<sub>n</sub></i>(ℝ) | det <i>A<sup>T</sup> = A</i><sup>−1</sup>} = orthogonal group.</p></li>
 	<li><p>(SO<sub><i>n</i></sub>(ℝ), ⋅) = {<i>A</i> &in; O<sub><i>n</i></sub>(ℝ)| det <i>A</i> = 1}</p></li>
 </ul>
 
 <p>The first two groups are abelian, whilst the others are not for <i>n</i> &ge; 2.</p>
 </div>
 
-<p><b>Proposition 7.1.2</b>. Let (<i>G</i>, ⋅) a group. Then the identity element <i>e &in; G</i>, is unique.</p>
+<p><b>7.1.2 Proposition</b>. Let (<i>G</i>, ⋅) a group. Then the identity element <i>e &in; G</i>, is unique.</p>
 
 <p><b>Proof</b>. Suppose that <i>e</i> and <i>u</i> both serve as identities in <i>G</i>. Then</p>
 
@@ -116,86 +116,51 @@
 <p><b>Corollary 7.1.4</b>. For each <i>a,b &in; G</i>, the inverse of the product of two elements of <i>G</i> is the product of their inverses in reverse order, that is</p>
 
 <div class="eq">
-<p>(<i>ab</i>)<sup>−1</sup></i> = <i>b<sup>−1</sup>a<sup>−1</sup></i></p>
+<p>(<i>ab</i>)<sup>−1</sup> = <i>b</i><sup>−1</sup><i>a</i><sup>−1</sup></p>
 </div>
 
-<p><b>Proof</b>. We have to show that the product of <i>b<sup>−1</sup>a<sup>−1</sup></i> and <i>ab</i> (in both orders) is equal to the identity <i>e</i> of the group. We have</p>
+<p><b>Proof</b>. We have to show that the product of <i>b</i><sup>−1</sup><i>a</i><sup>−1</sup> and <i>ab</i> (in both orders) is equal to the identity <i>e</i> of the group. We have</p>
 
 <div class="eq">
-<p>(<i>ab</i>) (<i>b<sup>−1</sup>a<sup>−1</sup></i>)= <i>a<sup>−1</sup> ⋅ (<i>b<sup>−1</sup>b</i>) ⋅ <i>a</i><sup>−1</sup> = a<sup>−1</sup> ⋅ e ⋅ a</i><sup>−1</sup> = a<sup>−1</sup> ⋅ a = e</i>.</p> 
+<p>(<i>ab</i>) (<i>b</i><sup>−1</sup>a<sup>−1</sup></i>)= <i>a</i><sup>−1</sup> ⋅ (<i>b</i><sup>−1</sup><i>b</i>) ⋅ <i>a</i><sup>−1</sup> = <i>a</i><sup>−1</sup> ⋅ <i>e ⋅ a</i><sup>−1</sup> = <i>a</i><sup>−1</sup> ⋅ <i>a = e</i>.</p> 
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p>(<i>b<sup>−1</sup>a<sup>−1</sup></i>)(<i>ab</i>) = <i>b<sup>−1</sup> ⋅ (<i>a<sup>−1</sup>a</i>) ⋅ <i>b</i> = b<sup>−1</sup> ⋅ e ⋅ b = b<sup>−1</sup> ⋅ b = e</i>.</p>
+<p>(<i>b</i><sup>−1</sup><i>a</i><sup>−1</sup>)(<i>ab</i>) = <i>b</i><sup>−1</sup> ⋅ (<i>a</i><sup>−1</sup><i>a</i>) ⋅ <i>b = b</i><sup>−1</sup> ⋅ <i>e ⋅ b = b</i><sup>−1</sup> ⋅ <i>b = e</i>.</p>
 </div>
 
-<p>Hence by definition (<i>ab</i>)<sup>−1</sup> = <i>b<sup>−1</sup>a<sup>−1</sup></i>. □</p>
+<p>Hence by definition (<i>ab</i>)<sup>−1</sup> = <i>b</i><sup>−1</sup><i>a</i><sup>−1</sup>. □</p>
 
-<p><b>Corollary 7.1.5</b>. A subgroup <i>S</i> of a group <i>G</i> a nonempty subset of <i>G</i> that is itself a group under the same operation as <i>G</i>.</p>
+<p><b>Corollary 7.1.5</b> A group <i>G</i> is Abelian if and only if (<i>ab</i>)<sup>−1</sup> = <i>a</i><sup>−1</sup><i>b</i><sup>−1</sup> &emsp; ∀<i>a,b ∈ G</i>.</p>
 
-<p>Then a subset <i>S</i> of a group (<i>G</i>, ⋅) is a subgroup if and only if</p>
-
-<ol type="a">
-	<li><p>the identity <i>e</i> of <i>G</i> belongs to <i>S</i>;</p></li>
-	<li><p><i>S</i> is closed under the operation of <i>G</i>, that is &forall;<i>s,t &in; S</i>, we have <i>st &in; S</i>; in other words the operation of ⋅ of <i>G</i> is also the operation of <i>S</i>, <i>i.e.</i></p>
-	<div class="eq">
-	<p>⋅ : <i>S</i> x <i>S</i> ⟶ <i>S</i></p>
-	</div>
-	</li>
-	
-	<li><p>for all <i>s</i> in <i>S</i>, <i>s</sup><sup>−1</sup></i> &in; <i>S</i>.</p>
-</ol>
-
-<p><b>Remark</b>. <i>S</i> = {−1, 1} is a nonempty subset of ℚ, and it is a group with respect to multiplication that is a subgroup (ℚ,*), but it is not a subgroup of (ℚ,+).</p>
-
-<p>Every group G automatically has two obvious subgroups, namely <i>G</i> itself and the subgroup consisting of the identity element, <i>e</i>, alone. These two subgroups we call <i>trivial subgroups</i>. Our interest will be in the remaining ones, the <i>proper subgroups</i> of <i>G</i>.</p>
-
-<p>Subgroup <i>S</i> of a group <i>G</i> is indicated with the following notations</p>
+<p><b>Proof.</b> If we assume (<i>ab</i>)<sup>−1</sup> = <i>a</i><sup>−1</sup> <i>b</i><sup>− 1</sup> then we have owing to the prvious corollary</p>
 
 <div class="eq">
-<p><i>H</i> &le; <i>G</i>, &emsp; or &emsp; <i>H</i> &lt; <i>G</i> &emsp; (if <i>H</i> &ne; <i>G</i>)</p>
+<p>(<i>ab</i>)<sup>−1</sup> = <i>b</i><sup>−1</sup><i>a</i><sup>−1</sup> = <i>a</i><sup>−1</sup><i>b</i><sup>−1</sup></p>
 </div>
 
-<p><b>Corollary 7.1.6</b>. (<i>Subgroup Theorem</i>) A non-empty subset <i>S</i> of a group <i>G</i> is a subgroup if and only if whenever <i>a, b ∈ S</i>, then <i>ab</i><sup>−1</sup> ∈ <i>S</i>.</p>
-
-<p><b>Proof</b>. The condition is obviuosly necessary. We now show that is also sufficient. If <i>S</i> is reduced to the identity element, it is automatically a subgroup. Let <i>a = x</i> and <i>b = x</i> both in <i>S</i>, in the hyphothesis, we have <i>e = xx<sup>−1</sup> = ab<sup>−1</sup></i> is in <i>S</i>. Taking the two elements <i>a = e &in; S</i> and <i>b = x &in; S</i> in the statement of the theorem, we have <i>ex<sup>−1</sup> = x<sup>−1</sup> &in; S</i>. Finally, the proof will be comple when we show that <i>S</i> is closed; that is, if <i>x,y</i> belong to <i>S</i>, we muest show that <i>xy &in; S</i> also. We have already shown that <i>y<sup>−1</sup></i> &in; <i>S</i> whnever <i>y</i> is; so, letting <i>a = x</i>, and <i>b = y</i><sup>−1</sup>, we have <i>xy = x</i>(<i>y<sup>−1</sup></i>)<sup>−1</sup> = <i>ab</i><sup>−1</sup> is in <i>S</i>.  &emsp;□</p>
-
-<div id="center">
-<p><b>7.1.7 Definition</b>. Let (<i>G</i>, ⋅) a group. The <i>center</i> of <i>G</i> is the subset</p>
+<p>and so we can argue as follows:</p>
 
 <div class="eq">
-<p><i>Z</i>(<i>G</i>) = {<i>g &in;  G</i> | <i>gx = xg &emsp; &forall;x &in; G</i>}</p>
+<p><i>b</i><sup>−1</sup><i>a</i><sup>−1</sup> = <i>a</i><sup>−1</sup><i>b</i><sup>−1</sup><br>
+<i>b · b</i><sup>−1</sup>a<sup>−1</sup> = <i>b · a</i><sup>−1</sup><i>b</i><sup>−1</sup><br>
+<i>a</i><sup>−1</sup> = <i>ba</i><sup>−1</sup>b<sup>−1</sup><br>
+<i>a · a</i><sup>−1</sup> = <i>a · ba</i><sup>−1</sup><i>b</i><sup>−1</sup><br>
+<i>e = aba</i><sup>−1</sup>b<sup>−1</sup><br>
+<i>e · b = aba</i><sup>−1</sup>b<sup>−1</sup> · <i>b</i><br>
+b = aba<sup>−1</sup><br>
+<i>b · a = aba</i><sup>−1</sup>·<i>a</i> <br>
+<i>ba = ab</i></p>
 </div>
 
-<p>The notation <i>Z</i>(<i>G</i>) comes from the fact that the German word for center is <i>Zentrum</i>. The term was coined by J. A. de Séguier in 1904.]</p>
-
-<p><b>7.1.8 Proposition</b>. The center of a group <i>G</i> is a subgroup of <i>G</i>.</p>
-
-<p><b>Proof</b>. Clearly, <i>e &in; Z</i>(<i>G</i>), so <i>Z</i>(<i>G</i>) is nonempty. Now, suppose <i>a, b &in; Z</i>(<i>G</i>). Then (<i>ab</i>)<i>x</i> = <i>a</i>(<i>bx</i>) = <i>a</i>(<i>xb</i>) = (<i>ax</i>)<i>b</i> = (<i>xa</i>)<i>b</i> = <i>x</i>(<i>ab</i>) for all <i>x &in; G</i>; and, therefore, <i>ab &in; Z</i>(<i>G</i>), so that <i>Z</i>(<i>G</i>) satisfies the first axiom (associativity) for groups. Furthermore, multiplying both sides of the equation <i>xg = gx</i> first on the right side then on the left by <i>x<sup>−1</sup></i>, we deduce that <i>gx<sup>−1</sup> = x<sup>−1</sup>g</i>, which shows that <i>x<sup>−1</sup> &in; Z</i>(<i>G</i>). Satisfying all axioms, we conclude <i>Z</i>(<i>G</i>) is a subgroup of <i>G</i>. &emsp;□</p>
-</div>
-
-<p><b>7.1.9 Definition</b>. Let (<i>G</i>, ⋅) a group, and let <i>g &in; G</i>. and <i>i</i> &in; ℤ. We define power <i>g<sup>i</sup></i> of <i>g</i> with exponent <i>i</i> the following element of <i>G</i>:</p>
-
-<table class="noborder centertable">
-<tr> <td rowspan="3"> <i>g<sup>i</sup> =</td> <td>g ⋅ g ⋅ ⋅⋅⋅ ⋅ g</i> <br><i>i</i> times</td> <td>if <i>i</i> &gt; 0</td></tr>
-<tr> <td><i>e</i></td> <td>if <i>i</i> = 0</td></tr>
-<tr> <td><i>g<sup>−1</sup> ⋅  ⋅⋅⋅ ⋅ g<sup>−1</sup></i> <br><i>i</i> times</td> <td>if <i>i</i> &lt; 0</td></tr>
-</table>
-
-<p>The usual rules for manipulation of powers hold:</p>
-
-<div class="eq">
-<p><i>g<sup>i</sup> ⋅ g<sup>j</sup> = g<sup>i+j</sup></i> &emsp; and &emsp; (<i>g<sup>i</sup></i>)<i><sup>j</sup> = g<sup>ij</sup></i></p>
-</div>
-
-<p>On the other hand, (<i>gh</i>)<sup>i</sup> &ne; <i>g<sup>i</sup>h<sup>i</sup></i> in general.</p>
+<p>Hence <i>G</i> is Abelian.&emsp;□</p>
 
 <section aria-label="End">
-<a href="characteristic_integral_domain.html">&#171;The characteristic of an integral domain</a>
+<a href="groups.html">&#171;Abstract groups</a>
 <a href="index.html">Index</a>
-<a href="cyclic_groups.html">Cyclic groups&#187;</a>
+<a href="subgroups.html">Subgroups&#187;</a>
 </section>
 
 </div>

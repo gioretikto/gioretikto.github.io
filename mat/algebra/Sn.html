@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The symmetric group 𝓢<sub>n</sub>"/>
   <title>The symmetric group 𝓢<sub>n</sub></title>
   <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-   
+
 <div class="content">
 
 <h1>The symmetric group 𝓢<sub>n</sub></h1>
@@ -49,12 +49,54 @@
 
 <p>We shall write <i>&sigma;</i> as 2 x 6 matrix</p>
 
-<div class="eq">
-<p>
-|1 2 3 4 5 6|<br>
-|5 1 4 6 2 3|
-</p>
-</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>since the <i>&sigma;</i> is bijective in the bottom row, which contains the images of the elements of <i>X</i> we have all the elements of the first row in a different order. This means that</p>
 
@@ -92,24 +134,213 @@
 
 <p>The group 𝓢<sub><i>n</i></sub> is thus not Abelian. Now permutation multiplication is defined as function composition, we showed that function composition is associative. The identity elementd indicated by id of 𝓢<sub><i>n</i></sub> is the permutation</p>
 
-<table class="noborder">
-<tr><td rowspan="2">id =</td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>i</mi>
+  <mi>d</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mtable columnspacing="1em" rowspacing="4pt">
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mn>3</mn>
+          </mtd>
+          <mtd>
+            <mo>&#x22EF;</mo>
+          </mtd>
+          <mtd>
+            <mi>n</mi>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mn>3</mn>
+          </mtd>
+          <mtd>
+            <mo>&#x22EF;</mo>
+          </mtd>
+          <mtd>
+            <mi>n</mi>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+  </mrow>
+  <mo>.</mo>
+</math>
 
-<p>The inverse of a permutation is the permutation that reverses the direction of the mapping σ, that is, <i>σ<sup>−1</sup></i>(<i>a</i>) is the element <i>a'</i> of <i>X</i> such that <i>a = σ</i> (<i>a'</i>), thus swapping the two rows and then reordering the first row. The inverse of the permutation</p>
+<p>The inverse of a permutation is the permutation that reverses the direction of the mapping σ, that is, <i>σ</i><sup>−1</sup>(<i>a</i>) is the element <i>a'</i> of <i>X</i> such that <i>a = σ</i> (<i>a'</i>), thus swapping the two rows and then reordering the first row. The inverse of the permutation</p>
 
-<table class="noborder">
-<tr><td rowspan="2">&tau; = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-<tr> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C4;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>is the permutation</p>
 
-<table class="noborder">
-<tr> <td rowspan="2">&tau;<sup>−1</sup> =</td> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td> </td> <td rowspan="2"> = </td>  <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td></tr>
-<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>&#x3C4;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>Starting fromt a permutation <i>&sigma;</i> we can obtain its powers <i>&sigma;<sup>k</sup></i> with k &in; ℤ. Let <i>r</i> the least positive integer such that <i>&sigma;<sup>r</sup></i> = id. Such an integer surely exists and it is the <i>order</i> of the permutation.</p>
 

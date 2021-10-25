@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <meta name="description" content="Calcolo Combinatorio"/>
-  <title>Calcolo Combinatorio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Combinatorics"/>
+  <title>Combinatorics</title>
   <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -17,10 +17,10 @@
   <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
  </ul>
 </nav>
-   
+
 <div class="content">
 
-<h1>Calcolo Combinatorio</h1>
+<h1>Combinatorics</h1>
 
 <p>Scopo di questo paragrafo è rispondere alla domanda: <i>quanti sono?</i>. Ossia saremo interessati a <i>contare</i> gli oggetti di certi insiemi finiti. Diamo alcuni esempi.</p>
 
@@ -30,7 +30,7 @@
 <li><p>Uno studente vuole sedersi durante cinque giorni di lezione con cinque compagni diversi (ogni banco ha due posti). Quante sono le possibilità di scelta? Il primo giono ha cinque possibilità di scelta, il secondo giorno ne ha quattro, il terzo ne ha tre, e così via sino all'ultimo giorno, in cui ha un'unica possibiltà. In totale il numero di possibili scelte è</p>
 
 <div class="eq">
-<p><i>5 ⋅ 4 ⋅ 3 ⋅ 2 ⋅ 1 = 120</i></p>
+<p>5 ⋅ 4 ⋅ 3 ⋅ 2 ⋅ 1 = 120</p>
 </div>
 
 </li>
@@ -38,7 +38,7 @@
 <li><p>Quante targhe si possono formare utilizzando quattro cifre seguite da tre lettere (scelte tra 26)? Ci sono 10 ⋅ 10 ⋅ 10 ⋅ 10 possibili numeri a quattro cifre. Ci sono 26 ⋅ 26 ⋅ 26 possibili modi utilizzare tre lettere. In tutto quindi il numero di targhe che si possono ottenere è:</p>
 
 <div class="eq">
-<p><i>10<sup>4</sup> ⋅ 26<sup>3</sup> = 17576 ⋅ 10<sup>4</sup></i></p>
+<p>10<sup>4</sup> ⋅ 26<sup>3</sup> = 17576 ⋅ 10<sup>4</sup></p>
 </div>
 
 <p>Per risolvere questo genere di problemi è conveniente introdurre alcune notazioni:</p>
@@ -46,7 +46,7 @@
 <p>Dato un intero positivo <i>n</i>, si indica con <i>n!</i>, e si legge <i>n fattoriale</i>, il seguente intero:</p>
 
 <div class="eq">
-<p><i>n! := n ⋅ (n - 1) ⋅ (n - 2) ⋅⋅⋅ 3 ⋅ 2 ⋅ 1; &emsp; 0! := 1</i></p>
+<p><i>n</i>! := <i>n</i> ⋅ (n − 1) ⋅ (n − 2) ⋅⋅⋅ 3 ⋅ 2 ⋅ 1; &emsp; 0! := 1</p>
 </div>
 
 <p>Ad esempio 6! = 6 ⋅ 5 ⋅ 4 ⋅ 3 ⋅ 2 ⋅ 1 = 720. </p>
@@ -58,7 +58,7 @@
 </div>
 
 <div class="eq">
-<p><i>n</i>!/(<i>n−k</i>)! = n ⋅ (n−1) ⋅ (n−2) ⋅⋅⋅ (n−k+1) &emsp; if 0 &lt; <i>k &lt; n</i>.</p>
+<p><i>n</i>!/(<i>n−k</i>)! = n ⋅ (n − 1) ⋅ (n − 2) ⋅⋅⋅ (n − k + 1) &emsp; if 0 &lt; <i>k &lt; n</i>.</p>
 </div>
 
 <p>Si osservi come la funzione fattoriale cresca molto rapidamente. Nei calcoli, quando si ha a che fare ad esempio con quozienti di fattoriali, conviene procedere alla loro cancellazione, tenendo conto della (C.3):</p>
@@ -66,7 +66,7 @@
 <p>Ad esempio se si deve dividere 1000! per 997! conviene scrivere:</p>
 
 <div class="eq">
-<p><i>1000! / 997! = 1000 ⋅ 999 ⋅ 998 ⋅997</i></p>
+<p>1000! / 997! = 1000 ⋅ 999 ⋅ 998 ⋅997</p>
 </div>
 
 <p>Dati due insiemi <i>A</i> e <i>B</i> con <i>n</i> elementi ciascuno, il numero di corrispondenze biunivoche tra <i>A</i> e <i>B</i> è precisamente n!. Infatti, per individuare un'applicazione <i>f</i> basa assegnare i valori <i>f(x<sub>1</sub>), f(x<sub>2</sub>), f(x<sub>3</sub>),..., f(x<sub>3</sub>)</i>, dove <i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>, sono gli <i>n</i> elementi di <i>A</i>. Data un'applicazione biettiva arbitraria <i>f</i> da <i>A</i> a <i>B</i>, <i>f(x<sub>1</sub>)</i> piò essere uno qualunque degli <i>n</i> elementi di <i>B</i>, cioè può assumere <i>n</i> valori, <i>f(x<sub>2</sub>)</i> può coincidere con uno qualsiasi degli elementi di <i>B</i> purché diverso da <i>f(x<sub>1</sub>)</i> (per l'iniettività), quindi può assumere <i>(n-1)</i> valori, e così via. Si possono fare quindi in tutto <i>n ⋅ (n - 1) ⋅ (n - 2) ⋅⋅⋅ 2 ⋅ 1 = n!</i> scelte, e scelte diverse danno origine ad applicazioni biunivoche diverse tra <i>A</i> e <i>B</i>. <br> Nel caso in cui sia <i>A = B</i>, le corrispondenze biunivoche di <i>A</i> in sé prendono il nome di <i>permutazioni</i>. L'insieme di tutte le permutazioni di un insieme <i>X</i> si indica con <i>𝓢(X)</i>. Se si prende in corrispondenza la composizione di applicazioni, la composizione di elementi di <i>𝓢(X)</i>. Inoltre tale composizione è associativa, esiste un elemento <i>i<sub>X</sub> neutro</i> rispetto alla composizione, tale cioè che <i>i<sub>X</sub> ∘ f = f ∘ i<sub>X</sub> = f</i> per ogni <i>f &in; S(X)</i>. Inoltre dato comunque un elemento <i>f &in; 𝓢(X)</i> esiste l'applicazione inversa <i>f<sup>-1</sup></i> che sta ancora in <i>𝓢(X)</i>, tale che <i>f ∘ f<sup>-1</sup> = f<sup>-1</sup> ∘ f = i<sub>X</sub></i>. L'insieme <i>𝓢(X)</i> rispetto alla composizione di applicazioni ha una <i>struttura algebrica</i> che prende il nome di <a href="gruppo.html">gruppo</a>. Tale insieme rivestirà un'importanza fondamentale nel seguito, quando studieremo in dettaglio i gruppo. 
@@ -145,7 +145,50 @@
 
 <p>Il motivo per cui gli interi (<i>n k</i>) prendono il nome di coefficienti binomiali è che essi compaiono come coefficienti nella formula che dà lo sviluppo della potenza di un binomio (<i>a + b</i>)<sup>n</sup></i>:</p>
 
-<img src="img/newton.png" alt="binomio newton"/>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <msup>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+  </msup>
+  <msup>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msup>
+</math>
 
 <p>Esaminiamo i primi valori di <i>n</i>:</p>
 
@@ -162,15 +205,17 @@
 <p>(<i>a + b</i>)<sup>n</sup> = (a + b) ⋅ (a + b) ⋅ ... ⋅ (a + b)</p>
 </div>
 
-<p>si ottiene una somma di termini della forma a<sup>n-k</sup>b<sup>k</sup>. Se in un fattore <i>y</i> compare <i>k</i> volte, allora in quello stesso fattore <i>a</i> compare <i>n &minus; k</i> volte. Il coefficiente di ogni termine sarà il numero di modi di scegliere <i>k</i> degli <i>n</i> binomi (a+b), ossia il coefficiente binomilae (n k). Ad esempio in (<i>x + y</i>)<sup>3</sup> = (x + y)(x + y)(x + y), there are 3 ways to form the term 3x^2y si possono prendere le due x:</p>
+<p>si ottiene una somma di termini della forma a<sup>n-k</sup>b<sup>k</sup>, each one the product of <i>n</i> terms which can be either a or b. If in a term <i>a</i> appears <i>k</i> times, then in the same factor <i>b</i> appears <i>n &minus; k</i> times. The coefficient of a term corresponds to the <a href="../prob_stat/combinations.html">binomial coefficient</a>: the number of repeated permutations, of <i>n</i> elements of which <i>k</i> and <i>n − k</i> are repeated. For example (<i>x + y</i>)<sup>3</sup> = (x + y)(x + y)(x + y), there are 3 ways to form the term 3x<sup>2</sup>y</p>
 
-<ul>
-	<li><p>dai primi due binomi;</p>
-	<li><p>Dagli ultimi due binomi</p></li>
-	<li><p>dal primo e ultimo binomio</p></li>
-</ul>
+<pre>
+xxy
+xyx
+yxx
+</pre>
 
-<section>
+<p>since the order is irrelevant in multiplication. (3 2) = 3!/2!*1!.</p>
+
+<section aria-label="End">
 <a href="defective.html">&#171;Defective Verbs</a>
 <a href="index.html">Index</a>
 <a href="proprietàCalcolo Combinatorio.html">Proprietà dei Calcolo Combinatorio&#187;</a>

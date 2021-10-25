@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Compatible relations and normal subgroups"/>
+ <title>Compatible relations and normal subgroups</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+
+<div class="content">
+
+<h1>Compatible relations and normal subgroups</h1>
+
+<p>Let <i>G</i> a group and <i>&rho;</i> an equivalence relation defined on <i>G</i>, <a href="quotient_rings.html">compatible with the operations of the group</a>, <i>i.e.</i> such that</p>
+
+<div class="eq">
+<p><i>g<sub>1</sub> &rho; g'<sub>1</sub>, &emsp; g<sub>2</sub> &rho; g<sub>2</sub>' &emsp; ⇒ &emsp; g<sub>1</sub>g<sub>2</sub> &rho; g'<sub>1</sub>g'<sub>2</sub></i></p>
+</div>
+
+<p>Remembering the definitions of &rho;<sub>r</sub>, right and &rho;<sub>l</sub>, left congruence modulo a subgroup, we introduce the following proposition:</p>
+
+<p><b>7.11.1 Proposition</b>. Let <i>G</i> a group and &rho; an equivalence compatible relation defined on <i>G</i>. Let also</p>
+
+<div class="eq">
+<p><i>H</i> = {<i>x &in; G</i> | <i>x &rho; e</i>}</p>
+</div>
+
+<ol type="a">
+	<li><p><i>H</i> is a subgroup of <i>G</i></p></li>
+	<li><p>Indicating with <i>&rho;<sub>r</sub></i> and <i>&rho;<sub>l</sub></i>, the right and left congruence relations modulo <i>H</i>, it results</p>
+	
+		<div class="eq">
+		<p><i>&rho; = &rho;<sub>r</sub> = &rho;<sub>l</sub></i></p>
+		</div>
+
+	<p>That is</p>
+	
+	<div class="eq">
+	<p><i>x &rho; y &emsp; ⇐⇒ &emsp; xy</i><sup>&minus;1</sup> &in; <i>H</i> &emsp; ⇐⇒ &emsp; <i>y</i><sup>&minus;1</sup><i>x</i> &in; <i>H</i></p>
+	</div>
+	</li>
+	
+</ol>
+
+<p><b>Proof</b>. </p>
+<ol type="a">
+	<li><p>We have</p>
+	
+	<div class="eq">
+	<p><i>e &rho; e &emsp;⇒ &emsp; e &in; H</i></p>
+	</div>
+	
+	<p>Moreover &forall;<i>x,y &in; H</i></p>
+	
+	<div class="eq">
+	<p><i>x &rho; e, &emsp; y &rho; e &emsp;⇒ &emsp; xy &rho; ee = e &emsp;⇒ &emsp; xy &in; H</i></p>
+	</div>
+	
+	<p>And</p>
+	
+	<div class="eq">
+	<p><i>x &rho; e, &emsp; x<sup>&minus;1</sup> &rho; x<sup>&minus;1</sup> &emsp;⇒ &emsp; e &rho; x<sup>&minus;1</sup> &emsp;⇒ &emsp; x</i><sup>&minus;1</sup> &in; <i>H</i></p>
+	</div>
+	</li>
+	
+	<li><p><i>x &rho; y</i> and <i>y</i><sup>&minus;1</sup> &rho; <i>y</i><sup>&minus;1</sup> imply owing to the compatibility of &rho;: <i>xy</i><sup>&minus;1</sup> <i>&rho; e</i>, that is <i>x &rho;<sub>r</sub> y</i>. Conversely, if <i>x &rho;<sub>r</sub> y</i> then <i>xy</i><sup>&minus;1</sup> &in; <i>H</i>, that is <i>xy</i><sup>&minus;1</sup> &rho; e</i>, from which for the compatibility of <i>&rho;: x &rho; y</i>. Thus <i>x &rho; y&emsp;⇒ &emsp; x &rho;<sub>r</sub> y</i>. The same argument can be applied to <i>&rho;<sub>l</sub></i>.&emsp; □</p>
+</li>
+</ol>
+
+<p>The previous proposition states that given in <i>G</i> an equivalence relation compatible with the operations of the group, the partition in equivalence classes coincides with the partition in right (left) cosets modulo the <i>subgroup H</i> with this latter representing the class of the nuetral element of the group. Moreover left and right cosets coincide <i>i.e. Hx = xH</i>, &forall;<i>x &in; G</i>. </p>
+
+<p>We now ask the converse given a subgroup <i>H</i> of <i>G</i>, when the relations <i>&rho;<sub>r</sub>, &rho;<sub>l</sub></i> modulo <i>H</i> are compatible? It is not generally the case that the two relation are compatible as the following examples shows off:</p>
+
+<p><b>7.11.2 Example</b>. Let <i>G</i> = 𝓢<sub>3</sub> and <i>H</i> the subgroup <i>H</i> = ⟨(23)⟩. </p>
+
+<p>For <i>&rho;<sub>r</sub></i> we have: (13) <i>&rho;<sub>r</sub></i> (123), (12) <i>&rho;<sub>r</sub></i> (132), (e) <i>&rho;<sub>r</sub></i> (23)</p>
+
+<p>For <i>&rho;<sub>l</sub></i> we have: (13) <i>&rho;<sub>l</sub></i> (132), (12) <i>&rho;<sub>l</sub></i> (123), (e) <i>&rho;<sub>l</sub></i> (23).</p>
+
+<p>Neither of the two relations are compatible; We've to verify that for example</p>
+
+<div class="eq">
+<p>(13) <i>&rho;<sub>r</sub></i> (123), &emsp; (12) <i>&rho;<sub>r</sub></i> (132) &emsp;⇒ &emsp;(13)(12) <i>&rho;<sub>r</sub></i> (123)(132)</p>
+</div>
+
+<p>But this is not the case since:</p>
+
+<div class="eq">
+<p>(123)(132) = id &in; <i>H</i> &emsp; but &emsp;(13)(12) = (123) ∉ <i>H</i>, so it cannot be true that (13)(12)id<sup>&minus;1</sup> &in; <i>H</i>.</p>
+</div>
+
+<p>Observe also that <i>&rho;<sub>r</sub> &ne; &rho;<sub>l</sub></i>. Indeed there exist elements <i>x,y</i> such that <i>xy</i><sup>&minus;1</sup> &in; <i>H</i> but <i>yx</i><sup>&minus;1</sup> &notin; <i>H</i>. It suffices to take for example <i>x</i> = (132) and <i>y</i> = (12). We have <i>xy</i><sup>&minus;1</sup> = (23) &in; <i>H</i>, but <i>y</i><sup>&minus;1</sup><i>x</i> = (13) &notin; <i>H</i>. &emsp; ■ </p>
+
+<p>The following proposition clarify under which additional condition <i>&rho;<sub>r</sub></i> and <i>&rho;<sub>l</sub></i> are compatible.</p>
+
+<p><b>7.11.2 Proposition</b>. Let <i>H</i> a subgroup of <i>G</i>, and let <i>&rho;<sub>r</sub></i> and <i>&rho;<sub>l</sub></i> the right and left congruence relation modulo <i>H</i>. The necessary and sufficient condition for <i>&rho;<sub>r</sub></i> (or <i>&rho;<sub>l</sub></i>) to be compatile is</p>
+
+<div class="eq">
+<p><i>&rho;<sub>r</sub> = &rho;<sub>l</sub></i>, &emsp; <i>Hx = xH</i>, &emsp; &forall;<i>x &in; G</i> </p>
+</div>
+
+<p><b>Proof</b>. We observe first that by multiplying to the right (or left) by a same element of <i>G</i> two elements still congruent modulo <i>&rho;<sub>r</sub></i> (<i>&rho;<sub>l</sub></i>). Let <i>&rho;<sub>r</sub> = &rho;<sub>l</sub> = &rho;</i> and let <i>x &rho; x'</i> and <i>y &rho; y'</i>. Then we have <i>xy &rho; x'y</i>, from which</p>
+
+<div class="eq">
+<p><i>xy &rho; x'y</i></p>
+</div>
+
+<p>that is <i>&rho;<sub>r</sub></i> (= <i>&rho;<sub>l</sub></i>) is compatible.<br> Conversely suppo that <i>&rho;<sub>r</sub></i> is compatible. Then <i>x &rho;<sub>r</sub> y</i> &emsp;⇐⇒ &emsp; xy<sup>&minus;1</sup> &rho;<sub>r</sub> e. But then, owing to the compatibility of <i>&rho;<sub>r</sub></i>, we have <i>y</i><sup>&minus;1</sup>  &rho;<sub>r</sub> <i>x</i><sup>&minus;1</sup>, that is <i>y</i><sup>&minus;1</sup>(<i>x</i><sup>&minus;1</sup>)<sup>&minus;1</sup> = <i>y</i><sup>&minus;1</sup><i>x &in; H</i>, thus <i>x &rho;<sub>r</sub> y</i> &emsp;⇐⇒ &emsp; <i>x &rho;<sub>l</sub> y</i> and <i>&rho;<sub>r</sub> = &rho;<sub>l</sub></i>. &emsp; □</p>
+
+<p><b>7.11.3 Corollary</b>. Let <i>&rho;</i> an equivalence relation compatible defined on <i>G</i>. Then the subset <i>H</i> = {<i>x &in; G</i> | <i>x &rho; e</i>} is a subgroup of <i>G</i> and it holds that <i>&rho; = &rho;<sub>r</sub> = &rho;<sub>l</sub></i> modulo <i>H</i>. Conversely, if <i>H</i> is a subgroup of <i>G</i> such that <i>&rho;<sub>r</sub> = &rho;<sub>l</sub></i>, then <i>&rho;<sub>r</sub> = &rho;<sub>l</sub> = &rho;</i> is a compatible relation. &emsp; □</p>
+
+<h2>Quotient groups and Normal subgroups</h2>
+
+<p>With the equivalence relations defyining <a href="cosets.html">right and left cosets</a> 7.8.1 and 7.8.2, we denote the totality of all equivalence classes modulo <i>H</i> by <i>G/H</i>, known as the <b><i>quotient set</i></b> of the group G over its subgroup H. This set is the set of cosets G/H = {gH| g &in; G}. Analogously, the set of right cosets G/H = {Hg | g &in; G}. </p>
+
+<p>An interesting question is under what conditions on the subgroup <i>H</i> the quotient set <i>G/H</i> becomes a <i>quotient group</i>.</p>
+
+<p>The subgroup <i>H</i> of <i>G</i> such that <i>&rho;<sub>r</sub></i> (and thus also <i>&rho;<sub>l</sub></i>) is compatible, and for which the right and left cosets coincide are known as <i>normal</i>.</p>
+
+<p><b>7.11.4 Defintion</b>. A subgroup <i>H</i> of <i>G</i> is said <i>normal</i> in <i>G</i> if &forall;<i>x</i> &in; <i>G</i></p>
+
+<div class="eq">
+<p><i>Hx = xH</i></p>
+</div>
+
+<p>We write <i>H ⊲̲ G</i>. In group theory, (big group)/(subgroup) nearly always means the quotient group, meaning that the subgroup is normal.</p>
+
+<p>For example, in S<sub>3</sub> the alternating subgroup is a normal subgroup whilst the subgroup {id, (12)} is not.</p>
+
+<p><b>7.11.5 Example</b>. Let <i>H = A</i><sub>3</sub> = {(<i>e</i>), (1, 2, 3), (1, 3, 2)} = ⟨(1, 2, 3)⟩</p>
+
+<p>and</p>
+
+<p><i>G</i> = S<sub>3</sub> = {(<i>e</i>), (1, 2, 3), (1, 3, 2), (1, 2), (1, 3), (2, 3)}.</p>
+
+<p>For <i>x</i> = (1, 2) we have</p>
+
+<p><i>xH</i>= {(1, 2)(1), (1, 2)(1, 2, 3), (1, 2)(1, 3, 2)} = {(1, 2), (2, 3), (1, 3)}</p>
+
+<p>and</p>
+
+<p><i>Hx</i> = {(1)(1, 2), (1, 2, 3)(1, 2), (1, 3, 2)(1, 2)} = {(1, 2), (1, 3), (2, 3)}.</p>
+
+<p>Note that the condition <i>xH = Hx</i> is an equality of sets, and it does not require that <i>xh &ne; hx</i> for all <i>h &in; H</i>. We have <i>xH = Hx</i>, but <i>xh &ne; hx</i> when <i>h</i> = (1, 2, 3) &in; <i>H</i>. Similar computations show that</p>
+
+<p>(<i>e</i>)<i>H</i> = (1, 2, 3)<i>H</i> = (1, 3, 2)<i>H</i> = {(1), (1, 2, 3), (1, 3, 2)} = <i>H</i></p>
+<p><i>H</i>(<i>e</i>) = <i>H</i>(1, 2, 3) = <i>H</i>(1, 3, 2) = {(1), (1, 2, 3), (1, 3, 2)} = <i>H</i></p>
+<p>(1, 2)<i>H</i> = (1, 3)<i>H</i> = (2, 3)<i>H</i> = {(1, 2), (1, 3), (2, 3)}</p>
+<p><i>H</i>(1, 2) = <i>H</i>(1, 3) = <i>H</i>(2, 3) = {(1, 2), (1, 3), (2, 3)}.</p>
+
+<p>Thus <i>H</i> is a normal subgroup of <i>G</i>. Additionally we note that <i>G</i> can be expressed as <i>G = H</i> ∪ (1, 2)<i>H</i>. &emsp; ■</p>
+
+<p><b>Remark</b>. In the definition of normal subgroup we have specified <i>normal in G</i>. Indeed a subgroup <i>N</i> may be normal in a subgroup <i>H</i> but not in the whole <i>G</i>. The previous corollary states that all and the only compatible relations defined in a group <i>G</i> are the relations congruent modulo a normal subgroup. If we set</p>
+
+<p>𝓡 := {equivalence relation defined in <i>G</i>, compatible with the operations in <i>G</i>}</p>
+<p>𝓝 := {normal subgroups in <i>G</i>}</p>
+
+<p>The mapping</p>
+
+<div class="eq">
+<p>&Psi;: 𝓡  ⟶𝓝 </p>
+&emsp;&rho; ⟼ 𝓝 = {<i>x &in; G</i> | <i>x &rho; e</i>}</p>
+</div>
+
+<p>is a bijective function between 𝓡  and 𝓝, whose inverse is</p>
+
+<div class="eq">
+<p>&Psi;<sup>*</sup>: 𝓝  ⟶ 𝓡 </p>
+&emsp;<i>N ⟼ &rho; = &rho;<sub>r</sub> = &rho;<sub>l</sub></i>
+</div>
+
+<p>where <i>x &rho; y ⇐⇒ xy</i><sup>&minus;1</sup> &in; <i>N</i>.</p>
+
+<p>The role that ideals play in ring theory is played by normal subroups in group theory. ■</p>
+
+<p>As we did for the case of S<sub>n</sub> we introduce the definition of conjiugate elements.</p> 
+
+<p><b>7.11.6 Defintion</b>. Let <i>G</i> a group. Two elements <i>x,y &in; G</i> are said <i>conjugates</i> if there exists an element <i>g &in; G</i> such that</p>
+
+<div class="eq">
+<p><i>y = gxg</i><sup>&minus;1</sup></p>
+</div>
+
+<p>Every element of the set <i>gH</i> is equal to some element of <i>Hg</i>, i.e. gh<sub>i</sub> = h<sub>j</sub>g or h<sub>i</sub> = g<sup>&minus;1</sup>h<sub>j</sub>g</i>.</p>
+
+<p>Conjugacy is an equivalence relation, since it is</p>
+
+<ol>
+	<li><p><i>reflexive</i>: <i>x</i> = 1<sup>−1</sup> <i>x</i>1 for any <i>x ∈ G</i>.</p></li>
+	<li><p><i>symmetric</i>: if <i>y = g<sup>−1</sup>xg</i>, then <i>x</i> = (g<sup>−1</sup>)<sup>−1</sup>yg<sup>−1</sup>.</p></li>
+	<li><p><i>transitive</i>: if <i>y = g<sup>−1</sup>xg</i> and <i>z = h<sup>−1</sup> yh</i>, then <i>z</i> = (<i>gh</i>)<sup>−1</sup> <i>x</i>(<i>gh</i>).</p></li>
+</ol>
+
+<p>Hence, <i>G</i> is the disjoint union of the equivalence classes, which are called <b>conjugacy classes</b>.</p>
+
+<p>Given a subgroup <i>H</i> of <i>G</i> we indicate by <i>xHx</i><sup>&minus;1</sup>, the set</p>
+
+<div class="eq">
+<p><i>H<sup>x</sup> = xHx</i><sup>&minus;1</sup> := {<i>xHx</i><sup>&minus;1</sup> | <i>h &in; H</i>}</p>
+</div>
+
+<p>It is easy to show that it is still a subgroup of <i>G</i>, known as <i>Conjugated subgroup of H</i>, and may be also indicated with <i>H<sup>x</sup></i>. It coincides with <i>H</i> if and only if <i>H</i> is a normal subroup og <i>G</i>.</p>
+
+<p>We now give a list of equivalence definition of normal subgroup</p>
+
+<p><b>Proposition 7.11.7</b>. Let <i>N</i> a subgroup of a group <i>G</i>. Then the following propositions are equivalent</p>
+
+<ol type="a">
+	<li><p><i>N</i> is normal in <i>G</i></p></li>
+	<li><p><i>N<sup>x</sup> = N</i> &forall;<i>x&in;G</i></p></li>
+	<li><p><i>xnx</i><sup>&minus;1</sup> &in; <i>N</i>, &forall;<i>x &in; G</i> and &forall;<i>n &in; N</i></p></li>
+	<li><p><i>N</i> is the uniion of conjugate classes of <i>G</i>.</p></li>
+</ol>
+
+<p><b>Proof.</b> b) <i>xNx</i><sup>&minus;1</sup> = <i>N</i> if and only if <i>xN = Nx</i>, for one direction, we multiply on the right by <i>x</i>, and, for the converse we multiply on the right by <i>x</i><sup>&minus;1</sup>. <br>The condition for normality <i>x<sup>−1</sup>Nx = N</i> for all <i>x ∈ G</i>, says that <i>x</i><sup>−1</sup><i>nx</i> ∈ <i>N</i> for all <i>n ∈ N</i> and all <i>x ∈ G</i>; that is, for every element of <i>N</i>, its entire conjugacy class is contained in <i>N</i>.&emsp; □</p>
+
+<p><b>Definition 7.11.8</b>. Let <i>N</i> be a normal subgroup in the group <i>G</i>. The factor group, or <b>quotient group</b>, <i>G/N</i></p>
+
+<div class="eq">
+<p><i>G/N</i> := {<i>xN = Nx</i> | <i>x &in; G</i>}</p>
+</div>
+
+<p>is the set of all left (or right) cosets of <i>N &in; G</i>. Our first goal is to define an operation on right cosets so that <i>G/N</i> becomes a group. We define it as follows</p>
+
+<div class="eq">
+<p><i>Nx * Ny := Nxy</i></p>
+</div>
+
+<p><b>7.11.9 Proposition</b>. The quotient group <i>G/N</i>, as defined above, is indeed a group.</p>
+
+<p><b>Proof</b>. First we have to verify that the definition is well-defined. Let <i>Nx = Nx'</i> (that is <i>x' = nx</i>), <i>Ny = Ny'</i> (that is <i>y' = n'y</i>), where <i>n,n' &in; N</i>, <i>x,y &in;G</i>: we must prove that <i>Nxy = Nx'y'</i>. Indeed <i>x'y'= nxn'y = nn̅xy</i>. Where the last equality holds because <i>xn'∈ xN = Nx</i>, and so <i>xn'</i> is equal to <i>n̅x</i> for some <i>n̅ ∈ N</i>. But then <i>Nx'y' = Nxy</i>, as required.</p>
+
+<p>Group axioms, are routine and are left to the reader to verify. The closure law needs no proof, since the operation is well defined. For the associative law, we have</p>
+
+<div class="eq">
+<p>((Nx)(Ny)) (Nz) = (Nxy)Nz = N(xy)z,<br>
+(Nx) ((Ny)(Nz)) = Nx(Nyz) = Nx(yz),</p>
+</div>
+
+<p>and the right-hand sides are equal, by the associative law for <i>G</i>. Because (<i>aN</i>)(<i>eN</i>) = (<i>ae</i>)<i>N = aN</i> = (<i>ea</i>)<i>N</i> = (<i>eN</i>)(<i>aN</i>), we see that <i>eN = N</i> is the identity element in <i>G/N</i>. Finally the inverse, (<i>a<sup>−1</sup>N</i>)(aN) = (a<sup>−1</sup>a)<i>N = eN</i> = (<i>aa</i><sup>−1</sup>)<i>N</i> = (<i>a N</i>)(<i>a<sup>−1</sup>N</i>) shows that <i>a<sup>−1</sup>N</i> = (<i>aN</i>)<sup>−1</sup>. &emsp;■</p></li>
+
+<p>The quotient group comes as the image of a natural homomorphism, which (as in the case of <a href="rings.htnml">rings</a>) is called the <b>canonical homomorphism</b>. Recall that the elements of <i>G/N</i> are the <i>cosets</i> of <i>N</i> in <i>G</i>.</p>
+
+<p><b>Proposition 7.11.10</b> If <i>&phi;: G → G'</i> is any group homomorphism, then ker <i>&phi;</i> is a normal subgroup of <i>G</i>.</p>
+
+<p><b>Proof</b>. We already kwno that ker <i>&phi;</i> is a sugroup of <i>G</i>; to verify it is normal notice that</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>gng</i><sup>&minus;1</sup>) = <i>&phi;</i>(<i>g</i>)<i>&phi;</i>(<i>n</i>)<i>&phi;</i>(<i>g</i><sup>&minus;1</sup>) = <i>&phi;</i>(<i>g</i>) e<sub>G'</sub><i>&phi;</i>(<i>g</i>)<sup>&minus;1</sup> =  e<sub>G'</sub> &emsp;&forall;<i>g &in; G</i>, &forall;<i>n</i> &in; ker <i>&phi;</i></p>
+</div>
+
+<p>proving that <i>gng</i><sup>&minus;1</sup> &in; ker <i>&phi;</i>. &emsp; □</p>
+
+<p>We are now going that not only kernel ⇒ Normal, but that the converse is also true leading to <b>kernel ⇐⇒ Normal subgroup</b>. Define a map</p>
+
+<div class="eq">
+<p><i>&phi;: G → G/N</i><br>
+<i>g ⟼ Ng</i></p>
+</div>
+
+<p>Checking that <i>&pi;</i> is a homomorphism is straightforward from the definition of the operation in <i>G/N</i>.</p>
+
+<div class="eq">
+<p>&pi;(g<sub>1</sub>g<sub>2</sub>) = (<i>Ng<sub>1</sub></i>)(<i>Ng<sub>2</sub></i>) = <i>Ng<sub>1</sub>g<sub>2</sub> = &pi;</i>(<i>g<sub>1</sub>g<sub>2</sub></i>)</p>
+</div>
+
+<p>The image of <i>&pi;</i> is <i>G/N</i>, since every coset has the form <i>Ng</i> for some <i>g ∈ G</i>.</p>
+
+<p>For the kernel of &pi;, since the identity element of <i>G/N</i> is the coset <i>e<sub>G</sub>N</i>, that is, <i>N</i> itself, we have</p>
+
+<div class="eq">
+<p>Ker(<i>&pi;</i>) = {<i>g ∈ G : Ng = N</i>} = <i>N</i>.</p>
+</div>
+
+<p>Before we had noticed that every kernel (of a group homomorphism) is a normal subgroup; and now we have verified that every normal subgroup is in fact a kernel (of some group homomorphism). We conclude that</p>
+
+<div class="eq">
+<p><b>kernel ⇐⇒ Normal subgroup</b></p>
+</div>
+
+<p>in group theory, 'kernel' and 'normal subgroup' are equivalent concepts.</p>
+
+<p>Furthermore, every subgroup in an abelian group is the kernel of some homomorphism: yet another indication that life is simpler in Abelian groups.</p>
+
+<div class="def">
+<p><b>7.11.11 Example, Normal subgroups of <i>D</i><sub>4</sub></b> Here is the Cayley Table for <i>D</i><sub>4</sub></p>
+
+<table>
+<thead>
+<tr><th>∘</th> <th>R<sub>0</sub></th> <th>R<sub>1</sub></th> <th>R<sub>2</sub></th> <th>R<sub>3</sub></th> <th>F<sub>A</sub></th> <th>F<sub>B</sub></th> <th>F<sub>C</sub></th> <th>F<sub>D</sub></th></tr>
+</thead>
+
+<tbody>
+<tr><th>R<sub>0</sub></th> <td>R<sub>0</sub></td> <td>R<sub>1</sub></td> <td>R<sub>2</sub></td> <td>R<sub>3</sub></td> <td>F<sub>A</sub></td> <td>F<sub>B</sub></td> <td>F<sub>C</sub></td> <td>F<sub>D</sub></td></tr>
+<tr><th>R<sub>1</sub></th> <td>R<sub>1</sub></td> <td>R<sub>2</sub></td> <td>R<sub>3</sub></td> <td>R<sub>0</sub></td> <td>F<sub>C</sub></td> <td>F<sub>D</sub></td> <td>F<sub>B</sub></td> <td>F<sub>A</sub></td></tr>
+<tr><th>R<sub>2</sub></th> <td>R<sub>2</sub></td> <td>R<sub>3</sub></td> <td>R<sub>0</sub></td> <td>R<sub>1</sub></td> <td>F<sub>B</sub></td> <td>F<sub>A</sub></td> <td>F<sub>D</sub></td> <td>F<sub>C</sub></td></tr>
+<tr><th>R<sub>3</sub></th> <td>R<sub>3</sub></td> <td>R<sub>0</sub></td> <td>R<sub>1</sub></td> <td>R<sub>2</sub></td> <td>F<sub>D</sub></td> <td>F<sub>C</sub></td> <td>F<sub>A</sub></td> <td>F<sub>B</sub></td></tr>
+<tr><th>F<sub>A</sub></th> <td>F<sub>A</sub></td> <td>F<sub>D</sub></td> <td>F<sub>B</sub></td> <td>F<sub>C</sub></td> <td>R<sub>0</sub></td> <td>R<sub>2</sub></td> <td>R<sub>3</sub></td> <td>R<sub>1</sub></td></tr>
+<tr><th>F<sub>B</sub></th> <td>F<sub>B</sub></td> <td>F<sub>C</sub></td> <td>F<sub>A</sub></td> <td>F<sub>D</sub></td> <td>R<sub>2</sub></td> <td>R<sub>0</sub></td> <td>R<sub>1</sub></td> <td>R<sub>3</sub></td></tr>
+<tr><th>F<sub>C</sub></th> <td>F<sub>C</sub></td> <td>F<sub>A</sub></td> <td>F<sub>D</sub></td> <td>F<sub>B</sub></td> <td>R<sub>1</sub></td> <td>R<sub>3</sub></td> <td>R<sub>0</sub></td> <td>R<sub>2</sub></td></tr>
+<tr><th>F<sub>D</sub></th> <td>F<sub>D</sub></td> <td>F<sub>B</sub></td> <td>F<sub>C</sub></td> <td>F<sub>A</sub></td> <td>R<sub>3</sub></td> <td>R<sub>1</sub></td> <td>R<sub>2</sub></td> <td>R<sub>0</sub></td></tr>
+</tbody>
+</table>
+
+<p>There are 10 distinct subgroups of D<sub>4</sub>. They are</p>
+
+<p>{R<sub>0</sub>} which is normal</p>
+<p>{R<sub>0</sub>, R<sub>2</sub>} which is normal: <i>gR<sub>0</sub>g</i><sup>&minus;1</sup> &in; {R<sub>0</sub>,R<sub>2</sub>} for all <i>g</i> &in; <i>D<sub>4</sub></i> and <i>n</i> &in; {R<sub>0</sub>, R<sub>2</sub>}.</p>
+<p>{R<sub>0</sub>, F<sub>A</sub>} which is not normal.</p>
+<p>{R<sub>0</sub>, F<sub>B</sub>} which is not normal.</p>
+<p>{R<sub>0</sub>, F<sub>C</sub>} which is not normal.</p>
+<p>{R<sub>0</sub>, F<sub>D</sub>} which is not normal.</p>
+<p>{R<sub>0</sub>, R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>} which is not normal.</p>
+<p>{R<sub>0</sub>, R<sub>2</sup>, F<sub>A</sub>, F<sub>B</sub>} which is normal.</p>
+<p>{R<sub>0</sub>, R<sub>2</sub>, F<sub>C</sub>, F<sub>D</sub>} which is normal.</p>
+<p>D<sub>4</sub> which is normal</p>
+</div>
+
+<h2>The Normalizer and Normal Closure Subgroups</h2>
+
+<p>In this section we are going to ask ourselves: Given a subgroup <i>H</i> of <i>G</i>, can we find a subgroup <i>N</i> of <i>G</i> for which <i>H</i> lies inside of <i>N</i> as a normal subgroup?</p>
+
+<p><b>Definition 7.11.12</b> - Let <i>G</i> be a group, let <i>H</i> ⊆ <i>G</i> be a subgroup, and define the normalizer of <i>H</i> to be</p>
+
+<div class="eq">
+<p><i>N<sub>G</sub></i>(<i>H</i>) = {<i>g ∈ G</i> | <i>H<sup>g</sup></i> = <i>H</i>} = {<i>g ∈ G</i> | <i>gH<sup>&minus;1</sup>g = H</i>}</p>
+</div>
+
+<p><b>Proposition 7.11.13</b>. <i>N<sub>G</sub></i>(<i>H</i>) is a subgroup of <i>G</i>.</p>
+
+<p><b>Proof</b>. </p>
+
+<ol type="a">
+
+	<li><p>(<i>N<sub>G</sub></i>(<i>H</i>) nonempty): Trivially <i>e H e</i><sup>&minus;1</sup> = <i>H</i>, so <i>e</i> &in; <i>N<sub>G</sub></i>(<i>H</i>).</p></li>
+
+	<li><p>(Closure): Given <i>x,y</i> &in; <i>N<sub>G</sub></i>(<i>H</i>)</p>
+
+	<div class="eq">
+	<p> (xy) <i>H</i> (<i>xy</i>)<sup>&minus;1</sup> = <i>xy H y</i><sup>&minus;1</sup><i>x</i><sup>&minus;1</sup> = <i>x</i><sup>&minus;1</sup><i>Hx = H</i></p>
+	</div>
+
+	<p>So <i>xy</i>  &in; <i>N<sub>G</sub></i>(<i>H</i>). (We used the fact that (<i>xy</i>)<sup>&minus;1</sup> = y<sup>&minus;1</sup>x<sup>&minus;1</sup>, proposition <a href="groups.html">Corollary 7.1.4</a>). </p></li>
+
+	<li><p>(Existence of the inverse): Given an <i>x</i> &in; <i>N<sub>G</sub></i>(<i>H</i>):</p>
+
+	<div class="eq">
+	<p>xHx<sup>&minus;1</sup> = H</p>
+	</div>
+
+	<p>By multiplying to ther right for <i>x</i></p>
+
+	<div class="eq">
+	<p><i>xH = Hx</i> &emsp; multiplying to the left by <i>x</i><sup>&minus;1</sup> &emsp; <i>H = x</i><sup>&minus;1</sup> <i>Hx</i> </p>
+	</div>
+
+	<p>thus <i>x</i> &in; <i>N<sub>G</sub></i>(<i>H</i>).</p></li>
+
+</ol>
+
+<p>Thus <i>N<sub>G</sub></i>(<i>H</i>) is a subgroup of <i>G</i> as desired. &emsp; □.</p>
+
+<p><b>Proposition 7.11.14</b>. <i>H</i>  ⊲̲  <i>N<sub>G</sub></i>(<i>H</i>). We have <i>H ⊲̲ G</i> only if <i>N<sub>G</sub></i>(<i>H</i>) = <i>G</i>.</p>
+
+<p><b>Proof</b>. First, we must check to see that <i>H</i> is a normal subgroup of <i>N<sub>G</sub></i>(<i>H</i>). But this is obvious, since g<sup>−1</sup> Hg = H for all <i>g</i> &in; <i>N<sub>G</sub></i>(<i>H</i>)</p>
+
+<p><i>N<sub>G</sub></i>(<i>H</i>) = <i>G</i>  just outright means that H<sup>x</sup> = H, &forall;<i>x &in; G</i>: That's exactly normality of <i>H</i>.&emsp; □</p>
+
+<section aria-label="End">
+<a href="group_homomorphism.html">&#171;Group homomorphisms</a>
+<a href="index.html">Index</a>
+<a href="exercises_normal_subgroups.html">Exercises on normal subgroups &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
