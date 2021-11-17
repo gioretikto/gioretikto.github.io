@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8"/
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Group Isomorphism"/>
  <title>Group Isomorphism</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-  
+
 <div class="content">
 
 <h1>Group Isomorphism</h1>
@@ -43,23 +43,40 @@
 	</li>
 </ul>
 
-<p>When two groups are isomorphic all algebraic properties are shared: cardinality, the order of the elements, the fact to cyclic and abelian, to possess subgroups of a given order, etc. When they different for one of these properties they are not <i>ismorphic</i>.</p>
+<p><b>7.8.2 Example</b>. Let <i>c</i> be a fixed element of a group G. Define <i>f</i>: <i>G</i> ⟶ <i>G</i> by f(g) = c<sup>&minus;1</sup>gc, Then</p>
+
+<div class="eq">
+<p>f(b)f(b) = (c<sup>&minus;1</sup>ac)(c<sup>&minus;1</sup>bc) = c<sup>&minus;1</sup>a (cc<sup>&minus;1</sup>)be = c<sup>&minus;1</sup>abc = f(ab)</p>
+</div>
+
+<p>If <i>g</i> &in; <i>G</i> cgc<sup>&minus;1</sup> and</p>
+
+<div class="eq">
+<p>f(cgc<sup>&minus;1</sup>) = <i>c</i><sup>&minus;1</sup>(cgc<sup>&minus;1</sup>)c = (c<sup>&minus;1</sup>c)g(c<sup>&minus;1</sup>c) = ege = g</p>
+</div>
+
+<p>So <i>f</i> is surjective. To show that <i>f</i> is injective, suppose <i>f</i>(<i>a</i>) = <i>f</i>(<i>b</i>. The c<sup>&minus;1</sup>ac = c<sup>&minus;1</sup>bc. Canceling <i>c</i> on the right side and c<sup>&minus;1</sup> on the left side by <a href="groups.html#unique_id">Propositions 7.1.2, 7.1.3</a>, and corollary Corollary 7.1.4, we have <i>a = b</i>. Hence, <i>f</i> is injective. Therefore <i>f</i> is an isomorphism, called the inner automorphism of <i>G</i> induced by c. &emsp; ■</p>
+
+<p>When two groups are isomorphic all algebraic properties are shared: cardinality, the order of the elements, the fact to cyclic and abelian, to possess subgroups of a given order, etc. When they different for one of these properties they are not <i>isomorphic</i>.</p>
 
 <ul>
 	<li><p>(ℤ, +) is not isomorphic to (ℚ \ {0}, ⋅), since every element in ℤ different from zero has infinite order, while in ℚ \ {0} there exist two element 1 and &minus;1 with finite order.</p></li>
+
 	<li><p>(ℚ, +) is not isomorphic to (ℚ \ {0}, ⋅), since every element different form the neutral element in (ℚ, +) has infinite order whilst in ℚ \ {0} the element &minus;1 has order 2.</p></li>
+
 	<li><p>(<i>U</i>(ℤ<sub>8</sub>), +) and (ℤ<sub>4</sub>, +) are both groups with order four, but they are not isomorphic since in ℤ<sub>4</sub> there exists an element of order 4, while in <i>U</i>(ℤ<sub>8</sub>) there is not such an element.</p></li>
+
 	<li><p>(ℚ \ {0}, ⋅) and (ℝ \ {0}) are not isomorphic, since in (ℝ \ {0}) the orders of the elements are &infty;, 1 and 2 while in (ℂ\{0},⋅) there exist element of any order (as <i>n</i><sup>th</sup> roots of unity).</p></li>
 </ul>
 
-<p><b>7.8.2 Cayley’s Theorem</b>. Every group is isomorphic to a group of permutations.</p>
+<p><b>7.8.3 Cayley’s Theorem</b>. Every group is isomorphic to a group of permutations.</p>
 
 <p><b>Proof</b>. Let <i>G</i> be a given group. The permutations that we use in the proof will be mappings defined on the set of all elements in G.<br>
 For each element a in G, we define a mapping</p>
 
 <div class="eq">
 <p><i>T<sub>a</sub>: G ⟶ G</i><br>
-<i>x ⟼ ax &emsp; &forall;x &in; G</i></p>
+<i>x ⟼ ax</i> &emsp; &forall;<i>x</i> &in; <i>G</i></p>
 </div>
 
 <p>That is, the image of each <i>x</i> in <i>G</i> is obtained by multiplying <i>x</i> on the left by <i>a</i>. Now <i>f</i> a is one-to-one since</p>
@@ -117,8 +134,11 @@ For each element a in G, we define a mapping</p>
 
 <ol>
 	<li><p>Determine four distinct subgroups of 𝓢<sub>4</sub> isomorphic to 𝓢<sub>3</sub> and nine isomorphic to 𝓢<sub>2</sub>.</p></li>
-	<lI><p>Verify Cayley's theorem for the group <i>G</i> =  ⟨<i>g</i> | <i>g</i><sup>4</sup> = 1⟩ and for the Klein group.</p>
+
+	<li><p>Verify Cayley's theorem for the group <i>G</i> =  ⟨<i>g</i> | <i>g</i><sup>4</sup> = 1⟩ and for the Klein group.</p></li>
+
 	<li><p>Let <i>G</i> the multiplicative group of invertible elements ℤ<sub>8</sub> and let <i>G</i>' the multiplicative group of invertible elements of ℤ<sub>12</sub>. Prove that they are isomorphic.</p></li>
+
 	<li><p>Prove that the set</p>
 	
 <math xmlns="http://www.w3.org/1998/Math/MathML">

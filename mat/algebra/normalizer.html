@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="The Normalizer and Normal Closure Subgroups"/>
+ <title>The Normalizer and Normal Closure Subgroups</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Normalizer and Normal Closure Subgroups</h1>
+
+<p>In this section we are going to ask ourselves: Given a subgroup <i>H</i> of <i>G</i>, can we find a subgroup <i>N</i> of <i>G</i> for which <i>H</i> lies inside of <i>N</i> as a normal subgroup?</p>
+
+<p><b>Definition 7.12.1</b> - Let <i>G</i> be a group, let <i>H</i> ⊆ <i>G</i> be a subgroup, and define the normalizer of <i>H</i> to be</p>
+
+<div class="eq">
+<p><i>N<sub>G</sub></i>(<i>H</i>) = {<i>g ∈ G</i> | <i>H<sup>g</sup></i> = <i>H</i>} = {<i>g ∈ G</i> | <i>gH<sup>&minus;1</sup>g = H</i>}</p>
+</div>
+
+<p><b>Proposition 7.12.2</b>. <i>N<sub>G</sub></i>(<i>H</i>) is a subgroup of <i>G</i>.</p>
+
+<p><b>Proof</b>. </p>
+
+<ol type="a">
+
+	<li><p>(<i>N<sub>G</sub></i>(<i>H</i>) nonempty): Trivially <i>eHe</i><sup>&minus;1</sup> = <i>H</i>, so <i>e</i> &in; <i>N<sub>G</sub></i>(<i>H</i>).</p></li>
+
+	<li><p>(Closure): Given <i>x,y</i> &in; <i>N<sub>G</sub></i>(<i>H</i>)</p>
+
+	<div class="eq">
+	<p> (xy) <i>H</i> (<i>xy</i>)<sup>&minus;1</sup> = <i>xy H y</i><sup>&minus;1</sup><i>x</i><sup>&minus;1</sup> = <i>x</i><sup>&minus;1</sup><i>Hx = H</i></p>
+	</div>
+
+	<p>So <i>xy</i>  &in; <i>N<sub>G</sub></i>(<i>H</i>). (We used the fact that (<i>xy</i>)<sup>&minus;1</sup> = y<sup>&minus;1</sup>x<sup>&minus;1</sup>, proposition <a href="groups.html">Corollary 7.1.4</a>). </p></li>
+
+	<li><p>(Existence of the inverse): Given an <i>x</i> &in; <i>N<sub>G</sub></i>(<i>H</i>):</p>
+
+	<div class="eq">
+	<p><i>xHx</i><sup>&minus;1</sup> = <i>H</i></p>
+	</div>
+
+	<p>By multiplying to ther right for <i>x</i></p>
+
+	<div class="eq">
+	<p><i>xH = Hx</i> &emsp; multiplying to the left by <i>x</i><sup>&minus;1</sup> &emsp; <i>H = x</i><sup>&minus;1</sup> <i>Hx</i> </p>
+	</div>
+
+	<p>thus <i>x</i> &in; <i>N<sub>G</sub></i>(<i>H</i>).</p></li>
+
+</ol>
+
+<p>Thus <i>N<sub>G</sub></i>(<i>H</i>) is a subgroup of <i>G</i> as desired. &emsp; □.</p>
+
+<p><b>Proposition 7.12.3</b>. <i>H</i> ⊲̲ <i>N<sub>G</sub></i>(<i>H</i>). We have <i>H ⊲̲ G</i> only if <i>N<sub>G</sub></i>(<i>H</i>) = <i>G</i>.</p>
+
+<p><b>Proof</b>. First, we must check to see that <i>H</i> is a normal subgroup of <i>N<sub>G</sub></i>(<i>H</i>). But this is obvious, since <i>g</i><sup>−1</sup> <i>Hg</i> = <i>H</i> for all <i>g</i> &in; <i>N<sub>G</sub></i>(<i>H</i>)</p>
+
+<p><i>N<sub>G</sub></i>(<i>H</i>) = <i>G</i>  just outright means that <i>H<sup>x</sup> = H</i>, &forall;<i>x &in; G</i>: That's exactly normality of <i>H</i>.&emsp; □</p>
+
+<section aria-label="End">
+<a href="group_homomorphism.html">&#171;Group homomorphisms</a>
+<a href="index.html">Index</a>
+<a href="exercises_normal_subgroups.html">Exercises on normal subgroups &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

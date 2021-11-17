@@ -22,6 +22,9 @@
 <h1>Exercises Sylow theorem</h1>
 
 <ol>
+
+	<li><p>Prove that  if a group <i>G</i> has a unique Sylow <i>p</i>-subgroup, the is normal H ⊲̲ G.</p></li>
+
 	<li><p>Prove that if <i>p</i> is a prime number and <i>m</i> is not divisible by <i>p</i>, then </p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -49,12 +52,19 @@
   </mrow>
 </math>
 
-<p> is not divisible by <i>p</i>.</p></li>
+<p>is not divisible by <i>p</i>.</p></li>
+
+<li><p>Prove that the alternating group <i>A</i><sub>4</sub> does not possess subgroups of order 6.</p></li>
+
 </ol>
 
 <h2>Solutions</h2>
 
 <ol>
+
+<li><p><i>gHg</i><sup>&minus;1</sup> is still a Sylow <i>p</i>-subgroup as the cardinality of <i>H</i> is the same as <i>gHg</i><sup>&minus;1</sup>  and <i>gHg</i><sup>&minus;1</sup> is a subgroup. Since is unique it must be <i>gHg</i><sup>&minus;1</sup> = <i>H</i>, that is <i>gHg</i><sup>&minus;1</sup> ⊲̲ <i>H</i>.&emsp; ■</p></li>
+
+<li><p>Let <i>N</i> be such subgroup of order 6. By <a href="cosets.html#lagrange">Lagranges's theorem</a> the index |A<sub>4</sub>|/|N| = 2 = [A<sub>4</sub>: N]. If <i>N</i> is a subgroup of index 2, then <i>N</i> is normal (see <a href="normal_subgroups.html">Proposition 7.11.12</a>). Let <i>k</i> be the number of Sylow 3-subgroups of <i>N</i>. Then by Sylow's theorems <i>k</i> | 6 and <i>k</i> ≡ 1 modulo 3: thus <i>k</i> = 1. &emsp; ■</p></li>
 
 <li><p><b>First Proof</b>.</p>
 
@@ -107,7 +117,7 @@
         <mi>a</mi>
       </msup>
       <mo>&#x2212;</mo>
-      <mi>i</mi>
+      <mi>k</mi>
       <mo stretchy="false">)</mo>
     </mrow>
     <mrow>
@@ -144,12 +154,111 @@
     </mrow>
     <mn>1</mn>
   </mfrac>
+  <mo>=</mo>
+  <mi>m</mi>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msup>
+        <mi>p</mi>
+        <mi>a</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mi>a</mi>
+      </msup>
+      <mi>m</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+    <mi>k</mi>
+  </mfrac>
 </math>
 
-<p>Consider the quotient (<i>m ⋅ p<sup>a</sup> − i</i>)/<i>p<sup>a</sup> − i</i>. Notice that <i>p<sup>l</sup></i> | <i>mp<sup>a</sup></i> − <i>i</i>  ⇐⇒ <i>p<sup>l</sup></i> | <i>i</i> ⇐⇒ <i>p<sup>l</sup></i> | <i>p<sup>a</sup> − i</i>; for each positive integer <i>l</i> . Therefore, all powers of <i>p</i> cancel from each quotient, forcing the conclusion that binom (<i>m ⋅ p<sup>a</sup> p<sup>a</sup></i>) is relatively prime to <i>p</i>. &emsp; ■</p>
+<p>We want to see that the binomial coefficient and <i>p</i> are relatevely prime. Consider the factors (p<sup>a</sup>m &minus; k)/k. There are two cases:</p>
+
+<ol type="a">
+	<li><p>(p, k) = 1. Then p does not divide p<sup>a</sup> m − k.</p></li>
+	<li><p>(p, k) &gt; 1, say k = p<sup>βs</sup> where 1 ≤ β < α and (p, s) = 1. Then,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mi>a</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+    <mi>k</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mi>&#x3B2;</mi>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>a</mi>
+          <mo>&#x2212;</mo>
+          <mi>&#x3B2;</mi>
+        </mrow>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mi>s</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mi>&#x3B2;</mi>
+      </msup>
+      <mi>s</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>a</mi>
+          <mo>&#x2212;</mo>
+          <mi>&#x3B2;</mi>
+        </mrow>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mi>s</mi>
+    </mrow>
+    <mi>s</mi>
+  </mfrac>
+</math>
+</li>
+
+</ol>
+
+<p>and <i>p</i> does not divide <i>m p<sup>a−β</sup> − s</i>. Hence, after cancellation, <i>k</i> is a rational fraction with no factor of <i>p</i> in the numerator. Thus, <i>p</i> cannot divide the binomial coefficient. &emsp; ■</p>
 
 
-<p><b>Proof 2</b>. Consider the polynomial (1 + <i>x</i>)<sup><i>p</i></sup>; The binomial coefficient theorem (1+x)^n is the sum from k=0 to k=n of (n k) x^k applied this case says</p>
+<p><b>Proof 2</b>. Consider the polynomial (1 + <i>x</i>)<sup><i>p</i></sup>; The binomial coefficient theorem (1 + <i>x</i>)<sup>n</sup> is the sum from <i>k</i> = 0 to <i>k = n</i> of (<i>n k</i>) <i>x</i><sup><i>k</i></sup> applied this case says</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mo stretchy="false">(</mo>
@@ -227,18 +336,20 @@
 <p>Applying this fact a second time, we see that (1 + <i>x</i>)<sup><i>p</i><sup>2</sup></sup> ≡ (1 + <i>x</i><sup><i>p</i></sup>)<sup><i>p</i></sup> ≡ (1 + <i>x</i><sup><i>p</i></sup>)<sup><i>p</i><sup>2</sup></sup> &emsp; mod <i>p</i>, and thus by induction on <i>a</i> this gives</p>
 
 <div class="eq">
-<p>(1+ <i>x</i>)<i><sup>p<sup>a</sup></i> ≡ 1 + <i>x<sup>p<sup>a</sup></i> &emsp; mod <i>p</i></p>
+<p>(1 + <i>x</i>)<i><sup>p<sup>a</sup></i> ≡ 1 + <i>x<sup>p<sup>a</sup></i> &emsp; mod <i>p</i></p>
 </div>
 
 <p>Raising both sides of this equation to the <i>m</i>th power we get:</p>
 
 <div class="eq">
-<p>(1 + <i>x</i>)<sup><i>p<sup>a</sup>m</i></sup> ≡ (1 + <i>x<sup>p<sup>a</sup></sup></i>)<sup>m</sup> = 1 + mx<sup>p<sup>a</sup></sup> + binom (m 2) x<sup>2p<sup>a</sup></sup> + ... </p>
+<p>(1 + <i>x</i>)<sup><i>p<sup>a</sup>m</i></sup> ≡ (1 + <i>x<sup>p<sup>a</sup></sup></i>)<sup>m</sup> = 1 + <i>mx<sup>p<sup>a</i></sup></sup> + binom (<i>m</i> 2) <i>x<sup>2p<sup>a</i></sup></sup> + ... </p>
 </div>
 
 <p>Since these polynomials are congruent, the coefficients of corresponding term are congruent modulo <i>p</i>, and the result follow by considering the coefficient of <i>x<sup>p<sup>a</sup></sup></i> on each side.</p>
 
-<p>The coefficient of x<sup>p<sup>a</sup></sup> on the left is binom(p<sup>a</sup>m p<sup>a</sup>). This must be congruent to the corresponding coefficient on the right which is <i>m</i>. (1+x)^p^a^m is the sum from k=0 to k=p^a^n of (p^a^n k) x^k, since we want the the coefficient of x^p^a, we have to consider the term whose coefficient is (p^a^m p^a). So  (p^a^m p^a) ≡ m &emsp; mod <i>p</i>. &emsp; ■</p></li>
+<p>The coefficient on the right of <i>x<sup>p<sup>a</sup></sup></i> is <i>m</i>. To calculate the coefficient on the left note that (1 + <i>x</i>)<sup><i>p<sup>a</sup>m</i></sup> is the sum from <i>k</i> = 0 to <i>k = p<sup>a</sup>m</i> of binom(<i>p<sup>a</sup>m</sup> k</i>) <i>x<sup>k</sup></i>, since we want the the coefficient of <i>x<sup>p<sup>a</sup></sup></i>, we have to consider the term with <i>k = p<sup>a</sup></i> that is, the one whose coefficient is binom(<i>p<sup>a</sup>m p<sup>a</sup></i>). So binom(<i>p<sup>a</sup>m p<sup>a</sup></i>) ≡ <i>m</i> &emsp; mod <i>p</i>. &emsp; ■</p></li>
+
+
 
 </ol>
 
