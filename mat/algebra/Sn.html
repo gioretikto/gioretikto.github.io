@@ -31,6 +31,8 @@
 
 <p>You may be familiar with the notion of a permutation of a set as a rearrangement of the elements of the set. Thus for the set {1, 2, 3, 4, 5}, a rearrangement of the elements that could be for example the new arrangement {5, 2, 4, 3, 1}. </p>
 
+<p>Informally, a permutation of a finite set of objects, arranged in a given arbitrary order, consists of a rearrangement of those objects into another order. Given such an arrangement, two equivalent formal definitions of permutations can be give, depending on whether one considers them form a combinatorial of from an algebraic perspective.</p>
+
 <p>Let <i>n</i> = 6, <i>X</i> = {1,2,3,4,5,6} and let <i>&sigma;</i> the bijective mapping the act in the following way:</p>
 
 <div class="eq">
@@ -43,7 +45,6 @@
 6 ⟼ 3<br>
 </p>
 </div>
-
 
 <p>A <i>permutation</i> is thus a function mapping of each element listed in the left column into a single (not necessarily different) element from the same set listed at the right. Thus 1 is carried into 5, 2 is mapped into 1, and so on. Furthermore, to be a permutation of the set, this mapping must be such that each element appears in the right column once and only once.</p>
 
@@ -106,31 +107,279 @@
 
 <p>In general an element of 𝓢<sub><i>n</i></sub> is indicated by a 2 x <i>n</i> matrix</p>
 
-<table class="noborder">
-<tr><td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>...</td> <td>n|</td> </tr>
-<tr><td>|i<sub>1</sub></td> <td>i<sub>2</sub></td> <td>i<sub>3</sub></td> <td>i<sub>4</sub></td> <td>...</td> <td>i<sub>n</sub>|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <mi>n</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>i</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>i</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>i</mi>
+            <mn>3</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>i</mi>
+            <mn>4</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>i</mi>
+            <mi>n</mi>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>The composition of two permutations <i>&sigma; ◦ &tau;</i>, or <i>&sigma;&tau;</i> where for example <i>&sigma;</i> is the permutation above and <i>&tau;</i> is the following permutation</p>
 
-<table class="noborder">
-<tr><td rowspan="2">&tau; = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-<tr> <td>|2</td> <td>1</td> <td>5</td> <td>3</td> <td>4</td> <td>6|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C4;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>is the permutation obtained applying first &tau; on <i>X</i> then <i>&sigma;</i>: Remember that the action of <i>στ</i> on <i>X</i> must be read in right-to-left order: first apply <i>τ</i> and then <i>σ</i> that is</p>
 
-<table class="noborder">
-<tr><td rowspan="2"><i>&sigma; ◦ &tau;</i> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-<tr> <td>|1</td> <td>5</td> <td>2</td> <td>4</td> <td>6</td> <td>3|</td></tr>
-<table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C3;</mi>
+  <mo>&#x2218;</mo>
+  <mi>&#x3C4;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>if we reverse the order the reuslt is</p>
 
-<table class="noborder">
-<tr><td rowspan="2"><i>&tau; ◦ &sigma;</i> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-<tr> <td>|4</td> <td>2</td> <td>3</td> <td>6</td> <td>1</td> <td>5|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C4;</mi>
+  <mo>&#x2218;</mo>
+  <mi>&#x3C3;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>The group 𝓢<sub><i>n</i></sub> is thus not Abelian. Now permutation multiplication is defined as function composition, we showed that function composition is associative. The identity elementd indicated by id of 𝓢<sub><i>n</i></sub> is the permutation</p>
 
@@ -346,45 +595,293 @@
 
 <p><b>7.4.1 Example</b>. Calculate the order of the permutation</p>
 
-<table class="noborder">
-<tr> <td rowspan="2">&tau; = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-<tr> <td>|2</td> <td>3</td> <td>4</td> <td>6</td> <td>5</td> <td>1|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C4;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>The powers of <i>&tau;</i> are:</p>
 
-<section>
-<table class="noborder">
-<tr> <td rowspan="2">&tau;<sup>2</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> &ne; id</td> </tr>
-<tr> <td>|3</td> <td>4</td> <td>6</td> <td>1</td> <td>5</td> <td>2|</td> </tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>&#x3C4;</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x2260;</mo>
+  <mi>i</mi>
+  <mi>d</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>&#x3C4;</mi>
+    <mn>3</mn>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x2260;</mo>
+  <mi>i</mi>
+  <mi>d</mi>
+</math>
 
-<table class="noborder">
-<tr><td rowspan="2">&tau;<sup>3</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> &ne; id</td></tr>
-<tr> <td>|4</td> <td>6</td> <td>1</td> <td>2</td> <td>5</td> <td>3|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>&#x3C4;</mi>
+    <mn>4</mn>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x2260;</mo>
+  <mi>i</mi>
+  <mi>d</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>&#x3C4;</mi>
+    <mn>5</mn>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>i</mi>
+  <mi>d</mi>
+</math>
 
-</section>
-
-<section>
-
-<table class="noborder">
-<tr><td rowspan="2">&tau;<sup>4</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> &ne; id</td></tr>
-<tr> <td>|6</td> <td>1</td> <td>2</td> <td>3</td> <td>5</td> <td>4|</td></tr>
-</table>
-
-<table class="noborder">
-<tr><td rowspan="2">&tau;<sup>5</sup> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> <td rowspan="2"> = id</td></tr>
-<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td></tr>
-</table>
-</section>
-
-<p>Thus the order of <i>&tau;</i> is 5.</p>
+<p>Thus the order of <i>&tau;</i> is 5. &emsp;■</p>
 
 <p>Let <i>X</i> be a set and let <i>σ ∈ 𝓢<sub>n</sub></i>. We define in <i>X</i> the following relation:</p>
 
 <div class="eq">
-<p><i>x ≡<sub>&sigma;</sub> y &emsp; ⇐⇒ &emsp; y  = &sigma;<sup>i</sup></i>(<i>x</i>), &emsp; for some <i>i</i> &in; ℤ.</p>
+<p><i>x</i> ≡<sub>&sigma;</sub> <i>y</i> &emsp; ⇐⇒ &emsp; <i>y</i>  = <i>&sigma;<sup>i</sup></i>(<i>x</i>), &emsp; for some <i>i</i> &in; ℤ.</p>
 </div>
 
 <p>it can be easily proved it is an equivalence relation, thus <i>X</i> is parted into equivalence classes.</p>
@@ -412,9 +909,9 @@
 <p><b>Proof</b>. We have to prove that each <i>σ<sup>i</sup></i>(<i>x</i>), with <i>i</i> ∈ ℤ, coincides to one of the <i>m</i> elements <i>x = σ<sup>0</sup></i>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>), ..., <i>σ<sup>m−1</sup></i>(<i>x</i>) of <i>X</i>. From <i>i = mq + r, 0 &le; r &lt; m</i>, we obtain</p>
 
 <div class="eq">
-<p><i>&sigma;<sup>i</sup> = &sigma;<sup>mq + r</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(<i>&sigma;<sup>m</sup></i>)<i><sup>q</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(&sigma;<sup>&pm;m</sup>(<i>&sigma;<sup>&pm;m</sup></i> ⋅  ⋅  ⋅ (<i>&sigma;<sup>&pm;m</sup></i>(<i>x</i>))) = <i>&sigma;<sup>r</sup></i>(<i>x</i>). &emsp; □</p>
+<p><i>&sigma;<sup>i</sup> = &sigma;<sup>mq + r</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(<i>&sigma;<sup>m</sup></i>)<i><sup>q</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(&sigma;<sup>&pm;m</sup>(<i>&sigma;<sup>&pm;m</sup></i> ⋅⋅⋅ (<i>&sigma;<sup>&pm;m</sup></i>(<i>x</i>))) = <i>&sigma;<sup>r</sup></i>(<i>x</i>). &emsp; □</p>
 
-<p><b>Note</b>: <i>m</i> &gt; 0 so if <i>q</i> &lt; 0 then <i>qm</i> &lt;0 and <i>qm = &sigma;<sup>−m</sup>(<i>&sigma;<sup>−m</sup></i> ⋅  ⋅  ⋅ (<i>&sigma;<sup>−m</sup></i>(<i>x</i>)))</i>, hence |<i>qm</i>| iterations of the inverse map <i>&sigma;<sup>−1</sup></i>, or |<i>q</i>| iterations of the inverse of <i>&sigma;<sup>m</sup></i>, since both &sigma;<sup>m</sup> and its inverse map (denoted &sigma;<sup>-m</sup>) send <i>x</i> to <i>x</i>.</p>
+<p><b>Note</b>: <i>m</i> &gt; 0 so if <i>q</i> &lt; 0 then <i>qm</i> &lt;0 and <i>qm = &sigma;<sup>−m</sup>(<i>&sigma;<sup>−m</sup></i> ⋅⋅⋅ (<i>&sigma;<sup>−m</sup></i>(<i>x</i>)))</i>, hence |<i>qm</i>| iterations of the inverse map <i>&sigma;<sup>−1</sup></i>, or |<i>q</i>| iterations of the inverse of <i>&sigma;<sup>m</sup></i>, since both &sigma;<sup>m</sup> and its inverse map (denoted &sigma;<sup>-m</sup>) send <i>x</i> to <i>x</i>.</p>
 </div>
 
 <p><b>7.4.4 Definition</b>. A <i>cycle</i> of <i>&sigma;</i> is the ordered set</p>
@@ -501,7 +998,7 @@
 
 <p><b>7.4.6 Proposition</b>. Every permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub> is the product of its cycles (which are disjoint).</p>
 
-<p><b>Proof</b>. Let <i>&gamma;<sub>1</sub>, &gamma;<sub>2</sub>, ⋅  ⋅  ⋅, &gamma;<sub>k</sub></i> the disjoint cycles of <i>&sigma;</i>, to prove that <i>&sigma; = &gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i> we have to prove that for each <i>x &in; X</i> = {1,2...,<i>n</i>} we have</p>
+<p><b>Proof</b>. Let <i>&gamma;<sub>1</sub>, &gamma;<sub>2</sub>, ⋅  ⋅  ⋅, &gamma;<sub>k</sub></i> the disjoint cycles of <i>&sigma;</i>, to prove that <i>&sigma; = &gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅⋅⋅ &gamma;<sub>k</sub></i> we have to prove that for each <i>x &in; X</i> = {1,2...,<i>n</i>} we have</p>
 
 <div class="eq">
 <p><i>&sigma;</i>(<i>x</i>) = (<i>&gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>)(<i>x</i>)</p>
@@ -525,7 +1022,16 @@
 
 <p>A 2-<i>cycles</i> (i, j) is a permutation that interchanges the two elements <i>i</i> and <i>j</i> while leaving all the other elements fixed. Thus, a 2-cycle is also called a <b>transposition</b>.</p>
 
-<p><b>7.4.7 Proposition</b>. Every cycle can be written as product of transpositions <i>i.e</i>.</p>
+<p><b>7.4.7 Example</b>. The order of permutation <i>&tau;</i> = (1 2) (3456) is 4. To see this let us calculate</p>
+
+<div class="eq">
+<p><i>&tau;</i> = (12) (234556)<br>
+<i>&tau;</i><sup>2</sup> = (35) (46)<br>
+<i>&tau;</i><sup>3</sup> = (12) (3654)<br>
+<i>&tau;</i><sup>4</sup> = id.&emsp; ■</p>
+</div>
+
+<p><b>7.4.8 Proposition</b>. Every cycle can be written as product of transpositions <i>i.e</i>.</p>
 
 <div class="eq">
 <p>(1,2,3, ..., <i>m</i>) = (1, <i>m</i>) ∘ (1, <i>m</i> − 1) ∘ (1, <i>m</i> − 2) ⋅⋅⋅ (1,3) ∘ (1,2)</p>
@@ -554,18 +1060,18 @@
 <p>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>k</sub>, x<sub>k+1</sub></i>) = (<i>x<sub>1</sub>, x<sub>k+1</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>k</sub></i>) ∘ ... ∘ (<i>x<sub>1</sub>, x<sub>3</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>2</sub></i>) &emsp; □</p>
 </div>
 
-<p><b>7.4.8 Example</b>. Write the cycle (<i>a, b, c, d, e, f</i>) on the set <i>A</i> = {<i>a,b,c,d,e,f</i>) as a product of transpositions.</p>
+<p><b>7.4.9 Example</b>. Write the cycle (<i>a, b, c, d, e, f</i>) on the set <i>A</i> = {<i>a,b,c,d,e,f</i>) as a product of transpositions.</p>
 
 <p><b>Solutions</b>. The cycle (<i>a, b, c, d, e, f</i>) = (<i>a,f</i>) ∘ (<i>a, e</i>) ∘ (<i>a, d</i>) ∘ (<i>a, c</i>) ∘ (<i>a,b</i>)</p>
 
 <p>Notice how a cycle of lenght <i>m</i> has order <i>m</i>.</p>
 
-<p><b>7.4.9 Proposition</b>. The order of a permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub> is the least common multiple of the lenght of its cycles.</p>
+<p><b>7.4.10 Proposition</b>. The order of a permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub> is the least common multiple of the lenght of its cycles.</p>
 
-<p><b>Proof</b>. If <i>&sigma; = &gamma;<sub>1</sub>, &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>, indicated with <i>m<sub>i</sub></i> the order of the <i>i<sup>th</sup></i> cycle and with <i>M</i> = lcm (<i>m<sub>1</sub>, m<sub>2</sub> ⋅  ⋅  ⋅ m<sub>k</sub></i>), we have to prove that <i>M</i> is equal to the order <i>N</i> of <i>&sigma;</i>. Indeed</p>
+<p><b>Proof</b>. Let <i>&sigma; = &gamma;<sub>1</sub>, &gamma;<sub>2</sub> ⋅⋅⋅ &gamma;<sub>k</sub></i>, be the decomposition into a product of disjoint cycles. Let <i>m<sub>i</sub></i> the order of the <i>i<sup>th</sup></i> cycle and let <i>M</i> = lcm (<i>m<sub>1</sub>, m<sub>2</sub> ⋅⋅⋅ m<sub>k</sub></i>), we have to prove that <i>M</i> is equal to the order <i>N</i> of <i>&sigma;</i>. Indeed</p>
 
 <div class="eq">
-<p><i>&sigma;<sup>M</sup></i> = (<i>&gamma;<sub>1</sub>, &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>)<sup><i>M</i></sup> = <i>&gamma;<sub>1</sub><sup>M</sup> &gamma;<sub>2</sub><sup>M</sup> ⋅  ⋅  ⋅ &gamma;<sub>k</sub><sup>M</sup></i> = id</p>
+<p><i>&sigma;<sup>M</sup></i> = (<i>&gamma;</i><sub>1</sub>, <i>&gamma;</i><sub>2</sub> ⋅⋅⋅ <i>&gamma;<sub>k</sub></i>)<sup><i>M</i></sup> = <i>&gamma;<sub>1</sub><sup>M</sup> &gamma;<sub>2</sub><sup>M</sup> ⋅  ⋅  ⋅ &gamma;<sub>k</sub><sup>M</sup></i> = id</p>
 </div>
 
 <p>hence <i>N</i>|<i>M</i>, furthermore</p>
@@ -576,7 +1082,15 @@
 
 <p>Then <i>m<sub>i</sub></i> | <i>N</i> &forall;<i>i</i> = 1, ..., <i>k</i>, from which <i>M</i>|<i>N</i>, thus <i>N = M</i>.&emsp; □</p>
 
-<p><b>7.4.10 Corollary</b>. Every permutation is the product of 2-<i>cycles</i> (or <i>transpositions</i>).</p>
+<p><b>7.4.11 Example</b>- The order of</p>
+
+<div class="eq">
+<p><i>&sigma;</i> = (1 2 3 4 5) (5 6 7) (8 9) (10 11 12) (13 14 15 16 17)</p>
+</div>
+
+<p>After checking that the cycles are disjoint with calcualte the oerder as lcm(4,3,2,3,5) = 60. &emsp;■</p>
+
+<p><b>7.4.12 Corollary</b>. Every permutation is the product of 2-<i>cycles</i> (or <i>transpositions</i>).</p>
 
 <p><b>Proof</b>. Every cycle can be written as product of transpositions; For example</p>
 
@@ -595,12 +1109,12 @@
 <p>(1, 3, 2, 4) (1, 7, 6, 2) = (1, 7, 6, 4)(2, 3)<br>
 = (1, 4)(1, 6)(1, 7)(2, 3).</p>
 
-<p><b>7.4.11 Definition</b>. A permutation is said <i>even</i> if product of an even number of transposition, <i>odd</i> if product of an odd number of transpositions.</p>
+<p><b>7.4.13 Definition</b>. A permutation is said <i>even</i> if product of an even number of transposition, <i>odd</i> if product of an odd number of transpositions.</p>
 
 <p><b>Remark</b>. Although the expression of a permutation as a product of transpositions is not unique, the number of transpositions used for a certain permutation is either <i>always odd</i> or else
 <i>always even</i>.</p>
 
-<p><b>7.4.12 Proposition</b>. (<i>Always Even or Always Odd</i>) If a permutation can be written as product of an even number (<i>odd</i>) of transpositions, every other expression of the permutation contain an <i>even</i> (<i>odd</i>) number 
+<p><b>7.4.14 Proposition</b>. (<i>Always Even or Always Odd</i>) If a permutation can be written as product of an even number (<i>odd</i>) of transpositions, every other expression of the permutation contain an <i>even</i> (<i>odd</i>) number 
 of transpositions.</p>
 
 <p><b>Proof</b>. We prove the theorem taking in consideration a polynomial <i>P</i> defined as follows</p>
@@ -662,6 +1176,7 @@ of transpositions.</p>
 	<li><p>The factor (<i>x<sub>r</sub> − x<sub>s</sub></i>) in <i>p</i> is changed to (<i>x<sub>s</sub> − x<sub>r</sub></i>) in <i>&tau;</i>(<i>p</i>) so this factor changes sign.</p></li>
 	<li><p>The factors (<i>x<sub>i</sub> − x<sub>j</sub></i>) in <i>p</i> with both subscripts different from <i>r</i> and <i>s</i> are unchanged by <i>&tau;</i>.</p></li>
 	<li><p>The remaining factors in <i>p</i> have exactly one subscript <i>k</i> different from <i>r</i> and <i>s</i> and may be grouped into pairs according to the following plan.</p>
+
 	<ol type="a">
 		<li><p>If <i>k &lt; r &lt; s</i>, the pair (<i>x<sub>k</sub> − x<sub>r</sub></i>) (<i>x<sub>k</sub> − x<sub>s</sub></i>) becomes (<i>x<sub>k</sub> − x<sub>s</sub></i>) (<i>x<sub>k</sub> − x<sub>r</sub></i>), and their product is unchanged by the transposition <i>&tau;</i>.</p></li>
 		<li><p>Similarly, if <i>r &lt; s &lt; k</i>, the product (<i>x<sub>r</sub> − x<sub>k</sub></i>) (<i>x<sub>k</sub> − x<sub>s</sub></i>) is also unchanged by <i>&tau;</i>.</p></li>
@@ -673,7 +1188,7 @@ of transpositions.</p>
 		</div>
 		</li>
 	</ol>
-	</ol>
+</ol>
 
 <p>Thus<i>&tau;</i>(<i>p</i>) = −<i>p</i>, and the proof is complete. With this fact it's clear that a permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub>, we have</p>
 
@@ -687,7 +1202,7 @@ of transpositions.</p>
 <p>For example, if six people were sitting roung a table and two of them swapped places while everyone else remained seated, that would be a transposition. Using a suitable sequence of transpositions, any desired permutation can be achieved. For example, if you change the order of chairs round a table by a sequence of eleven transpositions, you have done an odd permutation. You are not able to do the same using an even number of transpositions. You <i>might</i> be able to do it in nine, but not in ten.</p>
 </div>
 
-<p><b>7.4.13 Definition</b>. The <b>alternating group</b> <i>A<sub>n</sub></i> is the subgroup of 𝓢<sub><i>n</i></sub> that consists of all even permutations in 𝓢<sub><i>n</i></sub>.</p>
+<p><b>7.4.15 Definition</b>. The <b>alternating group</b> <i>A<sub>n</sub></i> is the subgroup of 𝓢<sub><i>n</i></sub> that consists of all even permutations in 𝓢<sub><i>n</i></sub>.</p>
 
 <div class="eq">
 <p><i>A<sub>n</sub></i> := {even permutation of 𝓢<sub><i>n</i></sub>}</p>
@@ -698,7 +1213,7 @@ of transpositions.</p>
 <p>Let</p>
 
 <div class="eq">
-<p><i>&pi;<sub>1</sub>, &pi;<sub>2</sub>, ..., &pi;<sub>k</sub></i></p>
+<p><i>&pi;</i><sub>1</sub>, <i>&pi;</i><sub>2</sub>, ..., <i>&pi;<sub>k</sub></i></p>
 </div>
 
 <p>the <i>k</i> permutations even (all distinct) we want to count. Let <i>&tau;</i> an arbitraty transposition. Then the following permutations</p>
@@ -716,7 +1231,7 @@ of transpositions.</p>
 <p>Then</p>
 
 <div class="eq">
-<p><i>&pi;<sub>i</sub>&tau;&tau;<sup>−1</sup> = &pi;<sub>j</sub>&tau;&tau;<sup>−1</sup> &emsp; ⇒ &emsp; &pi;<sub>i</sub> = &pi;<sub>j</sub></i></p>
+<p><i>&pi;<sub>i</sub>&tau;&tau;</i><sup>−1</sup> = <i>&pi;<sub>j</sub>&tau;&tau;</i><sup>−1</sup> &emsp; ⇒ &emsp; <i>&pi;<sub>i</sub> = &pi;<sub>j</sub></i></p>
 </div>
 
 <p>which is the <i>cancellation law</i> for groups. Since the group is not Abelian, it is important that &tau; is always on the same side.</p>
@@ -735,7 +1250,7 @@ of transpositions.</p>
 
 <p>are <i>h</i> even permutations. By comparing with the previous relations we have <i>k = h</i>; We use this fact to prove the following</p>
 
-<p><b>7.4.14 Proposition</b>. The order of the subgroup <i>A<sub>n</sub></i> (its cardinality) of 𝓢<sub><i>n</i></sub> is</p>
+<p><b>7.4.16 Proposition</b>. The order of the subgroup <i>A<sub>n</sub></i> (its cardinality) of 𝓢<sub><i>n</i></sub> is</p>
 
 <div class="eq">
 <p><i>n</i>!/2</p>
@@ -743,7 +1258,7 @@ of transpositions.</p>
 
 <p><b>Proof.</b> For each odd permutation <i>&alpha;</i>, the permutation (12)<i>&alpha;</i> is even and, by the cancellation property in groups, (12)<i>&alpha;</i> &ne; (12)<i>&beta;</i> when <i>&alpha; &ne; &beta;</i>. Thus, there are at least as many even permutations as there are odd ones. On the other hand, for each even permutation <i>&alpha;</i>, the permutation (12)<i>&alpha;</i> is odd and (12)<i>&alpha;</i> &ne; (12)<i>&beta;</i> when <i>&alpha; &ne; &beta;</i>. Thus, there are at least as many odd permutations as there are even ones. It follows that there are equal numbers of even and odd permutations. Since |𝓢<sub><i>n</i></sub>| = <i>n</i>!, we have |<i>A<sub>n</sub></i>| = <i>n</i>! /2. &emsp; □</p>
 
-<p><b>7.4.15 Example</b>. The group 𝓢<sub>3</sub> has six elements that we write in the cycle notation</p>
+<p><b>7.4.17 Example</b>. The group 𝓢<sub>3</sub> has six elements that we write in the cycle notation</p>
 
 <div class="eq">
 <p>𝓢<sub>3</sub> = {id, (1,2,3), (1,3,2),(1,2),(1,3),(2,3)}</p>
@@ -779,6 +1294,28 @@ of transpositions.</p>
 </div>
 
 <p>The first and last in list are the <i>trivial</i> subgroups.</p>
+
+<div id="S_4">
+
+<p>S<sub>4</sub> = {<i>e</i>, (1234), (1324), (2134), (2314), (3124), (3214), (123), (132), (124), (142), (134), (143), (234), (243), (12), (13), (14), (23), (24), (34), (12)(34), (13)(24), (14)(23)}</p>
+
+<p>Out of these, the even permutations constitute A<sub>4</sub>:</p>
+
+<p>A<sub>4</sub> = {<i>e</i>, (123), (132), (124), (142), (134), (143), (234), (243), (12)(34), (13)(24), (14)(23)}. The permutations (12)(34), (13)(24) and (14)(23) are the only elements which are of order 2 in A<sub>4</sub>. There are 8, 3-cycles in A<sub>4</sub>. Any of these 3-cycle generates a cyclic subgroup of order 4.</p>
+
+<p>The following are all the subgroups of A<sub>4</sub>, of order 2,4 and 4:</p>
+
+<div class="eq">
+<p>{e},<br>
+{e, (12)(34)}, {e, (13)(24)}, {e, (14)(23)},<br>
+{e, (123), (132)}, {e, (124), (142)}, {e, (134), (143)}, {e, (234), (243)},<br>
+{e, (12)(34), (13)(24), (14)(23)},</p>
+</div>
+
+<p><b>Proposition 7.4.17</b> The order of any permutation is the least common multiple of the lengths of its disjoint cycles.</p>
+
+<p><b>Proof</b>. Let &pi; be any permutation of 1,2, ...,<i>n</i>. Since there are a total of <i>n</i>! permutations of <i>n</i> objects, successive iterations <i>&pi;<sup>2</sup>, &pi;<sup>3</sup></i>, ... must eventually arrive at repetitions, say <i>&pi;<sup>k</sup> = &pi;<sup>l</sup></i> whence <i>&pi;<sup>l−k</sup></i> = id. The smallest <i>m</i> with the property <i>&pi;<sup>m</sup></i> = id. is called the <b>order of the permutation</b> <i>&pi;</i>. Any cycle of lenght <i>k</i> evidently has order <i>k</i>, and since every permutation can be written as a product of cycles, the order of a permutation is the lowest common multiple of its cycles. For example, the order of (123)(45) is the lowest common multiple of 3 and 2, which is 6. The set of elements {id, &pi; <i>&pi;<sup>2</sup>, ..., &pi;<sup>m − 1</sup> = &pi;</i><sup>&minus;1</sup>} for a subgroup of S<sub>n</sub>, called the subgroup generated by <i>&pi;</i>, a cyclic group. &emsp; □</p>
+</div>
 
 <section aria-label="End">
 <a href="transformation_group.html">&#171;The transformation group</a>

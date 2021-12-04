@@ -21,13 +21,17 @@
 
 <h1>Isomorphism theorems</h1>
 
-<p>Let <i>H</i> and <i>K</i> two subgroups of a group <i>G</i>. Let</p>
+<p>Let <i>H</i> and <i>K</i> two subgroups of a group <i>G</i>. Their <b>internal product</b> is the subset of <i>G</i> definied by</p>
 
 <div class="eq">
 <p><i>HK</i> := {<i>hk</i> | <i>h &in; H</i> | <i>h &in; H, k &in; K</i>}</p>
 </div>
 
-<p>For example if <i>G</i> = S<sub>3</sub>, <i>H</i> = {id, (1,2)}, <i>K</i> = {id, (13)}, then <i>HK</i> = {id, (1,3), (1,2),(1,3,2)}. This subsets is not clearly a subgroup of <i>S</i><sub>3</sub> (see <a href="cosets.html#lagrange">Lagrange Theorem</a>). Notice also as <i>KH &ne; HK</i>. The following proposition holds true.</p>
+<p>The internal product need not be a subgroup, though at times it is.</p>
+
+<p>For example if <i>G</i> = S<sub>3</sub>, <i>H</i> = {id, (1,2)}, <i>K</i> = {id, (13)}, then <i>HK</i> = {id, (1,3), (1,2),(1,3,2)}. This subsets is not clearly a subgroup of <i>S</i><sub>3</sub> (see <a href="cosets.html#lagrange">Lagrange Theorem</a>). Notice also as <i>KH &ne; HK</i>.</p>
+
+<p>The following proposition holds true.</p>
 
 <p><b>Proposition 7.13.1</b>. Let <i>G</i> a group and <i>N, H</i> two subgroups of <i>G</i> such that <i>N</i> ⊲̲ <i>G</i>. Then <i>NH = HN</i> is a subgroup of <i>G</i>.</p>
 
@@ -90,7 +94,7 @@
 
 <ol type="a">
 	<li><p><i>&pi;</i><sup>&minus;1</sup>(&pi;(<i>H</i>)) = <i>HN</i>;</p></li>
-	<li><p><i>N ∩ H</i> is normal in <i>H</i>.</p></li>
+	<li><p><i>N</i> ∩ <i>H</i> is normal in <i>H</i>.</p></li>
 	<li><p><i>H</i>/(<i>N ∩ H</i>) ≃ <i>HN/N</i></p></li>
 </ol>
 
@@ -121,7 +125,7 @@
 <p>Im <i>&pi;</i><sub>|<i>H</i></sub> = <i>HN/N</i>, &emsp; Ker &pi;<sub>|<i>H</i></sub> = <i>H</i> ∩ <i>N</i></p>
 </div>
 
-<p>Remember that <i>N</i> is the identity element of G/N so &pi;<sub>|H</sub> = { h in H | hN = N }  = <i>H</i> ∩ <i>N</i>.</p>
+<p>Remember that <i>N</i> is the identity element of <i>G/N</i> so <i>&pi;</i><sub>|<i>H</i></sub> = {<i>h</i> &in; <i>H</i> | <i>hN</i> = <i>N</i> }  = <i>H</i> ∩ <i>N</i>.</p>
 
 <p>These relations tell us that <i>H ∩ N</i> is normal in <i>H</i>, being the kernel of a homomorphism (<a href="fund_theo_group.iso.html">theorem 1.12.1</a>) and by the fundamental theorem of group homomorphism that (<a href="fund_theo_group.iso.html">theorem 1.12.2</a>)</p>
 
@@ -147,7 +151,7 @@
 <p><i>gN ⋅ hN</i> ⋅ (<i>gN</i>)<sup>&minus;1</sup> = <i>ghg</i><sup>&minus;1</sup> <i>N &in; H/N</i>
 </div>
 
-<p>Conversely, let now <i>H/N ⊲̲ G/N</i>. Consider the following compositions</p>
+<p>Conversely, let now <i>H/N</i> ⊲̲ <i>G/N</i>. Consider the following compositions</p>
 
 <table class="noborder centertable">
 <tr><td><i>G</i></td> <td><i>&pi;</i><sub>1</sub><br>⟶</td> <td><i>G/N</i></td> <td>&pi;<sub>2</sub><br>⟶</td> <td>(G/N)/(H/N)</td></tr>
@@ -162,23 +166,39 @@
 <p><b>Example 7.13.5</b>. Let <i>G</i> = Z<sub>24</sub>, <i>H</i> = ⟨ [2]⟩, and <i>N</i> = ⟨[6]⟩, we have</p>
 
 <div class="eq">
-<p><i>H</i> =  <[2]> = {[0],[2],[4], ...,[22]},<br>
-<i>N</i> = <[6]> = {[0],[6],[12],[18]}</p>
+<p><i>H</i> =  ⟨[2]⟩ = {[0],[2],[4], ...,[22]},<br>
+<i>N</i> = ⟨[6]⟩ = {[0],[6],[12],[18]}</p>
 </div>
 
-<p>then <i>H/N</i> = {([0] + N) + N, ([2] + N) + N ,([4] + N), ..., ([22] + N) + N} = {[0] + N, [2] + N, [4] + N, ..., [22] + N}, but the first three of those are the same as the next three (respectively) and then the same as the next three and then the same as the last three, because [0] + N = [6] + N = [12] + N = [18] + N ,  and  [2] + N = [8] + N = [14] + N = [20] + N,  etc.., so</p>
+<p>then <i>H/N</i> = {([0] + N) + N, ([2] + N) + <i>N</i> ,([4] + <i>N</i>), ..., ([22] + <i>N</i>) + N} = {[0] + <i>N</i>, [2] + <i>N</i>, [4] + N, ..., [22] + N}, but the first three of those are the same as the next three (respectively) and then the same as the next three and then the same as the last three, because [0] + N = [6] + <i>N</i> = [12] + <i>N</i> = [18] + N ,  and  [2] + N = [8] + N = [14] + N = [20] + N,  etc.., so</p>
 
 <div class="eq">
-<p><i>H/N</i> = {N, [2] + N, [4] + N}</p>
-<p><i>G/N</i> = {N, [1] + N, [2] + N, [3] + N, [4] + N, [5] + N}</p>
+<p><i>H/N</i> = {<i>N</i>, [2] + <i>N</i>, [4] + N}</p>
+<p><i>G/N</i> = {<i>N</i>, [1] + <i>N</i>, [2] + N, [3] + <i>N</i>, [4] + <i>N</i>, [5] + <i>N</i>}</p>
 </div>
+
+<p><b>Proposition 7.13.6</b>. The alternating group <i>A<sub>n</sub></i> forms a normal subgroup of index 2 in <i>S<sub>n</sub></i>, that is (S<sub>n</sub>: A<sub>n</sub>) = 2.</p>
+
+<p><b>Proof</b>. The sign function sgn is a homomorphism from S<sub>n</sub> onto (Z<sub>2</sub>, +):</p>
+
+<div class="eq">
+<p>sgn: S<sub>n</sub> ⟶ Z<sub>2</sub></p>
+</div>
+
+<p>By definition of alternating group we have</p>
+
+<div class="eq">
+<p>A<sub>n</sub> = {&pi; &in; S<sub>n</sub>: sgn(&pi;) = 0} = even permutation of <i>S<sub>n</sub></i></p>
+</div>
+
+<p>Then ker(sgn) = A<sub>n</sub> and therefore A<sub>n</sub> is a normal subgroup of <i>S<sub>n</sub></i> from <a href="fund_theo_group_homo.html">Theorem 7.13.2</a> and <a href="normal_subgroups.htmL">Proposition 7.12.10</a>. Since Im(sgn) = Z<sub>2</sub> we have the sieze of the image is 2, that is |Im(sgn)| = 2 and hence |<i>S<sub>n</sub></i>/<i>A<sub>n</sub></i>| = 2. Therefore [<i>S<sub>n</sub></i> : <i>A<sub>n</sub></i>] = 2. Since |<i>S<sub>n</sub></i>| = <i>n</i>! then |<i>A<sub>n</sun></i>| = <i>n</i>!/2 follows from Lagrange's Thereom. &emsp; □</p>
 
 <h2>Exercises</h2>
 
 <ol>
-	<li><p>Let <i>G = GL</i><sub>2</sub>(R) and let <i>H</i> = ⟨(1, 0; 1, 1)⟩ and <i>K</i> = ⟨(1, 1; 0, 1)⟩. Study <i>H</i> and <i>K</i> and verify that <i>HK</i> is not a subgroup of <i>GL</i><sub>2</sub>(R).</p></li>
+	<li><p>Let <i>G</i> = <i>GL</i><sub>2</sub>(R) and let <i>H</i> = ⟨(1, 0; 1, 1)⟩ and <i>K</i> = ⟨(1, 1; 0, 1)⟩. Study <i>H</i> and <i>K</i> and verify that <i>HK</i> is not a subgroup of <i>GL</i><sub>2</sub>(R).</p></li>
 	
-	<li><p>Let <i>Q</i>* the rational multiplicative group, <i>N</i> = {-1,1} and <i>H</i> the subgroup of <i>Q</i>* generated by 1/3. Study <i>HN/N</i> verifying the first fundamental isomorphism theorem.</p></li>
+	<li><p>Let <i>Q</i>* the rational multiplicative group, <i>N</i> = {−1,1} and <i>H</i> the subgroup of <i>Q</i>* generated by 1/3. Study <i>HN/N</i> verifying the first fundamental isomorphism theorem.</p></li>
  
 </ol>
 
@@ -196,7 +216,7 @@
 
 <p>A general element in <i>HK</i> is the product (1,0; <i>k</i>, 1)* (1, <i>m</i>; 0, 1) = (1, <i>m; k, km</i> + 1). A general element of <i>KH</i> is  (1, <i>m</i>; 0, 1) * (1, 0; <i>k</i>, 1) = (1 + <i>km, m; k</i>, 1). The last element of a matrix in <i>HK</i> is always 1 in and one in <i>KH</i> has the 1st always 1 in. Thus <i>HK &ne; KH</i>. &emsp; ■</p></li>
 
-	<li><p><i>H</i> = {(1/3)<sup>i</sup>| <i>i</i> &in; Z}, <i>HN</i> = {<i>hn</i> | <i>h</i> &in; H, <i>n</i> &in; <i>N</i>} = {&pm;(1/3)<sup>i</sup>| <i>i</i> &in; Z}, <i>H</i> ∩ <i>N</i> = {1}. Then <i>HN/N</i> is all the cosets, <i>xN</i>, for <i>x</i> in <i>HN</i>, which is the same as all cosets  xN   for x in H, since   hnN = hN  for any h in H, any n in N. Thus <i>x</i> &pm; 1/3<sup>i</sup>. Then every class of <i>HN/N</i> is a power of (1/3)<i>N</i> and HN/N is a cyclic infinite gorup generated by the class (1/3)<i>N</i>. Since <i>H</i> ∩ <i>N</i> = {1}, then <i>H</i>/(<i>H</i> ∩ <i>N</i>) ≃ <i>H</i>, which is infinite cyclic. Then <i>H</i>/(<i>H</i> ∩ <i>N</i>) ≃ <i>HN/N</i> </p>
+	<li><p><i>H</i> = {(1/3)<sup>i</sup>| <i>i</i> &in; Z}, <i>HN</i> = {<i>hn</i> | <i>h</i> &in; H, <i>n</i> &in; <i>N</i>} = {&pm;(1/3)<sup>i</sup>| <i>i</i> &in; Z}, <i>H</i> ∩ <i>N</i> = {1}. Then <i>HN/N</i> is all the cosets, <i>xN</i>, for <i>x</i> in <i>HN</i>, which is the same as all cosets <i>xN</i> for <i>x</i> in <i>H</i>, since <i>hnN</i>= <i>hN</i> for any <i>h</i> in <i>H</i>, any <i>n</i> in <i>N</i>. Thus <i>x</i> &pm; 1/3<sup>i</sup>. Then every class of <i>HN/N</i> is a power of (1/3)<i>N</i> and HN/N is a cyclic infinite gorup generated by the class (1/3)<i>N</i>. Since <i>H</i> ∩ <i>N</i> = {1}, then <i>H</i>/(<i>H</i> ∩ <i>N</i>) ≃ <i>H</i>, which is infinite cyclic. Then <i>H</i>/(<i>H</i> ∩ <i>N</i>) ≃ <i>HN/N</i> </p>
 
 </ol>
 

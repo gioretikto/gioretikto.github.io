@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exercises Sylow theorem"/>
+    <title>Exercises Sylow theorem</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Direct Products</h1>
+
+<p>The Cartesian product, with operations defined ooordinatewise, allowed us to construct new rings from known ones. The same is true for groups. Direct products are an easy way to construct larger groups from smaller ones. This construction yields all finite abelian groups.</p>
+
+<p>Given two groups <i>G</i> and <i>H</i>, the <b>(direct) product</b> group G x H is the cartesian product with the operation</p>
+
+<div class="eq">
+<p>(g,h) ⋅ (g',h') = (gg', hh')</p>
+</div>
+
+<p>It is easy to verify that G x H is a group. For <i>G</i> and <i>H</i> abelian, with groups operations written as addition, often the direct product is written instead as a <b>(direct) sum</b>.</p>
+
+<div class="eq">
+<p><i>G</i> ⊕ <i>H</i></p>
+</div>
+
+<p><b>Theorem 7.17.1</b> Let <i>H</i> and <i>K</i> finite cyclic groups of order <i>m</i> and <i>n</i> respectively. Then <i>H x K</i> is cyclic iff gcd(<i>m,n</i>) = 1.</p>
+
+<p><b>Proof</b>. Assume <i>H x K</i> is cyclic. Suppose gcd(<i>m,n</i>) = <i>d</i> and (<i>h,k</i>) is a generator of <i>H x K</i>. Now</p>
+
+<div class="eq">
+<p>(<i>h,k</i>)<sup><i>mn</i>/<i>d</i></sup> = ((<i>h<sup>m</sup></i>)<sup>n/d</sup>, (<i>k<sup>n</sup></i>)<sup><i>m/d</i></sup>) = (<i>e,e</i>) ⇒ <i>mn</i> = |(<i>h,k</i>)| &le; <i>mn</i>/<i>d</i> ⇒ <i>d</i> = 1</p>
+</div>
+
+<p>Thus |<i>H</i>| and |<i>K</i>| are relatively prime.</p>
+
+<p>For the converse suppose <i>H</i> = ⟨<i>h</i>⟩ and <i>K</i> = ⟨<i>k</i>⟩ of order <i>m</i> an <i>n</i> respectively, and gcd(<i>m,n</i>) = 1. Let <i>d</i> be a positive integer such that (h,k)<sup>d</sup> = (e,e). Then h<sup>d</sup> = e and k<sup>d</sup> = e. Since o(h) = m and o(k) = <i>n</i>, we have <i>m</i>|d and n|d. Now gcd(<i>m,n</i>) = 1. hence <i>mn</i>| <i>d</i> and so <i>mn</i> &le; <i>d</i> (see <a href="gcd.html">Corollary 2.19</a>). Thus it follows for definition of order that o(h,k) = <i>mn</i> and hence <i>H</i> x <i>K</i> is a cyclic group. &emsp; □</p>
+
+<div class="eq">
+<p>|(<i>h,k</i>)| = lcm(<i>m,n</i>) = <i>mn</i> = |<i>H</i> x <i>K</i>|</p>
+</div>
+
+<p>so (<i>h,k</i>) is a generator of <i>H</i> x <i>K</i> which implies that <i>H</i> x <i>K</i> is cyclic. &emsp; □</p>
+
+<p><b>Proposition 7.17.2</b>. Let <i>H</i> and <i>K</i> be normal subgroups of a group <i>G</i>, such that <i>H</i> ∩ <i>K</i> = {<i>e</i>} and the product <i>HK</i> = {<i>hk</i>: <i>h</i> &in; <i>H</i>, <i>K</i> &in; <i>K</i>} = <i>G</i>. Then <i>G</i> is isomorphic to <i>H</i> x <i>K</i>. Conversely, if <i>G</i> is isomorphic to a direct product <i>J</i><sub>1</sub> x <i>J</i><sub>2</sub> of groups, then there are normal subgroups <i>H</i> and <i>K</i> of <i>G</i> with <i>H</i> ∩ <i>K</i> = {<i>e</i>}, <i>HK</i> = <i>G</i>, <i>H</i> ≃ <i>J</i><sub>1</sub>, and <i>K</i> ≃ <i>J</i><sub>2</sub>.</p>
+
+<div class="eq">
+<p><i>f</i>: <i>H</i> x <i>K</i> ⟶<i>HK</i></p>
+</div>
+
+<p>defined as</p>
+
+<div class="eq">
+<p><i>f</i>(<i>h,k</i>) := <i>hk</i>.</p>
+
+<p>is an isomorphism. The subroup <i>HK</i> ≃ <i>H</i> x <i>K</i> is a normal subgrouop of <i>G</i>. In particular <i>hk = kh</i> for all <i>h</i> &in; H and <i>k</i> &in; K</i>.</p>
+
+<p><b>Proof</b>. Let <i>H</i> and <i>K</i> be normal subgroups of a group G with H n K = {e} and HK = G. First by Exercise xx every element of G can be written in a unique way in the form <i>hk</i>. Define &phi; : G ⟶ H x K by &phi;(<i>hk</i>) = (h,k). The conditions H n K = {e} and <i>HK = G</i> ensure that <i>&phi;</i> is one-to-one and onto, respectively. The “morphism” aspect of an isomorphism depends on H and K being normal subgroups. Let’s start with the right side of the equality <i>&phi;</i>(ab) = <i>&phi;</i>(a)<i>&phi;</i>(b): <i>&phi;</i>(h<sub>1</sub> k<sub>1</sub>)<i>&phi;</i>(h<sub>2</sub>k<sub>2</sub>) = (h<sub>1</sub>, k<sub>1</sub> )(h<sub>2</sub>, k<sub>2</sub>) = (h<sub>1</sub> h<sub>2</sub>, k<sub>1</sub> k<sub>2</sub>)= <i>&phi;</i>(h<sub>1</sub>h<sub>1</sub>k<sub>2</sub>k<sub>2</sub>). For <i>&phi;</i>(<i>h</i><sub>1</sub><i>k</i><sub>1</sub><i>h</i><sub>2</sub><i>k</i><sub>2</sub>) to equal this quantity, we need <i>h</i><sub>1</sub><i>k</i><sub>1</sub><i>h</i><sub>2</sub><i>k</i><sub>2</sub> = <i>h</i><sub>1</sub><i>k</i><sub>1</sub><i>h</i><sub>2</sub><i>k</i><sub>2</sub>. We can cancel <i>h</i><sub>1</sub> on the left of each side of the equation and k<sub>2</sub>, on the right. Thus to finish the isomorphism we need commutativity for elements of <i>H</i> with those of <i>K</i>: h<sub>2</sub>k<sub>1</sub> = k<sub>1</sub>h<sub>2</sub>. Let’s start with the right side k<sub>1</sub>h<sub>2</sub>. By the definition of <i>K</i> being normal (<i>aK = Ka</i>), there is k<sub>3</sub> so that k<sub>1</sub>h<sub>2</sub> = h<sub>2</sub>k<sub>3</sub>. Similarly since <i>H</i> is normal, there is h<sub>3</sub> so that k<sub>1</sub>h<sub>2</sub> = h<sub>3</sub>k<sub>1</sub>. So h<sub>2</sub>k<sub>3</sub> = h<sub>3</sub>k<sub>1</sub>. By uniqueness from Exercise 6.4.10(a) <i>h</i><sub>2</sub> = <i>h</i><sub>3</sub> and k<sub>1</sub> = k<sub>3</sub>, showing commutativity and finishing the isomorphism. See Exercise 6.4.10(b) for the converse. &emsp;■ </p></li>
+
+<section aria-label="End">
+<a href="cauchy_sylow.html">&#171;Sylow and Cauchy theorems</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
