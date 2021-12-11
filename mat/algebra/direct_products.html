@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Exercises Sylow theorem"/>
-    <title>Exercises Sylow theorem</title>
+    <meta name="description" content="Direct Products"/>
+    <title>Direct Products</title>
     <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -23,50 +23,244 @@
 
 <p>The Cartesian product, with operations defined ooordinatewise, allowed us to construct new rings from known ones. The same is true for groups. Direct products are an easy way to construct larger groups from smaller ones. This construction yields all finite abelian groups.</p>
 
-<p>Given two groups <i>G</i> and <i>H</i>, the <b>(direct) product</b> group G x H is the cartesian product with the operation</p>
+<p><b>Definition 7.17.1</b>. Given two groups <i>G</i><sub>1</sub> and <i>G</i><sub>2</sub>, the <b>(direct) product</b> group <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> is the cartesian product</p>
 
 <div class="eq">
-<p>(g,h) ⋅ (g',h') = (gg', hh')</p>
+<p><i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> = {(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>)| <i>g<sub>i</sub></i> &in; <i>G<sub>i</sub></i>}
 </div>
 
-<p>It is easy to verify that G x H is a group. For <i>G</i> and <i>H</i> abelian, with groups operations written as addition, often the direct product is written instead as a <b>(direct) sum</b>.</p>
+<p>with the operation</p>
 
 <div class="eq">
-<p><i>G</i> ⊕ <i>H</i></p>
+<p>(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>) ⋅ (<i>g'</i><sub>1</sub>, <i>g'</i><sub>2</sub>) := (<i>g</i><sub>1</sub>g<sub>1</sub>', <i>g</i><sub>2</sub>g<sub>2</sub>')</p>
 </div>
 
-<p><b>Theorem 7.17.1</b> Let <i>H</i> and <i>K</i> finite cyclic groups of order <i>m</i> and <i>n</i> respectively. Then <i>H x K</i> is cyclic iff gcd(<i>m,n</i>) = 1.</p>
+<p>It is easy to verify that <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> is a group: the identity is (1,1); the inverse (g<sub>1</sub>, g<sub>2</sub>)<sup>−1</sup> is (g<sub>1</sub><sup>−1</sup>, g<sub>2</sub><sup>−1</sup>). Notice that neither G<sub>1</sub> nor G<sub>2</sub> is a subgroup of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, but <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> does contain isomorphic replicas of each, namely, <i>G</i><sub>1</sub> x 1 = {(<i>g</i><sub>1</sub>,1): g<sub>1</sub> &in; <i>G</i><sub>1</sub>} and <i>G</i><sub>2</sub> x 1 = {(1,<i>g</i><sub>2</sub>): <i>g</i><sub>2</sub> &in; <i>G</i><sub>2</sub>}.</p>
 
-<p><b>Proof</b>. Assume <i>H x K</i> is cyclic. Suppose gcd(<i>m,n</i>) = <i>d</i> and (<i>h,k</i>) is a generator of <i>H x K</i>. Now</p>
+<p>For <i>G</i><sub>1</sub> and <i>G</i><sub>2</sub> abelian, with groups operations written as addition, often the direct product is written instead as a <b>(direct) sum</b>.</p>
 
 <div class="eq">
-<p>(<i>h,k</i>)<sup><i>mn</i>/<i>d</i></sup> = ((<i>h<sup>m</sup></i>)<sup>n/d</sup>, (<i>k<sup>n</sup></i>)<sup><i>m/d</i></sup>) = (<i>e,e</i>) ⇒ <i>mn</i> = |(<i>h,k</i>)| &le; <i>mn</i>/<i>d</i> ⇒ <i>d</i> = 1</p>
+<p><i>G</i><sub>1</sub> ⊕ <i>G</i><sub>2</sub></p>
 </div>
 
-<p>Thus |<i>H</i>| and |<i>K</i>| are relatively prime.</p>
+<p><b>Examples 7.17.2</b></p>
 
-<p>For the converse suppose <i>H</i> = ⟨<i>h</i>⟩ and <i>K</i> = ⟨<i>k</i>⟩ of order <i>m</i> an <i>n</i> respectively, and gcd(<i>m,n</i>) = 1. Let <i>d</i> be a positive integer such that (h,k)<sup>d</sup> = (e,e). Then h<sup>d</sup> = e and k<sup>d</sup> = e. Since o(h) = m and o(k) = <i>n</i>, we have <i>m</i>|d and n|d. Now gcd(<i>m,n</i>) = 1. hence <i>mn</i>| <i>d</i> and so <i>mn</i> &le; <i>d</i> (see <a href="gcd.html">Corollary 2.19</a>). Thus it follows for definition of order that o(h,k) = <i>mn</i> and hence <i>H</i> x <i>K</i> is a cyclic group. &emsp; □</p>
+<ol type="a">
+<li><p>Let <i>G</i><sub>1</sub> = Z<sub>2</sub> and <i>G</i><sub>2</sub> = Z<sub>3</sub>. Then</p>
 
 <div class="eq">
-<p>|(<i>h,k</i>)| = lcm(<i>m,n</i>) = <i>mn</i> = |<i>H</i> x <i>K</i>|</p>
+<p>Z<sub>2</sub> x Z<sub>3</sub> = {(0̅, 0̅), (0̅, 1̅), (0̅, 2̅), (1̅, 0̅), (1̅, 1̅), (1̅, 2̅)}</p>
 </div>
 
-<p>so (<i>h,k</i>) is a generator of <i>H</i> x <i>K</i> which implies that <i>H</i> x <i>K</i> is cyclic. &emsp; □</p>
-
-<p><b>Proposition 7.17.2</b>. Let <i>H</i> and <i>K</i> be normal subgroups of a group <i>G</i>, such that <i>H</i> ∩ <i>K</i> = {<i>e</i>} and the product <i>HK</i> = {<i>hk</i>: <i>h</i> &in; <i>H</i>, <i>K</i> &in; <i>K</i>} = <i>G</i>. Then <i>G</i> is isomorphic to <i>H</i> x <i>K</i>. Conversely, if <i>G</i> is isomorphic to a direct product <i>J</i><sub>1</sub> x <i>J</i><sub>2</sub> of groups, then there are normal subgroups <i>H</i> and <i>K</i> of <i>G</i> with <i>H</i> ∩ <i>K</i> = {<i>e</i>}, <i>HK</i> = <i>G</i>, <i>H</i> ≃ <i>J</i><sub>1</sub>, and <i>K</i> ≃ <i>J</i><sub>2</sub>.</p>
+<p>the elements order of Z<sub>2</sub> x Z<sub>3</sub> are respectively 1, 3, 3, 2, 6, 6. Which is a cyclic group of order 6, thus</p>
 
 <div class="eq">
-<p><i>f</i>: <i>H</i> x <i>K</i> ⟶<i>HK</i></p>
+<p>Z<sub>2</sub> x Z<sub>3</sub> ≃ Z<sub>6</sub></p>
 </div>
 
-<p>defined as</p>
+</li>
+
+<li><p>Let <i>G</i><sub>1</sub> = Z<sub>2</sub> and <i>G</i><sub>2</sub> = Z<sub>4</sub>. The external product Z<sub>2</sub> x Z<sub>4</sub> is made by 8 elements, but this time there is no element with order 8, hence we are not dealing with the cyclic <i>i.e.</i> Z<sub>2</sub> x Z<sub>4</sub> ≠ Z<sub>8</sub>.&emsp;■</p></li>
+
+</ol>
+
+<p><b>Theorem 7.17.3</b> Let <i>H</i> and <i>K</i> two groups, and define <i>G</i> = <i>H</i> x <i>K</i>. Then <i>G</i> has two subgroups <i>H</i><sub>1</sub>, <i>K</i><sub>2</sub>, such that</p>
+
+<ol type="a">
+	<li><p><i>H</i><sub>1</sub> ≃ <i>H</i><sub>1</sub>, <i>K</i><sub>2</sub> ≃ <i>K</i></p></li>
+	<li><p><i>H</i><sub>1</sub> ⊲̲ <i>G</i>, <i>K</i><sub>2</sub> ⊲̲ <i>G</i></p></li>
+	<li><p><i>G</i> = <i>H</i><sub>1</sub><i>K</i><sub>2</sub></p></li>
+	<li><p><i>H</i><sub>1</sub> ∩ <i>K</i><sub>2</sub> = {(<i>e<sub><i>H</i></sub></i>, <i>e<sub>K</sub></i>)} = trivial subgroup of <i>H</i> x <i>K</i></p></li>
+</ol>
+
+<p><b>Proof</b>. Let</p>
 
 <div class="eq">
-<p><i>f</i>(<i>h,k</i>) := <i>hk</i>.</p>
+<p><i>H</i><sub>1</sub> := <i>H</i> x {<i>e</i><sub>K</sub></i>} = {(<i>h</i>, <i>e<sub>K</sub></i>) | <i>h</i> &in; <i>H</i>}<br>
+<i>K</i><sub>1</sub> := <i>K</i> x {<i>e</i><sub>H</sub></i>} = {(<i>k</i>, <i>e<sub>H</sub></i>) | <i>k</i> &in; <i>K</i>}</p>
+</div>
 
-<p>is an isomorphism. The subroup <i>HK</i> ≃ <i>H</i> x <i>K</i> is a normal subgrouop of <i>G</i>. In particular <i>hk = kh</i> for all <i>h</i> &in; H and <i>k</i> &in; K</i>.</p>
+<p>Map <i>H</i> x <i>K</i> onto <i>K</i> by (<i>h, k</i>) ⟼ <i>k</i>. It is not hard to show that this map is a homomorphism from <i>G</i> onto <i>K</i>. Its kernel is {(<i>h,k</i>): (<i>h,k</i>) ⟼  <i>e<sub>K</sub></i>} = {(<i>h</i>, e<sub>K</sub>): <i>h</i> &in; <i>H</i>} = <i>H</i><sub>1</sub>. This establishes that <i>H</i><sub>1</sub> is a normal subgroup of <i>G</i> and that <i>G</i>/<i>H</i><sub>1</sub> ~ <i>K</i> by the group isomorphism theorem. In an identical fashion using the map (<i>h,k</i>) ⟼ <i>h</i>, it can be shown that <i>K</i><sub>1</sub> is a normal subgroup of <i>G</i> and <i>G/K</i><sub>2</sub> ~ <i>H</i>.</p>
 
-<p><b>Proof</b>. Let <i>H</i> and <i>K</i> be normal subgroups of a group G with H n K = {e} and HK = G. First by Exercise xx every element of G can be written in a unique way in the form <i>hk</i>. Define &phi; : G ⟶ H x K by &phi;(<i>hk</i>) = (h,k). The conditions H n K = {e} and <i>HK = G</i> ensure that <i>&phi;</i> is one-to-one and onto, respectively. The “morphism” aspect of an isomorphism depends on H and K being normal subgroups. Let’s start with the right side of the equality <i>&phi;</i>(ab) = <i>&phi;</i>(a)<i>&phi;</i>(b): <i>&phi;</i>(h<sub>1</sub> k<sub>1</sub>)<i>&phi;</i>(h<sub>2</sub>k<sub>2</sub>) = (h<sub>1</sub>, k<sub>1</sub> )(h<sub>2</sub>, k<sub>2</sub>) = (h<sub>1</sub> h<sub>2</sub>, k<sub>1</sub> k<sub>2</sub>)= <i>&phi;</i>(h<sub>1</sub>h<sub>1</sub>k<sub>2</sub>k<sub>2</sub>). For <i>&phi;</i>(<i>h</i><sub>1</sub><i>k</i><sub>1</sub><i>h</i><sub>2</sub><i>k</i><sub>2</sub>) to equal this quantity, we need <i>h</i><sub>1</sub><i>k</i><sub>1</sub><i>h</i><sub>2</sub><i>k</i><sub>2</sub> = <i>h</i><sub>1</sub><i>k</i><sub>1</sub><i>h</i><sub>2</sub><i>k</i><sub>2</sub>. We can cancel <i>h</i><sub>1</sub> on the left of each side of the equation and k<sub>2</sub>, on the right. Thus to finish the isomorphism we need commutativity for elements of <i>H</i> with those of <i>K</i>: h<sub>2</sub>k<sub>1</sub> = k<sub>1</sub>h<sub>2</sub>. Let’s start with the right side k<sub>1</sub>h<sub>2</sub>. By the definition of <i>K</i> being normal (<i>aK = Ka</i>), there is k<sub>3</sub> so that k<sub>1</sub>h<sub>2</sub> = h<sub>2</sub>k<sub>3</sub>. Similarly since <i>H</i> is normal, there is h<sub>3</sub> so that k<sub>1</sub>h<sub>2</sub> = h<sub>3</sub>k<sub>1</sub>. So h<sub>2</sub>k<sub>3</sub> = h<sub>3</sub>k<sub>1</sub>. By uniqueness from Exercise 6.4.10(a) <i>h</i><sub>2</sub> = <i>h</i><sub>3</sub> and k<sub>1</sub> = k<sub>3</sub>, showing commutativity and finishing the isomorphism. See Exercise 6.4.10(b) for the converse. &emsp;■ </p></li>
+<p>Since <i>H</i><sub>1</sub> and <i>K</i><sub>2</sub> are normal subgroups of <i>G</i> = <i>H</i> x <i>K</i>, then it follows from <a href="normalizer.html">Lemma 7.12.4</a>
+that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. Let (<i>h</i>, <i>k</i>) be any element of <i>G</i> = <i>H</i> x <i>K</i>. Then (<i>h, k</i>) = (<i>h</i>, <i>e</i><sub>K</sub>) (<i>e</i><sub>H</sub>, <i>k</i>) &in; <i>H</i><sub>1</sub><i>H</i><sub>2</sub>. This shows <i>G</i> &subset; <i>H</i><sub>1</sub><i>H</i><sub>2</sub>. Hence <i>G</i> = <i>H</i><sub>1</sub><i>H</i><sub>2</sub>.</p>
+
+<p>Finally, consider <i>H</i><sub>1</sub> ∩ <i>K</i><sub>2</sub>. If (<i>x, y</i>) &in; <i>H</i><sub>1</sub> ∩ <i>K</i><sub>2</sub> then (<i>x ,y</i>) &in; H<sub>1</sub> and (<i>x, y</i>) &in; <i>K</i><sub>2</sub>. But if (<i>x, y</i>) &in; <i>H</i><sub>1</sub> then <i>y = e<sub>K</sub></i> and if (<i>x, y</i>) &in; <i>K</i><sub>2</sub> then <i>x = e<sub>H</sub></i>. This implies that (<i>x,y</i>) = (
+ e<sub>H</sub></i>, e<sub>K</sub></i>). Then all conditions listed above are satisfied. &emsp;□</p>
+
+<p>If a group has two subgroups <i>H</i><sub>1</sub> and <i>K</i><sub>2</sub>, satisfying the conditions b), c), d) of the previous theorem, then <i>G</i> is said <i>internal direct product of its subgroups</i> <i>H</i><sub>1</sub> and <i>K</i><sub>2</sub>. We just proved that a a group which is an external direct product of two groups is isomorphic to the <i>internal</i> product.</p>
+
+<p>The previous theorem says that inside any direct product of two groups there are two normal subgroups whose product is the whole group and whose intersection is trivial. We now see that the converse of this is true as well providing a method for recognizing that a group <i>G</i> is isomorphic to the direct product of two groups.</p>
+
+<p><b>Theorem 7.17.4</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
+
+<ol type="a">
+	<li><p><i>H</i> and <i>K</i> are normal subgroups of <i>G</i>;</p></li>
+	<li><p><i>G = HK</i>;</p></li>
+	<li><p><i>H</i> ∩ <i>K</i> = {<i>e</i>};</p></li>
+</ol>
+
+<p>Then <i>G</i> ≃ <i>H</i> x <i>K</i>.</p>
+
+<p>Before proving the theorem we introduce two lemmas.</p>
+
+<p><b>Lemma 7.17.5</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
+
+<div class="eq">
+<p><i>H</i> ⊲̲ <i>G</i>, &emsp; <i>K</i> ⊲̲ <i>G</i>, &emsp; <i>H</i> ∩ <i>K</i>{<i>e</i>};</p>
+</div>
+
+<p>Then, for every <i>h</i> &in; <i>H</i> and every <i>k</i> &in; <i>K</i> it results <i>hk = kh</i>.</p>
+
+<p><b>Proof</b>. Let <i>x = khk</i><sup>−1</sup>. From <i>x</i> = (<i>hkh</i><sup>−1</sup>)<i>k</i><sup>−1</sup>, it is clear that since <i>hkh</i><sup>−1</sup> &in; <i>K</i> for the normality of <i>K</i> in <i>G</i> then <i>x</i> &in; <i>K</i>. From <i>x</i> = <i>h</i>(<i>kh</i><sup>−1</sup><i>k</i><sup>−1</sup>), for the normality of <i>H</i> in <i>G</i>, <i>x</i> belongs to <i>H</i>. From <i>H</i> ∩ <i>K</i>{<i>e</i>}, it follows that <i>x</i> = <i>hkh</i><sup>−1</sup><i>k</i><sup>−1</sup> = <i>e</i>, thus <i>hk = kh</i>.&emsp;□</p>
+
+<p><b>Lemma 7.17.6</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
+
+<ol type="a">
+	<li><p><i>G</i> = <i>HK</i>;</p></li>
+	<li><p><i>H</i> ∩ <i>K</i> = {<i>e</i>};</p></li>
+</ol>
+
+<p>Then every <i>g</i> &in; <i>G</i> is written uniquely as product of an element <i>h</i> &in; <i>H</i> by an element <i>k</i> &in; <i>K</i>.</p>
+
+<p><b>Proof</b>. By condition a) every <i>g</i> &in; <i>G</i> can be written as <i>hk</i> for some <i>h</i> &in; <i>H</i> by an element <i>k</i> &in; <i>K</i>. To prove the uniqueness of the writing, suppose we have</p>
+
+<div class="eq">
+<p><i>g = hk = h'k'</i></p>
+</div>
+
+<p>Then <i>h</i><sup>−1</sup><i>hkk'</i><sup>−1</sup> = <i>h</i><sup>−1</sup><i>h'k'k'</i><sup>−1</sup>, from which <i>kk'</i><sup>−1</sup> = <i>h</i><sup>−1</sup><i>h'</i> &in; <i>H</i> ∩ <i>K</i> = {<i>e</i>}. Thus <i>h = h'</i> and <i>k = k'</i> is a unique writing. &emsp;□</p>
+
+<p>We now prove the theorem.</p>
+
+<p><b>Proof of  Theorem 7.17.4</b>. We define the following map</p>
+
+<div class="eq">
+<p><i>&Psi;</i> : <i>H x K</i> ⟶ <i>G</i><br>
+(<i>h,k</i>) ⟼ <i>hk</i></p>
+</div>
+
+<p>The application is surjective for condition b) of the statement. It is injective by lemma 7.17.6 and it is also a homomorphism by lemma 7.17.5. We thus proved that <i>G</i> is isomorphic to the direct product <i>H</i> by <i>K</i>. &emsp;□</p>
+
+<p>The theorems just proved show us that the internal direct product <i>HK</i> is isomorphic to the direct product <i>H</i> x <i>K</i>; We shall use the symbols <i>HK</i> and <i>H x K</i> as well as the terms "internal direct product" and "direct product" interchangeably.</p>
+
+<p>The last theorem says that to check whether a group is isomorphic to a direct product, it is enough to check the conditions of the theorem. We give some examples.</p>
+
+<p><b>Example 7.17.7</b> The group (ℤ, +) is not a direct product of two non-trivial groups since the intersection of its subgroups is always non-trivial.&emsp;■</p>
+
+<p><b>Example 7.17.8</b> The symmetric group S<sub>3</sub> is not a direct product, since it possesses a single normal subgroup.&emsp;■</p>
+
+<p><b>Example 7.17.9</b> Z<sub>12</sub> is isomorphic to the direct product Z<sub>3</sub> x Z<sub>4</sub>, since the two subgroups</p>
+
+<div class="eq">
+<p><i>H</i> = {0̅, 4̅, 8̅}, &emsp; <i>K</i> = {0̅, 3̅, 6̅, 9̅}</p>
+</div>
+
+<p>sono normal with intersection reduced to the class 0̅, and are such that Z<sub>12</sub> = <i>H</i> + <i>K</i>. Moreover <i>H</i> ≃ Z<sub>3</sub> and <i>K</i> ≃ Z<sub>4</sub>. &emsp;■</p>
+
+<p><b>Example 7.17.10</b> The dihedral group D<sub>4</sub> is not a direct product, since two whatever non-trivial normal subgroups of D<sub>4</sub> intersect to give a non-trivial subgroup, containing the element <i>r</i><sup>2</sup>.&emsp;■</p>
+
+<p><b>Example 7.17.11</b> The orthogonal group O<sub>3</sub>(R) is isomorphic to the direct product of SO<sub>3</sub> (orthogonal matrices with determinant 1) by Z<sub>2</sub>. More generally</p>
+
+<div class="eq">
+<p>O<sub>n</sub> ≃ SO<sub>n</sub> x Z<sub>n</sub>, &emsp; <i>n</i> odd &emsp;■</p>
+</div>
+
+<p><b>Example 7.17.12</b> (C, +) is isomorphic to (R, +) x (R, +). &emsp;■</p>
+
+<p>The definition of exzernal product of two groups can be extended to the more general case of more of two groups</p>
+
+<p><b>Proposition 7.17.13</b>. Let <i>G</i><sub>1</sub>, <i>G</i><sub>2</sub>, ..., <i>G</i><sub>3</sub>. We define the external direct product of <i>G</i><sub>1</sub>, <i>G</i><sub>2</sub>, ..., <i>G</i><sub>3</sub>, the set </p>
+
+<div class="eq">
+<p><i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> := {(<i>g</i><sub>1</sub>, g<sub>2</sub>, ..., g<sub>k</sub>) | <i>g<sub>i</sub></i> &in; <i>G<sub>i</sub></i>}
+</div>
+
+<p>with the group operation</p>
+
+<div class="eq">
+<p>(<i>g</i><sub>1</sub>, g<sub>2</sub>, ..., g<sub>k</sub>) (<i>g</i><sub>1</sub>', g<sub>2</sub>', ..., g<sub>k</sub>') := (<i>g</i><sub>1</sub>g<sub>1</sub>', g<sub>2</sub>g<sub>2</sub>', ..., g<sub>k</sub>g<sub>k</sub>')</p>
+</div>
+
+<p>It is easy to notice that <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i>. Then</p>
+
+<ol type="a">
+	<li><p>if every factor has finite order,</p>
+
+	<div class="eq">
+	<p>|<i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i>| = |<i>G</i><sub>1</sub>| |<i>G</i><sub>2</sub>| ⋅⋅⋅ |<i>G<sub>k</sub></i>|;</p>
+	</div>
+	</li>
+
+	<li><p><i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> is abelian if and only if for every <i>G<sub>i</sub></i> is abelian;</p></li>
+
+	<li><p>|(<i>g</i><sub>1</sub>, g<sub>2</sub>, ..., g<sub>k</sub>)| = lcm (|<i>g</i><sub>1</sub>|,|<i>g</i><sub>2</sub>|, ..., |<i>g</i><sub>k</sub>|), the order is infinite if one of the <i>g<sub>i</sub></i> has inifnite order;</p></li>
+
+	<li><p>if every <i>G<sub>i</sub></i> has finite order, <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> is cyclic if and only if every <i>G<sub>i</sub></i> is cyclic and (|<i>G<sub>i</sub></i>, <i>G<sub>j</sub></i>|) = 1, for every <i>i</i> &ne; <i>j</i>.</p></li>	
+
+</ol>
+
+<p><b>Proof</b>. Points (a), and (b) are obvious. (c) let <i>m</i> = lcm (|<i>g</i><sub>1</sub>|,|<i>g</i><sub>2</sub>|, ..., |<i>g</i><sub>k</sub>|) and let <i>t</i> the order of (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>). From</p>
+
+<div class="eq">
+<p>(<i>e</i>, <i>e</i>, ..., <i>e</i>) = (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>)<sup><i>t</i></sup> = (<i>g</i><sub>1</sub><sup><i>t</i></sup>, <i>g</i><sub>2</sub><sup><i>t</i></sup>, ..., <i>g<sub>k</sub><sup>t</sup></i>)</p>
+</div>
+
+<p>it results that <i>t</i> is a multiple of every |<i>g<sub>i</sub></i>|, hence <i>m</i>| <i>t</i>. On the other hand from</p>
+
+<div class="eq">
+<p>(<i>e</i>, <i>e</i>, ..., <i>e</i>) = (<i>g</i><sub>1</sub><sup><i>m</i></sup>, g<sub>2</sub><sup><i>m</i></sup>, ..., <i>g<sub>k</sub><sup>m</sup></i>)</p>
+</div>
+
+<p>we have <i>t</i> | <i>m</i>. Thus <i>t = m</i>.</p>
+
+<p>(d) (⇒) That <i>G<sub>i</sub></i> are cyclic is obvious, because isomorphic to a subgroup of a cyclic group. Let <i>g<sub>i</sub></i> a generator of <i>G<sub>i</sub></i>, the element <i>g</i> = (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>) has greatest order among all the elements of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> and by point (c) its order is lcm(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>). If it were (|<i>G<sub>i</sub></i>|, |<i>G<sub>j</sub></i>|) = <i>d</i> &ne; 1 for some <i>i,j</i>, <i>i &ne; j</i> then the order of (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>) would be</p>
+
+<div class="eq">
+<p>(|<i>g</i><sub>1</sub>||<i>g</i><sub>2</sub>| ⋅⋅⋅ |<i>g</i><sub>k</sub>|) / <i>d</i> &lt; |<i>g</i><sub>1</sub>| |<i>g</i><sub>2</sub>| ⋅⋅⋅ |<i>g</i><sub>k</sub>|</p>
+</div>
+
+<p>and it couldn't be a generator of of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i>.</p>
+
+<p>To understnad the last passage: Suppose gcd(<i>m,n</i>) = <i>d</i>, then g<sup>mn/d</sup> = (g<sup>m</sup>)<sup>n/d</sup> = <i>e</i>.</p>
+
+<p>(⇐) If every <i>G<sub>i</sub></i> is cyclic and (|<i>G<sub>i</sub></i>|, |<i>G<sub>j</sub></i>|) for every <i>i, j</i>, <i>i</i> &ne; <i>j</i>, then letting <i>g<sub>i</sub></i> a generator of <i>G<sub>i</sub></i> for every <i>i</i> = 1, ..., <i>k</i>, the element (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>) has order |<i>g</i><sub>1</sub>| |<i>g</i><sub>2</sub>| ⋅⋅⋅ |<i>g</i><sub>k</sub>|, hence <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> is cyclic.&emsp;□</p>
+
+<p><b>Corollary 7.17.14</b>. Z<sub>r</sub> x Z<sub>s</sub> is isomrphic to Z<sub>rs</sub> (that is cyclic) if and only if (<i>r,s</i>) = 1.</p>
+
+<p>Theorem 7.17.4 can be generalized to the product of more than two groups as follows</p>
+
+<p><b>Theorem 7.17.15</b>. Let <i>G</i> a group and let <i>N</i><sub>1</sub>, <i>N</i><sub>2</sub>, ...., <i>N<sub>k</sub></i> subgroups of <i>G</i> such that</p>
+
+<ol type="a">
+	<li><p><i>N<sub>i</sub></i> ⊲̲ <i>G</i>;</p></li>
+	<li><p><i>G</i> = <i>N</i><sub>1</sub><i>N</i><sub>2</sub>⋅⋅⋅<i>N<sub>k</sub></i>;</p></li>
+	<li><p><i>N<sub>i</sub></i> ∩ (<i>N</i><sub>1</sub> <i>N</i><sub>2</sub> ⋅⋅⋅ <i>N̂<sub>i</sub></i><i>N</i><sub>i+1</sub> ⋅⋅⋅ <i>N<sub>k</sub></i>)</p></li>
+</ol>
+
+<p>Then <i>G</i> is isomorphic to the direct product <i>N</i><sub>1</sub> x N<sub>2</sub> x ⋅⋅⋅ N<sub>k</sub></p>
+
+<p><b>Proof</b>.</p>
+
+<p>We've seen that if a group is a direct product then there exist in <i>G</i> two subgroups <i>H</i> <i>K</i> such that <i>G</i> = <i>HK</i> and <i>H</i> ∩ <i>K</i> = {<i>e</i>}. And to prove this we used the fact that (see Lemma 7.17.5) that</p>
+
+<div class="eq">
+<p><i>hk</i> ⋅ <i>h'k'</i> = <i>hh'</i> ⋅ <i>kk'</i> &emsp; &forall; <i>h,h'</i> &in; <i>H</i>, &forall; <i>k,k'</i> &in; <i>K</i> &emsp; (<b>7.17.1</b>)</p>
+</div>
+
+<p>We suppose now that the group possesses a normal subgroup <i>N</i> and another subgroup (not necessarily normal) <i>H</i> such that</p>
+
+<div class="eq">
+<p><i>G</i> = <i>NH</i>, &emsp; <i>N</i> ∩ <i>H</i> = {<i>e</i>}
+</p>
+
+<p>in this case (7.17.1) does not hold anymore <i>i.e.</i> in general <i>nh ⋅ n'h'</i> &ne; <i>nn'</i> ⋅ <i>hh'</i>. But it is always true that</p>
+
+<div class="eq">
+<p><i>nh ⋅ n'h'</i> = <i>nhn'h'h</i><sup>−1</sup> ⋅ <i>hh'</i></p>
+</div>
+
+<p>where <i>hn'h</i><sup>−1</sup>, being conjugates of an element of <i>N</i>, which is normal. We have now that the product of two elements <i>nh</i> and <i>n'h'</i> of <i>NH</i> does not equal (as in the case of both subgroups normal) the product of <i>nn'</i> by <i>hh'</i>, but the product of <i>n</i>(hn'h<sup>−1</sup>) by <i>hh'</i>;</p>
 
 <section aria-label="End">
 <a href="cauchy_sylow.html">&#171;Sylow and Cauchy theorems</a>
