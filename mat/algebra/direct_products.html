@@ -35,7 +35,41 @@
 <p>(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>) ⋅ (<i>g'</i><sub>1</sub>, <i>g'</i><sub>2</sub>) := (<i>g</i><sub>1</sub>g<sub>1</sub>', <i>g</i><sub>2</sub>g<sub>2</sub>')</p>
 </div>
 
-<p>It is easy to verify that <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> is a group: the identity is (1,1); the inverse (g<sub>1</sub>, g<sub>2</sub>)<sup>−1</sup> is (g<sub>1</sub><sup>−1</sup>, g<sub>2</sub><sup>−1</sup>). Notice that neither G<sub>1</sub> nor G<sub>2</sub> is a subgroup of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, but <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> does contain isomorphic replicas of each, namely, <i>G</i><sub>1</sub> x 1 = {(<i>g</i><sub>1</sub>,1): g<sub>1</sub> &in; <i>G</i><sub>1</sub>} and <i>G</i><sub>2</sub> x 1 = {(1,<i>g</i><sub>2</sub>): <i>g</i><sub>2</sub> &in; <i>G</i><sub>2</sub>}.</p>
+<p><b>Proving that <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> is a group for the binary operation defined above</b>.</p>
+
+<ol>
+	<li><p><b>Closure</b>: We have (g<sub>1</sub>,g<sub>2</sub>)(g<sub>1</sub>',g<sub>2</sub>') = (g<sub>1</sub>g<sub>1</sub>', g<sub>2</sub>g<sub>2</sub>') &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, because g<sub>1</sub>g<sub>1</sub>' &in; G<sub>1</sub>, with g<sub>1</sub>, g<sub>1</sub>' &in; G<sub>1</sub> because G<sub>1</sub> is a group. Similarly g<sub>2</sub>g<sub>2</sub>' &in; G<sub>2</sub>.</p></li>
+
+	<li><p><b>Associativity</b>: If (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>), (<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>'), (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'') &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> then</p>
+
+	<div class="eq">
+	<p>[(<i>g</i><sub>1</sub>,g<sub>2</sub>) (<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>')] (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'') =<br>
+	 (<i>g</i><sub>1</sub>g<sub>1</sub>', <i>g</i><sub>2</sub>g<sub>2</sub>') (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'') = ([<i>g</i><sub>1</sub> <i>g</i><sub>1</sub>']g<sub>1</sub>'', [g<sub>2</sub>g<sub>2</sub>'] g<sub>2</sub>'')=<br>
+	 (<i>g</i><sub>1</sub> [<i>g</i><sub>1</sub>'<i>g</i><sub>1</sub>''], <i>g</i><sub>2</sub>[<i>g</i><sub>2</sub>' <i>g</i><sub>2</sub>''])=<br>
+	(<i>g</i><sub>1</sub>,g<sub>2</sub>) (<i>g</i><sub>1</sub>'<i>g</i><sub>2</sub>'', g<sub>2</sub>'<i>g</i><sub>2</sub>'') =<br>
+	 (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>) [(<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>') (g<sub>1</sub>'', g<sub>2</sub>'')]</p>
+	</div>
+	</li>
+
+	<li><p>If (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>) &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, then (<i>e</i><sub>G<sub>1</sub></sub>,<i>e</i><sub>G<sub>2</sub></sub>) (g<sub>1</sub>,g<sub>2</sub>) = (<i>e</i><sub>G<sub>1</sub></sub>g<sub>1</sub>,<i>e</i><sub>G<sub>2</sub></sub>g<sub>2</sub>) = (g<sub>1</sub>,g<sub>2</sub>). Therefore (<i>e</i><sub>G<sub>1</sub></sub>,<i>e</i><sub>G<sub>2</sub></sub>) is the left identity of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>;</p></li>
+
+	<li><p>Existence of left inverse (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>)<sup>−1</sup> is (<i>g</i><sub>1</sub><sup>−1</sup>, <i>g</i><sub>2</sub><sup>−1</sup>).</p></li>
+
+</ol>
+
+<p> Notice that neither <i>G</i><sub>1</sub> nor <i>G</i><sub>2</sub> is a subgroup of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, but <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> does contain isomorphic replicas of each, namely,</p>
+
+<div class="eq">
+<p><i>G</i><sub>1</sub>* = <i>G</i><sub>1</sub> x <i>e</i><sub><i>G</i><sub>2</sub></sub> = {(<i>g</i><sub>1</sub>, <i>e</i><sub>G<sub>2</sub></sub>): <i>g</i><sub>1</sub> &in; <i>G</i><sub>1</sub>}&emsp;and&emsp; <i>G</i><sub>2</sub>* = <i>G</i><sub>2</sub> x <i>e</i><sub><i>G</i><sub>1</sub></sub> = {(<i>e</i><sub><i>G</i><sub>1</sub></sub>,<i>g</i><sub>2</sub>): <i>g</i><sub>2</sub> &in; <i>G</i><sub>2</sub>}.</p>
+</div>
+
+<p>Since</p>
+
+<div class="eq">
+<p>(<i>g</i><sub>1</sub>, <i>e</i><sub><i>G</i><sub>2</sub></sub>) (<i>e</i><sub><i>G</i><sub>1</sub></sub>, <i>g</i><sub>2</sub>) = (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>) = (<i>e</i><sub><i>G</i><sub>1</sub></sub>, <i>g</i><sub>2</sub>) (<i>g</i><sub>1</sub>, <i>e</i><sub><i>G</i><sub>2</sub></sub>)</p>
+</div>
+
+<p>every element of <i>G</i> is the product of an element of <i>G</i><sub>1</sub>* and one of <i>G</i><sub>2</sub>*. Moreover two such elements commute.</p>
 
 <p>For <i>G</i><sub>1</sub> and <i>G</i><sub>2</sub> abelian, with groups operations written as addition, often the direct product is written instead as a <b>(direct) sum</b>.</p>
 
@@ -80,7 +114,13 @@
 <i>K</i><sub>1</sub> := <i>K</i> x {<i>e</i><sub>H</sub></i>} = {(<i>k</i>, <i>e<sub>H</sub></i>) | <i>k</i> &in; <i>K</i>}</p>
 </div>
 
-<p>Map <i>H</i> x <i>K</i> onto <i>K</i> by (<i>h, k</i>) ⟼ <i>k</i>. It is not hard to show that this map is a homomorphism from <i>G</i> onto <i>K</i>. Its kernel is {(<i>h,k</i>): (<i>h,k</i>) ⟼  <i>e<sub>K</sub></i>} = {(<i>h</i>, e<sub>K</sub>): <i>h</i> &in; <i>H</i>} = <i>H</i><sub>1</sub>. This establishes that <i>H</i><sub>1</sub> is a normal subgroup of <i>G</i> and that <i>G</i>/<i>H</i><sub>1</sub> ~ <i>K</i> by the group isomorphism theorem. In an identical fashion using the map (<i>h,k</i>) ⟼ <i>h</i>, it can be shown that <i>K</i><sub>1</sub> is a normal subgroup of <i>G</i> and <i>G/K</i><sub>2</sub> ~ <i>H</i>.</p>
+<p>Consider the mapping &phi;: <i>H</i> x <i>K</i> ⟶ <i>K</i> by (<i>h, k</i>) ⟼ <i>k</i>. It is not hard to show that this map is a homomorphism from <i>G</i> onto <i>K</i>. Obviously the map is onto <i>K</i>. Then</p>
+
+<div class="eq">
+<p>&phi;( (h,k) ⋅ (h',k') ) = &phi;( (hh',kk') ) = kk' = &phi;(h,k) &phi;(h',k')</p>
+</div>
+
+<p>&phi; is a homomorphim of <i>H</i> x <i>K</i> onto <i>K</i>. The kernel of <i>&phi;</i> is {(<i>h,k</i>): (<i>h,k</i>) ⟼  <i>e<sub>K</sub></i>} = {(<i>h</i>, e<sub>K</sub>): <i>h</i> &in; <i>H</i>} = <i>H</i><sub>1</sub>. This establishes that <i>H</i><sub>1</sub> is a normal subgroup of <i>G</i> and that <i>G</i>/<i>H</i><sub>1</sub> ≃ <i>K</i> by the group isomorphism theorem. In an identical fashion using the map (<i>h,k</i>) ⟼ <i>h</i>, it can be shown that <i>K</i><sub>1</sub> is a normal subgroup of <i>G</i> and <i>G/K</i><sub>2</sub> ≃ <i>H</i>.</p>
 
 <p>Since <i>H</i><sub>1</sub> and <i>K</i><sub>2</sub> are normal subgroups of <i>G</i> = <i>H</i> x <i>K</i>, then it follows from <a href="normalizer.html">Lemma 7.12.4</a>
 that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. Let (<i>h</i>, <i>k</i>) be any element of <i>G</i> = <i>H</i> x <i>K</i>. Then (<i>h, k</i>) = (<i>h</i>, <i>e</i><sub>K</sub>) (<i>e</i><sub>H</sub>, <i>k</i>) &in; <i>H</i><sub>1</sub><i>H</i><sub>2</sub>. This shows <i>G</i> &subset; <i>H</i><sub>1</sub><i>H</i><sub>2</sub>. Hence <i>G</i> = <i>H</i><sub>1</sub><i>H</i><sub>2</sub>.</p>
@@ -240,27 +280,144 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 
 <p>Then <i>G</i> is isomorphic to the direct product <i>N</i><sub>1</sub> x N<sub>2</sub> x ⋅⋅⋅ N<sub>k</sub></p>
 
-<p><b>Proof</b>.</p>
-
-<p>We've seen that if a group is a direct product then there exist in <i>G</i> two subgroups <i>H</i> <i>K</i> such that <i>G</i> = <i>HK</i> and <i>H</i> ∩ <i>K</i> = {<i>e</i>}. And to prove this we used the fact that (see Lemma 7.17.5) that</p>
+<p><b>Proof</b>. We define the map</p>
 
 <div class="eq">
-<p><i>hk</i> ⋅ <i>h'k'</i> = <i>hh'</i> ⋅ <i>kk'</i> &emsp; &forall; <i>h,h'</i> &in; <i>H</i>, &forall; <i>k,k'</i> &in; <i>K</i> &emsp; (<b>7.17.1</b>)</p>
+<p><i>f</i>: <i>N</i><sub>1</sub> × <i>N</i><sub>2</sub> × ··· × <i>N<sub>k</sub></i> ⟶ <i>G</i><br>
+<i>f</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>k</sub></i>) = <i>a</i><sub>1</sub><i>a</i><sub>2</sub>···<i>a<sub>k</sub></i>.</p>
+</div>
+
+<p>The map <i>f</i> is surjective because by hypothesis (b), each element of <i>G</i> can be written in the form <i>a</i><sub>1</sub> <i>a</i><sub>2</sub>···<i>ak</i> for some <i>a<sub>i</sub></i> ∈ <i>N<sub>i</sub></i>, <i>i</i> = 1,2, ... ,<i>k</i>. The map <i>f</i> is injective because when <i>f</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>k</sub></i>) = <i>f</i>(<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>k</sub></i>), we obtain that <i>a</i><sub>1</sub>a<sub>2</sub>···<i>a<sub>k</sub></i> = <i>b</i><sub>1</sub><i>b</i><sub>2</sub> ··· <i>b<sub>k</sub></i>, so  that by the uniqueness of writing each element of <i>G</i> as a product, we have <i>a</i><sub>1</sub> = <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub> = <i>b</i><sub>2</sub>, ... , <i>a<sub>k</sub> = b<sub>k</sub></i>.</p>
+
+<p>By Lemma 7.17.5, we then have that <i>a<sub>i</sub>b<sub>j</sub> = b<sub>j</sub>a<sub>i</sub></i> for all <i>a<sub>i</sub></i> ∈ <i>N<sub>i</sub></i> and <i>b<sub>j</sub></i> ∈ <i>N<sub>j</sub></i> when <i>i</i> &ne;<i>j</i>. We use this fact to show that <i>f</i> is a homomorphism</p>
+
+<div class="eq">
+<p><i>f</i>((<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>k</sub></i>) (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>k</sub></i>)) = <i>f</i>(<i>a</i><sub>1</sub><i>b</i><sub>1</sub>, <i>a</i><sub>2</sub>b<sub>2</sub>, ... , <i>a<sub>k</sub>b<sub>k</sub></i>)<br>
+= <i>a</i><sub>1</sub><i>b</i><sub>1</sub><i>a</i><sub>2</sub><i>b</i><sub>2</sub>···<i>a<sub>k</sub>b<sub>k</sub></i><br>
+= <i>a</i><sub>1</sub><i>a</i><sub>2</sub><i>b</i><sub>1</sub><i>b</i><sub>2</sub>···<i>a<sub>k</sub>b<sub>k</sub></i><br>
+= <i>a</i><sub>1</sub><i>a</i><sub>2</sub>···<i>a<sub>k</sub>b</i><sub>1</sub><i>b</i><sub>2</sub>···<i>b<sub>k</sub></i><br>
+= <i>f</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>k</sub></i>) <i>f</i>(<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>k</sub></i>)</p>
+</div>
+
+<p>Therefore <i>f</i>: <i>N</i><sub>1</sub> × N<sub>2</sub> ×··· × <i>N<sub>k</sub></i> → <i>G</i> is an isomorpism. &emsp;□</p>
+
+<p>We've seen that if a group is a direct product then there exist in <i>G</i> two subgroups <i>H</i> <i>K</i> such that <i>G</i> = <i>HK</i> and <i>H</i> ∩ <i>K</i> = {<i>e</i>}. And to prove this we used the fact <i>kh' = h'k</i> of Lemma 7.17.5</p>
+
+<div class="eq">
+<p><i>hkh'k' = hh'kk'</i> &emsp; &forall; <i>h,h'</i> &in; <i>H</i>, &forall; <i>k,k'</i> &in; <i>K</i> &emsp; (<b>7.17.1</b>)</p>
 </div>
 
 <p>We suppose now that the group possesses a normal subgroup <i>N</i> and another subgroup (not necessarily normal) <i>H</i> such that</p>
 
 <div class="eq">
-<p><i>G</i> = <i>NH</i>, &emsp; <i>N</i> ∩ <i>H</i> = {<i>e</i>}
-</p>
+<p><i>G</i> = <i>NH</i>, &emsp; <i>N</i> ∩ <i>H</i> = {<i>e</i>}</p>
+</div>
 
 <p>in this case (7.17.1) does not hold anymore <i>i.e.</i> in general <i>nh ⋅ n'h'</i> &ne; <i>nn'</i> ⋅ <i>hh'</i>. But it is always true that</p>
 
 <div class="eq">
-<p><i>nh ⋅ n'h'</i> = <i>nhn'h'h</i><sup>−1</sup> ⋅ <i>hh'</i></p>
+<p><i>nh ⋅ n'h'</i> = <i>nhn'h'h</i><sup>−1</sup> ⋅ <i>hh'</i> &emsp; (<b>7.17.2</b>)</p>
 </div>
 
-<p>where <i>hn'h</i><sup>−1</sup>, being conjugates of an element of <i>N</i>, which is normal. We have now that the product of two elements <i>nh</i> and <i>n'h'</i> of <i>NH</i> does not equal (as in the case of both subgroups normal) the product of <i>nn'</i> by <i>hh'</i>, but the product of <i>n</i>(hn'h<sup>−1</sup>) by <i>hh'</i>;</p>
+<p>where <i>hn'h</i><sup>−1</sup>, being conjugates of an element of <i>N</i>, which is normal. We have now that the product of two elements <i>nh</i> and <i>n'h'</i> of <i>NH</i> does not equal (as in the case of both subgroups normal) the product of <i>nn'</i> by <i>hh'</i>, but the product of <i>n</i>(<i>hn'h</i><sup>−1</sup>) by <i>hh'</i>; The difference is that in place of <i>n'</i> there must be the conjugate of <i>n'</i> through the element <i>h</i>. Thus for every <i>h</i> &in; <i>H</i> the following map is defined</p>
+
+<div class="eq">
+<p><i>&gamma;<sub>h</sub></i>: <i>N</i> ⟶ <i>N</i><br>
+<i>n'</i> ⟼ <i>hn'h</i><sup>−1</sup></p>
+</div>
+
+<p>an <i>automorphism</i> of <i>N</i>. Note that in the case of <i>H</i> normal as well, this automorphism results the identical automorpshim: indeed we have hn' = n'h, from which <i>hn'h</i><sup>−1</sup> = <i>n'</i>.</p>
+
+<p>We can define the following map</p>
+
+<div class="eq">
+<p><i>&Phi;</i>: <i>H</i> ⟶ Aut(<i>N</i>)<br>
+<i>h</i> ⟼ <i>&gamma;<sub>h</sub></i></p>
+</div>
+
+<p>which is a <i>homomorpshim</i>. Equation 7.17.2, can be written in terms of the last homomorphism as</p>
+
+<div class="eq">
+<p><i>nhn'h' = n&Phi;</i>(<i>h</i>)(<i>n'</i>)<i>hh'</i></p>
+</div>
+
+<p>Note that, in case of <i>H</i> normal in <i>G</i>, <i>&Phi;</i>(<i>h</i>)(<i>n'</i>) = <i>n'</i> we find 7.17.1.</p>
+
+<p>Let now <i>H</i> and <i>K</i> two arbitrary groups and let <i>&Phi;</i> a homomorpshim from <i>K</i> to Aut(<i>H</i>). In the cartesian product <i>H x K</i> we can define the following operation</p>
+
+<div class="eq">
+<p>(<i>h,k</i>)(<i>h',k'</i>) := (<i>h</i>&Phi;(<i>k</i>)(<i>h'</i>),<i>kk'</i>)&emsp; (<b>7.17.3</b>)</p>
+</div>
+
+<p><i>H x K</i> with this operation is a group, and the subsets</p>
+
+<div class="eq">
+<p><i>H</i><sub>1</sub> = {(<i>h,e<sub>K</sub></i>) | <i>h</i> &in; <i>H</i>}<br>
+<i>K</i><sub>1</sub> = {(<i>e<sub>H</sub>, k</i>) | <i>k</i> &in; <i>K</i>}</p>
+</div>
+
+<p>are two normal subgroups in <i>H x K</i> of which <i>H</i><sub>1</sub> is isomorphic to <i>H</i> and <i>K</i><sub>1</sub> to <i>K</i>.</p>
+
+<p><b>Definition 7.17.16</b>. Let <i>H</i> and <i>K</i> two groups and <i>&Phi;</i> a homomorphism from <i>K</i> to Aut(<i>H</i>). The cartesian product <i>H x K</i> along with the operation 7.17.3 is named <i>semidirect product</i> of <i>H x K</i> through the homomorphism <i>&Phi;</i>, indicated by</p>
+
+<div class="eq">
+<p><i>H</i> ∐<sub>&Phi;</sub> <i>K</i></p>
+</div>
+
+<p>The analogous theorem for direct product can be given for semidirect products:</p>
+
+<p><b>Theorem 7.17.17</b> Let <i>N</i> and <i>H</i> two subgroups of a group <i>G</i>. If <i>N</i> is normal in <i>G</i>, and <i>G = NH</i> and <i>N</i> ∩ <i>H</i> = {<i>e</i>}, then <i>G</i> is isomorphic to the semidirect product <i>N</i> ∐<sub><i>&Phi;</i></sub> <i>H</i>, where <i>&Phi;</i>: <i>H</i> ⟶ Aut(<i>N</i>) is the automorphism defined by</p>
+
+<div class="eq">
+<p>&Phi;</i>(<i>h</i>)(<i>n</i>) = <i>hnh</i><sup>−1</sup></p>
+</div>
+
+<p><b>Proof</b>. The map</p>
+
+<div class="eq">
+<p>&Psi;: <i>N</i> ∐<sub>&Phi;</sub> <i>H</i> ⟶ <i>G</i>
+(<i>n,h</i>) ⟼ <i>nh</i></p>
+</div>
+
+<p>is a surjective homomoerphism, whose kernel is the neutral element, hence a isomorphism. &emsp; □</p>
+
+<p><b>Examples 7.17.18</b> Let <i>G</i> = S<sub>3</sub>, <i>N</i> = ⟨(1,2,3)⟩, and <i>H</i> = ⟨(1,2)⟩. Then it results</p>
+
+<div class="eq">
+<p>S<sub>3</sub> ≃ <i>N</i> ∐<sub>&Phi;</sub> <i>H</i></p>
+</div>
+
+<p>where &Phi;((1,2)(1,2,3)) = (1,2)(1,2,3)(1,2)<sup>−1</sup> = (1,3,2). The map between <i>N</i> ∐<sub>&Phi;</sub> <i>H</i> and S<sub>3</sub> is the following</p>
+
+<div class="eq">
+<p>(id,id) ⟼ id<br>
+((1,2,3), id) ⟼ (1,2,3)<br>
+((1,3,2), id) ⟼ (1,3,2)<br>
+(id, (1,2)) ⟼ (1,2)<br>
+((1,2,3), (1,2) ⟼ (1,3)<br>
+((1,3,2), (1,2) ⟼ (2,3)&emsp;■</p>
+</div>
+
+<h2>Exercises</h2>
+
+<ol>
+	<li><p>What group ℤ<sub>5</sub> x ℤ<sub>8</sub> is isomorphic to?</p></li>
+	<li><p>Determine whether the group ℤ<sub>16</sub> is isomorphic to the direct product ℤ<sub>4</sub> x ℤ<sub>4</sub>.</p></li>
+	<li><p>Check whether (ℚ, +) is the direct product of two of its proper subgroups.</p></li>
+	<li><p>Prove that a cyclic group with order 15 is necessarily cyclic.</p></li>
+	<li><p>Prove that U(ℤ<sub>7</sub>) is a direct product. Check whether it is cyclic or not.</p></li>
+	<li><p>Calculate the possible orders of the elements of ℤ x ℤ<sub>6</sub>. Is it a cyclic group? And what about ℤ x ℤ?.</p></li>
+	<li><p>Which of the following groups having the same order are isomorphic?</p>
+
+	<div class="eq">
+	<p>ℤ<sub>16</sub>, &emsp; ℤ<sub>8</sub> x ℤ<sub>2</sub>, &emsp; ℤ<sub>4</sub> x ℤ<sub>4</sub>, &emsp; ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub>, &emsp; ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></p>
+	</div>
+
+	</li>
+
+	<li><p>Calculate the orders of the elements ℤ<sub>2</sub> x D<sub>5</sub>.</p></li>
+	<li><p>Check whethet S<sub>4</sub> is a directo product of its non-trivial subgroups.</p></li>
+</ol>
 
 <section aria-label="End">
 <a href="cauchy_sylow.html">&#171;Sylow and Cauchy theorems</a>
