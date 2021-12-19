@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content=">Dihedral groups"/>
   <title>Dihedral groups</title>
   <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-   
+
 <div class="content">
 
 <h1>Dihedral groups</h1>
@@ -100,12 +100,7 @@
 <p>2&pi;/<i>n</i>, &emsp; 2 ⋅ &pi;/<i>n</i>, &emsp; 3 ⋅ 2&pi;/<i>n</i>, &emsp; <i>k</i> ⋅ 2&pi;/<i>n</i>, &emsp; ... &emsp; <i>n</i> ⋅ 2&pi;/<i>n</i> = id</p>
 </div>
 
-<p><i>D<sub>n</sub></i> consists as well of <i>n</i> reflections with respect to the 'symmetry axes' of the polygon: if <i>n</i> is odd, the symmetry axes are the bisectors of two opposite sides, if <i>n = 2k</i> they are the <i>k</i> bisectors and <i>k</i> axes as it can seen from the figure below:</p>
-
-<figure>
-<img src="img/pentagon_hexagon.png" alt="pentagon hexagon"/>
-<figcaption><b>Fig. 1</b></figcaption>
-</figure>
+<p><i>D<sub>n</sub></i> consists as well of <i>n</i> reflections with respect to the 'symmetry axes' of the polygon: if <i>n</i> is odd, the symmetry axes are the bisectors of two opposite sides, if <i>n = 2k</i> they are the <i>k</i> bisectors and <i>k</i> axes as it can seen from the figure below, where regular polygon with <i>n</i> = 5 (pentagon) and <i>n</i> = 6 (a hexagon )are shown if Fig. 1.</p>
 
 <p>We have |<i>D<sub>n</sub></i>| = 2<i>n</i>. Since rigid motions of the plane can be thought as permutations of vertices, it results</p>
 
@@ -120,6 +115,37 @@
 </div>
 
 <p>since |<i>D<sub>n</sub></i>| = 2<i>n</i> and |𝓢<sub><i>n</i></sub>| = <i>n</i>!, and 2<i>n</i> &le; <i>n</i>!, they are equal only for <i>n</i> = 3.</p>
+
+<div id="D5">
+<figure>
+<img src="img/pentagon_hexagon.png" alt="pentagon hexagon"/>
+<figcaption><b>Fig. 1</b></figcaption>
+</figure>
+
+<p><b><p><i>D</i><sub>5</sub></b> is the group of symmetries of a regular pentagon. It has ten elements: <i>e</i>, four counterclockwise rotations (<i>r</i><sub>1</sub> = 72°, <i>r</i><sub>1</sub><sup>2</sup> = 144°, r<sub>1</sub><sup>3</sup>=216°, r<sub>1</sub><sup>4</sup> = 288°) and the five reflections <i>l<sub>k</sub></i> about perpendiculars from a vertex to the opposite side.</p>
+
+<p>All posible rotations can be represented as permutations in cyclic notation:</p>
+
+<div class="eq">
+<p><i>r</i><sub>1</sub> = (1, 2, 3, 4, 5), &emsp; <i>r</i><sub>1</sub><sup>2</sup> = (1, 3 , 5, 2, 4) &emsp;  <i>r</i><sub>1</sub><sup>3</sup> = (1, 4, 2, 5, 3),<br>
+ r<sub>1</sub><sup>4</sup> = (1, 5, 4, 3, 2), &emsp; <i>r</i><sub>1</sub><sup>5</sup> = 1</p>
+</div>
+
+<p>If we let <i>l<sub>k</sub></i> denote the reflection about line <i>l<sub>k</sub></i> for <i>k</i> = 1, 2, 3 ,4 ,5, then the reflections in <i>D</i><sub>5</sub> appear as follows in cyclic notation:</p>
+
+<div class="eq">
+<p>l<sub>1</sub> = (2, 5) (3, 4), &emsp; l<sub>2</sub> = (1,3)(4,5), &emsp; l<sub>3</sub> = (1,5)(2,4), <br>
+l<sub>4</sub> = (1, 2)(3, 5), &emsp; l<sub>5</sub> = (1, 4)(2, 3)</p>
+</div>
+
+<p>Direct computations verify that</p>
+
+<div class="eq">
+<p><i>l</i><sub>1</sub>r<sub>1</sub> = <i>l</i><sub>3</sub>, &emsp; <i>l</i><sub>1</sub>r<sub>1</sub><sup>2</sup> = <i>l</i><sub>5</sub>, &emsp; <i>l</i><sub>1</sub>r<sub>1</sub><sup>3</sup> = <i>l</i><sub>2</sub>, &emsp; <i>l</i><sub>1</sub>r<sub>1</sub><sup>4</sup> = <i>l</i><sub>4</sub></p>
+</div>
+
+
+</div>
 
 <h2>Symmetries of a Square</h2>
 
@@ -150,7 +176,7 @@
 
 <img src="img/D4_example2.png" alt="D4 example"/>
 
-<p>Thus, we see that this pair of motions—taken together—is equal to the Flip about the main diagonal. This observation suggests that we can compose two motions to obtain a single motion. And indeed we can, since the eight motions may be viewed as functions from the square region to itself, and as such we can combine them using function composition. With this in mind, we write H R<sub>90</sub> = D because in lower level math courses function composition <i>f ∘ g</i> means “g followed by f.” The eight motions R<sub>0</sub>, R<sub>90</sub>, R<sub>180</sub>, R<sub>270</sub>, H, V, D, and D', together with the operation composition, form a mathematical system called the <i>dihedral group of order 8</i> (the ­order of a group is the number of elements it contains). It is denoted by D<sub>4</sub>. Rather than introduce the formal definition of a group here, let’s look at some properties of groups by way of the example D<sub>4</sub>. <br> To facilitate future computations, we construct an operation table or Cayley table  for D<sub>4</sub> below. The circled entry represents the fact that D = HR<sub>90</sub>. (In general, <i>ab</i> denotes the entry at the intersection of the row with <i>a</i> at the left and the column with <i>b</i> at the top.)</p>
+<p>Thus, we see that this pair of motions—taken together—is equal to the Flip about the main diagonal. This observation suggests that we can compose two motions to obtain a single motion. And indeed we can, since the eight motions may be viewed as functions from the square region to itself, and as such we can combine them using function composition. With this in mind, we write H R<sub>90</sub> = D because in lower level math courses function composition <i>f ∘ g</i> means “<i>g</i> followed by <i>f</i>”. The eight motions R<sub>0</sub>, R<sub>90</sub>, R<sub>180</sub>, R<sub>270</sub>, H, V, D, and D', together with the operation composition, form a mathematical system called the <i>dihedral group of order 8</i> (the ­order of a group is the number of elements it contains). It is denoted by D<sub>4</sub>. Rather than introduce the formal definition of a group here, let’s look at some properties of groups by way of the example <i>D</i><sub>4</sub>. <br> To facilitate future computations, we construct an operation table or Cayley table  for <i>D</i><sub>4</sub> below. The circled entry represents the fact that D = HR<sub>90</sub>. (In general, <i>ab</i> denotes the entry at the intersection of the row with <i>a</i> at the left and the column with <i>b</i> at the top.)</p>
 
 <p>Note that <i>r</i><sup>4</sup> = <i>e</i> and <i>s</i><sup>2</sup> = <i>e</i> and <i>sr = r</i><sup>&minus;1</sup><i>s</i>.</p>
 
@@ -231,7 +257,7 @@
 <p>thus <i>D</i><sub>4</sub> is a subgroup of 𝓢<sub>4</sub>. There are 8 symmetries of the square, and 4! = 24 elements of 𝓢<sub>4</sub>, so the <i>D</i><sub>4</sub> is a just a third of 𝓢<sub>4</sub>.</p>
 </div>
 
-<p>We indicate with <i>r</i> the rotation of 2&pi;/<i>n</i>; This has order <i>n</i> and it generates the subgroup of all rotations, since any rotation is a <i>r<sup>k</sup></i> of it</p>
+<p>We indicate with <i>r</i> the rotation of 2<i>&pi;</i>/<i>n</i>; This has order <i>n</i> and it generates the subgroup of all rotations, since any rotation is a <i>r<sup>k</sup></i> of it</p>
 
 <div class="eq">
 <p><i>r<sup>k</sup> = r<sub>k2&pi;/n</sub></i>, &emsp; <i>k</i> = 1, ..., <i>n</i></p>
@@ -244,7 +270,7 @@
 <p><b>7.6.3 Proposition</b>. Let <i>r</i> the rotation of 2&pi;/<i>n</i> around the center <i>O</i> of a regular polygon and <i>f</i> an arbitrary reflection. Then the dihedral group <i>D<sub>n</sub></i> is generated by <i>r</i> and <i>f</i> and it results</p>
 
 <div class="eq">
-<p><i>D<sub>n</sub></i> = ⟨<i>r,s</i>⟩ = {id, <i>r, r<sup>2</sup>, ...., r<sup>n &minus; 1</sup>, s, rs, r<sup>2</sup>s, ..., r<sup>n &minus; 1</sup>s</i>}</p>
+<p><i>D<sub>n</sub></i> = ⟨<i>r,s</i>⟩ = {id, <i>r, r</i><sup>2</sup>, ...., <i>r</i><sup>n &minus; 1</sup>, s<i>, rs, r</i><sup>2</sup><i>s</i>, ..., <i>r</i><sup>n &minus; 1</sup>s</i>}</p>
 </div>
 
 <p><b>Proof</b>. We are going to prove that every symmetry of the polygon can be written in the form</p>
@@ -305,7 +331,7 @@
 <p>and so</p>
 
 <div class="eq">
-<p><i>x' = r</i> cos (<i>&theta; + &phi;</i>) &emsp; and &emsp; <i>y' = r</i> sin (<i>&theta; + &phi;</i>)
+<p><i>x' = r</i> cos (<i>&theta; + &phi;</i>) &emsp; and &emsp; <i>y' = r</i> sin (<i>&theta; + &phi;</i>)</p>
 </div>
 
 <img src="img/matrix_notation.png" alt="matrix notation"/>
@@ -494,7 +520,7 @@
 <p>We can partition <i>D</i><sub>4</sub> into its conjugacy classes by:</p>
 
 <div class="eq">
-<p>D<sub>4</sub> = [1] ∪ [r<sup>2</sup>] ∪ [r] ∪ [s] ∪ [rs] = {1} ∪ {r<sup>2</sup>} ∪ {r,r<sup>3</sup>} ∪ {s,r<sup>2</sup> s} ∪ {rs,r<sup>3</sup>s}</p>
+<p><i>D</i><sub>4</sub> = [1] ∪ [r<sup>2</sup>] ∪ [<i>r</i>] ∪ [<i>s</i>] ∪ [<i>rs</i>] = {1} ∪ {<i>r</i><sup>2</sup>} ∪ {<i>r,r</i><sup>3</sup>} ∪ {<i>s,r</i><sup>2</sup> <i>s</i>} ∪ {<i>rs,r</i><sup>3</sup><i>s</i>}</p>
 </div>
 
 <p><b>7.6.5 Lemma</b>. The center of <i>D<sub>n</sub></i> is {<i>e</i>} or {<i>e, r<sup>n/2</sup></i>} depending on wheter <i>n</i> is even or odd.</p>
