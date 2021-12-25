@@ -52,14 +52,173 @@
 	
 	<p>By applying two times such a transformation, the identity is obtained.</p></li>
 	
-	<li><p><i>Rotations</i>: the transformations of hte form</p>
+	<li><p><i>Rotations</i>: Consider the following situation in which a point <i>P</i> of coordinates (<i>x, y</i>) is rotated about the origin of an angle &theta; to the point <i>P'</i> of coordinates (<i>x', y'</i>).</p>
+
+	<img src="img/rotations_plane.png" alt="plane rotations"/>
+
+	<p>From the trigonometric relations</p>
+
+	<div class="eq">
+	<p><i>x</i> = <i>&rho;</i> cos &phi;, &emsp; <i>y</i> = &rho; sin &phi;</p>
+	</div>
+
+	<p>and</p>
+
+	<div class="eq">
+	<p><i>x'</i> = <i>&rho;</i> cos (&theta; + &phi;) , &emsp; <i>y</i> = &rho; sin (&theta; + &phi;)</p>
+	</div>
+
+	<p>where &rho; indicates the lenght of both OP and OP'. Since</p>
+
+	<div class="eq">
+	<p><i>&rho;</i> cos (&theta; + &phi;) = <i>&rho;</i> cos &theta; <i>&rho;</i> sin &phi; − <i>&rho;</i> sin &theta; cos &phi; = <i>x</i> cos &theta; − <i>y</i> sin &theta;</p>
+	<p><i>&rho;</i> sin (&theta; + &phi;) = <i>&rho;</i> sin &theta; <i>&rho;</i> cos &phi; + <i>&rho;</i> cos &theta; sin &phi; = <i>x</i> sin &theta; + <i>y</i> cos &theta;</p>
+	</div>
+
+	<p>we have</p>
+
+	<div class="eq">
+	<p><i>x'</i> = x cos &theta; − y sin &theta;<br>
+	<i>y'</i> = x sin &theta; + y sin &theta;</p>
+	</div>
+
+	<p>Introducing the column vector (x y) and (x' y') we can write the transformation as</p>
+
+	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>x</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>y</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>To reverse it, we apply the rotation −&theta; and obtain <i>A</i><sup>−1</sup></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3B8;</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>The matrix <i>A</i> above is a <a href="../linear_algebra/orthogonal_matrix.html">orthogonal matrix</a>, <i>i.e.</i> a matrix such that <i>A<sup>T</sup></i> = <i>A</i><sup>−1</sup>.</p>
+
+<p>All these transformations can be represented by the following equations</p>
 	
 	<div class="eq">
-	<p><i>x' = x</i> cos <i>&theta;</i> + <i>y</i> sin <i>&theta; +  &alpha;</i>.</p>
-	<p><i>y' = &epsilon; x</i> sin <i>&theta;</i> −&epsilon; <i>y</i> cos <i>&theta; + &beta;</i>.</p>
+		<p><i>x' = x</i> cos <i>&theta;</i> + <i>y</i> sin <i>&theta; +  &alpha;</i>.<br>
+		<i>y' = &epsilon; x</i> sin <i>&theta;</i> −&epsilon; <i>y</i> cos <i>&theta; + &beta;</i>.</p>
 	</div>
 	
-	<p>with <i>&epsilon;</i> = &pm; 1. The matrix <i>A</i> = [cos <i>&theta;</i>, sin <i>&theta;; &epsilon; x</i> sin <i>&theta;</i>], is orthogonal with determinant &pm;1.</p></li>
+<p>with <i>&epsilon;</i> = &pm; 1. The matrix <i>A</i> = [cos <i>&theta;</i>, sin <i>&theta;; &epsilon; x</i> sin <i>&theta;</i>], is orthogonal with determinant &pm;1.</p></li>
 	
 </ol>
 
@@ -84,7 +243,7 @@
 	
 	<p>In 1872, Felix Klein, an eminent German mathematician, in his famous Erlanger Programm attempted to define geometry as the study of those properties which are invariant under a given group of transformation: different geometries corresponding in this way to different transformation groups. Geometries may be classified according to the group of transformations which preserve the intrinsic
 properties of the geometry. In the case of Euclidean geometry, this is the group of Euclidean isometries: in line with the above, these will be seen to be the rotations, reflections and translations of the plane.</p>
-	</li>
+</li>
 	
 </ol>
 
