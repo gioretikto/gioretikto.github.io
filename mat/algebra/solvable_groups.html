@@ -37,7 +37,7 @@
 
 <p>Notice how the inverse of a commutator is still a commutator, thus <i>G</i> ', is composed by <i>products</i> of commutators. Every element of <i>G</i> ' has the form <i>a</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup><i>a</i><sub>2</sub><sup><i>h</i><sub>2</sub></sup> ⋅⋅⋅ <i>a</i><sub><i>t</i></sub><sup><i>h</i><sub><i>t</i></sub></sup>, where <i>a</i><sub><i>j</i></sub> has the form <i>xyx</i><sup>−1</sup><i>y</i><sup>−1</sup>, <i>h</i> = &pm;1 and <i>t</i> is a positive integer.</p>
 
-<p>Let's calculate the derived subgroup <i>S</i><sub>3</sub> ', of <i>S</i><sub>3</sub>.  Notice how any commutator is an even permutation, so that <i>S</i><sub>3</sub> ' &subseteq; <i>A</i><sub>3</sub> '. The only even permutations on 3 elements are id, and the cyclic permutations (1, 2, 3) and (1, 3, 2), then we have</p> 
+<p>Let's calculate the derived subgroup <i>S</i><sub>3</sub> ', of <i>S</i><sub>3</sub>. Notice how any commutator is an even permutation, so that <i>S</i><sub>3</sub> ' &subseteq; <i>A</i><sub>3</sub> '. The only even permutations on 3 elements are id, and the cyclic permutations (1, 2, 3) and (1, 3, 2), then we have</p> 
 
 <div class="eq">
 <p>(1,2) id (1,2)<sup>−1</sup> id<sup>−1</sup> = id &in; <i>S</i><sub>3</sub> '<br>
@@ -85,7 +85,7 @@
 <p><b>Definition 17.18.3</b> A group <i>G</i> is said <i>solvable</i> if it is possible to find a chain of subgroups,</p>
 
 <div class="eq">
-<p><i>G = M</i><sub>0</sub> ⊃ <i>M</i><sub>1</sub> ⊃ <i>M</i><sub>2</sub> ⊃⋅⋅⋅ ⊃ <i>M</i><sub><i>s</i></sub> = {<i>e</i>}</p>
+<p><i>G = M</i><sub>0</sub> ⊃ <i>M</i><sub>1</sub> ⊃ <i>M</i><sub>2</sub> ⊃ ⋅⋅⋅ ⊃ <i>M</i><sub><i>s</i></sub> = {<i>e</i>}</p>
 </div>
 
 <p>with each M<sub>i</sub> is normal in <i>M</i><sub><i>i</i> − 1</sub> and with abelian quotients <i>M</i><sub><i>i</i> − 1</sub>/<i>M</i><sub>i</sub>.</p>
@@ -179,6 +179,21 @@
 </div>
 
 <p>where each <i>G</i><sub>i+1</sub> is a normal subgroup of <i>G<sub>i</sub></i> and <i>G</i><sub><i>i</i> − 1</sub>/<i>G<sub>i</sub></i> is abelian. Since <i>S<sub>n</sub></i> contains every 3-cycles, we conclude that <i>G</i><sub>1</sub> contains every 3-cycles. By induction on <i>i</i> we conclude that <i>G</i><sub>m</sub> = {<i>e</i>} contains every 3-cycle, which is impossible. Hence such a chain of subgroups cannot exists, and our theorem is proved. &emsp;□</p>
+
+<h2>Exercises</h2>
+
+<ol>
+	<li><p>Prove that a solvable group is simple if and only if is cyclic of prime order.</p></li>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p><b>1st solution</b>. <i>G</i> being solvable and nontrivial means it has proper subgroup <i>N</i> with <i>G</i>/<i>N</i> abelian. But <i>G</i> simple means <i>N</i> = {<i>e</i>}. Now <i>G</i>/{<i>e</i>} is abelian: {<i>e</i>}<i>x</i> * {<i>e</i>}<i>y</i> = {<i>e</i>}<i>xy </i>= {<i>e</i>}<i>y</i> * {<i>e</i>}<i>x</i> = {<i>e</i>} * <i>yx</i> so that {e⋅xy} = {xy} and {e⋅yx} = {<i>yx</i>}, but {<i>xy</i>} = {<i>yx</i>} as set equality, implies (since each set has exactly one element in it) <i>xy = yx</i> in <i>G</i>. Alternatevely use the <a href="fund_theorem_homomorphism.html">First Isomorphism Theorem</a>: the identity map <i>i</i>: <i>G</i> ⟶ <i>G</i> is a group homomorphism, that is surjective with kernel {<i>e</i>}, thus <i>i</i>(<i>G</i>) = <i>G</i> =~ <i>G</i>/{<i>e</i>}. So that means the only subgroups of <i>G</i> at all are <i>G</i> and {<i>e</i>}. If <i>G</i> is simple and abelian then <i>G</i> is cyclic as well: because if you take any nonidentity <i>g</i> &in; <i>G</i>, and if the cyclic subgroup ⟨<i>g</i>⟩ is not all of <i>G</i>, then it is a normal subgroup of <i>G</i> (because <i>G</i> is abelian) that is different from {<i>e</i>} and <i>G</i>, not possible when <i>G</i> is simple. By <a href="lagrange.html">Theorem 7.9.8</a> a simple abelian group has prime order. Hence composition factors of <i>G</i> have prime orders. The converse is an immediate consequence of the definition of solvability. &emsp;■ </p>
+
+<p><b>2nd solution</b>. Assume <i>G</i> is a solvable simple group. If <i>G</i> is a solvable nontrivial group, then <i>G '&ne; G</i>, for otherwise all terms of the derived seriees would be <i>G</i>, and so it will never terminate to {<i>e</i>}. Since <i>G</i> is assumed to be simple, <i>G</i> ' = {<i>e</i>}, and so <i>G</i> is abelian. Since an abelian simple group is prime cyclic, the result follows. &emsp;■.</p></li>
+
+</ol>
 
 <section aria-label="End">
 <a href="epoxides.html">&#171;Epoxides</a>
