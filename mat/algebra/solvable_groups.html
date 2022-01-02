@@ -51,7 +51,9 @@
 
 <ol type="a">
 	<li><p>The derived subgroup <i>G</i> ' is a normal subgroup and the quotient <i>G</i>/<i>G</i> ' is abelian;</p></li>
+
 	<li><p>if <i>N</i> ⊲̲ <i>G</i> is abelian if and only if <i>G'</i> &le; <i>N</i>, that is <i>G</i> ' is the smallest normal subgroup of <i>G</i> such that the quotient is abelian;</p></li>
+
 	<li><p>if <i>N</i> is a normal subgroup of <i>G</i>, then also <i>N</i> ', is a normal subgroup of <i>G</i>.</p></li>
 </ol>
 
@@ -119,7 +121,7 @@
 	</div>
 </ol>
 
-<p>A non-abelian simple group, obviuosly cannot be <i>solvable</i>.</p>
+<p>A <i>non-abelian simple</i> group, obviuosly cannot be <i>solvable</i>. But all abelian groups are trivially solvable —a subnormal series being given by just the group itself and the trivial group</p>
 
 <p><b>Proposition 17.18.4</b> A group <i>G</i> is solvable if and only if there exists a <i>m</i> &ge; 0 such that <i>G</i><sup>(<i>m</i>) = {<i>e</i>}.</p>
 
@@ -129,10 +131,10 @@
 <p><i>G = M</i><sub>0</sub> ⊃ <i>M</i><sub>1</sub> ⊃ <i>M</i><sub>2</sub> ⊃⋅⋅⋅ ⊃ <i>M</i><sub><i>s</i></sub> = {<i>e</i>}</p>
 </div>
 
-<p>since every <i>M<sub>i</sub></i> is normal in <i>G</i> it is also normal in <i>M</i><sub>i − 1</sup>. In addition</p>
+<p>since every <i>M<sub>i</sub></i> is normal in <i>G</i> it is also normal in <i>M</i><sub>i − 1</sub>. In addition</p>
 
 <div class="eq">
-<p> <i>M</i><sub><i>i</i> − 1</sup>/<i>M<sub>i</sub></i> = <i>G</i><sup>(<i>i</i> − 1)</sup>/ <i>G</i><sup>(<i>i</i>)</sup> = <i>G</i><sup>(<i>i</i> − 1)</sup> / <i>G</i><sup>(<i>i</i> − 1) '</sup>
+<p> <i>M</i><sub><i>i</i> − 1</sub>/<i>M<sub>i</sub></i> = <i>G</i><sup>(<i>i</i> − 1)</sup>/ <i>G</i><sup>(<i>i</i>)</sup> = <i>G</i><sup>(<i>i</i> − 1)</sup> / <i>G</i><sup>(<i>i</i> − 1) '</sup>
 </div>
 
 <p>since every quotient is abelian, <i>G</i> is solvable;</p>
@@ -140,10 +142,10 @@
 <p>Conversely, suppose <i>G</i> is solvable. There there's a finite chain of subgroups each normal in the next, with abelian quotients</p>
 
 <div class="eq">
-<p><i>G = M</i><sub>0</sub> ⊃ <i>M</i><sub>1</sub> ⊃ <i>M</i><sub>2</sub> ⊃ ⋅⋅⋅ ⊃ <i>M</i><sub><i>s</i></sub> = {<i>e</i>}</p>
+<p><i>G = M</i><sub>0</sub> ⊃ <i>M</i><sub>1</sub> ⊃ <i>M</i><sub>2</sub> ⊃ ⋅⋅⋅ ⊃ <i>M</i><sub>s</sub> = {<i>e</i>}</p>
 </div>
 
-<p>such that for every <i>i</i>, <i>M<sub>i</sub></i> ⊲̲ <i>M</i><sub><i>i</i> − 1</sup> and <i>M</i><sub><i>i</i> − 1</sup>/<i>M<sub>i</sub></i> is abelian. But then from Proposition 17.18.2 (b) it results <i>M</i><sub><i>i</i> − 1</sup> &subseteq; <i>M<sub>i</sub></i>. We have the following situation</p>
+<p>such that for every <i>i, M<sub>i</sub></i> ⊲̲ <i>M</i><sub><i>i</i> − 1</sub> and <i>M</i><sub><i>i</i> − 1</sub>/<i>M<sub>i</sub></i> is abelian. But then from Proposition 17.18.2 (b) it results <i>M</i><sub><i>i</i> − 1</sub> &subseteq; <i>M<sub>i</sub></i>. We have the following situation</p>
 
 <div class="eq">
 <p><i>M</i><sub>1</sub> ⊃ <i>M</i><sub>0</sub> ' = <i>G</i> '<br>
@@ -185,6 +187,7 @@
 <ol>
 	<li><p>Prove that a solvable group is simple if and only if is cyclic of prime order.</p></li>
 	<li><p>Prove that for <i>n</i> &ge; 5 the alternating group <i>A</i><sub>5</sub> is simple.</p></li>
+	<li><p>Using the result of the previous exercise, prove that for <i>n</i> &ge; 5 the symmetric group <i>S<sub><i>n</i></sub></i> is not solvable.</p></li>
 </ol>
 
 <h2>Solutions</h2>
@@ -228,12 +231,16 @@
 </li>
 </ol>
 
-<p>In the first case <i>σ</i> being even and not being a 3-cycle, moves at least two other symbols besides the three listed ones, say 4 and 5: If <i>σ</i> permutes exactly 4 integers, then <i>σ</i> = (1 2 3 <i>a</i>) for some integer <i>a</i> &ne; 1, 2, 3, and <i>σ</i> is odd, thus not in <i>N</i>. Let <i>&beta;</i> = (3, 4, 5) &in; <i>A<sub>n</sub></i> (because <i>n</i> &ge; 5), then <i>&beta;&sigma;&beta;</i><sup>−1</sup> &in; <i>N</i>, because <i>N</i> ⊲̲ <i>A<sub>n</sub></i>. <a herf="conjugacy.html">Proposition 7.5.3</a> shows that <i>σ'</i> = <i>&beta;σ&beta;</i><sup>−1</sup> = <i>&gamma;'ρ'</i> = (1, 2, 4, ···)<i>ρ'</i> with <i>ρ'</i> not containing any of the symbols appearing in <i>&gamma;'</i>. Thus <i>σ'σ</i><sup>−1</sup> moves 3 into 4 and cannot be the identity. But <i>σ'σ</i><sup>−1</sup> is in <i>N</i> and fixes all symbols other than 1, 2, 3, 4, 5 that are fixed by <i>σ</i>. In addition, <i>σ'σ</i><sup>−1</sup> fixes 2, and none of 1, 2, 3, 4, 5 is fixed by <i>σ</i>. Thus <i>σ'σ</i><sup>−1</sup> is a member of <i>N</i> other than the identity that fixes fewer symbols than <i>σ</i>, and we have arrived at a contradiction.</p>
+<p>In the first case <i>σ</i> being even and not being a 3-cycle, moves at least two other symbols besides the three listed ones, say 4 and 5: If <i>σ</i> permutes exactly 4 integers, then <i>σ</i> = (1 2 3 <i>a</i>) for some integer <i>a</i> &ne; 1, 2, 3, and <i>σ</i> is odd, thus not in <i>N</i>. Let <i>&beta;</i> = (3, 4, 5) &in; <i>A<sub>n</sub></i> (because <i>n</i> &ge; 5), then <i>&beta;&sigma;&beta;</i><sup>−1</sup> &in; <i>N</i>, because <i>N</i> ⊲̲ <i>A<sub>n</sub></i>. <a href="conjugacy.html">Proposition 7.5.3</a> shows that <i>σ'</i> = <i>&beta;σ&beta;</i><sup>−1</sup> = <i>&gamma;'ρ'</i> = (1, 2, 4, ···)<i>ρ'</i> with <i>ρ'</i> not containing any of the symbols appearing in <i>&gamma;'</i>. Thus <i>σ'σ</i><sup>−1</sup> moves 3 into 4 and cannot be the identity. But <i>σ'σ</i><sup>−1</sup> is in <i>N</i> and fixes all symbols other than 1, 2, 3, 4, 5 that are fixed by <i>σ</i>. In addition, <i>σ'σ</i><sup>−1</sup> fixes 2, and none of 1, 2, 3, 4, 5 is fixed by <i>σ</i>. Thus <i>σ'σ</i><sup>−1</sup> is a member of <i>N</i> other than the identity that fixes fewer symbols than <i>σ</i>, and we have arrived at a contradiction.</p>
 
 <p>The second case is that <i>σ</i> is a product <i>σ</i> = (1, 2)(3, 4) ··· of disjoint transpositions. There must be at least two factors since <i>σ</i> is even. Put <i>&beta;</i> = (1, 2)(4, 5), the symbol 5 existing since the group <i>A<sub>n</sub></i> in question has <i>n</i> &ge; 5. Then <i>σ'</i> = (1, 2)(3, 5) ···. Since <i>σ'σ</i><sup>−1</sup> carries 4 into 5, <i>σ'σ</i><sup>−1</sup> is a member of <i>N</i> other than the identity. It fixes all symbols other than 1, 2, 3, 4, 5 that are fixed by <i>σ</i>, and in addition it fixes 1 and 2. Thus <i>σ'σ</i><sup>−1</sup> fixes more symbols than <i>σ</i> does, and again we have arrived at a contradiction.</p>
 
-<p>(b) These two cases show that <i>N</i> must contain a 3-cycle <i>&tau;</i>. We know that any two 3-cycles in <i>S<sub>n</sub></i> are conjugate. Hence <i>&tau;</i> is conjugate to any other 3-cycle in <i>𝓢<sub>n</sub></i>. Since <i>N</i> is normal and <i>&tau;</i> &in; <i>N</i> each of these conjugates must also be in <i>N</i>. Therefore <i>N</i> contains all 3-cycles in <i>S<sub>n</sub></i>. We know from <a href="Sn.html">Lemma 7.4.19</a> that for <i>n</i> ≥ 3, the alternating group <i>A<sub>n</sub></i> is generated by 3-cycles. Thus <i>N = A<sub>n</sub></i>. &emsp;■</p>
+<p>(b) From the argument above <i>N</i> must contain a 3-cycle <i>&tau;</i>. We know that any two 3-cycles in <i>S<sub>n</sub></i> are conjugate. Hence <i>&tau;</i> is conjugate to any other 3-cycle in <i>𝓢<sub>n</sub></i>. Since <i>N</i> is normal and <i>&tau;</i> &in; <i>N</i> each of these conjugates must also be in <i>N</i>. Therefore <i>N</i> contains all 3-cycles in <i>S<sub>n</sub></i>. We know from <a href="Sn.html">Lemma 7.4.19</a> that for <i>n</i> ≥ 3, the alternating group <i>A<sub>n</sub></i> is generated by 3-cycles. Thus <i>N = A<sub>n</sub></i>. &emsp;■</p>
 </li>
+
+<li><p>If <i>S<sub>n</sub></i> were solvable, <i>A<sub>n</sub></i> would be solvable too by Corollary 17.18.5, but solvable and simple together imply having prime order, which is not the case for <i>A<sub>n</sub></i> (for <i>n</i> &ge; 5).</p></li>
+
+</ol>
 
 <section aria-label="End">
 <a href="epoxides.html">&#171;Epoxides</a>
