@@ -21,7 +21,7 @@
 
 <h1>The symmetric group 𝓢<sub>n</sub></h1>
 
-<p>We have introduced the group 𝓢(<i>X</i>, ∘) of all <i>bijections</i> from <i>X</i> to itself. When the number of elements of <i>X</i> is finite the group 𝓢(<i>X</i>) is indicated by 𝓢<sub><i>n</i></sub>, with <i>n</i> representing the cardinality of of <i>X</i> = {<i>x<sub>1</sub>, x<sub>2</sub>, ...,x<sub>n</sub></i>}, and is known as <i>symmetric group of degree n</i>.</p>
+<p>We have introduced the group 𝓢(<i>X</i>, ∘) of all <i>bijections</i> from <i>X</i> to itself. When the number of elements of <i>X</i> is finite the group 𝓢(<i>X</i>) is indicated by 𝓢<sub><i>n</i></sub>, with <i>n</i> representing the cardinality of of <i>X</i> = {<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>}, and is known as <i>symmetric group of degree n</i>.</p>
 
 <p>Let <i>X</i> = {1, 2, ..., <i>n</i>}. Every element <i>&sigma;</i> of 𝓢<sub><i>n</i></sub> is a <i>bijections</i> from <i>X</i> to itself, represent a <b>permutation</b> of {1, 2, ..., <i>n</i>}. Thus the cardinality of 𝓢<sub><i>n</i></sub> is</p>
 
@@ -881,7 +881,7 @@
 <p>Let <i>X</i> be a set and let <i>σ ∈ 𝓢<sub>n</sub></i>. We define in <i>X</i> the following relation:</p>
 
 <div class="eq">
-<p><i>x</i> ≡<sub>&sigma;</sub> <i>y</i> &emsp; ⇐⇒ &emsp; <i>y</i>  = <i>&sigma;<sup>i</sup></i>(<i>x</i>), &emsp; for some <i>i</i> &in; ℤ.</p>
+<p><i>x</i> ≡<sub><i>&sigma;</i></sub> <i>y</i> &emsp; ⇐⇒ &emsp; <i>y</i> = <i>&sigma;<sup>i</sup></i>(<i>x</i>), &emsp; for some <i>i</i> &in; ℤ.</p>
 </div>
 
 <p>it can be easily proved it is an equivalence relation, thus <i>X</i> is parted into equivalence classes.</p>
@@ -903,10 +903,10 @@
 <p><b>7.4.3 Proposition</b>. Let <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub>. Given <i>m = m</i>(<i>x</i>) the least positive integer such that <i>σ<sup>m</sup></i>(<i>x</i>) = <i>x</i>, the orbit of the element <i>x</i> under <i>&sigma;</i> is the subset of <i>X</i>.</p>
 
 <div class="eq">
-<p>𝓞<sub>σ</sub>(<i>x</i>) = {<i>x = σ<sup>0</sup></i>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>), ..., <i>σ<sup>m−1</sup></i>(<i>x</i>)}</p>
+<p>𝓞<sub>σ</sub>(<i>x</i>) = {<i>x = σ<sup>0</sup></i>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ</i><sup>2</sup>(<i>x</i>), ..., <i>σ</i><sup><i>m</i>−1</sup>(<i>x</i>)}</p>
 </div>
 
-<p><b>Proof</b>. We have to prove that each <i>σ<sup>i</sup></i>(<i>x</i>), with <i>i</i> ∈ ℤ, coincides to one of the <i>m</i> elements <i>x = σ<sup>0</sup></i>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>), ..., <i>σ<sup>m−1</sup></i>(<i>x</i>) of <i>X</i>. From <i>i = mq + r, 0 &le; r &lt; m</i>, we obtain</p>
+<p><b>Proof</b>. We have to prove that each <i>σ<sup>i</sup></i>(<i>x</i>), with <i>i</i> ∈ ℤ, coincides to one of the <i>m</i> elements <i>x = σ</i><sup>0</sup>(<i>x</i>), <i>σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>), ..., <i>σ<sup>m−1</sup></i>(<i>x</i>) of <i>X</i>. From <i>i = mq + r, 0 &le; r &lt; m</i>, we obtain</p>
 
 <div class="eq">
 <p><i>&sigma;<sup>i</sup> = &sigma;<sup>mq + r</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(<i>&sigma;<sup>m</sup></i>)<i><sup>q</sup></i>(<i>x</i>) = <i>&sigma;<sup>r</sup></i>(&sigma;<sup>&pm;m</sup>(<i>&sigma;<sup>&pm;m</sup></i> ⋅⋅⋅ (<i>&sigma;<sup>&pm;m</sup></i>(<i>x</i>))) = <i>&sigma;<sup>r</sup></i>(<i>x</i>). &emsp; □</p>
@@ -922,12 +922,68 @@
 
 <p>The integer <i>m</i> is said <i>lenght</i> of the permutation.</p>
 
-<p><b>7.4.5 Example</b>.  Let <i>&sigma;</i> &in; 𝓢<sub>6</sub>, the permutation</p>
+<p><b>7.4.5 Example</b>. Let <i>&sigma;</i> &in; 𝓢<sub>6</sub>, the permutation</p>
 
-<table class="noborder">
-<tr> <td rowspan="2"><i>&sigma;</i> = </td> <td>|1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6|</td> </tr>
-<tr> <td>|3</td> <td>1</td> <td>2</td> <td>5</td> <td>6</td> <td>4|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C3;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>starting from 1 &in; <i>X</i>, the orbit of 1 under <i>&sigma;</i> is the subset <i>X</i></p>
 
@@ -941,14 +997,54 @@
 <p>(1, 3, 2)</p>
 </div>
 
-<p>We use () when we are refferring to a cycle. Also (3,2,1) represents the same cycle as well as (2,1,3), but it's not the case for the cycle (1,2,3) as the element 2, since &sigma;(1) = 3.</p>
+<p>We use () when we are refferring to a cycle. Also (3,2,1) represents the same cycle as well as (2,1,3), but it's not the case for the cycle (1,2,3) as the element 2, since <i>&sigma;</i>(1) = 3.</p>
 
 <p>Not every permutation is a cycle, <i>e.g.</i></p>
 
-<table class="noborder">
-<tr> <td>|1</td> <td>2</td> <td>3</td> <td>4|</td> </tr>
-<tr> <td>|4</td> <td>3</td> <td>2</td> <td>1|</td></tr>
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C3;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
 
 <p>but as we shall we it can always be written as product of two cycle (1 4)(2 3).</p>
 
@@ -998,36 +1094,36 @@
 
 <p><b>7.4.6 Proposition</b>. Every permutation <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub> is the product of its cycles (which are disjoint).</p>
 
-<p><b>Proof</b>. Let <i>&gamma;<sub>1</sub>, &gamma;<sub>2</sub>, ⋅  ⋅  ⋅, &gamma;<sub>k</sub></i> the disjoint cycles of <i>&sigma;</i>, to prove that <i>&sigma; = &gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅⋅⋅ &gamma;<sub>k</sub></i> we have to prove that for each <i>x &in; X</i> = {1,2...,<i>n</i>} we have</p>
+<p><b>Proof</b>. Let <i>&gamma;</i><sub>1</sub>, <i>&gamma;</i><sub>2</sub>, ⋅⋅⋅, <i>&gamma;<sub>k</sub></i> the disjoint cycles of <i>&sigma;</i>, to prove that <i>&sigma; = &gamma;</i><sub>1</sub> <i>&gamma;</i><sub>2</sub> ⋅⋅⋅ <i>&gamma;<sub>k</sub></i> we have to prove that for each <i>x &in; X</i> = {1, 2, ..., <i>n</i>} we have</p>
 
 <div class="eq">
-<p><i>&sigma;</i>(<i>x</i>) = (<i>&gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>)(<i>x</i>)</p>
+<p><i>&sigma;</i>(<i>x</i>) = (<i>&gamma;</i><sub>1</sub> <i>&gamma;</i><sub>2</sub> ⋅⋅⋅ <i>&gamma;<sub>k</sub></i>)(<i>x</i>)</p>
 </div>
 
-<p>Every <i>x &in; X</i> is contained only in one cycle <i>&gamma;<sub>i</sub></i> = (<i>x, σ</i>(<i>x</i>), <i>σ<sup>2</sup></i>(<i>x</i>) ⋅  ⋅  ⋅ <i>σ<sup>m−1</sup></i>(<i>x</i>)}. Moreover, for every <i>j &ne; i</i> and every <i>y = &sigma;<sup>h</sup></i>(<i>x</i>) (<i>i.e</i> for every <i>y &in; &gamma;<sub>i</sub></i>)</p>
+<p>Every <i>x &in; X</i> is contained only in one cycle <i>&gamma;<sub>i</sub></i> = (<i>x, σ</i>(<i>x</i>), <i>σ</i><sup>2</sup>(<i>x</i>) ⋅⋅⋅ <i>σ</i><sup><i>m</i>−1</sup>(<i>x</i>)). Moreover, for every <i>j &ne; i</i> and every <i>y = &sigma;<sup>h</sup></i>(<i>x</i>) (<i>i.e</i> for every <i>y &in; &gamma;<sub>i</sub></i>)</p>
 
 <div class="eq">
-<p><i>&gamma;</i><sub>j</sub>(<i>y</i>) = <i>y</i></p>
+<p><i>&gamma;<sub>j</sub></i>(<i>y</i>) = <i>y</i></p>
 </div>
 
 <p>Then for every <i>x &in; X</i></p>
 
 <div class="eq">
-<p>(<i>&gamma;<sub>1</sub>&gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>)(<i>x</i>) = (<i>&gamma;<sub>1</sub>&gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>i</sub></i>)(<i>x</i>) = <i>&gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>i−1</sub></i>(<i>&sigma;</i>(<i>x</i>)) = <i>&sigma;</i>(<i>x</i>)</p>
+<p>(<i>&gamma;</i><sub>1</sub>&gamma;<sub>2</sub> ⋅⋅⋅ <i>&gamma;<sub>k</sub></i>)(<i>x</i>) = (<i>&gamma;<sub>1</sub>&gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>i</sub></i>)(<i>x</i>) = <i>&gamma;<sub>1</sub> &gamma;<sub>2</sub> ⋅⋅⋅ <i>&gamma;</i><sub><i>i</i>−1</sub></i>(<i>&sigma;</i>(<i>x</i>)) = <i>&sigma;</i>(<i>x</i>)</p>
 </div>
 
-<p>Thus <i>&sigma; = &gamma;<sub>1</sub>&gamma;<sub>2</sub> ⋅  ⋅  ⋅ &gamma;<sub>k</sub></i>. &emsp; □</p>
+<p>Thus <i>&sigma; = &gamma;</i><sub>1</sub>&gamma;<sub>2</sub> ⋅⋅⋅ <i>&gamma;<sub>k</sub></i>. &emsp; □</p>
 
 <h3>Transpositions and the sign of a permutation</h3>
 
 <p>A 2-<i>cycles</i> (i, j) is a permutation that interchanges the two elements <i>i</i> and <i>j</i> while leaving all the other elements fixed. Thus, a 2-cycle is also called a <b>transposition</b>.</p>
 
-<p><b>7.4.7 Example</b>. The order of permutation <i>&tau;</i> = (1 2) (3456) is 4. To see this let us calculate</p>
+<p><b>7.4.7 Example</b>. The order of permutation <i>&tau;</i> = (1,2) (3,4,5,6) is 4. To see this let us calculate</p>
 
 <div class="eq">
-<p><i>&tau;</i> = (12) (234556)<br>
-<i>&tau;</i><sup>2</sup> = (35) (46)<br>
-<i>&tau;</i><sup>3</sup> = (12) (3654)<br>
+<p><i>&tau;</i> = (1,2) (2,3,4,5,6)<br>
+<i>&tau;</i><sup>2</sup> = (3,5) (4,6)<br>
+<i>&tau;</i><sup>3</sup> = (1,2) (3,6,5,4)<br>
 <i>&tau;</i><sup>4</sup> = id.&emsp; ■</p>
 </div>
 
@@ -1043,7 +1139,7 @@
 <p><b>Induction step</b>. Let the result true for <i>k</i>, Let as assume that (<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>h</sub>, x<sub>k+1</sub></i>) is a cycle of lenght <i>k</i> + 1. Then we have</p>
 
 <div class="eq">
-<p>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>k</sub>, x<sub>k+1</sub></i>) = (<i>x<sub>1</sub>, x<sub>k+1</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>2</sub>, ...., x<sub>k</sub></i>) &emsp; (<i>i</i>)</p>
+<p>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub>, ..., <i>x<sub>k</sub></i>, <i>x</i><sub><i>k</i>+1</sub>) = (<i>x</i><sub>1</sub>, <i>x</i><sub><i>k</i> + 1</sub>) ∘ (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ...., <i>x<sub>k</sub></i>) &emsp; (<i>i</i>)</p>
 </div>
 
 <p>as can be verified by computingn the composition.</p>
@@ -1057,7 +1153,7 @@
 <p>Substituting (ii) into (i), we have</p>
 
 <div class="eq">
-<p>(<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>k</sub>, x<sub>k+1</sub></i>) = (<i>x<sub>1</sub>, x<sub>k+1</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>k</sub></i>) ∘ ... ∘ (<i>x<sub>1</sub>, x<sub>3</sub></i>) ∘ (<i>x<sub>1</sub>, x<sub>2</sub></i>) &emsp; □</p>
+<p>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub>, ..., <i>x<sub>k</sub></i>, <i>x<sub>k+1</sub></i>) = (<i>x</i><sub>1</sub>, <i>x<sub>k+1</sub></i>) ∘ (<i>x</i><sub>1</sub>, <i>x<sub>k</sub></i>) ∘ ... ∘ (<i>x</i><sub>1</sub>, <i>x</i><sub>3</sub>) ∘ (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) &emsp; □</p>
 </div>
 
 <p><b>7.4.9 Example</b>. Write the cycle (<i>a, b, c, d, e, f</i>) on the set <i>A</i> = {<i>a,b,c,d,e,f</i>) as a product of transpositions.</p>
@@ -1120,7 +1216,7 @@ of transpositions.</p>
 <p><b>Proof</b>. We prove the theorem taking in consideration a polynomial <i>P</i> defined as follows</p>
 
 <div class="eq">
-<p><i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>) := ∏<sub><sub><i>i &lt; j</i></sub></sub> (<i>x<sub>i</sub> − x<sub>j</sub></i>)</p>
+<p><i>p</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>) := ∏<sub><sub><i>i &lt; j</i></sub></sub> (<i>x<sub>i</sub> − x<sub>j</sub></i>)</p>
 </div>
 
 <p>with 1 &le; <i>i &lt; j &le; n</i>.</p>
@@ -1128,7 +1224,7 @@ of transpositions.</p>
 <p>Let <i>&sigma;</i> &in; 𝓢<sub><i>n</i></sub>, then <i>&sigma;</i> is applied to <i>p</i> by the rule</p>
 
 <div class="eq">
-<p><i>&sigma;</i>(<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>)) := <i>p</i>(<i>x<sub>&sigma;(1)</sub>, x<sub>&sigma;(2)</sub>, ..., x<sub>&sigma;(n)</sub></i>)
+<p><i>&sigma;</i>(<i>p</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>)) := <i>p</i>(<i>x<sub>&sigma;(1)</sub>, x<sub>&sigma;(2)</sub>, ..., x<sub>&sigma;(<i>n</i>)</sub></i>)
 </div>
 
 <p>For example, if <i>n</i> = 4 and <i>&sigma;</i> = (2,3,4), then</p>
@@ -1261,7 +1357,7 @@ of transpositions.</p>
 <p><b>7.4.17 Example</b>. The group 𝓢<sub>3</sub> has six elements that we write in the cycle notation</p>
 
 <div class="eq">
-<p>𝓢<sub>3</sub> = {id, (1,2,3), (1,3,2),(1,2),(1,3),(2,3)}</p>
+<p>𝓢<sub>3</sub> = {id, (1,2,3), (1,3,2), (1,2), (1,3), (2,3)}</p>
 </div>
 
 <p>The group multiplicative table is the following</p>
@@ -1301,9 +1397,9 @@ of transpositions.</p>
 
 <p>Out of these, the even permutations constitute A<sub>4</sub>:</p>
 
-<p>A<sub>4</sub> = {<i>e</i>, (123), (132), (124), (142), (134), (143), (234), (243), (12)(34), (13)(24), (14)(23)}. The permutations (12)(34), (13)(24) and (14)(23) are the only elements which are of order 2 in A<sub>4</sub>. There are 8, 3-cycles in A<sub>4</sub>. Any of these 3-cycle generates a cyclic subgroup of order 4.</p>
+<p><i>A</i><sub>4</sub> = {<i>e</i>, (123), (132), (124), (142), (134), (143), (234), (243), (12)(34), (13)(24), (14)(23)}. The permutations (12)(34), (13)(24) and (14)(23) are the only elements which are of order 2 in A<sub>4</sub>. There are 8, 3-cycles in <i>A</i><sub>4</sub>. Any of these 3-cycle generates a cyclic subgroup of order 4.</p>
 
-<p>The following are all the subgroups of A<sub>4</sub>, of order 2,4 and 4:</p>
+<p>The following are all the subgroups of <i>A</i><sub>4</sub>, of order 1, 2 and 4:</p>
 
 <div class="eq">
 <p>{e},<br>
@@ -1314,8 +1410,42 @@ of transpositions.</p>
 
 <p><b>Proposition 7.4.17</b> The order of any permutation is the least common multiple of the lengths of its disjoint cycles.</p>
 
-<p><b>Proof</b>. Let &pi; be any permutation of 1,2, ...,<i>n</i>. Since there are a total of <i>n</i>! permutations of <i>n</i> objects, successive iterations <i>&pi;<sup>2</sup>, &pi;<sup>3</sup></i>, ... must eventually arrive at repetitions, say <i>&pi;<sup>k</sup> = &pi;<sup>l</sup></i> whence <i>&pi;<sup>l−k</sup></i> = id. The smallest <i>m</i> with the property <i>&pi;<sup>m</sup></i> = id. is called the <b>order of the permutation</b> <i>&pi;</i>. Any cycle of lenght <i>k</i> evidently has order <i>k</i>, and since every permutation can be written as a product of cycles, the order of a permutation is the lowest common multiple of its cycles. For example, the order of (123)(45) is the lowest common multiple of 3 and 2, which is 6. The set of elements {id, &pi; <i>&pi;<sup>2</sup>, ..., &pi;<sup>m − 1</sup> = &pi;</i><sup>&minus;1</sup>} for a subgroup of S<sub>n</sub>, called the subgroup generated by <i>&pi;</i>, a cyclic group. &emsp; □</p>
+<p><b>Proof</b>. Let &pi; be any permutation of 1,2, ...,<i>n</i>. Since there are a total of <i>n</i>! permutations of <i>n</i> objects, successive iterations <i>&pi;<sup>2</sup>, &pi;<sup>3</sup></i>, ... must eventually arrive at repetitions, say <i>&pi;<sup>k</sup> = &pi;<sup>l</sup></i> whence <i>&pi;<sup>l−k</sup></i> = id. The smallest <i>m</i> with the property <i>&pi;<sup>m</sup></i> = id. is called the <b>order of the permutation</b> <i>&pi;</i>. Any cycle of lenght <i>k</i> evidently has order <i>k</i>, and since every permutation can be written as a product of cycles, the order of a permutation is the lowest common multiple of its cycles. For example, the order of (123)(45) is the lowest common multiple of 3 and 2, which is 6. The set of elements {id, <i>&pi; &pi;<sup>2</sup>, ..., &pi;<sup>m − 1</sup> = &pi;</i><sup>&minus;1</sup>} for a subgroup of S<sub>n</sub>, called the subgroup generated by <i>&pi;</i>, a cyclic group. &emsp; □</p>
 </div>
+
+<p><b>Lemma 7.4.18</b> If <i>n</i> &ge; 5, then all 3–cycles are conjugate in <i>A<sub>n</sub></i>. </p>
+
+<p><b>Proof</b>. Let <i>&sigma;</i> and <i>&theta;</i> = (123) be two 3-cycles in <i>A<sub>n</sub></i> for <i>n</i> &ge; 5. Let <i>&pi;</i> a permutation in <i>S<sub>n</sub></i> such that <i>&pi;&sigma;&pi;</i><sup>−1</sup> = <i>&theta;</i>. If <i>&pi;</i> is an even permutation we are done. Otherwise we choose <i>k</i> and <i>l</i> ∉ {1,2,3}. Since the 3-cycle <i>&theta;</i> and the transposition <i>&tau;</i> = (<i>k l</i>) are disjoint they commute and <i>&pi;&tau;</i> is even. In view of this <i>&tau;&theta;&tau;</i><sup>−1</sup> = <i>&theta;</i>. Hence (<i>&pi;&tau;</i>)<i>&theta;</i>(<i>&pi;&tau;</i>)<sup>−1</sup> = <i>&pi;</i>(<i>&tau;&theta;&tau;</i><sup>−1</sup>)<i>&pi;</i><sup>−1</sup> = <i>&pi;&theta;&pi;</i><sup>−1</sup> = <i>&sigma;</i>. The permutation &pi;&tau; is an even permutation and it conjugates &sigma; and &theta;. This completes the proof.&emsp;□ </p>
+
+<p>For the treatement of the following lemma notice these simple facts abou transpositions:</p>
+
+<ul>
+	<li><p>If two transposition are equal, they cancel each other (ab)(ab) = id.</p></li>
+	<li><p>If two transpositions have one letter in common their product is a 3-cycle (ab)(ac) = (acb).</p></li>
+	<li><p>If two transposition have no letter in common, their product can be expressed as the product of two 3-cycles, (ab)(cd) = (cad)(abc).</p></li>
+</ul>
+
+<p><b>Lemma 7.4.19</b> For <i>n</i> &ge; 3, the alternating group <i>A<sub>n</sub></i> is generated by 3-cycles.</p>
+
+<p><b>Proof</b>. Since every even permutation is a product of an even number of 2-cycles, it suffices to show that every product of two 2-cycles may be written as product of 3-cycles. Therefore, consider a product</p>
+
+<div class="eq">
+<p>(<i>ab</i>)(<i>cd</i>)</p>
+</div>
+
+<p>with a &ne; b, c &ne; d. If (<i>ab</i>) = (<i>cd</i>), then this product is the identity, and there is nothing to prove. If {<i>a, b</i>}, {<i>c, d</i>} have exactly one element in common, then we may assume <i>c = a</i> and observe</p>
+
+<div class="eq">
+<p>(<i>ab</i>)(<i>ad</i>) = (<i>abd</i>)</p>
+</div>
+
+<p>If {<i>a, b</i>}, {<i>c, d</i>} are disjoint, then</p>
+
+<div class="eq">
+<p>(<i>ab</i>)(<i>cd</i>) = (<i>abc</i>)(<i>adc</i>)</p>
+</div>
+
+<p>and the proof is complete. &emsp;□</p>
 
 <section aria-label="End">
 <a href="transformation_group.html">&#171;The transformation group</a>
