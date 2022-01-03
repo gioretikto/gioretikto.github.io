@@ -117,8 +117,10 @@
 	<li><p>Every group with order <i>pq</i> (with <i>p</i> and <i>q</i> primes) is solvable. If <i>p = q</i>, <i>G</i> is an abelian group (see <a href="cauchy_sylow.html">Theorem 7.17.7</a>). We can thus suppose <i>p</i> &lt; <i>q</i>. By Sylow's theorems, there exists a normal Sylow <i>q</i>-subgroup <i>N</i>. The it suffices to take the chain</p>
 
 	<div class="eq">
-	<p><i>G</i> ⊃ <i>N</i> ⊃ {<i>e</i>}&emsp;■</p>
+	<p><i>G</i> ⊃ <i>N</i> ⊃ {<i>e</i>}</p>
 	</div>
+
+<p>Observe that <i>N</i> is normal in <i>G</i> and {<i>e</i>} is normal in <i>N</i>. Since |<i>G/N</i>| = <i>p</i> and |<i>N</i>/{<i>e</i>}| = <i>q</i>, both quotient groups have prime order and are therefore abelian.&emsp;■</p>
 </ol>
 
 <p>A <i>non-abelian simple</i> group, obviuosly cannot be <i>solvable</i>. But all abelian groups are trivially solvable —a subnormal series being given by just the group itself and the trivial group</p>
@@ -190,6 +192,8 @@
 	<li><p>Using the result of the previous exercise, prove that for <i>n</i> &ge; 5 the symmetric group <i>S<sub><i>n</i></sub></i> is not solvable.</p></li>
 
 	<li><p>Let <i>G</i> be a group, and let <i>N</i> be a normal subgroup of <i>G</i>. Then G is solvable if and only if N and <i>G/N</i> are solvable. </p></li>
+
+	<li><p>Check whether the group with order 91 is solvable.</p></li>
 </ol>
 
 <h2>Solutions</h2>
@@ -261,11 +265,21 @@
 <p><i>G</i> = <i>G</i><sub>0</sub> ⊃ ⋅⋅⋅ ⊃ <i>G</i><sub>k</sub> = <i>N</i></p>
 </div>
 
-<p>Appending the subnormal series for <i>N</i></p>
+<p>Appending the series for <i>N</i></p>
 
 <div class="eq">
 <p><i>G</i> = <i>G</i><sub>0</sub> ⊃ ⋅⋅⋅ ⊃ <i>G</i><sub>k</sub> = <i>N</i> = <i>N</i><sub>0</sub> ⊃ <i>N</i><sub>1</sub> ⊃ ⋅⋅⋅ ⊃ <i>N<sub>m</sub></i> = {<i>e</i>}.&emsp;■</p>
 </div>
+
+</li>
+
+<li><p>Let |<i>G</i>| = 91 = 13 ⋅ 7, the number of Sylow 7-subgroup must be a divisor of 13, that is either 13 or 1. Since it must also be conguent to 1 modulo 7, we conclude there is only a Sylow 7-subgroup, we name it <i>P</i>. We have a subnormal series</p>
+
+<div class="eq">
+<p><i>G</i> ⊃ <i>P</i> ⊃ {<i>e</i>}</p>
+</div>
+
+<p>Observe that <i>P</i> is normal in <i>G</i> and {<i>e</i>} is normal in <i>P</i>. Since |G/P| = 13 and |P/{e}| = <i>7</i>, both quotient groups have prime order and are therefore abelian. &emsp;■</p>
 
 </li>
 
