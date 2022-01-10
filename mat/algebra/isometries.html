@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Transformation Groups"/>
   <title>Transformation Groups</title>
   <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-   
+
 <div class="content">
 
 <h1>Transformation Groups</h1>
@@ -25,21 +25,208 @@
 
 <p><b>7.3.1 Definition</b> A group <i>G</i> is said transformation group of a set <i>X</i> if <i>G</i> is a subgroup of the group 𝓢(<i>X</i>, ∘) of all bijections from <i>X</i> to itslef.</p>
 
-<p>An example of transformation group is the group of planar isometries; <b>Isometries</b> are transformations that preserve distance. An isometry of ℝ<sup>2</sup> is a transformation <i>φ</i>: ℝ<sup>2</sup> → ℝ<sup>2</sup> that preserves distance, so that the distance between points <i>P</i> and <i>Q</i> is the same as the distance between the points <i>φ</i>(<i>P</i>) and <i>φ</i>(<i>Q</i>) for all points <i>P</i> and <i>Q</i> in ℝ<sup>2</sup>. If <i>ψ</i> is also an isometry of ℝ<sup>2</sup>, then the distance between <i>ψ</i>(<i>φ</i>(<i>P</i>)) and <i>ψ</i>(<i>φ</i>(<i>Q</i>)) must be the same as the distance between <i>φ</i>(<i>P</i>) and <i>φ</i>(<i>Q</i>), which in turn is the distance between <i>P</i> and <i>Q</i>, showing that the composition of two isometries is again an isometry. Since the identity map is an isometry and the inverse of an isometry is an isometry, we see that the isometries of ℝ<sup>2</sup> form a subgroup of the group of all transformations of ℝ<sup>2</sup>.</p>
+<p>An example of transformation group is the group of planar isometries; <b>Isometries</b> are transformations that preserve distance. An isometry of ℝ<sup>2</sup> is a transformation <i>φ</i>: ℝ<sup>2</sup> → ℝ<sup>2</sup> that preserves distance, so that the distance between points <i>P</i> and <i>Q</i> is the same as the distance between the points <i>φ</i>(<i>P</i>) and <i>φ</i>(<i>Q</i>) for all points <i>P</i> and <i>Q</i> in ℝ<sup>2</sup>. Note that if <i>&phi;</i>: ℝ<sup>2</sup> → ℝ<sup>2</sup> is a rigid motion, then &phi; sends the vertices of a triangle to the corresponding vertices of a congruent triangle. Hence, <i>φ</i> preserves the angles of a triangle.</p>
 
-<p>We will list some of such transformations. Let <i>X</i> = ℝ<sup>2</sup> = {(<i>x,y</i>): <i>x, y</i> ∈ ℝ}, the euclidean plane in which we have fixed a cartesian reference system. The following transformations from <i>X</i> to itself are ismoetries:</p>
+<p>If <i>ψ</i> is also an isometry of ℝ<sup>2</sup>, then the distance between <i>ψ</i>(<i>φ</i>(<i>P</i>)) and <i>ψ</i>(<i>φ</i>(<i>Q</i>)) must be the same as the distance between <i>φ</i>(<i>P</i>) and <i>φ</i>(<i>Q</i>), which in turn is the distance between <i>P</i> and <i>Q</i>, showing that the composition of two isometries is again an isometry. Since the identity map is an isometry and the inverse of an isometry is an isometry, we see that the isometries of ℝ<sup>2</sup> form a subgroup of the group of all transformations of ℝ<sup>2</sup>.</p>
 
-<ol type="a">
-	<li><p>translations <i>T</i>: Slide every point the same distance in the same direction. Example: <i>T</i>(<i>x, y</i>) = (<i>x, y</i>) + (<i>a, b</i>) = (<i>x + a, y + b</i>), with <i>a,b</i> &in;ℝ<sup>2</sup> or equivantely</p>
-	
-	<div class="eq">
-	<p><i>x' = x + a</i></p>
-	<p><i>y' = y + b</i></p>
-	</div>
-	
-	</li>
-	
-	<li><p><i>Reflections</i>: We can think of a reflection or a flip across a line <i>l</i> moves each point <i>P</i> to <i>P</i>′ such that line <i>l</i> is the perpendicular bisector of the segment connecting <i>P</i> and <i>P</i>′. If <i>P</i> is on <i>l</i>, then <i>P</i> is mapped to itself, or P = P'. </p>
+<p>The isometries of the plane form a group under composition of function, the so called Euclidean group <i>E</i><sub>2</sub>. Euclidean group is built from the translational group <i>T</i> and the orthogonal group O<sub>2</sub>(R).</p>
+
+<h3>Rotations and Reflections</h3>
+
+<p>Every element of O<sub>2</sub>(R) can be represented by a 2 x 2 matrix, where any such matrix satisfies the condition <i>A<sup>T</sup>A</i> = <i>I</i>. Let <i>A</i> be the matrix with respect to the standard basis for an element in O<sub>2</sub>(R). If</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>then the condition <i>A<sup>T</sup>A</i> = <i>I</i> gives</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msup>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>a</mi>
+          <mi>b</mi>
+          <mo>+</mo>
+          <mi>c</mi>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+          <mi>b</mi>
+          <mo>+</mo>
+          <mi>c</mi>
+          <mi>d</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <msup>
+            <mi>d</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>d</mi>
+            <mn>2</mn>
+          </msup>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>The relation above is satisfied for an angle &theta; with <i>a</i> = cos &theta;, <i>c</i> = cos &theta;, (<i>b d</i>) = (−sin &theta;, cos &theta;), or (<i>b,d</i>) = (sin &theta;, −cos &theta;). The first choiche gives a matrix <i>A</i> with determinant 1 that represents a <b>rotation</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>which are elements of the subgroup SO<sub>2</sub>(R) of O<sub>2</sub>. In particular, we have R<sub>θ</sub>R<sub>φ</sub> = R<sub>φ</sub>R<sub>θ</sub>, so the group SO<sub>2</sub> is Abelian.</p>
+
+<p>On the other hand the second choice gives a matrix of determinant −1 </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>that represents a reflection across a line through the origin. The elements of O<i>2</i>(R) \ SO<sub>2</sub>(R) are <b>reflections</b>.</p>
+
+<p>We can think of a reflection or a flip across a line <i>l</i> moves each point <i>P</i> to <i>P</i> ' such that line <i>l</i> is the perpendicular bisector of the segment connecting <i>P</i> and <i>P</i>′. If <i>P</i> is on <i>l</i>, then <i>P</i> is mapped to itself, or <i>P = P</i>'. </p>
 	
 	<img src="img/reflection.png" alt="reflection"/>
 	
@@ -47,7 +234,7 @@
 	
 	<div class="eq">
 	<p><i>x' = x</i> cos <i>&theta;</i> + <i>y</i> sin <i>&theta;</i>.</p>
-	<p><i>y' = − x</i> sin <i>&theta;</i> + <i>y</i> cos <i>&theta;</i>.</p>
+	<p><i>y' = − x</i> sin <i>&theta;</i> − <i>y</i> cos <i>&theta;</i>.</p>
 	</div>
 	
 	<p>By applying two times such a transformation, the identity is obtained.</p></li>
@@ -82,7 +269,7 @@
 	<i>y'</i> = x sin &theta; + y sin &theta;</p>
 	</div>
 
-	<p>Introducing the column vector (x y) and (x' y') we can write the transformation as</p>
+	<p>Introducing the column vector (<i>x y</i>) and (<i>x' y'</i>) we can write the transformation as</p>
 
 	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mrow data-mjx-texclass="INNER">
@@ -209,7 +396,32 @@
   </mrow>
 </math>
 
-<p>The matrix <i>A</i> above is a <a href="../linear_algebra/orthogonal_matrix.html">orthogonal matrix</a>, <i>i.e.</i> a matrix such that <i>A<sup>T</sup></i> = <i>A</i><sup>−1</sup>.</p>
+<h3>Translations</h3>
+
+<p>Let <i>T</i> denote the subgroup of <i>E</i><sub>2</sub> which consists of all the translations. Translations slide every point the same distance in the same direction. Example: <i>T</i>(<i>x, y</i>) = (<i>x, y</i>) + (<i>a, b</i>) = (<i>x + a, y + b</i>), with <i>a,b</i> &in;ℝ<sup>2</sup> or equivantely</p>
+	
+	<div class="eq">
+	<p><i>x' = x + a</i></p>
+	<p><i>y' = y + b</i></p>
+	</div>
+
+<p>In vector form a translations by the vector <b>v</b> is the function <i>&tau;</i>: ℝ ⟶ ℝ<sup>2</sup> defined by <i>&tau;</i>(<b><i>x</i></b>) = <i><b>v + x</b></i> for all <b>x</b> &in; ℝ<sup>2</sup>. Translations— other than the trivial one, when <i><b>v</b></i> = <b>0</b> — cannot be linear because.</p>
+
+<div class="eq">
+<p><i>&tau;</i>(<b>x + y</b>) = <b>x + y + v</b> &ne; <i>&tau;</i>(<b>x</b>) + <i>&tau;</i>(<b>y</b>) = <b>x</b> + <b>y</b> + 2<b>v</b></p>
+</div>
+
+<p>Or, even more simply, we note that <i>&tau;</i>(<b>0</b>) = <b>v</b>, which must be <b>0</b> if <i>&tau;</i> is to be linear.</p>
+
+<p>Since &tau;(<b>0</b>) = <b>v</b>, a translation is completely determined if we know where it sends the origin. This is easily checked <i>&tau;</i>(<b><i>x</i></b>) = <i><b>0 + x</b></i> is the identity element. If <i>&tau;<sub>1</sub>, &tau;<sub>2</sub></i> &in; <i>T</i> are defined by <i>&tau;</i><sub>1</sub>(<b>x</b>) = <b>u</b> + <b>x</b> and <i>&tau;</i><sub>2</sub>(<b>x</b>) = <b>v</b> + <b>x</b> for all <b>x</b> &in; ℝ<sup>2</sup>, then</p>
+
+<div class="eq">
+<p><i>&tau;</i><sub>1</sub><i>&tau;</i><sub>2</sub><sup>−1</sup>(<b>x</b>) = <i>&tau;</i><sub>1</sub>((−<b>v</b>) + <b>x</b>)<br>
+ = <b>u</b> + ((−<b>v</b>) + <b>x</b>)<br>
+=(<b>u</b> − <b>v</b>) + <b>x</b></p>
+</div>
+
+<p>So <i>&tau;</i><sub>1</sub><i>&tau;</i><sub>2</sub><sup>−1</sup> is translation by <b>u − v</b> and therefore blongs to <i>T</i>.</p>
 
 <p>All these transformations can be represented by the following equations</p>
 	
@@ -243,8 +455,6 @@
 	
 	<p>In 1872, Felix Klein, an eminent German mathematician, in his famous Erlanger Programm attempted to define geometry as the study of those properties which are invariant under a given group of transformation: different geometries corresponding in this way to different transformation groups. Geometries may be classified according to the group of transformations which preserve the intrinsic
 properties of the geometry. In the case of Euclidean geometry, this is the group of Euclidean isometries: in line with the above, these will be seen to be the rotations, reflections and translations of the plane.</p>
-</li>
-	
 </ol>
 
 <section aria-label="End">

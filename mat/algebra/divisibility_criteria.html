@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Divisibility Criteria"/>
   <title>Divisibility Criteria</title>
   <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
     <li><a class="navbar" href="index.html">Algebra</a></li>
   </ul>
 </nav>
-   
+
 <div class="content">
 
 <h1>Divisibility Criteria</h1>
@@ -26,7 +26,7 @@
 <p><p>We study now some useful applications that make use of the congruence. <b>Casting out of nines</b> is a necessary condition to check the exactness of a multiplication. We try first to understand what's behind this method and what the number 9 has to do with it. Let <i>a</i> be an integer, and let <i>a<sub>0</sub>, a<sub>1</sub>, ..., a<sub>n</sub></i> be its decimal digits. In other words,</p>
 
 <div class="eq">
-<p><i>a = a<sub>n</sub> 10<sup>n</sup> + a<sub>n−1</sub>10<sup>n−1</sup> + ... + a<sub>1</sub> 10 +  a<sub>0</sub></i> &emsp; (<b>4.3</b>)</p>
+<p><i>a = a<sub>n</sub></i> 10<sup><i>n</i></sup> + <i>a</i><sub><i>n</i>−1</sub>10<sup><i>n</i>−1</sup> + ... + <i>a</i><sub>1</sub> 10 + <i>a</i><sub>0</sub></i> &emsp; (<b>4.3</b>)</p>
 </div>
 
 <p>where 0 &le; <i>a<sub>i</sub></i> &le; 9 for <i>i</i> = 0,...,<i>n</i>.</p>
@@ -40,14 +40,13 @@
 <p>Ora, qualsiasi sia <i>n</i> &gt; 0</p>
 
 <div class="eq">
-<p>10<sup>n</sup> − 1 = 999...9 = 9 ⋅ 111 ... 1 </br>
-&emsp;&emsp; &emsp;&emsp;&emsp; <i>n</i> times &emsp; &emsp;   <i>n</i> times
-</p>					
+<p>10<sup><i>n</i></sup> − 1 = 999...9 = 9 ⋅ 111 ... 1 </br>
+&emsp;&emsp; &emsp;&emsp;&emsp; <i>n</i> times &emsp; &emsp; <i>n</i> times</p>					
 </div>
 			
 <p>i.e.</p>
 
-<p>10<sup>n</sup> ≡ 1 (mod 9)</p>
+<p>10<sup><i>n</i></sup> ≡ 1 (mod 9)</p>
 
 <p>by using the properties of congruences,</p>
 
@@ -57,7 +56,7 @@
 
 <p>thus any integer number, written in decimal notation is congruent modulo 9 to the sum of its digits.</p>
  
-<p>Suppose we wanto to multiply two integers: 3455⋅2134, obtaining as result 7282970. We want to check the exactness of the result. Allora si procede al seguente modo: si scrive la somma delle cifre dei fattori e si fa la moltiplicazione di questi due numeri: questa deve coincidere con la somma delle cifre del risultato da controllare. Quindi nel nostro caso:</p>
+<p>Suppose we want to multiply two integers: 3455 ⋅ 2134, obtaining as result 7282970. We want to check the exactness of the result. We proceed as follows: write the sum of the digits of each number:</p> 
 
 <div class="eq">
 <p>3455 → 3 + 4 + 5 + 5 = 17 → 1 + 7 = 8;</p>
@@ -65,9 +64,11 @@
 <p>7282970 → 7 + 2 + 8 + 2 + 9 + 7 + 0 = 35 → 3 + 5 = 8;</p>
 </div>
 
-<p>Da quello che abbiamo visto sappiamo che 3455 ≡<sub>9</sub> 8, 2134 ≡<sub>9</sub> 1 e 7282970 ≡<sub>9</sub> 8. Dunque 3455 ⋅ 2134 ≡<sub>9</sub> 8 ⋅ 1 = 8.</p>
+<p>and them multiply the sums obtained by each other 8 ⋅ 1: if the result is correct this number is equal to the the sum of the digits in the result 35 = 3 + 5 = 8.</p>
 
-<p>Se anziché 8 avessimo trovato un altro numero voleva dire che <i>sicuramente</i> avevamo commesso un errore nella moltiplicazione. Il fatto di aver superato il controllo positivamente <i>non garantisce</i> però che la moltiplicazione sia corretta.</p>
+<p>Indeed we know from the discussion above that 3455 ≡<sub>9</sub> 8, 2134 ≡<sub>9</sub> 1 e 7282970 ≡<sub>9</sub> 8. Thus 3455 ⋅ 2134 ≡<sub>9</sub> 8 ⋅ 1 = 8.</p>
+
+<p>If instead of 8 we would have obtained a different number that would have signified with certainty that the result of the multiplation was incorrect. However, having obtained 8, <i>does not</i> guarentee the corecteness of the result.</p>
 
 <h2>Divisibility criteria</h2>
 
@@ -88,7 +89,7 @@
 <p>So, the difference between <i>z</i> and the sum <i>S</i> of its digits is</p>
 
 <div class="eq">
-<p><i>z − S = a<sub>1</sub> · 9 + a<sub>2</sub> · 99 + · · · + a<sub>n</sub></i> · 999...9,</p>
+<p><i>z − S = a</i><sub>1</sub> · 9 + <i>a</i><sub>2</sub> · 99 + ··· + <i>a<sub>n</sub></i> · 999...9,</p>
 </div>
 
 <p>which is divisible by 3. Thus,</p>
@@ -102,9 +103,9 @@
 <p><b>Proposition 4.12</b>. An integer number is divisible by 2 or by 5 if and only if its rightmost digit, is divisible by 2 or by
 5;</p>
 
-<p><b>Proof</b>. For each <i>n</i> &gt; 0, 10<sup>n</sup> ≡ 0 both mod 2 and mod 5. So, z ≡ a<sub>0</sub> both mod 2 and mod 5, and this proves the corresponding divisibility tests. □</p>
+<p><b>Proof</b>. For each <i>n</i> &gt; 0, 10<sup><i>n</i></sup> ≡ 0 both mod 2 and mod 5. So, <i>z ≡ a</i><sub>0</sub> both mod 2 and mod 5, and this proves the corresponding divisibility tests. □</p>
 
-<p><b>Proposition 4.13</b>. An integer number is divisible by 4 (or by 25, respectively) if and only if the number (a 1 a 0 ) 10 formed by its last two digits <i>a<sub>1</sub>a<sub>0</sub></i> is divisible by 4 (or by 25, respectively);</p>
+<p><b>Proposition 4.13</b>. An integer number is divisible by 4 (or by 25, respectively) if and only if the number (a 1 a 0 ) 10 formed by its last two digits <i>a<sub>1</sub><i>a</i><sub>0</sub> is divisible by 4 (or by 25, respectively);</p>
 
 <p><b>Proof</b>. 100 = 2<sup>2</sup> 5<sup>2</sup> ≡ 0 both modulo 4 and modulo 25, and so every integer is congruent modulo 4 and modulo 25 to the integer formed by its rightmost two digits.□</p>
 
@@ -128,21 +129,21 @@ test for 2<sup>k</sup>. In particular, an integer is divisible by 8 if and only 
 <p><b>Proposition 4.17</b>. An integer is divisible by 11 if and only if the sum of its digits taken with alternating signs</p>
 
 <div class="eq">
-<p>(−1)<sup>n</sup><i>a<sub>n</sub> + ... − a<sub>1</sub> + a<sub>0</sub></i></p>
+<p>(−1)<sup><i>n</i></sup><i>a<sub>n</sub></i> + ... − <i>a</i><sub>1</sub> + <i>a</i><sub>0</sub></p>
 </div>
 
 <p>is divisible by 11.</p>
 
-<p><b>Proof</b>. Notice that 10 ≡ −1 (mod 11),  we can write</p>
+<p><b>Proof</b>. Notice that 10 ≡ −1 (mod 11), we can write</p>
 
 <div class="eq">
-<p><i>z = a<sub>0</sub> · 1 + a<sub>1</sub> · 10 + a<sub>2</sub> · 10<sup>2</sup> + ··· + a<sub>n</sub> · 10<sup>n</sup>
+<p><i>z = a</i><sub>0</sub> · 1 + <i>a</i><sub>1</sub> · 10 + a<sub>2</sub> · 10<sup>2</sup> + ··· + a<sub>n</sub> · 10<sup>n</sup>
 ≡ a<sub>0</sub> · 1 + a<sub>1</sub> · (−1) + a<sub>2</sub> · (−1)<sup>2</sup> + · · · + a<sub>n</sub> · (−1)<sup>n</sup></i> (mod 11)</p>
 </div>
 
 <p>and <i>z</i> is congruent to the alternating sum of its digits.□</p>
  
-<section>
+<section aria-label="End">
 <a href="modulo.html">&#171; Congruenza modulare</a>
 <a href="index.html">Index</a>
 <a href="linear_congruences.html">Linear Congruences &#187;</a>

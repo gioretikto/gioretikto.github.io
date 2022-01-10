@@ -28,7 +28,7 @@
 <p><b>Proof</b>. Define a permutation T<sub>g</sub> on the left cosets of <i>H</i> by</p>
 
 <div class="eq">
-<p>T<sub>g</sub>: <i>X</i> ⟶ <i>X</i><br>
+<p><i>T<sub>g</sub></i>: <i>X</i> ⟶ <i>X</i><br>
 <i>xH</i> ⟼ <i>gxH</i></p>
 </div>
 
@@ -45,10 +45,10 @@
 <p><i>T<sub>gg'</sub></i>(<i>xH</i>) = <i>gg'</i>(<i>xH</i>) = <i>g</i>(<i>g'xH</i>) = <i>T<sub>g</sub></i>(<i>T<sub>g'</sub>xH</i>)</p>
 </div>
 
-<p>that is T<sub>gg'</sub> = T<sub>g</sub> ∘ T<sub>g'</sub> thus <i>&Psi;</i> is a homomorphism between <i>G</i> and S(<i>X</i>). The kernel is</p>
+<p>that is T<sub>gg'</sub> = <i>T<sub>g</sub></i> ∘ T<sub>g'</sub> thus <i>&Psi;</i> is a homomorphism between <i>G</i> and S(<i>X</i>). The kernel is</p>
 
 <div class="eq">
-<p>Ker Psi = {all g in G | S(X) = identyty map of the symmetric group} the id of S(X) is that 1->1, 2->2, etc</p>
+<p>Ker <i>&Psi;</i> = {all g in G | S(<i>X</i>) = identyty map of the symmetric group} the id of S(<i>X</i>) is that 1->1, 2->2, etc</p>
 </div>
 
 <div class="eq">
@@ -113,9 +113,29 @@
 
 <ol>
 	<li><p>Let <i>G</i> a group of order 42. Prove that <i>G</i> is not simple.</p></li>
+
+	<li><p>Prove that a group with order 77 possesses a non-trivial normal subgroup.</p></li>
+
+	<li><p>By applying the simplicity test (corollary 7.17.10) prove that for <i>n</i> &le; 100, and <i>n</i> non prime for which it's not excluded (using the same criterion) that there exists a simple group of order <i>n</i> are the following: 12, 24, 30, 48, 56, 60, 72, 80, 90, 96. Then using Cayley's generalized theorem verify that the only possible simple groups are those with order 56 and 100.</p></li>
 </ol>
 
 <h2>Solutions</h2>
+
+<ol>
+	<li><p>Let <i>H</i> a group of order 5 (which exists by Cauchy's theorem). It results |<i>G</i>| ∤  (<i>G</i> : <i>H</i>)!. Thus by the generalized Cayley theorem, <i>X</i> the set of left cosets of <i>H</i> in <i>G</i>, the mapping <i>&psi;</i> ⟶ S(<i>X</i>) given by <i>&psi;</i>(<i>g</i>) = <i>T<sub>g</sub></i>, with <i>T<sub>g</sub></i>(<i>xH</i>) = <i>gxH</i> is a homomorphism and not an isomorphism , hence it possesses a non-trivial kernel, which is the largest normal subgroup of <i>G</i> contained in <i>H</i>. It follows that <i>H</i> itself is normal in <i>G</i>.&emsp;■</p></li>
+
+	<li><p>As in the exercise above considering a group of order 11 (which exists by Cauchy's theorem).</p></li>
+	
+	<li> <p>Applying Corollary 7.17.10 that is <i>n</i> = p<sup>a</sup> and (m,p) = 1 and 1 is the only divisor of <i>n</i>, then the group has a normal subgroup and hence it's not simple. For example for a group of order 12 = 2<sup>2</sup> ⋅ 3, (2,3) = 1 and by the 3rd Sylow theorem the number of Sylow 2-subgroubs is such that it divides 3 and is congruent to 1 modulo 2. Since 3 ≡ 1 modulo 2, <i>n</i><sub>2</sub> = 3 so, 2e cannot exclude it is simple.</p>
+
+	<p>Let <i>G</i> be a group with order 56 then there exists a subgroup of order 7 by Cauchy's theorem. Applying the same reasoning of the previous exercises, it results</p>
+
+	<div class="eq">
+	<p>(<i>G</i> : <i>H</i>) = 8, &emsp; 8! = 40320, |<i>G</i>| = 56 | 40320 = 720</p>
+	</div>
+
+	<p>Thus <i>G</i> is not simple. The same reasoning for the group with order 60.&emsp;■</p></li>
+</ol>
 
 <section aria-label="End">
 <a href="epoxides.html">&#171;Epoxides</a>

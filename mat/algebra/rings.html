@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Rings"/>
  <title>Rings</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-  
+
 <div class="content">
 
 <h1>Rings</h1>
@@ -26,26 +26,32 @@
 <p><b>6.1.1 Definition</b> A ring (<i>R</i>, +, ⋅) is a set equipped with <i>two binary operations</i> indicated by + and ·,</p>
 
 <div class="eq">
-<p><i>R x R ⟶ R</i> &emsp;&emsp; <i>R x R ⟶ R</i></p>
-<p>(<i>a,b</i>) ⟼ <i>a + b</i> &emsp;&emsp; (<i>a,b</i>) ⟼ <i>a ⋅ b</i></p>
+<p><i>R x R ⟶ R</i> &emsp;&emsp; <i>R</i> x <i>R</i> ⟶ <i>R</i></p>
+<p>(<i>a, b</i>) ⟼ <i>a + b</i> &emsp;&emsp; (<i>a, b</i>) ⟼ <i>a ⋅ b</i></p>
 </div>
 
 <p>satisfying the following three sets of axioms, called the ring axioms</p>
 
 <ol type="i">
 
-<li><ol type="a">
-	<li><p>+ is <i>associative</i>: (<i>a + b</i>) + <i>c = a</i> + (<i>b + c</i>) &forall;<i>a, b, c &in; R</i></p></li>
-	<li><p>There is an element 0 in <i>R</i> such that <i>a</i> + 0 = <i>a &forall;a &in; R</i> (that is, 0 is the additive identity).</p></li>
-	<li><p>&forall;<i>a &in; R</i> there exists −<i>a &in; R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
-	<li><p>+ is <i>commutative</i>: <i>a + b = b + a</i> &forall;<i>a, b &in; R</i></p></li>
+<li>
+<ol type="a">
+	<li><p>+ is <i>associative</i>: (<i>a</i> + <i>b</i>) + <i>c</i> = <i>a</i> + (<i>b</i> + <i>c</i>) &forall;<i>a, b, c &in; R</i></p></li>
+
+	<li><p>There is an element 0 in <i>R</i> such that <i>a</i> + 0 = <i>a</i> &forall;<i>a</i> &in; R</i> (that is, 0 is the additive identity).</p></li>
+
+	<li><p>&forall;<i>a</i> &in; <i>R</i> there exists −<i>a</i> &in; <i>R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
+
+	<li><p>+ is <i>commutative</i>: <i>a</i> + <i>b</i> = <i>b</i> + <i>a</i> &forall;<i>a, b</i> &in; <i>R</i></p></li>
 </ol>
 </li>
 
-	<li><p>· is <i>associative</i>: (<i>a · b</i>) · <i>c = a</i> · (<i>b · c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
+	<li><p>· is <i>associative</i>: (<i>a</i> · <i>b</i>) · <i>c</i> = <i>a</i> · (<i>b</i> · <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
+
 	<li><p>Multiplication is distributive with respect to addition, meaning that:</p>
+
 		<div class="eq">
-		<p><i>a</i> · (<i>b + c</i>) = <i>a · b + a · c</i>, &emsp; (<i>a + b</i>) · <i>c</i> = <i>a · c + b · c</i> &emsp; &forall;<i>a,b,c &in; R</i></p>
+		<p><i>a</i> · (<i>b</i> + <i>c</i>) = <i>a</i> · <i>b</i> + <i>a</i> · <i>c</i>, &emsp; (<i>a</i> + <i>b</i>) · <i>c</i> = <i>a · c + b · c</i> &emsp; &forall;<i>a, b, c</i> &in; <i>R</i></p>
 		</div>
 	</li>
 </ol>
@@ -65,30 +71,30 @@
 <ul>
 	<li><p>ℤ, ℚ, ℝ, ℂ, with respect to addition and multiplication.</p></li>
 	
-	<li><p>𝕂[<i>x</i>], 𝕂[<i>x<sub>1</sub>, ..., x<sub>n</sub></i>] with respect to addition and multiplication defined for this rings.</p></li>
+	<li><p>𝕂[<i>x</i>], 𝕂[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] with respect to addition and multiplication defined for this rings.</p></li>
 	
-	<li><p>The set ℤ<sub>n</sub> of congruence class modulo <i>n</i> with the addition and the multiplication defined by [<i>a</i>] + [<i>b</i>] = [<i>a + b</i>] and [<i>a</i>] [<i>b</i>] = [<i>ab</i>]. Note that [0] is the 0 required by our axioms for a ring, and [1] is the unit element of <i>R</i>.</p></li>
+	<li><p>The set ℤ<sub><i>n</i></sub> of congruence class modulo <i>n</i> with the addition and the multiplication defined by [<i>a</i>] + [<i>b</i>] = [<i>a + b</i>] and [<i>a</i>] [<i>b</i>] = [<i>ab</i>]. Note that [0] is the 0 required by our axioms for a ring, and [1] is the unit element of <i>R</i>.</p></li>
 	
-	<li><p>The set <i>M<sub>n</sub></i>(𝕂) of square matrices <i>n x n</i>, over a field 𝕂, along with the standard matrix addition and multiplication.</p></li>
+	<li><p>The set <i>M<sub>n</sub></i>(𝕂) of square matrices <i>n</i> x <i>n</i>, over a field 𝕂, along with the standard matrix addition and multiplication.</p></li>
 	
 	<li><p>The power set of a set is a commutative ring under the natural operations of union and intersection</p>
 	
 		<div class="eq">
-		<p><i>A + B</i> := (<i>A</i> ⋃ <i>B</i>) ⋂ 𝐶(<i>A</i> ⋂ <i>B</i>), &emsp; <i>A · B := A</i> ⋂ <i>B</i></p>
+		<p><i>A</i> + <i>B</i> := (<i>A</i> ∪ <i>B</i>) ∩ 𝐶(<i>A</i> ∩ <i>B</i>), &emsp; <i>A · B</i> := <i>A</i> ∩ <i>B</i></p>
 		</div>
 		
-		<p>it is easy to notice that it is an abelian group with respect to the first operation (the nueter element is ∅ and the inverse of an A &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributives properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent</i> i.e. <i>A<sup>2</sup> = A · A = A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
+		<p>it is easy to notice that it is an abelian group with respect to the first operation (the nueter element is ∅ and the inverse of an <i>A</i> &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributives properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent</i> i.e. <i>A</i><sup>2</sup> = <i>A</i> · <i>A</i> = <i>A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
 		
-		<li><p>The set of continuos functions, in one variable <i>x &in; X</i></p>
+		<li><p>The set of continuos functions, in one variable <i>x</i> &in; <i>X</i></p>
 		
 		<div class="eq">
-		<p><i>R<sup>X</sup></i> := {<i>f: X ⟶ R</i>}</p>
+		<p><i>R<sup>X</sup></i> := {<i>f</i>: <i>X</i> ⟶ <i>R</i>}</p>
 		</div>
 		
 		<p>with the addition and multiplication defined by</p>
 		
 		<div class="eq">
-		<p>(<i>f+g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) := <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) &emsp; &forall;<i>f,g &in; R<sup>X</sup>, &forall;x &in; X</i></p>
+		<p>(<i>f+g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) := <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) &emsp; &forall;<i>f,g</i> &in; <i>R<sup>X</sup></i>, &forall;<i>x</i> &in; <i>X</i></p>
 		</div>
 		
 		<p>(<i>R<sup>X</sup></i>, +, ·) is a ring: it is a commutative ring only if <i>R</i> is communtative; it is unitary only if <i>R</i> is unitary as well. The unit function is that mapping every element of <i>X</i> to the unit of <i>R</i>.</p>
@@ -96,29 +102,29 @@
 		
 		<div id="direct_sum">
 		
-		<li><p>Let <i>R<sub>1</sub>, R<sub>2</sub> , ... , R<sub>n</sub></i> be rings. We can use these to construct a new ring by cartesian product</p>
+		<li><p>Let <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, ..., <i>R<sub>n</sub></i> be rings. We can use these to construct a new ring by cartesian product</p>
 		
 		<div class="eq">
-		<p><i>R<sub>1</sub> x R<sub>2</sub> x R<sub>n</sub></i></p>
+		<p><i>R</i><sub>1</sub> x <i>R</i><sub>2</sub> x <i>R<sub>n</sub></i></p>
 		</div>
 		
 		<p>and perform componentwise addition and multiplication, defined as</p>
 		
 		<div class="eq">
-		<p>(<i>a<sub>1</sub> , a<sub>2</sub>, ... , a<sub>n</sub></i>) + (<i>b<sub>1</sub> , b<sub>2</sub>, ... , b<sub>n</sub></i>) = (<i>a<sub>1</sub> + b<sub>1</sub>, a<sub>2</sub> + b<sub>2</sub> , ... , a<sub>n</sub> + b<sub>n</sub></i>)</p>
+		<p>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) + (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>n</sub></i>) = (<i>a</i><sub>1</sub> + <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub> + <i>b</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> + <i>b<sub>n</sub></i>)</p>
 		</div>
 		
 		<p>and</p>
 		
 		<div class="eq">
-		<p>(<i>a<sub>1</sub> , a<sub>2</sub>, ... , a<sub>n</sub></i>) (<i>b<sub>1</sub> , b<sub>2</sub>, ... , b<sub>n</sub></i>) = (<i>a<sub>1</sub> b<sub>1</sub>, a<sub>2</sub>b<sub>2</sub> , ... , a<sub>n</sub>b<sub>n</sub></i>)</p>
+		<p>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>n</sub></i>) = (<i>a</i><sub>1</sub> <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub><i>b</i><sub>2</sub>, ..., <i>a<sub>n</sub>b<sub>n</sub></i>)</p>
 		</div>
 		
-		<p>This ring is called the <i>direct sum</i> of <i>R<sub>1</sub>, R<sub>2</sub> , ... , R<sub>n</sub></i> and usually indicated as</p>
+		<p>This ring is called the <i>direct sum</i> of <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, ..., <i>R<sub>n</sub></i> and usually indicated as</p>
 		</li>
 		
 		<div class="eq">
-		<p><i>R<sub>1</sub> ⊕ R<sub>2</sub> ⊕ ... ⊕ R<sub>n</sub></i></p>
+		<p><i>R</i><sub>1</sub> ⊕ <i>R</i><sub>2</sub> ⊕ ... ⊕ <i>R<sub>n</sub></i></p>
 		</div>
 		</div>
 	</ul>
@@ -127,19 +133,19 @@
 
 <ol type="i">
 	<li><p><i>a</i> ⋅ 0 = 0 ⋅ <i>a</i> = 0;</p></li>
-	<li><p>(−<i>a</i>) ⋅ <i>b</i> = −(<i>a ⋅ b</i>);</i></p></li>
+	<li><p>(−<i>a</i>) ⋅ <i>b</i> = −(<i>a</i> ⋅ <i>b</i>);</i></p></li>
 </ol>
 
 <p><b>6.1.2 Definition.</b> Let [<i>R</i>, +, ⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
 
 <div class="eq">
-<p><i>&phi;(<i>a+b</i>) = &phi;(<i>a</i>) +' &phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
+<p><i>&phi;</i>(<i>a+b</i>) = <i>&phi;</i>(<i>a</i>) +' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p><i>&phi;(<i>a⋅b</i>) = &phi;(<i>a</i>) ⋅' &phi;(<i>b</i>) &emsp; <i>a,b</i> &in; R</i></p>
+<p><i>&phi;</i>(<i>a⋅b</i>) = <i>&phi;</i>(<i>a</i>) ⋅' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
 </div>
 
 <p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R ≅ R'</i>. The relation of being isomorphic is an equivalence relation.</p>
@@ -160,14 +166,18 @@
 
 <ul>
 	<li><p>A <i>commutative ring</i> satisfies the commutative property for multiplication.</p></li>
-	<li><p>A <i>commutative ring with identity</i> is a ring with a nonzero element, 1 &in; <i>R</i>, that is an identity under multiplication i.e. if 1 ⋅ <i>a = a</i> &forall;<i>a</i> &in; <i>R</i>.</p>
+
+	<li><p>A <i>commutative ring with identity</i> is a ring with a nonzero element, 1 &in; <i>R</i>, that is an identity under multiplication i.e. if 1 ⋅ <i>a</i> = <i>a</i> &forall;<i>a</i> &in; <i>R</i>.</p>
 	
-	<p>Let <i>R</i> be a ring with identity. The element <i>a ∈ R</i> is a <b>unit</b> or <b>invertible elements</b>, if it has a multiplicative inverse in <i>R</i>, that is if there exists <i>b ∈ R</i> such that <i>ab = ba</i> = 1, that is <i>a</i> divides 1. The element <i>b</i> is called the <b>inverse</b> of <i>a</i>, and is written <i>a<sup>−1</sup></i>. It is unique; for if <i>b</i> and <i>c</i> are both inverses of <i>a</i>, then</p>
+	<p>Let <i>R</i> be a ring with identity. The element <i>a</i> ∈ <i>R</i> is a <b>unit</b> or <b>invertible elements</b>, if it has a multiplicative inverse in <i>R</i>, that is if there exists <i>b</i> ∈ <i>R</i> such that <i>ab</i> = <i>ba</i> = 1, that is <i>a</i> divides 1. The element <i>b</i> is called the <b>inverse</b> of <i>a</i>, and is written <i>a</i><sup>−1</sup>. It is unique; for if <i>b</i> and <i>c</i> are both inverses of <i>a</i>, then</p>
+
 	<div class="eq">
-	<p><i>c = 1c</i> = (<i>ba</i>)<i>c</i> = <i>b</i>(<i>ac</i>) = <i>b ⋅ 1 = b</i>.</p>
+	<p><i>c</i> = 1<i>c</i> = (<i>ba</i>)<i>c</i> = <i>b</i>(<i>ac</i>) = <i>b</i> ⋅ 1 = <i>b</i>.</p>
 	</div>
+
 	<p>The units in ℤ are 1 and −1.</p>
-	<p><b>Remark</b> Let <i>u &in; R</i> be a unit with inverse <i>v</i>, so that <i>uv</i> = 1. For any <i>b &in; R</i>  we have <i>u</i>(<i>vb</i>) = (<i>uv</i>)<i>b</i> = 1<i>b = b</i>. Therefore</p>
+
+	<p><b>Remark</b> Let <i>u &in; R</i> be a unit with inverse <i>v</i>, so that <i>uv</i> = 1. For any <i>b &in; R</i>  we have <i>u</i>(<i>vb</i>) = (<i>uv</i>)<i>b</i> = 1<i>b</i> = <i>b</i>. Therefore</p>
 	
 	<div class="eq">
 	<p>a unit divides every element of <i>R</i></p>
@@ -186,7 +196,7 @@
 			<li><p>Every nonzero element of <i>F</i> has a multiplicative inverse.</p></li>
 		</ol>
 
-	<p>Another way to look at the definition of a <i>field</i> is t his: It is a commutative ring in which one can always solve equations of the form <i>ax = b</i> (when <i>a</i> &ne; 0). The solution is, of course, <i>x = a<sup>−1</sup> b</i>. In other words: In all rings we can add, subtract, and multiply, but in fields we can also divide. Or to say this yet another way, a field is a commutative ring with unity for which all non-zero elements are <i>associates</i> of one another. ℚ, ℝ and ℂ, are familiar examples of <i>fields</i>. We have seen that if <i>p</i> is a prime, then ℤ<sub><i>p</i></sub> is a field.</p></div></li>
+	<p>Another way to look at the definition of a <i>field</i> is t his: It is a commutative ring in which one can always solve equations of the form <i>ax</i> = <i>b</i> (when <i>a</i> &ne; 0). The solution is, of course, <i>x</i> = <i>a</i><sup>−1</sup> <i>b</i>. In other words: In all rings we can add, subtract, and multiply, but in fields we can also divide. Or to say this yet another way, a field is a commutative ring with unity for which all non-zero elements are <i>associates</i> of one another. ℚ, ℝ and ℂ, are familiar examples of <i>fields</i>. We have seen that if <i>p</i> is a prime, then ℤ<sub><i>p</i></sub> is a field.</p></div></li>
 
 	<li><p>A <i>division ring</i> is a ring with identity (not necessarily commutative).</p></li>
 </ul>
@@ -196,43 +206,43 @@
 <ol type="a">
 	<li><p>The identity is a unit; it is equal to its inverse.</p></li>
 	<li><p>If <i>a</i> is a unit, then so is <i>a</i><sup>−1</sup>; its inverse is <i>a</i>.</p></li>
-	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b<sup>−1</sup> a<sup>−1</sup></i>.</p></li>
+	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup></i>.</p></li>
 </ol>
 
 <p><b>Proof</b>.</p>
 
 <ol type="a">
-	<li><p>1⋅ 1 = 1</p></li>
-	<li><p>This is shown by the equation <i>aa<sup>−1</sup> = a<sup>−1</sup> a</i> = 1</p></li>
-	<li><p>We have (<i>ab</i>)(<i>b<sup>−1</sup>a<sup>−1</sup></i>) = <i>a</i> (<i>bb<sup>−1</sup></i>) <i>a<sup>−1</sup> = aa<sup>−1</sup></i> = 1.</p>
-	<p>and, similarly, (<i>b<sup>−1</sup> a<sup>−1</sup></i>)(<i>ab</i>) = 1.□</p></li>
+	<li><p>1 ⋅ 1 = 1</p></li>
+
+	<li><p>This is shown by the equation <i>aa</i><sup>−1</sup> = <i>a</i><sup>−1</sup> <i>a</i> = 1</p></li>
+
+	<li><p>We have (<i>ab</i>)(<i>b</i><sup>−1</sup><i>a</i><sup>−1</sup>) = <i>a</i> (<i>bb</i><sup>−1</sup></i>) <i>a</i><sup>−1</sup> = <i>aa</i><sup>−1</sup> = 1.</p>
+	<p>and, similarly, (<i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup>)(<i>ab</i>) = 1.□</p></li>
 </ol>
 
 <div id="associates">
 
-<p><b>6.1.4 Definition.</b> Two elements <i>a, b</i> of the integral domain <i>R</i> are said to be <b>associates</b> if there is a unit <i>u ∈ R</i> such that <i>b = au</i>.
-This is not a different proposition from the one we already gave when studying the integers: Two elemens <i>a</i> and <i>b</i> of ℤ such that <i>a</i>|<i>b</i> e <i>b</i>|<i>a</i> are said associates</p>
+<p><b>6.1.4 Definition.</b> Two elements <i>a, b</i> of the integral domain <i>R</i> are said to be <b>associates</b> if there is a unit <i>u ∈ R</i> such that <i>b = au</i>. This is not a different proposition from the one we already gave when studying the integers: Two elemens <i>a</i> and <i>b</i> of ℤ such that <i>a</i>|<i>b</i> e <i>b</i>|<i>a</i> are said associates</p>
 
-<p>If <i>a</i> and b are associates, <i>a = cb</i> and <i>b = da</i>, hence <i>a = cda</i>. The cancellation law gives 1 = <i>cd</i>, so both <i>c</i> and <i>d</i> are units. </p>
+<p>If <i>a</i> and b are associates, <i>a</i> = <i>cb</i> and <i>b</i> = <i>da</i>, hence <i>a</i> = <i>cda</i>. The cancellation law gives 1 = <i>cd</i>, so both <i>c</i> and <i>d</i> are units. </p>
 
 <p>Note that, by the above Proposition, it follows that being associates is an equivalence relation: it is</p>
 
 <ul>
-	<li><p><i>reflexive</i>, since <i>a = a</i>1;</p></li>
-	<li><p><i>symmetric</i>, since <i>b = au</i> implies <i>a = bu<sup>−1</sup></i>;</p></li>
-	<li><p><i>transitive</i>, since <i>b = au</i> and <i>c = bv</i> imply <i>c = a</i>(<i>uv</i>).</p></li>
+	<li><p><i>reflexive</i>, since <i>a</i> = <i>a</i>1;</p></li>
+	<li><p><i>symmetric</i>, since <i>b</i> = <i>au</i> implies <i>a = bu</i><sup>−1</sup>;</p></li>
+	<li><p><i>transitive</i>, since <i>b</i> = <i>au</i> and <i>c</i> = <i>bv</i> imply <i>c</i> = <i>a</i>(<i>uv</i>).</p></li>
 </ul>
-
 
 <p><i>R</i> is partitioned into equivalence classes, called <b>associate classes</b>. For example, in ℤ, the associate classes are the sets {<i>n, −n</i>} for all non-negative integers <i>n</i>.</p>
 </div>
 
 <p><b>6.1.5 Proposition.</b> Every field <i>F</i> is an integral domain</p>
 
-<p><b>Proof.</b> Let <i>F</i> be a field. Supposte that <i>a,b &in; F</i>, where <i>a</i> &ne; 0 and <i>a ⋅ b </i>= 0. Since <i>a</i> &ne; 0, there exists a multiplicative inverse <i>a<sup>−1</sup></i> to <i>a</i>. By the associativity of the multiplication, we have</p>
+<p><b>Proof.</b> Let <i>F</i> be a field. Supposte that <i>a, b</i> &in; <i>F</i>, where <i>a</i> &ne; 0 and <i>a</i> ⋅ <i>b</i>= 0. Since <i>a</i> &ne; 0, there exists a multiplicative inverse <i>a</i><sup>−1</sup> to <i>a</i>. By the associativity of the multiplication, we have</p>
 
 <div class="eq">
-<p><i>a<sup>−1</sup></i> ⋅ (<i>a⋅b</i>) = (<i>a<sup>−1</sup> ⋅ a</i>) ⋅ <i>b = 1 ⋅  b</i>= 0</p>
+<p><i>a</i><sup>−1</sup></i> ⋅ (<i>a⋅b</i>) = (<i>a</i><sup>−1</sup> ⋅ <i>a</i>) ⋅ <i>b</i> = 1 ⋅ <i>b</i>= 0</p>
 </div>
 
 <p>and hence <i>b</i> = 0. Thus, we have an integral domain.□</p>

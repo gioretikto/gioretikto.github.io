@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Linear congruences"/>
     <title>Linear congruences</title>
     <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,7 +16,7 @@
         <li><a class="navbar" href=/index.html">Algebra</a></li>
     </ul>
 </nav>
-      
+
 <div class="content">
 
 <h1>Linear congruences</h1>
@@ -33,7 +33,7 @@
 
 <p>We are interested in understanding in which cases such a congruence admits solutions, intending for solution an integer <i>x<sub>0</sub></i> such that <i>ax<sub>0</sub></i> ≡<sub><i>n</i></sub> <i>b</i>. If a solution exists, we say that the equation is <i>soluble</i>.</p>
 
-<p><b>Example 4.5.2</b>. The equation 3<i>x</i> ≡ 2 (mod 9) does not admit solutions: if it did, we would find solutions in ℤ for the equation <i>3x + 9y</i> = 2, but <a href="diophantine.html#dioph">Proposition 2.19</a> tells us that this equation does not admit integer solutions, as gcd(3, 9) = 3, which does not divide 2.</p>
+<p><b>Example 4.5.2</b>. The equation 3<i>x</i> ≡ 2 (mod 9) does not admit solutions: if it did, we would find solutions in ℤ for the equation 3<i>x</i> + 9<i>y</i> = 2, but <a href="diophantine.html#dioph">Proposition 2.19</a> tells us that this equation does not admit integer solutions, as gcd(3, 9) = 3, which does not divide 2.</p>
 
 <p><b>Example 4.5.3</b>. The equation 4<i>x</i> ≡ 6 (mod 10) admits the solution <i>x</i> = 4, which is not unique, as <i>x</i> = 9 is a solution too.</p>
 
@@ -47,28 +47,28 @@
 
 <p>It admits solutions if and only if <i>d</i> = gcd(<i>a, n</i>) divides <i>b</i>.</p>
 
-<p><b>Proof</b>. To solve a linear congruence of the form <i>ax</i> ≡ <i>b</i> (mod <i>n</i>) we have essentially to solve a linear Diophantine equation of the form <i>ax + ny = b</i>. We know by <a href="diophantine.html#dioph">Proposition 2.19</a> that these exist if and only if gcd(<i>a, n</i>) | <i>b</i>.□</p>
+<p><b>Proof</b>. To solve a linear congruence of the form <i>ax</i> ≡ <i>b</i> (mod <i>n</i>) we have essentially to solve a linear Diophantine equation of the form <i>ax</i> + <i>ny</i> = <i>b</i>. We know by <a href="diophantine.html#dioph">Proposition 2.19</a> that these exist if and only if gcd(<i>a, n</i>) | <i>b</i>.□</p>
 
 <p>The following proposition tells us how many solutions there are.</p>
 
-<p><b>Proposition 4.5.5</b>. Consider the congruence <i>ax</i> ≡ <i>b</i> (mod <i>n</i>) such that gcd(<i>a, n</i>)|<i>b</i>. Indicating with <i>x<sub>0</sub></i> a solution, then all numbers of the form <i>x<sub>0</sub> + h ⋅ n</i>/gcd(<i>a,n</i>), with <i>h</i> ∈ ℤ, are solutions, and there are no other solutions. Among these, the solutions</p>
+<p><b>Proposition 4.5.5</b>. Consider the congruence <i>ax</i> ≡ <i>b</i> (mod <i>n</i>) such that gcd(<i>a, n</i>)|<i>b</i>. Indicating with <i>x</i><sub>0</sub> a solution, then all numbers of the form <i>x</i><sub>0</sub> + <i>h ⋅ n</i>/gcd(<i>a,n</i>), with <i>h</i> ∈ ℤ, are solutions, and there are no other solutions. Among these, the solutions</p>
 
 <div class="eq">
-<p><i>x<sub>0</sub>, &emsp; x<sub>0</sub> + n/d, &emsp; x<sub>0</sub> + 2 ⋅ n/d, &emsp; ..., &emsp; x<sub>0</sub></i> + (<i>d</i> − 1) ⋅ <i>n/d</i> &emsp; (<b>4.4</b>)</p>
+<p><i>x</i><sub>0</sub>, &emsp; <i>x</i><sub>0</sub> + <i>n/d</i>, &emsp; <i>x</i><sub>0</sub> + 2 ⋅ <i>n/d</i>, &emsp; ..., &emsp; x<sub>0</sub></i> + (<i>d</i> − 1) ⋅ <i>n/d</i> &emsp; (<b>4.4</b>)</p>
 </div>
 
 <p>are pairwise non-congruent and all other solutions (those with <i>h &ge;d</i>) are congruent to one of them. Thus the congruence admits exactly <i>d</i> non-congruent solutions modulo <i>n</i>.</p>
 
-<p><b>Proof</b>. Let us prove first that <i>x<sub>0</sub> + h ⋅ n</i>/gcd(<i>a,n</i>) is a solution, for all <i>h</i> ∈ ℤ. We have,</p>
+<p><b>Proof</b>. Let us prove first that <i>x</i><sub>0</sub> + <i>h ⋅ n</i>/gcd(<i>a,n</i>) is a solution, for all <i>h</i> ∈ ℤ. We have,</p>
 
 <div class="eq">
-<p><i>a</i>(<i>x<sub>0</sub> + h ⋅ n</i>/gcd(<i>a,n</i>)) = <i>ax<sub>0</sub> + ah ⋅ n/d</i> = <i>ax<sub>0</sub> + hn</i> ≡<sub><i>n</i></sub> <i>ax<sub>0</sub> ≡<sub>n</sub> b</i>.</p>
+<p><i>a</i>(<i>x</i><sub>0</sub> + <i>h ⋅ n</i>/gcd(<i>a,n</i>)) = <i>ax</i><sub>0</sub> + <i>ah ⋅ n/d</i> = <i>ax</i><sub>0</sub> + <i>hn</i> ≡<sub><i>n</i></sub> <i>ax</i><sub>0</sub> ≡<sub>n</sub> b</i>.</p>
 </div>
 
 <p>We prove next that each solution is of this form. Let <i>x<sub>0</sub></i> and <i>x<sub>0</sub>'</i> be two solutions. Then</p>
 
 <div class="eq">
-<p><i>ax<sub>0</sub> = b + hn, &emsp;ax<sub>0</sub>' = b + kn</i>,</p>
+<p><i>ax</i><sub>0</sub> = <i>b + hn</i>, &emsp;<i>ax</i><sub>0</sub>' = <i>b + kn</i>,</p>
 </div>
 
 <p>for suitable integers <i>h</i> and <i>k</i>, so</p>
@@ -80,40 +80,40 @@
 <p>By dividing both sides by <i>d</i> we get</p>
 
 <div class="eq">
-<p><i>a/d</i> ⋅ (<i>x<sub>0</sub> − x<sub>0</sub>'</i>) = <i>n/d</i> ⋅ (<i>h − k</i>),</p>
+<p><i>a/d</i> ⋅ (<i>x</i><sub>0</sub> − <i>x</i><sub>0</sub>') = <i>n/d</i> ⋅ (<i>h − k</i>),</p>
 </div>
 
-<p>since <i>a/d</i> and <i>n/d</i> are coprime (see <a href="gcd.html">Proposition 2.22</a>) we see that n/d divides <i>x<sub>0</sub> − x<sub>0</sub>'</i>, that is <i>x<sub>0</sub> − x<sub>0</sub>' = zn</i> for some integer <i>z</i>.</p>
+<p>since <i>a/d</i> and <i>n/d</i> are coprime (see <a href="gcd.html">Proposition 2.22</a>) we see that n/d divides <i>x<sub>0</sub> − x<sub>0</sub>'</i>, that is <i>x</i><sub>0</sub> − <i>x</i><sub>0</sub>' = <i>zn</i> for some integer <i>z</i>.</p>
 
-<p>We prove now that, among the solutions <i>x<sub>0</sub> + h ⋅ n/d</i>, when <i>h</i> varies in ℤ, exactly <i>d</i> of them are non-congruent modulo <i>n</i>. To this end, we shall show that the solutions (4.4) are non-congruent modulo n and that every solution is congruent to one of them. Assume by contradiction that two of the solutions (4.4) are congruent modulo <i>n</i>, that is to say,</p>
+<p>We prove now that, among the solutions <i>x</i><sub>0</sub> + <i>h ⋅ n/d</i>, when <i>h</i> varies in ℤ, exactly <i>d</i> of them are non-congruent modulo <i>n</i>. To this end, we shall show that the solutions (4.4) are non-congruent modulo n and that every solution is congruent to one of them. Assume by contradiction that two of the solutions (4.4) are congruent modulo <i>n</i>, that is to say,</p>
 
 <div class="eq">
-<p><i>x<sub>0</sub> + h<sub>1</sub> ⋅ n/d</i> ≡ <i>x<sub>0</sub> + h<sub>2</sub> ⋅ n/d</i> &emsp; (mod <i>n</i>)</p>
+<p><i>x</i><sub>0</sub> + <i>h</i><sub>1</sub> ⋅ <i>n/d</i> ≡ <i>x<sub>0</sub> + h<sub>2</sub> ⋅ n/d</i> &emsp; (mod <i>n</i>)</p>
 </div>
 
-<p><i>h<sub>1</sub>, h<sub>2</sub></i> &in; ℤ e 0 &le; h<sub>1</sub> &le; h<sub>2</sub> &le; <i>d</i> − 1. Then we would get</p>
+<p><i>h</i><sub>1</sub>, <i>h</i><sub>2</sub> &in; ℤ e 0 &le; <i>h</i><sub>1</sub> &le; <i>h</i><sub>2</sub> &le; <i>d</i> − 1. Then we would get</p>
 
 <div class="eq">
 <p><i>h<sub>1</sub> ⋅ n/d</i> ≡ <i>h<sub>2</sub> ⋅ n/d</i> &emsp; (mod <i>n</i>)</p>
 </div>
 
-<p>hence, by dividing by <o>n/d</i> wchih is gcd(<i>n/d, n</i>), it would follow that</p>
+<p>hence, by dividing by <i>n/d</i> wchih is gcd(<i>n/d, n</i>), it would follow that</p>
 
 <div class="eq">
-<p><i>h<sub>1</sub></i> ≡ <i>h<sub>2</sub></i> &emsp; (mod <i>n</i>/(<i>n/d</i>)</p>
+<p><i>h</i><sub>1</sub></i> ≡ <i>h</i><sub>2</sub> &emsp; (mod <i>n</i>/(<i>n/d</i>)</p>
 </div>
 
-<p>yielding to a contradiction of the initial assumption <i>0 &le; h<sub>1</sub> &le; h<sub>2</sub> &le; <i>d</i> − 1</i>.</p>
+<p>yielding to a contradiction of the initial assumption 0 &le; <i>h</i><sub>1</sub> &le; <i>h</i><sub>2</sub> &le; <i>d</i> − 1</i>.</p>
 
-<p>To prove that each solution of the form <i>x<sub>0</sub> + h ⋅ (n/d)</i>, when <i>h</i> varies in ℤ, is congruent to one of the solutions (4.4), it suffices to divide <i>h</i> by <i>d</i>, that is to say, defining <i>h = dq + r</i>, with <i>0 ≤ r ≤ d − 1</i>, we have</p>
+<p>To prove that each solution of the form <i>x</i><sub>0</sub> + <i>h</i> ⋅ (<i>n/d</i>), when <i>h</i> varies in ℤ, is congruent to one of the solutions (4.4), it suffices to divide <i>h</i> by <i>d</i>, that is to say, defining <i>h = dq + r</i>, with <i>0 ≤ r ≤ d − 1</i>, we have</p>
 
 <div class="eq">
-<p><i>x<sub>0</sub> + h ⋅ n/d = x<sub>0</sub></i> + (<i>dq + r</i>)<i>m</i> = <i>x<sub>0</sub> + qn + r ⋅ n/d ≡ n x<sub>0</sub> + r ⋅ n/d</i></p>
+<p><i>x</i><sub>0</sub> + <i>h ⋅ n/d</i> = x<sub>0</sub></i> + (<i>dq + r</i>)<i>m</i> = <i>x</i><sub>0</sub> + <i>qn</i> + <i>r</i> ⋅ <i>n/d</i> ≡<sub><i>n</i></sub> <i>x</i><sub>0</sub> + <i>r ⋅ n/d</i></p>
 </div>
 
 <p>which is exactly one of the solutions (4.4). &emsp;□</p>
 
-<p><b>Example 4.5.6</b>. Consider the conguence 3<i>x</i> ≡ 12 (mod 15). So we have gcd(3, 15) = 3 which divides 12. One easy solution is <i>x<sub>0</sub></i> = 4. We have <i>n/d</i> = 5, so the solutions listed in (4.4) in this example are: <i>x<sub>0</sub></i> = 4; <i>x<sub>0</sub></i> + 1 ⋅ 5 = 9, <i>x<sub>0</sub></i> + 2 ⋅ 5 = 14. Now let's take some other value for <i>h</i> &ge; 3, for example <i>h</i> = 4: So <i>x<sub>0</sub></i> + 4 ⋅ 5 = 24. But 24 mod 15 = 9, that means <i>x<sub>0</sub></i> + 4 ⋅ 5 is congruent to <i>x<sub>0</sub></i> + 1 ⋅ 5. Any solution is congruent to ONE of those solutions: The solution with <i>h</i> = 3 is congruent to the one with <i>h</i> = 0; 19 − 5 = 15.</p>
+<p><b>Example 4.5.6</b>. Consider the conguence 3<i>x</i> ≡ 12 (mod 15). So we have gcd(3, 15) = 3 which divides 12. One easy solution is <i>x<sub>0</sub></i> = 4. We have <i>n/d</i> = 5, so the solutions listed in (4.4) in this example are: <i>x<sub>0</sub></i> = 4; <i>x<sub>0</sub></i> + 1 ⋅ 5 = 9, <i>x</i><sub>0</sub> + 2 ⋅ 5 = 14. Now let's take some other value for <i>h</i> &ge; 3, for example <i>h</i> = 4: So <i>x</i><sub>0</sub> + 4 ⋅ 5 = 24. But 24 mod 15 = 9, that means <i>x</i><sub>0</sub> + 4 ⋅ 5 is congruent to <i>x</i><sub>0</sub> + 1 ⋅ 5. Any solution is congruent to ONE of those solutions: The solution with <i>h</i> = 3 is congruent to the one with <i>h</i> = 0; 19 − 5 = 15.</p>
 
 <p><b>Corollary 4.5.7</b>. If <i>a</i> and <i>n</i> are relatively prime gcd(<i>a,n</i>) = 1, then the congruence <i>ax</i> ≡ <i>b</i> (mod <i>n</i>) admits exactly one solution modulo <i>n</i> (that is any two solutions in ℤ are congruent modulo <i>n</i>).</p>
 
@@ -128,7 +128,7 @@
 <p><i>ax</i> ≡ 1 (mod <i>n</i>).</p>
 </div>
 
-<p>Now, this congruence admits a solution, and this solution is unique, if and only if GCD(<i>a, n</i>) = 1. So the invertible classes are the classes <i>ā</i> with 0 &lt; <i>a</i> &lt; <i>n</i> and GCD(<i>a, n</i>) = 1.  &emsp;□</p>
+<p>Now, this congruence admits a solution, and this solution is unique, if and only if GCD(<i>a, n</i>) = 1. So the invertible classes are the classes <i>ā</i> with 0 &lt; <i>a</i> &lt; <i>n</i> and GCD(<i>a, n</i>) = 1. &emsp;□</p>
 </div>
 
 <section aria-label="End">

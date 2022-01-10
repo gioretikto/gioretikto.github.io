@@ -21,18 +21,18 @@
 
 <h1>Fundamental theorem of ring homorpshims and isomorphism</h1>
 
-<p><b>6.4.0 Proposition</b> (<i>Fundamental theorem of ring homomorphism</i>) Let <i>R</i> and <i>R'</i> two rings and let <i>f: R ⟶ R'</i> an homomorphsim between rings. Then there exists a unique isomorphim <i>f*</i> from <i>R</i>/Ker <i>f</i> to Im<i>f</i></p>
+<p><b>6.4.1 Proposition</b> (<i>Fundamental theorem of ring homomorphism</i>) Let <i>R</i> and <i>R'</i> two rings and let <i>f</i>: <i>R</i> ⟶ <i>R</i>' an homomorphsim between rings. Then there exists a unique isomorphim <i>f*</i> from <i>R</i>/Ker <i>f</i> to Im<i>f</i></p>
 
 <div class="eq">
 <p><i>R</i>/Ker <i>f</i> ≃ Im<i>f</i></p>
 </div>
 
-<p>such that <i>f* ∘ &pi; = f</i>, with <i>&pi;</i> the canonical projection of <i>R</i> on <i>R</i>/Ker <i>f</i>. </p>
+<p>such that <i>f</i>* ∘ <i>&pi;</i> = <i>f</i>, with <i>&pi;</i> the canonical projection of <i>R</i> on <i>R</i>/Ker <i>f</i>. </p>
 
-<p><b>Proof</b>. If <i>f*</i> has to satisfy <i>f = f* ∘ &pi;</i>, we must define it as follows</p>
+<p><b>Proof</b>. If <i>f*</i> has to satisfy <i>f</i> = <i>f</i>* ∘ <i>&pi;</i>, we must define it as follows</p>
 
 <div class="eq">
-<p><i>f* : R</i>/Ker <i>f</i> ⟶ Im <i>f</i></p>
+<p><i>f</i>* : <i>R</i>/Ker <i>f</i> ⟶ Im <i>f</i></p>
 <p><i>x</i> + Ker <i>f</i> ⟼ <i>f</i>(<i>x</i>)</p>
 </div>
 
@@ -40,12 +40,14 @@
 
 <ol>
 	<li><p><i>f*</i> is well-defined, i.e. if [<i>x</i>] = [<i>y</i>] ⇒ <i>f</i>(<i>x</i>) = <i>f</i>(<i>y</i>)</p></li>
+
 	<li><p><i>f*</i> is bijective.</p></li>
+
 	<li><p><i>f*</i> is an homomorphism.</p></li>
 </ol>
 
 <ol>
-	<li><p>[<i>x</i>] = [<i>y</i>] ⇐⇒ <i>x − y</i> &in; Ker <i>f</i> ⇐⇒ <i>f</i>(<i>x − y</i>) = 0 ⇐⇒ <i>f</i>(<i>x</i>) = <i>f</i>(<i>y</i>). Double implication prove at the same time that <i>f*</i> is well-defined and injective.</p></li>
+	<li><p>[<i>x</i>] = [<i>y</i>] ⇐⇒ <i>x</i> − <i>y</i> &in; Ker <i>f</i> ⇐⇒ <i>f</i>(<i>x</i> − <i>y</i>) = 0 ⇐⇒ <i>f</i>(<i>x</i>) = <i>f</i>(<i>y</i>). Double implications prove at the same time that <i>f*</i> is well-defined and injective.</p></li>
 	
 	<li><p>It is left to prove that <i>f*</i> is surjective: An element <i>f</i>(<i>x</i>) &in; Im<i>f</i>, has counter image <i>x &in; R</i>.
 	And an element [<i>x</i>] is mapped through <i>f*</i> to <i>f</i>(<i>x</i>), hence <i>f*</i> is surjective Im<i>f*</i> = Im<i>f</i>.</p></li>
@@ -59,7 +61,7 @@
 
 <img src="img/fundamental_theorem_homo.png">
 
-<p>This diagram tell us that there exist only one isomorphism <i>f*</i>, from <i>R</i>/Ker <i>f</i> to Im <i>f</i> for <i>diagram to be commutative</i>, that is such that <i>f = f* ∘ &pi;</i>.□</p>
+<p>This diagram tell us that there exist only one isomorphism <i>f*</i>, from <i>R</i>/Ker <i>f</i> to Im <i>f</i> for <i>diagram to be commutative</i>, that is such that <i>f</i> = <i>f</i>* ∘ <i>&pi;</i>.□</p>
 
 <p>If there exists an homomorphism <i>f</i> of <i>R</i> onto <i>R'</i>, then <i>R'</i> is called an isomorphic image of <i>R</i>.</p>
 
@@ -67,41 +69,44 @@
 
 <p>Moreover to prove that a quotienti ring <i>R/I</i> is isomorphic to a ring <i>R'</i> it is sufficient to find an epimorphism <i>&phi;</i> from <i>R'</i> to <i>R</i> such that <i>I</i> = Ker <i>&phi;</i>.</p>
 
-<p><b>6.4.1 Example</b> Consider ℤ, the ring of integers and let <i>n</i> &gt; 1 be a fixed integer and let <i>I<sub>n</sub></i> (= <i>n</i>ℤ) be the set of all multiples of <i>n</i>; then <i>I<sub>n</sub></i> is an ideal of ℤ. If ℤ<sub><i>n</i></sub>, is the integers mod <i>n</i>, define <i>&phi;</i>: ℤ ⟶  ℤ<sub><i>n</i></sub>, by <I>&phi;</i>(<i>a</i>) = [<i>a</i>]. As is easily seen, <i>&phi;</i> is a homomorphism of ℤ onto ℤ<sub><i>n</i></sub>, with kernel <i>I<sub>n</sub></i>. So by the Fundamental theorem of ring homomorphism, ℤ<sub><i>n</i></sub> ≃ ℤ/<i>I<sub>n</sub></i>. (This should come as no surprise, for that is how we originally introduced ℤ<sub><i>n</i></sub>.)</p>
+<p><b>6.4.2 Example</b> Consider ℤ, the ring of integers and let <i>n</i> &gt; 1 be a fixed integer and let <i>I<sub>n</sub></i> (= <i>n</i>ℤ) be the set of all multiples of <i>n</i>; then <i>I<sub>n</sub></i> is an ideal of ℤ. If ℤ<sub><i>n</i></sub>, is the integers mod <i>n</i>, define <i>&phi;</i>: ℤ ⟶  ℤ<sub><i>n</i></sub>, by <I>&phi;</i>(<i>a</i>) = [<i>a</i>]. As is easily seen, <i>&phi;</i> is a homomorphism of ℤ onto ℤ<sub><i>n</i></sub>, with kernel <i>I<sub>n</sub></i>. So by the Fundamental theorem of ring homomorphism, ℤ<sub><i>n</i></sub> ≃ ℤ/<i>I<sub>n</sub></i>. (This should come as no surprise, for that is how we originally introduced ℤ<sub><i>n</i></sub>.)</p>
 
 <p><b>6.4.2 Proposition</b> Let <i>f</i> an homomorphism between two rings <i>R</i> and <i>R'</i>. Then</p>
 
 <ol type="a">
 	<li><p>if <i>A</i> is a subring of <i>R</i>, <i>f</i>(<i>A</i>) is a subring of <i>R'</i>.</p></li>
+
 	<li><p>if <i>I</i> is an ideal of <i>R</i>, <i>f</i>(<i>I</i>) is a ideal of <i>f</i>(<i>R</i>) (= Im <i>f</i>) (not necessarily of <i>R'</i>).</p></li>
-	<li><p>if <i>A'</i> is a subring of <i>R'</i>, <i>f<sup>−1</sup></i>(<i>A'</i>) is a subring of <i>R</i> containing Ker <i>f</i>.</p></li>
-	<li><p>if <i>I'</i> is a an ideal of <i>R'</i>, <i>f<sup>−1</sup></i>(<i>I'</i>) is an ideal of <i>R</i> containing Ker <i>f</i>.</p></li>
+
+	<li><p>if <i>A'</i> is a subring of <i>R'</i>, <i>f</i><sup>−1</sup>(<i>A'</i>) is a subring of <i>R</i> containing Ker <i>f</i>.</p></li>
+
+	<li><p>if <i>I'</i> is a an ideal of <i>R'</i>, <i>f</i><sup>−1</sup>(<i>I'</i>) is an ideal of <i>R</i> containing Ker <i>f</i>.</p></li>
 </ol>
 
-<p><b>Note</b> <i>f</i><sup>−1</sup>(<i>A'</i>) here means the <a href="functions.html#image">preimage</a> or "inverse image" i.e. the set {<i>r &in; R</i>: <i>f</i>(<i>r</i>) &in; A'</i>}.</p>
+<p><b>Note</b> <i>f</i><sup>−1</sup>(<i>A'</i>) here means the <a href="functions.html#image">preimage</a> or "inverse image" i.e. the set {<i>r</i> &in; <i>R</i>: <i>f</i>(<i>r</i>) &in; <i>A</i>'}.</p>
 
 <p><b>Proof.</b></p>
 
 <ol type="a">
 
-	<li><p>Given two elements <i>f</i>(<i>a</i>) and <i>f</i>(<i>a̅</i>) of <i>f</i>(<i>A</i>), we have <i>f</i>(<i>a</i>) − <i>f</i>(<i>a̅</i>) = <i>f</i>(<i>a −a̅</i>) &in; <i>f</i>(<i>A</i>) and <i>f</i>(<i>a</i>)<i>f</i>(<i>a̅</i>) = <i>f</i>(<i>aa̅</i>) &in; <i>f</i>(<i>I</i>) since <i>a − a̅</i> &in; <i>A</i> and <i>aa̅ &in; A</i>.</p></li>
+	<li><p>Given two elements <i>f</i>(<i>a</i>) and <i>f</i>(<i>a̅</i>) of <i>f</i>(<i>A</i>), we have <i>f</i>(<i>a</i>) − <i>f</i>(<i>a̅</i>) = <i>f</i>(<i>a</i> − <i>a̅</i>) &in; <i>f</i>(<i>A</i>) and <i>f</i>(<i>a</i>)<i>f</i>(<i>a̅</i>) = <i>f</i>(<i>aa̅</i>) &in; <i>f</i>(<i>I</i>) since <i>a</i> − <i>a̅</i> &in; <i>A</i> and <i>aa̅</i> &in; <i>A</i>.</p></li>
 	
-	<li><p>It is sufficient to prove that <i>f</i>(<i>a</i>)<i>f</i>(<i>x</i>) &in; <i>f</i>(<i>I</i>) and <i>f</i>(<i>x</i>)<i>f</i>(<i>a</i>) &in; <i>f</i>(<i>I</i>) because <i>ax &in; I</i>. Analogously <i>f</i>(<i>x</i>)<i>f</i>(<i>a</i>) &in; <i>f</i>(<i>I</i>).</p></li>
+	<li><p>It is sufficient to prove that <i>f</i>(<i>a</i>)<i>f</i>(<i>x</i>) &in; <i>f</i>(<i>I</i>) and <i>f</i>(<i>x</i>)<i>f</i>(<i>a</i>) &in; <i>f</i>(<i>I</i>) because <i>ax</i> &in; <i>I</i>. Analogously <i>f</i>(<i>x</i>)<i>f</i>(<i>a</i>) &in; <i>f</i>(<i>I</i>).</p></li>
 	
-	<li><p>Let <i>a,a̅ &in; f<sup>−1</sup></i>(<i>A'</i>), such that <i>f</i>(<i>a</i>) &in; <i>A'</i> and <i>f</i>(<i>a̅</i>) &in; <i>A'</i>. Then <i>f</i>(<i>a − a̅</i>) = <i>f</i>(<i>a</i>) − <i>f</i>(<i>a̅</i>) &in; <i>A'</i>, and <i>f</i>(<i>aa̅</i>) = <i>f</i>(<i>a</i>)<i>f</i>(<i>a̅</i>) &in; <i>A'</i> hence <i>a − a̅</i> and <i>aa̅</i> are in <i>f<sup>−1</sup></i>(<i>A'</i>). The last element contains Ker <i>f</i>, since &forall;<i>k</i> &in; Ker <i>f</i>, <i>f</i>(<i>k</i>) = 0<sub><i>R'</i></sub>, which is contained in every ring <i>A'</i>. </p></li>
+	<li><p>Let <i>a, a̅</i> &in; <i>f</i><sup>−1</sup>(<i>A'</i>), such that <i>f</i>(<i>a</i>) &in; <i>A'</i> and <i>f</i>(<i>a̅</i>) &in; <i>A'</i>. Then <i>f</i>(<i>a</i> − <i>a̅</i>) = <i>f</i>(<i>a</i>) − <i>f</i>(<i>a̅</i>) &in; <i>A'</i>, and <i>f</i>(<i>aa̅</i>) = <i>f</i>(<i>a</i>)<i>f</i>(<i>a̅</i>) &in; <i>A'</i> hence <i>a</i> − <i>a̅</i> and <i>aa̅</i> are in <i>f</i><sup>−1</sup>(<i>A'</i>). The last element contains Ker <i>f</i>, since &forall;<i>k</i> &in; Ker <i>f</i>, <i>f</i>(<i>k</i>) = 0<sub><i>R'</i></sub>, which is contained in every ring <i>A'</i>. </p></li>
 	
-	<li><p>Let <i>x &in; R</i> and <i>a &in; f<sup>−1</sup></i>(<i>I'</i>). We must prove that <i>xa</i> and <i>ax</i> are in <i>f<sup>−1</sup></i>(<i>I'</i>). Indeed, <i>f</i>(<i>xa</i>) = <i>f</i>(<i>x</i>)<i>f</i>(<i>a</i>) &in; <i>I'</i> (since <i>f</i>(<i>a</i>) &in; <i>I'</i>). Analogously <i>f</i>(<i>ax</i>) &in; <i>I'</i>. In this case as well <i>f<sup>−1</sup></i>(<i>I'</i>) contains Ker <i>f</i>.□</p></li>
+	<li><p>Let <i>x</i> &in; <i>R</i> and <i>a</i> &in; <i>f</i><sup>−1</sup>(<i>I'</i>). We must prove that <i>xa</i> and <i>ax</i> are in <i>f<sup>−1</sup></i>(<i>I'</i>). Indeed, <i>f</i>(<i>xa</i>) = <i>f</i>(<i>x</i>)<i>f</i>(<i>a</i>) &in; <i>I'</i> (since <i>f</i>(<i>a</i>) &in; <i>I'</i>). Analogously <i>f</i>(<i>ax</i>) &in; <i>I'</i>. In this case as well <i>f<sup>−1</sup></i>(<i>I'</i>) contains Ker <i>f</i>.□</p></li>
 </ol>
 
-<p><b>6.4.6. Example</b>. Let <i>R</i> = ℤ and <i>R'</i> = ℤ<sub>4</sub> = ℤ/4ℤ, and <i>f = &pi;</i> the canonical projection of ℤ on ℤ/4ℤ. Let <i>A</i> = 6ℤ. The elements of 6ℤ are distributed in only two classes of ℤ modulo 4ℤ. Considering the quotient modulo I = 4ℤ.</p>
+<p><b>6.4.3. Example</b>. Let <i>R</i> = ℤ and <i>R'</i> = ℤ<sub>4</sub> = ℤ/4ℤ, and <i>f = &pi;</i> the canonical projection of ℤ on ℤ/4ℤ. Let <i>A</i> = 6ℤ. The elements of 6ℤ are distributed in only two classes of ℤ modulo 4ℤ. Considering the quotient modulo <i>I</i> = 4ℤ.</p>
 
-<p>6Z + 4Z = {<i>a + b</i> | <i>a</i> in 6Z, <i>b</i> in 4Z}. For that, the mean the multiples of 6 in Z fall into only two of the four possible cosets of 4Z. In other words, out of the possible values 0,1,2,3 for what some n in Z can be mod 4, only two of those values come up when you look at just the n in 6Z.</p>
+<p>6Z + 4Z = {<i>a + b</i> | <i>a</i> in 6Z, <i>b</i> in 4Z}. For that, the mean the multiples of 6 in ℤ fall into only two of the four possible cosets of 4Z. In other words, out of the possible values 0,1,2,3 for what some <i>n</i> in ℤ can be mod 4, only two of those values come up when you look at just the <i>n</i> in 6Z.</p>
 
 <p><i>&pi;</i>(<i>A</i>) = 6ℤ/4ℤ = [0, 2] = {<i>I, 2+I</i>}, because, a multiple of 6 divided by 4 can have as remainder either 0 or 2.</p>
 
 <p><i>R/I</i> = ℤ/4ℤ because every <i>n</i> in ℤ can be written uniquely as <i>4m + r</i> where <i>r</i> is in {0,1,2,3} by the division algorithm. So <i>R/I</i> = {<i>I, 1+I, 2+I, 3+I</i>}. It's easy to see that <i>&pi;</i>(<i>A</i>) is an ideal of <i>R/I</i>.</p>
 
-<p><b>6.4.6. Corollary</b>. Let <i>R</i> a ring, <i>I</i> one of its two-sided ideal and <i>&pi;: R  ⟶ R/I</i>, the canonical projection. Then</p>
+<p><b>6.4.4. Corollary</b>. Let <i>R</i> a ring, <i>I</i> one of its two-sided ideal and <i>&pi;</i>: <i>R</i>  ⟶ <i>R/I</i>, the canonical projection. Then</p>
 
 <ol type="a">
 	<li><p><i>S</i> subring (<i>ideal</i>) of <i>R</i> ⇒ <i>&pi;</i>(<i>S</i>) = (<i>S + I</i>)/<i>I</i> is a subring (<i>ideal</i>) of <i>R/I</i>;</p></li>
@@ -113,13 +118,13 @@
 <ol>
 	<li><p>let <i>S</i> be a subring of <i>R</i>. <i>&pi;</i> is a homomorphism between <i>R</i> and <i>R/I</i>, so by point 1 of 6.4.1, <i>π</i>(<i>S</i>) is a subring of <i>R/I</i>.</p></li>
 	
-	<li><p>let <i>S</i> be an ideal of <i>R</i>. <i>π</i> is a homomorphism between <i>R</i> and <i>R/I</i>, so by point 2 of 6.4.1, <i>π</i>(<i>S</i>) is an ideal of <i>π</i>(<i>R</i>). Furthermore, <i>π</i> defined as <i>r ⟼ r + I</i> is a surjection, so <i>π</i>(<i>R</i>) = <i>R/I</i>. Therefore, <i>π</i>(<i>S</i>) is an ideal of <i>R/I</i>. </p></li>
+	<li><p>let <i>S</i> be an ideal of <i>R</i>. <i>π</i> is a homomorphism between <i>R</i> and <i>R/I</i>, so by point 2 of 6.4.1, <i>π</i>(<i>S</i>) is an ideal of <i>π</i>(<i>R</i>). Furthermore, <i>π</i> defined as <i>r</i> ⟼ <i>r</i> + <i>I</i> is a surjection, so <i>π</i>(<i>R</i>) = <i>R/I</i>. Therefore, <i>π</i>(<i>S</i>) is an ideal of <i>R/I</i>. </p></li>
 </ol>
 
 <p><b>On why (<i>S + I</i>)/<i>I</i> = <i>π</i>(<i>S</i>)</b> and <i>π</i>(<i>s</i>) is an element of (<i>S+I</i>)/<i>I</i>, <i>π</i>(<i>s</i>) = <i>s+I</i> by definition. Anything in (<i>S + I</i>)/<i>I</i> is some coset <i>x + I</i> where <i>x</i> is in the set <i>S + I</i>, so <i>x</i> is some <i>s + i</i>  (<i>s &in; S, i &in; I</i>), so <i>x + I = s + i + I = s + I = pi</i>(<i>s</i>). Conversely, take any <i>&pi;</i>(<i>s</i>) in <i>&pi;</i>(<i>S</i>).
 π(s) = s + I = s + i + I with i = 0 in I.□</p>
 
-<p><b>6.4.6. Proposition</b>. (<i>The Correspondence Theorem</i>) Let <i>R</i> a ring, <i>I</i> one of its ideal and <i>&pi;: R ⟶ R/I</i> the canonical projection. Let</p>
+<p><b>6.4.5. Proposition</b>. (<i>The Correspondence Theorem</i>) Let <i>R</i> a ring, <i>I</i> one of its ideal and <i>&pi;: R ⟶ R/I</i> the canonical projection. Let</p>
 
 <div class="eq">
 <p>𝓛  = {subrings (ideals) of <i>R</i> containing <i>I</i>}</p>
@@ -148,11 +153,11 @@
 	<li><p><i>&pi;</i>(<i>&pi;</i><sup>−1</sup>(<i>A'</i>)) = <i>A'</i></p></li>
 </ol>
 
-<p><i>&pi;<sup>−1</sup></i>(<i>&pi;</i>(<i>A</i>)) ⊃ <i>A</i> and <i>&pi;</i>(<i>&pi;</i><sup>−1</sup>(<i>A'</i>)) ⊂ <i>A'</i> are general properties of any map of sets and for arbitrary subsets. The equality <i>&pi;</i>(&pi;<sup>−1</sup>(<i>A'</i>)) = <i>A'</i> holds for any surjective map of sets. We need to prove the double inclusion i.e. <i>&pi;<sup>−1</sup></i>(&pi;(<i>A</i>)) ⊂  <i>A</i>, which requires <i>A</i> ⊃  <i>I</i>. Let <i>x</i> &in; <i>&pi;<sup>−1</sup></i>(&pi;(<i>A</i>)). Then <i>&pi;</i>(<i>x</i>) &in; <i>&pi;</i>(<i>A</i>), i.e. there exist an element <i>y</i> &in; <i>I</i> such that <i>&pi;</i>(<i>y</i>) = <i>&pi;</i>(<i>x</i>). Since <i>&pi;</i> is a homomorphism, <i>&pi;</i>(<i>x−y</i>) = 0 and <i>x − y</i> &in; <i>I</i> = Ker <i>&pi;</i>. Since <i>y &in; I</i> and <i>A</i> ⊃  <i>I</i>, this implies that <i>x &in; A</i> □.</p>
+<p><i>&pi;</i><sup>−1</sup></i>(<i>&pi;</i>(<i>A</i>)) ⊃ <i>A</i> and <i>&pi;</i>(<i>&pi;</i><sup>−1</sup>(<i>A'</i>)) ⊂ <i>A'</i> are general properties of any map of sets and for arbitrary subsets. The equality <i>&pi;</i>(<i>&pi;</i><sup>−1</sup>(<i>A'</i>)) = <i>A'</i> holds for any surjective map of sets. We need to prove the double inclusion i.e. <i>&pi;</i><sup>−1</sup>(<i>&pi;</i>(<i>A</i>)) ⊂  <i>A</i>, which requires <i>A</i> ⊃  <i>I</i>. Let <i>x</i> &in; <i>&pi;</i><sup>−1</sup>(<i>&pi;</i>(<i>A</i>)). Then <i>&pi;</i>(<i>x</i>) &in; <i>&pi;</i>(<i>A</i>), i.e. there exist an element <i>y</i> &in; <i>I</i> such that <i>&pi;</i>(<i>y</i>) = <i>&pi;</i>(<i>x</i>). Since <i>&pi;</i> is a homomorphism, <i>&pi;</i>(<i>x</i> − <i>y</i>) = 0 and <i>x − y</i> &in; <i>I</i> = Ker <i>&pi;</i>. Since <i>y</i> &in; <i>I</i> and <i>A</i> ⊃  <i>I</i>, this implies that <i>x</i> &in; <i>A</i> □.</p>
  
 <p><b>6.4.6. Example</b>. Determine all ideals of the quotient ring Z/12ℤ .</p>
 
-<p>The ring is now made of elements of the sort <i>z</i> + 12ℤ with z &in; ℤ. We must find (<i>z</i> + 12ℤ)(<i>i</i> + 12ℤ) = <i>zi</i> + 12ℤ. Using the correspondence theorem, find all ideals of ℤ containing 12ℤ and then use the &Psi; to create the correspondence with the ideals of ℤ/12ℤ. For example if we take even numbers 2ℤ this is an ideal of Z since an even number multiplied by an integer is again even: 12ℤ ⊂ 2ℤ. We have that mℤ ⊂ nℤ  iff <i>n</i> | <i>m</i>, so these sets are</p>
+<p>The ring is now made of elements of the sort <i>z</i> + 12ℤ with <i>z</i> &in; ℤ. We must find (<i>z</i> + 12ℤ)(<i>i</i> + 12ℤ) = <i>zi</i> + 12ℤ. Using the correspondence theorem, find all ideals of ℤ containing 12ℤ and then use the <i>&Psi;</i> to create the correspondence with the ideals of ℤ/12ℤ. For example if we take even numbers 2ℤ this is an ideal of Z since an even number multiplied by an integer is again even: 12ℤ ⊂ 2ℤ. We have that <i>m</i>ℤ ⊂ <i>n</i>ℤ iff <i>n</i> | <i>m</i>, so these sets are</p>
 
 <div class="eq">
 <p>Z, 2Z, 3Z, 4Z, 6Z, 12Z</p>
@@ -169,26 +174,28 @@
 <p><b>6.4.6. Theorem</b>. (<i>First Isomorphism theorem</i>) Let <i>R</i> a ring, <i>I</i> one of its ideal and <i>&pi;</i> the canonical projection. Let <i>A</i> a subring of <i>R</i> not necessarily containing <i>I</i>. Then</p>
 
 <ol type="a">
-	<li><p><i>&pi;</i><sup>−1</sup>(&pi;(<i>A</i>)) = <i>A + I</i> = {<i>a + i</i> | <i>a &in; A, i &in; I</i>}</p></li>
+	<li><p><i>&pi;</i><sup>−1</sup>(&pi;(<i>A</i>)) = <i>A + I</i> = {<i>a + i</i> | <i>a</i> &in; <i>A, i</i> &in; <i>I</i>}</p></li>
+
 	<li><p><i>A</i> ∩ <i>I</i> is an ideal of <i>A</i> and <i>I</i> is an ideal of <i>A + I</i>.</p></li>
-	<li><p>A/(<i>A</i> ∩ <i>I</i>) ≃ (<i>A + I</i>)/<i>I</i>.</p></li>
+
+	<li><p><i>A</i>/(<i>A</i> ∩ <i>I</i>) ≃ (<i>A + I</i>)/<i>I</i>.</p></li>
 </ol>
 
 <p><b>Proof.</b></p>
 
 <ol type="a">
 
-	<li><p>We have <i>π<sup>−1</sup></i>(π(<i>A</i>)) ⊇ <i>A</i> for all functions. A stronger statement is <i>π<sup>−1</sup></i>(π(A)) ⊇ A + ker π, because </p>
+	<li><p>We have <i>π</i><sup>−1</sup>(<i>π</i>(<i>A</i>)) ⊇ <i>A</i> for all functions. A stronger statement is <i>π<sup>−1</sup></i>(π(<i>A</i>)) ⊇ <i>A</i> + ker <i>π</i>, because </p>
 	
 	<div class="eq">
 	<p><i>π</i>(<i>a + z</i>) = <i>π</i>(<i>a</i>) + <i>π</i>(<i>z</i>) = <i>π</i>(<i>a</i>) when <i>π</i>(<i>z</i>) = 0, i.e. <i>z</i> ∈ ker <i>π</i>.</p>
 	</div>
 	
-	<p>Then <i>π<sup>−1</sup></i>(<i>π</i>(<i>A</i>)) = <i>A</i> +ker(π) and ker(π) = I, so <i>π<sup>−1</sup></i>(<i>π</i>(<i>A</i>)) = <i>A + I</i>;</p></li>
+	<p>Then <i>π</i><sup>−1</sup>(<i>π</i>(<i>A</i>)) = <i>A</i> +ker(π) and ker(<i>π</i>) = <i>I</i>, so <i>π</i><sup>−1</sup>(<i>π</i>(<i>A</i>)) = <i>A + I</i>;</p></li>
 	
-	<li><p><i>I</i> is an additive subgroup, and <i>i</i>(<i>a+i</i>) &in; <i>I</i> since both ai and ii are in I</i> (because <i>I</i> is an ideal of <i>R</i> and a &in; <i>R</i>. <i>A ∩ I</i> is an additive subgroup: if <i>x,y &in; A ∩ I</i>  then <i>x</i> and <i>y</i> are in <i>A</i>, so <i>x + y</i> is in <i>A</i> and <i>x</i> and <i>y</i> are in <i>I</i>, so <i>x + y</i> is in <i>I</i> that is <i>A ∩ I</i> is an additive subgroup. Moreover <i>xa &in; A</i> since <i>A</i> is an ideal of <i>R</i></p></li>
+	<li><p><i>I</i> is an additive subgroup, and <i>i</i>(<i>a+i</i>) &in; <i>I</i> since both ai and ii are in <i>I</i> (because <i>I</i> is an ideal of <i>R</i> and a &in; <i>R</i>. <i>A ∩ I</i> is an additive subgroup: if <i>x,y</i> &in; <i>A</i> ∩ <i>I</i>  then <i>x</i> and <i>y</i> are in <i>A</i>, so <i>x + y</i> is in <i>A</i> and <i>x</i> and <i>y</i> are in <i>I</i>, so <i>x + y</i> is in <i>I</i> that is <i>A ∩ I</i> is an additive subgroup. Moreover <i>xa</i> &in; <i>A</i> since <i>A</i> is an ideal of <i>R</i></p></li>
 	
-	<li><p>If <i>&pi;: R ⟶ R/I</i>, let <i>&pi;<sub>|A</sub></i> the restriction of &pi; to <i>A</i> that is</p>
+	<li><p>If <i>&pi;</i>: <i>R</i> ⟶ <i>R/I</i>, let <i>&pi;</i><sub>|<i>A</i></sub> the restriction of &pi; to <i>A</i> that is</p>
 	
 	<div class="eq">
 	<p><i>&pi;<sub>|A</sub>: A</i> ⟶ (<i>A+I</i>)/<i>I</i></p>
@@ -197,7 +204,7 @@
 	<p>It is a ring homomorpshim whose kernel is</p>
 	
 	<div class="eq">
-	<p>Ker <i>&pi;<sub>|A</sub></i> = { <i>x &in; A</i> | <i>&pi;<sub>|A</sub></i> (<i>x</i>) = <i>I</i>} = {<i>x &in; A</i> | <i>x + I = I</i>} = <i>A ∩ I</i>}</p>
+	<p>Ker <i>&pi;</i><sub>|<i>A</i></sub> = { <i>x</i> &in; <i>A</i> | <i>&pi;</i><sub>|<i>A</i></sub> (<i>x</i>) = <i>I</i>} = {<i>x</i> &in; <i>A</i> | <i>x + I</i> = <i>I</i>} = <i>A</i> ∩ <i>I</i>}</p>
 	</div>
 	
 	<p>The result follows by virtue of the fundamental theorem of ring homomorphism.□</p></li>
@@ -210,7 +217,7 @@
 <p>(<i>R/I</i>)/(<i>J/I</i>) ≃ <i>R/J</i></p>
 </div>
 
-<p><b>Proof.</b> Based on the fundamental ring homomorphism theorem, it is sufficient to prove the existence of a an epimorphosm of rings from <i>R</i> to (<i>R/I</i>)/(<i>J/I</i>) with kernel <i>J</i>. The composite function <i>&pi; = &pi;<sub>2</sub> ∘ &pi;<sub>1</sub> of canonical projections</p>
+<p><b>Proof.</b> Based on the fundamental ring homomorphism theorem, it is sufficient to prove the existence of a an epimorphosm of rings from <i>R</i> to (<i>R/I</i>)/(<i>J/I</i>) with kernel <i>J</i>. The composite function <i>&pi;</i> = <i>&pi;</i><sub>2</sub> ∘ <i>&pi;</i><sub>1</sub> of canonical projections</p>
 
 <div class="eq">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -290,7 +297,7 @@
 <p>There are repretitions among these twelve elements: two residue classes (m<sub>1</sub> + 12ℤ) + 3ℤ/12ℤ and (m<sub>2</sub> + 12ℤ) + 3ℤ/12ℤ are equal iff</p>
 
 <div class="eq">
-<p>(m<sub>1</sub> + 12ℤ) + 3ℤ/12ℤ − (m<sub>2</sub> + 12ℤ) + 3ℤ/12ℤ &in; 3ℤ/12ℤ iff (r<sub>1</sub> - r<sub>2</sub>) + 12ℤ &in; 3ℤ/12ℤ so iff r<sub>1</sub> - r<sub>2</sub> is divisible by 3.</p>
+<p>(m<sub>1</sub> + 12ℤ) + 3ℤ/12ℤ − (<i>m</i><sub>2</sub> + 12ℤ) + 3ℤ/12ℤ &in; 3ℤ/12ℤ iff (<i>r</i><sub>1</sub> − <i>r</i><sub>2</sub>) + 12ℤ &in; 3ℤ/12ℤ so iff <i>r</i><sub>1</sub> − <i>r</i><sub>2</sub> is divisible by 3.</p>
 </div>
 
 <p>So the ring (ℤ/12ℤ ) /(3ℤ/12ℤ ) really consists of just the threee residue classes</p>
@@ -314,7 +321,6 @@
 </div>
 
 <p>[3]<sub>12</sub> just refers to that specific element of the 12-element ring ℤ<sub>12</sub>, and then [3]<sub>12</sub>ℤ<sub>12</sub> means the set of all products [3]<sub>12</sub>(n_{12}) in this ring namely {[0]<sub>12</sub>, [3]<sub>12</sub>, [6]<sub>12</sub>, [9]<sub>12</sub>}.</p>
-
 
 <section aria-label="End">
 <a href="rings.html">&#171;Ring and ring's isomorphisms</a>
