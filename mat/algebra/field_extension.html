@@ -23,16 +23,69 @@
 
 <p>Abstract algebra has three basic components: groups, rings, and fields. Thus far we have covered groups and rings in some detail, and we have touched on the notion of a <a href="rings.html#field">field</a>. To explore fields more deeply, we need some rudiments of vector space theory studied in a linear algebra course.</p>
 
-<p><b>5.21.1 Definition</b> (<i>Extension Field</i> A field <i>K</i> is an extension field of a field <i>F</i> if <i>F</i> ⊆ <i>K</i> and the operations of <i>F</i> are those of <i>K</i> restricted to <i>F</i>.</p>
+<p><b>5.21.1 Definition</b> (<i>Extension Field</i> A field <i>K</i> is an extension field of a field <i>F</i> if <i>F</i> ⊆ <i>K</i> and the operations of <i>F</i> are those of <i>K</i> restricted to <i>F</i>. &emsp;□</p>
 
 <p>For example, ℝ is an extension field of ℚ, ℂ is an extension field of both ℝ and ℚ, and ℚ(√2) is an extension field of ℚ.</p>
 
 <p>To be more precise, an extension field of a field <i>F</i> is a pair (<i>K</i>, <i>&iota;</i>) made by a field <i>K</i> and a monomorphic (of field) <i>&iota;</i> from <i>F</i> to <i>K</i>. Generally we identify an element <i>a</i> of <i>F</i> by its image <i>&iota;</i>(<i>a</i>) in <i>K</i>, considering <i>F</i> as subfield of <i>K</i>.</p>
 
-<p>We already introduced the notion of <a href="characteristic_integral_domain.html">characteristic of a field</a> and that of a <i>prime subfield</i>.</p>
+<p>We already introduced the notion of <a href="characteristic_integral_domain.html">characteristic of a field</a> and that of a <i>prime subfield</i>. We have seen that the prime subfield of every field with characteristic zero is the rational field, whilst the prime subfield of every field with characteristic <i>p</i> is the field ℤ<sub><i>p</i></sub>. Thus every field with characteristic zero is the extension the the rationals (it embeds the rational field), while every field of characteristic <i>p</i> is the extension of the field ℤ<sub><i>p</i></sub>.</p>
+
+<p>If <i>F</i> is an extension field of <i>K</i>, then multiplication in <i>F</i> defines a scalar multiplication, if we consider the elements of <i>K</i> as scalars and the elements of <i>F</i> as vectors. It is easy to check that the necessary axioms hold for this scalar multiplication, and since <i>F</i> is an abelian group under addition, we see that <i>F</i> is a <a href="../linear_algebra/vector_space.html">vector space</a> over <i>K</i>. We crystalyze this fact as a proposition.</p>
+
+<p><b>5.21.2 Proposition</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
+
+<p>Knowing that an extension field is a vector space over the base field allows us to make use of the concept of the dimension of a vector space.</p>
+
+<p><b>5.21.3 Proposition</b>. Let <i>F </i>be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
+
+<p><b>5.21.4 Proposition</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
+
+<ol type="a">
+	<li><p><i>L</i> is a finite extension of <i>F</i></p></li>
+	<li><p>[<i>L</i> : <i>F</i>] = [<i>L</i> : <i>K</i>][<i>K</i> : <i>F</i>].</p></li>
+</ol>
+
+<p><b>Proof</b>. Let [<i>L</i> : <i>K</i>] = <i>m</i>, [<i>K</i> : <i>F</i>] = <i>n</i> and let <i>X</i> = {<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>} a base of <i>L</i> over the field <i>K</i> and let <i>Y</i> = {<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, ..., <i>y<sub>n</sub></i>} a base of <i>K</i> over the field <i>F</i>. We shall prove that the set of <i>mn</i> products {<i>x<sub>i</sub>y<sub>j</sub></i>}<sub><i>i</i> = 1,...,<i>m</i>, <i>j</i> = 1, ..., <i>n</i></sub> is a basis of <i>L</i> over <i>F</i>, proving both assertions of the theorem.</p>
+
+<ol type="a">	<li><p>The <i>x<sub>i</sub>y<sub>j</sub></i> are generators. Let <i>l</i> an arbitrary element of <i>L</i>. Then</p>
+
+	<div class="eq">
+	<p><i>l</i> = ∑<sup><i>m</i></sup><sub><sub><i>i</i> = 1</sub></sub> <i>k<sub>i</sub>x<sub>i</sub></i>, &emsp; <i>k<sub>i</sub></i> &in; <i>L</i>.</p>
+	</div>
+
+	<p>since the <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i> are a base of <i>L</i> over <i>K</i>. Since <i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, ..., <i>y<sub>n</sub></i> is a base of <i>K</i> over the field <i>F</i>, every <i>k<sub>i</sub></i> can be written a lineare combination of the <i>y<sub>i</sub></i> with coefficients in <i>F</i>. It follows that</p>
+
+	<div class="eq">
+	<p><i>l</i> = ∑<sup><i>m</i></sup><sub><sub><i>i</i> = 1</sub></sub> (∑<sup><i>n</i></sup><sub><sub><i>j</i> = 1</sub></sub> <i>a<sub>ij</sub>y<sub>j</sub></i>)<i>x<sub>i</sub></i> = ∑<sub><sub><i>i,j</i></sub></sub> <i>a<sub>ij</sub>y<sub>j</sub>x<sub>i</sub></i></p>
+	</div>
+
+	</li>
+
+	<li><p>To show that {<i>x<sub>i</sub>y<sub>j</sub></i>}<sub><i>i</i> = 1,...,<i>m</i>, <i>j</i> = 1, ..., <i>n</i></sub> forms a linearly independent set, suppose that</p>
+
+	<div class="eq">
+	<p>∑<sub><sub><i>i,j</i></sub></sub> <i>a<sub>ij</sub></i>(<i>y<sub>j</sub>x<sub>i</sub></i>) = 0, &emsp; <i>a<sub>ij</sub></i> &in; <i>F</i></p>
+	</div>
+
+	<p>We have then</p>
+
+		<div class="eq">
+	<p>0 = ∑<sup><i>m</i></sup><sub><sub><i>i</i> = 1</sub></sub> (∑<sup><i>n</i></sup><sub><sub><i>j</i> = 1</sub></sub> <i>a<sub>ij</sub>y<sub>j</sub></i>)<i>x<sub>i</sub></i></p>
+	</div>
+
+	<p>From the independe of the <i>x<sub>i</sub></i> over <i>K</i>,</p>
+
+	<div class="eq">
+	<p>∑<sup><i>n</i></sup><sub><sub><i>j</i> = 1</sub></sub> <i>a<sub>ij</sub>y<sub>j</sub></i> = 0</p>
+	</div>
+
+	<p>Since the <i>y<sub>j</sub></i> are independent over <i>F</i>, thus <i>a<sub>ij</sub></i> = 0 for every <i>i,j</i>.&emsp;□</p></li>
+
+</ol>
 
 <section aria-label="End">
-<a href="finite_abelian_groups.html.html">&#171;Classification of finite abelian groups</a>
+<a href="finite_abelian_groups.html">&#171;Classification of finite abelian groups</a>
 <a href="index.html">Index</a>
 <a href="sulfides.html">Sulfides&#187;</a>
 </section>
