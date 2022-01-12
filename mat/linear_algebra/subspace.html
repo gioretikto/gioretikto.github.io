@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Subspaces"/>
+    <title>Subspaces</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Subspaces</h1>
+
+<p><b>Definition 1.5.1</b> A <b>subspace</b> of a vector space <i>V</i> is a subset <i>S</i> of <i>V</i> that is a vector space in its own right under the operations obtained by restricting the operations of <i>V</i> to <i>S</i>. We use the notation <i>S &le; V</i> to indicate that <i>S</i> is a subspace of <i>V</i> and <i>S &lt; V</i> to indicate that <i>S</i> is a proper subspace of <i>V</i>, that is, <i>S</i> &le; <i>V</i> but <i>S &ne; V</i>. The zero subspace of <i>V</i> is {0}. Then <i>S</i> is a subspace of <i>V</i> if and only if the following conditions hold:</p>
+
+<ol>
+	<li><p>If <b><i>u</i></b> and <b>v</b> are in <i>S</i>, then <b><i>u</i></b> + <i><b>v</b></i></b> is in <i>S</i>.</p></li>
+	<li><p>If <b><i>u</i></b> is in <i>S</i> and <i>&lambda;</i> is a scalar, then &lambda;<b>u</b> is in <i>S</i>. </p></li>
+</ol>
+
+<p>An equivalent definition in terms of groups is the following</p>
+
+<p><b>Definition 1.5.2</b> Let <i>V</i> be a vector space over a field <i>F</i>. A non-empty subset <i>U</i> of <i>V</i> is called a subspace of <i>V</i> iff</p>
+
+<ol type="a">
+	<li><p>(<i>U</i>, +) is a subgroup of (<i>V</i> , +);</p></li>
+	<li><p>for <i>α</i> ∈ <i>F</i> and <i><b>u</b></i> ∈ <i>U</i>, <i>α<b>u</b></i> ∈ <i>U</i>.</p></li>
+</ol>
+
+<p>Clearly, for any vector space <i>V</i>, {0} and <i>V</i> are subspaces of <i>V</i>, called trivial subspaces. Any other subspace of <i>V</i> (if it exists) is called a proper subspace of <i>V</i>.</p>
+
+<p><b>Example 1.5.3</b> If <i>V</i> is a vector space, then <i>V</i> is clearly a subspace of itself. The set {<b>0</b>}, consisting of only the zero vector, is also a subspace of <i>V</i>, called the zero subspace. To show this, we simply note that the two closure conditions are satisfied:</p>
+
+<div class="eq">
+<p><b>0 + 0 = 0</b> and <i>&lambda;</i><b>0</b> = <b>0</b> &emsp; for any scalar &lambda;</p>
+</div>
+
+<p>The subspaces {<b>0</b>} and <i>V</i> are called the <b>trivial subspaces</b> of <i>V</i>. &emsp; ■</p>
+
+<h2>Dimension of a Subspace</h2>
+
+<p>It is obvious that the dimension of a subspace <i>U</i> of a vector space <i>V</i> cannot be greater than the dimension of the entire space <i>V</i>.</p>
+
+<p><b>Theorem 1.5.4</b> If the dimension of a subspace <i>U</i> of a vector space <i>V</i> is equal to the dimension of <i>V</i>, then the subspace U is equal to all of V.</p>
+
+<p><b>Proof</b> Suppose dim <i>U</i> = dim <i>V</i> = <i>n</i>. Then in <i>U</i> one could find <i>n</i> linearly independent vectors <b><i>x</i></b><sub>1</sub>, ... ,<b><i>x<sub>n</sub></i></b>. If <i>U</i> &ne; <i>V</i>, then in <i>V</i> there would be some vector <b>x</b> &ne; <i>U</i>. Since dim <i>V</i> = <i>n</i>, it follows that any <i>n</i> + 1 vectors in this space are linearly dependent. In particular, the vectors <b><i>x</i></b><sub>1</sub>, ... , <b><i>x<sub>n</sub></i></b>, <b><i>x</i></b> are linearly dependent. That is, there is a relationship</p>
+
+<div class="eq">
+<p><i>α</i><sub>1</sub> <b><i>x</i></b><sub>1</sub> + ··· + <i>α<sub>n</sub><b>x</b><sub>n</sub></i> + <i>α<b>x</b></i> = <b>0</b></p>
+</div>
+
+<p>with not all coefficients equal to zero. If we had <i>α</i> = 0, then this would yield the linear dependence of the vectors <b><i>x</i></b><sub>1</sub>, ... , <b><i>x<sub>n</sub></i></b>, which are linearly independent by assumption. This means that <i>α</i> &ne; 0 and <b><i>x</i></b> = <i>β</i><sub>1</sub><i><b>x</b></i><sub>1</sub> + ··· + <i>β<sub>n</sub><b>x</b><sub>n</sub></i>, <i>β<sub>i</sub></i> = −α<sup>−1</sup>α<sub>i</sub>, from which it follows that <i><b>x</b></i> is a linear combination of the vectors <b><i>x</i></b><sub>1</sub>, ... , <b><i>x<sub>n</sub></i></b>. It clearly follows from the definition of a subspace that a linear combination of vectors in <i>U</i> is itself a vector in <i>U</i>. Hence we have <i><b>x</b></i> ∈ <i>U</i>, and <i>U</i> = <i>V</i>. &emsp;□</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

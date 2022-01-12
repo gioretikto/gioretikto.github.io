@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bases"/>
+    <title>Bases</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Bases</h1>
+
+<p><b>Definition 1.4.1</b> A <b>basis</b> of a vector space <i>V</i> over a field 𝕂, is a set of vectors 𝓑 = {<i><b>v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub></b></i>} in <i>V</i> that is linearly independent and spans <i>V</i>: Span (𝓑) = <i>V</i>.</p>
+
+<p><b>Definition 1.4.2</b>. A vector space <i>V</i> is called <b>finite-dimensional</b> if it has a basis consisting of finitely many vectors. The dimension of <i>V</i>, denoted by dim <i>V</i>, is the number of vectors in a basis for V. The <b>dimension</b> of the zero vector space {0} is defined to be zero. A vector space that has no finite basis is called <b>infinite-dimensional</b>.</p>
+
+<p><b>Theorem 1.4.3</b> (<i>Uniqueness of Basis Representation</i>) Every <i><b>v</b> &in; V</i> can be written uniquely as linear combination <i>i.e.</i>: &forall;<i><b>v</b> &in; V</i> there exist <i>n</i> scalars, <i>&lambda;<sub>1</sub>,...,&lambda;<sub>n</sub></i> &in; 𝕂 such that</p>
+	
+	<div class="eq">
+	<p><i><b>v</b></i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>&lambda;<sub>i</sub> <b>v<sub>i</sub></b></i></p>
+	</div>
+
+<p><b>Proof.</b> Suppose there is another linear combination for the same vector <b>v</b> as</p>
+	
+	<div class="eq">
+	<p><i><b>v</b></i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>&mu;<sub>i</sub> <b>v<sub>i</sub></b></i></p>
+	</div>
+
+<p>by subtracting the two we have, <b>0</b> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> (&lambda;<sub>i</sub> &minus; &mu;<sub>i</sub></i>)<i><b>v<sub>i</sub></b></i>, which implies, owing to the independence of the vectors <i>&lambda;<sub>i</sub> = &mu;<sub>i</sub></i> &forall;<i>i</i>. &emsp; □</p>
+
+<p>The coefficients <i>&lambda;<sub>1</sub>, &lambda;<sub>2</sub>, ..., &lambda;<sub>n</sub></i> are called <b>scalar components</b> of <b>v</b> with respect to the basis {<i><b>v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub></b></i>}. For a specified basis we can write the vector <b><i>v</i></b> as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3BB;</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>&#x3BB;</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+  <msub>
+    <mi>&#x3BB;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>or</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>&#x3BB;</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>&#x3BB;</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>&#x3BB;</mi>
+            <mi>n</mi>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>we call the notation on the left <i>row vector</i> and that on the right <i>column vector</i>. We shall use mostly columns vectors, basically to multiply them to the left by matrices. Obviously changing the basis components change.</p>
+
+<p><b>1.4.4 Examples</b>. <ul>
+
+<li><p>In 𝕂<sup><i>n</i></sup> the vectors</p>
+
+<div class="eq">
+<p><i><b>e<sub>1</sub></b></i> = (1, 0, 0, ..., 0)<br>
+<p><i><b>e<sub>2</sub></b></i> = (0, 1, 0, ..., 0)<br>
+<p>...<br>
+<p><i><b>e<sub>n</sub></b></i> = (0, 0, 0, ..., 1)<br>
+</div>
+
+<p>represent a basis called the <b>standard</b> (or <b>canonical</b>).</p></li>
+
+<li><p>The list 1,<i>x</i>, ..., x<sup>n</sup> a basis of P<sub>n</sub>(𝕂) of polynomials of degree <i>n</i> or less. Consider for example the polynomial</p>
+
+<div class="eq">
+<p><i><b>p</b></i> = <i>ax</i><sup>2</sup> + bx + c</i></p>
+</div>
+
+<p>the three polynomials</p>
+
+<div class="eq">
+<p><i><b>e</b></i><sub>1</sub> = <i>x</i><sup>2</sup> &emsp; <b>e<sub>2</sub></b> = <i>x</i> &emsp; <b>e<sub>3</sub></b></i> = 1</p>
+</div>
+
+<p>which are clearly linear independent, made a basis of <i>V</i>. Thus <i>V</i> has <i>n</i> = 3 as dimension.</p></li>
+
+</ul>
+
+<p><b>1.4.5. Definition</b>. A maximal linearly independent set in <i>V</i> is a linearly independent set 𝓑 in <i>V</i> such that if a vector <b>v</b> in <i>V</i> but not in 𝓑 is added to 𝓑, then the new set is linearly dependent.</p>
+
+<p><b>1.4.6. Proposition</b>. Let 𝓑 = {<i><b>v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub></b></i>} a basis of a vector space <i>V</i>, then 𝓑 is a maximal set of linear independent vectors of <i>V</i>.</p>
+
+<p><b>Proof.</b> By definition the vectors {<i><b>v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub></b></i>} are linear independent; we must show that for every <b>v</b> &in; <i>V</i>, the vectors <i><b>v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub></b></i> are linear dependent. Since 𝓑  spans <i>V</i>, there exist <i>&lambda;<sub>1</sub>,...,&lambda;<sub>n</sub></i> &in; 𝕂, such that</p>
+
+<div class="eq">
+<p><i><b>v</b> = &lambda;</i><sub>1</sub><b><i>v</i><sub>1</sub></b> + ... + <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i></p>
+</div>
+
+<p>thus we have</p>
+
+<div class="eq">
+<p><i><b>v</b></i> &minus; <i>&lambda;<sub>1</sub><b>v<sub>1</sub></b></i> &minus; ... &minus; <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i> = <b>O</b></p>
+</div>
+
+<p>which is a linear dependence relation between the vectors <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ...,<i><b>v</b><sub>n</sub></i> (the coefficient of <b><i>v</i></b> is 1, which is not null). &emsp; □</p>
+
+<p>Thus, it is clear that a basis of a vector space is a maximal linearly independent set of vectors in that space. Because both the concepts of span and independence depend on the scalar field <i>F</i>, a basis too depends on <i>F</i>, as illustraed by the following example. </p>
+
+<p><b>1.4.7. Example</b>. Over the field of complex numbers, the vector space of complex numbers has dimension 1. A basis is {1}. Over the field of real numbers, the vector space of complex number has dimension 2. A basis is {1, <i>i</i>}.</p>
+
+<section aria-label="End">
+<a href="span.html">&#171;Spanning Sets and Linear Independence</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

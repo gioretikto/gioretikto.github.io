@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vector space"/>
+    <title>Vector space</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Vector space</h1>
+
+<p><b>Definition 1.1.1</b>. Let 𝕂  be a <a href="../algebra/rings.html#field">field</a>, whose elements are referred to as scalars. A <b>vector space</b> over 𝕂 is a nonempty set <i>V</i>, whose elements are referred to as <i>vectors</i>, together with two operations. The first operation, called addition and denoted by +, assignsan element <i><b>u + v</b></i> &in; <i>V</i> to each pair of elements <b><i>u, v</i></b> &in; <i>V</i>. The second operation, called scalar multiplication is a function that assigns an element <i>&lambda;<b>v</b></i> &in; <i>V</i> to each <i>&lambda;</i> &in; 𝕂 and each <b><i>v</i></b> &in; <i>V</i>. Furthermore, the following properties must be satisfied:</p>
+
+
+<ol type="1">
+	<li><p>Commutativity of addition: <b><i>u</i> + <i>v</i> = <i>v</i> + <i>u</i></b></p></li>
+
+	<li><p>Associativity of addition: (<b><i>u</i> + <i>v</b></i>) + <b><i>w</i> = <i>u</i></b> + (<i><b>v + w</b></i>).</p></li>
+
+	<li><p>Existence of a zero: There is a zero vector <b>0</b> in <i>V</i> such that <b>0 + <i>u</i> = <i>u</i> + 0 = <i>u</i></b>.</p></li>
+
+	<li><p>Existence of additive inverses: For each <i><b>u</b> &in; V</i> , there is a vector <b>u</b> in <i>V</i> such that <b>u</b> + (&minus;<b>u</b>) + <i><b>u</b></i> = 0.</p></li>
+
+	<li><p>Closure under addition: The scalar multiple of <i><b>u</b></i> by <i>&lambda;</i>, denoted by &lambda;<b>u</b>, is in <i>V</i> .</p></li>
+
+	<li><p>&lambda;(<i><b>u</b></i> + <b><i>v</i></b>) = <i>&lambda;</i><b>u</b> + <i>&lambda;</i> <b><i>v</i></b>.</p></li>
+
+	<li><p>(<i>&lambda;<sub>1</sub> + &lambda;<sub>2</sub></i>) <i><b>u</b></i> = <i>&lambda;</i><sub>1</sub> <b><i>u</i></b> + <i>&lambda;</i><sub>2</sub><b><i>u</i></b>.</p></li>
+
+	<li><p><i>&lambda;</i><sub>1</sub>(<i>&lambda;</i><sub>2</sub><b><i>u</i></b>) = (<i>&lambda;</i><sub>1</sub><i>&lambda;</i><sub>2</sub>) <i><b>u</b></i>.</p></li>
+
+	<li><p>1 <b><i>u</i> = <i>u</i></b></p></li>
+</ol>
+
+<p>Note that the first four properties in the definition of vector space can be summarized by saying that <i>V</i> is an <a href="../algebra/groups.html">abelian group</a> under addition.</p>
+
+<p>A vector space over a field 𝕂 is sometimes called an 𝕂-space. A vector space over the real field is called a <b>real vector space</b> and a vector space over the complex field is called a <b>complex vector space</b>.</p>
+
+<p>We see now some examples of vector spaces.</p>
+
+<p><b>Definition 1.1.2</b> Suppose <i>n</i> is a positive integer. A list of length <i>n</i> (or <b><i>n</i>-tuple</b>) is an ordered collection of <i>n</i> elements (which might be numbers, other lists, or more abstract entities) separated by commas and surrounded by parentheses. A list of length <i>n</i> looks like this:</p>
+
+<div class="eq">
+<p>(<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>)</p>
+</div>
+
+<p>Two lists are equal if and only if they have the same length and the same elements in the same order.</p>
+
+<p><b>Remark</b>. By definition each list has a finite length that is a positive integer. Thus an object that looks like (<i>x<sub>1</sub>, x<sub>2</sub></i>, ...), which might be said to have infinite length, is not a list. A list of length 0 looks like this: ().</p>
+
+<p>The set 𝕂<sup><i>n</i></sup> of all ordered <i>n</i>-tuples whose components lie in a field 𝕂, is a <i>vector space</i> over 𝕂, with addition and scalar multiplication defined componentwise.</p>
+
+<div class="eq">
+<p>(<i>x<sub>1</sub>, ..., x<sub>n</sub></i>) + (<i>y<sub>1</sub>, ..., y<sub>n</sub></i>) = (<i>x<sub>1</sub>y<sub>1</sub>, ..., x<sub>n</sub> + y<sub>n</sub></i>)</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>&lambda;</i>(<i>x<sub>1</sub>, ..., x<sub>n</sub></i>) = (<i>&lambda;x<sub>1</sub>, ..., &lambda;x<sub>n</sub></i>)</p>
+</div>
+
+<p><b>Examples 1.1.3</b>. Sono spazi vettoriali:</p>
+
+<ul>
+	
+</li>
+    <li><p>Let 𝕂 be a field. The set 𝕂<sup>𝕂</sup> of all functions from 𝕂 to 𝕂 is a vector space over 𝕂, under the operations of ordinary addition and scalar multiplication of functions:</p>
+    
+    <div class="eq">
+    <p>(<i>f + g</i>)(<i>x</i>) = <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>)</p>
+    </div>
+    
+    <p>and</p>
+    
+    <div class="eq">
+    <p>(<i>af</i>)(<i>x</i>) = <i>a</i>(<i>f</i>(<i>x</i>))</p>
+    </div>
+    
+    </li>
+    
+    
+    <li><p>The set <i>M<sub>n,m</sub></i>(𝕂) of all <i>n x m</i> matrixes with entries in a field 𝕂 is a vector space over 𝕂, under the operations of matrix addition and scalt multiplication.</p></li>
+
+</ul>
+    
+<section aria-label="End">
+<a href="index.html">Index</a>
+<a href="span.html">Spanning Sets and Linear Independence &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
