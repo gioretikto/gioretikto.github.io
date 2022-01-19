@@ -21,35 +21,43 @@
 
 <h1>Spanning Sets and Linear Independence</h1>
 
-<p><b>Definition 1.3.1</b> Let <i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i> be vectors of <i>V</i> over a field 𝕂. Then the vector <i><b>v</b></i> is a <b>linear combination</b> of <i><b>v<sub>1</sub></b>, ..., <b>v<sub>n</sub></b></i> if and only if there are the scalars <i>&lambda;</i><sub>1</sub>,..., <i>&lambda;<sub>n</sub></i> &in; 𝕂 such that</p>
+<p><b>Definition 1.3.1</b> Let <i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i> be vectors of <i>V</i> over a field <i>F</i>. Then the vector <i><b>w</b></i> is a <b>linear combination</b> of <i><b>v<sub>1</sub></b>, ..., <b>v<sub>n</sub></b></i> if and only if there are the scalars <i>&lambda;</i><sub>1</sub>,..., <i>&lambda;<sub>n</sub></i> &in; <i>F</i> such that</p>
 
 <div class="eq">
-<p><i><b>v</b></i> = <i>&lambda;</i><sub>1</sub><b><i>v</i><sub>1</sub></b> + ... + <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i></p>
+<p><i><b>w</b></i> = <i>&lambda;</i><sub>1</sub><b><i>v</i><sub>1</sub></b> + ... + <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i> &emsp;□</p>
 </div>
 
-<p>A set of vectors <i>spans</i> a vector space if every vector can be written as a linear combination of some of the vectors in that set. The formal definition is the following</p>
-
-<p><b>Definition 1.3.2</b> The subspace spanned (or subspace generated) by a nonempty set <i>S</i> of vectors in <i>V</i> is the set of all linear combinations of vectors from:</p>
+<p><b>Definition 1.3.2</b> Let <i>V</i> a vector space, over a field <i>K</i>; Given a nonempty set of vectors <i>S</i> = {<i>v</i><sub>1</sub>,...,<i>v<sub>n</sub></i>} (not necessarily finite) we define the Span of <i>S</i> as the set of all possible linear combinations of finite subsets of <i>S</i></p>
 
 <div class="eq">
-<p>⟨<i>S</i>⟩ = span(<i>S</i>) = {<i>&lambda;<sub>1</sub><b>v<sub>1</sub></b> + ... + &lambda;<sub>n</sub><b>v<sub>n</sub></b></i>| <i>&lambda;<sub>i</sub></i> &in; 𝕂, <b><i>v<sub>i</sub></i></b> &in; <i>S</i>}</p>
+<p>⟨<i>S</i>⟩ = Span(<i>S</i>) = {∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>&lambda;<sub>i</sub>v<sub>i</sub></i> | <i>n</i> &in; ℕ, <i>v<sub>i</sub></i> &in; <i>S</i>, <i>&lambda;<sub>i</sub></i> &in; <i>K</i>}&emsp;□</p>
 </div>
 
-<p>If every vector of <i>V</i> can be written as a linear combination of vectors from a subset <i>S</i> of <i>V</i>, we say that <i>S</i> <b>spans</b> (or <b>generates</b>) <i>V</i>. Note that <i>V</i> may be infinite or finite, but any given linear combination of vectors from <i>S</i> involves only a finite number of vectors.</p>
+<p>Span(S) is a subspace of <i>V</i>.</p>
 
-<p><b>Example 1.3.3</b> Let <i>A</i> the subset of ℝ<sup>3</sup> given by <i>A</i> = {(1,0,0), (0,1,0)}. The span of <i>A</i> is the <i>xy</i>-plane.&emsp;□</p>
+<p><b>Definition 1.3.3</b> If every element of a vector space <i>V</i> over a field <i>F</i> is a linear combination of <i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i> we say that the set {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i>} spans <i>V</i> over <i>F</i> (or <b>generates</b> <i>V</i>). &emsp;□</p>
+
+<p>Note that <i>V</i> may be infinite or finite, but any given linear combination of vectors from <i>S</i> involves only a finite number of vectors.</p>
+
+<p><b>Example 1.3.4</b> Let <i>A</i> the subset of ℝ<sup>3</sup> given by <i>A</i> = {(1,0,0), (0,1,0)}. The span of <i>A</i> is the <i>xy</i>-plane.&emsp;□</p>
+
+<p><b>Example 1.3.5</b> Let <i>P</i> the vector space of polynomials of any degree. Then no <i>finite</i> set of polynomials spans <i>P</i>. If you suppose that <i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>, ..., <i>p<sub>n</sub></i> are polynomials. Let <i>p</i><sub>k</sub> be the polynomial of largest degree in this set and let <i>n</i> = deg <i>p</i><sub>k</sub>. Then it is clear that the polynomial <i>p</i>(<i>x</i>) = <i>x</i><sup><i>n</i>+1</sup> cannot be written as a linear combination of <i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>, ..., <i>p<sub>n</sub></i>. &emsp;□</p>
 
 <h2>Linear Independence</h2>
 
-<p><b>Definition 1.3.4</b> Let <i>V</i> be a vector space. A nonempty set <i>S</i> of vectors in <i>V</i> is linearly independent if for any distinct vectors <b><i>s</i><sub>1</sub>, <i>s</i><sub>2</sub>, ..., <i>s<sub>n</sub></b></i> in <i>S</i>,</p>
+<p><b>Definition 1.3.4</b> Let <i>V</i> be a vector space. A nonempty set <i>S</i> of vectors in <i>V</i> is linearly independent if for any distinct vectors <b><i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ..., <i>v<sub>n</sub></b></i> in <i>S</i>,</p>
 
 <div class="eq">
-<p><i>&lambda;</i><sub>1</sub><b><i>s</i><sub>1</sub></b> + <i>&lambda;</i><sub>2</sub><b><i>s</i><sub>2</sub></b> + ... + <i>&lambda;<sub>n</sub><b>s<sub>n</sub></b></i> = <b>0</b> &emsp;⇒&emsp; <i>&lambda;<sub>i</sub></i> = 0 &forall;<i>i</i></p>
+<p><i>&lambda;</i><sub>1</sub><b><i>v</i><sub>1</sub></b> + <i>&lambda;</i><sub>2</sub><b><i>v</i><sub>2</sub></b> + ... + <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i> = <b>0</b> &emsp;⇒&emsp; <i>&lambda;<sub>i</sub></i> = 0 &forall;<i>i</i></p>
 </div>
 
 <p>That is, <i>S</i> is linearly independent if the only linear combination of vectors from <i>S</i> that is equal to <b>0</b> is the trivial linear combination, all of whose coefficients are 0. If <i>S</i> is not linearly independent, it is said to be <b>linearly dependent</b>.</p>
 
 <p>It is clear that a linearly independent set of vectors cannot contain the zero vector, since then  1 ⋅ <b>0</b> = <b>0</b> violates the condition of linear independence.</p>
+
+<p>Let <i>V</i> be a vector space over a field <i>F</i>. The preceding examples show that linear independence and spanning do not imply each other; a subset of V may have one, both, or neither of these properties. A subset that has both properties is given a special name
+
+<p><b>Definition 1.3.6</b> A subset {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i>} of a vector space <i>V</i> over a field <i>F</i> is said to be a basis of <i>V</i> If it spans <i>V</i> and is linearly Independent over <i>F</i>. &emsp;□</p>
 
 <section aria-label="End">
 <a href="vector_space.html">&#171;Vector space</a>
