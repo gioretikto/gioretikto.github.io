@@ -35,10 +35,10 @@
 <p><b>Proposition 4.9</b>. (<i>Euclid's Algorithm)</i> Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>], we successively divide in the following way</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) <i>q<sub>0</sub></i>(<i>x</i>) + <i>r<sub>0</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>0</sub></i>(<i>x</i>) < ∂<i>g</i>(<i>x</i>)</p>
-<p><i>g</i>(<i>x</i>) = <i>r<sub>0</sub></i>(<i>x</i>) <i>q<sub>1</sub></i>(<i>x</i>) + <i>r<sub>2</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>1</sub></i>(<i>x</i>) < ∂<i>r<sub>0</sub></i>(<i>x</i>)</p>
+<p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) <i>q</i><sub>0</sub></i>(<i>x</i>) + <i>r</i><sub>0</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>0</sub></i>(<i>x</i>) < ∂<i>g</i>(<i>x</i>)</p>
+<p><i>g</i>(<i>x</i>) = <i>r</i><sub>0</sub>(<i>x</i>) <i>q<sub>1</sub></i>(<i>x</i>) + <i>r<sub>2</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>1</sub></i>(<i>x</i>) < ∂<i>r</i><sub>0</sub>(<i>x</i>)</p>
 <p>...</p>
-<p><i>r<sub>i</sub></i>(<i>x</i>) = <i>r<sub>i+1</sub></i>(<i>x</i>) <i>q<sub>i+2</sub></i>(<i>x</i>) + <i>r</i><sub>i+2</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>i+2</sub>(<i>x</i>) < ∂<i>r<sub>i+1</sub></i>(<i>x</i>)</p>
+<p><i>r<sub>i</sub></i>(<i>x</i>) = <i>r</i><sub><i>i</i>+1</sub>(<i>x</i>) <i>q<sub>i+2</sub></i>(<i>x</i>) + <i>r</i><sub>i+2</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>i+2</sub>(<i>x</i>) < ∂<i>r<sub>i+1</sub></i>(<i>x</i>)</p>
 <p>...</p>
 <p><i>r</i><sub>n-2</sub>(<i>x</i>) = <i>r</i><sub>n-1</sub>(<i>x</i>) <i>q</i><sub>n</sub>(<i>x</i>) + <i>r</i><sub>n</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>n</sub>(<i>x</i>) < ∂<i>r<sub>n-1</sub></i>(<i>x</i>)</p>
 <p><i>r</i><sub>n-1</sub>(<i>x</i>) = <i>r</i><sub>n</sub>(<i>x</i>) <i>q</i><sub>n+1</sub>>(<i>x</i>) + 0.</p>
@@ -46,7 +46,7 @@
 
 <p>Applying the same procedure as in ℤ, the last non-null remainder in the sequence of the divisions is the gcd.</p>
 
-<p><b>Example 4.10</b> Find the gcd of x<sup>2</sup> + 7<i>x</i> + 6 and <i>x<sup>2</sup> − 5x</i> − 6:</p>
+<p><b>Example 4.10</b> Find the gcd of <i>x</i><sup>2</sup> + 7<i>x</i> + 6 and <i>x</i><sup>2</sup> − 5<i>x</i> − 6:</p>
 
 <div class="eq">
 <p><i>x<sup>2</sup> + 7x</i> + 6 = 1 ⋅ (<i>x</i><sup>2</sup> − 5<i>x</i> − 6) + (12<i>x</i> + 12)</p>
@@ -59,7 +59,7 @@
 
 <div class="eq">
 <p><i>x</i><sup>3</sup> + 1 = <i>x</i>(<i>x</i><sup>2</sup> + 1) − <i>x</i> + 1</i>,</p>
-<p><i>x</i><sup>2</sup> + 1 = (−<i>x</i> − 1)(−x + 1) + 2</i>,</p>
+<p><i>x</i><sup>2</sup> + 1 = (−<i>x</i> − 1)(−<i>x</i> + 1) + 2</i>,</p>
 <p>−<i>x</i> + 1 = − 1/2 · (<i>x</i> − 1) · 2,</p>
 </div>
 
@@ -87,13 +87,24 @@
 <p>GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 1</p>
 </div>
 
-<p><b>Definition 4.13</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>irreducible</i> on 𝕂, if</p>
+<div id="irreducibility">
+<p><b>Definition 4.13</b>. A nonconstant and non-invertible polynomial <i>f</i>(<i>x</i>) &in; K[<i>x</i>] is said to be <i>irreducible</i> on K, if</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), &emsp; <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>] ⇒ <i>g</i>(<i>x</i>) or <i>h</i>(<i>x</i>) invertible.</p>
 </div>
 
+<p>The invertible elements in <i>F</i>[<i>x</i>], over the field <i>F</i>, are just the nonzero constant polys. So 2<i>x</i> + 4 = (2)(<i>x</i> + 2) with the first factor invertible in ℝ[<i>x</i>], is not a factorization for getting 2<i>x</i> + 4 reducible. In fact 2<i>x</i> + 4 is irreducible, as are all linear polynomials over a field.</p>
+
+<p>In ℤ[<i>x</i>], where the only invertible things are 1 and −1, both 2 and <i>x</i> + 2 are non-invertible, so here, 2<i>x</i> + 4 <b>is reduciblle</b> since both factors in (2)(<i>x</i> + 2) are non-invertible in ℤ[<i>x</i>].</p>
+
+<p>In the definition above K could be either a field or a simple ring but if <i>F</i> is a <b>field</b> then we could be the following definition:</p>
+
+<blockquote>A nonconstant polynomial is said to be <b>irreducible over the field</b> <i>F</i> if it cannot be factored in <i>F</i>[<i>x</i>] into a product of polynomials of lower degree. It is said to be <b>reducible</b> over <i>F</i> if such a factorization exists.</blockquote>
+
 <p>For example <i>x</i><sup>2</sup> + 5 is irreducible in ℤ<sub>11</sub> because <i>x</i><sup>2</sup> + 5 = (2)(6<i>x</i><sup>2</sup> + 8) and 2 is the unit in 𝕂[<i>x</i>].</p>
+
+</div>
 
 <p><b>Definition 4.14</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>]), then it divides one of the two factors.</p>
 
@@ -104,10 +115,10 @@
 <p><b>Theorem 4.16</b> (<i>Unique Factorization Theorem</i>) Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in 𝕂[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = <i>p<sub>1</sub></i>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)  = <i>q<sub>1</sub></i>(<i>x</i>) <i>q<sub>2</sub></i>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>) </p>
+<p><i>f</i>(<i>x</i>) = <i>p</i><sub>1</sub>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>) = <i>q</i><sub>1</sub>(<i>x</i>) <i>q</i><sub>2</sub>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>) </p>
 </div>
 
-<p><i>p<sub>i</sub></i>(<i>x</i>) and <i>q<sub>j</sub></i>(<i>x</i>) are irreducible in 𝕂[<i>x</i>], then <i>s = t</i> and there exists a biunique correspondence between {<i>p<sub>1</sub></i>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)} and {<i>q<sub>1</sub></i>(<i>x</i>) <i>q<sub>2</sub></i>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>)} such that if <i>q<sub>j</sub></i>(<i>x</i>) corresponds to <i>p<sub>i</sub></i>(<i>x</i>), then <i>p<sub>i</sub></i>(<i>x</i>) is associated to <i>q<sub>j</sub></i>(<i>x</i>).</p>
+<p><i>p<sub>i</sub></i>(<i>x</i>) and <i>q<sub>j</sub></i>(<i>x</i>) are irreducible in 𝕂[<i>x</i>], then <i>s = t</i> and there exists a biunique correspondence between {<i>p<sub>1</sub></i>(<i>x</i>) <i>p</i><sub>2</sub>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)} and {<i>q<sub>1</sub></i>(<i>x</i>) <i>q</i><sub>2</sub>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>)} such that if <i>q<sub>j</sub></i>(<i>x</i>) corresponds to <i>p<sub>i</sub></i>(<i>x</i>), then <i>p<sub>i</sub></i>(<i>x</i>) is associated to <i>q<sub>j</sub></i>(<i>x</i>).&emsp;□</p>
 
 <section aria-label="End">
 <a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>

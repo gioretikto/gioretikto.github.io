@@ -129,7 +129,7 @@
 
 <p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, <i>i.e</i> we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. </p>
 
-<p><b>5.21.9 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. Then F(<i>a</i>) = <i>T</i> where <i>T</i> is the defined as the set</p>
+<p><b>5.21.9 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>F</i>(<i>a</i>) = <i>T</i> where <i>T</i> is the defined as the set</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>T</mi>
@@ -619,6 +619,8 @@
 
 <p>[<i>F</i>(<i>a</i>) : <i>F</i>] is infinite because 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i>, ... are linearly inependent over <i>F</i>. &emsp;□</p>
 
+<p><b>Remark</b>. The vectors 1 = <i>a</i><sup>0</sup>, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i> are linearly inependent only when <i>a</i> is transcendental. If <i>a</i> were algebraic over <i>F</i>, <i>e.g</i> consider the algebraic <i>a</i> = √2, over the reals, we'd have <i>a</i><sup>2</sup> − 2 = 0, which is linear dependent combinations of powers.□
+
 <p>Thus if <i>K</i> is an extension of <i>F</i>, all the extension of <i>F</i>(<i>a</i>) with <i>a</i> transcendental over <i>F</i> are mutually isomorphic; the element <i>a</i> can be regarded as an <i>unknown</i> <i>x</i> and <i>F</i>(<i>a</i>) can be identified with rational function in the indedeterminate <i>x</i>. Next theorem shows how the fininite or infinite nature <i>F</i>(<i>a</i>) over <i>F</i> characterized the whethet <i>a</i> is algebraic or trascendental over <i>F</i>.</p>
 
 <p><b>5.21.16 Theorem</b>. Let <i>K</i> an extension <i>F</i> and let <i>a</i> an algebraic element over <i>F</i>. Then, if &Psi;<sub><i>a</i></sub> is the evaluation homomorphism from <i>F</i> to <i>K</i>,<p>
@@ -670,20 +672,53 @@
 
 </ol>
 
-<p>Notice how the writing <i>f</i>(<i>a</i>) = &alpha;<sub>0</sub> + &alpha;<sub>1</sub><i>a</i> + &alpha;<sub>2</sub> <i>a</i><sup>2</sup> + ... + &alpha;<sub><i>n</i> −1</sub><i>a</i><sup><i>n</i> − 1</sup> of every element <i>F</i>[<i>a</i>] is <i>unique</i>, since the elements  1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> are a <i>basis</i> .</p>
+<p>Notice how the writing <i>f</i>(<i>a</i>) = &alpha;<sub>0</sub> + &alpha;<sub>1</sub><i>a</i> + &alpha;<sub>2</sub> <i>a</i><sup>2</sup> + ... + &alpha;<sub><i>n</i> −1</sub><i>a</i><sup><i>n</i> − 1</sup> of every element <i>F</i>[<i>a</i>] is <i>unique</i>, since the elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> represent a <i>basis</i> .</p>
 
 <p><b>5.21.17 Corollary</b>. Let <i>K</i> an extension of the field <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>a</i> is algebraic if and only if <i>F</i>(<i>a</i>) is a finite extension, whilst is trascendental if and only if <i>F</i>(<i>a</i>) is an infinite extension.</p>
 
-<p><b>Proof</b>. It's a consequence of theorems 5.21.16 and 5.21.15. If <i>a</i> is transcendental, then the map</p>
+<p><b>Proof</b>. If <i>a</i> is transcendental, by theorem 5.21.15 we know that <i>F</i>[<i>x</i>] ≃ <i>F</i>(<i>a</i>), and [<i>F</i>(<i>a</i>) : <i>F</i>] is infinite because: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i>, ... are linearly inependent over <i>F</i> .</p>
+
+<p>If <i>a</i> is algebraic, by theorem 5.21.16(c) we know that in this case <i>F</i>[<i>a</i>] is a field and that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>). The minimal polynomial has degree <i>n</i>, [<i>F</i>(<i>a</i>) : <i>F</i>] = <i>n</i> and <i>F</i>(<i>a</i>) has the finite basis: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup>. &emsp;□ </p>
+
+
+<p><b>5.21.18 Example</b>. We've thus characterized <i>simple extensions</i>. Suppose now to build the extension ℚ(<i>S</i>), with <i>S</i> = {√3, √5} and calculate its degree in ℚ. We proceed in this way: we adjoin first √3 obtaining the extension ℚ(√3) and then adjoin the element √5 to ℚ(√3). With the aid of theorem 5.21.16 we can easily calculate the degree of the extension. √3 is algebraic over ℚ, of degree 2 since its minimal polynomial is <i>x</i><sup>2</sup> − 3; By theorem 5.21.16 ℚ(√3) ≃ ℚ([<i>x</i>]/(<i>x</i><sup>2</sup> − 3). We now adjoin  √5 to ℚ(√3). The polynomial <i>x</i><sup>2</sup> − 5 is irreducible (not only over ℚ, but also) over ℚ(√3). Thus the extension ℚ(√3,√5) = (ℚ(√3))(√5) has degree two over ℚ(√3). Then by theorem 5.21.4 we have</p>
 
 <div class="eq">
-<p>&phi;<sub>a</sub>: <i>F</i>[<i>x</i>] ⟶ <i>F</i>[<i>a</i>]<br>
-<i>f</i>(<i>x</i>) ⟶ <i>f</i>(<i>a</i>)</p>
+<p>[ℚ(√3)(√5):ℚ] = [ℚ(√3,√5) : ℚ(√3)][ℚ(√3):ℚ] = 2 ⋅ 2 = 4.</p>
 </div>
 
-<p>is injective since Ker &phi;<sub>a</sub> = {0}, then <i>F</i>[<i>x</i>] ≃ <i>F</i>(<i>a</i>). Since <i>F</i>[<i>x</i>] is an infinite-dimensional <i>F</i>-vector space so is <i>F</i>(<i>a</i>). By theorem 5.21.15 we already knew that <i>F</i>[<i>x</i>] ≃ <i>F</i>(<i>a</i>).</p>
+<p>Since a basis of ℚ(√3,√5) over ℚ(√3) is {1, √5} and a basis over ℚ(√3) over ℚ is {1,√3}, a basis of ℚ(√3,√5) over ℚ is given by</p>
 
-<p>If <i>a</i> is algebraic, then <i>&phi;</i> is not injective. By theorem 5.21.16(c) we know that in this case <i>F</i>[<i>a</i>] is a field and that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>). The minimal polynomial has degree <i>n</i>, [<i>F</i>(<i>a</i>) : <i>F</i>] = <i>n</i> and <i>F</i>(<i>a</i>) has finite basis 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup>. &emsp;□ </p>
+<div class="eq">
+<p>1, √3, √5, √3√5 = √15</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>ℚ(√3)(√5) = {<i>a</i> + <i>b</i>√3 + <i>c</i>√5 + <i>d</i>√15 | <i>a,b,c,d</i> &in; ℚ}</p>
+</div>
+
+<p>We are now able to prove the following theorem.</p>
+
+<p><b>5.21.19 Theorem</b>. Let <i>K</i> an extension of <i>F</i>. Then the algebraic elements of <i>K</i>, over <i>F</i> make a subfield of <i>K</i>.</p>
+
+<p><b>Proof</b>. It suffices to prove that if <i>a</i> and <i>b</i> are algebraic over <i>F</i>, then are so <i>a</i> &pm; <i>b, ab</i> and <i>a/b</i>.<br> Let <i>a</i> of degree <i>n</i>, and <i>b</i> of degree <i>m</i>. Then</p>
+
+<div class="eq">
+<p>[<i>F</i>(<i>a</i>):<i>F</i>] = <i>n</i></p>
+</div>
+
+<p>Since <i>b</i> is algebraic of degree <i>m</i> over <i>F</i>, it is algebraic of degree &le; <i>m</i> over <i>F</i>(<i>a</i>), it follows that</p>
+
+<div class="eq">
+<p>[<i>F</i>(<i>a,b</i>):<i>F</i>] = [<i>F</i>(<i>a,b</i>):<i>F</i>(<i>a</i>)] [<i>F</i>(<i>a</i>) : <i>F</i>] &le; <i>nm</i></p>
+</div>
+
+<p>Now, <i>a</i> &pm; <i>b, ab</i> and <i>a/b</i> are all in <i>F</i>(<i>a,b</i>) that is <i>F</i>(<i>a &pm; b</i>), <i>F</i>(<i>ab</i>), <i>F</i>(<i>a/b</i>) which is a <i>finite</i> extension of <i>F</i>. By corollary 5.21.17 <i>a</i> &pm; <i>b, ab</i> and <i>a/b</i> are all algebraic over <i>F</i>. &emsp;□</p>
+
+              │14:03:39      Pollion | it is Q(sqrt(2))(sqrt(3)).                                           │ aindilis
+              │14:04:11      Pollion | Then you also added sqrt(6) "accidentally"    
 
 <section aria-label="End">
 <a href="finite_abelian_groups.html">&#171;Classification of finite abelian groups</a>
