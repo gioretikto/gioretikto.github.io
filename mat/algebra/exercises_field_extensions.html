@@ -23,6 +23,17 @@
 
 <ol>
 	<li><p>Determine whether the polynomial <i>x</i><sup>2</sup> − 5 is irreducible over ℚ and ℚ(√3)</p></li>
+
+	<li><p>Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>, an algebraic element over <i>F</i>. Let <i>p</i>(<i>x</i>) its minimal polynomial over <i>F</i> (that is the monic polynomial &in; <i>F</i>[<i>x</i> such that p(a) = 0). Prove that <i>p</i>(<i>x</i>) is irreducible over <i>F</i>. Conversely, if <i>p</i>(<i>x</i>) is a monic and irreducible polynomial of <i>F</i>[<i>x</i>], prove this is the minimal polynomial for each one of its roots.</p></li>
+
+	<li><p>Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. We have seen that if <i>a</i> is algebraic over <i>F</i>, then</p>
+
+	<div class="eq">
+	<p><i>F</i>(<i>a</i>) = <i>F</i>[<i>a</i>]</p>
+	</div>
+
+<p>Caluclate the inverse of an element <i>g</i>(<i>a</i>) = &in; <i>F</i>(<i>a</i>), <i>g</i> &ne; 0, expressing it in the form <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>a</i> + <i>&alpha;</i><sub>2</sub> <i>a</i><sup>2</sup> + ... + <i>&alpha;</i><sub>2</sub> <i>a</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>, with <i>n</i> the degree of the minimal polynomial <i>p</i>(<i>x</i>) of <i>a</i> over <i>F</i>.</p></li>
+
 </ol>
 
 <h2>Solutions</h2>
@@ -36,7 +47,31 @@
 <p>∃ <i>a,b</i> ∈ ℚ: √5 = <i>a</i> + <i>b</i>√5 &emsp;⟹ &emsp;5 = <i>a</i><sup>2</sup> + 2<i>ab</i>√5 + 5<i>b</i><sup>2</sup> &emsp; ⟹ &emsp; 5 − <i>a</i><sup>2</sup> − 5<i>b</i><sup>2</sup> = 2<i>ab</i>√5</p>
 </div>
 
-<p>but the L.H.S is rational and the R.H.S is irrational, a contradiction. Thus √5 &notin; ℚ(√5).&emsp;■</p>
+<p>but the L.H.S is rational and the R.H.S is irrational, a contradiction. Thus √5 &notin; ℚ(√3).&emsp;■</p></li>
+
+<li><p>Let <i>p</i>(<i>x</i>) = <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>), with <i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], a factorization of <i>p</i>(<i>x</i>), with ∂<i>g</i>(<i>xc</i>) and ∂<i>f</i>(<i>x</i>) less than ∂<i>p></i>(<i>x</i>). Then 0 = <i>p</i>(0) = <i>f</i>(<i>a</i>)<i>g</i>(<i>a</i>), this being a relation in a field without zero divisors implies either <i>f</i>(<i>a</i>) = 0 or <i>g</i>(<i>a</i>) = 0, contradicting the fact that <i>p</i>(<i>x</i>) is the minimal polynomial with root <i>a</i>.</p>
+
+<p>Conversely, let <i>f</i>(<i>x</i>) a monic and irreducible polynomial in <i>F</i>[<i>x</i>]. Let <i>a</i> one of the roots of <i>f</i>(<i>x</i>), we must prove that <i>f</i>(<i>x</i>) is the minimal polynomial of <i>a</i>. To this end it suffices to prove, that given the ideal <i>I</i> of all polynomials in <i>F</i>[<i>x</i>] zeroed by <i>a</i>, it results <i>I</i> = (<i>f</i>(<i>x</i>)). Let <i>I</i> = (<i>g</i>(<i>x</i>)). Then <i>f</i>(<i>x</i>) must be a multiple of <i>g</i>(<i>x</i>). Since <i>f</i>(<i>x</i>) is irreducible we have <i>f</i>(<i>x</i>) = <i>&alpha;g</i>(<i>x</i>), with <i>&alpha;</i> &in; <i>F</i>. But then (<i>f</i>(<i>x</i>)) = (<i>g</i>(<i>x</i>)). &emsp;□</p></li>
+
+<li><p>Let <i>g</i>(<i>a</i>) = <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>a</i> + <i>&alpha;</i><sub>2</sub> <i>a</i><sup>2</sup> + ... + <i>&alpha;</i><sub>2</sub> <i>a</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>. Consider the polynomial <i>g</i>(<i>x</i>) = <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>x</i> + <i>&alpha;</i><sub>2</sub> <i>x</i><sup>2</sup> + ... + <i>&alpha;</i><sub>2</sub> <i>x</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>. Since <i>g</i>(<i>a</i>) &ne; 0, <i>g</i>(<i>x</i>) is not a multiple of <i>p</i>(<i>x</i>). Then</p>
+
+<div class="def">
+<p>(<i>g</i>(<i>x</i>),<i>p</i>(<i>x</i>)) = 1</p>
+</div>
+
+<p>and thus there exist <i>s</i>(<i>x</i>), <i>t</i>(<i>x</i>) in <i>F</i>[<i>x</i>] such that</p>
+
+<div class="def">
+<p>1 = <i>s</i>(<i>x</i>)<i>g</i>(<i>x</i>) + <i>t</i>(<i>x</i>)<i>p</i>(<i>x</i>)</p>
+</div>
+
+<p>By letting <i>x</i> = <i>a</i>, we obtain</p>
+
+<div class="def">
+<p>1 = <i>s</i>(<i>a</i>)<i>g</i>(<i>a</i>) + <i>t</i>(<i>a</i>)<i>p</i>(<i>x</i>) = <i>s</i>(<i>a</i>)<i>g</i>(<i>a</i>)</p>
+</div>
+
+<p>The element <i>s</i>(<i>a</i>) 
 
 </ol>
 
