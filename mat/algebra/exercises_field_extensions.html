@@ -24,7 +24,7 @@
 <ol>
 	<li><p>Determine whether the polynomial <i>x</i><sup>2</sup> − 5 is irreducible over ℚ and ℚ(√3)</p></li>
 
-	<li><p>Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>, an algebraic element over <i>F</i>. Let <i>p</i>(<i>x</i>) its minimal polynomial over <i>F</i> (that is the monic polynomial &in; <i>F</i>[<i>x</i> such that p(a) = 0). Prove that <i>p</i>(<i>x</i>) is irreducible over <i>F</i>. Conversely, if <i>p</i>(<i>x</i>) is a monic and irreducible polynomial of <i>F</i>[<i>x</i>], prove this is the minimal polynomial for each one of its roots.</p></li>
+	<li><p>Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>, an algebraic element over <i>F</i>. Let <i>p</i>(<i>x</i>) its minimal polynomial over <i>F</i> (that is the monic polynomial &in; <i>F</i>[<i>x</i> such that <i>p</i>(<i>a</i>) = 0). Prove that <i>p</i>(<i>x</i>) is irreducible over <i>F</i>. Conversely, if <i>p</i>(<i>x</i>) is a monic and irreducible polynomial of <i>F</i>[<i>x</i>], prove this is the minimal polynomial for each one of its roots.</p></li>
 
 	<li><p>Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. We have seen that if <i>a</i> is algebraic over <i>F</i>, then</p>
 
@@ -32,7 +32,40 @@
 	<p><i>F</i>(<i>a</i>) = <i>F</i>[<i>a</i>]</p>
 	</div>
 
-<p>Caluclate the inverse of an element <i>g</i>(<i>a</i>) = &in; <i>F</i>(<i>a</i>), <i>g</i> &ne; 0, expressing it in the form <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>a</i> + <i>&alpha;</i><sub>2</sub> <i>a</i><sup>2</sup> + ... + <i>&alpha;</i><sub>2</sub> <i>a</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>, with <i>n</i> the degree of the minimal polynomial <i>p</i>(<i>x</i>) of <i>a</i> over <i>F</i>.</p></li>
+<p>Caluclate the inverse of an element <i>g</i>(<i>a</i>) = &in; <i>F</i>(<i>a</i>), <i>g</i> &ne; 0, expressing it in the form <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>a</i> + <i>&alpha;</i><sub>2</sub> <i>a</i><sup>2</sup> + ... + <i>&alpha;</i><sub><i>n</i> − 1</sub> <i>a</i><sup><i>n</i> − 1</sup>, with <i>n</i> the degree of the minimal polynomial <i>p</i>(<i>x</i>) of <i>a</i> over <i>F</i>.</p></li>
+
+	<li><p>Let <i>K</i> = ℚ(2<sup>1/3</sup>), a subfield of ℂ and let <i>a</i> = 1/(1 + 2(2)<sup>1/3</sup>). Prove that <i>a</i> &in; <i>K</i> and <i>a</i> &notin; ℚ. Study ℚ(<i>a</i>).</p></li>
+
+	<li><p>Check whether the followin are algebraic numbers, and in case calculate the minimal polynomial:</p>
+
+	<ul>
+		<li><p>√2 + √3 over ℚ</p></li>
+		<li><p>√2 + √3 over ℚ(√2)</p></li>
+		<li><p>(<i>&pi;</i> + 2) /(<i>&pi;</i> + √2)</p></li>
+		<li><p>(2)<sup>(1/3)</sup> + √5</p></li>
+		<li><p>(4 + √5)<sup>(1/3)</sup></p></li>
+	</ul>
+
+	</li>
+
+	<li><p>Determine a basis for the following extensions</p>
+
+	<ul>
+		<li><p>Q(√2√3), Q(√2,√3) and Q(√2,2<sup>1/3</sup>) over <i>Q</i></p></li>
+		<li><p>Q(√3 + √5)  over <i>Q</i>(√5)</p></li>
+	</ul>
+
+	</li>
+
+	<li><p>Let <i>p</i> a prime number and &xi; a <i>p</i>-th root of the unit. Study the extension Q(&xi;).</p></li>
+
+	<li><p>Prove that ℚ(√<i>i</i>) = ℚ(√2, <i>i</i>)</p></li>
+
+	<li><p>Verify whether the element √3√7 is algebraic over ℚ, and in case determine the minimal polynomial.</p></li>
+
+	<li><p>Prove that √2 + <i>i</i> is algebraic of degree 4 over ℚ, and of degree 2 over ℝ, then determine the minimal polynomial.</p></li>
+
+	<li><p>Prove that the order of a finite field is a prime power.</p></li>
 
 </ol>
 
@@ -53,25 +86,80 @@
 
 <p>Conversely, let <i>f</i>(<i>x</i>) a monic and irreducible polynomial in <i>F</i>[<i>x</i>]. Let <i>a</i> one of the roots of <i>f</i>(<i>x</i>), we must prove that <i>f</i>(<i>x</i>) is the minimal polynomial of <i>a</i>. To this end it suffices to prove, that given the ideal <i>I</i> of all polynomials in <i>F</i>[<i>x</i>] zeroed by <i>a</i>, it results <i>I</i> = (<i>f</i>(<i>x</i>)). Let <i>I</i> = (<i>g</i>(<i>x</i>)). Then <i>f</i>(<i>x</i>) must be a multiple of <i>g</i>(<i>x</i>). Since <i>f</i>(<i>x</i>) is irreducible we have <i>f</i>(<i>x</i>) = <i>&alpha;g</i>(<i>x</i>), with <i>&alpha;</i> &in; <i>F</i>. But then (<i>f</i>(<i>x</i>)) = (<i>g</i>(<i>x</i>)). &emsp;□</p></li>
 
-<li><p>Let <i>g</i>(<i>a</i>) = <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>a</i> + <i>&alpha;</i><sub>2</sub> <i>a</i><sup>2</sup> + ... + <i>&alpha;</i><sub>2</sub> <i>a</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>. Consider the polynomial <i>g</i>(<i>x</i>) = <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>x</i> + <i>&alpha;</i><sub>2</sub> <i>x</i><sup>2</sup> + ... + <i>&alpha;</i><sub>2</sub> <i>x</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>. Since <i>g</i>(<i>a</i>) &ne; 0, <i>g</i>(<i>x</i>) is not a multiple of <i>p</i>(<i>x</i>). Then</p>
+<li><p>Let <i>g</i>(<i>a</i>) = <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>a</i> + <i>&alpha;</i><sub>2</sub> <i>a</i><sup>2</sup> + ... + <i>&alpha;<sub>n</i> − 1</sub> <i>a</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>. Consider the polynomial <i>g</i>(<i>x</i>) = <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>x</i> + <i>&alpha;</i><sub>2</sub> <i>x</i><sup>2</sup> + ... + <i>&alpha;</i><sub><i>n</i> − 1</sub> <i>x</i><sub><i>n</i> − 1</sub><sup><i>n</i> − 1</sup>. Since <i>g</i>(<i>a</i>) &ne; 0, <i>g</i>(<i>x</i>) is not a multiple of <i>p</i>(<i>x</i>). Then</p>
 
-<div class="def">
+<div class="eq">
 <p>(<i>g</i>(<i>x</i>),<i>p</i>(<i>x</i>)) = 1</p>
 </div>
 
 <p>and thus there exist <i>s</i>(<i>x</i>), <i>t</i>(<i>x</i>) in <i>F</i>[<i>x</i>] such that</p>
 
-<div class="def">
+<div class="eq">
 <p>1 = <i>s</i>(<i>x</i>)<i>g</i>(<i>x</i>) + <i>t</i>(<i>x</i>)<i>p</i>(<i>x</i>)</p>
 </div>
 
 <p>By letting <i>x</i> = <i>a</i>, we obtain</p>
 
-<div class="def">
+<div class="eq">
 <p>1 = <i>s</i>(<i>a</i>)<i>g</i>(<i>a</i>) + <i>t</i>(<i>a</i>)<i>p</i>(<i>x</i>) = <i>s</i>(<i>a</i>)<i>g</i>(<i>a</i>)</p>
 </div>
 
-<p>The element <i>s</i>(<i>a</i>) 
+<p>Since <i>s</i>(<i>x</i>) = <i>p</i>(<i>x</i>)<i>q</i>(<i>x</i>) + <i>r</i>(<i>x</i>) with ∂<i>r</i>(<i>x</i>) &lt; <i>n</i>. Evaluating it in <i>a</i> we have <i>s</i>(<i>a</i>) = <i>r</i>(<i>a</i>), and we can write the inverse as <i>g</i>(<i>a</i>) ⋅ <i>r</i>(<i>a</i>) = 1. &emsp;■</p></li>
+
+<li><p>1 + 2 ⋅ 2<sup>1/3</sup> &in; ℚ(2<sup>1/3</sup>) ⟶ 1 / (1 + 2 ⋅ 2<sup>1/3</sup>) &in; ℚ(2<sup>1/3</sup>) since we are dealing with a field. (1 + 2⋅2<sup>1/3</sup>) &notin; ℚ, otherwise 2<sup>1/3</sup> would be inside ℚ (but <i>x</i><sup>3</sup> − 2 is irreducible over ℚ), without calculating (1 + 2 ⋅ 2<sup>1/3</sup>) we can conclude that ℚ(<i>a</i>) = ℚ(2<sup>1/3</sup>), because [ℚ(2<sup>1/3</sup>): ℚ] = 3, (prime see <a href="field_extension.html">Corollary 5.21.5</a>), thus there are no interdmediate fields. (if the dimension weren't prime for example, for <i>a</i> = the extensions ℚ &lt; ℚ(2<sup>1/2</sup>) &lt; ℚ(2<sup>1/4</sup>) and the biggest field there has degree 4 over ℚ). &emsp;■</p></li>
+
+	<li><p>Let <i>x</i> = √2 + √3. Note that x<sup>2</sup> = 2 + √6 + 3 and therefore <i>x</i><sup>2</sup> − 5 = 2√6. We can square both sides of this equation and obtain (<i>x</i><sup>2</sup> − 5)<sup>2</sup> = 24. By expanding this equation, we obtain a monic polynomial <i>p</i> of degree 4 such that <i>p</i>(<i>x</i>) = 0, <i>x</i><sup>4</sup> + 25 − 10x<sup>2</sup> + 1 = 0.</p></li>
+
+	<li><p>We can write the equivalent expression: <i>&pi;</i> = (2 − <i>a</i>√2) / (<i>a</i> − 1); This is an expression made up of algebraic numbers only, which make up a field <i>i.e.</i> algebraic + algebraic = algebraic, algebraic * algebraic = algebraic, algebraic / algebraic = algebraic. </p>
+
+	<p>let <i>x</i> = 2<sup>(1/3)</sup> + √5, then (<i>x</i> − √5)<sup>3</sup> = 2 so <i>x</i><sup>3</sup> + 15<i>x</i> − (3<i>x</i><sup>2</sup> + 5)√5 = 2, so (<i>x</i><sup>3</sup> + 15<i>x</i> − 2)<sup>2</sup> = 5⋅(3x<sup>2</sup> + 5)<sup>2</sup>. By developing the remaining powers we eventually get <i>x</i><sup>6</sup> −15<i>x</i><sup>4</sup> −4<i>x</i><sup>3</sup> + 75<i>x</i><sup>2</sup> −60 <i>x</i> − 121, which is indeed the minimal polynomial, since 2<sup>(1/3)</Sup> + √5 &notin; ℚ(2<sup>(1/3)</sup>). ℚ(2<sup>(1/3)</sup>) + √5) = ℚ(2<sup>(1/3)</sup>), √5) and ℚ(2<sup>(1/3)</sup>), √5) is as an extension of degree 6. </p></li>
+
+<p><i>x</i> = (4 + √5)<sup>1/3</sup>; ⟶ <i>x</i><sup>3</sup> = 4 + √5 ⟶ <i>x</i><sup>3</sup> − 4 = √5 ⟶ <i>x</i><sup>6</sup> −8<i>x</i><sup>3</sup> + 11 (minimal polynomial).</p>
+
+<p><i>x</i> = (2 + √2)<sup>1/2</sup> ⟶ <i>x</i><sup>2</sup> = (2 + √2) ⟶ <i>x</i><sup>2</sup> − 2 = √2 ⟶ <i>x</i><sup>4</sup> − 4<i>x</i><sup>2</sup> + 2, which is irreducible by <a href="algebra/pol_irr_Q.html#Eisenstein">Eisenstein’s irreducibility criterion</a>.</p></li>
+
+<li>
+
+<ul>
+	<li><p>Note that Q(√2√3) = Q(√6) this is because √2√3 = √6, so basis is {1,√6}. We have that <i>x</i><sup>2</sup> − √6 = 0 so [Q(√2√3) : Q] = 2; This matches with |{1, √6}| = 2.</p></li>
+
+	<li><p>The the min. poly of Q(√2) over Q is <i>x</i><sup>2</sup> − √2 = 0 and similarly for Q(√3): <i>x</i><sup>2</sup> − √3 = 0. Since Q(√2, √3) = (Q√2))(√3), we have</p>
+
+	<div class="eq">
+	<p>[Q(√2, √3) : Q] = [Q(√2, √3) : Q(√2)][Q(√3) : Q] = 2 ⋅ 2 = 4</p>
+	</div>
+
+	<p>Since a basis for Q(√2) is {1, √2} is a basis and {1, √3} is a basis for Q(√3), a basis for Q(√2, √3) is given by <a href="field_extension.html">Theorem 5.21.4</a> doing doing all the possible multiplications {1, √2, √3, √6}.</p></li>
+
+	<li><p>[Q(√2, 2<sup>1/3</sup>) : Q] = 6. We have that a basis for Q(√2) is {1, √2} and one for Q(2<sup>1/3</sup>) is {1, 2<sup>1/3</sup>, 2<sup>2/3</sup> by <a href="field_extension.html">Theorem 5.21.4</a> doing doing all the possible multiplications {1, √2, 2<sup>1/3</sup>, 2<sup>2/3</sup>, √22<sup>1/3</sup>, √22<sup>2/3</sup>}.</p></li>
+
+	<li><p>We look for the minimal polynomial first by letting (<i>x</i> − 3)<sup>2</sup> = 5; So [<i>Q</i>(√3 + √5) : <i>Q</i>(√5)] = 2. We know from <a href="field_extension.html">Theorem 5.21.19</a> that Q(√3 ± √5), Q(√3√5), Q(√3/√5) are all inside Q(√3,√5). Q(sqrt(3), sqrt(5)) has basis {1, √3, √5, √3√5} over Q, so Q(sqrt(3) + sqrt(5)) has the basis {1,√3} over <i>Q</i>(√5). &emsp;■ </p></li>
+
+</ul>
+
+</li>
+
+<li><p><i>&xi;</i> satisfies the polynomial <i>x<sup>p</sup></i> − 1, which is not the minimal polynomial for <i>&xi;</i> since it is not irreducible: <i>x<sup>p</sup></i> − 1 = (<i>x</i> − 1) (<i>x</i><sup><i>p</i>−1</sup> + <i>x</i><sup><i>p</i>−2</sup> + ... + <i>x</i> + 1). Now <i>&xi;</i> does not satisfy <i>x</i> − 1, but it satisfies <i>x</i><sup><i>p</i>−1</sup> + <i>x</i><sup><i>p</i>−2</sup> + ... + <i>x</i> + 1 and this latter is irreducible over ℚ (see the properties of <a href="cyclotomic_polynomials.html">cyclotomic polynomials</a>), which is thus the minimal polynomial of &xi;. We thus have [Q(<i>&xi;</i>): Q] = <i>p</i> − 1, and a basis of Q(&xi;) is given by {1, &xi;, &xi;<sup>2</sup>, ..., <i>&xi;</i><sup><i>p</i> − 2</sup>}.&emsp;■</p></li>
+
+	<li><p>We have that</p>
+
+<div class="eq">
+<p>√<i>i</i> = (cos <i>&pi;</i>/2 + <i>i</i>sin <i>&pi;</i>/2)<sup>1/2</sup> = cos <i>&pi;</i>/4 + <i>i</i>sin <i>&pi;</i>/4 = 1/√2 + <i>i</i>/√2.&emsp; (*)</p>
+</div>
+
+<p>In addition, <i>i</i>√<i>i</i> = −1/√2 + <i>i</i>/√2 which by multiplying by √2√<i>i</i> yields to</p>
+
+<div class="eq">
+<p>√<i>i</i> − <i>i</i>√<i>i</i> = √2</p>
+</div>
+
+<p>and since (√<i>i</i>)<sup>2</sup> = <i>i</i>, it follows that Q(<i>i</i>, √2) &subseteq; Q(√<i>i</i>). From (*) we've also that  Q(√<i>i</i>) &subseteq; Q(<i>i</i>, √2), thus the equality of the two extensions. &emsp;■</p></li>
+
+<li><p>Let <i>&alpha;</i> = √3 + √7; We have <i>&alpha;</i> − √3 = √7 ⟶ (<i>&alpha;</i> − √3)<sup>2</sup> = 7 ⟶ <i>&alpha;</i><sup>2</sup> + 3 − 2<i>&alpha;</i>√3 = 7, thus (<i>&alpha;</i><sup>2</sup> − 4)<sup>2</sup> = 12<i>&alpha;</i><sup>2</sup> ⟶ <i>a</i><sup>4</sup> − 20<i>&alpha;</i><sup>2</sup> + 16 = 0. The minimal polynomial is thus <i>x</i><sup>4</sup> −20<i>x</i><sup>2</sup> + 16. Indeed <i>&alpha;</i> canno satisfy a polynomial of lower degree; it should have degree 2, but in this case &alpha; should be contained in Q(√3) and thus √7 as well should belong to Q(√3), which is impossible.&emsp;■ </p> </li>
+
+	<li><p>Let <i>&alpha;</i> = √2 + <i>i</i>, &alpha; &notin; <i>R</i> and <i>&alpha;</i> − √2 = <i>i</i>. By squaring both sides of the equation, <i>&alpha;</i><sup>2</sup> + 2 −2√2<i>&alpha;</i> = −1. Thus <i>x</i><sup>2</sup> −2√2<i>x</i> + 3 is the minimal polynomial of <i>&alpha;</i> on ℝ. </p>
+
+<p>So we have <i>x</i><sup>2</sup> − 2√2 <i>x</i> + 3 = 0. By Isolating the last square root and squaring again we obtain <i>x</i><sup>2</sup> − 2√2<i>x</i> + 3 = 0, you end up with x<sup>4</sup> − 2x<sup>2</sup> + 9 = 0 which is the minimal polynomial over ℚ.&emsp;■</p></li>
 
 </ol>
 
