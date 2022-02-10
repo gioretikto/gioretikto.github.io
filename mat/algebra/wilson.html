@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Primality test; Wilson's Theorem"/>
  <title>Primality test; Wilson's Theorem</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -21,7 +21,7 @@
 
 <h1>Primality test; Wilson's Theorem</h1>
 
-<p><a href="fermat_little.html">Fermat’s little theorem</a> may be used as a primality test, to verify if a number is not prime. We have seen that if <i>p</i> is a prime number whatever <i>a</i> we have</p>
+<p><a href="fermat_little.html">Fermat’s little theorem</a> may be used as a primality test, to verify that a number is not prime. We have seen that if <i>p</i> is a prime number whatever <i>a</i> we have</p>
 
 <div class="eq">
 <p><i>a<sup>p</sup></i> ≡ <i>a</i> &emsp;(mod <i>p</i>) &emsp; (4.4)</p>
@@ -29,17 +29,17 @@
 
 <p>Then we can state the following proposition</p>
 
-<p><b>Proposition 4.31</b>. If there exists a number <i>a</i> such that</p>
+<p><b>Proposition 4.10.1</b>. If there exists a number <i>a</i> such that</p>
 
 <div class="eq">
-<p><i>a<sup>n</sup> ≢ a</i> &emsp; (mod <i>n</i>),</p>
+<p><i>a<sup>n</sup></i> ≢ <i>a</i> &emsp; (mod <i>n</i>),</p>
 </div>
 
 <p>then <i>n</i> is not prime.</p>
 
 <p>For instance, <i>n</i> = 6 is not prime because 2<sup>6</sup> ≢ 2 (mod 6).</p>
 
-<p><b>Proposition 4.32</b>. (<i>Wilson's Theorem</i>) If <i>p</i> is prime, then</p>
+<p><b>Proposition 4.10.2</b>. (<i>Wilson's Theorem</i>) If <i>p</i> is prime, then</p>
 
 <div class="eq">
 <p>(<i>p</i> − 1)! ≡ −1 &emsp; (mod <i>p</i>)</p>
@@ -49,33 +49,33 @@
 <div class="eq"><p><i>ax</i> ≡ 1 (mod <i>p</i>)</p>
 </div>
 
-<p>where <i>a</i> is one of the integers 1 &le; a &le; <i>p</i>−1. As GCD(<i>a, p</i>) = 1, this congruence admits exactly one solution <i>a'</i> modulo <i>p</i>, with 1 ≤ <i>a'</i> &lt; <i>p</i>. Can be <i>a</i> equal to <i>a'</i> and if so when? The congruence</p>
+<p>where <i>a</i> is one of the integers 1 &le; <i>a</i> &le; <i>p</i>−1. As GCD(<i>a, p</i>) = 1, this congruence admits exactly one solution <i>a'</i> modulo <i>p</i>, with 1 ≤ <i>a'</i> &lt; <i>p</i>. Can be <i>a</i> equal to <i>a'</i> and if so when? The congruence</p>
 
 <div class="eq">
-<p><i>a<sup>2</sup></i> ≡ 1 (mod <i>p</i>)</p>
+<p><i>a</i><sup>2</sup> ≡ 1 (mod <i>p</i>)</p>
 </div>
 
-<p>means that <i>a<sup>2</sup></i> − 1 has <i>p</i> has a factor. Therefore, since</p>
+<p>means that <i>a</i><sup>2</sup> − 1 has <i>p</i> has a factor. Therefore, since</p>
 
 <div class="eq">
-<p><i>a<sup>2</sup></i> − 1 = (<i>a</i> + 1)(<i>a</i> − 1)</p>
+<p><i>a</i><sup>2</sup> − 1 = (<i>a</i> + 1)(<i>a</i> − 1)</p>
 </div>
 
 <p>Either <i>p</i> divides <i>a</i> + 1 or <i>p</i> divides <i>a</i> − 1. It follows that either <i>a</i> − 1 ≡ 0 (mod <i>p</i>), that is, <i>a</i> = 1, or <i>a</i> + 1 ≡ 0, that is, <i>a</i> = <i>p</i> − 1. </p>
 
-<p>The other solutions with <i>a &ne; a'</i> are, leaving out the two previous one, are the elements 2, 3, ..., <i>p</i> − 2 and can be paired up into (<i>p</i> − 3)/2 pairs {<i>a, a'</i>}, such that</p>
+<p>The other solutions with <i>a</i> &ne; <i>a'</i> are, leaving out the two previous one, are the elements 2, 3, ..., <i>p</i> − 2 and can be paired up into (<i>p</i> − 3)/2 pairs {<i>a, a'</i>}, such that</p>
 
 <div class="eq">
-<p><i>aa'</i> ≡ 1 (mod <i>p</i>) &emsp; with&emsp; <i>a &ne; a'</i></p>
+<p><i>aa'</i> ≡ 1 (mod <i>p</i>) &emsp; with&emsp; <i>a</i> &ne; <i>a'</i></p>
 </div>
 
 <p>By multiplying together all the congruences, we obtain 2 · 3 · ··· · (<i>p</i> − 2) = (<i>p</i> − 2)! ≡ 1 (mod <i>p</i>). Now, by multiplying both sides by <i>p</i> − 1 ≡ −1 (mod <i>p</i>), we find that (<i>p</i> − 1)! ≡ <i>p</i> − 1 (mod <i>p</i>), which is our claim.□</p>
 
 <p>The inverse of this theorem is also true:</p>
 
-<p><b>Proposition 4.33</b>. If (<i>n</i> − 1)! ≡ −1 (mod <i>n</i>), then <i>n</i> is prime.</p>
+<p><b>Proposition 4.10.3</b>. If (<i>n</i> − 1)! ≡ −1 (mod <i>n</i>), then <i>n</i> is prime.</p>
 
-<p><b>Proof</b>. If <i>n</i> were not a prime, it would have a divisor <i>b</i>, with 1 &lt; <i>b</i> &lt; n, which, being a divisor of <i>n</i>, would divide (<i>n</i> − 1)! + 1 as well. But <i>b</i> should appear among the factors of (<i>n</i> − 1)!, as 1 &lt; <i>b</i> &lt; n, so <i>b</i> | (<i>n</i> − 1)!. These two relations imply that <i>b</i> divides 1, which is a contradiction.□</p>
+<p><b>Proof</b>. If <i>n</i> were not a prime, it would have a divisor <i>b</i>, with 1 &lt; <i>b</i> &lt; <i>n</i>, which, being a divisor of <i>n</i>, would divide (<i>n</i> − 1)! + 1 as well. But <i>b</i> should appear among the factors of (<i>n</i> − 1)!, as 1 &lt; <i>b</i> &lt; <i>n</i>, so <i>b</i> | (<i>n</i> − 1)!. These two relations imply that <i>b</i> divides 1, which is a contradiction.□</p>
 
 <p>Similarly to Fermat’s little theorem, Wilson’s theorem provides a primality test. In principle, the test works as follows: given <i>n</i>, compute (<i>n</i> − 1)! + 1 and verify whether it is divisible by <i>n</i> or not. If it is not, and only in this case, <i>n</i> is prime.</p>
 
@@ -85,19 +85,38 @@
 
 <p>However such a test is unfeasible in practive, (<i>n</i> − 1)! is exponential and we do not an algorithm for its rapid calculation.</p>
 
-<p>The algorithms used to recognise whether a given number is prime or not are know as <i>primality tests</i>. The most natural, but by far not the most efficient way to determine whether a number <i>n</i> is prime consists in verifying that it is not divisible by any number preceding it, that is to say, by 2, 3, 4, . . ., <i>n</i> − 1. A method that reduces the number of division, one of the most ancient method is the so-called <b>sieve of Eratosthenes</b> based on the Fundamental Theorem of Arithmetic, allows in principle, to determine all prime numbers smaller than or equal to a fixed positive integer number <i>n</i>.</p>
+<p>The algorithms used to check whether a given number is prime or not are know as <i>primality tests</i>. The most natural, but by far not the most efficient way to determine whether a number <i>n</i> is prime consists in verifying that it is not divisible by any number preceding it, that is to say, by 2, 3, 4, . . ., <i>n</i> − 1.</p>
 
-<p><b>Proposition 4.34</b>. (<i>sieve of Eratosthenes</i>) If a positive integer <i>n</i> is not divisible by any prime number 
+<div id="eratosthenes">
+<p>A useful procedure handed down from antiquity is able to reduce the number of divisions, the so-called <b>sieve of Eratosthenes</b> ((276–194 BC) based on the Fundamental Theorem of Arithmetic, which assures us that every positive integer can be written in a unique way as a product of prime numbers, though it does not provide any algorithm to find the factorisation of a given number. The sieve of Eratosthenes allows in principle, to determine all prime numbers smaller than or equal to a fixed positive integer number <i>n</i>.</p>
+
+<p><b>Proposition 4.10.4</b>. (<i>Sieve of Eratosthenes</i>) If a positive integer <i>n</i> is not divisible by any prime number 
  smaller than or equal to √<i>n</i>, then <i>n</i> is prime.</p>
 
-<p><b>Proof</b>. Assume <i>n</i> to be reducible, that is to say that <i>n = ab</i> with <i>a</i> and <i>b</i> integers such that 1 &lt; <i>a</i> &lt; <i>n</i> and 1 &lt; <i>b</i> &lt; <i>n</i>. One of the factors, <i>a</i> or <i>b</i>, is necessarily smaller than or equal to <i>n</i>: otherwise we would have <i>n = ab</i> &gt; √<i>n</i> · √<i>n</i> = <i>n</i>, which is impossible. So <i>n</i> has a factor, say <i>b</i>, smaller than or equal to <i>n</i>. If it is prime, the proposition is proved. Otherwise, <i>b</i> has a prime factor <i>p</i>, and <i>p &lt; b ≤ √n</i>.□</p>
+<p><b>Proof</b>. Assume <i>n</i> to be reducible, that is to say that <i>n</i> = <i>ab</i> with <i>a</i> and <i>b</i> integers such that 1 &lt; <i>a</i> &lt; <i>n</i> and 1 &lt; <i>b</i> &lt; <i>n</i>. One of the factors, <i>a</i> or <i>b</i>, is necessarily smaller than or equal to √<i>n</i>: otherwise we would have <i>n</i> = <i>ab</i> &gt; √<i>n</i> · √<i>n</i> = <i>n</i>, which is impossible. So <i>n</i> has a factor, say <i>b</i>, smaller than or equal to <i>n</i>. If it is prime, the proposition is proved. Otherwise, <i>b</i> has a prime factor <i>p</i>, and <i>p</i> &lt; <i>b</i> ≤ √<i>n</i>.□</p>
 
-<p><b>Example 4.35</b>. To prove that the number 173 is prime, it is sufficient to prove that it is not divisible by any prime smaller than or equal to √173, that is to say that it is not divisible by 2, 3, 5, 7, 11, 13. The reader may easily check that this is the case.</p>
+<p>So the method consists of the following steps:</p>
+
+<ol>
+	<li><p>Write a list of all natural numbers from 2 to the given number <i>n</i>.</p></li>
+	<li><p>Delete from this list all multiples of two (4, 6, 8, etc.), since these are not prime.</p></li>
+	<li><p>Delete from this list all remaining multiples of three (9, 15, etc.), since these are not prime.</p></li>
+	<li><p>Find in the list the next remaining prime number (5) and delete all numbers that are multiples of 5, and so on.</p></li>
+	<li><p>Stop the process when the largest prime <i>p</i> &le; √<i>n</i> is reached.</p></li> 
+</ul>
+
+
+<p>For example, we can find all <i>p</i> primes less than 24 by just crossing off all multiples of 2 and 3, since 5 > √24:</p>
+
+<p>2 3 <del>4</del> 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23</p>
+
+<p><b>Example 4.10.5</b>. To prove that the number 173 is prime, it is sufficient to prove that it is not divisible by any prime smaller than or equal to √173, that is to say that it is not divisible by 2, 3, 5, 7, 11, 13. The reader may easily check that this is the case.</p>
 
 <p>In order to use the <i>sieve of Eratosthenes</i>, however, we need to know the prime numbers smaller than or equal to √<i>n</i>, and this may result incovinient, there are no known recurrence formulas to compute prime numbers, and so there is no efficient
 method to generate prime numbers. So we may use the method in a weaker form, and check if <i>n</i> is divisible by 2, 3, 4, 5, ..., [√<i>n</i>], that is, by all integer numbers smaller than or equal to <i>n</i>. By the way, this is not an efficient method, as its complexity is exponential.</p>
- 
-<section>
+</div>
+
+<section aria-label="End">
 <a href="euler.html">&#171; Euler's function and theorem</a>
 <a href="index.html">Index</a>
 <a href="cryptology.html">Cryptology &#187;</a>
