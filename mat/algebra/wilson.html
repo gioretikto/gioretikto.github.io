@@ -49,7 +49,7 @@
 <div class="eq"><p><i>ax</i> ≡ 1 (mod <i>p</i>)</p>
 </div>
 
-<p>where <i>a</i> is one of the integers 1 &le; <i>a</i> &le; <i>p</i>−1. As GCD(<i>a, p</i>) = 1, this congruence admits exactly one solution <i>a'</i> modulo <i>p</i>, with 1 ≤ <i>a'</i> &lt; <i>p</i>. Can be <i>a</i> equal to <i>a'</i> and if so when? The congruence</p>
+<p>where <i>a</i> is one of the integers 1 &le; <i>a</i> &le; <i>p</i> − 1. As GCD(<i>a, p</i>) = 1, this congruence admits exactly one solution <i>a'</i> modulo <i>p</i>, with 1 ≤ <i>a'</i> &lt; <i>p</i>. Can be <i>a</i> equal to <i>a'</i> and if so when? The congruence</p>
 
 <div class="eq">
 <p><i>a</i><sup>2</sup> ≡ 1 (mod <i>p</i>)</p>
@@ -88,7 +88,7 @@
 <p>The algorithms used to check whether a given number is prime or not are know as <i>primality tests</i>. The most natural, but by far not the most efficient way to determine whether a number <i>n</i> is prime consists in verifying that it is not divisible by any number preceding it, that is to say, by 2, 3, 4, . . ., <i>n</i> − 1.</p>
 
 <div id="eratosthenes">
-<p>A useful procedure handed down from antiquity is able to reduce the number of divisions, the so-called <b>sieve of Eratosthenes</b> ((276–194 BC) based on the Fundamental Theorem of Arithmetic, which assures us that every positive integer can be written in a unique way as a product of prime numbers, though it does not provide any algorithm to find the factorisation of a given number. The sieve of Eratosthenes allows in principle, to determine all prime numbers smaller than or equal to a fixed positive integer number <i>n</i>.</p>
+<p>The <b>sieve of Eratosthenes</b> is a useful procedure handed down from antiquity able to reduce unnecessary trial divisions; Eratosthenes (276–194 BC) from Cyrene (in what is now Lybia) was a contemporary of Archimedes, and the head librarian of the great library of Alexandria. One of his most impressive accomplischments was to accurately calculate the circumference of the earth using only geometry. This primality test is based on the Fundamental Theorem of Arithmetic, which assures us that every positive integer can be written in a unique way as a product of prime numbers, though it does not provide any algorithm to find the factorisation of a given number. The sieve of Eratosthenes allows in principle, to determine all prime numbers smaller than or equal to a fixed positive integer number <i>n</i>.</p>
 
 <p><b>Proposition 4.10.4</b>. (<i>Sieve of Eratosthenes</i>) If a positive integer <i>n</i> is not divisible by any prime number 
  smaller than or equal to √<i>n</i>, then <i>n</i> is prime.</p>
@@ -101,19 +101,235 @@
 	<li><p>Write a list of all natural numbers from 2 to the given number <i>n</i>.</p></li>
 	<li><p>Delete from this list all multiples of two (4, 6, 8, etc.), since these are not prime.</p></li>
 	<li><p>Delete from this list all remaining multiples of three (9, 15, etc.), since these are not prime.</p></li>
-	<li><p>Find in the list the next remaining prime number (5) and delete all numbers that are multiples of 5, and so on.</p></li>
-	<li><p>Stop the process when the largest prime <i>p</i> &le; √<i>n</i> is reached.</p></li> 
+	<li><p>Find in the list the next remaining prime number (5) and if 5 &le; √<i>n</i> delete all numbers that are multiples of 5, and so on.</p></li>
+	<li><p>stop this process as soon as you reach the last prime <i>p</i> &le; √<i>n</i> and cross off its multiples. All the non-crossed off numbers are prime.</p></li> 
 </ul>
 
+<p>For example, we can find all primes less than 24 by just crossing off all multiples of 2 and 3, since 5 > √24:</p>
 
-<p>For example, we can find all <i>p</i> primes less than 24 by just crossing off all multiples of 2 and 3, since 5 > √24:</p>
-
-<p>2 3 <del>4</del> 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23</p>
+<p>2 3 <u>4</u> 5 <u>6</u> 7 <u>8</u> <u>9</u> <u>10</u> 11 <u>12</u> 13 <u>14</u> <u>15</u> <u>16</u> 17 <u>18</u> 19 <u>20</u> <u>21</u> <u>22</u> 23</p>
 
 <p><b>Example 4.10.5</b>. To prove that the number 173 is prime, it is sufficient to prove that it is not divisible by any prime smaller than or equal to √173, that is to say that it is not divisible by 2, 3, 5, 7, 11, 13. The reader may easily check that this is the case.</p>
 
+<p>We can use the <i>sieve of Eratosthenes</i> as a factorization method. To factorize an integer <i>n</i> we check whether it is divisible by all primes 2,3,.,√<i>n</i> not underlined.</p>
+
+<ol>
+	<li><p>if <i>n</i> is not divisible by any of these numbers, then <i>n</i> is a prime number;</p></li>
+	<li><p>Otherwise, denoting by <i>n</i><sub>1</sub> a factor of <i>n</i>, apply the same procedure to <i>n</i><sub>1</sub> and
+<i>n</i>/<i>n</i><sub>1</sub> (which is an integer), arriving finally to the complete factorisation of <i>n</i> in prime factors.</p></li>
+</ol>
+
 <p>In order to use the <i>sieve of Eratosthenes</i>, however, we need to know the prime numbers smaller than or equal to √<i>n</i>, and this may result incovinient, there are no known recurrence formulas to compute prime numbers, and so there is no efficient
 method to generate prime numbers. So we may use the method in a weaker form, and check if <i>n</i> is divisible by 2, 3, 4, 5, ..., [√<i>n</i>], that is, by all integer numbers smaller than or equal to <i>n</i>. By the way, this is not an efficient method, as its complexity is exponential.</p>
+</div>
+
+<div id="fermat_factorization">
+<h3>Fermat's Factorization Method</h3>
+
+<p>To factorize an integer <i>n</i> in many cases it is more efficient the following method due to Pierre de Fermat. It is based of the following points:</p>
+
+<ol type="a">
+	<li><p>We can suppose <i>n</i> to be odd.</p></li>
+	<li><p>An odd positive integer <i>n</i> greater than 1 is a prime number iff can be represented in only one way as the difference of two squares of positive integers:</p>
+
+	<div class="eq">
+	<p><i>n</i> = <i>x</i><sup>2</sup> − <i>y</i><sup>2</sup>, <i>x,y</i> &in; ℕ</p>
+	</div>
+
+<p>Indeed if <i>n</i> = <i>x</i><sup>2</sup> − <i>y</i><sup>2</sup>, then <i>n</i> = (<i>x</i> + <i>y</i>) (<i>x</i> − <i>y</i>) is a factorization of <i>n</i>. Conversely for a given odd positive integer <i>n</i> &gt; 1, if <i>n</i> = <i>a</i> ⋅ <i>b</i>, with <i>a</i> &ge; <i>b</i> &ge; 1, then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>n</mi>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>a</mi>
+          <mo>+</mo>
+          <mi>b</mi>
+        </mrow>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>a</mi>
+          <mo>&#x2212;</mo>
+          <mi>b</mi>
+        </mrow>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<p>where (<i>a</i> + <i>b</i>)/2, (<i>b</i> − <i>a</i>)/2 &in; ℕ: since <i>n</i> is odd both <i>a</i> and <i>b</i> are odd and <i>a</i> &pm: <i>b</i> is even.</p></li>
+
+<li><p>Determining <i>x</i> and <i>y</i> such that <i>n</i> = <i>x</i><sup>2</sup> − <i>y</i><sup>2</sup> is equivalent to determinining <i>x</i> such that <i>x</i><sup>2</sup> − <i>n</i> is a square (=<i>y</i><sup>2</sup>). </p>
+
+</ol>
+
+<p>Fermat factorisation method works as follows: first of all determine the smallest positive integer <i>k</i> such that <i>k</i><sup>2</sup> ≥ <i>n</i>; then successively compute the differences</p>
+
+<div class="eq">
+<p><i>k</i><sup>2</sup> − <i>n</i>, &emsp; (<i>k</i> + 1)<sup>2</sup> − <i>n</i>, &emsp; (<i>k</i> + 2)<sup>2</sup> − <i>n</i>, ...</p>
+</div>
+
+<p>until a value <i>s</i> ≥ <i>k</i> is found such that <i>t</i><sup>2</sup> − <i>n</i> is a square. Notice that this process <i>terminates</i> at most when <i>s</i> = (<i>n</i> + 1)/2, as </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mi>n</mi>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>n</mi>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mrow>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<p>a value that can be obtained only when the number <i>n</i> is prime, so that the factorization of <i>n</i> is trivial</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>n</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>n</mi>
+  <mo>&#x22C5;</mo>
+  <mn>1</mn>
+</math>
+
+<p><b>Example 4.10.6</b>. Use Fermat's method to factor 8777.</p>
+
+<p><b>Solution</b>. We see that 93<sup>2</sup> &lt; 8777 &lt; 94<sup>2</sup>. Therefore we have to consider the values of <i>k</i><sup>2</sup> − 8777 for <i>k</i> &ge; 230. Taking <i>k</i> = 94, 95 , .. we have</p>
+
+<div class="eq">
+<p>94<sup>2</sup> − 8777 = 8836 − 8777 = 59&emsp; not a square<br>
+95<sup>2</sup> − 8777 = 9025 − 8777 = 248&emsp; not a square<br>
+96<sup>2</sup> − 8777 = 9216 − 8777 = 439&emsp; not a square<br>
+97<sup>2</sup> − 8777 = 9409 − 8777 = 632&emsp; not a square<br>
+98<sup>2</sup> − 8777 = 9604 − 8777 = 827&emsp; not a square<br>
+99<sup>2</sup> − 8777 = 9801 − 8777 = 1024&emsp; a square!</p>
+</div>
+
+<p>So <i>x</i> = 99 and <i>y</i> = 32 which yields</p>
+
+<p>8777 = (99 + 32) ⋅ (99 − 32) = 131 ⋅ 67&emsp;■</p>
+
+</div>
+
+<div id="fermat_numbers">
+<h3>Fermat numbers</h3>
+
+<p>The mathematician P. de Fermat considered the question of which odd prime numbers can be written in the form <i>p</i> = 2<sup><i>k</i></sup> + 1, where <i>k</i> is a positive integer. Fermat showed that for 2<sup><i>k</i></sup> + 1 to be prime, <i>k</i> must be a power of 2, <i>i.e.</i> <i>k</i> = 2<sup><i>n</i></sup> or equivalently <i>k</i> has no odd factors, for suppose it had an odd factor <i>t</i> = 2<i>h</i> + 1, we would have</p>
+
+<div class="eq">
+<p>2<sup><i>k</i></sup> + 1 = 2<sup><i>tr</i></sup> + 1 = (2<sup><i>r</i></sup>)<sup><i>t</i></sup> + 1 <br>
+= (2<sup><i>r</i></sup> + 1) ((2<sup><i>r</i></sup>)<sup>2<i>h</i></sup> − (2<sup><i>r</i></sup>)<sup>2<i>h</i> −1</sup> + ... + (2<sup><i>r</i></sup>)<sup>2</sup> − 2<sup><i>r</i></sup> + 1)</p>
+</div>
+
+<p>is an algebraic identity. Thus if we want a number in the form 2<sup><i>k</i></sup> + 1 to be prime the exponent <i>k</i> must have the form 2<sup>2<sup><i>n</i></sup></sup>.</p>
+
+<p><b>Definition 4.10.7</b>. A Fermat number is an integer of the form</p>
+
+<div class="eq">
+<p><i>N<sub>n</sub></i> = 2<sup>2<sup><i>n</i></sup></sup> + 1&emsp;□</p>
+</div>
+
+<p>The first Fermat numbers are</p>
+
+<div class="eq">
+<p><i>N</i><sub>0</sub> = 3, &emsp; <i>N</i><sub>1</sub> = 5, &emsp;<i>N</i><sub>2</sub> = 17, &emsp; <i>N</i><sub>3</sub> = 257, &emsp;<i>N</i><sub>4</sub> = 65537</p>
+</div>
+
+<p>Fermat conjectured that all Fermat numbers were prime. However in 1732, Leonhard Euler showed that <i>N</i><sub>5</sub> is not a prime, showing its factorization</p>
+
+<div class="eq">
+<p><i>N</i><sub>5</sub> = 4294967297 = 641 ⋅ 6700417</p>
+</div>
+
+<p>Until today no further Fermat number has been found to be prime. The greatest known Fermat number not prime is <i>N</i><sub>23471</sub>. </p>
+
+<p>Fermat prime numbers are involved as we shall see in next chapters in the constructibility with the ruler and compass of regular <i>n</i>-polygons.</p>
 </div>
 
 <section aria-label="End">
