@@ -54,7 +54,7 @@
 	<i>f</i>(<i>x</i>) ⟼ <i>f</i>(<i>x</i>) + (<i>x</i><sup>2</sup> − 5) </p>
 	</div>
 
-<p>The set ℚ̅ = {<i>a</i> + (<i>x</i><sup>2</sup> −5) | <i>a</i> &in; ℚ} is a field isomorphic to ℚ: indeed let <i>a,b</i> &in; ℚ, <i>a</i> + (<i>x</i><sup>2</sup> − 5) = <i>b</i> + (<i>x</i><sup>2</sup> − 5) if and only if <i>a</i> = <i>b</i>. Thus <i>K</i> =  ℚ[<i>x</i>]/(<i>x</i><sup>2</sup> − 5) ⊇ ℚ̅ ≃ ℚ.</p></li>
+<p>The set ℚ̅ = {<i>a</i> + (<i>x</i><sup>2</sup> − 5) | <i>a</i> &in; ℚ} is a field isomorphic to ℚ: indeed let <i>a,b</i> &in; ℚ, <i>a</i> + (<i>x</i><sup>2</sup> − 5) = <i>b</i> + (<i>x</i><sup>2</sup> − 5) if and only if <i>a</i> = <i>b</i>. Thus <i>K</i> =  ℚ[<i>x</i>]/(<i>x</i><sup>2</sup> − 5) ⊇ ℚ̅ ≃ ℚ.</p></li>
 
 <li><p><i>K</i> contains a root <i>&alpha;</i> of <i>x</i><sup>2</sup> − 5; let <i>&alpha;</i> = to the class <i>x</i> + (<i>x</i><sup>2</sup> − 5), then</p>
 
@@ -72,7 +72,7 @@
 <p>ℤ<sub>2</sub>/(<i>x</i><sup>2</sup> + <i>x</i> + 1) = ℤ<sub>2</sub>(&xi;) = {<i>a</i> + b<i>&xi;</i> | <i>a,b</i> &in; ℤ<sub>2</sub>, <i>&xi;</i><sup>2</sup> + <i>&xi;</i> + 1 = 0}</p>
 </div>
 
-<p>Thus has four elements 0, 1, <i>&xi;</i>, 1 + <i>&xi;</i> with <i>&xi;</i> such that <i>&xi;</i><sup>2</sup> + &xi; + 1 = 0; hence &xi; is a root of <i>f</i>(<i>x</i>).</p>
+<p>where with ℤ<sub>2</sub>(&xi;) we are adjoining a formal root of f(x), called ξ to ℤ<sub>2</sub>. Thus has four elements 0, 1, <i>&xi;</i>, 1 + <i>&xi;</i> with <i>&xi;</i> such that <i>&xi;</i><sup>2</sup> + &xi; + 1 = 0; hence &xi; is a root of <i>f</i>(<i>x</i>).</p>
 
 <p>We can now consider the general case proving that for every polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], with <i>F</i> an arbitrary field we are able to find a field containing a root of <i>f</i>(<i>x</i>). Then with an inductive method we shall prove that there exists a field containing all roots of <i>f</i>(<i>x</i>).</p>
 
@@ -105,6 +105,14 @@
 = <i>x<sup>n</sup></i> + (<i>p</i>(<i>x</i>)) + <i>a</i><sub><i>n</i> − 1</sub>(<i>x</i><sup><i>n</i> − 1</sup> + (<i>p</i>(<i>x</i>))) + ... + <i>a</i><sub>1</sub>(<i>x</i> + (<i>p</i>(<i>x</i>))) + <i>a</i><sub>0</sub><br>
 = <i>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub> + ... + <i>a</i><sub>1</sub>x + <i>a</i><sub>0</sub> + (<i>p</i>(<i>x</i>)) = (<i>p</i>(<i>x</i>)) = 0<sub><i>F</i>[<i>x</i>]/(<i>p</i>(<i>x</i>))</sub>. &emsp;□</p>
 </div>
+
+<p><b>Lemma 8.2.5</b>. Let <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an arbitrary polynomial of degree <i>n</i> &ge; 1. Then there exists a finite extension <i>E</i> of <i>F</i> in which <i>f</i>(<i>x</i>) has a root. We have further</p>
+
+<div class="eq">
+<p>[<i>E</i> : <i>F</i>] &le; <i>n</i></p>
+</div>
+
+<p><b>Proof</b>. Let <i>p</i>(<i>x</i>) an irriducible factor of <i>f</i>(<i>x</i>). By the previous lemma there exists an extension <i>E</i> of <i>F</i> in which <i>p</i>(<i>x</i>) has a root (hence <i>f</i>(<i>x</i>) as well has a root), and [<i>E</i> : <i>F</i>] = ∂<i>p</i>(<i>x</i>) &le; <i>n</i>. &emsp;□</p>
 
 <section aria-label="End">
 <a href="field_extension.html">&#171;Field Extensions</a>

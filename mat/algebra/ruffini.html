@@ -51,7 +51,7 @@
 <p><i>f</i>(<i>x</i>) = (<i>x</i> − <i>&alpha;</i>)<sup><i>m</i></sup> <i>q</i>(<i>x</i>), &emsp; ∂<i>q</i>(<i>x</i>) = <i>n</i> − <i>m</i></p>
 </div>
 
-<p>If <i>&beta;</i> is another root of <i>f</i>(<i>x</i>) then 0 = <i>f</i>(<i>&beta;</i>) = (<i>&beta;</i> − <i>&alpha;</i>)<sup><i>m</i></sup> <i>q</i>(<i>&beta;</i>). Since <i>&beta; &alpha;</i> we must have <i>q</i>(&beta;) = 0, because 𝕂 has no zero-divisors. Thus the only roots of <i>f</i>(<i>x</i>) are <i>&alpha;</i> (with multiplicity <i>m</i>) and the roots of <i>q</i>(<i>x</i>). For the induction hypothesis, <i>q</i>(<i>x</i>) has at last <i>n</i> − <i>m</i> roots (= degree ∂<i>q</i>(<i>x</i>)). Hence <i>f</i>(<i>x</i>) can have at last <i>m</i> + (<i>n</i> − <i>m</i>) = <i>n</i> roots in 𝕂. □</p>
+<p>If <i>&beta;</i> is another root of <i>f</i>(<i>x</i>) then 0 = <i>f</i>(<i>&beta;</i>) = (<i>&beta;</i> − <i>&alpha;</i>)<sup><i>m</i></sup> <i>q</i>(<i>&beta;</i>). Since <i>&beta; &alpha;</i> we must have <i>q</i>(<i>&beta;</i>) = 0, because 𝕂 has no zero-divisors. Thus the only roots of <i>f</i>(<i>x</i>) are <i>&alpha;</i> (with multiplicity <i>m</i>) and the roots of <i>q</i>(<i>x</i>). For the induction hypothesis, <i>q</i>(<i>x</i>) has at last <i>n</i> − <i>m</i> roots (= degree ∂<i>q</i>(<i>x</i>)). Hence <i>f</i>(<i>x</i>) can have at last <i>m</i> + (<i>n</i> − <i>m</i>) = <i>n</i> roots in 𝕂. □</p>
 
 <p><b>Corollary 5.4.5</b>. Let 𝕂 a field with infinitely many elements and <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) two polynomials &in; 𝕂[<i>x</i>]. Then they are equal as polynomials <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) only if they are equal as polynomial functions <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) on 𝕂.</p>
 
@@ -77,51 +77,7 @@
 <p>In the case of, <i>g</i>(<i>x</i>) is irreducible over ℤ<sub>5</sub> since <i>g</i>(<i>x</i>) has no zeros in ℤ<sub>5</sub>:</p>
 
 <div class="eq">
-<p><i>g</i> (0) = 4, &emsp; <i>g</i>(1) = 3, &emsp; <i>g</i>(2) = 4, &emsp; <i>g</i>(3) = 4, &emsp; <i>g</i>(4) = 2.</p>
-</div>
-
-<h3>The difference of Powers Formula</h3>
-
-<p>Observe that we have the following relations for the difference of squares/cubes</p>
-
-<div class="eq">
-<p><i>x</i><sup>2</sup> − <i>y</i><sup>2</sup> = (<i>x</i> − <i>y</i>) (<i>x</i> + <i>y</i>)<br>
-<i>x</i><sup>3</sup> −<i>y</i><sup>3</sup> = (<i>x</i> − <i>y</i>)(<i>x</i><sup>2</sup> + <i>xy</i> + <i>y</i><sup>2</sup>)<br>
-.<br>
-.<br>
-.<br>
-<i>x</i><sup><i>n</i> + 1</sup> − <i>y</i><sup><i>n</i> + 1</sup> = (<i>x</i> − <i>y</i>) (<i>x<sup>n</sup></i> + <i>x</i><sup><i>n</i> − 1</sup><i>y</i> + ... + <i>xy</i><sup><i>n</i> − 1</sup> + <i>y<sup>n</sup></i>) &emsp; (<b>5.4.2</b>)</p>
-</div>
-
-<p>this result can be easily derived using the following equations:</p>
-
-<div class="eq">
-<p><i>x</i>(<i>x<sup>n</sup></i> + <i>x</i><sup><i>n</i> − 1</sup>y + ··· + <i>xy</i><sup><i>n</i> − 1</sup> + <i>y<sup>n</sup></i> ) = <i>x<sup>n</sup></i> + <i>x<sup>n</sup>y</i> + <i>x</i><sup><i>n</i> − 1</sup><i>y</i><sup>2</sup> + ··· + <i>xy<sup>n</sup></i>&emsp; (<b>5.4.3</b>)<br>
-<i>y</i>(<i>x<sup>n</sup></i> + <i>x</i><sup><i>n</i> − 1</sup><i>y</i> + ··· + <i>xy</i><sup><i>n</i> − 1</sup> + <i>y<sup>n</sup></i>) = &emsp;&emsp;&emsp;&emsp;&emsp;<i>x<sup>n</sup></i><i>y</i> + <i>x</i><sup><i>n</i> −1</sup><i>y</i><sup>2</sup> + ··· + <i>xy<sup>n</sup></i> + <i>y</i><sup><i>n</i> + 1</sup> &emsp; (<b>5.4.4</b>)</p>
-</div>
-
-<p>The left and right sides of 5.4.3 and 5.4.4 are equal by the distributive law. If we then subtract 5.4.4 from 5.4.3, we get 5.4.2.
-Another useful formula is for the <i>sum of odd powers</i>:</p>
-
-<div class="eq">
-<p><i>x</i><sup>2<i>n</i> + 1</sup> + <i>y</i><sup>2<i>n</i> + 1</sup> = (<i>x</i> + <i>y</i>) (<i>x</i><sup>2<i>n</i></sup> − <i>x</i><sup>2<i>n</i> − 1</sup><i>y</i> + ··· − <i>xy</i><sup>2<i>n</i> − 1</sup> + <i>y</i><sup>2<i>n</i></sup>) &emsp; (<b>5.4.5</b>)</p>
-</div>
-
-<p>which we can obtain by converting the sum to a difference and relying on the previous result</p>
-
-<div class="eq">
-<p><i>x</i><sup>2<i>n</i> + 1</sup> + <i>y</i><sup>2<i>n</i> + 1</sup> = <i>x</i><sup>2<i>n</i> + 1</sup> − (−<i>y</i><sup>2<i>n</i> + 1</sup>)<br>
-= <i>x</i><sup>2<i>n</i> + 1</sup> − (−<i>y</i>)<sup>2<i>n</i> + 1</sup><br>
-= (<i>x</i> − (−<i>y</i>))(<i>x</i><sup>2<i>n</i></sup> + <i>x</i><sup>2<i>n</i> − 1</sup>(−<i>y</i>) + ··· + (−<i>y</i>)<sup>2<i>n</i></sup>)<br>
-= (<i>x</i> + <i>y</i>)(<i>x</i><sup>2<i>n</i></sup> − <i>x</i><sup>2<i>n</i> − 1</sup><i>y</i> + ··· − <i>xy</i><sup>2<i>n</i> − 1</sup> + <i>y</i><sup>2<i>n</i></sup>)</p>
-</div>
-
-<p>Here are some examples</p>
-
-<div class="eq">
-<p><i>x</i><sup>2</sup> − 49 = (<i>x</i> − 7) (<i>x</i> + 7)<br>
-<i>x</i><sup>3</sup> − 1 = (<i>x</i> − 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1)<br>
-<i>x</i><sup>4</sup> − 81 <i>y</i><sup>4</sup> = (<i>x</i> − 3<i>y</i>) (<i>x</i><sup>3</sup> + 3<i>x</i><sup>2</sup><i>y</i> + 9<i>xy</i><sup>2</sup> + 27<i>y</i><sup>3</sup>)</p>
+<p><i>g</i>(0) = 4, &emsp; <i>g</i>(1) = 3, &emsp; <i>g</i>(2) = 4, &emsp; <i>g</i>(3) = 4, &emsp; <i>g</i>(4) = 2.</p>
 </div>
 
 <section aria-label="End">
