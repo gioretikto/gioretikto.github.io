@@ -36,7 +36,7 @@
 
 <li>
 <ol type="a">
-	<li><p>+ is <i>associative</i>: (<i>a</i> + <i>b</i>) + <i>c</i> = <i>a</i> + (<i>b</i> + <i>c</i>) &forall;<i>a, b, c &in; R</i></p></li>
+	<li><p>+ is <i>associative</i>: (<i>a</i> + <i>b</i>) + <i>c</i> = <i>a</i> + (<i>b</i> + <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
 
 	<li><p>There is an element 0 in <i>R</i> such that <i>a</i> + 0 = <i>a</i> &forall;<i>a</i> &in; R</i> (that is, 0 is the additive identity).</p></li>
 
@@ -48,12 +48,14 @@
 
 	<li><p>· is <i>associative</i>: (<i>a</i> · <i>b</i>) · <i>c</i> = <i>a</i> · (<i>b</i> · <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
 
+<div id="distributive_law">
 	<li><p>Multiplication is distributive with respect to addition, meaning that:</p>
 
 		<div class="eq">
-		<p><i>a</i> · (<i>b</i> + <i>c</i>) = <i>a</i> · <i>b</i> + <i>a</i> · <i>c</i>, &emsp; (<i>a</i> + <i>b</i>) · <i>c</i> = <i>a · c + b · c</i> &emsp; &forall;<i>a, b, c</i> &in; <i>R</i></p>
+		<p><i>a</i> · (<i>b</i> + <i>c</i>) = <i>a</i> · <i>b</i> + <i>a</i> · <i>c</i>, &emsp; (<i>a</i> + <i>b</i>) · <i>c</i> = <i>a</i> · <i>c</i> + <i>b</i> · <i>c</i> &emsp; &forall;<i>a, b, c</i> &in; <i>R</i></p>
 		</div>
 	</li>
+</div>
 </ol>
 
 <p>From now on we'll write <i>ab</i> instead of <i>a · b</i>. A set satisfying a), b), c) is called <a href="groups.html">group</a>: hence (<i>R</i>, +) is a group. If d) is also satisfied we have a <i>commutative group</i> or <i>abelian group</i>. (<i>R</i>, +) is oftentimes referred to as additive group of the ring.</p>
@@ -73,14 +75,14 @@
 	
 	<li><p>𝕂[<i>x</i>], 𝕂[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] with respect to addition and multiplication defined for this rings.</p></li>
 	
-	<li><p>The set ℤ<sub><i>n</i></sub> of congruence class modulo <i>n</i> with the addition and the multiplication defined by [<i>a</i>] + [<i>b</i>] = [<i>a + b</i>] and [<i>a</i>] [<i>b</i>] = [<i>ab</i>]. Note that [0] is the 0 required by our axioms for a ring, and [1] is the unit element of <i>R</i>.</p></li>
+	<li><p>The set ℤ<sub><i>n</i></sub> of congruence class modulo <i>n</i> with the addition and the multiplication defined by [<i>a</i>] + [<i>b</i>] = [<i>a</i> + <i>b</i>] and [<i>a</i>] [<i>b</i>] = [<i>ab</i>]. Note that [0] is the 0 required by our axioms for a ring, and [1] is the unit element of <i>R</i>.</p></li>
 	
 	<li><p>The set <i>M<sub>n</sub></i>(𝕂) of square matrices <i>n</i> x <i>n</i>, over a field 𝕂, along with the standard matrix addition and multiplication.</p></li>
 	
 	<li><p>The power set of a set is a commutative ring under the natural operations of union and intersection</p>
 	
 		<div class="eq">
-		<p><i>A</i> + <i>B</i> := (<i>A</i> ∪ <i>B</i>) ∩ 𝐶(<i>A</i> ∩ <i>B</i>), &emsp; <i>A · B</i> := <i>A</i> ∩ <i>B</i></p>
+		<p><i>A</i> + <i>B</i> := (<i>A</i> ∪ <i>B</i>) ∩ 𝐶(<i>A</i> ∩ <i>B</i>), &emsp; <i>A</i> · <i>B</i> := <i>A</i> ∩ <i>B</i></p>
 		</div>
 		
 		<p>it is easy to notice that it is an abelian group with respect to the first operation (the nueter element is ∅ and the inverse of an <i>A</i> &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributives properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent</i> i.e. <i>A</i><sup>2</sup> = <i>A</i> · <i>A</i> = <i>A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
@@ -94,7 +96,7 @@
 		<p>with the addition and multiplication defined by</p>
 		
 		<div class="eq">
-		<p>(<i>f+g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) := <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) &emsp; &forall;<i>f,g</i> &in; <i>R<sup>X</sup></i>, &forall;<i>x</i> &in; <i>X</i></p>
+		<p>(<i>f</i>+<i>g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) := <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) &emsp; &forall;<i>f,g</i> &in; <i>R<sup>X</sup></i>, &forall;<i>x</i> &in; <i>X</i></p>
 		</div>
 		
 		<p>(<i>R<sup>X</sup></i>, +, ·) is a ring: it is a commutative ring only if <i>R</i> is communtative; it is unitary only if <i>R</i> is unitary as well. The unit function is that mapping every element of <i>X</i> to the unit of <i>R</i>.</p>
@@ -139,16 +141,16 @@
 <p><b>6.1.2 Definition.</b> Let [<i>R</i>, +, ⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
 
 <div class="eq">
-<p><i>&phi;</i>(<i>a+b</i>) = <i>&phi;</i>(<i>a</i>) +' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
+<p><i>&phi;</i>(<i>a</i> + <i>b</i>) = <i>&phi;</i>(<i>a</i>) +' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p><i>&phi;</i>(<i>a⋅b</i>) = <i>&phi;</i>(<i>a</i>) ⋅' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
+<p><i>&phi;</i>(<i>a</i>⋅<i>b</i>) = <i>&phi;</i>(<i>a</i>) ⋅' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
 </div>
 
-<p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R ≅ R'</i>. The relation of being isomorphic is an equivalence relation.</p>
+<p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R</i> ≅ <i>R'</i>. The relation of being isomorphic is an equivalence relation.</p>
 
 <img src="img/isomorphism.png" alt="ring isomorphism"/>
 
@@ -177,7 +179,7 @@
 
 	<p>The units in ℤ are 1 and −1.</p>
 
-	<p><b>Remark</b> Let <i>u &in; R</i> be a unit with inverse <i>v</i>, so that <i>uv</i> = 1. For any <i>b</i> &in; <i>R</i>  we have <i>u</i>(<i>vb</i>) = (<i>uv</i>)<i>b</i> = 1<i>b</i> = <i>b</i>. Therefore</p>
+	<p><b>Remark</b> Let <i>u</i> &in; <i>R</i> be a unit with inverse <i>v</i>, so that <i>uv</i> = 1. For any <i>b</i> &in; <i>R</i>  we have <i>u</i>(<i>vb</i>) = (<i>uv</i>)<i>b</i> = 1<i>b</i> = <i>b</i>. Therefore</p>
 	
 	<div class="eq">
 	<p>a unit divides every element of <i>R</i></p>
@@ -210,7 +212,7 @@
 <p>be the set of integer multiplies of <i>n</i>. The set <i>n</i>ℤ is a subset of ℤ and inherits addition and multiplication from ℤ. If we take two elements from <i>n</i>ℤ, say <i>nh</i> and <i>nk</i> we can see that</p>
 
 <div class="eq">
-<p><i>nk</i> + <i>nh</i> = <i>n</i> (<i>k + h</i>) &emsp; and &emsp; (<i>nk</i>)(<i>nh</i>) = <i>n</i>(<i>knh</i>)</p>
+<p><i>nk</i> + <i>nh</i> = <i>n</i> (<i>k</i> + <i>h</i>) &emsp; and &emsp; (<i>nk</i>)(<i>nh</i>) = <i>n</i>(<i>knh</i>)</p>
 </div>
 
 <p>by distributivity and associativity. Addition and multiplication are both associative in <i>n</i>ℤ and multiplication is distributive with respect to addition. In <i>n</i>ℤ, 0 is the additive identity. However, there is no multiplicative identity in <i>n</i>ℤ unless <i>n</i> = &pm; 1. There are also no multiplicative inverses for <i>nk</i> unless <i>n</i> = &pm; 1 and <i>k</i> = &pm; 1.</p>
@@ -267,7 +269,7 @@
 
 <p><b>6.1.6 Proposition.</b> Every finte Integral domain <i>R</i> is a field.</p>
 
-<p><b>Proof</b>. Since <i>R</i> is a commutative ring with identity, we need only show that for each a &ne; 0<sub>R</sub>, the equation <i>ax</i> = 1<sub><i>R</i></sub> has a solution. Let <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>. be the distinct elements of <i>R</i> and suppose <i>a<sub>s</sub></i> &ne; 0<sub><i>R</i></sub>. To show that <i>a<sub>s</sub></i>x &ne; 1<sub><i>R</i></sub> has a solution, consider the products <i>a<sub>s</sub>a</i><sub>1</sub>, <i>a<sub>s</sub>a</i><sub>2</sub>, ..., <i>a<sub>s</sub>a<sub>n</sub></i>. If <i>a<sub>i</sub></i> &ne; <i>a<sub>j</sub></i>, then we must have <i>a<sub>s</sub>a<sub>i</sub></i> &ne; <i>a<sub>s</sub>a<sub>j</sub></i> (because <i>a<sub>s</sub>a<sub>j</sub></i> = <i>a<sub>s</sub>a<sub>j</sub></i> would imply that <i>a<sub>s</sub></i> = <i>a<sub>j</sub></i> by cancelation). Therefore, <i>a<sub>s</sub>a</i><sub>1</sub>, ..., <i>a<sub>s</sub>a<sub>n</sub></i>, are <i>n</i> distinct elements of <i>R</i>. However, <i>R</i> has exactly <i>n</i> elements all together, and so these must be all the elements of <i>R</i> in some order. In particular, for some <i>j</i>, <i>a<sub>s</sub>a<sub>j</sub></i> = 1<sub><i>R</i></sub>. Therefore, the equation <i>a<sub>s</sub>x</i> = 1<sub><i>R</i></sub> has a solution and <i>R</i> is a field. &emsp;□</p>
+<p><b>Proof</b>. Since <i>R</i> is a commutative ring with identity, we need only show that for each <i>a</i> &ne; 0<sub><i>R</i></sub>, the equation <i>ax</i> = 1<sub><i>R</i></sub> has a solution. Let <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>. be the distinct elements of <i>R</i> and suppose <i>a<sub>s</sub></i> &ne; 0<sub><i>R</i></sub>. To show that <i>a<sub>s</sub></i>x &ne; 1<sub><i>R</i></sub> has a solution, consider the products <i>a<sub>s</sub>a</i><sub>1</sub>, <i>a<sub>s</sub>a</i><sub>2</sub>, ..., <i>a<sub>s</sub>a<sub>n</sub></i>. If <i>a<sub>i</sub></i> &ne; <i>a<sub>j</sub></i>, then we must have <i>a<sub>s</sub>a<sub>i</sub></i> &ne; <i>a<sub>s</sub>a<sub>j</sub></i> (because <i>a<sub>s</sub>a<sub>j</sub></i> = <i>a<sub>s</sub>a<sub>j</sub></i> would imply that <i>a<sub>s</sub></i> = <i>a<sub>j</sub></i> by cancelation). Therefore, <i>a<sub>s</sub>a</i><sub>1</sub>, ..., <i>a<sub>s</sub>a<sub>n</sub></i>, are <i>n</i> distinct elements of <i>R</i>. However, <i>R</i> has exactly <i>n</i> elements all together, and so these must be all the elements of <i>R</i> in some order. In particular, for some <i>j</i>, <i>a<sub>s</sub>a<sub>j</sub></i> = 1<sub><i>R</i></sub>. Therefore, the equation <i>a<sub>s</sub>x</i> = 1<sub><i>R</i></sub> has a solution and <i>R</i> is a field. &emsp;□</p>
 
 <section aria-label="End">
 <a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>
