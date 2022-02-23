@@ -29,9 +29,9 @@
 
 <p>To explore fields more deeply, we need some rudiments of vector space theory studied in a linear algebra course.</p>
 
-<p><b>5.21.1 Definition</b> (<i>Field Extension</i> A field <i>K</i> is an extension field of a field <i>F</i> if <i>F</i> ⊆ <i>K</i> and the operations of <i>F</i> are those of <i>K</i> restricted to <i>F</i>. We will sometimes write <i>K</i>/<i>F</i> to mean that <i>K</i> is an extension of <i>F</i>. &emsp;□</p>
+<p><b>8.1.1 Definition</b> (<i>Field Extension</i> A field <i>K</i> is an extension field of a field <i>F</i> if <i>F</i> ⊆ <i>K</i> and the operations of <i>F</i> are those of <i>K</i> restricted to <i>F</i>. We will sometimes write <i>K</i>/<i>F</i> to mean that <i>K</i> is an extension of <i>F</i>. &emsp;□</p>
 
-<p>For example, ℝ is an extension field of ℚ, ℂ is an extension field of both ℝ and ℚ, and ℚ(√2) is an extension field of ℚ.</p>
+<p>For example, the field ℂ of complex numbers is an extension of degree 2 on ℝ, since a basis is given by 1 and <i>i</i>, whilst is of degree 1 on itself. The field ℝ(<i>x</i>) of rational functions with coefficients in ℝ has infinite dimension on ℝ, since it contains the rational functions 1, <i>x</i>, <i>x</i><sup>2</sup>, ..., <i>x<sup>i</sup></i>, whilst is an extension of degree 1 on itself.</p>
 
 <p>To be more precise, an extension field of a field <i>F</i> is a pair (<i>K, &iota;</i>) made by a field <i>K</i> and a monomorphic (of field) <i>&iota;</i> from <i>F</i> to <i>K</i>. Generally we identify an element <i>a</i> of <i>F</i> by its image <i>&iota;</i>(<i>a</i>) in <i>K</i>, considering <i>F</i> as subfield of <i>K</i>.</p>
 
@@ -39,13 +39,13 @@
 
 <p>If <i>F</i> is an extension field of <i>K</i>, then multiplication in <i>F</i> defines a scalar multiplication, if we consider the elements of <i>K</i> as scalars and the elements of <i>F</i> as vectors. It is easy to check that the necessary axioms hold for this scalar multiplication, and since <i>F</i> is an abelian group under addition, we see that <i>F</i> is a <a href="../linear_algebra/vector_space.html">vector space</a> over <i>K</i>. We crystalyze this fact as a proposition.</p>
 
-<p><b>5.21.2 Proposition</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
+<p><b>8.1.2 Proposition</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
 
 <p>Knowing that an extension field is a vector space over the base field allows us to make use of the concept of the dimension of a vector space.</p>
 
-<p><b>5.21.3 Proposition</b>. Let <i>F </i>be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
+<p><b>8.1.3 Proposition</b>. Let <i>F</i> be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
 
-<p><b>5.21.4 Theorem</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
+<p><b>8.1.4 Theorem</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
 
 <ol type="a">
 	<li><p><i>L</i> is a finite extension of <i>F</i></p></li>
@@ -90,7 +90,7 @@
 
 </ol>
 
-<p><b>5.21.5 Corollary</b> Let <i>L</i> a finite extension of <i>F</i> and <i>K</i> a subfield of <i>L</i> embedding <i>F</i>. Then</p>
+<p><b>8.1.5 Corollary</b> Let <i>L</i> a finite extension of <i>F</i> and <i>K</i> a subfield of <i>L</i> embedding <i>F</i>. Then</p>
 
 <div class="eq">
 <p>[<i>K</i> : <i>F</i>] | [<i>L</i> : <i>F</i>]</p>
@@ -104,13 +104,13 @@
 
 <p>The last result can be seen as an analogous for field extension of the <a href="lagrange.html">Lagrange's theorem</a> for finite groups.</p>
 
-<p><b>5.21.6 Corollary</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
+<p><b>8.1.6 Corollary</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
 
 <p>We shall se now how given a field <i>F</i> and one of its extension <i>K</i>, is possible to obtain intermidiate extensions between <i>K</i> and <i>F</i>. Usually if you just add a random element to a field, you lose the closure property and the inverse property unless you also add a whole slew of other elements; thus we follow a different path.</p>
 
 <p>In a field <i>F</i>, the intersection of any collection of subfields of <i>F</i> is again a subfield. In particular, if <i>F</i> is an extension field of <i>K</i> and <i>S</i> is a subset of <i>F</i>, then the intersection of all subfields of <i>F</i> that contain both <i>K</i> and <i>S</i> is a subfield of <i>F</i>. This intersection is contained in any subfield that contains both <i>K</i> and <i>S</i>. This guarantees the existence of the field defined below.</p>
 
-<p><b>5.21.7 Definition</b>. Let <i>K</i> be an extension field of <i>F</i>, and let <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> &in; <i>K</i>. The smallest subfield of <i>K</i> that contains <i>F</i> and <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> will be denoted by <i>K</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>). It is called the extension field of <i>F</i> generated by <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>. Alternatively, <i>F</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) is called the extension field of <i>K</i> defined by adjoining <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> to <i>K</i>. If <i>K</i> = <i>F</i>(<i>a</i>) for a single element <i>a</i> &in; <i>K</i>, then <i>K</i> is said to be a <b>simple extension of <i>F</i></b>.</p>
+<p><b>8.1.7 Definition</b>. Let <i>K</i> be an extension field of <i>F</i>, and let <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> &in; <i>K</i>. The smallest subfield of <i>K</i> that contains <i>F</i> and <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> will be denoted by <i>K</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>). It is called the extension field of <i>F</i> generated by <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>. Alternatively, <i>F</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) is called the extension field of <i>K</i> defined by adjoining <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> to <i>K</i>. If <i>K</i> = <i>F</i>(<i>a</i>) for a single element <i>a</i> &in; <i>K</i>, then <i>K</i> is said to be a <b>simple extension of <i>F</i></b>.</p>
 
 <p>Let <i>K</i> an extension of <i>F</i> and let <i>S</i> a subset of <i>K</i>. We indicate by</p>
 
@@ -128,12 +128,11 @@
 <p>In addition <i>F</i>(<i>S</i>) is the <i>quotient field</i> of <i>F</i>[<i>S</i>]. On the other hand, a union of subfields is not in
 general a subfield.</p>
 
-<p><b>Example 5.21.8</b>. Let <i>F</i> be any field and let <i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i> be independent variables. The polynomial ring <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is an integral domain (see <a href="polynomials.html">Proposition 4.3</a>). The quotient field of <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is denoted <i>F</i>(<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>). It consists of all fractions <i>f/g</i>, with <i>f,g</i> &in; <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] and <i>g</i> &ne; 0, and the usual addition and multiplication. Then <i>F</i>(<i>x</i>) is an extension of <i>F</i>.&emsp;■</p>
+<p><b>Example 8.1.8</b>. Let <i>F</i> be any field and let <i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i> be independent variables. The polynomial ring <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is an integral domain (see <a href="polynomials.html">Proposition 4.3</a>). The quotient field of <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is denoted <i>F</i>(<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>). It consists of all fractions <i>f/g</i>, with <i>f,g</i> &in; <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] and <i>g</i> &ne; 0, and the usual addition and multiplication. Then <i>F</i>(<i>x</i>) is an extension of <i>F</i>.&emsp;■</p>
 
-<p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, <i>i.e</i> we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. The standard procedure for
-constructing the complex numbers from the real numbers is to ‘adjoin’ a square root of −1; that is, an element i satisfying <i>i</i><sup>2</sup> + 1 = 0. We will now describe this procedure, ‘adjoining the root of a polynomial’, in more detail. </p>
+<p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, <i>i.e</i> we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. The standard procedure for constructing the complex numbers from the real numbers is to ‘adjoin’ a square root of −1; that is, an element i satisfying <i>i</i><sup>2</sup> + 1 = 0. We will now describe this procedure, ‘adjoining the root of a polynomial’, in more detail. </p>
 
-<p><b>5.21.9 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>F</i>(<i>a</i>) = <i>T</i> where <i>T</i> is the defined as the set</p>
+<p><b>8.1.9 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>F</i>(<i>a</i>) = <i>T</i> where <i>T</i> is the defined as the set</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>T</mi>
@@ -246,7 +245,7 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>since that <i>T</i> is a field containing <i>F</i> and <i>a</i>. The reverse inclusion holds as well, <i>F</i>(<i>a</i>) &subseteq; <i>T</i>, since the elements of <i>T</i> must be contained in <i>every</i> field containing <i>F</i> and <i>a</i>. &emsp;□</p>
 
-<p><b>5.21.10 Example</b>. Let <i>F</i> = ℚ, <i>K</i> = ℝ and <i>a</i> = <i>&pi;</i>, then</p>
+<p><b>8.1.10 Example</b>. Let <i>F</i> = ℚ, <i>K</i> = ℝ and <i>a</i> = <i>&pi;</i>, then</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi mathvariant="double-struck">Q</mi>
@@ -348,9 +347,9 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
   <mo fence="false" stretchy="false">}</mo>
 </math>
 
-<p>ℚ(&pi;) means the smallest possible subfield of ℝ containing <i>&pi;</i> and all ℚ. Notice how ℚ is a field, but the set ℚ ∪ {<i>&pi;</i>} is not even a ring, much less a field. &emsp;■</p>
+<p>ℚ(<i>&pi;</i>) means the smallest possible subfield of ℝ containing <i>&pi;</i> and all ℚ. Notice how ℚ is a field, but the set ℚ ∪ {<i>&pi;</i>} is not even a ring, much less a field. &emsp;■</p>
 
-<p><b>5.21.11 Example</b>. Let <i>F</i> = ℚ, <i>K</i> = ℝ and <i>a</i> = √3, then</p>
+<p><b>8.1.11 Example</b>. Let <i>F</i> = ℚ, <i>K</i> = ℝ and <i>a</i> = √3, then</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi mathvariant="double-struck">Q</mi>
@@ -567,13 +566,13 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>In the last case we have seen that the extension can be simplified, whilst in the first case it wasn't possible. The reason behind this behavior lies down to the specific nature of the element <i>a</i> we are adjoining.</p>
 
-<p><b>5.21.12 Definition</b>. Let <i>K</i> be an extension field of <i>F</i> and let <i>a</i> &in; <i>K</i>. If there exists a nonzero polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] such that <i>f</i>(<i>a</i>) = 0, then <i>a</i> is said to satisfy the polynomial <i>f</i>(<i>x</i>) and to be <i>algebraic</i> over <i>F</i>. Otherwise we say that <i>a</i> is trascendental over <i>F</i>.</p>
+<p><b>8.1.12 Definition</b>. Let <i>K</i> be an extension field of <i>F</i> and let <i>a</i> &in; <i>K</i>. If there exists a nonzero polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] such that <i>f</i>(<i>a</i>) = 0, then <i>a</i> is said to satisfy the polynomial <i>f</i>(<i>x</i>) and to be <i>algebraic</i> over <i>F</i>. Otherwise we say that <i>a</i> is trascendental over <i>F</i>.</p>
 
 <p>An element <i>a</i> of an extension <i>K</i> of <i>F</i> is algebraic over <i>F</i> if there exists a nonzero polynomial <i>f</i>(<i>x</i>) with coefficients in <i>F</i> such that <i>f</i>(<i>a</i>) = 0. A non-algebraic element is called transcendental. For instance, the number √2 is an element of ℝ that is algebraic over ℚ, because it is a root of <i>x</i><sup>2</sup> − 2 ∈ ℚ[<i>x</i>]. Of course, √2 is also a zero of <i>x</i><sup>3</sup> − 2<i>x</i> and of <i>x</i><sup>4</sup> − 3<i>x</i><sup>2</sup> + 2 = (<i>x</i><sup>2</sup> − 2)(<i>x</i><sup>2</sup> − 1). Both these other polynomials having 2 as a zero were multiples of <i>x</i><sup>2</sup> − 2.</p>
 
 <p>Another example is ∛2 and (4 + √2)<sup>1/5</sup> are algebraic numbers since they are zeros of <i>x</i><sup>3</sup> − 2 and (<i>x</i><sup>5</sup> − 4)<sup>2</sup> − 2 respectively. The familiar constants <i>e</i> and <i>&pi;</i> are transcendental over ℚ. The analytic proofs lie beyond the scope of this book. That <i>e</i> is transcendental was proved by Charles Hermite (1822–1882) in 1873, and the corresponding result for <i>&pi;</i> was proved by the German mathematician Ferdinand Lindemann (1852–1939) in 1882. It is well known that <i>e<sup>&pi;</sup></i> is transcendental, while it is not known the nature of <i>&pi;<sup>e</sup></i>.</p>
 
-<p><b>5.21.13 Thorem</b>. Let <i>F</i> a field and <i>K</i> an extension of <i>F</i>. Let <i>a</i> &in; <i>K</i>, the mapping</p>
+<p><b>8.1.13 Thorem</b>. Let <i>F</i> a field and <i>K</i> an extension of <i>F</i>. Let <i>a</i> &in; <i>K</i>, the mapping</p>
 
 <div class="eq">
 <p>&Psi;<sub><i>a</i></sub>: <i>F</i>[<i>x</i>] ⟶ <i>K</i><br>
@@ -605,11 +604,11 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>thus Im <i>&Psi;<sub>a</sub></i> = <i>F</i>[<i>a</i>].&emsp;□</p>
 
-<p><b>5.21.14 Corollary</b>. Let <i>F</i> a field and let <i>K</i> an extension of <i>F</i>. Given <i>a</i> &in; <i>K</i> and <i>&Psi;<sub>a</sub></i> the evaluation homomorphism, <i>a</i> results algebraic if and only if Ker &Psi;<sub><i>a</i></sub> &ne; 0 (thus <i>a</i> is transcendental if and only if Ker <i>&Psi;<sub>a</sub></i> &ne; 0).</p>
+<p><b>8.1.14 Corollary</b>. Let <i>F</i> a field and let <i>K</i> an extension of <i>F</i>. Given <i>a</i> &in; <i>K</i> and <i>&Psi;<sub>a</sub></i> the evaluation homomorphism, <i>a</i> results algebraic if and only if Ker &Psi;<sub><i>a</i></sub> &ne; 0 (thus <i>a</i> is transcendental if and only if Ker <i>&Psi;<sub>a</sub></i> &ne; 0).</p>
 
-<p><b>5.21.15 Theorem</b>. Let <i>F</i> a field, <i>K</i> an extension of <i>F</i> and <i>a</i> a transcendental element over <i>F</i>, then there exists a isomorphism between <i>F</i>(<i>a</i>) and the field of rational functions <i>F</i>(<i>x</i>) with coefficient in <i>F</i>. In particular, [<i>F</i>(<i>a</i>) : <i>F</i>] is infinite.</p>
+<p><b>8.1.15 Theorem</b>. Let <i>F</i> a field, <i>K</i> an extension of <i>F</i> and <i>a</i> a transcendental element over <i>F</i>, then there exists a isomorphism between <i>F</i>(<i>a</i>) and the field of rational functions <i>F</i>(<i>x</i>) with coefficient in <i>F</i>. In particular, [<i>F</i>(<i>a</i>) : <i>F</i>] is infinite.</p>
 
-<p><b>Proof</b>. From theorem 5.21.13, corollary 5.21.14 and the fundamental homomorphism ring theorem, follows that</p>
+<p><b>Proof</b>. From theorem 8.1.13, corollary 8.1.14 and the fundamental homomorphism ring theorem, follows that</p>
 
 <div class="eq">
 <p><i>F</i>[<i>a</i>] ≃ <i>F</i>[<i>x</i>]</p>
@@ -627,7 +626,7 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>Thus if <i>K</i> is an extension of <i>F</i>, all the extension of <i>F</i>(<i>a</i>) with <i>a</i> transcendental over <i>F</i> are mutually isomorphic; the element <i>a</i> can be regarded as an <i>unknown</i> <i>x</i> and <i>F</i>(<i>a</i>) can be identified with rational function in the indedeterminate <i>x</i>. Next theorem shows how the fininite or infinite nature <i>F</i>(<i>a</i>) over <i>F</i> characterized the whethet <i>a</i> is algebraic or trascendental over <i>F</i>.</p>
 
-<p><b>5.21.16 Theorem</b>. Let <i>K</i> an extension <i>F</i> and let <i>a</i> an algebraic element over <i>F</i>. Then, if &Psi;<sub><i>a</i></sub> is the evaluation homomorphism from <i>F</i> to <i>K</i>,<p>
+<p><b>8.1.16 Theorem</b>. Let <i>K</i> an extension <i>F</i> and let <i>a</i> an algebraic element over <i>F</i>. Then, if &Psi;<sub><i>a</i></sub> is the evaluation homomorphism from <i>F</i> to <i>K</i>,<p>
 
 <ol type="a">
 	<li><p>Ker (&Psi;<sub><i>a</i></sub>) = (<i>p</i>(<i>x</i>)) where <i>p</i>(<i>x</i>) is a monic irreducible polynomial in <i>F</i>[<i>x</i>] known as the minimal polynomial of <i>a</i> over <i>F</i>.</p></li>
@@ -642,7 +641,7 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 <p><b>Proof</b>.
 
 <ol>
-	<li><p>From the <a href="fund_theorem_homomorphism.html">fundamental theorem on ring homomorphism</a> and theorem 5.21.13, we have</p>
+	<li><p>From the <a href="fund_theorem_homomorphism.html">fundamental theorem on ring homomorphism</a> and theorem 8.1.13, we have</p>
 
 <div class="eq">
 <p><i>F</i>[<i>a</i>] ≃ <i>F</i>[<i>x</i>]/ Ker &Psi;<sub><i>a</i></sub></p>
@@ -652,7 +651,7 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <li><p>A polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] is such that <i>f</i>(<i>a</i>) = 0 if and only if <i>f</i>(<i>x</i>) &in; Ker &Psi;<sub><i>a</i></sub> and thus if and only if <i>p</i>(<i>x</i>) | <i>f</i>(<i>x</i>).</p></li>
 
-<li><p>It results <i>F</i>(<i>a</i>) = <i>F</i>[<i>a</i>], since under current hyphothesis (Ker &Psi;<sub><i>a</i></sub> is generated by an irreducible element) the quotient <i>F</i>[<i>x</i>]/ Ker &Psi;<sub><i>a</i></sub>, and thus <i>F</i>[<i>a</i>] are fields (by theorem 5.21.13). Since <i>F</i>[<i>a</i>] contains are <i>F</i> and <i>a</i>, it follows that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>) and <i>F</i>(<i>a</i>) ≃ <i>F</i>[<i>x</i>]/<i>p</i>(<i>x</i>). </p></li>
+<li><p>It results <i>F</i>(<i>a</i>) = <i>F</i>[<i>a</i>], since under current hyphothesis (Ker &Psi;<sub><i>a</i></sub> is generated by an irreducible element) the quotient <i>F</i>[<i>x</i>]/ Ker &Psi;<sub><i>a</i></sub>, and thus <i>F</i>[<i>a</i>] are fields (by theorem 8.1.13). Since <i>F</i>[<i>a</i>] contains are <i>F</i> and <i>a</i>, it follows that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>) and <i>F</i>(<i>a</i>) ≃ <i>F</i>[<i>x</i>]/<i>p</i>(<i>x</i>). </p></li>
 
 <li><p>Let <i>n</i> = ∂<i>p</i>(<i>x</i>). We prove that the element 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> are a basis for <i>F</i>[<i>a</i>] (= <i>F</i>(<i>a</i>)). We prove first the linear <i>independence</i>: let</p>
 
@@ -678,14 +677,13 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>Notice how the writing <i>f</i>(<i>a</i>) = &alpha;<sub>0</sub> + &alpha;<sub>1</sub><i>a</i> + &alpha;<sub>2</sub> <i>a</i><sup>2</sup> + ... + &alpha;<sub><i>n</i> −1</sub><i>a</i><sup><i>n</i> − 1</sup> of every element <i>F</i>[<i>a</i>] is <i>unique</i>, since the elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> represent a <i>basis</i> .</p>
 
-<p><b>5.21.17 Corollary</b>. Let <i>K</i> an extension of the field <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>a</i> is algebraic if and only if <i>F</i>(<i>a</i>) is a finite extension, whilst is trascendental if and only if <i>F</i>(<i>a</i>) is an infinite extension.</p>
+<p><b>8.1.17 Corollary</b>. Let <i>K</i> an extension of the field <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>a</i> is algebraic if and only if <i>F</i>(<i>a</i>) is a finite extension, whilst is trascendental if and only if <i>F</i>(<i>a</i>) is an infinite extension.</p>
 
-<p><b>Proof</b>. If <i>a</i> is transcendental, by theorem 5.21.15 we know that <i>F</i>[<i>x</i>] ≃ <i>F</i>(<i>a</i>), and [<i>F</i>(<i>a</i>) : <i>F</i>] is infinite because: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i>, ... are linearly inependent over <i>F</i> .</p>
+<p><b>Proof</b>. If <i>a</i> is transcendental, by theorem 8.1.15 we know that <i>F</i>[<i>x</i>] ≃ <i>F</i>(<i>a</i>), and [<i>F</i>(<i>a</i>) : <i>F</i>] is infinite because: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i>, ... are linearly inependent over <i>F</i> .</p>
 
-<p>If <i>a</i> is algebraic, by theorem 5.21.16(c) we know that in this case <i>F</i>[<i>a</i>] is a field and that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>). The minimal polynomial has degree <i>n</i>, [<i>F</i>(<i>a</i>) : <i>F</i>] = <i>n</i> and <i>F</i>(<i>a</i>) has the finite basis: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup>. &emsp;□ </p>
+<p>If <i>a</i> is algebraic, by theorem 8.1.16(c) we know that in this case <i>F</i>[<i>a</i>] is a field and that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>). The minimal polynomial has degree <i>n</i>, [<i>F</i>(<i>a</i>) : <i>F</i>] = <i>n</i> and <i>F</i>(<i>a</i>) has the finite basis: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup>. &emsp;□ </p>
 
-
-<p><b>5.21.18 Example</b>. We've thus characterized <i>simple extensions</i>. Suppose now to build the extension ℚ(<i>S</i>), with <i>S</i> = {√3, √5} and calculate its degree in ℚ. We proceed in this way: we adjoin first √3 obtaining the extension ℚ(√3) and then adjoin the element √5 to ℚ(√3). With the aid of theorem 5.21.16 we can easily calculate the degree of the extension. √3 is algebraic over ℚ, of degree 2 since its minimal polynomial is <i>x</i><sup>2</sup> − 3; By theorem 5.21.16 ℚ(√3) ≃ ℚ([<i>x</i>]/(<i>x</i><sup>2</sup> − 3). We now adjoin √5 to ℚ(√3). The polynomial <i>x</i><sup>2</sup> − 5 is irreducible (not only over ℚ, but also) over ℚ(√3) (Why? see the exercises). Thus the extension ℚ(√3,√5) = (ℚ(√3))(√5) has degree two over ℚ(√3). Then by theorem 5.21.4 we have</p>
+<p><b>8.1.18 Example</b>. We've thus characterized <i>simple extensions</i>. Suppose now to build the extension ℚ(<i>S</i>), with <i>S</i> = {√3, √5} and calculate its degree in ℚ. We proceed in this way: we adjoin first √3 obtaining the extension ℚ(√3) and then adjoin the element √5 to ℚ(√3). With the aid of theorem 8.1.16 we can easily calculate the degree of the extension. √3 is algebraic over ℚ, of degree 2 since its minimal polynomial is <i>x</i><sup>2</sup> − 3; By theorem 8.1.16 ℚ(√3) ≃ ℚ([<i>x</i>]/(<i>x</i><sup>2</sup> − 3). We now adjoin √5 to ℚ(√3). The polynomial <i>x</i><sup>2</sup> − 5 is irreducible (not only over ℚ, but also) over ℚ(√3) (Why? see the exercises). Thus the extension ℚ(√3,√5) = (ℚ(√3))(√5) has degree two over ℚ(√3). Then by theorem 8.1.4 we have</p>
 
 <div class="eq">
 <p>[ℚ(√3)(√5) : ℚ] = [ℚ(√3,√5) : ℚ(√3)][ℚ(√3) : ℚ] = 2 ⋅ 2 = 4.</p>
@@ -705,11 +703,13 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>If we had ℚ(√2)(√3), then we would have also added √6 "accidentally".</p>
 
+<div id="alg_closed_fields">
+
 <h2>Algebraically Closed Fields and Algebraic Closures</h2>
 
 <p>We are now able to prove the following theorem.</p>
 
-<p><b>5.21.19 Theorem</b>. Let <i>K</i> an extension of <i>F</i>. Then the algebraic elements of <i>K</i>, over <i>F</i> make a subfield of <i>K</i>.</p>
+<p><b>8.1.19 Theorem</b>. Let <i>K</i> an extension of <i>F</i>. Then the algebraic elements of <i>K</i>, over <i>F</i> make a subfield of <i>K</i>.</p>
 
 <p><b>Proof</b>. It suffices to prove that if <i>a</i> and <i>b</i> are algebraic over <i>F</i>, then are so <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i>.<br> Let <i>a</i> of degree <i>n</i>, and <i>b</i> of degree <i>m</i>. Then</p>
 
@@ -725,11 +725,11 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 <p>[<i>F</i>(<i>a,b</i>) : <i>F</i>] = [<i>F</i>(<i>a,b</i>) : <i>F</i>(<i>a</i>)] [<i>F</i>(<i>a</i>) : <i>F</i>] &le; <i>nm</i></p>
 </div>
 
-<p>Now, <i>a</i> &pm; <i>b, ab</i> and <i>a/b</i> are all in <i>F</i>(<i>a,b</i>) that is <i>F</i>(<i>a</i> &pm; <i>b</i>), <i>F</i>(<i>ab</i>), <i>F</i>(<i>a</i>/<i>b</i>) which is a <i>finite</i> extension of <i>F</i>. By corollary 5.21.17 <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i> are all algebraic over <i>F</i>. &emsp;□</p>
+<p>Now, <i>a</i> &pm; <i>b, ab</i> and <i>a/b</i> are all in <i>F</i>(<i>a,b</i>) that is <i>F</i>(<i>a</i> &pm; <i>b</i>), <i>F</i>(<i>ab</i>), <i>F</i>(<i>a</i>/<i>b</i>) which is a <i>finite</i> extension of <i>F</i>. By corollary 8.1.17 <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i> are all algebraic over <i>F</i>. &emsp;□</p>
 
-<p><b>Remark 5.21.20</b>. In the previous theorem we proved that if <i>a</i> and <i>b</i> are alberaic respectebely of degree <i>n</i> and <i>m</i> then <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i> are algebraic of &le; <i>nm</i>.&emsp;□</p>
+<p><b>Remark 8.1.20</b>. In the previous theorem we proved that if <i>a</i> and <i>b</i> are alberaic respectebely of degree <i>n</i> and <i>m</i> then <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i> are algebraic of &le; <i>nm</i>.&emsp;□</p>
 
-<p><b>Remark 5.21.21</b>. The set <i>A</i> of all algebraic numbers over ℚ is the <i>field of algebraic numbers</i>. This field is an extension of ℚ, in which every element <i>a</i> &in; <i>A</i> is algebraic and thus [ℚ(<i>a</i>) : ℚ] &lt; ∞, and</p>
+<p><b>Remark 8.1.21</b>. The set <i>A</i> of all algebraic numbers over ℚ is the <i>field of algebraic numbers</i>. This field is an extension of ℚ, in which every element <i>a</i> &in; <i>A</i> is algebraic and thus [ℚ(<i>a</i>) : ℚ] &lt; ∞, and</p>
 
 <div class="eq">
 <p>[<i>A</i> : ℚ] = ∞</p>
@@ -747,7 +747,7 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 <p>[ℚ(<i>a</i>) : ℚ] = <i>n</i> + 1 &gt; [<i>A</i> : ℚ] = <i>n</i></p>
 </div>
 
-<p><b>Definition 5.21.22</b>. An extension <i>K</i> of a field <i>F</i> is said algebrical if every element of <i>K</i> is algebraic over <i>F</i>.</p>
+<p><b>Definition 8.1.22</b>. An extension <i>K</i> of a field <i>F</i> is said algebrical if every element of <i>K</i> is algebraic over <i>F</i>.</p>
 
 <p>For example, the field of complex numbers ℂ is an algebraic extension of ℝ as every element <i>a</i> + <i>ib</i> in ℂ, satisfies the polynomial in ℝ[<i>x</i>]:</p>
 
@@ -757,12 +757,12 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>Every <i>finite</i> extension of a field <i>F</i> is an algebraic extension, but the converse is not true: indeed for example <i>A</i> is an algebraic extension, but infinite.</p>
 
-<p><b>Theorem 5.21.23</b>. Let <i>L</i> an algebraic extension of <i>K</i> and let <i>K</i> an algebraic extension of <i>F</i>. Then <i>L</i> is an algebraic extension over <i>F</i>.</p>
+<p><b>Theorem 8.1.23</b>. Let <i>L</i> an algebraic extension of <i>K</i> and let <i>K</i> an algebraic extension of <i>F</i>. Then <i>L</i> is an algebraic extension over <i>F</i>.</p>
 
 <p><b>Proof</b>. To prove the theorem it suffices to show that <i>every element</i> of <i>L</i> belongs to a finite extension of <i>F</i>. Let <i>l</i> &in; <i>L</i>. Since <i>l</i> is algebraic over <i>K</i>, then <i>l</i> is a root of the polynomial</p>
 
 <div class="eq">
-<p><i>k</i><sub>0</sub> + <i>k</i><sub>1</sub><i>x</i> + <i>k</i><sub>2</sub>x<sup>2</sup> + ... + <i>k<sub>n</sub>x<sup>n</sup></i> &emsp; <i>k<sub>i</sub></i> &in; <i>K</i></p>
+<p><i>k</i><sub>0</sub> + <i>k</i><sub>1</sub><i>x</i> + <i>k</i><sub>2</sub><i>x</i><sup>2</sup> + ... + <i>k<sub>n</sub>x<sup>n</sup></i> &emsp; <i>k<sub>i</sub></i> &in; <i>K</i></p>
 </div>
 
 <p>Now, every <i>k<sub>i</sub></i>, as element of <i>K</i>, which is algebraic over <i>F</i>, is algebraic over <i>F</i> and thus</p>
@@ -773,7 +773,6 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>Adjoining now <i>l</i> to <i>F</i>(<i>k</i><sub>0</sub>, <i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>), it results</p>
 
-
 <div class="eq">
 <p>[<i>F</i>(<i>k</i><sub>0</sub>, <i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>)(<i>l</i>):<i>F</i>] =
 <br> [<i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>)(<i>l</i>) : <i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>)] [<i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>):<i>F</i>]</p>
@@ -781,9 +780,13 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 
 <p>The first term on the R.H.S. is &lt; ∞, since <i>l</i> is algebraic over <i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>) because it satisfies a polynomial with coefficient in <i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>), the second term is &lt; ∞ for what said before. Thus beloning to a <i>finite</i> extension of <i>F</i>, <i>l</i> is algebraic over <i>F</i>. &emsp;□</p>
 
-<p><b>Definition 5.21.24</b>. A field <i>K</i> is said algebrically closed if it has no proper algebraic extensions, that is, no algebraic extensions <i>E</i> with <i>F</i> &lt; <i>E</i>.</p>
+<p><b>Definition 8.1.24</b>. A field <i>F</i> is said algebrically closed if it has no proper algebraic extensions, that is, no algebraic extensions <i>E</i> with <i>F</i> &lt; <i>E</i>.</p>
 
-<p><b>Theorem 5.21.25</b>. The field <i>A</i> of all algebraic numbers is algebrically closed.</p>
+<p>A field is algebraically closed if every non-constant polynomial in <i>F</i>[<i>x</i>] (the univariate polynomial ring with coefficients in <i>F</i>) has a root in <i>F</i>. </p>
+
+<p>ℝ is not algebraically closed, because the polynomial equation <i>x</i><sup>2</sup> + 1 = 0  has no solution in real numbers, even though all its coefficients (1 and 0) are real. No finite field <i>F</i> is algebraically closed, indeed it sufficed to consider a polynomial of finite degree whose roots are all elements of the field. Adding a unit to it, we get a polynomial that has no root: (<i>x</i> − a<sub>1</sub>)(<i>x</i> − a<sub>2</sub>) ⋯ (<i>x</i> − a<sub>n</sub>) + 1, has no zero in <i>F</i>. By contrast, the fundamental theorem of algebra states that the field of complex numbers is algebraically closed. Another example of an algebraically closed field is the field of (complex) algebraic numbers.</p>
+
+<p><b>Theorem 8.1.25</b>. The field <i>A</i> of all algebraic numbers is algebrically closed.</p>
 
 <p><b>Proof</b>. It suffices to prove that the roots of every polynomial with algebraic numbers are algebraic. Let <i>f</i>(<i>x</i>) = <i>x<sup>n</sup></i> + <i>a</i><sub><i>n</i>−1</sub>x<sup><i>n</i>−1</sup> + ... + <i>a</i><sub>0</sub> a polynomial with coefficients in <i>A</i>. We consider the extension</p>
 
@@ -794,6 +797,8 @@ constructing the complex numbers from the real numbers is to ‘adjoin’ a squa
 <p>It is a <i>finite</i> extension of ℚ. Let <i>s</i> an arbitrary root of <i>f</i>(<i>x</i>). Then <i>K</i>(<i>s</i>) is a finite extension of <i>K</i>, because <i>s</i> is algebraic over <i>K</i>. But then <i>K</i>(<i>s</i>) is a finite extension of ℚ as well, and <i>s</i> is algebraic.&emsp;□</p>
 
 <p>The most familiar example of an algebraically closed field is ℂ, which is so by the fundamental theorem of algebra.</p>
+
+</div> <!-- Alg. closed fields id-->
 
 <section aria-label="End">
 <a href="finite_abelian_groups.html">&#171;Classification of finite abelian groups</a>
