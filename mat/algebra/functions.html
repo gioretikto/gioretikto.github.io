@@ -31,7 +31,7 @@
 <p>The function is thus specified by three objects: the <i>rule</i> that establishes the correpondence, its <i>domain</i>, and its <i>codomain</i>. Changing any one of them will change the function, and it will determine wheter a correspondence is a function.</p>
 
 <div class="def">
-<p><b>Example 1.4.2</b>. Let <i>X</i> = {1,2,3,4} and <i>Y</i> = {<i>D,B,C,E</i>}. The law <i>f</i>: <i>X</i> → <i>Y</i> defined as <i>f</i>(1) = <i>D</i>, <i>f</i>(2) = <i>B</i>, <i>f</i>(3) = <i>C</i>, <i>f</i>(4) = <i>C</i> is a function. We can represent it with the following diagram</p>
+<p><b>Example 1.4.2</b>. Let <i>X</i> = {1, 2, 3, 4} and <i>Y</i> = {<i>D, B, C, E</i>}. The law <i>f</i>: <i>X</i> → <i>Y</i> defined as <i>f</i>(1) = <i>D</i>, <i>f</i>(2) = <i>B</i>, <i>f</i>(3) = <i>C</i>, <i>f</i>(4) = <i>C</i> is a function. We can represent it with the following diagram</p>
 <img src="img/surjective2.png" alt="surjective function"/>
 </div>
 
@@ -96,14 +96,16 @@
 </div>
 
 <div class="def">
-<p><b>Definition 1.4.6.</b> A function <i>f</i>: <i>X</i> → <i>Y</i> is <b>biunique</b> when each <i>y</i> &in; <i>Y</i> has one counterimage in <i>X</i>. In this case <i>f</i> is both injective and surjective.</p>
+<p><b>Definition 1.4.6.</b> A function <i>f</i>: <i>X</i> → <i>Y</i> is <b>bijective</b> when each <i>y</i> &in; <i>Y</i> has one counterimage in <i>X</i>. In this case <i>f</i> is both injective and surjective.</p>
 
 <figure>
-    <img src="img/biunivoca.png" alt="funzione biunivoca" />
+    <img src="img/bijection.png" alt="bijection" />
     <figcaption>A biunique function</figcaption>
 </figure>
 
 </div>
+
+<p>Many authors say there extist a "one to one correspondence" to connete bijection. We avoid this term, since it can be easily confused with a "one to one mapping", that is the alternative name for injective function.</p>
 
 <p><p><b>Definition 1.4.7.</b> If <i>f</i>: <i>A</i> → <i>B</i> a bijective function, then is also <b>invertible</b>. That is there exists the function <i>f</i><sup>−1</sup>: <i>B</i> → <i>A</i> such that every <i>y</i> &in; <i>B</i> is mapped to a unique element <i>x</i> &in; <i>A</i>; we have that:</p>
 
@@ -115,7 +117,7 @@
 
 <p><b>Note</b>. Don't confuse <i>f</i><sup>−1</sup>(<i>T</i>) with the inverse function <i>f</i><sup>−1</sup>. The inverse function cannot be defined for any function, whereas the pre-image can always be defined. </p>
 
-<p><b>Example 1.4.8</b>. Let <i>f</i>: <i>X</i> → <i>Y</i> defined as in the example above, and let <i>X<sub>1</sub></i> = {2,4} and <i>B</i><sub>1</sub> = {<i>B,C,E</i>} then <i>f</i>(<i>X</i><sub>1</sub>) = {<i>B,C</i>} and <i>f</i><sup>−1</sup>(<i>B</i><sub>1</sub>) = {2,3,4}.</p>
+<p><b>Example 1.4.8</b>. Let <i>f</i>: <i>X</i> → <i>Y</i> defined as in the example above, and let <i>X<sub>1</sub></i> = {2,4} and <i>B</i><sub>1</sub> = {<i>B,C,E</i>} then <i>f</i>(<i>X</i><sub>1</sub>) = {<i>B, C</i>} and <i>f</i><sup>−1</sup>(<i>B</i><sub>1</sub>) = {2,3,4}.</p>
 
 <p><b>Example 1.4.9</b>. Consider the function <i>f</i>: ℝ → ℝ defined as <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup>. Note that <i>f</i>({0,1,2}) = {0,1,4} and <i>f</i><sup>−1</sup>({0,1,4}) = {−2,−1,0,1,2}. This shows that <i>f</i><sup>−1</sup>(<i>f</i>(<i>X</i>)) ≠ <i>X</i> in general, it is only when injective.</p>
 
@@ -123,7 +125,7 @@
 
 	<ul>
 		<li><p><i>f</i> is injective if and only if <i>X</i> = <i>f</i><sup>−1</sup>(<i>f</i>(<i>X</i>)) for all <i>X</i> ⊆ <i>A</i>.</p></li>
-		<li><p><i>f</i> is surjective if and only if  <i>f</i>(<i>f</i><sup>−1</sup>(<i>Y</i>)) = <i>Y</i> for all <i>Y</i> ⊆ 	<i>B</i>.</p></li>
+		<li><p><i>f</i> is surjective if and only if <i>f</i>(<i>f</i><sup>−1</sup>(<i>Y</i>)) = <i>Y</i> for all <i>Y</i> ⊆ 	<i>B</i>.</p></li>
 	</ul>
 
 <h2>Graph of a function</h2>
@@ -297,7 +299,7 @@
 <p><i>&theta;</i>: 𝓟(<i>X</i>) → <b>2</b><sup>X</sup></i></p>
 </div>
 
-<p>maps every element <i>A</i> of 𝓟(<i>X</i>) to its characteristic function <i>&chi;<sub>A</sub></i>, is bijective. We have to prove both surjectivity and injectivity of <i>&chi;<sub>A</sub></i>. We first show that it is one-to-one. Suppose <i>&theta;</i>(<i>A</i>) = <i>&theta;</i>(<i>B</i>) where <i>A, B</i> &in; 𝓟(<i>X</i>). We must show <i>A</i> = <i>B</i>. Let <i>x</i> &in; <i>A</i>. Then <i>&theta;</i>(<i>A</i>) = <i>&chi;<sub>A</sub></i> that is <i>&theta;</i>(<i>A</i>) is a function from <i>X</i> to <b>2</b><sup>X</sup></i> . Let <i>x</i> &in; <i>A</i> then <i>&chi;<sub>A</sub></i>(<i>x</i>) = 1, so <i>&chi;<sub>B</sub></i>(<i>x</i>) = 1, which means <i>x</i> &in; <i>B</i>. Thus <i>A</i> &subset; <i>B</i>. Similarly <i>B</i> &subset; <i>A</i> and so <i>A</i> = <i>B</i>. Next to prove thta <i>&theta;</i> is onto, let <i>f</i> &in; {0,1}<sup><i>X</i></sup>. <i>f</i> defines a unique subset <i>A</i> = <i>f</i><sup>−1</sup>{1} of <i>X</i> and it is evidently the characeristic function of the subset <i>A</i> &subseteq; <i>X</i>. So <i>f</i> = <i>&chi;<sub>A</sub></i> = <i>&theta;</i>(<i>A</i>).□</p>
+<p>maps every element <i>A</i> of 𝓟(<i>X</i>) to its characteristic function <i>&chi;<sub>A</sub></i>, is bijective. We have to prove both surjectivity and injectivity of <i>&chi;<sub>A</sub></i>. We first show that it is one-to-one. Suppose <i>&theta;</i>(<i>A</i>) = <i>&theta;</i>(<i>B</i>) where <i>A, B</i> &in; 𝓟(<i>X</i>). We must show <i>A</i> = <i>B</i>. Let <i>x</i> &in; <i>A</i>. Then <i>&theta;</i>(<i>A</i>) = <i>&chi;<sub>A</sub></i> that is <i>&theta;</i>(<i>A</i>) is a function from <i>X</i> to <b>2</b><sup>X</sup></i>. Let <i>x</i> &in; <i>A</i> then <i>&chi;<sub>A</sub></i>(<i>x</i>) = 1, so <i>&chi;<sub>B</sub></i>(<i>x</i>) = 1, which means <i>x</i> &in; <i>B</i>. Thus <i>A</i> &subset; <i>B</i> (&forall;<i>x</i> in <i>X</i> we've <i>&chi;<sub>A</sub></i>(<i>x</i>) = 1 ⇒ &chi;<sub>B</sub>(<i>x</i>) = 1, iff <i>A</i> &subset; <i>B</i>). Similarly <i>B</i> &subset; <i>A</i> and so <i>A</i> = <i>B</i>. Next to prove that <i>&theta;</i> is onto, let <i>f</i> &in; {0,1}<sup><i>X</i></sup>. <i>f</i> defines a unique subset <i>A</i> = <i>f</i><sup>−1</sup>{1} of <i>X</i> and it is evidently the characeristic function of the subset <i>A</i> of <i>X</i>. So <i>f</i> = <i>&chi;<sub>A</sub></i> = <i>&theta;</i>(<i>A</i>).□</p>
 
 <p><b>Property 1.4.18</b>. Let |<i>A</i>| = <i>n</i> and |<i>B</i>| = <i>m</i>, then <i>B<sup>A</sup></i> has cardinality <i>m<sup>n</sup></i>.</p>
 

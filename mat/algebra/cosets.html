@@ -21,7 +21,7 @@
 
 <h1>Cosets</h1>
 
-<p>Let <i>H</i> be a subgroup of a group (<i>G</i>, ⋅). We define a relation ~ in the set <i>G</i> as follows: For any two elements <i>a,b</i> &in; <i>G</i>, let <i>a ~ b</i> iff <i>h</i><sup>&minus;1</sup><i>g</i>  &in; <i>H</i>. We denote the equivalence relation by ~<sub>r</sub> for reasons that will be soon clear.</p>
+<p>Let <i>H</i> be a subgroup of a group (<i>G</i>, ⋅). We define a relation ~ in the set <i>G</i> as follows: For any two elements <i>a,b</i> &in; <i>G</i>, let <i>a</i> ~ <i>b</i> iff <i>h</i><sup>&minus;1</sup><i>g</i> &in; <i>H</i>. We denote the equivalence relation by ~<sub>r</sub> for reasons that will be soon clear.</p>
 
 <div class="eq">
 <p><i>a ~<sub>r</sub> b</i> &emsp; ⇐⇒ &emsp; <i>ab</i><sup>&minus;1</sup> &in; <i>H</i> &emsp; (<b>7.8.1</b>)</p>
@@ -30,35 +30,35 @@
 <p>Note that if the operation on <i>G</i> were the addition, the relation would be</p>
 
 <div class="eq">
-<p><i>a ~<sub>r</sub> b</i> &emsp; ⇐⇒ &emsp; <i>a &minus; b</i> &in; <i>H</i></p>
+<p><i>a ~<sub>r</sub> b</i> &emsp; ⇐⇒ &emsp; <i>a</i> &minus; <i>b</i> &in; <i>H</i></p>
 </div>
 
 <p>which we've already studied in the case <i>G</i> = ℤ, and <i>H = n</i>ℤ.</p>
 
-<p>This relation ~: G x G ⟶ G, being reflexive, symmetric and transitive, and hence an <i>equivalence relation</i> on the set <i>G</i>. This equivalence relation divides the set <i>G</i> into disjoint subsets (equivalence classes) known as <b>right cosets modulo <i>H</i></b> whose union is <i>G</i>. </p>
+<p>This relation ~: <i>G</i> x <i>G</i> ⟶ <i>G</i>, being reflexive, symmetric and transitive, and hence an <i>equivalence relation</i> on the set <i>G</i>. This equivalence relation divides the set <i>G</i> into disjoint subsets (equivalence classes) known as <b>right cosets modulo <i>H</i></b> whose union is <i>G</i>. </p>
 
 <p>It is reflexive, since <i>xx</i><sup>−1</sup> = ∈ <i>H</i>; symmetric, since <i>xy</i><sup>−1</sup></i> ∈ <i>H</i> implies <i>yx</i><sup>−1</sup> = (<i>xy</i><sup>−1</sup>)<sup>−1</sup>∈ <i>H</i>; and transitive, since <i>xy</i><sup>−1</sup> ∈ <i>H, yz</i><sup>−1</sup> ∈ <i>H</i> implies <i>xz</i><sup>−1</sup> = (<i>xy</i><sup>−1</sup>)(<i>yz</i><sup>−1</sup>) ∈ <i>H</i>. 
 
 <p>There are also the <i>left cosets modulo H</i> since we can define the following relation called <b>left congruence modulo <i>H</i></b>, denoted by ~<sub>l</sub>:</p>
 
 <div class="eq">
-<p><i>a ~<sub>l</sub> b</i> &emsp; ⇐⇒ &emsp; <i>b</i><sup>&minus;1</sup><i>a &in; H</i> &emsp; (<b>7.8.2</b>)</p>
+<p><i>a ~<sub>l</sub> b</i> &emsp; ⇐⇒ &emsp; <i>b</i><sup>&minus;1</sup><i>a</i> &in; <i>H</i> &emsp; (<b>7.8.2</b>)</p>
 </div>
 
-<p>obtaining the <i>left cosets</i>. In the case <i>G</i> = ℤ, and <i>H = n</i>ℤ, the two relations coincide, and so the right and left cosets.</p>
+<p>obtaining the <i>left cosets</i>. In the case <i>G</i> = ℤ, and <i>H</i> = <i>n</i>ℤ, the two relations coincide, and so the right and left cosets.</p>
 
 <p>We analyze now how this classes are composed. Let <i>a &in; G</i>, under the relation <i>&rho;<sub>d</sub></i> we have that</p>
 
 <div class="eq">
-<p>[<i>a</i>] := {<i>b &in; G</i> | <i>b &rho; a</i>} = {<i>b &in; G</i> | <i>ba</i><sup>&minus;1</sup> &in; H</i>}<br>
-= {<i>b &in; G</i> | <i>ba</i><sup>&minus;1</sup> = <i>h, h &in; H</i>}<br>
-= {<i>b &in; G</i> | <i>b = ha</i>, for some <i>h &in; H</i>} ⊆ <i>Ha</i>.</p>
+<p>[<i>a</i>] := {<i>b</i> &in; <i>G</i> | <i>b &rho; a</i>} = {<i>b</i> &in; <i>G</i> | <i>ba</i><sup>&minus;1</sup> &in; H</i>}<br>
+= {<i>b</i> &in; <i>G</i> | <i>ba</i><sup>&minus;1</sup> = <i>h, h</i> &in; <i>H</i>}<br>
+= {<i>b</i> &in; <i>G</i> | <i>b</i> = <i>ha</i>, for some <i>h</i> &in; H</i>} ⊆ <i>Ha</i>.</p>
 </div>
 
 <p>the converse is easy to prove. Then the class <i>&rho;<sub>r</sub></i>(<i>a</i>) coincides with the subgroup <i>Ha</i> of <i>G</i>, where</p>
 
 <div class="eq">
-<p><i>Ha</i> := {<i>ha</i> | <i>h &in; H</i>}</p>
+<p><i>Ha</i> := {<i>ha</i> | <i>h</i> &in; <i>H</i>}</p>
 </div>
 
 <p>Differently to what we have with conjugacy classes, the following holds true</p>
@@ -68,7 +68,7 @@
 <p><b>Proof</b>. It suffices to show that there exists a bijective mapping between two arbitrary left cosets (right). This means that all cosets have the same cardinality of <i>H</i> (which is at the same time a right coset and left coset). Let <i>Ha</i> and <i>Hb</i> two arbitraty right cosets. The mapping</p>
 
 <div class="eq">
-<p><i>&psi;: Ha ⟶ Hb</i></p>
+<p><i>&psi;</i>: <i>Ha</i> ⟶ <i>Hb</i></p>
 </div>
 
 <p>defined as</p>
@@ -78,9 +78,9 @@
 </div>
 
 <ol type="a">
-	<li><p>is injective: if <i>&psi;</i>(<i>h<sub>1</sub>a</i>) = &psi;(<i>h<sub>2</sub>a</i>), then it means that <i>h<sub>1</sub>b = h<sub>2</sub>b</i>, from which, owing to the cancellation law, <i>h<sub>1</sub> = h<sub>2</sub></i>;</p></li>
+	<li><p>is injective: if <i>&psi;</i>(<i>h</i><sub>1</sub><i>a</i>) = &psi;(<i>h</i><sub>2</sub><i>a</i>), then it means that <i>h</i><sub>1</sub><i>b</i> = <i>h</i><sub>2</sub>b</i>, from which, owing to the cancellation law, <i>h</i><sub>1</sub> = <i>h</i><sub>2</sub></i>;</p></li>
 	
-	<li><p>is surjective: given any element <i>Hb</i>, this will be of the form <i>hb</i> for some <i>h &in; H</i>, hence having as counterimage <i>ha</i>. &emsp; □</p></li>
+	<li><p>is surjective: given any element <i>Hb</i>, this will be of the form <i>hb</i> for some <i>h</i> &in; <i>H</i>, hence having as counterimage <i>ha</i>. &emsp; □</p></li>
 </ol>
 
 <p><b>7.8.2 Example</b>. Let <i>G</i> = 𝓢<sub>3</sub> and <i>H</i> the subgroup generated by the transposition (2,3). We calculate right and left cosets, remembering that if <i>H</i> = {a,b,c} then <i>Hx</i> = {<i>ax,bx,cx</i>.}</p>
@@ -133,7 +133,7 @@
 <div id="equality_cosets">
 <p><b>7.8.3 Proposition</b> (<i>Equality of cosets</i>). Let <i>G</i> be a group and <i>H</i> be a subgroup of <i>G</i>. If <i>x, y</i> ∈ <i>G</i>, then <i>Hx = Hy</i> if and only if <i>xy</i><sup>−1</sup> ∈ <i>H</i>.</p>
 
-<p><b>Proof.</b> Suppose <i>Hx = Hy</i>, then since the identity <i>e &in; H</i>, and since <i>x = ex</i>, the element <i>x &in; Hx = Hy</i>, so <i>x = hy</i> for some <i>h &in; H</i> (the equality of sets mean that the two have exactly the same elements). Thus <i>xy</i><sup>−1</sup> = <i>h ∈ H</i>. <br>Conversely if <i>xy</i><sup>−1</sup> ∈ <i>H</i>, then <i>H</i> (<i>xy</i><sup>−1</sup>) = <i>H</i>, hence <i>H (<i>xy</i><sup>−1</sup>) y = Hy</i> which leads to <i>Hx = Hy</i>. &emsp; □</p>
+<p><b>Proof.</b> Suppose <i>Hx</i> = <i>Hy</i>, then since the identity <i>e &in; H</i>, and since <i>x</i> = <i>ex</i>, the element <i>x</i> &in; <i>Hx</i> = <i>Hy</i>, so <i>x</i> = <i>hy</i> for some <i>h</i> &in; <i>H</i> (the equality of sets mean that the two have exactly the same elements). Thus <i>xy</i><sup>−1</sup> = <i>h</i> ∈ <i>H</i>. <br>Conversely if <i>xy</i><sup>−1</sup> ∈ <i>H</i>, then <i>H</i> (<i>xy</i><sup>−1</sup>) = <i>H</i>, hence <i>H</i> (<i>xy</i><sup>−1</sup>) <i>y</i> = <i>Hy</i> which leads to <i>Hx</i> = <i>Hy</i>. &emsp; □</p>
 </div>
 
 <section aria-label="End">

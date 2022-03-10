@@ -142,12 +142,12 @@
 <p><b>1.6.6 Definition</b>. An ideal <i>I</i> &ne; <i>R</i> of <i>R</i> is said <i>prime</i> if for every <i>a,b</i> &in; R</i></p>
 
 	<div class="eq">
-	<p><i>ab</i> &in; <i>I</i> ⇒  &emsp; <i>a</i> &in; <i>I</i> or <i>b</i> &in; <i>I</i></p>
+	<p><i>ab</i> &in; <i>I</i> &emsp; ⇒ &emsp; either <i>a</i> &in; <i>I</i> or <i>b</i> &in; <i>I</i></p>
 	</div>
 
 <p><b>1.6.7 Examples</b>. Consider in ℤ the ideal (5) = 5ℤ. If <i>ab</i> &in; (5), then <i>ab</i> is a multiple of 5, hence 5 divides <i>ab</i>; But 5 is a prime number we must have <i>a</i> multiple of 5 (<i>a</i> &in; (5)) or <i>b</i> multiple of 5 (<i>b</i> &in; (5)). On the other hand (10) is not a prime ideal 4 ⋅ 5 = 20 &in; (10) but neither 4 or 5 are in (10). </p>
 
-<p>We can notice easily that in ℤ, if <i>n</i>&ne;0, (<i>n</i>) is a prime ideal if and only if the integer <i>n</i> is prime.</p>
+<p>We can notice easily that in ℤ, if <i>n</i> &ne; 0, (<i>n</i>) is a prime ideal if and only if the integer <i>n</i> is prime.</p>
 
 <p><b>1.6.7 Definition</b>. An ideal <i>I</i> of a ring <i>R</i>, <i>I</i> &ne; <i>R</i> is said <i>maximal</i> if</p>
 
@@ -170,7 +170,7 @@
 <ol>
 	<li><p>In ℤ, (5) is a maximal ideal. For suppose that (5) ⫋  (<i>m</i>) in ℤ, <i>m</i> must be a divisor of 5 distinct by 5. But then it must be <i>m</i> = 1, hence (<i>m</i>) = (1) = ℤ. The prime ideals of ℤ are (0),(2),(3),(5) ,...; these are all maximal except (0).</p></li>
 	
-	<li><p>Example 1 shows that the ideal (4) is not maximal in ℤ. However, (4) is a maximal ideal of the ring <i>E</i> of all even integers. To see that this is true, let <i>I</i> be an ideal of <i>E</i> such that (4) ⊆ <i>I</i> ⊆ <i>E</i>. Let <i>x</i> be any element of I that is not in (4). Then x has the form</p>
+	<li><p>Example 1 shows that the ideal (4) is not maximal in ℤ. However, (4) is a maximal ideal of the ring <i>E</i> of all even integers. To see that this is true, let <i>I</i> be an ideal of <i>E</i> such that (4) ⊆ <i>I</i> ⊆ <i>E</i>. Let <i>x</i> be any element of I that is not in (4). Then <i>x</i> has the form</p>
 	
 	<div class="eq">
 	<p><i>x</i> = 4<i>k</i> + 2 = 2(2<i>k</i> + 1)</p>
@@ -193,45 +193,47 @@
 
 <p>The importance of maximal ideals is evident from the result of the following theorem.</p>
 
-<p><b>1.6.10 Theorem</b>. Let <i>R</i> a commutative ring with unit. An ideal <i>I</i> is <i>maximal</i> if and only if <i>R/I</i> is a field.</p>
+<p><b>1.6.10 Theorem</b>. Let <i>R</i> a commutative ring with unit. An ideal <i>I</i> is <i>maximal</i> if and only if <i>R</i>/<i>I</i> is a field.</p>
 
-<p><b>Proof 1</b>. If <i>R</i> is a commutative ring with unit, <i>R/I</i> as well is commutatative with unit. Then by the theorem just proved above</p>
+<p><b>Proof 1</b>. If <i>R</i> is a commutative ring with unit, <i>R</i>/<i>I</i> as well is commutatative with unit. Then by the theorem just proved above</p>
 
 <div class="eq">
-<p><i>R/I</i> field &emsp; ⇐⇒ &emsp; <i>R/I</i> has only trivial ideals</p>
+<p><i>R</i>/<i>I</i> field &emsp; ⇐⇒ &emsp; <i>R</i>/<i>I</i> has only trivial ideals</p>
 </div>
 
 <p>Owing to the "correspondence theorem" that says that if <i>I</i> is an ideal of <i>R</i>, then the projection map <i>R</i> → <i>R/I</i> induces a strictly inclusion-preserving bijection {all ideals of <i>R</i> that contain <i>I</i>} -> {all ideals of <i>R/I</i>}.</p>
 
 <div class="eq">
-<p><i>R/I</i> field &emsp; ⇐⇒ &emsp; <i>I</i> maximal</p>
+<p><i>R</i>/<i>I</i> field &emsp; ⇐⇒ &emsp; <i>I</i> maximal</p>
 </div>
 
 <p>the theorem is thus proved.□</p>
 
-<p><b>Proof 2</b>. You can also do it quite directly:  Say I is maximal. Now pick any y outside of I, so the element  y + I  of R/I is nonzero in this quotient ring. But I maximal means the ideal (I,y) = { i + ry : i in I, r in R } = all of R. So some particular i in I and r in R exist with  i + ry = 1, so ry + I = 1 - i + I = 1 + I = the multliplicative identity of R/I. But ry + I = (r + I)(y + I), so r + I is the inverse of y + I. We've shown that every nonzero element of R/I has an inverse, so R/I is a field.</p>
+<p><b>Proof 2</b>. You can also prove it quite directly: Say <i>I</i> is maximal. Now pick any <i>y</i> outside of <i>I</i>, so the element <i>y</i> + <i>I</i> of <i>R</i>/<i>I</i> is nonzero in this quotient ring. But I maximal means the ideal (<i>I,y</i>) = {<i>i</i> + <i>ry</i> : <i>i</i> &in; <i>I</i>, <i>r</i> &in; <i>R</i>} = all of <i>R</i>. So some particular <i>i</i> in <i>I</i> and <i>r</i> in <i>R</i> exist with <i>i</i> + <i>ry</i> = 1, so <i>ry</i> + <i>I</i> = 1 − <i>i</i> + <i>I</i> = 1 + <i>I</i> = the multliplicative identity of <i>R</i>/<i>I</i>. But <i>ry</i> + <i>I</i> = (<i>r</i> + <i>I</i>)(<i>y</i> + <i>I</i>), so <i>r</i> + <i>I</i> is the inverse of <i>y</i> + <i>I</i>. We've shown that every nonzero element of <i>R</i>/<i>I</i> has an inverse, so <i>R</i>/<i>I</i> is a field.</p>
 
-<p><b>1.6.11 Theorem</b>. Let <i>R</i> a commutative ring (not necessarily with unit) and let <i>I</i> one of its ideal. The ideal <i>I</i> is <i>prime</i> if and only if <i>R/I</i> is an integral domain.</p>
+<div id="ring_integraldomain">
+<p><b>1.6.11 Theorem</b>. Let <i>R</i> a commutative ring (not necessarily with unit) and let <i>I</i> one of its ideal. The ideal <i>I</i> is <i>prime</i> if and only if <i>R</i>/<i>I</i> is an integral domain.</p>
 
-<p><b>Proof.</b> To state that <i>R/I</i> is an integral domain means that</p>
-
-<div class="eq">
-<p>(<i>a + I</i>) (<i>b + I</i>)&emsp; ⇒ &emsp; <i>a</i> + <i>I</i> = <i>I</i> &emsp; or <i>b</i> + <i>I</i> = <i>I</i></p>
-</div>
-
-<p>this relation can also be stated as</p>
+<p><b>Proof.</b> Assume that <i>R</i>/<i>I</i> is an <a href="Z_divisibility.html#integral_domain">integral domain</a>. Thus in <i>R</i>/<i>I</i> we have a product of cosets equal to the zero coset:</p>
 
 <div class="eq">
-<p><i>ab</i> + <i>I</i> = <i>I</i> &emsp; ⇒ &emsp; <i>a</i> &in; <i>I</i> &emsp; or <i>b</i> &in; <i>I</i></p>
+<p>(<i>a</i> + <i>I</i>) (<i>b</i> + <i>I</i>) = 0 + <i>I</i>&emsp; ⇒ &emsp; <i>a</i> + <i>I</i> = <i>I</i> &emsp; or&emsp; <i>b</i> + <i>I</i> = <i>I</i></p>
 </div>
 
-<p>that is</p>
+<p>Remember that the zero element of <i>R</i>/<i>I</i> is the coset consisting of all elements of <i>I</i>. </p>
+
+<p>If both <i>a</i> + <i>I</i> and <i>b</i> + <i>I</i>, differ from the identity 0 + <i>I</i>, we would have zero divisors. The relation above is equal to</p>
 
 <div class="eq">
-<p><i>ab</i> &in; <i>I</i> &emsp; <i>a</i> &in; <i>I</i> &emsp; or &emsp; <i>b</i> &in; <i>I</i>, &emsp; <i>i.e. I</i> is prime.□</p>
+<p><i>ab</i> + <i>I</i> = (<i>a</i> + <i>I</i>) (<i>b</i> + <i>I</i>) = 0 + <i>I</i>&emsp; ⇒ &emsp; <i>a</i> &in; <i>I</i> &emsp; or <i>b</i> &in; <i>I</i></p>
 </div>
+
+<p>that is <i>ab</i> &in; <i>I</i> and either <i>a</i> &in; <i>I</i> or <i>b</i> &in; <i>I</i>, and so <i>I</i> must be a <a href="ideal_generated.html#prime_ideal">prime ideal</a>.</p>
+
+<p>For the other direction, assume that <i>I</i> is a prime ideal. If <i>a,b</i> &in; <i>R</i> with (<i>a</i> + <i>I</i>) (<i>b</i> + <i>I</i>) = 0 + <i>I</i> in <i>R</i>/<i>I</i>, then we have <i>ab</i> &in; <i>I</i>, and so by assumption either <i>a</i> &in; <i>I</i> or <i>b</i> &in; <i>I</i>. This shows that either <i>a</i> + <i>I</i> = 0 + <i>I</i> or <i>b</i> + <i>I</i> = 0 + <i>I</i>, and so <i>R</i>/<i>I</i> is an integral domain. &emsp;□</p>
 
 <p>The two theorems just proved state that in a <i>commutative ring with unit</i>, a maximal ideal is prime (remember that every field is also an integral domain).</p>
+</div>
 
 <p>We give now an example of a prime ideal which is not maximal.</p>
 
@@ -242,7 +244,7 @@
 <p><i>f</i>(<i>x,y</i>) ⟼ <i>f</i>(0,<i>y</i>)</p>
 </div>
 
-<p>an epimorphism, with kernel (<i>x</i>). Owing to the fundamental theorem of ring homomorphism we have</p>
+<p>an epimorphism, with kernel (<i>x</i>). Owing to the <a href="fund_theorem_homomorphism.html">fundamental theorem on ring homomorphism</a>, we have</p>
 
 <div class="eq">
 <p>𝕂[<i>y</i>] ≃ 𝕂[<i>x,y</i>]/(<i>x</i>)</p>
@@ -252,7 +254,7 @@
 
 <p><b>Remark</b>. Pay attention to the fact that in a ring without unit it does not hold true that a maximal ideal is prime. The following is an example.</p>
 
-<p><b>1.6.13 Example</b>. Let <i>R</i> = 2ℤ and let <i>I</i>=(4) {0, &pm;4, &pm; 8,..}. <i>I</i> is maximal: indeed let <i>U</i> an ideal of of <i>R</i> such <i>U</i> ⊃ <i>I</i> and <i>U</i> &ne; <i>I</i>. We must have <i>U</i> = 2ℤ, because since <i>U</i> ⊋ <i>I</i>, <i>U</i> must contain an element of the form <i>2k</i> with <i>k</i> odd. But then <i>k</i> + 1 is even and 2 = 2(<i>k</i> + 1) −2<i>k</i> &in; <i>U</i> hence <i>U</i> = 2ℤ. However <i>I</i> is not <i>prime e.g.</i> 4 = 2 ⋅ 2 &in; (4), but 2 &ne; (4). We could have also verify that <i>I</i> is not prime by checking the quotient ring 2ℤ/(4) ={(4), 2 + (4)}. The product of two whatsoever elements of such ring is not an integral domain as it should be in the case of the ideal being prime. </p>
+<p><b>1.6.13 Example</b>. Let <i>R</i> = 2ℤ and let <i>I</i> = (4) {0, &pm;4, &pm; 8,..}. <i>I</i> is maximal: indeed let <i>U</i> an ideal of of <i>R</i> such <i>U</i> ⊃ <i>I</i> and <i>U</i> &ne; <i>I</i>. We must have <i>U</i> = 2ℤ, because since <i>U</i> ⊋ <i>I</i>, <i>U</i> must contain an element of the form <i>2k</i> with <i>k</i> odd. But then <i>k</i> + 1 is even and 2 = 2(<i>k</i> + 1) −2<i>k</i> &in; <i>U</i> hence <i>U</i> = 2ℤ. However <i>I</i> is not <i>prime e.g.</i> 4 = 2 ⋅ 2 &in; (4), but 2 &ne; (4). We could have also verify that <i>I</i> is not prime by checking the quotient ring 2ℤ/(4) ={(4), 2 + (4)}. The product of two whatsoever elements of such ring is not an integral domain as it should be in the case of the ideal being prime. </p>
 
 <section aria-label="End">
 <a href="rings.html">&#171;Ring and ring's isomorphisms</a>

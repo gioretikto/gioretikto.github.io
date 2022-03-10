@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Euclidean algorithm"/>
+  <title>Euclidean algorithm</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href=/index.html">Algebra</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Euclidean algorithm</h1>
+
+<p>We introduce now the <i>Euclidean algorithm</i>, which offers a method for the calculation of the greatest common divisor of two integers <i>a</i> and <i>b</i>, (which we know to exists br proposition), and allow us to determine a Bézout identity. We want to calculate the gcd(<i>a,b</i>), we can without doubt let <i>a</i> &ge; <i>b</i> &gt; 0.</p>
+
+<p><b>2.4.1 Algorithm</b>. We write in bold the elements that are going to be divided in the next division. Let <b>a, b</b> &in; ℤ and let <i><b>a</b></i> &ge; <i><b>b</b></i> &gt; 0. We perform the following divisions:</p>
+
+<div class="eq">
+<p><i>a</i> = <b><i>b</i></b><i>q</i><sub>1</sub> + <b><i>r</i></b><sub>1</sub> &emsp; 0 &lt;<i>r</i><sub>1</sub> &lt; <i>b</i></p>
+<p><i>b</i> = <b><i>r</i></b><sub>1</sub><i>q</i><sub>1</sub> + <b><i>r</i></b><sub>2</sub> &emsp; 0 &lt; <i>r</i><sub>2</sub> &lt;<i>r</i><sub>1</sub></p>
+<p><i>r</i><sub>1</sub> = <i><b>r</b></i><sub>2</sub><i>q</i><sub>1</sub> + <b><i>r</i></b><sub>3</sub> &emsp; 0 &lt; <i>r</i><sub>3</sub> &lt; <i>r</i><sub>2</sub></p>
+<p><i>...</i></p>
+<p><i>r</i><sub>n−2</sub> = <b><i>r</i></b><sub><i>n</i>−1</sub><i>q<sub>n</sub></i> + <span style="padding:2px; border-style: solid; border-width:1px;"><b>r</b><sub>n</sub></i></span> &emsp; 0 &lt; <i>r<sub>n</sub></i> &lt; <i>r</i><sub><i>n</i>−1</sub></p>
+<p><i>r</i><sub><i>n</i>−1</sub> = <i><b>r</b><sub>n</sub>q</i><sub><i>n</i>+1</sub> + 0</p>
+</div>
+
+<p>We must come to an halt for sure (in less of <i>b</i> steps), since <i>b</i> &gt;<i>r</i><sub>1</sub> &gt; <i>r</i><sub>2</sub> &gt; ... is a strictly decreasing sequence of positive integers.</p>
+
+<h3>Proof of the algorithm</h3>
+
+<ol>
+	<li><p>From last division you can notice that, <i>r<sub>n</sub></i> divides <i>r</i><sub><i>n</i>−1</sub>, and in addition, going from downward to upward of the <i>n</i>-th division we can notice that <i>r<sub>n</sub></i>, divides <i>r</i><sub><i>n</i>−2</sub>. Risalendo le equazioni si ha <i>r<sub>n</sub></i> is a divisor of <i>a</i> and <i>b</i>. It must be &le; gcd(<i>a,b</i>).</p></li>
+	
+	<li><p>Each common divisor <i>a</i> and <i>b</i> is also a divisor of <i>r<sub>1</sub></i>, sinche if a number divides <i>a</i> and <i>b</i> then it divides the difference as well (<a href="Z_divisibility.html#lemma_219">Lemma 2.19</a>). This line of thought holds for all remainder of the next divisions till the remainder <i>r<sub>n</sub></i>, which is the last &ne; 0. Thus every common divisor of <i>a</i> and <i>b</i> divides <i>r<sub>n</sub></i> as well. By steps 1) and 2) we conclude that <i>r<sub>n</sub></i> = MCD(<i>a,b</i>).</p>
+</ol>
+
+<p>Let's calculate gcd(34, 19) with the Euclidean algorithm.</p>
+
+<pre>
+34 = 19 ⋅ 1 + 15
+19 = 15 ⋅ 1 + 4
+15 = 4 ⋅ 3 + 3
+4 = 3 ⋅ 1 + <span style="padding:2px; border-style: solid; border-width:1px;">1</span>
+3 = 1 ⋅3 + 0
+</pre>
+
+<p>Quindi, gcd(34, 19) = 1.</p>
+
+<p>Further, these relations offer us a way to write gcd(<i>a,b</i>) as Bézout's identity in the form <i>d</i> = gcd(<i>a,b</i>) = <i>sa</i> + <i>tb</i>. To find a Bézout's identity for per gcd(34, 19) = 1 = <i>d</i>, we proceed backward.</p> 
+
+<pre>1 = 4 − 1 ⋅ 3
+= 4 − 1(15 - 4⋅3) = 4 ⋅ 4 − 1⋅15
+= 4(19 − 15⋅1) − 1⋅15) = 4⋅19 − 5⋅15
+= 4⋅19 − 5(34 − 19⋅1) = 9⋅19 − 5⋅34
+</pre>
+
+<p>Thus Bézout's identity for <i>a</i> = 34 and <i>b</i> = 19 is 1 = 34(−5) + 19 ⋅ 9</p>
+
+<section aria-label="End">
+<a href="gcd.html">&#171;gcd: The greatest common divisor</a>
+<a href="index.html">Index</a>
+<a href="diophantine.html">Linear Diophantine equations &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

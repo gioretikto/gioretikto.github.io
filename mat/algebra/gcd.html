@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
 
 <h1>gcd: greatest common divisor</h1>
 
-<p><b>Definition 2.3.1</b>. Given <i>a, b ∈ ℤ</i>. An element <i>d ∈ ℤ</i> is said to be a <i>greatest common divisor</i> of <i>a</i> and <i>b</i> if</p>
+<p><b>Definition 2.3.1</b>. Given <i>a, b</i> ∈ ℤ. An element <i>d</i> ∈ ℤ is said to be a <i>greatest common divisor</i> of <i>a</i> and <i>b</i> if</p>
 
 <ol type="i">
  <li><p><i>d</i>|<i>a</i>, <i>d</i>|<i>b</i></p></li>
@@ -34,7 +34,7 @@
 <p>gcd (<i>a,b</i>) &emsp; or &emsp; (<i>a,b</i>)</p>
 </div>
 
-<p>It is not though defined gcd(0,0), because each <i>x &in; ℤ</i> divides zero, thus does not exists a <i>greatest divisor</i>.</p>
+<p>It is not though defined gcd(0,0), because each <i>x</i> &in; ℤ divides zero, thus does not exists a <i>greatest divisor</i>.</p>
 
 <p><b>Definition 2.3.2</b>. Two integers <i>a</i> and <i>b</i> such that gcd(<i>a, b</i>) = 1 are said <i>coprime</i> or <i>relatevely prime</i>.</p>
 
@@ -42,54 +42,54 @@
 
 <div id="divisionZ">
 
-<p><b>Proposition 2.3.3</b>. (DIVISION IN ℤ) Let <i>a</i> and <i>b</i> two integers with, <i>b &ne; 0</i>. There there exist and are univocally determined two integers <i>q</i> and <i>r</i> such that</p>
+<p><b>Proposition 2.3.3</b>. (Division in ℤ) Let <i>a</i> and <i>b</i> two integers with, <i>b</i> &ne; 0. There there exist and are univocally determined two integers <i>q</i> and <i>r</i> such that</p>
 
 <div class="eq">
-<p><i>a = qb + r</i>, &emsp; 0 &le; <i>r</i> &lt; |<i>b</i>|</p>
+<p><i>a</i> = <i>qb</i> + <i>r</i>, &emsp; 0 &le; <i>r</i> &lt; |<i>b</i>|</p>
 </div>
 
 <p>(<i>a</i> Dividend, <i>b</i> Divisor, <i>q</i> Quotient, <i>r</i> Remainder).</p>
 
-<p><b>Proof</b>. <i>Existence</i>: We examine separately the two cases we can observe i.e. <i>a&ge; 0</i> or <i>a &lt; 0</i>.</p>
+<p><b>Proof</b>. <i>Existence</i>: We examine separately the two cases we can observe i.e. <i>a</i> &ge; 0 or <i>a</i> &lt; 0.</p>
 
-<p><i>a&ge; 0</i>. By applying the induction principle in the form 𝕀  with regards to <i>a</i>. If <i>a = 0</i>, it enough to put <i>q = r = 0</i>, and thus <i>P</i>(0) is true.</p>
+<p><i>a</i> &ge; 0. By applying the induction principle in the form 𝕀  with regards to <i>a</i>. If <i>a</i> = 0, it enough to put <i>q</i> = <i>r</i> = 0, and thus <i>P</i>(0) is true.</p>
 
-<p>Let <i>a &gt; 0</i>. Let's see if the hypothesis <i>P</i>(<i>k</i>) true for all <i>k</i> such <i>0 &le; k &lt; a</i> implies <i>P</i>(<i>a</i>) true. If |<i>b</i>| &gt; <i>a</i>, it is enough to put <i>q = 0</i> and <i>r = a</i>. So we can suppose <i>a</i> &ge; |<i>b</i>|. Then <i>a &gt; a</i> − |<i>b</i>| &ge;0 and by the inductive hypothesis <i>P</i>(<i>a</i> − |<i>b</i>|) is true. This means there exist two integers <i>q',r'</i> such that <i>a</i> − |<i>b</i>| = <i>bq'+r', 0 &le; r' &lt;</i> |<i>b</i>|, from which we can deduce <i>a</i> = |<i>b</i>| + <i>bq'+r'</i>. In the case <i>b &gt; 0</i> or <i>b&lt; 0</i> we'll have respectevely <i>a</i> = <i>b</i>(<i>q' + 1</i>) + <i>r'</i> or <i>a = b</i>(<i>q − 1</i>) + <i>r'</i>, with  0 &le; r' &lt; |<i>b</i>|, i.e. <i>P</i>(<i>a</i>) is true, with <i>q = q' + 1</i>, <i>r = r'</i>, in the case <i>b</i> &gt; 0, and <i>q = q' − 1</i>, <i>r = r'</i>, if <i>b</i> &lt; 0. Owing to the inductive principle, <i>P</i>(<i>a</i>) is true for every <i>a</i>.</p>
+<p>Let <i>a</i> &gt; 0. Let's see if the hypothesis <i>P</i>(<i>k</i>) true for all <i>k</i> such 0 &le; <i>k</i> &lt; <i>a</i> implies <i>P</i>(<i>a</i>) true. If |<i>b</i>| &gt; <i>a</i>, it is enough to put <i>q</i> = 0 and <i>r</i> = <i>a</i>. So we can suppose <i>a</i> &ge; |<i>b</i>|. Then <i>a</i> &gt; <i>a</i> − |<i>b</i>| &ge;0 and by the inductive hypothesis <i>P</i>(<i>a</i> − |<i>b</i>|) is true. This means there exist two integers <i>q',r'</i> such that <i>a</i> − |<i>b</i>| = <i>bq'</i> + <i>r'</i>, 0 &le; <i>r'</i> &lt; |<i>b</i>|, from which we can deduce <i>a</i> = |<i>b</i>| + <i>bq'</i> + <i>r'</i>. In the case <i>b</i> &gt; 0 or <i>b</i> &lt; 0 we'll have respectevely <i>a</i> = <i>b</i>(<i>q'</i> + 1) + <i>r'</i> or <i>a</i> = <i>b</i>(<i>q</i> − 1) + <i>r'</i>, with  0 &le; <i>r'</i> &lt; |<i>b</i>|, <i>i.e.</i> <i>P</i>(<i>a</i>) is true, with <i>q</i> = <i>q'</i> + 1, <i>r</i> = <i>r'</i>, in the case <i>b</i> &gt; 0, and <i>q</i> = <i>q'</i> − 1, <i>r</i> = <i>r'</i>, if <i>b</i> &lt; 0. Owing to the inductive principle, <i>P</i>(<i>a</i>) is true for every <i>a</i>.</p>
 
-<p><i>a &lt; 0</i>. In this case we get <i>−a</i> &gt; 0. There exist thus, from what we have proved in the first part two integers <i>r*</i> and <i>q*</i> such that <i>−a = bq* - r*</i>, with 0 &le; r* &lt; |b|</i>.</p>
+<p><i>a &lt; 0</i>. In this case we get <i>−a</i> &gt; 0. There exist thus, from what we have proved in the first part two integers <i>r*</i> and <i>q*</i> such that <i>−a</i> = <i>bq*</i> − <i>r*</i>, with 0 &le; <i>r*</i> &lt; |<i>b</i>|.</p>
 
-<p>If <i>r* = 0</i> then <i>a = b(-q*)</i>, hence it is sufficient to let <i>q = q*</i> and <i>r = 0</i>. If <i>r* &gt; 0</i>, then <i>a = b(-q*)+ (-r*) = b(-q*) -|b| + |b| -r* = b (-q &pm; 1) + (|b| -r*)</i> with <i>0 &lt; |<i>b</i>| - <i>r*</i> &lt; |<i>b</i>|. In any case (<i>b</i> &gt; or <i>b</i> &lt; 0) there exist two integers <i>q</i> and <i>r</i> resolving the problem.</p>
+<p>If <i>r*</i> = 0 then <i>a</i> = <i>b</i>(−<i>q*</i>), hence it is sufficient to let <i>q</i> = <i>q*</i> and <i>r</i> = 0. If <i>r*</i> &gt; 0, then <i>a</i> = <i>b</i>(−<i>q*</i>) + (−<i>r*</i>) = <i>b</i>(−<i>q*</i>) − |<i>b</i>| + |<i>b</i>| − <i>r*</i> = <i>b</i> (−<i>q</i> &pm; 1) + (|<i>b</i>| − <i>r*</i>) with 0 &lt; |<i>b</i>| − <i>r*</i> &lt; |<i>b</i>|. In any case (<i>b</i> &gt; or <i>b</i> &lt; 0) there exist two integers <i>q</i> and <i>r</i> resolving the problem.</p>
 
-<p><i>Unicity</i>. Let <i>a = bq + r = bq' + r'</i>, 0 &le; r,r' &lt; |<i>b</i>|. Suppose for example <i>r' &le; r</i>. Then 0 &le; r' - r = b(q-q')</i>, from which, taking the absolute values</p>
+<p><i>Unicity</i>. Let <i>a</i> = <i>bq</i> + <i>r</i> = <i>bq'</i> + <i>r'</i>, 0 &le; <i>r,r'</i> &lt; |<i>b</i>|. Suppose for example <i>r'</i> &le; <i>r</i>. Then 0 &le; <i>r'</i> − <i>r</i> = <i>b</i>(<i>q</i>−<i>q'</i>), from which, taking the absolute values</p>
 
 <div class="eq">
-<p>|<i>b</i>| |<i>q-q'</i>| = |<i>b(q-q')</i>| = <i>r' -r &le; r'</i> &lt; |<i>b</i>|</p>
+<p>|<i>b</i>| |<i>q</i> − <i>q'</i>| = |<i>b</i>(<i>q</i>  − <i>q'</i>)</i>| = <i>r'</i> − <i>r</i> &le; <i>r'</i> &lt; |<i>b</i>|</p>
 </div>
 
-<p>This is possible only if |<i>q -q'</i>| &lt; 1 e |<i>q -q'</i>| = 0, from which <i>q</i> = <i>q'</i> e <i>r</i> = <i>r'</i>.□</p>
+<p>This is possible only if |<i>q</i> − <i>q'</i>| &lt; 1 and |<i>q</i> − <i>q'</i>| = 0, from which <i>q</i> = <i>q'</i> e <i>r</i> = <i>r'</i>.□</p>
 </div>
 
-<p><i>Example 2.3.4</i>. 29 = 7 ⋅ 4 + 1, -29 = 4 ⋅ (-7 -1) + (-4 -1) = 4 ⋅ (-8) + 3, 29 = (-4) ⋅ (-7) +1, -29 =  -4 ⋅ (7+1) + (4-1).</p>
+<p><i>Example 2.3.4</i>. 29 = 7 ⋅ 4 + 1, -29 = 4 ⋅ (-7 -1) + (-4 -1) = 4 ⋅ (-8) + 3, 29 = (-4) ⋅ (−7) +1, -29 =  −4 ⋅ (7+1) + (4-1).</p>
 
-<p><b>Theorem 2.3.5</b> - Let <i>a, b ∈ ℤ</i>, both nonzero, there exists theit greatest common divisor <i>d</i> = gcd(<i>a,b</i>). Moreover it is possible to find two integers <i>s</i> and <i>t</i> in ℤ such that <i>d = sa + tb</i>.</p>
+<p><b>Theorem 2.3.5</b> - Let <i>a, b</i> ∈ ℤ, both nonzero, there exists theit greatest common divisor <i>d</i> = gcd(<i>a,b</i>). Moreover it is possible to find two integers <i>s</i> and <i>t</i> in ℤ such that <i>d</i> = <i>sa</i> + <i>tb</i>.</p>
 
 <p><b>Proof</b>. Let</p>
 
 <div class="eq">
-<p><i>S</i> = {<i>xa + by</i> | <i>x, y ∈ ℤ, xa + yb &gt; 0</i>} &subseteq; ℕ.</p>
+<p><i>S</i> = {<i>xa</i> + <i>by</i> | <i>x, y</i> ∈ ℤ, <i>xa</i> + <i>yb</i> &gt; 0} &subseteq; ℕ.</p>
 </div>
 
-<p>We observe that <i>S &ne; ∅</i> since <i>a</i> and <i>b</i> are both nonzero. Then there exists a minimum element of <i>S</i>; <i>d = x<sub>0</sub>a + y<sub>0</sub>b</i> = min <i>S</i>. We want to prove that such an element is a greatest commond divisor of <i>a</i> and <i>b</i>.</p>
+<p>We observe that <i>S</i> &ne; ∅ since <i>a</i> and <i>b</i> are both nonzero. Then there exists a minimum element of <i>S</i>; <i>d</i> = <i>x</i><sub>0</sub><i>a</i> + <i>y</i><sub>0</sub><i>b</i> = min <i>S</i>. We want to prove that such an element is a greatest commond divisor of <i>a</i> and <i>b</i>.</p>
 
-<p>If <i>c</i>|<i>a</i> e <i>c</i>|<i>b</i> theb <i>a = ck</i> and <i>b = ch</i>, thus <i>d = ax + by = ckx + chy = c(kx+hy)</i> i.e. <i>c|d</i> and property ii) in the definition of gcd is verified.</p>
+<p>If <i>c</i>|<i>a</i> and <i>c</i>|<i>b</i> then <i>a</i> = <i>ck</i> and <i>b</i> = <i>ch</i>, thus <i>d</i> = <i>ax</i> + <i>by</i> = <i>ckx</i> + <i>chy</i> = <i>c</i>(<i>kx</i> + <i>hy</i>) <i>i.e.</i> <i>c</i>|<i>d</i> and property ii) in the definition of gcd is verified.</p>
 
-<p>It remains to verify that <i>d</i>|<i>a</i> e <i>d</i>|<i>b</i>. Dividing <i>a</i> by <i>d</i> we get: <i>a = dq +r</i>, with <i>0 &le; r &lt; d</i>. We have that,</p>
+<p>It remains to verify that <i>d</i>|<i>a</i> e <i>d</i>|<i>b</i>. Dividing <i>a</i> by <i>d</i> we get: <i>a</i> = <i>dq</i> + <i>r</i>, with 0 &le; <i>r</i> &lt; <i>d</i>. We have that,</p>
 
 <div class="eq">
-<p>0 &le; <i>r = a - dq = a</i> - (<i>x<sub>0</sub>a + y<sub>0</sub>b</i>) <i>q</i> = (1 - x<sub>0</sub>)a + (-y<sub>0</sub>q)b &le; d</i></p>
+<p>0 &le; <i>r</i> = <i>a</i> − <i>dq</i> = <i>a</i> − (<i>x</i><sub>0</sub><i>a</i> + <i>y</i><sub>0</sub><i>b</i>) <i>q</i> = (1 − <i>x</i><sub>0</sub>)<i>a</i> + (−<i>y</i><sub>0</sub><i>q</i>)<i>b</i> &le; <i>d</i></p>
 </div>
 
-<p>an element of <i>S</i>. If we want not to contradict the minimality of <i>d</i>, it must be <i>r = 0</i> thus <i>d</i>|<i>a</i>. Analogously we can prove <i>d</i> | <i>b</i>. We have proved at the same time the existence of gcd(<i>a,b</i>) and its writing in the form <i>d = sa + tb</i>.□</p>
+<p>an element of <i>S</i>. If we want not to contradict the minimality of <i>d</i>, it must be <i>r</i> = 0 thus <i>d</i>|<i>a</i>. Analogously we can prove <i>d</i> | <i>b</i>. We have proved at the same time the existence of gcd(<i>a,b</i>) and its writing in the form <i>d</i> = <i>sa</i> + <i>tb</i>.□</p>
 
 <p>The writing of <i>d</i> = gcd(<i>a, b</i>) of two integers <i>a</i> and <i>b</i> in the form</p>
 
@@ -101,112 +101,104 @@
 
 <p><b>Theorem 2.3.6</b>. If <i>a</i> and <i>b</i> are relatively prime and <i>a</i> | <i>bc</i>, then <i>a</i>| <i>c</i>.</p>
 
-<p><b>Proof</b>. Assume that (<i>a,b</i>) = 1 and <i>a</i> | <i>bc</i>. Since (<i>a,b</i>) = 1, there are integers <i>m</i> and <i>n</i> such that 1 = <i>am + bn</i> by Lemma 2.16. Since <i>a</i> | <i>bc</i>, there exists an integer <i>q</i> such that <i>bc</i> = <i>aq</i>. Now,</p>
+<p><b>Proof</b>. Assume that (<i>a,b</i>) = 1 and <i>a</i> | <i>bc</i>. Since (<i>a,b</i>) = 1, there are integers <i>m</i> and <i>n</i> such that 1 = <i>am</i> + <i>bn</i> by Lemma 2.16. Since <i>a</i> | <i>bc</i>, there exists an integer <i>q</i> such that <i>bc</i> = <i>aq</i>. Now,</p>
 
 <p>1 = <i>am + bn</i></p>
 
 <p>multiplying by <i>c</i></p>
 
-<p><i>c = acm + bcn</i></p>
+<p><i>c</i> = <i>acm</i> + <i>bcn</i></p>
 
-<p>replacing <i>bc = aq</i> into the latter:</p>
+<p>replacing <i>bc</i> = <i>aq</i> into the latter:</p>
 
-<p><i>c = acm + aqn</i></p>
+<p><i>c</i> = <i>acm</i> + <i>aqn</i></p>
 
 <p>Thus</p>
 
-<p><i>c = a</i>(<i>cm + qn</i>) &emsp; ⇒ <i>a</i> | <i>c</i>.□</p>
-
-<div id="euclid_lemma"/>
-<p><b>Corollary 2.3.7</b> (<i>Euclid’s Lemma</i>) If <i>p</i> is a prime and <i>p</i> | <i>ab</i>, then either <i>p</i> | <i>a</i> or <i>p</i> | <i>b</i>.</p>
-
-<p><b>Proof</b>. Assume <i>p</i> is a prime and <i>p</i> |<i>ab</i>. If <i>p</i> | <i>a</i>, the conclusion of the theorem is satisfied. Suppose that <i>p</i> does not divide <i>a</i>, so 1 = (<i>p,a</i>) since the only positive divisors of <i>p</i>
-are 1 and <i>p</i> itself. Then Theorem 2.17 implies that <i>p</i> | <i>b</i>. Thus <i>p</i> | <i>b</i> if <i>p</i> does not divide <i>a</i>, and the theorem is true in any case.□</p>
-
-<p><b>Example</b> - For example if <i>n</i> = 6, <i>a</i> = 3, <i>b</i> = 2, <i>n</i>|<i>ab</i>, but <i>n</i> is not prime and doesn't divide neither <i>a</i> nor <i>b</i>.</p>
-</div>
+<p><i>c</i> = <i>a</i>(<i>cm</i> + <i>qn</i>) &emsp; ⇒ <i>a</i> | <i>c</i>.□</p>
 
 <div id="irr_prim">
 <p>We've already proved (<a href="Z_divisibility.html#prime_irr">Proposition 2.2.11</a>) that any prime element in ℤ, is an irreducible element; We are now able to prove that also the converse holds true in ℤ:</p>
 
-<p><b>Corollary 2.19</b> If <i>a, b</i> divide <i>c</i> and <i>a, b</i> are relatively prime, then <i>ab</i> divides <i>c</i>.</p>
+<p><b>Corollary 2.3.7</b> If <i>a, b</i> divide <i>c</i> and <i>a, b</i> are relatively prime, then <i>ab</i> divides <i>c</i>.</p>
 
-<p><b>Proof</b>. There are integers <i>m, n</i> such that am + bn = 1. We have c = au and c = bv for certain integers u, v. Then</p>
-
-<div class="eq">
-<p>c = c(am + bn) = c(am) + c(bn) = (bv)(am) + (au)(bn)<br>
-= (ab)(vm) + (ab)(un) = ab(vm + un). &emsp;□</p>
-</div>
-
-
-<p><b>Proposition 2.19</b>. Every irreducible element in ℤ, is prime.</p>
-
-<p><b>Proof</b>. We must prove that by being <i>p</i> irreducible element in ℤ, follows that if <i>p</i> divides the product <i>ab</i>, then <i>p</i> divides either <i>a</i> or <i>b</i>. Let <i>ab = ph</i> and suppose <i>p</i> does not divide <i>a</i>. Then, since <i>p</i> has as divisors <i>p</i> and 1, gcd(<i>a,p</i>) = 1. Thus there exist <i>s,t</i> such that <i>1 = sa + tp</i>. Multiplying by <i>b</i> both sides of the equation, we get <i>b = sab + tpb</i>; since <i>p</i>|<i>ab</i> and <i>p</i>|<i>p</i>, we get <i>p</i>|<i>b</i>.□</p>
-</div>
-
-<p><b>Lemma 2.3.8</b>: Let <i>a, b</i>, and <i>c</i> be positive integers with gcd(<i>a, c</i>) = 1. Then gcd(<i>ab, c</i>) = gcd(<i>b, c</i>).</p>
-
-<p><i>Proof</i>: Let <i>d<sub>1</sub></i> = gcd(<i>b, c</i>) and <i>d<sub>2</sub></i> = gcd(<i>ab, c</i>). Now <i>d<sub>1</sub></i> = gcd(<i>b, c</i>) ⇒[(d<sub>1</sub> divides <i>b</i>) and (d<sub>1</sub> divides c)]. Consequently, <i>d<sub>1</sub></i> divides <i>ab</i>, and so it follows that <i>d<sub>1</sub></i> divides <i>d<sub>2</sub></i>. <br> With gcd(<i>a, c</i>) = 1, there exist integers <i>x</i> and <i>y</i> such that <i>ax + cy = 1</i>. Therefore, <i>abx + bcy = b</i>. Now d<sub>2</sub> = gcd(<i>ab, c</i>) ⇒ [(d<sub>2</sub> divides <i>ab</i>) and (d<sub>2</sub> divides <i>c</i>)], so d<sub>2</sub> divides (<i>ab</i>)<i>x</i> + <i>b</i>(<i>c</i>)<i>y = b</i>. Then [(d<sub>2</sub> divides b) and (d<sub>2</sub> divides c)] ⇒ [d<sub>2</sub> divides d<sub>1</sub>]. Finally, since d<sub>1</sub> divides d<sub>2</sub>, and d<sub>2</sub> divides <i>d<sub>1</sub></i>, and <i>d<sub>1</sub>, d<sub>2</sub></i> are positive, we have <i>d<sub>1</sub> = d<sub>2</sub></i> — or gcd(<i>ab, c</i>) = gcd(<i>b, c</i>).□</p>
-
-<p><b>Proposition 2.3.9</b>. Let <i>a</i> and <i>b</i> be two positive integers. They are coprime if and only if there exist two integers <i>α, β</i> such that</p>
+<p><b>Proof</b>. There are integers <i>m, n</i> such that <i>am</i> + <i>bn</i> = 1. We have <i>c</i> = <i>au</i> and <i>c</i> = <i>bv</i> for certain integers <i>u, v</i>. Then</p>
 
 <div class="eq">
-<p><i>αa + βb = 1</i> &emsp; (2.16)</p>
+<p><i>c</i> = <i>c</i>(<i>am</i> + <i>bn</i>) = <i>c</i>(<i>am</i>) + <i>c</i>(<i>bn</i>) = (<i>bv</i>)(<i>am</i>) + (<i>au</i>)<i>(bn</i>)<br>
+= (<i>ab</i>)(<i>vm</i>) + (<i>ab</i>)(<i>un</i>) = <i>ab</i>(<i>vm</i> + <i>un</i>). &emsp;□</p>
+</div>
+
+<p>We've already proved that any prime element in ℤ, is also irreducilbe (see <a href="Z_divisibility.html#prime_irr">Proposition 2.2.11</a>). Now we are able to prove that the converse in ℤ holds as well.</p>
+
+<p><b>Proposition 2.3.8</b>. Every irreducible element in ℤ, is prime.</p>
+
+<p><b>Proof</b>. We must prove that by being <i>p</i> irreducible element in ℤ, follows that if <i>p</i> divides the product <i>ab</i>, then <i>p</i> divides either <i>a</i> or <i>b</i>. Let <i>ab</i> = <i>ph</i> and suppose <i>p</i> does not divide <i>a</i>. Then, since <i>p</i> has as divisors <i>p</i> and 1, gcd(<i>a,p</i>) = 1. Thus there exist <i>s,t</i> such that 1 = <i>sa</i> + <i>tp</i>. Multiplying by <i>b</i> both sides of the equation, we get <i>b</i> = <i>sab</i> + <i>tpb</i>; since <i>p</i>|<i>ab</i> and <i>p</i>|<i>p</i>, we get <i>p</i>|<i>b</i>.□</p>
+</div>
+
+<p><b>Lemma 2.3.9</b>: Let <i>a, b</i>, and <i>c</i> be positive integers with gcd(<i>a, c</i>) = 1. Then gcd(<i>ab, c</i>) = gcd(<i>b, c</i>).</p>
+
+<p><i>Proof</i>: Let <i>d</i><sub>1</sub> = gcd(<i>b, c</i>) and <i>d<sub>2</sub></i> = gcd(<i>ab, c</i>). Now <i>d</i><sub>1</sub> = gcd(<i>b, c</i>) ⇒[(<i>d</i><sub>1</sub> divides <i>b</i>) and (<i>d</i><sub>1</sub> divides <i>c</i>)]. Consequently, <i>d</i><sub>1</sub></i> divides <i>ab</i>, and so it follows that <i>d</i><sub>1</sub> divides <i>d<sub>2</sub></i>. <br> With gcd(<i>a, c</i>) = 1, there exist integers <i>x</i> and <i>y</i> such that <i>ax</i> + <i>cy</i> = 1</i>. Therefore, <i>abx</i> + <i>bcy</i> = <i>b</i>. Now <i>d</i><sub>2</sub> = gcd(<i>ab, c</i>) ⇒ [(<i>d</i><sub>2</sub> divides <i>ab</i>) and (<i>d</i><sub>2</sub> divides <i>c</i>)], so <i>d</i><sub>2</sub> divides (<i>ab</i>)<i>x</i> + <i>b</i>(<i>c</i>)<i>y</i> = <i>b</i>. Then [(<i>d</i><sub>2</sub> divides <i>b</i>) and (<i>d</i><sub>2</sub> divides <i>c</i>)] ⇒ [<i>d</i><sub>2</sub> divides <i>d</i><sub>1</sub>]. Finally, since <i>d</i><sub>1</sub> divides <i>d</i><sub>2</sub>, and <i>d</i><sub>2</sub> divides <i>d</i><sub>1</sub>, and <i>d</i><sub>1</sub>, <i>d</i><sub>2</sub> are positive, we have <i>d</i><sub>1</sub> = <i>d</i><sub>2</sub> — or gcd(<i>ab, c</i>) = gcd(<i>b, c</i>).□</p>
+
+<p><b>Proposition 2.3.10</b>. Let <i>a</i> and <i>b</i> be two positive integers. They are coprime if and only if there exist two integers <i>α, β</i> such that</p>
+
+<div class="eq">
+<p><i>αa</i> + <i>βb</i> = 1 &emsp; (2.16)</p>
 </div>
 
 <p><b>Proof</b>. If <i>a</i> and <i>b</i> are coprime, we have gcd(<i>a, b</i>) = 1 and the claim follows from Bézout’s identity. On the other hand, suppose equation (2.16) holds. Let <i>d</i> be a common divisor of <i>a</i> and <i>b</i>. Then clearly <i>d</i> divides <i>αa + βb</i> too, and so divides 1. Thus either <i>d</i> = 1 or <i>d</i> = −1, and consequently <i>a</i> and <i>b</i> are relatively prime.□</p>
 
-<p><b>Corollary 2.3.10</b>. Let <i>a</i> and <i>b</i> be two positive integers and let <i>d</i> = gcd(<i>a, b</i>). If <i>a = dn</i> e <i>b = dm</i>, we have gcd(<i>n, m</i>) = 1.</p>
+<p><b>Corollary 2.3.11</b>. Let <i>a</i> and <i>b</i> be two positive integers and let <i>d</i> = gcd(<i>a, b</i>). If <i>a</i> = <i>dn</i> and <i>b</i> = <i>dm</i>, we have gcd(<i>n, m</i>) = 1.</p>
 
 <p><b>Proof</b>. Equation (2.15) may now be written as</p>
 
 <div class="eq">
-<p><i>d = dnα + dmβ</i></p>
+<p><i>d</i> = <i>dnα</i> + <i>dmβ</i></p>
 </div>
 
 <p>By dividing by <i>d</i> both sides we get</p>
 
 <div class="eq">
-<p><i>αn + βm = 1</i></p>
+<p><i>αn</i> + <i>βm</i> = 1</p>
 </div>
 
 <p>and by applying Proposition 2.3.9 we conclude that <i>n</i> and <i>m</i> are relatively prime. □</p>
 
-<p><b>Corollary 2.3.11</b>. Let <i>a, b<sub>1</sub></i>, and <i>b<sub>2</sub></i> be integers such that <i>a</i> and <i>b<sub>1</sub></i> are coprime, and so are <i>a</i> and <i>b<sub>2</sub></i>. Then <i>a</i> is coprime with <i>b<sub>1</sub>b<sub>2</sub></i>.</p>
+<p><b>Corollary 2.3.12</b>. Let <i>a, b</i><sub>1</sub>, and <i>b</i><sub>2</sub> be integers such that <i>a</i> and <i>b</i><sub>1</sub> are coprime, and so are <i>a</i> and <i>b</i><sub>2</sub>. Then <i>a</i> is coprime with <i>b</i><sub>1</sub><i>b</i><sub>2</sub>.</p>
 
 <p><b>Proof</b>. We can write</p>
 
 <div class="eq">
-<p>1 = <i>αa + β<sub>1</sub> b<sub>1</sub></i>, &emsp; 1 = <i>α'a + β<sub>2</sub> b<sub>2</sub></i></p>
+<p>1 = <i>αa</i> + <i>β</i><sub>1</sub> <i>b</i><sub>1</sub>, &emsp; 1 = <i>α'a</i> + <i>β</i><sub>2</sub> <i>b</i><sub>2</sub></p>
 </div>
 
 <p>By multiplying them, we get</p>
 
 <div class="eq">
-<p>1 = (<i>αα'a + αβ<sub>2</sub> b<sub>2</sub> + α' β<sub>1</sub>b<sub>1</sub></i>)<i>a</i> + (<i>β<sub>1</sub> β<sub>2</sub></i>)(<i>b<sub>1</sub> b<sub>2</sub></i>)</p>
+<p>1 = (<i>αα'a</i> + <i>αβ</i><sub>2</sub> <i>b</i><sub>2</sub> + <i>α'β</i><sub>1</sub><i>b</i><sub>1</sub>)<i>a</i> + (<i>β</i><sub>1</sub> <i>β</i><sub>2</sub>)(<i>b</i><sub>1</sub> <i>b</i><sub>2</sub>)</p>
 </div>
 
 <p>proving the claim.□</p>
 
-<p><b>Lemma 2.3.12</b>: Let <i>a</i> and <i>b</i> be two integers, then gcd(<i>a,b</i>) = gcd(<i>a,a&pm;b</i>).</p>
+<p><b>Lemma 2.3.13</b>: Let <i>a</i> and <i>b</i> be two integers, then gcd(<i>a,b</i>) = gcd(<i>a, a</i> &pm; <i>b</i>).</p>
 
-<p><b>Proof</b>. We prove something stronger: every integer which is a common divisor of <i>a</i> and <i>b</i> is also a common divisor of <i>a</i> and <i>a &pm; b</i>; viceversa, every integer which is a common divisor of <i>a</i> and <i>a &pm; b</i> is also a common divisor of <i>a</i> and <i>b</i>. In math language we show that the two sets:</p>
+<p><b>Proof</b>. We prove something stronger: every integer which is a common divisor of <i>a</i> and <i>b</i> is also a common divisor of <i>a</i> and <i>a</i> &pm; <i>b</i>; viceversa, every integer which is a common divisor of <i>a</i> and <i>a</i> &pm; <i>b</i> is also a common divisor of <i>a</i> and <i>b</i>. In math language we show that the two sets:</p>
 
 <div class="eq">
-<p><i>A<sub>1</sub></i> = {<i>d</i> ∈ ℤ | <i>d</i>|<i>a</i> and <i>d</i>|<i>b</i>}</p>
+<p><i>A</i><sub>1</sub> = {<i>d</i> ∈ ℤ | <i>d</i>|<i>a</i> and <i>d</i>|<i>b</i>}</p>
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p><i>A<sub>2</sub></i> = {<i>d</i> ∈ ℤ | <i>d</i>|<i>a</i> and <i>d</i>|<i>a&pm;b</i>}</p>
+<p><i>A</i><sub>2</sub> = {<i>d</i> ∈ ℤ | <i>d</i>|<i>a</i> and <i>d</i>|<i>a</i> &pm; <i>b</i>}</p>
 </div>
 
-<p>are the same. To prove that the two sets are the same we will show that if we pick an element <i>s</i> in <i>A<sub>1</sub></i> then <i>s</i> is also an element of <i>A<sub>2</sub></i> and if we pick an element <i>t</i> ∈ <i>A<sub>2</sub></i> then <i>t</i> is also an element of <i>A<sub>1</sub></i>: in mathematical language we prove that <i>A<sub>1</sub> ⊆ A<sub>2</sub></i> and <i>A<sub>2</sub> ⊆ A<sub>1</sub></i>. From the equality condition of the two sets <i>A<sub>1</sub> = A<sub>2</sub></i> follows that if <i>d</i> = gcd(<i>a,b</i>) then it is also true that <i>d</i> = gcd(<i>a&pm;b</i>). We need to prove two statements:</p>
+<p>are the same. To prove that the two sets are the same we will show that if we pick an element <i>s</i> in <i>A</i><sub>1</sub> then <i>s</i> is also an element of <i>A</i><sub>2</sub> and if we pick an element <i>t</i> ∈ <i>A</i><sub>2</sub> then <i>t</i> is also an element of <i>A</i><sub>1</sub>: in mathematical language we prove that <i>A</i><sub>1</sub> ⊆ <i>A</i><sub>2</sub></i> and <i>A</i><sub>2</sub> ⊆ <i>A</i><sub>1</sub>. From the equality condition of the two sets <i>A</i><sub>1</sub> = <i>A</i><sub>2</sub> follows that if <i>d</i> = gcd(<i>a,b</i>) then it is also true that <i>d</i> = gcd(<i>a</i> &pm; <i>b</i>). We need to prove two statements:</p>
 
 <ol>
-	<li><p>If <i>x</i>|<i>a</i> and <i>x</i>|<i>b</i> then <i>x</i>|<i>a&pm;b</i>;</p></li>
-	<li><p>If <i>x</i>|<i>a</i> and <i>x</i>|<i>a &pm; b</i> then <i>x</i>|<i>b</i>.</p></li>
+	<li><p>If <i>x</i>|<i>a</i> and <i>x</i>|<i>b</i> then <i>x</i>|<i>a</i> &pm; <i>b</i>;</p></li>
+	<li><p>If <i>x</i>|<i>a</i> and <i>x</i>|<i>a</i> &pm; <i>b</i> then <i>x</i>|<i>b</i>.</p></li>
 </ol>
 
 <p>We know from <a href="Z_divisibility.html#lemma_225">Lemma 2.2.5</a> that this is true.□</p>

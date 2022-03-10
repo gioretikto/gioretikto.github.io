@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="GCD of polynomials"/>
  <title>GCD of polynomials</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,109 +16,121 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-  
+
 <div class="content">
 
 <h1>GCD of polynomials</h1>
 
-<p><b>Definition 4.7</b>. A polynomial with 1 as its leading coefficient is called a <b>monic</b> polynomial.</p>
+<p><b>Definition 5.3.1</b>. A polynomial with 1 as its leading coefficient is called a <b>monic</b> polynomial.</p>
 
-<p><b>Definition 4.8</b>. Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>]. We define the <i>greatest common divisor</i> between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) and indicate as GCD(<i>g</i>(<i>x</i>), <i>f</i>(<i>x</i>)) or simply by (<i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>)), the polynomial <i>d</i>(<i>x</i>) such that</p>
+<p><b>Definition 5.3.2</b>. Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>]. We define the <i>greatest common divisor</i> between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) and indicate as GCD(<i>g</i>(<i>x</i>), <i>f</i>(<i>x</i>)) or simply by (<i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>)), the polynomial <i>d</i>(<i>x</i>) such that</p>
 
 <ul>
 	<li><p><i>d</i>(<i>x</i>) | <i>f</i>(<i>x</i>), &emsp; <i>d</i>(<i>x</i>)| <i>g</i>(<i>x</i>)</p></li>
-	<li><p>if <i>d'</i>(<i>x</i>) | <i>f</i>(<i>x</i>), <i>d'</i>(<i>x</i>) | <i>g</i>(<i>x</i>), &emsp; then &emsp; d'</i>(<i>x</i>) | <i>d</i>(<i>x</i>)</p></li>
+	<li><p>if <i>d'</i>(<i>x</i>) | <i>f</i>(<i>x</i>), <i>d'</i>(<i>x</i>) | <i>g</i>(<i>x</i>), &emsp; then &emsp; <i>d'</i>(<i>x</i>) | <i>d</i>(<i>x</i>)</p></li>
 </ul>
 
 <p>The same euclidean algorithm used for finding the GCD of two integers can be used for polynomials and guarantes the existence of a GCD of two non-zero polynomials. One of the conditions that we place on a greatest common divisor of two polynomials is that it be monic. Without this condition, the greatest common divisor of two polynomials would not be unique.</p>
 
-<p><b>Proposition 4.9</b>. (<i>Euclid's Algorithm)</i> Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in 𝕂[<i>x</i>], we successively divide in the following way</p>
+<p><b>Proposition 5.3.3</b>. (<i>Euclid's Algorithm</i>) Let <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) two non-zero polynomials in <i>K</i>[<i>x</i>], we successively divide in the following way</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) <i>q</i><sub>0</sub></i>(<i>x</i>) + <i>r</i><sub>0</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>0</sub></i>(<i>x</i>) < ∂<i>g</i>(<i>x</i>)</p>
-<p><i>g</i>(<i>x</i>) = <i>r</i><sub>0</sub>(<i>x</i>) <i>q<sub>1</sub></i>(<i>x</i>) + <i>r<sub>2</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>1</sub></i>(<i>x</i>) < ∂<i>r</i><sub>0</sub>(<i>x</i>)</p>
+<p><i>g</i>(<i>x</i>) = <i>r</i><sub>0</sub>(<i>x</i>) <i>q<sub>1</sub></i>(<i>x</i>) + <i>r<sub>2</sub></i>(<i>x</i>) &emsp; ∂<i>r</i><sub>1</sub>(<i>x</i>) < ∂<i>r</i><sub>0</sub>(<i>x</i>)</p>
 <p>...</p>
-<p><i>r<sub>i</sub></i>(<i>x</i>) = <i>r</i><sub><i>i</i>+1</sub>(<i>x</i>) <i>q<sub>i+2</sub></i>(<i>x</i>) + <i>r</i><sub>i+2</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>i+2</sub>(<i>x</i>) < ∂<i>r<sub>i+1</sub></i>(<i>x</i>)</p>
+<p><i>r<sub>i</sub></i>(<i>x</i>) = <i>r</i><sub><i>i</i>+1</sub>(<i>x</i>) <i>q</i><sub><i>i</i>+2</sub>(<i>x</i>) + <i>r</i><sub><i>i</i>+2</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub><i>i</i> + 2</sub>(<i>x</i>) < ∂<i>r</i><sub><i>i</i> + 1</sub>(<i>x</i>)</p>
 <p>...</p>
-<p><i>r</i><sub>n-2</sub>(<i>x</i>) = <i>r</i><sub>n-1</sub>(<i>x</i>) <i>q</i><sub>n</sub>(<i>x</i>) + <i>r</i><sub>n</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub>n</sub>(<i>x</i>) < ∂<i>r<sub>n-1</sub></i>(<i>x</i>)</p>
-<p><i>r</i><sub>n-1</sub>(<i>x</i>) = <i>r</i><sub>n</sub>(<i>x</i>) <i>q</i><sub>n+1</sub>>(<i>x</i>) + 0.</p>
+<p><i>r</i><sub><i>n</i> − 2</sub>(<i>x</i>) = <i>r</i><sub><i>n</i> − 1</sub>(<i>x</i>) <i>q</i><sub>n</sub>(<i>x</i>) + <i>r</i><sub>n</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub><i>n</i></sub>(<i>x</i>) < ∂<i>r<sub><i>n</i> − 1</sub></i>(<i>x</i>)</p>
+<p><i>r</i><sub><i>n</i> − 1</sub>(<i>x</i>) = <i>r</i><sub>n</sub>(<i>x</i>) <i>q</i><sub><i>n</i> + 1</sub>(<i>x</i>) + 0.</p>
 </div>
 
 <p>Applying the same procedure as in ℤ, the last non-null remainder in the sequence of the divisions is the gcd.</p>
 
-<p><b>Example 4.10</b> Find the gcd of <i>x</i><sup>2</sup> + 7<i>x</i> + 6 and <i>x</i><sup>2</sup> − 5<i>x</i> − 6:</p>
+<p><b>Example 5.3.4</b> Find the gcd of <i>x</i><sup>2</sup> + 7<i>x</i> + 6 and <i>x</i><sup>2</sup> − 5<i>x</i> − 6:</p>
 
 <div class="eq">
-<p><i>x<sup>2</sup> + 7x</i> + 6 = 1 ⋅ (<i>x</i><sup>2</sup> − 5<i>x</i> − 6) + (12<i>x</i> + 12)</p>
-<p><i>x<sup>2</sup> − 5x</i> − 6 = (12<i>x</i> + 12) (1/12 <i>x</i> − 1/2) + 0</p>
+<p><i>x</i><sup>2</sup> + 7<i>x</i> + 6 = 1 ⋅ (<i>x</i><sup>2</sup> − 5<i>x</i> − 6) + (12<i>x</i> + 12)</p>
+<p><i>x</i><sup>2</sup> − 5<i>x</i> − 6 = (12<i>x</i> + 12) (1/12 <i>x</i> − 1/2) + 0</p>
 </div>
 
 <p>Since 12<i>x</i> + 12 is the last nonzero remainder, it is a GCD of the original polynomials, and the monic GCD is <i>x</i> + 1. </p>
 
-<p><b>Example 4.11</b> Compute the greatest common divisor of the polynomials <i>f</i>(<i>x</i>) = x<sup>3</sup> + 1, <i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 1 on ℚ. We have</p>
+<p><b>Example 5.3.5</b> Compute the greatest common divisor of the polynomials <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> + 1, <i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 1 on ℚ. We have</p>
 
 <div class="eq">
-<p><i>x</i><sup>3</sup> + 1 = <i>x</i>(<i>x</i><sup>2</sup> + 1) − <i>x</i> + 1</i>,</p>
-<p><i>x</i><sup>2</sup> + 1 = (−<i>x</i> − 1)(−<i>x</i> + 1) + 2</i>,</p>
+<p><i>x</i><sup>3</sup> + 1 = <i>x</i>(<i>x</i><sup>2</sup> + 1) − <i>x</i> + 1,</p>
+<p><i>x</i><sup>2</sup> + 1 = (−<i>x</i> − 1)(−<i>x</i> + 1) + 2,</p>
 <p>−<i>x</i> + 1 = − 1/2 · (<i>x</i> − 1) · 2,</p>
 </div>
 
 <p>and so GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 2.</p>
 
-<p><b>Definition 4.11</b>. Two elements <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] such that <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) are said <i>associates</i> if there exists an inverible element <i>a</i> of 𝕂[<i>x</i>] such that</p>
+<p><b>Definition 5.3.6</b>. Two elements <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] such that <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) are said <i>associates</i> if there exists an inverible element <i>a</i> of <i>K</i>[<i>x</i>] such that</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) ⋅ <i>a</i></p>
 </div>
 
-<p>The relation of being <i>associates</i> is an equivalence relation and in each equivalence class there is exactly one monic polynomial, which we regard as the canonical representative of the class. For example 4<i>x</i><sup>2</sup> + 8<i>x</i><sup>2</sup> + 4 is associated to the monic polynomial <i>x</i><sup>2</sup> + 2<i>x</i> + 1</i>. Any polynomial is an associate of exactly one monic polynomial.</p>
+<p>The relation of being <i>associates</i> is an equivalence relation and in each equivalence class there is exactly one monic polynomial, which we regard as the canonical representative of the class. For example 4<i>x</i><sup>2</sup> + 8<i>x</i><sup>2</sup> + 4 is associated to the monic polynomial <i>x</i><sup>2</sup> + 2<i>x</i> + 1. Any polynomial is an associate of exactly one monic polynomial.</p>
 
 <p>Let <i>d'</i>(<i>x</i>) and <i>d</i>(<i>x</i>) two elements verifying both the condition of being gcd between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>). It is easy to see that they are associates. Then we can say that <i>the</i> greatest common divisor between <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) is the unique monic polynomial.</p>
 
-<p>The Bezout's relation holds true for polynomials as well. If <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) are in 𝕂[<i>x</i>], let <i>d</i>(<i>x</i>) their gcd then there exist <i>h</i>(<i>x</i>) and <i>k</i>(<i>x</i>) &in; 𝕂[<i>x</i>] such that</p>
+<p>The Bezout's relation holds true for polynomials as well. If <i>g</i>(<i>x</i>) and <i>f</i>(<i>x</i>) are in <i>K</i>[<i>x</i>], let <i>d</i>(<i>x</i>) their gcd then there exist <i>h</i>(<i>x</i>) and <i>k</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] such that</p>
 
 <div class="eq">
 <p><i>d</i>(<i>x</i>) = <i>h</i>(<i>x</i>) <i>f</i>(<i>x</i>) + <i>k</i>(<i>x</i>) <i>g</i>(<i>x</i>)</p>
 </div>
 
-<p><b>Definition 4.12</b>. Two polynomials are said <i>coprime</i> if</p>
+<p><b>Definition 5.3.7</b>. Two polynomials are said <i>coprime</i> if</p>
 
 <div class="eq">
 <p>GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 1</p>
 </div>
 
 <div id="irreducibility">
-<p><b>Definition 4.13</b>. A nonconstant and non-invertible polynomial <i>f</i>(<i>x</i>) &in; K[<i>x</i>] is said to be <i>irreducible</i> on K, if</p>
+<p><b>Definition 5.3.8</b>. A nonconstant and non-invertible polynomial <i>f</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] is said to be <i>irreducible</i> over <i>K</i>, if</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), &emsp; <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>] ⇒ <i>g</i>(<i>x</i>) or <i>h</i>(<i>x</i>) invertible.</p>
+<p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), &emsp; <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in;<i>K</i>[<i>x</i>] ⇒ <i>g</i>(<i>x</i>) or <i>h</i>(<i>x</i>) invertible.</p>
 </div>
 
-<p>The invertible elements in <i>F</i>[<i>x</i>], over the field <i>F</i>, are just the nonzero constant polys. So 2<i>x</i> + 4 = (2)(<i>x</i> + 2) with the first factor invertible in ℝ[<i>x</i>], is not a factorization for getting 2<i>x</i> + 4 reducible. In fact 2<i>x</i> + 4 is irreducible, as are all linear polynomials over a field.</p>
+<p>this means that for *every* possible factorization in terms of two polynomials <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), one of those must be invertible; it's not enough to find one factorization <i>i.e.</i> <i>x</i><sup>2</sup> + 1 = 1/2 (2<i>x</i><sup>2</sup> + 2), and 1/2 is a unit in ℚ, but <i>x</i><sup>2</sup> + 1 is irreducible over ℚ.</p>
+
+<p>An equivalent definition of irreducible polynomial is the following.</p>
+
+<p>A polynomial <i>f</i>(<i>x</i>) of degree at least one in <i>K</i>[<i>x</i>] is called <i>irreducible</i> over <i>K</i> if it cannot be written as a product of two noncostant polynomials in <i>K</i>[<i>x</i>] of lower degree.</p>
+
+<p>For example, in ℚ[<i>x</i>], <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 1 is irreducible, since there is no factorization of <i>f</i>(<i>x</i>) into polynomials both of degree less that 2 (of course, x<sup>2</sup> + 1 = 1/2 (2x<sup>2</sup> + 2), but 1/2 is unit in Q. 
+
+<p>In the polynomial ring <i>K</i>[<i>x</i>] where <i>K</i> is a field, the invertible elements consist of all polynomials of degree zero, <i>i.e.</i> the factors are the elements of the field itself.</p>
+
+<p><b>Example 5.3.8</b>. Consider the polynomial <i>x</i><sup>2</sup> − 2. Note that x<sup>2</sup> − 2 has no zeroes over ℚ. This is the same as saying t hat √2 is irrational, so the polynomial cannot decomposend in terms of a linear facto (see <a href="ruffini.html">Ruffini's theorem</a>. If <i>x</i><sup>2</sup> − 2 is reducible then we may write x<sup>2</sup> − 2 = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), where the degree of g(<i>x</i>) and <i>h</i>(<i>x</i>) is less than two. As the degree ofthe LHS is two, the only possibility is that both <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) have degree one. In this case x<sup>2</sup> − 2 has a zero in ℚ, a contradiction. Thus <i>x</i><sup>2</sup> − 2 is irreducible over ℚ.On the other hand, √2 ∈ R so that x<sup>2</sup> − 2 is reducible over ℝ, <i>x</i><sup>2</sup> − 2 = (<i>x</i> − √2)(<i>x</i> + √2).</p>
+
+<p>So 2<i>x</i> + 4 = (2)(<i>x</i> + 2) with the first factor invertible in ℝ[<i>x</i>], is not a factorization for getting 2<i>x</i> + 4 reducible. In fact 2<i>x</i> + 4 is irreducible, as are all linear polynomials over a field.</p>
 
 <p>In ℤ[<i>x</i>], where the only invertible things are 1 and −1, both 2 and <i>x</i> + 2 are non-invertible, so here, 2<i>x</i> + 4 <b>is reduciblle</b> since both factors in (2)(<i>x</i> + 2) are non-invertible in ℤ[<i>x</i>].</p>
 
-<p>In the definition above K could be either a field or a simple ring but if <i>F</i> is a <b>field</b> then we could be the following definition:</p>
+<p>In the definition above <i>K</i> could be either a field or a simple ring but if <i>F</i> is a <b>field</b> then we could be the following definition:</p>
 
 <blockquote>A nonconstant polynomial is said to be <b>irreducible over the field</b> <i>F</i> if it cannot be factored in <i>F</i>[<i>x</i>] into a product of polynomials of lower degree. It is said to be <b>reducible</b> over <i>F</i> if such a factorization exists.</blockquote>
 
-<p>As another example <i>x</i><sup>2</sup> + 5 is irreducible in ℤ<sub>11</sub> because <i>x</i><sup>2</sup> + 5 = (2)(6<i>x</i><sup>2</sup> + 8) and 2 is the unit in 𝕂[<i>x</i>].</p>
+<p>As another example <i>x</i><sup>2</sup> + 5 is irreducible in ℤ<sub>11</sub> because <i>x</i><sup>2</sup> + 5 = (2)(6<i>x</i><sup>2</sup> + 8) and 2 is the unit in <i>K</i>[<i>x</i>].</p>
 
 </div>
 
-<p><b>Definition 4.14</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; 𝕂[<i>x</i>]), then it divides one of the two factors.</p>
+<p><b>Definition 5.3.9</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>]), then it divides one of the two factors.</p>
 
 <p>Irreducible polynomials play a role in the factorization of polynomials corresponding to the role that prime integers play in the factorization of integers.</p>
 
-<p><b>Proposition 4.15</b>. A polynomial in 𝕂[<i>x</i>] is irreducible iff is <i>prime</i>.</p>
+<p><b>Proposition 5.3.10</b>. A polynomial in <i>K</i>[<i>x</i>] is irreducible iff is <i>prime</i>.</p>
 
-<p><b>Theorem 4.16</b> (<i>Unique Factorization Theorem</i>) Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in 𝕂[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
+<p><b>Theorem 5.3.11</b> (<i>Unique Factorization Theorem</i>) Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in <i>K</i>[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>p</i><sub>1</sub>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>) = <i>q</i><sub>1</sub>(<i>x</i>) <i>q</i><sub>2</sub>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>) </p>
 </div>
 
-<p><i>p<sub>i</sub></i>(<i>x</i>) and <i>q<sub>j</sub></i>(<i>x</i>) are irreducible in 𝕂[<i>x</i>], then <i>s = t</i> and there exists a biunique correspondence between {<i>p<sub>1</sub></i>(<i>x</i>) <i>p</i><sub>2</sub>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)} and {<i>q<sub>1</sub></i>(<i>x</i>) <i>q</i><sub>2</sub>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>)} such that if <i>q<sub>j</sub></i>(<i>x</i>) corresponds to <i>p<sub>i</sub></i>(<i>x</i>), then <i>p<sub>i</sub></i>(<i>x</i>) is associated to <i>q<sub>j</sub></i>(<i>x</i>).&emsp;□</p>
+<p><i>p<sub>i</sub></i>(<i>x</i>) and <i>q<sub>j</sub></i>(<i>x</i>) are irreducible in <i>K</i>[<i>x</i>], then <i>s = t</i> and there exists a biunique correspondence between {<i>p<sub>1</sub></i>(<i>x</i>) <i>p</i><sub>2</sub>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>)} and {<i>q<sub>1</sub></i>(<i>x</i>) <i>q</i><sub>2</sub>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>)} such that if <i>q<sub>j</sub></i>(<i>x</i>) corresponds to <i>p<sub>i</sub></i>(<i>x</i>), then <i>p<sub>i</sub></i>(<i>x</i>) is associated to <i>q<sub>j</sub></i>(<i>x</i>).&emsp;□</p>
 
 <section aria-label="End">
 <a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>

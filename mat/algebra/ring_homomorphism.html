@@ -26,8 +26,8 @@
 <p><b>4.2.0 Definition</b>. Give two rings (<i>R</i>, +, ·) and (<i>R'</i>, +, ·) we define homomorphism between <i>R</i> and <i>R'</i> a mapping between <i>&phi;</i> between <i>R</i> and <i>R'</i> such that</p>
 
 <div class="eq">
-<p><i>&phi;</i>(<i>r</i><sub>1</sub> + <i>r</i><sub>2</sub>) = <i>&phi;</i>(<i>r</i><sub>1</sub></i>) + <i>&phi;</i>(<i>r</i><sub>2</sub>)</p>
-<p><i>&phi;</i>(<i>r</i><sub>1</sub> r<sub>2</sub></i>) = <i>&phi;</i>(<i>r</i><sub>1</sub></i>) <i>&phi;</i>(<i>r</i><sub>2</sub>)</p>
+<p><i>&phi;</i>(<i>r</i><sub>1</sub> + <i>r</i><sub>2</sub>) = <i>&phi;</i>(<i>r</i><sub>1</sub>) + <i>&phi;</i>(<i>r</i><sub>2</sub>)</p>
+<p><i>&phi;</i>(<i>r</i><sub>1</sub> <i>r</i><sub>2</sub>) = <i>&phi;</i>(<i>r</i><sub>1</sub>) <i>&phi;</i>(<i>r</i><sub>2</sub>)</p>
 <p>&forall;<i>r</i><sub>1</sub>,<i>r</i><sub>2</sub> &in; <i>R</i></p>
 </div>
 
@@ -71,7 +71,7 @@
 
 <p><b>4.2.1 Proposition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, then the image of the zero of <i>R</i> is the zero of <i>R'</i>.</p>
 
-<p><b>Proof.</b> Indeed <i>&phi;</i>(0<sub>R</sub>) = <i>&phi;</i>(0<sub>R</sub> + 0<sub>R</sub>) = <i>&phi;</i>(0<sub>R</sub>) + <i>&phi;</i>(0<sub>R</sub>) and it follows <i>&phi;</i>(0<sub>R</sub>) = 0<sub>R'</sub>.□</p>
+<p><b>Proof.</b> Indeed <i>&phi;</i>(0<sub><i>R</i></sub>) = <i>&phi;</i>(0<sub><i>R</i></sub> + 0<sub>R</i></sub>) = <i>&phi;</i>(0<sub><i>R</i></sub>) + <i>&phi;</i>(0<sub><i>R</i></sub>) and it follows <i>&phi;</i>(0<sub><i>R</i></sub>) = 0<sub><i>R'</i></sub>.□</p>
 
 <p><b>4.2.2 Corollary</b>. <i>&phi;</i>(−<i>a</i>) = −<i>&phi;</i>(<i>a</i>), &forall; <i>a</i> &in; <i>R</i>.</p>
 
@@ -118,7 +118,7 @@
 </math>
 </div>
 
-<p>and <i>R'</i> is the ring of 2x2 matrix with elements in ℝ. Both rings have a unit, nonetheless considering the application</p>
+<p>and <i>R'</i> is the ring of 2 x 2 matrix with elements in ℝ. Both rings have a unit, nonetheless considering the application</p>
 
 <div class="eq">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -234,13 +234,13 @@
 
 <p><b>4.2.3 Proposition</b>. Let <i>&phi;</i> a non-null homomorphism between two rings <i>R</i> and <i>R'</i> with unity. If <i>R'</i> is an integral domain or <i>&phi;</i> is an epimorphism, then the image of the unity of <i>R</i> is the uniti of <i>R'</i>.</p>
 
-<p><b>Proof.</b> If <i>&phi;</i> is surjective every <i>r' &in; R'</i> is equal to <i>&phi;</i>(<i>r</i>) for some <i>r</i> &in; <i>R</i>, thus</p>
+<p><b>Proof.</b> If <i>&phi;</i> is surjective every <i>r'</i> &in; <i>R'</i> is equal to <i>&phi;</i>(<i>r</i>) for some <i>r</i> &in; <i>R</i>, thus</p>
 
 <div class="eq">
 <p><i>r' = &phi;</i>(<i>r</i>) = <i>&phi;</i>(<i>r</i> ⋅ 1<sub><i>R</i></sub>) = <i>&phi;</i>(<i>r</i>) <i>&phi;</i>(1<sub><i>R</i></sub>) = <i>r</i>' <i>&phi;</i>(1<sub><i>R</i></sub>)</p>
 </div>
 
-<p>hence <i>&phi;</i>(<i>1<sub>R</sub></i>) represents the right unity for <i>R'</i>. Analogously we can notice it is also a left unity. If <i>R'</i> is an integral domain <i>&phi;</i>(<i>r</i>) = <i>&phi;</i>(<i>r</i>) <i>&phi;</i>(<i>1<sub>R</sub></i>) implies that (with <i>&phi;</i>(<i>r</i>) &ne; 0) by the cancellation property <i>&phi;</i>(1<sub><i>R</i></sub>) = 1<sub><i>R</i>'</sub></i>.□</p>
+<p>hence <i>&phi;</i>(<i>1<sub>R</sub></i>) represents the right unity for <i>R'</i>. Analogously we can notice it is also a left unity. If <i>R'</i> is an integral domain <i>&phi;</i>(<i>r</i>) = <i>&phi;</i>(<i>r</i>) <i>&phi;</i>(1<sub><i>R</i></sub>) implies that (with <i>&phi;</i>(<i>r</i>) &ne; 0) by the cancellation property <i>&phi;</i>(1<sub><i>R</i></sub>) = 1<sub><i>R</i>'</sub></i>.□</p>
 
 <p><b>4.2.4 Definition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, the <b>kernel</b> of <i>&phi;</i> is the subset of the elements of <i>R</i> which are mapped onto the zero element of <i>R'</i></p>
 
@@ -270,11 +270,12 @@
 
 <p><b>4.2.7 Proposition</b>. The homomorphism <i>&phi;</i> is a <i>monomorphism</i> (injective) if and only if Ker <i>&phi;</i> = {0<sub>R</sub>}</p>
 
-<p><b>Proof</b>. Let Ker <i>&phi;</i> = {0<sub>R</sub>} and <i>a,b &in; R</i>, <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>). Now <i>&phi;</i>(<i>a - b</i>) = <i>&phi;</i>(<i>a</i>) - <i>&phi;</i>(<i>b</i>) = 0. So <i>a</i> − <i>b</i> &in; Ker <i>&phi;</i> = {0<sub>R</sub>}, <i>i.e. a</i> − <i>b</i> = 0 or <i>a</i> = <i>b</i>. Hence <i>&phi;</i> is injective. So <i>&phi;</i> is a monomorphism, from <i>R</i>, onto <i>&phi;</i>(<i>R</i>). &emsp; □</p>
+<p><b>Proof</b>. Let Ker <i>&phi;</i> = {0<sub><i>R</i></sub>} and <i>a,b</i> &in; <i>R</i>, <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>). Now <i>&phi;</i>(<i>a</i> − <i>b</i>) = <i>&phi;</i>(<i>a</i>) − <i>&phi;</i>(<i>b</i>) = 0. So <i>a</i> − <i>b</i> &in; Ker <i>&phi;</i> = {0<sub><i>R</i></sub>}, <i>i.e. a</i> − <i>b</i> = 0 or <i>a</i> = <i>b</i>. Hence <i>&phi;</i> is injective. So <i>&phi;</i> is a monomorphism, from <i>R</i>, onto <i>&phi;</i>(<i>R</i>). &emsp; □</p>
 
+<div id="ideal">
 <p>The property of the kernel of a ring homomorphism −that is closed under multiplication by arbitrary elements of the ring−is abstracted in the conept of an <b>ideal</b>.</p>
 
-<p><b>4.2.6 Definition</b>. For an arbitrary ring (<i>R</i>, + , ⋅ ). A <i>left ideal, I</i>, of <i>R</i> is an additive subgroup such that &forall;<i>a</i> &in; <i>I</i> and <i>r</i> &in; <i>R</i>, <i>ar</i> &in; <i>I</i>. <br>Similarly a <i>right ideal</i> is an additive subgroup <i>I</i> of <i>R</i> such that &forall;<i>a</i> &in; <i>I</i> and <i>r &in; R</i>, <i>ra</i> &in; <i>I</i>. <br> If <i>I</i> is both a left and right ideal of <i>R</i> is is called a <i>two-sided ideal</i>, or simply an ideal of <i>R</i> and it is indicated as</p>
+<p><b>4.2.6 Definition</b>. For an arbitrary ring (<i>R</i>, + , ⋅ ). A <i>left ideal, I</i>, of <i>R</i> is an additive subgroup such that &forall;<i>a</i> &in; <i>I</i> and <i>r</i> &in; <i>R</i>, <i>ar</i> &in; <i>I</i>. <br>Similarly a <i>right ideal</i> is an additive subgroup <i>I</i> of <i>R</i> such that &forall;<i>a</i> &in; <i>I</i> and <i>r</i> &in; <i>R</i>, <i>ra</i> &in; <i>I</i>. <br> If <i>I</i> is both a left and right ideal of <i>R</i> is is called a <i>two-sided ideal</i>, or simply an ideal of <i>R</i> and it is indicated as</p>
 
 <div class="eq">
 <p><i>I</i> ⊲̲ <i>R</i></p>
@@ -293,6 +294,8 @@
 <p><b>4.2.7 Lemma</b>. If <i>&phi;</i>: <i>R</i> ⟶ <i>R</i>' is a homomorphim, then Ker <i>&phi;</i> is an ideal of <i>R</i>.</p>
 
 <p>A left or right ideal is a subring of <i>R</i> but the viceversa is not true consider for example <i>S<sub>a</sub></i> = {<i>x</i> &in; <i>R</i> | <i>ax</i> = <i>xa</i>} is a subring but not an ideal.</p>
+
+</div>
 
 <section aria-label="End">
 <a href="exercises_rings.html">&#171;Exercises on rings</a>

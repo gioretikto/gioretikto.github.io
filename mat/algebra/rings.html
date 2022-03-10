@@ -27,7 +27,7 @@
 
 <div class="eq">
 <p><i>R</i> x <i>R</i> ⟶ <i>R</i> &emsp;&emsp; <i>R</i> x <i>R</i> ⟶ <i>R</i></p>
-<p>(<i>a, b</i>) ⟼ <i>a + b</i> &emsp;&emsp; (<i>a, b</i>) ⟼ <i>a ⋅ b</i></p>
+<p>(<i>a, b</i>) ⟼ <i>a</i> + <i>b</i> &emsp;&emsp; (<i>a, b</i>) ⟼ <i>a</i> ⋅ <i>b</i></p>
 </div>
 
 <p>satisfying the following three sets of axioms, called the ring axioms</p>
@@ -38,7 +38,7 @@
 <ol type="a">
 	<li><p>+ is <i>associative</i>: (<i>a</i> + <i>b</i>) + <i>c</i> = <i>a</i> + (<i>b</i> + <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
 
-	<li><p>There is an element 0 in <i>R</i> such that <i>a</i> + 0 = <i>a</i> &forall;<i>a</i> &in; R</i> (that is, 0 is the additive identity).</p></li>
+	<li><p>There is an element 0 in <i>R</i> such that <i>a</i> + 0 = <i>a</i> &forall;<i>a</i> &in; <i>R</i> (that is, 0 is the additive identity).</p></li>
 
 	<li><p>&forall;<i>a</i> &in; <i>R</i> there exists −<i>a</i> &in; <i>R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
 
@@ -85,7 +85,7 @@
 		<p><i>A</i> + <i>B</i> := (<i>A</i> ∪ <i>B</i>) ∩ 𝐶(<i>A</i> ∩ <i>B</i>), &emsp; <i>A</i> · <i>B</i> := <i>A</i> ∩ <i>B</i></p>
 		</div>
 		
-		<p>it is easy to notice that it is an abelian group with respect to the first operation (the nueter element is ∅ and the inverse of an <i>A</i> &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributives properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent</i> i.e. <i>A</i><sup>2</sup> = <i>A</i> · <i>A</i> = <i>A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
+		<p>it is easy to notice that it is an abelian group with respect to the first operation (the nueter element is ∅ and the inverse of an <i>A</i> &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributives properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent i.e.</i> <i>A</i><sup>2</sup> = <i>A</i> · <i>A</i> = <i>A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
 		
 		<li><p>The set of continuos functions, in one variable <i>x</i> &in; <i>X</i></p>
 		
@@ -141,13 +141,13 @@
 <p><b>6.1.2 Definition.</b> Let [<i>R</i>, +, ⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
 
 <div class="eq">
-<p><i>&phi;</i>(<i>a</i> + <i>b</i>) = <i>&phi;</i>(<i>a</i>) +' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
+<p><i>&phi;</i>(<i>a</i> + <i>b</i>) = <i>&phi;</i>(<i>a</i>) +' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; <i>R</i></p>
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p><i>&phi;</i>(<i>a</i>⋅<i>b</i>) = <i>&phi;</i>(<i>a</i>) ⋅' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; R</i></p>
+<p><i>&phi;</i>(<i>a</i>⋅<i>b</i>) = <i>&phi;</i>(<i>a</i>) ⋅' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; <i>R</i></p>
 </div>
 
 <p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R</i> ≅ <i>R'</i>. The relation of being isomorphic is an equivalence relation.</p>
@@ -169,7 +169,7 @@
 <ul>
 	<li><p>A <i>commutative ring</i> satisfies the commutative property for multiplication.</p></li>
 
-	<li><p>A <i>commutative ring with identity</i> is a ring with a nonzero element, 1 &in; <i>R</i>, that is an identity under multiplication i.e. if 1 ⋅ <i>a</i> = <i>a</i> &forall;<i>a</i> &in; <i>R</i>.</p>
+	<li><p>A <i>commutative ring with identity</i> is a ring with a nonzero element, 1 &in; <i>R</i>, that is an identity under multiplication <i>i.e.</i> if 1 ⋅ <i>a</i> = <i>a</i> &forall;<i>a</i> &in; <i>R</i>.</p>
 	
 	<p>Let <i>R</i> be a ring with identity. The element <i>a</i> ∈ <i>R</i> is a <b>unit</b> or <b>invertible elements</b>, if it has a multiplicative inverse in <i>R</i>, that is if there exists <i>b</i> ∈ <i>R</i> such that <i>ab</i> = <i>ba</i> = 1, that is <i>a</i> divides 1. The element <i>b</i> is called the <b>inverse</b> of <i>a</i>, and is written <i>a</i><sup>−1</sup>. It is unique; for if <i>b</i> and <i>c</i> are both inverses of <i>a</i>, then</p>
 
@@ -224,7 +224,7 @@
 <ol type="a">
 	<li><p>The identity is a unit; it is equal to its inverse.</p></li>
 	<li><p>If <i>a</i> is a unit, then so is <i>a</i><sup>−1</sup>; its inverse is <i>a</i>.</p></li>
-	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup></i>.</p></li>
+	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup>.</p></li>
 </ol>
 
 <p><b>Proof</b>.</p>
@@ -240,9 +240,9 @@
 
 <div id="associates">
 
-<p><b>6.1.4 Definition.</b> Two elements <i>a, b</i> of the integral domain <i>R</i> are said to be <b>associates</b> if there is a unit <i>u</i> ∈ <i>R</i> such that <i>b = au</i>. This is not a different proposition from the one we already gave when studying the integers: Two elemens <i>a</i> and <i>b</i> of ℤ such that <i>a</i>|<i>b</i> e <i>b</i>|<i>a</i> are said associates</p>
+<p><b>6.1.4 Definition.</b> Two elements <i>a, b</i> of the integral domain <i>R</i> are said to be <b>associates</b> if there is a unit <i>u</i> ∈ <i>R</i> such that <i>b</i> = <i>au</i>. This is not a different proposition from the one we already gave when studying the integers: Two elemens <i>a</i> and <i>b</i> of ℤ such that <i>a</i>|<i>b</i> and <i>b</i>|<i>a</i> are said associates</p>
 
-<p>If <i>a</i> and b are associates, <i>a</i> = <i>cb</i> and <i>b</i> = <i>da</i>, hence <i>a</i> = <i>cda</i>. The cancellation law gives 1 = <i>cd</i>, so both <i>c</i> and <i>d</i> are units. </p>
+<p>If <i>a</i> and <i>b</i> are associates, <i>a</i> = <i>cb</i> and <i>b</i> = <i>da</i>, hence <i>a</i> = <i>cda</i>. The cancellation law gives 1 = <i>cd</i>, so both <i>c</i> and <i>d</i> are units. </p>
 
 <p>Note that, by the above Proposition, it follows that being associates is an equivalence relation: it is</p>
 
@@ -255,6 +255,7 @@
 <p><i>R</i> is partitioned into equivalence classes, called <b>associate classes</b>. For example, in ℤ, the associate classes are the sets {<i>n</i>, −<i>n</i>} for all non-negative integers <i>n</i>.</p>
 </div>
 
+<div id="field_integraldomain">
 <p><b>6.1.5 Proposition.</b> Every field <i>F</i> is an integral domain</p>
 
 <p><b>Proof.</b> Let <i>F</i> be a field. Supposte that <i>a, b</i> &in; <i>F</i>, where <i>a</i> &ne; 0 and <i>a</i> ⋅ <i>b</i> = 0. Since <i>a</i> &ne; 0, there exists a multiplicative inverse <i>a</i><sup>−1</sup> to <i>a</i>. By the associativity of the multiplication, we have</p>
@@ -266,6 +267,7 @@
 <p>and hence <i>b</i> = 0. Thus, we have an integral domain.□</p>
 
 <p>The converse of proposition 6.1.5 is false in general (ℤ is an integral domain that is not a field), but true in the finite case.</p>
+</div>
 
 <p><b>6.1.6 Proposition.</b> Every finte Integral domain <i>R</i> is a field.</p>
 
