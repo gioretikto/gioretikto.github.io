@@ -129,7 +129,7 @@
 	<p>among the elements that can be written as linear combination of elements in ℤ, there is the gcd(6,15). Thus</p>
 	
 	<div class="eq">
-	<p>(6,15) = (3) = {3<i>z</i> | <i>z</i> &in; ℤ }</p>
+	<p>(6,15) = (3) = {3<i>z</i> | <i>z</i> &in; ℤ}</p>
 	</div>
 	
 	<p>6 in (3) and 15 in (3) so (6,15) is a subset of (3); 3 in (6,15) so (3) is a subset of (6,15)... so they're equal.</p>
@@ -139,7 +139,7 @@
 </ol>
 
 <div id="prime_ideal">
-<p><b>1.6.6 Definition</b>. An ideal <i>I</i> &ne; <i>R</i> of <i>R</i> is said <i>prime</i> if for every <i>a,b</i> &in; R</i></p>
+<p><b>1.6.6 Definition</b>. An ideal <i>I</i> &ne; <i>R</i> of <i>R</i> is said <i>prime</i> if for every <i>a,b</i> &in; <i>R</i></p>
 
 	<div class="eq">
 	<p><i>ab</i> &in; <i>I</i> &emsp; ⇒ &emsp; either <i>a</i> &in; <i>I</i> or <i>b</i> &in; <i>I</i></p>
@@ -187,29 +187,34 @@
 	<li><p>In ℤ the ideal {0} is prime, as the integers are an integral domain, but not maximal as it is contained in any other ideal.</p></li>
 </ol>
 
-<p><b>1.6.9 Lemma</b>. A commutative ring with unit is a field if and only if contains only trivial ideals</p></p>
+<p><b>1.6.9 Lemma</b>. A commutative ring <i>R</i>, with unit is a field if and only if it contains only the trivial ideals {0} and <i>R</i></p>
 
-<p><b>Proof.</b> Let <i>R</i> a field and let <i>I</i> and ideal of <i>R</i> different from {0}. Then there exists in <i>I</i> an element <i>a</i> &ne; 0. Then <i>I</i> contains as well <i>aa</i><sup>−1</sup> = 1, which implies that <i>I</i> contains every <i>r</i> = 1<i>r</i>. Thus <i>I</i> = <i>R</i>. Conversely, let <i>R</i> a field, to show that <i>R</i> is a field, it's sufficient to prove that every non null element is invertible. Let <i>a</i> &ne; 0 an element of <i>R</i>. Consider the set <i>I</i> = {<i>ar</i> | <i>r</i> &in; <i>R</i>}. This is an ideal different fro {0}, because <i>I</i> contains <i>a</i> (<i>R</i> has the unit), hence <i>I</i> = <i>R</i>, and we would have 1 = <i>ar̅</i> for some <i>r̅</i> &in; <i>R</i>. Thus <i>a</i> is invertible.□</p> 
+<p><b>Proof.</b> Let <i>R</i> a field and let <i>I</i> and ideal of <i>R</i> different from {0}. Then there exists in <i>I</i> an element <i>a</i> &ne; 0 such that the smallest ideal of R</i> that contains <i>a</i> is <i>Ra</i> = {<i>ra</i>∣<i>r</i> ∈ <i>R</i>}. Then by definition of an ideal, <i>I</i> contains as well <i>aa</i><sup>−1</sup> = 1, which implies that <i>I</i> contains every <i>r</i> = <i>r</i>1. Thus <i>I</i> = <i>R</i>. Conversely, let <i>R</i> a field, to show that <i>R</i> is a field, it's sufficient to prove that every non null element is invertible. Let <i>a</i> &ne; 0 an element of <i>R</i>. Consider the set <i>I</i> = {<i>ar</i> | <i>r</i> &in; <i>R</i>}. This is an ideal different from {0}, because <i>I</i> contains <i>a</i> (<i>R</i> has the unit), hence <i>I</i> = <i>R</i>, and we would have 1 = <i>ar̅</i> for some <i>r̅</i> &in; <i>R</i>. Thus <i>a</i> is invertible.□</p> 
 
 <p>The importance of maximal ideals is evident from the result of the following theorem.</p>
 
+<div id="max_irr">
 <p><b>1.6.10 Theorem</b>. Let <i>R</i> a commutative ring with unit. An ideal <i>I</i> is <i>maximal</i> if and only if <i>R</i>/<i>I</i> is a field.</p>
 
-<p><b>Proof 1</b>. If <i>R</i> is a commutative ring with unit, <i>R</i>/<i>I</i> as well is commutatative with unit. Then by the theorem just proved above</p>
+<p><b>Proof 1</b>. If <i>R</i> is a commutative ring with unit, <i>R</i>/<i>I</i> as well is a commutatative ring with unit. Suppose <i>R</i>/<i>I</i> is a field; Then 0 &ne; 1 &in; <i>R</i>/<i>I</i>, so <i>I</i> &ne; <i>R</i>. We know by the Lemma just proved that</p>
 
 <div class="eq">
-<p><i>R</i>/<i>I</i> field &emsp; ⇐⇒ &emsp; <i>R</i>/<i>I</i> has only trivial ideals</p>
+<p><i>R</i>/<i>I</i> field &emsp; ⇐⇒ &emsp; <i>R</i>/<i>I</i> has only the trivial ideals {0}/<i>I</i> and <i>R</i>/<i>I</i></p>
 </div>
 
-<p>Owing to the "correspondence theorem" that says that if <i>I</i> is an ideal of <i>R</i>, then the projection map <i>R</i> → <i>R/I</i> induces a strictly inclusion-preserving bijection {all ideals of <i>R</i> that contain <i>I</i>} -> {all ideals of <i>R/I</i>}.</p>
+<p>Owing to the <a href="fund_theorem_homomorphism.html#correspondence_theo">The correspondence theorem</a> there exists a bijection between the ideals <i>J</i> of <i>R</i> containing <i>I</i> and the ideals of <i>R</i>/<i>I</i>, so</p>
 
-<div class="eq">
-<p><i>R</i>/<i>I</i> field &emsp; ⇐⇒ &emsp; <i>I</i> maximal</p>
-</div>
+<table>
+<tr><th>Ideals of <i>R</i>/<i>I</i></th> <th></th> <th>Ideals of <i>R</i> containing <i>I</i></th></tr>
+<tr><td>{0}/<i>I</i></td> <td>&emsp;←→&emsp;</td> <td>{0}</td></tr>
+<tr><td><i>R</i>/<i>I</i></td> <td>&emsp;←→&emsp;</td> <td><i>R</i></td></tr>
+</table>
 
-<p>the theorem is thus proved.□</p>
+<p>Then <i>I</i> is a maximal ideal and the theorem is proved.&emsp;□</p>
 
 <p><b>Proof 2</b>. You can also prove it quite directly: Say <i>I</i> is maximal. Now pick any <i>y</i> outside of <i>I</i>, so the element <i>y</i> + <i>I</i> of <i>R</i>/<i>I</i> is nonzero in this quotient ring. But I maximal means the ideal (<i>I,y</i>) = {<i>i</i> + <i>ry</i> : <i>i</i> &in; <i>I</i>, <i>r</i> &in; <i>R</i>} = all of <i>R</i>. So some particular <i>i</i> in <i>I</i> and <i>r</i> in <i>R</i> exist with <i>i</i> + <i>ry</i> = 1, so <i>ry</i> + <i>I</i> = 1 − <i>i</i> + <i>I</i> = 1 + <i>I</i> = the multliplicative identity of <i>R</i>/<i>I</i>. But <i>ry</i> + <i>I</i> = (<i>r</i> + <i>I</i>)(<i>y</i> + <i>I</i>), so <i>r</i> + <i>I</i> is the inverse of <i>y</i> + <i>I</i>. We've shown that every nonzero element of <i>R</i>/<i>I</i> has an inverse, so <i>R</i>/<i>I</i> is a field.</p>
+
+</div>
 
 <div id="ring_integraldomain">
 <p><b>1.6.11 Theorem</b>. Let <i>R</i> a commutative ring (not necessarily with unit) and let <i>I</i> one of its ideal. The ideal <i>I</i> is <i>prime</i> if and only if <i>R</i>/<i>I</i> is an integral domain.</p>

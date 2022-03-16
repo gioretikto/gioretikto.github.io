@@ -37,7 +37,8 @@
 
 <p>As seen in the last examples it is important to specify over which field the polynomials splits. Further if of a polynomial <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] we know the roots, the splitting field is easily found by adjoining the roots of <i>p</i>(<i>x</i>) to <i>F</i>. In other casese the task can be more difficult for example finding the splitting field of <i>p</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1 over ℤ<sub>2</sub>[<i>x</i>]. Such a polynomial has no roots in the field ℤ<sub>2</sub>. Another instance is a polynomial of large degree <i>n</i> over ℚ, with no rational roots; finding a field containing all roots of such a polynomial can be a daunting task. Our task in this section is to determine the splitting field of a polynomial <i>p</i>(<i>x</i>) &in; <i>F</i> we do not know explicitly the roots.</p>
 
-<p>We start off by considering a simpler problem: given a polynomial find a field containing a root of the polynomial. Consider again the example of <i>x</i><sup>2</sup> − 5 &in; ℚ[<i>x</i>]. Consider the ring</p>
+<div class="def">
+<p><b>8.2.4. Case of study</b>. We start off by considering a simpler problem: given a polynomial find a field containing a root of the polynomial. Consider again the example of <i>x</i><sup>2</sup> − 5 &in; ℚ[<i>x</i>]. Consider the ring</p>
 
 <div class="eq">
 <p><i>K</i> =  ℚ[<i>x</i>]/(<i>x</i><sup>2</sup> − 5)</p>
@@ -69,7 +70,7 @@
 <p>From this example it is clear how to proceed in the case of the example considered above to find a field containing the root of the polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 &in; ℤ[<i>x</i>]. Being <i>f</i>(<i>x</i>) irreducible over ℤ<sub>2</sub>, ℤ<sub>2</sub>/(<i>x</i><sup>2</sup> + <i>x</i> + 1) is a field, with 4 elements, and extension of ℤ<sub>2</sub>. It results</p>
 
 <div class="eq">
-<p>ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + <i>x</i> + 1) = ℤ<sub>2</sub>(&xi;) = {<i>a</i> + b<i>&xi;</i> | <i>a,b</i> &in; ℤ<sub>2</sub>, <i>&xi;</i><sup>2</sup> + <i>&xi;</i> + 1 = 0}</p>
+<p>ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + <i>x</i> + 1) ≃ ℤ<sub>2</sub>(&xi;) = {<i>a</i> + <i>b&xi;</i> | <i>a,b</i> &in; ℤ<sub>2</sub>, <i>&xi;</i><sup>2</sup> + <i>&xi;</i> + 1 = 0}</p>
 </div>
 
 <p>This is because by theorem <a href="field_extension.html">8.1.16 Theorem (c)</a> ℤ<sub>2</sub>(&xi;) ≃ ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + <i>x</i> + 1).</p>
@@ -80,11 +81,13 @@
 <p>0, 1, x, 1 + <i>x</i></p>
 </div>
 
-<p>with <i>x</i> such that <i>x</i><sup>2</sup> + x + 1 = 0. Indeed notice as <i>x</i><sup>2</sup> and <i>x</i> + 1 represent the same class since <i>x</i><sup>2</sup> − <i>x</i> − 1 &in; (<i>x</i><sup>2</sup> + <i>x</i> + 1) since −1 = 1 in ℤ<sub>2</sub>.</p>
+<p>with <i>x</i> such that <i>x</i><sup>2</sup> + <i>x</i> + 1 = 0. Indeed notice as <i>x</i><sup>2</sup> and <i>x</i> + 1 represent the same class since <i>x</i><sup>2</sup> − <i>x</i> − 1 &in; (<i>x</i><sup>2</sup> + <i>x</i> + 1) since −1 = 1 in ℤ<sub>2</sub>.</p>
+
+</div>
 
 <p>We can now consider the general case proving that for every polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], with <i>F</i> an arbitrary field we are able to find a field containing a root of <i>f</i>(<i>x</i>). Then with an inductive method we shall prove that there exists a field containing all roots of <i>f</i>(<i>x</i>).</p>
 
-<p><b>Lemma 8.2.4</b>. Let <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an irreducible polynomial of degree <i>n</i> &ge; 1. Then there exists an extension <i>E</i> of <i>F</i> with [<i>E</i>:<i>F</i>] = <i>n</i> in which <i>p</i>(<i>x</i>) has a root.</p>
+<p><b>Lemma 8.2.5</b>. Let <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an irreducible polynomial of degree <i>n</i> &ge; 1. Then there exists an extension <i>E</i> of <i>F</i> with [<i>E</i>:<i>F</i>] = <i>n</i> in which <i>p</i>(<i>x</i>) has a root.</p>
 
 <p><b>Proof</b>. We proceed analogously to what we have done in the example above. The field we are looking for is</p>
 
@@ -92,7 +95,7 @@
 <p><i>F</i>[<i>x</i>]/(<i>p</i>(<i>x</i>))</p>
 </div>
 
-<p>Indeed it is a field because (<i>p</i>(<i>x</i>)) is maximal being <i>p</i>(<i>x</i>) irreducible; it is also an extension of <i>F</i> since the homomorphism &Psi;</p>
+<p>Indeed it is a field because (<i>p</i>(<i>x</i>)) is maximal being <i>p</i>(<i>x</i>) irreducible (see <a href="ideal_generated.html#max_irr">theorem 1.6.10</a>); It is also an extension of <i>F</i> since the homomorphism &Psi;</p>
 
 	<div class="eq">
 	<p>&Psi;: ℚ[<i>x</i>] ⟶ ℚ[<i>x</i>]/(<i>p</i>(<i>x</i>))<br>
@@ -102,7 +105,7 @@
 <p>it results that <i>F</i>[<i>x</i>]/(<i>p</i>(<i>x</i>)) contains a <i>F̅</i> = {<i>a</i> + (<i>p</i>(<i>x</i>)) | <i>a</i> &in; <i>F</i>} which is isomorphic to <i>F</i>. It is further a <i>finite</i> extension of degree <i>n</i> of <i>F</i>, since one of its basis is</p>
 
 	<div class="eq">
-	<p>1 + (<i>p</i>(<i>x</i>), &emsp; <i>x</i> + (<i>p</i>(<i>x</i>)), ..., <i>x</i><sup><i>n</i> − 1</sup> + (<i>p</i>(<i>x</i>))</p>
+	<p>1 + (<i>p</i>(<i>x</i>)), &emsp; <i>x</i> + (<i>p</i>(<i>x</i>)), ..., <i>x</i><sup><i>n</i> − 1</sup> + (<i>p</i>(<i>x</i>))</p>
 	</div>
 
 <p>Ultimately, the class <i>&alpha;</i> = <i>x</i> + (<i>p</i>(<i>x</i>)) is a root of <i>p</i>(<i>x</i>), since <i>p</i>(<i>x</i>) = <i>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub> + ... + <i>a</i><sub>1</sub><i>x</i> + <i>a</i><sub>0</sub>, then</p>
@@ -111,10 +114,10 @@
 <p><i>p</i>(<i>&alpha;</i>) = <i>&alpha;</i><sup>n</sup> + <i>a</i><sub><i>n</i> − 1</sub><i>&alpha;</i><sup><i>n</i> − 1</sup> + ... + <i>a</i><sub>1</sub> &alpha; + <i>a</i><sub>0</sub><br>
 = (<i>x</i> + (<i>p</i>(<i>x</i>))<sup><i>n</i></sup> + <i>a</i><sub><i>n</i> − 1</sub>(<i>x</i> + (<i>p</i>(<i>x</i>)))<sup><i>n</i> − 1</sup> + ... + <i>a</i><sub>1</sub>(<i>x</i> + (<i>p</i>(<i>x</i>))) + <i>a</i><sub>0</sub><br>
 = <i>x<sup>n</sup></i> + (<i>p</i>(<i>x</i>)) + <i>a</i><sub><i>n</i> − 1</sub>(<i>x</i><sup><i>n</i> − 1</sup> + (<i>p</i>(<i>x</i>))) + ... + <i>a</i><sub>1</sub>(<i>x</i> + (<i>p</i>(<i>x</i>))) + <i>a</i><sub>0</sub><br>
-= <i>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub> + ... + <i>a</i><sub>1</sub>x + <i>a</i><sub>0</sub> + (<i>p</i>(<i>x</i>)) = (<i>p</i>(<i>x</i>)) = 0<sub><i>F</i>[<i>x</i>]/(<i>p</i>(<i>x</i>))</sub>. &emsp;□</p>
+= <i>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub> + ... + <i>a</i><sub>1</sub><i>x</i> + <i>a</i><sub>0</sub> + (<i>p</i>(<i>x</i>)) = (<i>p</i>(<i>x</i>)) = 0<sub><i>F</i>[<i>x</i>]/(<i>p</i>(<i>x</i>))</sub>. &emsp;□</p>
 </div>
 
-<p><b>Lemma 8.2.5</b>. Let <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an arbitrary polynomial of degree <i>n</i> &ge; 1. Then there exists a finite extension <i>E</i> of <i>F</i> in which <i>f</i>(<i>x</i>) has a root. We have further</p>
+<p><b>Lemma 8.2.6</b>. Let <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an arbitrary polynomial of degree <i>n</i> &ge; 1. Then there exists a finite extension <i>E</i> of <i>F</i> in which <i>f</i>(<i>x</i>) has a root. We have further</p>
 
 <div class="eq">
 <p>[<i>E</i> : <i>F</i>] &le; <i>n</i></p>
@@ -144,7 +147,7 @@
 
 <p><b>Theorem 8.2.8</b>. Let <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] a polynomial of degree <i>n</i> &ge; 1. Then there exists an extension <i>E</i> of <i>F</i> of degree &le; <i>n</i>! where <i>f</i>(<i>x</i>) has all the roots.</p>
 
-<p><b>Proof</b>. We proceed by induction on the degree <i>n</i> of the polynomial. For <i>n</i> = 1 the polynomial has all roots (i.e. only one) in <i>F</i> and thus <i>E</i> = <i>F</i>. Suppose to have proved the theorem for all polynomials of degree <i>n</i> − 1, and we prove it for polynomials of degree <i>n</i>. By the previous lemma, there exists an extension E<sub>0</sub> of <i>F</i>, with [<i>E</i><sub>0</sub> : <i>F</i>] &le; <i>n</i>, where <i>f</i>(<i>x</i>) has a root <i>&alpha;</i>. The in <i>E</i><sub>0</sub>[<i>x</i>] we have the following factorization:</p>
+<p><b>Proof</b>. We proceed by induction on the degree <i>n</i> of the polynomial. For <i>n</i> = 1 the polynomial has all roots (i.e. only one) in <i>F</i> and thus <i>E</i> = <i>F</i>. Suppose to have proved the theorem for all polynomials of degree <i>n</i> − 1, and we prove it for polynomials of degree <i>n</i>. By the previous lemma, there exists an extension <i>E</i><sub>0</sub> of <i>F</i>, with [<i>E</i><sub>0</sub> : <i>F</i>] &le; <i>n</i>, where <i>f</i>(<i>x</i>) has a root <i>&alpha;</i>. The in <i>E</i><sub>0</sub>[<i>x</i>] we have the following factorization:</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = (<i>x</i> − <i>&alpha;</i>)<i>g</i>(<i>x</i>), &emsp; <i>g</i>(<i>x</i>) &in; <i>E</i><sub>0</sub>, &emsp;∂<i>g</i>(<i>x</i>) = <i>n</i> − 1.</p>
