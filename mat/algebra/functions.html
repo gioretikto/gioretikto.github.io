@@ -43,7 +43,7 @@
 
 <p>One can observe that in Example 1.4.1, there are elements in the domain that are associated with the same element of the codomain, <i>e.g.</i> <i>f</i>(3) = <i>C</i>, <i>f</i>(4) = <i>C</i>. This does not contradict the definition of function, because the definition does not state that the different elements of <i>A</i> can't be mapped to a same element of <i>B</i>. This is an additional property that defines <i>injective functions</i>.</p>
 
-<p><b>Definition 1.4.3</b> A function <i>f</i>: <i>X → Y</i> is <b>injective</b> (or <i>one-to-one</i>) if, for all <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> in <i>X</i>, <i>f</i>(<i>x</i><sub>1</sub>) = <i>f</i>(<i>x</i><sub>2</sub>) implies <i>x</i><sub>1</sub> = <i>x</i><sub>2</sub>. We say in this case that <i>f</i> is a <i>one-to-one mapping</i> for <i>X</i> to <i>Y</i>.</p>
+<p><b>Definition 1.4.3</b> A function <i>f</i>: <i>X</i> → <i>Y</i> is <b>injective</b> (or <i>one-to-one</i>) if, for all <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> in <i>X</i>, <i>f</i>(<i>x</i><sub>1</sub>) = <i>f</i>(<i>x</i><sub>2</sub>) implies <i>x</i><sub>1</sub> = <i>x</i><sub>2</sub>. We say in this case that <i>f</i> is a <i>one-to-one mapping</i> for <i>X</i> to <i>Y</i>.</p>
 
 <figure>
 <img src="img/injective.png" alt="injective function" />
@@ -305,6 +305,39 @@
 
 <p><i>Proof</i>. Every function <i>f</i>: <i>A</i> → <i>B</i> maps an element of <i>A</i> to one and only one element of <i>B</i>; this latter element can be chosen in <i>m</i> possible ways <i>f</i>(<i>a<sub>i</sub></i>), &forall;<i>i</i> &in; <i>n</i>, so there are in total <i>m</i> ⋅ <i>m</i> ⋅ ... ⋅ <i>m</i> = <i>m<sup>n</sup></i> functions <i>f</i>. &emsp;□</p>
 </div>
+
+<h2 id="canonical_projection">Canonical projection</h2>
+
+<p>Let <i>f</i>: <i>X</i> → <i>Y</i> be a function between two sets. We can define a relation &rho;<sub><i>f</i></sub> on <i>X</i> as follows:</p>
+
+<div class="eq">
+	<p><i>x</i> &rho;<sub><i>f</i></sub> <i>y</i> &emsp; ⇐⇒ &emsp; <i>f</i>(<i>x</i>) = <i>f</i>(<i>y</i>)</p>
+</div>
+
+<p>It is easy to verify it is an equivalence relation: Since <i>f</i>(<i>x</i>) = <i>f</i>(<i>x</i>), <i>x</i> ∼ <i>x</i> and ∼ is <b>reflexive</b>. If <i>x</i> ∼ <i>y</i>, then <i>f</i>(<i>x</i>) = <i>f</i>(<i>y</i>), so <i>f</i>(<i>y</i>) = <i>f</i>(<i>x</i>) and <i>y</i> ∼ <i>x</i>; hence, ∼ is <b>symmetric</b>. If <i>x</i> ∼ <i>y</i> and <i>y</i> ∼ <i>z</i>, then <i>f</i>(<i>x</i>) = <i>f</i>(<i>y</i>) and <i>f</i>(<i>y</i>) = <i>f</i>(<i>z</i>), so <i>f</i>(<i>x</i>) = <i>f</i>(<i>z</i>), which implies that <i>x</i> ∼ <i>z</i>, so ∼ is <b>transitive</b>.</p>
+
+<p>For every <i>y</i> &in; <i>Y</i>, we have <i>f</i><sup>−1</sup> ({<i>y</i>}) = ∅ if <i>y</i> &notin; Im <i>f</i> otherwise <i>f</i><sup>−1</sup> ({<i>y</i>}) = [<i>x</i>], with <i>x</i> any element of <i>X</i> such that <i>f</i>(<i>x</i>) = <i>y</i>, and [<i>x</i>] is the equivalence class of <i>x</i> modulo &rho;<sub><i>f</i></sub>.</p>
+
+<p>Conversely, suppose we start by an equivalence relation &rho; on a set <i>X</i>, with <i>X</i>/&rho;, the quotient set, that is the set of all equivalence classes, then it is defined a mapping known as <b>canonical projection</b> over the quotient as follows</p>
+
+<div class="eq">
+<p>π : <i>X</i> ⟶ <i>X</i>/&rho;<br>
+<i>a</i> ⟼ [<i>a</i>]</p>
+</div>
+
+<p>that carries <i>x</i> ∈ <i>X</i> into the equivalence class of <i>x</i>, [<i>x</i>]. such that &rho;<sub>&pi;</sub> = &rho;.</p>
+
+<p><b>Example 1.4.20</b>. Suppose <i>X</i> = {1,2,3,4,5,6,7,8,9}, <i>Y</i> = {<i>a,b,c,d,e</i>} and</p>
+
+<div class="eq">
+<p>i(1) = <i>c</i>, &emsp;f(2) = <i>b</i>, &emsp;f(3) = e,<br>
+<i>f</i>(4) = <i>b</i>, &emsp; <i>f</i>(5) = e, &emsp;f(6) = <i>c</i>,&emsp;<br>
+<i>f</i>(7) = <i>b</i>, &emsp;f(8) = c,&emsp;<i>f</i>(9) = <i>e</i>.&emsp;</p>
+</div>
+
+<p>Then <i>A</i>/∼ = {{1,6,8},{2,4,7},{3,9},{5}}. &emsp;&emsp;■</p>
+
+
 
 <section aria-label="End">
 <a href="sets.html">&#171;Sets</a>

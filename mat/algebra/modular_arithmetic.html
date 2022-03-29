@@ -21,7 +21,7 @@
 
 <h1>Modular Arithmetic</h1>
 
-<p>The finite set ℤ<sub><i>n</i></sub>, is closely related to the infinite set ℤ. So it is natural to ask if it is possible to define addition and multiplication in ℤ<sub><i>n</i></sub> and do some reasonable kind of arithmetic there. To define addition in ℤ<sub><i>n</i></sub>, we must have some way of taking two classes in ℤ<sub><i>n</i></sub> and producing another class− their sum. Because addition of integers <i>is</i> defined, the following <i>tentative</i> definition seems worth investigating: The sum of the classes [<i>a</i>] and [<i>c</i>] is the class containing <i>a + c</i> or, in symbols,</p>
+<p>The finite set ℤ<sub><i>n</i></sub>, is closely related to the infinite set ℤ. So it is natural to ask if it is possible to define addition and multiplication in ℤ<sub><i>n</i></sub> and do some reasonable kind of arithmetic there. To define addition in ℤ<sub><i>n</i></sub>, we must have some way of taking two classes in ℤ<sub><i>n</i></sub> and producing another class− their sum. Because addition of integers <i>is</i> defined, the following <i>tentative</i> definition seems worth investigating: The sum of the classes [<i>a</i>] and [<i>c</i>] is the class containing <i>a</i> + <i>c</i> or, in symbols,</p>
 
 <div class="def">
 <p><b>Definition 4.2.1</b>. Let [<i>a</i>] and [<i>b</i>] be elements of ℤ<sub><i>n</i></sub>, then By proposition 4.2 the following operations can be defined</p>
@@ -49,10 +49,10 @@
 <p>By <a href="modulo.html">Proposition 4.1.5</a>,</p>
 
 <div class="eq">
-<p><i>a + b</i> ≡ <i>c + d</i> (mod <i>n</i>),</p>
+<p><i>a</i> + <i>b</i> ≡ <i>c</i> + <i>d</i> (mod <i>n</i>),</p>
 </div>
 
-<p>and therefore [<i>a + b</i>]<sub><i>n</i></sub> = [<i>c + d</i>]<sub><i>n</i></sub>. A similar argument holds true for multiplication.□</p>
+<p>and therefore [<i>a</i> + <i>b</i>]<sub><i>n</i></sub> = [<i>c</i> + <i>d</i>]<sub><i>n</i></sub>. A similar argument holds true for multiplication.□</p>
 
 </div>
 
@@ -168,17 +168,29 @@
 
 <p>Notice the different structure of ℤ<sub>4</sub> and ℤ<sub>5</sub>, the first set has zero divisors (see <a href="Z_divisibility.html#commutative_ring">Definition 2.4</a>) indeed we see that [2]<sub>4</sub> ⋅ [2]<sub>4</sub> = [0]<sub>4</sub> whilst ℤ<sub>5</sub> has no zero divisors. Thus ℤ<sub>4</sub> is not an <a href="Z_divisibility.html#integral_domain">integral domain</a>, but ℤ<sub>5</sub> is.</p> 
 
-<p><b>Definition 4.2.4</b> An element [<i>a</i>] &in; ℤ/<i>n</i>ℤ distinct from 0 is called <b>invertible</b> if there is an element [<i>b</i>] &in; ℤ/<i>n</i>ℤ such that [a][b] = [1].</p>
+<p><b>Definition 4.2.4</b> An element [<i>a</i>] &in; ℤ/<i>n</i>ℤ distinct from 0 is called <b>invertible</b> if there is an element [<i>b</i>] &in; ℤ/<i>n</i>ℤ such that [<i>a</i>][<i>b</i>] = [1].</p>
 
 <p>An integer <i>a</i> will also be called <b>invertible</b> modulo <i>n</i> if the class <i>a</i> is invertible.</p>
 
 <p>In ℤ<sub>7</sub>, every nonzero element is invertible: [1][1] = [1], [2][4] = [8], [3][5] = [15] = [1], and [6][6] = [−1][−1] = [1].</p>
 
-<p>In ℤ<sub>5</sub> any element different from zero is <b>invertibile</b>, i.e. multiplied for a specific element yields [1]<sub>5</sub>, which is, the neuter element with regards to multiplication in ℤ<sub>5</sub>. This is noticable in the multiplicative Cayley's table for ℤ<sub>5</sub>: in each row, except the one labelled with 0, appears 1. For example, in the row labelled with 2 we have 1 by crossing with the column labelled withg 3, because [2]<sub>5</sub> · [3]<sub>5</sub> = [1]<sub>5</sub>; hence [2]<sub>5</sub> is invertible in ℤ<sub>5</sub> with [3]<sub>5</sub> the inverse of [2]<sub>3</sub>. </p>
+<p>In ℤ<sub>5</sub> any element different from zero is <b>invertibile</b>, <i>i.e.</i> multiplied for a specific element yields [1]<sub>5</sub>, which is, the neuter element with regards to multiplication in ℤ<sub>5</sub>. This is noticable in the multiplicative Cayley's table for ℤ<sub>5</sub>: in each row, except the one labelled with 0, appears 1. For example, in the row labelled with 2 we have 1 by crossing with the column labelled withg 3, because [2]<sub>5</sub> · [3]<sub>5</sub> = [1]<sub>5</sub>; hence [2]<sub>5</sub> is invertible in ℤ<sub>5</sub> with [3]<sub>5</sub> the inverse of [2]<sub>3</sub>.</p>
+
+<div id="U">
+<p>The subset of ℤ<sub><i>n</i></sub> that consists of exaclty those elements of ℤ<sub><i>n</i></sub> with multiplicative inverses is denoted <i>U</i>(ℤ<sub><i>n</i></sub>).</p>
+
+<div class="eq">
+<p><i>U</i>(ℤ<sub><i>n</i></sub>) = {[<i>a</i>] &in; ℤ<sub><i>n</i></sub>: [<i>a</i>][<i>b</i>] = [1] for some [<i>b</i>] &in; ℤ<sub><i>n</i></sub>} = {[<i>a</i>] &in; ℤ<sub><i>n</i></sub>: gcd(<i>a,n</i>) = 1}</p>
+</div>
+
+<p>We have seen that <i>U</i>(ℤ<sub>5</sub>) = {[1], [2], [3], [4]}; whereas <i>U</i>(ℤ<sub>6</sub>) = {[1], [5]}.</p>
+
+<p>We shall prove that the set <i>U</i>(ℤ<sub><i>n</i></sub>) under multiplication mod <i>n</i> provides the standard example of <a href="groups.html#U">finite multiplicative group</a>.</p> 
+</div>
 
 <p>ℤ<sub>5</sub> behaves as the <b>ring</b> ℚ of rational numbers or ℝ of real numbers (rings of this kind are known as <b>fields</b>), in which all elements different from zero are invertible, equivalently, in which is always possible to divide an element by another element different from zero, and not as in ℤ, in which these properties do not hold true. Conversely, ℤ<sub>6</sub>, ha proprietà più deboli di quelle che valgono in ℤ. For example, in ℤ (as in ℚ and in ℝ, and as well in ℤ<sub>5</sub>) the cancellation law for the product holds true: if the product of two elements is zero, one of them must be zero. This does not hold in ℤ<sub>6</sub>, as we can see from its multiplicative table; for example [2]<sub>6</sub> · [3]<sub>6</sub> = [0]<sub>6</sub>, even if [2]<sub>6</sub> &ne; [0]<sub>6</sub> &ne; [3]<sub>6</sub>.</p>
 
-<p>The multiplicative inverse element of 3 modulo 10 is 7 (because 3 ⋅ 7 = 21 ≡ 1 (mod 10) ), but the inverse of 4 modulo 10 does not exists. The criterion for the existence of solutions of a <a href="linear_congruences.html">linear congruence (Corollary 4.5.8)</a>  implies that a class [<i>a</i>]<sub>n</sub> is invertible if and only if (<i>a, n</i>) = 1. In this case, the multiplicative inverse modulo <i>n</i> can be computed using the extended Euclidean algorithm. Therefore, it is clear that the product of two invertible classes is itself invertible.</p>
+<p>The multiplicative inverse element of 3 modulo 10 is 7 (because 3 ⋅ 7 = 21 ≡ 1 (mod 10) ), but the inverse of 4 modulo 10 does not exists. The criterion for the existence of solutions of a <a href="linear_congruences.html">linear congruence (Corollary 4.5.8)</a>  implies that a class [<i>a</i>]<sub><i>n</i></sub> is invertible if and only if (<i>a, n</i>) = 1. In this case, the multiplicative inverse modulo <i>n</i> can be computed using the extended Euclidean algorithm. Therefore, it is clear that the product of two invertible classes is itself invertible.</p>
 
 <p>We see that ℤ, ℤ<sub>5</sub> and ℤ<sub>6</sub> are very different algebraic structure. As we are going to study the properties of  ℤ<sub><i>n</i></sub> are determined by the arithemtical properties of the numbers <i>n</i> which define them. For example, we can prove that ℤ<sub><i>n</i></sub> is an integral domaing only if <i>n</i> is a prime number.</p>
 
@@ -190,7 +202,7 @@
 <p>Suppose now that <i>n</i> is not a prime and [<i>a</i>][<i>b</i>] = 0 holds true. Then <i>n</i> has divisors other than &pm; 1 and &pm; <i>n</i>, so there are integers <i>a</i> and <i>b</i> such that</p>
 
 <div class="eq">
-<p><i>n = ab</i> &emsp; where 1 &lt; <i>a</i> &lt; <i>n</i> &emsp; and &emsp; 1 &lt; <i>b</i> &lt; <i>n</i></p>
+<p><i>n</i> = <i>ab</i> &emsp; where 1 &lt; <i>a</i> &lt; <i>n</i> &emsp; and &emsp; 1 &lt; <i>b</i> &lt; <i>n</i></p>
 </div>
 
 <p>This means that [<i>a</i>] &ne; [0], [<i>b</i>] &ne; 0, but</p>
@@ -205,24 +217,24 @@
 <p><b>Corollary 4.2.6 </b>. Let <i>n</i> a given positive integer. Then for every <i>a,b,c,d</i> &in; ℤ and if <i>a ≡ b</i> mod <i>n</i>, then following relations hold</p>
 
 <div class="eq">
-<p><i>a+b</i> ≡ <i>b + c</i> (mod <i>n</i>) &emsp; (<b>4.2.1</b>)</p>
+<p><i>a</i>+<i>b</i> ≡ <i>b</i> + <i>c</i> (mod <i>n</i>) &emsp; (<b>4.2.1</b>)</p>
 <p><i>ac</i> ≡ <i>bc</i> (mod <i>n</i>) &emsp; (<b>4.2.2</b>)</p>
 <p><i>a</i><sup>i</sup> ≡ <i>b</i><sup>i</sup> (mod <i>n</i>) &emsp; (<b>4.2.3</b>)</p>
 </div>
 
 <p><b>Proof.</b> It is a corollary of Proposition 4.1.10, 4.2.1 and 4.2.2 are particular cases of the relations present in the proposition, whist (2.6.4) can be obtained by induction.</p>
 
-<p><i>P</i>(0) is trivially true, as <i>a<sup>0</sup> = b<sup>0</sup></i> = 1.
+<p><i>P</i>(0) is trivially true, as <i>a</i><sup>0</sup> = <i>b</i><sup>0</sup> = 1.
 <p><i>P</i>(1) is true, as this just says: <i>a</i> ≡ <i>b</i> (mod <i>m</i>)</p>
 <p>Suppose <i>a<sup>k</sup></i> ≡ <i>b<sup>k</sup></i> (mod <i>m</i>).</p>
 <p>Then <i>aa<sup>k</sup></i> ≡ <i>bb<sup>k</sup></i> (mod <i>m</i>) by definition of modulo multiplication.</p>
 
-<p>Thus <i>a<sup>k+1</sup></i> ≡ <i>b<sup>k+1</sup></i> (mod <i>m</i>).</p>
+<p>Thus <i>a</i><sup><i>k</i>+1</sup> ≡ <i>b</i><sup><i>k</i>+1</sup> (mod <i>m</i>).</p>
 
 <p>We have seen that some of the properties holding for the = hold true also for ≡. However, it would be wrong to assume that every property holding for the equality holds for congruences as well. For instance, in ℤ we have the following cancellation property:</p>
 
 <div class="eq">
-<p><i>ac = bc</i> (<i>c</i> &ne; 0) &emsp; implies &emsp; <i>a = b</i>,</p>
+<p><i>ac</i> = <i>bc</i> (<i>c</i> &ne; 0) &emsp; implies &emsp; <i>a</i> = <i>b</i>,</p>
 </div>
 
 <p>In other words, ℤ is an <b>integral domain</b>. This property does not hold, in general, for congruences, as the following example shows:</p>
@@ -244,42 +256,42 @@
 
 <p>Nevertheless, the following result holds:</p>
 
-<p><b>Proposition 4.12</b>. (<i>Cancellation Law</i>) Let <i>n &gt; 1</i> be an integer. If <i>ac</i> ≡<sub><i>n</i></sub> <i>bc</i> and (<i>c, n</i>) = 1, then</p>
+<p><b>Proposition 4.12</b>. (<i>Cancellation Law</i>) Let <i>n</i> &gt; 1 be an integer. If <i>ac</i> ≡<sub><i>n</i></sub> <i>bc</i> and (<i>c, n</i>) = 1, then</p>
 
 <div class="eq">
 <p><i>a</i> ≡<sub><i>n</i></sub> <i>b</i>.</p>
 </div>
 
-<p><b>Proof</b>. If <i>ac</i> ≡<sub><i>n</i></sub> <i>bc</i>, then <i>n</i> | (<i>a − b</i>)<i>c</i>. As GCD(<i>c, n</i>) = 1, there exist <i>s, t</i> such that 1 = <i>sc + tn</i> and by multiplying both members by <i>a − b</i>, it is possible to write</p>
+<p><b>Proof</b>. If <i>ac</i> ≡<sub><i>n</i></sub> <i>bc</i>, then <i>n</i> | (<i>a − b</i>)<i>c</i>. As GCD(<i>c, n</i>) = 1, there exist <i>s, t</i> such that 1 = <i>sc</i> + <i>tn</i> and by multiplying both members by <i>a − b</i>, it is possible to write</p>
 
 <div class="eq">
-<p> <i>a − b</i> = (<i>a − b</i>) <i>sc</i> + (<i>a − b</i>) <i>tn</i> = (<i>a − b</i>) <i>c ⋅ s</i> + (<i>a − b</i>)<i>tn</i></p>
+<p><i>a</i> − <i>b</i> = (<i>a</i> − <i>b</i>) <i>sc</i> + (<i>a</i> − <i>b</i>) <i>tn</i> = (<i>a − b</i>) <i>c</i> ⋅ <i>s</i> + (<i>a</i> − <i>b</i>)<i>tn</i></p>
 </div>
 
-<p>thus <i>n</i> | <i>a − b</i>, because it divides the second member, consequenlty <i>a</i> ≡<sub><i>n</i></sub> <i>b</i>.□</p>
+<p>thus <i>n</i> | <i>a</i> − <i>b</i>, because it divides the second member, consequenlty <i>a</i> ≡<sub><i>n</i></sub> <i>b</i>.□</p>
 
-<p><b>Proposition 4.13</b>. Let <i>n</i> &gt; 1 be an integer. If <i>ac ≡ bc</i> (mod <i>n</i>), then <i>a ≡ b</i>
+<p><b>Proposition 4.13</b>. Let <i>n</i> &gt; 1 be an integer. If <i>ac</i> ≡ <i>bc</i> (mod <i>n</i>), then <i>a</i> ≡ <i>b</i>
 (mod <i>n/d</i>), where <i>d</i> = GCD(<i>c, n</i>).</p>
 
-<p><b>Proof</b>. The proposition says that it's possible to simplify a congruence eliminating a term, <i>but</i> the module must be changed accordingly. <i>ac ≡ bc</i> (mod <i>n</i>) ⇐⇒ (<i>a − b</i>) <i>c = kn</i>, from which dividing by <i>d</i> = GCD(<i>c, n</i>), we find that</p>
+<p><b>Proof</b>. The proposition says that it's possible to simplify a congruence eliminating a term, <i>but</i> the module must be changed accordingly. <i>ac</i> ≡ <i>bc</i> (mod <i>n</i>) ⇐⇒ (<i>a</i> − <i>b</i>) <i>c</i> = <i>kn</i>, from which dividing by <i>d</i> = GCD(<i>c, n</i>), we find that</p>
 
 <div class="eq">
-<p>(<i>a − b</i>) <i>c/d = k</i>(<i>n/d</i>)</p>
+<p>(<i>a</i> − <i>b</i>) <i>c</i>/<i>d</i> = <i>k</i>(<i>n/d</i>)</p>
 </div>
 
-<p>(the fraction <i>c/d</i> and <i>n/d</i> are integers numbers). Thus <i>n/d</i> divides the product (<i>a − b</i>) <i>c/d</i> and <i>n/d</i> and <i>c/d</i> are coprime: <i>f = c/d, m = n/d, d</i> = gcd(<i>c,n</i>) so gcd(<i>f,m</i>) = gcd(<i>c,n</i>)/<i>d</i> = 1, and so <i>n/d</i> divides <i>a − b</i>, thus <i>a</i> ≡<sub>n/d</sub> <i>b</i>. □</p>
+<p>(the fraction <i>c</i>/<i>d</i> and <i>n</i>/<i>d</i> are integers numbers). Thus <i>n</i>/<i>d</i> divides the product (<i>a</i> − <i>b</i>) <i>c/d</i> and <i>n</i>/<i>d</i> and <i>c</i>/<i>d</i> are coprime: <i>f</i> = <i>c</i>/<i>d</i>, <i>m</i> = <i>n</i>/<i>d</i>, <i>d</i> = gcd(<i>c,n</i>) so gcd(<i>f,m</i>) = gcd(<i>c,n</i>)/<i>d</i> = 1, and so <i>n</i>/<i>d</i> divides <i>a</i> − <i>b</i>, thus <i>a</i> ≡<sub><i>n</i>/<i>d</i></sub> <i>b</i>. □</p>
 
 <p>For instance, 21 = 3 · 7 ≡<sub>9</sub> 30 = 3 · 10 and 7 ≢ 10 (mod 9), while 7 ≡ 10 (mod 3). </p>
 
 <p>5 ≢ 8 (mod 9), 5 ≡ 8 (mod 9/3).</p> 
 
-<p><b>Remark 4.14</b>. As a consequence of the above, we may see, for instance, that in ℤ<sub>5</sub> the same cancellation property holds as in ℤ; in other words, ℤ<sub>5</sub> is, like ℤ, an integral domain, and consequently, since it is finite, a field (see Exercise A1.48). Indeed, if ā· b̄ = <span class="overline">0</span> with ā, b̄ ∈ ℤ<sub>5</sub> and b̄ &ne; = <span class="overline">0</span>, then ā = <span class="overline">0</span> by Proposition 4.8, as GCD(<i>b</i>, 5) = 1. So ℤ<sub>5</sub> is an integral domain. On the other hand, the same results say nothing about ℤ<sub>4</sub>. In fact, in ℤ<sub>4</sub> there are zero-divisors: we have <span class="overline">2</span> ·<span class="overline">2</span> = <span class="overline">0</span> con <span class="overline">2</span> &ne; <span class="overline">0</span>.</p>
+<p><b>Remark 4.14</b>. As a consequence of the above, we may see, for instance, that in ℤ<sub>5</sub> the same cancellation property holds as in ℤ; in other words, ℤ<sub>5</sub> is, like ℤ, an integral domain, and consequently, since it is finite, a field (see Exercise A1.48). Indeed, if <i>ā</i> · <i>b̄</i> = <span class="overline">0</span> with <i>ā, b̄</i> ∈ ℤ<sub>5</sub> and <i>b̄</i> &ne; = <span class="overline">0</span>, then <i>ā</i> = <span class="overline">0</span> by Proposition 4.8, as GCD(<i>b</i>, 5) = 1. So ℤ<sub>5</sub> is an integral domain. On the other hand, the same results say nothing about ℤ<sub>4</sub>. In fact, in ℤ<sub>4</sub> there are zero-divisors: we have <span class="overline">2</span> ·<span class="overline">2</span> = <span class="overline">0</span> con <span class="overline">2</span> &ne; <span class="overline">0</span>.</p>
 
 <p><b>Proposition 4.15</b>. The following properties hold:</p>
 
 <ol>
-	<li><p>if <i>a ≡<sub><i>n</i></sub> b</i> and <i>d</i> | <i>n</i>, then <i>a ≡<sub>d</sub> b</i>;</p></li>
-	<li><p>if <i>a ≡<sub><i>n</i></sub> b</i> and <i>a ≡<sub>m</sub> b</i>, then <i>a ≡ b</i> (mod lcm(<i>n, m</i>)).</p></li>
+	<li><p>if <i>a</i> ≡<sub><i>n</i></sub> <i>b</i> and <i>d</i> | <i>n</i>, then <i>a</i> ≡<sub>i</sub> <i>b</i>;</p></li>
+	<li><p>if <i>a</i> ≡<sub><i>n</i></sub> <i>b</i> and <i>a</i> ≡<sub><i>m</i></sub> <i>b</i>, then <i>a</i> ≡ <i>b</i> (mod lcm(<i>n, m</i>)).</p></li>
 </ol>
 
 <p><b>Proof</b>. They follow directly from the definition of congruence.□</p>
@@ -288,41 +300,41 @@
 <p><b>Exercise 4.13</b> - On the set ℤ consider the following two equivalence relations:</p>
 
 <ol>
-	<li><p><i>a</i> ≡ <i>b</i> (mod <i>n</i>), that is <i>a𝓡b</i> if and only if <i>a − b = nh</i> for some integer <i>h</i>.</p>
-	<li><p><i>a𝓢b</i> if and only if if <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
+	<li><p><i>a</i> ≡ <i>b</i> (mod <i>n</i>), that is <i>a</i>𝓡<i>b</i> if and only if <i>a</i> − <i>b</i> = <i>nh</i> for some integer <i>h</i>.</p>
+	<li><p><i>a</i>𝓢<i>b</i> if and only if if <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
 </ol>
 
-<p>Show that <i>a</i> ≡ <i>b</i> (mod <i>n</i>) if and only if <i>a𝓢b</i>; and the two equivalence relations determine the same classes.</p>
+<p>Show that <i>a</i> ≡ <i>b</i> (mod <i>n</i>) if and only if <i>a</i>𝓢<i>b</i>; and the two equivalence relations determine the same classes.</p>
 
-<p><b>Solution</b>. We prove first that <i>a ≡ b</i> (mod <i>n</i>), implies <i>a𝓢b</i>. If</p>
+<p><b>Solution</b>. We prove first that <i>a</i> ≡ <i>b</i> (mod <i>n</i>), implies <i>a</i>𝓢<i>b</i>. If</p>
 
 <div class="eq">
-<p><i>a − b = hn</i> &emsp; for some integer <i>h</i> &emsp; (2.0)</p>
+<p><i>a</i> − <i>b</i> = <i>hn</i> &emsp; for some integer <i>h</i> &emsp; (2.0)</p>
 </div>
 
-<p>then <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>. Suppose that <i>a</i> has been divided by <i>n</i>, producing the quotient <i>q</i> and the remainder <i>r</i> with 0 &le; <i>r &lt; n</i>. This means that <i>a = nq + r</i>. Replacing <i>a</i> in (2.0) with <i>nq + r</i> yields</p>
+<p>then <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>. Suppose that <i>a</i> has been divided by <i>n</i>, producing the quotient <i>q</i> and the remainder <i>r</i> with 0 &le; <i>r &lt; n</i>. This means that <i>a</i> = <i>nq</i> + <i>r</i>. Replacing <i>a</i> in (2.0) with <i>nq</i> + <i>r</i> yields</p>
 
 <div class="eq">
-<p><i>b = a − hn</i> = (<i>nq + r</i>) − <i>hn</i> = <i>n</i>(<i>q − h</i>) + <i>r</i></p>
+<p><i>b</i> = <i>a</i> − <i>hn</i> = (<i>nq</i> + <i>r</i>) − <i>hn</i> = <i>n</i>(<i>q</i> − <i>h</i>) + <i>r</i></p>
 </div>
 
 <p>Let's now divide <i>b</i> by <i>n</i>:</p>
 
 <div class="eq">
-<p><i>b / n</i> = [<i>n</i>(<i>q − h</i>) + <i>r</i>]/<i>n</i> = (<i>q − h</i>) + <i>r/n</i></p>
+<p><i>b</i> / <i>n</i> = [<i>n</i>(<i>q</i> − <i>h</i>) + <i>r</i>]/<i>n</i> = (<i>q</i> − <i>h</i>) + <i>r/n</i></p>
 </div>
 
 <p>This means that the quotient of the division is the integer <i>q − h</i>, and the remainder is <i>r</i>. Thus, <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
 
-<p>Let’s now prove the converse: <i>a𝓢b</i>, implies <i>a ≡<sub><i>n</i></sub> b</i>. By hypothesis <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>; call this common remainder <i>r</i>. Then <i>a = nh + r</i> and <i>b = nk + r</i> with <i>h</i> and <i>k</i> integers, and <i>0 ≤ r &lt; n</i>. To prove that <i>a ≡<sub><i>n</i></sub> b</i> we need to check whether <i>a − b</i> is divisible by <i>n</i>. Using the information we have for <i>a</i> and <i>b</i> we obtain</p>
+<p>Let’s now prove the converse: <i>a𝓢b</i>, implies <i>a</i> ≡<sub><i>n</i></sub> <i>b</i>. By hypothesis <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>; call this common remainder <i>r</i>. Then <i>a</i> = <i>nh</i> + <i>r</i> and <i>b</i> = <i>nk</i> + <i>r</i> with <i>h</i> and <i>k</i> integers, and 0 ≤ <i>r</i> &lt; <i>n</i>. To prove that <i>a ≡<sub><i>n</i></sub> b</i> we need to check whether <i>a</i> − <i>b</i> is divisible by <i>n</i>. Using the information we have for <i>a</i> and <i>b</i> we obtain</p>
 
 <div class="eq">
-<p><i>a − b</i> = (<i>nh + r</i>) − (<i>nk + r</i>) = <i>nh − nk</i> = <i>n</i>(<i>h − k</i>)</p>
+<p><i>a</i> − <i>b</i> = (<i>nh</i> + <i>r</i>) − (<i>nk</i> + <i>r</i>) = <i>nh</i> − <i>nk</i> = <i>n</i>(<i>h</i> − <i>k</i>)</p>
 </div>
 
-<p>The number <i>h − k</i> is an integer because <i>h</i> and <i>k</i> are integers. Thus <i>a</i> ≡<sub><i>n</i></sub> b</i>.</p>
+<p>The number <i>h</i> − <i>k</i> is an integer because <i>h</i> and <i>k</i> are integers. Thus <i>a</i> ≡<sub><i>n</i></sub> <i>b</i>.</p>
 
-<p><i>Part 2</i>. We must prove that the relations "≡<sub><i>m</i></sub>" and "𝓢" are equal. By definition [<i>a</i>]<sub>m</sub> = {<i>b</i> ∈ ℤ| <i>b</i> ≡ <i>a</i> (mod <i>m</i>)} and [<i>a</i>]<sub>𝓢</sub> = {<i>b</i> ∈ ℤ|<i>b𝓢a</i>}. Let <i>b</i> ∈ [0]<sub><i>m</i></sub>, or equivalently, let <i>a</i> ≡<sub><i>m</i></sub> <i>b</i>. By part 1 this is equivalent to stating that <i>a𝓢b</i>. In turn, this is equivalent to saying that <i>b</i> ∈ [<i>a</i>]<sub>𝓢</sub>. Since <i>b</i> ∈ [<i>a</i>]<sub>m</sub> if and only if <i>b</i> ∈ [<i>a</i>]<sub>m</sub>, the two equivalence classes are identical.□</p>
+<p><i>Part 2</i>. We must prove that the relations "≡<sub><i>m</i></sub>" and "𝓢" are equal. By definition [<i>a</i>]<sub>m</sub> = {<i>b</i> ∈ ℤ| <i>b</i> ≡ <i>a</i> (mod <i>m</i>)} and [<i>a</i>]<sub>𝓢</sub> = {<i>b</i> ∈ ℤ|<i>b𝓢a</i>}. Let <i>b</i> ∈ [0]<sub><i>m</i></sub>, or equivalently, let <i>a</i> ≡<sub><i>m</i></sub> <i>b</i>. By part 1 this is equivalent to stating that <i>a</i>𝓢<i>b</i>. In turn, this is equivalent to saying that <i>b</i> ∈ [<i>a</i>]<sub>𝓢</sub>. Since <i>b</i> ∈ [<i>a</i>]<sub>m</sub> if and only if <i>b</i> ∈ [<i>a</i>]<sub>m</sub>, the two equivalence classes are identical.□</p>
 
 </div>
 

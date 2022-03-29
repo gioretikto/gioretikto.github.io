@@ -23,7 +23,7 @@
 
 <p>The divisibility properties and definitions relating to integers extend to polynomials.</p>
 
-<p><b>Proposition 4.5</b>. (<i>Algorithm for the division</i>). Let <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) &in; 𝕂[<i>x</i>] two polynomials with <i>g</i>(<i>x</i>) &ne; 0. Then there exist and are uniquely determined two polynomials <i>q</i>(<i>x</i>) and <i>r</i>(<i>x</i>) &in;  𝕂[<i>x</i>] such that</p>
+<p><b>Proposition 5.2.1</b>. (<i>Algorithm for the division</i>). Let <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) &in; 𝕂[<i>x</i>] two polynomials with <i>g</i>(<i>x</i>) &ne; 0. Then there exist and are uniquely determined two polynomials <i>q</i>(<i>x</i>) and <i>r</i>(<i>x</i>) &in;  𝕂[<i>x</i>] such that</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) · <i>q</i>(<i>x</i>) + <i>r</i>(<i>x</i>), &emsp; with ∂<i>r</i>(<i>x</i>) < ∂<i>g</i>(<i>x</i>) &emsp; or &emsp; <i>r</i>(<i>x</i>) = 0.</p>
@@ -61,7 +61,7 @@
 <p><i>f</i>(<i>x</i>) − <i>a<sub>n</sub></i> <i>b</i><sub><i>m</i></sub><sup>−1</sup> <i>x<sup>n−m</sup></i> <i>g</i>(<i>x</i>) = <i>h</i>(<i>x</i>) = <i>g</i>(<i>x</i>) <i>q</i><sub>1</sub> + <i>r</i><sub>1</sub>(<i>x</i>)</p>
 </div>
 
-<p>And it is enough to take <i>r</i>(<i>x</i>) = <i>r</i><sub>1</sub>(<i>x</i>) and <i>q</i>(<i>x</i>) = <i>q</i><sub>1</sub>(<i>x</i>) + (<i>a<sub>n</sub></i> <i>b</i><sub><i>m</i></sub><sup>−1</sup>)<i>x<sup>n−m</sup></i>.</p>
+<p>And it is enough to take <i>r</i>(<i>x</i>) = <i>r</i><sub>1</sub>(<i>x</i>) and <i>q</i>(<i>x</i>) = <i>q</i><sub>1</sub>(<i>x</i>) + (<i>a<sub>n</sub></i> <i>b</i><sub><i>m</i></sub><sup>−1</sup>)<i>x</i><sup><i>n</i>−<i>m</i></sup>.</p>
 
 <p>As to the uniqueness of division, notice that if <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) · <i>q</i><sub>1</sub> (<i>x</i>) + <i>r</i><sub>1</sub> (<i>x</i>) = <i>g</i>(<i>x</i>) · <i>q</i><sub>2</sub>(<i>x</i>) + <i>r</i><sub>2</sub></i> (<i>x</i>) such that ∂<i>r</i><sub>i</sub>(<i>x</i>) < ∂<i>g</i>(<i>x</i>) or <i>r</i><sub>i</sub>(<i>x</i>) = 0 with <i>i</i> = 1, 2, then we would get</p>
 
@@ -69,21 +69,27 @@
 <p><i>g</i>(<i>x</i>)(<i>q</i><sub>1</sub>(<i>x</i>) − <i>q</i><sub>2</sub>(<i>x</i>)) = (<i>r</i><sub>2</sub>(<i>x</i>) − <i>r</i><sub>1</sub>(<i>x</i>))</p>
 </div>
 
-<p>If it is the case that <i>q</i><sub>1</sub>>(<i>x</i>) − <i>q</i><sub>2</sub>(<i>x</i>) &ne; 0, the left-hand side would have a greater degree than the second one, which is not possible. So we must have <i>q</i><sub>1</sub>(<i>x</i>) = <i>q</i><sub>2</sub></i> (<i>x</i>), which also implies <i>r</i><sub>2</sub>(<i>x</i>) = <i>r</i><sub>1</sub>(<i>x</i>).□</p>
+<p>If it is the case that <i>q</i><sub>1</sub> > (<i>x</i>) − <i>q</i><sub>2</sub>(<i>x</i>) &ne; 0, the left-hand side would have a greater degree than the second one, which is not possible. So we must have <i>q</i><sub>1</sub>(<i>x</i>) = <i>q</i><sub>2</sub></i> (<i>x</i>), which also implies <i>r</i><sub>2</sub>(<i>x</i>) = <i>r</i><sub>1</sub>(<i>x</i>).□</p>
 
-<p><b>Definition 4.6</b>. We say that a polynomial <i>g</i>(<i>x</i>) <i>divides</i> a polynomial <i>f</i>(<i>x</i>) with <i>f,g</i> &in;  𝕂[<i>x</i>] and we write  <i>g</i>(<i>x</i>)| <i>f</i>(<i>x</i>) if there exists a polynomnial <i>q</i>(<i>x</i>) &in;  𝕂[<i>x</i>] such that</p>
+<p><b>Definition 5.2.2</b>. We say that a polynomial <i>g</i>(<i>x</i>) <i>divides</i> a polynomial <i>f</i>(<i>x</i>) with <i>f,g</i> &in;  𝕂[<i>x</i>] and we write  <i>g</i>(<i>x</i>)| <i>f</i>(<i>x</i>) if there exists a polynomnial <i>q</i>(<i>x</i>) &in;  𝕂[<i>x</i>] such that</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) · <i>q</i>(<i>x</i>)</p>
 </div>
 
-<p><b>Definition 4.7</b>. An element <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said <i>invertible</i> if there exists a polynomial <i>g</i>(<i>x</i>) &in; 𝕂[<i>x</i>] such that <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) = 1.</p>
+<p><b>Definition 5.2.3</b>. An element <i>f</i>(<i>x</i>) &in; 𝕂[<i>x</i>] is said <i>invertible</i> if there exists a polynomial <i>g</i>(<i>x</i>) &in; 𝕂[<i>x</i>] such that <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) = 1.</p>
 
-<p>A poly g(x) of degree 1 or higher, in F[<i>x</i>], can never be invertible, because if it had an inverse <i>h</i>(<i>x</i>), then h(<i>x</i>) != 0 so the product g(<i>x</i>) h(<i>x</i>)  has degree  deg(g) + deg(<i>h</i>) >= 1, so this product can't be 1.</p>
+<p>A poly g(x) of degree 1 or higher, in F[<i>x</i>], can never be invertible, because if it had an inverse <i>h</i>(<i>x</i>), then h(<i>x</i>) != 0 so the product g(<i>x</i>) h(<i>x</i>)  has degree  deg(g) + deg(<i>h</i>) &ge; 1, so this product can't be 1.</p>
 
-<p><b>Example 4.8</b>. Long division of <i>x</i><sup>3</sup> &minus; 8 by <i>x</i> &minus; 2 yields</p>
+<p><b>Example 5.2.4</b>. Long division of <i>x</i><sup>3</sup> &minus; 8 by <i>x</i> &minus; 2 yields</p>
 
 <img src="img/long_division_ex.png" alt="example long division"/>
+
+<p><b>Example 5.2.5</b>. The division of <i>x</i><sup>2</sup> + <i>x</i> + 2 by <i>x</i> − <i>b</i>, with <i>b</i> a constant, leaves a remainder <i>b</i><sup>2</sup> + <i>b</i> + 2.</p>
+
+<img src="img/poly_division_remainder.png" alt="division of x^2+x+2 by x-b"/>
+
+<p>At each step we must remove the highest degree term: so in the 1st step we multiply <i>x</i> − <i>b</i>, by <i>x</i> to remove the x<sup>2</sup> and in the 2nd step to remove (b+1)x we multiply <i>x</i> − <i>b</i>, by <i>b</i> + 1.&emsp;■</p>
 
 <section aria-label="End">
 <a href="polynomials.html">&#171;Polynomials: general properties</a>

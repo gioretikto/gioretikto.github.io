@@ -22,20 +22,85 @@
 <h1>Exercises on splitting fields</h1>
 
 <ol>
+	<li><p>Consider <i>p</i>(<i>x</i>) = x<sup>2</sup> + <i>x</i> + 2 over ℤ<sub>3</sub>. Let <i>b</i> one of its roots. Prove that ℤ<sub>3</sub>(<i>b</i>) is a splitting field for <i>p</i>(<i>x</i>).</p></li>
+
 	<li><p>Find all irreducible polynomials <i>p</i>(<i>x</i>) of second degree in ℤ<sub>2</sub>[<i>x</i>]. For each one of these polynomial compute the field ℤ<sub>2</sub>/(<i>p</i>(<i>x</i>)).</p></li>
+
+	<li><p>Prove that the polynomial <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + 1 is irreducible over ℤ<sub>2</sub>. Let <i>a</i> one of its root (which of course does not belong to ℤ<sub>2</sub>, but to ℤ<sub>2</sub>(<i>a</i>)), prove that ℤ<sub>2</sub>(<i>a</i>) is the splitting field of <i>f</i>(<i>x</i>).</p></li>
+
+	<li><p>Let <i>&alpha;</i> a root of the polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 &in; ℤ<sub>5</sub>[<i>x</i>], irreducible over ℤ<sub>5</sub>. Calculate the extension ℤ<sub>5</sub>(&alpha;).</p></li>
+
 </ol>
 
 <h2>Solutions</h2>
 
 <ol>
-	<li><p>Let <i>I</i> mean the ideal (<i>x</i><sup>2</sup> + <i>x</i> + 1) in ℤ<sub>2</sub>[<i>x</i>]. This is defined as ⟨<i>x</i><sup>2</sup> + <i>x</i> + 1⟩ = {<i>p</i>(<i>x</i>) (<i>x</i><sup>2</sup> + <i>x</i> + 1)| <i>p</i>(<i>x</i>) in Z<sub>2</sub>[<i>x</i>]}.</p>
 
+	<li><p>Z<sub>3</sub>[<i>x</i>]/(x<sup>2</sup> + x + 2) ≃ ℤ<sub>3</sub>(<i>b</i>) = {0, 1, 2, b, 2<i>b</i>, <i>b</i> + 1, 2<i>b</i> + 1, <i>b</i> + 2, 2<i>b</i> + 2}. Performing long division x<sup>2</sup> + <i>x</i> + 2 : (<i>x</i> − <i>b</i>)</p>
 
- Technically the four elements of the quotient ring ℤ<sub>2</sub>[<i>x</i>]/<i>I</i>  are the cosets  0 + I, 1 + I, x + I,  x + 1 + I.   You can caculate  (x + I)(x + 1 + I) = x<sup>2</sup> + x + I, but this = 1 + <i>I</i> because   is in I. (- is the same as + in this ring, since it has characteristic 2).
+<img src="img/poly_division_remainder.png" alt="long division polynomial"/>
+
+<p>Note how the remainder of the division  <i>b</i><sup>2</sup> + <i>b</i> + 2 = 0, in ℤ<sub>3</sub>(<i>b</i>). So, <i>x</i><sup>2</sup> + <i>x</i> + 2 = (<i>x</i> − b)(<i>x</i> + <i>b</i> + 1).&emsp;■</p></li>
+
+	<li><p>The only polynomial irreducible of 2nd degree in ℤ<sub>2</sub>[<i>x</i>] is <i>x</i><sup>2</sup> + <i>x</i> + 1. This polynomial has no roots in ℤ<sub>2</sub> so it is irreducible. We have already calculated the field in <a href="splitting_field.html#example">Example 8.2.5.</a>. &emsp;■</p></li>
+
+	<li><p>It is a 3rd degree polynomial without roots in ℤ<sub>2</sub>, thus it is irreducible. We calculate ℤ<sup>2</sup>[<i>x</i>]/(<i>p</i>(<i>x</i>)) as in the previous exercise.</p>
+
+<div class="eq">
+<p>ℤ<sub>2</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) = {0, 1, <i>x</i>, <i>x</i> + 1, <i>x</i><sup>2</sup>, <i>x</i><sup>2</sup> + x, <i>x</i><sup>2</sup> + 1, <i>x</i><sup>2</sup> + <i>x</i> + 1}</p>
+</div>
+
+<p>by theorem <a href="field_extension.html">8.1.16 Theorem (c)</a> we know ℤ<sub>2</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) ≃ ℤ<sub>2</sub>(&alpha;) = {0, 1, &alpha;, 1 + &alpha;, &alpha;<sup>2</sup>, 1 + &alpha;<sup>2</sup>, &alpha; + &alpha;<sup>2</sup>, 1 + &alpha; + &alpha;<sup>2</sup>| &alpha;<sup>3</sup> + &alpha;<sup>2</sup> + 1 = 0}.</p>
+
+<p>We try to check whether the other elements of the field can be roots of <i>p</i>(<i>x</i>). First note that</p>
+
+<div class="eq">
+<p>(α<sup>3</sup> + α<sup>2</sup> + 1)<sup>2</sup> = 0<br>
+[(α<sup>2</sup> + 1) + α<sup>3</sup>]<sup>2</sup> = 0<br>
+α<sup>4</sup> + 1 + α<sup>6</sup> = 0</p>
+</div>
+
+<p>If we replace α<sup>2</sup> in <i>p</i>(<i>x</i>) we get:</p>
+
+<div class="eq">
+<p>(α<sup>2</sup>)<sup>3</sup> + (α<sup>2</sup>)<sup>2</sup> = α<sup>6</sup> + α<sup>4</sup> + 1 = 0 (is = 0 from the relation above).</p>
+</div>
+
+<p>Let's check the remaining elements, say 1 + α + α<sup>2</sup>. We must compute (1 + α + α<sup>2</sup>)<sup>3</sup> + (1 + α + α<sup>2</sup>)<sup>2</sup> + 1:</p>
+
+<div class="eq">
+<p>(1 + α + α<sup>2</sup>)<sup>3</sup> = [(1 + α) + α<sup>2</sup>]<sup>3</sup> = (1 + α)<sup>3</sup> + α<sup>6</sup> + 3(1+α)<sup>2</sup> α<sup>2</sup> + 3(1+α)α<sup>4</sup><br>
+= (1 + α)<sup>3</sup> + α<sup>6</sup> + α<sup>2</sup>(1+α)<sup>2</sup> + (1+α)α<sup>4</sup> = 1 + α<sup>3</sup> + 3α<sup>2</sup> + 3α + α<sup>6</sup> + α<sup>2</sup> + α<sup>4</sup> + α<sup>4</sup> + α<sup>5</sup><br>
+= 1 + α<sup>3</sup> + α + α<sup>6</sup> + α<sup>5</sup> = 1 + α + (α<sup>3</sup> + α<sup>5</sup> + α<sup>6</sup>) = 1 + a + α<sup>3</sup>(1 + α<sup>2</sup> + α<sup>3</sup>) = 1 + α </p>
+</div>
+
+<div class="eq">
+<p>(1 + a + α<sup>2</sup>)<sup>2</sup> = [(1+α)<sup>2</sup> + α<sup>2</sup>]<sup>2</sup> = 1 + α<sup>2</sup> + α<sup>4</sup></p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p>(1 + α + α<sup>2</sup>)<sup>3</sup> + (1 + α + α<sup>2</sup>)<sup>2</sup> + 1 = 1 + α + α<sup>2</sup> + α<sup>4</sup> + 1 + 1  = 1 + α + α<sup>4</sup> + α<sup>2</sup> = 1 + α + (α<sup>4</sup> + α<sup>2</sup>) = 1 + α + α<sup>2</sup>(α<sup>2</sup> + 1) = 1 + α + α<sup>2</sup>(α + 1)<sup>2</sup><br>
+1 + α + α<sup>2</sup>(α + 1)<sup>2</sup> = (1 + α)[1 + α<sup>2</sup>(1 + α)] = (1 + α)[1 + α<sup>2</sup> + α<sup>3</sup>] = (1 + <i>α</i>) ⋅ 0 = 0</p>
+</div>
+
+</li>
+
+<li><p>The elements of ℤ<sub>5</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) ≃ ℤ<sub>5</sub>(<i>&alpha;</i>) are residue classes <i>i.e.</i> polynomials <i>r</i>(<i>x</i>) such that deg(<i>r</i>(<i>x</i>)) &lt; deg(<i>x</i><sup>2</sup> + <i>x</i> + 1), are the following 25 elements</p>
+
+<p>0, x, x +1, 2x +1, 3x +1, 4x +1<br>
+1, 2x, x+2, 2x+2, 3x +2, 4x +1<br>
+2, 3x, x+3, 2x +3, 3x+3, 4x +3<br>
+3, 4x, x +4, 2x+4, 3x +4, 4x+4</p>
+
+</li>
+
+</ol>
 
 
 <section aria-label="End">
-<a href="epoxides.html">&#171;Epoxides</a>
+<a href="splitting_field.html">&#171;Splitting Field</a>
 <a href="index.html">Index</a>
 <a href="sulfides.html">Sulfides&#187;</a>
 </section>
