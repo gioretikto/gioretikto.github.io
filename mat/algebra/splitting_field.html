@@ -101,7 +101,7 @@
 <p>Z<sub>2</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) = {0 + (<i>p</i>(<i>x</i>)), 1 + (<i>p</i>(<i>x</i>)), <i>x</i> + (<i>p</i>(<i>x</i>)), 1 + <i>x</i> + (<i>p</i>(<i>x</i>))} ≃ ℤ<sub>2</sub>(&xi;) = {<i>a</i> + <i>b&xi;</i> | <i>a,b</i> &in; ℤ<sub>2</sub>, <i>&xi;</i><sup>2</sup> + <i>&xi;</i> + 1 = 0}</p>
 </div>
 
-<p>The last equality ℤ<sub>2</sub>(<i>&xi;</i>) ≃ ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + <i>x</i> + 1) by theorem <a href="field_extension.html">8.1.16 Theorem (c)</a>. Note how 0 + (p(x)) is the zero of the field and same element as <i>x</i><sup>2</sup> + <i>x</i> + 1 + (<i>p</i>(<i>x</i>)). The following are also the same elements <i>x</i><sup>2</sup> and <i>x</i> + 1 since <i>x</i><sup>2</sup> − (<i>x</i> + 1) = x<sup>2</sup> + <i>x</i> + 1 as 1 = −1 in ℤ<sub>2</sub>, so we write <i>x</i><sup>2</sup> = <i>x</i> + 1 mod(<i>x</i><sup>2</sup> + <i>x</i> + 1). <br> 1 + (p(x)) is the multiplicative identity of the field i.e. the multiplicative inverse of (x+1) + (p(x)) is x + (p(x)) since (x+1)x = x<sup>2</sup> + <i>x</i> = 1 mod (p(x)) or (x + 1 + (p(x))) (x + (p(x))) = 1 + (p(x)))&emsp;■</p>
+<p>The last equality ℤ<sub>2</sub>(<i>&xi;</i>) ≃ ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + <i>x</i> + 1) by theorem <a href="field_extension.html">8.1.16 Theorem (c)</a>. Note how 0 + (p(x)) is the zero of the field and same element as <i>x</i><sup>2</sup> + <i>x</i> + 1 + (<i>p</i>(<i>x</i>)). The following are also the same elements <i>x</i><sup>2</sup> and <i>x</i> + 1 since <i>x</i><sup>2</sup> − (<i>x</i> + 1) = <i>x</i><sup>2</sup> + <i>x</i> + 1 as 1 = −1 in ℤ<sub>2</sub>, so we write <i>x</i><sup>2</sup> = <i>x</i> + 1 mod(<i>x</i><sup>2</sup> + <i>x</i> + 1). <br> 1 + (p(x)) is the multiplicative identity of the field i.e. the multiplicative inverse of (x+1) + (p(x)) is x + (p(x)) since (x+1)x = x<sup>2</sup> + <i>x</i> = 1 mod (p(x)) or (x + 1 + (p(x))) (x + (p(x))) = 1 + (p(x)))&emsp;■</p>
 
 </div>
 
@@ -190,7 +190,7 @@
 </div>
 
 <p>If <i>f</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i>, then 
-<i>&tau;̅̅</i>(<i>f</i>(<i>x</i>)) = <i>&tau;̅̅</i>(<i>a<sub>i</sub>x<sup>i</sup></i>)<i>x<sup>i</sup></i>.</p>
+<i>&tau;̅̅</i>(<i>f</i>(<i>x</i>)) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub><i>&tau;</i>(<i>a<sub>i</sub></i>)<i>x<sup>i</sup></i>.</p>
 
 <p><b>Theorem 8.2.13</b>. Let <i>&tau;</i> a isomorphism between two fields <i>F</i> and <i>F'</i> and let <i>f</i>(<i>x</i>) and <i>f'</i>(<i>x</i>) two polynomials such that <i>f'</i>(<i>x</i>) = <i>&tau;̅̅</i>(<i>f</i>(<i>x</i>)), with <i>&tau;̅̅</i> the isomorphism defined above. Let <i>E</i> a splitting field for <i>f</i>(<i>x</i>) and <i>E'</i> a splitting field for <i>f'</i>(<i>x</i>). Then the isomorphism <i>&tau;</i> between <i>F</i> and <i>F'</i> can be extended to a isomorphism <i>&Psi;</i> between <i>E</i> and <i>E'</i>.</p>
 
@@ -206,11 +206,39 @@
 <p><i>f'</i>(<i>x</i>) = <i>p</i><sub>1</sub>'(<i>x</i>)<i>p</i><sub>2</sub>'(<i>x</i>) ... <i>p<sub>r</sub></i>'(<i>x</i>), &emsp; <i>p<sub>i</sub>'</i> &in; <i>F'</i>[<i>x</i>]</p>
 </div>
 
-<p>the corresponding (through <i>&tau;̅̅</i>) factorization of <i>f'</i>(<i>x</i>). At least on of the two factors <i>p<sub>i</sub></i>(<i>x</i>) (let it <i>p</i><sub>1</sub>(<i>x</i>)) must have degree strictly greater than 1, otherwise all roots would in <i>F</i> and <i>k</i> = 0, a case which has already been proved. Let <i>&alpha;</i> a root of <i>p</i><sub>1</sub>(<i>x</i>). Then <i>f'</i>(<i>x</i>) = <i>&tau;̅̅</i><i>f</i>((<i>x</i>)) as well, has an irreducible factor, <i>p'</i>(<i>x</i>), of degree strictly greater than 1, and let <i>&alpha;'</i> a root of <i>p'</i>(<i>x</i>). Let <i>n</i> = &delta;<i>p</i><sub>1</sub>(<i>x</i>), the mapping</p></p>
+<p>the corresponding (through <i>&tau;̅̅</i>) factorization of <i>f'</i>(<i>x</i>). At least on of the two factors <i>p<sub>i</sub></i>(<i>x</i>) (let it <i>p</i><sub>1</sub>(<i>x</i>)) must have degree strictly greater than 1, otherwise all roots would in <i>F</i> and <i>k</i> = 0, a case which has already been proved. Let <i>&alpha;</i> a root of <i>p</i><sub>1</sub>(<i>x</i>). Then <i>f'</i>(<i>x</i>) = <i>&tau;̅̅</i><i>f</i>((<i>x</i>)) as well, has an irreducible factor, <i>p'</i>(<i>x</i>), of degree strictly greater than 1, and let <i>&alpha;'</i> a root of <i>p'</i>(<i>x</i>). Let <i>n</i> = deg(<i>p</i><sub>1</sub>(<i>x</i>)), the mapping</p></p>
 
 	<div class="eq">
 	<p><i>F</i>[<i>x</i>]/(<i>p</i><sub>1</sub>(<i>x</i>)) ⟶ <i>F'</i>[<i>x</i>]/(<i>p'</i><sub>1</sub>(<i>x</i>))<br>
+∑<sup><i>n</i>−1</sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> + (<i>p</i><sub>1</sub>(<i>x</i>)) ⟼ ∑<sup><i>n</i>−1</sup><sub><sub><i>i</i>=0</sub></sub> <i>a'<sub>i</sub>x<sup>i</sup></i> + (<i>p</i>'<sub>1</sub>(<i>x</i>)), &emsp; <i>a<sub>i</sub>'</i> = &tau;(<i>a<sub>i</sub></i>)</p>
+</div>
 
+<p>is an isomorphism (verify it). On the other hand the following isomprhisms hold</p>
+
+<div class="eq">
+<p><i>F</i>(&alpha;) ≃ <i>F</i>[<i>x</i>]/(<i>p</i><sub>1</sub>(<i>x</i>))<br>
+<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> &alpha; + ... + <i>a</i><sub><i>n</i>−1</sub>&alpha;<sup>n−1</sup> ⟼ <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>x</i> + ... + <i>a</i><sub>n−1</sub>x<sup>n−1</sup> + (<i>p</i><sub>1</sub>(<i>x</i>))</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>F</i>(&alpha;) ≃ <i>F'</i>[<i>x</i>]/(<i>p</i><sub>1</sub>(<i>x</i>))<br>
+<i>a</i>'<sub>0</sub> + <i>a</i><sub>1</sub>' &alpha; + ... + <i>a</i>'<sub><i>n</i>−1</sub>&alpha;<sup><i>n</i>−1</sup> ⟼ <i>a</i>'<sub>0</sub> + <i>a</i><sub>1</sub>' <i>x</i> + ... + <i>a</i>'<sub>n−1</sub>x<sup>n−1</sup> + (<i>p</i>'<sub>1</sub>(<i>x</i>))</p>
+</div>
+
+<p>By the transitivity property of the isomorphism, it follows that</p>
+
+<div class="eq">
+<p><i>F</i>(&alpha;) ≃ <i>F</i>'(&alpha;')<br>
+<i>a</i>'<sub>0</sub> + <i>a</i><sub>1</sub>' &alpha; + ... + <i>a</i>'<sub>n−1</sub>&alpha;<sup><i>n</i>−1</sup> ⟼ <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> &alpha; + ... + <i>a</i><sub>n−1</sub>&alpha;<sup>n−1</sup></p>
+</div>
+
+<p>The last isomorphism that we call &Psi; is an extension of <i>&tau;</i>. Let's sart now by the field <i>F</i>(&alpha;) and <i>F</i>'(&alpha;') = &Psi;(F(&alpha;)). Then <i>f</i>(<i>x</i>) has at last <i>k</i> − 1 roots not in <i>F</i>'(<i>a</i>'). Thus &Psi;, by the inductive hyphotesis can be externded to an isomorphism <i>&Psi;̅̅</i> between <i>E</i> and <i>E</i>'. This isomorphim <i>&Psi;̅̅</i> is clearly as well an extension of the isomorphism <i>&tau;</i>. &emsp;□</p>
+
+<p><b>Corollary 8.2.14</b>. All splitting fields of a polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] are isomorphic to an isomorphism that fixes <i>F</i>.</p>
+
+<p><b>Proof</b>. In the previous theorem let <i>F</i>' = <i>F</i> and <i>&tau;</i> is the identity mapping. If <i>E</i> and <i>E</i>' are two splitting fields of <i>f</i>(<i>x</i>) then <i>E</i> ≃ <i>E</i>' by the previous theorem. &emsp;□</p>
 
 <section aria-label="End">
 <a href="field_extension.html">&#171;Field Extensions</a>
