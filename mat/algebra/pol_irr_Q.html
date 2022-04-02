@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Irreducibility of polynomials in ℚ"/>
- <title>Irreducibility of polynomials in ℚ</title>
- <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Irreducibility of polynomials in ℚ"/>
+	<title>Irreducibility of polynomials in ℚ</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -85,7 +85,7 @@
 <p>be the two primitive polynomials. Assume by contradiction that <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) is not primitive. Then there exists a prime number <i>p</i> dividing all the coefficients of <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>). This element <i>p</i> cannot divide all the coefficients of <i>f</i>(<i>x</i>) and of <i>g</i>(<i>x</i>) by the hypothesis of primitivity. Let <i>a<sub>h</sub></i> and <i>b<sub>k</sub></i> be the smallest-indexed coefficients of <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>), respectively, that are not divided by <i>p</i>. Look at the coefficient with index <i>h</i> + <i>k</i> in <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>). It is</p>
 
 <div class="eq">
-<p><i>c<sub>h+k</sub></i> = <i>a<sub>h</sub> b<sub>k</sub></i> + (<i>a</i><sub><i>h</i>−1</sub> <i>b</i><sub><i>k</i> + 1</sub> + ··· + <i>a</i><sub>0</sub> <i>b<sub>h+k</sub></i>) + (<i>a</i><sub><i>h</i>+1</sub> <i>b</i><sub><i>k</i>−1</sub> + ··· + <i>a</i><sub><i>h+k</i></sub> <i>b</i><sub>0</sub>).</p>
+<p><i>c<sub>h+k</sub></i> = <i>a<sub>h</sub> b<sub>k</sub></i> + (<i>a</i><sub><i>h</i>−1</sub> <i>b</i><sub><i>k</i> + 1</sub> + ··· + <i>a</i><sub>0</sub> <i>b</i><sub><i>h</i>+<i>k</i></sub>) + (<i>a</i><sub><i>h</i>+1</sub> <i>b</i><sub><i>k</i>−1</sub> + ··· + <i>a</i><sub><i>h+k</i></sub> <i>b</i><sub>0</sub>).</p>
 </div>
 
 <p>Now, <i>p</i> divides <i>c<sub>h+k</sub></i> and both summands in the parentheses, and so it divides <i>a<sub>h</sub> b<sub>k</sub></i>. Thus, it divides one of the two factors, contradicting the hypothesis.□</p>
@@ -169,7 +169,9 @@
 
 <p>In order to decide about the reducibility of a polynomial <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>] over ℚ it is useful in the first place to have a criterion to establish whether the polynomial has roots in ℚ or not. If it has roots, it is sure to be reducible. The following proposition teaches us something useful in this regard.</p>
 
-<p><b>Proposition 4.6.10</b>. Let <i>f</i>(<i>x</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>x</i> + <i>a</i><sub>2</sub> <i>x</i><sup>2</sup> + ··· + <i>a<sub>n</sub> x<sup>n</sup></i> ∈ ℤ[<i>x</i>]. Let <i>α</i> = <i>r</i>/<i>s</i> ∈ ℚ be a root of <i>f</i>(<i>x</i>), with <i>r</i> and <i>s</i> relatively prime. Then <i>r</i> | <i>a</i><sub>0</sub> and <i>s</i> | <i>a<sub>n</sub></i>.</p>
+
+<div id="rational_root_theorem">
+<p><b>Proposition 4.6.10</b> (<i>Rational root theorem</i>). Let <i>f</i>(<i>x</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>x</i> + <i>a</i><sub>2</sub> <i>x</i><sup>2</sup> + ··· + <i>a<sub>n</sub> x<sup>n</sup></i> ∈ ℤ[<i>x</i>]. Let <i>α</i> = <i>r</i>/<i>s</i> ∈ ℚ be a root of <i>f</i>(<i>x</i>), with <i>r</i> and <i>s</i> relatively prime. Then <i>r</i> | <i>a</i><sub>0</sub> and <i>s</i> | <i>a<sub>n</sub></i>.</p>
 
 <p><b>Proof</b>. If <i>α</i> = <i>r</i>/<i>s</i> is a root of <i>f</i>(<i>x</i>), we find 0 = <i>f</i>(<i>r</i>/<i>s</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> (<i>r</i>/<i>s</i>) + ··· + <i>a<sub>n</sub></i> (<i>r</i>/<i>s</i>)<sup><i>n</i></sup>. Multiplying by <i>s<sup>n</sup></i> we get</p>
 
@@ -196,9 +198,11 @@
 
 <p><b>Corollary 4.6.12</b>. If a monic polynomial with integer coefficients has a rational root, this is a an integer.</p>
 
-<p><b>Proof.</b> Monic means <i>a<sub>n</sub></i> = 1. <i>s</i>|1 i.e. <i>s</i> = 1 and <i>r</i>/<i>s</i> = <i>r</i>.</p>
+<p><b>Proof.</b> Monic means <i>a<sub>n</sub></i> = 1. <i>s</i>|1 <i>i.e.</i> <i>s</i> = 1 and <i>r</i>/<i>s</i> = <i>r</i>.</p>
 
 <p>As it may be easily verified, none of these rational numbers is a root of <i>f</i>(<i>x</i>), so <i>f</i>(<i>x</i>) admits no rational roots. Being of degree 3, the polynomial is irreducible over ℚ.</p>
+
+</div>
 
 <p>There exists a criterion to determine whether a polynomial of arbitrary degree is irreducible over ℚ.</p>
 
