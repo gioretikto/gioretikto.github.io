@@ -29,7 +29,7 @@
 
 <p>To explore fields more deeply, we need some rudiments of vector space theory studied in a linear algebra course.</p>
 
-<p><b>8.1.1 Definition</b> (<i>Field Extension</i>) A field <i>K</i> is an extension field of a field <i>F</i> if <i>F</i> ⊆ <i>K</i> and the operations of <i>F</i> are those of <i>K</i> restricted to <i>F</i>. We will sometimes write <i>K</i>/<i>F</i> to mean that <i>K</i> is an extension of <i>F</i>. &emsp;□</p>
+<p><b>8.1.1 Definition</b> (<i>Field Extension</i>) An extension of a field <i>F</i> is a field <i>K</i> containing <i>F</i>. &emsp;□</p>
 
 <p>For example, the field ℂ of complex numbers is an extension of degree 2 on ℝ, since a basis is given by 1 and <i>i</i>, whilst is of degree 1 on itself. The field ℝ(<i>x</i>) of rational functions with coefficients in ℝ has infinite dimension on ℝ, since it contains the rational functions 1, <i>x</i>, <i>x</i><sup>2</sup>, ..., <i>x<sup>i</sup></i>, whilst is an extension of degree 1 on itself.</p>
 
@@ -45,6 +45,9 @@
 
 <p><b>8.1.3 Proposition</b>. Let <i>F</i> be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
 
+<p>A tower of extensions is a sequence of successive field extensions. In a tower of extensions, the degree is multiplicative:</p>
+
+<div id="tower">
 <p><b>8.1.4 Theorem</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
 
 <ol type="a">
@@ -91,6 +94,8 @@
 	<p>Since the <i>y<sub>j</sub></i> are independent over <i>F</i>, thus <i>a<sub>ij</sub></i> = 0 for every <i>i,j</i>.&emsp;□</p></li>
 
 </ol>
+
+</div>
 
 <p><b>8.1.5 Corollary</b> Let <i>L</i> a finite extension of <i>F</i> and <i>K</i> a subfield of <i>L</i> embedding <i>F</i>. Then</p>
 
@@ -666,6 +671,8 @@
 
 <p>Next theorem shows how the fininite or infinite nature <i>F</i>(<i>a</i>) over <i>F</i> <i>determines</i> whether <i>a</i> is algebraic or trascendental over <i>F</i>.</p>
 
+<div id="8117">
+
 <p><b>8.1.17 Theorem</b>. Let <i>K</i> an extension <i>F</i> and let <i>a</i> an algebraic element over <i>F</i>. Then, if &Psi;<sub><i>a</i></sub> is the evaluation homomorphism from <i>F</i> to <i>K</i>,<p>
 
 <ol type="a">
@@ -714,6 +721,8 @@
 <p>We managed to express <i>s</i> = <i>f</i>(<i>a</i>) as linear combination of elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup>, which are thus generators. &emsp;□</p></li>
 
 </ol>
+
+</div>
 
 <p>Notice how the writing <i>f</i>(<i>a</i>) = &alpha;<sub>0</sub> + &alpha;<sub>1</sub><i>a</i> + &alpha;<sub>2</sub> <i>a</i><sup>2</sup> + ... + &alpha;<sub><i>n</i> −1</sub><i>a</i><sup><i>n</i> − 1</sup> of every element <i>F</i>[<i>a</i>] is <i>unique</i>, since the elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> represent a <i>basis</i> .</p>
 

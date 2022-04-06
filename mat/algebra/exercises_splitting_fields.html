@@ -44,6 +44,10 @@
 		<li><p><i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6 <i>x</i> + 12</p></li>
 
 		<li><p><i>x</i><sup>3</sup> − 1</p></li>
+
+		<li><p><i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> −4<i>x</i><sup>2</sup> − 4</p></li>
+
+		<li><p><i>x</i><sup>4</sup> −4<i>x</i><sup>2</sup> + 2</p></li>
 	</ul>
 </li>
 
@@ -57,7 +61,7 @@
 
 <img src="img/poly_division_remainder.png" alt="long division polynomial"/>
 
-<p>Note how the remainder of the division  <i>b</i><sup>2</sup> + <i>b</i> + 2 = 0, in ℤ<sub>3</sub>(<i>b</i>). So, <i>x</i><sup>2</sup> + <i>x</i> + 2 = (<i>x</i> − b)(<i>x</i> + <i>b</i> + 1).&emsp;■</p></li>
+<p>Note how the remainder of the division  <i>b</i><sup>2</sup> + <i>b</i> + 2 = 0, in ℤ<sub>3</sub>(<i>b</i>). So, <i>x</i><sup>2</sup> + <i>x</i> + 2 = (<i>x</i> − <i>b</i>)(<i>x</i> + <i>b</i> + 1).&emsp;■</p></li>
 
 	<li><p>The only polynomial irreducible of 2nd degree in ℤ<sub>2</sub>[<i>x</i>] is <i>x</i><sup>2</sup> + <i>x</i> + 1. This polynomial has no roots in ℤ<sub>2</sub> so it is irreducible. We have already calculated the field in <a href="splitting_field.html#example">Example 8.2.5.</a>. &emsp;■</p></li>
 
@@ -181,7 +185,7 @@
 <ul>
 	<li><p>For a 3rd degree polynomial to be reducible it must possess at least a root. By the <a href="pol_irr_Q.html#rational_root_theorem">Rational root theorem</a>, a possible root of the polynomial must be in the set {±1,±2,±5,±10}. It's easily verified −2 is a root, so we can divide the original poly by (<i>x</i> − (−2)) and get <i>x</i><sup>2</sup> + 5. So the possible roots are ±sqrt(5)<i>i</i> and the splitting field is ℚ(sqrt(5)<i>i</i>). &emsp;■</p></li>
 
-	<li><p>The polynomial could split in f(x) = g(x) ⋅ h(x) where deg(g(x)) = deg(h(x)) = 2 or could have a linear factor. In the latter case the polynomial must have a root. By the Rational root theorem the possible roots are {±1,±2,±5,±10}. Since none of those is a root we examine the first case. By the replacement <i>x</i><sup>2</sup> = <i>y</i> we have the polynomial</p>
+	<li><p>The polynomial could split in <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) ⋅ <i>h</i>(<i>x</i>) where deg(g(<i>x</i>)) = deg(h(<i>x</i>)) = 2 or could have a linear factor. In the latter case the polynomial must have a root. By the Rational root theorem the possible roots are {±1,±2,±5,±10}. Since none of those is a root we examine the first case. By the replacement <i>x</i><sup>2</sup> = <i>y</i> we have the polynomial</p>
 
 	<div class="eq">
 	<p><i>y</i><sup>2</sup> −7<i>y</i> + 10</p>
@@ -191,7 +195,34 @@
 
 	<li><p>By the Rational root theorem the possible roots are {±1,±2,±3,±4,±6,±12} and −2 is one of them. By peforming (<i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6 <i>x</i> + 12):(<i>x</i> +2) we obtain <i>x</i><sup>4</sup>−5<i>x</i><sup>2</sup> + 6. The possible roots of <i>x</i><sup>4</sup>−5<i>x</i><sup>2</sup> + 6 are {±1,±2,±3,±6} and none of them is a root. By replacing <i>x</i><sup>2</sup> = <i>y</i> we obtain the polynomial <i>y</i><sup>2</sup> −5<i>y</i> + 6 having roots 3 and 2, thus <i>y</i><sup>2</sup> −5<i>y</i> + 6 = (<i>y</i> − 2) (<i>y</i> − 3) = (<i>x</i><sup>2</sup> −2) (<i>x</i><sup>2</sup> − 3). Thus the splitting field is ℚ(√3, √2). &emsp;■ </p></li>
 
-	<li><p>1 is a root of the polynomial then <i>x</i><sup>3</sup> −1 = (<i>x</i> − 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1).</p>
+	<li><p>1 is a root of the polynomial then <i>x</i><sup>3</sup> −1 = (<i>x</i> − 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1). The complex roots of <i>x</i><sup>2</sup> + <i>x</i> + 1 are</p>
+
+	<div class="eq">
+	<p><i>x</i> = [−1 &pm; sqrt(1 − 4)]/2 = −1/2 &pm; √3/2 <i>i</i></p>
+	</div>
+
+	<p>So the splitting field could be wrriten as ℚ(1, −1/2 − √3/2 <i>i</i>, −1/2 + √3/2 <i>i</i>) or more simply as ℚ(−1/2 − √3/2 <i>i</i>).&emsp;■□</p></li>
+
+	<li><p>By the rational root theorem the possible roots are {±1,±2,±4}. The fact that none of them is a root implies that the polynomial does not split in linear factors over ℚ. By using the substitution <i>y</i> = <i>x</i><sup>2</sup>, we obtain the polynomial <i>y</i><sup>3</sup> + <i>y</i><sup>2</sup> − 4<i>y</i> − 4, whose roots are −1, and ±2</p>
+
+	<div class="eq">
+	<p><i>y</i><sup>3</sup> + <i>y</i><sup>2</sup> − 4<i>y</i> − 4 = (<i>y</i> − 2) (<i>y</i> + 2) (<i>y</i> + 1).</p>
+	</div>
+
+	<p>Replacing back <i>x</i> we have <i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> −4<i>x</i><sup>2</sup> − 4 = (<i>x</i><sup>2</sup> − 2) (<i>x</i><sup>2</sup> + 2) (<i>x</i><sup>2</sup> + 1). So the splitting field is ℚ(√2, <i>i</i>).&emsp;■</p></li>
+
+	<li><p>Make the substitution <i>y</i> = <i>x</i><sup>2</sup> which yields to <i>y</i><sup>2</sup> − 4<i>y</i> + 2, and solve this quadratic to get <i>y</i> = [4 &pm; √8]/2 = 2 &pm;√2. So</p>
+	
+	<div class="eq">
+	<p><i>y</i><sup>2</sup> − 4<i>y</i> + 2 = (<i>y</i> + 2 &pm;√2) (<i>y</i> − 2 &pm;√2)</p>
+	</div>
+
+	<p>Replacing back <i>x</i> we have as roots the square roots of each of the two values found <i>i.e.</i> &pm;√(2 &pm;√2). We can express the splitting field as ℚ(√(2 + √2)) since ℚ(√(2  +√2)) = {<i>q</i><sub>0</sub> + <i>q</i><sub>1</sub>√(2 + √2) + <i>q</i><sub>2</sub> (2 + √2) + <i>q</i><sub>3</sub> (√(2  +√2))<sup>3</sup>}, and we have that 2 + √2 (and thus √2) is in ℚ(√(2 + √2)). But then </p>
+
+	<div class="eq">
+	<p>√2/√(2+√2) = √(2−√2) &in; ℚ(√(2 + √2)).&emsp;■</p>
+	</div>
+</li>
 
 </li>
 
@@ -202,7 +233,7 @@
 <section aria-label="End">
 <a href="splitting_field.html">&#171;Splitting Field</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides&#187;</a>
+<a href="finite_fields.html">Finite Fields&#187;</a>
 </section>
 
 </div>
