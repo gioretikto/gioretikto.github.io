@@ -21,7 +21,54 @@
 
 <h1>Finite Fields</h1>
 
-<p>These fields as we already mentioned have characteristi <i>p</i>, that is are extension of ℤ<sub>p</sub>.</p>
+<p>Finite fields have a finite number of elements and characteristic <i>p</i>, that is they are extension of ℤ<sub><i>p</i></sub>. Before proceeding in the study of finite fields we introduce some definitions we shall use later on.</p> 
+
+<p><b>8.2.1 Definition</b>. Let <i>F</i> a field and let <i>f</i>(<i>x</i>) = <i>a<sub>n</sub>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub><i>x</i><sup><i>n</i> − 1</sup> + ... + <i>a</i><sub>1</sub><i>x</i> + <i>a</i><sub>0</sub> a plynomial in <i>F</i>[<i>x</i>]. We define the <i>derivative</i> of <i>f</i>(<i>x</i>), and we indicate it by <i>f</i>'(<i>x</i>), the polynomial in <i>F</i>[<i>x</i>]:</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) := <i>na<sub>n</sub>x</i><sup><i>n</i> − 1</sup> + (<i>n</i> − 1)<i>a</i><sub><i>n</i> − 1</sub><i>x</i><sup><i>n</i> − 2</sup> + ... + 2<i>a</i><sub>2</sub><i>x</i> + <i>a</i><sub>1</sub></p>
+</div>
+
+<p>which is a polynomial of degree at most <i>n</i> − 1. It is to verify that the ordinary rules of calculus hold:</p>
+
+<div class="eq">
+<p>(<i>f</i> + <i>g</i>)' = <i>f</i>' + <i>g</i>';<br>
+(<i>f</i><i>g</i>)' = <i>f</i>'<i>g</i> + <i>f</i><i>g</i>'</p>
+</div>
+
+<p><b>8.2.2 Proposition</b>. A polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] has a multiple root (in some extension field) if and only if <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor (<i>i.e.</i> with degree greater than one).</p>
+
+<p><b>Proof</b>. First notice that it is immaterial to specify over which field <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor; If they have a common non-trivial factor in a field <i>K</i> &subseteq; <i>F</i> then they have a common non-trivial factor in <i>F</i> as well, indeed from the relation</p>
+
+<div class="eq">
+<p><i>s</i>(<i>x</i>) <i>f</i>(<i>x</i>) + <i>t</i>(<i>x</i>)<i>f</i>'(<i>x</i>) = 1, &emsp;<i>s</i>(<i>x</i>),<i>t</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>]</p>
+</div>
+
+<p>which says that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) are coprimes in <i>F</i> would be a relation true in <i>K</i> as well, then the two polynomials would be coprimes in <i>K</i> as well. Let <i>&alpha;</i> an arbitrary multiple root of <i>f</i>(<i>x</i>), that is</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = (<i>x</i> − &alpha;)<sup><i>m</i></sup><i>g</i>(<i>x</i>), &emsp; <i>m</i> &gt; 1</p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p><i>f</i>'(<i>x</i>) = <i>m</i> (<i>x</i> − &alpha;)<sup><i>m</i> −1</sup><i>g</i>(<i>x</i>) + (<i>x</i> − &alpha;)<sup><i>m</i></sup><i>g</i>'(<i>x</i>)</p>
+</div>
+
+<p>from which it results that <i>&alpha;</i> is a root of <i>f</i>'(<i>x</i>) as well.<br> Conversely, suppose that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor. By contradiction, suppose first that <i>f</i>(<i>x</i>) has no multiple roots, that is let</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = ∏<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> (<i>x</i> − &alpha;<sub><i>i</i></sub>)</p>
+</div>
+
+<p>with <i>&alpha;<sub>i</sub></i>, all distinct among each other. Then</p>
+
+<div class="eq">
+<p><i>f</i>'(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> (<i>x</i> − &alpha;<sub><i>1</i></sub>) (<i>x</i> − &alpha;<sub><i>2</i></sub>) ... (<i>x</i> − &alpha;<sub><i>i</i></sub>) (<i>x</i> − &alpha;<sub><i>n</i></sub>)</p>
+</div>
+
+<p>from which it results that <i>f</i>'(&alpha;<sub>i</sub>) &ne; 0 for every <i>i</i> = 1, ..., <i>n</i> and this contradicts the assumption that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor. &emsp;□</p>
 
 <section aria-label="End">
 <a href="epoxides.html">&#171;Epoxides</a>
