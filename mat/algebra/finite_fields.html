@@ -21,7 +21,7 @@
 
 <h1>Finite Fields</h1>
 
-<p>Finite fields have a finite number of elements and characteristic <i>p</i>, that is they are extension of ℤ<sub><i>p</i></sub>. Before proceeding in the study of finite fields we introduce some definitions we shall use later on.</p> 
+<p>Finite fields have a finite number of elements and <a href="characteristic_integral_domain.html">characteristic</a> <i>p</i>, that is they are extension of ℤ<sub><i>p</i></sub>. Before proceeding in the study of finite fields we introduce some definitions we shall use later on.</p> 
 
 <p><b>8.2.1 Definition</b>. Let <i>F</i> a field and let <i>f</i>(<i>x</i>) = <i>a<sub>n</sub>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub><i>x</i><sup><i>n</i> − 1</sup> + ... + <i>a</i><sub>1</sub><i>x</i> + <i>a</i><sub>0</sub> a plynomial in <i>F</i>[<i>x</i>]. We define the <i>derivative</i> of <i>f</i>(<i>x</i>), and we indicate it by <i>f</i>'(<i>x</i>), the polynomial in <i>F</i>[<i>x</i>]:</p>
 
@@ -62,13 +62,63 @@
 <p><i>f</i>(<i>x</i>) = ∏<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> (<i>x</i> − &alpha;<sub><i>i</i></sub>)</p>
 </div>
 
-<p>with <i>&alpha;<sub>i</sub></i>, all distinct among each other. Then</p>
+<p>with <i>&alpha;<sub>i</sub></i>, all distinct among each other. Then, applying the product rule (fg)' = f'g + fg' to calculate the derivative</p>
 
 <div class="eq">
 <p><i>f</i>'(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> (<i>x</i> − &alpha;<sub><i>1</i></sub>) (<i>x</i> − &alpha;<sub><i>2</i></sub>) ... (<i>x</i> − &alpha;<sub><i>i</i></sub>) (<i>x</i> − &alpha;<sub><i>n</i></sub>)</p>
 </div>
 
+<p>notice that the product rule extends to (fgh)' = f'gh + fg'h + fgh'; for example if f(x) = (x-a1)(x-a2)(x-a3), then f'(x) = (x-a2)(x-a3) + (x-a1)(x-a3) + (x-a1)(x-a2), and f'(a1) = (a1-a2)(a1-a3) &ne; 0.</p>
+
 <p>from which it results that <i>f</i>'(&alpha;<sub>i</sub>) &ne; 0 for every <i>i</i> = 1, ..., <i>n</i> and this contradicts the assumption that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor. &emsp;□</p>
+
+<p><b>8.2.3 Definition</b> An irreducible polynomial <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] is separable if it has no multiple roots in any extension of <i>F</i>, otherwise it is called inseparable over <i>F</i> </p>
+
+<p><b>8.2.3 Example</b> The polynomial <i>f</i>(<i>x</i>) = <i>x</i> − 5 &in; ℚ[<i>x</i>] is irreducible over ℚ, and has all disting roots.&emsp;■</p>
+
+<p><b>8.2.4 Example</b> Let <i>K</i> = ℤ<sub>3</sub>(<i>t</i>) is the field of rational functions in the indeterminate <i>t</i>, with coefficients in ℤ<sub>3</sub>. The polynomial</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − <i>t</i> &in; ℤ<sub>3</sub>(<i>t</i>)[<i>x</i>]</p>
+</div>
+
+<p>is inseparable. Let &alpha; one of its roots (in its splitting field). Then it results &alpha;<sup>3</sup> = <i>t</i>, from which</p>
+
+<div class="eq">
+<p>(<i>x</i> − &alpha;)<sup>3</sup> = <i>x</i><sup>3</sup> − &alpha;<sup>3</sup> = <i>x</i><sup>3</sup> − <i>t</i> = <i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>so if &beta; is another root of <i>f</i>(<i>x</i>), then</p>
+
+<div class="eq">
+<p>0 = <i>f</i>(&beta;) = (<i>x</i> − &beta;)<sup>3</sup> &emsp;⇒  &emsp; &beta; = &alpha;</p>
+</div>
+
+<p>It remains to prove that <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − <i>t</i> is irreducible over ℤ<sub>3</sub>(<i>t</i>). If it were reducible, being a polynomial of 3rd degree it would possess a root.  Elements of ℤ<sub>3</sub>(<i>t</i>) are of the form</p>
+
+<div class="eq">A
+<p><i>&alpha;</i>(<i>t</i>) = (a + b t + c t<sup>2</sup> + ...)/(x + y t + z t<sup>2</sup> + ...). </p>
+</div>
+
+<p>
+
+<p>Suppose by contradiction that &alpha;(<i>t</i>) = A(t)/B(t) is a root of <i>x</i><sup>3</sup> − t. Then <i>&alpha;</i><sup>3</sup> − <i>t</i> = 0 <i>i.e</i> A(t)<sup>3</sup> / B(t)<sup>3</sup> − t = 0, so so A(t)<sup>3</sup> = t B(t)<sup>3</sup>, which is clearly impossible. Similarly to how you might show sqrt(2) = a/b is impossible. certainly, a is not in Z<sub>3</sub>(<i>t</i>) just like how sqrt(2) is not in Q but we can extend it to get  ℤ<sub>3</sub>(<i>t</i>)[<i>a</i>], as we did ℚ[sqrt(2)]&emsp;■</p>
+
+<p>The following proposition indicates in which cases an irreducible polynomial has multiples roots.</p>
+
+<p><b>8.2.5 Proposition</b> Let <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an irreducible polynomial. Then, if <i>F</i> has characteristic zero, <i>f</i>(<i>x</i>) has is never inseparable. If <i>F</i> has characteristic <i>p</i>, <i>f</i>(<i>x</i>) is inseparable if and only if <i>f</i>(<i>x</i>) = <I>g</i>(<i>x<sup>p</sup></i>), that is is a polynomial in the variable <i>x<sup>p</sup></i>:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>x<sup>p</sup></i> + ... + <i>a<sub>n</sub>x<sup>np</sup></i></p>
+</div>
+
+<p><b>Proof</b>. We know that a polynomial <i>f</i>(<i>x</i>) is inseparable if and only if <i>f</i>(<i>x</i>) and <i>f'</i>(<i>x</i>) have a common factor of degree &ge; 1. But, since that in this case <i>f</i>(<i>x</i>) is irreducible, and since <i>f'</i>(<i>x</i>) has degree less than that of <i>f</i>(<i>x</i>), it follows that an irreducible polynomial is inseparable if and only if <i>f'</i>(<i>x</i>) = 0, that is</p>
+
+<div class="eq">
+<p><i>ia<sub>i</sub></i> = 0 &emsp; &forall;<i>i</i> = 1, ..., <i>n</i></p>
+</div>
+
+<p>Now, if the characteristic is zero, these relations imply that <i>a<sub>i</sub></i> = 0 for every <i>i</i> = 1, ..., <i>n</i>, that is <i>f</i>(<i>x</i>) is a constant <i>a</i><sub>0</sub>, hence, without roots. If the characteristic if <i>p</i> the relations imply that those <i>a<sub>i</sub></i> such that <i>i</i> ≡ 0 (mod <i>p</i>) is not verified must be zero. Thus <i>f</i>(<i>x</i>) is a polynomial composed by powers of <i>x<sup>p</sup></i>. Conversely every such a polynomial is inseparable since its derivative is zero. &emsp;□ </p>
 
 <section aria-label="End">
 <a href="epoxides.html">&#171;Epoxides</a>
