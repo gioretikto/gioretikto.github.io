@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infinite Sequences"/>
+    <title>Infinite Sequences</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Infinite Sequences</h1>
+
+<p>A sequence of real numbers is a function whose domain is the set of positive integers and range a set of real numbers.</p>
+
+<div class="eq">
+<p><i>f</i> : ℕ → ℝ</p>
+</div>
+
+<p>A sequence of complex numbers is defined similarly, with ℝ replaced by ℂ. A sequence can be thought of as a list of numbers written in a definite order:</p>
+
+<div class="eq">
+<p><i>a</i><sub>0</sub>, <i>a</i><sub>1</sub> , a<sub>2</sub> , <i>a</i><sub>3</sub>, ... , <i>a<sub>n</sub></i>, ...</p>
+</div>
+
+<p>The number a1 is called the first term, <i>a</i><sub>1</sub> is the second term, and in general <i>a<sub>n</sub></i> is the nth term. The sequence {<i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, ..., <i>a<sub>n</sub></i>} is generally indicated as {<i>a<sub>n</sub></i>}. For example consider the sequence</p>
+
+<div class="eq">
+<p>{<i>a<sub>n</sub></i>} = {(−1)<sup>n</sup>} = {−1, 1, −1, 1, −1, ...}<<br>
+<br>{<i>a<sub>n</sub></i>} = {<i>n</i><i>2</i>} = {0, 1, 4, 9, 16, ..}<br>
+<br>{<i>a<sub>n</sub></i>} = {1/<i>n</i>} = {1, 1/2, 1/3, 1/4, ..}<br>
+<br>{<i>a<sub>n</sub></i>} = {5} = {5, 5, 5} (constant sequence)<br>
+</div>
+
+<p>Its <i>n</i>th term is <i>a<sub>n</sub></i> = (−1)<sup><i>n</i></sup> and the range is {−1, 1}. Some sequences can be defined by giving a formula for the <i>n</i>th term. </p>
+
+<div class="eq">
+<p><i>a<sub>n</sub</i>> = <i>n</i>/(<i>n</i> + 1), &emsp;&emsp; {1/2, 2/3, 3/4, 4/5, ..., i>n</i>/(<i>n</i> + 1)}<br>
+</div>
+
+<p><b>Definition 2.1.1</b>. A sequence {<i>a<sub>n</sub></i>} is said</p>
+
+<ul>
+	<li><p><i>Bounded below</i> if there exists a real number <i>m</i> such that &emsp; <i>a<sub>n</sub></i> &ge; <i>m</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
+	<li><p><i>Bounded above</i> if there exists a real number <i>M</i> such that &emsp; <i>a<sub>n</sub></i> &le; <i>M</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
+	<li><p><i>Bounded</i>. A sequence which is bounded both above and below. Thus a sequence {<i>a<sub>n</sub></i>} is said to be bounded if there exist two real numbers <i>m</i> and <i>M</i> such that <i>m</i> &le; <i>a<sub>n</sub></i> &le; <i>M</i> &forall; <i>n</i> &in; ℕ.&emsp;□</p></li>
+</ul>
+
+<p>For example {(−1)<sup><i>n</i></sup>)} is bounded by the two numbers {−1, 1}; {1/<i>n</i>} is bounded: 1 is the upper limit and 0 is a lower bound; {<i>n</i><sup>2</sup>} is bounded below; {(−2)<sup>n</sup>)} is not bounded.</p>
+
+<p>The most important question about a sequence is whether it converges. We define this notion as follows.</p>
+
+<h2>Convergence of Sequences</h2>
+
+<p><b>Definition 2.1.2</b> - (<i>Limit of a sequence</i>) A sequence {<i>a<sub>n</sub></i>} is said to converge to a real number <i>ℓ</i>, called the limit of {a<sub>n</sub>}, if for every <i>&epsilon;</i> &gt; there <i>exists</i> a natural number <i>n</i><sub>0</sub> such that:</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon;, &emsp; &forall;<i>n</i> &ge; <i>n</i><sub>0</sub></p>
+</div>
+
+<p>If the sequence {<i>a<sub>n</sub></i>} converges to the limit <i>ℓ</i>, then we write</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>a<sub>n</sub></i> = <i>ℓ</i>. &emsp;□</p>
+</div>
+
+<p>note that the inequality |<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon; corresponds to the chain of inequalities:</p>
+
+<div class="eq">
+<p><i>ℓ</i> − <i>&epsilon;</i> &lt; <i>a<sub>n</sub></i> &lt; <i>ℓ</i> + <i>&epsilon;</i></p>
+</div>
+
+<p>from this relation is clear that: <i>every convergent sequence is as well bounded</i>.</p>
+
+<p><b>Example 2.1.3</b> Let a<sub>n</sub> = 1/<i>n</i>, <i>n</i> = 1, 2, ... . Then the sequence converges to 0. For let <i>&epsilon;</i> > 0. Choose <i>N</i> to be the next integer after 1/&epsilon; (we use the <a href="R.html">Archimedean property</a>, if <i>r,&epsilon;</i> are positive real numbers, then there is a positive integer <i>n</i> sucht that <i>n&epsilon;</i> &gt; <i>r</i>). If <i>n</i> > <i>N</i> then</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − 0| = |<i>a<sub>n</sub></i>| = 1/<i>n</i> &lt; 1/<i>N</i> &lt; &epsilon;</p>
+</div>
+
+<p>proving the claim. &emsp;■</p>
+
+<p>When discussing the convergence of a sequence, we often find it inconvenient to deal with the definition of convergence as given. For this definition makes reference to the number to which the sequence is supposed to converge, and we often do not know what the limit is in advance. Would it not be useful to be able to decide whether a series converges without knowing to what limit it converges?</p>
+
+<p><b>Definition 2.1.4</b>. (Cauchy Sequence) Let {<i>a<sub>n</sub></i>} be a sequence of real numbers. We say that the sequence satisfies the Cauchy criterion — or more briefly, that the sequence is <b>Cauchy</b> — if, for each <i>&epsilon;</i> &gt; 0, there is an integer <i>N</i> > 0 such that if <i>j, k</i> &gt; <i>N</i> then |<i>a<sub>j</sub></i> − <i>a<sub>k</sub></i>| < &epsilon; &emsp;□</p>
+
+<p><b>Theorem 2.1.5</b>. (Cauchy’s Criterion) A sequence is convergent only if it is Cauchy.</p>
+
+<p><b>Proof.</b>. If the sequence has limit <i>ℓ</i>, then by definition, by fixing an <i>&epsilon;</i> &gt; 0, there is an integer <i>N</i> such that |<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon; for <i>n</i> &ge; <i>N</i>. Thus if <i>n,m</i> &ge; <i>N</i></p>
+
+<div class="eq">
+<p>|<i>a<sub>m</sub></i> − <i>a<sub>n</sub></i>| = |<i>a<sub>m</sub></i> − <i>ℓ</i> + <i>ℓ</i> − a<sub>n</sub>| &le; |a<sub>n</sub> − <i>ℓ</i>| + |<i>ℓ</i> − a<sub>n</sub>| &lt; 2<i>&epsilon;</i>.</p>
+</div>
+
+<p>since 2<i>&epsilon;</i> is an arbitrary positive number it follows that {<i>a<sub>n</sub></i>} is a Cauchy sequence.</p>
+
+<p>For the converse we need to show that there is a value <i>ℓ</i> to which the sequence converges.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
