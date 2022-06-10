@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Real Numbers"/>
+    <title>The Real Numbers</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Real Numbers</h1>
+
+<!--
+<p>Having explored different aspects of the integers and the rational numbers, we now have to consider the next stage and analyse what is that distinguishes the real numbers from the rational numbers. </p>
+
+<p><b>Proposition 1.1.1</b>. The equation</p>
+
+<div class="eq">
+<p><i>p</i> = 2</p>
+</div>
+
+<p>is not satisfied by any rational <i>p</i>.</p>
+
+<p><b>First proof</b>. If there were such a <i>p</i>, we could write <i>p</i> = <i>m</i>/<i>n</i> where <i>m</i> and <i>n</i> are integers that are not both even. If necessary, we can assume that <i>m</i>/<i>n</i> is a fraction in its lowest terms, <i>i.e.</i> that the integers <i>m</i> and <i>n</i> have no common factors. Now <i>m</i><sup>2</sup> = 2 <i>n</i><sup>2</sup> implies that <i>m</i><sup>2</sup> is even. Therefore, <i>m</i> is even and so we can write <i>m</i> = 2<i>k</i>. Hence (2<i>k</i>)<sup>2</sup> = 2<i>n</i><sup>2</sup>, <i>i.e.</i> 4<i>k</i><sup>2</sup> = 2<i>n</i><sup>2</sup>. This tells us that <i>n</i><sup>2</sup> = 2<i>k</i><sup>2</sup>, so that <i>n</i><sup>2</sup> is even, implying that <i>n</i> is even. But <i>m</i> and <i>n</i> both being even implies that they do have a common factor of 2. This is a contradiction which the method of <i>reduction ad absurdum</i> entails. The proposition is thus proved. &emsp;■</p>
+
+<p><b>Second proof</b>. We use the fact that a prome factor of a square number occures an even number of times in the factorization. For example 3136 = 56<sup>2</sup> = 2<sup>6</sup> ⋅ 7<sup>2</sup>. We consider the equation <i>p</i><sup>2</sup> = 2<i>q</i><sup>2</sup>. On the left-hand side the prime factor 2 must occure an even number of times (remember that 0 is even), whereas on the right-hand side 2 will occur an odd number of times. This is a contradiction to the fact that the prime factorization of a number is unique. So it is impossible to have integers <i>p</i> and <i>q</i> satisfying <i>p</i><sup>2</sup> = 2<i>q</i><sup>2</sup>.&emsp;■</p>
+
+<div class="eq">
+<p><i>q</i> = <i>p</i> − (<i>p</i><sup>2</sup> − 2)/(<i>p</i> + 2) = (2<i>p</i> + 2)/(<i>p</i> + 2)</p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p><i>q</i><sup>2</sup> − 2 = 2(2<i>p</i><sup>2</sup> − 2)/(<i>p</i> + 2)<sup>2</sup></p>
+</div>
+
+
+<p>If <i>p</i> is in <i>A</i> then <i>p</i><sup>2</sup> &lt; 0, (3) shows that <i>q</i> &gt; <i>p</i>: (2<i>p</i> + 2)/(<i>p</i> + 2) &gt; <i>p</i>  iff  (2<i>p</i> + 2) &gt; <i>p</i>(<i>p</i> + 2)  iff  2 > <i>p</i><sup>2</sup>.</p>
+
+<p>(4) shows that <i>q</i><sup>2</sup> &lt; 2. Thus <i>q</i> is in <i>A</i>.</p>
+
+<p>If <i>p</i> is in <i>B</i> then <i>p</i><sup>2</sup> − 2 &gt; 0, (3) shows that 0 &lt; q &lt; <i>p</i>, and (4) shows that <i>q</i><sup>2</sup> &gt; 2. Thus <i>q</i> is in <i>B</i>.</ p>
+-->
+
+<p><b>Proposition 1.1.2</b> ℕ is ubbounded in ℝ.</p>
+
+<p><b>Proof</b>. If ℕ were bounded, then by the completness axiom ℕ would have a least upper bound, say sup ℕ = <i>m</i>; then <i>m</i> − 1 is not an upper bound of ℕ. Thus, there exists a positive integer <i>n</i> such that <i>n</i> &gt; <i>m</i> − 1, that is, <i>n</i> + 1 &gt; <i>m</i>, and <i>n</i> + 1 &in; ℕ (<i>n</i> + 1 being a successor of <i>n</i>). Thus <i>m</i> is not an upper bound of ℕ, which is a contradiction. &emsp;□</p>
+
+<p><b>Proposition 1.1.3</b> (<i>Archimedean Property</i>) Let <i>x</i> and <i>y</i> be positive real numbers. Then there is a natural number <i>n</i> such that</p>
+
+<div class="eq">
+<p><i>nx</i> &gt; <i>y</i>.</p>
+</div>
+
+<p>Equivalently, given <i>y</i> &gt; 0, there is an <i>n</i> &in; ℕ such that <i>ny</i> &gt; 1.</p>
+
+<!-- <p><b>Proof 1</b> (By Contradiction). Suppose the claim to be false, then <i>nx</i> &le; <i>y</i>. Let <i>S</i> = {<i>nx</i>: <i>n</i> &in; ℕ}; Then <i>S</i> has <i>y</i> as an upper bound. But then <i>S</i> has a <i>least</i> upper bound in ℝ. Put <i>&alpha;</i> = sup <i>S</i>. Since <i>x</i> &gt; 0, <i>&alpha;</i> − <i>x</i> &lt; &alpha;, and <i>&alpha;</i> − <i>x</i> is not an upper bound of <i>S</i>. Hence <i>&alpha;</i> − <i>x</i> &lt; <i>mx</i> for some positive integer <i>m</i>. But then &alpha; &lt; (<i>m</i> + 1)<i>x</i> &in; <i>S</i>, which is impossible, since &alpha; is an upper bound of <i>S</i>. &emsp;□</p> -->
+
+<p><b>Proof</b>. If the first conclusion were false, then every natural numnber would be bounded above by <i>y</i>/<i>x</i>. If the second conclusion were false, then evey natural number would be bounded above by 1/<i>y</i>. &emsp;□</p>
+
+<p>The Archimedean Property also implies that there are no infinitely small positive real numbers.</p>
+
+<p><b>Corollary 1.1.4</b> (Density of ℚ in ℝ) If <i>x</i> and <i>y</i> are real numbers with <i>x</i> &lt; <i>y</i>, then there exists a rational number <i>q</i> &in; ℚ, such that <i>x</i> &lt; <i>q</i> &lt; <i>y</i>.</p>
+
+<p><b>Proof</b>. Since <i>x</i> &lt; <i>y</i>, we have <i>y</i> − <i>x</i> &gt; 0, by the Archimedean Property there is a positive integer <i>n</i> such that</p>
+
+<div class="eq">
+<p><i>n</i> (<i>y</i> − <i>x</i>) &gt; 1</p>
+</div>
+
+<p>Applying the the Archimedean Property again, to obtain positive integers <i>m</i><sub>1</sub> such that <i>m</i><sub>1</sub> &gt; <i>nx</i> and  <i>m</i><sub>2</sub> &gt; −<i>n</i> ⋅ <i>x</i>. Thus we see that <i>nx</i> falls between the integers <i>m</i><sub>1</sub> and −<i>m</i><sub>2</sub>;</p>
+
+<div class="eq">
+<p>−<i>m</i><sub>2</sub> &le; <i>nx</i> &lt; <i>m</i><sub>1</sub></p>
+</div>
+
+<p>therefore there must be an integer <i>m</i> (with −<i>m</i><sub>2</sub> &le; <i>m</i> &le; −<i>m</i><sub>1</sub>) such that</p>
+
+<div class="eq">
+<p><i>m</i> − 1 &le; <i>nx</i> &lt; <i>m</i></p>
+</div>
+
+<p>If we combine these inequalities, we obtain</p>
+
+<div class="eq">
+<p><i>nx</i> &lt; <i>m</i> &le; 1 + <i>nx</i> &lt; <i>ny</i></p>
+</div>
+
+<p>Since <i>n</i> &gt; 0, it follows that</p>
+
+<div class="eq">
+<p><i>x</i> &lt; <i>m</i>/<i>n</i> &lt; <i>y</i></p>
+</div>
+
+<p>this proves the claim, with <i>q</i> = <i>m</i>/<i>n</i>. &emsp;□</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
