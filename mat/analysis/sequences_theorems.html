@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fundamental theorems on sequences"/>
+    <title>Fundamental theorems on sequences</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Fundamental theorems on sequences</h1>
+
+<p><b>Theorem 2.2.1</b> (<i>Uniqueness of the limit</i>). If {<i>a<sub>n</sub></i>} is a convergent sequence with limit ℓ, there are no other limits.</p>
+
+<p><b>Proof</b>. Suppose there exist two limits ℓ<sub>1</sub> and ℓ<sub>2</sub> for the same sequence. By using triangular inequality:</p>
+
+<div class="eq">
+<p>|<i>ℓ</i><sub>1</sub> − <i>ℓ</i><sub>2</sub></i>|  = |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i> + <i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub>| &le; |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i>| + |<i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub></i>| &lt; 2<i>&epsilon;</i></p>
+</div>
+
+<p>Since &epsilon; is a real positive number (can be chosen to be arbitrarily small), this inequality can only hold if <i>ℓ</i><sub>1</sub> = <i>ℓ</i><sub>2</sub>. &emsp;□</p>
+
+<p><b>Theorem 2.2.2</b>. (<i>Squeeze Theorem</i>). Let {<i>a<sub>n</sub></i>}, {<i>b<sub>n</sub></i>} and {<i>c<sub>n</sub></i>} be sequences such that</p> 
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &le; <i>b<sub>n</sub></i> &le; <i>c<sub>n</sub></i></p>
+</div>
+
+<p>for every positive integer <i>n</i>. If</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>a<sub>n</sub></i> = <i>ℓ</i> = lim<sub><i>n</i> ⟶ &infin;</sub> <i>c<sub>n</sub></i></p>
+</div>
+
+<p>then</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>b<sub>n</sub></i> = <i>ℓ</i></p>
+</div>
+
+<p><b>Proof</b>. Let &epsilon; &gt; 0. By the definition of limit, there exists a positive integer <i>N</i><sub>1</sub> such that if <i>n</i> &ge; <i>N</i><sub>1</sub>:</p>
+
+<div class="eq">
+<p><i>ℓ</i> − <i>&epsilon;</i> &lt; <i>a<sub>n</sub></i> &lt; <i>ℓ</i>
+</div>
+
+<p>An there exists a positive integer <i>N</i><sub>2</sub> such that if <i>n</i> &ge; <i>N</i><sub>2</sub>:</p>
+
+<div class="eq">
+<p>ℓ − &epsilon; &lt; <i>c<sub>n</sub></i> &lt; <i>ℓ</i> + <i>&epsilon;</i></p>
+</div>
+
+<p>Thus is <i>n</i> &ge; max {<i>N</i><sub>1</sub>,<i>N</i><sub>2</sub>}, we have</p>
+
+<div class="eq">
+<p><i>ℓ</i> − <i>&epsilon;</i> &lt; <i>a<sub>n</sub></i> &le; <i>b<sub>n</sub></i> &le; <i>c<sub>n</sub></i> &lt; <i>ℓ</i> + <i>&epsilon;</i> &emsp;□</p>
+</div>
+
+<p><b>Example 2.2.3</b>. To illustrate the squeeze theorem, we find the limit of the following sequence (sin <i>n</i>)/<i>n</i> as <i>n</i> → ∞. Recall that the sine function has range [−1, +1] so</p>
+
+<div class="eq">
+<p>−1 &le; sin <i>n</i> &le; 1</p>
+</div>
+
+<p>for every value of <i>n</i>; when we divide these inequalities by <i>n</i>, we obtain</p>
+
+<div class="eq">
+<p>−1/<i>n</i> &le; (sin <i>n</i>)/<i>n</i> &le; 1/<i>n</i></p>
+</div>
+
+<p>The flanking sequences are −1∕<i>n</i> and 1∕<i>n</i>, and both of them converge to 0 as <i>n</i> → ∞. Therefore, {<i>a<sub>n</sub></i>} converges to 0 too. &emsp;■</p>
+
+<p><b>Theorem 2.2.4</b>. (<i>Permanence of sing</i>) If a sequence {<i>a<sub>n</sub></i>} has limit <i>ℓ</i> &ne; 0, its terms starting from an index <i>&nu;</i> on, have the same sign of ℓ.</p>
+
+<p><b>Proof</b>. Let <i>&epsilon;= <i>ℓ</i>/2</i>. By the definition of limit:</p>
+
+<div class="eq">
+<p><i>ℓ</i> − |<i>ℓ</i>|/2 &lt; <i>a<sub>n</sub></i> &lt; <i>ℓ</i> + |<i>ℓ</i>|/2</p>
+</div>
+
+<p>&forall; <i>n</i> &gt; <i>&nu;</i>, given a certain &nu; (whose value depends on the choice of &epsilon;). Thus if <i>ℓ</i> &gt; 0 it follows (from the first inequality)</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &gt; <i>ℓ</i>/2 &gt; 0</i></p>
+</div>
+
+<p>or if <i>ℓ &lt; 0</i> it follows (from the second inequality)</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub> &lt; ℓ/2 &lt; 0. □</i></p>
+</div>
+
+<section aria-label="End">
+<a href="sequences.html">&#171;Infinite sequences</a>
+<a href="index.html">Index</a>
+<a href="subseqeunces.html">Subseqeunces &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

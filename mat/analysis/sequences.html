@@ -31,13 +31,14 @@
 <p>A sequence of complex numbers is defined similarly, with ℝ replaced by ℂ. A sequence can be thought of as a list of numbers written in a definite order:</p>
 
 <div class="eq">
-<p><i>a</i><sub>0</sub>, <i>a</i><sub>1</sub> , a<sub>2</sub> , <i>a</i><sub>3</sub>, ... , <i>a<sub>n</sub></i>, ...</p>
+<p><i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, a<sub>2</sub>, <i>a</i><sub>3</sub>, ... , <i>a<sub>n</sub></i>, ...</p>
 </div>
 
-<p>The number a1 is called the first term, <i>a</i><sub>1</sub> is the second term, and in general <i>a<sub>n</sub></i> is the nth term. The sequence {<i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, ..., <i>a<sub>n</sub></i>} is generally indicated as {<i>a<sub>n</sub></i>}. For example consider the sequence</p>
+<p>The number a1 is called the first term, <i>a</i><sub>1</sub> is the second term, and in general <i>a<sub>n</sub></i> is the <i>n</i>th term i.e. the real value f(<i>n</i>) associated to <i>n</i>. The sequence {<i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, ..., <i>a<sub>n</sub></i>} is generally indicated as {<i>a<sub>n</sub></i>}. It's important to remark the fact that a sequence (always infinite) may
+well have a <i>finite range</i>; for instance, 1, 0, 1, 0, ... is an infinite repeating sequence while its range is a set consisting of just two numbers: 0 and 1. Some example are</p>
 
 <div class="eq">
-<p>{<i>a<sub>n</sub></i>} = {(−1)<sup>n</sup>} = {−1, 1, −1, 1, −1, ...}<<br>
+<p>{<i>a<sub>n</sub></i>} = {(−1)<sup><i>n</i></sup>} = {−1, 1, −1, 1, −1, ...}<<br>
 <br>{<i>a<sub>n</sub></i>} = {<i>n</i><i>2</i>} = {0, 1, 4, 9, 16, ..}<br>
 <br>{<i>a<sub>n</sub></i>} = {1/<i>n</i>} = {1, 1/2, 1/3, 1/4, ..}<br>
 <br>{<i>a<sub>n</sub></i>} = {5} = {5, 5, 5} (constant sequence)<br>
@@ -46,10 +47,12 @@
 <p>Its <i>n</i>th term is <i>a<sub>n</sub></i> = (−1)<sup><i>n</i></sup> and the range is {−1, 1}. Some sequences can be defined by giving a formula for the <i>n</i>th term. </p>
 
 <div class="eq">
-<p><i>a<sub>n</sub</i>> = <i>n</i>/(<i>n</i> + 1), &emsp;&emsp; {1/2, 2/3, 3/4, 4/5, ..., i>n</i>/(<i>n</i> + 1)}<br>
+<p><i>a<sub>n</sub></i> = <i>n</i>/(<i>n</i> + 1), &emsp;&emsp; {1/2, 2/3, 3/4, 4/5, ..., <i>n</i>/(<i>n</i> + 1)}<br>
 </div>
 
-<p><b>Definition 2.1.1</b>. A sequence {<i>a<sub>n</sub></i>} is said</p>
+<p><b>Definition 2.1.1</b>. A sequence {<i>a<sub>n</sub></i>} is said to be <b>non-decreasing</b> iff <i>a<sub>n</sub></i> &le; <i>a</i><sub><i>n</i>+1</sub> for all <i>n</i> and <b>non-increasing</b> iff <i>a<sub>n</sub></i> &ge; <i>a</i><sub><i>n</i>+1</sub>. If <i>a<sub>n</sub></i> &lt; <i>a</i><sub><i>n</i>+1</sub>, we say that the sequence is <b>increasing</b> and if <i>a<sub>n</sub></i> &gt; <i>a</i><sub><i>n</i>+1</sub>, <b>decreasing</b>. A non-decreasing or a non-increasing sequence is called <b>monotone</b>. &emsp;□</p>
+
+<p><b>Definition 2.1.2</b>. A sequence {<i>a<sub>n</sub></i>} is said</p>
 
 <ul>
 	<li><p><i>Bounded below</i> if there exists a real number <i>m</i> such that &emsp; <i>a<sub>n</sub></i> &ge; <i>m</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
@@ -63,7 +66,7 @@
 
 <h2>Convergence of Sequences</h2>
 
-<p><b>Definition 2.1.2</b> - (<i>Limit of a sequence</i>) A sequence {<i>a<sub>n</sub></i>} is said to converge to a real number <i>ℓ</i>, called the limit of {a<sub>n</sub>}, if for every <i>&epsilon;</i> &gt; there <i>exists</i> a natural number <i>n</i><sub>0</sub> such that:</p>
+<p><b>Definition 2.1.3</b> - (<i>Limit of a sequence</i>) A sequence {<i>a<sub>n</sub></i>} is said to converge to a real number <i>ℓ</i>, called the limit of {a<sub>n</sub>}, if for every <i>&epsilon;</i> &gt; there <i>exists</i> a natural number <i>n</i><sub>0</sub> such that:</p>
 
 <div class="eq">
 <p>|<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon;, &emsp; &forall;<i>n</i> &ge; <i>n</i><sub>0</sub></p>
@@ -83,7 +86,7 @@
 
 <p>from this relation is clear that: <i>every convergent sequence is as well bounded</i>.</p>
 
-<p><b>Example 2.1.3</b> Let a<sub>n</sub> = 1/<i>n</i>, <i>n</i> = 1, 2, ... . Then the sequence converges to 0. For let <i>&epsilon;</i> > 0. Choose <i>N</i> to be the next integer after 1/&epsilon; (we use the <a href="R.html">Archimedean property</a>, if <i>r,&epsilon;</i> are positive real numbers, then there is a positive integer <i>n</i> sucht that <i>n&epsilon;</i> &gt; <i>r</i>). If <i>n</i> > <i>N</i> then</p>
+<p><b>Example 2.1.4</b>. Let <i>a<sub>n</sub></i> = 1/<i>n</i>, <i>n</i> = 1, 2, ... . Then the sequence converges to 0. For let <i>&epsilon;</i> > 0. Choose <i>N</i> to be the next integer after 1/&epsilon; (we use the <a href="R.html">Archimedean property</a>, if <i>r,&epsilon;</i> are positive real numbers, then there is a positive integer <i>n</i> sucht that <i>n&epsilon;</i> &gt; <i>r</i>). If <i>n</i> > <i>N</i> then</p>
 
 <div class="eq">
 <p>|<i>a<sub>n</sub></i> − 0| = |<i>a<sub>n</sub></i>| = 1/<i>n</i> &lt; 1/<i>N</i> &lt; &epsilon;</p>
@@ -91,26 +94,51 @@
 
 <p>proving the claim. &emsp;■</p>
 
-<p>When discussing the convergence of a sequence, we often find it inconvenient to deal with the definition of convergence as given. For this definition makes reference to the number to which the sequence is supposed to converge, and we often do not know what the limit is in advance. Would it not be useful to be able to decide whether a series converges without knowing to what limit it converges?</p>
-
-<p><b>Definition 2.1.4</b>. (Cauchy Sequence) Let {<i>a<sub>n</sub></i>} be a sequence of real numbers. We say that the sequence satisfies the Cauchy criterion — or more briefly, that the sequence is <b>Cauchy</b> — if, for each <i>&epsilon;</i> &gt; 0, there is an integer <i>N</i> > 0 such that if <i>j, k</i> &gt; <i>N</i> then |<i>a<sub>j</sub></i> − <i>a<sub>k</sub></i>| < &epsilon; &emsp;□</p>
-
-<p><b>Theorem 2.1.5</b>. (Cauchy’s Criterion) A sequence is convergent only if it is Cauchy.</p>
-
-<p><b>Proof.</b>. If the sequence has limit <i>ℓ</i>, then by definition, by fixing an <i>&epsilon;</i> &gt; 0, there is an integer <i>N</i> such that |<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon; for <i>n</i> &ge; <i>N</i>. Thus if <i>n,m</i> &ge; <i>N</i></p>
+<p><b>Example 2.1.5</b>. The sequence <i>a<sub>n</sub></i> = (<i>n</i><sup>2</sup> + 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) has limit 1; indeed</p>
 
 <div class="eq">
-<p>|<i>a<sub>m</sub></i> − <i>a<sub>n</sub></i>| = |<i>a<sub>m</sub></i> − <i>ℓ</i> + <i>ℓ</i> − a<sub>n</sub>| &le; |a<sub>n</sub> − <i>ℓ</i>| + |<i>ℓ</i> − a<sub>n</sub>| &lt; 2<i>&epsilon;</i>.</p>
+<p>1 − (<i>n</i><sup>2</sup> + 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) = 2(<i>n</i> − 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) &lt; 2<i>n</i>/<i>n</i><sup>2</sup> = 2/<i>n</i> &lt; &epsilon;</p>
 </div>
 
-<p>since 2<i>&epsilon;</i> is an arbitrary positive number it follows that {<i>a<sub>n</sub></i>} is a Cauchy sequence.</p>
+<p>for <i>n</i> &gt; 2/<i>&epsilon;</i>. It is not generally necessary to find the least <i>n</i><sub>0</sub> such that the previous relation is satisfied. &emsp;■</p>
 
-<p>For the converse we need to show that there is a value <i>ℓ</i> to which the sequence converges.</p>
+<p><b>Example 2.1.6</b> Every convergent sequence in ℝ is bounded.</p>
+
+<p><b>Proof</b>. Let the sequence {<i>a<sub>n</sub></i>} converge to the limit <i>L</i>. If &epsilon; = 1, there exists a positive integer <i>N</i> such that if <i>n</i> &ge; <i>N</i>, then</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − <i>L</i>| = 1</p>
+</div>
+
+<p>Thus, if <i>n</i> &ge; <i>N</i>, we have</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i>| &le; |<i>a<sub>n</sub></i> − <i>L</i>| + |<i>L</i>| &lt; 1 + |<i>L</i>|</p>
+</div>
+
+<p>Now, set</p>
+
+<div class="eq">
+<p><i>M</i> = sup {|<i>a</i><sub>1</sub>|, |<i>a</i><sub>2</sub>|, ..., |<i>a<sub>n</sub></i>|, |<i>L</i>| + 1}</p>
+</div>
+
+<p>Thus |<i>a<sub>n</sub></i>| &le; <i>M</i> for all <i>n</i> &in; ℕ. &emsp;□</p>
+
+<p>Is the converse of the above theorem true? No, as the following example shows. We will show later that a bounded <i>monotone</i> sequence converges.</p>
+
+<p><b>Exmaple 2.1.7</b> {(−1)<sup><i>n</i></sup>)} is bounded by 1 but does not have a unique limit. Suppose that (−1)<sup><i>n</i></sup> ⟶ <i>L</i> as <i>n</i> ⟶ &infin;. Given &epsilon; = 1/2, then there is an <i>N</i> &in; ℕ such that <i>n</i> &ge; <i>N</i> implies |(−1)<sup><i>n</i></sup> − <i>L</i>| &lt; &epsilon; For <i>n</i> odd this implies |1 + <i>L</i>| = |−1 −<i>L</i>| &lt; 1/2 and for <i>n</i> even this implies |1 − <i>L</i>| &lt; 1/2. Hence</p>
+
+<div class="eq">
+<p>2 = |1 + 1| = |(1 − <i>L</i>) + (1 + <i>L</i>)| &le; |1 − <i>L</i>| + |1 + <i>L</i>| &lt; 1/2 + 1/2 = 1</p>
+</div>
+
+<p>This implies 2 &lt; 1, a contradiction. Therefore, the sequence (−1)<sup><i>n</i></sup> does not converge. &emsp;■</p>
+
 
 <section aria-label="End">
 <a href="system.html">&#171;Thermodynamic Systems</a>
 <a href="index.html">Index</a>
-<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+<a href="sequnces_theorems.html">Fundamental theorems on sequences &#187;</a>
 </section>
 
 </div>
