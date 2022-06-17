@@ -50,95 +50,316 @@ well have a <i>finite range</i>; for instance, 1, 0, 1, 0, ... is an infinite re
 <p><i>a<sub>n</sub></i> = <i>n</i>/(<i>n</i> + 1), &emsp;&emsp; {1/2, 2/3, 3/4, 4/5, ..., <i>n</i>/(<i>n</i> + 1)}<br>
 </div>
 
-<p><b>Definition 2.1.1</b>. A sequence {<i>a<sub>n</sub></i>} is said to be <b>non-decreasing</b> iff <i>a<sub>n</sub></i> &le; <i>a</i><sub><i>n</i>+1</sub> for all <i>n</i> and <b>non-increasing</b> iff <i>a<sub>n</sub></i> &ge; <i>a</i><sub><i>n</i>+1</sub>. If <i>a<sub>n</sub></i> &lt; <i>a</i><sub><i>n</i>+1</sub>, we say that the sequence is <b>increasing</b> and if <i>a<sub>n</sub></i> &gt; <i>a</i><sub><i>n</i>+1</sub>, <b>decreasing</b>. A non-decreasing or a non-increasing sequence is called <b>monotone</b>. &emsp;□</p>
-
 <p><b>Definition 2.1.2</b>. A sequence {<i>a<sub>n</sub></i>} is said</p>
 
 <ul>
 	<li><p><i>Bounded below</i> if there exists a real number <i>m</i> such that &emsp; <i>a<sub>n</sub></i> &ge; <i>m</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
 	<li><p><i>Bounded above</i> if there exists a real number <i>M</i> such that &emsp; <i>a<sub>n</sub></i> &le; <i>M</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
-	<li><p><i>Bounded</i>. A sequence which is bounded both above and below. Thus a sequence {<i>a<sub>n</sub></i>} is said to be bounded if there exist two real numbers <i>m</i> and <i>M</i> such that <i>m</i> &le; <i>a<sub>n</sub></i> &le; <i>M</i> &forall; <i>n</i> &in; ℕ.&emsp;□</p></li>
+	<li><p><i>Bounded</i>. A sequence which is bounded both above and below. Thus a sequence {<i>a<sub>n</sub></i>} is said to be bounded if there exist two real numbers <i>m</i> and <i>M</i> such that <i>m</i> &le; <i>a<sub>n</sub></i> &le; <i>M</i> &forall; <i>n</i> &in; ℕ;</p></li>
+	<li><p><i>monotone increasing (or non-decreasing)</i> iff <i>a<sub>n</sub></i> &le; <i>a</i><sub><i>n</i>+1</sub> &forall;<i>n</i>;</p></li>
+	<li><p><i>monotone decreasing (or non-increasing)</i> iff <i>a<sub>n</sub></i> &ge; <i>a</i><sub><i>n</i>+1</sub> &forall;<i>n</i>;</p></li>
+	<li><p><i>strictly increasing </i> if <i>a<sub>n</sub></i> &lt; <i>a</i><sub><i>n</i>+1</sub> &forall;<i>n</i>;</p></li>
+	<li><p><i>strictly decreasing</i> if <i>a<sub>n</sub></i> &gt; <i>a</i><sub><i>n</i>+1</sub> &forall;<i>n</i>;</p></li>
+	<li><p><i>monotone</i> if it is either increasing or decreasing;</p></li>
+	<li><p><i>strictly monotonic</i> if it is either strictly increasing or strictly decreasing;</p></li>
+	<li><p><i>alternating<</i> if {a<sub>n</sub>} changes sign alternately. (e.g. {(−1)<sup><i>n</i></sup>}.&emsp;□</p></li>
 </ul>
 
 <p>For example {(−1)<sup><i>n</i></sup>)} is bounded by the two numbers {−1, 1}; {1/<i>n</i>} is bounded: 1 is the upper limit and 0 is a lower bound; {<i>n</i><sup>2</sup>} is bounded below; {(−2)<sup>n</sup>)} is not bounded.</p>
 
 <p>The most important question about a sequence is whether it converges. We define this notion as follows.</p>
 
-<h2>Convergence of Sequences</h2>
+<div id="AP">
 
-<p><b>Definition 2.1.3</b> - (<i>Limit of a sequence</i>) A sequence {<i>a<sub>n</sub></i>} is said to converge to a real number <i>ℓ</i>, called the limit of {a<sub>n</sub>}, if for every <i>&epsilon;</i> &gt; there <i>exists</i> a natural number <i>n</i><sub>0</sub> such that:</p>
-
-<div class="eq">
-<p>|<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon;, &emsp; &forall;<i>n</i> &ge; <i>n</i><sub>0</sub></p>
-</div>
-
-<p>If the sequence {<i>a<sub>n</sub></i>} converges to the limit <i>ℓ</i>, then we write</p>
+<p><b>Example 2.1.3</b> (AP). An arithmetic sequence or arithmetic progression (AP) is a sequence in which each term after the first term is formed by adding a constant number to the preceding term. Consider the sequence 1, 4, 7, 10,... where each term is obtained from the previous term by adding the constant value 3. The general form of a term in this sequence is <i>a<sub>n</sub></i> = 3<i>n</i> − 2. The general form of an <i>arithmetic sequence</i> is given by</p>
 
 <div class="eq">
-<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>a<sub>n</sub></i> = <i>ℓ</i>. &emsp;□</p>
+<p><i>a</i><sub>1</sub>,  <i>a</i><sub>1</sub> + <i>d</i>, <i>a</i><sub>1</sub> + 2<i>d</i>,  <i>a</i><sub>1</sub> + 3<i>d</i>, ...,  <i>a</i><sub>1</sub> + (<i>n</i> − 1)<i>d</i></p>
 </div>
 
-<p>note that the inequality |<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon; corresponds to the chain of inequalities:</p>
+<p>The <i>n</i>th term of an A.P. is given by</p>
 
 <div class="eq">
-<p><i>ℓ</i> − <i>&epsilon;</i> &lt; <i>a<sub>n</sub></i> &lt; <i>ℓ</i> + <i>&epsilon;</i></p>
+<p><i>a<sub>n</sub></i> = <i>a</i><sub>1</sub> + (<i>n</i> − 1)<i>d</i></p>
 </div>
 
-<p>from this relation is clear that: <i>every convergent sequence is as well bounded</i>.</p>
+<p>The value  <i>a</i><sub>1</sub> is the initial term in the sequence, and the value <i>d</i> is the constant difference between a term and its successor. In the above example we have <i>a</i> = 1 and <i>d</i> = 3.</p>
 
-<p><b>Example 2.1.4</b>. Let <i>a<sub>n</sub></i> = 1/<i>n</i>, <i>n</i> = 1, 2, ... . Then the sequence converges to 0. For let <i>&epsilon;</i> > 0. Choose <i>N</i> to be the next integer after 1/&epsilon; (we use the <a href="R.html">Archimedean property</a>, if <i>r,&epsilon;</i> are positive real numbers, then there is a positive integer <i>n</i> sucht that <i>n&epsilon;</i> &gt; <i>r</i>). If <i>n</i> > <i>N</i> then</p>
+<p>By mathematical induction method, we prove that hte sum S<sub>n</sub>, of the first <i>n</i> terms of arithmetic progression is calculated by the formula</p>
 
-<div class="eq">
-<p>|<i>a<sub>n</sub></i> − 0| = |<i>a<sub>n</sub></i>| = 1/<i>n</i> &lt; 1/<i>N</i> &lt; &epsilon;</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>a</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mi>n</mi>
+</math>
+
+<!-- $$S_n = \frac{a_1+a_n}{2}n $$ -->
+
+<ol>
+	<li><p>For <i>n</i> = 1, we obtain S<sub>1</sub> = (1/2) (a<sub>1</sub> + a<sub>1</sub>) = a<sub>1</sub>.</p>
+	<li><p>Assume that the formula for <i>S<sub>n</sub></i> holds for all positive integers <i>n</i> &ge; 1, then we'll prove the formula for <i>n</i> + 1, that is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>a</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>a</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mi>n</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+</math>
+
+<p>We have that <i>S</i><sub><i>n</i>+1</sub> = <i>S<sub>n</sub></i> + <i>a</i><sub><i>n</i>+1</sub> and according to the inductive hyphothesys S<sub>n</sub> =(a<sub>1</sub> + a<sub>n</sub>)<i>n</i>/2. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>S</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>a</mi>
+              <mi>n</mi>
+            </msub>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+        <mi>n</mi>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">[</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+        <msub>
+          <mi>a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">[</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mi>d</mi>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <mi>n</mi>
+        <mi>d</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">[</mo>
+        <mn>2</mn>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mi>n</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mi>d</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <mi>n</mi>
+        <mi>d</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>a</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- \begin{align*}S_{n+1} &= \frac{a_1 + a_n}{2}n + a_{n+1} = \frac12 [(a_1+a_n)n + 2a_{n+1}] =\\ &= \frac12 [(a_1 + a_1 + (n-1)d)n + 2(a_1+nd)] = \frac12 [2a_1(n+1) + n(n+1)d] = \\ &= \frac12 (a_1+a_1+nd)(n+1) = \frac{a_1+ a_{n+1}}{2} (n+1). \end{align*} -->
+
+<p>completing the proof. &emsp;■</p>
+
 </div>
-
-<p>proving the claim. &emsp;■</p>
-
-<p><b>Example 2.1.5</b>. The sequence <i>a<sub>n</sub></i> = (<i>n</i><sup>2</sup> + 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) has limit 1; indeed</p>
-
-<div class="eq">
-<p>1 − (<i>n</i><sup>2</sup> + 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) = 2(<i>n</i> − 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) &lt; 2<i>n</i>/<i>n</i><sup>2</sup> = 2/<i>n</i> &lt; &epsilon;</p>
-</div>
-
-<p>for <i>n</i> &gt; 2/<i>&epsilon;</i>. It is not generally necessary to find the least <i>n</i><sub>0</sub> such that the previous relation is satisfied. &emsp;■</p>
-
-<p><b>Example 2.1.6</b> Every convergent sequence in ℝ is bounded.</p>
-
-<p><b>Proof</b>. Let the sequence {<i>a<sub>n</sub></i>} converge to the limit <i>L</i>. If &epsilon; = 1, there exists a positive integer <i>N</i> such that if <i>n</i> &ge; <i>N</i>, then</p>
-
-<div class="eq">
-<p>|<i>a<sub>n</sub></i> − <i>L</i>| = 1</p>
-</div>
-
-<p>Thus, if <i>n</i> &ge; <i>N</i>, we have</p>
-
-<div class="eq">
-<p>|<i>a<sub>n</sub></i>| &le; |<i>a<sub>n</sub></i> − <i>L</i>| + |<i>L</i>| &lt; 1 + |<i>L</i>|</p>
-</div>
-
-<p>Now, set</p>
-
-<div class="eq">
-<p><i>M</i> = sup {|<i>a</i><sub>1</sub>|, |<i>a</i><sub>2</sub>|, ..., |<i>a<sub>n</sub></i>|, |<i>L</i>| + 1}</p>
-</div>
-
-<p>Thus |<i>a<sub>n</sub></i>| &le; <i>M</i> for all <i>n</i> &in; ℕ. &emsp;□</p>
-
-<p>Is the converse of the above theorem true? No, as the following example shows. We will show later that a bounded <i>monotone</i> sequence converges.</p>
-
-<p><b>Exmaple 2.1.7</b> {(−1)<sup><i>n</i></sup>)} is bounded by 1 but does not have a unique limit. Suppose that (−1)<sup><i>n</i></sup> ⟶ <i>L</i> as <i>n</i> ⟶ &infin;. Given &epsilon; = 1/2, then there is an <i>N</i> &in; ℕ such that <i>n</i> &ge; <i>N</i> implies |(−1)<sup><i>n</i></sup> − <i>L</i>| &lt; &epsilon; For <i>n</i> odd this implies |1 + <i>L</i>| = |−1 −<i>L</i>| &lt; 1/2 and for <i>n</i> even this implies |1 − <i>L</i>| &lt; 1/2. Hence</p>
-
-<div class="eq">
-<p>2 = |1 + 1| = |(1 − <i>L</i>) + (1 + <i>L</i>)| &le; |1 − <i>L</i>| + |1 + <i>L</i>| &lt; 1/2 + 1/2 = 1</p>
-</div>
-
-<p>This implies 2 &lt; 1, a contradiction. Therefore, the sequence (−1)<sup><i>n</i></sup> does not converge. &emsp;■</p>
-
 
 <section aria-label="End">
 <a href="system.html">&#171;Thermodynamic Systems</a>
 <a href="index.html">Index</a>
-<a href="sequnces_theorems.html">Fundamental theorems on sequences &#187;</a>
+<a href="sequences_limit.html">Convergence of sequences &#187;</a>
 </section>
 
 </div>
