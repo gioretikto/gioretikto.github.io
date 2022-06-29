@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hôpital's Rule"/>
+    <title>Hôpital's Rule</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Hôpital's Rule</h1>
+
+<p>Differential calculus offers a way to calculate limits in the case of indeterminate forms of the type 0/0 and &infin;/&infin;. <br> L'Hospital's Rule is named after a French nobleman, the Marquis de l'Hospital (1661–1704).</p>
+
+<p><b>Theorem 5.7.1</b> <i>(L'Hôpital's Rule)</i>. Let <i>f</i> and <i>g</i> be continuous on [<i>a,b</i>] and differentiable on (<i>a,b</i>), such that <i>g'</i>(<i>x</i>) &ne; 0 &forall; <i>x</i> &in; (<i>a,b</i>). Suppose that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \lim_{x \to x_0} f(x) = 0, \quad \lim_{x \to x_0} g(x) = 0 $$ -->
+
+<p>Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">&#x21D2;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$ \lim_{x \to x_0} \frac{f'(x)}{g'(x)} = \ell \quad \Rightarrow \quad \lim_{x \to x_0} \frac{f(x)}{g(x)} = \ell $$ -->
+
+<p>By <a href="Lagrange.html#Cauchy">Cauchy's Mean Value Theorem</a> there is <i>c</i> between <i>x</i> and <i>x</i><sub>0</sub> such that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{f(x)}{g(x)} = \frac{f(x) - f(x_0)}{g(x) - g(x_0)} = \frac{f'(c)}{g'(c)} $$ -->
+
+<p>Now as <i>x</i> ⟶ <i>x</i><sub>0</sub>, we must have also <i>c</i> ⟶ <i>x</i><sub>0</sub> because <i>c</i> is between <i>x</i> and <i>x</i><sub>0</sub>. So if</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$ \lim_{x \to x_0} \frac{f'(x)}{g'(x)} = \ell $$ -->
+
+<p>then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$ \lim_{x \to x_0} \frac{f'(c)}{g'(c)} = \ell $$ -->
+
+<p>Thefore</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$ \lim_{x \to x_0} \frac{f(x)}{g(x)} = \ell $$ -->
+
+<p>as desired. &emsp;□</p>
+
+<!-- <p><b>Esempio I</b>. Il limtie:</p>
+
+<img src="img/derivate/limite3.png" alt="limite 0/0" />
+
+<p>si presenta nella forma indeterminata 0/0. Applicando la regola di De l'Hôpital si ha: </p>
+
+<img src="img/derivate/limite4.png" alt="limite 0/0" />
+
+
+<p><b>Esempio II</b>. Il limtie:</p>
+
+<img src="img/derivate/limite.png" alt="limite 0/0" />
+
+<p>è una forma indeterminata 0/0. Applicando la regola di De l'Hôpital si ha: </p>
+
+<img src="img/derivate/limite1.png" alt="limite 0/0" />
+
+<p>che è ancora una forma indeterminata 0/0, applicando nuovamente la regola si trova:</p>
+
+<img src="img/derivate/limite2.png" alt="limite 0/0" />
+
+<h4>Precauzione per l'uso</h4>
+
+<p>Il teorema di de l'Hôpital:</p>
+
+<ul>
+	<li><p>Si usa per quozienti non per prodotti.</p></li>
+	<li><p>Si usa per quozienti che si presentano come forme di indterminazione.</p></li>
+	<li><p>Se il limite di f'/g' non esiste nulla si può concludere su quello di f/g, per l'ipotesi ii) del teorema. Quindi non si può dire che non esiste neanche il limite di f/g.</p></li>
+</ul>
+
+-->
+
+<section aria-label="End">
+<a href="Lagrange.html">&#171;The Mean Value Theorem</a>
+<a href="index.html">Index</a>
+<a href="maxmin.html">Maxima and minima of a function&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
