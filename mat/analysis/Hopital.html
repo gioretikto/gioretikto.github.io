@@ -21,9 +21,9 @@
 
 <h1>Hôpital's Rule</h1>
 
-<p>Differential calculus offers a way to calculate limits in the case of indeterminate forms of the type 0/0 and &infin;/&infin;. <br> L'Hospital's Rule is named after a French nobleman, the Marquis de l'Hospital (1661–1704) a student of Johann Bernoulli, a marquis for whom the latter wrote the first textbook of analysis in the years 1691-1692. The portion of this textbook devoted to differential calculus was published in slightly altered form by l'Hopital under his own name in the "Analyse des infinitement petits". Thus "l'Hopital's rule" is really due to Johann Bernoulli.</p>
+<p>Differential calculus offers a way to calculate limits in the case of indeterminate forms of the type 0/0 and &infin;/&infin;. <br> L'Hospital's Rule is named after a French nobleman, the Marquis de l'Hospital (1661–1704) a student of Johann Bernoulli, a marquis for whom the latter wrote the first textbook of analysis in the years 1691-1692. The portion of this textbook devoted to differential calculus was published in slightly altered form by l'Hopital under his own name in the "Analyse des infinitement petits" in 1696. Thus "l'Hopital's rule" is really due to Johann Bernoulli.</p>
 
-<p><b>Theorem 5.7.1</b> (L'Hôpital's Rule</i>: 0/0 case). Let <i>f</i> and <i>g</i> be continuous on [<i>a,b</i>] and differentiable on (<i>a,b</i>), such that <i>g'</i>(<i>x</i>) &ne; 0 &forall;<i>x</i> &in; (<i>a,b</i>), and let <i>x</i><sub>0</sub> &in; (<i>a, b</i>). Suppose that</p>
+<p><b>Theorem 5.7.1</b> (L'Hôpital's Rule</i>: 0/0 case). Let <i>f</i> and <i>g</i> be defined nad differentiable on (<i>x</i><sub>0</sub>,<i>b</i>), such that <i>g'</i>(<i>x</i>) &ne; 0 &forall;<i>x</i> &in; (<i>x</i><sub>0</sub>,<i>b</i>). Suppose that</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -31,10 +31,11 @@
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
+      <msubsup>
         <mi>x</mi>
         <mn>0</mn>
-      </msub>
+        <mo>+</mo>
+      </msubsup>
     </mrow>
   </munder>
   <mi>f</mi>
@@ -47,10 +48,11 @@
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
+      <msubsup>
         <mi>x</mi>
         <mn>0</mn>
-      </msub>
+        <mo>+</mo>
+      </msubsup>
     </mrow>
   </munder>
   <mi>g</mi>
@@ -61,7 +63,7 @@
   <mn>0</mn>
 </math>
 
-<!-- $$ \lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = 0 $$ -->
+<!-- $$ \lim_{x \to x_0^+} f(x) = \lim_{x \to x_0^+} g(x) = 0 $$ -->
 
 <p>Then</p>
 
@@ -71,10 +73,11 @@
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
+      <msubsup>
         <mi>x</mi>
         <mn>0</mn>
-      </msub>
+        <mo>+</mo>
+      </msubsup>
     </mrow>
   </munder>
   <mfrac>
@@ -111,10 +114,11 @@
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
+      <msubsup>
         <mi>x</mi>
         <mn>0</mn>
-      </msub>
+        <mo>+</mo>
+      </msubsup>
     </mrow>
   </munder>
   <mfrac>
@@ -135,10 +139,9 @@
   <mi>&#x2113;</mi>
 </math>
 
-<!-- $$ \lim_{x \to x_0} \frac{f'(x)}{g'(x)} = \ell \quad \Rightarrow \quad \lim_{x \to x_0} \frac{f(x)}{g(x)} = \ell $$ -->
+<!-- $$ \lim_{x \to x_0^+} \frac{f'(x)}{g'(x)} = \ell \quad \Rightarrow \quad \lim_{x \to x_0^+} \frac{f(x)}{g(x)} = \ell $$ -->
 
-<p><b>Proof</b>. Since <i>f,g</i> are continuous at 0 we have <i>f</i>(x<sub>0</sub>) = <i>g</i>(<i>x</i><sub>0</sub>) = 0, for <i>x</i> &ne; 0, we may write</p>
-
+<p><b>Proof</b>. Without loss of generality, it can be assumed that <i>f</i>(x<sub>0</sub>) = <i>g</i>(<i>x</i><sub>0</sub>) = 0,  because redefining the function at <i>x</i><sub>0</sub> does not change the limit at <i>x</i><sub>0</sub> of <i>f, g, f', g'</i> or their ratios. For <i>x</i> &ne; <i>x</i><sub>0</sub>, we may write</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
