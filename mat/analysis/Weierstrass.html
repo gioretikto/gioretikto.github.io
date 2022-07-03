@@ -22,11 +22,50 @@
 
 <h1>The Extreme Value theorem</h1>
 
-<p>We now show that if a function defined on a closed and bounded set is continuous, then it is necessarily bounded.</p>
+<p>We now show that if a function defined on a closed and bounded set is continuous, then it is necessarily bounded. So if <i>f</i> is continuous on a closed boundedn interval <i>I</i> then the image of <i>I</i> under <i>f</i> is also closed and bounded interval. For this is crucial that the interval <i>I</i> is closed: for example, the function <i>f</i>(<i>x</i>) = 1/<i>x</i> is continuous on the interval (0,1), but takes arbitrarly large values as <i>x</i> ⟶ 0. The function <i>g</i>(<i>x</i>) = <i>x</i> is bounded on (0,1), but it does not have a maximum or minimum on the interval (0,1) − it approaches 0 and 1 arbitrarly closely, but never attaints either, as its value lie strictly between 0 and 1. <br> A continuous function defined on a bounded and closed interval is not just bounded but it attains a maximum and a minimum as well. <br> The following theorem is attributed to the great German mathematician Karl Weierstrass (1815–1897).</p>
 
-<p><b>Theorem 4.3.2</b> (<i>The Boundedness theorem</i>). Let <i>f</i>: [<i>a, b</i>] →  ℝ, a continuous function. Then <i>f</i> is bounded and attins it bounds, so that the range of <i>f</i> is again a closed bounded interval.</p>
+<p><b>Theorem 4.3.2</b> (<i>The Extreme Value Theorem</i>). Let <i>f</i>: [<i>a, b</i>] →  ℝ, a continuous function. Then <i>f</i> is bounded and attains it bounds, so that the range of <i>f</i> is again a closed bounded interval, and <i>f</i> has maximumum and minimum points, <i>i.e.</i> there are points <i>c,d</i> &in; [<i>a, b</i>] such that</p>
 
-<p><b>Proof</b>. We prove this by contradiction. If the set <i>f</i>([<i>a,b</i>]) were unbounded above, then there would exist a sequence {<i>x<sub>n</sub></i>} in [<i>a, b</i>] such that <i>f</i>(<i>x<sub>n</sub></i>) ⟶ &infin;. Since {<i>x<sub>n</sub></i>} &in; [<i>a, b</i>], it is a bounded sequence. The <a href="subsequences.html.html">Bolzano–Weierstrass theorem</a> asserts that there exists a convergent subsequence {<i>x<sub>n<sub>k</sub></sub></i>} ⟶ <i>c</i>. Since {x<sub>n<sub>k</sub></sub>} &in; [<i>a, b</i>] and since <i>f</i> is continuous on [<i>a,b</i>], namely at <i>c</i>, it must be the case that <i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>) ⟶ <i>f</i>(<i>c</i>). But {<i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>)} is a subsequence of {<i>f</i>(<i>x<sub>n</sub></i>)} by <a href="subsequences.html.html">Theorem 2.3.2</a> we know that they must converge to the same limit</p>
+<div class="eq">
+<p><i>f</i>(<i>d</i>) &le; <i>f</i>(<i>x</i>) &le; <i>f</i>(<i>c</i>)</p>
+</div>
+
+<p><b>Proof</b>. Observe first that whatever the function <i>f</i>(<i>x</i>) in <i>I</i> = [<i>a, b</i>], there exists a sequence {<i>x<sub>n</sub></i>} in <i>I</i> such that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mtext>sup&#xA0;</mtext>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>I</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \lim_{n \to \infty} f(x_n) = \text{sup } f(I) $$ -->
+
+<p>Indeed it suffices to consider &forall;<i>n</i> &in; ℕ, <i>x<sub>n</sub></i> &in; <i>I</i> such that</p>
+
+<ul>
+	<li><p><i>f</i>(<i>x<sub>n</sub></i>) &gt; <i>n</i> &emsp;if&emsp; sup <i>f</i>(<i>I</i>) = +&infin;</p></li>
+	<li><p>or <i>f</i>(<i>x<sub>n</sub></i>) &lt; <i>M</i> − 1/<i>n</i> &emsp;if&emsp; sup <i>f</i>(<i>I</i>) = <i>M</i> &lt; +&infin;.</p></li>
+</ul>
+
+<p>Now, we prove the theorem by contradiction. If the set <i>f</i>(<i>I</i>]) were unbounded above, then there would exist a sequence {<i>x<sub>n</sub></i>} in [<i>a, b</i>] such that <i>f</i>(<i>x<sub>n</sub></i>) ⟶ &infin;. Since {<i>x<sub>n</sub></i>} &in; [<i>a, b</i>], it is a bounded sequence, by <a href="subsequences.html">Bolzano–Weierstrass theorem</a> we know there exists a convergent subsequence {<i>x<sub>n<sub>k</sub></sub></i>} ⟶ <i>c</i>. Since {<i>x<sub>n<sub>k</sub></sub></i>} &in; [<i>a, b</i>] and since <i>f</i> is continuous on [<i>a,b</i>], namely at <i>c</i>, it must be the case that <i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>) ⟶ <i>f</i>(<i>c</i>). But {<i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>)} is a subsequence of {<i>f</i>(<i>x<sub>n</sub></i>)} by <a href="subsequences.html">Theorem 2.3.2</a> we know that they must converge to the same limit</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>f</mi>
@@ -84,28 +123,10 @@
 
 <!-- $$ f(c) = \lim_{k \to \infty} f(x_{n_k}) = \lim_{n \to \infty} f(x_n) = \text{sup } f([a,b])$$ -->
 
-<p>If <i>f</i>(<i>x<sub>n</sub></i>) ⟶ &infin;, it would be <i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>) ⟶ &infin; as well. This is a contradiction, since <i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>) ⟶ <i>f</i>(<i>x</i>) &ne; &infin;. So we cannot have sup <i>f</i>([<i>a,b</i>]) = +&infin;. If <i>f</i>([<i>a,b</i>]) is unbounded below, a similar argument is used. &emsp;□</p>
-
-<p>So if <i>f</i> is continuous on a closed boundedn interval <i>I</I> then the image of <i>I</i> under <i>f</i> is also closed and bounded interval. For this is crucial that the interval <i>I</i> is closed: for example, the function <i>f</i>(<i>x</i>) = 1/<i>x</i> is continuous on the interval (0,1), but takes arbitrarly large values as <i>x</i> ⟶ 0. The function <i>g</i>(<i>x</i>) = <i>x</i> is bounded on (0,1), but it does not have a maximum or minimum on the interval (0,1) − it approaches 0 and 1 arbitrarly closely, but never attaints either, as its value lie strictly between 0 and 1. <br> A continuous function defined on a bounded and closed interval is not just bounded but it attains a maximum and a minimum as well. <br> The following theorem is attributed to the great German mathematician Karl Weierstrass (1815–1897).</p>
-
-<p><b>Theorem 4.3.2</b> (<i>The Extreme Value theorem</i>). Assume that [<i>a,b</i>] is a closed, bounded interval, and that <i>f</i>: [<i>a, b</i>] →  ℝ, is a continuous function. Then <i>f</i> has maximum and minimum points, <i>i.e.</i>, there points <i>c,d</i> &in; [<i>a,b</i>] such that</p>
-
-<div class="eq">
-<p><i>f</i>(<i>d</i>) &le; <i>f</i>(<i>x</i>) &le; <i>f</i>(<i>c</i>)</p>
-</div>
-
-<p>for all <i>x</i> &in; [<i>a,b</i>].</p>
-
-<p><b>Proof</b>. We know by the previous theorem that <i>f</i> is bounded so we can set</p>
-
-<div class="eq">
-<p><i>M</i> = sup {<i>f</i>(<i>x</i>) | <i>x</i> &in; (<i>a,b</i>)}
-</div>
-
-<p>We don't know yet that <i>f</i> is bounded, so we assume the possibility for <i>M</i> = &infin;. Chose a sequence {<i>x<sub>n</sub></i>} in [<i>a, b</i>] such that <i>f</i>(<i>x<sub>n</sub></i>) ⟶ <i>M</i> (which exists regardless of whether <i>M</I> is finite or not). Since [<i>a, b</i>] is bounded, {<i>x<sub>n</sub></i>} has a convergent subsequence {<i>y<sub>n</sub></i>} by the <a href="subsequences.html.html">Bolzano–Weierstrass theorem</a>, and since [<i>a, b</i>] is closed, the limit ..</p>
+<p>If <i>f</i>(<i>x<sub>n</sub></i>) ⟶ &infin;, it would be <i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>) ⟶ &infin; as well. This is a contradiction, since <i>f</i>(<i>x<sub>n<sub>k</sub></sub></i>) ⟶ <i>f</i>(<i>x</i>) &ne; &infin;. So we cannot have sup <i>f</i>([<i>a,b</i>]) = +&infin; but <i>M</i> = sup {<i>f</i>(<i>x</i>) | <i>x</i> &in; <i>a,b</i>]} and we have found a maximum point <i>c</i> for <i>f</i> in <i>I</i>. Similar arguments show that <i>f</i> attains a minimum value. &emsp;□</p>
 
 <section aria-label="End">
-<a href="syllable.html">&#171;The Syllable</a>
+<a href="continuity.html">&#171;The limit of a function</a>
 <a href="index.html">Index</a>
 <a href="zero_theorem.html">The Intermediate Zero Theorem&#187;</a>
 </section>
