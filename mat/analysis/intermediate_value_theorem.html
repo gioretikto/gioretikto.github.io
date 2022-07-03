@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Intermediate Zero Theorem"/>
+    <title>The Intermediate Zero Theorem</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Intermediate Value Theorem</h1>
+
+<p><b>Theorem 5.7</b>. If the <i>f</i> is continuous on a closed interval [<i>a,b</i>] and if <i>f</i>(<i>a</i>) and <i>f</i>(<i>b</i>) have opposite signs, then there exists a number <i>x</i><sub>0</sub> between <i>a</i> and <i>b</i> such that <i>f</i>(<i>x</i><sub>0</sub>) = 0. <!-- If <i>f</i> is also strictly monotonous, the zero is unique -->.</p>
+
+<p><b>Proof</b>: Assume (with no loss of generality) that <i>f</i>(<i>a</i>) &lt; 0 &lt; <i>f</i>(<i>b</i>)</i>. Let</p>
+
+<div class="eq">
+<p><i>S</i> = {<i>x</i> &in; [<i>a,b</i>]: <i>f</i>(<i>x</i>) &gt; 0}</p>
+</div>
+
+<p>this set is not empty, since <i>a</i> &in; <i>S</i>, and is bounded above by <i>b</i>, therefore by the completeness property of ℝ, it has a least upper bound, <i>x</i><sub>0</sub> = sup <i>S</i>. Since <i>a</i> &le; <i>x</i><sub>0</sub> &lt; <i>b</i>, follows that <i>x</i><sub>0</sub> &in; [<i>a,b</i>]. We shall show that <i>f</i>(<i>x</i><sub>0</sub>) = 0. <br> If it was <i>f</i>(<i>x</i><sub>0</sub>) &gt; 0 owning to <a href="continuity.html#permanence_sign">Theorem 4.1.17 (<i>permanennce of sign</i>)</a>, it would be <i>f</i>(<i>x</i>) &gt; 0 &forall;<i>x</i> &in; (<i>x</i><sub>0</sub> − <i>&delta;</i>, <i>x</i><sub>0</sub> + &delta;</i>) and in this neighborhood of <i>x</i><sub>0</sub> we could find <i>x</i> &in; <i>S</i>, but this contradicts the hypothesis <i>x</i><sub>0</sub> = sup <i>S</i>. If it was <i>f</i>(<i>x</i><sub>0</sub>) &lt; 0 for the same reason, <i>f</i>(<i>x</i>) &lt; 0 &forall;<i>x</i> &in; (<i>x</i><sub>0</sub> − &sigma;, <i>x</i><sub>0</sub> + <i>&sigma;</i>) and in this neighborhood of <i>x</i><sub>0</sub> we could find <i>x</i> &lt; <i>x</i><sub>0</sub> such that <i>x</i> = sup <i>S</i> but this also contradicts the initial hypothesis <i>x</i><sub>0</sub> = sup <i>S</i>, then <i>f</i>(<i>x</i><sub>0</sub>) = 0. &emsp;□</p>
+
+<section aria-label="End">
+<a href="Weierstrass.html">&#171;The extreme value theorem</a>
+<a href="index.html">Index</a>
+<a href="Rolle.html">Rolle's Theorem &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
