@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The algebra of derivatives"/>
+    <title>The algebra of derivatives</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The algebra of derivatives</h1>
+
+<p><b>Theorem 5.2.1</b>. Let <i>f, g</i>: (<i>a,b</i>) → ℝ, differentiable on (<i>a, b</i>); then <i>f</i> &pm; <i>g</i>, <i>f</i> ⋅ <i>g</i>, and <i>f</i>/<i>g</i> (<i>g</i> &ne;0) are differentiable on (<i>a, b</i>) and the following properties hold:</p>
+
+<ol type="i">
+
+	<li><p>(<i>f</i> &pm; <i>g</i>)' = <i>f'</i> &pm; <i>g'</i></p></li>
+	<li><p>(<i>f</i> ⋅ <i>g</i>)' = <i>f'</i> ⋅ <i>g</i> + <i>f</i> ⋅ <i>g'</i></p></li>
+	<li><p>(1/<i>g</i>)' = −<i>g</i>/<i>g</i><sup>2</sup>.</p></li>
+	<li><p>(<i>f</i> / <i>g</i>)' = (<i>f'</i> ⋅ <i>g</i> −<i>f</i> ⋅ <i>g'</i>)/<i>g</i><sup>2</sup></p></li>
+</ol>
+
+<p><b>Proof</b>.</p>
+
+<ol type="i">
+	<li><p><b>Derivative of a sum</b>. The derivative of the sum/difference of two differentiable functions equals the sum/difference of their derivatives.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mo stretchy="false">(</mo>
+        <mi>f</mi>
+        <mo>+</mo>
+        <mi>g</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>h</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mo stretchy="false">[</mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>+</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">]</mo>
+            <mo>&#x2212;</mo>
+            <mo stretchy="false">[</mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo>+</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">]</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>h</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mfrac>
+            <mrow>
+              <mo stretchy="false">[</mo>
+              <mi>f</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>h</mi>
+              <mo stretchy="false">)</mo>
+              <mo>&#x2212;</mo>
+              <mi>f</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+              <mo stretchy="false">]</mo>
+            </mrow>
+            <mi>h</mi>
+          </mfrac>
+          <mo>+</mo>
+          <mfrac>
+            <mrow>
+              <mo stretchy="false">[</mo>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>h</mi>
+              <mo stretchy="false">)</mo>
+              <mo>&#x2212;</mo>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mi>h</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>h</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;</mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+        <mo>+</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>h</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <msup>
+          <mi>g</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{align} (f+g)' (x) &= \lim_{h \to 0} \frac{[f(x+h) + g(x+h)] - [f(x) + g(x)]} {h} \\ & = \lim_{h \to 0} \left[ \frac{[f(x+h) - f(x)]}{h} + \frac{ [g(x+h) - g(x)} {h} \right] \\
+& = \lim_{h \to 0} \frac{f(x+h) - f(x)} {h} + \lim_{h \to 0} \frac{g(x+h) - g(x)} {h} \\
+& = f'(x) + g'(x) \end{align} $$ -->
+
+<p>An analogous proof can be provided for the derivative of a difference.</p></li>
+
+<li><p><b>Derivative of a product</b>. We analyze the difference quotient</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mfrac>
+          <mrow>
+            <mo stretchy="false">(</mo>
+            <mi>f</mi>
+            <mo>&#x22C5;</mo>
+            <mi>g</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;</mo>
+            <mo stretchy="false">(</mo>
+            <mi>f</mi>
+            <mo>&#x22C5;</mo>
+            <mi>g</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;</mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;</mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo>+</mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;</mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>h</mi>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mfrac>
+            <mrow>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>h</mi>
+              <mo stretchy="false">)</mo>
+              <mo>&#x2212;</mo>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mi>h</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>g</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mfrac>
+            <mrow>
+              <mi>f</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>h</mi>
+              <mo stretchy="false">)</mo>
+              <mo>&#x2212;</mo>
+              <mi>f</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mi>h</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{align} \frac{(f \cdot g) (x+h) - (f \cdot g) (x)} {h} = \frac{f(x+h) g(x+h) - f(x)g(x)} {h} \\ &= \frac{ f(x+h)g(x+h) - f(x+h)g(x) + f(x+h) g(x) - f(x) g(x)} {h} \\&= f(x+h) \left[\frac{g(x+h) - g(x)}{h} \right] + g(x) \left[\frac{f(x+h) - f(x)}{h} \right] \end{align}$$ -->
+
+<p>Here we have added and subtracted <i>f</i>(<i>x</i> + <i>h</i>)<i>g</i>(<i>x</i>) in the numerator and then regrouped the terms so as to display the difference quotients for <i>f</i> and <i>g</i> separately. Thus taking the limit lim<sub><i>h</i>→0</sub> <i>f</i>(<i>x</i> + <i>h</i>) = <i>f</i>(<i>x</i>), and</p>
+
+<div class="eq">
+<p>(<i>f</i> ⋅ <i>g</i>)'(<i>x</i>) = <i>f</i>(<i>x</i>)<i>g'</i>(<i>x</i>) + <i>g</i>(<i>x</i>)<i>f'</i>(<i>x</i>).</p>
+</div>
+
+</li>
+
+<li><p>Since <i>g</i> is differentiable at <i>x</i>, it is also continuous at <i>x</i> by <a href="diff_cont.html">Theorem 5.2.1</a>. Since <i>g</i>(<i>x</i>) &ne; 0, we know that the function (1/<i>g</i>)(<i>x</i>) is continuous at <i>x</i>. We have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msup>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mn>1</mn>
+              <mrow>
+                <mi>g</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>h</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mn>1</mn>
+          <mi>h</mi>
+        </mfrac>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>h</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mfrac>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+        <mo>=</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>h</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mo>&#x2212;</mo>
+          <munder>
+            <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+            <mrow data-mjx-texclass="ORD">
+              <mi>h</mi>
+              <mo accent="false" stretchy="false">&#x2192;</mo>
+              <mn>0</mn>
+            </mrow>
+          </munder>
+          <mfrac>
+            <mrow>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>h</mi>
+              <mo stretchy="false">)</mo>
+              <mo>&#x2212;</mo>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mi>h</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+        <mo>&#x22C5;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <munder>
+            <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+            <mrow data-mjx-texclass="ORD">
+              <mi>h</mi>
+              <mo accent="false" stretchy="false">&#x2192;</mo>
+              <mn>0</mn>
+            </mrow>
+          </munder>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>h</mi>
+              <mo stretchy="false">)</mo>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>g</mi>
+              <mo data-mjx-alternate="1">&#x2032;</mo>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <mo stretchy="false">(</mo>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{align} \left( \frac{1}{g(x)} \right)' (x) &= \lim_{h \to 0} \frac{1}{h} \left[\frac{1}{g(x+h)} - \frac{1}{g(x)} \right] = \lim_{h \to 0} \frac{g(x) - g(x+h)} {g(x+h)g(x)} \\ &= \left[-\lim_{h \to 0} \frac{g(x+h) - g(x)} {h} \right] \cdot \left[ \lim_{h \to 0} \frac{1} {g(x+h)g(x)} \right] \\ &= -\frac{g'(x)} {(g(x))^2} \end{align}$$ -->
+
+<p>where we used the fact that</p>
+
+<div class="eq">
+<p>lim<sub><i>h</i>⟶0</sub> 1/<i>g</i>(<i>x</i> + <i>h</i>) = 1/<i>g</i>(<i>x</i>)</p>
+</div>
+
+</li>
+
+<li><p><b>The quotient rule</b>. Verify it by applying the rule for products and the reciprocal rule.&emsp;□</p></li>
+
+</ol>
+
+<h2>The derivative of a composite function: The Chain Rule</h2>
+
+<p><b>Proposition 3.2</b> (<b>Chain Rule</b>) Let <i>D,E</i> &subseteq; ℝ and <i>f</i>: <i>D</i> ⟶ ℝ, <i>g</i>: <i>E</i> ⟶ ℝ be functions such that <i>f</i>(<i>D</i>) &subseteq; <i>E</i>. Suppose <i>x</i> is an interior point of <i>E</i>. If <i>f</i> is differentiable at <i>x</i> and <i>g</i> is differentible at <i>f</i>(<i>c</i>), then <i>g</i> ∘ <i>f</i> is differentiable at <i>x</i> and</p>
+
+<div class="eq">
+<p>(<i>g</i> ∘ <i>f</i>)'(<i>x</i>) = <i>g'</i>(<i>f</i>(<i>x</i>))<i>f'</i>(<i>x</i>)</p>
+</div>
+
+<p><b>Proof</b>. We have</p>
+
+<div class="eq">
+<p>(<i>g</i> ∘ <i>f</i>)(<i>x</i> + <i>h</i>) &minus; (<i>g</i> ∘ <i>f</i>)(<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i> + <i>h</i>)) &minus; <i>g</i>(<i>f</i>(<i>x</i>))</p>
+</div>
+
+<p>For the sake of simplifying the notation, let</p>
+
+<div class="eq">
+<p><i>k</i> = <i>f</i>(<i>x</i> + <i>h</i>) &minus; <i>f</i>(<i>x</i>)</p>
+<p><i>y</i> = <i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>then <i>f</i>(<i>x</i> + <i>h</i>) = <i>y</i> + <i>k</i>; from the continuity of <i>f</i> we have for <i>h</i> ⟶ 0 that <i>k</i> ⟶ 0. With the new notations</p>
+
+<div class="eq">
+<p><i>g</i>(<i>f</i>(<i>x</i> + <i>h</i>)) &minus; <i>g</i>(<i>f</i>(<i>x</i>)) = <i>g</i>(<i>y</i> + <i>k</i>) &minus; <i>g</i>(<i>y</i>)</p>
+</div>
+
+<p>The derivative of <i>g</i> is:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>k</mi>
+  </mfrac>
+</math>
+
+<p>which can be written as well, for <i>k</i> &ne; 0:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>k</mi>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>&#x3F5;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<p>Where <i>ε</i>(<i>k</i>) indicates a quntity that goes to zero for <i>k</i> ⟶ 0. By multiplying both sides of the former by <i>k</i>, we obtain</p>
+
+<div class="eq">
+<p><i>g</i>(<i>y</i> + <i>k</i>) &minus; <i>g</i>(<i>y</i>) = <i>g</i>' (<i>y</i>) ⋅ <i>k</i> + <i>&epsilon;</i>(<i>k</i>) ⋅ <i>k</i></p>
+</div>
+
+<p>which is perfeclty valid for <i>k</i> = 0 as well. Thus</p>
+
+<div class="eq">
+<p><i>g</i>(<i>f</i>(<i>x</i> + <i>h</i>)) &minus; <i>g</i>(<i>f</i>(<i>x</i>)) = <i>g</i>' (<i>y</i>) ⋅ <i>k</i> + <i>&epsilon;</i>(<i>k</i>) ⋅ <i>k</i></p>
+</div>
+
+<p>dividing by <i>h</i> and observing that <i>k</i>/<i>h</i> → <i>f</i>'(<i>x</i>), we have proved the claim.&emsp; □</p>
+
+
+<p>The Chain Rule has a particularly simple expression if we use the Leibniz notation for the derivative. Recall <i>f</i> ∘ <i>g</i> is defined as <i>f</i>(<i>g</i>(<i>x</i>)). The quantity <i>f′</i>(<i>g</i>(<i>x</i>)) is the derivative of <i>f</i> with <i>x</i> replaced by <i>g</i>; this can be written df/dg. As usual, <i>g′</i>(<i>x</i>) = d<i>g</i>/d<i>x</i>. Then the Chain Rule becomes</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow class="MJX-TeXAtom-ORD">
+    <mfrac>
+      <mrow>
+        <mi>d</mi>
+        <mi>w</mi>
+      </mrow>
+      <mrow>
+        <mi>d</mi>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+  <mo>=</mo>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mfrac>
+      <mrow>
+        <mi>d</mi>
+        <mi>w</mi>
+      </mrow>
+      <mrow>
+        <mi>d</mi>
+        <mi>y</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mfrac>
+      <mrow>
+        <mi>d</mi>
+        <mi>y</mi>
+      </mrow>
+      <mrow>
+        <mi>d</mi>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+  <mtext>.</mtext>
+</math>
+
+<p><b>Examples </b>. If <i>w</i>(<i>x</i>) = (sen <i>x</i>)<sup>2</sup>, we have <i>w</i> '(<i>x</i>) = 2 sen <i>x</i> ⋅ cos <i>x</i>.</p>
+
+<p>If <i>w</i>(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> then <i>w</i> '(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> ⋅ (&minus;2<i>x</i>).</p>
+
+<p>If <i>w</i>(<i>x</i>) = (sen cos x<sup>3</sup>)<sup>&minus;2</sup> then <i>w</i> '(<i>x</i>) = &minus;2(sen cos <i>x</i><sup>3</sup>)<sup>&minus;3</sup> ⋅ cos cos x<sup>3</sup> ⋅ (&minus;sen <i>x</i><sup>3</sup>) ⋅ 3<i>x</i><sup>2</sup>. &emsp; ■</p>
+
+
+<h2>Derivative of a periodic function</h2>
+
+<p>Let <i>f</i>: <i>I</i> ⟶ ℝ be a differentiable function, with period <i>T</i>, that is <i>f</i>(<i>x</i> + <i>T</i>) = <i>f</i>(<i>x</i>) &forall;<i>x</i> &in; <i>I</i>, then <i>f'</i> is also periodic with period <i>T</i>. We have  if <i>f</i> is differentiable at <i>x</i>,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+    <mtr>
+      <mtd>
+        <msup>
+          <mi>f</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>T</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo movablelimits="true" form="prefix">lim</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>h</mi>
+            <mo stretchy="false">&#x2192;<!-- → --></mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>T</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>T</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd />
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo movablelimits="true" form="prefix">lim</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>h</mi>
+            <mo stretchy="false">&#x2192;<!-- → --></mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd />
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msup>
+          <mi>f</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<p>Let <i>f</i>: ℝ → ℝ be periodic with period <i>T</i>.</p>
+
+<ul>
+	<li><p>The range of <i>f</i> is precisely <i>f</i>([0,<i>T</i>]); in particular, if <i>f</i> is continuous, the range of <i>f</i> is bounded.</p></li>
+	<li><p>If f is differentiable, then f′ is periodic with period T.</p></li>
+</ul>
+
+<p><b>Example 1</b>. Verify whether <i>f</i>(<i>x</i>) = sin(<i>x</i><sup>2</sup>) is a periodic function. Note that <i>f</i>(<i>x</i>) = sin(<i>x</i><sup>2</sup>) is differentiable and <i>f′</i>(<i>x</i>)= 2<i>x</i> ⋅ cos(<i>x</i><sup>2</sup>) which is unbounded. Therefore, f′ cannot be periodic by the first point, and hence f cannot be periodic by the second point. &emsp; ■</p>
+
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

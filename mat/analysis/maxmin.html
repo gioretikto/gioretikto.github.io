@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finding the maximum/minimum values of a function"/>
+    <title>Finding the maximum/minimum values of a function</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Finding the maximum/minimum values of a function</h1>
+
+<p>From the <a href="Lagrange.html#monotonicity">Monotonicity test for real functions</a> we easily deduce a <i>sufficient condition</i> that gurantees that a stationary point is a point of local maximum or minimum.</p>
+  
+<p><b>Theorem</b>. (First Derivative Test) Let <i>f</i>: [<i>a,b</i>] ⟶ ℝ, and let <i>x</i><sub>0</sub> &in; (<i>a,b</i>) be a stationary point, that is <i>f'</i>(<i>x</i><sub>0</sub>) = 0.</p>
+
+<ul>
+	<li><p>If in a left neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &ge; 0 and in a right neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &le; 0, then <i>x</i><sub>0</sub> is a point of local maximum.</p></li>
+
+	<li><p>If in a left neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &le; 0 and in a right neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &ge; 0, then <i>x</i><sub>0</sub> is a point of local minimum.</p></li>
+</ul>
+
+<section>
+
+<table>
+<tr><th colspan="2"><i>x</i><sub>0</sub> maximum point</th></tr>
+<tr><td>x &lt; <i>x</i><sub>0</sub></td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &ge; 0</td> <td><i>f'</i>(<i>x</i>) &le; 0</td></tr>
+<tr><td><i>f</i> ↗</td> <td><i>f</i> ↘</td> </tr>
+</table>
+
+<table>
+<tr><th colspan="2"><i>x</i><sub>0</sub> minimum point</th></tr>
+<tr><td>x &lt; <i>x</i><sub>0</sub></td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &ge; 0</td> <td><i>f'</i>(<i>x</i>) &le; 0</td></tr>
+<tr><td><i>f</i>↘ </td> <td><i>f</i>↗ </td> </tr>
+</table>
+
+</section>
+
+<figure>
+<img src="img/derivate/max_min.png" alt="studio segno derivata prima"/>
+<figcaption>Segno della derivata prima e comportamento della funzione</figcaption>
+</figure>
+
+<li><p>Trovati gli eventuali punti di estremo locale, si calcola il valore di <i>f</i> in questi punti e lo si confronta con <i>f(a)</i> and <i>f(b)</i>.</p></li>
+</ol>
+
+<div class="def">
+
+<p><b>Example 1</b>. Find maxima and minina of the polynomial function:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = 2<i>x</i><sup>3</sup> − 3x<sup>2</sup> − 12<i>x</i> +10</p>
+</div>
+
+<p>The derivative of <i>f</i> is:</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) = 6<i>x</i><sup>3</sup> − 6<i>x</i><sup>2</sup> − 12 = 6(<i>x</i> − 2)(<i>x</i> + 1)</p>
+</div>
+
+<p>Dunque i punti in cui si annulla, sono <i>x</i> = −1 and <i>x</i> = 2. The following table re <i>f</i> ed <i>f'</i></p>
+
+<table class="noborder">
+<tr><td><b>x</b></td> <td>−∞</td> <td></td> <td>−1</td> <td></td> <td>2</td> <td> </td> <td>+∞</td> </tr>
+
+<tr><td><b>f'(x)</b></td> <td></td> <td>+</td> <td>0</td> <td>−</td> <td>0</td> <td>+</tr>
+<tr><td></td> <td></td> <td></td> <td>0</td> <td><b>x<sub>0</sub></b></td> <td></td> <td></td></tr>
+
+<tr><td><b>f(x)</b></td> <td></td> <td><img src="img/up.png" alt="freccia su"/> </td>
+<td>17</td>
+<td>↘</td>
+<td> </td>
+<td><img src="img/up.png" alt="segno su"/></td></tr>
+<tr>  <td> </td> <td>−∞</td> <td> </td> <td> </td>  <td> </td><td>-10</td> <td> </td> <td>+∞</td> </tr>
+</table>
+
+</div>
+
+<p>Si può presentatre anche il caso in cui la derivata è nulla in un punto di flesso:</p>
+
+<img src="img/funzioni/cubic.png" alt="f(x) = x^3" />
+
+<table>
+<tr><td><b>x</b></td> <td>-∞</td> <td>0</td>  <td>+∞</td> </tr>
+
+<tr><td><b>f'(x)</b></td> <td>+</td>  <td>0</td> <td>+</td>  </tr>
+
+<tr><td><b>f(x)</b></td> <td><img src="img/up.png" alt="freccia su"/> </td>
+<td>0</td>
+<td><img src="img/up.png" alt="freccia in sù"/></td>
+
+</table>
+
+</ol>
+
+<h2>Second Derivative Test</h2>
+
+<p>In the last section we saw  that <a href="Lagrange.html#monotonicity">Monotonicity test</a> allows the classification of critical points of a function and how it depende of the sign changes of the derivative <i>f'</i>. We can apply the same test to <i>f'</i>(<i>x</i>) when <i>f</i> is a function twice differentiable. We have the followin.</p>
+
+<p><b>Theorem</b> (<b>Second derivative test</b>). Suppose <i>f</i> is differentiable on a neighborhood of <i>x</i><sub>0</sub> a critical point for <i>f</i> <i>i.e.</i> <i>f'</i>(<i>x</i><sub>0</sub>) = 0, and that <i>f''</i>(<i>x</i><sub>0</sub>) exists and is nonzero. Then</p>
+
+<ol type="i">
+	<li><p>If <i>f''</i>(<i>x</i><sub>0</sub>) &le; 0; Then <i>f</i> has a local maximum at <i>x</i><sub>0</sub></p></li>
+
+	<li><p>If <i>f''</i>(<i>x</i><sub>0</sub>) &ge; 0; Then <i>f</i> has a local minimum at <i>x</i><sub>0</sub></p></li>
+
+</ul>
+
+<p><b>Proof</b>.</p>
+
+<ol type="i">
+
+	<li><p>When the critical point <i>x</i><sub>0</sub> is a maximum, in a left neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &ge; 0 and in a right neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &le; 0, hence the first derivative is decreasing and we must have <i>f''</i>(<i>x</i><sub>0</sub>) &lt; 0.</p></li>
+
+	<li><p>When the critical point <i>x</i><sub>0</sub> is a minimum, in a left neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &le; 0 and in a right neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &ge; 0, hence the first derivative is increasing thus <i>f''</i>(<i>x</i><sub>0</sub>) &gt; 0. &emsp;□</p></li>
+
+</ol>
+
+<p>If <i>f''</i> is continuous at <i>x</i><sub>0</sub>, and if <i>f''</i>(<i>x</i><sub>0</sub>) &ne; 0, there will be a neighborhood of <i>x</i><sub>0</sub> in which <i>f''</i> has the same sign as <i>f''</i>(<i>x</i><sub>0</sub>). Instead of a point we can consider a whole interval (<i>a,b</i>) and state that if <i>f</i>: (<i>a,b</i>) → ℝ is differentiable two times in (<i>a,b</i>). We have the following:</p>
+
+<p><b>Convavity Test</b></p>
+
+<ol type="a">
+	<li><p><i>f''</i> &ge; 0 in (<i>a,b</i>) ⇐⇒ <i>f'</i> increasing in (<i>a,b</i>)</p></li>
+	<li><p><i>f''</i> &le; 0 in (<i>a,b</i>) ⇐⇒ <i>f'</i> decreasing in (<i>a,b</i>)</p></li>
+</ol>
+
+<ul>
+    <li><p>When <i>f</i> satisfies a) <i>f</i> is said <b>convex</b> or <b>upward concave</b>.</p></li>
+    <li><p>When <i>f</i> satisfies b), <i>f</i> is said <b>concave</b> or <b>downward concave</b>.</p></li>
+</ul>
+
+<p>Geometrically when <i>f</i> is convex, as <i>x</i> increases the slope of the tange line to the graph of <i>f</i> increases as well. As a consequence if a function is convex in an interval (<i>a,b</i>) its graph lies above the tangent line at every point <i>x</i> &in; (<i>a,b</i>):</p>
+
+<figure>
+<img src="img/derivate/convessa.png" alt="funzione convessa" />
+<figcaption><b>Fig.1</b>. <b>Convex function</b> the slope of the tanget line goes from negative to positive values, hence increases.</figcaption>
+</figure>
+
+<p>The tangent line to the graph of <i>f</i> at a point <i>x</i><sub>0</sub> has equation</p>
+
+<div class="eq">
+<p><i>y</i> = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i><sub>0</sub>) (<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>If <i>f</i> is convex, its graph never goes below that line; this means that</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i><sub>0</sub>) &ge; <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i><sub>0</sub>) (<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>holds for every <i>x</i> with <i>x</i><sub>0</sub> &in; (<i>a,b</i>). For concave function it is enough to reverse the inequality in the previous relation. The same condition also implies that every stationary point of a convex or concave function is a point of global minimum or maximum respectively.</p>
+
+<h2>Inflection points</h2>
+
+<p><b>Definition</b>. An <i>inflection point</i> is a point where the graph of a function changes from convex to concave or vice versa.</p>
+
+<p>In view of the concavity test, there is a point of inflection at any point where the second derivative changes sign (assuming that the function is continuous).</p>
+
+<p>The second derivative test can be of great pratical value in determining the nature of a critical point whether it is a local minimum or local maximum. Of course, not all critical points correspond to extrema, as the example of <i>x</i> = 0 for the function <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> at which <i>f''</i> = 0. At such points, the second derivative test is inconclusive.</p>
+
+<img src="img/flessoor.png" alt="horizontal inflection point"/>
+
+<img src="img/x^3.png" alt="cubic function"/>
+
+<p>The reader ought to beware that <i>f"</i>(<i>x</i><sub>0</sub>) = 0 does not warrant <i>x</i><sub>0</sub> is a point of inflection for <i>f</i>. The function <i>f</i>(<i>x</i>) = <i>x</i><sup>4</sup> has second derivative <i>f"</i>(<i>x</i>) = 12<i>x</i><sup>2</sup> which vanishes at <i>x</i><sub>0</sub> = 0. The origin is nonetheless not an inflection point, for the tangent at <i>x</i><sub>0</sub> is the axis <i>y</i> = 0, and the graph of <i>f</i> stays always above it. In addition, <i>f"</i> does not change sign around <i>x</i><sub>0</sub>.</p>
+
+<p>The inflection point of the cubic function is known as a <i>horizontal inflection point</i>.</p>
+
+<p><b>Definition</b> (<b>Horizontal inflection point</b>). Consider a differentiable function <i>f</i>(<i>x</i>). Assume that <i>f'</i>(<i>x</i><sub>0</sub>) = 0, and that, in any neighborhood of <i>x</i><sub>0</sub> we have <i>f</i>(<i>x</i>) &gt; <i>f</i>(<i>x</i><sub>0</sub>) on one side of <i>x</i><sub>0</sub>, and <i>f</i>(<i>x</i>) &lt; <i>f</i>(<i>x</i><sub>0</sub>) on the other. Then, the point <i>x</i><sub>0</sub> is called a <i>horizontal inflection point</i>. &emsp;□</p>
+
+<p>If the tangent line to a graph exists at a point at which the concavity changes, then the point is a <b>point of inflection</b>. In addition to horizontal inflection points we can also have inflection points with vertical tangents</p>
+
+<img src="img/vertical_tangents.png" alt="vertical tangents"/>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

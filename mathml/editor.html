@@ -20,7 +20,8 @@
 $$u_1 = \sqrt[3]{-\frac{2}{2} + \sqrt{\frac{q^2} {4} + \frac{p^3}{27}}, \quad u_2 = \omega u1, \quad u_3 = \omega^2u_1$$
 </textarea>
 <br>
- <input id="myBtn" type="button" value="Clear">
+<input id="myBtn" type="button" value="Validate">
+ <input id="myOtherBtn" type="button" value="Clear">
 
 <div id="text">
 
@@ -29,25 +30,56 @@ $$u_1 = \sqrt[3]{-\frac{2}{2} + \sqrt{\frac{q^2} {4} + \frac{p^3}{27}}, \quad u_
 </div>
 
 <script type="text/javascript">
-	addEventListener( 'load', ()=>{
-		const txtarea = document.querySelector( 'textarea' );
-		const div = document.getElementById( 'text' );
-  
-		txtarea.addEventListener( 'keyup', ()=>{
-  			const content = txtarea.value;
-    		div.innerText = content;
-    		MathJax.typeset()
-  		})
+	addEventListener('load', () => {
+    const txtarea = document.querySelector('textarea');
+    const div = document.getElementById('text');
 
-		function eraseText() {
-			const txtarea = document.querySelector( 'textarea' );
-			txtarea.value = "";
-		}
+    txtarea.addEventListener('keyup', () => {
+        const content = txtarea.value;
+        div.innerText = content;
+        MathJax.typeset()
+    })
 
-		const element = document.getElementById("myBtn");
-		element.addEventListener("click", eraseText);
+    function eraseText() {
+        const txtarea = document.querySelector('textarea');
+        txtarea.value = "";
+    }
 
-	});
+    const clearButton = document.getElementById("myOtherBtn");
+    clearButton.addEventListener("click", eraseText);
+
+    function isValid () {
+        const stack = [];
+        const brackets = ['[', ']', '{', '}', '(', ')']; // list of characters to watch for
+        const characters = { ')': '(', '}': '{', ']': '[' };
+        let feedback = '';
+        for (const char of txtarea.value) {
+            // this jumps over characters that we're not interested in
+            if (brackets.indexOf(char) < 0) {
+                feedback += char;
+                continue;
+            }
+            if (!characters[char]) {
+                stack.push(char);
+                feedback += char;
+            } else {
+                if (stack.pop() !== characters[char]) {
+                    console.log('invalid bracket thing');
+                    feedback += '<span class="booh">' + char + '</span>';
+                    div.innerHTML = feedback;
+                    return false;
+                }else{
+                    feedback += char;
+                }
+            }
+        }
+        return stack.length === 0;
+    }
+    
+    const validateButton = document.getElementById("myBtn");
+    validateButton.addEventListener("click", isValid);
+    
+});
 </script>
 
 </body>
