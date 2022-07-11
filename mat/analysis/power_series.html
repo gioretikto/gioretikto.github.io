@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Power Series"/>
+    <title>Power Series</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Power Series</h1>
+
+<p>Given a sequence {<i>a<sub>n</sub></i>} of real numbers, the series</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo>=</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+</math>
+
+<!-- $$ \sum_{n = 0}^\infty a_n(x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \ldots $$ -->
+
+<p>is called a <i>power series</i> around <i>x</i><sub>0</sub>. Thus the power series is a function of <i>x</i> provided it converges for some or all <i>x</i>. Of course, it converges for <i>x</i> = <i>x</i><sub>0</sub>. Whether it converges for other values of <i>x</i> depends on the choice of values of {<i>a<sub>n</sub></i>}.</p>
+
+<p>We observe that is always possible to perform the following traslation <i>x</i> − <i>x</i><sub>0</sub> = <i>t</i>, so that is always possible to study the following power series instead.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <msup>
+    <mi>t</mi>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$ \sum_{n = 0}^\infty a_nt^n $$ -->
+
+<p><b>Lemma 6.2.1</b> (<b>Abel's Lemma</b>). If the numeric series &Sigma; <i>a<sub>n</sub>b<sup>n</sup></i>, (<i>b</i> &ne; 0) converges, then also the power &Sigma; <i>a<sub>n</sub></i>(<i>x</i> − x<sub>0</sub>)<sup><i>n</i></sup> converges absolutely for every <i>x</i> &in; |<i>x</i> − <i>x</i><sub>0</sub>| &lt; |<i>b</i>|.</p>
+
+<p><b>Proof</b>. Since the numeric series &Sigma; <i>a<sub>n</sub>b<sup>n</sup></i> converges, the sequence of its terms tends to zero, and it is thus bounded: there exists a constant <i>K</I> &gt; 0 such that |<i>a<sub>n</sub>b<sup>n</sup></i>| &le; <i>K</i> for every value of <i>n</i>. Thus it results</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <msup>
+    <mi>b</mi>
+    <mi>n</mi>
+  </msup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+      <msup>
+        <mi>b</mi>
+        <mi>n</mi>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>&#x2264;</mo>
+  <mi>K</mi>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">|</mo>
+      <mfrac>
+        <mrow>
+          <mi>x</mi>
+          <mo>&#x2212;</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+        </mrow>
+        <mi>b</mi>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">|</mo>
+    </mrow>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$ |a_n(x - x_0)^n| = |a_n b^n| \left|\frac{(x-x_0)^n} {b^n} \right| \le K \left| \frac{x-x_0} {b} \right|^n $$ -->
+
+<p>The series &Sigma; |(<i>x</i> − <i>x</i><sub>0</sub>)/<i>b</i>|<sup><i>n</i></sup> is a <a href="series.html#geometric">geometric series</a> which converges for |(<i>x</i> − <i>x</i><sub>0</sub>)/<i>b</i>| &lt; 1, that is for |<i>x</i> − <i>x</i><sub>0</sub>| &lt; |<i>b</i>|. By the comparison test the series &Sigma; |<i>a<sub>n</sub></i>(<i>x</i> − <i>x</i><sub>0</sub>)<sup><i>n</i></sup>| converges as well for |<i>x</i> − <i>x</i><sub>0</sub>| &lt; |<i>b</i>|. &emsp;□</p>
+
+<p>Abel's Lemma has an important consequence: if a power series converges at a point <i>x</i><sub>1</sub> then it converges absolutely inside the interval |<i>x</i>| &lt; |<i>x</i><sub>1</sub>|. If the series does not converge at <i>x</i><sub>2</sub> then it does not converge over all the interval marked below:</p>
+
+<img src="img/conv_int_pow_series.png" alt="converge interval power series" />
+
+<p>Notice that for the case <i>x</i> = &pm;<i>R</i>; we cannot conclude anything, the series could converge at both points, at only one of them or neither that is the convergence interval could be of the form (−<i>R</i>, <i>R</i>), [−<i>R</i>, <i>R</i>], [−<i>R</i>, <i>R</i>).</p>
+
+<h2>Radius of Convergence</h2>
+
+<p>It turns out that, given any sequence {<i>a<sub>n</sub></i>}, one of the following proposition expressed by the folllowing theorem holds for its power series:</p>
+
+<p><b>Theorem 6.2.2</b>
+
+<ol type="i">
+	<li><p>The power series converges only for <i>x</i> = 0;</p></li>
+	<li><p>The power series converges absolutely for all <i>x</i> ∈ ℝ;</p></li>
+	<li><p>There is a positive number <i>R</i> such that the series converges if |<i>x</i>| &lt; <i>R</i> and diverges if |<i>x</i>| &gt; <i>R</i>. </p></li>
+</ol>
+
+<p>The number <i>R</i> in case (iii) is called the <b>radius of convergence</b> of the power series. By convention, the radius of convergence is <i>R</i> = 0 in case (i) and <i>R</i> = &infin; in case (ii).</p>
+
+<p><b>Proof</b>. Let <i>A</i> := {<i>x</i> ∈ ℝ : &Sigma;<sub><i>n</i> ≥ 0</sub> <i>a<sub>n</sub> x<sup>n</sup></i> is convergent}. If this set is reduced to {0} we have case i). If <i>A</i> is not bounded above, then given <i>x</i> ∈ ℝ, we may find  <i>x</i><sub>1</sub> &in; <i>A</i> such that |<i>x</i><sub>1</sub>| &gt; <i>x</i>, hence by Abel's lemma the power series &Sigma; <i>a<sub>n</sub>x<sup>n</sup></i> converges absolutely. From the arbitrary of <i>x</i><sub>1</sub> ii) is proved. <br> Excluding the previous two cases we have that <i>A</i> is bounded and <i>A</i> &ne; {∅}. Let <i>R</i> = sup {|<i>x</i>|, <i>x</i> &in; <i>A</i>} we have <i>R</i> &gt; 0. The power series does not obviously converge for |<i>x</i>| &gt; <i>R</i>, (then <i>x</i> &notin; <i>A</i> in this case), but it converges for |<i>x</i>| &lt; <i>R</i> so by Abel's Lemma &Sigma;<sub><i>n</i> ≥ 0</sub> <i>a<sub>n</sub> x<sup>n</sup></i> is absolutely convergent. &emsp;□</p>
+
+<p>The convergence of a power series can be studied using the criteria already already known to the reader for numeric series.</p>
+
+<p><b>Example 6.2.3</b>. For what values of <i>x</i> is the following power series convergent?</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mi>n</mi>
+  <mo>!</mo>
+  <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$\sum_{n=0}^\infty n!x^n $$ -->
+
+<p>We use the ratio test.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <msub>
+        <mi>a</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>!</mo>
+        <msup>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+      <mrow>
+        <mi>n</mi>
+        <mo>!</mo>
+        <msup>
+          <mi>x</mi>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mo stretchy="false">(</mo>
+  <mi>n</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$ \lim_{n \to \infty} \left|\frac{a_{n+1}} {a_n} \right| = \lim_{n\to \infty} \left|\frac {(n+1)!x^{n+1}} {n!x^n} \right| = \lim_{n \to \infty} (n+1) |x| = \infty $$ -->
+
+<p>By the Ratio Test, the series diverges when <i>x</i> &ne; 0. Thus the given series converges only when <i>x</i> = 0. &emsp;■</p>
+
+<p><b>Example 6.2.4.</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+</math>
+
+<!-- $$  \sum_{n = 1}^\infty \frac{(x-2)^n}{n} $$ -->
+
+<p>For which values of <i>x</i> is the series convergent? We apply the ratio test:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <msub>
+        <mi>a</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <mn>2</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo>&#x22C5;</mo>
+    <mfrac>
+      <mi>n</mi>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <mn>2</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mi>n</mi>
+      </mfrac>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mn>2</mn>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mn>2</mn>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$ \lim_{n \to \infty} \left|\frac{a_{n+1}} {a_n} \right| = \lim_{n\to \infty} \left|\frac {(x-2)^{n+1}} {n+1} \cdot \frac{n}{(x-2)^n} \right| = \lim_{n \to \infty} \frac{1}{1 + \frac{1}{n}} |x -2| = |x - 2| $$ -->
+
+<p>We have thus that</p>
+
+<div class="eq">
+<p>|<i>x</i> − 2| &lt; 1 &emsp;←→&emsp; −1 &lt; <i>x</i> − 2 &lt; 1 &emsp;←→&emsp; 1 &lt; <i>x</i> &lt; 3&emsp;■</p>
+</div>
+
+<p><b>Example 6.2.5.</b> An example already encountered is that of the geometric series:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$\sum_{n=0}^\infty x^n $$ -->
+
+<p>which is absolutely convergent for |<i>x</i>| &le; 1, having sum 1/(1−<i>x</i>).&emsp;■ </p>
+
+<p><b>Example 6.2.6.</b> We prove that the following series</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mi>n</mi>
+    </msup>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=0}^\infty \frac{x^n}{n!} $$ -->
+
+<p>converges &forall;<i>x</i>. For <i>x</i> = 0, the series converges with sum 1. Analogously to the previous examples using the ratio test:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <msub>
+        <mi>a</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <msup>
+        <mi>x</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>!</mo>
+      </mrow>
+    </mfrac>
+    <mo>&#x22C5;</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+        <mo>!</mo>
+      </mrow>
+      <msup>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi>x</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \lim_{n \to \infty} \left|\frac{a_{n+1}} {a_n} \right| = \lim_{n\to \infty} \left|\frac {x^{n+1}} {(n+1)!} \cdot \frac{n!} {x^n} \right| = \lim_{n \to \infty} \frac{|x|}{n+1} =0 $$ -->
+
+<p>thus we have convergence &forall;<i>x</i> &in; ℝ. &emsp;■</p>
+
+<p><b>Example 6.2.7.</b> Given the series </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$ \sum_{n=0}^\infty \frac{n-1}{n+1} x^n $$ -->
+
+<p>has convergence ray <i>R</i> = 1, its terms are bounded by <i>x</i> = &pm;1. Thus the series converges absolutely for |<i>x</i>| &le; 1 and does not converge for |<i>x</i>| &le; 1. &emsp;■</p>
+
+<section aria-label="End">
+<a href="derivative.html">&#171;Derivative</a>
+<a href="index.html">Index</a>
+<a href="null.html">Null &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
