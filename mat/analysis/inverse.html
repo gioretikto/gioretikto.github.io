@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Funzioni Inverse"/>
+    <title>Funzioni Inverse</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Funzioni Inverse</h1>
+      
+<p>Una funzione <i>f</i> si dice <b>iniettiva</b> se ogni <i>y</i> &in; Im <i>f</i> è l'immagine di un solo elemento <i>x</i> &in; dom <i>f</i>, ovvero se vale</p>
+
+<div class="eq">
+<p><i>y</i> = f(x<sub>1</sub>) = f(x<sub>2</sub>) &emsp; ⇒ x<sub>1</sub> = x<sub>2</sub></i></p>
+</div>
+
+<p>Se <i>f</i> è iniettiva possiamo associare ad ogni elemento <i>y</i> dell'immagine l'unico elemento <i>x</i> del dominio. La funzione che realizza tale corrispondenza viene detta funzione <b>inversa</b>, e indicata con <i>f</i><sup>−1</sup></p>
+
+<div class="eq">
+<p><i>x</i> = <i>f</i> <sup>-1</sup>(<i>y</i>) &emsp; ⇔ &emsp; y = f(<i>x</i>)</p>
+</div>
+
+<p>La funzione inversa ha quindi come dominio l'immagine di <i>f</i> e come codominio il dominio di <i>f</i>:</p>
+
+<div class="eq">
+<p>dom<i>f</i> <sup>-1</sup> = im<i>f</i>, &emsp; im <i>f</i> <sup>-1</sup> = dom <i>f</i></p>
+</div>
+
+<p>In alcuni casi nota l'espressione analitica di <i>f</i> è possibile risolvendo l'equazione rispetto a <i>x</i> ricavare l'espressione per la funzione inversa. Ad esempio la funzione <i>f(x) = 4x + 5</i> risulta essere invertibile su ℝ e la funzione inversa risulta essere</p>
+
+<div class="eq">
+<p><i>f</i><sup>−1</sup> (<i>y</i>) = (<i>y</i> − 4)/5</p>
+</div>
+
+<h2>Grafic of the inverse functions</h2>
+
+<p>Il grafico della funzione inversa si ottiene da quello di <i>f</i> scambiando tra loro le coordinate di ciascun  punto (x<sub>0</sub>, y<sub>0</sub>). I punti (x<sub>0</sub>, y<sub>0</sub>)  e (y<sub>0</sub>, x<sub>0</sub>), risultano simmetrici rispetto la retta <i>y=x</i>, bisettrice del I e III quadrante quindi i grafici di <i>f</i> e della sua inversa risultano uno l'immagine speculare dell'altro.</p>
+
+<p>Un esempio è dato dalla funzione cubica: <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> and <i>f</i><sup>−1</sup>(<i>y</i>) = (<i>y</i>)<sup>1/3</sup>.</p>
+
+<img src="img/cubica.png" alt="funzione cubica"/>
+
+<h2>Funzioni trigonometriche inverse</h2>
+
+<p>Essendo le funzioni trigonometriche priodiche, per trattare le loro funzioni inverse bisognerà restringersi a intervalli in cui queste siano strettamente monotone, quindi invertibili. La funzione y = sin x è strttamente crescente nell'intervallo [-&pi;/2,&pi;/2]. La funzione inversa funzione arcoseno e indicata y= arcsin x; è definita in [-1,1] e ivi strettamente crescente.</p>
+
+<img src="img/arcoseno.png" alt="funzione arcoseno"/>
+
+<img src="img/asinplot.png" alt="grafico seno arcoseno"/>
+
+<p>Per cos(x) l'intervallo di monotonia è [0,&pi;], nel quale la funzione è possibile definire la funzione inversa <i>arcoseno</i></p>
+
+<img src="img/arcocoseno.png" alt="funzione arcocoseno"/>
+
+<img src="img/acosplot.png" alt="grafico coseno arcocoseno"/>
+
+<p>Per la tangente l'intervallo di monotonia è (-&pi;/2,&pi;/2) ed ivi invertibile. La funzione inversa si chiama <i>arcotangente</i> </p>
+
+<img src="img/arcotangente.png" alt="funzione arcotangente"/>
+
+<h2>Iperbolic inverse functions</h2>
+
+<p>La funzione <i>y</i> = Sh <i>x</i> è definita e strettamente crescente su tutto <img src="img/R.png" alt="insieme reale" class="inline"/>, dunqe invertibile. Per trovare la funzione inversa poniamo</p>
+
+<div class="eq">
+<p><i>x</i> = Sh <i>y</i> = (<i>e<sup>y</sup></i> − <i>e<sup>−y</sup></i>)/2</p>
+</div>
+
+<p>solving with respect to <i>y</i>, moltiplicando ambo i membri per <i>e<sup>y</sup></i> l'equazione si può riscrivere come</p>
+
+<div class="eq">
+<p>e<sup>2<i>y</i></sup> − 2<i>x</i>e<sup><i>y</i></sup> − 1 = 0</p>
+</div>
+
+<p>questa è un'equazione di 2° nell'ingognita e<sup>y</sup>. Risolvendola si ha</p>
+
+<img src="img/parabolica2.png" alt="settore seno iperbolico"/>
+
+<p>Essendo e<sup>y</sup> &gt;0, scartiamo la soluzione negativa. Quella positiva è</p>
+
+<img src="img/parabolica3.png" alt="settore seno iperbolico"/>
+
+<p>Questa è la funzione inversa di Sh x, nota come <i>settore seno iperbolico</i>, SettSh x, definita &forall;<img src="img/R.png" alt="insieme reale" class="inline"/>.</p>
+
+<p>Con passaggi analoghi si ricava la funzione inversa del coseno iperbolico Ch x, strettamente crescente per x &ge;0, descrescente per x &le;0.  Non è quindi invertibile su tutto ℝ, ma la sua restriction to <i>x</i> &ge; 0 is.</p>
+
+<div class="eq">
+<p><i>x</i> = Ch <i>y</i> = (<i>e<sup>y</sup></i> − <i>e<sup>−y</sup></i>)/2</p>
+</div>
+
+<p>risolvendo rispetto a <i>y</i>:</p>
+
+<img src="img/settorecosenodim.png" alt="settore coseno iperbolico passaggi"/>
+
+<div class="eq">
+<p><i>e<sup>y</sup></i> + <i>e<sup>2y</sup></i> − 2<i>x</i>e<sup><i>y</i></sup> + 1 = 0</p>
+</div>
+
+<p>thus</p>
+
+<p>In questo caso entrambe le soluzioni sono accettabili. Passando la logaritmo otteniamo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>y</mi>
+  <mo>=</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>&#x2212;</mo>
+    <mn>1</mn>
+  </msqrt>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ y = \log (x + \sqrt{x^2 - 1}) $$ -->
+
+<p>che è nota come <i>settore coseno iperbolico</i>, SettChx, è definita per <i>x</i> &ge;1.</p>
+
+<p>Come esempio notiamo che l'equazione</p>
+
+<div class="eq">
+<p>Sh <i>x</i> = 3 &emsp;unica soluzione &emsp; <i>x</i> = SettSh 3 = log 3 + √10</p>
+</div>
+
+<img src="img/eqsettsh.png" alt="settore coseno iperbolico equazione"/>
+
+<p>mentre per l'equazione</p>
+
+<div class="eq">
+<p>Ch <i>x</i> = 3 &emsp;due soluzioni &emsp; <i>x</i> = &pm;SettCh 3 = log 3 + √8</p>
+</div>
+
+<img src="img/eqsettch3.png" alt="settore coseno iperbolico"/>
+
+<p>Le funzioni iverse del seno e coseno iperbolico risultano utili nell'integrazione delle funzioni irrazionali.</p>
+
+<section>
+<a href="rappresentazione.html">&#171;Rappresentazione matriciale delle trasformazioni</a>
+<a href="index.html">Index</a>
+<a href="ker.html">Immagine e nucleo di una trasformazione &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

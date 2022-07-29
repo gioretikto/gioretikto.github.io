@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Integration by parts"/>
+    <title>Integration by parts</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Integration by parts</h1>
+
+<p>Now we consider one of the most powerful methods of evaluating the product of two integrable functions. </p>
+
+<p>Let <i>f</i> and <i>g</i> derivable functions in [<i>a,b</i>], we have</p>
+
+<p>(<i>fg</i>)' = <i>f'g</i> + <i>fg'</i></p>
+
+<p>that is:</p>
+
+<p><i>fg'</i> = (<i>fg</i>)' − <i>f'g</i></p>
+
+<p>taking the indefinite integral of both sides, and noticing that &int; (<i>fg</i>)'d<i>x</i> = <i>fg</i>, we find the <i>integration by parts rule</i>:</p>
+
+<div class="eq">
+<p>∫<i>f</i>(<i>x</i>) ⋅ <i>g'</i>(<i>x</i>) = <i>f</i>(<i>x</i>) ⋅ <i>g</i>(<i>x</i>) − ∫<i>f'</i>(<i>x</i>) ⋅ <i>g</i>(<i>x</i>) d<i>x</i></p>
+</div>
+
+<p>which can be applied as well for the definite integral:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">[</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x22C5;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+      <mo data-mjx-texclass="CLOSE">]</mo>
+    </mrow>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mo>&#x2212;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\int_a^b f(x) \cdot g'(x) \text{d}x = \left[f(x) \cdot g(c)\right]_a^b  -\int_a^b f'(x) \cdot g(x) \text{d}x $$ -->
+
+<p><b>Example 1</b>. Evaluate</p>
+
+<div class="eq">
+<p>&int; <i>e<sup>x</sup></i> sin <i>x</i> d<i>x</i></p>
+</div>
+
+<p>We are able to calculate the primitive of both functions <i>e<sup>x</sup></i> and sin <i>x</i>. We proceed as follows:</p>
+
+<div class="eq">
+<p>&int; <i>e<sup>x</sup></i> sin <i>x</i> d<i>x</i> = <i>e<sup>x</sup></i> sin <i>x</i> − &int; <i>e<sup>x</sup></i> cos <i>x</i> d<i>x</i></p>
+</div>
+
+<p>We perform a second integrations by parts, picking <i>f,g</i>' as in the first choiche:</p>
+
+<p>= <i>e<sup>x</sup></i> sin <i>x</i> − { <i>e<sup>x</sup></i> cos <i>x</i> − &int; <i>e<sup>x</sup></i> (−sin <i>x</i>) d<i>x</i>}</p>
+
+<p>Let <i>I</i> be the original integra, then we have</p>
+
+<div class="eq">
+<p><i>I</i> = <i>e<sup>x</sup></i> sin <i>x</i> − <i>e<sup>x</sup></i> cos <i>x</i> − <i>I</i></p>
+</div>
+
+<p>By solving the equation we obtain <i>I</i></p>
+
+<p>2<i>I</i> = <i>e<sup>x</sup></i> sin <i>x</i> − <i>e<sup>x</sup></i> cos <i>x</i></p>
+
+<p><i>I</i> = 1/2 e<sup>x</sup> (sin <i>x</i> − cos <i>x</i>) + <i>c</i>. &emsp;■ </p>
+
+<p><b>Example 2</b>. Evaluate ∫ log <i>x</i>, by parts, by letting <i>f</i>(<i>x</i>) = log <i>x</i> and <i>g'</i>(<i>x</i>) = 1:</p>
+
+<div class="eq">
+<p>∫ log <i>x</i> d<i>x</i> = <i>x</i> log <i>x</i> − ∫<i>x</i> ⋅ 1/<i>x</i> = <i>x</i> log <i>x</i> ⋅ ∫ 1 ⋅ d<i>x</i> = <i>x</i> log<i>x</i> − <i>x</i> + <i>c</i>. &emsp;■</p>
+</div>
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index</a>
+<a href="integral_properties.html">Properties of the integral &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

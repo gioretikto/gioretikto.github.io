@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The fundamental theorem of calculus"/>
+    <title>The Fundamental Theorem of Calculus</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Fundamental Theorem of Calculus</h1>
+
+<p>Differential calculus arose from the tangent problem, whereas integral calculus arose from a seemingly unrelated problem, the area problem. Newton’s mentor at Cambridge, Isaac Barrow (1630–1677), discovered that these two problems are actually closely related. In fact, he realized that differentiation and integration are inverse processes.</p>
+
+<p>With simple intuitive consideration we can see the relation among integration and differentiation. Given a function f(x) defined on and continous in the interval [<i>a,b</i>], where it assumes positive values, we consider the area under the graph of f(x) delimited by the lines <i>x</i> = <i>a</i> and <i>x</i> = <i>b</i>. If for any <i>x</i> &in; [<i>a,b</i>], we define <i>F</i>(<i>x</i>) the area delimited by <i>x</i> = <i>a</i> and a generic line parallel to the <i>y</i> axis, passing through the point <i>x</i>, the increment &Delta;<i>F</i> of such a function, corresponding to a small increment &Delta;<i>x</i> is given by</p>
+
+<div class="eq">
+<p>&Delta;<i>F</i> = <i>F</i>(<i>x</i>) + <i>f</i>(<i>x</i>) &Delta;<i>x</i> <br>
+<i>F</i>(<i>x</i>+&Delta;<i>x</i>) − <i>F</i>(<i>x</i>) = <i>f</i>(<i>x</i>) &Delta;<i>x</i></p>
+</div>
+
+<p>as &Delta;<i>x</i> tends to zero and becomes a d<i>x</i>, we have</p>
+
+<div class="eq">
+<p><i>F'</i>(<i>x</i>) = <i>f</i>(<i>x</i>) &emsp;&emsp;<i>f</i>(<i>x</i>)d<i>x</i> is the differential of F(<i>x</i>)</p>
+</div>
+
+<p>The <i>F</i>(<i>x</i>) is called a <b>primitive</b> or an <b>antiderivative</b> of the function <i>f</i>(<i>x</i>). The determination of all the primitive functions for a continous function, is called integration and is one of the basic problems of integral calculus;</p>
+
+
+<p><b>Definition 7.3.1</b> (Primitive of a function). Let <i>f</i>: [<i>a,b</i>] → ℝ. Then a function <i>G</i>: [<i>a,b</i>] → ℝ is called a primitive of <i>f</i> if</p>
+
+<ul>
+	<li><p><i>G</i> is differentiable on [<i>a,b</i>];</p></li>
+	<li><p><i>G'</i>(<i>x</i>) = <i>f</i>(<i>x</i>) &forall;<i>x</i> &in; [<i>a,b</i>].&emsp;□</p></li>
+</ul>
+
+<p>For example <i>G</i>(<i>x</i>) = <i>x</i><sup>2</sup> is a primitive of <i>f</i>(<i>x</i>) = 2<i>x</i> and  <i>G</i>(<i>x</i>) = sin <i>x</i> is a primitive of f(x) = cos <i>x</i>. Clearly if <i>G</i> is a primitive of <i>f</i>, then <i>G</i> + <i>c</i>, with <i>c</i> constant, is a primitive as well of <i>f</i>. On the other hand if <i>G</i><sub>1</sub> and <i>G</i><sub>2</sub> are two primitives of <i>f</i> in [<i>a,b</i>] then <i>G'</i><sub>1</sub> − <i>G'</i><sub>2</sub> = 0, that is (<i>G</i><sub>1</sub> − <i>G</i><sub>2</sub>) = 0 ad thus <i>G</i><sub>1</sub> − <i>G</i><sub>2</sub> = constant. It follows that if we know a primitive <i>G</i> of <i>f</i> then all the other primitives are of the form <i>G</i> + <i>c</i>.</p>
+
+<p>Not every function defined on a real interval admits primitives. We limit ourselves to point out an important class of integrable maps, that of <b>continuous</b> functions on a real interval; the fact that continuity implies integrability will follow from the Fundamental Theorem of integral calculus.</p>
+
+<p><b>Theorem 7.3.2</b> (<i>The Fundamental Theorem of integral calculus)</i> - Let <i>f</i>: <i>I</i> ⟶ ℝ a continuous function on the interval <i>I</i>.  We call <b>integral function</b> of <i>f</i> on <i>I</i> the map</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>F</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mi>x</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+<mtext>&emsp;7.3.1</mtext>
+</math>
+
+<p>with <i>x<sub>0</sub></i> &in; <i>I</i>. Then the map <i>F</i> is differentiable over <i>I</i> and</p>
+
+<div class="eq">
+<p><i>F'</i>(<i>x</i>) = <i>f</i>(<i>x</i>) &emsp; &forall;<i>x</i> &in; <i>I</i>.</p>
+</div>
+
+<p><b>Proof</b>. If <i>x</i> and <i>x</i> + <i>h</i> are in <i>I</i>, then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>F</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>F</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msubsup>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>h</mi>
+        </mrow>
+      </msubsup>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mtext>d</mtext>
+      <mi>t</mi>
+      <mo>&#x2212;</mo>
+      <msubsup>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+        </mrow>
+      </msubsup>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msubsup>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+        </mrow>
+      </msubsup>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mtext>d</mtext>
+      <mi>t</mi>
+      <mo>+</mo>
+      <msubsup>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>h</mi>
+        </mrow>
+      </msubsup>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mtext>d</mtext>
+      <mi>t</mi>
+      <mo>&#x2212;</mo>
+      <msubsup>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+        </mrow>
+      </msubsup>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msubsup>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>h</mi>
+        </mrow>
+      </msubsup>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+</math>
+
+<!-- $$\frac{F(x+h) - F(x)}{h} = \frac{\int_{x_0}^{x+h} f(t) \text{d}t -\int_{x_0}^{x} f(t) \text{d}t}{h} = \frac{\int_{x_0}^{x} f(t) \text{d}t +\int_{x}^{x+h} f(t) \text{d}t -\int_{x_0}^{x} f(t) \text{d}t}{h} = \frac{\int_{x}^{x+h}f(t)\text{d}t}{h} $$ -->
+
+<p>Since <i>f</i> is continuous, the integral mean value theorem guarantees the existence in the interval <i>x</i>, <i>x</i>+<i>h</i> of a point <i>c</i> such that</p>
+
+<div class="eq">
+<p>[<i>F</i>(<i>x</i>+<i>h</i>) − <i>F</i>(<i>x</i>)]/<i>h</i> = <i>f</i>(<i>c</i>) &emsp; 7.3.2</p>
+</div>
+
+<p>for <i>h</i>⟶ 0, <i>c</i> ⟶ <i>x</i>, by the continuity of <i>f</i>, we have</p>
+
+<div class="eq">
+<p>lim<sub><i>h</i> ⟶ 0</sub> <i>f</i>(<i>c</i>) = <i>f</i>(lim<sub><i>h</i> ⟶0</sub> <i>c</i>) = <i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>From 7.3.2 we conclude that the limit of the left-hand side exists and that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>F</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>F</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>F</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+<mtext>&emsp;&emsp;□</mtext>
+</math>
+
+<!-- $$ F'(x) = \lim_{h\to 0} \frac{F(x+h) - F(x)}{h} = f(x) $$ -->
+
+<p><b>Corollary 7.3.3</b> Let <i>F</i><sub><i>x</i><sub>0</sub></sub>(<i>x</i>) be the integral function (eq. 7.3.1) of a continuous <i>f</i> on <i>I</i>. Then</p>
+
+<div class="eq">
+<p><i>F</i><sub><i>x</i><sub>0</sub></sub>(<i>x</i>) = <i>G</i>(<i>x</i>) − <i>G</i>(x<sub>0</sub>), &emsp; &forall;<i>x</i> &in; <i>I</i></p>
+</div>
+
+<p>for any primitive map <i>G</i> of <i>f</i> on <i>I</i>.</p>
+
+<p><b>Proof</b>. We have <i>F'</i><sub><i>x</i><sub>0</sub></sub>(<i>x</i>) − <i>G'</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i>) = 0, which means that <i>F</i>(<i>x</i>) − <i>G</i>(<i>x</i>) = constant. The constant is fixed by the condition <i>F</i><sub><i>x</i><sub>0</sub></sub>(<i>x</i><sub>0</sub>) = 0. &emsp;□</p>
+
+<p>The next corollary has great importance, for it provides the definite integral by means of an arbitrary primitive of the integrand.</p>
+
+<p><b>Corollary 7.3.4</b> Let <i>f</i> be continuous on [<i>a, b</i>] and <i>G</i> any primitive of <i>f</i> on that interval. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mi>G</mi>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>G</mi>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\int_a^b f(x) \, \text{d}x = G(b) - G(a) $$ -->
+
+<p><b>Proof</b>. Denoting <i>F<sub>a</sub></i> the integral function of <i>f</i> vanishing at <i>a</i>, one has</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>F</mi>
+    <mi>a</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\int_a^b f(x) \, \text{d}x = F_a(b) $$ -->
+
+<p>The previous corollary provides the claim once we put <i>x</i><sub>0</sub> = <i>a</i>, <i>x</i> = <i>b</i>. &emsp;□</p>
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index</a>
+<a href="integral_properties.html">Properties of the integral &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

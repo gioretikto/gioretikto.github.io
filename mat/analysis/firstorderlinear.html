@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Equazioni lineari del primo ordine"/>
+    <title>Equazioni lineari del primo ordine</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Equazioni lineari del primo ordine</h1>
+
+<p>Sono equazioni lineari del primo ordine, quelle che possono scriversi nella forma</p>
+
+<div class="eq">
+<p><i>y' + a(t)y = b(t)</i>
+<span>(L.1)</span>
+</p>
+</div>
+
+<p>con <i>a</i> e <i>b</i> continue <i>I &subset; ℝ</i>. In tal caso, la funzione f(t,y) = -a(t)y +b(t) è un polinomio di primo grado in <i>y</i>, a coefficienti dipendenti da <i>t</i>. L'equazione si dice <b>omogenea</b> se <i>b(t)=0</i>, <b>completa</b> diversamente.</p>
+
+<h2>Soluzione dell'equazione omogenea</h2>
+
+<p>Risolviamo innanzitutto l'equazione omogenea (L.3), che scriviamo come</p>
+
+<p>y' = -a(x) y</p>
+
+<p>Una soluzione è l'equazione costante <i>y(t) = 0</i>. Altrimenti, separando le variabili, otteniamo</p>
+
+<div class="eq">
+<p>∫ 1/y dy = - ∫ a(x) dx</i> 
+</div>
+
+<p>Se <i>A(x)</i> è una primitiva di a(x), cioè se</p>
+
+<div class="eq">
+<p><i>∫ a(x) dx = A(x) + C, &emsp; C &in; ℝ</i>
+<span>L.2</span></p>
+</div>
+
+<p>abbiamo allora:</p>
+
+<div class="eq">
+<p><i>log |y| = -A(x) -C</i></p>
+</div>
+
+<p>cioè</p>
+
+<div class="eq">
+<p><i>|y(x)| = e<sup>-C</sup>e<sup>-A(x)</sup></i></p>
+</div>
+
+<p>dunque</p>
+
+<div class="eq">
+<p><i>y(x) = &pm;Ke<sup>-A(x)</sup></i></p>
+</div>
+
+<img src="img/edo/sepvar4.png" alt="separation of variables"/>
+
+<p>avendo posto <i>K= e<sup>-c</sup> &gt; 0</i>. Si noti che la soluzione particolare <i>y(x)=0</i> è contenuta nella formula precedente se ammettiamo che <i>K</i> possa assumere anche il valore 0. Pertanto tutte le soluzioni dell'equazione omogenea sono rappresentante dalla formula</p>
+
+<img src="img/edo/sepvar5.png" alt="separation of variables"/>
+
+<div class="eq">
+<p><i>y(x) = Ke<sup>-A(x)</sup>, &emsp;K &in; ℝ</i></p>
+</div>
+
+<p>ove <i>A(x)</i> è definita dalla L.2.</p>
+
+<h2>Ricerca di una soluzione particolare dell'equazione non omogenea</h2>
+
+<p><p>Passiamo ora all'equazione non omogenea. Dimostriamo anzitutto il seguente teorema fondamentale (che, come vedremo, si estenderà alle equazioni lineari di ordine qualsiasi).</p>
+
+<div class="def">
+<p><b>Tereoma E.1</b> L'integrale generale dell'equazione completa si ottiene aggiungendo all'integrale generale della omogenea una soluzione particolare della completa.</p>
+
+<p><b>Dimostrazione</b>. Sia infatti y(t) una qualunque soluzione della (L.2) e y* una soluzione particolare, cioè:</p>
+
+<img src="img/edo/linearteo.png" alt="teorema equazioni differenziali primo ordine"/>
+
+<p>Sottraendo membro a membro si ha:</p>
+
+<img src="img/edo/linearteo1.png" alt="teorema equazioni differenziali primo ordine"/>
+
+<p>Perciò la funzione <i>z(t) = y(t) - y*(t)</i> è soluzione della (L.3). Viceversa, sia <i>z(t)</i> una qualunque soluzione della (L.2) e y*(t) una soluzione particolare della (L.1); per somma si ottiene che la funzione <i>y(t) = z(t) +y*(t)</i> è soluzione della (L.2). Abbiamo così dimostrato che la generica soluzione dell'equazione completa si ottiene sommando alla soluzione generica dell'equazione omogenea, una soluzione particolare (fissata una volta per tutte) dell'equazione completa.□</p>
+</div>
+
+<p>Spesso una soluzione particolare si riesce a trovare facilmente in caso contrario si applica il <i>metodo di variazione delle costanti</i>, che consiste nel cercare una soluzione particolare nella forma:</p>
+
+<div class="eq">
+<p><i>y*(x) = K(x) e<sup>-A(x)</sup></i>
+<span>(L.4)</span>
+</p>
+</div>
+
+<p>dove ora <i>K(x)</i> è una funzione della variabile <i>x</i>, da determinarsi. Tale rappresentazione di <i>y(x)</i> è sempre possibile, essendo <i>e<sup>-A(x)</sup> &gt; 0</i>. Sostituendo nell'equazione (L.1) otteniamo</p>
+
+<div class="eq">
+<p><i>K'(x) e<sup>-A(x)</sup> + K(x)e<sup>-A(x)</sup> (-a(x)) + a(x) K(x)e<sup>-A(x)</sup> = b(x)</i>
+</p>
+</div>
+
+<p>ossia</p>
+
+<div class="eq">
+<p><i>K'(x) = e<sup>A(x)</sup> b(x)</i>
+</p>
+</div>
+
+<p>Detta B(x) una primitiva della funzione <i>e<sup>A(x)</sup> b(x)</i>, cioè</p>
+
+<div class="eq">
+<p><i>∫ e<sup>A(x)</sup> b(x) dx = B(x) + C, &emsp; C &in; ℝ</i></p>
+</div>
+
+<p>abbiamo quindi</p>
+
+<div class="eq">
+<p><i>K(x) = B(x) + C</i>
+</p>
+</div>
+
+<p>e dunque la soluzione generale della risulta essere</p>
+
+<div class="eq">
+<p><i>y(x) = e<sup>-A(x)</sup> (B(x) + C)</i>
+</p>
+</div>
+
+<p>Essa viene talvolta scritta nella forma più espressiva</p>
+
+<div class="eq">
+<p><i>y(x) = e<sup>∫-A(x)</sup> dx ∫ e<sup>∫a(x)dx</sup> b(x) dx</i>
+</p>
+</div>
+
+<p>che mette in luce i passi da compiere per risolvere un'equazione lineare completa: si devono determinare in successione due primitive.</p>
+
+<img src="img/edo/solpartfirst.png" alt="soluzione equazione completa primo ordine"/>
+
+<p>L'integrale generale della (L.2) risulta essere dato dalla formula</p>
+
+<div class="eq">
+<p>
+<img class="inline" src="img/edo/intgenfirst.png" alt="integrale generale primo ordine"/>
+<span>(L.5)</span>
+</p>
+</div>
+
+<h3>Soluzione del Problema di Cauchy</h3>
+
+<p>La costante <i>K</i> nella (L.5) sarà determinata da una condizione iniziale y(t<sub>0</sub>) = y<sub>0</sub>. Ossia si deve risolvere il problema di Cauchy</p>
+
+
+<div class="eq">
+<p>
+<img class="inline" src="img/edo/cauchyfirstlinear.png" alt="Problema di Cauchy"/>
+<span>(L.6)</span>
+</p>
+</div>
+
+<p>Può essere convenienete scegliere come primitiva di <i>a(t)</i> quella che si annulla in <i>t<sub>0</sub></i>, che in base al Teorema fondamentale del calcolo integrale rappresentiamo come:</p>
+
+<img src="img/edo/intat.png" alt="primitiva"/>
+
+<p>L'integrale della (L.2) soddisfacente la (L.6) sarà:</p>
+
+<img src="img/edo/intgencauchy.png" alt="Integrale generale problema cauchy"/>
+<!-- y(t) = y_0 e^{-A(t)} + e^{-A(t)} \int_{t_0}^t f(s) e^{A(s)}\text{d}s  -->
+
+<p>si tenga a mente che le variabili di integrazione sotto segno di integrale definito sono mute.</p>
+
+<h3>Esercizi</h3>
+
+<p><b>Esercizio 1</b>- Si risolva il seguente problema di Cauchy</p>
+
+<img src="img/edo/esercizi.png" alt="esercizi"/>
+
+<p><i>a(t) = -2t</i>, quindi <i>A(t) =-t<sup>2</sup></i></p>
+
+<p>Quindi la soluzione del problema è:</p>
+
+<img src="img/edo/esercizi1.png" alt="esercizi"/>
+
+<p>si noti che l'integrale di e<sup>-s<sup>2</sup></sup> non si può esprimere in termini di funzioni elementari; questo esempio mostra come, anche nei casi molto semplici come questo, sia necessario lasciare scritta la soluzione in forma integrale.</p>
+
+<p><b>Esercizio 2</b>- Si risolva il seguente problema di Cauchy</p>
+
+
+<img src="img/edo/esercizi2.png" alt="esercizi Problema Cauchy"/>
+
+
+<p><i>a(t) = - 1/(t+1)</i> e <i>A(x)= - ln(t+1)</i>, <i>f(t)= 3</i>.</p>
+
+
+<p>La soluzione del problema risulta essere:</p>
+
+<img src="img/edo/esercizi3.png" alt="esercizi Problema Cauchy"/>
+
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Analysis</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

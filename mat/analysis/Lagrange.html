@@ -21,10 +21,7 @@
 
 <h1>Mean value theorem</h1>      
 
-<p><b>Theorem 5.6.1</b> (<i>Mean value theorem</i>) - Let <i>f</i>: [<i>a , b</i>] → ℝ be a continuous function on the closed interval [<i>a, b</i>], and differentiable on the open interval (<i>a, b</i>), where <i>a</i> &lt; <i>b</i>. Then there exists some <i>&xi;</i> &in; (<i>a, b</i>) such that</p>
-
-Let <i>f</i>: [<i>a, b</i>] → ℝ be a continuous function that is differentiable for <i>a</i> &lt; <i>x</i> &lt; <i>b</i>. Then there exists <i>c</i> in the open interval ]<i>a, b</i>[,
-such that</p>
+<p><b>Theorem 5.6.1</b> (<i>Mean value theorem</i>) - Let <i>f</i>: [<i>a , b</i>] → ℝ differentiable on the open interval (<i>a, b</i>), where <i>a</i> &lt; <i>b</i>. Then there exists some <i>&xi;</i> &in; (<i>a, b</i>) such that</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msup>
@@ -147,17 +144,27 @@ such that</p>
 
 <!-- $$ \omega(x) = f(x) - \left[ f(a) + \frac{f(b) - f(a)} {b-a} (x-a) \right] $$ -->
 
-<p>Because <i>f</i> is continuous on [<i>a, b</i>], it follows that <i>&omega;</i> is also continuous on [<i>a, b</i>]. Furthermore, because <i>f</i> is differentiable on (<i>a, b</i>) <i>&omega;</i> as well is differentiable on (<i>a,b</i>). Applying <a href="rolle.html">Rolle's theorem</a> to the function <i>&omega;</i>, there exists a number &xi; such that <i>&omega;'</i>(&xi;) = 0. So there exists a number &xi; in (<i>a,b</i>) such that<7p>
+<p>Because <i>f</i> is continuous on [<i>a, b</i>], it follows that <i>&omega;</i> is also continuous on [<i>a, b</i>]. Furthermore, because <i>f</i> is differentiable on (<i>a, b</i>) then <i>&omega;</i> also differentiable on (<i>a,b</i>). Applying <a href="rolle.html">Rolle's theorem</a> to the function <i>&omega;</i>, there exists a number <i>&xi;</i> such that <i>&omega;'</i>(&xi;) = 0. So there exists a number &xi; in (<i>a,b</i>) such that</p>
 
 <div class="eq">
 <p><i>f'</i>(&xi;) − [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>) = 0 &emsp;⇒&emsp; <i>f'</i>(<i>&xi;</i>) = <i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)/(<i>b</i> − <i>a</i>) &emsp;□</p>
 </div>
 
-<div id="Cauchy">
+<p>Note that Rolle's Theorem, is a special case of the Mean Value Theorem, where <i>f</i>(<i>b</i>) = <i>f</i>(<i>a</i>).</p>
 
-<h2>Cauchy’s Form of the Mean Value Theorem</h2>
+<h2 id="monotonicity">Applications</h2>
 
-<p>If we apply the Mean value theorem to each of two functions <i>f</i> and <i>g</i> continuous on [<i>a,b</i>] and differentiable on (<i>a, b</i>), we can conclude that there are <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub> &in; (<i>a, b</i>) such that</p>
+<p>Many of the most basic results in calculus follow from the Mean Value Theorem. A function <i>f</i> defined on (<i>a,b</i>) is <b>increasing</b> if <i>f</i>(<i>x</i><sub>1</sub>) &le; <i>f</i>(<i>x</i><sub>2</sub>) whenever <i>a</i> &lt; <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>b</i>; and <i>f</i> is <b>decreasing</b> on (<i>a,b</i>) if <i>f</i>(<i>x</i><sub>1</sub>) &ge; <i>f</i>(<i>x</i><sub>2</sub>)  whenever <i>a</i> &lt; <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>b</i>. (So <i>f</i> is decreasing on (<i>a,b</i>) ⇔ −<i>f</i> is increasing on (<i>a,b</i>)). The function <i>f</i> being <b>strictly increasing</b> means that the &le; above can  be replaced with &lt;, and the function <i>f</i> being <b>strictly decreasing</b> means that the &ge; above can be replaced with &gt;.</p>
+
+<p><b>Lemma 5.6.2</b> (<i>Monotonicity test</i>). Suppose that <i>f</i> is differentiable on (<i>a, b</i>):</p>
+
+<ol type="i">
+	<li><p>If <i>f'</i> &gt; 0 on (<i>a, b</i>) then <i>f</i> is increasing on (<i>a, b</i>);</p></li>
+	<li><p>If <i>f'</i> &lt; 0 on (<i>a, b</i>) then <i>f</i> is is decreasing on (<i>a, b</i>);</p></li>
+	<li><p>If <i>'</i>(<i>x</i>) = 0 for every <i>x</i> &in; (<i>a,b</i>), then <i>f</i> is constant on (<i>a,b</i>).</p></li>
+</ol>
+
+<p><b>Proof</b>. We let <i>a</i> &lt; <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>b</i> and apply the Mean Value Theorem to <i>f</i> on [<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>]: Then there is <i>c</i> &in; (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) such that</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msup>
@@ -165,110 +172,59 @@ such that</p>
     <mo data-mjx-alternate="1">&#x2032;</mo>
   </msup>
   <mo stretchy="false">(</mo>
-  <msub>
-    <mi>c</mi>
-    <mn>1</mn>
-  </msub>
+  <mi>c</mi>
   <mo stretchy="false">)</mo>
   <mo>=</mo>
   <mfrac>
     <mrow>
       <mi>f</mi>
       <mo stretchy="false">(</mo>
-      <mi>b</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
       <mo stretchy="false">)</mo>
       <mo>&#x2212;</mo>
       <mi>f</mi>
       <mo stretchy="false">(</mo>
-      <mi>a</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
       <mo stretchy="false">)</mo>
     </mrow>
     <mrow>
-      <mi>b</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
       <mo>&#x2212;</mo>
-      <mi>a</mi>
-    </mrow>
-  </mfrac>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <mtext>and</mtext>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <msup>
-    <mi>g</mi>
-    <mo data-mjx-alternate="1">&#x2032;</mo>
-  </msup>
-  <mo stretchy="false">(</mo>
-  <msub>
-    <mi>c</mi>
-    <mn>2</mn>
-  </msub>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>b</mi>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>a</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>b</mi>
-      <mo>&#x2212;</mo>
-      <mi>a</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
     </mrow>
   </mfrac>
 </math>
 
-<!-- $$ f'(c_1) = \frac{f(b) - f(a)} {b -a} \quad \text{and} \quad  g'(c_2) = \frac{g(b) - g(a)} {b -a} $$ -->
+<!-- $$ f'(c) = \frac{ f(x_2) - f(x_1)} {x_2 - x_1} $$ -->
 
-<p>This gives</p>
-
-<div class="eq">
-<p><i>f'</i>(<i>c</i><sub>1</sub>) [<i>g</i>(<i>b</i>) − <i>g</i>(<i>a</i>)] = <i>g</i>'(<i>c</i><sub>2</sub>) [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]</p>
-</div>
-
-<p>However it happens to exist one <i>c</i> &in; (<i>a,b</i>) wich works for both function, as the next theorem precises.</p>
-
-<p><b>Theorem 5.6.1</b> (<i>Cauchy's Mean Value Theorem</i>) Let <i>f</i> and <i>g</i> continuous on [<i>a,b</i>] and differentiable on (<i>a, b</i>). Then there exists <i>c</i> &in; (<i>a,b</i>) such that</p>
+<p>That is,</p>
 
 <div class="eq">
-<p><i>f'</i>(<i>c</i>) [<i>g</i>(<i>b</i>) − <i>g</i>(<i>a</i>)] = <i>g</i>'(<i>c</i>) [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]</p>
+<p><i>f</i>(<i>x</i><sub>2</sub>) − <i>f</i>(<i>x</i><sub>1</sub>) = <i>f'</i> (<i>x</i><sub>2</sub> − <i>x</i><sub>1</sub>).</p>
 </div>
 
-<p><b>Proof</b>. If <i>g</i>(<i>a</i>) = <i>g</i>(<i>b</i>) then the result holds by Rolle's Theorem applied to <i>g</i>. So we assume that <i>g</i>(<i>a</i>) &ne; <i>g</i>(<i>b</i>). In the proof of Lagrange's Mean value theorem we used the auxiliary function</p>
-
-<div class="eq">
-<p><i>&omega;</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>x</i> ⋅ [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>)</p>
-</div>
-
-<p>We replace the function <i>x</i> (identity function) with <i>g</i>; We have</p>
-
-<div class="eq">
-<p><i>&omega;</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>) ⋅ [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>)</p>
-</div>
-
-<p>Then <i>&omega;</i> is continous on [<i>a,b</i>] and differentiable on (<i>a,b</i>). One can easily verify that <i>&omega;</i>(<i>a</i>) = <i>&omega;</i> (<i>b</i>), so by Rolle's Theorem there is a <i>c</i> &in; (<i>a,b</i>) such that <i>&omega;</i>'(<i>c</i>) = 0. Finally <i>&omega;</i>'(<i>c</i>) = 0 gives</p>
-
-<div class="eq">
-<p><i>f'</i>(<i>c</i>)[<i>g</i>(<i>b</i> − <i>g</i>(<i>a</i>)] = <i>g'</i>(<i>c</i>) [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]</p>
-</div>
-
-<p>as desired. &emsp;□</p>
-
-</div>
+<ol type="i">
+ 	<li><p>If <i>f'</i> &gt; 0 then the right-hand side is &ge; 0; and so the left-hand side is &ge; 0. That is, <i>f</i>(<i>x</i><sub>2</sub>) &ge; <i>f</i>(<i>x</i><sub>1</sub>);</p></li>
+	<li><p>If <i>f'</i> &lt; 0 then the right-hand side is &le; 0; and so the left-hand side is &le; 0. That is, <i>f</i>(<i>x</i><sub>2</sub>) &le; <i>f</i>(<i>x</i><sub>1</sub>);</p></li>
+	<li><p>We must have <i>f'</i>(<i>c</i>) = 0 and so the right-hand side is = 0: Therefore <i>f</i>(<i>x</i><sub>1</sub>) = <i>f</i>(<i>x</i><sub>2</sub>): This is true for any choice of <i>x</i><sub>1</sub> &lt; <I>x</i><sub>2</sub> in (<i>a, b</i>) and so <i>f</i> must be constant.&emsp;□</p></li>
+</ol>
 
 <section aria-label="End">
-<a href="rolle.html">&#171;Rolle's theorem</a>
+<a href="Rolle.html">&#171;Rolle's theorem</a>
 <a href="index.html">Index</a>
-<a href="Hopital.html">Hôpital's Rule &#187;</a>
+<a href="Cauchy_MVT.html">Cauchy MVT &#187;</a>
 </section>
 
 </div>

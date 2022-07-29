@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Linear differential equations"/>
+    <title>Linear differential equations</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+
+<h1>Linear differential equations</h1>
+
+<p>A linear differential equation is a differential equation that is defined by a linear polynomial in the unknown function and its derivatives, that is an equation of the form </p>
+
+<img src="img/edo/linearedo.svg" alt="linear differential equation"/>
+
+<p>where a<sub>0</sub>( x ), ..., a<sub>n</sub> ( x ) and <i>b(x)</i> are arbitrary differentiable functions that do not need to be linear, and <i>y' , … , y<sup>(n)</sup></i> are the successive derivatives of an unknown function <i>y</i> of the variable <i>x</i>. If <i>b(x)=0</i> the equation is <b>homogeneous</b>.</p>
+
+<p>A linear 1st order ODE can be written as </p>
+
+<p>y′+a(x)y = b(x).</p>
+
+<p>Il motivo per cui l'equazione è detta lineare è il seguente. Se infichiamo con L(y)(t) il primo membro dell'equazione, notiamo che l'operatore</p>
+
+<img src="img/edo/L.svg" alt="operatore differenziale lineare"/>
+
+<p>risulta essere proprio un operatore tra questi spazi di funzioni: Ly(x) = b(x). </p>
+
+<img src="img/edo/L1.png" alt="operatore differenziale lineare"/>
+
+<p>è <i>lineare</i>, verifica cioè la relazione</p>
+
+
+<div class="eq">
+<p>
+<img class="inline" src="img/edo/linearity.png" alt="Linearità"/>
+<span>(L.1)</span>
+</p>
+</div>
+
+<p>con <i>y<sub>1</sub>,y<sub>2</sub></i> &in; <i>C<sup>n</sup>(I)</i> e &alpha;,&beta; &in; ℝ.</p>
+
+
+<p>The <i>kernel</i> of a linear differential operator is its kernel as a linear mapping, that is the vector space of the solutions of the (homogeneous) differential equation L y = 0. </p>
+
+<p>Dalla (L.1) seguono immediatamente le seguenti proposizioni:</p>
+
+
+<div class="def">
+
+<p><b>Proposizione L.1</b> - (<i>Principio di sovrapposizione</i>) - Siano <i>y<sub>1</sub>,y<sub>2</sub></i> soluzioni dell'equazione omogenea e siano &alpha;,&beta; &in; ℝ costanti. Allora:</p>
+
+<img src="img/edo/superposition.png" alt="superposition principle"/>
+
+<p>Allora ogni combinazione lineare &alpha;y<sub>1</sub>  + &beta;y<sub>2</sub> è ancora soluzione di tale equazione. L'insieme delle soluzioni dell'equazione omogenea è un sottospazio <i>C<sup>n</sup>(I)</i>, in particolare è uno spazio vettoriale.</p>
+
+<p><b>Dimostrazione</b> - Il primo passaggio segue dalla linearità di <i>L</i>, il secondo dal fatto che per ipotesi <i>Ly<sub>1</sub> = 0</i> e <i>Ly<sub>2</sub> =0</i>.</p>
+
+</div>
+
+
+<div class="def">
+
+<p><b>Teorema L.2</b> - (<i>Struttura generale dell'integrale generale</i>) - L'integrale generale dell'equazione completa si ottiene sommando l'integrale generale dell'equazione omogenea e una soluzione particolare dell'equazione completa.</p>
+
+<p><b>Dimostrazione</b> - Siano <i>y<sub>1</sub></i> una soluzione particolare dell'equazione completa e y<sub>0</sub> una generica soluzione dell'equazione completa, ossia: Ly<sub>1</sub> = f, Ly<sub>0</sub> = 0. Allora per linearità:</p>
+
+<img src="img/edo/generale.png" alt="Integrale generale"/>
+<!-- L(y_1 + y_0) = Ly_1 +  Ly_0 = f +0 = f  -->
+<p>ossia <i>y<sub>1</sub> + y<sub>0</sub></i> è soluzione dell'equazione completa. 
+
+<p>Viceversa, se y<sub>2</sub> è ora una qualsiasi soluzione dell'equazione completa (Ly<sub>2</sub> = f) per linearità:</p>
+
+<img src="img/edo/generale1.png" alt="Integrale generale teorema"/>
+
+<p>ossai <i>y<sub>2</sub> - y<sub>1</sub></i> è soluzione dell'omogenea, ossia <i>y<sub>2</sub> - y<sub>1</sub> = y<sub>0</sub></i> per una certa soluzione y<sub>0</sub> dell'omogenea. Dunque la generica soluzione dell'equazione completa si può scrivere come somma di una particolare soluzione y<sub>1</sub> dell'equazione completa (fissata una volta per tutte) e di una soluzione dell'equazione omogenea: <i>y<sub>2</sub>  =  y<sub>1</sub> + y<sub>0</sub></i> □</p>
+
+</div>
+
+
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Analysis</a>
+<a href="firstorderlinear.html">Equazioni differenziali lineari del primo ordine &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

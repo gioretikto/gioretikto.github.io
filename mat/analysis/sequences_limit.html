@@ -21,7 +21,7 @@
 
 <h1>Convergence of Sequences</h1>
 
-<p><b>Definition 2.2.1</b> - (<i>Limit of a sequence</i>) A sequence {<i>a<sub>n</sub></i>} is said to converge to a real number <i>ℓ</i>, called the limit of {a<sub>n</sub>}, if for every <i>&epsilon;</i> &gt; there <i>exists</i> a natural number <i>n</i><sub>0</sub> such that:</p>
+<p><b>Definition 2.2.1</b> - (<i>Limit of a sequence</i>) A sequence {<i>a<sub>n</sub></i>} is said to converge to a real number <i>ℓ</i>, called the limit of {<i>a<sub>n</sub></i>}, if for every <i>&epsilon;</i> &gt; there <i>exists</i> a natural number <i>n</i><sub>0</sub> such that:</p>
 
 <div class="eq">
 <p>|<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon;, &emsp; &forall;<i>n</i> &ge; <i>n</i><sub>0</sub></p>
@@ -57,38 +57,42 @@
 
 <p>for <i>n</i> &gt; 2/<i>&epsilon;</i>. It is not generally necessary to find the least <i>n</i><sub>0</sub> such that the previous relation is satisfied. &emsp;■</p>
 
+<p>In some cases ∞ or −∞ can be regarded as “limits” of a sequence {<i>a<sub>n</sub></i>}. We say that {<i>a<sub>n</sub></i>} <b>tends to</b> ∞ or <b>diverges</b> to ∞ if for every <i>α</i> ∈ ℝ, there is <i>n</i><sub>0</sub> ∈ ℕ such that <i>a<sub>n</sub></i> &gt; <i>α</i> for all <i>n</i> ≥ <i>n</i><sub>0</sub>, and then ∞ if {<i>a<sub>n</sub></i>} does not tend to ∞. Similarly, we say that {<i>a<sub>n</sub></i>} <b>tends</b> to −∞ or <b>diverges</b> to −∞ if for every <i>β</i> ∈ ℝ, there is <i>n</i><sub>0</sub> ∈ ℕ such that <i>a<sub>n</sub></i> &lt; <i>&beta;</i> for all <i>n</i> ≥ <i>n</i><sub>0</sub>
+, and we write <i>a<sub>n</sub></i> → −∞.</p>
+
 <p><b>Theorem 2.2.4</b> Every convergent sequence in ℝ is bounded. The converse is not true.</p>
 
-<p><b>Proof</b>. Let the sequence {<i>a<sub>n</sub></i>} converge to the limit <i>L</i>. If <i>&epsilon;</i> = 1, there exists a positive integer <i>N</i> such that</p>
+<p><b>Proof</b>. Let the sequence {<i>a<sub>n</sub></i>} converge to the limit <i>ℓ</i>. If <i>&epsilon;</i> = 1, there exists a positive integer <i>N</i> such that</p>
 
 <div class="eq">
-<p><i>n</i> &ge; <i>N</i> &emsp;⇒&emsp; |<i>a<sub>n</sub></i> − <i>L</i>| = 1</p>
+<p><i>n</i> &ge; <i>N</i> &emsp;⇒&emsp; |<i>a<sub>n</sub></i> − <i>ℓ</i>| = 1</p>
 </div>
 
 <p>The triangle inequality yields</p>
 
 <div class="eq">
-<p>|<i>a<sub>n</sub></i>| − |<i>L</i>| &le; |<i>a<sub>n</sub></i> − <i>L</i>|</p>
+<p>|<i>a<sub>n</sub></i>| − |<i>L</i>| &le; |<i>a<sub>n</sub></i> − <i>ℓ</i>|</p>
 </div>
 
-<p>it follows |<i>a<sub>n</sub></i>| &le; 1 + |<i>L</i>| for all <i>n</i> &gt; <i>N</i>. Now, set</p>
+<p>it follows |<i>a<sub>n</sub></i>| &le; 1 + |<i>ℓ</i>| for all <i>n</i> &gt; <i>N</i>. Now, set</p>
 
 <div class="eq">
-<p><i>K</i> = sup {|<i>a</i><sub>1</sub>|, |<i>a</i><sub>2</sub>|, ..., |<i>a<sub>n</sub></i>|, |<i>L</i>| + 1}</p>
+<p><i>K</i> = sup {|<i>a</i><sub>1</sub>|, |<i>a</i><sub>2</sub>|, ..., |<i>a<sub>n</sub></i>|, |<i>ℓ</i>| + 1}</p>
 </div>
 
 <p>Thus |<i>a<sub>n</sub></i>| &le; <i>K</i> for all <i>n</i> &in; ℕ. In other words {<i>a<sub>n</sub></i>} is bounded by −<i>K</i> and <i>K</i>. &emsp;□</p>
 
 <p>Is the converse of the above theorem true? No, as the following example shows. We will show later that a bounded <i>monotone</i> sequence converges.</p>
 
-<p><b>Exmaple 2.2.5</b> {(−1)<sup><i>n</i></sup>)} is bounded by 1 but does not have a unique limit. Suppose that (−1)<sup><i>n</i></sup> ⟶ <i>L</i> as <i>n</i> ⟶ &infin;. Given &epsilon; = 1/2, then there is an <i>N</i> &in; ℕ such that <i>n</i> &ge; <i>N</i> implies |(−1)<sup><i>n</i></sup> − <i>L</i>| &lt; &epsilon; For <i>n</i> odd this implies |1 + <i>L</i>| = |−1 −<i>L</i>| &lt; 1/2 and for <i>n</i> even this implies |1 − <i>L</i>| &lt; 1/2. Hence</p>
+<p><b>Exmaple 2.2.5</b> {(−1)<sup><i>n</i></sup>)} is bounded by 1 but does not have a unique limit. Suppose that (−1)<sup><i>n</i></sup> ⟶ <i>ℓ</i> as <i>n</i> ⟶ &infin;. Given <i>&epsilon;</i> = 1/2, then there is an <i>N</i> &in; ℕ such that <i>n</i> &ge; <i>N</i> implies |(−1)<sup><i>n</i></sup> − <i>ℓ</i>| &lt; &epsilon; For <i>n</i> odd this implies |1 + <i>ℓ</i>| = |−1 −<i>ℓ</i>| &lt; 1/2 and for <i>n</i> even this implies |1 − <i>ℓ</i>| &lt; 1/2. Hence</p>
 
 <div class="eq">
-<p>2 = |1 + 1| = |(1 − <i>L</i>) + (1 + <i>L</i>)| &le; |1 − <i>L</i>| + |1 + <i>L</i>| &lt; 1/2 + 1/2 = 1</p>
+<p>2 = |1 + 1| = |(1 − <i>ℓ</i>) + (1 + <i>ℓ</i>)| &le; |1 − <i>ℓ</i>| + |1 + <i>ℓ</i>| &lt; 1/2 + 1/2 = 1</p>
 </div>
 
 <p>This implies 2 &lt; 1, a contradiction. Therefore, the sequence (−1)<sup><i>n</i></sup> does not converge. &emsp;■</p>
 
+<div id="mst">
 <p><b>Theorem 2.2.5</b>. (<b>Monotone Sequence Theorem</b>). A bounded and monotone sequence converges to its supremum as <i>n</i> ⟶ &infin;.</p>
 
 <p><b>Proof</b>. Let {<i>a<sub>n</sub></i>} a sequence bounded above, whose least upper bound <i>&alpha;</i> = sup <i>a<sub>n</sub></i> exists as a real number. Suppose <i>&epsilon;</i> &gt; 0 is given; since <i>&alpha;</i> is the <i>least</i> upper bound of {<i>a<sub>n</sub></i>} there must exist <i>n</i><sub>0</sub> &in; ℕ such that</p>
@@ -104,6 +108,8 @@
 </div>
 
 <p>thus {<i>a<sub>n</sub></i>} converges to <i>&alpha;</i> as <i>n</i> ⟶ &infin;. &emsp;□</p>
+
+</div>
 
 <p>Our recipe for finding the limit of a sequence {<i>a<sub>n</sub></i>} is therefore to show that {<i>a<sub>n</sub></i>} is monotone and bounded.</p>
 
@@ -137,7 +143,7 @@
  = |<i>a<sub>n</sub></i>| |<i>b<sub>n</sub></i> − <i>b</i>| + |<i>b</i>| |<i>a<sub>n</sub></i> − <i>a</i>|</p>
 </div>
 
-<p>Since <i>a<sub>n</sub></i> ⟶ <i>a</i>, |<i>a<sub>n</sub></i> − <i>a</i>| &lt; <i>&epsilon;</i>; and by the <a href="R.html#triangle2">triangle inequality</a> |<i>a<sub>n</sub></i>| &lt; |<i>a</i>| + <i>&epsilon;</i>; Since b<sub>n</sub> ⟶ <i>b</i>, |<i>a<sub>n</sub></i> − <i>b</i>| &lt; <i>&epsilon;</i>; Thus</p>
+<p>Since <i>a<sub>n</sub></i> ⟶ <i>a</i>, |<i>a<sub>n</sub></i> − <i>a</i>| &lt; <i>&epsilon;</i>; and by the <a href="R.html#triangle2">triangle inequality</a> |<i>a<sub>n</sub></i>| &lt; |<i>a</i>| + <i>&epsilon;</i>; Since <i>b<sub>n</sub></i> ⟶ <i>b</i>, |<i>b<sub>n</sub></i> − <i>b</i>| &lt; <i>&epsilon;</i>; Thus</p>
 
 <div class="eq">
 <p>|<i>a<sub>n</sub>b<sub>n</sub></i> − <i>ab</i>| &lt; (|<i>a</i>| + <i>&epsilon;</i>) <i>&epsilon;</i> + |<i>b</i>|<i>&epsilon;</i> &lt; <i>&epsilon;</i> ⋅ cost.</p>

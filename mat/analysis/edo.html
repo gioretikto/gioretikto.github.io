@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Equazioni differenziali ordinarie"/>
+    <title>Equazioni differenziali ordinarie</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Equazioni differenziali ordinarie</h1>
+
+<p>Per equazione differenziale ordinaria intendiamo una relazione tra una variabile indipendente reale (che indicheremo con <i>t</i>), una funzione incognita <i>y =y(t)</i> e le sue derivate <i>y<sup>(k)</sup></i> fino ad un certo ordine <i>n</i>. Si dice <i>equazione differenziale di ordine n</i>, un'equazione del tipo:</p>
+
+<div class="eq">
+<p><i>F</i>(<i>t,y,y',y'',..., y<sup>(n)</sup></i>) = 0
+<span>(E.1)</span>
+</p>
+</div>
+
+<p>dove <i>y(t)</i> è la funzione incognita e <i>F</i> è una funzione reale di <i>n</i> + 2 variabili <i>t,y',y'', ..., y<sup>(n)</sup></i> a valori reali. Diremo che l’equazione differenziale è di <b>ordine</b> <i>n</i>, se <i>n</i> è l’ordine più alto delle derivate di <i>y</i> che intervengono nella (E.1). L'aggettivo <i>ordinaria</i> si riferisce al fatto che l'incognita è funzione di una variabile. Si parla di equazioni a <i>derivate parziali</i> quando l'incognita è funzione di più variabili.</p>
+
+<p>Si dirà <i>soluzione</i>, o (<i>curva</i>) integrale, della E.1, nell'intervallo I &subset; ℝ, una funzione <i>&phi;(t)</i>, definita almeno in <i>I</i> e a valori reali, per cui risulti</p>
+
+<div class="eq">
+<p><i>F(t,&phi;(t),&phi;(t)',&phi;(t)'', ...,&phi;(t)<sup>(n)</sup>) = 0 &emsp; &forall;t &in; I</i>
+<span>(E.1)</span>
+</p>
+</div>
+
+<p>Infine, si dirà <i>integrale generale</i> dell'equazione E.1 una formula che rappresenti la famiglia di tutte le soluzioni dell'equazione E.1, eventualmente al variare di uno o più parametri in essa contenuti. Mostriamo un primp esempio elementare, ma storicamente significativo, di modello differenziale.</p>
+
+<div class="def">
+
+<p><b>Modello di Malthus per la dinamica delle popolazioni, 1798</b>. Si considera una popolazione che evolve isolata e i cui unici fattori di evoluzioni sono fertilità e mortalità. Indicheremo con <i>N(t)</i> il numero di individui presenti al tempo <i>t</i>, con &lambda; (rispettivamente, &mu;) il numero di nuovi nati (morti) per individuo nell'unità di tempo, cosicché in un tempo di durata <i>h</i> il numero di nuovi nati e di morti sarà rispettivamente <i>&lambda;hN(t)</i> e <i>&mu;hN(t)</i>. Perciò, la variazione del numero di individui in un tempo <i>h</i> sarà:</p>
+
+<div class="eq">
+<p><i>N(t+h) - N(t) = &lambda;hN(t) - &mu;hN(t)</i></p>
+</div>
+
+<p>Dividendo ambo i membri della precedente equazione per <i>h</i>, abbiamo:</p>
+
+<div class="eq">
+<p><i>[N(t+h) - N(t)] / h = (&lambda; - &mu;) N(t)</i></p>
+</div>
+
+<p>Assumeremo l'equazione precedente valida per ogni intervallo di tempo <i>h</i>; prendendo il limite di ambo i membri <i>h →0</i> abbiamo (ammesso che la funzione <i>N(t)</i> sia derivabile)</p>
+
+<div class="eq">
+<p><i> N'(t)= (&lambda; - &mu;) N(t)</i></p>
+</div>
+
+<p>Questa è un'equazione lineare del primo ordine; il numero &epsilon; = &lambda; - &mu; si chiama <i>potenziale biologico</i>. Scrivendo la nella forma N'/N = &epsilon;, si osserva che il tasso relativo di crescita (o diminuzione) di <i>N</i> è costante.</p>
+
+</div>
+
+<p>Spesso è possibile esprimere mediante la (E.1) la derivata di ordine massimo <i>y<sup>(n)</sup></i> in funzione di <i>t</i> e delle derivate di ordine inferiore (in diverse applicazioni, questo è anzi il modo con cui si scrive originariamente l’equazione differenziale). In generale, il <a href="dini.html">Teorema della funzione implicita</a> assicura che è possibile esplicitare <i>y<sup>(n)</sup></i> quando la derivata parziale di <i>F</i> rispetto all’ultima variabile non si annulla. In tal caso, possiamo scrivere la (E.1) nella forma</p>
+
+<div class="eq">
+<p><i>y</i><sup>(<i>n</i>)</sup> (<i>x</i>) = <i>f</i>(<i>x,y(x),y'(<i>x</i>), ..., <i>y</i><sup>(<i>n</i>−1)</sup>(<i>x</i>)) &emsp; E.2</p>
+</div>
+
+<p>dove <i>f</i> è una funzione reale di <i>n + 1</i> variabili reali: <i>f: ℝ<sup>n+1</sup>  &subseteq; D → ℝ</i>. Diremo allora che l’equazione differenziale è in forma normale. La definizione di soluzione si modifica in modo ovvio nel caso in cui l’equazione sia in forma normale.</p>
+
+<p>Noi tratteremo il caso particolarmente importante e, come vedremo subito, sufficientemente generale, dei sistemi di <i>n</i> equazioni del 1° ordine in forma normale, in <i>n</i> funzioni incognite; un gerico sistema di questo tipo si può scrivere nel modo seguente:</p>
+
+<p>dove le funzioni <i>f<sub>j</sub>, j=1, ...., n</i> sono definite in una stessa regione <i>D</i> di ℝ<sup>n+1</sup> ed y<sub>1</sub>(t), ...., y<sub>n</sub> = y<sub>n</sub>(t) sono le funzioni incognite. Introducendo i vettori <b>y</b>(t) = (y<sub>1</sub>(t), ..., y<sub>n</sub>(t)) e <b>f</b>=(f<sub>1</sub>,f<sub>2</sub>, ..., f<sub>n</sub>), il sistema può essere scritto più concisamente come un'unica equazione vettoriale:</p>
+
+<p>Se ogni componente di <b>f</b> è lineare in <b>y</b> si dice che il sistema è <i>lineare</i>. Se <b>f</b> non dipende esplicitamente da <i>t</i> ossia <b>y'</b>= <b>f</b>(<b>y</b>), si dice che il sistema è <i>autonomo</i>.</p>
+
+<h2>Problema di Cauchy</h2>
+
+<p>Un modo molto naturale per selezionare una soluzione particolare è quello di imporre che la soluzione ad un certo istante <i>t</i><sub>0</sub> ∈ <i>I</i> assuma un valore assegnato <b>y</b><sub>0</sub> ∈ D. Consideriamo cioè il problema di trovare <b><i>y</i> = <i>y</i></b>(<i>t</i>) soddisfacente</p>
+
+<div class="eq">
+<p><i><b>y</b>'</i> = <i>f</i>(<i>t,<b>y</b></i>) &emsp; in <i>J</i><br>
+<i><b>y</b></i>(<i>t</i><sub>0</sub>) = <i>y</i><sub>0</sub></p>
+</div>
+
+<p>dove <i>J</i> è un sottointervallo aperto di <i>I</i> contenente t<sub>0</sub>, che in generale dipende dalla soluzione stessa e non è determinabile a priori. Questo problema prende il nome di
+<b>problema di Cauchy</b> per l’equazione differenziale. Talvolta si usa chiamare anche problema ai valori iniziali in quanto spesso modellizza l’evoluzione temporale di un sistema fisico, il quale all’istante t<sub>0</sub> in cui inizia la simulazione matematica si trova nella configurazione y0 . Dal punto di vista geometrico, la condizione imposta in t<sub>0</sub> equivale a chiedere che la curva integrale della soluzione passi per il punto (t<sub>0</sub> , y<sub>0</sub>) ∈ Ω. La risolubilità del problema di Cauchy in senso locale (cioè in un intorno J di t<sub>0</sub> ), oppure in senso globale (cioè quando <i>J = I</i>, nel qual caso si parla di soluzione globale) è trattata rispettivamente nei §§ 10.4.1 e 10.4.3.</p>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Mathematical Analysis</a>
+<a href="edolinear.html">Linear Differential Equations &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

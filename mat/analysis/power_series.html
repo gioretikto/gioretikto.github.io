@@ -212,21 +212,326 @@
 
 <p>It turns out that, given any sequence {<i>a<sub>n</sub></i>}, one of the following proposition expressed by the folllowing theorem holds for its power series:</p>
 
-<p><b>Theorem 6.2.2</b>
+<p><b>Theorem 6.2.2</b></p>
 
 <ol type="i">
 	<li><p>The power series converges only for <i>x</i> = 0;</p></li>
 	<li><p>The power series converges absolutely for all <i>x</i> ∈ ℝ;</p></li>
-	<li><p>There is a positive number <i>R</i> such that the series converges if |<i>x</i>| &lt; <i>R</i> and diverges if |<i>x</i>| &gt; <i>R</i>. </p></li>
+	<li><p>There is a unique positive number <i>R</i> such that the series converges if |<i>x</i>| &lt; <i>R</i> and diverges if |<i>x</i>| &gt; <i>R</i>. </p></li>
 </ol>
 
 <p>The number <i>R</i> in case (iii) is called the <b>radius of convergence</b> of the power series. By convention, the radius of convergence is <i>R</i> = 0 in case (i) and <i>R</i> = &infin; in case (ii).</p>
 
-<p><b>Proof</b>. Let <i>A</i> := {<i>x</i> ∈ ℝ : &Sigma;<sub><i>n</i> ≥ 0</sub> <i>a<sub>n</sub> x<sup>n</sup></i> is convergent}. If this set is reduced to {0} we have case i). If <i>A</i> is not bounded above, then given <i>x</i> ∈ ℝ, we may find  <i>x</i><sub>1</sub> &in; <i>A</i> such that |<i>x</i><sub>1</sub>| &gt; <i>x</i>, hence by Abel's lemma the power series &Sigma; <i>a<sub>n</sub>x<sup>n</sup></i> converges absolutely. From the arbitrary of <i>x</i><sub>1</sub> ii) is proved. <br> Excluding the previous two cases we have that <i>A</i> is bounded and <i>A</i> &ne; {∅}. Let <i>R</i> = sup {|<i>x</i>|, <i>x</i> &in; <i>A</i>} we have <i>R</i> &gt; 0. The power series does not obviously converge for |<i>x</i>| &gt; <i>R</i>, (then <i>x</i> &notin; <i>A</i> in this case), but it converges for |<i>x</i>| &lt; <i>R</i> so by Abel's Lemma &Sigma;<sub><i>n</i> ≥ 0</sub> <i>a<sub>n</sub> x<sup>n</sup></i> is absolutely convergent. &emsp;□</p>
+<p><b>Proof</b>. Let <i>A</i> := {<i>x</i> ∈ ℝ : &Sigma;<sub><i>n</i> &ge; 0</sub> <i>a<sub>n</sub> x<sup>n</sup></i> is convergent}. If this set is reduced to {0} we have case i). If <i>A</i> is not bounded above, then given <i>t</i> ∈ ℝ<sup>+</sup>, we may find  <i>x</i><sub>1</sub> &in; <i>A</i> such that |<i>x</i><sub>1</sub>| &gt; <i>t</i>, hence by Abel's lemma the power series &Sigma; <i>a<sub>n</sub>x<sup>n</sup></i> converges absolutely in the interval |<i>x</i>| &lt; <i>t</i>. From the arbitrary of <i>t</i> ii) is proved. <br> Excluding the previous two cases we have that <i>A</i> is bounded and <i>A</i> &ne; {∅}. Let <i>R</i> = sup {|<i>x</i>|, <i>x</i> &in; <i>A</i>} we have <i>R</i> &gt; 0. The power series obviously does not converge for |<i>x</i>| &gt; <i>R</i>, (then <i>x</i> &notin; <i>A</i> in this case). Given a <i>h</i> ∈ ℝ<sup>+</sup>, such that <i>h</i> &lt; <i>R</i>, we may find <i>x</i><sub>1</sub> &in; <i>A</i> such that |<i>x</i><sub>1</sub>| &gt; <i>h</i>, hence by Abel's lemma the power series &Sigma; <i>a<sub>n</sub>x<sup>n</sup></i> converges absolutely in the interval |<i>x</i>| &lt; <i>h</i>. Since <i>h</i> is any number &lt; <i>R</i> we have case iii). &emsp;□</p>
+
+<p><b>Theorem 6.2.3</b> Given the power series &Sigma;<sub><i>n</i> &ge; 0</sub> <i>a<sub>n</sub> x<sup>n</sup></i>, if the limit</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mroot>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mi>n</mi>
+  </mroot>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$\lim_{n\to \infty} \sqrt[n]{|a_n|} = \ell $$ -->
+
+<p>exists, then the radius of convergence of the power series <i>R</i> is equal to</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>R</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mi>&#x2113;</mi>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>&#x2113;</mi>
+          <mo>&#x2260;</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>+</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>&#x2113;</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>&#x2113;</mi>
+          <mo>=</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+          <mo>.</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ R = \begin{cases} 1/\ell, \quad &{\text{if }\quad} \ell \ne 0, \infty\\+\infty,&{\text{if }\quad} \ell =0\\ 0,&{\text{if }\quad} \ell =\infty.\end{cases} $$ -->
+
+<p><b>Proof</b>. We have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mroot>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+      <msup>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msup>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mi>n</mi>
+  </mroot>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mroot>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mi>n</mi>
+  </mroot>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$\lim_{n\to \infty} \sqrt[n]{|a_n x^n|} = \lim_{n\to \infty} \sqrt[n]{|a_n|} \cdot |x| = \ell \cdot |x| $$ -->
+
+<p>From which follows that the power series converge &forall;<i>x</i> &in; ℝ if <i>ℓ</i> = 0, hence <i>R</i> = +&infin;; converges only for <i>x</i> = 0 if <i>ℓ</i> = +&infin; hence <i>R</i> = 0; As last case if <i>ℓ</i> &in; ℝ<sup>+</sup> it converges for |<i>x</i>| = 1/<i>ℓ</i>, hence <i>R</i> = 1/<i>ℓ</i>. &emsp;□</p>
+
+<p>A result similar to Proposition 6.2.3 involving using the <a href="series_tests.html#ratio">Ratio test</a> instead that the root test, which is usually simpler to apply.</p>
+
+<p><b>Proposition 6.2.4</b>. Given the power series &Sigma;<sub><i>n</i> &ge; 0</sub> <i>a<sub>n</sub> x<sup>n</sup></i>, if the limit</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <msub>
+        <mi>a</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$ \lim_{n \to \infty} \left|\frac{a_{n+1}} {a_n} \right| = \ell $$ -->
+
+<p>exists, then the radius of convergence of the power series is <i>R</i> = 1/<i>ℓ</i>.</p>
+
+<p><b>Proof</b>. If we apply the Ratio Test to the power series, we get</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <msup>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+        <msup>
+          <mi>x</mi>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <msub>
+        <mi>a</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$ \lim_{n \to \infty} \left|\frac{a_{n+1} x^{n+1}} {a_n x^n} \right| = \lim_{n \to \infty} \left|\frac{a_{n+1}} {a_n} \right| |x| = \ell \cdot |x| $$ -->
+
+<p>By the Ratio test, the series is (absolutely) convergent if the limit value <i>ℓ</i> ⋅ |<i>x</i>| is less than 1, hence for |<i>x</i>| &lt; 1/<i>ℓ</i> and nonconvergent if |<i>x</i>| &gt; 1/<i>ℓ</i>, hence the radius of convergence is <i>R</i> = 1/<i>ℓ</i>. &emsp;□</p>
 
 <p>The convergence of a power series can be studied using the criteria already already known to the reader for numeric series.</p>
 
-<p><b>Example 6.2.3</b>. For what values of <i>x</i> is the following power series convergent?</p>
+<p><b>Example 6.2.4</b>. For what values of <i>x</i> is the following power series convergent?</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munderover>
@@ -345,7 +650,7 @@
 
 <p>By the Ratio Test, the series diverges when <i>x</i> &ne; 0. Thus the given series converges only when <i>x</i> = 0. &emsp;■</p>
 
-<p><b>Example 6.2.4.</b></p>
+<p><b>Example 6.2.5.</b></p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munderover>
@@ -498,7 +803,7 @@
 <p>|<i>x</i> − 2| &lt; 1 &emsp;←→&emsp; −1 &lt; <i>x</i> − 2 &lt; 1 &emsp;←→&emsp; 1 &lt; <i>x</i> &lt; 3&emsp;■</p>
 </div>
 
-<p><b>Example 6.2.5.</b> An example already encountered is that of the geometric series:</p>
+<p><b>Example 6.2.6.</b> An example already encountered is that of the geometric series:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munderover>
@@ -520,7 +825,7 @@
 
 <p>which is absolutely convergent for |<i>x</i>| &le; 1, having sum 1/(1−<i>x</i>).&emsp;■ </p>
 
-<p><b>Example 6.2.6.</b> We prove that the following series</p>
+<p><b>Example 6.2.7.</b> We prove that the following series</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munderover>
@@ -646,7 +951,7 @@
 
 <p>thus we have convergence &forall;<i>x</i> &in; ℝ. &emsp;■</p>
 
-<p><b>Example 6.2.7.</b> Given the series </p>
+<p><b>Example 6.2.8.</b> Given the series </p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munderover>
