@@ -24,7 +24,7 @@
 <p> The dot product can be defined for two vectors <i><b>x</b></i> and <i><b>y</b></i> by</p>
 
 <div class="eq">
-<p><i><b>x</b></i> ⋅ <i><b>y</b></i> = |<i>x</i>||<i>y</i>| cos &theta;</p> 
+<p><i><b>x</b></i> ⋅ <i><b>y</b></i> = |<i>x</i>||<i>y</i>| cos &theta; &emsp;1.5.1</p> 
 </div> 
 
 <p>where <i>&theta;</i> is the angle between the vectors and |<i>x</i>| is the norm.  </p>
@@ -73,6 +73,7 @@
     <mi>y</mi>
     <mi>n</mi>
   </msub>
+<mtext>&emsp;1.5.2</mtext> 
 </math>
 
 <!-- $$ \mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^n x_iy_i = x_1y_1 + \ldots + x_ny_n $$ -->
@@ -87,11 +88,181 @@
 
 <p>Rather than choosing basis vector for a Cartesian coordinate system that are mutually perpendicular (i.e., orthogonal). </p>
 
-<p>When coordinate basis vectors are not be mutually perpendicular they may have different length: <i><b>e</b><sub>i</sub></i> · <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i> &ne; <i>δ<sub>ij</sub>.</i> We can no longer use the standard formula for dot product in this system. Consider a basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>} such that <i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub> &ne; 0, then the dot product between <i><b>u</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) and <i><b>v</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) is</p>
+<p>When coordinate basis vectors are not be mutually perpendicular they may have different length: <i><b>e</b><sub>i</sub></i> · <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i> &ne; <i>δ<sub>ij</sub></i>. We can no longer use the standard formula for dot product Eq. 1.5.2, in this system. Consider a basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>} such that <i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub> &ne; 0, then the dot product between <i><b>u</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) and <i><b>v</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) is</p>
 
 <div class="eq">
 <p><i><b>u</b></i> ⋅ <i><b>v</b></i> = (<i>a</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>a</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) ⋅ (<i>b</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>b</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) = (<i>a</i><sub>1</sub><i>b</i><sub>1</sub> + <i>a</i><sub>2</sub><i>b</i><sub>2</sub>) + (<i>a</i><sub>1</sub><i>b</i><sub>2</sub> + <i>b</i><sub>1</sub><i>a</i><sub>2</sub>) (<i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub>)</p>
 </div>
+
+<p>We can represent the collection of scalar products of the basis vectors as a symmetric matrix, called the <i>metric</i> or the <i>metric tensor</i>:</p>
+
+<div class="eq">
+<p><i><b>e</b><sub>i</sub></i> ⋅ <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i></p>
+</div>
+
+<p>We can display the metric of a 4D space as a 4 × 4 matrix whose elements are the dot products of the basis vectors:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">[</mo>
+  <mi>g</mi>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>00</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>01</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>10</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">0</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">0</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">0</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">1</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">0</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">1</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn mathvariant="bold">1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ [g] = \left( \begin{array}{ccc} g_{00} & g_{01} & \ldots \\ g_{10} & g_{11} & \ldots \\ \vdots & \vdots & \end{array} \right) = \left( \begin{array}{ccc} \mathbf{e_{0}} \cdot \mathbf{e_{0}} & \mathbf{e_{0}} \cdot \mathbf{e_{1}} & \ldots \\ \mathbf{e_{1}} \cdot \mathbf{e_{0}} & \mathbf{e_{1}} \cdot \mathbf{e_{1}} & \ldots \\ \vdots & \vdots & \end{array} \right)  $$ -->
+
+<p>Thus the diagonal elements are the (squared) magnitudes of the basis vectors, |<b>e</b><sub>0</sub>|<sup>2</sup>, |<b>e</b><sub>1</sub>|<sup>2</sup>, etc., while the off-diagonal elements represent their deviations from orthogonality. Any set of mutually perpendicular bases would be represented by a diagonal metric matrix.</p>
 
 <p>Then the dot product could be expressed in the form</p>
 
