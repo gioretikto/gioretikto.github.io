@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Dot product"/>
+	<title>Dot product</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Dot product</h1>
+
+<p> The dot product can be defined for two vectors <i><b>x</b></i> and <i><b>y</b></i> by</p>
+
+<div class="eq">
+<p><i><b>x</b></i> ⋅ <i><b>y</b></i> = |<i>x</i>||<i>y</i>| cos &theta;</p> 
+</div> 
+
+<p>where <i>&theta;</i> is the angle between the vectors and |<i>x</i>| is the norm.  </p>
+
+<p>In general</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">x</mi>
+  <mo>&#x22C5;</mo>
+  <mi mathvariant="bold">y</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>1</mn>
+  </msub>
+  <msub>
+    <mi>y</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <msub>
+    <mi>y</mi>
+    <mi>n</mi>
+  </msub>
+</math>
+
+<!-- $$ \mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^n x_iy_i = x_1y_1 + \ldots + x_ny_n $$ -->
+
+<p>This can be written very succinctly using Einstein summation notation as</p>
+
+<div class="eq">
+<p><i><b>x</b></i> ⋅ <i><b>y</b></i> = <i>x</i><sub>i</sub> <i>y</i><sub>i</sub>.</p>
+</div> 
+
+<h2>Non-orthogonal Axes</h2>
+
+<p>Rather than choosing basis vector for a Cartesian coordinate system that are mutually perpendicular (i.e., orthogonal). </p>
+
+<p>When coordinate basis vectors are not be mutually perpendicular they may have different length: <i><b>e</b><sub>i</sub></i> · <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i> &ne; <i>δ<sub>ij</sub>.</i> We can no longer use the standard formula for dot product in this system. Consider a basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>} such that <i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub> &ne; 0, then the dot product between <i><b>u</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) and <i><b>v</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) is</p>
+
+<div class="eq">
+<p><i><b>u</b></i> ⋅ <i><b>v</b></i> = (<i>a</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>a</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) ⋅ (<i>b</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>b</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) = (<i>a</i><sub>1</sub><i>b</i><sub>1</sub> + <i>a</i><sub>2</sub><i>b</i><sub>2</sub>) + (<i>a</i><sub>1</sub><i>b</i><sub>2</sub> + <i>b</i><sub>1</sub><i>a</i><sub>2</sub>) (<i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub>)</p>
+</div>
+
+<p>Then the dot product could be expressed in the form</p>
+
+<div class="eq">
+<p><i><b>u</b></i> ⋅ <i><b>v</b></i> = <i>g<sub>ij</sub></i> <i>u</i><sub>i</sub><i>v</i><sub>j</sub></p>
+</div>
+
+<p>where we employed Einstein summation convention.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
