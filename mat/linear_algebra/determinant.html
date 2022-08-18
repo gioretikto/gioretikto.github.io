@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Determinant"/>
+    <title>Determinant</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Determinant</h1>
+
+<p>The determinant is a very important scalar function defined on square <i>n × n</i> real matrices.</p>
+
+<div class="eq">
+<p>det: <i>M<sub>n,n</sub></i>(&Kopf;) ⟶ &Kopf;</p>
+</div>
+
+<p>which associates a determined number <b>determinante</b>, to a square matrix.</p>
+
+<p><b>Definition D.0</b> - Let <i>A</i> = (<i>a<sub>ij</sub></i>) ∈ <i>M<sub>n,n</sub></i>(&Kopf;) a square matrix of order <i>n</i> with coefficients in &Kopf;. The determinant of <i>A</i> is defined as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="OP" movablelimits="true">det</mo>
+  <mi>A</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3C3;</mi>
+      <mo>&#x2208;</mo>
+      <msub>
+        <mi>S</mi>
+        <mi>n</mi>
+      </msub>
+    </mrow>
+  </munder>
+  <mtext>sgn</mtext>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3C3;</mi>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mi>&#x3C3;</mi>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mi>&#x3C3;</mi>
+      <mo stretchy="false">(</mo>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msub>
+  <mo>&#x2026;</mo>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mi>&#x3C3;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msub>
+</math>
+
+<p>The sum goes over all <i>n</i>! permutations σ of <i>n</i> numbers 1, 2, ..., <i>n</i>, and these permutations form the symmetric group S<sub>n</sub>.</p>
+
+<table class="noborder centertable">
+<tr><td rowspan="2">sign <i>&sigma;</i> =</td> <td></td><td>1</td> <td>if <i>&sigma;</i> is an even permutation</td></tr>
+<tr><td></td> <td>&minus;1</td> <td>if &sigma; is an odd permutation</td></tr>
+</table>
+
+<p>while <i>σ</i>(<i>i</i>), <i>i</i> = 1, 2, ..., <i>n</i>, is the image of i under the permutation <i>σ</i>.</p>
+
+<p>As an example we calculate the determinant for small values of <i>n</i>. If <i>n</i> = 1, that is the matrix is composed by a signle element, <i>A = a</i><sub>11</sub>, we have det <i>A = a</i><sub>11</sub> (the only permutation is the identity permutation, with sign 1).</p>
+
+<p>For <i>n</i> = 2, we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>12</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>21</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>22</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>there are two permutations of two elements</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3C3;</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>&#x3C3;</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>Si ha sgn(<i>σ</i><sub>1</sub>) = 1 e sgn(<i>σ</i><sub>2</sub>) = −1, per cui il determinante è lo scalare</p>
+
+<div class="eq">
+<p>det(<i>A</i>) = <i>a<sub>11</sub> a<sub>22</sub> &minus; a<sub>21</sub>a<sub>12</sub></i></p>
+</div>
+
+<p>As last example we consider the case <i>n</i> = 3. There are 3! = 6 permutations of three elements, namely</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>&#x3C3;</mi>
+          <mn>1</mn>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>&#x3C3;</mi>
+          <mn>2</mn>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>&#x3C3;</mi>
+          <mn>3</mn>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>,</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>&#x3C3;</mi>
+          <mn>4</mn>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>&#x3C3;</mi>
+          <mn>5</mn>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>&#x3C3;</mi>
+          <mn>6</mn>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<p>Si verifica facilmente che sgn(σ<sub>1</sub>) = sgn(σ<sub>3</sub>) = sgn(σ<sub>5</sub>) = 1, mentre sgn(σ<sub>2</sub>) = sgn(σ<sub>4</sub>) = sgn(σ<sub>6</sub>) = −1, quindi</p>
+
+<div class="eq">
+<p>det(<i>A</i>) = <i>a<sub>11</sub> a<sub>22</sub> a<sub>33</sub> + a<sub>12</sub> a<sub>23</sub> a<sub>31</sub> + a<sub>13</sub> a<sub>21</sub> a<sub>32</sub> &minus; a<sub>13</sub>a<sub>32</sub>a<sub>31</sub> &minus; a<sub>11</sub>a<sub>23</sub>a<sub>32</sub> &minus; a<sub>12</sub>a<sub>21</sub>a<sub>33</sub></i></p>
+</div>
+
+<p>As <i>n</i> increases the determinant of <i>n x n</i> matrix is complicated to be calculated directly, from the definition. We shall see other methods which are not based on the definition of determinant.</p>
+
+<p>From the definition some properties which can be easily verified follow.</p>
+
+<p><b>Proposition D.0</b> - The determinant of any triangular matrix <i>A</i> (lower, upper, or diagonal) is the product of all diagonal elements: det <i>A = a<sub>11</sub>a<sub>22</sub>a<sub>nn</sub></i></p>
+
+<p><b>Proof</b>. Dato che <i>A</i> = (<i>a<sub>ij</sub></i>) è una matrice triangolare superiore, si ha <i>a<sub>ij</sub></i> = 0 if <i>i &gt; j</i>. We observe that for every permutation <i>σ</i> of {1, 2, ..., <i>n</i>}, different from id, there exists an index <i>i</i> such that <i>i &gt; σ</i>(<i>i</i>). The product <i>a<sub>1σ(1)</sub> a<sub>2σ(2)</sub> ··· a<sub>nσ(n)</sub></i> is thus zero, given the fact that at least one of its factors is zero. Hence the only permutation giving a non-null addend is id, thus it results det <i>A = a<sub>11</sub>a<sub>22</sub> a<sub>nn</sub></i>. &emsp;□</p>
+
+<div class="def">
+<p><b>Proposizione D.2</b> -If in a square matrix <i>A</i>, the elements of a row (or column) are null then det <i>A</i>=0.</p>
+</div>
+
+<p><b>Proposition D.2</b> - For any square matrix <i>A</i>, we have det <i>A<sup>T</sup></i> = det <i>A</i>, or, in other words, the matrix <i>A</i> and its transpose have equal determinants.</p>
+
+<div class="eq">
+<p>det <i>A</i> = det <i>A<sup>T</sup></i></p>
+</div>
+
+<p><b>Proof.</b> We have</p>
+
+<div class="eq">
+<p><i>a<sub>ij</sub><sup>T</sup> = a<sub>ji</sub></i> &emsp; (1.3)</p>
+</div>
+
+<p>per la definizione di determinante si può scrivere:</p>
+
+<img src="img/det6.png" alt="determinante trasposta"/>
+<!-- \text{det}\,A^T = \sum_{h_1,h_2,\ldots,h_n}(-1)^{h} b_{h_11}  b_{h_22} \ldots b_{h_nn} -->
+
+<p>given Eq. (1.3) we have:</p>
+
+<img src="img/det7.png" alt="determinante trasposta"/>
+<!-- \text{det}\,A^T = \sum_{h_1,h_2,\ldots,h_n}(-1)^{h} a_{1h_1}  b_{2h_2} \ldots b_{nh_n} -->
+
+<p>Il secondo membro della presecente non è altro che <i>det A</i>. La proposizione è così dimostrata.□</p>
+</div>
+
+
+<div class="def">
+<p><b>Teorema D.0</b> - Operando una sostituzione nelle righe (o colonne) della matrice <i>A</i>, si ottiene una matrice <i>B</i>, tale da aversi:</p>
+
+<img src="img/B.png" alt="B matrice sostituita"/>
+
+<p>avente determinante pari a:</p>
+
+<div class="eq">
+<p>det <i>B</i> = (&minus;1)<sup><i>h</sup> <i>A</i></p>
+</div>
+
+<p>where <i>h</i> is equal to the inversion of the generic permutation <i>h<sub>1</sub>, h<sub>2</sub>, ..., h<sub>n</sub></i></p>
+
+<p><b>Proof.</b> La sostituzione è tale da aversi:</p>
+
+<div class="eq">
+<p><i>b<sub>1r</sub> = a<sub>h1r</sub>b<sub>2r</sub> = a<sub>h<usb>2</sub>r  ⋅ ⋅ ⋅ b<sub>nr</sub> = a<sub>h<sub>nr</sub></i></p>
+</div>
+
+<p>with <i>r =1, 2,...,n</i>. Per la (1.2) si ha:</p>
+
+<img src="img/detB0.png" alt="determinante matrice sostituzione"/>
+
+<!-- \text{det}\,B = \sum_{k_1,k_2,\ldots,k_n}(-1)^{h} b_{1k_1}  b_{2k_2} \ldots a_{nk_n} -->
+
+<p>che per la (1.4) può scriversi come:</p>
+
+<img src="img/detB.png" alt="determinante matrice sostituzione"/>
+
+<p>il secondo membro dell'ultima equazione vale per la (1.2) <i>(-1)<sup>h</sup> det A</i>, si ha quindi la tesi:</p>
+<img src="img/detBA.png" alt="determinante matrice sostituita"/>
+<p>□</p>
+
+</div>
+
+<section aria-label="End">
+<a href="../algebra/permutazioni.html">&#171;Permutazioni</a>
+<a href="index.html">Index</a>
+<a href="laplace.html">Teorema di Laplce &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

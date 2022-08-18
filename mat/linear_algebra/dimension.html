@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Dimensione di uno spazio vettoriale"/>
+    <title>Dimensione di uno spazio vettoriale</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Dimensione di uno spazio vettoriale</h1>
+
+<div class="def">
+<p><b>Proposizione 2.5</b> - Sia <i>B</i> = {<b>u<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub></b>} una base di <i>V</i> e sia <i>S</i> = {<b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>m</sub></b>} un insieme di vetori indipendenti di <i>V</i>, allora <i>m &le; n</i>.</p>
+
+<p><b>Dim.</b> Si possono usare i vettori della base <i>B</i> per esprimere in modo unico il vettore <b>v</b><sub>1</sub>, come</p>
+
+<div class="eq">
+<p>
+<img class="inline" src="img/teodim.png" alt="teorema dimensione spazi \mathbf{v}_1 = a_1 \mathbf{u}_1 +a_2\mathbf{u}_2+\ldots+a_{n}\mathbf{u}_n 
+"/><span>(2.2)</span>
+</p>
+</div>
+
+<p>Essendo i vettori <b>v</b><sub>i</sub> linearmente indipendenti, essi sono tutti diversi dal vettore nullo. In particolare, poichè <b>v</b><sub>1</sub> &ne; 0, vi è sicuramente nella (2.2) un <i>a<sub>i</sub></i> diverso da zero. Possiamo sceglire arbitrariamente il coefficiente <i>a<sub>1</sub> &ne; 0</i>.</p>
+
+<p>Dalla (2.2) si ricava:</p>
+
+<img src="img/teodim1.png" alt="teorema dimensione spazi \mathbf{u}_1 = a_1^{-1}v_1 -(a_1^{-1}a_2) \mathbf{u}_2 -(a_1^{-1}a_3)\mathbf{u}_3-\ldots-(a_1^{-1}a_n)\mathbf{u}_n 
+"/>
+
+<p>Quindi per la proposizione (2.1) si ha:</p>
+
+<img src="img/teodim2.png" alt="teorema dimensione spazi \text{Span} (\mathbf{v}_1, \mathbf{u}_2,\ldots, \mathbf{u}_n ) = \text{Span} (\mathbf{u}_1, \mathbf{u}_2,\ldots, \mathbf{u}_n )  = V
+"/>
+
+<p>quindi l'insieme {<b>v<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub></b>} è un insieme di generatori di <i>V</i>. Poichè <b>v</b><sub>1</sub> non può esprimersi come combinazione lineare dei soli vettori {<b>u<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub>}</b> essendo a<sub>1</sub> &ne; 0 ne segue che {<b>v<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub></b>} è un insieme di vettori linearmente indipendenti e quindi costituiscono una base.</p>
+
+<p>Applicando il procedimento già seguito si dimostra che anche {<b>v<sub>1</sub>, v<sub>2</sub> u<sub>3</sub> , ..., u<sub>n</sub></b>} è una base di <i>V</i>. Iterando il procedimento, se fosse <i>m &gt; n</i>, si potrebbero trovare <i>n</i> vettori <b>v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub></b> tra gli <i>m</i> dati, che  costituiscono una base di <i>V</i>. Ma allora i rimanenti <i>m - n</i> vettori <b>v<sub>n+1</sub>, v<sub>n+2</sub> , ..., v<sub>m</sub></b> risulterebbero linearmente dipendenti da essi, il che è una contraddizione della ipotesi di partenza, dunque <i>m &le; n</i>. □</p>
+
+</div>
+
+<div class="def">
+<p><b>Teorema 2.1</b> - Tutte le basi di uno spazio vettoriale <i>V</i> finitamente generato contenono lo stesso numero di basi.</p>
+
+<p><b>Dim.</b>- Siano {<b>u<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub></b>} e  {<b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>m</sub></b>} due basi di <i>V</i>. Poichè {<b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>m</sub></b>} è un insieme di vettori linearmente indipendenti, per la proposizione 2.5, vale <i>m &le; n</i>. Dato che anche {<b>u<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub></b>} è un insieme di vettori linearmente indipendenti, per la proposizione (2.5) deve essere <i>n &le; m</i>, quindi deve essere per forma <i>m = n</i>. □</p>
+</div>
+
+
+<div class="def">
+<p><b>Definizione 2.6</b> - Il numero di vettori contenuti in una base di uno spazio vettoriale <i>V</i> è detto <b>dimensione</b> dello spazio, e si indica con dim <i>V = n</i>
+
+</div>
+
+<p>La dimensione di uno spazio vettoriale rappresenta quindi il massimo numero di vettori linearmente indipendenti. Per lo spazio vettoriale <i>V = {<b>0</b>}</i>, <i>dim V=0</i>. Gli spazi vettoriali di dimensione <i>n</i> si dicono di <i>dimensione finita</i>. Può accadere che non esista alcun <i>n</i> per cui <i>V</i> abbia una base di <i>n</i> vettori.</p>
+
+<div class="def">
+<p><b>Esempio 2.1</b> Sia <i>V</i> lo spazio di tutti i polinomi di una variabile. E' facile notare che non esiste un numero <i>finito</i> di polinomi tale che ogni polinomio sia combinazione lineare di questi. Prendendo come base l'insieme:</p>
+
+
+<p>1, x, x<sup>2</sup>,  x<sup>3</sup>,...</p>
+
+<p>ci sarà sempre un polinomio che non è combinazione lineare di questi. Pertanto <i>V</i> è uno spazio vettoriale a dimensione <i>infinita</i>.</p>
+
+</div>
+
+
+<div class="def">
+<p><b>Teorema 2.1</b> (<i>Del completamento di una base</i>) - Siano {<b>u<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub></b>} vettori linearmente indipendenti di uno spazio vettoriale <i>V</i> di dimensione <i>n</i>. Se <i>k &le; n</i> allora possiamo trovare <i>n − k</i> vettori {<b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>k</sub></b>} tali che gli <i>n</i> vettori</p>
+
+<div class="eq">
+<p><b>v<sub>1</sub>, v<sub>2</sub>, v<sub>k</sub>, u<sub>1</sub>, ...., u<sub>n−k</sub></b></p>
+</div>
+
+<p>siano una nuova base di <i>V</i>.</p>
+
+<p><b>Dim.</b> Il sistema dei <i>k + n</i> vettori {<b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>k</sub>, u<sub>1</sub>, u<sub>n-k</sub></b>} è sicuramente un sistema di generatori per lo spazio vettoriale <i>V</i>. Applicando a tale sistema il metodo usato per dimostrare il teorema (2.0) e ricordando che tutte le basi hanno lo stesso numeri di elementi, si ha la tesi. □</p>
+
+</div>
+
+
+<div class="def">
+<p><b>Definizione 2.6</b> (<i>Somma diretta</i>) - Diciamo che <i>V</i> è <b>somma diretta</b> di <i>U</i> e <i>W</i> se per ogni elemento <b>v</b> &in; <i>V</i> esistono unici
+gli elementi <b>u</b> &in; <i>U</i> e <b>w</b> &in; <i>W</i> tali che <b>v = u + w</b>. In tal caso si scrive:</p>
+
+<p><i>V = U &bigoplus; W</i></p>
+</div>
+
+
+<div class="def">
+<p><b>Teorema 2.2</b> - Sia <i>V</i> uno spazio vettoriale sul campo <i>𝕂</i> e siano <i>U</i> e <i>W</i> due sottospazi di <i>V</i>. Se <i>U + W = V</i>, e se <i>U &Intersection; W = {<b>0</b>}</i> allora <i>V</i> è somma diretta di <i>U</i> e <i>W</i>.</p>
+
+<p><b>Dim.</b> Dato <b>v</b> &in; <i>V</i>, per la prima ipotesi esistono <b>u</b> e <b>w</b> tali che <b>v = u + w</b>. Supponiamo che lo stesso vettore <b>v</b> possa esprimersi come somma di due vettori differenti <b>v = u' + w'</b>. Ciò porta ad una contraddizione della seconda ipotesi, infatti:</p>
+
+<p><b>u + w = u' + w'</b></p>
+
+<p>Allora:</p>
+
+<b>u - u' = w' - w</b></p>
+
+<p>Ma <b>u - u'</b> &in; <i>U</i> e <b>w - w'</b> &in; <i>W</i>, quindi esisterebbe un vettore diverso dal vettore nullo che appartiente ad <i>U &Intersection; W = {<b>0</b>}</i> in contraddizione con la seconda ipotesi.</p>
+
+</div>
+
+
+<div class="def">
+<p><b>Teorema 2.3</b> - Se <i>V</i> è uno spazio vettoriale di dimensione finita su <i>𝕂</i>, e somma diretta dei sottospazi <i>U</i> e <i>W</i>, allora:</p>
+
+<p><i>dim V = dim W + dim U</i></p>
+
+
+<p><b>Dim.</b> Sia {<b>v</b><sub>1</sub>, <b>v</b><sub>2</sub> , ..., <b>v</b><sub>k</sub>} una base di <i>U</i> e {<b>w</b><sub>1</sub>, <b>w</b><sub>2</sub> , ..., <b>w</b><sub>m</sub></b>} una base di <i>W</i>. Ogni elemento di <i>U</i> ha un'unica combinazione lineare x<sub>1</sub><b>v</b><sub>1</sub>+ x<sub>2</sub> <b>v</b><sub>2</sub> + ...+ x<sub>k</sub><b>v</b><sub>k</sub> con x<sub>i</sub> &in;  <i>𝕂</i> lo stesso per <i>W</i>: y<sub>1</sub><b>w</b><sub>1</sub>+ y<sub>2</sub> <b>w</b><sub>2</sub> + ...+ y<sub>k</sub><b>w</b><sub>m</sub> con y<sub>i</sub> &in;  <i>𝕂</i>. Quindi ogni elemento di <i>V</i> si può esprimere come un'unica combinazione lineare:</p>
+
+<p>x<sub>1</sub><b>v</b><sub>1</sub>+ x<sub>2</sub> <b>v</b><sub>2</sub> + ...+ x<sub>k</sub><b>v</b><sub>k</sub> + y<sub>1</sub><b>w</b><sub>1</sub>+ y<sub>2</sub> <b>w</b><sub>2</sub> + ...+ y<sub>k</sub><b>w</b><sub>m</sub></b></p>
+
+<p>Questo dimostra il teorema ed anche il fatto che {<b>v</b><sub>1</sub>, <b>v</b><sub>2</sub> , ..., <b>v</b><sub>k</sub>, <b>w</b><sub>1</sub>, <b>w</b><sub>2</sub> , ..., <b>w</b><sub>m</sub></b>} è una base di <i>V</i>.</p>
+
+</div>
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Physics</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

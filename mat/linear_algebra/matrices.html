@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matrices"/>
+    <title>Matrices</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Matrices</h1>
+
+<p>An <i>m</i> by <i>n</i> <b>matrix</b> over a set <i>S</i> is a rectangular array of elements of <i>S</i>, arranged in <i>m</i> rows and <i>n</i> columns. It is customary to write an m by n matrix using notation such as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>12</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>21</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>22</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>The <i>m x n</i> matrix <i>A</i> can also be written compactly as A [<o>a<sub>ij</sub></i>]<sub><i>mxn</i></sub> or simply as <i>A</i> = [<i>a<sub>ij</sub></i>] or <i>A</i> = (<i>a<sub>ij</sub></i>), if the dimension is known from the context.</p>
+
+<p>Fixed the <i>i</i>-esima row (or <i>j</i>-esima column) of a matrix <i>A</i> = (<i>a<sub>ij</sub></i>), the elements <i>a<sub>i1</sub></i>,<i>a<sub>i2</sub></i>, <i>a<sub>in</sub></i> can be seen as vectors of ℝ<sup><i>n</i></sup>. For this reason thye are known as row (column) vectors and are indicated as:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="bold">a</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+  <mo>,</mo>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>o</mi>
+  <mi>r</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi mathvariant="bold">a</mi>
+    <mi mathvariant="bold">j</mi>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>i</mi>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>i</mi>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mi>j</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<h2>Some Special Matrices</h2>
+
+<p>A matrix <i>A</i> = [<i>a<sub>ij</sub></i>]<sub><i>n×n</i></sub>, which has an equal number of rows and columns, is called a <b>square matrix</b> of order <i>n</i>. Otherwise it is called <i>rectangular</i>.</p>
+
+<p id="trace">The elements <i>a</i><sub>11</sub>, <i>a</i><sub>22</sub>, ..., <i>a<sub>nn</sub></i> form the main diagonal of <i>A</i>. The sum of the elements on the main diagonal of <i>A</i> is called the <b>trace of <i>A</i></b>, and it is denoted by</p>
+
+<div class="eq">
+<p>tr <i>A</i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>a<sub>ii</sub></i></p>
+</div>
+
+<p>A square matrix in which all the entries above (or below) the main diagonal are zero is called a lower (or an upper) <b>triangular matrix</b>. For example an upper triangular matrix has the form</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>12</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>13</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>22</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>23</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>33</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>3</mn>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>4</mn>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>n</mi>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>A square matrix <i>A</i> = [<i>a<sub>ij</sub></i>]<sub><i>n×n</i></sub> in which every entry off the main diagonal is zero, that is, </p>
+
+<div class="eq">
+	<p><i>a<sub>ij</sub></i> = 0 for <i>i = j</i>,</p>
+</div>
+
+<p>is called a <b>diagonal matrix</b>. The sum, the scalar product, and the product of diagonal matrices are again diagonal matrices. (The collection of all diagonal real <i>n × n</i> matrices is thus closed under these operations.)</p>
+
+<p>Two matrices <i>A</i> = (<i>a<sub>ij</sub></i>) and <i>B</i> = (<i>b<sub>ij</sub></i>) are <b>equal</b> if every element of <i>a<sub>ij</sub></i> of <i>A</i> is equal to the correspondend element <i> b<sub>ij</sub></i> of <i>B</i>.</p>
+
+<p>The set of al matrices <i>m x n</i> with elements in &Kopf; is denoted by <i>𝕄<sub>m,n</sub></i>(&Kopf;) and the set of all square matricec of order <i>n</i> by M<sub>n</sub></i>(&Kopf;). Obviously 𝕄<sub><i>n,n</i></sub>(&Kopf;) = M<sub><i>n</i></sub>(&Kopf;) and M<sub>1</sub>(&Kopf;) = &Kopf;, because a 1 x 1 matrix is nothing elese than an element of &Kopf;</p>
+
+<h2>Sum of Matrices</h2>
+
+<p>By setting</p>
+
+<div class="eq">
+<p>(<i>a<sub>ij</sub></i>) + (<i>b<sub>ij</sub></i>) = (<i>a<sub>ij</sub> + b<sub>ij</sub></i>)<br>
+<i>&lambda;</i>(<i>a<sub>ij</sub></i>) + (<i>&lambda;a<sub>ij</sub></i>)</p>
+</div>
+
+<p>&forall;(<i>a<sub>ij</sub></i>), (b<sub>ij</sub>) &in; <i>𝕄<sub>m,n</sub></i>(&Kopf;)</i>, &lambda;&in; &Kopf;, is defined on <i>𝕄<sub>m,n</sub></i>(&Kopf;)</i> una struttura di &Kopf;-spazio vettoriale. Lo zero è la matrice nulla.</p>
+
+<p>If <i>A</i> = (<i>a<sub>ij</sub></i>) and <i>B = (b<sub>ij</sub>), &lambda;&in; &Kopf;, the matrices (<i>a<sub>ij</sub></i>) +  (<i>b<sub>ij</sub></i>) and (<i>&lambda;a<sub>ij</sub></i>) are denoted by <i>A + B</i> and <i>&lambda;A</i>, respectively.</i></p>
+
+<p>It is easy to verify that for the sum of matrices the commutative and associative properties hold:</p>
+
+<div class="eq">
+<p><i>A + B  = B + A</i> &emsp; (<i>A + B</i>) + <i>C = A</i> + (<i>B + C</i>)</p>
+</div>
+
+<h2>Product of a matrix by a vector</h2>
+
+<p>Consideriamo il concetto importante di combinazione lineare di <i>m</i> vettori di dimensione <i>n</i></p>
+
+<div class="eq">
+<p><i><b>a</b><sub>1</sub></b>x<sub>1</sub> + <b>a</b><sub>2</sub>x<sub>2</sub> + . . . + <b>a</b><sub>m</sub> x<sub>m</sub></i></p>
+</div>
+
+<p>questa combinazione lineare si può definire come il prodotto righe per colonne tra una matrice ed un vettore, quest'ultimo immaginato disposto come colonna.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>11</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>12</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mo>&#x2026;</mo>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>1</mn>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>21</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>22</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mo>&#x2026;</mo>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>2</mn>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mo>&#x22F1;</mo>
+              </mtd>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mo>&#x2026;</mo>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>x</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>x</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>x</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>11</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>21</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <msub>
+          <mi>x</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>12</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>22</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <msub>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>1</mn>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>2</mn>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <msub>
+          <mi>x</mi>
+          <mi>m</mi>
+        </msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mo>=</mo>
+        <msub>
+          <mi mathvariant="bold">a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi mathvariant="bold">a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x2026;</mo>
+        <mo>+</mo>
+        <msub>
+          <mi mathvariant="bold">a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>m</mi>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mi>m</mi>
+        </msub>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>11</mn>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mn>1</mn>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>12</mn>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msub>
+                <mo>+</mo>
+                <mo>&#x2026;</mo>
+                <mo>+</mo>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>1</mn>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mi>m</mi>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>21</mn>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mn>1</mn>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>22</mn>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msub>
+                <mo>+</mo>
+                <mo>&#x2026;</mo>
+                <mo>+</mo>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mn>2</mn>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mi>m</mi>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mo>&#x22EE;</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mn>1</mn>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msub>
+                <mo>+</mo>
+                <mo>&#x2026;</mo>
+                <mo>+</mo>
+                <msub>
+                  <mi>a</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>n</mi>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mi>x</mi>
+                  <mi>m</mi>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

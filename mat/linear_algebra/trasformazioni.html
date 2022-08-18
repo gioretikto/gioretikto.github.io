@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Trasformazioni tra sistemi cartesiani"/>
+    <title>Trasformazioni tra sistemi cartesiani</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../index.php">Home</a></li>
+        <li><a class="navbar" href="../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Trasformazioni tra sistemi cartesiani</h1>
+
+
+<p>Consideriamo due sistemi cartesiani K e K' aventi basi ortonormali <b>i<sub>1</sub>, i<sub>2</sub>, i<sub>3</sub></b>, e <b>i'<sub>1</sub>, i'<sub>2</sub>, i'<sub>3</sub></b> rispettivamente. Ci ponaimo il problema di esprimere le coordinate x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> di un punto <i>P</i> nel sistema K in quelle  x'<sub>1</sub>, x'<sub>2</sub>, x'<sub>3</sub> nel sistema K' e vice versa.</p>
+
+<img src="img/fig_trasf.png" alt="trasformazioni di coordinate"/>
+
+<p>Siano <b>r</b> e <b>r'</b> i vettori posizione del punto <i>P</i>, nei sistemi K e K'. Sia l'originie O' del sistema K' individuata dal vettore <b>r'<sub>0</sub></b> e coordinate x'<sub>0K</sub> in K. Mentre l'origine O del sistema K è data dal vettore <b>r<sub>0</sub> = - r'<sub>0</sub></b> e coordinate x<sub>0K</sub>, nel sistema K'. Si ha allora:</p>
+
+
+<p><b>r</b> = <b>r' + r'<sub>0</sub></b></p>
+
+<p>e</p>
+
+<p><b>r'</b> = <b>r + r<sub>0</sub></b></p>
+
+<p>da cui:</p>
+
+<img src="img/trasf0.png" alt="trasformazioni coordinate rettangolari"/>
+<!-- x_k\mathbf{i_k} = x'_k\mathbf{i'_k} + x'_{0k}\mathbf{i_k}
+ -->
+
+<img src="img/trasf1.png" alt="trasformazioni coordinate rettangolari"/>
+
+<!-- x'_k\mathbf{i'_k} = x_k\mathbf{i_k} + x_{0k}\mathbf{i'_k}
+ -->
+ 
+<p>facendo il prodotto scalare della prima equazione col vettore unitario desiderato <b>i<sub>l</sub></b> e con <b>i'<sub>l</sub></b> nella seconda, si ottengono le relazioni:</p>
+
+<img src="img/trasf3.png" alt="trasformazioni coordinate rettangolari"/>
+<!-- x_l  = (\mathbf{i'_k} \cdot \mathbf{i_l}) x'_k + x'_{0l} = \alpha_{k'l} x'_k + x'_{0l}
+ -->
+
+<img src="img/trasf4.png" alt="trasformazioni coordinate rettangolari"/>
+
+<!-- x'_l  = (\mathbf{i'_l} \cdot \mathbf{i_k}) x_k + x_{0l} = \alpha_{l'k} x_{k} + x_{0l}
+ -->
+<p>ottenendo le trasformazioni dal sistema K a K'.</p>
+ 
+<p>avendo posto:</p>
+
+<img src="img/coefftrasf.png" alt="coefficienti trasformazione"/>
+<!-- \alpha_{j'k} = \cos (x'_j, x_{k}) = \mathbf{i_j'} \cdot \mathbf{i_k}
+ -->
+  
+<p>Possiamo rappresentare la trasfomrazione tramite una matrice. Per semplicità di scrittura prendendo due sistemi K  K' aventi origine comune, la trasformazione è rappresentata dalla matrice:</p>
+
+
+<section>
+<a href="first_peculiarities.html">&#171;Peculiarities of the first declension</a>
+<a href="index.html">Index of LatinGrammar</a>
+<a href="gerund.html">The gerund&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

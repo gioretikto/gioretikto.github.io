@@ -21,13 +21,13 @@
 
 <h1>The Dual Space</h1>
 
-<p>Given a vector space <i>V</i> over a field 𝕂, the consideration of all possible scalar <a href="linear_transformation.html">linear functions</a> defined on <i>V</i> gives rise to</p>
+<p>Given a vector space <i>V</i> over a field 𝕂, the consideration of all possible scalar <a href="linear_forms.html">linear forms</a> defined on <i>V</i> gives rise to</p>
 
 <div class="eq">
 <p><i>V</i><sup>∗</sup> := {linear functions <i>f</i>: <i>V</i> → 𝕂}.</p>
 </div>
 
-<p>These linear functions form a vector space in its own right, the <b>dual space</b> <i>V</i>* of <i>V</i>. In physics the elements of the vector space <i>V</i>∗ are called covectors. That <i>V</i>∗ does indeed form a vector space is verified by observing that the collection of linear functions satisfies the familiar ten properties of a vector space; By introducting on <i>V</i>* the operation of sum and product by a scaler defined as follows:</p>
+<p>These linear forms, form a vector space in its own right, the <b>dual space</b> <i>V</i>* of <i>V</i>. In physics the elements of the vector space <i>V</i>∗ are called <b>covectors</b> or (algebraic) <b>1-forms</b>. That <i>V</i>∗ does indeed form a vector space is verified by observing that the collection of linear functions satisfies the familiar ten properties of a vector space; By introducting on <i>V</i>* the operation of sum and product by a scaler defined as follows:</p>
 
 <div class="eq">
 <p>(<i>f</i> + <i>g</i>)(<i><b>v</b></i>) = <i>f</i>(<b>v</b></i>) + <i>g</i>(<b>v</b></i>), &emsp;(<i>&alpha;f</i>)(<b><i>v</i></b>) = <i>&alpha; f</i>(<b>v</b>)</p>
@@ -71,9 +71,17 @@
 
 <p>It is clear from Eq. 8.1.1 that given a basis, <i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b></i><sub>n</sub> every <i>n</i>-tuple <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> determines a unique linear function. Further since this correspondence with <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> preserves sums and products (of vectors by scalars), it follows that <i>V</i>* is isomorphic to the space of <i>n</i>-tuples of numbers. One consequence of this fact is that the dual space i of the n-dimensional space <i>V</i> is likewise <i>n</i>-dimensional.</p>
 
-<p>The vectors in <i>V</i> are said to be <i>contravariant</i>, those in <i>V</i>*, <i>covariant</i>. The condition of duality between two vector spaces is defined by the following. </p>
+<p>The vectors in <i>V</i> are said to be <i>contravariant</i>, those in <i>V</i>*, <i>covariant</i>.</p>
 
-<p><b>Definition 8.1.1</b>. Let {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i> and {<b><i>e</i></b><sup>1</sup>, ..., <i><b>e</b><sup>n</sup></i>} a basis in <i>V</i>*. The two bases are said to be dual if</p>
+<table>
+<tr><th>Expansion of <b>A</b></th> <th>Projections</th> <th>Component names</th></tr>
+<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sup>μ</sup></i> <b>e</b><sub>μ</sub></td> <td><i>A<sup>μ</sup></i> = <b>A</b> · <b>e</b><sup>μ</sup></td> <td>Contravariant components of A</td></tr>
+<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sub>μ</sub></i> <b>e</b><sup>μ</sup></td> <td><i>A<sub>μ</sub></i> = <b>A</b> · <b>e</b><sub>μ</sub></td> <td>Covariant components of A</td></tr>
+</table>
+
+<p>The condition of duality between two vector spaces is defined by the following. </p>
+
+<p id="duality"><b>Definition 8.1.1</b>. Let {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i> and {<b><i>e</i></b><sup>1</sup>, ..., <i><b>e</b><sup>n</sup></i>} a basis in <i>V</i>*. The two bases are said to be dual if</p>
 
 <div class="eq">
 <p><i><b>e</b><sup>i</sup></i> (<i><b>e</b><sub>j</sub></i>) = <i>&delta;<sup>i</sup><sub>j</sub></i></p>
@@ -85,7 +93,7 @@
 <p>⟨<i><b>e</b><sup>i</sup></i> | <i><b>e</b><sub>j</sub></i>⟩ = <i>&delta;<sup>i</sup><sub>j</sub></i> &emsp;</p>
 </div>
 
-<p>where &delta;<sub>j</sub><sup>i</sup> is Kronecker's delta.&emsp;□</p>
+<p>where <i>&delta;<sub>j</sub><sup>i</sup></i> is Kronecker's delta.&emsp;□</p>
 
 <p>If {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i>, and <i>f</i> is a linear function on <i>V</i>, then ⟨<i>f</i> | <i><b>e</b><sub>j</sub></i>⟩ = <i>f</i>(<i><b>e</b><sub>j</sub></i>) give the numbers <i>a<sub>j</sub></i> which determine the linear function <i>f</i> &in; <i>V</i>* (cf. formula (8.1.2)). This remark implies that, if {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} is a basis in <i>V</i>, then there exists a unique basis {<i><b>f</b></i><sub>1</sub>, <i><b>f</b></i><sub>2</sub>, ..., <i><b>f</b><sub>n</sub></i>} in <i>V</i>* dual to {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>}. The proof is immediate</p>
 
@@ -103,7 +111,7 @@
 
 <p>Ad esempio se <i>V</i> è ℝ<sup>2</sup> scegliendo la base canonica {<b>e</b></sub><sub>1</sub> = (1, 0), <b>e</b></sub><sub>2</sub> = (0, 1)}, allora <b>e</b><sup>1</sup> e <b>e</b><sup>2</sup> so funzioni lineari  tali da aversi <b>e</b><sup>1</sup>(<b>e</b><sub>1</sub>) = 1, <b>e</b><sup>1</sup>(<b>e</b><sub>2</sub>) = 0, <b>e</b><sup>2</sup>(<b>e</b><sub>1</sub>) = 0</span>, e <b>e</b><sup>2</sup>(<b>e</b><sub>2</sub>) = 1.</p>
 
-<section>
+<section aria-label="End">
 <a href="fourth.html">&#171;The fourth Declension</a>
 <a href="index.html">Index</a>
 <a href="peculiarities4.html">Tensors&#187;</a>

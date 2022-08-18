@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Rango di una matrice"/>
+    <title>Rango di una matrice</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Rango di una matrice</h1>
+
+<p>Abbiamo visto che se le righe (o colonne) di <b>A</b> sono vettori linearmente dipendenti allora <i>det <b>A</b> = 0</i>. Per <i>n =2</i> o <i>n=3</i> abbiamo dimostrato anche il viceversa: il determinante si annulla se e solo se le righe della matrice sono linearmente dipendenti. Questo risultato si può generalizzare per <i>n</i> qualsiasi</p>
+
+<p>Data una matrice <i>A (m x n)</i> il sottospazio ℝ<sup>n</sup> generato dai vettori riga <b>a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>m</sub></b> di <i>A</i> è detto <b>spazio delle righe</b> ed il sottospazio ℝ<sup>m</sup> generato dai vettori colonna <b>a<sup>1</sup>, a<sup>2</sup>, ..., a<sup>n</sup></b> è detto <b>spazio delle colonne</b>. Tali spazi vengono indicati con &realine;<sub>A</sub> e &Cfr;<sub>A</sub>, rispettivamente. Vale il seguente teorema:</p>
+
+<div class="def" id="matriceindipendenza">
+
+<p><b>Teorema R.0</b> - Siano <b>a</b><sup>1</sup>, <b>a</b><sup>2</sup>, ...,<b>a</b><sub>n</sub>, <i>r</i> vettori riga di ℝ<sup>n</sup> ( r &lt; n) e sia <b>A</b> la matrice (<i>r,n</i>) che ha per righe questi vettori. Allora i vettori <b>a<sup>1</sup>, a<sup>2</sup>, ...,a<sub>n</sub></b> sono linearmente dipendenti se e solo se ogni matrice (r,r) estratta da <b>A</b> ha determinante nullo; sono indipendenti se e solo se esiste almeno una matrice <i>(r,r)</i> estratta da <b>A</b>, con determinante diverso da zero.</p>
+
+<p>Inoltre: <i>n</i> vettori di ℝ<sup>n</sup> sono linearmente dipendenti (indipendenti) se e solo se la matrice (n,n) che si ottiene accostandoli ha determinante uguale a zero (diverso da zero).</p>
+</div>
+
+<div class="def">
+
+<p><b>Teorema R.1</b> Lo spazio delle righe e lo spazio delle colonne di una matrice <i>A(m,n)</i> hanno la stessa dimensione.</p>
+
+<p><b>Dim.</b> Se <i>A</i> è la matrice nulla, sia le righe che le colonne di <i>A</i> sono vettori nulli. Si ha quindi dim &realine;<sub>A</sub> = dim &Cfr;<sub>A</sub> = 0. Se <i>A</i> non è la matrice nulla, vi è qualche vettore riga e qualche vettore colonna che non sono vettori nulli. </p>
+
+<p>Per il teorema di esistenza della base, di uno spazio vettoriale, tra gli <i>m</i> vettori riga ci saranno al più <i>r &le; m</i> vettori riga che sono una base di &realine;<sub>A</sub> ed al più <i>c &le; n</i> vettori colonna che sono una base di &Cfr;<sub>A</sub>.</p>
+
+<p>Senza ledere di generalità, supponiamo che {<b>a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>r</sub></b>} sia una base di &realine;<sub>A</sub>. Allora per qualche vettore riga, <b>a</b><sub>i</sub> di <i>A</i> si ha:</p>
+
+<img src="img/baseRA.png" alt="base spazio vettori riga"/>
+
+<p>ossia in modo più esplicito come:</p>
+
+<img src="img/spaziorighe0.png" alt="spazio vettori riga matrice"/>
+
+<!-- \mathbf{a}_{i} = c_{i1} ( a_{11}+ a_{12} + \ldots+ a_{1n} ) + c_{i2} (a_{21} +  a_{22}+ \ldots +   a_{2n}) + \ldots + c_{ir} (a_{r1} + a_{r2} + a_{rn})
+ -->
+
+<p>Ricavando dalla precedente il <i>j</i>-esimo elemento di <b>a</b><sub>i</sub>, si ha:</p>
+
+<img src="img/spaziorighe.png" alt="spazio vettori riga matrice"/>
+
+<!-- a_{ij} = c_{i1} a_{1j}+ c_{i2} a_{2j} + c_{i2} a_{2j} + \ldots + c_{ir} a_{rj}
+ -->
+
+<p>che porta alle seguenti equazioni:</p>
+
+<img src="img/spaziorighe1.png" alt="spazio vettori riga matrice"/>
+
+<p>per <i>j= 1,2, ...,n</i>. Quest'ultima relazione mostra che il <i>j-</i>esimo vettore colonna <b>a</b><sup>j</sup> di <i>A</i>, è combinazione lineare degli <i>r</i> vettori di 
+ℝ<sup>m</sup>.</p>
+
+<img src="img/spaziorighe2.png" alt="spazio vettori riga matrice"/>
+
+<!-- \mathbf{h}^1 = (h_{11}, h_{21},\ldots, h_{m1}) ,\mathbf{h}^2 = (h_{12}, h_{22},\ldots, h_{m2}), \ldots, \mathbf{h}^r = (h_{1r}, h_{2r},\ldots, h_{mr})
+ -->
+
+<p>si ha quindi per <i>j= 1,2, ...,n :</i>
+
+<img src="img/spaziorighe3.png" alt="spazio vettori riga matrice"/>
+
+<!-- \mathbf{a}^j \in \text{Span} (\mathbf{h}^1,\mathbf{h}^2,\ldots,\mathbf{h}^r)
+ -->
+
+<p>Segue quindi che ℭ<sub>A</sub>⊆ Span(<b>h</b><sup>1</sup>, <b>h</b><sup>2</sup>, ..., <b>h</b><sup>r</sup>), quindi</p>
+
+<p>dim ℭ<sub>A</sub> &le; dim Span(<b>h</b><sup>1</sup>, <b>h</b><sup>2</sup>, ..., <b>h</b><sup>r</sup>). </p>
+
+<p>Ovvero:</p>
+
+<p align="center"><i>s &le; r</i>.</p>
+
+<p>Scambiando il ruolo delle righe e delle colonne e procededo analogamente, risulta che:</p>
+
+<p align="center"><i>r &le; s</i>.</p>
+ 
+<p>quindi:</p>
+
+<p align="center"><i>r = s</i>.</p>
+
+<p>Essendo <i>r</i> ed <i>s</i> il numero dei vettori di una base di &realine;<sub>A</sub> e  ℭ<sub>A</sub> rispettivamente, allora dim &realine;<sub>A</sub> =dim  ℭ<sub>A</sub>, da cui la tesi.□</p>
+</div>
+
+<p>Dal teorema segue che:</p>
+
+<div class="def">
+<p><b>Def. R.1</b>. Dicesi <b>rango</b> (o <i>caratteristica</i>) di una matrice <i>A(m, n)</i>, e lo si indica con <i>r(A)</i>, il massimo numero di righe o di colonne linearmente indipendenti.</p>
+
+</div>
+
+<p>E' evidente in base al teorma R1 che:</p>
+
+<div class="eq">
+<p><i>r(A) = r(A<sup>T</sup>)</i></p>
+</div>
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="seriepositive.html">Funzioni monòtone a termini positivi &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

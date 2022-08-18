@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Autovalori ed Autovettori"/>
+    <title>Autovalori ed Autovettori</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Autovalori ed Autovettori</h1>
+
+<div class="def">
+<p><b>Definizione 1</b> - Sia T: V → V un endomorfismo di uno spazio vettoriale <i>V</i> rappresentato dalla matrice <b>A</b>. Un vettore <b>v</b> &ne; <b>0</b> di <i>V</i> è un autovettore di <i>T</i> relativo all'autovalore &lambda; se si ha</p>
+
+<div class="eq">
+<p>A<b>v</b> = &lambda; <b>v</b>
+<span>(1.0)</span>
+</p>
+</div>
+
+</div>
+
+<p>L'insieme degli autovalori di <i>T</i> cioè degli scalari &lambda; &in; 𝕂. per cui esista un vettore non nullo v<sub>0</sub>, soddisfacente la (1.0) - si dice <i>spettro</i> di T, ed è indicato con sp(T). Se &lambda; &in; sp(T), l'insieme</p>
+
+<p align="center">V<sub>&lambda;</sub> = { <b>v</b> &in; V | T(<b>v</b>) = &lambda;<b>v</b>}</p>
+
+<p>è detto <i>autospazio</i> di <i>T</i> relativo all'autovalore &lambda;, ed è un sottospazio di <i>V</i>. Ovviamente &lambda; è un autovalore se e solo se V<sub>&lambda;</sub> &ne; {∅}.</p>
+
+<p>In altre parole si stiamo chiedendo se esistono <i>particolari vettori</i> sui quali la trasformazione <i>T</i> agisce come se fosse di tipo diagonale. </p>
+
+<p>In tal caso, preso un qualsiasi vettore <i>t</i><b>v</b> parallelo <b>v</b> (t &in; 𝕂) si avrà anche, per linearità:</p>
+
+<p align="center">A(<i>t</i><b>v</b>) = <i>t</i>A<b>v</b> = (t &lambda;)<b>v</b></p>
+
+<p>e quindi in questo caso possiamo affermare che la direzione di 𝕂<sup>n</sup> individuata dal vettore <b>v</b> è trasformata in se stessa.</p>
+
+<p>Scivendo <b>I<sub>n</sub> v</b> al posto di <b>v</b> possiamo riscrivere l'equazione (1.0) come</p>
+
+<p align="center">(A - &lambda;<b>I</b><sub>n</sub>) <b>v</b> = <b>0</b></p>
+
+<p>In questa equazione il vettore <b>v</b> come lo scalare &lambda; è incognito: le componenti del vettore soddisfano perciò un sistema lineare omogeneo <i>n x n</i>. Sappiamo che, perchè esistano vettori <b>v</b> (non nulli) che rislvono la (1.0), dovrà essere</p>
+
+<p align="center">D(&lambda;) = |A - &lambda;<b>I</b><sub>n</sub>)| = 0</p>
+
+<p>per esempio per <i>n = 2</i> definendo la matrice come</p>
+
+<img src="img/2x2.png" alt="matrice 2x2"/>
+
+<img src="img/caratteristica.png" alt="equazione caratteristica"/>
+
+<p>L'equazione (1.0) è un'equazione algebrica in &lambda; di grado <i>n</i> detta <i>equazione caratteristica</i> della matrice A; il polinomio D(&lambda;) è detto <i>polinomio caratteristico</i> della matrice A. Questo polinomio dipende solo dalla trasformazione lineare, e non dal riferimento in cui questa è descritta; in altri termini, non varia se si sostituisce alla matrice A un'altra matrice ad essa equivalente. Infatti si può scrivere</p>
+
+<p align="center">S<sup>-1</sup>AS - &lambda;<b>I</b> =S<sup>-1</sup> (A - &lambda;I)S</p>
+
+<p>e quindi usando le proprietà del determinante</p>
+
+<p align="center">S<sup>-1</sup>AS - &lambda;<b>I</b> = |S<sup>-1</sup> ( A - &lambda;I) S| =1 /|S| |A-&lambda;I||S| = D(&lambda;)</p>
+
+<p>Chiameremo <i>autovalore</i> della matrice A (o della trasformazione che la matrice A rappresenta) qualsiasi numero &lambda; &in; ℂ soddisfi l'equazione caratteristica; chiamaeremo autovalore (corrispondente all'autovalore &lambda;) ogni vettore <b>v</b> &ne; 0 (<b>v</b> &in; 𝕂<sup>n</sup>)</p>
+
+<p>Notiamo subito che, mentre un autovettore corrisponde sempre ad un unico autovalore (perchè l'identità A<b>v</b> = &lambda; <b>v</b> determina univocamente &lambda;) ad un autovalore corrispondono sempre infiniti autovettori, in quanto se A<b>v</b> = <b>&lambda;v</b>, è anche A c <b>v</b> = &lambda; (c<b>v</b>) come già osservato, e quindi tutti i vettori c<b>v</b> paralleli a <b>v</b> sono pure autovettori relativi a &lambda;</p>
+
+<p>Si osservi che, se la matrice A è reale il polinomio caratteristico è a coefficienti reali per cui gli autovalori sono reali oppure a copie complessi coniugati. Gli autovettori posssono essere scelti in modo che agli autovalori reali corrispondano autovettore reali e ad autovalori complessi coniugati corrispondano autovettori complessi coniugati.</p>
+
+<div class="def">
+<p><b>Proposizione A.0</b> Matrici simili hanno lo stesso polinomio caratteristico.</p>
+
+</div>
+
+<div class="def">
+<p><b>Esempio 1</b> - Trovare autovalori e autovettori relativi alla matrice</p>
+
+<img src="img/Aes.png" alt="matrice 3x3"/>
+
+<p><b>Soluzione</b> - Il polinomio caratteristico è</p>
+
+<img src="img/autoes.png" alt="autovalori esempio"/>
+
+<!-- \begin{equation*} \begin{aligned} det(A-\lambda I) = \left|\begin{array}{ccc} -\lambda & 1 & 0 \\ 0 & -\lambda & 1 \\ 2 & -5 & 4-\lambda \\ \end{array}\right| \\ =-\lambda \left| \begin{array}{cc} -\lambda & 1 \\ - 5 & 4-\lambda \\ \end{array} \right| - \left| \begin{array}{cc} 0 & 1 \\ 2 & 4-\lambda \\ \end{array} \right|\\ =-\lambda(\lambda^2 - 4\lambda +5) - (-2) \\ =-\lambda^3+ 4\lambda^2 -5 \lambda  +2 \end{aligned} \end{equation*} -->
+
+<p>tale polinomio può essere fattorizzato come -( &lambda; - 1)<sup>2</sup>(&lambda;- 2). Il teorema fondamentale dell'algebra garantisce tre soluzioni che sono &lambda;=1 con molteplicità 2 e &lambda;=2. Per trovare gli autospazi relativi agli autovalori &lambda;<sub>1</sub> = &lambda;<sub>2</sub> = 1, occorre risolvere il sistema</p>
+
+<p align="center">(A-&lambda;I)<b>x</b> = <b>0</b></p>
+
+<p>se &lambda;<sub>1</sub> =1, E<sub>1</sub> = (t, t, t) = span(1,1,1).</p>
+
+<p>se &lambda;<sub>1</sub> =2, E<sub>2</sub> = (t/4, t/2, t) = span(1/4, 1/2, 1) = span(1, 2, 4).</p>
+
+</div>
+
+<div class="def">
+<p><b>Definizione</b> Dicesi <b>moleplicità algebrica</b>, m<sub>j</sub> di un autovalore &lambda;, la molteplicità di &lambda; come radice del polinomio caratteristico.</p>
+</div>
+
+<p>Quindi nell'esempio precedente &lambda;=1 ha molteplicità algebrica 2 e &lambda;=2 ha molteplicità algebrica 1.</p>
+
+<div class="def">
+<p><b>Definizione</b> Dicesi <b>moleplicità geometrica</b>, d<sub>j</sub> di un autovalore &lambda;, la dimensione dell'autospazio relativo all'autovalore &lambda;, cioè dimE<sub>&lambda;</sub>.</p>
+</div>
+
+<p>Nell'esempio precedente entrambi gli autospazi hanno basi formate da un solo vettore dim E<sub>1</sub> = dim E<sub>2</sub> = 1.</p>
+
+<div class="def">
+<p><b>Teorema</b> </p>
+
+<ol>
+    <li><p>Autovettori corrispondenti ad autovalori distinti sono linearmente indipendenti.</p></li>
+    <li><p>La molteplicità geometrica di un autovalore non supera la sua molteplicità algebrica: <i>d<sub>j</sub> &le; m<sub>j</sub></i>.</p></li>
+</ol>
+
+</div>
+
+<p>Un autovalore si dice <b>regolare</b> se <i>d<sub>j</sub> = m<sub>j</sub></i>. Un autovalore si dice <i>semplice</i> se ha molteplicità algebrica 1. Quando un autovalore è semplice anche d<sub>j</sub> dovrà essere uguale a 1, <i>perciò un autovalore semplice è sempre regolare</i></p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="diagonalizzabilità.html">Condizioni di diagonalizzabilità &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

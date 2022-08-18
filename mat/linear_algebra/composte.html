@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Trasformazioni composte"/>
+    <title>Trasformazioni composte</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Trasformazioni composte</h1>
+
+<p>Siano ora L<sub>1</sub>: ℝ<sup>n</sup> → ℝ<sup>m</sup> e L<sub>2</sub>: ℝ<sup>m</sup> → ℝ<sup>s</sup> due trasformazioni lineari, rappresentate rispettivamente da una matrice <b>A</b> di tipo (m,n) e da una matrice <b>B</b>, di tipo (s,n), ottenute fissando una volta per tutte una base in ℝ<sup>n</sup>, ℝ<sup>m</sup>, ℝ<sup>s</sup> (è necessario che la base considerata in ℝ<sup>m</sup> sia la stessa per L<sub>1</sub> e L<sub>2</sub>). Consideriamo la <i>trasformazione composta</i>, L<sub>2</sub> ∘ L<sub>1</sub>, così definita</p>
+
+<p align="center">L<sub>2</sub> ∘ L<sub>1</sub> : ℝ<sup>n</sup> → ℝ<sup>s</sup></p>
+<p align="center">(L<sub>2</sub> ∘ L<sub>1</sub>) : <b>x</b> ↦ L<sub>2</sub>(L<sub>1</sub><b>x</b>)</p>
+
+<p>In altre parole la trasformazione composta è quella che si ottiene facendo agire le due trasformazioni una dopo l'altra, ossia applicando la seconda al risultato della prima. E' immediato verificare che L<sub>2</sub> ∘ L<sub>1</sub> è anch'essa una trasformazione lineare; per il Teorema di rappresntazione, esisterà una matrice <b>C</b>, di tipo (<i>s,n</i>) che rappresenta tale trasformazione rispetto alle stesse basi. Tale matrice è semplicemente</p>
+
+<p align="center"><b>C</b> = <b>BA</b></p>
+
+<p>ossia la matrice rappresentativa di L<sub>2</sub> ∘ L<sub>1</sub> è il prodotto righe per colonne delle matrici <b>B,A</b> che rappresentano L<sub>2</sub>, L<sub>1</sub>, rispettivamente. Questo risulato è anzi il motivo principale per cui è naturale definire il prodotto di matrici proprio in quelo modo "complicato". La verifica di questo fatto è semplice: scrivendo il vettore <b>x</B> come <i>n</i>-upla rispetto alla base fissata, si ha che</p>
+
+<p align="center">L<sub>2</sub> (L<sub>1</sub><b>x</b>) : <b>B</b> ⋅ (<b>Ax</b>) = (<b>BA</b>)<b>x</b></p>
+
+<p>ossia <b>BA</b> rappresenta L<sub>2</sub> ∘ L<sub>1</sub>. Il discorso vale inalterato se anzichè ℝ<sup>n</sup>, ℝ<sup>m</sup>, ℝ<sup>s</sup> si considerano tre spazi vettoriali qualsiasi di dimensioni, rispettivamente <i>n,m,s</i></p>
+
+<section>
+<a href="rappresentazione.html">&#171;Rappresentazione matriciale delle trasformazioni</a>
+<a href="index.html">Index</a>
+<a href="ker.html">Immagine e nucleo di una trasformazione &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Immagine e nucleo di una trasformazione"/>
+    <title>Immagine e nucleo di una trasformazione</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Immagine e nucleo di una trasformazione</h1>
+
+<p>Se la trasformazione <i>L</i> è lineare da <i>V</i> a <i>W</i>, si chiama <b>immagine</b> della trasformazione di <i>L</i> l'insieme dei vettori di W che sono i trasformati dei vettori  di <i>V</i>:</p>
+
+<p align="center">Im(L)</p>
+
+<p>Se <b>y</b> &in; Im(<i>L</i>) allora si ha <b>y</b> &in; <i>L(<b>x</b></i>) per qualche <b>x</b> &in;<i>V</i>.</p>
+
+
+<div class="def">
+<p><b>Teorema K.1</b> <ol>
+<li><p>L'insieme Im(<i>L</i>) è un sottospazio vettoriale di W.</p></li>
+<li><p>Fissate le basi in V e W, sia <b>A</b> una matrice di tipo (m,n) che rappresenta L. Allora</p>
+            <p align="center">dim Im(L) = rango di A</p>
+</li>
+</ol>
+
+<p><b>Dim.</b> La proprietà 1) segue dalla linearità di <i>L</i>, se <b>y</b><sub>1</sub>=L(<b>x<sub>1</sub></b>) e  <b>y</b><sub>2</sub>=L(<b>x<sub>2</sub></b>) e &alpha; e &beta; in &Kopf;:</p>
+
+<img src="img/ImLsubspace.png" alt="immagine dimostrazione sottospazio"/>
+
+<!-- \alpha \mathbf{y}_1 + \beta \mathbf{y}_2 = \alpha L(\mathbf{x}_1) + \beta L(\mathbf{x}_2) =  L(\alpha\mathbf{x}_1  + \beta \mathbf{x}_2) -->
+
+<p>Per dimostrare la 2) osesrviamo che dalla dimostrazione del <a href="rappresentazione.html#rappresentazione">teorema di rappreesntazione</a>, si vede che Im(L) è generato dai vettori L(<b>u<sub>1</sub></b>), ..., L(<b>u<sub>n</sub></b>). Le colonne della matrice <b>A</b> sono le componenti scalari degli L(<b>u<sub>i</sub></b>) rispetto alla base <b>v<sub>1</sub></b>, ..., <b>v<sub>n</sub></b> di W. Se <i>r</i> tra queste colonne sono indipendenti i corrispondendit vettori L(<b>u<sub>i</sub></b>) sono indipendenti e viceversa. Da ciò segue che <i>r = dim Im(L)</i>.</p>
+</div>
+
+<p>Da questo teorema segue che le matrici che rappresentatno (rispetto a basi diverse) la stessa trasformazione lineare hanno lo stesso rango.</p>
+
+<div class="def">
+<p><b>Def. K1</b> (<i>Nucleo di una trasformazione</i>)- Siano <i>V, W</i> due spazi vettoriali su &Kopf;, e sia <i>L: V  → W</i>, un'applicazione lineare. Il nucleo dell'applicazione che si indica col simbolo Ker(<i>L</i>), è l'insieme dei vettori di <i>v</i> &in; V che hanno come immagine il vettore nullo di <i>W</i>, L(<b>v</b>)=<b>0</b>.  Ossia l'insieme:</p>
+
+<img src="img/ker.png" alt="kernel applicazione"/>
+<!-- \text{Ker}(L) = \{ \mathbf{x} \in V | L(\mathbf{x}) = \mathbf{0} \in W\} -->
+
+</div>
+
+<p>Anche Ker(<i>L</i>) è uno spazio vettoriale (ciò è di facile verifica).</p>
+
+<div class="def">
+<p><b>Teorema. K2</b> Sia <i>L: V → W</i> una trasformazione lineare, il cui Ker = {<b>0</b>}. Se <b>v<sub>1</sub></b>, ..., <b>v<sub>n</sub></b> sono vettori linearmente indipendenti di <i>V</i> allora L(<b>v<sub>1</sub></b>), ..., L(<b>v<sub>n</sub></b>) sono vettori linearmente indipendenti di <i>W</i>.</p>
+<p><b>Dim.</b> Siano x<sub>1</sub>, x<sub>2</sub> , ..., x<sub>n</sub> coefficienti tali che:</p>
+
+<img src="img/teoker.png" alt="kernel teorema"/>
+
+<!-- x_1 L(\mathbf{v}_1)+\ldots+ x_n L(\mathbf{v}_n) = 0 -->
+
+<p>Per linearità si ottiene:</p>
+
+<img src="img/teoker1.png" alt="dimostrazione kernel teorema"/>
+
+<!-- L(x_1 \mathbf{v}_1+\ldots+ x_n \mathbf{v}_n) = 0 -->
+
+<p>Siccome <b>v<sub>1</sub>, ..., v<sub>n</sub></b> sono linearmente indipendenti ciò implica che x<sub>i</sub>=0 per <i>i= 1,..,n</i>. Il teorema è così dimostrato. □</p>
+
+</div>
+
+<div class="def">
+<p><b>Teorema. K3</b> Sia <i>V</i> uno spazio vettoriale di dimensione <i>n</i> e sia <i>L: V → W</i> una trasformazione lineare, nello spazio <i>W</i>. Vale la seguente identità</p>
+<img src="img/tdimIm.png" alt="dimensione immage e kernel"/>
+
+<p><b>Dim.</b> Poniamo <i>k</i>= dim Ker(<i>L</i>) e <i>n</i> = dim <i>V</i>. Scegliamo una base <b>w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>k</sub></b> del nucleo. Si aggiungono a questa base <i>n -k</i> vettori linearmente indipendenti <b>w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub></b> in modo che: </p>
+
+<p align="center"><b>w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>k</sub></b>, <b>u<sub>k+1</sub>,..., u<sub>n</sub></b></p>
+
+<p>formino una base per <i>V</i>. Sia <b>v</b> un generico vettore di <i>V</i> si può quindi scrivere:</p>
+
+<img src="img/tdimIm1.png" alt="dimensione immage e kernel"/>
+
+
+<p>Essendo <i>L</i>(<b>w<sub>j</sub></b>)= 0 per ogni <i>j</i> =1, 2, ...,n, si ha:</p>
+
+
+<img src="img/tdimIm2.png" alt="dimensione immage e kernel"/>
+
+<p>per cui L(<b>u<sub>k+1</sub>),..., L(u<sub>n</sub></b>) risulta un sistema di generatori per Im(<i>L</i>). Si ha quindi dim Im(<i>L</i>) &le; n-k.</p>
+
+
+<p>Facciamo vedere che dim Im(<i>L</i>) = <i>n-k</i>, infatti l'insieme di vettori vettori <b>u<sub>k+1</sub></b>,..., <b>u<sub>n</sub></b> è un insieme linearmente indipendente. Se fossero dipendenti si avrebbe</p>
+
+<img src="img/tdimIm3.png" alt="dimensione immage e kernel"/>
+
+<!-- 0 = \beta_{k+1} L(\mathbf{u}_{k+1}) +\ldots + \beta_{n} L(\mathbf{u}_{n}) = L(\beta_{k+1} \mathbf{u}_{k+1} + \ldots +  \beta_{n} (\mathbf{u}_{n})) -->
+
+<p>con qualche &beta;<sub>j</sub> diverso da zero. Ciò implicherebbe che il vettore non nullo &beta;<sub>k+1</sub><b>u<sub>k+1</sub></b> +...+ &beta;<sub>n</sub><b>u<sub>n</sub></b> &in; Ker(<i>L</i>); ma allora questo vettore si potrebbe scrivere come combinazione lineare dei vettori <b>w</b><sub>i</sub> il che è un assurdo poichè i vettori <b>w</b><sub>i</sub> e <b>u</b><sub>i</sub> sono tra loro linearmente indipendenti.□</p>
+
+</div>
+
+<section>
+<a href="rappresentazione.html">&#171;Rappresentazione matriciale delle trasformazioni</a>
+<a href="index.html">Index</a>
+<a href="iniettive.html">Trasformazioni iniettive e suriettive &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

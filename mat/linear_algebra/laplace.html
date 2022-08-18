@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Laplace's theorem"/>
+    <title>Laplace's theorem</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Laplace's theorem</h1>
+
+<p>In this section we study the Laplace expansion, which is the classical way of calculating an <i>n x n</i> determinant as a sum of (<i>n</i> &minus; 1) x (<i>n</i> &minus; 1) determinant.</p>
+
+<p>Consider an arbitrary <i>n x n</i> matrix. For any element <i>i,j</i> imagine the deletion of the rwo and column containing the (<i>i,j</i>)th entry of <i>A</i> to leave a (<i>n</i> &minus; 1) x (<i>n</i> &minus; 1) matrix: the determinant of this (<i>n</i> &minus; 1) x (<i>n</i> &minus; 1) submatrix is called the <b>minor</b> of the (<i>i,j</i>)th entry of <i>A</i> and will be denoted by <i>M<sub>ij</sub></i>. Hence <i>M<sub>i,j</sub></i> = det <i>A<sub>i, j</sub></i>, where <i>A<sub>i,j</sub></i> is the minor matrix in <i>A</i></p>
+
+<img src="img/minore.png" alt="minore complementare di un elemento"/>
+
+<p>From this we can define the <b>cofactor</b> or <b>signed minor</b>, <i>c<sub>i,j</sub></i>.</p>
+
+<div class="eq">
+<p><i>c<sub>ij</sub></i> = (&minus;1)<sup><i>i+j</i></sup> <i>M<sub>ij</sub></i></p>
+</div>
+
+<p>For example taking the elements <i>a<sub>11</sub>, a<sub>12</sub>, a<sub>13</sub></i>, the signs of cofactors are (−1)<sup>1+1</sup> , (−1)<sup>1+2</sup>, (−1)<sup>1+3</sup>, i.e., (−1) to the power which is the sum of indices of the elements from the first row.</p>
+
+
+
+
+
+<p>Il teorema di Laplace o sviluppo di Laplace, il cui nome è dovuto a Pierre Simon Laplace, è una formula che permette di calcolare il determinante di una matrice (quadrata) con un procedimento ricorsivo. Lo sviluppo può essere eseguito per righe oppure per colonne. Il primo teorema di Laplace afferma che il determinante di una matrice quadrata A di ordine n  è pari alla somma dei prodotti degli elementi di una riga qualsiasi (o una colonna qualsiasi) per i rispettivi complementi algebrici.</p>
+
+<div class="def">
+<p><b>First Laplace's theorem</b> - The determinant det <i>A</i> of an <i>n × n</i> matrix <i>A</i> can be computed by multiplying the entries of any row or any column by their respective cofactors and adding the resulting product. More precisely:</p>
+
+<div class="eq">
+<p>det <i>A</i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>a<sub>ij</sub>c<sub>ij</sub></i> &emsp; (1.3)</p>
+</div>
+
+<p>expansion by row</p>
+
+<p>or by fixing the row <i>i</i>.</p>
+
+<div class="eq">
+<p>det <i>A = a<sub>i1</sub>c<sub>i1</sub> + a<sub>i2</sub>c<sub>i2</sub> + ... + a<sub>in</sub>c<sub>in</sub></i></p>
+</div>
+
+<p>We prove the theorem having fixed columns, <b>c<sub>1</sub>, ..., c<sub>n</sub></b> of the matrix <i>A</i>. THe j-th colum can be written as <i><b>c<sub>j</sub></b> = a<sub>1j</sub>e<sub>1</sub> + ... + a<sub>nj</sub>e<sub>n</sub></i>. Thus</p>
+
+<div class="eq">
+<p>|<i>A</i>| = det (<i><b>c<sub>1</sub>, ..., c<sub>j</sub>, ..., c<sub>n</sub></b></i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> a<sub>ij</sub> det (<i><b>c<sub>1</sub>,...,e<sub>i</sub>,... c<sub>n</sub></i></b>).</p>
+</div>
+
+<p>with <i>n &minus; j</i> changes of places we can take the <i>j</i>-colunmn to the last position leaving the rest unchanges. With <i>n &minus; i</i> changes we can take the <i>i</i>-th row to the last position leaving unchanged the order of the other rows. Thus</p>
+
+<div class="eq">
+<p>|<i>A</i>| = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> (-1)<sup>n-j</sup> a<sub>ij</sub> det (<i><b>c<sub>1</sub>,..., c*<sub>j</sub>,..., c<sub>n</sub>, e<sub>i</sub></i></b>) =  ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> (-1)<sup>n-j</sup> (-1)<sup>n-1</sup> a<sub>ij</sub> det (<i><b>c<sub>1</sub><sup>i</sup>,..., c*<sub>j</sub>,..., c<sub>n</sub><sup>i</sup>, e<sub>i</sub></i></b>)</p>
+</div>
+
+<p>where <i><b>c*<sub>j</sub></b></i> means that the <i>j</i>-th column does not appear. Owing to proposition 36 we have</p>
+
+<div class="eq">
+<p>|<i>A</i>| = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> (-1)<sup>i+j</sup> a<sub>ij</sub> det (<i><b>c<sub>1</sub><sup>i</sup>,..., c*<sub>j</sub>,..., c<sub>n</sub><sup>i</sup></b></i>)</p>
+</div>
+
+<p>where det (<i><b>c<sub>1</sub><sup>i</sup>,..., c*<sub>j</sub>,..., c<sub>n</sub><sup>i</sup></b></i>) is determinant of the matrix obtained elimininating from <i>A</i> the i-th row and j-th column. Thus we have (-1)<sup>i+j</sup> det (<i><b>c<sub>1</sub><sup>i</sup>,..., c*<sub>j</sub>,..., c<sub>n</sub><sup>i</sup></b></i>) = A<sub>ij</sub>. &emsp; □</p>
+
+</div>
+
+<p>La <b>regola di Laplace</b> sfrutta il complemento algebrico fornendo un comodo merodo iterativo per calcolare un determinante qualsiasi: si sceglie arbitrariamente una riga (o una colonna) e si moltiplicano per i corrispondenti complementi algebrici tutti gli elmenti della matrice che si incontrano scorrendo quella riga (o quella colonna).</p>
+
+<div class="def">
+<p><b>Esempio 1</b>- Applichiamo il teorema di Laplace per calcolare il determinante della matrice </p>
+
+<img src="img/simmetrica.png" alt="matrice simmetrica"/>
+
+<p>osserviamo innanzitutto che, poichè la matrice ha un elemento nullo, risulta conveniente effettuare il calcolo rispetto ad una riga o una colonna che contenga lo zero; sviluppando ad esempio rispetto alla seconda riga risulta:</p>
+
+<p>det (A) = -4 (7*4 - 15) + 0 (14 - 25) +3 (-6 + 20) = -52 + 42 = -10</p>
+
+</div>
+
+<p>Dalla definizione di determinante seguono delle proprietà di facile verifica:</p>
+
+<div class="def">
+<p><b>Proposizione D.1</b> - Se in una matrice quadrate <i>A</i>, sono nulli tutti gli elementi di una riga (o di una colonna) si ha <i>det A=0</i>.</p>
+</div>
+
+<div class="def">
+<p><b>Proposizione D.2</b> - Se <i>A</i><sup>T</sup> è la matrice trasposta della matrice qudrata <i>A</i>, si ha:</p>
+<img src="img/detAT.png" alt="determinante trasposta"/>
+
+<p><b>Dim.</b> Se <i>A</i> è la matrice, indichiamo la trasposta con:</p>
+
+<img src="img/trasposta.png" alt="matrice trasposta"/>
+<!-- A^T = \left(\begin{array}{cccc} b_{11} & b_{12} & \ldots & b_{1n}  \\ 
+b_{21} & b_{22} & \ldots & b_{2n}  \\
+\ldots & \ldots & \ldots & \ldots \\
+b_{n1} & b_{n2} & \ldots & b_{nn}  \\
+\end{array}\right) -->
+
+<p>per definizone di <i>A</i><sup>T</Sup>:</p>
+
+<div class="eq">
+<img class="inline" src="img/elemtrasposta.png" alt="elementi matrice trasposta"/>
+<span>(1.3)</span>
+</p>
+</div>
+
+<p>per la definizione di determinante si può scrivere:</p>
+
+<img src="img/det6.png" alt="determinante trasposta"/>
+<!-- \text{det}\,A^T = \sum_{h_1,h_2,\ldots,h_n}(-1)^{h} b_{h_11}  b_{h_22} \ldots b_{h_nn} -->
+
+<p>data la (1.3) si ha:</p>
+
+<img src="img/det7.png" alt="determinante trasposta"/>
+<!-- \text{det}\,A^T = \sum_{h_1,h_2,\ldots,h_n}(-1)^{h} a_{1h_1}  b_{2h_2} \ldots b_{nh_n} -->
+
+<p>Il secondo membro della presecente non è altro che <i>det A</i>. La proposizione è così dimostrata.□</p>
+</div>
+
+
+<div class="def">
+<p><b>Teorema D.0</b> - Operando una sostituzione nelle righe (o colonne) della matrice <i>A</i>, si ottiene una matrice <i>B</i>, tale da aversi:</p>
+
+<img src="img/B.png" alt="B matrice sostituita"/>
+
+<p>avente determinante pari a:</p>
+
+<img src="img/detBA.png" alt="determinante matrice sostituita"/>
+
+<!-- \text{det} \, B = (-1)^h \text{det} \,A -->
+
+<p>dove <i>h</i> è uguale al numero delle inversioni della permutazione generica <i>h<sub>1</sub>, h<sub>2</sub>, ..., h<sub>n</sub></i></p>
+
+<img src="img/sostituzionegenerica.png" alt="permutazioni sostituzione generica"/>
+
+<p><b>Dim.</b> La sostituzione è tale da aversi:</p>
+
+<div class="eq">
+<p>
+<img class="inline" src="img/Bsostituzione.png" alt="B matrice sostituita"/>
+<span>(1.4)</span>
+</p>
+</div>
+
+<!-- b_{1r} = a_{h_1r}, b_{2r} = a_{h_2r}, \ldots, b_{nr} = a_{h_nr} -->
+
+<p>con <i>r =1, 2,...,n</i>. Per la (1.2) si ha:</p>
+
+<img src="img/detB0.png" alt="determinante matrice sostituzione"/>
+
+<!-- \text{det}\,B = \sum_{k_1,k_2,\ldots,k_n}(-1)^{h} b_{1k_1}  b_{2k_2} \ldots a_{nk_n} -->
+
+<p>che per la (1.4) può scriversi come:</p>
+
+<img src="img/detB.png" alt="determinante matrice sostituzione"/>
+
+<p>il secondo membro dell'ultima equazione vale per la (1.2) <i>(-1)<sup>h</sup> det A</i>, si ha quindi la tesi:</p>
+<img src="img/detBA.png" alt="determinante matrice sostituita"/>
+<p>□</p>
+
+</div>
+
+
+<div class="def">
+<p><b>Secondo Teorema di Laplace</b> - Data una matrice quadrata A, la somma la somma dei prodotti degli elementi di una riga (o colonna) per i complementi algebrici di un'altra riga (o colonna) della matrice stessa è sempre nulla.</p>
+
+<p><b>Dimostrazione</b> - Il motivo di tale risultato è hce in questi casi si sta calcolando il determinante di una matrice con due righe o due colonne uguali, per cui il determinante è nullo.</p>
+
+</div>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="binet.html">Teorema di Binet, Regola di Sarrus &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

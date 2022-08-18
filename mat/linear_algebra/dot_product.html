@@ -21,15 +21,7 @@
 
 <h1>Dot product</h1>
 
-<p> The dot product can be defined for two vectors <i><b>x</b></i> and <i><b>y</b></i> by</p>
-
-<div class="eq">
-<p><i><b>x</b></i> ⋅ <i><b>y</b></i> = |<i>x</i>||<i>y</i>| cos &theta; &emsp;1.5.1</p> 
-</div> 
-
-<p>where <i>&theta;</i> is the angle between the vectors and |<i>x</i>| is the norm.  </p>
-
-<p>In general</p>
+<p>In analytic plane geometry, the basic tasks are measuring lenghts and angles; everything else depends on them. The basic tools for these tasks is the <b>dot product</b>. The standard Euclidean inner product is</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi mathvariant="bold">x</mi>
@@ -82,7 +74,29 @@
 
 <div class="eq">
 <p><i><b>x</b></i> ⋅ <i><b>y</b></i> = <i>x</i><sub>i</sub> <i>y</i><sub>i</sub>.</p>
-</div> 
+</div>
+
+<p>From the inner product we get the lenght, or Euclidean <b>norm</b>, of a vector,</p>
+
+<div class="eq">
+<p>||<i><b>x</b></i>|| = √<i><b>x</b></i> ⋅ <i><b>x</b></i></p>
+</div>
+
+<p>The lenght of a vector <i><b>x</b></i> is the square root of the dor product of that vector with itself.</p>
+
+<p>The angle <i>&theta;</i> between two vectors <i><b>x</b></i> and <i><b>y</b></i> may be determined from</p>
+
+<div class="eq">
+<p><i><b>x</b></i> ⋅ <i><b>y</b></i> = |<i>x</i>||<i>y</i>| cos <i>&theta;</i> &emsp;1.5.1</p> 
+</div>
+
+<p>In order to understand why the algebraic dot product between two vector yields the trigonometric cosine value, one can use the cosine law from Euclidean geometry. Consider the triangle created by the origin, <i><b>x</b></i> and <i><b>y</b></i>. We want to find the angle <i>&theta;</i> between <i><b>x</b></i> and <i><b>y</b></i>. The Euclidean side lenghts of this triangle are <i>a</i> = |<i>x</i>|, <i>b</i> = |<i>y</i>|, and <i>c</i> = |<i><b>x</b></i> − <i><b>y</b></i>|. The <a href="../euclidean/cosine_law.html">cosine law</a> provides a formula for the angle <i>&theta;</i> in terms of side lenghts as follows</p>
+
+<div class="eq">
+<p>cos <i>&theta;</i> = |<i><b>x</b></i>|<sup>2</sup> + |<i><b>y</b></i>|<sup>2</sup> − |<i>x</i> − <i>y</i>|<sup>2</sup>/2|<i>x</i>||<i>y</i>| =  <i><b>x</b></i> ⋅ <i><b>y</b></i> / √<i><b>x</b></i> ⋅ <i><b>x</b></i> √<i><b>y</b></i> ⋅ <i><b>y</b></i>&emsp;1.5.2</p> 
+</div>
+
+<p>where <i>&theta;</i> is the angle between the vectors and |<i>x</i>| is the norm.  </p>
 
 <h2>Non-orthogonal Axes</h2>
 
@@ -260,7 +274,7 @@
 
 <!-- $$ [g] = \left( \begin{array}{ccc} g_{00} & g_{01} & \ldots \\ g_{10} & g_{11} & \ldots \\ \vdots & \vdots & \end{array} \right) = \left( \begin{array}{ccc} \mathbf{e}_{0} \cdot \mathbf{e}_{0} & \mathbf{e}_{0} \cdot \mathbf{e}_{1} & \ldots \\ \mathbf{e}_{1} \cdot \mathbf{e}_{0} & \mathbf{e}_{1} \cdot \mathbf{e}_{1} & \ldots \\ \vdots & \vdots & \end{array} \right) $$ -->
 
-<p>Thus the diagonal elements are the (squared) magnitudes of the basis vectors, |<b>e</b><sub>0</sub>|<sup>2</sup>, |<b>e</b><sub>1</sub>|<sup>2</sup>, etc., while the off-diagonal elements represent their deviations from orthogonality. Any set of mutually perpendicular bases would be represented by a diagonal metric matrix.</p>
+<p>Thus the diagonal elements are the (squared) magnitudes of the basis vectors, |<b><i>e</i></b><sub>0</sub>|<sup>2</sup>, |<b><i>e</i></b><sub>1</sub>|<sup>2</sup>, etc., while the off-diagonal elements represent their deviations from orthogonality. Any set of mutually perpendicular bases would be represented by a diagonal metric matrix.</p>
 
 <p>Then the dot product could be expressed in the form</p>
 

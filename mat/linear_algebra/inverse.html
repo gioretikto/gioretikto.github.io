@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Inverse matrix"/>
+    <title>Inverse matrix</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Inverse matrix</h1>
+
+<p><b>Definition </b>. Let <i>A</i> &in; <i>M<sub>n,n</sub></i>(𝕂) a square matrix, we call <b>inverse matrix</b> of <i>A</i> (if exists) the matrix <i>A</i><sup>&minus;1</sup>, such that:</p>
+
+<div class="eq">
+<p><i>A ⋅ A<sup>&minus;1</sup> = A<sup>&minus;1</sup> ⋅ A = I<sub>n</sub></i></p>
+</div>
+
+<p>being <i>I<sub>n</sub></i> the identity matrix with order <i>n</i>. The set of invertible matrices of order <i>n</i> is denoted by GL<sub><i>n</i></sub>(𝕂), where GL stands for "linear group". (GL<sub><i>n</i></sub>(𝕂), ⋅) is a non commutative <a href="../algebra/groups.html">group</a> with respect to multiplication. </p>
+
+<div class="def">
+<p><b>Proposition I.1</b> Given <i>A</i> &in; <i>M<sub>n,n</sub></i>(𝕂), if the inverse of <i>A</i> exists is unique.</p>
+
+<p><b>Proof.</b> Let <i>A</i><sup>&minus;1</sup> its inverse. If <i>B</i> is a matrix such that:</p>
+
+<div class="eq">
+<p><i>BA = I</i></p>
+</div>
+
+<p>then:</p>
+
+<p align="center"><i>(BA) A</i><sup>-1</sup> = I <i>A<sup>&minus;1</sup></i></p>
+
+<p align="center"><i>(BAA<sup>-1</sup>) = B I = B I A<sup>-1</sup> = A<sup>-1</sup>I</i></p>
+
+<p>si ha quindi:</p>
+
+<p align="center"><i>B = A<sup>-1</sup></i></p>
+
+</div>
+
+<div class="def">
+<p><b>Theorem I.0</b> Sufficient condition for a matrix <i>A</i> &in; <i>M<sub>n,n</sub></i>(𝕂) to possess an inverse <i>A<sup>&minus;1</sup></i> is that det <i>A</i> &ne; 0. In this case the inverse is given by the following relation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mo data-mjx-texclass="OP" movablelimits="true">det</mo>
+      <mi>A</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>11</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>12</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mo>&#x2026;</mo>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>1</mn>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>21</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>22</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mo>&#x2026;</mo>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>2</mn>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x22EE;</mo>
+            </mrow>
+          </mtd>
+          <mtd>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x22EE;</mo>
+            </mrow>
+          </mtd>
+          <mtd></mtd>
+          <mtd>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x22EE;</mo>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mn>2</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mo>&#x2026;</mo>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>T</mi>
+  </msup>
+</math>
+
+<p>where <i>T</i> indicates the "transposition", A<sub>ij</sub> are the matrices obtained by removing the i-th row and j-th column from <i>A</i>.</p>
+
+<p><b>Proof.</b> - Proviamo prima che se esiste la matrice inversa di A, allora necessariamente det A &ne; 0. Infatti poichè A⋅A<sup>-1</sup> = I<sub>n</sub>, det(A⋅A<sup>&minus;1</sup>) = det <i>I<sub>n</sub></i>, owing to <a href="binet.html">Binet's Theorem</a> we have</p>
+
+<div class="eq">
+<p>1 = det <i>A</i> ⋅ det (<i>A</i><sup>&minus;1</sup>)</p>
+</div>
+
+<p>and this implies det <i>A</i> &ne; 0.</p>
+
+<p>Supposing that det <i>A</i> &ne; 0 we prove that the inverse is calculated as stated above. L'elemento di posto <i>ki</i> nella matrice identità A⋅A<sup>-1</sup> è in base alla (4.10)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>b</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mi>i</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mtext>det</mtext>
+      <mi mathvariant="bold">A</mi>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mtext>det</mtext>
+      <mi mathvariant="bold">A</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+</math>
+
+<p>ora se <i>k=i</i>, la sommatoria scritta vale det <b>A</b>, per la <a href="laplace.html">definizione di determinante</a> (1.3), e quindi b<sub>ki</sub> =1; se invece k&ne; i, mostriamo che tale somma vale 0. Infatti sia <b>A'</b> la matrice ottenuta da <b>A</b> rimpiazzando la riga <i>i</i> con una coppia della riga <i>k</i>. Alterare la riga <i>i</i> non altera i numeri A<sub>i1</sub> ...,A<sub>in</sub>. Si vede allora  che l'espressione</p>
+
+<p align="center">a<sub>k1</sub>A<sub>i1</sub>+ a<sub>k2</sub>A<sub>i2</sub> +....+ a<sub>kn</sub>A<sub>in</sub></p>
+
+<p>non è altro che det <b>A'</b>, per la definizione di determinante. Ma <b>A'</b> ha due righe uguali, quindi il suo determinante è nullo. Abbiamo quindi provato che l'elemento di posto <i>ki</i> nella matrice <b>A ⋅ A</b><sup>-1</sup> vale 1 se <i>k=i</i>, 0 se <i>k&ne;i</i>. &emsp;</p>
+</div>
+
+<p><b>Example</b>. Calculate the inverse of the matrix</p>
+
+ <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>Essendo triangolare det <i>A</i> = 1 ⋅ (&minus;1) ⋅ 2 = &minus;2 &ne;0, then <i>A</i><sup>&minus;1</sup> exists. We have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>11</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mn>2</mn>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>12</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>13</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>21</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mn>4</mn>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>2</mn>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>23</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>31</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>9</mn>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>32</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>A</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>33</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+        <mtr>
+          <mtd>
+            <mo>&#x2212;</mo>
+            <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mo>&#x2212;</mo>
+            <mn>4</mn>
+          </mtd>
+          <mtd>
+            <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>9</mn>
+          </mtd>
+          <mtd>
+            <mn>3</mn>
+          </mtd>
+          <mtd>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>T</mi>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>9</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>3</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>In the case of order 2 the calculation is particularly simple</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>In the hyphothesys det <i>A</i> = ad &minus; bc &ne; 0, we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>A</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>A</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>12</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>A</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>21</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>A</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>22</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>c</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>b</mi>
+        </mtd>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>thus</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>a</mi>
+      <mi>d</mi>
+      <mo>&#x2212;</mo>
+      <mi>b</mi>
+      <mi>c</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>c</mi>
+        </mtd>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p><b>Theorem 4.11</b> The set of invertible <I>n × n</i> matrices over R forms a group with respect to the matrix multiplication. We denote this group by GL<sub>n</sub>(R) (<i>“GL” abbreviates “general linear (group)”</i>).</p>
+
+<p><b>Proof</b> The associativity of the multiplication in GL<sub><i>n</i></sub>(ℝ) is clear. As shown in (2) in Lemma 4.10, the product of two invertible matrices is an invertible matrix. The neutral element in GL<sub>n</sub>(ℝ) is the identity matrix I<sub>n</sub> , and since every <i>A</i> ∈ GL<sub><i>n</i></sub>(ℝ) is assumed to be invertible, <i>A</i><sup>−1</sup> exists with (<i>A</i><sup>−1</sup>)<sup>−1</sup> = <i>A</i> ∈ GL<sub><i>n</i></sub>(ℝ). &emsp; □</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

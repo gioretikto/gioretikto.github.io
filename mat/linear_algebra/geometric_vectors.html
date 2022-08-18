@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Geometric Vectors"/>
     <title>Geometric Vectors</title>
     <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -21,27 +21,208 @@
 
 <h1>Geometric Vectors</h1>
 
-<p>The word <i>vector</i> comes from the Latin word <i>vector</i> meaning “carrier, transporter.” A vector is formed when a point is displaced—or “carried off ”—a given distance in a given direction. A <b>vector</b> is a directed line segment that corresponds to a displacement from one point <i>A</i> to another point <i>B</i>; see Figure 1. The vector from A to B is denoted by <span class="overline">AB</span>; the point A is called its initial point, or <i>tail</i>, and the point <i>B</i> is called its terminal point, or arrow-head. The direction of the arrowhead specifies the <b>direction</b> of the vector and the <b>length</b> of the arrow specifies the magnitude. Mathematicians call these <b>geometric vectors</b>.</p>
+<p>Quantities such as force and velocity involve both <i>magnitude</i> and <i>direction</i> and cannot be completely characterized by a signle number; such quantities are called <b>vectors</b>. <br> A convenient geometrical representation of a vector is provided by a straight line segment drawn in space parallel to the required direction, with an arrowhead indicating the <b>sense</b>. The given lenght of the line segment represents the magnitude of the vector <b><i>v</i></b>, insicated by |<b><i>v</i></b>|. <br>The <b>direction</b> of the vector is specified by the <b>direction cosines</b> of a (directed) line which are the cosines of the angles which the line makes with the positive directions of the coordinate axes.</p>
 
-<p>Often, a vector is simply denoted by a single boldface, lowercase letter such as <b>v</b>. It is natural to represent such vectors using coordinates. For example, in Figure 1, <i>A</i> = (3, 2) and we write the vector <b>a</b> = OA = [3, 2] using square brackets.</p>
+<img src="img/direction_cosines.png" alt="direction cosines"/>
 
-<p>Two vectors are considered “equal” if they have the same length and are lying on parallel lines having the same direction. In other words, they are equal if they can be placed one on the top of the other by a translation in the plane. The relation of being equal vectors in the set of all vectors in the plane is <i>reflexive, symmetric</i> and <i>transitive</i> thus it is <a href="../algebra/relations.html">an equivalence relation</a>, so it produces a partition in this set into equivalence classes of equal vectors. We shall denote the set of all equivalence classes by <i>V<sub>2</sub></i> and choose a representative of each class as we find it convenient. The most convenient way to choose a representative is to select a point in R<sup>2</sup> and declare it as the origin <i>O</i>. Then, we define as the representative of each class that vector <i>ā</i> from the class whose initial point is <i>O</i>.</p>
+<p>This four quantities are not independent. We know that we can calculate the length of <b><i>v</i></b> using Pythagoras' theorem</p>
+
+<div class="eq">
+<p>(cos &alpha;)<sup>2</sup> + (cos &beta;)<sup>2</sup> + (cos &gamma;)<sup>2</sup> = |<b><i>v</i></b>| &emsp;1.2.1</p>
+</div>
+
+<p>A vector <b><i>v</i></b> can be interpreted as the <b>displacement</b> from a point <i>P</i><sub>1</sub> of cartesian coordinates <i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>z</i><sub>1</sub> to a specific point <i>P</i><sub>2</sub>, of cartesian coordinates <i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>, <i>z</i><sub>2</sub>. The magnitude |<b><i>v</i></b>| of the vector is given by the Pythagoras' theorem as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>v</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>z</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>z</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ |v| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2} $$ -->
+
+<p>and its director cosines are</p>
+
+<div class="eq">
+<p>cos &alpha; = (<i>x</i><sub>2</sub> − <i>x</i><sub>1</sub>)/|<i><b>v</b></i>| &emsp; cos &beta; = (<i>y</i><sub>2</sub> − <i>y</i><sub>1</sub>)/|<i><b>v</b></i>| &emsp;cos &gamma; = (<i>z</i><sub>2</sub> − <i>z</i><sub>1</sub>)/|<i><b>v</b></i>|</p>
+</div>
+
+<h2>Component Form of a Vector</h2>
+
+<p>We have seen that the vector is characterized by dependent quantities. We want now to characterize a given vector <i><b>v</b></i> in terms of independent quantities, known as <b>components</b> of the vector. Each component is obtained by multiplying the magnitude of the vector by the direction cosine. The component form of a vector is written as <i><b>v</b></i> = (<i>a,b,c</i>), which each component expressed as</p>
+
+<div class="eq">
+<p><i>a</i> = |<i><b>v</b></i>| cos &alpha; &emsp; <i>b</i> = |<i><b>v</b></i>| cos &beta; &emsp; <i>c</i> = |<i><b>v</b></i>| cos &gamma; &emsp;1.2.2</p>
+</div>
+
+<p>Thus a component of a vector is the projection of the vector on an axis. So <i>a</i> is the component along the <i>x</i> axis. Since the magnitude |<i><b>v</b></i>|, is always positive, a component will be positive or negative depending on the angle <i>&theta;</i> either acute, or obtuse. Then by 1.2.1 we find the condition</p>
+
+<div class="eq">
+<p><i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> + <i>c</i><sup>2</sup> = |<i><b>v</b></i>|<sup>2</sup></p>
+</div>
+
+<p>Once |<i><b>v</b></i>| is determined 1.2.2 give us the directors cosines so that the direction of <i><b>v</b></i> is fully characterized.</p>
+
+<p>A vector whose magnitude is unity is called a <b>unit vector</b>. Given any vector <b>v</b> = a<b>i</b> + b<b>j</b> + c<b>k</b>, the unit vector having the same direction as that of given vector <i><b>v</b></i> is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi mathvariant="bold">v</mi>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>a</mi>
+      <mi mathvariant="bold">i</mi>
+      <mo>+</mo>
+      <mi>b</mi>
+      <mi mathvariant="bold">j</mi>
+      <mo>+</mo>
+      <mi>c</mi>
+      <mi mathvariant="bold">k</mi>
+    </mrow>
+    <msqrt>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+</math>
+
+<!-- $$ \hat{\mathbf{v}} = \frac{a\mathbf{i} + b\mathbf{j} + c\mathbf{k}}{\sqrt{a^2 + b^2 + c^2}} $$ -->
+
+<p>The coefficients <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mfrac>
+    <mi>a</mi>
+    <msqrt>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+</math>
+
+are sometimes referred to as <b>the direction cosines</b> (or directional cosines), they are the components (&alpha;, &beta;, &gamma;) of the unit vector.</p>
+
+<h2>Vector operations</h2>
+
+<p><b>Multiplying a vector by a scalar</b>: If we multiply a vector <i><b>v</b></i> by a scalar <i>&lambda;</i>, we get a new vector whose magnitude is the product of |<i><b>v</b></i>| by the absolute value of <i>&lambda;</i>. Its direction is the direction of <i><b>v</b></i> is <i>&lambda;</i> is positive but the opposite direction if <i>&lambda;</i> is negative. In particular the symbol −<i><b>v</b></i> represent the vector with opposite sense as <i><b>v</b></i>.</p>
+
+<p><b>Addition (sum) of two vectors</b>: Adding two vectors, say <b>u</b> and <b>v</b>, will make a third vector <b>w</b>, we write</p>
+
+<div class="eq">
+<p><b>u</b> + <b>v</b> = <b>w</b>.</p>
+</div>
+
+<p>Components can also be used to find the resultant of vectors if <b>u</b> = (u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>) and <b>v</b> = (v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>) then the resulting vector is</p>
+
+<div class="eq">
+<p><b>w</b> = (u<sub>1</sub> + v<sub>1</sub>, u<sub>2</sub> + v<sub>2</sub>, u<sub>3</sub> + v<sub>3</sub>)</p>
+</div>
+
+<p><b>Parallelogram Rule for Vector Additiob</b>. If <b>u</b> and <b>v</b> are vectors that are positioned so that their initial points coincide, then the two vectors form adjacent sides of a parallelogram, and the sum <b>u</b> + <b>v</b> = <b>w</b> is the vector represented by the arrow from the common point of <b>u</b> and <b>v</b> to the opposite vertex of the parallelogram</p>
+
+<img src="img/vectors_parallelogram_rule.png" alt="parallelogram rule"/>
+
+<p><b>Triangle Rule for Vector Addition</b>. If <b>u</b> and <b>v</b> are vectors that are positioned so the initial point of <b>v</b> is at the terminal point of <b>u</b>, then the sum <b>u</b> + <b>v</b> is represented by the arrow from the initial point of <b>u</b> to the terminal point of <b>v</b>.</p>
+
+<img src="img/vectors_sum.png" alt="sum of vectors"/>
+
+<p>Si verifica immediatamente che la somma di vettori gode della proprietà commutativa, cioè <i>u + v = v + u</i>, come si può vedere nella figura seguente</p>
+
+
+
+<p>Un altro metodo è quello del <i>parallelogramma</i>, volendo sommare due vettori <b>a</b> e <b>b</b>, si disegna un parallelogramma costituito dai lati <b>a</b> e <b>b</b>; il vettore somma <b>a+b</b> sarà dato dalla diagonale del parallelogramma.</p>
 
 <p>The vector whose initial and terminal points coincide has length zero, so we call this the zero vector and denote it by 0. The zero vector has no natural direction, so we will agree that it can be assigned any direction that is convenient for the problem at hand.</p>
 
-<p>The vector addition has the following properties: For <b>v, w, u</b> ∈ R<sup>n</sup>,
+<p>The vector addition has the following properties: For <b><i>v, w, u</i></b> ∈ ℝ<sup><i>n</i></sup>,</p>
 
 <ol type="a">
-	<li><p><b>v + w</b> = <b>w + v</b>,</p></li>
-	<li><p><b>v</b> + (<b>w + u</b>) = (<b>v + w</b>) + <b>u</b>,</p></li>
-	<li><p>there exists a zero vector <b>0</b>, with the property that <b>v + 0</b> = <b>v</b></p></li>
+	<li><p><b><i>v</i> + <i>w</i></b> = <b><i>w</i> + <i>v</i></b>,</p></li>
+	<li><p><b>v</b> + (<b>w + u</b>) = (<b><i>v</i></b> + <b><i>w</i></b>) + <b>u</b>,</p></li>
+	<li><p>there exists a zero vector <b>0</b>, with the property that <b>v</b> + <b>0</b> = <b>v</b></p></li>
 	<li><p>every vector <b>v</b> has an additive inverse −<b>v</b>, with the property that <b>v</b> + (−<b>v</b>) = 0.</p></li>
 </ol>
 
 <p>You should recognize these as the same defining properties possessed by addition in a ring (see Chapter 6) or the properties of the operation in an abelian group (see Chapter 19). Here, the additive identity is the zero vector 0. In R<sup>3</sup> , <b>0</b> = (0, 0, 0) and if <b>v</b> = (<i>v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub></i>), then −<b>v</b> = (<i>v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub></i>). The other arithmetic operation in the algebra of vectors is scalar multiplication, in which vectors are multiplied by scalars to give other vectors. Here, our scalars come from the field R. Scalar multiplication has the following properties: For r, s ∈ R and v, w ∈ R<sup>n</sup>,</p>
 
 <ol type="e">
-	<li><p>(r + s)<b>v</b> = r<b>v</b> + s<b>v</b>,</p></li>
+	<li><p>(<i>r</i> + <i>s</i>)<b>v</b> = r<b>v</b> + s<b>v</b>,</p></li>
 	<li><p>(rs)<b>v</b> = r(s<b>v</b>),</p></li>
 	<li><p>r(<b>v + w</b>) = r<b>v</b> + r<b>w</b>,</p></li>
 	<li><p>1<b>v</b> = <b>v</b>.</p></li>
@@ -64,24 +245,22 @@
 <img src="img/vettore.png" alt="vettore piano cartesiano"/>
 
 <p>La direzione ed il verso del vettore sono quelli indicati dalla freccia, mentre il suo modulo è la lunghezza della freccia.
-Un vettore è rappresentato in tal caso come un punto del piano cartesiano determinato da una coppia di numeri reali <i>( x , y )</i>, note come <i>componenti scalari del vettore</i>. Nello spazio tridimensionale un vettore è analogamente una terna di numeri reali <i>( x , y, z )</i> Si indica un vettore col simbolo <img src="img/OA.png" alt="vettore" class="inline"/>, con A la punta della freccia, oppure con simboli in grassetto come <b>v</b>, <b>a</b>. Il modulo di un vettore <b>v</b> è indicato con |<b>v</b>|. </p>
-Vettori geometrici
+Un vettore è rappresentato in tal caso come un punto del piano cartesiano determinato da una coppia di numeri reali (<i>(x , y</i>), note come <i>componenti scalari del vettore</i>. Nello spazio tridimensionale un vettore è analogamente una terna di numeri reali <i>( x , y, z )</i> Si indica un vettore col simbolo <img src="img/OA.png" alt="vettore" class="inline"/>, con A la punta della freccia, oppure con simboli in grassetto come <b>v</b>, <b>a</b>. Il modulo di un vettore <b>v</b> è indicato con |<b>v</b>|. </p>
 
-<h2>Somma e prodotto per uno scalare</h2>
+<h2>The Triangle Inequality</h2>
 
-<p>Nell’insieme dei vettori geometrici sono definite, in modo del tutto naturale, due operazioni. La prima consiste nella moltiplicazione di un vettore <sub>v</sub> per un numero (reale) λ. Se <sub>v</sub> rappresenta una determinata traslazione e se λ > 0, il vettore λv rappresenta una traslazione che avviene nella stessa direzione e nello stesso verso di quella rappresentata da <i>v</i>, ma determina uno spostamento pari a λ volte quello effettuato dalla traslazione rappresentata da <i>v</i>. Il vettore λ<i>v</i> è quindi rappresentato da un segmento orientato che ha la stessa direzione e verso di <i>v</i>, ma una lunghezza pari alla lunghezza di <i>v</i> moltiplicata per λ. <br> Se λ = 0 si ottiene un vettore di lunghezza nulla, che corrisponde a una “traslazione nulla.” In questo caso le nozioni di direzione e verso non hanno più alcun significato; il segmento orientato si riduce a un punto, il quale non ha più alcuna direzione e alcun verso. Se λ &lt; 0 si intende che il vettore λ<i>v</i> rappresenta una traslazione che avviene nella stessa direzione ma nel verso opposto a quella rappresentata da v, per uno spostamento pari al valore assoluto di λ moltiplicato per lo spostamento effettuato dalla traslazione rappresentata da <i>v</i>. In questo modo si ha che la composizione delle traslazioni corrispondenti ai vettori λ<i>v</i> e −λ<i>v</i> è la traslazione nulla: λ<i>v</i> + (−λ<i>v</i>) = 0.</p>
+<p><b>Proposition</b> (<b>Triangle inequality</b>). Suppose that <i><b>v</b></i> and <i><b>w</b></i> are two <i>n</i>-dimensional vectors. Then,</p>
 
-<p>La <b>somma di due vettori</b> corrisponde alla composizione di due <b>traslazioni</b>. Se <i>u</i> e <i>v</i> sono due vettori, la loro somma <i>w = u + v</i> è, per definizione, il vettore che rappresenta la traslazione che si ottiene effettuando prima la traslazione rappresentata da <i>u</i> e poi quella rappresentata da <i>v</i>. L’effetto di questa composizione di traslazioni è rappresentato nella figura sottostante.<br> Se la traslazione rappresentata da <i>u</i> porta il punto <i>A</i> nel punto <i>B</i> e la traslazione rappresentata da v porta il punto <i>B</i> nel punto <i>C</i>, allora la composizione delle due traslazioni, rappresentata da <i>w = u + v</i>, porta il punto <i>A</i> nel punto <i>C</i>. The addition of two vectors is accomplished by laying the vectors head to tail in sequence to create a triangle (known as <b>head-to-tail method</b>).</p>
+<div class="eq">
+<p>||<i><b>v</b></i> + <i><b>w</b></i>|| &le; ||<i><b>v</b></i>|| + ||<i><b>w</b></i>||</p>
+</div>
 
-<img src="img/vectors_sum.png" alt="sum of vectors"/>
+<p>The triangle inequality states that the <i>magnitude of a sum</i> is always less than or equal to the sum of the magnitudes of the individual vectors in the sum. Next Figures contains a geometric proof of the triangle inequality in ℝ<sup>2</sup>: Since the shortest distance between two points is a straight line, any side of any triangle is always shorter that then sum of the lenghts of the other two sides. The only case in which the rule is an equality, that is  ||<i><b>v</b></i> + <i><b>w</b></i>|| = ||<i><b>v</b></i>|| + ||<i><b>w</b></i>||, is when <i><b>v</b></i> and <i><b>w</b></i> have the same direction. In this case, the triangle "collapses", and has no interior.</p>
 
-<p>Si verifica immediatamente che la somma di vettori gode della proprietà commutativa, cioè <i>u + v = v + u</i>, come si può vedere nella figura seguente</p>
-
-<img src="img/vectors_parallelogram_rule.png" alt="parallelogram rule"/>
-
-<p>Un altro metodo è quello del <i>parallelogramma</i>, volendo sommare due vettori <b>a</b> e <b>b</b>, si disegna un parallelogramma costituito dai lati <b>a</b> e <b>b</b>; il vettore somma <b>a+b</b> sarà dato dalla diagonale del parallelogramma:</p>
-
-<img src="img/parallelogramma.png" alt="meotdo parallelogramma  vettori"/>
+<figure>
+<img src="img/triangle_inequality.png" alt="triangle inequality"/>
+<figcaption>The shortest distance between two points is a straight line</figcaption>
+</figure>
 
 <p>Questa figura illustra la cosiddetta <b>regola del parallelogramma</b>: il vettore <i>w = u + v</i> è la diagonale del parallelogramma che ha come lati i vettori <i>u</i> e <i>v</i>.</p>
 

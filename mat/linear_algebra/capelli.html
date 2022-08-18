@@ -1,0 +1,102 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Sistemi generali - Teorema di Rouché Capelli"/>
+    <title>Sistemi generali - Teorema di Rouché Capelli</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Sistemi generali - Teorema di Rouché Capelli</h1>
+
+<p>Consideriamo il sistema</p>
+
+<div class="eq">
+<p>
+<img class="inline" src="img/sistemagenerale.png" alt="equazione lineare"/>
+<span>4.3</span>
+</p>
+</div>
+
+<p>costiutio da <i>m </i> equazioni in <i>n</i> incognite. Sia <b>A</b> la matrice (m,n) dei coefficienti del sistema. Pensando di fissare in ℝ<sup>n</sup> e ℝ<sup>m</sup> le rispettive basi canoniche, sia L: ℝ<sup>n</sup> → ℝ<sup>m</sup> la trasformazione lineare rappresentata da <b>A</b>. Il sistema lineare può dunque riscriversi nella forma</p>
+
+<p align="center">L(<b>x</b>) = <b>b</b></p>
+
+<p>o anche</p>
+
+<p align="center">A<b>x</b> = <b>b</b></p>
+
+<p>con <b>x</b> &in; ℝ<sup>n</sup>, <b>b</b> &in; ℝ<sup>m</sup>. Risolvere il sistema significa trovare quali vettori <b>x</b> &in; ℝ<sup>n</sup> hanno come immagine attraverso L il vettore <b>b</b> &in; ℝ<sup>m</sup>. Vale la seguente proposizione</p>
+
+
+<div class="def">
+<p><b>Proposizione C.0</b> Sia Ax=b un sistema lineare in <i>m</i> equazioni ed <i>n</i> incognite, e siano <b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>, &in; ℝ<sup>n</sup> le colonne dei coefficienti. Allora il sistema è compatibile se e solo se b &in; Span(<b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>).</p>
+
+<p><b>Dimostrazione</b> - Il sistema si può scrivere come</p>
+
+<p align="center">x<sub>1</sub> <b>A</b><sup>1</sup> + ... + x<sub>n</sub><b>A</b><sup>n</sup> = <b>b</b></p>
+
+<p>I vettori A1,..., An sono linearmente indipendti per ipotesi, formano quindi una base di 𝕂n. Allora ogni vettore B presenta un'unica espressione, come combinazione lineare:
+
+<p>Quindi ili sistema è compatibile se e solo se <b>b</b> è combinazione delle colonne della matrice dei coefficienti, cioè se e solo se <b>b</b> &in; Span(<b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>).□</p>
+
+</div>
+
+<p>Dato il sistema (4.3) consideriamo le due matrici:</p>
+
+<img src="img/completa.png" alt="marice completa e incopleta"/>
+
+<!-- A= \left(\begin{array}{cccc}  a_{11} & a_{12} & \ldots & a_{13} \\  a_{21} & a_{22} & \ldots & a_{2n}\\   \ldots & \ldots & \ldots & \ldots \\   a_{m1} & a_{m2} & \ldots & a_{mn} \\\end{array}\right);  \qquad  A'= \left(\begin{array}{ccccc}  a_{11} & a_{12} & \ldots & a_{13} & b_1 \\  a_{21} & a_{22} & \ldots & a_{2n} & b_2 \\  \ldots & \ldots & \ldots & \ldots & b_3\\  a_{m1} & a_{m2} & \ldots & a_{mn} & b_m\\\end{array}\right)\end{mymath} -->
+
+<p>Sia <b>A</b> la matrice dei coefficienti del sistema e  <b>A'</b> la matrice ottenuta oralndo la matrice <b>A</b> con la colonna dei termini noti. La matrice <b>A'</b> si dice <b>completa</b> mentre la matrice <b>A</b> è chiamata <i>incompleta</i> del sistema lineare. Vale il seguente teorema.</p>
+
+<div class="def">
+<p><b>Teorema di Rouchè-Capelli</b> - Il sistema (4.3) ha soluzione solo se la matrice <b>A</b> e la matrice <b>A'</b> hanno lo stesso rango. Inoltre la soluzione, se esiste, è unica se e solo se rg A = <i>n</i></p>
+
+<p><b>Dimostrazione</b> - Grazie alla proposizione C.0 sappiamo che la soluzione esiste se e solo se <b>b</b> &in; Span(<b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>), che è equivalente a richiedere</p>
+
+<div class="eq">
+<p>Span(<b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>) = Span(<b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>,<b>b</b>).
+<span>(4.4)</span>
+</p>
+</div>
+
+<p>Ma il primo Span è l'immagine di L<sub>A</sub> mentre il secondo l'immagine di L<sub>A'</sub>. Siccome si ha sempre</p>
+
+<p align="center">Span(<b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>) &subseteq; Span(<b>A</b><sup>1</sup>,..., <b>A</b><sup>n</sup>,<b>b</b>) ⇔ rg A = rg A'</p>
+
+<p>L'uguaglianza (4.4) vale quindi se e solo se rg A = rg A'. L'unicità vale se e solo se Ker L<sub>A</sub> = {<b>0</b>}, il che accade se e solo se rg A = dim ℝ<sup>n</sup> = <i>n</i>. □</p>
+
+</div>
+
+<p>Osserviamo che se il sistema è omogeneo (<b>b</b> = <b>0</b>) la condizione rango di <b>A</b> = rango di <b>A'</b> è sempre soddisfatta.</p>
+
+<div class="def">
+<p><b>Teorema di Struttura</b> - Sia <b>x</b><sub>0</sub> una soluzione del sistema omogeneo <b>Ax</b> = <b>0</b>, e <b>x</b><sub>1</sub> una soluzione del sistema non omogeneo <b>Ax</b> =<b>b</b>. Allora anche <b>x</b><sub>0</suB> + <b>x</b><sub>1</sub> è soluzione del sistema non omogeneo, infatti:</p>
+
+<p align="center"><b>A</b> (<b>x</b><sub>1</sub> + <b>x</b><sub>0</sub>) = <b>b</b><sub>0</sub> + <b>0</b> = <b>b</b>
+
+<p>Se det <b>A</b> = 0, e <b>Ax</b> = <b>b</b> ha una soluzione, allora ne ha infinite. In altre parole quando det <b>A</b> = 0 per il sistema non omogeneo, viene a cadere o l'esistenza o l'unicità della soluzione.</p>
+</div>
+
+<section>
+<a href="sistemi.html">&#171;Sistemi di equazioni lineari</a>
+<a href="index.html">Index of Linear Algebra</a>
+<a href="gerund.html">The gerund&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

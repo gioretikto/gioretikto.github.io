@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Sistemi di equazioni lineari"/>
+    <title>Sistemi di equazioni lineari</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Sistemi di equazioni lineari</h1>
+
+<p>Le matrici intervengono nello studio dei sistemi lineari. Per sistema lineare s'intende <i>un sistema di equazioni algebriche di primo grado</i>.</p>
+
+<p>Siano <i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>, <i>n</i> incognite. Un'<i>equazione lineare</i> (o di primo grado) nelle incognite x<sub>i</sub> a coefficienti in &Kopf; è un'equazione della forma</p>
+
+<div class="eq">
+<p>
+<img class="inline" src="img/equazionelineare.png" alt="equazione lineare"/>
+<span>4.0</span>
+</p>
+</div>
+
+<p>Una <i>soluzione dell'equazione</i>, è un elemento (<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>) &in; &Kopf; che, sostituito nella (4.0) dà luogo a una identità.</p>
+
+<p>La (4.0) si dice <i>omogenea</i> se <i>b = 0</i>.</p>
+
+<p>Considerando un sistema generale di <i>n</i> equazioni in <i>n</i> incognite.</p>
+
+<div class="eq">
+<p>
+<img class="inline" src="img/sistemalineare.png" alt="sistema di equazioni lineari"/>
+<span>(4.1)</span>
+</p>
+</div>
+
+
+
+<p>La matrice A dei coefficienti è</p>
+
+<img src="img/A.png" alt="matrice dei coeffficienti"/>
+
+<!-- \mathbf{A} = \left(
+\begin{array}{cccc} a_{11} & a_{12} & \ldots & a_{1n} \\
+a_{21} & a_{22} & \ldots & a_{2n} \\
+\vdots \\
+a_{n1} & a_{n2} & \ldots & a_{nn} \\
+\end{array}  -->
+
+<p>Il sistema può riscriversi come</p>
+
+<p align="center"><b>A</b><sup>1</sup> x<sub>1</sub> + <b>A</b><sup>2</sup> x<sub>2</sub> + ...+ <b>A</b><sup>n</sup> x<sub>n</sub> = <b>b</b></p>
+
+<p>con <b>a</b><sub>i</sub> i vettori colonna della matrice <b>A</b>.</p>
+
+<p>Una soluzione del sistema (4.1) è un elemento di (<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>) &in; &Kopf;<sup>n</sup> che è soluzione simultanea delle <i>n</i> equazioni. Il sistema si dice <b>compatibile</b> (incompatibile) se possiede almeno una soluzione (se non ne possiede).</p>
+
+<p>Ponendo</p>
+
+<img src="img/coeffincogn.png" alt="vettori coefficienti ed incognite"/>
+
+<!-- \begin{cases} a_{11}x_1+ a_{12}x_2 + \ldots + a_{1n}x_n = b_1 \\
+a_{21}x_1+ a_{22}x_2 + \ldots + a_{2n}x_n = b_2\\
+\vdots \\
+a_{n1}x_1+ a_{n2}x_2 + \ldots + a_{nn}x_n = b_n\\
+\end{cases} -->
+
+<p>il sistema (4.1) può scriversi, come:</p>
+
+<p align="center"> <b>A</b> ⋅ <b>x</b> = <b>b</b></p>
+
+<h2>Soluzione di un sistema normale - Teorema di Cramer</h2>
+
+<p>Per risolvere il sistema ricorriamo all'analogia con l'equazione scalare <i>ax = b</i>. Se a &ne; 0, l'unica soluzione è <i>x=a/b</i>. L'analogo della condizione a &ne; 0 è ora <b>det A</b> &ne; 0. Infatti, per il teorema sulla matrice inversa, se <b>det A</b> &ne; 0 esiste <b>A</b><sup>-1</sup>; moltiplicando a sinistra <b>A</b><sup>-1</sup> entrambi i membri si trova<p>
+
+<p align="center"><b>A</b><sup>-1</sup>(<b>A</b>x) = <b>A</b><sup>-1</sup> ⋅ <b>b</b></p>
+
+<p>Utilizzando, la proprietà associativa per il prodotto tra matrici, si ricava:</p>
+
+<p align="center">(<b>A</b> ⋅<b>A</b><sup>-1</sup>)x = <b>A</b><sup>-1</sup> ⋅ <b>b</b></p>
+
+<p>ed infine poichè <b>A</b> ⋅<b>A</b><sup>-1</sup> = <b>I</b><sub>n</sub> e <b>I</b><sub>n</sub> <b>x </b> = <b>x</b>, si ottiene la formula seguente, per il <i>vettore soluzione</i> del sistema:</p>
+
+<p align="center"> <b>x</b> = <b>A</b><sup>-1</sup> ⋅ <b>b</b></p>
+
+<p>Si osserva che, sviluppando i calcoli indicati dalla, le componenti x<sub>i</sub> di <b>x</b> si ottengono dalla formula seguente:</p>
+
+<div class="eq">
+<p><b>x</b> = |<b>B</b><sub>i</sub>| / |<b>A</b>|
+<span>(4.2)</span>
+</p>
+</div>
+
+<p>dove a numeratore compare il determinante della matrice <b>B</b><sub>i</sub> che si ottiene dalla matrice <b>A</b> sostituendo </p>
+
+<div class="def">
+<p><b>Teorema di Cramer</b> - Consideriamo il sistema di <i>n</i> equazioni in <i>n</i> incognite</p>
+
+<p align="center"><b>Ax</b> = <b>B</b></p>
+
+<p>con <b>A</b> matrice (<i>n,n</i>), <b>b</b> &in; ℝ<sup>n</sup> assegnato e <b>x</b> &in; ℝ<sup>n</sup> incognito. Se det <b>A</b> &ne; 0, il sistema è determinato, ossia ha una e una sola soluzione, assegnata dalla (4.2).</p>
+</div>
+
+<p>Sistemi che ammettono le stesse soluzioni si dicono <b>equivalenti</b>. Due sistemi lineari sono sicuramente equivalenti se uno è ottenibile dall'altro operando sulle equazioni con un numero finito di trasformazioni, come:</p>
+
+<ol>
+    <li><p>scambio di due equazioni</p></li>
+    <li><p>moltiplicazione di una equazione per un numero reale &lambda; &ne; 0.</p></li>
+    <li><p>sostituzione di una equazione con la somma di essa e di un'altra.</p></li>
+</ol>
+
+<h2>Soluzione dei sistemi omogenei di n equazioni in n incognite</h2>
+
+<p>Un sistema si dice omogeneo se (<i>b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>m</sub> </i>)= 0, quindi se</p>
+
+<p align="center"><b>Ax</b> = <b>0</b></p>
+
+<p>In questo caso, se det <b>A</b> &ne; 0, l'unica soluzione è <b>x</b>=<b>0</b>. Viceversa, supponiamo che det <b>A</b> = 0, ciò significa per il <a href="rango.html#matriceindipendenza">teorema R.0</a> che le colonne di <b>A</b> , <b>A</b><sup>1</sup>, ..., <b>A</b><sup>n</sup> sono vettori linearmente dipendenti, ossia eistono numeri <i>x<sub>1</sub>, ..., x<sub>n</sub></i> non tutti nulli tali che</p>
+
+<p align="center">x<sub>1</sub> <b>A</b><sup>1</sup>+ x<sub>2</sub> <b>A</b><sup>2</sup>+ ...+ x<sub>n</sub> <b>A</b><sup>n</sup> =0</p>
+
+<p>ossia il sistema <b>Ax</b> = <b>0</b> in questo caso ammette almeno una soluzione <b>x</b> non banale (ossia una soluzione <b>x</b> &ne; 0). Si noti che se <b>Ax</b> = <b>0</b> si ha per ogni &lambda; &in; ℝ,</p>
+
+<p align="center"> <b>A</b>(&lambda;<b>x</b>) = <b>0</b>
+
+<p>perciò in questo caso le soluzioni del sistema omogeneo sono infinite. Riassumendo vale il seguente teorema.</p>
+
+<div class="def">
+<p><b>Teorema 6.0</b>- Il sistema omogeneo di <i>n</i> equazioni in <i>n</i> incognite</p>
+
+<p align="center"><b>Ax</b> = <b>0</b></p>
+
+<p>ha solo la soluzione banale (<b>x</b> = <b>0</b>) se e solo se det <b>A</b> &ne; ; ha almeno una soluzione non banale se e solo se det <b>A</b> = 0.</p>
+</div>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="capelli.html">Sistemi generali - Teorema di Rouché Capelli &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

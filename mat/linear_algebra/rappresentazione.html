@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Rappresentazione lineare delle trasformazioni lineari"/>
+    <title>Rappresentazione lineare delle trasformazioni lineari</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Rappresentazione lineare delle trasformazioni lineari</h1>
+
+<p>Abbiamo visto che la matrice A<sub>&alpha;</sub> di ordine 2 realizza una rotazione del piano (attorno all'origine) di un angolo &alpha;, nel senso che, preso il vettore (x,y), il vettore trasformato, si ottiene ruotando di un angolo &alpha; attorno all'origine (nel senso positivo). In generale, una matrice quadrata <b>A</b>, qudrata di ordine <i>n</i>, traforma un vettore di ℝ<sup>n</sup> in un altro vettore di ℝ<sup>n</sup> mediante il prodotto righe per colonne (pensanso sempre ai vettori come colonne): <b>x</b> &in; ℝ<sup>n</sup> è trasformato nel vettore <b>Ax</b> &in; ℝ<sup>n</sup>, nel vettore <b>Ax</b> &in; ℝ<sup>m</sup>.</p>
+
+<div class="eq">
+<p><i>L</i>: ℝ<sup><i>n</i></sup> ⟶ ℝ<sup><i>m</i></sup><br> <i>L</i>: <i><b>x</b></i> ⟼ <i>A</i><i><b>x</b></i></p>
+</div>
+
+<p>Infine, considerazioni analoghe valgono per il campo complesso ℂ: una matrice di tipo (m,n) a elementi complessi realizza una trasformazione lineare di ℂ<sup>n</sup> in ℂ<sup>m</sup>. Il prossimo teorema afferma che tutte le trasformazioni lineari tra due spazi vetoriali qualsiasi di dimensione finita si possono rappresentare a questo modo.</p>
+    
+<div class="def" id="rappresentazione">
+<p><b>Teorema 6.1 - Teorema di Rappresentazione</b> - Sia data una applicazione lineare <i>L : V → W</i> con  <i>V</i> e <i>W</i> due spazi vettoriali, sul campo &Kopf;. Fissate due basi <b>u<sub>1</sub>, u<sub>2</sub> , ..., u<sub>n</sub></b> in <i>V</i> e <b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>m</sub></b> in <i>W</i>, esiste una matrice unica <i>A (m x n)</i>  a elementi in &Kopf; che rappresenta <i>L</i>. Nel senso che se, <b>x</b> = x<sub>1</sub> <b>u<sub>1</sub></b> + x<sub>2</sub> <b>u<sub>2</sub></b> + ... + x<sub>m</sub><b>u<sub>m</sub></b>, la trasformazione <i>L(<b>x</b>) = y<sub>1</sub> <b>v<sub>1</sub></b>+ y<sub>2</sub> <b>v<sub></sub></b> + ...+ <b>v<sub>m</sub></b></i>, si può rappresentare in forma matriciale come</p>
+
+<img src="img/teorappresentazione.png" alt="teorema di rappresentazione"/>
+
+<p><b>Dim.</b> - I vettori <i>L( <b>u<sub>j</sub></b> ) &in; W</i>, si poosono esprimere come combinazione lineari dei vettori della base:</p>
+
+<img src="img/teorappresentazione1.png" alt="teorema di rappresentazione"/>
+
+<p>per opportuni coefficienti <i>a<sub>ij</sub></i> &in; ℝ.</p>
+
+<p>Poniano:</p>
+
+<img src="img/Aij.png" alt="matrice m x n"/>
+
+<p>e <b>x</b> = x<sub>1</sub> <b>u<sub>1</sub></b> + x<sub>2</sub> <b>u<sub>2</sub></b> + ... + x<sub>m</sub><b>u<sub>m</sub></b>. Si ha per la linearità di <i>L</i> e per le equazioni precedenti:</p>
+
+<img src="img/dimrappresentazione.png" alt="teorema rappresentazione dimostrazione"/>
+
+<!-- \begin{array}{c}L(\mathbf{x}) = L(\sum_{j=1}^n x_j \mathbf{u}_j) = \sum_{j=1}^n x_j L(\mathbf{u}_j) = \sum_{j=1}^n x_j \sum_{i=1}^m a_{ij}\mathbf{v}_i  \\ \\
+ = \sum_{j=1}^n \sum_{i=1}^m a_{ij} x_j\mathbf{v}_i = \sum_{i=1}^m (\sum_{j=1}^n a_{ij} x_j)\mathbf{v}_i  -->
+
+<p>Risulta evidente che le componenti scalari di <i>L<b>(x)</b></i>, rispetto alla base <b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>m</sub></b> sono date dalla relazione:</p>
+
+<img src="img/dimrappresentazione1.png" alt="teorema rappresentazione dimostrazione"/>
+
+<p>o in forma matriciale</p>
+
+<img src="img/teorappresentazione.png" alt="teorema di rappresentazione"/>
+
+<p>La matrice <i>A</i> è unica nel rappresentare <i>L</i> poichè ogni vettore <i>L( <b>u<sub>j</sub></b> )</i> si può esprimere in un unico modo come combinazione lineare dei vettori <b>v<sub>1</sub>, v<sub>2</sub> , ..., v<sub>m</sub></b>.□</p>
+
+</div>
+
+<h2>Osservazioni</h2>
+
+<ol>
+<li><p>Il teorema di rappresentazione chiarisce il motivo per cui il prodotto di matrici è stato definito proprio in quel modo ("righe per colonne").</p></li>
+</ol>
+
+<section>
+<a href="applicazioni.html">&#171;Applicazioni Lineari</a>
+<a href="index.html">Index</a>
+<a href="composte.html">Trasformazioni lineari composte &#187;</a>
+</section>
+
+</body>
+</html>
