@@ -55,21 +55,34 @@
 <p>If we indicate the pair (0,1) with the symbol <i>i</i>, we can write</p>
 
 <div class="eq">
-<p>(<i>a,b</i>) = (<i>a</i>,0) + (0,<i>b</i>) = (<i>a</i>, 0) + (0,1)(<i>b</i>,0) = <i>a + ib</i></p>
-<p><i>i<sup>2</sup></i> = (0,1)(0,1) = −1</p>
+<p>(<i>a,b</i>) = (<i>a</i>,0) + (0,<i>b</i>) = (<i>a</i>, 0) + (0,1)(<i>b</i>,0) = <i>a</i> + <i>ib</i></p>
+<p><i>i</i><sup>2</sup> = (0,1)(0,1) = −1</p>
 </div>
 
 <p>The element <i>i</i> &in; ℂ is known as <i>imaginary unit</i>. Using this notation we have</p>
 
 <div class="eq">
 <p>(<i>a</i> + <i>ib</i>) + (<i>c</i> + <i>id</i>) = (<i>a</i> + <i>c</i>) + <i>i</i> (<i>b</i> + <i>d</i>)</p>
+</div>
+
+<p>To add two complex numbers together we just add up their real and imaginary parts.</p>
+
+<div class="eq">
 <p>(<i>a</i> + <i>ib</i>) ⋅ (<i>c</i> + <i>id</i>) = (<i>ac</i> − <i>bd</i>) + <i>i</i> (<i>ad</i> + <i>bc</i>)</p>
 </div>
 
-<p>Give <i>z</i> = <i>x</i> + <i>iy</i>, we call <b>complex conjugate</b> of <i>z</i> and we denote it by <i>z̄</i> the number</p>
+<p>We multiply two complex numbers together as we multiply real numbers together, and we make use of the fact that <i>i</i><sup>2</sup> = −1. <br> We can thus think of ℂ much like we think of ℝ<sup>2</sup> (i.e., we think of the complex number <i>a</i> + <i>bi</i> ∈ ℂ as the vector (<i>a, b</i>) ∈ ℝ<sup>2</sup>), but with a multiplication operation that we do not have on ℝ<sup>2</sup>.</p>
+
+<p id="conjugate">Given <i>z</i> = <i>x</i> + <i>iy</i>, we call <b>complex conjugate</b> of <i>z</i> and we denote it by <i>z̄</i> the number</p>
 
 <div class="eq">
 <p><i>z̄</i> = <i>x</i> − <i>iy</i></p>
+</div>
+
+<p>for example,</p>
+
+<div class="eq">
+<p><span class="overline">4 + 5<i>i</i></span> = 4 − 5<i>i</i>, &emsp; <span class="overline">6 − 7<i>i</i></span> = 6 + 7<i>i</i>, &emsp; <span class="overline">2<i>i</i></span> = −2<i>i</i>, &emsp; 7̄ = 7.</p>
 </div>
 
 <p>Complex conjugates give us another way to interpret <b>reciprocals</b>. You can easily verify that a complex number <i>z</i> = <i>x</i> + <i>yi</i> times its conjugate <i>x</i> – <i>yi</i> is the square of its absolute value |<i>z</i>|<sup>2</sup>.</p>
@@ -104,9 +117,7 @@
 </ol>
 </div>
 
-<div id="norm">
-<p>The real number <i>zz̄</i> is known as <i>norm</i> of the complex number <i>z</i> and its square root √(<i>zz̄</i>) is = (<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>)<sup>1/2</sup> is knwon as <i>module</i> of <i>z</i> and indicated by |<i>z</i>|.</p>
-</div>
+<p id="norm">The real number <i>zz̄</i> is known as <i>norm</i> of the complex number <i>z</i> and its square root √(<i>zz̄</i>) is = (<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>)<sup>1/2</sup> is knwon as <i>module</i> of <i>z</i> and indicated by |<i>z</i>|.</p>
 
 <p><b>Definition 4.13.2</b> For any complex number <i>z</i><sub>1</sub> = <i>a</i> + <i>bi</i> and <i>z</i><sub>2</sub> = <i>c</i> + <i>di</i></p>
 
@@ -137,13 +148,42 @@
 <figcaptin>Geometric representation of triangle inequality</figpcation>
 </figure>
 
-<h2>Trigonometric form</h2>
+<h2>Complex plane and Trigonometric form</h2>
 
-<p>From the geometric representation of complex numbers</p>
+<p>Much like we think of ℝ as a line, we can think of ℂ as a plane, called the complex plane. The set of real numbers takes the place of the <i>x</i>-axis (which we call the real axis) and the set of imaginary numbers takes the place of the <i>y</i>-axis (which we called the imaginary axis), so that the number <i>a</i> + <i>bi</i> has coordinates (<i>a, b</i>) on that plane, as in the following Figure</p>
 
 <img src="img/complex_number.png" alt="complex number in plane"/>
 
-<p>let <i>&theta;</i> be the angle subtended between the positive real axis and the line segment <i>OP</i>, and let <i>r</i><sup>2</sup> = <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>, we have the following relations</p>
+<p>With the similarities with ℝ<sup>2</sup> in mind, we can also define the <b>norm</b> or <b>magnitude</b> of a complex number <i>a</i> + <i>bi</i> to be the quantity</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>y</mi>
+  <mi>i</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>:=</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ |x+yi| := \sqrt{x^2+y^2} $$ -->
+
+<p>which is simply the length of the associated vector (<i>x, y</i>) (i.e., it is the distance between <i>x</i> + <i>yi</i> and the origin in the complex plane).</p>
+
+<p>Let <i>&theta;</i> be the angle subtended between the positive real axis and the line segment <i>OP</i>, and let <i>r</i><sup>2</sup> = <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>, we have the following relations</p>
 
 <div class="eq">
 <p><i>x</i> = <i>r</i> cos <i>&theta;</i> &emsp;<i>y</i> = <i>r</i> sin <i>&theta;</i></p>
@@ -157,12 +197,13 @@
 
 <p>The angle <i>&theta;</i> is known as the <i>argument</i> of the complex number <i>z</i>, the number <i>r</i> corresponds to the module of <i>z</i>: <i>r</i> = |<i>z</i>| = (<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>)<sup>1/2</sup>. The module, <i>r</i>, is unique, but the angle <i>&theta;</i> is not unique since there are many angles in standard position with <i>P</i> on their terminal side.</p>
 
+<div id="De_Moivre">
 <h2>De Moivre’s formula</h2>
 
 <p>If <i>z</i> and <i>z'</i> have the following representation <i>z</i> = <i>r</i>[cos<i>&theta;</i> + <i>i</i> sin<i>&theta;</i>] and <i>z'</i> = <i>r'</i>(cos<i>&theta;'</i> + <i>i</i> sin<i>&theta;'</i>) then as it can be easily verified</p>
 
 <div class="eq">
-<p><i>z</i> ⋅ <i>z</i>' = <i>rr'</i>(cos (<i>&theta;</i> + <i>&theta;</i>') + <i>i</i> sin(<i>&theta;</i> + <i>&theta;'</i>))</p>
+<p><i>z</i> ⋅ <i>z</i>' = <i>rr'</i> [cos (<i>&theta;</i> + <i>&theta;</i>') + <i>i</i> sin(<i>&theta;</i> + <i>&theta;'</i>)]</p>
 </div>
 
 <p>the product of two complex numbers in trigonometric form is equal to a complex number having as argument the sum of the arguments and as module the product of moduli. The trigonometric form of a complex number is particularly useful to calculate the powers; for every integer <i>n</i> &gt; 0, we have the following relation known as <i>De Moivre Formula</i>, valid for every integer <i>n</i> and every <i>&theta;</i> ∈ ℝ</p>
@@ -205,6 +246,8 @@
 
 <p>For <i>k</i> = 0, 1, <i>n</i>−1 the <i>z<sub>k</sub></i> are all distincts and represent the distinct <i>n</i>-th roots of <i>u</i>. For <i>u</i> = 0 there is a unique root which is zero.</p>
 
+</div>
+
 <p><b>Definition 4.13.3 </b>The roots in ℂ of the polynomial <i>x<sup>n</sup></i> − 1 are called the <b>complex <i>n</i>th roots of unity</b>.<br> A complex <i>n</i>th root of unity is said to be <b>primitive</b> if it is a root of the polynomial <i>x<sup>n</sup></i> − 1, but is not a root of <i>x<sup>m</sup></i> = 1 for any positive integer <i>m</i> &lt; <i>n</i>.</p>
 
 <p>For <i>u</i> = 1, we have the <b><i>n</i>th roots of unity</b>: 1 = cos(<i>n&theta;</i>) + <i>i</i> sin(<i>n&theta;</i>), and hence cos(<i>n&theta;</i>) = 1 and sin(<i>n&theta;</i>) = 0. The only way this can be verifies is when <i>n&theta;</i> is an integer multiple of 2<i>&pi;</i>, or equivalently <i>&theta;</i> = 2<i>k&pi;</i>/<i>n</i> for some integer <i>k</i>. So the <i>n</i>-th roots of unity are cos(2<i>k&pi;</i>/<i>n</i>) + <i>i</i> sin(2<i>k&pi;</i>/<i>n</i>), for <i>k</i> = 0,...,<i>n</i> − 1. Let</p>
@@ -233,17 +276,7 @@
 
 <img src="img/complex_polygon.png" alt="sided polygon inscribed inside the unit circle"/>
 
-<p><b>Definition 4.13.4</b> Let <i>n</i> be a positive integer. A <b>primitive  nth root of unity</b> is an <i>n</i>th root of unity that is not a <i>k</i>th root of unity for any positive <i>k</i> &lt; <i>n</i>. That is, <i>ζ</i> is a primitive <i>n</i>th root of unity if and only if</p>
-
-<div class="eq">
-<p><i>ζ<sup>n</sup></i> = 1, and <i>ζ<sup>k</sup></i> ≠ 1 for any positive integer <i>k</i> &lt; <i>n</i>.</p>
-</div>
-
-<p>There are four4th roots of unity given by ±1, ±<i>i</i>. Two of these, namely ±<i>i</i>, are primitive. The other two are not: 1<sup>1</sup> = 1 and (−1)<sup>2</sup> = 1.</p>
-
-</div> <!-- end id roots of unity -->
-
-<p><b>Exercise 4.13.5</b>. Calculate the module of the following complex numbers</p>
+<p><b>Exercise 4.13.4</b>. Calculate the module of the following complex numbers</p>
 
 <ol>
 	<li><p>1 + <i>i</i> + <i>i</i><sup>2</sup> + <i>i</i><sup>3</sup> + <i>i</i><sup>4</sup> + <i>i</i><sup>5</sup></p></li>
@@ -259,7 +292,7 @@
 	<li><p>|(1 + <i>i</i>)(1 − <i>i</i>)| = |1 −<i>i</i> + <i>i</i> + 1| = |2| = 2.</p>
 </ol>
 
-<p><b>Exercise 4.13.6</b>. Calculate</p>
+<p><b>Exercise 4.13.5</b>. Calculate</p>
 
 <ol type="a">
 	<li><p>The 4-th roots of <i>i</i>.</p></li>
@@ -285,8 +318,8 @@
 
 <section aria-label="End">
 <a href="different_bases.html">&#171;Representation of numbers in arbitrary bases</a>
-<a href="index.html">Index of Algebra</a>
-<a href="polynomial.html">Polynomial &#187;</a>
+<a href="index.html">Index</a>
+<a href="polynomials.html">Polynomials &#187;</a>
 </section>
 
 </div>

@@ -25,18 +25,24 @@
 
 <p>We take the natural numbers to be elements of any set ℕ, defined by the triple (ℕ, &sigma;, 0) where ℕ is a set, <i>&sigma;</i> an application from ℕ to ℕ and 0 an element of ℕ with the following properties (<i>Peano axioms</i>):</p>
 
-<p>ℕ<sub>1</sub> <i>&sigma;</i> is injective: Every number <i>n</i> has precisely one successor <i>n'</i>.</p></li>
-<p>ℕ<sub>2</sub> 0 &ne; Im &sigma;</p></li>
-<p>ℕ<sub>3</sub> (<i>Assioma di induzione</i>): every subset <i>U</i> of ℕ such that</p>
+<ul>
+	<li><p>ℕ<sub>1</sub> <i>&sigma;</i> is injective: Every number <i>n</i> has precisely one successor <i>n'</i>.</p></li>
+	<li><p>ℕ<sub>2</sub> 0 &ne; Im &sigma;</p></li>
+	
+	<li><p>ℕ<sub>3</sub> (<i>Assioma di induzione</i>): every subset <i>U</i> of ℕ such that</p>
 
 <ol type="a">
-<li><p>0 &in; <i>U</i></p></li>
-<li><p><i>k</i> &in; <i>U</i> ⇒ &sigma;</i>(<i>k</i>) &in; <i>U</i> &emsp; &forall;<i>k</i></p></li>
+	<li><p>0 &in; <i>U</i></p></li>
+	<li><p><i>k</i> &in; <i>U</i> ⇒ &sigma;</i>(<i>k</i>) &in; <i>U</i> &emsp; &forall;<i>k</i></p></li>
 </ol>
+
+</li>
+
+</ul>
 
 <p>coincide con tutto ℕ.</p>
 
-<p>Given an element <i>n &in; ℕ</i>, the element <i>&sigma;</i>(<i>n</i>) is said <i>successor</i> of <i>n</i>. Resta definita in ℕ allora in modo naturale una <i>relazione d'ordine</i>, &le;. Il postulato ℕ<sub>3</sub> è noto come il <p>principio di induzione matematica</i>. Si può dimostrare che se (𝔸, &sigma;,0) e (𝔸',&sigma;',0') sono due terne che verificano i postulati precedenti, allora esse sono "sostanzialmente identiche", nel senso che esiste una corrispondenza biunivoca <i>&phi;</i> tra 𝔸 e 𝔸' tale che &sigma;'(&phi;(n)) = &phi;(&sigma;(<i>n</i>)), cioè il successivo del trasformato è il trasformato del successivo. Quindi si può dire che i <i>postulati di Peano caratterizzano i numeri naturali</i>. Quello che si deve <i>postulare</i> (cioè accettare senza dimostrazione) è l'esistenza di un insieme ℕ verificante gli assiomi di Peano. L'intero edificio matematico è pertanto basato sull'accettazione dell'esistenza dei numeri naturali. Knonecker espresse questo fatto con la famosa frase:</p>
+<p>Given an element <i>n</i> &in; ℕ, the element <i>&sigma;</i>(<i>n</i>) is said <i>successor</i> of <i>n</i>. Resta definita in ℕ allora in modo naturale una <i>relazione d'ordine</i>, &le;. Il postulato ℕ<sub>3</sub> è noto come il <p>principio di induzione matematica</i>. Si può dimostrare che se (𝔸, &sigma;,0) e (𝔸',&sigma;',0') sono due terne che verificano i postulati precedenti, allora esse sono "sostanzialmente identiche", nel senso che esiste una corrispondenza biunivoca <i>&phi;</i> between 𝔸 and 𝔸' such that &sigma;'(&phi;(<i>n</i>)) = &phi;(&sigma;(<i>n</i>)), cioè il successivo del trasformato è il trasformato del successivo. Quindi si può dire che i <i>postulati di Peano caratterizzano i numeri naturali</i>. Quello che si deve <i>postulare</i> (cioè accettare senza dimostrazione) è l'esistenza di un insieme ℕ verificante gli assiomi di Peano. L'intero edificio matematico è pertanto basato sull'accettazione dell'esistenza dei numeri naturali. Knonecker espresse questo fatto con la famosa frase:</p>
 
 <blockquote>Die ganzen Zahlen hat der liebe Gott gemacht, alles andere ist Menschenwerk. (Kronecker)</blockquote>
 
@@ -44,21 +50,21 @@
 
 <p><b>Definition 1.4</b>. Una <i>operazione binaria</i> in un insieme <i>S</i> è un'applicazione da <i>S</i> x <i>S</i> in <i>S</i>, ossia una legge che associa ad ogni coppia di elementi di <i>S</i> un ben determinato elemento di <i>S</i>.</p>
 
-<p>Ad esempio, l'unione tra sottoinsiemi di un insieme <i>X</i> è un'operazione binaria definita in 𝓟(<i>X</i>):</p>
+<p>For example, l'unione tra sottoinsiemi di un insieme <i>X</i> is a binary operation defined in 𝓟(<i>X</i>):</p>
 
 <div class="eq">
 <p><i>U</i> : 𝓟(<i>X</i>) x 𝓟(<i>X</i>) → 𝓟(<i>X</i>)</p>
 <p>(<i>A,B</i>) ↦ <i>A</i> U <i>B</i></p>
 </div>
 
-<p>L'ordinaria addizione tra interi è un'operazione binaria definita in:</p>
+<p>The ordinary addition of integers is a binary operation definined as:</p>
 
 <div class="eq">
 <p>+ : ℤ x ℤ → ℤ</p>
 <p>(<i>a,b</i>) ↦ <i>a</i> + <i>b</i></p>
 </div>
 
-<p>Il risultato dell'operazione di addizione, ossia l'elemento <i>a</i> + <i>b</i> &in; ℤ, prende il nome di <i>somma</i> di <i>a</i> e <i>b</i>.</p>
+<p>The result of the addition operation, that is the element <i>a</i> + <i>b</i> &in; ℤ, is called <i>sum</i> of <i>a</i> e <i>b</i>.</p>
 
 <p>Si parla anche di operazioni <i>n</i>-arie per vari <i>n</i> = 1,2,.... Si tratta di applicazioni da <i>S</i> x <i>S</i> x ... x <i>S</i> in <i>S</i>. Per <i>n</i> = 1 un'operazione 1-aria definita su <i>S</i> è un'applicazione da <i>S</i> a <i>S</i>. Se <i>S</i> = <i>P</i>(<i>X</i>), un esempio di applicazione 1-aria è l'applicazione che associa ad ogni sottoinsieme di <i>X</i> il suo complementare.</p>
 
@@ -211,14 +217,14 @@
 
 <h2>The principle of mathematical induction</h2>
 
-<p>Il terzo assioma di Peano ℕ<sub>3</sub> è alla base del principio di induzione. Esso sostanzialmente dice che se un sottoinsieme <i>U</i> di ℕ è tale che contiene lo zero e, accanto ad ogni elemento, contiene anche il successivo, allora necessariamente U coincide con tutto ℕ. L'accettazione di questo assioma fornisce "gratuitamente" un metodo di dimostrazione per induzione che è di fondamentale importanza matematica. Vediamo in che cosa consiste. Supponiamo che per ogni intero <i>n &ge; 0</i> si possa formulare una proposizione <i>P(n)</i>, dipendente dall'interno <i>n</i>, ad esempio la proposizione seguente: "se un insieme finito <i>S</i> ha <i>n</i> elementi, allora l'insieme delle parti di <i>S</i> ha 2<sup><i>n</i></sup> elementi". Supponiamo di voler provare che la proposizione <i>P</i>(<i>n</i>) è vera per ogni <i>n</i>: si tratta di dimostrare infinite proposizioni! Ebbene il metodo di dimostrazione per induzione permette di ottenere questi <i>infinit</i> risultati con due soli passi. Si procede nel modo seguente:</p>
+<p>Il terzo assioma di Peano ℕ<sub>3</sub> è alla base del principio di induzione. Esso sostanzialmente dice che se un sottoinsieme <i>U</i> di ℕ è tale che contiene lo zero e, accanto ad ogni elemento, contiene anche il successivo, allora necessariamente U coincide con tutto ℕ. L'accettazione di questo assioma fornisce "gratuitamente" un metodo di dimostrazione per induzione che è di fondamentale importanza matematica. Vediamo in che cosa consiste. Supponiamo che per ogni intero <i>n &ge; 0</i> si possa formulare una proposizione P(<i>n</i>), dipendente dall'interno <i>n</i>, ad esempio la proposizione seguente: "se un insieme finito <i>S</i> ha <i>n</i> elementi, allora l'insieme delle parti di <i>S</i> ha 2<sup><i>n</i></sup> elementi". Supponiamo di voler provare che la proposizione <i>P</i>(<i>n</i>) è vera per ogni <i>n</i>: si tratta di dimostrare infinite proposizioni! Ebbene il metodo di dimostrazione per induzione permette di ottenere questi <i>infinit</i> risultati con due soli passi. Si procede nel modo seguente:</p>
 
 <ol>
 	<li><p>Base dell'induzione: Dimostrare che è vera <i>P</i>(0)</p></li>
-	<li><p>Passo induttivo: Dimostrare che per ogni <i>k</i>, dall'essere vera <i>P</i>(<i>k</i>) segue che è vera <i>P</i>(<i>k</i> + 1).</p></li>
+	<li><p>Passo induttivo: Dimostrare che per ogni <i>k</i>, dall'essere vera <i>P</i>(<i>k</i>) segue che è vera <i>P</i>(<i>k</i> + 1) that is P(<i>k</i>) ⇒ P(<i>k</i>+1).</p></li>
 </ol>
 
-<p>Allora si può concludere di aver dimostrato che <i>P</i>(<i>n</i>) è vero per ogni <i>n</i>. Infatti posto <i>U</i> = {<i>n</i> &in; ℕ | <i>P</i>(n)</i> è vera}, risulta 0 &in; <i>U</i> perché è stato provato che <i>P</i>(0) è vera. Inoltre, <i>k</i> &in; <i>U</i>, cioè se <i>P</i>(<i>k</i>) è vera, allora <i>P(k+1)</i> è vera, (passo induttivo) e quindi <i>k</i> + 1 &in; <i>U</i>, da cui segue, in virtù di ℕ<sub>3</sub>, <i>U</i> = ℕ, ossia <i>P</i>(<i>n</i>) è vera per ogni <i>n</i>.</p>
+<p>Then we can conclude to have proved that <i>P</i>(<i>n</i>) is true for every <i>n</i>. Indeed by letting <i>U</i> = {<i>n</i> &in; ℕ | <i>P</i>(n)</i> is true}, it results 0 &in; <i>U</i> because it has been proved that <i>P</i>(0) is true. Further, <i>k</i> &in; <i>U</i>, that is if <i>P</i>(<i>k</i>) is true, then <i>P(k+1)</i> is true, (inductive step) and thus <i>k</i> + 1 &in; <i>U</i>, from whihc follows, by ℕ<sub>3</sub>, <i>U</i> = ℕ, that is <i>P</i>(<i>n</i>) is true for every <i>n</i>.</p>
 
 <p>Si notiche che se vogliamo dimostrare una proposizione <i>P</i>(<i>n</i>) non per tutti gli <i>n</i>, ma per tutti gli <i>n &ge; n<sub>0</sub></i>, basta provare come base dell'induzione <i>P</i>(<i>n</i><sub>0</sub>) anziché <i>P</i>(0).</p>
 
@@ -234,11 +240,11 @@
 	<li><p>La base dell'induzione: <i>P</i>(1) è verificata perché per <i>n</i> = 1 entrambi i membri si riducono a 2<sup>3</sup>.</p></li>
 	<li><p>Il passo induttivo: Supposta vera <i>P</i>(<i>n</i> − 1), dimostriamo <i>P</i>(<i>n</i>). La <i>P</i>(<i>n</i> − 1) (che stiamo supponendo vera) è:</p>
 	<div class="eq">
-	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2n(n-1)<sup>2</sup>n<sup>2</sup></i></p>
+	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i>−1)<sup>2</sup>n<sup>2</sup></i></p>
 	</div>
 	<p>Aggiungendo ad ambo i membri dell'ultima equazione (2n)<sup>3</sup> si ha</p>
 	<div class="eq">
-	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2n(<i>n</i> − 1)<sup>2</sup>n<sup>2</sup> + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup>[(<i>n</i> − 1)<sup>2</sup> + 4n] = 2<i>n</i><sup>2</sup> (<i>n</i> + 1)<sup>2</sup></i></p>
+	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i> − 1)<sup>2</sup>n<sup>2</sup> + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup>[(<i>n</i> − 1)<sup>2</sup> + 4n] = 2<i>n</i><sup>2</sup> (<i>n</i> + 1)<sup>2</sup></i></p>
 	</div>
 	<p>che è esattamente <i>P</i>(<i>n</i>).□</p>
 </ol>	
@@ -273,7 +279,7 @@
 
 <p><b>Proof</b> - Assumiano vero il principio di induzione forte e proviamo il principio del buon ordinamento. Supponiamo che <i>S</i> sia un sottoinsieme non vuoto di ℕ. Sia <i>T</i> = ℕ \ <i>S</i>. Supponiamo per assurdo che <i>S</i> non abbia elemento minimo. Allora <i>1 &ne; S</i>, perché se lo avesse allora sarebbe sicuramente l'elemento minimo di <i>S</i> poichè è l'elemento minimo di ℕ. Allora <i>1 &in; T</i>. Si suponsa che per un <i>k</i>, si abbia 1 &le; <i>i</i> &le; <i>k, i &in; T</i>. Si consideri <i>k+1</i>. Se <i>k+1</i> fosse in <i>S</i>, sarebbe l'elemento minimo di <i>S</i> perchè nessun <i>i</i> compreso tra 1 e <i>k</i> si trova in <i>S</i>. Siccome stiamo assumento che <i>S</i> non abbia elemento minimo, si deve avere <i>k+1 &in; T</i>. Per il principio di induzione forte, <i>T</i> deve contenere tutti i numeri naturali e quindi essere uguale ad ℕ. Segue che <i>S = ∅</i>. Questa è una contraddizione, concludiano quindi che <i>S</i> possiede elemento minimo.</p>
 
-<p>Adesso si supponga che il principio del buon ordinamento sia vero e proviamo il principio di induzione forte. Sia <i>U</i> un sottoinsieme di ℕ verificante le ipotesi di 𝕀 e supponiamo per assurdo che U &ne; ℕ. Allora detto <i>V = N \ U</i>, risulta <i>V &ne; ∅</i>. Per la 𝕄 esiste un minimo <i>m &in; V</i>, che sarà maggiore di zero, perchè <i>0 &in; U</i>. Essendo <i>m</i> minimo per <i>V</i>, ogni <i>k</i> tale che sia <i>0 &le; k &lt; m</i> sta in <i>U</i>. Ma allora per la (b) di 𝕀, <i>m &in; U</i>, che è un assurdo.□</p>
+<p>Adesso si supponga che il principio del buon ordinamento sia vero e proviamo il principio di induzione forte. Sia <i>U</i> un sottoinsieme di ℕ verificante le ipotesi di 𝕀 e supponiamo per assurdo che U &ne; ℕ. Allora detto <i>V</i> = <i>N</i> \ <i>U</i>, risulta <i>V</i> &ne; ∅. Per la 𝕄 esiste un minimo <i>m &in; V</i>, che sarà maggiore di zero, perchè <i>0 &in; U</i>. Essendo <i>m</i> minimo per <i>V</i>, ogni <i>k</i> tale che sia 0 &le; <i>k</i> &lt; <i>m</i> sta in <i>U</i>. Ma allora per la (b) di 𝕀, <i>m &in; U</i>, che è un assurdo.□</p>
 
 </div>
 

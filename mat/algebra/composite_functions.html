@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Composite Functions"/>
+    <title>Composite Functions</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Algebra</a></li>
+        <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Composite Functions</h1>
+
+<p><b>Definition 1.5.1</b>. Let <i>f</i>: <i>X</i> ⟶ <i>Y</i> and <i>g</i>: <i>Y</i> ⟶ <i>Z</i> be two functions. Then the function <i>g</i> ∘ <i>f</i>: <i>X</i> ⟶ <i>Z</i> given by</p>
+
+<div class="eq">
+<p>(<i>g</i> ∘ <i>f</i>) (<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>))</p>
+</div>
+
+<p>is called the <i>composition of the function</i> <i>f</i> and <i>g</i>. &emsp;□</p>
+
+<p><i>g</i> ◦ <i>f</i> reads as <i>g</i> composed with <i>f</i>, or as <i>f</i> followed by <i>g</i>.</p>
+
+<p>For example, consider the function <i>f</i>: ℕ ⟶ ℤ given by <i>f</i>(<i>n</i>) = <i>n</i> − 3, and the function <i>g</i>: ℤ ⟶ ℤ given by <i>g</i>(<i>x</i>)</p>
+
+<div class="eq">
+<p>(<i>g</i> ∘ <i>f</i>) (<i>n</i>) = <i>g</i>(<i>f</i>(<i>n</i>)) = <i>g</i>(<i>n</i> − 3) = (<i>n</i> − 2)<sup>2</sup> = <i>n</i><sup>2</sup> −3<i>n</i> + 9.</p>
+</div>
+
+<p>Notice that though the codomain of <i>g</i> is the set ℤ its range is</p>
+
+<div class="eq">
+<p>Range(<i>g</i>) = {<i>n</i><sup>2</sup> | <i>n</i> &in; ℤ} &subset; ℕ.</p>
+</div>
+
+<p>so we can also define the composite <i>f</i> ∘ <i>g</i>, where</p>
+
+<div class="eq">
+<p>(<i>f</i> ∘ <i>g</i>)(<i>n</i>) = <i>f</i>(<i>g</i>(<i>n</i>)) = <i>f</i>(<i>n</i><sup>2</sup>) = <i>n</i><sup>2</sup> − 3.</p>
+</div>
+
+<p>Notice how</p>
+
+<div class="eq">
+<p><i>f</i> ∘ <i>g</i> &ne; <i>g</i> ∘ <i>f</i></p>
+</div>
+
+<p><b>Esempio</b> Let <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup></i> and <i>g</i>(<i>x</i>) = sin (<i>x</i>). The composite function <i>g</i> ∘ <i>f</i> is</p>
+
+<div class="eq">
+<p><i>h</i>(<i>x</i>) = <i>g</i>[<i>f</i>(<i>x</i>)] = sin(x<sup>2</sup>)</i></p>
+</div>
+
+<p>Since <i>g</i> is well-defined over all ℝ, also <i>h</i> is. The function <i>k</i> = <i>f</i> ∘ <i>g</i> is also well defined by the relation</p>
+
+<div class="eq">
+<p><i>k</i>(<i>x</i>) = <i>f</i>[<i>g</i>(<i>x</i>)] = [sin(<i>x</i>)]<sup>2</sup></i></p>
+</div>
+
+<p>The composition operation is <b>associative</b>, that is if <i>f, g,</i> and <i>h</i> are functions respectevely from <i>A</i> to <i>B</i>, and from <i>B</i> to <i>C</i> from <i>C</i> to <i>D</i>, then it results also</p>
+
+<div class="eq">
+<p><i>h</i> ∘ (<i>g</i> ∘ <i>f</i>) = (<i>h</i> ∘ <i>g</i>) ∘ <i>f</i></p>
+</div>
+
+<h2>Inverse Functions</h2>
+
+<p><b>Definition 1.5.2</b>. Let <i>X</i> and <i>Y</i> be two nonempy sets, and <i>f</i>: <i>X</i> ⟶ <i>Y</i> be a function. We say <i>g</i>: <i>Y</i> ⟶ <i>X</i> is the <i>inverse function</i> of <i>f</i> if</p>
+
+<div class="eq">
+<p><i>g</i> ∘ <i>f</i> = id<sub><i>X</i></sub> &emsp;and&emsp; <i>f</i> ∘ <i>g</i> = id<sub>Y</sub></p>
+</div>
+
+<p>In this case, we write <i>g</i> = <i>f</i><sup>−1</sup>. We say a function <i>f</i>: <i>X</i> ⟶ <i>Y</i> is <i>invertible</i> if it has an inverse. &emsp;□</p>
+
+<p>where id<sub><i>X</i></sub> is the identity function on the set <i>X</i>; that is, the function that leaves its argument unchanged.</p>
+
+<p>As an example, consider the real-valued function of a real variable given by <i>f</i>(<i>x</i>) = 5<i>x</i> − 8. One can think of f as the function which multiplies its input by 5 then subtracts 8 from the result. To undo this, one adds 8 to the input, then divides the result by 5. Therefore, the inverse of <i>f</i> is the function f<sup>−1</sup>: ℝ → ℝ  defined by <i>f</i><sup>−1</sup>(<i>y</i>) = (<i>y</i> + 8)/ 5. </p>
+
+<section aria-label="End">
+<a href="functions.html">&#171;Functions</a>
+<a href="index.html">Index</a>
+<a href="f_caratteristica.html">Funzione caratteristica &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

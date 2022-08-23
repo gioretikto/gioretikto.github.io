@@ -68,7 +68,7 @@
 <p><i>f</i>'(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> (<i>x</i> − &alpha;<sub><i>1</i></sub>) (<i>x</i> − &alpha;<sub><i>2</i></sub>) ... (<i>x</i> − &alpha;<sub><i>i</i></sub>) (<i>x</i> − &alpha;<sub><i>n</i></sub>)</p>
 </div>
 
-<p>notice that the product rule extends to (<i>fgh</i>)' = <i>f'gh</i> + <i>fg'h</i> + <i>fgh'</i>; for example if f(x) = (x − a<sub>1</sub>)(x − a<sub>2</sub>)(x-a<sub>3</sub>), then f'(x) = (x − a2)(x − a<sub>3</sub>) + (x-a<sub>1</sub>)(x-a<sub>3</sub>) + (x − a<sub>1</sub>)(x − a<sub>2</sub>), and <i>f'</i>(a<sub>1</sub>) = (a<sub>1</sub> − a<sub>2</sub>)(a<sub>1</sub> − a<sub>3</sub>) &ne; 0.</p>
+<p>notice that the product rule extends to (<i>fgh</i>)' = <i>f'gh</i> + <i>fg'h</i> + <i>fgh'</i>; for example if f(x) = (x − a<sub>1</sub>)(x − a<sub>2</sub>)(x-a<sub>3</sub>), then f'(x) = (x − a2)(x − a<sub>3</sub>) + (x-a<sub>1</sub>)(x-a<sub>3</sub>) + (<i>x</i> − <i>a</i><sub>1</sub>)(<i>x</i> − <i>a</i><sub>2</sub>), and <i>f'</i>(a<sub>1</sub>) = (a<sub>1</sub> − a<sub>2</sub>)(a<sub>1</sub> − a<sub>3</sub>) &ne; 0.</p>
 
 <p>from which it results that <i>f</i>'(&alpha;<sub>i</sub>) &ne; 0 for every <i>i</i> = 1, ..., <i>n</i> and this contradicts the assumption that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor. &emsp;□</p>
 
@@ -176,19 +176,44 @@
 
 <p><b>8.3.11 Theorem</b>. The multiplicative group of a finite field is cyclic.</p>
 
-<p><b>Proof</b>. Let <i>F</i> a finite field an consider its multiplicative group <i>F*</i> = <i>F</i> \ {0}. Being a <i>finite abelian group</i>, (using the same notation eomplyed in the <a href="finite_abelian_groups.html">theorem on the structure of finite abelian groups</a>):</p>
+<p><b>Proof</b>. Let <i>F</i> a finite field and consider its multiplicative group <i>F*</i> = <i>F</i> \ {0}. Being a <i>finite abelian group</i>, (using the same notation eomplyed in the <a href="finite_abelian_groups.html">theorem on the structure of finite abelian groups</a>):</p>
 
 <div class="eq">
 <p><i>K*</i> = &Sigma;<sub><i>q</i><sub>1</sub></sub> x &Sigma;<sub><i>q</i><sub>2</sub></sub> x ⋅⋅⋅ x &Sigma;<sub><i>q</i><sub><i>t</i></sub></sub></p>
 </div>
 
-<p>where the <i>q<sub>i</sub></i> are primes that appear in the factorization of the order |<i>K</i>*| = <i>p<sup>n</sup></i> − 1, and each &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> is the product of cyclic groups. To prove that <i>K*</i> is cyclic it suffices to show that each &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> is cyclic, that is, possesses an element with period its order. We have</p> 
+<p>where the <i>q<sub>i</sub></i> are primes that appear in the factorization of the order |<i>K</i>*| = <i>p<sup>n</sup></i> − 1, and each &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> is the product of cyclic groups. To prove that <i>K*</i> is cyclic it suffices to show that each &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> is cyclic, that is, possesses an element with period its order. For the sake of simplicity, let's drop the <sub>i</sub> here, we don't need it. We have</p> 
 
 <div class="eq">
-<p>&Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> = ℤ<sub><i>q</i><sub><i>i</i></sub><sup>&alpha;<sub>1</sub></sub> x ℤ<sub><i>q</i><sub><i>i</i></sub><sup>&alpha;<sub>2</sub></sub> x ... ℤ<sub><i>q</i><sub><i>i</i></sub><sup>&alpha;<sub><i>r</i></sub></sub></p>
+<p>&Sigma;<sub><i>q</i></sub> = ℤ<sub><i>q</i><sup>&alpha;<sub>1</sub></sub> x ℤ<sub><i>q</i></sub><sup>&alpha;<sub>2</sub></sub> x ... x ℤ<sub><i>q</i><sup>&alpha;<sub><i>r</i></sub></sub></p>
 </div>
 
-<p>with &alpha;<sub>1</sub> + &alpha;<sub>2</sub> + ... &alpha;<sub><i>r</i></sub>  = &alpha;, and |&Sigma;<sub><i>q</i><sub><i>i</i></sub></sub>| = <i>q<sub><i>i</i></sub><sup>&alpha;</sup></i>. By way of contradiction suppose that the maximum order of the elements of &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> is <i>q<sub><i>i</i></sub><sup>&alpha;<sub>1</sub></sup></i> &lt; <i>q<sub>i</sub><sup>&alpha;</sup></i>. Then for every element <i>s</i> of &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> we have that <i>s</i><sup><i>q</i><sub><i>i</i></sub><sup>&alpha;<sub>1</sub></sup></sup> = 1. But this is a contradiction since the polynomial <i>x</i><sup><i>q</i><sub><i>i</i></sub><sup>&alpha;<sub>1</sub></sup></sup> − 1 has more roots than its degree. &emsp;□ </p>
+<p>with &alpha;<sub>1</sub> + &alpha;<sub>2</sub> + ... &alpha;<sub><i>r</i></sub>  = &alpha;, and |&Sigma;<sub><i>q</i></sub>| = <i>q<sub><i>i</i></sub><sup>&alpha;</sup></i>. By way of contradiction suppose that the maximum order of the elements of &Sigma;<sub><i>q</i></sub> is <i>q<sup>&alpha;<sub>1</sub></sup></i> &lt; <i>q<sup>&alpha;</sup></i>. Then for every element <i>s</i> of &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> we have that <i>s</i><sup><i>q</i><sup>&alpha;<sub>1</sub></sup></sup> = 1. But this is a contradiction since the polynomial <i>x</i><sup><i>q</i><sup>&alpha;<sub>1</sub></sup></sup> − 1 has more roots (which are <i>q<sup>&alpha;</sup></i>) than its degree. &emsp;□ </p>
+
+<h2>Exercises</h2>
+
+<ol>
+	<li><p>Check whether groups of the following order exists, and in case construct them: 16, 24, 167, 2867.</p></li>
+</ol>
+
+<h2>Solution</h2>
+
+<ol>
+
+	<li>
+
+	<ul>
+		<li><p>16 = 2<sup>4</sup>, so there exits a field with 16 as order. A field can be constructed as ℤ<sub>2</sub>/(<i>p</i>(<i>x</i>), with <i>p</i>(<i>x</i>) is an irreducible polynomial od degree 4 over ℤ<sub>2</sub>. For example <i>p</i>(<i>x</i>) = <i>x</i><sup>4</sup> + <i>x</i> + 1 is irreducible: since x<sup>2</sup> + 1 has a zero of 1 in ℤ<sub>2</sub>, you know that <i>x</i><sup>2</sup> + 1 cannot be a factor, so you are left with (x<sup>2</sup> + <i>x</i> + 1)(x<sup>2</sup> + <i>x</i> + 1) = <i>x</i><sup>4</sup> + <i>x</i><sup>2</sup> + 1. The elements of the field are all of the form <i>q</i>(<i>x</i>) + <x<sup>4</sup> + <i>x</i> + 1> where <i>q</i>(<i>x</i>) is a degree 3 or less poly, and there are 2<sup>4</sup> polynomials of the form ax<sup>3</sup> + bx<sup>2</sup> + c<i>x</i> + d in ℤ<sub>2</sub>.&emsp;■</p></li>
+
+		<li><p>24 cannot be expressed in terms of any power, hence there's no field with cardinality 24.</p></li>
+
+		<li><p>It sufficies to show that it's not divisible by 2,3,5,7,12. Since 167 is prime there exists a field which 167 elements which is ℤ<sub>167</sub>.&emsp;■</p></li>
+
+		<li><p>Use Fermat's method to find a factorization 2867 = 47 ⋅ 61, so it's not expressible as <i>p<sup>k</sup></i>.&emsp;■</p></li>
+
+	<ul>
+
+</ol>
 
 <section aria-label="End">
 <a href="splitting_field.html">&#171;Splitting field</a>

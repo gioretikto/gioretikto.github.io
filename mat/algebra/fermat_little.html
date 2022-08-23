@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Fermat's Little theorem"/>
  <title>Fermat's Little theorem</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -16,33 +16,90 @@
   <li><a class="navbar" href="index.html">Algebra</a></li>
  </ul>
 </nav>
-  
+
 <div class="content">
 
 <h1>Fermat's Little theorem</h1>
 
 <p>We present now some notable congruence relations</p>
 
-<p><b>Proposition 4.16.</b> For any prime <i>p</i> and <i>x,y</i> &in; ℤ the following relation holds</p>
+<p><b>Proposition 4.1.1</b>. For any prime <i>p</i> and <i>x,y</i> &in; ℤ the following relation holds</p>
 
 <div class="eq">
-<p>(<i>x + y</i>)<sup><i>p</i></sup> ≡ <i>x<sup><i>p</i></sup> + y<sup>p</sup></i> &emsp;(mod <i>p</i>)</p>
+<p>(<i>x</i> + <i>y</i>)<sup><i>p</i></sup> ≡ <i>x<sup><i>p</i></sup></i> + <i>y<sup>p</sup></i> &emsp;(mod <i>p</i>)</p>
 </div>
 
 <p><b>Proof</b>. From the binomial identity</p>
 
-<img src="img/binomial_identity.png" alt="binomial identity"/>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>y</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>p</mi>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mi>x</mi>
+    <mi>p</mi>
+  </msup>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>p</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <msup>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+  </msup>
+  <msup>
+    <mi>y</mi>
+    <mi>k</mi>
+  </msup>
+  <mo>+</mo>
+  <msup>
+    <mi>y</mi>
+    <mi>p</mi>
+  </msup>
+</math>
 
-<p>it is enough to prove that the summation is divisbile by <i>p</i>. This is true because it results <i>k &lt;p</i> and <i>p − k  &lt; p</i>, so each binomial coeefficient is an integer with <i>p</i> as factor.□</p>
+<p>it is enough to prove that the summation is divisbile by <i>p</i>. This is true because in the summation, it results <i>k</i> &lt; <i>p</i> and <i>p</i> − <i>k</i>  &lt; <i>p</i>, so each binomial coefficient is an integer with <i>p</i> as factor. &emsp;□</p>
 
 <div id="fermat">
-<p><b>Theorem 4.17.</b> (<i>Fermat's Little theorem</i>) - Let <i>a</i> an integer and <i>p</i> a prime number. Then</p>
+<p><b>Theorem 4.1.2</b> (<i>Fermat's Little theorem</i>). Let <i>a</i> an integer and <i>p</i> a prime number. Then</p>
 
 <div class="eq">
 <p><i>a<sup>p</sup></i> ≡ <i>a</i> &emsp;(mod <i>p</i>) &emsp; (4.4)</p>
 </div>
 
-<p>If <i>a</i> is divisible by <i>p</i>, then (4.4) is trivially true, as <i>a<sup>p</sup> ≡ <i>a</i> ≡ 0</i> (mod <i>p</i>). If <i>a</i> is not divisible by <i>p</i>, then suppose <i>a</i> &ge; 0, we use induction using <i>a</i> itself as induction variable. If <i>a</i> = 0 the result is obviuos. Supposing true the result for <i>a &gt; 0</i> we prove it for <i>a</i> + 1. Owing to eq (4.4)</p>
+<p>If <i>a</i> is divisible by <i>p</i>, then (4.4) is trivially true, as <i>a<sup>p</sup> ≡ <i>a</i> ≡ 0</i> (mod <i>p</i>). If <i>a</i> is not divisible by <i>p</i>, then suppose <i>a</i> &ge; 0, we use induction using <i>a</i> itself as induction variable. If <i>a</i> = 0 the result is obviuos. Supposing true the result for <i>a</i> &gt; 0 we prove it for <i>a</i> + 1. Owing to eq (4.4)</p>
 
 <div class="eq">
 <p>(<i>a + 1</i>)<sup><i>p</i></sup> ≡ <i>a<sup>p</sup></i> + 1<sup><i>p</i></sup> &emsp;(mod <i>p</i>)</p>
@@ -51,26 +108,26 @@
 <p>Since 1<sup><i>p</i></sup> ≡ 1 and <i>a<sup>p</sup></i> ≡ <i>a</i> for the inductive hypothesis, it follows</p>
 
 <div class="eq">
-<p>(<i>a + 1</i>)<sup><i>p</i></sup> ≡ <i>a</i> + 1 &emsp;(mod <i>p</i>)</p>
+<p>(<i>a</i> + 1)<sup><i>p</i></sup> ≡ <i>a</i> + 1 &emsp;(mod <i>p</i>)</p>
 </div>
 
 <p>the expected result.</p>
 
-<p>We suppose now <i>a</i> &lt; 0. Thus 0 ≡ <i>0<sup>p</sup></i> = (<i>a</i> + (−<i>a</i>))<sup><i>p</i></sup> ≡ <i>a<sup>p</sup></i> + (−<i>a</i>)<sup><i>p</i></sup> (mod <i>p</i>). Since <i>−a</i> &gt;0, for what we already proved in the first part: (−<i>a</i>)<sup><i>p</i></sup>  ≡ −<i>a</i>, thus 0 ≡ <i>a<sup>p</sup></i> <i>−a</i>, i.e. <i>a<sup>p</sup></i> ≡ <i>a</i>. □</p>
+<p>We suppose now <i>a</i> &lt; 0. Thus 0 ≡ <i>0<sup>p</sup></i> = (<i>a</i> + (−<i>a</i>))<sup><i>p</i></sup> ≡ <i>a<sup>p</sup></i> + (−<i>a</i>)<sup><i>p</i></sup> (mod <i>p</i>). Since <i>−a</i> &gt;0, for what we already proved in the first part: (−<i>a</i>)<sup><i>p</i></sup>  ≡ −<i>a</i>, thus 0 ≡ <i>a<sup>p</sup></i> <i>−a</i>, <i>i.e. a<sup>p</sup></i> ≡ <i>a</i>. □</p>
 </div>
 
-<p><b>Corollary 4.18.</b> If gcd(<i>a, p</i>) = 1, then</p>
+<p><b>Corollary 4.1.3.</b> If gcd(<i>a, p</i>) = 1, then</p>
 
 <div class="eq">
-<p><i>a<sup>p−1</sup></i> ≡ 1 &emsp; (mod <i>p</i>)</p>
+<p><i>a</i><sup><i>p</i>−1</sup> ≡ 1 &emsp; (mod <i>p</i>)</p>
 </div>
 
-<p>From proposition 4.17, <i>p</i> | <i>a<sup>p</sup> − a</i> = <i>a</i>(<i>a</i><sup><i>p</i>−1</sup> − 1) and if gcd(<i>a, p</i>) = 1, then <i>p</i> | <i>a</i><sup><i>p</i>−1</sup> − 1.□</p>
+<p>From proposition 4.1.2, <i>p</i> | <i>a<sup>p</sup></i> − <i>a</i> = <i>a</i>(<i>a</i><sup><i>p</i>−1</sup> − 1) and if gcd(<i>a, p</i>) = 1, then <i>p</i> | <i>a</i><sup><i>p</i>−1</sup> − 1.□</p>
 
-<section>
+<section aria-label="End">
 <a href="prova_nove.html">&#171; Casting out nines; Divisibility criteria</a>
 <a href="index.html">Index</a>
-<a href="fermat_little.html">Fermat's Little theorem &#187;</a>
+<a href="divisibility_criteria.html">Divisibility criteria &#187;</a>
 </section>
 
 </div>

@@ -11,34 +11,36 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
 </nav>
 
 <div class="content">
 
 <h1>Cyclotomic polynomials</h1>
 
-<p>Recall that the roots of unity for some integer <i>n</i> (i.e. the solutions of <i>x<sup>n</sup></i> − 1 = 0) are the <i>n</i> complex numbers <i>&zeta;</i><sub><i>n</i>,0</sub>, <i>&zeta;</i><sub><i>n</i>,1</sub>, ..., <i>&zeta;</i><sub><i>n,n</i> − 1</sub>, where</p>
+<p>Recall that the <a href="complex_numbers.html#roots_unity">roots of unity</a> for some integer <i>n</i> (<i>i.e.</i> the solutions of <i>x<sup>n</sup></i> − 1 = 0) are the <i>n</i> complex numbers <i>&zeta;</i><sub><i>n</i>,0</sub>, <i>&zeta;</i><sub><i>n</i>,1</sub>, ..., <i>&zeta;</i><sub><i>n,n</i> − 1</sub>, where</p>
 
 <div class="eq">
 <p><i>&zeta;<sub>n,k</sub></i> = cos 2<i>&pi;k</i>/<i>n</i> + i sin2<i>&pi;k</i>/<i>n</i>, &emsp; 0 &le; <i>k</i> &lt; <i>n</i></p>
 </div>
 
-<p><b>Definition 5.7.1</b>. We define the <i>order</i> of the <i>n</i>-th roots of unity, &zeta;, the smallest integer <i>m</i> such that <i>&zeta;<sup>m</sup></i> = 1 and &zeta;<sup>h</sup> &ne; 1 &forall; <i>h = 1,...,m-1</i>. </p>
+<p><b>Definition 5.7.1</b>. We define the <i>order</i> of the <i>n</i>-th roots of unity, &zeta;, the smallest integer <i>m</i> such that <i>&zeta;<sup>m</sup></i> = 1 and &zeta;<sup>h</sup> &ne; 1 &forall; <i>h</i> = 1,...,<i>m</i> − 1. </p>
 
 <p><b>Lemma 5.7.2</b>. Let &zeta; a root of unity such that for some <i>t</i> &gt; 0, <i>t</i> &in; ℕ, <i>&zeta;<sup>t</sup></i> = 1. Then the order <i>m</i> of &zeta; is a divisor of <i>t</i>.</p>
 
-<p><b>Proof</b>. If <i>m</i> divides <i>t</i>, then <i>t = mc</i> for some integer <i>c</i>, and since <i>&zeta;<sup>m</sup></i> = 1 by the definition of order, it readily follows from <i>&zeta;<sup>t</sup></i> = (<i>&zeta;<sup>m</sup></i>)<sup>c</sup> = 1.□</p>
+<p><b>Proof</b>. If <i>m</i> divides <i>t</i>, then <i>t</i> = <i>mc</i> for some integer <i>c</i>, and since <i>&zeta;<sup>m</sup></i> = 1 by the definition of order, it readily follows from <i>&zeta;<sup>t</sup></i> = (<i>&zeta;<sup>m</sup></i>)<sup>c</sup> = 1.□</p>
 
 <p><b>Definition 5.7.3</b>. A <i>n</i>-th <b>primitive root</b> of unity is an <i>n</i>-th root of unity of order <i>n</i>.</p>
 
-<p>We'll indicate by <i>&zeta;<sub>n</sub></i> the <i>n</i>-root of unity corresponding to <i>k</i> = 1, i.e. <i>&zeta;<sub>n</sub></i> = <i>&zeta;</i><sub><i>n</i>,1</sub> = cos (2&pi;/<i>n</i>) + i sin(2&pi;/<i>n</i>). It is a root of unity because for (<i>h = 1, ..., n-1</i>) by De Moivre formula</p>
+<p>So a complex <i>n</i>th root of unity is said to be primitive if it is a root of the polynomial <i>x</i><sup>n</sup> − 1, but is not a root of <i>x<sup>m</sup></i> = 1 for any positive integer <i>m</i> &lt; <i>n</i>.</p>
+
+<p>We'll indicate by <i>&zeta;<sub>n</sub></i> the <i>n</i>-root of unity corresponding to <i>k</i> = 1, <i>i.e. &zeta;<sub>n</sub></i> = <i>&zeta;</i><sub><i>n</i>,1</sub> = cos (2&pi;/<i>n</i>) + i sin(2&pi;/<i>n</i>). It is a root of unity because for (<i>h</i> = 1, ..., <i>n</i> −1) by <a href="complex_numbers.html#De_Moivre">De Moivre’s formula</a></p>
 
 <div class="eq">
-<p><i>&zeta;<sub>n</sub><sup>h</sup></i> = cos (2<i>h&pi;/n</i>) + i sin(2<i>h&pi;/n</i>) = <i>&zeta;<sub>n,h</sub></i></p>
+<p><i>&zeta;<sub>n</sub><sup>h</sup></i> = cos (2<i>h&pi;</i>/<i>n</i>) + i sin(2<i>h&pi;</i>/<i>n</i>) = <i>&zeta;<sub>n,h</sub></i></p>
 </div>
 
 <p>which is different from 1. Raising <i>&zeta;<sub>n</sub></i> to the power of <i>h</i> leads to all the other roots of unity.</p>
@@ -46,16 +48,16 @@
 <p><b>Proposition 5.7.4</b>. If <i>&zeta;</i> is a <i>n</i>-root of unity different from 1.</p>
 
 <div class="eq">
-<p><i>1 + &zeta; + &zeta;<sup>2</sup> + ... + &zeta;<sup>n − 1</sup></i> = 0</p>
+<p>1 + &zeta; + &zeta;<sup>2</sup> + ... + &zeta;<sup><i>n</i> − 1</sup> = 0</p>
 </div>
 
 <p><b>Proof.</b> We have</p>
 
 <div class="eq">
-<p>(<i>x<sup>n</sup></i> − 1) = (<i>x</i> − 1) (<i>x<sup>n−1</sup> + x<sup>n−2</sup> + ... + x + 1</i>)</p>
+<p>(<i>x<sup>n</sup></i> − 1) = (<i>x</i> − 1) (<i>x</i><sup><i>n</i>−1</sup> + <i>x</i><sup>n−2</sup> + ... + <i>x</i> + 1)</p>
 </div>
 
-<p>letting <i>x = &zeta; &ne; 1</i>, yields to</p>
+<p>letting <i>x</i> = &zeta; &ne; 1, yields to</p>
 
 <div class="eq">
 <p>(<i>&zeta;</i><sup><i>n</i>−1</sup> + <i>&zeta;</i><sup><i>n</i>−2</sup> + ... + <i>&zeta;</i> + 1) = 0.&emsp;□</p>
@@ -65,7 +67,7 @@
 
 <p><b>Proposition 5.7.5</b>. Let <i>ζ</i> be a primitive <i>n</i>-th root of unity and let <i>k</i> be an integer, then <i>ζ<sup>k</sup></i> has order <i>n</i>/(<i>n,k</i>).</p>
 
-<p><b>Proof.</b> Let <i>&delta;</i> = gcd(<i>n,k</i>); and let <i>k</i> = <i>&delta;k</i><sub>1</sub> and <i>n</i> = <i>&delta;n</i><sub>1</sub>, then (<i>n</i><sub>1</sub>, <i>k</i><sub>1</sub>) = 1. We want to determine the order <i>m = m</i>(<i>k</i>) of <i>ζ<sup>k</sup></i>. We have</p>
+<p><b>Proof.</b> Let <i>&delta;</i> = gcd(<i>n,k</i>); and let <i>k</i> = <i>&delta;k</i><sub>1</sub> and <i>n</i> = <i>&delta;n</i><sub>1</sub>, then (<i>n</i><sub>1</sub>, <i>k</i><sub>1</sub>) = 1. We want to determine the order <i>m</i> = <i>m</i>(<i>k</i>) of <i>ζ<sup>k</sup></i>. We have</p>
 
 <div class="eq">
 <p>(<i>ζ<sup>k</sup></i>)<sup><i>m</i></sup> = (<i>ζ<sup>k</sup></i>)<sup><i>n</i><sub>1</sub></sup> = (<i>ζ<sup><i>k</i><sub>1</sub>&delta;</sup></i>)<sup><i>n/&delta;</i></sup> = (<i>ζ<sup>n</sup></i>)<sup><i>k</i><sub>1</sub></sup> = 1</p>
@@ -83,7 +85,7 @@
 <p><i>&zeta;<sup>km</sup></i> = (<i>&zeta;<sup>k</sup></i>)<sup><i>m</i></sup> = 1</p>
 </div>
 
-<p>being <i>ζ</i> a primitive <i>n</i>-th root of unity and hence of period <i>n</i> it follows that <i>n</i> | <i>km</i> ⇒ <i>n<sub>1</sub>&delta;</i> | <i>n<sub>1</sub>&delta;m</i>, which yields to <i>n</i><sub>1</sub>| <i>k</i><sub>1</sub>m. Since (<i>n,k</i><sub>1</sub>) = 1</p>
+<p>being <i>ζ</i> a primitive <i>n</i>-th root of unity and hence of period <i>n</i> it follows that <i>n</i> | <i>km</i> ⇒ <i>n<sub>1</sub>&delta;</i> | <i>n<sub>1</sub>&delta;m</i>, which yields to <i>n</i><sub>1</sub>| <i>k</i><sub>1</sub><i>m</i>. Since (<i>n,k</i><sub>1</sub>) = 1</p>
 
 <div class="eq">
 <p><i>n</i><sub>1</sub> | <i>m</i> &emsp; (<b>5.7.2</b>)</p>
@@ -148,7 +150,7 @@
 <p>Since &Phi;<sub>1</sub> = <i>x</i> − 1, we get the factorization</p>
 
 <div class="eq">
-<p><i>x<sup>n</sup> − 1</i> = &Phi;<sub>1</sub>(<i>x</i>) &Phi;<sub>2</sub>(<i>x</i>) &Phi;<sub>4</sub>(<i>x</i>) = (<i>x</i> −1) (<i>x</i> +1) (x<sup>2</sup> +1)</p>
+<p><i>x<sup>n</sup></i> − 1 = &Phi;<sub>1</sub>(<i>x</i>) &Phi;<sub>2</sub>(<i>x</i>) &Phi;<sub>4</sub>(<i>x</i>) = (<i>x</i> − 1) (<i>x</i> +1) (x<sup>2</sup> + 1)</p>
 </div>
 
 <p>Equation 5.7.10 can be written as well as</p>
@@ -178,7 +180,7 @@
 <p>&Phi;<sub><i>p</i></sub> (<i>x</i>) = 1 + <i>x</i> + <i>x</i><sup>2</sup> + ... + <i>x</i><sup><i>p</i>−2</sup> + <i>x</i><sup><i>p</i>−1</sup></p>
 </div>
 
-<p>Moreover, for <i>n = p<sup>h</sup></i></p>
+<p>Moreover, for <i>n</i> = <i>p<sup>h</sup></i></p>
 
 <div class="eq">
 <p>&Phi;<i><sub>p<sup>h</sup></sub></i>(<i>x</i>) = 1 + <i>x</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> + (<i>x</i><sup><i>h</i>−1</sup>)<sup><i>p</i>−1</sup></p>
@@ -408,7 +410,7 @@
 <p><i>y</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> ∑ <i>&alpha;<sub>i</sub> y<sup>i</sup></i> + <i>y</i><sup><i>p</i><sup><i>h</i>−1(<i>p</i>−1)</sup></sup> ⋅ <i>y</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> = <i>y<sup>p<sup>h</sup></sup></i> + <i>pf̄</i>(<i>y</i>)</p>
 </div>
 
-<p>in this form we are sure that all coefficients <i>&alpha;<sub>i</sub></i> different from the leading coefficients (which is 1) of &Psi;(<i>y</i>) are multiples of <i>p</i>. To apply Eisenstein criterion we only need to prove that <i>p</i><sup>2</sup> does not divide the constant term. This is true since theconstant term of &Psi;(<i>y</i>) is obtained by putting <i>y</i> = 0, and hence it is equal to <i>p</i> times 1 i.e. <i>p</i>. We have proved trhat &Psi;(<i>y</i>) is irreducible and thus &Psi;<sub><i>h</i></sub>(<i>y</i>) as well.</p>
+<p>in this form we are sure that all coefficients <i>&alpha;<sub>i</sub></i> different from the leading coefficients (which is 1) of &Psi;(<i>y</i>) are multiples of <i>p</i>. To apply Eisenstein criterion we only need to prove that <i>p</i><sup>2</sup> does not divide the constant term. This is true since theconstant term of &Psi;(<i>y</i>) is obtained by putting <i>y</i> = 0, and hence it is equal to <i>p</i> times 1 <i>i.e. p</i>. We have proved trhat &Psi;(<i>y</i>) is irreducible and thus &Psi;<sub><i>h</i></sub>(<i>y</i>) as well.</p>
 
 <p>This result tells us that cyclotomic polynomials are irreducible over ℚ, and we can use them to find the factorization of <i>x<sup>n</sup></i> &minus; 1. We have</p>
 

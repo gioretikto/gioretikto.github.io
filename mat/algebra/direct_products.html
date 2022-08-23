@@ -21,37 +21,51 @@
 
 <h1>Direct Products</h1>
 
-<p>The Cartesian product, with operations defined ooordinatewise, allowed us to construct new rings from known ones. The same is true for groups. Direct products are an easy way to construct larger groups from smaller ones. This construction yields all finite abelian groups.</p>
+<p>The Cartesian product, with operations defined coordinatewise, allowed us to construct new rings from known ones, as <a href="rings_direct_sum.html">direct sum</a>. The same is true for groups. Direct products are an easy way to construct larger groups from smaller ones. This construction yields all finite abelian groups. </p>
 
-<p><b>Definition 7.17.1</b>. Given two groups <i>G</i><sub>1</sub> and <i>G</i><sub>2</sub>, the <b>(direct) product</b> group <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> is the cartesian product</p>
-
-<div class="eq">
-<p><i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> = {(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>)| <i>g<sub>i</sub></i> &in; <i>G<sub>i</sub></i>}
-</div>
-
-<p>with the operation</p>
+<p><b>Definition 7.17.1</b> (<i>Direct product of two groups</i>) Let <i>G</i> (with operation ⋅) and <i>H</i> (with operation *) be groups. Define an operation ∘ on <i>G</i> X <i>H</i> by</p>
 
 <div class="eq">
-<p>(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>) ⋅ (<i>g'</i><sub>1</sub>, <i>g'</i><sub>2</sub>) := (<i>g</i><sub>1</sub>g<sub>1</sub>', <i>g</i><sub>2</sub>g<sub>2</sub>')</p>
+<p>(<i>g, h</i>) ∘ (<i>g', h'</i>) = (<i>g⋅g', h*h'</i>).</p>
 </div>
 
-<p><b>Proving that <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> is a group for the binary operation defined above</b>.</p>
+<p>Then <i>G</i> X <i>H</i> is a group. If <i>G</i> and <i>H</i> are abelian, then so is <i>G</i> X <i>H</i>. If <i>G</i> and <i>H</i> are finite, then so is <i>G</i> x <i>H</i> and |<i>G</i> x <i>H</i>| = |<i>G</i>| |<i>H</i>|. For <i>G</i> and <i>H</i> abelian, with groups operations written as addition, often the direct product is written instead as a <b>(direct) sum</b>.</p>
+
+<div class="eq">
+<p><i>G</i> ⊕ <i>H</i></p>
+</div>
+
+<p>The notion of direct product can be extended to more than two groups.</p>
+
+<p><b>Definition 7.17.2</b> (<i>Generalized direct product</i>). If <i>G</i><sub>1</sub>,<i>G</i><sub>2</sub>,...,<i>G<sub>n</sub></i> are groups. The <b>(direct) product</b> is defined as the set</p>
+
+<div class="eq">
+<p><i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>n</sub></i> = {(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>,..., <i>g<sub>n</sub></i>)| <i>g<sub>i</sub></i> &in; <i>G<sub>i</sub></i>}</p>
+</div>
+
+<p>along with the coordinatewise operation, ∘, on the Cartesian product <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>n</sub></i> defined as</p>
+
+<div class="eq">
+<p>(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>,..., <i>g<sub>n</sub></i>) ∘ (<i>g'</i><sub>1</sub>, <i>g</i>'<sub>2</sub>,..., <i>g'<sub>n</sub></i>) := (<i>g</i><sub>1</sub>g<sub>1</sub>', <i>g</i><sub>2</sub>g<sub>2</sub>', ..., <i>g<sub>n</sub>g'<sub>n</sub></i>)</p>
+</div>
+
+<p>It is easy to verify that <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>n</sub></i>, is a group under this operation: If <i>e<sub>i</sub></i> is the identity element of <i>G<sub>i</sub></i>, then (<i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>, <i>e<sub>n</sub></i>) is the identity elancnt of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>n</sub></i>, and (<i>a</i><sup>−1</sup>, <i>a</i><sub>2</sub><sup>−1</sup>, ... ,<i>a<sub>n</sub></i><sup>−1</sup>) is the inverse of (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>). This group is called the <b>direct product</b> of <i>G</i><sub>1</sub>,<i>G</i><sub>2</sub>,...,<i>G<sub>n</sub></i>.  When each <i>G<sub>i</sub></i> is an additive abelian group, the direct product of <i>G<sub>i</sub></i>, is sometimes called the <b>direct sum</b> and denoted <i>G</i><sub>1</sub> ⊕ <i>G</i><sub>2</sub> ⊕ ... ⊕ <i>G<sub>n</sub></i>
+
+<p>More in depth, if for the sake of simplicity we consider only <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, we can verify the properties of</p>
 
 <ol>
-	<li><p><b>Closure</b>: We have (g<sub>1</sub>,g<sub>2</sub>)(g<sub>1</sub>',g<sub>2</sub>') = (g<sub>1</sub>g<sub>1</sub>', g<sub>2</sub>g<sub>2</sub>') &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, because g<sub>1</sub>g<sub>1</sub>' &in; G<sub>1</sub>, with g<sub>1</sub>, g<sub>1</sub>' &in; G<sub>1</sub> because G<sub>1</sub> is a group. Similarly g<sub>2</sub>g<sub>2</sub>' &in; G<sub>2</sub>.</p></li>
+	<li><p><b>Closure</b>: We have (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>)(<i>g</i><sub>1</sub>',<i>g</i><sub>2</sub>') = (<i>g</i><sub>1</sub><i>g</i><sub>1</sub>', <i>g</i><sub>2</sub><i>g</i><sub>2</sub>') &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, because <i>g</i><sub>1</sub>g<sub>1</sub>' &in; <i>G</i><sub>1</sub>, with <i>g</i><sub>1</sub>, g<sub>1</sub>' &in; <i>G</i><sub>1</sub> because <i>G</i><sub>1</sub> is a group. Similarly <i>g</i><sub>2</sub><i>g</i><sub>2</sub>' &in; G<sub>2</sub>.</p></li>
 
 	<li><p><b>Associativity</b>: If (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>), (<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>'), (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'') &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> then</p>
 
 	<div class="eq">
 	<p>[(<i>g</i><sub>1</sub>,g<sub>2</sub>) (<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>')] (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'') =<br>
-	 (<i>g</i><sub>1</sub>g<sub>1</sub>', <i>g</i><sub>2</sub>g<sub>2</sub>') (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'') = ([<i>g</i><sub>1</sub> <i>g</i><sub>1</sub>']g<sub>1</sub>'', [g<sub>2</sub>g<sub>2</sub>'] g<sub>2</sub>'')=<br>
-	 (<i>g</i><sub>1</sub> [<i>g</i><sub>1</sub>'<i>g</i><sub>1</sub>''], <i>g</i><sub>2</sub>[<i>g</i><sub>2</sub>' <i>g</i><sub>2</sub>''])=<br>
-	(<i>g</i><sub>1</sub>,g<sub>2</sub>) (<i>g</i><sub>1</sub>'<i>g</i><sub>2</sub>'', g<sub>2</sub>'<i>g</i><sub>2</sub>'') =<br>
-	 (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>) [(<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>') (g<sub>1</sub>'', g<sub>2</sub>'')]</p>
+	 (<i>g</i><sub>1</sub>g<sub>1</sub>', <i>g</i><sub>2</sub>g<sub>2</sub>') (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'') = ([<i>g</i><sub>1</sub> <i>g</i><sub>1</sub>']<i>g</i><sub>1</sub>'', [<i>g</i><sub>2</sub>g<sub>2</sub>'] <i>g</i><sub>2</sub>'')=<br>
+	 (<i>g</i><sub>1</sub> [<i>g</i><sub>1</sub>'<i>g</i><sub>1</sub>''], <i>g</i><sub>2</sub>[<i>g</i><sub>2</sub>' <i>g</i><sub>2</sub>''])=<br> (<i>g</i><sub>1</sub>,g<sub>2</sub>) (<i>g</i><sub>1</sub>'<i>g</i><sub>2</sub>'', <i>g</i><sub>2</sub>'<i>g</i><sub>2</sub>'') =<br>(<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>) [(<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>') (<i>g</i><sub>1</sub>'', <i>g</i><sub>2</sub>'')]</p>
 	</div>
 	</li>
 
-	<li><p>If (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>) &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, then (<i>e</i><sub>G<sub>1</sub></sub>,<i>e</i><sub>G<sub>2</sub></sub>) (g<sub>1</sub>,g<sub>2</sub>) = (<i>e</i><sub>G<sub>1</sub></sub>g<sub>1</sub>,<i>e</i><sub>G<sub>2</sub></sub>g<sub>2</sub>) = (g<sub>1</sub>,g<sub>2</sub>). Therefore (<i>e</i><sub>G<sub>1</sub></sub>,<i>e</i><sub>G<sub>2</sub></sub>) is the left identity of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>;</p></li>
+	<li><p>If (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>) &in; <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>, then (<i>e</i><sub>G<sub>1</sub></sub>,<i>e</i><sub>G<sub>2</sub></sub>) (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>) = (<i>e</i><sub>G<sub>1</sub></sub>g<sub>1</sub>,<i>e</i><sub>G<sub>2</sub></sub><i>g</i><sub>2</sub>) = (<i>g</i><sub>1</sub>,<i>g</i><sub>2</sub>). Therefore (<i>e</i><sub>G<sub>1</sub></sub>,<i>e</i><sub>G<sub>2</sub></sub>) is the left identity of <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub>;</p></li>
 
 	<li><p>Existence of left inverse (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>)<sup>−1</sup> is (<i>g</i><sub>1</sub><sup>−1</sup>, <i>g</i><sub>2</sub><sup>−1</sup>).</p></li>
 
@@ -71,34 +85,28 @@
 
 <p>every element of <i>G</i> is the product of an element of <i>G</i><sub>1</sub>* and one of <i>G</i><sub>2</sub>*. Moreover two such elements commute.</p>
 
-<p>For <i>G</i><sub>1</sub> and <i>G</i><sub>2</sub> abelian, with groups operations written as addition, often the direct product is written instead as a <b>(direct) sum</b>.</p>
-
-<div class="eq">
-<p><i>G</i><sub>1</sub> ⊕ <i>G</i><sub>2</sub></p>
-</div>
-
-<p><b>Examples 7.17.2</b></p>
+<p><b>Examples 7.17.3</b></p>
 
 <ol type="a">
-<li><p>Let <i>G</i><sub>1</sub> = Z<sub>2</sub> and <i>G</i><sub>2</sub> = Z<sub>3</sub>. Then</p>
+<li><p>Let <i>G</i><sub>1</sub> = ℤ<sub>2</sub> and <i>G</i><sub>2</sub> = ℤ<sub>3</sub>. Then</p>
 
 <div class="eq">
-<p>Z<sub>2</sub> x Z<sub>3</sub> = {(0̅, 0̅), (0̅, 1̅), (0̅, 2̅), (1̅, 0̅), (1̅, 1̅), (1̅, 2̅)}</p>
+<p>ℤ<sub>2</sub> x ℤ<sub>3</sub> = {(0̅, 0̅), (0̅, 1̅), (0̅, 2̅), (1̅, 0̅), (1̅, 1̅), (1̅, 2̅)}</p>
 </div>
 
-<p>the elements order of Z<sub>2</sub> x Z<sub>3</sub> are respectively 1, 3, 3, 2, 6, 6. Which is a cyclic group of order 6, thus</p>
+<p>the elements order of ℤ<sub>2</sub> x ℤ<sub>3</sub> are respectively 1, 3, 3, 2, 6, 6. Which is a cyclic group of order 6, thus</p>
 
 <div class="eq">
-<p>Z<sub>2</sub> x Z<sub>3</sub> ≃ Z<sub>6</sub></p>
+<p>ℤ<sub>2</sub> x ℤ<sub>3</sub> ≃ ℤ<sub>6</sub></p>
 </div>
 
 </li>
 
-<li><p>Let <i>G</i><sub>1</sub> = Z<sub>2</sub> and <i>G</i><sub>2</sub> = Z<sub>4</sub>. The external product Z<sub>2</sub> x Z<sub>4</sub> is made by 8 elements, but this time there is no element with order 8, hence we are not dealing with the cyclic <i>i.e.</i> Z<sub>2</sub> x Z<sub>4</sub> ≠ Z<sub>8</sub>.&emsp;■</p></li>
+<li><p>Let <i>G</i><sub>1</sub> = ℤ<sub>2</sub> and <i>G</i><sub>2</sub> = ℤ<sub>4</sub>. The external product ℤ<sub>2</sub> x ℤ<sub>4</sub> is made by 8 elements, but this time there is no element with order 8, hence we are not dealing with the cyclic <i>i.e.</i> ℤ<sub>2</sub> x ℤ<sub>4</sub> ≠ ℤ<sub>8</sub>.&emsp;■</p></li>
 
 </ol>
 
-<p><b>Theorem 7.17.3</b> Let <i>H</i> and <i>K</i> two groups, and define <i>G</i> = <i>H</i> x <i>K</i>. Then <i>G</i> has two subgroups <i>H</i><sub>1</sub>, <i>K</i><sub>2</sub>, such that</p>
+<p><b>Theorem 7.17.4</b> Let <i>H</i> and <i>K</i> two groups, and define <i>G</i> = <i>H</i> x <i>K</i>. Then <i>G</i> has two subgroups <i>H</i><sub>1</sub>, <i>K</i><sub>2</sub>, such that</p>
 
 <ol type="a">
 	<li><p><i>H</i><sub>1</sub> ≃ <i>H</i><sub>1</sub>, <i>K</i><sub>2</sub> ≃ <i>K</i></p></li>
@@ -125,18 +133,17 @@
 <p>Since <i>H</i><sub>1</sub> and <i>K</i><sub>2</sub> are normal subgroups of <i>G</i> = <i>H</i> x <i>K</i>, then it follows from <a href="normalizer.html">Lemma 7.12.4</a>
 that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. Let (<i>h</i>, <i>k</i>) be any element of <i>G</i> = <i>H</i> x <i>K</i>. Then (<i>h, k</i>) = (<i>h</i>, <i>e</i><sub>K</sub>) (<i>e</i><sub>H</sub>, <i>k</i>) &in; <i>H</i><sub>1</sub><i>H</i><sub>2</sub>. This shows <i>G</i> &subset; <i>H</i><sub>1</sub><i>H</i><sub>2</sub>. Hence <i>G</i> = <i>H</i><sub>1</sub><i>H</i><sub>2</sub>.</p>
 
-<p>Finally, consider <i>H</i><sub>1</sub> ∩ <i>K</i><sub>2</sub>. If (<i>x, y</i>) &in; <i>H</i><sub>1</sub> ∩ <i>K</i><sub>2</sub> then (<i>x ,y</i>) &in; H<sub>1</sub> and (<i>x, y</i>) &in; <i>K</i><sub>2</sub>. But if (<i>x, y</i>) &in; <i>H</i><sub>1</sub> then <i>y = e<sub>K</sub></i> and if (<i>x, y</i>) &in; <i>K</i><sub>2</sub> then <i>x = e<sub>H</sub></i>. This implies that (<i>x,y</i>) = (
- e<sub>H</sub></i>, e<sub>K</sub></i>). Then all conditions listed above are satisfied. &emsp;□</p>
+<p>Finally, consider <i>H</i><sub>1</sub> ∩ <i>K</i><sub>2</sub>. If (<i>x, y</i>) &in; <i>H</i><sub>1</sub> ∩ <i>K</i><sub>2</sub> then (<i>x ,y</i>) &in; <i>H</i><sub>1</sub> and (<i>x, y</i>) &in; <i>K</i><sub>2</sub>. But if (<i>x, y</i>) &in; <i>H</i><sub>1</sub> then <i>y</i> = <i>e<sub>K</sub></i> and if (<i>x, y</i>) &in; <i>K</i><sub>2</sub> then <i>x</i> = <i>e<sub>H</sub></i>. This implies that (<i>x,y</i>) = (<i>e<sub>H</sub>, e<sub>K</sub></i>). Then all conditions listed above are satisfied. &emsp;□</p>
 
 <p>If a group has two subgroups <i>H</i><sub>1</sub> and <i>K</i><sub>2</sub>, satisfying the conditions b), c), d) of the previous theorem, then <i>G</i> is said <i>internal direct product of its subgroups</i> <i>H</i><sub>1</sub> and <i>K</i><sub>2</sub>. We just proved that a a group which is an external direct product of two groups is isomorphic to the <i>internal</i> product.</p>
 
 <p>The previous theorem says that inside any direct product of two groups there are two normal subgroups whose product is the whole group and whose intersection is trivial. We now see that the converse of this is true as well providing a method for recognizing that a group <i>G</i> is isomorphic to the direct product of two groups.</p>
 
-<p><b>Theorem 7.17.4</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
+<p><b>Theorem 7.17.5</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
 
 <ol type="a">
 	<li><p><i>H</i> and <i>K</i> are normal subgroups of <i>G</i>;</p></li>
-	<li><p><i>G = HK</i>;</p></li>
+	<li><p><i>G</i> = <i>HK</i>;</p></li>
 	<li><p><i>H</i> ∩ <i>K</i> = {<i>e</i>};</p></li>
 </ol>
 
@@ -144,17 +151,17 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 
 <p>Before proving the theorem we introduce two lemmas.</p>
 
-<p><b>Lemma 7.17.5</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
+<p><b>Lemma 7.17.6</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
 
 <div class="eq">
 <p><i>H</i> ⊲̲ <i>G</i>, &emsp; <i>K</i> ⊲̲ <i>G</i>, &emsp; <i>H</i> ∩ <i>K</i>{<i>e</i>};</p>
 </div>
 
-<p>Then, for every <i>h</i> &in; <i>H</i> and every <i>k</i> &in; <i>K</i> it results <i>hk = kh</i>.</p>
+<p>Then, for every <i>h</i> &in; <i>H</i> and every <i>k</i> &in; <i>K</i> it results <i>hk</i> = <i>kh</i>.</p>
 
-<p><b>Proof</b>. Let <i>x = khk</i><sup>−1</sup>. From <i>x</i> = (<i>hkh</i><sup>−1</sup>)<i>k</i><sup>−1</sup>, it is clear that since <i>hkh</i><sup>−1</sup> &in; <i>K</i> for the normality of <i>K</i> in <i>G</i> then <i>x</i> &in; <i>K</i>. From <i>x</i> = <i>h</i>(<i>kh</i><sup>−1</sup><i>k</i><sup>−1</sup>), for the normality of <i>H</i> in <i>G</i>, <i>x</i> belongs to <i>H</i>. From <i>H</i> ∩ <i>K</i>{<i>e</i>}, it follows that <i>x</i> = <i>hkh</i><sup>−1</sup><i>k</i><sup>−1</sup> = <i>e</i>, thus <i>hk = kh</i>.&emsp;□</p>
+<p><b>Proof</b>. Let <i>x</i> = <i>khk</i><sup>−1</sup>. From <i>x</i> = (<i>hkh</i><sup>−1</sup>)<i>k</i><sup>−1</sup>, it is clear that since <i>hkh</i><sup>−1</sup> &in; <i>K</i> for the normality of <i>K</i> in <i>G</i> then <i>x</i> &in; <i>K</i>. From <i>x</i> = <i>h</i>(<i>kh</i><sup>−1</sup><i>k</i><sup>−1</sup>), for the normality of <i>H</i> in <i>G</i>, <i>x</i> belongs to <i>H</i>. From <i>H</i> ∩ <i>K</i>{<i>e</i>}, it follows that <i>x</i> = <i>hkh</i><sup>−1</sup><i>k</i><sup>−1</sup> = <i>e</i>, thus <i>hk = kh</i>.&emsp;□</p>
 
-<p><b>Lemma 7.17.6</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
+<p><b>Lemma 7.17.7</b> Let <i>G</i> a group and let <i>H</i> and <i>K</i> two subgroups of <i>G</i>, such that</p>
 
 <ol type="a">
 	<li><p><i>G</i> = <i>HK</i>;</p></li>
@@ -166,63 +173,49 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 <p><b>Proof</b>. By condition a) every <i>g</i> &in; <i>G</i> can be written as <i>hk</i> for some <i>h</i> &in; <i>H</i> by an element <i>k</i> &in; <i>K</i>. To prove the uniqueness of the writing, suppose we have</p>
 
 <div class="eq">
-<p><i>g = hk = h'k'</i></p>
+<p><i>g</i> = <i>hk</i> = <i>h'k'</i></p>
 </div>
 
-<p>Then <i>h</i><sup>−1</sup><i>hkk'</i><sup>−1</sup> = <i>h</i><sup>−1</sup><i>h'k'k'</i><sup>−1</sup>, from which <i>kk'</i><sup>−1</sup> = <i>h</i><sup>−1</sup><i>h'</i> &in; <i>H</i> ∩ <i>K</i> = {<i>e</i>}. Thus <i>h = h'</i> and <i>k = k'</i> is a unique writing. &emsp;□</p>
+<p>Then <i>h</i><sup>−1</sup><i>hkk'</i><sup>−1</sup> = <i>h</i><sup>−1</sup><i>h'k'k'</i><sup>−1</sup>, from which <i>kk'</i><sup>−1</sup> = <i>h</i><sup>−1</sup><i>h'</i> &in; <i>H</i> ∩ <i>K</i> = {<i>e</i>}. Thus <i>h</i> = <i>h'</i> and <i>k</i> = <i>k'</i> is a unique writing. &emsp;□</p>
 
 <p>We now prove the theorem.</p>
 
-<p><b>Proof of  Theorem 7.17.4</b>. We define the following map</p>
+<p><b>Proof of Theorem 7.17.5</b>. We define the following map</p>
 
 <div class="eq">
-<p><i>&Psi;</i> : <i>H x K</i> ⟶ <i>G</i><br>
+<p><i>&Psi;</i> : <i>H</i> x <i>K</i> ⟶ <i>G</i><br>
 (<i>h,k</i>) ⟼ <i>hk</i></p>
 </div>
 
-<p>The application is surjective for condition b) of the statement. It is injective by lemma 7.17.6 and it is also a homomorphism by lemma 7.17.5. We thus proved that <i>G</i> is isomorphic to the direct product <i>H</i> by <i>K</i>. &emsp;□</p>
+<p>The application is surjective for condition b) of the statement. It is injective by lemma 7.17.7 and it is also a homomorphism by lemma 7.17.6. We thus proved that <i>G</i> is isomorphic to the direct product <i>H</i> by <i>K</i>. &emsp;□</p>
 
-<p>The theorems just proved show us that the internal direct product <i>HK</i> is isomorphic to the direct product <i>H</i> x <i>K</i>; We shall use the symbols <i>HK</i> and <i>H x K</i> as well as the terms "internal direct product" and "direct product" interchangeably.</p>
+<p>The theorems just proved show us that the internal direct product <i>HK</i> is isomorphic to the direct product <i>H</i> x <i>K</i>; We shall use the symbols <i>HK</i> and <i>H</i> x <i>K</i> as well as the terms "internal direct product" and "direct product" interchangeably.</p>
 
 <p>The last theorem says that to check whether a group is isomorphic to a direct product, it is enough to check the conditions of the theorem. We give some examples.</p>
 
-<p><b>Example 7.17.7</b> The group (ℤ, +) is not a direct product of two non-trivial groups since the intersection of its subgroups is always non-trivial.&emsp;■</p>
+<p><b>Example 7.17.8</b> The group (ℤ, +) is not a direct product of two non-trivial groups since the intersection of its subgroups is always non-trivial.&emsp;■</p>
 
-<p><b>Example 7.17.8</b> The symmetric group S<sub>3</sub> is not a direct product, since it possesses a single normal subgroup.&emsp;■</p>
+<p><b>Example 7.17.9</b> The symmetric group S<sub>3</sub> is not a direct product, since it possesses a single normal subgroup.&emsp;■</p>
 
-<p><b>Example 7.17.9</b> Z<sub>12</sub> is isomorphic to the direct product Z<sub>3</sub> x Z<sub>4</sub>, since the two subgroups</p>
+<p><b>Example 7.17.10</b> ℤ<sub>12</sub> is isomorphic to the direct product ℤ<sub>3</sub> x ℤ<sub>4</sub>, since the two subgroups</p>
 
 <div class="eq">
 <p><i>H</i> = {0̅, 4̅, 8̅}, &emsp; <i>K</i> = {0̅, 3̅, 6̅, 9̅}</p>
 </div>
 
-<p>sono normal with intersection reduced to the class 0̅, and are such that Z<sub>12</sub> = <i>H</i> + <i>K</i>. Moreover <i>H</i> ≃ Z<sub>3</sub> and <i>K</i> ≃ Z<sub>4</sub>. &emsp;■</p>
+<p>sono normal with intersection reduced to the class 0̅, and are such that ℤ<sub>12</sub> = <i>H</i> + <i>K</i>. Moreover <i>H</i> ≃ ℤ<sub>3</sub> and <i>K</i> ≃ ℤ<sub>4</sub>. &emsp;■</p>
 
-<p><b>Example 7.17.10</b> The dihedral group <i>D</i><sub>4</sub> is not a direct product, since two whatever non-trivial normal subgroups of D<sub>4</sub> intersect to give a non-trivial subgroup, containing the element <i>r</i><sup>2</sup>.&emsp;■</p>
+<p><b>Example 7.17.11</b> The dihedral group <i>D</i><sub>4</sub> is not a direct product, since two whatever non-trivial normal subgroups of D<sub>4</sub> intersect to give a non-trivial subgroup, containing the element <i>r</i><sup>2</sup>.&emsp;■</p>
 
-<p><b>Example 7.17.11</b> The orthogonal group O<sub>3</sub>(R) is isomorphic to the direct product of SO<sub>3</sub> (orthogonal matrices with determinant 1) by Z<sub>2</sub>. More generally</p>
-
-<div class="eq">
-<p>O<sub>n</sub> ≃ SO<sub>n</sub> x Z<sub>n</sub>, &emsp; <i>n</i> odd &emsp;■</p>
-</div>
-
-<p><b>Example 7.17.12</b> (ℂ, +) is isomorphic to (ℝ, +) x (ℝ, +). &emsp;■</p>
-
-<p>The definition of exzernal product of two groups can be extended to the more general case of more of two groups</p>
-
-<p><b>Definition 7.17.13</b>. Let <i>G</i><sub>1</sub>, <i>G</i><sub>2</sub>, ..., <i>G</i><sub>3</sub>. We define the external direct product of <i>G</i><sub>1</sub>, <i>G</i><sub>2</sub>, ..., <i>G</i><sub>3</sub>, the set </p>
+<p><b>Example 7.17.12</b> The orthogonal group O<sub>3</sub>(R) is isomorphic to the direct product of SO<sub>3</sub> (orthogonal matrices with determinant 1) by ℤ<sub>2</sub>. More generally</p>
 
 <div class="eq">
-<p><i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> := {(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>) | <i>g<sub>i</sub></i> &in; <i>G<sub>i</sub></i>}
+<p>O<sub>n</sub> ≃ SO<sub>n</sub> x ℤ<sub>n</sub>, &emsp; <i>n</i> odd &emsp;■</p>
 </div>
 
-<p>with the group operation</p>
+<p><b>Example 7.17.13</b> (ℂ, +) is isomorphic to (ℝ, +) x (ℝ, +). &emsp;■</p>
 
-<div class="eq">
-<p>(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>) (<i>g</i><sub>1</sub>', <i>g</i><sub>2</sub>', ..., <i>g<sub>k</sub>'</i>) := (<i>g</i><sub>1</sub>g<sub>1</sub>', g<sub>2</sub>g<sub>2</sub>', ..., <i>g<sub>k</sub>g<sub>k</sub>'</i>)</p>
-</div>
-
-<p>is a group. The following properties hold:</p>
+<p>The following properties hold:</p>
 
 <p><b>Proposition 7.17.14</b>. Let <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i>. Then</p>
 
@@ -236,7 +229,7 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 
 	<li><p><i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> is abelian if and only if for every <i>G<sub>i</sub></i> is abelian;</p></li>
 
-	<li><p>|(<i>g</i><sub>1</sub>, g<sub>2</sub>, ..., g<sub>k</sub>)| = lcm (|<i>g</i><sub>1</sub>|,|<i>g</i><sub>2</sub>|, ..., |<i>g</i><sub>k</sub>|), the order is infinite if one of the <i>g<sub>i</sub></i> has inifnite order;</p></li>
+	<li><p>|(<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>k</sub></i>)| = lcm (|<i>g</i><sub>1</sub>|,|<i>g</i><sub>2</sub>|, ..., |<i>g</i><sub>k</sub>|), the order is infinite if one of the <i>g<sub>i</sub></i> has inifnite order;</p></li>
 
 	<li><p>if every <i>G<sub>i</sub></i> has finite order, <i>G</i><sub>1</sub> x <i>G</i><sub>2</sub> x ... x <i>G<sub>k</sub></i> is cyclic if and only if every <i>G<sub>i</sub></i> is cyclic and (|<i>G<sub>i</sub></i>, <i>G<sub>j</sub></i>|) = 1, for every <i>i</i> &ne; <i>j</i>.</p></li>	
 
@@ -270,7 +263,7 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 
 <p><b>Corollary 7.17.15</b>. ℤ<sub><i>r</i></sub> x ℤ<sub><i>s</i></sub> is isomrphic to ℤ<sub><i>rs</i></sub> (that is cyclic) if and only if (<i>r,s</i>) = 1.</p>
 
-<p>Theorem 7.17.4 can be generalized to the product of more than two groups as follows</p>
+<p>Theorem 7.17.5 can be generalized to the product of more than two groups as follows</p>
 
 <p><b>Theorem 7.17.16</b>. Let <i>G</i> a group and let <i>N</i><sub>1</sub>, <i>N</i><sub>2</sub>, ...., <i>N<sub>k</sub></i> subgroups of <i>G</i> such that</p>
 
@@ -280,7 +273,7 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 	<li><p><i>N<sub>i</sub></i> ∩ (<i>N</i><sub>1</sub> <i>N</i><sub>2</sub> ⋅⋅⋅ <i>N<sub><i>i</i> −1</sub>N̂<sub>i</sub></i><i>N</i><sub>i+1</sub> ⋅⋅⋅ <i>N<sub>k</sub></i>) = {<i>e</i>} &forall;<i>i</i> = 1,...,<i>k</i>.</p></li>
 </ol>
 
-<p>Then <i>G</i> is isomorphic to the direct product <i>N</i><sub>1</sub> x N<sub>2</sub> x ⋅⋅⋅ N<sub>k</sub></p>
+<p>Then <i>G</i> is isomorphic to the direct product <i>N</i><sub>1</sub> x <i>N</i><sub>2</sub> x ⋅⋅⋅ <i>N<sub>k</sub></i></p>
 
 <p><b>Proof</b>. We define the map</p>
 
@@ -291,7 +284,7 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 
 <p>The map <i>f</i> is surjective because by hypothesis (b), each element of <i>G</i> can be written in the form <i>a</i><sub>1</sub> <i>a</i><sub>2</sub>···<i>ak</i> for some <i>a<sub>i</sub></i> ∈ <i>N<sub>i</sub></i>, <i>i</i> = 1,2, ... ,<i>k</i>. The map <i>f</i> is injective because when <i>f</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>k</sub></i>) = <i>f</i>(<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>k</sub></i>), we obtain that <i>a</i><sub>1</sub>a<sub>2</sub>···<i>a<sub>k</sub></i> = <i>b</i><sub>1</sub><i>b</i><sub>2</sub> ··· <i>b<sub>k</sub></i>, so  that by the uniqueness of writing each element of <i>G</i> as a product, we have <i>a</i><sub>1</sub> = <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub> = <i>b</i><sub>2</sub>, ... , <i>a<sub>k</sub> = b<sub>k</sub></i>.</p>
 
-<p>By Lemma 7.17.5, we then have that <i>a<sub>i</sub>b<sub>j</sub> = b<sub>j</sub>a<sub>i</sub></i> for all <i>a<sub>i</sub></i> ∈ <i>N<sub>i</sub></i> and <i>b<sub>j</sub></i> ∈ <i>N<sub>j</sub></i> when <i>i</i> &ne;<i>j</i>. We use this fact to show that <i>f</i> is a homomorphism</p>
+<p>By Lemma 7.17.6, we then have that <i>a<sub>i</sub>b<sub>j</sub> = b<sub>j</sub>a<sub>i</sub></i> for all <i>a<sub>i</sub></i> ∈ <i>N<sub>i</sub></i> and <i>b<sub>j</sub></i> ∈ <i>N<sub>j</sub></i> when <i>i</i> &ne;<i>j</i>. We use this fact to show that <i>f</i> is a homomorphism</p>
 
 <div class="eq">
 <p><i>f</i>((<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>k</sub></i>) (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>k</sub></i>)) = <i>f</i>(<i>a</i><sub>1</sub><i>b</i><sub>1</sub>, <i>a</i><sub>2</sub>b<sub>2</sub>, ... , <i>a<sub>k</sub>b<sub>k</sub></i>)<br>
@@ -301,12 +294,12 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 = <i>f</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>k</sub></i>) <i>f</i>(<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>k</sub></i>)</p>
 </div>
 
-<p>Therefore <i>f</i>: <i>N</i><sub>1</sub> × N<sub>2</sub> ×··· × <i>N<sub>k</sub></i> → <i>G</i> is an isomorpism. &emsp;□</p>
+<p>Therefore <i>f</i>: <i>N</i><sub>1</sub> × <i>N</i><sub>2</sub> ×··· × <i>N<sub>k</sub></i> → <i>G</i> is an isomorpism. &emsp;□</p>
 
-<p>We've seen that if a group is a direct product then there exist in <i>G</i> two subgroups <i>H</i> <i>K</i> such that <i>G</i> = <i>HK</i> and <i>H</i> ∩ <i>K</i> = {<i>e</i>}. And to prove this we used the fact <i>kh' = h'k</i> of Lemma 7.17.5</p>
+<p>We've seen that if a group is a direct product then there exist in <i>G</i> two subgroups <i>H</i> <i>K</i> such that <i>G</i> = <i>HK</i> and <i>H</i> ∩ <i>K</i> = {<i>e</i>}. And to prove this we used the fact <i>kh'</i> = <i>h'k</i> of Lemma 7.17.6</p>
 
 <div class="eq">
-<p><i>hkh'k' = hh'kk'</i> &emsp; &forall; <i>h,h'</i> &in; <i>H</i>, &forall; <i>k,k'</i> &in; <i>K</i> &emsp; (<b>7.17.1</b>)</p>
+<p><i>hkh'k'</i> = <i>hh'kk'</i> &emsp; &forall; <i>h,h'</i> &in; <i>H</i>, &forall; <i>k,k'</i> &in; <i>K</i> &emsp; (<b>7.17.1</b>)</p>
 </div>
 
 <p>We suppose now that the group possesses a normal subgroup <i>N</i> and another subgroup (not necessarily normal) <i>H</i> such that</p>
@@ -315,10 +308,10 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 <p><i>G</i> = <i>NH</i>, &emsp; <i>N</i> ∩ <i>H</i> = {<i>e</i>}</p>
 </div>
 
-<p>in this case (7.17.1) does not hold anymore <i>i.e.</i> in general <i>nh ⋅ n'h'</i> &ne; <i>nn'</i> ⋅ <i>hh'</i>. But it is always true that</p>
+<p>in this case (7.17.1) does not hold anymore <i>i.e.</i> in general <i>nh</i> ⋅ <i>n'h'</i> &ne; <i>nn'</i> ⋅ <i>hh'</i>. But it is always true that</p>
 
 <div class="eq">
-<p><i>nh ⋅ n'h'</i> = <i>nhn'h'h</i><sup>−1</sup> ⋅ <i>hh'</i> &emsp; (<b>7.17.2</b>)</p>
+<p><i>nh</i> ⋅ <i>n'h'</i> = <i>nhn'h'h</i><sup>−1</sup> ⋅ <i>hh'</i> &emsp; (<b>7.17.2</b>)</p>
 </div>
 
 <p>where <i>hn'h</i><sup>−1</sup>, being conjugates of an element of <i>N</i>, which is normal. We have now that the product of two elements <i>nh</i> and <i>n'h'</i> of <i>NH</i> does not equal (as in the case of both subgroups normal) the product of <i>nn'</i> by <i>hh'</i>, but the product of <i>n</i>(<i>hn'h</i><sup>−1</sup>) by <i>hh'</i>; The difference is that in place of <i>n'</i> there must be the conjugate of <i>n'</i> through the element <i>h</i>. Thus for every <i>h</i> &in; <i>H</i> the following map is defined</p>
@@ -328,7 +321,7 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 <i>n'</i> ⟼ <i>hn'h</i><sup>−1</sup></p>
 </div>
 
-<p>an <i>automorphism</i> of <i>N</i>. Note that in the case of <i>H</i> normal as well, this automorphism results the identical automorpshim: indeed we have hn' = n'h, from which <i>hn'h</i><sup>−1</sup> = <i>n'</i>.</p>
+<p>an <i>automorphism</i> of <i>N</i>. Note that in the case of <i>H</i> normal as well, this automorphism results the identical automorpshim: indeed we have <i>hn'</i> = <i>n'h</i>, from which <i>hn'h</i><sup>−1</sup> = <i>n'</i>.</p>
 
 <p>We can define the following map</p>
 
@@ -340,18 +333,18 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 <p>which is a <i>homomorpshim</i>. Equation 7.17.2, can be written in terms of the last homomorphism as</p>
 
 <div class="eq">
-<p><i>nhn'h' = n&Phi;</i>(<i>h</i>)(<i>n'</i>)<i>hh'</i></p>
+<p><i>nhn'h'</i> = <i>n&Phi;</i>(<i>h</i>)(<i>n'</i>)<i>hh'</i></p>
 </div>
 
 <p>Note that, in case of <i>H</i> normal in <i>G</i>, <i>&Phi;</i>(<i>h</i>)(<i>n'</i>) = <i>n'</i> we find 7.17.1.</p>
 
-<p>Let now <i>H</i> and <i>K</i> two arbitrary groups and let <i>&Phi;</i> a homomorpshim from <i>K</i> to Aut(<i>H</i>). In the cartesian product <i>H x K</i> we can define the following operation</p>
+<p>Let now <i>H</i> and <i>K</i> two arbitrary groups and let <i>&Phi;</i> a homomorpshim from <i>K</i> to Aut(<i>H</i>). In the cartesian product <i>H</i> x <i>K</i> we can define the following operation</p>
 
 <div class="eq">
 <p>(<i>h,k</i>)(<i>h',k'</i>) := (<i>h</i>&Phi;(<i>k</i>)(<i>h'</i>),<i>kk'</i>)&emsp; (<b>7.17.3</b>)</p>
 </div>
 
-<p><i>H x K</i> with this operation is a group, and the subsets</p>
+<p><i>H</i> x <i>K</i> with this operation is a group, and the subsets</p>
 
 <div class="eq">
 <p><i>H</i><sub>1</sub> = {(<i>h,e<sub>K</sub></i>) | <i>h</i> &in; <i>H</i>}<br>
@@ -360,7 +353,7 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 
 <p>are two normal subgroups in <i>H x K</i> of which <i>H</i><sub>1</sub> is isomorphic to <i>H</i> and <i>K</i><sub>1</sub> to <i>K</i>.</p>
 
-<p><b>Definition 7.17.17</b>. Let <i>H</i> and <i>K</i> two groups and <i>&Phi;</i> a homomorphism from <i>K</i> to Aut(<i>H</i>). The cartesian product <i>H x K</i> along with the operation 7.17.3 is named <i>semidirect product</i> of <i>H x K</i> through the homomorphism <i>&Phi;</i>, indicated by</p>
+<p><b>Definition 7.17.17</b>. Let <i>H</i> and <i>K</i> two groups and <i>&Phi;</i> a homomorphism from <i>K</i> to Aut(<i>H</i>). The cartesian product <i>H</i> x <i>K</i> along with the operation 7.17.3 is named <i>semidirect product</i> of <i>H</i> x <i>K</i> through the homomorphism <i>&Phi;</i>, indicated by</p>
 
 <div class="eq">
 <p><i>H</i> ×<sub>&Phi;</sub> <i>K</i></p>
@@ -400,292 +393,12 @@ that <i>H</i><sub>1</sub><i>H</i><sub>2</sub> &subset; <i>G</i> is a subgroup. L
 ((1,3,2), (1,2) ⟼ (2,3)&emsp;■</p>
 </div>
 
-<p>so with a <b>direct product</b>, (a,x)(b,y) = (ab, xy) with a <b>semidirect product</b>, (a,x)(b,y) = (a &phi;<sub>x</sub>(b), xy).</p>
-
-<h2>Exercises</h2>
-
-<ol>
-	<li><p>What group ℤ<sub>5</sub> x ℤ<sub>8</sub> is isomorphic to?</p></li>
-	<li><p>Determine whether the group ℤ<sub>16</sub> is isomorphic to the direct product ℤ<sub>4</sub> x ℤ<sub>4</sub>.</p></li>
-	<li><p>Check whether (ℚ, +) is the direct product of two of its proper subgroups.</p></li>
-	<li><p>Prove that a group with order 15 is necessarily cyclic.</p></li>
-	<li><p>Prove that U(ℤ<sub>7</sub>) is a direct product. Check whether it is cyclic or not.</p></li>
-	<li><p>Calculate the possible orders of the elements of ℤ x ℤ<sub>6</sub>. Is it a cyclic group? And what about ℤ x ℤ?.</p></li>
-	<li><p>Which of the following groups having the same order are isomorphic?</p>
-
-	<div class="eq">
-	<p>ℤ<sub>16</sub>, &emsp; ℤ<sub>8</sub> x ℤ<sub>2</sub>, &emsp; ℤ<sub>4</sub> x ℤ<sub>4</sub>, &emsp; ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub>, &emsp; ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></p>
-	</div>
-
-	</li>
-
-	<li><p>Calculate the orders of the elements ℤ<sub>2</sub> x D<sub>5</sub>.</p></li>
-
-	<li><p>Check whethet S<sub>4</sub> is a direct product of its non-trivial subgroups.</p></li>
-
-	<li><p>Let <i>G = H x K</i> the direct product of two groups <i>H</i> and <i>K</i>. Let Z(<i>H</i>) the center of <i>H</i> and Z(<i>K</i>) the center of <i>K</i>. Check whether the following identity holds true</p>
-
-	<div class="eq">
-	<p>Z(<i>H</i> x <i>K</i>) = Z(<i>H</i>) x Z(<i>K</i>)</p>
-	</div>
-
-	<p>with Z(<i>H</i> x <i>K</i>) the center of <i>H</i> x <i>K</i>. If the identity is true, prove it.</p></li>
-
-	<li><p>Prove that the group <i>E</i><sub>2</sub> of all planar isometries is the semidirect product of the orthogonal group O<sub>2</sub>(ℝ) and of the group <i>T</i> of translations.</p></li> 
-</ol>
-
-<h2>Solutions</h2>
-
-<ol>
-	<li><p>By Corollary 7.17.15 ℤ<sub>5</sub> x ℤ<sub>8</sub> is cyclic since (8,5) = 1, hence isomorphic to Z<sub>40</sub>.&emsp;■</p></li>
-
-	<li><p>ℤ<sub>16</sub> not isomorphic to ℤ<sub>4</sub> x ℤ<sub>4</sub> which is not cyclic by Corollary 7.17.15: it ha no element of order 16. &emsp;■</p></li>
-
-	<li><p>Any two nontrivial subgroups of Q intersect nontrivially. Take <i>p/q</i> ∈ <i>H</i><sub>1</sub> and <i>r/s</i> ∈ <i>H</i><sub>2</sub>. By closure unders addition <i>p/q + p/q + ... = p</i> ∈ <i>H</i><sub>1</sub> (<i>q</i> times addition). Similarly <i>r</i> ∈ <i>H</i><sub>2</sub>. Hence <i>p ⋅ r</i> &in; <i>H</i><sub>1</sub> &cap; <i>H</i><sub>2</sub>. &emsp;■</p></li>
-
-	<li><p>A group <i>G</i> of order 15 = 5 ⋅ 3, has a Sylow 3-subgroup and a Sylow 5-subgroup. They are both unique and have obviously non trivial intersection since the orders of each are different. Let <i>a</i> a generator of <i>H</i> and <i>b</i> one of <i>K</i>, then the element <i>ab</i> has order 15. Thus <i>G</i> is cyclic.&emsp;■</p></li>
-
-	<li><p>U(ℤ<sub>7</sub>) is the set of <a href="modular_arithmetic.html">invertible elements</a> of ℤ<sub>7</sub>. In ℤ<sub>7</sub> every nonzero element is invertible, hence U(ℤ<sub>7</sub>) = {[1], [2], [3], [4], [5], [6]. It is cyclic.</p></li>
-
-	<li><p>(0, [0]<sub>6</sub>) is the identity element with order 1; (<i>z</i>, [<i>a</i>]<sub>6</sub>) is always inf, if <i>z</i> &ne;0; (0, [5]<sub>6</sub>) has order 6 since 6⋅[5]<sub>6</sub> = [30]<sub>6</sub> =  [0]<sub>6</sub>. (0,[2]<sub>6</sub>) and (0, [4]<sub>6</sub>) have order 3; (0,[3]<sub>6</sub>) has order 2.</p>
-
-	<p>ℤ x ℤ is not cyclic since there is no element (<i>n,m</i>) &in; ℤ x ℤ which generate the whole group (if you some over (1,1) you don't get (0,0)).&emsp;■</p></li>
-
-	<li><p>Except ℤ<sub>16</sub> which is cyclic the other groups resulting by direct product are not cyclic by Proposition 7.17.14, so not isomorphic to ℤ<sub>16</sub>. For the other groups you can look at order of different elements, how many elements in ℤ<sub>4</sub> x ℤ<sub>4</sub> have order 4? How many elements in ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> have order 4?</p> 
-
-<section>
-<table>
-<caption><b>ℤ<sub>8</sub> x ℤ<sub>2</sub></caption>
-
-<tr> <th></th> <th colspan="3">ℤ<sub>2</sub></th></tr>
-
-<tr><th></th> <th></th> <th>[0]<sub>2</th> <th>[1]<sub>2</sub></tr>
-<tr> <th rowspan="9">ℤ<sub>8</sub><br></th>  </tr>
-<tr><th>[0]<sub>8</sub></th><td>(0,0) <br>order = 1</td> <td>(0,1) <br>2</td></tr>
-<tr><th>[1]<sub>8</sub></th><td>(1,0) <br>1</td> <td>(1,1) <br>8</td></tr>
-<tr><th>[2]<sub>8</sub></th><td>(2,0) <br>4</td> <td>(2,1) <br>4</td></tr>
-<tr><th>[3]<sub>8</sub></th><td>(3,0) <br>4</td> <td>(3,1) <br>4</td></tr>
-<tr><th>[4]<sub>8</sub></th><td>(4,0) <br>2</td> <td>(4,1) <br>2</td></tr>
-<tr><th>[5]<sub>8</sub></th><td>(5,0) <br>8</td> <td>(5,1) <br>8</td></tr>
-<tr><th>[6]<sub>8</sub></th><td>(6,0) <br>3</td> <td>(6,1) <br>4</td></tr>
-<tr><th>[7]<sub>8</sub></th><td>(7,0) <br>8</td> <td>(7,1) <br>8</td></tr>
-</table>
-
-<table>
-<caption><b>ℤ<sub>4</sub> x ℤ<sub>4</sub></caption>
-
-<tr> <th></th> <th colspan="5">ℤ<sub>4</sub></th></tr>
-
-<tr><th></th> <th></th> <th>[0]<sub>4</th> <th>[1]<sub>4</sub> <th>[2]<sub>2</th> <th>[3]<sub>4</sub></tr>
-<tr> <th rowspan="9">ℤ<sub>8</sub><br></th>  </tr>
-<tr><th>[0]<sub>4</sub></th><td>(0,0) <br>order = 1</td> <td>(0,1) <br>4</td> <td>(0,2) <br>2</td> <td>(0,3) <br>4</td></tr>
-<tr><th>[1]<sub>4</sub></th><td>(1,0) <br>4</td> <td>(1,1) <br>4</td>  <td>(1,2) <br>4</td>  <td>(1,3) <br>4</td></tr>
-<tr><th>[2]<sub>4</sub></th><td>(2,0) <br>2</td> <td>(2,1) <br>4</td> <td>(2,2) <br>2</td> <td>(2,1) <br>4</td></tr>
-<tr><th>[3]<sub>4</sub></th><td>(3,0) <br>4</td> <td>(3,1) <br>4</td> <td>(3,2) <br>4</td> <td>(3,3) <br>4</td></tr>
-</table>
-</section>
-
-<p><b>ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></b>:</p>
-
-<p>o((0,0,0,0)) = 1 &emsp; o((1,0,0,0)) = 2 &emsp; o((0,1,0,0)) = 2, &emsp; o((0,0,1,0)) = 2, &emsp; o((0,0,0,1)) = 2<br>
-o((1,1,0,0)) = 2 &emsp; o((0,1,1,0)) = 2 &emsp; o((0,0,1,1)) = 2, &emsp; o((1,0,0,1)) = 2, <br>
-o((1,1,1,0)) = 2 &emsp; o((0,1,1,1)) = 2 &emsp; o((1,0,1,1)) = 2, &emsp; o((1,1,1,1)) = 2, <br>
-o((1,0,1,0)) = 2, &emsp;o((0,1,0,1)) = 2 &emsp; o((1,0,1,0)) = 2
-</p>
-
-<p><b>ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></b>:</p>
-
-<p>o((0,0,0)) = 1, &emsp; o((0,1,0)) = 2, &emsp; o((0,0,1)) = 2 &emsp; o((0,1,1)) = 2<br>
-o((1,0,0)) = 4, &emsp; o((1,0,1)) = 4, &emsp;o((1,1,0)) = 4, &emsp; o((1,1,1)) = 4<br>
-o((2,0,0)) = 2, &emsp; o((2,0,1)) = 2, &emsp;o((2,1,0)) = 2, &emsp; o((2,1,1)) = 2<br>
-o((3,0,0)) = 4, &emsp; o((3,0,1)) = 4, &emsp; o((3,1,0)) = 4, &emsp; o((3,1,1)) = 4,<br>
-</p>
-
-<p>Hence none of the groups above are isomorphic. &emsp;■</p></li>
-
-<li><p><a href="dihedral_groups.html#D5"><i>D</i><sub>5</sub></a> is the group of symmetries of a regular pentagon. It has ten elements: <i>e</i>, four counterclockwise rotations <i>r<sub>i</sub></i> (72° = 360°/5, 144°, 216°, 288°) and the five reflections <i>l<sub>i</sub></i> about perpendiculars from a vertex to the opposite side.</p>
-
-<table>
-<caption><b>ℤ<sub>2</sub> x <i>D</i><sub>5</sub></caption>
-
-<tr> <th></th> <th colspan="3">ℤ<sub>2</sub></th></tr>
-
-<tr><th></th> <th></th> <th>[0]<sub>2</th> <th>[1]<sub>2</sub> </tr>
-<tr> <th rowspan="11">D<sub>5</sub><br></th>  </tr>
-<tr><th>e</th><td>([0]<sub>2</sub>, <i>e</i>) <br>order = 1</td> <td>([1]<sub>2</sub>, <i>e</i>) <br>4</td> </tr>
-<tr><th><i>r</i><sub>1</sub></th><td>([0]<sub>2</sub>, <i>r</i><sub>1</sub>) <br>order = 5</td> <td>([1]<sub>2</sub>,<i>r</i><sub>1</sub>) <br>10</td> </tr>
-<tr><th><i>r</i><sub>2</sub></th><td>([0]<sub>2</sub>, <i>r</i><sub>2</sub>) <br>5</td> <td>([1]<sub>2</sub>, <i>r</i><sub>2</sub>) <br>10</td>  </tr>
-<tr><th><i>r</i><sub>3</sub></th><td>([0]<sub>2</sub>, <i>r</i><sub>3</sub>) <br>5</td> <td>([1]<sub>2</sub>, <i>r</i><sub>3</sub>) <br>10</td> </tr>
-<tr><th><i>r</i><sub>4</sub></th><td>([0]<sub>2</sub>, <i>r</i><sub>4</sub>) <br>5</td> <td>([1]<sub>2</sub>, <i>r</i><sub>4</sub>) <br>10</td>  </tr>
-<tr><th><i>l</i><sub>1</sub></th><td>([0]<sub>2</sub>, <i>l</i><sub>1</sub>) <br>2</td> <td>([1]<sub>2</sub>, <i>l</i><sub>1</sub>) <br>2</td>  </tr>
-<tr><th><i>l</i><sub>2</sub></th><td>([0]<sub>2</sub>, <i>l</i><sub>2</sub>) <br>2</td> <td>([1]<sub>2</sub>, <i>l</i><sub>2</sub>) <br>2</td>  </tr>
-<tr><th><i>l</i><sub>3</sub></th><td>([0]<sub>2</sub>, <i>l</i><sub>3</sub>) <br>2</td> <td>([1]<sub>2</sub>, <i>l</i><sub>3</sub>) <br>2</td>  </tr>
-<tr><th><i>l</i><sub>4</sub></th><td>([0]<sub>2</sub>, <i>l</i><sub>4</sub>) <br>2</td> <td>([1]<sub>2</sub>, <i>l</i><sub>4</sub>) <br>2</td>  </tr>
-<tr><th><i>l</i><sub>5</sub></th><td>([0]<sub>2</sub>, <i>l</i><sub>5</sub>) <br>2</td> <td>([1]<sub>2</sub>, <i>l</i><sub>5</sub>) <br>2</td>  </tr>
-</table>
-
-<p>so the possible orders in <i>D</i><sub>5</sub> are 1, 2, 5, 10. &emsp;■</p></li>
-
-<li><p>The two normal subgroups of S<sub>4</sub> are A<sub>4</sub> = {id, (123), (132), (124), (142), (134), (143), (234), (243), (12)(34), (13)(24), (14)(23)} and <i>K</i> = {id, (12)(34), (1,3),(2,4), (2,3) (1,4)} which have a non-trivial intersection hence by Theorem 7.17.4 is not possible to express S<sub>4</sub> as direct product. &emsp;■</p></li>
-
-<li><p>It is true. (<i>x, y</i>) &in; Z(<i>H</i> x <i>H</i>) ⇐⇒ (<i>x, y</i>) (<i>h, k</i>) = (<i>h, k</i>) (<i>x, y</i>) for all (<i>h, k</i>) &in; <i>H</i> x <i>K</i> ⇐⇒ (<i>xh, yk</i>) = (<i>hx, ky</i>) for all <i>h</i> &in; <i>H</i>, <i>k</i> &in; <i>K</i> ⇐⇒ <i>xh = hx</i>, <i>yk = ky</i> for all <i>h</i> &in; <i>H</i>, <i>k</i> &in; <i>K</i> ⇐⇒ <i>x</i> &in; Z(<i>H</i>), <i>y</i> &in; Z(<i>K</i>) ⇐⇒ (<i>x, y</i>) &in; Z(<i>H</i>) x Z(<i>K</i>)&emsp;■.</p></li>
-
-<li><p>We have already studied the <a href="isometries.html">isometries</a> which form a group under composition of function, the so called Euclidean group <i>E</i><sub>2</sub>. Euclidean group is built from the translational group <i>T</i> and the orthogonal group O<sub>2</sub>(R).</p>
-
-<p>By checking that the conditions of Theorem 7.17.18 are satisfied <i>i.e</i>:</p>
-
-<ul>
-	<li><p><i>T</i> is a normal subgroup of <i>E</i><sub>2</sub>,</p></li>
-	<li><p><i>E</i><sub>2</sub> = <i>TO</i><sub>2</sub>,</p></li>
-	<li><p><i>T</i> ∩ <i>O</i><sub>2</sub> = {<i>I</i>}.
-</ul>
-
-<p>We have that <i>E</i><sub>2</sub> is the semidirect product <i>T</i> x<sub>&phi;</sub> <i>O</i>, where &phi; is a certain homorphism.</p>
-
-<p>We see that the composition of a rotation, a translation, and the inverse rotation is another translation i.e. <i>T</i> is a normal subgroup. Suppose <i>f</i> &in; <i>O</i>, <i>&tau;</i> in <i>T</i>, and <i>&tau;</i>(<b>0</b>) = <b>v</b>. Then for each <b>x</b> &in; ℝ<sup>2</sup> we have</p>
-
-<div class="eq">
-<p><i>ftf</i><sup>−1</sup>(<b>x</b>) = <i>f</i> (<b>v</b> + <i>f</i><sup>−1</sup>(<b>x</b>))<br>
-= <i>f</i>(<b>v</b>) + <i>f</i>(<i>f</i><sup>−1</sup>(<b>x</b>))&emsp; because <i>f</i> in linear<br>
-= <i>f</i>(<b>v</b>) + <b>x</b></p>
-</div>
-
-<p>Therefore the conhugate <i>ftf</i><sup>−1</sup> is translation by the vector <i>f</i>(<b>v</b>), hence <i>T</i> is a normal subgroup of <i>E</i><sub>2</sub>.</p>
-
-<p>The intersection of <i>T</i> and <i>O</i> is just the identity transformation because every non-trivial translation moves the origin, whereas every element of <i>O</i> keeps the origin fixed.</p>
-
-<p>Now we show that <i>E</i><sub>2</sub> = <i>TO</i> = <i>OT</i>, that is a general element <i>E</i><sub>2</sub> is either a rotation about the origin followed by a translation, or a rotation followed by a traslation. Let <i>f</i> : ℝ<sup>2</sup> ⟶ ℝ<sup>2</sup> be an arbitrary isometry. Define <i>g</i> : ℝ<sup>2</sup> ⟶ ℝ<sup>2</sup> by <i>g</i>(<b>x</b>) = <i>f</i>(<b>x</b>) − <i>f</i>(<b>0</b>). Then <i>g</i> fixes the origin, so <i>g</i> &in; O<sub>2</sub>. Clearly, <i>f</i> = <i>tg</i>, where <i>&tau;</i>(<b>x</b>) = <b>x</b> + <i>f</i>(<b>0</b>). By taking the <a href="groups.html#inverse">inverse</a> of <i>f</i> we have <i>f</i><sup>−1</sup> = <i>&tau;</i><sup>−1</sup> <i>o</i><sup>−1</sup>, so <i>E</i><sub>2</sub> = <i>TO</i><sub>2</sub> as well.</p>
-
-<p>In matrix notation, the general direct isometry of the Euclidean plane is given by</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">(</mo>
-    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>x</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>y</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">)</mo>
-  </mrow>
-  <mo accent="false" stretchy="false">&#x2192;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">(</mo>
-    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msup>
-            <mi>x</mi>
-            <mo data-mjx-alternate="1">&#x2032;</mo>
-          </msup>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msup>
-            <mi>y</mi>
-            <mo data-mjx-alternate="1">&#x2032;</mo>
-          </msup>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">)</mo>
-  </mrow>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">(</mo>
-    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>c</mi>
-          <mi>o</mi>
-          <mi>s</mi>
-          <mi>&#x3B8;</mi>
-        </mtd>
-        <mtd>
-          <mi>s</mi>
-          <mi>i</mi>
-          <mi>n</mi>
-          <mi>&#x3B8;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mi>s</mi>
-          <mi>i</mi>
-          <mi>n</mi>
-          <mi>&#x3B8;</mi>
-        </mtd>
-        <mtd>
-          <mi>c</mi>
-          <mi>o</mi>
-          <mi>s</mi>
-          <mi>&#x3B8;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">)</mo>
-  </mrow>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">(</mo>
-    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>x</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>y</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">)</mo>
-  </mrow>
-  <mo>+</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">(</mo>
-    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>a</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>b</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">)</mo>
-  </mrow>
-</math>
-
-<p>where <i>x</i> and <i>y</i> are Cartesian coordinates; it represents a rotation (counter-clockwise) through an angle <i>&theta;</i> followed by a translation by distance <i>a</i> in the <i>x</i>-direction and a distance <i>b</i> in the <i>y</i>-direction. The same can also be obtained by a suitable translation <i>followed</i> by a rotation.</p>
-
-<p>Thus <i>E</i><sub>2</sub> = <i>T</i> x<sub>&phi;</sub> <i>O</i> is a semidirect product where <i>&phi;</i> is the homomorphism <i>&phi;</i>: O ⟶ Aut(<i>T</i>) induced by conjugation</p>
-
-<div class="eq">
-<p><i>&phi;</i>: O<sub>2</sub>(R) ⟶ Aut(<i>T</i>)<br>
-&phi;<sub>o</sub>(<i>t</i>) = <i>oto</i><sup>−1</sup>&emsp;■</p>
-</div>
-
-</li>
-
-</ol>
+<p>so with a <b>direct product</b>, (<i>a,x</i>)(<i>b,y</i>) = (<i>ab, xy</i>) with a <b>semidirect product</b>, (<i>a,x</i>)(<i>b,y</i>) = (a &phi;<sub>x</sub>(b), <i>xy</i>).</p>
 
 <section aria-label="End">
 <a href="cauchy_sylow.html">&#171;Sylow and Cauchy theorems</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides&#187;</a>
+<a href="exercises_direct_products.html">Exercises&#187;</a>
 </section>
 
 </div>
