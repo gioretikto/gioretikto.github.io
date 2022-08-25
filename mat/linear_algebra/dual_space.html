@@ -69,7 +69,45 @@
 <p><i>a</i><sub>1</sub> = <i>f</i>(<i><b>e</b></i><sub>1</sub>), &emsp; <i>a</i><sub>2</sub> = <i>f</i>(<i><b>e</b></i><sub>1</sub>), ..., <i>a<sub>n</sub></i> = <i>f</i>(<i><b>e</b><sub>n</sub></i>)&emsp; 8.1.2</p>
 </div>
 
-<p>It is clear from Eq. 8.1.1 that given a basis, <i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b></i><sub>n</sub> every <i>n</i>-tuple <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> determines a unique linear function. Further since this correspondence with <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> preserves sums and products (of vectors by scalars), it follows that <i>V</i>* is isomorphic to the space of <i>n</i>-tuples of numbers. One consequence of this fact is that the dual space i of the n-dimensional space <i>V</i> is likewise <i>n</i>-dimensional.</p>
+<p>It is clear from Eq. 8.1.1 that given a basis, <i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b></i><sub>n</sub> every <i>n</i>-tuple <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> determines a unique linear function. Further since this correspondence with <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> preserves sums and products (of vectors by scalars), it follows that <i>V</i>* is isomorphic to the space of <i>n</i>-tuples of numbers. One consequence of this fact is that the dual space i of the <i>n</i>-dimensional space <i>V</i> is likewise <i>n</i>-dimensional.</p>
+
+<h2>Double Dual space <i>V</i>**</h2>
+
+<p>The isomorphism between <i>V</i> and <i>V<sup>∗</sup></i> is somewhat strange, as it depends on the particular choice of basis that we make on <i>V</i>—if we change the basis <i>B</i> in <a href="linear_forms.html">Theorem 7.1.4</a> then the vector <b><i>v</i></b> corresponding to a linear form <i>f</i> changes as well. The fact that the isomorphism between <i>V</i> and <i>V<sup>∗</sup></i> is basis-dependent suggests that something somewhat unnatural is going on, as many (even finite-dimensional) vector spaces do not have a “natural” or “standard” choice of basis. However, if we go one step further and consider the double-dual space <i>V<sup>∗∗</sup></i> consisting of linear forms acting on <i>V<sup>∗</sup></i> then things become a bit more well-behaved, so we now briefly explore this double-dual space.</p>
+
+<p>The members of <i>V</i><sup>∗∗</sup> are linear forms acting on linear forms (i.e., functions of functions).</p>
+
+<p>Using the exact same ideas as earlier, if <i>V</i> is finite-dimensional then we still have dim(<i>V</i><sup>∗∗</sup>) = dim(<i>V</i><sup>∗</sup>) = dim(<i>V</i>), so all three of these vector spaces are isomorphic. Consider the function <i>T</i>: <i>V</i> ⟶ <i>V</i>** defined by</p>
+
+<div class="eq">
+<p><i>T</i>(<b>v</b>) = <i>φ<sub><b>v</b></sub></i> &emsp;8.1.2</p>
+</div>
+
+<p>with <i><b>v</b></i> ∈ <i>V</i> and <i>φ<sub><b>v</b></sub></i> ∈ <i>V</i>**. <i>T</i> is a function that sends vectors to functions of functions of vectors. The linear form <i>φ<sub><b>v</b></sub></i> ∈ <i>V</i><sup>∗∗</sup> in 8.1.2 is defined by</p>
+
+<div class="eq">
+<p><i>φ<sub><b>v</b></sub></i>(<i>f</i>) = <i>f</i>(<i><b>v</b></i>) &emsp;for all&emsp; <i>f</i> ∈ <i>V</i><sup>∗</sup>.</p>
+</div>
+
+<p>Showing that <i>φ<sub><b>v</b></sub></i> is linear form does not requires just to check the two defining properties from the Definition of linear forms:</p>
+
+<ol type="a">
+	<li><p>For all <i>f , g</i> ∈ <i>V<sup>∗</sup></i> we have</p>
+
+<div class="eq">
+<p><i>φ<sub><b>v</b></sub></i>(<i>f</i> + <i>g</i>) = (<i>f</i> + <i>g</i>)(<i><b>v</b></i>) = <i>f</i>(<i><b>v</b></i>) + <i>g</i>(<i><b>v</b></i>) = <i>φ<sub><b>v</b></sub></i>(<i>f</i>) + <i>φ<sub><b>v</b></sub></i>(<i>g</i>).</p>
+</div>
+
+</li>
+
+<li><p>Similarly, for all <i>c</i> ∈ 𝕂 and <i>f</i> ∈ <i>V<sup>∗</sup></i> we have</p>
+
+<div class="eq">
+<p><i>φ<sub><b>v</b></sub></i>(<i>cf</i>) = (<i>cf</i>)(<i><b>v</b></i>) = <i>cf</i>(<i><b>v</b></i>) = <i>cφ<sub><b>v</b></sub></i>(<i>f</i>)</p>
+</div>
+</li>
+
+</ol>
 
 <p>The vectors in <i>V</i> are said to be <i>contravariant</i>, those in <i>V</i>*, <i>covariant</i>.</p>
 
@@ -109,10 +147,26 @@
 
 <p>define a unique vector (linear function) <i><b>f</b><sup>2</sup></i> &in; <i>V</i>*, etc. The vectors <i><b>f</b></i><sup>1</sup>, ..., <i><b>f</b><sup>n</sup></i> are linarly independent since the corresponding <i>n</i>-tuples of numbers are linearly independent. Thus {<i><b>f</b></i><sub>1</sub>, <i><b>f</b></i><sub>2</sub>, ..., <i><b>f</b><sub>n</sub></i>} costitute a unique basis of <i>V</i>* dual to the basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} of <i>V</i>.</p>
 
-<p>Ad esempio se <i>V</i> è ℝ<sup>2</sup> scegliendo la base canonica {<b>e</b></sub><sub>1</sub> = (1, 0), <b>e</b></sub><sub>2</sub> = (0, 1)}, allora <b>e</b><sup>1</sup> e <b>e</b><sup>2</sup> so funzioni lineari  tali da aversi <b>e</b><sup>1</sup>(<b>e</b><sub>1</sub>) = 1, <b>e</b><sup>1</sup>(<b>e</b><sub>2</sub>) = 0, <b>e</b><sup>2</sup>(<b>e</b><sub>1</sub>) = 0</span>, e <b>e</b><sup>2</sup>(<b>e</b><sub>2</sub>) = 1.</p>
+<p>For example if <i>V</i> is ℝ<sup>2</sup> choosing the canonical base {<b>e</b></sub><sub>1</sub> = (1, 0), <b>e</b></sub><sub>2</sub> = (0, 1)}, then <b>e</b><sup>1</sup> and <b>e</b><sup>2</sup> are linear forms such that <b>e</b><sup>1</sup>(<b>e</b><sub>1</sub>) = 1, <b>e</b><sup>1</sup>(<b>e</b><sub>2</sub>) = 0, <b>e</b><sup>2</sup>(<b>e</b><sub>1</sub>) = 0</span>, and <b>e</b><sup>2</sup>(<b>e</b><sub>2</sub>) = 1.</p>
+
+<p>Figure 1 represents two coordinate systems where the contravariant and covariant components of <b>OP</b> are shown. The covariant components of <b>OP</b> appear in the axes of the two coordinate systems {X1; X2}  and {X'1; X'2}. If we increase the length of a basis vector <b>e</b><sub>j</sub>, we must decrease the contravariant component <i>x<sup>j</sup></i> of <b>OP</b> in order to keep the latter unchanged. In other words, contravariant component <i>x<sup>j</sup></i> transforms in the opposite way to basis vector <i><b>e</b><sub>j</sub></i>. As a result, the dual basis vector <i><b>e</b><sub>j</sub></i> decreases in length due to</p>
+
+<div class="eq">
+<p><i><b>e</b><sub>i</sub></i> ⋅ <i><b>e</b><sub>j</sub></i> = ||<i><b>e</b><sub>i</sub></i>|| ||<i><b>e</b><sub>j</sub></i>|| cos &theta; = 1.</p>
+</div>
+
+<p>Therefore, the covariant component <i>x<sub>j</sub></i> of <b>OP</b> in the dual coordinate system must increase in order to keep <b>OP</b> unchanged. In other words, covariant components <i>x<sub>j</sub></i> in the dual coordinate system transforms in the same
+way as basis vector <b><i>e<sub>j</sub></i></b>.</p> 
+
+<figure>
+<img src="img/dual_space.png" alt="dual space"/>
+<figcaption><b>Fig.1</b>. The Primal basis (red) and reciprocal basis (blue) are mutually orthogonal: <i>e</i><sup>1</sup> is orthogonal to <i>e</i><sub>2</sub> and <i>e</i><sub>1</sub> is orthogonal to <i>e</i><sup>2</sup>. Contravariant (<i>x</i><sup>1</sup>, <i>x</i><sup>2</sup>) and covariant (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) components of vector <b>OP</b> in Euclidean plane with two nonorthogonal basis vectors {<b><i>e</i></b><sub>1</sub>, <b><i>e</i></b><sub>2</sub>} and dual basis vectors {<b><i>e</i></b><sup>1</sup>, <b><i>e</i></b> <sup>2</sup>}.</figcaption>
+</figure>
+
+<p><b>Example</b>. The gradient <i>F</i>(<i>x</i>) of ∇<i>F</i>: <i>V</i> ⟶ ℝ at any point <i>x</i> &in; <i>V</i> is in the dual space <i>V*</i> of (continuous) linear functionals on <i>V</i>. &emsp;■</p>
 
 <section aria-label="End">
-<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="linear_forms.html">&#171;Linear Forms</a>
 <a href="index.html">Index</a>
 <a href="peculiarities4.html">Tensors&#187;</a>
 </section>
