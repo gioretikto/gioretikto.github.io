@@ -35,6 +35,64 @@
 
 <p>By the sum <i>h</i> of <i>f</i> and <i>g</i> we mean the function which associates with a vector <i><b>v</b></i> the number <i>f</i>(<i><b>v</b></i>) + <i>g</i>(<i><b>v</b></i>). By the product of <i>f</i> by a number <i>&alpha;</i> we mean the function which associates with a vector <b><i>v</i></b>  the number <i>&alpha;</i> <i>f</i>(<b><i>v</i></b>). With these two operations, <i>V*</i> acquires the properties of vector space over &Kopf;, known as <b>dual space</b>.</p>
 
+<h2>The Duality Principle</h2>
+
+<p>The condition of duality between two vector spaces is defined by the following.</p>
+
+<p id="duality"><b>Definition 8.1.1</b>. Let {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i> and {<b><i>e</i></b><sup>1</sup>, ..., <i><b>e</b><sup>n</sup></i>} a basis in <i>V</i>*. The two bases are said to be dual if</p>
+
+<div class="eq">
+<p><i><b>e</b><sup>i</sup></i> (<i><b>e</b><sub>j</sub></i>) = <i>&delta;<sup>i</sup><sub>j</sub></i></p>
+</div>
+
+<p>or using brackets as:</p>
+
+<div class="eq">
+<p>⟨<i><b>e</b><sup>i</sup></i> | <i><b>e</b><sub>j</sub></i>⟩ = <i>&delta;<sup>i</sup><sub>j</sub></i> &emsp;</p>
+</div>
+
+<p>where <i>&delta;<sub>j</sub><sup>i</sup></i> is Kronecker's delta.&emsp;□</p>
+
+<p>The vectors in <i>V</i> are said to be <i>contravariant</i>, those in <i>V</i>*, <i>covariant</i>.</p>
+
+<table>
+<tr><th>Expansion of <b>A</b></th> <th>Projections</th> <th>Component names</th></tr>
+<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sup>μ</sup></i> <b>e</b><sub>μ</sub></td> <td><i>A<sup>μ</sup></i> = <b>A</b> · <b>e</b><sup>μ</sup></td> <td>Contravariant components of A</td></tr>
+<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sub>μ</sub></i> <b>e</b><sup>μ</sup></td> <td><i>A<sub>μ</sub></i> = <b>A</b> · <b>e</b><sub>μ</sub></td> <td>Covariant components of A</td></tr>
+</table>
+
+<p>If {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i>, and <i>f</i> is a linear function on <i>V</i>, then ⟨<i>f</i> | <i><b>e</b><sub>j</sub></i>⟩ = <i>f</i>(<i><b>e</b><sub>j</sub></i>) give the numbers <i>a<sub>j</sub></i> which determine the linear function <i>f</i> &in; <i>V</i>* (cf. formula (8.1.2)). This remark implies that, if {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} is a basis in <i>V</i>, then there exists a unique basis {<i><b>f</b></i><sub>1</sub>, <i><b>f</b></i><sub>2</sub>, ..., <i><b>f</b><sub>n</sub></i>} in <i>V</i>* dual to {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>}. The proof is immediate</p>
+
+<div class="eq">
+<p>⟨<i><b>f</b><sup>1</sup></i> | <i><b>e</b><sub>1</sub></i>⟩ = 1, &emsp; ⟨<i><b>f</b><sup>1</sup></i> | <i><b>e</b><sub>2</sub></i>⟩ = 0, &emsp; ..., &emsp; ⟨<i><b>f</b><sup>1</sup></i> | <i><b>e</b><sub>n</sub></i>⟩ = 0</p>
+</div>
+
+<p>define a unique vector (linear function) <i><b>f</b><sup>1</sup></i> &in; <i>V</i>*. The equations</p>
+
+<div class="eq">
+<p>⟨<i><b>f</b><sup>2</sup></i> | <i><b>e</b><sub>1</sub></i>⟩ = 0, &emsp; ⟨<i><b>f</b><sup>2</sup></i> | <i><b>e</b><sub>2</sub></i>⟩ = 1, &emsp; ..., &emsp; ⟨<i><b>f</b><sup>2</sup></i> | <i><b>e</b><sub>n</sub></i>⟩ = 0</p>
+</div>
+
+<p>define a unique vector (linear function) <i><b>f</b><sup>2</sup></i> &in; <i>V</i>*, etc. The vectors <i><b>f</b></i><sup>1</sup>, ..., <i><b>f</b><sup>n</sup></i> are linarly independent since the corresponding <i>n</i>-tuples of numbers are linearly independent. Thus {<i><b>f</b></i><sub>1</sub>, <i><b>f</b></i><sub>2</sub>, ..., <i><b>f</b><sub>n</sub></i>} costitute a unique basis of <i>V</i>* dual to the basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} of <i>V</i>.</p>
+
+<p>For example if <i>V</i> is ℝ<sup>2</sup> choosing the canonical base {<b>e</b></sub><sub>1</sub> = (1, 0), <b>e</b></sub><sub>2</sub> = (0, 1)}, then <b>e</b><sup>1</sup> and <b>e</b><sup>2</sup> are linear forms such that <b>e</b><sup>1</sup>(<b>e</b><sub>1</sub>) = 1, <b>e</b><sup>1</sup>(<b>e</b><sub>2</sub>) = 0, <b>e</b><sup>2</sup>(<b>e</b><sub>1</sub>) = 0</span>, and <b>e</b><sup>2</sup>(<b>e</b><sub>2</sub>) = 1.</p>
+
+<p>Figure 1 represents two coordinate systems where the contravariant and covariant components of <b>OP</b> are shown. The covariant components of <b>OP</b> appear in the axes of the two coordinate systems {X1; X2}  and {X'1; X'2}. If we increase the length of a basis vector <b>e</b><sub>j</sub>, we must decrease the contravariant component <i>x<sup>j</sup></i> of <b>OP</b> in order to keep the latter unchanged. In other words, contravariant component <i>x<sup>j</sup></i> transforms in the opposite way to basis vector <i><b>e</b><sub>j</sub></i>. As a result, the dual basis vector <i><b>e</b><sub>j</sub></i> decreases in length due to</p>
+
+<div class="eq">
+<p><i><b>e</b><sup>j</sup></i> ⋅ <i><b>e</b><sub>j</sub></i> = ||<i><b>e</b><sup>j</sup></i>|| ||<i><b>e</b><sub>j</sub></i>|| cos &theta; = 1.</p>
+</div>
+
+<p>Therefore, the covariant component <i>x<sub>j</sub></i> of <b>OP</b> in the dual coordinate system must increase in order to keep <b>OP</b> unchanged. In other words, covariant components <i>x<sub>j</sub></i> in the dual coordinate system transforms in the same
+way as basis vector <b><i>e<sub>j</sub></i></b>.</p> 
+
+<figure>
+<img src="img/dual_space.png" alt="dual space"/>
+<figcaption><b>Fig.1</b>. The Primal basis (red) and reciprocal basis (blue) are mutually orthogonal: <i>e</i><sup>1</sup> is orthogonal to <i>e</i><sub>2</sub> and <i>e</i><sub>1</sub> is orthogonal to <i>e</i><sup>2</sup>. Contravariant (<i>x</i><sup>1</sup>, <i>x</i><sup>2</sup>) and covariant (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) components of vector <b>OP</b> in Euclidean plane with two nonorthogonal basis vectors {<b><i>e</i></b><sub>1</sub>, <b><i>e</i></b><sub>2</sub>} and dual basis vectors {<b><i>e</i></b><sup>1</sup>, <b><i>e</i></b> <sup>2</sup>}.</figcaption>
+</figure>
+
+<p><b>Example</b>. The gradient <i>F</i>(<i>x</i>) of ∇<i>F</i>: <i>V</i> ⟶ ℝ at any point <i>x</i> &in; <i>V</i> is in the dual space <i>V*</i> of (continuous) linear functionals on <i>V</i>. &emsp;■</p>
+
 <h2>Dirac’s Bracket Notation</h2>
 
 <p>To emphasize the duality between the two vector spaces, one takes advantage of Dirac’s bra-ket notation, which he originally introduced into quantum mechanics. <br> If <i>f</i> is a linear function on <i>V</i> and <i>f</i>(<b><i>v</i></b>) is its value at <b><i>v</i></b> ∈ <i>V</i>, then one also write</p>
@@ -60,13 +118,13 @@
 <p>is a vector in <i>V</i> and <i>f</i> is a linear function on <i>V</i>, then we can write</p>
 
 <div class="eq">
-<p><i>f</i>(<i><b>x</b></i>) = <i>f</i>(<i>&xi;</i><sup>1</sup><i><b>e</b></i><sub>1</sub> + <i>&xi;</i><sup>2</sup><i><b>e</b></i><sub>2</sub> + ... + <i>&xi;<sup>n</sup><b>e</b><sub>n</sub></i>)<br> = <i>a</i><sub>1</sub> <i>&xi;</i><sup>1</sup> + <i>a</i><sub>2</sub> <i>&xi;</i><sup>2</sup> + ... + <i>a<sub>n</sub> &xi;<sup>n</sup></i> &emsp; 8.1.1</p>
+<p><i>f</i>(<i><b>x</b></i>) = <i>f</i>(<i>&xi;</i><sup>1</sup><i><b>e</b></i><sub>1</sub> + <i>&xi;</i><sup>2</sup><i><b>e</b></i><sub>2</sub> + ... + <i>&xi;<sup>n</sup><b>e</b><sub>n</sub></i>)<br> = <i>a</i><sub>1</sub> <i>&xi;</i><sup>1</sup> + <i>a</i><sub>2</sub> <i>&xi;</i><sup>2</sup> + ... + <i>a<sub>n</sub> &xi;<sup>n</sup></i> &emsp; <b>8.1.1</b></p>
 </div>
 
 <p>where the coefficients <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> which determine the linear function are given by</p>
 
 <div class="eq">
-<p><i>a</i><sub>1</sub> = <i>f</i>(<i><b>e</b></i><sub>1</sub>), &emsp; <i>a</i><sub>2</sub> = <i>f</i>(<i><b>e</b></i><sub>1</sub>), ..., <i>a<sub>n</sub></i> = <i>f</i>(<i><b>e</b><sub>n</sub></i>)&emsp; 8.1.2</p>
+<p><i>a</i><sub>1</sub> = <i>f</i>(<i><b>e</b></i><sub>1</sub>), &emsp; <i>a</i><sub>2</sub> = <i>f</i>(<i><b>e</b></i><sub>1</sub>), ..., <i>a<sub>n</sub></i> = <i>f</i>(<i><b>e</b><sub>n</sub></i>)&emsp; <b>8.1.2</b></p>
 </div>
 
 <p>It is clear from Eq. 8.1.1 that given a basis, <i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b></i><sub>n</sub> every <i>n</i>-tuple <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> determines a unique linear function. Further since this correspondence with <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> preserves sums and products (of vectors by scalars), it follows that <i>V</i>* is isomorphic to the space of <i>n</i>-tuples of numbers. One consequence of this fact is that the dual space i of the <i>n</i>-dimensional space <i>V</i> is likewise <i>n</i>-dimensional.</p>
@@ -80,13 +138,13 @@
 <p>Using the exact same ideas as earlier, if <i>V</i> is finite-dimensional then we still have dim(<i>V</i><sup>∗∗</sup>) = dim(<i>V</i><sup>∗</sup>) = dim(<i>V</i>), so all three of these vector spaces are isomorphic. Consider the function <i>T</i>: <i>V</i> ⟶ <i>V</i>** defined by</p>
 
 <div class="eq">
-<p><i>T</i>(<b>v</b>) = <i>φ<sub><b>v</b></sub></i> &emsp;8.1.2</p>
+<p><i>T</i>(<b>v</b>) = <i>φ<sub><b>v</b></sub></i> &emsp;<b>8.1.3</b></p>
 </div>
 
-<p>with <i><b>v</b></i> ∈ <i>V</i> and <i>φ<sub><b>v</b></sub></i> ∈ <i>V</i>**. <i>T</i> is a function that sends vectors to functions of functions of vectors. The linear form <i>φ<sub><b>v</b></sub></i> ∈ <i>V</i><sup>∗∗</sup> in 8.1.2 is defined by</p>
+<p>with <i><b>v</b></i> ∈ <i>V</i> and <i>φ<sub><b>v</b></sub></i> ∈ <i>V</i>**. <i>T</i> is a function that sends vectors to functions of functions of vectors. The linear form <i>φ<sub><b>v</b></sub></i> ∈ <i>V</i><sup>∗∗</sup> in 8.1.3 is defined by</p>
 
 <div class="eq">
-<p><i>φ<sub><b>v</b></sub></i>(<i>f</i>) = <i>f</i>(<i><b>v</b></i>) &emsp;for all&emsp; <i>f</i> ∈ <i>V</i><sup>∗</sup>.</p>
+<p><i>φ<sub><b>v</b></sub></i>(<i>f</i>) = <i>f</i>(<i><b>v</b></i>) &emsp;for all&emsp; <i>f</i> ∈ <i>V</i><sup>∗</sup> &emsp;<b>8.1.4</b></p>
 </div>
 
 <p>Showing that <i>φ<sub><b>v</b></sub></i> is linear form does not requires just to check the two defining properties from the Definition of linear forms:</p>
@@ -109,61 +167,46 @@
 
 </ol>
 
-<p>The vectors in <i>V</i> are said to be <i>contravariant</i>, those in <i>V</i>*, <i>covariant</i>.</p>
+<p>To prove that <i>T</i> is a canonical isomorphism we need the followin proposition.</p>
 
-<table>
-<tr><th>Expansion of <b>A</b></th> <th>Projections</th> <th>Component names</th></tr>
-<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sup>μ</sup></i> <b>e</b><sub>μ</sub></td> <td><i>A<sup>μ</sup></i> = <b>A</b> · <b>e</b><sup>μ</sup></td> <td>Contravariant components of A</td></tr>
-<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sub>μ</sub></i> <b>e</b><sup>μ</sup></td> <td><i>A<sub>μ</sub></i> = <b>A</b> · <b>e</b><sub>μ</sub></td> <td>Covariant components of A</td></tr>
-</table>
+<p><b>Proposition 8.1.1</b>. Let <i>T</i>: <i>V</i> → <i>V</i>** the canonical double-dual isomorphism defined as eq. 8.1.3. If  <i>B</i> = {<i><b>v</b></i><sub>1</sub>, <i><b>v</b></i><sub>2</sub>, ..., <i><b>v</b></i><sub>n</sub>} ⊆ <i>V</i> is linearly independent then so is <i>B'</i> = {<i>T</i>(<i><b>v</b></i><sub>1</sub>), <i>T</i>(<i><b>v</b></i><sub>2</sub>), ..., <i>T</i> (<i><b>v</b><sub>n</sub></i>)}⊆ <i>V</i>**.</p>
 
-<p>The condition of duality between two vector spaces is defined by the following. </p>
-
-<p id="duality"><b>Definition 8.1.1</b>. Let {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i> and {<b><i>e</i></b><sup>1</sup>, ..., <i><b>e</b><sup>n</sup></i>} a basis in <i>V</i>*. The two bases are said to be dual if</p>
+<p><b>Proof</b>. Suppose that</p>
 
 <div class="eq">
-<p><i><b>e</b><sup>i</sup></i> (<i><b>e</b><sub>j</sub></i>) = <i>&delta;<sup>i</sup><sub>j</sub></i></p>
+<p><i>c</i><sub>1</sub><i>T</i> (<b>v</b><sub>1</sub>) ··· + <i>c<sub>n</sub>T</i> (<i><b>v</b><sub>n</sub></i>) = <b>0</b>.</p>
 </div>
 
-<p>or using brackets as:</p>
+<p>By linearity of <i>T</i>, this implies <i>T</i> (<i>c</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + ··· + <i>c<sub>n</sub> <b>v</b><sub>n</sub></i>) = <b>0</b>, so <i>φ</i><sub><i>c</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + ··· + <i>c<sub>n</sub> <b>v</b><sub>n</sub></i></sub> = 0, which implies</p>
 
 <div class="eq">
-<p>⟨<i><b>e</b><sup>i</sup></i> | <i><b>e</b><sub>j</sub></i>⟩ = <i>&delta;<sup>i</sup><sub>j</sub></i> &emsp;</p>
+<p><i>φ</i><sub><i>c</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + ··· + <i>c<sub>n</sub> <b>v</b><sub>n</sub></i></sub>(<i>f</i>) = <i>f</i>(<i>c</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + ··· + <i>c<sub>n</sub> <b>v</b><sub>n</sub></i></sub>) = <i>c</i><sub>1</sub> <i>f</i>(<b><i>v</i></b><sub>1</sub>) + ··· + <i>c<sub>n</sub> f</i>(<i><b>v</b><sub>n</sub></i>) = 0</p>
 </div>
 
-<p>where <i>&delta;<sub>j</sub><sup>i</sup></i> is Kronecker's delta.&emsp;□</p>
+<p>for all <i>f</i> ∈ <i>V</i>*.</p>
 
-<p>If {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i>, and <i>f</i> is a linear function on <i>V</i>, then ⟨<i>f</i> | <i><b>e</b><sub>j</sub></i>⟩ = <i>f</i>(<i><b>e</b><sub>j</sub></i>) give the numbers <i>a<sub>j</sub></i> which determine the linear function <i>f</i> &in; <i>V</i>* (cf. formula (8.1.2)). This remark implies that, if {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} is a basis in <i>V</i>, then there exists a unique basis {<i><b>f</b></i><sub>1</sub>, <i><b>f</b></i><sub>2</sub>, ..., <i><b>f</b><sub>n</sub></i>} in <i>V</i>* dual to {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>}. The proof is immediate</p>
+<!--<p>Since <i>B</i> is linearly independent, we can choose f so that f (v 1 ) = 1 and f (v 2 ) = · · · = f (v n ) = 0, which implies c 1 = 0. A similar argu- ment (involving different choices of f ) shows that c 2 = · · · = c n = 0 as well, so C is linearly independent.</p> -->
+
+<p><b>Theorem 8.1.2</b>. The function <i>T</i>: <i>V</i> → <i>V</i>** defined by <i>T</i> (<b><i>v</i></b>) = <i>φ<sub><b>v</b></sub></i> where <i>φ<sub><b>v</b></sub></i> ∈ <i>V</i>** is defined as Equation 8.1.4, is an isomorphism.</p>
+
+<p><b>Proof</b>. We must show that <i>T</i> is linear and invertible. Before showing that <i>T</i> is linear, we first make a brief note on notation. Since <i>T</i> maps into <i>V</i><sup>∗∗</sup>, we know that <i>T</i>(<b>v</b>) is a function acting on <i>V</i>*. We thus
+use the notation <i>T</i> (<b>v</b>)(<i>f</i>) or to refer to the scalar value that results from applying the function <i>T</i>(<b>v</b>) to <i>f</i> ∈ <i>V</i>*. For linearity, for all <i>f</i> ∈ <i>V</i>* we have</p>
 
 <div class="eq">
-<p>⟨<i><b>f</b><sup>1</sup></i> | <i><b>e</b><sub>1</sub></i>⟩ = 1, &emsp; ⟨<i><b>f</b><sup>1</sup></i> | <i><b>e</b><sub>2</sub></i>⟩ = 0, &emsp; ..., &emsp; ⟨<i><b>f</b><sup>1</sup></i> | <i><b>e</b><sub>n</sub></i>⟩ = 0</p>
+<p>T (<b><i>v</i></b> + <b><i>w</i></b>)(<i>f</i>) = <i>φ</i><sub><b><i>v</i></b> + <b><i>w</i></b></sub>(<i>f</i>) &emsp;(definition of <i>T</i>)<br>
+= <i>f</i>(<b><i>v</i></b> + <b><i>w</i></b>) &emsp; (definition of <i>φ</i><sub><b><i>v</i></b> + <b><i>w</i></b></sub>)
+= <i>f</i> (<b><i>v</i></b>) + <i>f</i>(<b><i>w</i></b>) &emsp; (linearity of each <i>f</i> ∈ <i>V</i>*) <br>
+= <i>φ<sub><b>v</b></sub></i> (<i>f</i>) + <i>φ<sub><b>w</b></sub></i> (<i>f</i>) &emsp; (definition of <i>φ<sub><b>v</b></sub></i> and <i>φ<sub><b>w</b></sub></i>) <br>
+= <i>T</i> (<b><i>v</i></b>)(<i>f</i>) + <i>T</i>(<b><i>w</i></b>)(<i>f</i>). &emsp;(definition of <i>T</i>)</p>
 </div>
 
-<p>define a unique vector (linear function) <i><b>f</b><sup>1</sup></i> &in; <i>V</i>*. The equations</p>
+<p>and</p>
 
 <div class="eq">
-<p>⟨<i><b>f</b><sup>2</sup></i> | <i><b>e</b><sub>1</sub></i>⟩ = 0, &emsp; ⟨<i><b>f</b><sup>2</sup></i> | <i><b>e</b><sub>2</sub></i>⟩ = 1, &emsp; ..., &emsp; ⟨<i><b>f</b><sup>2</sup></i> | <i><b>e</b><sub>n</sub></i>⟩ = 0</p>
+<p><i>T</i> (<i>c<b>v</b></i>)(<i>f</i>) = <i>φ<sub>c<b>v</b></sub></i>(<i>f</i>) = <i>f</i> (<i>c<b>v</b></i>) = <i>cf</i>(<b><i>v</i></b>) = <i>cφ</i><sub>v</sub>(<i>f</i>) = <i>cT</i>(<b><i>v</i></b>)(<i>f</i>)</p>
 </div>
 
-<p>define a unique vector (linear function) <i><b>f</b><sup>2</sup></i> &in; <i>V</i>*, etc. The vectors <i><b>f</b></i><sup>1</sup>, ..., <i><b>f</b><sup>n</sup></i> are linarly independent since the corresponding <i>n</i>-tuples of numbers are linearly independent. Thus {<i><b>f</b></i><sub>1</sub>, <i><b>f</b></i><sub>2</sub>, ..., <i><b>f</b><sub>n</sub></i>} costitute a unique basis of <i>V</i>* dual to the basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} of <i>V</i>.</p>
-
-<p>For example if <i>V</i> is ℝ<sup>2</sup> choosing the canonical base {<b>e</b></sub><sub>1</sub> = (1, 0), <b>e</b></sub><sub>2</sub> = (0, 1)}, then <b>e</b><sup>1</sup> and <b>e</b><sup>2</sup> are linear forms such that <b>e</b><sup>1</sup>(<b>e</b><sub>1</sub>) = 1, <b>e</b><sup>1</sup>(<b>e</b><sub>2</sub>) = 0, <b>e</b><sup>2</sup>(<b>e</b><sub>1</sub>) = 0</span>, and <b>e</b><sup>2</sup>(<b>e</b><sub>2</sub>) = 1.</p>
-
-<p>Figure 1 represents two coordinate systems where the contravariant and covariant components of <b>OP</b> are shown. The covariant components of <b>OP</b> appear in the axes of the two coordinate systems {X1; X2}  and {X'1; X'2}. If we increase the length of a basis vector <b>e</b><sub>j</sub>, we must decrease the contravariant component <i>x<sup>j</sup></i> of <b>OP</b> in order to keep the latter unchanged. In other words, contravariant component <i>x<sup>j</sup></i> transforms in the opposite way to basis vector <i><b>e</b><sub>j</sub></i>. As a result, the dual basis vector <i><b>e</b><sub>j</sub></i> decreases in length due to</p>
-
-<div class="eq">
-<p><i><b>e</b><sub>i</sub></i> ⋅ <i><b>e</b><sub>j</sub></i> = ||<i><b>e</b><sub>i</sub></i>|| ||<i><b>e</b><sub>j</sub></i>|| cos &theta; = 1.</p>
-</div>
-
-<p>Therefore, the covariant component <i>x<sub>j</sub></i> of <b>OP</b> in the dual coordinate system must increase in order to keep <b>OP</b> unchanged. In other words, covariant components <i>x<sub>j</sub></i> in the dual coordinate system transforms in the same
-way as basis vector <b><i>e<sub>j</sub></i></b>.</p> 
-
-<figure>
-<img src="img/dual_space.png" alt="dual space"/>
-<figcaption><b>Fig.1</b>. The Primal basis (red) and reciprocal basis (blue) are mutually orthogonal: <i>e</i><sup>1</sup> is orthogonal to <i>e</i><sub>2</sub> and <i>e</i><sub>1</sub> is orthogonal to <i>e</i><sup>2</sup>. Contravariant (<i>x</i><sup>1</sup>, <i>x</i><sup>2</sup>) and covariant (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) components of vector <b>OP</b> in Euclidean plane with two nonorthogonal basis vectors {<b><i>e</i></b><sub>1</sub>, <b><i>e</i></b><sub>2</sub>} and dual basis vectors {<b><i>e</i></b><sup>1</sup>, <b><i>e</i></b> <sup>2</sup>}.</figcaption>
-</figure>
-
-<p><b>Example</b>. The gradient <i>F</i>(<i>x</i>) of ∇<i>F</i>: <i>V</i> ⟶ ℝ at any point <i>x</i> &in; <i>V</i> is in the dual space <i>V*</i> of (continuous) linear functionals on <i>V</i>. &emsp;■</p>
+<p>for all <i>f</i> ∈ <i>V</i>*, so <i>T</i> (<i>c<b>v</b></i>) = <i>cT</i>(<b><i>v</i></b>) for all <i>c</i> ∈ 𝕂. <br> For invertibility, we claim that if <i>B</i> = {<i><b>v</b></i><sub>1</sub>, <i><b>v</b></i><sub>2</sub>, ..., <i><b>v</b></i><sub>n</sub>} is linearly independent then so is <i>B'</i> = {<i>T</i>(<i><b>v</b></i><sub>1</sub>), <i>T</i>(<i><b>v</b></i><sub>2</sub>), ..., <i>T</i> (<i><b>v</b><sub>n</sub></i>)} (this claim is pinned down in Exercise 1.3.24). Since <i>B'</i> contains <i>n</i> = dim(<i>V</i>) = dim(<i>V</i>**) vectors, it must be a basis of <i>V</i>** by Exercise 1.2.27(a). It follows that [<i>T</i>]<sub>B'←B</sub> = <i>I</i>, which is invertible, so <i>T</i> is invertible as well. &emsp;□</p>
 
 <section aria-label="End">
 <a href="linear_forms.html">&#171;Linear Forms</a>
