@@ -11,33 +11,215 @@
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href="index.html">Index</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
 <div class="content">
 
 <h1>Spanning Sets and Linear Independence</h1>
 
-<p><b>Definition 1.3.1</b> Let <i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i> be vectors of <i>V</i> over a field <i>F</i>. Then the vector <i><b>w</b></i> is a <b>linear combination</b> of <i><b>v<sub>1</sub></b>, ..., <b>v<sub>n</sub></b></i> if and only if there are the scalars <i>&lambda;</i><sub>1</sub>,..., <i>&lambda;<sub>n</sub></i> &in; <i>F</i> such that</p>
+<p>Given a general vector space <i>V</i> over the field 𝔽. Given that we have two operations, vector addition and scalar multiplication, at our disposal the most general algebraic expression is of the form</p>
 
-<div class="eq">
-<p><i><b>w</b></i> = <i>&lambda;</i><sub>1</sub><b><i>v</i><sub>1</sub></b> + ... + <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i> &emsp;□</p>
-</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mn>1</mn>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mi>k</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>k</mi>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+<mtext>&emsp;1.3.1</mtext>
+</math>
 
-<p><b>Definition 1.3.2</b> Let <i>V</i> a vector space, over a field <i>K</i>; Given a nonempty set of vectors <i>S</i> (not necessarily finite), in <i>V</i>, we define the Span of <i>S</i> as the set of all possible linear combinations of finite subsets of <i>S</i></p>
+<!-- $$ \alpha_1\mathbf{v}_1 + \ldots + \alpha_k\mathbf{v}_k = \sum_{i=1}^k \alpha_i \mathbf{v}_i $$ -->
 
-<div class="eq">
-<p>⟨<i>S</i>⟩ = Span(<i>S</i>) = {∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>&lambda;<sub>i</sub>v<sub>i</sub></i> | <i>n</i> &in; ℕ, <i>v<sub>i</sub></i> &in; <i>S</i>, <i>&lambda;<sub>i</sub></i> &in; <i>K</i>}&emsp;□</p>
-</div>
+<p>where <b><i>v</i></b><sub>1</sub>, ..., <i><b>v</b><sub>k</sub></i> ∈ <i>V</i> and <i>α</i><sub>1</sub>, ..., <i>α<sub>k</sub></i> ∈ 𝔽 are <i>k</i> vector and scalars, respectively. An expression of the form (1.3.1) is called a <b>linear combination of the vectors</b> <b><i>v</i></b><sub>1</sub>, ..., <i><b>v</b><sub>k</sub></i>. The set of all linear combinations of given vectors <b><i>v</i></b><sub>1</sub>, ..., <i><b>v</b><sub>k</sub></i> is called the <b>span of these vectors</b>, and it is written as</p>
 
-<p>So Span(<i>S</i>) is simply all linear combinations involving any finitely many elements from <i>S</i> and it always contains all elements of <i>S</i>.</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>Span</mtext>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>:=</mo>
+  <mo fence="false" stretchy="false">{</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>k</mi>
+  </munderover>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+  <mo fence="false" stretchy="false">}</mo>
+</math>
 
-<p>The set of all finite linear combinations of elemenets of <i>S</i> satisfies the closure axiomos and hence Span(<i>S</i>) is a subspace of <i>V</i>.</p>
+<!-- $$\text{Span} (\mathbf{v}_1 + \ldots + \mathbf{v}_k) := \{\sum_{i=1}^k \alpha_i \mathbf{v}_i\} $$ -->
 
-<p><b>Definition 1.3.3</b> If every element of a vector space <i>V</i> over a field <i>F</i> is a linear combination of <i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i> we say that the set {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i>} spans <i>V</i> over <i>F</i> (or <b>generates</b> <i>V</i>). &emsp;□</p>
+<p>Proposition 1.3.1</b> For any vectors <b><i>v</i></b><sub>1</sub>, ..., <i><b>v</b><sub>k</sub></i> ∈ <i>V</i>, the span, Span(<b><i>v</i></b><sub>1</sub>, ..., <i><b>v</b><sub>k</sub></i>), is a vector subspace of <i>V</i>. Proof All we need to do is to verify that the span satisfies the conditions in Def. 6.2. Consider two vectors <b><i>u, w</i></b> ∈ Span(<b><i>v</i></b><sub>1</sub>, ..., <i><b>v</b><sub>k</sub></i>) in the span. By definition of the span, this means they can be written as linear combinations</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">u</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>k</mi>
+  </munderover>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi mathvariant="bold">w</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>k</mi>
+  </munderover>
+  <mi>&#x3B2;</mi>
+  <msub>
+    <mi mathvariant="bold">w</mi>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<!-- $$ \mathbf{u} = \sum_{i=1}^k \alpha_i \mathbf{v}_i, \quad \mathbf{w} = \sum_{i=1}^k \beta \mathbf{w}_i $$ -->
+
+<p>for suitable scalars <i>α<sub>i</sub>, β<sub>i</sub></i> ∈ 𝔽. Their sum and the scalar multiple of <b>u</b> with <i>α</i> ∈ 𝔽 are
+then given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">u</mi>
+  <mo>+</mo>
+  <mi mathvariant="bold">w</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>k</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x3B2;</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>&#x3B1;</mi>
+  <mi mathvariant="bold">u</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>k</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B1;</mi>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<!-- $$ \mathbf{u}+\mathbf{w} = \sum_{i=1}^k (\alpha_i + \beta_i) \mathbf{v}_i, \quad \alpha\mathbf{u} = \sum_{i=1}^k (\alpha\alpha_i) \mathbf{v}_i $$ -->
+
+<p>and are, hence, both contained in the span. This shows that the two conditions of <a href="subspace.html">Definition 1.5.1</a> are indeed satisfied. &emsp;□</p>
+
+<p>This result means that the span provides us with a way of generating vector subspaces. The span has a straightforward geometric interpretation, at least for coordinate vectors with real entries. The span of a single vector <b><i>v</i></b> ∈ ℝ<sup><i>n</i></sup> consists of all scalar multiples of this vector and, hence, can be thought of as the line through <b>0</b> which contains <b><i>v</i></b>. The span of two vectors <b><i>u, v</i></b> ∈ ℝ<sup><i>n</i></sup> (which are not multiples of each other) represents the plane through <b>0</b> which contains both vectors. More generally, spans of column vectors are lines, planes and their higher-dimensional analogues through the ’origin’ <b>0</b>. We will be more precise about this later but for now just present an example.</p>
+
+<p><b>Definition 1.3.3</b> If every element of a vector space <i>V</i> over a field 𝔽 is a linear combination of <i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i> we say that the set {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i>} spans <i>V</i> over <i>F</i> (or <b>generates</b> <i>V</i>). &emsp;□</p>
 
 <p>Note that <i>V</i> may be infinite or finite, but any given linear combination of vectors from <i>S</i> involves only a finite number of vectors.</p>
 
@@ -47,7 +229,7 @@
 
 <h2>Linear Independence</h2>
 
-<p><b>Definition 1.3.4</b> Let <i>V</i> be a vector space. A nonempty set <i>S</i> of vectors in <i>V</i> is linearly independent if for any distinct vectors <b><i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ..., <i>v<sub>n</sub></b></i> in <i>S</i>,</p>
+<p><b>Definition 1.3.4</b> Let <i>V</i> be a vector space. A nonempty set <i>S</i> of vectors in <i>V</i> is linearly independent if for any distinct vectors <b><i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ..., <i>v<sub>n</sub></b></i> in <i>S</i>, and scalars <i>&lambda;<sub>i</sub></i></p>
 
 <div class="eq">
 <p><i>&lambda;</i><sub>1</sub><b><i>v</i><sub>1</sub></b> + <i>&lambda;</i><sub>2</sub><b><i>v</i><sub>2</sub></b> + ... + <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i> = <b>0</b> &emsp;⇒&emsp; <i>&lambda;<sub>i</sub></i> = 0 &forall;<i>i</i></p>
@@ -60,6 +242,12 @@
 <p>Let <i>V</i> be a vector space over a field <i>F</i>. The preceding examples show that linear independence and spanning do not imply each other; a subset of V may have one, both, or neither of these properties. A subset that has both properties is given a special name
 
 <p><b>Definition 1.3.6</b> A subset {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>n</sub></b></i>} of a vector space <i>V</i> over a field <i>F</i> is said to be a basis of <i>V</i> If it spans <i>V</i> and is linearly Independent over <i>F</i>. &emsp;□</p>
+
+<p>When the vectors <b><i>u</i></b> and <b><i>v</i></b> are linearly independent, it means that they are not scalar multiples of each other: i.e. they have different directions. Arbitrary linear independent vectors <b><i>u</i></b> and <b><i>v</i></b> in ℝ<sup>2</sup> can be illustrated as shown in Fig. 1:</p>
+
+<img src="img/linear_indipendence.png" alt="linear indipendence" />
+
+<p>Linearly independent vectors <b><i>u</i></b> and <b><i>v</i></b> have different directions.</p>
 
 <section aria-label="End">
 <a href="vector_space.html">&#171;Vector space</a>

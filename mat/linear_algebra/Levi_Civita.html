@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The Levi-Civita symbol"/>
+	<title>The Levi-Civita symbol</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>The Levi-Civita symbol</h1>
+
+<p>While Eq. (10.6) is convenient for working out the cross product of explicit numerical vectors, as in the previous problem, it becomes quite cumbersome when the vectors contain symbolic entries and when multiple products are involved. A more efficient way of writing the cross product is facilitated by the Levi-Cicita symbol <i>&epsilon;<sub>ijk</sub></i> in three dimensions</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3B5;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+      <mi>k</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mo stretchy="false">(</mo>
+          <mi>i</mi>
+          <mo>,</mo>
+          <mi>j</mi>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo>,</mo>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mo stretchy="false">(</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mo stretchy="false">(</mo>
+          <mi>i</mi>
+          <mo>,</mo>
+          <mi>j</mi>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mo stretchy="false">(</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mstyle scriptlevel="0">
+            <mspace width="0.278em"></mspace>
+          </mstyle>
+          <mstyle scriptlevel="0">
+            <mspace width="0.278em"></mspace>
+          </mstyle>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>otherwise</mtext>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ \varepsilon_{ijk}= \begin{cases}+1&{\text{if }}(i,j,k,) = (1,2,3),(2,3,1),(3,1,2)\\-1&{\text{if }}(i,j,k) = (2,1,3), (3,2,1), (1,3,2)\\\;\;\,0&{\text{otherwise}}\end{cases} $$ -->
+
+<p>Using this symbol, the cross product can be written, using Einstein summation convention as</p>
+
+<div class="eq">
+<p>(<b><i>v</i></b> × <b><i>w</i></b>)<sub><i>i</i></sub> = <i>&epsilon;<sub>ijk</sub> v<sub>j</sub> w<sub>k</sub></i></p>
+</div>
+
+<p>for example the 1st component is</p>
+
+<div class="eq">
+<p>(<b><i>v</i></b> × <b><i>w</i></b>)<sub>1</sub> = <i>&epsilon;<sub>123</sub> <i>v</i><sub>2</sub> <i>w</i><sub>3</sub> + <i>&epsilon;<sub>132</sub> <i>v</i><sub>3</sub> <i>w</i><sub>2</sub> = <i>v</i><sub>2</sub> <i>w</i><sub>3</sub> − <i>v</i><sub>3</sub> <i>w</i><sub>2</sub></p>
+</div>
+
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

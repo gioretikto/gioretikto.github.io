@@ -21,22 +21,25 @@
 
 <h1>The Dual Space</h1>
 
-<p>Given a vector space <i>V</i> over a field 𝕂, the consideration of all possible scalar <a href="linear_forms.html">linear forms</a> defined on <i>V</i> gives rise to the dual space.</p>
+<p>As we have studied, given two vector spaces <i>V</i> and <i>W</i> over 𝔽, the set of all linear maps <i>V</i> → <i>W</i> is a vector space denoted by Hom(<i>V, W</i>). A special case arises when <i>W</i> = 𝔽. The linear maps <i>V</i> → 𝔽 are called <a href="linear_forms.html">linear forms</a> (or linear functionals) and they form a vector space <i>V</i>* = Hom(<i>V</i>, 𝔽), called the dual vector space, which is naturally associated to <i>V</i>. It turns out that a vector space <i>V</i> and its dual <i>V</i>* have the same dimension and are, hence, isomorphic.</p>
 
-<p><b>Definition 7.2.1</b>. Let <i>V</i> be a vector space over a field 𝕂. Then the <b>dual</b> of <i>V</i>, denoted by <i>V</i>*,
+<p><b>Definition 7.2.1</b>. Let <i>V</i> be a vector space over a field 𝔽. Then the <b>dual</b> of <i>V</i>, denoted by <i>V</i>*,
 is the vector space consisting of all linear forms on <i>V</i>.</p>
 
 <div class="eq">
-<p><i>V</i><sup>∗</sup> := {linear functions <i>f</i>: <i>V</i> → 𝕂}&emsp;□</p>
+<p><i>V</i><sup>∗</sup> := {linear functions <i>f</i>: <i>V</i> → 𝔽}&emsp;□</p>
 </div>
 
-<p>These linear forms, form a vector space in its own right, the <b>dual space</b> <i>V</i>* of <i>V</i>. In physics the elements of the vector space <i>V</i>∗ are called <b>covectors</b> or (algebraic) <b>1-forms</b>. That <i>V</i>∗ does indeed form a vector space is verified by observing that the collection of linear functions satisfies the familiar ten properties of a vector space; By introducting on <i>V</i>* the operation of sum and product by a scaler defined as follows:</p>
+<p><b>Example 7.2.2</b>. (<i>Linear functionals on coordinate vector spaces</i>) For the vector space 𝔽<sup><i>n</i></sup> (seen as a vector space of columns) the dual vector space (𝔽<sup>n</sup>)* = Hom(𝔽<sup><i>n</i></sup>, 𝔽) = M<sub>1,<i>n</i></sub> (𝔽) consists of 1 × <i>n</i> matrices, that is, of row vectors, with entries in 𝔽. For such a row vector <i><b>φ</b></i> = (<i>φ</i><sub>1</sub>, ..., <i>φ<sub>n</sub></i>) the action on a vector <b>v</b> ∈ <i>V</i> is given by matrix multiplication, so</p>
 
 <div class="eq">
-<p>(<i>f</i> + <i>g</i>)(<i><b>v</b></i>) = <i>f</i>(<b>v</b></i>) + <i>g</i>(<b>v</b></i>), &emsp;(<i>&alpha;f</i>)(<b><i>v</i></b>) = <i>&alpha; f</i>(<b>v</b>)</p>
+<p><i><b>φ</b></i>(<i><b>v</b></i>) = <i><b>φv</b></i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>φ<sub>i</sub>v<sub>i</sub></i> &emsp; (<b>7.2.1</b>)</p>
 </div>
 
-<p>By the sum <i>h</i> of <i>f</i> and <i>g</i> we mean the function which associates with a vector <i><b>v</b></i> the number <i>f</i>(<i><b>v</b></i>) + <i>g</i>(<i><b>v</b></i>). By the product of <i>f</i> by a number <i>&alpha;</i> we mean the function which associates with a vector <b><i>v</i></b>  the number <i>&alpha;</i> <i>f</i>(<b><i>v</i></b>). With these two operations, <i>V*</i> acquires the properties of vector space over &Kopf;, known as <b>dual space</b>.</p>
+<p>Note that the matrix product of an 1 × <i>n</i> matrix (a row vector) with an <i>n</i> × 1 matrix (a column vector) is indeed a 1 × 1 matrix, so a number, as required. The expression on the right-hand side of Eq. (7.2.1) is, effectively, a <a href="dot_product.html">dot product</a> which we have now written as a matrix product. <br> To summarize, the elements of 𝔽<sup><i>n</i></sup>, as per our convention, can be viewed as column vectors while the elements of the dual, (𝔽<sup><i>n</i></sup>)*, can be viewed as row vectors, each with <i>n</i> entries in 𝔽. In particular, 𝔽<sup><i>n</i></sup> and (𝔽<sup><i>n</i></sup>)* have the same dimension.&emsp;□</p>
+
+<p>In the previous example we have seen that 𝔽<sup><i>n</i></sup> and its dual, (𝔽<sup><i>n</i></sup>)* have the same dimension. In
+fact, <a href="Hom.html">Theorem 3.4.2</a> proofs that dim<sub>𝔽</sub> (<i>V</i>) = dim<sub>𝔽</sub> (<i>V</i>*) is generally true. The following theorem provides another proof of this fact which relies on constructing the dual basis.</p>
 
 <h2>The Duality Principle</h2>
 
@@ -60,8 +63,8 @@ is the vector space consisting of all linear forms on <i>V</i>.</p>
 
 <table>
 <tr><th>Expansion of <b>A</b></th> <th>Projections</th> <th>Component names</th></tr>
-<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sup>μ</sup></i> <b>e</b><sub>μ</sub></td> <td><i>A<sup>μ</sup></i> = <b>A</b> · <b>e</b><sup>μ</sup></td> <td>Contravariant components of A</td></tr>
-<tr><td><b>A</b> = &Sigma;<sub>&mu;</sub> <i>A<sub>μ</sub></i> <b>e</b><sup>μ</sup></td> <td><i>A<sub>μ</sub></i> = <b>A</b> · <b>e</b><sub>μ</sub></td> <td>Covariant components of A</td></tr>
+<tr><td><b><i>A</i></b> = &Sigma;<sub>&mu;</sub> <i>A<sup>μ</sup> <b>e</b><sub>μ</sub></i></td> <td><i>A<sup>μ</sup></i> = <b><i>A</i></b> · <b>e</b><sup>μ</sup></td> <td>Contravariant components of A</td></tr>
+<tr><td><b><i>A</i></b> = &Sigma;<sub>&mu;</sub> <i>A<sub>μ</sub> <b>e</b><sup>μ</sup></i></td> <td><i>A<sub>μ</sub></i> = <b><i>A</i></b> · <i><b>e</b><sub>μ</sub></i></td> <td>Covariant components of A</td></tr>
 </table>
 
 <p>If {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} be a basis in <i>V</i>, and <i>f</i> is a linear function on <i>V</i>, then ⟨<i>f</i> | <i><b>e</b><sub>j</sub></i>⟩ = <i>f</i>(<i><b>e</b><sub>j</sub></i>) give the numbers <i>a<sub>j</sub></i> which determine the linear function <i>f</i> &in; <i>V</i>* (cf. formula (7.2.2)). This remark implies that, if {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>} is a basis in <i>V</i>, then there exists a unique basis {<i><b>f</b></i><sub>1</sub>, <i><b>f</b></i><sub>2</sub>, ..., <i><b>f</b><sub>n</sub></i>} in <i>V</i>* dual to {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>, ..., <i><b>e</b><sub>n</sub></i>}. The proof is immediate</p>

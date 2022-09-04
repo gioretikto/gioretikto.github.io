@@ -78,11 +78,23 @@
 
 <p>From the inner product we get the lenght, or Euclidean <b>norm</b>, of a vector,</p>
 
-<div class="eq">
-<p>||<i><b>x</b></i>|| = √<i><b>x</b></i> ⋅ <i><b>x</b></i></p>
-</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi mathvariant="bold">x</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mi mathvariant="bold">x</mi>
+    <mo>&#x22C5;</mo>
+    <mi mathvariant="bold">x</mi>
+  </msqrt>
+</math>
 
-<p>The lenght of a vector <i><b>x</b></i> is the square root of the dor product of that vector with itself.</p>
+<!-- $$ |\mathbf{x}| = \sqrt{\mathbf{x} \cdot \mathbf{x}} $$ -->
+
+<p>The lenght of a vector <i><b>x</b></i> is the square root of the dot product of that vector with itself.</p>
 
 <p>The angle <i>&theta;</i> between two vectors <i><b>x</b></i> and <i><b>y</b></i> may be determined from</p>
 
@@ -105,6 +117,30 @@
 <div class="eq">
 <p><i><b>v̄</b></i> · <i><b>w</b></i> = <i>v̄</i><sub>1</sub> <i>w</i><sub>1</sub> + ··· + <i>v̄<sub>n</sub>w<sub>n</sub></i></p>
 </div>
+
+<h2>Properties of the dot product</h2>
+
+<p>The following proposition shows that the dot product satisfies the properties of linearity, symmetry, and positivity.</p>
+
+<p><b>Proposition 1.8.1</b> The dot product on ℝ<sup><i>n</i></sup> satisfies the following properties for all <i><b>v, w, u</b></i> ∈ ℝ<sup><i>n</i></sup> and all <i>α</i> ∈ ℝ.</p>
+
+<ol type="i">
+	<li><p><b><i>v</i></b> · (<b><i>w</i></b> + <b><i>u</i></b>) = <b><i>v</i></b> · <b><i>w</i></b> + <b><i>v</i></b> · <b><i>u</i></b> and <b><i>v</i></b> · (<i>α<b>w</b></i>) = <i>α</i>(<i><b>v</b></i> · <b><i>w</i></b>) &emsp; (linearity)</p></li>
+	<li><p><b><i>v</i></b> · <b><i>w</i></b> = <b><i>w</i></b> · <b><i>v</i></b> &emsp; (symmetry)</p></li>
+	<li><p><b><i>v</i></b> · <b><i>v</i></b> &gt; 0 for all <b><i>v</i></b> &ne; 0 &emsp;(positivity)</p></li>
+</ol>
+
+<p><b>Proof</b>. Using the Einstein summation convention</p>
+
+<ol type="i">
+	<li><p><b><i>v</i></b> · (<b><i>w</i></b> + <b><i>u</i></b>) = <i><b>v</i></b><sub>i</sub></i> (<i><b>w</b></i> + <i><b>u</b></i>)<sub>i</sub> = <i>v<sub>i</sub></i>(<i>w<sub>i</sub></i> + <i>u<sub>i</sub></i>) = <i>v<sub>i</sub> w<sub>i</sub></i> + <i>v<sub>i</sub> u<sub>i </sub></i> = <i><b>v</b></i> · <i><b>w</b></i> + <i><b>v</b></i> · <i><b>u</b></i></p></li>
+
+	<li><p><i><b>v</b></i> · (<i>α<b>w</b></i>) = <i>v<sub>i</sub></i> (<i>α<b>w</b></i>)<sub>i</sub> = <i>αv<sub>i</sub>w<sub>i</sub></i> = <i>α</i>(<i><b>v</b></i> · <i><b>w</b></i>)</p></li>
+
+	<li><p><i><b>v</b></i> · <i><b>w</b></i> = <i>v<sub>i</sub> w<sub>i</sub></i> = <i>w<sub>i</sub> v<sub>i</sub></i> = <b><i>w</i></b> · <b><i>v</i></b></p></li>
+
+	<li><p>(<i><b>v, v</b></i>) = &Sigma;<sub>i</sub> <i>v<sub>i</sub></i><sup>2</sup> &gt; 0 for <b><i>v</i></b> &ne; 0.</p></li>
+</ol>
 
 <h2>Non-orthogonal Axes</h2>
 

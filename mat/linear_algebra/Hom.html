@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Addition and scalar multiplication of linear maps"/>
+	<title>Addition and scalar multiplication of linear maps</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Addition and scalar multiplication of linear maps</h1>
+
+<p>Weìve already introduced the space of all <a href="linear_transformations.html">linear maps</a> ℱ(<i>V, W</i>) of all function <i>f</i> : <i>V</i> → <i>W</i> between two vector spaces <i>V</i> and <i>W</i> over 𝔽 can be made into a vector space over the same field. Vector addition and multiplication of functions are defined as,</p>
+
+<div class="eq">
+<p>(<i>f</i> + <i>g</i>)(<b><i>v</i></b>) = <i>f</i>(<b>v</b>) + <i>g</i>(<b>w</b>), &emsp;(<i>αf</i>)(<b>v</b>) = <i>αf</i>(<b>v</b>) &emsp; <b>3.4.1</b></p>
+</div>
+
+<p>where <i>f, g</i> ∈ ℱ(<i>V, W</i>), <b>v</b> ∈ <i>V</i> and <i>α</i> ∈ 𝔽. We are interested in understanding whether this property of linearity is preserved under addition and scalar multiplication of functions.</p>
+
+<p><b>Theorem 3.4.1</b> Let <i>f, g</i> : <i>V</i> → <i>W</i> be two linear maps between vector spaces <i>V</i> and <i>W</i> over 𝔽 and <i>α</i> ∈ 𝔽 a scalar. Then the sum <i>f</i> + <i>g</i> and the scalar multiple <i>αf</i>, as defined in Eq. (3.4.1), are linear.</p>
+
+<p><b>Proof</b>. We need to check the linearity condition (12.1) for <i>f</i> + <i>g</i> and <i>αf</i>, given it is satisfied for <i>f</i> and <i>g</i>.</p>
+
+<div class="eq">
+<p>(<i>f</i> + <i>g</i>)(<i>α</i><sub>1</sub> <b>v</b><sub>1</sub> + <i>α</i><sub>2</sub><b>v</b><sub>2</sub>) = <i>f</i>(<i>α</i><sub>1</sub> <b>v</b><sub>1</sub> + <i>α</i><sub>2</sub> <b>v</b><sub>2</sub>) + <i>g</i>(<i>α</i><sub>1</sub> <b>v</b><sub>1</sub> + <i>α</i><sub>2</sub><b>v</b><sub>2</sub>)<br>
+= <i>α</i><sub>1</sub> <i>f</i>(<b>v</b><sub>1</sub>) + <i>α</i><sub>2</sub> <i>f</i>(<b>v</b><sub>2</sub>) + <i>α</i><sub>1</sub> <i>g</i>(<b>v</b><sub>1</sub>) + <i>α</i><sub>2</sub><i>g</i>(<b>v</b><sub>2</sub>)<br>
+= <i>α</i><sub>1</sub> (<i>f</i>(<b>v</b><sub>1</sub>) + <i>g</i>(<b>v</b><sub>1</sub>)) + <i>α</i><sub>2</sub> (<i>f</i> <b>v</b><sub>2</sub>) + <i>g</i>(<b>v</b><sub>2</sub>))<br>
+= <i>α</i><sub>1</sub> (<i>f</i> + <i>g</i>)(<b>v</b><sub>1</sub>) + <i>α</i><sub>2</sub> (<i>f</i> + <i>g</i>)(<b>v</b><sub>2</sub>)</P>
+</div>
+
+<p>The proof for <i>αf</i> works analogously and is left as Exercise. &emsp;□</p>
+
+<p>We can reformulate this result more abstractly by saying that the set of linear maps <i>f</i> : <i>V</i> → <i>W</i> forms a vector subspace of ℱ(<i>V, W</i>). This vector space of linear maps from <i>V</i> to <i>W</i> is also denoted by Hom(<i>V, W</i>), which stands for <i>homomorphisms</i> from <i>V</i> to <i>W</i>. For the special case <i>V</i> = <i>W</i>, linear maps <i>V</i> → <i>V</i> are also called (vector space) <i>endomorphisms</i> and the vector space of endomorphisms is denoted by End(<i>V</i>).</p>
+
+<p><b>Theorem 3.4.2</b> The space Hom(<i>V, W</i>) of linear maps <i>V</i> → <i>W</i>, with addition and scalar multiplication as defined in Eq. 3.4.1, forms a vector spaces over the same field as <i>V</i> and <i>W</i>. If <i>V</i> and <i>W</i> are finite-dimensional its dimension is given by</p>
+
+<div class="eq">
+<p>dim<sub>𝔽</sub> (Hom(<i>V, W</i>)) = dim<sub>𝔽</sub> (<i>V</i>) dim<sub>𝔽</sub> (<i>W</i>). &emsp;<b>3.4.2</b></p>
+</div>
+
+<p><b>Proof</b>. It remains to proof the dimension formula. We choose bases (<b><i>v</i></b><sub>1</sub> , ..., <b><i>v<sub>n</sub></i></b>) and (<b><i>w</i></b><sub>1</sub> , ..., <b><i>w<sub>n</sub></i></b>) of <i>V</i> and <i>W</i> and define the linear maps <i>f<sub>ij</sub></i> ∈ Hom(<i>V, W</i>) for <i>i</i> = 1, ... , <i>n</i> and <i>j</i> = 1, ..., <i>m</i> by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi mathvariant="bold">k</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">w</mi>
+            <mi mathvariant="bold">k</mi>
+          </msub>
+        </mtd>
+        <mtd>
+          <mtext>for&#xA0;</mtext>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn mathvariant="bold">0</mn>
+        </mtd>
+        <mtd>
+          <mtext>for&#xA0;</mtext>
+          <mi>k</mi>
+          <mo>&#x2260;</mo>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{equation}
+f_{ij} (\mathbf{v_k}) = 
+\begin{cases}
+\mathbf{w_k} & \text{for } k = i \\
+\mathbf{0} & \text{for } k \ne i \\
+\end{cases}
+\end{equation}$$ -->
+
+<p>We want to show that these linear maps form a basis of Hom(<i>V, W</i>). For linear independence, start with the equation &Sigma;<sub><i>ij</i></sub> <i>λ<sub>ij</sub> f<sub>ij</sub></i> = 0 and act on the vector <i><b>v</b><sub>k</sub></i> which results in &Sigma;<sub><i>ij</i></sub> <i>λ<sub>kj</sub> <b>w</b><sub>j</sub></i> = <b>0</b>. Since (<b><i>w</i></b><sub>1</sub>, ..., <b><i>w<sub>n</sub></i></b>) forms a basis, this implies that all <i>λ<sub>kj</sub></i> = 0. Hence, the <i>f<sub>ij</sub></i> are linearly independent. <br> Next, consider the function <i>f</i> = &Sigma;<sub>i,j</sub> <i>a<sub>ij</sub>f<sub>ij</sub></i>, for <i>a<sub>ij</sub></i> ∈ 𝔽. Since <i>f</i>(<i><b>v</b><sub>k</sub></i>) = &Sigma;<sub>j</sub> <i>a<sub>kj</sub> <b>w</b><sub>j</sub></i> and the <i><b>w</b><sub>j</sub></i> are a basis, it follows that any image vectors <i>f</i> (<i><b>v</b><sub>k</sub></i>) can be obtained for suitable choices of the <i>a<sub>ij</sub></i>. From Theorem 3.4.1 this means the <i>f<sub>ij</sub></i> span Hom(<i>V, W</i>). Since the number of these functions is <i>nm</i>, Eq. (3.4.2) follows. &emsp;□</p>
+
+<h2 id="comp">Map composition and inverse</h2>
+
+<p>Linearity is also preserved under map composition and inversion, as the following proposition illustates.</p>
+
+<p><b>Proposition 3.4.3</b> Let <i>f, f</i><sub>1</sub>, <i>f</i><sub>2</sub>: <i>V</i> → <i>W</i> and <i>g, g</i><sub>1</sub>, <i>g</i><sub>2</sub>: <i>W</i> → <i>U</i> be linear maps and <i>α</i><sub>1</sub>, <i>α</i><sub>2</sub> ∈ 𝔽.</p>
+
+<ol type="a">
+	<li><p>The composition <i>g</i> ◦ <i>f</i> : <i>V</i> → <i>U</i> is linear.</p></li>
+	<li><p><i>g</i> ◦ (<i>α</i><sub>1</sub> <i>f</i><sub>1</sub> + <i>α</i><sub>2</sub> <i>f</i><sub>2</sub>) = <i>α</i><sub>1</sub> (<i>g</i> ◦ <i>f</i><sub>1</sub>) + <i>α</i><sub>2</sub> (<i>g</i> ◦ <i>f</i><sub>2</sub>).</p></li>
+	<li><p>(α<sub>1</sub> <i>g</i><sub>1</sub> + α<sub>2</sub> g<sub>2</sub>) ◦ <i>f</i> = <i>α</i><sub>1</sub> (<i>g</i><sub>1</sub> ◦ <i>f</i>) + <i>α</i><sub>2</sub> (<i>g</i><sub>2</sub> ◦ <i>f</i>).</p></li>
+	<li><p>If <i>f</i><sup>−1</sup>: <i>W</i> → <i>V</i> exists it is linear.</p></li>
+</ol>
+
+<p><b>Poof</b>. (i) All we need to do is check the linearity condition for <i>g</i> ◦ <i>f</i> given it is satisfied for <i>f</i> and <i>g</i>.</p>
+
+<div class="eq">
+<p>(<i>g</i> ◦ <i>f</i>)(<i>α</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + <i>α</i><sub>2</sub> <i><b>v</b></i><sub>2</sub>) = <i>g</i>(<i>f</i>(<i>α</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + <i>α</i><sub>2</sub> <b><i>v</i></b><sub>2</sub>)) = <i>g</i>(<i>α</i><sub>1</sub> <i>f</i>(<i><b>v</b></i><sub>1</sub>) + <i>α</i><sub>2</sub> <i>f</i> (<i>v</i><sub>2</sub>))
+= <i>α</i><sub>1</sub> <i>g</i>(<i>f</i>(<i><b>v</b></i><sub>1</sub>)) + <i>α</i><sub>2</sub> <i>g</i>(<i>f</i>(<b>v</b><sub>2</sub>)) = <i>α</i><sub>1</sub> (<i>g</i> ◦ <i>f</i>)(<b><i>v</i></b><sub>1</sub>) + <i>α</i><sub>2</sub> (<i>g</i> ◦ <i>f</i>)(<i>v</i><sub>2</sub>)</p>
+</div>
+
+<p>(ii) For <b><i>v</i></b> ∈ <i>V</i> we have, from the definition of map composition and linearity, that</p>
+
+<div class="eq">
+<p>(<i>g</i> ◦ (<i>α</i><sub>1</sub> <i>f</i><sub>1</sub> + <i>α</i><sub>2</sub> <i>f</i><sub>2</sub> ))(<b><i>v</i></b>) = <i>g</i>((<i>α</i><sub>1</sub> <i>f</i><sub>1</sub> + <i>α</i><sub>2</sub> <i>f</i><sub>2</sub>)(<b><i>v</i></b>)) = <i>g</i>(<i>α</i><sub>1</sub><i>f</i><sub>1</sub> (<b><i>v</i></b>) + <i>α</i><sub>2</sub> <i>f</i><sub>2</sub> (<b><i>v</i></b>))<br>
+= <i>α</i><sub>1</sub> (<i>g</i> ◦ <i>f</i><sub>1</sub> )(<b><i>v</i></b>) + <i>α</i><sub>2</sub> (<i>g</i> ◦ <i>f</i><sub>2</sub>)(<b><i>v</i></b>) = (<i>α</i><sub>1</sub> (<i>g</i> ◦ <i>f</i><sub>1</sub>) + <i>α</i><sub>2</sub> (<i>g</i> ◦ <i>f</i><sub>2</sub>))(<b><i>v</i></b>)</p>
+</div>
+
+<p>(iii) This works exactly like the proof for part (ii).</p>
+
+<p>(iv) Let <i>f</i> : <i>V</i> → <i>W</i> be an invertible linear maps with inverse <i>f</i><sup>−1</sup> : <i>W</i> → <i>V</i>. Consider two vectors <b><i>w</i></b><sub>1</sub>, <b><i>w</i></b><sub>2</sub> ∈ <i>W</i>. Since <i>f</i> is surjective they can be written as <b><i>w</i></b><sub>1</sub> = <i>f</i> (<b>v</b><sub>1</sub>) and <b><i>w</i></b><sub>2</sub> = <i>f</i> (<b>v</b><sub>2</sub>) for two vectors <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub> ∈ <i>V</i>, so that <b><i>v</i></b><sub>1</sub> = <i>f</i><sup>−1</sup> (<b>w</b><sub>1</sub>) and <b><i>v</i></b><sub>2</sub> = <i>f</i><sup>−1</sup> (<b><i>w</i></b><sub>2</sub>). The linearity condition for <i>f</i><sup>−1</sup> is verified by</p>
+
+<div class="eq">
+<p><i>f</i><sup>−1</sup> (<i>α</i><sub>1</sub> <b><i>w</i></b><sub>1</sub> + <i>α</i><sub>2</sub><b><i>w</i></b><sub>2</sub>) = <i>f</i><sup>−1</sup> (α<sub>1</sub> <i>f</i>(<b><i>v</i></b><sub>1</sub>) + <i>α</i><sub>2</sub> <i>f</i> (<b><i>v</i></b><sub>2</sub>)) = <i>f</i><sup>−1</sup> (<i>f</i> (<i>α</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + <i>α</i><sub>2</sub> <b><i>v</i></b><sub>2</sub>))
+= α<sub>1</sub> <b><i>v</i></b><sub>1</sub> + <i>α</i><sub>2</sub> <b><i>v</i></b><sub>2</sub> = <br><i>α</i><sub>1</sub> <i>f</i><sup>−1</sup> (<b><i>w</i></b><sub>1</sub>) + <i>α</i><sub>2</sub> <i>f</i><sup>−1</sup>(<b><i>w</i></b><sub>2</sub>) &emsp;□</p>
+</div>
+
+<section aria-label="End">
+<a href="invertible_linear_transformations.html.html">&#171;Invertibility of linear transformations</a>
+<a href="index.html">Index</a>
+<a href="isomorphisms.html">Isomorphism&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
