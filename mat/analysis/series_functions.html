@@ -21,24 +21,83 @@
 
 <h1>Series of functions</h1>
 
-<p>For every <i>x</i> &in; <i>I</i> consider the series</p>
+<p>Let {<i>f<sub>n</sub></i>} be a sequence of functions defined on <i>I</i> ⊆ ℝ. We introduce a new sequence {<i>s<sub>n</sub></i>}, where</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>s</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>f</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>x</mi>
+  <mo>&#x2208;</mo>
+  <mi>I</mi>
+</math>
+
+<!-- $$ s_n(x) = \sum_{k=1}^n f_k(x), \quad x \in I $$ -->
+
+<p>Here, <i>s<sub>n</sub></i>(<i>x</i>) is called the <i>n</i>th partial sum of the series of functions</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>f</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \sum_{n=1}^\infty f_n(x) $$ -->
+
+<p>This series is said to <i>converge pointwise (uniformly)</i> on <i>I</i> to <i>f</i>(<i>x</i>) if {<i>s<sub>n</sub></i>} <i>converges pointwise (uniformly)</i> to <i>f</i>(<i>x</i>) on <i>I</i> as <i>n</i> → ∞. Further, the series of functions is said to converge
+absolutely to <i>f̄</i>(<i>x</i>) on <i>I</i> if ∑<sup>&infin;</sup><sub><sub><i>n</i>=1</sub></sub> |<i>f<sub>n</sub></i>(<i>x</i>)|
+converges for each <i>x</i> ∈ <i>I</i>. The series of functions is <i>uniformly bounded on I</i> iff there exists a real constant <i>L</i> such that ∑<sup><i>k</i>=1</sup><sub><sub><i>n</i></sub></sub> ≤ <i>L</i> for all <i>x</i> ∈ <i>I</i> and <i>n</i> ∈ ℕ.</p>
+
+<p><b>Example 8.3.1</b> Consider the series ∑<sup>&infin;</sup><sub><sub><i>n</i>=1</sub></sub> <i>f<sub>n</sub></i>(<i>x</i>) where,</p>
 
 <div class="eq">
-<p><i>f</i><sub>1</sub>(<i>x</i>) + <i>f</i><sub>2</sub>(<i>x</i>) + ... + <i>f</i><sub>n</sub>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=&infin;</sub></sub> <i>f<sub>n</sub></i>(<i>x</i>)</p>
+<p><i>f<sub>n</sub></i>(<i>x</i>) = <i>nx</i>/(1 + <i>n</i><sup>2</sup> <i>x</i><sup>2</sup>)</p>
 </div>
 
-<p>the series ∑ <i>f<sub>n</sub></i>(<i>x</i>) is said convergent in the interval <i>I</i>, if it is convergent for every <i>x</i> &in; <i>I</i>, that is if the sequence {s<sub>n</sub>} of partial sums 
-
-<div class="eq">
-<p><i>s<sub>n</sub></i> = <i>f</i><sub>1</sub>(<i>x</i>) + <i>f</i><sub>2</sub>(<i>x</i>) + ... + <i>f</i><sub>n</sub>(<i>x</i>)</p>
-</div>
-
-<p>converges to a limit <i>f</i>(<i>x</i>), otherwise is called <i>divergent</i>. </p>
+<p>Clearly, ∑<sup>&infin;</sup><sub><sub><i>n</i>=1</sub></sub> <i>f<sub>n</sub></i>(<i>x</i>) is a series of continuous functions <i>f<sub>n</sub></i>(<i>x</i>) on ℝ and since its <i>n</i>th partial sum is <i>s<sub>n</sub></i>(<i>x</i>) = <i>nx</i> /(1 + <i>n</i><sup>2</sup>x<sup>2</sup>) from <a href="exercises_sequences_functions.html">exercise 1</a> it follows that this series converges pointwise to <i>f</i>(<i>x</i>) = 0 on ℝ, but the convergence is not uniform.</p>
 
 <section aria-label="End">
 <a href="sequences_of_functions.html">&#171;Sequences of functions</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides&#187;</a>
+<a href="exercises_sequences_functions.html">Exercises on series of functions&#187;</a>
 </section>
 
 </div>

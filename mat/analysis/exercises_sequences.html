@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exercises on Sequences"/>
+	<title>Exercises on Sequences</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Exercises on Sequences</h1>
+
+<ol>
+	<p></p>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>Let <i>A</i> &gt; 0. The sequence defined by</p>
+
+	<div class="eq">
+	<p><i>a</i><sub><i>n</i>+1</sub> = (1/2)(<i>a<sub>n</sub></i> + <i>A</i>/<i>a<sub>n</sub></i>) &emsp;(<b>E.1</b>)</p>
+	</div>
+
+<p>is used to calculate approximations to √<i>A</i>, and it also known as the Babylonian Algorithm for computing square roots. Recalling the <a href="../algebra/useful_formulas.html">inequality</a> relating geometric and arithmetic mean of two numbers <i>a,b</i> &gt; 0</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msqrt>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mrow>
+      <mi>a</mi>
+      <mo>+</mo>
+      <mi>b</mi>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \sqrt{ab} \le \frac {a+b}{2} $$ -->
+
+<p>In this inequality, put <i>a</i> = <i>a<sub>n</sub></i> and <i>b</i> = <i>A</i>/<i>a<sub>n</sub></i> to deduce</p>
+
+<div class="eq">
+<p>√<i>A</i> &le; (1/2) (<i>a<sub>n</sub></i> + <i>A</i>/<i>a<sub>n</sub></i>) = <i>a</i><sub><i>n</i> + 1</sub></p>
+</div>
+
+<p>So the sequence is bounded below by √<i>A</i> at least starting from <i>n</i> = 2. To prove the convergence it remains to show it is decreasing, which is the same as showing that <i>a</i><sub><i>n</i>+1</sub> − <i>a<sub>n</sub></i> &lt; 0. In fact, for <i>n</i> &ge; 2 we have <i>a<sub>n</sub></i><sup>2</sup> &gt; <i>A</i>, so that</p>
+
+<div class="eq">
+<p><i>a</i><sub><i>n</i>+1</sub> = (1/2) (<i>a<sub>n</sub></i> + <i>A</i>/<i>a<sub>n</sub></i>) &le; (<i>a<sub>n</sub></i> + <i>a<sub>n</sub></i>)/2 = <i>a<sub>n</sub></i></p>
+</div>
+
+<p>Hence by theorem <a href="sequences_limit.html">Monotone Sequence Theorem 2.2.5.</a>, the sequence <i>a<sub>n</sub></i> converges to some number <i>L</i> &ge; √<i>A</i>. Taking the limit on both sides of E.1, we deduce that <i>L</i> satisfies <i>L</i> = (1/2)(<i>L</i> + <i>A</i>/<i>L</i>) and so <i>L</i> = √<i>A</i>. &emsp;■</p>
+
+<section aria-label="End">
+<a href="Stolz–Cesàro.html">&#171;The Stolz–Cesàro theorem</a>
+<a href="index.html">Index</a>
+<a href="series.html">Series&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -11,10 +11,10 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+<ul>
+	<li><a class="navbar" href="../../index.html">Home</a></li>
+	<li><a class="navbar" href="index.html">Algebra</a></li>
+</ul>
 </nav>
 
 <div class="content">
@@ -57,7 +57,7 @@
 	<li><p>We have</p>
 	
 	<div class="eq">
-	<p><i>e &rho; e &emsp;⇒ &emsp; e &in; H</i></p>
+	<p><i>e</i> &rho; <i>e</i> &emsp;⇒ &emsp; <i>e</i> &in; <i>H</i></p>
 	</div>
 	
 	<p>Moreover &forall;<i>x,y &in; H</i></p>
@@ -112,7 +112,7 @@
 <p><b>Proof</b>. We observe first that by multiplying to the right (or left) by a same element of <i>G</i> two elements still congruent modulo <i>&rho;<sub>r</sub></i> (<i>&rho;<sub>l</sub></i>). Let <i>&rho;<sub>r</sub> = &rho;<sub>l</sub> = &rho;</i> and let <i>x &rho; x'</i> and <i>y &rho; y'</i>. Then we have <i>xy &rho; x'y</i>, from which</p>
 
 <div class="eq">
-<p><i>xy &rho; x'y</i></p>
+<p><i>xy</i> &rho; <i>x'y</i></p>
 </div>
 
 <p>that is <i>&rho;<sub>r</sub></i> (= <i>&rho;<sub>l</sub></i>) is compatible.<br> Conversely suppo that <i>&rho;<sub>r</sub></i> is compatible. Then <i>x &rho;<sub>r</sub> y</i> &emsp;⇐⇒ &emsp; xy<sup>&minus;1</sup> &rho;<sub>r</sub> e. But then, owing to the compatibility of <i>&rho;<sub>r</sub></i>, we have <i>y</i><sup>&minus;1</sup>  &rho;<sub>r</sub> <i>x</i><sup>&minus;1</sup>, that is <i>y</i><sup>&minus;1</sup>(<i>x</i><sup>&minus;1</sup>)<sup>&minus;1</sup> = <i>y</i><sup>&minus;1</sup><i>x &in; H</i>, thus <i>x &rho;<sub>r</sub> y</i> &emsp;⇐⇒ &emsp; <i>x &rho;<sub>l</sub> y</i> and <i>&rho;<sub>r</sub> = &rho;<sub>l</sub></i>. &emsp; □</p>
@@ -226,23 +226,23 @@
 
 <p><b>Proof.</b> b) <i>xNx</i><sup>&minus;1</sup> = <i>N</i> if and only if <i>xN = Nx</i>, for one direction, we multiply on the right by <i>x</i>, and, for the converse we multiply on the right by <i>x</i><sup>&minus;1</sup>. <br>The condition for normality <i>x</i><sup>−1</sup><i>Nx = N</i> for all <i>x ∈ G</i>, says that <i>x</i><sup>−1</sup><i>nx</i> ∈ <i>N</i> for all <i>n ∈ N</i> and all <i>x ∈ G</i>; that is, for every element of <i>N</i>, its entire conjugacy class is contained in <i>N</i>.&emsp; □</p>
 
-<p><b>Definition 7.12.8</b>. Let <i>N</i> be a normal subgroup in the group <i>G</i>. The factor group, or <b>quotient group</b>, <i>G/N</i></p>
+<p id="normal"><b>Definition 7.12.8</b>. Let <i>N</i> be a normal subgroup in the group <i>G</i>. The factor group, or <b>quotient group</b>, <i>G/N</i></p>
 
 <div class="eq">
-<p><i>G/N</i> := {<i>xN = Nx</i> | <i>x &in; G</i>}</p>
+<p><i>G</i>/<i>N</i> := {<i>xN</i> = <i>Nx</i> | <i>x &in; G</i>}</p>
 </div>
 
-<p>is the set of all left (or right) cosets of <i>N &in; G</i>. Our first goal is to define an operation on right cosets so that <i>G/N</i> becomes a group. We define it as follows</p>
+<p>is the set of all left (or right) cosets of <i>N</i> &in; <i>G</i>. Our first goal is to define an operation on right cosets so that <i>G/N</i> becomes a group. We define it as follows</p>
 
 <div class="eq">
-<p><i>Nx * Ny := Nxy</i></p>
+<p><i>Nx</i> * <i>Ny</i> := <i>Nxy</i></p>
 </div>
 
-<p><b>Example</b>. If <i>G</i> = {e,a,a<sup>2</sup>} = C<sub>3</sub>, and N = {e} then  G/{e} = { {e}, {a}, {a^2} }.</p>
+<p><b>Example</b>. If <i>G</i> = {<i>e,a,a</i><sup>2</sup>} = C<sub>3</sub>, and N = {e} then  G/{e} = { {e}, {a}, {a^2} }.</p>
 
 <p><b>7.12.9 Proposition</b>. The quotient group <i>G/N</i>, as defined above, is indeed a group.</p>
 
-<p><b>Proof</b>. First we have to verify that the definition is well-defined. Let <i>Nx = Nx'</i> (that is <i>x' = nx</i>), <i>Ny = Ny'</i> (that is <i>y' = n'y</i>), where <i>n,n' &in; N</i>, <i>x,y &in;G</i>: we must prove that <i>Nxy = Nx'y'</i>. Indeed <i>x'y'= nxn'y = nn̅xy</i>. Where the last equality holds because <i>xn'∈ xN = Nx</i>, and so <i>xn'</i> is equal to <i>n̅x</i> for some <i>n̅ ∈ N</i>. But then <i>Nx'y' = Nxy</i>, as required.</p>
+<p><b>Proof</b>. First we have to verify that the definition is well-defined. Let <i>Nx = Nx'</i> (that is <i>x'</i> = <i>nx</i>), <i>Ny = Ny'</i> (that is <i>y'</i> = <i>n'y</i>), where <i>n,n' &in; N</i>, <i>x,y &in;G</i>: we must prove that <i>Nxy = Nx'y'</i>. Indeed <i>x'y'= nxn'y = <i>nn̅xy</i>. Where the last equality holds because <i>xn'∈ xN = Nx</i>, and so <i>xn'</i> is equal to <i>n̅x</i> for some <i>n̅ ∈ N</i>. But then <i>Nx'y'</i> = <i>Nxy</i>, as required.</p>
 
 <p>Group axioms, are routine and are left to the reader to verify. The closure law needs no proof, since the operation is well defined. For the associative law, we have</p>
 
@@ -255,7 +255,7 @@
 
 <p>The quotient group comes as the image of a natural homomorphism, which (as in the case of <a href="rings.htnml">rings</a>) is called the <b>canonical homomorphism</b>. Recall that the elements of <i>G/N</i> are the <i>cosets</i> of <i>N</i> in <i>G</i>.</p>
 
-<p><b>Proposition 7.12.10</b> If <i>&phi;: G → G'</i> is any group homomorphism, then ker <i>&phi;</i> is a normal subgroup of <i>G</i>.</p>
+<p><b>Proposition 7.12.10</b> If <i>&phi;</i>: <i>G</i> → <i>G'</i> is any group homomorphism, then ker <i>&phi;</i> is a normal subgroup of <i>G</i>.</p>
 
 <p><b>Proof</b>. We already know that ker <i>&phi;</i> is a sugroup of <i>G</i>; to verify it is normal notice that</p>
 
@@ -268,8 +268,8 @@
 <p>We are now going that not only kernel ⇒ Normal, but that the converse is also true leading to <b>kernel ⇐⇒ Normal subgroup</b>. Define a map</p>
 
 <div class="eq">
-<p><i>&phi;</i>: <i>G</i> → <i>G/N</i><br>
-<i>g ⟼ Ng</i></p>
+<p><i>&phi;</i>: <i>G</i> → <i>G</i>/<i>N</i><br>
+<i>g</i> ⟼ <i>Ng</i></p>
 </div>
 
 <p>Checking that <i>&pi;</i> is a homomorphism is straightforward from the definition of the operation in <i>G/N</i>.</p>
@@ -335,7 +335,7 @@
 <p><b>Proof</b>. To see this, suppose <i>H</i> is a subgroup of <i>G</i> such that [<i>G : H</i>] = 2. One coset is <i>H</i> itself: if <i>x</i> happens to be in H, then <i>xH = H</i> and Hx = H ⇒ xH = Hx. Now let <i>a</i> and element of <i>G</i> that is not contained in <i>H</i>. Then the left and right coset decompositions of <i>G</i> by <i>H</i> yield</p>
 
 <div class="eq">
-<p><i>G = H + aH = H + Ha</i></p>
+<p><i>G</i> = <i>H</i> + <i>aH</i> = <i>H</i> + <i>Ha</i></p>
 </div>
 
 <p>Accordingly, aH = Ha or <i>aHq</i><sup>&minus;1</sup> = <i>H</i>, i.e. <i>H</i> is a normal subgroup of <i>G</i>. &emsp; □</p>
