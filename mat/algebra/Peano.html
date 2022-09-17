@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peano axioms"/>
+  <title>Peano axioms</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">  
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href=/index.html">Algebra</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Peano axioms</h1>
+
+<p>The arithmetic of the integers, like the geometry of the plane, can be made to dependent on a few axioms. As early as 1891 G. Peano showed that all the properties of natural numbers can be derived from five axioms, which now bear his name.</p>
+
+<p>We take the natural numbers to be elements of any set ℕ, defined by the triple (ℕ, &sigma;, 0) where ℕ is a set, <i>&sigma;</i> an application from ℕ to ℕ and 0 an element of ℕ with the following properties known as <i>Peano axioms</i> or <i>postulates</i>:</p>
+
+<ul>
+	<li><p>ℙ<sub>1</sub>: <i>&sigma;</i> is injective: Every number <i>n</i> has precisely one successor <i>n'</i>.</p></li>
+	<li><p>ℙ<sub>2</sub>: 0 &ne; Im <i>&sigma;</i></p></li>
+	
+	<li><p>ℙ<sub>3</sub>: (<i>Induction axiom</i>): every subset <i>U</i> of ℕ such that</p>
+
+<ol type="a">
+	<li><p>0 &in; <i>U</i></p></li>
+	<li><p><i>k</i> &in; <i>U</i> ⇒ &sigma;</i>(<i>k</i>) &in; <i>U</i> &emsp; &forall;<i>k</i></p></li>
+</ol>
+
+</li>
+
+</ul>
+
+<p>coincides with ℕ.</p>
+
+<p>Given an element <i>n</i> &in; ℕ, the element <i>&sigma;</i>(<i>n</i>) is said <i>successor</i> of <i>n</i>. We thus have naturally defined in ℕ an <i>order relation</i>, &le;. The axiom ℙ<sub>3</sub> is known <p>principle of mathematical induction</i>. We can prove that if (𝔸, &sigma;,0) and (𝔸',&sigma;',0') are two triples verifying Peano's axioms, then they are "substantially identical", that is there is a bijections <i>&phi;</i> between 𝔸 and 𝔸' such that <i>&sigma;'</i>(&phi;(<i>n</i>)) = <i>&phi;</i>(<i>&sigma;</i>(<i>n</i>)), i.e the successor of the image is the image of the successor. Thus we can say that Peano axioms characterize the natural numbers. What we have to <i>postulate</i> (accept without proof) is the existence of a set ℕ which verifies Peano's axioms. Thus the fundation of the mathematical apparaturs is based on the existence of natural numbers. In the words of Knonecker:</p>
+
+<blockquote>Die ganzen Zahlen hat der liebe Gott gemacht, alles andere ist Menschenwerk. (Kronecker)</blockquote>
+
+<p>From Peano's axioms is possible to deduce all well-known properties of natural numbers. We give first some preliminary definitions.</p>
+
+<p>The <a href="sets.html#Cartesian">Cartesian product</a> of two sets or a finite collection of sets is of considerable importance
+through set theory. Here below, we introduce a few concepts arising from the Cartesian product that are essential for the rest of this book.</p>
+
+<p id="binary"><b>Definition 1.5.1</b>. A binary operation on a set <i>A</i> is a function that maps each ordered pair in <i>A</i> x <i>A</i> to a unique element of a set containing <i>A</i>, that is a map <i>f</i> : <i>A</i> x <i>A</i> ⟶ <i>B</i> &subset; <i>A</i> </p>
+
+<p>The concept of a binary operation models a process by which any two objects in a set may be combined to produce a specific other element in the set. This concept is ubiquitous in mathematics. Some standard examples include +, −, and × on ℤ or ℝ. <br> The ordinary addition of integers is a binary operation definined as:</p>
+
+<div class="eq">
+<p>+ : ℤ x ℤ → ℤ</p>
+<p>(<i>a,b</i>) ↦ <i>a</i> + <i>b</i></p>
+</div>
+
+<p>The result of the addition operation, that is the element <i>a</i> + <i>b</i> &in; ℤ, is called <i>sum</i> of <i>a</i> and <i>b</i>.</p>
+
+<p>Note that the division process ÷ is not a binary operator on ℝ because for example 3 ÷ 0 is not well-defined, while it is a binary operator on ℝ − {0}. Also ÷ is not a binary operator on ℤ − {0} because for example, 3 ÷ 2 is a rational number but not again an element of ℤ − {0}. As yet another nonexample, consider the <a href="../linear_algebra/dot_product.html">dot product</a> · of two vectors in ℝ<sup>3</sup>. This is not a binary operation because it is a function ℝ<sup>3</sup> × ℝ<sup>3</sup> → ℝ and the codomain is not again ℝ<sup>3</sup>.</p>
+
+<p>Another example, is the union of subsets of a set <i>X</i> is a binary operation defined in 𝓟(<i>X</i>):</p>
+
+<div class="eq">
+<p>∪ : 𝓟(<i>X</i>) x 𝓟(<i>X</i>) → 𝓟(<i>X</i>)</p>
+<p>(<i>A,B</i>) ↦ <i>A</i> ∪ <i>B</i></p>
+</div>
+
+<p>We talk of <i>n</i>-ary operations with <i>n</i> = 1,2,.... which are functions from <i>S</i> x <i>S</i> x ... x <i>S</i> into <i>S</i>. For <i>n</i> = 1 a 1-ary (unitary) operation defined on <i>S</i> is a function from <i>S</i> to <i>S</i>. If <i>S</i> = <i>P</i>(<i>X</i>), an example of 1-ary operation is the functions that associates to each subset of  <i>X</i> its complement.</p>
+
+<p><b>Definition 1.5.2</b>. An <i>algebraic structure</i> is a set endowed with one or multiple <i>n</i>-ary operation satisfying given axioms. </p>
+
+<p>From Peano's axioms all the well known properties of natural numbers can be derived. In particular the sum and product and their properties can be deduced by Peano's axioms.</p>
+
+<p><b>Definition 1.5.3</b>. The <i>sum</i> of two natural numbers <i>n</i> and <i>m</i> is defined as the natural number <i>n</i> + <i>m</i> where</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>n</mi>
+  <mo>+</mo>
+  <mi>m</mi>
+  <mover>
+    <mo>=</mo>
+    <mtext>def</mtext>
+  </mover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <munder>
+            <mrow data-mjx-texclass="OP">
+              <munder>
+                <mrow>
+                  <mi>&#x3C3;</mi>
+                  <mo stretchy="false">(</mo>
+                  <mi>&#x3C3;</mi>
+                  <mo stretchy="false">(</mo>
+                  <mo>&#x22EF;</mo>
+                  <mi>&#x3C3;</mi>
+                  <mo stretchy="false">(</mo>
+                  <mi>n</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+                <mo>&#x23DF;</mo>
+              </munder>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mstyle scriptlevel="0">
+                <mspace width="0.167em"></mspace>
+              </mstyle>
+              <mtext>times</mtext>
+            </mrow>
+          </munder>
+        </mtd>
+        <mtd>
+          <mtext>if</mtext>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>m</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>n</mi>
+        </mtd>
+        <mtd>
+          <mtext>if</mtext>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>m</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<p>from this definition it results naturally <i>&sigma;</i>(<i>n</i>) = <i>n</i> + 1, where 1 = <i>&sigma;</i>(0).</p>
+
+<p><b>Definition 1.5.4</b>. The <i>product</i> of two natural numbers <i>n</i> and <i>m</i> is defined as the natural number <i>n</i> ⋅ <i>m</i> where</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>n</mi>
+  <mo>&#x22C5;</mo>
+  <mi>m</mi>
+  <mover>
+    <mo>=</mo>
+    <mtext>def</mtext>
+  </mover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <munder>
+            <mrow data-mjx-texclass="OP">
+              <munder>
+                <mrow>
+                  <mi>n</mi>
+                  <mo>+</mo>
+                  <mi>n</mi>
+                  <mo>+</mo>
+                  <mo>&#x22EF;</mo>
+                  <mo>+</mo>
+                  <mi>n</mi>
+                </mrow>
+                <mo>&#x23DF;</mo>
+              </munder>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mstyle scriptlevel="0">
+                <mspace width="0.167em"></mspace>
+              </mstyle>
+              <mtext>times</mtext>
+            </mrow>
+          </munder>
+        </mtd>
+        <mtd>
+          <mtext>if</mtext>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>m</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mtext>if</mtext>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>m</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<p>Generally we are interested in <i>binary</i> operations, which we shall simply call operations without specifying they are binary.</p>
+
+<h2 id="induction">The principle of mathematical induction</h2>
+
+<p>The third Peano axiom ℙ<sub>3</sub> is the assertion on which the principle of mathematical induction is based. It basically says that every subset <i>U</i> of ℕ which contains 0 and contains the successor of each of its elements contains all the natural numbers.
+If we accept this axiom (We do not prove that mathematical induction is valid, but instead choose to accept the principles because is  rooted in our intuitive understanding of the integers) we obtain a method for proving that a proposition P(<i>n</i>) concerning natural numbers <i>n</i> is valid for all natural numbers. Let's see its application. Suppose that for every integer <i>n</i> &ge; 0 we can formula a proposition P(<i>n</i>), which depends on <i>n</i>, for example: "If a finite set <i>S</i> has <i>n</i> elements, then l'insieme delle parti di <i>S</i> has 2<sup><i>n</i></sup> elements". Suppose we want to prove that the proposition <i>P</i>(<i>n</i>) is true for every <i>n</i>: we should prove infinite propositions! With the methematical induction we can prove a proposition sin just two steps. We proceed as follows:</p>
+
+<ol>
+	<li><p>Basis step: prove that <i>P</i>(0) is true;</p></li>
+	<li><p>Induction step: Prove that for every <i>k</i>, from <i>P</i>(<i>k</i>) being true, follows that <i>P</i>(<i>k</i> + 1) is true, that is P(<i>k</i>) ⇒ P(<i>k</i>+1).</p></li>
+</ol>
+
+<p>Then we can conclude to have proved that <i>P</i>(<i>n</i>) is true for every <i>n</i>. Indeed by letting <i>U</i> = {<i>n</i> &in; ℕ | <i>P</i>(<i>n</i>) is true}, it results 0 &in; <i>U</i> because it has been proved that <i>P</i>(0) is true. Further, <i>k</i> &in; <i>U</i>, that is if <i>P</i>(<i>k</i>) is true, then <i>P</i>(<i>k</i>+1)</i> is true, (inductive step) and thus <i>k</i> + 1 &in; <i>U</i>, from whihc follows, by ℙ<sub>3</sub>, <i>U</i> = ℕ, that is <i>P</i>(<i>n</i>) is true for every <i>n</i>.</p>
+
+<p>Notice that if we want to prove a proposition <i>P</i>(<i>n</i>) not for all <i>n</i>, but only for those <i>n</i> &ge; <i>n</i><sub>0</sub>, it sufficies to prove as basis step the proposition <i>P</i>(<i>n</i><sub>0</sub>) instead of <i>P</i>(0).</p>
+
+<p>Prove that for any positive integer <i>n</i> the sum of the cubes of the first <i>n</i> even numbers is given by</p>
+<div class="eq">
+<p>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup> (<i>n</i>+1)<sup>2</sup></p>
+</div>
+
+<p><b>Proof</b>. We must prove:</p>
+
+<ol>
+	<li><p>Base of the induction: <i>P</i>(1) is true for <i>n</i> = 1 both members reduce to 2<sup>3</sup>.</p></li>
+	<li><p>Induction step: Supposing true <i>P</i>(<i>n</i> − 1), we prove <i>P</i>(<i>n</i>). The <i>P</i>(<i>n</i> − 1) (which we are supposing true) is:</p>
+	<div class="eq">
+	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i>−1)<sup>2</sup>n<sup>2</sup></i></p>
+	</div>
+	<p>Adding (2<i>n</i>)<sup>3</sup> to both sides of last equation, we have</p>
+	<div class="eq">
+	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i> − 1)<sup>2</sup>n<sup>2</sup> + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup>[(<i>n</i> − 1)<sup>2</sup> + 4<i>n</i>] = 2<i>n</i><sup>2</sup> (<i>n</i> + 1)<sup>2</sup></i></p>
+	</div>
+	<p>which is exactly <i>P</i>(<i>n</i>).□</p>
+</ol>	
+
+<p>We now give two <i>equivalent</i> alternative formulations 𝕀  and 𝕄, of the principle of mathematical induction ℙ<sub>3</sub> because in certain cases these formulation can be more useful.</p>
+
+<p id="strong"><b>1.5.5 𝕀: (<i>Second Principle of Mathematical Induction: strong induction</i></b>) Every subset <i>V</i> of ℕ such that</p>
+
+<ol type="a">
+	<li><p>0 &in; <i>V</i></p></li>
+	<li><p>if <i>V</i> contains all numbers less than <i>n</i> then it also contains <i>n</i>, concisely:<p>
+	<div class="eq">
+	<p><i>n</i> &in; <i>V</i> &emsp; if <i>k</i> &in; <i>V</i>, &forall;<i>k</i> such that 0 &le; <i>k</i> &lt; <i>n</i></p>
+	</div>
+	</li>
+</ul>
+
+<p>then <i>V</i> coincides with ℕ.</p>
+
+<p id="well"><b>1.5.6 𝕄: (<i>The Well-Ordering principle</i>)</b> Every nonempty set <i>T</i> of ℕ contains a least element. That is, there is an element <i>t</i> &in; <i>T</i> such that <i>t</i> &le; <i>x</i> &forall;<i>x</i> &in; <i>T</i>.</p>
+
+<p>A <a href="relations.html#order">partially ordered set</a> <i>X</i> is said <i>Well-Ordered</i> if every non-empty subset of <i>X</i> has a minimum element.</p>
+
+<p><b>Proposition 1.5.7</b>. The three principles ℙ<sub>3</sub>, 𝕀  and 𝕄 are equivalent.</p>
+
+<p><b>Proof</b>. Assumiano vero il principio di induzione forte e proviamo il principio del buon ordinamento. Suppose that <i>S</i> is a non-empty set of ℕ. Let <i>T</i> = ℕ \ <i>S</i>. Suppose by contradiction that <i>S</i> does not possess a minimum element. Then 1 &ne; <i>S</i>, otherwise it would be the minimum element of <i>S</i> since it is the minimum element of ℕ. Then 1 &in; <i>T</i>. Suppose that for a <i>k</i>, we have 1 &le; <i>i</i> &le; <i>k, i</i> &in; <i>T</i>. Consider <i>k</i> + 1. If <i>k</i>+1 were in <i>S</i>, it would be the minimum element in <i>S</i> because no <i>i</i> between 1 and <i>k</i> can be found in <i>S</i>. Since we are assuming that <i>S</i> has no minimum element, we must have <i>k</i> + 1 &in; <i>T</i>. For the strong indunction principle, <i>T</i> must contain all natural numbers, thus be equivalent to ℕ. It follows that <i>S</i> = ∅, a contradiction. We thus conclude that <i>S</i> has a minimum element.</p>
+
+<p>Adesso si supponga che il principio del buon ordinamento sia vero e proviamo il principio di induzione forte. Sia <i>U</i> un sottoinsieme di ℕ verificante le ipotesi di 𝕀 e supponiamo per assurdo che <i>U</i> &ne; ℕ. Allora detto <i>V</i> = <i>N</i> \ <i>U</i>, risulta <i>V</i> &ne; ∅. Per la 𝕄 esiste un minimo <i>m</i> &in; <i>V</i>, che sarà maggiore di zero, perchè 0 &in; <i>U</i>. Essendo <i>m</i> minimo per <i>V</i>, ogni <i>k</i> tale che sia 0 &le; <i>k</i> &lt; <i>m</i> sta in <i>U</i>. Ma allora per la (b) di 𝕀, <i>m &in; U</i>, che è un assurdo.□</p>
+
+<p>A practical example of these two proof methods can be given to prove the following proposition regarding division in ℕ.</p>
+
+<p>1.5.8 Proposition. Let <i>a,b</i> &in; ℕ, <i>b</i> &ne; 0</i>. Then there exist two natural numbers <i>q,r</i>, such that</p>
+<div class="eq">
+<p><i>a</i> = <i>bq</i> + <i>r</i>, &ensp; 0 &le; <i>r</i> &lt; <i>b</i></p>
+</div>
+
+<p><b>Proof</b>. We use the Well-Ordering principle: let <i>q</i> + 1</i> the least integer <i>b</i>(<i>q</i>+1) &gt; <i>a</i> (such a minimum integer exists for sure considering the non-empty set <i>T</i> = {<i>x</i> &in; ℕ | <i>bx</i> &gt; <i>a</i>})</p>
+
+<p>We thus have</p>
+
+<div class="eq">
+<p><i>bq</i> &le; <i>a</i> &lt; <i>b</i>(<i>q</i> + 1)</p>
+</div>
+
+<p>from which follows</p>
+
+<div class="eq">
+<p>0 &le; <i>a</i> − <i>bq</i> &lt; <i>b</i></p>
+</div>
+
+<p>Let <i>r</i> = <i>a</i> − <i>bq</i>, we have <i>a</i> = <i>bq</i> + <i>r</i>, 0 &le; <i>r</i> &lt; <i>b</i>. □</p>
+
+<p>These principles of induction are often described using the image of a line of dominoes falling down. For weak induction, we prove that P(0) is true and that P(<i>n</i>) implies P(<i>n</i> + 1) for all <i>n</i> ≥ <i>a</i>. In the domino setting, this corresponds to knowing both that the first domino has fallen down and that when any domino falls down, the next domino in line must also fall down. These two observations about a line of dominoes leads to the conclusion that every domino in the line has fallen down. The principle of strong induction is similar except that we need to know that the first few dominos have fallen down, and that all the dominoes have fallen down up to some point in the line implies the next domino in line must also fall down. In some mathematical settings, the claim that a statement is true for a particular integer depends on knowing the statement is true for every preceding integer (rather than just the immediate predecessor).</p>
+
+<section aria-label="End">
+<a href="isomorfismo.html">&#171; Isomorfismo</a>
+<a href="index.html">Index</a>
+<a href="cardinalità.html">Cardinalità &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
