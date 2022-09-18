@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Topology"/>
+	<title>Topology</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Topology</h1>
+
+<p><b>Definition 1.1.1</b>. Let <i>X</i> be a non-empty set. A collection <i>τ</i> of subsets of <i>X</i> is said to be a <b>topology</b> on <i>X</i> if</p>
+
+<ol type="i">
+	<li><p><i>X, Ø</i> &in; <i>τ</i>;</p></li>
+	<li><p>the union of any (finite or infinite) number of sets in <i>τ</i>;</p></li>
+	<li><p>the intersection of any two sets in <i>τ</i> belongs to <i>τ</i>.</p></li>
+</ol>
+
+<p>The pair (<i>X, τ</i>) is called a <b>topological space</b>. The members of <i>τ</i> are called <b>open sets</b>. Thus <i>A</i> &in; <i>τ</i> and <i>A</i> open, mean the same thing. Their complements, <i>F</i> = <i>X</i> \ <i>A</i>, are called <b>closed sets</b>. Members of <i>X</i> are called points.  &emsp;□</p>
+
+<p><b>Example 1.1.2</b>. Let <i>X</i> = {<i>a, b, c, d, e, f</i>} and</p>
+
+<div class="eq">
+<p><i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {<i>c, d</i>}, {<i>a, c, d</i>}, {<i>b, c, d, e, f</i>}}.</p>
+</div>
+
+<p>Then <i>τ</i> is a topology on <i>X</i> as it satisfies conditions (i), (ii) and (iii) of Definitions 1.1.1.&emsp;■</p>
+
+<p><b>Example 1.1.3</b>. Let <i>X</i> = {<i>a, b, c, d, e</i>} and</p>
+
+<div class="eq">
+<p><i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {<i>c, d</i>}, {<i>a, c, e</i>}, {<i>b, c, d</i>}}.</p>
+</div>
+
+<p>Then <i>τ</i> is not a topology on <i>X</i> as the union {<i>c, d</i>} ∪ {<i>a, c, e</i>} = {<i>a, c, d, e</i>} of two members of <i>τ</i> does not belong to <i>τ</i> condition (ii) of Definitions 1.1.1.&emsp;■</p>
+
+<p><b>Example 1.1.4</b>. Let <i>X</i> = {<i>a, b, c, d, e, f</i>} and <i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {f}, {<i>a, f</i>}, {<i>b, c, d, e, f</i>}}. Then <i>τ</i> is <b>not</b> a topology on X since the intersection {<i>a, c, f</i>} ∩ {<i>b, c, d, e, f</i>} = {<i>c, f</i>} of two sets in <i>τ</i> does not belong to <i>τ</i>; that is, <i>τ</i> does not have property (iii) of Definitions 1.1.1. &emsp;■</p>
+
+<p><b>Definition 1.1.5</b>. Let <i>X</i> be any non-empty set and let <i>τ</i> be the collection of all subsets of <i>X</i>. Then <i>τ</i> is called the <b>discrete topology</b> on the set <i>X</i>. The topological space (<i>X, τ</i>) is called a <b>discrete space</b>.</p>
+
+<p>We note that <i>τ</i> in Definitions 1.1.5 does satisfy the conditions of Definitions 1.1.1 and so is indeed a topology.</p>
+
+<p>Observe that the set <i>X</i> in Definitions 1.1.5 can be any non-empty set. So there is an infinite number of discrete spaces – one for each set <i>X</i>.</p>
+
+<p><b>Definition 1.1.6</b>. Let <i>X</i> be any non-empty set and let <i>τ</i> = {<i>X</i>, Ø}. Then <i>τ</i> is called the <b>indiscrete topology</b> and (<i>X, τ</i>) is said to be an <b>indiscrete space</b>.</p>
+
+<p>Once again we have to check that <i>τ</i> satisfies the conditions of Definitions 1.1.1 and so is indeed a topology. <br> We observe again that the set <i>X</i> in Definitions 1.1.6 can be any non-empty set. So there is an infinite number of indiscrete spaces – one for each set <i>X</i>.</p>
+
+<p><b>Proposition 1.1.7</b>. Let (<i>X, τ</i>) be any topological space. Verify that the intersection of any finite number of members of
+<i>τ</i> is a member of <i>τ</i>.</p>
+
+<p>By definition the intersection of any two open sets gives an open set, so by repeating that finitely many times you end with an open set. For example, let O<sub>1</sub>, O<sub>2</sub>, and O<sub>3</sub> be open sets. O<sub>1</sub> ∩ O<sub>2</sub> is open, so (O<sub>1</sub> ∩ O<sub>2</sub>) ∩ O<sub>3</sub> is also open. If there is also an O<sub>4</sub>, then ((O<sub>1</sub> ∩ O<sub>2</sub>) ∩ O<sub>3</sub>) ∩ O<sub>4</sub> is open. This process can be carried on for any finite collection of open sets. </p>
+
+<p><b>Proof</b>. Let <i>S</i> = {<i>n</i> &in; ℕ: the intersection of any <i>n</i> members of <i>τ</i> is a member of <i>τ</i>}. It is clear that 1 and 2 belong to <i>S</i>. Suppose <i>n</i> &ge; 2 and {1,2,...,<i>n</i>} &subseteq; <i>S</i>. Let {<i>U<sub>i</sub></i>: <i>i</i> &in; {1,2,...,<i>n</i>+1}} be a collection of members of <i>τ</i>. Since <i>n</i> &in; <i>S</i>, ⋂<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i> &in; <i>τ</i>. Therefore, since 2 &in; <i>S</i>, ⋂<sup><i>n</i>+1</sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i> = (⋂<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i>) ∩ <i>U</i><sub><i>n</i>+1</sub> &in; <i>τ</i>. Thus <i>n</i> + 1 &in; <i>S</i>, and by the <a href="../algebra/Peano.html#strong">second principle of mathematical induction</a>, <i>S</i> = ℕ. &emsp;□</p>
+
+<p><b>Proposition 1.1.8</b>. If (<i>X, τ</i>) be any topological space, then</p>
+
+<ol type="i">
+	<li><p>Ø and <i>X</i> are closed sets.</p></li>
+	<li><p>The union of any finite number of closed sets is a closed set.</p></li>
+	<li><p>The intersection of any (finite or infinite) number of closed sets is a closed set.</p></li>
+</ol>
+
+<p><b>Proof</b>. i)The fact that Ø and <i>X</i> are open sets is a trivial fact derived from definition 1.1.1. They are as well closed sets since the complement of <i>X</i> is Ø and the complement of Ø is <i>X</i>. &emsp;□ </p>
+
+<p>To prove that (ii) is true, let <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ... ,<i>A<sub>n</sub></i> be closed sets. We are required to prove that <i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ ··· ∪ <i>A<sub>n</sub></i> is a closed set. It suffices to show, by Definition 1.1.1, that <i>X</i> \ (<i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ ··· ∪ <i>A<sub>n</sub></i>) is an open set.
+As <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ... , <i>A<sub>n</sub></i> are closed sets, their complements <i>X</i> \ <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ... , <i>A<sub>n</sub></i> are open sets. But</p>
+
+<div class="eq">
+<p><i>X</i> \ (<i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ ··· ∪ <i>A<sub>n</sub></i>) = (<i>X</i> \ <i>A</i><sub>1</sub>) ∩ (<i>X</i> \ <i>A</i><sub>2</sub>) ∩ ··· ∩ (<i>X</i> \ <i>A<sub>n</sub></i>).</p>
+</div>
+ 
+<p>As the right hand side of (1) is a finite intersection of open sets, it is an open set, by proposition 1.1.7. So the left hand side of (1) is an open set. Hence <i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ ··· ∪ <i>A<sub>n</sub></i> is a closed set, as required. So (ii) is true. The proof of (iii) is analogous to (ii).&emsp;□</p>
+
+<p>As we have seen despite the names, some open sets are also closed sets. Moreover, some sets are neither open sets nor closed sets.
+The names “open” and “closed” should not lead the reader into error. Indeed, if we consider Example 1.1.2 we see that</p>
+
+<ol type="i">
+	<li><p>The set {<i>a</i>} is both open and closed;</p></li>
+	<li><p>The set {<i>b, c</i>} is neither open nor closed;</p></li>
+	<li><p>The set {<i>c, d</i>} is open but not closed;</p></li>
+	<li><p>The set {<i>a, b, e, f</i>} is closed but not open.</p></li>
+</ol>
+
+<p><b>Proposition 1.1.9</b>. A subset <i>A</i> of a topological space (<i>X, τ</i>) is said to be <b>clopen</b> if it is both open and closed in (<i>X, τ</i>).</p>
+
+<ul>
+	<li><p>In every topological space (<i>X, τ</i>) both <i>X</i> and Ø are clopen.</p></li>
+	<li><p>In a discrete space all subsets of <i>X</i> are clopen.</p></li>
+	<li><p>In an indiscrete space the only clopen subsets are <i>X</i> and Ø.</p></li>
+</ul>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="basis.html">Basis for a Topology&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
