@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Limit points"/>
+	<title>Limit points</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Limit points</h1>
+
+<p>On the real number line we have a notion of “closeness”. For example each point in the sequence</p>
+
+<div class="eq">
+<p>0.1, .01, .001, .0001, .00001, ...</p>
+</div> 
+
+<p>is closer to 0 than the previous one. <br> Indeed, in some sense, 0 is a limit point of this sequence. So the interval (0, 1] is not
+closed, as it does not contain the limit point 0. A metric space is a topological space that includes the notion of a metric or distance between its elements but in a general topological space we do not have a metric, so we must proceed differently. We shall define the notion of limit point without resorting to distances. Even with our new definition of limit point, the point 0 will still be a limit point of (0, 1]. The introduction of the notion of limit point will lead us to a much better understanding of the notion of closed set.</p>
+
+<p><b>Definition 1.3.1</b>. Let <i>A</i> be a subset of a topological space (<i>X,τ</i>). A point <i>x</i> ∈ <i>X</i> is said to be a <b>limit point</b> (or <i>accumulation point</i> or <i>cluster point</i>) of <i>A</i> if every open set, <i>U</i>, containing <i>x</i> contains a point of <i>A</i> different from <i>x</i>. The open subset <i>U</i> of <i>X</i> that contains <i>x</i> is known as <b>open neighborhood</b> of <i>x</i>. Symbolically we can say that <i>x</i> is a limit point of <i>A</i> if or every open neighborhood <i>U<sub>x</sub></i> of <i>x</i>, we have</p>
+
+<div class="eq">
+<p><i>U<sub>x</sub></i> ∩ (<i>A</i> \{<i>x</i>}) ≠ ∅.</p>
+</div>
+
+<p><b>Example 1.3.2</b>. Consider the topological space (<i>X,τ</i>) where the set <i>X</i> = {<i>a, b, c, d, e</i>} , the topology <i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {<i>c, d</i>}, {<i>a, c, d</i>}, {<i>b, c, d, e</i>}}, and <i>A</i> = {<i>a, b, c</i>}. Then <i>b, d</i>, and <i>e</i> are limit points of <i>A</i> but <i>a</i> and <i>c</i> are not limit points of <i>A</i>.</p>
+
+<ul>
+	<li><p>The set {<i>a</i>} is open and contains no other point of <i>A</i>. So a is not a limit point of <i>A</i>.</p></li>
+	<li><p>The set {<i>c, d</i>} is an open set containing c but no other point of <i>A</i>. So <i>c</i> is not a limit point of <i>A</i>.</p></li>
+	<li><p>The only open sets containing <i>b</i> are <i>X</i> and {<i>b, c, d, e</i>} and both contain another element of <i>A</i>, namely <i>c</i>. So <i>b</i> is a limit point of <i>A</i>.</p></li>
+	<li><p>The point <i>d</i> is a limit point of A , even though it is not in <i>A</i>. This is so since every open set containing <i>d</i> contains a point of <i>A</i>. Similarly <i>e</i> is a limit point of <i>A</i> even though it is not in <i>A</i>. &emsp;■</p></li>
+</ul>
+
+<p><b>Example 1.3.3</b>. Consider the subset <i>A</i> = [<i>a, b</i>) of ℝ. Then it is easily verified that every element in [<i>a, b</i>) is a limit point of <i>A</i>. The point <i>b</i> is also a limit point of <i>A</i>. &emsp;■</p>
+
+<p>The next proposition provides a useful way of testing whether a set is closed or not.</p>
+
+<p><b>Proposition 1.3.4</b>. A subset <i>A</i> of a space <i>X</i> is closed if and only if it contains all of its accumulation points.</p>
+
+<p><b>Proof</b>. Assume that <i>A</i> is closed in (<i>X, τ</i>). Suppose that <i>x</i> is a limit point of <i>A</i> which belongs to <i>X</i> \ <i>A</i>. Then <i>X</i> \ <i>A</i> is an open set containing the limit point <i>x</i> of <i>A</i>. Therefore <i>X</i> \ <i>A</i> contains an element of <i>A</i>. This is clearly false and so we have a contradiction to our supposition. Therefore every limit point of A must belong to <i>A</i>.</p>
+
+<p>Conversely, assume that <i>A</i> contains all of its limit points. For each <i>z</i> ∈ <i>X</i> \ <i>A</i>, our assumption implies that there exists an open set <i>z</i> &in; <i>U<sub>z</sub></i> such that <i>U<sub>z</sub></i> ∩ <i>A</i> = Ø; that is, <i>U<sub>z</sub></i> ⊆ <i>X</i> \ <i>A</i>. Therefore <i>X</i> \ <i>A</i> = ⋃<sub><sub><i>z</i> ∈ <i>X</i>\<i>A</i></sub></sub> <i>U<sub>z</sub></i>. So <i>X</i> \ <i>A</i> is a union of open sets and hence is open. Consequently its complement, <i>A</i>, is closed. &emsp;□</p>
+
+<section aria-label="End">
+<a href="euclidean_topology.html">&#171;The Euclidean Topology</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
