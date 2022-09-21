@@ -38,8 +38,6 @@ closed, as it does not contain the limit point 0. A metric space is a topologica
 <p><i>U<sub>x</sub></i> ∩ (<i>A</i> \{<i>x</i>}) ≠ ∅.</p>
 </div>
 
-<p><b>Nota bene</b>. In general a limit point for <i>A</i>, needs not to be a point in <i>A</i>.</p>
-
 <p><b>Example 1.3.3</b>. Consider the topological space (<i>X,τ</i>) where the set <i>X</i> = {<i>a, b, c, d, e</i>} , the topology <i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {<i>c, d</i>}, {<i>a, c, d</i>}, {<i>b, c, d, e</i>}}, and <i>A</i> = {<i>a, b, c</i>}. Then <i>b, d</i>, and <i>e</i> are limit points of <i>A</i> but <i>a</i> and <i>c</i> are not limit points of <i>A</i>.</p>
 
 <ul>
@@ -68,11 +66,18 @@ closed, as it does not contain the limit point 0. A metric space is a topologica
 
 <p>The set of all limit points of a set <i>A</i> is called the <i>derived set</i> of the set <i>A</i> and denoted by <i>A'</i>.</p>
 
+<p><b>Nota bene</b>. In general a limit point for <i>A</i>, needs not to be a point in <i>A</i>.</p>
+
 <p><b>Proposition 1.3.6</b>. For any set <i>A</i> &subset; <i>X</i>, the set <i>A</i> &cup; <i>A'</i> is closed.</p>
 
-<p><b>Proof</b>. We shall show that the set <i>X</i>\(<i>A</i> &cup; <i>A'</i>) is open. Let <i>x</i> be an arbitrary point from <i>X</i>\(<i>A</i> &cup; <i>A'</i>). Then <i>x</i> is neither in <i>A</i> nor a limit point of <i>A</i>. 
+<p><b>Proof</b>. We shall show that the set <i>X</i>\(<i>A</i> &cup; <i>A'</i>) is open. Let <i>x</i> be an arbitrary point from <i>X</i>\(<i>A</i> &cup; <i>A'</i>). Then <i>x</i> is neither in <i>A</i> nor a limit point of <i>A</i>. If <i>x</i> is not a limit point of <i>A</i> the negation of the limit point property (def.1.3.2) <i>U<sub>x</sub></i> ∩ (<i>A</i> \{<i>x</i>}) ≠ ∅ must be true that is there exists a neighborhood <i>U<sub>x</sub></i> of <i>x</i> that does not intersect neither <i>A</i> nor <i>A'</i>. Hence <i>U<sub>x</sub></i> is disjoint from <i>A</i> and <i>A'</i>, thus we conclude that <i>U<sub>x</sub></i> ⊆ <i>X</i>\(<i>A</i> &cup; <i>A'</i>). Given the arbitrary of <i>x</i> we can find other open sets for all points in <i>X</i>\(<i>A</i> &cup; <i>A'</i>), whose union must be the open 
+open set <i>X</i>\(<i>A</i> &cup; <i>A'</i>). This proves <i>A</i> &cup; <i>A'</i> is closed, as desired. &emsp;□</p>
 
- Then <i>x</i> is not a limit point of <i>A</i>; therefore, there is a neighbourhood <i>U<sub>x</sub></i> of it such that <i>U<sub>x</sub></i> &cap; <i>A</i> = ∅. Let <i>x'</i> &in; <i>U<sub>x</sub></i> be an arbitrary point. By negating the limit point property (def.1.3.2) <i>U<sub>x</sub></i> ∩ (<i>A</i> \{<i>x</i>}) ≠ ∅ we obtain that if <i>x</i> is not a limit point of <i>A</i>, there exists a neighborhood of <i>U<sub>x</sub></i> of <i>x</i> that does not intersect neither <i>A</i> nor <i>A'</i>. Hence <i>U<sub>x</sub></i> is disjoint from <i>A</i> and <i>A'</i>, hence we conclude that <i>U<sub>x</sub></i> ⊆ <i>X</i>\(<i>A</i> &cup; <i>A'</i>). This proves <i>X</i>\(<i>A</i> &cup; <i>A'</i>) is open, as desired. &emsp;□</p>
+<p><b>Definition 1.3.7</b>. Let the set <i>A</i> be a subset of a topological space (<i>X,τ</i>). Then the set <i>A</i> &cup; <i>A'</i> consisting of <i>A</i> and all its limit points is called the <b>closure of A</b> and is denoted by <i><b>Ā</b>,</i>.</p>
+
+<p>Every closed set containing <i>A</i> must also contain the set <i>A'</i>. So <i>A</i> ∪ <i>A'</i> = <i>Ā</i> is the smallest closed set containing <i>A</i>. This implies that <i>Ā</i> is the intersection of all closed sets containing A.</p>
+
+<p><b>Definition 1.3.8</b>. Let <i>A</i> be a subset of a topological space (<i>X,τ</i>). Then <i>A</i> is said to be <b>dense</b> in <i>X</i> or <b>everywhere dense</b> in <i>X</i> if <i>Ā</i> = <i>X</i>.</p>
 
 <section aria-label="End">
 <a href="euclidean_topology.html">&#171;The Euclidean Topology</a>
