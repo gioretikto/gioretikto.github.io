@@ -30,13 +30,17 @@
 <p>is closer to 0 than the previous one. <br> Indeed, in some sense, 0 is a limit point of this sequence. So the interval (0, 1] is not
 closed, as it does not contain the limit point 0. A metric space is a topological space that includes the notion of a metric or distance between its elements but in a general topological space we do not have a metric, so we must proceed differently. We shall define the notion of limit point without resorting to distances. Even with our new definition of limit point, the point 0 will still be a limit point of (0, 1]. The introduction of the notion of limit point will lead us to a much better understanding of the notion of closed set.</p>
 
-<p><b>Definition 1.3.1</b>. Let <i>A</i> be a subset of a topological space (<i>X,τ</i>). A point <i>x</i> ∈ <i>X</i> is said to be a <b>limit point</b> (or <i>accumulation point</i> or <i>cluster point</i>) of <i>A</i> if every open set, <i>U</i>, containing <i>x</i> contains a point of <i>A</i> different from <i>x</i>. The open subset <i>U</i> of <i>X</i> that contains <i>x</i> is known as <b>open neighborhood</b> of <i>x</i>. Symbolically we can say that <i>x</i> is a limit point of <i>A</i> if or every open neighborhood <i>U<sub>x</sub></i> of <i>x</i>, we have</p>
+<p><b>Definition 1.3.1</b>. (Neighbourhood) In a topological space (<i>X,τ</i>), an open neighbourhood of a point <i>x</i> &in; <i>X</i> is an open set containing <i>x</i>, so that an open set is an open neighbourhood of every point of itself.</p>
+
+<p><b>Definition 1.3.2</b>. Let <i>A</i> be a subset of a topological space (<i>X,τ</i>). A point <i>x</i> ∈ <i>X</i> is said to be a <b>limit point</b> (or <i>accumulation point</i> or <i>cluster point</i>) of <i>A</i> (that is not necessarily in A) if every open set, <i>U</i>, containing <i>x</i> contains a point of <i>A</i> different from <i>x</i>. Symbolically we can say that <i>x</i> is a limit point of <i>A</i> if for every open neighborhood <i>U<sub>x</sub></i> of <i>x</i>, we have</p>
 
 <div class="eq">
 <p><i>U<sub>x</sub></i> ∩ (<i>A</i> \{<i>x</i>}) ≠ ∅.</p>
 </div>
 
-<p><b>Example 1.3.2</b>. Consider the topological space (<i>X,τ</i>) where the set <i>X</i> = {<i>a, b, c, d, e</i>} , the topology <i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {<i>c, d</i>}, {<i>a, c, d</i>}, {<i>b, c, d, e</i>}}, and <i>A</i> = {<i>a, b, c</i>}. Then <i>b, d</i>, and <i>e</i> are limit points of <i>A</i> but <i>a</i> and <i>c</i> are not limit points of <i>A</i>.</p>
+<p><b>Nota bene</b>. In general a limit point for <i>A</i>, needs not to be a point in <i>A</i>.</p>
+
+<p><b>Example 1.3.3</b>. Consider the topological space (<i>X,τ</i>) where the set <i>X</i> = {<i>a, b, c, d, e</i>} , the topology <i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {<i>c, d</i>}, {<i>a, c, d</i>}, {<i>b, c, d, e</i>}}, and <i>A</i> = {<i>a, b, c</i>}. Then <i>b, d</i>, and <i>e</i> are limit points of <i>A</i> but <i>a</i> and <i>c</i> are not limit points of <i>A</i>.</p>
 
 <ul>
 	<li><p>The set {<i>a</i>} is open and contains no other point of <i>A</i>. So a is not a limit point of <i>A</i>.</p></li>
@@ -45,13 +49,30 @@ closed, as it does not contain the limit point 0. A metric space is a topologica
 	<li><p>The point <i>d</i> is a limit point of A , even though it is not in <i>A</i>. This is so since every open set containing <i>d</i> contains a point of <i>A</i>. Similarly <i>e</i> is a limit point of <i>A</i> even though it is not in <i>A</i>. &emsp;■</p></li>
 </ul>
 
-<p><b>Example 1.3.3</b>. Consider the subset <i>A</i> = [<i>a, b</i>) of ℝ. Then it is easily verified that every element in [<i>a, b</i>) is a limit point of <i>A</i>. The point <i>b</i> is also a limit point of <i>A</i>. &emsp;■</p>
+<p><b>Example 1.3.4</b>. Consider the subset <i>A</i> = [<i>a, b</i>) of ℝ. Then it is easily verified that every element in [<i>a, b</i>) is a limit point of <i>A</i>. The point <i>b</i> is also a limit point of <i>A</i>. &emsp;■</p>
 
 <p>The next proposition provides a useful way of testing whether a set is closed or not.</p>
 
-<p><b>Proposition 1.3.4</b>. A subset <i>A</i> of a space <i>X</i> is closed if and only if it contains all of its limit points.</p>
+<p><b>Proposition 1.3.5</b>. A subset <i>A</i> of a space <i>X</i> is closed if and only if it contains all of its limit points (of <i>A</i>). In other words, iff the complement <i>X</i>\<i>A</i> of <i>A</i> contains no limit points of <i>A</i>. </p>
 
 <p><b>Proof</b>. Assume that <i>A</i> is closed in (<i>X, τ</i>). Suppose that <i>x</i> is a limit point of <i>A</i> which belongs to <i>X</i> \ <i>A</i>. Then <i>X</i> \ <i>A</i> is an open set containing the limit point <i>x</i> of <i>A</i>. Therefore <i>X</i> \ <i>A</i> contains an element of <i>A</i>. This is clearly false and so we have a contradiction to our supposition. Therefore every limit point of A must belong to <i>A</i>. <br> Conversely, assume that <i>A</i> contains all of its limit points. For each <i>z</i> ∈ <i>X</i> \ <i>A</i>, our assumption implies that there exists an open set <i>U<sub>z</sub></i> ∋ <i>z</i> such that <i>U<sub>z</sub></i> ∩ <i>A</i> = Ø; This is because if <i>z</i> were a limit point we'd have <i>U<sub>z</sub></i> ∩ (<i>A</i> \{<i>z</i>}) ≠ ∅; negating this condition knowing that <i>A</i> \ {<i>z</i>} = <i>A</i> we have <i>U<sub>z</sub></i> ∩ <i>A</i> = Ø. Now if two subsets are disjoint, then each one is contained in the complement of the other that is, <i>U<sub>z</sub></i> ⊆ <i>X</i> \ <i>A</i>. Therefore <i>X</i> \ <i>A</i> = ⋃<sub><sub><i>z</i> ∈ <i>X</i>\<i>A</i></sub></sub> <i>U<sub>z</sub></i>. So <i>X</i> \ <i>A</i> is a union of open sets and hence is open. Consequently its complement, <i>A</i>, is closed. &emsp;□</p>
+
+<p><b>Example 1.3.6</b>. As applications of Proposition 1.3.5 we have the following:</p>
+
+<ul>
+	<li><p>the set [<i>a, b</i>) is not closed in ℝ, since <i>b</i> is a limit point and <i>b</i> &notin; [<i>a, b</i>);</p></li>
+	<li><p>the set [<i>a, b</i>] is closed in ℝ, since all the limit points of [<i>a, b</i>] (namely all the elements of [<i>a, b</i>]) are in [<i>a, b</i>];</p></li>
+	<li><p>(<i>a, b</i>) is not a closed subset of ℝ, since it does not contain the limit point <i>a</i>;</p></li>
+	<li><p>([<i>a</i>, ∞) is a closed subset of ℝ.&emsp;■</p></li>
+</ul>
+
+<p>The set of all limit points of a set <i>A</i> is called the <i>derived set</i> of the set <i>A</i> and denoted by <i>A'</i>.</p>
+
+<p><b>Proposition 1.3.6</b>. For any set <i>A</i> &subset; <i>X</i>, the set <i>A</i> &cup; <i>A'</i> is closed.</p>
+
+<p><b>Proof</b>. We shall show that the set <i>X</i>\(<i>A</i> &cup; <i>A'</i>) is open. Let <i>x</i> be an arbitrary point from <i>X</i>\(<i>A</i> &cup; <i>A'</i>). Then <i>x</i> is neither in <i>A</i> nor a limit point of <i>A</i>. 
+
+ Then <i>x</i> is not a limit point of <i>A</i>; therefore, there is a neighbourhood <i>U<sub>x</sub></i> of it such that <i>U<sub>x</sub></i> &cap; <i>A</i> = ∅. Let <i>x'</i> &in; <i>U<sub>x</sub></i> be an arbitrary point. By negating the limit point property (def.1.3.2) <i>U<sub>x</sub></i> ∩ (<i>A</i> \{<i>x</i>}) ≠ ∅ we obtain that if <i>x</i> is not a limit point of <i>A</i>, there exists a neighborhood of <i>U<sub>x</sub></i> of <i>x</i> that does not intersect neither <i>A</i> nor <i>A'</i>. Hence <i>U<sub>x</sub></i> is disjoint from <i>A</i> and <i>A'</i>, hence we conclude that <i>U<sub>x</sub></i> ⊆ <i>X</i>\(<i>A</i> &cup; <i>A'</i>). This proves <i>X</i>\(<i>A</i> &cup; <i>A'</i>) is open, as desired. &emsp;□</p>
 
 <section aria-label="End">
 <a href="euclidean_topology.html">&#171;The Euclidean Topology</a>
