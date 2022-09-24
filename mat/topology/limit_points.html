@@ -73,12 +73,31 @@ closed, as it does not contain the limit point 0. A metric space is a topologica
 <p><b>Proof</b>. We shall show that the set <i>X</i>\(<i>A</i> &cup; <i>A'</i>) is open. Let <i>x</i> be an arbitrary point from <i>X</i>\(<i>A</i> &cup; <i>A'</i>). Then <i>x</i> is neither in <i>A</i> nor a limit point of <i>A</i>. If <i>x</i> is not a limit point of <i>A</i> the negation of the limit point property (def.1.3.2) <i>U<sub>x</sub></i> ∩ (<i>A</i> \{<i>x</i>}) ≠ ∅ must be true, i.e. there exists a neighborhood <i>U<sub>x</sub></i> of <i>x</i> that does not intersect neither <i>A</i> nor <i>A'</i>. Hence <i>U<sub>x</sub></i> is disjoint from <i>A</i> and <i>A'</i>, thus we conclude that <i>U<sub>x</sub></i> ⊆ <i>X</i>\(<i>A</i> &cup; <i>A'</i>). Given the arbitrary of <i>x</i> we can find other open sets for all points in <i>X</i>\(<i>A</i> &cup; <i>A'</i>), whose union must be the open 
 open set <i>X</i>\(<i>A</i> &cup; <i>A'</i>). This proves <i>A</i> &cup; <i>A'</i> is closed, as desired. &emsp;□</p>
 
-<p><b>Definition 1.3.7</b>. Let the set <i>A</i> be a subset of a topological space (<i>X,τ</i>). Then the set <i>A</i> &cup; <i>A'</i> consisting of <i>A</i> and all its limit points is called the <b>closure of A</b> and is denoted by <i><b>Ā</b>,</i>.</p>
+<p id="closure"><b>Definition 1.3.7</b>. Let the set <i>A</i> be a subset of a topological space (<i>X,τ</i>). Then the set <i>A</i> &cup; <i>A'</i> consisting of <i>A</i> and all its limit points is called the <b>closure of A</b> and is denoted by <i><b>Ā</b>,</i>.</p>
 
 <p>Every closed set containing <i>A</i> must also contain the set <i>A'</i>. So <i>A</i> ∪ <i>A'</i> = <i>Ā</i> is the smallest closed set containing <i>A</i>. This implies that <i>Ā</i> is the intersection of all closed sets containing A.</p>
 
-<p><b>Definition 1.3.8</b>. Let <i>A</i> be a subset of a topological space (<i>X,τ</i>). Then <i>A</i> is said to be <b>dense</b> in <i>X</i> or <b>everywhere dense</b> in <i>X</i> if <i>Ā</i> = <i>X</i>.</p>
+<p><b>Example 1.3.8</b>. Let <i>X</i> = {<i>a, b, c, d, e</i>} and <i>τ</i> = {<i>X</i>, Ø, {a}, {<i>c, d</i>}, {<i>a, c, d</i>}, {<i>b, c, d, e</i>}}. Show that {<i>b̅</i>} = {<i>b, e</i>} , {<span class="overline">a, c</span>} = <i>X</i> , and {<span class="overline">b, d</span>} = {<i>b, c, d, e</i>}.</p>
 
+<p><b>Solution</b>. To find the closure of a particular set, we shall find all the closed sets containing that set and then select the smallest. We therefore begin by writing down all of the closed sets – these are simply the complements of all the open sets.</p>
+
+<p>The closed sets are Ø, <i>X</i>, {<i>b, c, d, e</i>}, {<i>a, b, e</i>}, {<i>b, e</i>} and {<i>a</i>}. So the smallest closed set containing {<i>b</i>} is {<i>b, e</i>}; that is, {<i>b̅</i>} = {<i>b, e</i>}. Similarly {<span class="overline">a, c</span>} = <i>X</i>, and {<span class="overline">b, d</span>} = {<i>b, c, d, e</i>}.&emsp;■
+
+<p><b>Proposition 1.3.9</b>. Let ℚ be the subset of ℝ consisting of all the rational numbers, then ℚ̅ = ℝ.</p>
+
+<p><b>Proof</b>. Suppose ℚ̅ &ne; ℝ. Then there exists an <i>x</i> ∈ ℝ \ ℚ̅. As ℝ \ ℚ̅ is open in ℝ, there exist <i>a, b</i> with <i>a</i> < <i>b</i> such that <i>x</i> ∈ (<i>a, b</i>) ⊆ ℝ \ ℚ̅. But in every interval (<i>a, b</i>) there is a rational number <i>q</i>; that is, <i>q</i> ∈ (<i>a, b</i>). So <i>q</i> ∈ ℝ \ ℚ̅ which implies <i>q</i> ∈ ℝ \ ℚ̅. This is a contradiction, as <i>q</i> ∈ ℚ. Hence ℚ = ℝ. &emsp;□</p>
+
+<p id="dense"><b>Definition 1.3.10</b>. Let <i>A</i> be a subset of a topological space (<i>X,τ</i>). Then <i>A</i> is said to be <b>dense</b> in <i>X</i> or <b>everywhere dense</b> in <i>X</i> if <i>Ā</i> = <i>X</i>. &emsp;■</p>
+
+<p>In view of Proposition 1.3.9 ℚ is a dense subset of ℝ. In Example 1.3.8 {<i>a,c</i>} is dense in <i>X</i>. </p>
+
+<p><b>Example 1.3.11</b>. Let (<i>X,τ</i>) be a <a href="topology.html">discrete space</a>. Then every subset of <i>X</i> is closed (since its complement is open). Therefore the only dense subset of <i>X</i> is <i>X</i> itself, since each subset of <i>X</i> is its own closure.</p>
+
+<p><b>Definition 1.3.11</b>. Let <i>A</i> be a subset of a topological space (<i>X, τ</i>). Then <i>A</i> is dense in <i>X</i> if and only if every non-empty open subset of <i>X</i> intersects <i>A</i>
+non-trivially (that is, if <i>U</i> ∈ <i>τ</i> and <i>U</i> = Ø then <i>A</i> ∩ <i>U</i> &ne; Ø.)</p>
+
+<p><b>Proof</b>. Assume, firstly that every non-empty open set intersects A non-trivially. If <i>A</i> = <i>X</i> , then clearly <i>A</i> is dense in <i>X</i>. If <i>A</i> &ne; <i>X</i>, let <i>x</i> ∈ <i>X</i> \ <i>A</i>. If <i>U</i> ∈ <i>τ</i> and <i>x</i> ∈ <i>U</i> then <i>U</i> ∩ <i>A</i> &ne; Ø . So <i>x</i> is a limit point of <i>A</i>. As <i>x</i> is an arbitrary point in <i>X</i> \ <i>A</i> , every point of <i>X</i> \ <i>A</i> is a limit point of <i>A</i>. So <i>A'</i>  ⊇ <i>X</i> \ <i>A</i> and then, by Definition 3.1.9, <i>Ā</i> = <i>A'</i> ∪ <i>A</i> = <i>X</i>; that is, <i>A</i> is dense in <i>X</i>. <br> Conversely, assume <i>A</i> is dense in <i>X</i>. Let <i>U</i> be any non-empty open subset of <i>X</i>. Suppose <i>U</i> ∩ <i>A</i> = Ø. Then if <i>x</i> ∈ <i>U</i>, <i>x</i> &notin; <i>A</i> and <i>x</i> is not a limit point of <i>A</i>, since <i>U</i> is an open set containing x which does not contain any element of <i>A</i>. This is a contradiction since, as A is dense in <i>X</i> , every element of <i>X</i> \ <i>A</i> is a limit point of <i>A</i>. So our supposition is false and <i>U</i> ∩ <i>A</i> &ne; Ø, as required.</p>
+ 
 <section aria-label="End">
 <a href="euclidean_topology.html">&#171;The Euclidean Topology</a>
 <a href="index.html">Index</a>
