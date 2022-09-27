@@ -21,7 +21,7 @@
 
 <h1>Topology</h1>
 
-<p><b>Definition 1.1.1</b>. Let <i>X</i> be a non-empty set. A collection <i>τ</i> of subsets of <i>X</i>, called open sets is said to be a <b>topology</b> on <i>X</i> if</p>
+<p><b>Definition 1.1.1</b>. Let <i>X</i> be a non-empty set. A collection <i>τ</i> of subsets of <i>X</i>, called <b>open sets</b> is said to be a <b>topology</b> on <i>X</i> if</p>
 
 <ol type="i">
 	<li><p><i>X</i>, Ø &in; <i>τ</i>;</p></li>
@@ -49,7 +49,9 @@
 
 <p><b>Example 1.1.4</b>. Let <i>X</i> = {<i>a, b, c, d, e, f</i>} and <i>τ</i> = {<i>X</i>, Ø, {<i>a</i>}, {f}, {<i>a, f</i>}, {<i>b, c, d, e, f</i>}}. Then <i>τ</i> is <b>not</b> a topology on X since the intersection {<i>a, c, f</i>} ∩ {<i>b, c, d, e, f</i>} = {<i>c, f</i>} of two sets in <i>τ</i> does not belong to <i>τ</i>; that is, <i>τ</i> does not have property (iii) of Definitions 1.1.1. &emsp;■</p>
 
-<p><b>Definition 1.1.5</b>. Let <i>X</i> be any non-empty set and let <i>τ</i> be the collection of all subsets of <i>X</i>. Then <i>τ</i> is called the <b>discrete topology</b> on the set <i>X</i>. The topological space (<i>X, τ</i>) is called a <b>discrete space</b>.</p>
+<p id="discrete"><b>Definition 1.1.5</b>. Let <i>X</i> be any non-empty set and let <i>τ</i> be the collection of all subsets of <i>X</i>. Then <i>τ</i> is called the <b>discrete topology</b> on the set <i>X</i>. The topological space (<i>X, τ</i>) is called a <b>discrete space</b>.</p>
+
+<p><b>Nota bene</b>. Every subset of the discrete metric space is open as well as closed.</p>
 
 <p>We note that <i>τ</i> in Definitions 1.1.5 does satisfy the conditions of Definitions 1.1.1 and so is indeed a topology.</p>
 
@@ -64,7 +66,7 @@
 
 <p>By definition the intersection of any two open sets gives an open set, so by repeating that finitely many times you end with an open set. For example, let O<sub>1</sub>, O<sub>2</sub>, and O<sub>3</sub> be open sets. O<sub>1</sub> ∩ O<sub>2</sub> is open, so (O<sub>1</sub> ∩ O<sub>2</sub>) ∩ O<sub>3</sub> is also open. If there is also an O<sub>4</sub>, then ((O<sub>1</sub> ∩ O<sub>2</sub>) ∩ O<sub>3</sub>) ∩ O<sub>4</sub> is open. This process can be carried on for any finite collection of open sets. </p>
 
-<p><b>Proof</b>. Let <i>S</i> = {<i>n</i> &in; ℕ: the intersection of any <i>n</i> members of <i>τ</i> is a member of <i>τ</i>}. It is clear that 1 and 2 belong to <i>S</i>. Suppose <i>n</i> &ge; 2 and {1,2,...,<i>n</i>} &subseteq; <i>S</i>. Let {<i>U<sub>i</sub></i>: <i>i</i> &in; {1,2,...,<i>n</i>+1}} be a collection of members of <i>τ</i>. Since <i>n</i> &in; <i>S</i>, ⋂<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i> &in; <i>τ</i>. Therefore, since 2 &in; <i>S</i>, ⋂<sup><i>n</i>+1</sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i> = (⋂<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i>) ∩ <i>U</i><sub><i>n</i>+1</sub> &in; <i>τ</i>. Thus <i>n</i> + 1 &in; <i>S</i>, and by the <a href="../algebra/Peano.html#strong">second principle of mathematical induction</a>, <i>S</i> = ℕ. &emsp;□</p>
+<p><b>Proof</b>. Let <i>S</i> = {<i>n</i> &in; ℕ: the intersection of any <i>n</i> members of <i>τ</i> is a member of <i>τ</i>}. It is clear that 1 and 2 belong to <i>S</i>. Suppose <i>n</i> &ge; 2 and {1,2,...,<i>n</i>} &subseteq; <i>S</i>. Let {<i>U<sub>i</sub></i> : <i>i</i> &in; {1,2,...,<i>n</i>+1}} be a collection of members of <i>τ</i>. Since <i>n</i> &in; <i>S</i>, ⋂<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i> &in; <i>τ</i>. Therefore, since 2 &in; <i>S</i>, ⋂<sup><i>n</i>+1</sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i> = (⋂<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>U<sub>i</sub></i>) ∩ <i>U</i><sub><i>n</i>+1</sub> &in; <i>τ</i>. Thus <i>n</i> + 1 &in; <i>S</i>, and by the <a href="../algebra/Peano.html#strong">second principle of mathematical induction</a>, <i>S</i> = ℕ. &emsp;□</p>
 
 <p><b>Proposition 1.1.8</b>. If (<i>X, τ</i>) be any topological space, then</p>
 
@@ -95,7 +97,7 @@ The names “open” and “closed” should not lead the reader into error. Ind
 	<li><p>The set {<i>a, b, e, f</i>} is closed but not open.</p></li>
 </ol>
 
-<p><b>Proposition 1.1.9</b>. A subset <i>A</i> of a topological space (<i>X, τ</i>) is said to be <b>clopen</b> if it is both open and closed in (<i>X, τ</i>).</p>
+<p id="clopen"><b>Definition 1.1.9</b>. A subset <i>A</i> of a topological space (<i>X, τ</i>) is said to be <b>clopen</b> if it is both open and closed in (<i>X, τ</i>).</p>
 
 <ul>
 	<li><p>In every topological space (<i>X, τ</i>) both <i>X</i> and Ø are clopen.</p></li>
