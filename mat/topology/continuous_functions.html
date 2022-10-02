@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Continuous Functions"/>
+	<title>Continuous Functions</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Continuous Functions</h1>
+
+<p>Continuous functions represent key tools for comparing topological spaces and for identifying their topological properties. Suppose <i>f</i> is a function from one topological space <i>X</i> to another topological space <i>Y</i>. Our first attempt to define a continuos function could be to require that <i>f</i> takes each open set in <i>X</i> to another open set in <i>Y</i>, but looking at continuous functions from calculus as a guide we see that <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> does not take open intervals around 0 to open sets in ℝ (e.g. take (−1, 1) then <i>f</i>( (−1, 1) ) = [0, 1). However, our experience with continuous functions on ℝ gives us some indication of what features we want for continuous functions between topological spaces; the <a href="../analysis/continuity.html#Cauchy">ε-δ definition</a> definition starts with an opens interval in the codomain with ε &gt; then it finds an open interval in the domain (with &delta; &gt; 0) that is <i>f</i> : ℝ → ℝ is continuous if and only if for each <i>a</i> ∈ ℝ and each interval (<i>f</i>(<i>a</i>) − <i>ε</i>, <i>f</i>(<i>a</i>) + <i>ε</i>), for <i>ε</i> &gt; 0  there exists a <i>δ</i> &gt; 0 such that <i>f</i>(<i>x</i>) ∈ (<i>f</i>(<i>a</i>) − <i>ε</i>, <i>f</i>(<i>a</i>) + <i>ε</i>) for all <i>x</i> ∈ (<i>a</i> − <i>δ</i>, <i>a</i> + <i>δ</i>). At a point <i>x</i> this means that <i>f</i> maps the <i>ε</i>-neighbhorood to the <i>δ</i>-neighbhorood. This definition gives us the motivation for our definition of continuous functions betwee topological spaces; The topological definition of a continuous function is in terms of its inverse function. </p>
+
+<p><b>Definition 3.1.1 (Continuous Functions)</b>. A function <i>f</i> : (<i>X,τ<sub>X</sub></i>) → (<i>Y,τ<sub>Y</sub></i>) is said to be continuous if and only if for every open set <i>U</i> in <i>Y</i>, <i>f</i><sup>−1</sup>(<i>U</i>) is open in <i>X</i>. In other words, a function <i>f</i> is continuous if <i>f</i><sup>−1</sup> maps open sets into open sets. </p>
+
+<p>To check continuity, you need to check all opens in the codomain, and see if thery are mapped by <i>f</i><sup>−1</sup> to open sets.</p>
+
+<p>Continuity expressed in terms of open sets is more general and applied to functions defined on topological spaces; Definition 3.1.1 agrees with that introduced in calculus for metric spaces, however it does not require to introduce a metric.</p>
+
+<p><b>Lemma 3.1.2</b>. Let <i>f</i> : <i>S</i> → <i>T</i> be a function between two topological spaces. Then <i>f</i> is continuous if, and only if, <i>f</i><sup>−1</sup> (<i>U</i>) is closed whenever <i>U</i> is a closed subset of <i>T</i>.</p>
+
+<p><b>Proof</b> First let us assume that <i>f</i> is continuous, i.e., <i>f</i><sup>−1</sup> (<i>V</i>) is open whenever V is an open subset of <i>T</i>. If <i>U</i> ⊂ <i>T</i> is closed, then <i>T</i> − <i>U</i> is open, so <i>f</i><sup>−1</sup> (<i>T</i> − <i>U</i>) is open. However, f<sup>−1</sup> (<i>T</i> − <i>U</i>) = <i>S</i> − <i>f</i><sup>−1</sup> (<i>U</i>), so the complement of f<sup>−1</sup> (<i>U</i>) is open, i.e., f<sup>−1</sup> (<i>U</i>) is closed.</p>
+
+<p>For the converse, supposing <i>f</i> is continuous we have</p>
+
+<div class="eq">
+<p><i>f</i><sup>−1</sup>(<i>U</i>) is open for all open <i>U</i> &emsp;⇐⇒&emsp; <i>f</i><sup>−1</sup>(<i>U<sup>c</sup></i>) is open for all closed <i>U</i> &emsp;⇐⇒&emsp;  [<i>f</i><sup>−1</sup>(<i>U<sup>c</sup></i>)]<sup>c</sup> is closed for all closed <i>U</i>. &emsp;□</p>
+</div>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

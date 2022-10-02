@@ -21,16 +21,26 @@
 
 <h1>Non-Homeomorphic Spaces</h1>
 
-<p>To prove two topological spaces are homeomorphic we have to find a homeomorphism between them. But, to prove that two topological spaces are not homeomorphic is often much harder as we have to show that no homeomorphism exists. One way is to notice that if two spaces do not share a topological property, then they cannot be homeomorphic.</p>
+<p>To prove two topological spaces are homeomorphic we have to find a homeomorphism between them. But, to prove that two topological spaces are not homeomorphic is often much harder as we have to show that no homeomorphism exists. One way is to notice that if two spaces do not share a topological property, i.e. a property of the topological space that is entirely expressed in terms of its topology (i.e. collection of open sets), then they cannot be homeomorphic. A simple example of homeomorphism is the function <i>f</i>: (−1,1) ⟶ ℝ (both sets with the usual topology), with <i>f</i>(<i>x</i>) = <i>x</i>/(1 − <i>x</i><sup>2</sup>). This homeomorphism stretches the segment (−1,1) into the real line. </p>
 
-<p><b>Example</b>. Prove that [0, 2] is not homeomorphic to the subspace [0, 1] ∪ [2, 3] of ℝ.</p>
+<p><i>Connectedness</i>. Intuitively, a space is connected if it consists of a single “piece” and cannot be separated into disjoint open sets. More formally, we define a separation of a topological space <i>X</i> as a pair <i>U, V</i> of nonempty, disjoint open sets of X with the property <sub>U</sub></i> &cup; <i>V</i> = X. The space X is said to be connected if no separation of X exists. Since it is formulated entirely in terms of the collection of open sets of X, connectedness is a topological property of <i>X</i>. For example, the open interval (—1,1) (with the standard topology) is
+connected, while the open interval [—1,1) (with the lower limit topology) is not connected, since [—1, 1) = [—1,0) &cup; [0, 1), i.e., it has a separation. </p>
 
-<p><b>Solution</b>. [0,2] is connected, but [0,1] \cup [2,3] is not.</p>
+<p><b>Example</b>. Prove that [0, 2] is not homeomorphic to the subspace [0, 1] ∪ [2, 3] of ℝ;</p>
+
+<p><b>Proof</b>. Let (<i>X,τ</i>) = [0, 2] and (<i>Y, τ'</i>) = [0, 1] ∪ [2, 3]. We use <a href="subspaces.html">proposition 2.1.3</a> (comparing with the proposition 2.1.3 <i>A</i> is the subspace [0,1] u [2,3], <i>X</i> is ℝ and <i>B</i> &subseteq; <i>A</i> is [0,1] a closed set in ℝ). Then</p>
+
+<div class="eq">
+<p>[0, 1] = [0, 1] ∩ <i>Y</i> ⇒ [0, 1] is closed in (<i>Y, τ'</i>) and<br>
+[0, 1] = (−1, 3/2] ∩ <i>Y</i> ⇒ [0, 1] is open in (<i>Y, τ'</i>)</p>
+</div>
+
+<p>Being [0,1] open and closed, <i>Y</i> is not connected. Since [0,2] is connected we conclude that the two spaces cannot be homeomorphic. To further convince you, say <i>f</i>: <i>Y</i> ⟶ [0,2] is a homeomorphism, then <i>f</i> sends open sets to open sets, and sends closed sets to closed sets. So f([0,1]) would be an open subset of [0,2] and also a closed subset. Because <i>f</i> is a bijection, this image is also a nonempty proper subset of [0,2], violating the fact that [0,2] is connected. &emsp;■</p>
 
 <section aria-label="End">
-<a href="epoxides.html">&#171;Epoxides</a>
+<a href="homeomorphisms.html">&#171;Homeomorphisms</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides&#187;</a>
+<a href="continuous_functions.html">Continuous Functions&#187;</a>
 </section>
 
 </div>
