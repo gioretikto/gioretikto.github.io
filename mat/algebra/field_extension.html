@@ -11,10 +11,10 @@
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href="index.html">Index</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+        	<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -32,16 +32,29 @@
 <ol>
 	<li><p>The set <i>F</i> is an Abelian group under the "addition" operation +. The additive identity is called the <b>zero</b> and is denoted by 0;</p></li>
 
-	<li><p>The set <i>F</i>* = F\{0} is an Abelian group under the "multiplication" operation x. The multiplicative identity is called the <b>unity</b> and is denoted by 1;</p></li>
+	<li><p>The set <i>F</i>* = <i>F</i>\{0} is an Abelian group under the "multiplication" operation x. The multiplicative identity is called the <b>unity</b> and is denoted by 1;</p></li>
 
 	<li><p>The multiplication operation x distributes over the addition operation +; that is <i>a</i> x (<i>b</i> + <i>c</i>) = <i>a</i> x <i>b</i> + <i>a</i> x <i>c</i>, for every <i>a,b,c</i> &in; <i>F</i>. &emsp;□</p>
 </ol>
 
 <p>There are actually many fields lying between ℚ and ℂ, not only ℝ. One simple example is the field ℚ(<i>i</i>) = {<i>p</i> + <i>qi</i> | <i>p, q</i> ∈ ℚ} which has already been mentioned a couple of times. A similar example is ℚ(√2) = {<i>p</i> + <i>q</i>√2 | <i>p,q</i> ∈ ℚ}. There are, on the other hand, fields whose elements are not numbers, for example, ℤ<sub><i>p</i></sub> is a (finite) field for every prime number <i>p</i>.</p>
 
+<p><b>Definition 8.1.2</b> (Subfield) A nonempty subset <i>K</i> of a field <i>F</i> is called a <b>subfield</b> of <i>F</i> if <i>K</i> is itself a field under the same binary operations, addition and multiplication, of <i>F</i>.&emsp;□</p>
+
+<p>We have the following necessary and sufficient criterion for a nonempty subset <i>K</i> of a field <i>F</i> to be its <i>subfield</i>.</p>
+
+<p><b>Proposition 8.1.3</b>. (<b>Subfield Criterion</b>) A nonempty subset <i>K</i> of a field <i>F</i> is a subfielf of <i>F</i> iff</p>
+
+<ol type="i">
+	<li><p><i>a</i> − <i>b</i> &in; <i>K</i> for <i>a,b</i> in <i>K</i></p></li>
+	<li><p><i>ab</i><sup>−1</sup> &in; <i>K</i> for <i>a,b</i> &ne; 0.</p></li>
+</ol>
+
+<p><b>Proof</b>. Certainly if <i>K</i> is a subfield the axioms above must be satisfied. On the other hand if the axioms above are satisfied then <i>K</i> is a subring of <i>F</i>. The remaining axioms for a field are satisfied in <i>K</i> since they are satisfied in <i>F</i>. Hence we conclude that <i>K</i> si a subfield of <i>F</i>. &emsp;□</p>
+
 <p>To explore fields more deeply, we need some rudiments of vector space theory studied in a linear algebra course.</p>
 
-<p><b>Definition 8.1.2</b> (<i>Field Extension</i>) An extension of a field <i>F</i> is a field <i>K</i> containing <i>F</i>. &emsp;□</p>
+<p><b>Definition 8.1.3</b> (<i>Field Extension</i>) If <i>F</i> and <i>K</i> are fields with <i>K</i> &subseteq; <i>F</i>, we say that <i>F</i> is an extension field of <i>K</i>. &emsp;□</p>
 
 <p>For example, the field ℂ of complex numbers is an extension of degree 2 on ℝ, since a basis is given by 1 and <i>i</i>, whilst is of degree 1 on itself. The field ℝ(<i>x</i>) of rational functions with coefficients in ℝ has infinite dimension on ℝ, since it contains the rational functions 1, <i>x</i>, <i>x</i><sup>2</sup>, ..., <i>x<sup>i</sup></i>, whilst is an extension of degree 1 on itself.</p>
 
@@ -51,7 +64,15 @@
 
 <p>If <i>F</i> is an extension field of <i>K</i>, then multiplication in <i>F</i> defines a scalar multiplication, if we consider the elements of <i>K</i> as scalars and the elements of <i>F</i> as vectors. It is easy to check that the necessary axioms hold for this scalar multiplication, and since <i>F</i> is an abelian group under addition, we see that <i>F</i> is a <a href="../linear_algebra/vector_space.html">vector space</a> over <i>K</i>. We crystalyze this fact as a proposition.</p>
 
-<p><b>Proposition 8.1.3</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
+<p><b>Proposition 8.1.4</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
+
+<p><b>Example 8.1.5</b>. Every element of ℂ (considered as a vector space over ℝ) is a linear combination of 1 and <i>i</i> because every element can be written in the formal <i>a</i>1 + <i>bi</i>, with <i>a, b</i> &in; ℝ. Thus the set {1, <i>i</i>} spans ℂ over ℝ. The set {1 + <i>i</i>, 5<i>i</i>, 2 + 3<i>i</i>} also spans ℂ because any <i>a</i> + <i>bi</i> &in; ℂ is a linear combination of these three elements with coefficients in ℝ:</p>
+
+<div class="eq">
+<p><i>a</i> + <i>b</i> = 3<i>a</i>(1 + <i>i</i>) + <i>b</i>/5 (5<i>i</i>) + (−<i>a</i>)(2 + 3<i>i</i>).</p>
+</div>
+
+<p>{1, <i>i</i>} represents a basis of the vector field since it is linear inddependent; the set {1 + <i>i</i>, 5<i>i</i>, 2 + 3<i>i</i>} is not linearly independent and so it's not a basis. &emsp;■</p>
 
 <p>Knowing that an extension field is a vector space over the base field allows us to make use of the concept of the dimension of a vector space.</p>
 
@@ -60,7 +81,7 @@
 <p>A tower of extensions is a sequence of successive field extensions. In a tower of extensions, the degree is multiplicative:</p>
 
 <div id="tower">
-<p><b>Theorem 8.1.5</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
+<p><b>Theorem 8.1.6</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
 
 <ol type="a">
 	<li><p><i>L</i> is a finite extension of <i>F</i></p></li>
@@ -108,7 +129,7 @@
 
 </div>
 
-<p><b>Corollary 8.1.6</b> Let <i>L</i> a finite extension of <i>F</i> and <i>K</i> a subfield of <i>L</i> embedding <i>F</i>. Then</p>
+<p><b>Corollary 8.1.7</b> Let <i>L</i> a finite extension of <i>F</i> and <i>K</i> a subfield of <i>L</i> embedding <i>F</i>. Then</p>
 
 <div class="eq">
 <p>[<i>K</i> : <i>F</i>] | [<i>L</i> : <i>F</i>]</p>
@@ -122,758 +143,12 @@
 
 <p>The last result can be seen as an analogous for field extension of the <a href="lagrange.html">Lagrange's theorem</a> for finite groups.</p>
 
-<p><b>Corollary 8.1.7</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
-
-<p>We shall se now how given a field <i>F</i> and one of its extension <i>K</i>, is possible to obtain intermidiate extensions between <i>K</i> and <i>F</i>. Usually if you just add a random element to a field, you lose the closure property and the inverse property unless you also add a whole slew of other elements; thus we follow a different path.</p>
-
-<p>In a field <i>F</i>, the intersection of any collection of subfields of <i>F</i> is again a subfield. In particular, if <i>F</i> is an extension field of <i>K</i> and <i>S</i> is a subset of <i>F</i>, then the intersection of all subfields of <i>F</i> that contain both <i>K</i> and <i>S</i> is a subfield of <i>F</i>. This intersection is contained in any subfield that contains both <i>K</i> and <i>S</i>. This guarantees the existence of the field defined below.</p>
-
-<p><b>Definition 8.1.8</b>. Let <i>F</i> a field, and let <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> be elements of some extension <i>E</i> of <i>F</i>. We use <i>F</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) to denote the smallest subfield of <i>E</i> that contains <i>F</i> and the set {<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>}. Next theorem shows that <i>F</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) is the intersection of all subfields of <i>E</i> that contain <i>F</i> and the set {<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>}.</p>
-
-<p><b>Theorem 8.1.9</b>. Let <i>F</i> a field, and let <i>S</i> a subset of <i>E</i> of <i>F</i>. Let {<i>E<sub>i</sub></i>}<sub><i>i</i>&in; <i>A</i></sub> be a collection of subfields of <i>E</i>. Then the intersection <i>I</i> of all the <i>E<sub>i</sub></i>'s is again a subfield of <i>E</i>. In particular if <i>F</i> is any subfield of <i>E</i> and <i>S</i> is a subset of <i>E</i>, then <i>F</i>(<i>S</i>) is the intersection of all extension fields of <i>F</i> containing <i>S</i>.</p>
-
-<p><b>Proof</b>. Since every <i>E<sub>i</sub></i> contains 0 and 1, so does <i>I</i>. Now if <i>r</i> and <i>s</i> are in <i>I</i>, then for any <i>i</i>, we have that <i>r</i> and <i>s</i> are in <i>E<sub>i</sub></i> and so <i>r</i> + <i>s</i>, −<i>s</i>, <i>rs</i>, and (if <i>s</i> &ne; 0) <i>r</i>/<i>s</i> are in <i>E<sub>i</sub></i> for all <i>i</i>, hence in <i>I</i>. Thus <i>I</i> is indeed a subfield of <i>E</i>. Now clearly the intersection of all extension fields of <i>F</i> containing <i>S</i> is the unique smallest extension field of <i>F</i> containing <i>S</i>. &emsp;□</p>
-
-<div class="eq">
-<p><i>F</i>[<i>S</i>] &emsp; the intersection of all <i>subrings</i> of <i>E</i> containing <i>F</i> and <i>S</i><br>
-<i>F</i>(<i>S</i>) &emsp; the intesection of all <i>subfields</i> of <i>E</i> containing <i>F</i> and <i>S</i></p>
-</div>
-
-<p>Then it results</p>
-
-<div class="eq">
-<p><i>F</i>[<i>S</i>] &subseteq; <i>F</i>(<i>S</i>) &subseteq; <i>E</i></p>
-</div>
-
-<p>In addition <i>F</i>(<i>S</i>) is the <i>quotient field</i> of <i>F</i>[<i>S</i>]. On the other hand, a union of subfields is not in general a subfield.</p>
-
-<p><b>Example 8.1.10</b>. Let <i>F</i> be any field and let <i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i> be independent variables. The polynomial ring <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is an integral domain (see <a href="polynomials.html">Proposition 4.3</a>). The quotient field of <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is denoted <i>F</i>(<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>). It consists of all fractions <i>f</i>/<i>g</i>, with <i>f,g</i> &in; <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] and <i>g</i> &ne; 0, and the usual addition and multiplication. Then <i>F</i>(<i>x</i>) is an extension of <i>F</i>.&emsp;■</p>
-
-<p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, <i>i.e</i> we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. The standard procedure for constructing the complex numbers from the real numbers is to ‘adjoin’ a square root of −1; that is, an element i satisfying <i>i</i><sup>2</sup> + 1 = 0. We will now describe this procedure, ‘adjoining the root of a polynomial’, in more detail. </p>
-
-<p><b>8.1.11 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>F</i>(<i>a</i>) = <i>T</i> where <i>T</i> is the defined as the set</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>T</mi>
-  <mo>=</mo>
-  <mo fence="false" stretchy="false">{</mo>
-  <mfrac>
-    <mrow>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>1</mn>
-      </msub>
-      <mi>a</mi>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>2</mn>
-      </msub>
-      <msup>
-        <mi>a</mi>
-        <mn>2</mn>
-      </msup>
-      <mo>+</mo>
-      <mo>&#x2026;</mo>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mi>s</mi>
-      </msub>
-      <msup>
-        <mi>a</mi>
-        <mi>s</mi>
-      </msup>
-    </mrow>
-    <mrow>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-      </msub>
-      <mi>a</mi>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>2</mn>
-      </msub>
-      <msup>
-        <mi>a</mi>
-        <mn>2</mn>
-      </msup>
-      <mo>+</mo>
-      <mo>&#x2026;</mo>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mi>t</mi>
-      </msub>
-      <msup>
-        <mi>a</mi>
-        <mi>t</mi>
-      </msup>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2260;</mo>
-      <mn>0</mn>
-    </mrow>
-  </mfrac>
-  <mrow data-mjx-texclass="ORD">
-    <mo stretchy="false">|</mo>
-  </mrow>
-  <msub>
-    <mi>a</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>,</mo>
-  <msub>
-    <mi>&#x3B2;</mi>
-    <mi>j</mi>
-  </msub>
-  <mo>&#x2208;</mo>
-  <mi>F</mi>
-  <mo>,</mo>
-  <mi>s</mi>
-  <mo>,</mo>
-  <mi>t</mi>
-  <mo>&#x2208;</mo>
-  <mi mathvariant="double-struck">N</mi>
-  <mo fence="false" stretchy="false">}</mo>
-</math>
-
-<p><b>Proof</b>. Given an extension field <i>K</i> of <i>F</i> and an element <i>a</i> &in; <i>K</i>, any subfield that contains <i>F</i> and <i>a</i> must be closed under sums and products, so it must contain all elements of the form <i>&alpha;</i><sub>0</sub> + <i>&alpha;</i><sub>1</sub> <i>a</i> + ... + <i>&alpha;<sub>n</sub>a<sup>n</sup></i>, where <i>&alpha;<sub>i</sub></i> &in; <i>F</i> for 0 &le; <i>i</i> &le; <i>n</i>. Furthermore, since it must be closed under division, it must contain all elements of the form</p>
-
-<div class="eq">
-<p>(<i>&alpha;</i><sub>0</sub> + &alpha;<sub>1</sub> <i>a</i> + ... + <i>&alpha;<sub>n</sub>a<sup>n</sup></i>) / (<i>&beta;</i><sub>0</sub> + <i>&beta;</i><sub>1</sub> <i>a</i> + ... + <i>&beta;<sub>n</sub>a<sup>n</sup></i>)</p>
-</div>
-
-<p>such that the denominator is nonzero. We clearly have</p>
-
-<div class="eq">
-<p><i>T</i> &subseteq; <i>F</i>(<i>a</i>)</p>
-</div>
-
-<p>since that <i>T</i> is a field containing <i>F</i> and <i>a</i>. The reverse inclusion holds as well, <i>F</i>(<i>a</i>) &subseteq; <i>T</i>, since the elements of <i>T</i> must be contained in <i>every</i> field containing <i>F</i> and <i>a</i>. &emsp;□</p>
-
-<p><b>Example 8.1.12</b>. Let <i>F</i> = ℚ, <i>K</i> = ℝ and <i>a</i> = <i>&pi;</i>, then</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi mathvariant="double-struck">Q</mi>
-  <mo stretchy="false">(</mo>
-  <mi>&#x3C0;</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mo fence="false" stretchy="false">{</mo>
-  <mfrac>
-    <mrow>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>1</mn>
-      </msub>
-      <mi>&#x3C0;</mi>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>2</mn>
-      </msub>
-      <msup>
-        <mi>&#x3C0;</mi>
-        <mn>2</mn>
-      </msup>
-      <mo>+</mo>
-      <mo>&#x2026;</mo>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mi>s</mi>
-      </msub>
-      <msup>
-        <mi>&#x3C0;</mi>
-        <mi>s</mi>
-      </msup>
-    </mrow>
-    <mrow>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-      </msub>
-      <mi>&#x3C0;</mi>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>2</mn>
-      </msub>
-      <msup>
-        <mi>&#x3C0;</mi>
-        <mn>2</mn>
-      </msup>
-      <mo>+</mo>
-      <mo>&#x2026;</mo>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mi>t</mi>
-      </msub>
-      <msup>
-        <mi>&#x3C0;</mi>
-        <mi>t</mi>
-      </msup>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2260;</mo>
-      <mn>0</mn>
-    </mrow>
-  </mfrac>
-  <mrow data-mjx-texclass="ORD">
-    <mo stretchy="false">|</mo>
-  </mrow>
-  <msub>
-    <mi>a</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>,</mo>
-  <msub>
-    <mi>&#x3B2;</mi>
-    <mi>j</mi>
-  </msub>
-  <mo>&#x2208;</mo>
-  <mi mathvariant="double-struck">Q</mi>
-  <mo>,</mo>
-  <mi>s</mi>
-  <mo>,</mo>
-  <mi>t</mi>
-  <mo>&#x2208;</mo>
-  <mi mathvariant="double-struck">N</mi>
-  <mo fence="false" stretchy="false">}</mo>
-</math>
-
-<p>ℚ(<i>&pi;</i>) means the smallest possible subfield of ℝ containing <i>&pi;</i> and all ℚ. Notice how ℚ is a field, but the set ℚ ∪ {<i>&pi;</i>} is not even a ring, much less a field. &emsp;■</p>
-
-<p><b>Example 8.1.13</b>. Let <i>F</i> = ℚ, <i>K</i> = ℝ and <i>a</i> = √3, then</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi mathvariant="double-struck">Q</mi>
-  <mo stretchy="false">(</mo>
-  <msqrt>
-    <mn>3</mn>
-  </msqrt>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mo fence="false" stretchy="false">{</mo>
-  <mfrac>
-    <mrow>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B1;</mi>
-        <mn>1</mn>
-      </msub>
-      <msqrt>
-        <mn>3</mn>
-      </msqrt>
-    </mrow>
-    <mrow>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-      </msub>
-      <msqrt>
-        <mn>3</mn>
-      </msqrt>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2260;</mo>
-      <mn>0</mn>
-    </mrow>
-  </mfrac>
-  <mrow data-mjx-texclass="ORD">
-    <mo stretchy="false">|</mo>
-  </mrow>
-  <msub>
-    <mi>&#x3B1;</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>,</mo>
-  <msub>
-    <mi>&#x3B2;</mi>
-    <mi>j</mi>
-  </msub>
-  <mo>&#x2208;</mo>
-  <mi mathvariant="double-struck">Q</mi>
-  <mo fence="false" stretchy="false">}</mo>
-</math>
-
-<p>But</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <mn>1</mn>
-    <mrow>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>+</mo>
-      <msqrt>
-        <mn>3</mn>
-      </msqrt>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-      </msub>
-      <mo>&#x2212;</mo>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-      </msub>
-      <msqrt>
-        <mn>3</mn>
-      </msqrt>
-    </mrow>
-    <mrow>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-        <mn>2</mn>
-      </msubsup>
-      <mo>&#x2212;</mo>
-      <mn>3</mn>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-        <mn>2</mn>
-      </msubsup>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <msub>
-      <mi>&#x3B2;</mi>
-      <mn>0</mn>
-    </msub>
-    <mrow>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-        <mn>2</mn>
-      </msubsup>
-      <mo>&#x2212;</mo>
-      <mn>3</mn>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-        <mn>2</mn>
-      </msubsup>
-    </mrow>
-  </mfrac>
-  <mo>&#x2212;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">(</mo>
-    <mfrac>
-      <msub>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-      </msub>
-      <mrow>
-        <msubsup>
-          <mi>&#x3B2;</mi>
-          <mn>0</mn>
-          <mn>2</mn>
-        </msubsup>
-        <mo>&#x2212;</mo>
-        <mn>3</mn>
-        <msubsup>
-          <mi>&#x3B2;</mi>
-          <mn>1</mn>
-          <mn>2</mn>
-        </msubsup>
-      </mrow>
-    </mfrac>
-    <mo data-mjx-texclass="CLOSE">)</mo>
-  </mrow>
-  <msqrt>
-    <mn>3</mn>
-  </msqrt>
-</math>
-
-<p>and</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <msub>
-      <mi>&#x3B2;</mi>
-      <mn>0</mn>
-    </msub>
-    <mrow>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-        <mn>2</mn>
-      </msubsup>
-      <mo>&#x2212;</mo>
-      <mn>3</mn>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-        <mn>2</mn>
-      </msubsup>
-    </mrow>
-  </mfrac>
-  <mo>,</mo>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <mfrac>
-    <msub>
-      <mi>&#x3B2;</mi>
-      <mn>1</mn>
-    </msub>
-    <mrow>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>0</mn>
-        <mn>2</mn>
-      </msubsup>
-      <mo>&#x2212;</mo>
-      <mn>3</mn>
-      <msubsup>
-        <mi>&#x3B2;</mi>
-        <mn>1</mn>
-        <mn>2</mn>
-      </msubsup>
-    </mrow>
-  </mfrac>
-</math>
-
-<p>are bot elements of ℚ. Thus the elements of ℚ(√3) can be all be written in the form <i>q</i><sub>0</sub> + <i>q</i><sub>1</sub> √3, with <i>q</i><sub>0</sub>, <i>q</i><sub>1</sub> &in; ℚ. Then</p>
-
-<div class="eq">
-<p>ℚ(√3) = {<i>q</i><sub>0</sub> + <i>q</i><sub>1</sub>√3 | <i>q</i><sub>0</sub>, <i>q</i><sub>1</sub> &in; ℚ}&emsp;□</p>
-</div>
-
-<p>In the last case we have seen that the extension can be simplified, whilst in the first case it wasn't possible. The reason behind this behavior lies down to the specific nature of the element <i>a</i> we are adjoining.</p>
-
-<div id="algebraic">
-
-<p><b>Definition 8.1.14</b>. Let <i>K</i> be an extension field of <i>F</i> and let <i>a</i> &in; <i>K</i>. If there exists a nonzero polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] such that <i>f</i>(<i>a</i>) = 0, then <i>a</i> is said to satisfy the polynomial <i>f</i>(<i>x</i>) and to be <b>algebraic</b> over <i>F</i>. Otherwise we say that <i>a</i> is <b>trascendental</b> over <i>F</i>.</p>
-
-<p>An element <i>a</i> of an extension <i>K</i> of <i>F</i> is algebraic over <i>F</i> if there exists a nonzero polynomial <i>f</i>(<i>x</i>) with coefficients in <i>F</i> such that <i>f</i>(<i>a</i>) = 0. A non-algebraic element is called transcendental. For instance, the number √2 is an element of ℝ that is algebraic over ℚ, because it is a root of <i>x</i><sup>2</sup> − 2 ∈ ℚ[<i>x</i>]. Of course, √2 is also a zero of <i>x</i><sup>3</sup> − 2<i>x</i> and of <i>x</i><sup>4</sup> − 3<i>x</i><sup>2</sup> + 2 = (<i>x</i><sup>2</sup> − 2)(<i>x</i><sup>2</sup> − 1). Both these other polynomials having 2 as a zero were multiples of <i>x</i><sup>2</sup> − 2.</p>
-
-<p>Another example is ∛2 and (4 + √2)<sup>1/5</sup> are algebraic numbers since they are zeros of <i>x</i><sup>3</sup> − 2 and (<i>x</i><sup>5</sup> − 4)<sup>2</sup> − 2 respectively. The familiar constants <i>e</i> and <i>&pi;</i> are transcendental over ℚ. The analytic proofs lie beyond the scope of this book. That <i>e</i> is transcendental was proved by Charles Hermite (1822–1882) in 1873, and the corresponding result for <i>&pi;</i> was proved by the German mathematician Ferdinand Lindemann (1852–1939) in 1882. It is well known that <i>e<sup>&pi;</sup></i> is transcendental, while it is not known the nature of <i>&pi;<sup>e</sup></i>.</p>
-
-</div>
-
-<p><b>Theorem 8.1.15</b>. Let <i>F</i> a field and <i>K</i> an extension of <i>F</i>. Let <i>a</i> &in; <i>K</i>, the mapping</p>
-
-<div class="eq">
-<p>&Psi;<sub><i>a</i></sub>: <i>F</i>[<i>x</i>] ⟶ <i>K</i><br>
-<i>f</i>(<i>x</i>) ⟼ <i>f</i>(<i>a</i>)</p>
-</div>
-
-<p>is a ring homomorphism with Im <i>&Psi;<sub>a</sub></i> = <i>F</i>[<i>a</i>] known as <i>the evaluation homomorphism</i>.</p>
-
-<p><b>Proof</b>. For every <i>f,g</i> &in; <i>F</i>[<i>x</i>] it results</p>
-
-<div class="eq">
-<p>&Psi;<sub><i>a</i></sub>(<i>f+g</i>) = (<i>f</i> + <i>g</i>)(<i>a</i>) = <i>f</i>(<i>a</i>) + <i>g</i>(<i>a</i>) = &Psi;<sub><i>a</i></sub>(<i>f</i>) + &Psi;<sub><i>a</i></sub>(<i>g</i>)<br>
-&Psi;<sub><i>a</i></sub>(<i>fg</i>) = (<i>fg</i>)(<i>a</i>) = <i>f</i>(<i>a</i>) <i>g</i>(<i>a</i>) = &Psi;<sub><i>a</i></sub>(<i>f</i>) &Psi;<sub><i>a</i></sub>(<i>g</i>)</p>
-</div>
-
-<p>Thus this is a ring homomorphism.</p>
-
-<p>The image of the homomorhism Im <i>&Psi;<sub>a</sub></i> is a subring of <i>K</i> which contains <i>F</i> and <i>a</i>, thus it contains <i>F</i>[<i>a</i>]. On the other hand, if <i>t</i> is an element in Im &Psi;<sub><i>a</i></sub>, then <i>t</i> =  &Psi;<sub><i>a</i></sub>(<i>f</i>) for some <i>f</i> &in; <i>F</i>[<i>x</i>]. If</p>
-
-<div class="eq">
-<p><i>f</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>&alpha;<sub>i</sub>x<sup>i</sup></i>, &emsp; <i>&alpha;<sub>i</sub></i> &in; <i>F</i></p>
-</div>
-
-<p>then</p>
-
-<div class="eq">
-<p><i>t</i> =  <i>&Psi;<sub>a</sub></i>(<i>f</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>&alpha;<sub>i</sub>x<sup>i</sup></i> &in; <i>F</i>[<i>a</i>]</p>
-</div>
-
-<p>thus Im <i>&Psi;<sub>a</sub></i> = <i>F</i>[<i>a</i>].&emsp;□</p>
-
-<p><b>Corollary 8.1.16</b>. Let <i>F</i> a field and let <i>K</i> an extension of <i>F</i>. Given <i>a</i> &in; <i>K</i> and <i>&Psi;<sub>a</sub></i> the evaluation homomorphism, <i>a</i> results algebraic if and only if Ker &Psi;<sub><i>a</i></sub> &ne; 0 (thus <i>a</i> is transcendental if and only if Ker <i>&Psi;<sub>a</sub></i> &ne; 0).</p>
-
-<p><b>Theorem 8.1.17</b>. Let <i>F</i> a field, <i>K</i> an extension of <i>F</i> and <i>a</i> a transcendental element over <i>F</i>, then there exists a isomorphism between <i>F</i>(<i>a</i>) and the field of rational functions <i>F</i>(<i>x</i>) with coefficient in <i>F</i>. In particular, [<i>F</i>(<i>a</i>) : <i>F</i>] is infinite.</p>
-
-<p><b>Proof</b>. From theorem 8.1.15, corollary 8.1.16 and the fundamental homomorphism ring theorem, follows that</p>
-
-<div class="eq">
-<p><i>F</i>[<i>a</i>] ≃ <i>F</i>[<i>x</i>]</p>
-</div>
-
-<p>Then their quotient field are isomorphic as well, <i>i.e.</i>:</p>
-
-<div class="eq">
-<p><i>F</i>(<i>a</i>) ≃ <i>F</i>(<i>x</i>)</p>
-</div>
-
-<p>[<i>F</i>(<i>a</i>) : <i>F</i>] is infinite because 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i>, ... are linearly inependent over <i>F</i>. &emsp;□</p>
-
-<p><b>Remark</b>. The vectors 1 = <i>a</i><sup>0</sup>, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i> are linearly inependent only when <i>a</i> is transcendental. If <i>a</i> were algebraic over <i>F</i>, <i>e.g</i> consider the algebraic <i>a</i> = √2, over the reals, we'd have <i>a</i><sup>2</sup> − 2 = 0, which is linear dependent combinations of powers.□
-
-<p>Thus if <i>K</i> is an extension of <i>F</i>, all the extension of <i>F</i>(<i>a</i>) with <i>a</i> transcendental over <i>F</i> are mutually isomorphic; the element <i>a</i> can be regarded as an <i>unknown</i> <i>x</i> and <i>F</i>(<i>a</i>) can be identified with rational function in the indedeterminate <i>x</i>. </p>
-
-<p><br>We'll work with <b>quotient rings</b> (factor rings) <i>K</i>[<i>x</i>]/(<i>p</i>(<i>x</i>)), and it is important to recall the definition.</p>
-
-<div class="def" id="quotient_ring">
-<p><i>K</i>[<i>x</i>]/(<i>p</i>(<i>x</i>)) represents the set of equivalence classes or <i>residue classes modulo</i> <i>p</i>(<i>x</i>); The denominator is the ideal defined as (p(<i>x</i>)) = {<i>q</i>(<i>x</i>) p(<i>x</i>)| <i>q</i>(<i>x</i>) in ℤ<sub>2</sub>[<i>x</i>]}. Let <i>f, r</i> &in; <i>K</i>[<i>x</i>], with <i>f</i>(<i>x</i>) a polynomial with deg(<i>p</i>) &ge; 1. Then <i>f</i>(<i>x</i>) defines an equivalence relation on <i>K</i>[<i>x</i>]:</p>
-
-<div class="eq">
-<p><i>f</i>(<i>x</i>) ~ <i>r</i>(<i>x</i>) &emsp; if <i>f</i>(<i>x</i>) − <i>r</i>(<i>x</i>) = <i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) &emsp; for some <i>q</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>]</p>
-</div>
-
-<p>By the division algorithm</p>
-
-<div class="eq">
-<p><i>f</i>(<i>x</i>) = <i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) + <i>r</i>(<i>x</i>)  &emsp; deg(<i>r</i>(<i>x</i>)) &lt; deg(<i>p</i>(<i>x</i>))</p>
-</div>
-
-<p>Since <i>f</i>(<i>x</i>) = <i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) + <i>r</i>(<i>x</i>) and <i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) is already in the ideal (<i>p</i>(<i>x</i>)), then we can express the residue classes such that each residue class has a unique standard representantive of degree less than <i>n</i>: the polynomials of a same class are those which admit the same remainder <i>r</i>(<i>x</i>) in their division by <i>p</i>(<i>x</i>).</p>
-
-<div class="eq">
-<p><i>f</i>(<i>x</i>) + (<i>p</i>(<i>x</i>)) = <i>r</i>(<i>x</i>) + (<i>p</i>(<i>x</i>))   deg(<i>r</i>(<i>x</i>)) &lt; deg(<i>p</i>(<i>x</i>))</p>
-</div>
-
-<p><i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) &in; (<i>p</i>(<i>x</i>)) that is an element of the principal ideal generated by <i>p</i>(<i>x</i>).
-
-. Note that the definition is similar to ℤ/<i>n</i>ℤ the set of <a href="modulo.html">residue classes modulo an integer <i>n</i></a>, but here the construction is based on the polynomial ring <i>K</i>[<i>x</i>] instead of the ring of integers ℤ.</p>
-
-<p><i>K</i>[<i>x</i>]/(<i>p</i>(<i>x</i>)) is again a ring with the operations induced by <i>K</i>[<i>x</i>]; Element multiplication is defined as</p>
-
-<div class="eq">
-<p>(<i>a</i> + <i>p</i>(<i>x</i>)) (<i>a</i>' + <i>p</i>(<i>x</i>)) = <i>aa'</i> + (<i>p</i>(<i>x</i>)).</p>
-</div>
-
-<p>We shall see in next theorem that <i>K</i>[<i>x</i>]/(<i>p</i>(<i>x</i>)) is a field when <i>p</i>(<i>x</i>) is irreducible. &emsp;■</p>
-
-</div>
-
-<p>Next theorem shows how the fininite or infinite nature <i>F</i>(<i>a</i>) over <i>F</i> <i>determines</i> whether <i>a</i> is algebraic or trascendental over <i>F</i>.</p>
-
-<div id="8117">
-
-<p><b>8.1.19 Theorem</b>. Let <i>K</i> an extension <i>F</i> and let <i>a</i> an algebraic element over <i>F</i>. Then, if &Psi;<sub><i>a</i></sub> is the evaluation homomorphism from <i>F</i> to <i>K</i>,<p>
-
-<ol type="a">
-	<li><p>Ker (&Psi;<sub><i>a</i></sub>) = (<i>p</i>(<i>x</i>)) where <i>p</i>(<i>x</i>) is a monic irreducible polynomial in <i>F</i>[<i>x</i>] known as the minimal polynomial of <i>a</i> over <i>F</i>.</p></li>
-
-	<li><p>a polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] has zero in <i>a</i>, if and only <i>p</i>(<i>x</i>) divides <i>f</i>(<i>x</i>);</p></li>
-
-	<li><p><i>F</i>(<i>a</i>) = <i>F</i>[<i>a</i>] and <i>F</i>(<i>a</i>) ≃ <i>F</i>[<i>x</i>]/(<i>p</i>(<i>x</i>));</p></li>
-
-	<li><p>If deg(<i>p</i>(<i>x</i>)) = <i>n</i>, then [<i>F</i>(<i>a</i>) : <i>F</i>] = <i>n</i> and <i>F</i>(<i>a</i>) has basis 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup></p></li>
-</ol>
-
-<p><b>Proof</b>.</p>
-
-<ol>
-	<li><p>From the <a href="fund_theorem_homomorphism.html">fundamental theorem on ring homomorphism</a> and theorem 8.1.13, we have</p>
-
-<div class="eq">
-<p><i>F</i>[<i>a</i>] ≃ <i>F</i>[<i>x</i>]/ Ker &Psi;<sub><i>a</i></sub></p>
-</div>
-
-<p>Now, <i>F</i>[<i>a</i>] as subring of a field, is an integeral domain (see <a href="rings.html#field_integraldomain">Proposition 6.1.5</a>), hence by <a href="ideal_generated.html#ring_integraldomain">Theorem 1.6.11</a> Ker &Psi;<sub><i>a</i></sub> is a <a href="ideal_generated.html#prime_ideal">prime ideal</a> hence generated by an irreducible element; The division of this polynomial by its leading coefficient yields a monic polynomial with minimal degree zeroed by <i>a</i>. </p></li>
-
-<li><p>A polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] is such that <i>f</i>(<i>a</i>) = 0 if and only if <i>f</i>(<i>x</i>) &in; Ker &Psi;<sub><i>a</i></sub> and thus if and only if <i>p</i>(<i>x</i>) | <i>f</i>(<i>x</i>).</p></li>
-
-<li><p>It results <i>F</i>(<i>a</i>) = <i>F</i>[<i>a</i>], since under current hyphothesis (Ker &Psi;<sub><i>a</i></sub> is generated by an irreducible element) the quotient <i>F</i>[<i>x</i>]/ Ker &Psi;<sub><i>a</i></sub>, and thus <i>F</i>[<i>a</i>] are fields (by theorem 8.1.13). Since <i>F</i>[<i>a</i>] contains are <i>F</i> and <i>a</i>, it follows that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>) and <i>F</i>(<i>a</i>) ≃ <i>F</i>[<i>x</i>]/<i>p</i>(<i>x</i>). </p></li>
-
-<li><p>Let <i>n</i> = ∂<i>p</i>(<i>x</i>). We prove that the element 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> are a basis for <i>F</i>[<i>a</i>] (= <i>F</i>(<i>a</i>)). We prove first the linear <i>independence</i>: let</p>
-
-<div class="eq">
-<p>∑<sup><i>n</i> − 1</sup><sub><sub><i>i</i>=0</sub></sub> <i>&alpha;<sub>i</sub>a<sup>i</sup></i> = 0, &emsp; <i>&alpha;<sub>i</sub></i> &in; <i>F</i></p>
-</div>
-
-<p>and consider the polynomial <i>f</i>(<i>x</i>) = ∑<sup><i>n</i> − 1</sup><sub><sub><i>i</i>=0</sub></sub> <i>&alpha;<sub>i</sub>x<sup>i</sup></i> &in; <i>F</i>[<i>x</i>]. Since <i>f</i> is a polynomial zeroed by <i>a</i>, it belongs to Ker &Psi;<sub><i>a</i></sub>, thus a multiple of <i>p</i>(<i>x</i>). Being ∂<i>p</i>(<i>x</i>) = <i>n</i> whilst ∂<i>f</i>(<i>x</i>) = <i>n</i> − 1, <i>f</i>(<i>x</i>) must becessarily being a null polynomial thus all the <i>&alpha;<sub>i</sub></i> must be null. The linear independence of 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> is thus proved. We now prove that the 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> are generators of <i>F</i>[<i>x</i>]. If <i>s</i> is an element of <i>F</i>[<i>a</i>], there exists a polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], such that <i>s</i> = &Psi;<sub><i>a</i></sub>(<i>f</i>(<i>x</i>)) = <i>f</i>(<i>a</i>). Dividing <i>f</i>(<i>x</i>) by <i>p</i>(<i>x</i>) we obtain</p>
-
-<div class="eq">
-<p><i>f</i>(<i>x</i>) = <i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) + <i>r</i>(<i>x</i>), &emsp; <i>r</i> = 0 or deg(<i>r</i>(<i>x</i>)) &lt; deg(<i>p</i>(<i>x</i>))</p>
-</div>
-
-<p>Evaluating the relation in <i>a</i> we obtain</p>
-
-<div class="eq">
-<p><i>f</i>(<i>a</i>) = <i>q</i>(<i>a</i>)<i>p</i>(<i>a</i>) + <i>r</i>(<i>x</i>) = <i>q</i>(<i>a</i>) ⋅ 0 = <i>r</i>(<i>a</i>)</p>
-</div>
-
-<p>We managed to express <i>s</i> = <i>f</i>(<i>a</i>) as linear combination of elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup>, which are thus generators. &emsp;□</p></li>
-
-</ol>
-
-</div>
-
-<p>Notice how the writing <i>f</i>(<i>a</i>) = &alpha;<sub>0</sub> + &alpha;<sub>1</sub><i>a</i> + &alpha;<sub>2</sub> <i>a</i><sup>2</sup> + ... + &alpha;<sub><i>n</i> −1</sub><i>a</i><sup><i>n</i> − 1</sup> of every element <i>F</i>[<i>a</i>] is <i>unique</i>, since the elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> represent a <i>basis</i> .</p>
-
-<p><b>8.1.18 Corollary</b>. Let <i>K</i> an extension of the field <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>a</i> is algebraic if and only if <i>F</i>(<i>a</i>) is a finite extension, whilst is trascendental if and only if <i>F</i>(<i>a</i>) is an infinite extension.</p>
-
-<p><b>Proof</b>. If <i>a</i> is transcendental, by theorem 8.1.15 we know that <i>F</i>[<i>x</i>] ≃ <i>F</i>(<i>a</i>), and [<i>F</i>(<i>a</i>) : <i>F</i>] is infinite because: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a<sup>i</sup></i>, ... are linearly inependent over <i>F</i> .</p>
-
-<p>If <i>a</i> is algebraic, by theorem 8.1.16(c) we know that in this case <i>F</i>[<i>a</i>] is a field and that <i>F</i>[<i>a</i>] = <i>F</i>(<i>a</i>). The minimal polynomial has degree <i>n</i>, [<i>F</i>(<i>a</i>) : <i>F</i>] = <i>n</i> and <i>F</i>(<i>a</i>) has the finite basis: 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup>. &emsp;□ </p>
-
-<p><b>8.1.20 Example</b>. We've thus characterized <i>simple extensions</i>. Suppose now to build the extension ℚ(<i>S</i>), with <i>S</i> = {√3, √5} and calculate its degree in ℚ. We proceed in this way: we adjoin first √3 obtaining the extension ℚ(√3) and then adjoin the element √5 to ℚ(√3). With the aid of theorem 8.1.16 we can easily calculate the degree of the extension. √3 is algebraic over ℚ, of degree 2 since its minimal polynomial is <i>x</i><sup>2</sup> − 3; By theorem 8.1.16 ℚ(√3) ≃ ℚ([<i>x</i>]/(<i>x</i><sup>2</sup> − 3). We now adjoin √5 to ℚ(√3). The polynomial <i>x</i><sup>2</sup> − 5 is irreducible (not only over ℚ, but also) over ℚ(√3) (Why? see the exercises). Thus the extension ℚ(√3,√5) = (ℚ(√3))(√5) has degree two over ℚ(√3). Then by theorem 8.1.4 we have</p>
-
-<div class="eq">
-<p>[ℚ(√3)(√5) : ℚ] = [ℚ(√3,√5) : ℚ(√3)][ℚ(√3) : ℚ] = 2 ⋅ 2 = 4.</p>
-</div>
-
-<p>Since a basis of ℚ(√3,√5) over ℚ(√3) is {1, √5} and a basis over ℚ(√3) over ℚ is {1,√3}, a basis of ℚ(√3,√5) over ℚ is given by</p>
-
-<div class="eq">
-<p>1, √3, √5, √3√5 = √15</p>
-</div>
-
-<p>and</p>
-
-<div class="eq">
-<p>ℚ(√3)(√5) = {<i>a</i> + <i>b</i>√3 + <i>c</i>√5 + <i>d</i>√15 | <i>a,b,c,d</i> &in; ℚ}</p>
-</div>
-
-<p>If we had ℚ(√2)(√3), then we would have also added √6 "accidentally".</p>
-
-<div id="alg_closed_fields">
-
-<h2>Algebraically Closed Fields and Algebraic Closures</h2>
-
-<p>We are now able to prove the following theorem.</p>
-
-<p><b>8.1.21 Theorem</b>. Let <i>K</i> an extension of <i>F</i>. Then the algebraic elements of <i>K</i>, over <i>F</i> make a subfield of <i>K</i>.</p>
-
-<p><b>Proof</b>. It suffices to prove that if <i>a</i> and <i>b</i> are algebraic over <i>F</i>, then are so <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i>.<br> Let <i>a</i> of degree <i>n</i>, and <i>b</i> of degree <i>m</i>. Then</p>
-
-<div class="eq">
-<p>[<i>F</i>(<i>a</i>) : <i>F</i>] = <i>n</i></p>
-</div>
-
-<p>Since <i>b</i> is algebraic of degree <i>m</i> over <i>F</i>, it is algebraic of degree &le; <i>m</i> over <i>F</i>(<i>a</i>), (Say <i>F</i> is ℚ, <i>a</i> = √2, <i>b</i> = √<i>a</i> = 2<sup>1/4</sup>. The minimal polynomial of <i>b</i> over ℚ is <i>x</i><sup>4</sup> − 2, but over ℚ(<i>a</i>) = ℚ(√2), it's <i>x</i><sup>2</sup> − √2, with degree 2 &lt; 4)</p>
-
-<p>It follows that</p>
-
-<div class="eq">
-<p>[<i>F</i>(<i>a,b</i>) : <i>F</i>] = [<i>F</i>(<i>a,b</i>) : <i>F</i>(<i>a</i>)] [<i>F</i>(<i>a</i>) : <i>F</i>] &le; <i>nm</i></p>
-</div>
-
-<p>Now, <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i> are all in <i>F</i>(<i>a,b</i>) that is <i>F</i>(<i>a</i> &pm; <i>b</i>), <i>F</i>(<i>ab</i>), <i>F</i>(<i>a</i>/<i>b</i>) which is a <i>finite</i> extension of <i>F</i>. By corollary 8.1.17 <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i> are all algebraic over <i>F</i>. &emsp;□</p>
-
-<p><b>Remark 8.1.22</b>. In the previous theorem we proved that if <i>a</i> and <i>b</i> are alberaic respectebely of degree <i>n</i> and <i>m</i> then <i>a</i> &pm; <i>b, ab</i> and <i>a</i>/<i>b</i> are algebraic of &le; <i>nm</i>.&emsp;□</p>
-
-<p><b>Remark 8.1.23</b>. The set <i>A</i> of all algebraic numbers over ℚ is the <i>field of algebraic numbers</i>. This field is an extension of ℚ, in which every element <i>a</i> &in; <i>A</i> is algebraic and thus [ℚ(<i>a</i>) : ℚ] &lt; ∞, and</p>
-
-<div class="eq">
-<p>[<i>A</i> : ℚ] = ∞</p>
-</div>
-
-<p>Suppose instead that [<i>A</i> : ℚ] = <i>n</i>. We shall show there exists an element <i>a</i> in ℚ of degree greater than <i>n</i>. It suffices to take for example</p>
-
-<div class="eq">
-<p><i>a</i> = 2<sup>1/(<i>n</i> + 1)</sup>
-</div>
-
-<p>which is the root of the polynomial (irreducible over ℚ) <i>x</i><sup><i>n</i>+1</sup> − 2. Thus this polynomial is the minimal polynomial for <i>a</i> having degree <i>n</i> + 1. It results then</p>
-
-<div class="eq">
-<p>[ℚ(<i>a</i>) : ℚ] = <i>n</i> + 1 &gt; [<i>A</i> : ℚ] = <i>n</i></p>
-</div>
-
-<p>contradicting the fact that <i>a</i> &in; <i>A</i>. &emsp;□</p>
-
-<p>So <i>A</i> is a subfield of ℂ which is algebraic over ℚ <i>i.e.</i> consists of algebraic numbers. It contains 1,2,3/5,sqrt(2),i,1/2+cbrt(7/3)/5 etc..</p>
-
-<p><b>Definition 8.1.24</b>. An extension <i>K</i> of a field <i>F</i> is said algebrical if every element of <i>K</i> is algebraic over <i>F</i>.</p>
-
-<p>For example, the field of complex numbers ℂ is an algebraic extension of ℝ as every element <i>a</i> + <i>ib</i> in ℂ, satisfies the polynomial in ℝ[<i>x</i>]:</p>
-
-<div class="eq">
-<p><i>x</i><sup>2</sup> − 2<i>ax</i> + (<i>a</i><sup>2</sup> + <i>b</i><sup>2</sup>)</p>
-</div>
-
-<p>Every <i>finite</i> extension of a field <i>F</i> is an algebraic extension, but the converse is not true: indeed for example <i>A</i> is an algebraic extension, but infinite.</p>
-
-<p><b>Theorem 8.1.25</b>. Let <i>L</i> an algebraic extension of <i>K</i> and let <i>K</i> an algebraic extension of <i>F</i>. Then <i>L</i> is an algebraic extension over <i>F</i>.</p>
-
-<p><b>Proof</b>. To prove the theorem it suffices to show that <i>every element</i> of <i>L</i> belongs to a finite extension of <i>F</i>. Let <i>l</i> &in; <i>L</i>. Since <i>l</i> is algebraic over <i>K</i>, then <i>l</i> is a root of the polynomial</p>
-
-<div class="eq">
-<p><i>k</i><sub>0</sub> + <i>k</i><sub>1</sub><i>x</i> + <i>k</i><sub>2</sub><i>x</i><sup>2</sup> + ... + <i>k<sub>n</sub>x<sup>n</sup></i> &emsp; <i>k<sub>i</sub></i> &in; <i>K</i></p>
-</div>
-
-<p>Now, every <i>k<sub>i</sub></i>, as element of <i>K</i>, which is algebraic over <i>F</i>, is algebraic over <i>F</i> and thus</p>
-
-<div class="eq">
-<p>[<i>F</i>(<i>k</i><sub>0</sub>) : <i>F</i>] &lt; ∞, &emsp; [<i>F</i>(<i>k</i><sub>0</sub>, <i>k</i><sub>1</sub>) : <i>F</i>] &lt; ∞, ..., [<i>F</i>(<i>k</i><sub>0</sub>, <i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>): <i>F</i>] &lt; ∞</p>
-</div>
-
-<p>Adjoining now <i>l</i> to <i>F</i>(<i>k</i><sub>0</sub>, <i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>), it results</p>
-
-<div class="eq">
-<p>[<i>F</i>(<i>k</i><sub>0</sub>, <i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>)(<i>l</i>):<i>F</i>] =
-<br> [<i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>)(<i>l</i>) : <i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>)] [<i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>):<i>F</i>]</p>
-</div>
-
-<p>The first term on the R.H.S. is &lt; ∞, since <i>l</i> is algebraic over <i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>) because it satisfies a polynomial with coefficient in <i>F</i>(<i>k</i><sub>0</sub>,<i>k</i><sub>1</sub>, ..., <i>k</i><sub>n</sub>), the second term is &lt; ∞ for what said before. Thus beloning to a <i>finite</i> extension of <i>F</i>, <i>l</i> is algebraic over <i>F</i>. &emsp;□</p>
-
-<p><b>Definition 8.1.26</b>. A field <i>F</i> is said algebrically closed if it has no proper algebraic extensions, that is, no algebraic extensions <i>E</i> with <i>F</i> &lt; <i>E</i>.</p>
-
-<p>A field is algebraically closed if every non-constant polynomial in <i>F</i>[<i>x</i>] (the univariate polynomial ring with coefficients in <i>F</i>) has a root in <i>F</i>. </p>
-
-<p>ℝ is not algebraically closed, because the polynomial equation <i>x</i><sup>2</sup> + 1 = 0  has no solution in real numbers, even though all its coefficients (1 and 0) are real. No finite field <i>F</i> is algebraically closed, indeed it sufficed to consider a polynomial of finite degree whose roots are all elements of the field. Adding a unit to it, we get a polynomial that has no root: (<i>x</i> − <i>a</i><sub>1</sub>)(<i>x</i> − <i>a</i><sub>2</sub>) ⋯ (<i>x</i> − <i>a<sub>n</sub></i>) + 1, has no zero in <i>F</i>. By contrast, the fundamental theorem of algebra states that the field of complex numbers is algebraically closed. Another example of an algebraically closed field is the field of (complex) algebraic numbers.</p>
-
-<p><b>Theorem 8.1.27</b>. The field <i>A</i> of all algebraic numbers over ℚ is algebrically closed.</p>
-
-<p><b>Proof</b>. It suffices to prove that the roots of every polynomial with algebraic numbers are algebraic. Let <i>f</i>(<i>x</i>) = <i>x<sup>n</sup></i> + <i>a</i><sub><i>n</i>−1</sub>x<sup><i>n</i>−1</sup> + ... + <i>a</i><sub>0</sub> a polynomial with coefficients in <i>A</i>. We consider the extension</p>
-
-<div class="eq">
-<p><i>K</i> = ℚ(<i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, ..., <i>a</i><sub><i>n</i>−1</sub>)</p>
-</div>
-
-<p>It is a <i>finite</i> extension of ℚ. Let <i>s</i> an arbitrary root of <i>f</i>(<i>x</i>). Then <i>K</i>(<i>s</i>) is a finite extension of <i>K</i>, because <i>s</i> is algebraic over <i>K</i>. But then <i>K</i>(<i>s</i>) is a finite extension of ℚ as well, and <i>s</i> is algebraic.&emsp;□</p>
-
-<p>|<i>K</i>(<i>s</i>) : ℚ| finite means |ℚ(<i>s</i>) : ℚ| is also finite (it's no bigger than that first number), and this is what s being algebraic over ℚ means. ℚ(<i>s</i>) is a vector subspace of <i>K</i>(<i>s</i>), which is finite-dimensional over ℚ. So ℚ(<i>s</i>) is also finite-dimensional. ℚ(<i>s</i>) is finite-dimensional over ℚ iff <i>s</i> is algebraic over ℚ.</p>
-
-<p>The most familiar example of an algebraically closed field is ℂ, which is so by the fundamental theorem of algebra.</p>
-
-</div> <!-- Alg. closed fields id-->
+<p><b>Corollary 8.1.8</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
 
 <section aria-label="End">
-<a href="finite_abelian_groups.html">&#171;Classification of finite abelian groups</a>
+<a href="finite_abelian_groups.html">&#171;Finite Abelian Groups</a>
 <a href="index.html">Index</a>
-<a href="exercises_field_extensions.html">Exercises on field extension&#187;</a>
+<a href="simple_extensions.html">Simple Extensions&#187;</a>
 </section>
 
 </div>
