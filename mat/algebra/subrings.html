@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Subrings"/>
  <title>Subrings</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -11,26 +11,28 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
-  
+
 <div class="content">
 
 <h1>Subrings</h1>
 
-<p><b>6.2.1 Definition.</b> Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a called a <b>subring</b> of <i>R</i> if <i>S</i> is a ring with respect to the same operations of <i>R</i>.</p>
+<p><b>6.2.1 Definition.</b> Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a called a <b>subring</b> of <i>R</i> if <i>S</i> is a <a href="rings.html">ring</a> with respect to the same operations of <i>R</i>. &emsp;□</p>
 
 <p>For <i>S</i> to be a subring of the ring <i>R, S</i>, it must be an <i>additive subgroup</i> of the group (<i>R</i>, +), i.e. (<i>S</i>, +) must be a group.</p>
 
-<p>The following is a criterion it is necessary and sufficient for <i>S</i> to be a subring.</p>
+<p>In the ring ℤ of integers, for example, the subset <i>E</i> of even integers is a ring, but the subset 0 of odd integers is not, as we saw in <a href="rings.html#examples">Examples</a> 2 and 3.</p>
 
-<p><b>6.2.2 Proposition</b>. Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a subring of <i>R</i> if and only if <i>S</i> is closed under subtraction and under multiplication that is:</p>
+<p>The following is a criterion, necessary and sufficient for <i>S</i> to be a subring.</p>
+
+<p><b>6.2.2 Proposition</b> (<b>Subring Criterion</b>). Let (<i>R</i>, +, ⋅) a ring. A nonempty subset <i>S</i> of <i>R</i> is a subring of <i>R</i> if and only if <i>S</i> is closed under subtraction and under multiplication that is:</p>
 
 <div class="eq">
-<p><i>a − b &in; S, &emsp; ab &in; S &emsp; &forall;a,b &in; S</i> &emsp; (<b>4.58</b>)</p>
+<p><i>a</i> − <i>b</i> &in; <i>S</i>, &emsp; <i>ab</i> &in; <i>S</i> &emsp; &forall;<i>a,b</i> &in; <i>S</i> &emsp; (<b>6.2.1</b>)</p>
 </div>
 
 <p>If <i>S</i> is a subring the condition above is certainly satisfied. Viceversa suppose that for all <i>a</i> and <i>b</i> in <i>S</i>, we have <i>a − b &in; S, ab &in; S</i>: we have to prove that (<i>S</i>, +) is an additive group i.e. that it satisfies:</p>
@@ -41,7 +43,7 @@
 	<li><p>−<i>a &in; S</i></p>
 </ul>
 
-<p>(the associativity with respect to + is automatically verified). Since condition (4.8) is true for every <i>a,b &in; S</i> it also hold true for <i>a = b</i> hence <i>a −a = 0 &in; S</i>. If we take the elements <i>a</i> and 0, it follows that <i>0−a = −a &in; S</i>. It is also true that given <i>a,b &in; S</i> also <i>a</i> and <i>−b</i> are in <i>S</i> and thus follows <i>a</i>−(−<i>b</i>) = <i>a + b &in; S</i>.□</p>
+<p>(the associativity with respect to + is automatically verified). Since condition (6.2.1) is true for every <i>a,b &in; S</i> it also hold true for <i>a</i> = <i>b</i> hence <i>a</i> − <i>a</i> = 0 &in; <i>S</i>. If we take the elements <i>a</i> and 0, it follows that 0 −<i>a</i> = −<i>a</i> &in; <i>S</i>. It is also true that given <i>a,b</i> &in; <i>S</i> also <i>a</i> and −<i>b</i> are in <i>S</i> and thus follows <i>a</i>−(−<i>b</i>) = <i>a</i> + <i>b</i> &in; <i>S</i>.□</p>
 
 <p>For example, (ℤ, +, ·) is a subring of (<i>R</i>, +, ·), (2ℤ, +, ·) is a subring of (Z, +, ·).</p>
 
@@ -49,21 +51,21 @@
 
 <ul>
 	<li><p>Every ring posseses two subrings, known as <i>trivial subrings</i>: the whole ring and the ring containing only 0.</p></li>
-	<li><p>In <i>R</i> = ℤ, <i>S = n</i>ℤ (<i>n</i> &in; ℕ) is a subring of ℤ. Take <i>a,b &in; n</i>ℤ; let <i>a = nx, b = ny</i>, for some integers <i>x,y</i> &in; ℤ. Then</p>
+	<li><p>In <i>R</i> = ℤ, <i>S</i> = <i>n</i>ℤ (<i>n</i> &in; ℕ) is a subring of ℤ. Take <i>a,b</i> &in; <i>n</i>ℤ; let <i>a</i> = <i>nx, b</i> = <i>ny</i>, for some integers <i>x,y</i> &in; ℤ. Then</p>
 	
 	<div class="eq">
-		<p><i>a−b = n</i>(<i>x − y</i>) &in; <i>nℤ</i></p>
-		<p><i>ab = n</i> (<i>nxy</i>) &in; <i>nℤ</i></p>
+		<p><i>a</i>−<i>b</i> = <i>n</i>(<i>x</i> − <i>y</i>) &in; <i>nℤ</i></p>
+		<p><i>ab</i> = <i>n</i> (<i>nxy</i>) &in; <i>nℤ</i></p>
 	</div>
 	
 	<p>so, <i>nℤ</i> passes the test of Proposition 6.1.4.</p>
 	
 	<p>Proposition 4.18 shows that any subring of ℤ is of this form.</p></li>
 	
-	<li><p>Let <i>R</i> a ring and <i>a &in; R</i>. Let</p>
+	<li><p>Let <i>R</i> a ring and <i>a</i> &in; <i>R</i>. Let</p>
 	
 	<div class="eq">
-	<p><i>S<sub>a</sub></i> = {<i>x &in; R</i> | <i>xa = ax</i>}</p>
+	<p><i>S<sub>a</sub></i> = {<i>x</i> &in; <i>R</i> | <i>xa</i> = <i>ax</i>}</p>
 	</div>
 	
 	<p><i>S<sub>a</sub></i> is a subring of <i>R</i>.</p></li>
@@ -76,7 +78,7 @@
 
 <p><b>6.2.3 Proposition</b>. Every subring of ℤ is of the form <i>n</i>ℤ, with <i>n</i> &in; ℕ.</p>
 
-<p><b>Proof.</b> We previouslt showed that <i>nℤ</i> is a subring of ℤ. Now we show that <i>all</i> subrings are of this form. Let <i>S</i> be a subring of ℤ. Certainly 0 &in; <i>S</i>. If <i>S</i> = {0}, the <i>S</i> = 0ℤ is of the required form. Suppose it is not. If <i>n &in; S</i>, the also <i>−n &in; S</i>; so <i>S</i> must contain positive integer. Let <i>m</i> be the smallest positive integer in <i>S</i>. We will prove that <i>S = n</i>ℤ. Since <i>S ⊇ nℤ</i>, it is sufficien to prove to opposite inclusion. Dividing <i>h</i> by <i>m</i> we have <i>h = mq + r</i> with 0 &le; <i>r &lt; m</i>. Since <i>r &in; S</i> it must necessairly be <i>r</i> = 0 to avoid the contradiction of <i>m</i> being the smallest positive integer in <i>S</i>. Hence any element of <i>S</i> is a multiple of <i>m</i>.□</p>
+<p><b>Proof.</b> We previouslt showed that <i>n</i>ℤ is a subring of ℤ. Now we show that <i>all</i> subrings are of this form. Let <i>S</i> be a subring of ℤ. Certainly 0 &in; <i>S</i>. If <i>S</i> = {0}, the <i>S</i> = 0ℤ is of the required form. Suppose it is not. If <i>n</i> &in; <i>S</i>, the also −<i>n</i> &in; <i>S</i>; so <i>S</i> must contain positive integer. Let <i>m</i> be the smallest positive integer in <i>S</i>. We will prove that <i>S</i> = <i>n</i>ℤ. Since <i>S ⊇ nℤ</i>, it is sufficien to prove to opposite inclusion. Dividing <i>h</i> by <i>m</i> we have <i>h</i> = <i>mq</i> + <i>r</i> with 0 &le; <i>r</i> &lt; <i>m</i>. Since <i>r</i> &in; <i>S</i> it must necessairly be <i>r</i> = 0 to avoid the contradiction of <i>m</i> being the smallest positive integer in <i>S</i>. Hence any element of <i>S</i> is a multiple of <i>m</i>.□</p>
 
 <p>We've seen that there exist integral domain which are not fields such as ℤ. However there are no <i>finite integral domains</i> which are not fields as the following propisition proves.</p>
 
@@ -86,10 +88,10 @@
 
 <div class="eq">
 <p><i>&Psi;: D* ⟶ D*</i></p>
-<i>&emsp; a<sub>1</sub> ⟶ aa<sub>1</sub></i></p>
+&emsp; <i>a</i><sub>1</sub> ⟶ <i>aa</i><sub>1</sub></p>
 </div>
 
-<p>by <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>aa<sub>i</sub></i>. If <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>&Psi;</i>(<i>a<sub>j</sub></i>) then <i>aa<sub>i</sub> = aa<sub>j</sub></i>, so by the cancellation property, <i>a<sub>i</sub> = a<sub>j</sub></i> hence the <i>n</i> products <i>aa<sub>i</sub></i> are all distinct and the set {<i>aa<sub>1</sub>, ...,aa<sub>n</sub></i>} coincides with the set <i>D*</i>. Thus we see that <i>&Psi;</i> is a one-to-one function. Since <i>D*</i> is finite, the mapping <i>&Psi;</i> is onto <i>D*</i>. But one of the elements of <i>D*</i> is the multiplicative identity 1. Therefore, <i>&Psi;</i>(<i>a<sub>k</sub></i>) = 1 for some <i>a<sub>k</sub> &in; D*</i>; that is <i>aa<sub>k</sub></i> = 1. This shows that <i>a</i> has a multiplicative inverse and hence <i>D</i> is a field. Note that since <i>D</i> is commutative that <i>aa<sub>j</sub> = a<sub>j</sub>a</i>.□</p>
+<p>by <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>aa<sub>i</sub></i>. If <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>&Psi;</i>(<i>a<sub>j</sub></i>) then <i>aa<sub>i</sub> = aa<sub>j</sub></i>, so by the cancellation property, <i>a<sub>i</sub></i> = <i>a<sub>j</sub></i> hence the <i>n</i> products <i>aa<sub>i</sub></i> are all distinct and the set {<i>aa<sub>1</sub>, ...,aa<sub>n</sub></i>} coincides with the set <i>D*</i>. Thus we see that <i>&Psi;</i> is a one-to-one function. Since <i>D*</i> is finite, the mapping <i>&Psi;</i> is onto <i>D*</i>. But one of the elements of <i>D*</i> is the multiplicative identity 1. Therefore, <i>&Psi;</i>(<i>a<sub>k</sub></i>) = 1 for some <i>a<sub>k</sub></i> &in; <i>D*</i>; that is <i>aa<sub>k</sub></i> = 1. This shows that <i>a</i> has a multiplicative inverse and hence <i>D</i> is a field. Note that since <i>D</i> is commutative that <i>aa<sub>j</sub></i> = <i>a<sub>j</sub>a</i>.□</p>
 
 <section aria-label="End">
 <a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>

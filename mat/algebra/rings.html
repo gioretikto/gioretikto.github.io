@@ -11,10 +11,10 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -34,8 +34,7 @@
 
 <ol type="i">
 
-<li>
-<ol type="a">
+<li><ol type="a">
 	<li><p>+ is <i>associative</i>: (<i>a</i> + <i>b</i>) + <i>c</i> = <i>a</i> + (<i>b</i> + <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
 
 	<li><p>There is an element 0 in <i>R</i> such that <i>a</i> + 0 = <i>a</i> &forall;<i>a</i> &in; <i>R</i> (that is, 0 is the additive identity).</p></li>
@@ -43,34 +42,37 @@
 	<li><p>&forall;<i>a</i> &in; <i>R</i> there exists −<i>a</i> &in; <i>R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
 
 	<li><p>+ is <i>commutative</i>: <i>a</i> + <i>b</i> = <i>b</i> + <i>a</i> &forall;<i>a, b</i> &in; <i>R</i></p></li>
-</ol>
-</li>
+</ol></li>
 
 	<li><p>· is <i>associative</i>: (<i>a</i> · <i>b</i>) · <i>c</i> = <i>a</i> · (<i>b</i> · <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
 
-<div id="distributive_law">
-	<li><p>Multiplication is distributive with respect to addition, meaning that:</p>
+	<li><p id="distributive_law">Multiplication is distributive with respect to addition, meaning that:</p>
 
 		<div class="eq">
 		<p><i>a</i> · (<i>b</i> + <i>c</i>) = <i>a</i> · <i>b</i> + <i>a</i> · <i>c</i>, &emsp; (<i>a</i> + <i>b</i>) · <i>c</i> = <i>a</i> · <i>c</i> + <i>b</i> · <i>c</i> &emsp; &forall;<i>a, b, c</i> &in; <i>R</i></p>
 		</div>
 	</li>
-</div>
 </ol>
 
-<p>From now on we'll write <i>ab</i> instead of <i>a · b</i>. A set satisfying a), b), c) is called <a href="groups.html">group</a>: hence (<i>R</i>, +) is a group. If d) is also satisfied we have a <i>commutative group</i> or <i>abelian group</i>. (<i>R</i>, +) is oftentimes referred to as additive group of the ring.</p>
+<p>From now on we'll write <i>ab</i> instead of <i>a</i> · <i>b</i>. A set satisfying i) a), b), c) is called <a href="groups.html">group</a>: hence (<i>R</i>, +) is a group. If d) is also satisfied we have a <i>commutative group</i> or <i>abelian group</i>. (<i>R</i>, +) is oftentimes referred to as additive group of the ring.</p>
 
 <p>A <i>commutative ring</i> is a ring in which the multiplication operation is commutative.</p>
 
-<h3>Examples of rings and non-rings</h3>
+<p><b>6.1.2</b>. <b>Examples of non-rings abd rings</b></p>
 
 <ul>
-	<li><p>The set of natural numbers ℕ with the usual operations is not a ring, since (ℕ, +) is not even a group (the elements are not all invertible with respect to addition). For instance, there is no natural number which can be added to 2 to get 0 as a result.</p></li>
+	<li><p>The set of natural numbers ℕ with the usual operations is not a ring, since (ℕ, +) is not even a group (the elements are not all invertible with respect to addition, e.g. there is no natural number which can be added to 2 to get 0 as a result).</p></li>
+
+	<li><p>The set of odd integers with the usual addition and multiplication is not a ring. Among other things, Axiom 1 fails: The sum of two odd integers is not odd.</p></li>
+
 </ul>
 
 <p>Examples of rings</p>
 
 <ul>
+
+	<li><p>Let E be the set of even integers with the usual addition and multiplication. Since the sum or product of two even integers is also even, the closure axioms hold. Since 0 is an even integer, E has an additive identity element. If <i>a</i> is even, then − <i>a</i> is also even, and so Axiom <i>i)c</i> holds. The remaining axioms hold for all integers and, therefore, are true whenever <i>a, b, c</i>, are even. Consequently, E is a commutative ring. E does <i>not</i> have an identity, however, because no <i>even</i> integer <i>e</i> has the property that <i>ae</i> = <i>a</i> = <i>ea</i> for every even integer <i>a</i>.</p></li>
+
 	<li><p>ℤ, ℚ, ℝ, ℂ, with respect to addition and multiplication.</p></li>
 	
 	<li><p>𝕂[<i>x</i>], 𝕂[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] with respect to addition and multiplication defined for this rings.</p></li>
@@ -131,7 +133,7 @@
 		</div>
 	</ul>
 
-<p>The following properties follow from ring axiomes, we do not prove them since we've already proved it in the case of <a href="Z.html">integers</a> (without making it specific for integers alone).</p>
+<p>The following properties follow from ring axioms, we do not prove them since we've already proved it in the case of <a href="Z.html">integers</a> (without making it specific for integers alone).</p>
 
 <ol type="i">
 	<li><p><i>a</i> ⋅ 0 = 0 ⋅ <i>a</i> = 0;</p></li>

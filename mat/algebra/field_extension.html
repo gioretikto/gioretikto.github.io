@@ -39,7 +39,7 @@
 
 <p>There are actually many fields lying between ℚ and ℂ, not only ℝ. One simple example is the field ℚ(<i>i</i>) = {<i>p</i> + <i>qi</i> | <i>p, q</i> ∈ ℚ} which has already been mentioned a couple of times. A similar example is ℚ(√2) = {<i>p</i> + <i>q</i>√2 | <i>p,q</i> ∈ ℚ}. There are, on the other hand, fields whose elements are not numbers, for example, ℤ<sub><i>p</i></sub> is a (finite) field for every prime number <i>p</i>.</p>
 
-<p><b>Definition 8.1.2</b> (Subfield) A nonempty subset <i>K</i> of a field <i>F</i> is called a <b>subfield</b> of <i>F</i> if <i>K</i> is itself a field under the same binary operations, addition and multiplication, of <i>F</i>.&emsp;□</p>
+<p id="subfield"><b>Definition 8.1.2</b> (<b>Subfield</b>) A nonempty subset <i>K</i> of a field <i>F</i> is called a <b>subfield</b> of <i>F</i> if <i>K</i> is itself a field under the same binary operations, addition and multiplication, of <i>F</i>.&emsp;□</p>
 
 <p>We have the following necessary and sufficient criterion for a nonempty subset <i>K</i> of a field <i>F</i> to be its <i>subfield</i>.</p>
 
@@ -47,14 +47,14 @@
 
 <ol type="i">
 	<li><p><i>a</i> − <i>b</i> &in; <i>K</i> for <i>a,b</i> in <i>K</i></p></li>
-	<li><p><i>ab</i><sup>−1</sup> &in; <i>K</i> for <i>a,b</i> &ne; 0.</p></li>
+	<li><p><i>ab</i><sup>−1</sup> &in; <i>K</i> for <i>a,b</i> &in; <i>K</i> with <i>b</i> &ne; 0.</p></li>
 </ol>
 
-<p><b>Proof</b>. Certainly if <i>K</i> is a subfield the axioms above must be satisfied. On the other hand if the axioms above are satisfied then <i>K</i> is a subring of <i>F</i>. The remaining axioms for a field are satisfied in <i>K</i> since they are satisfied in <i>F</i>. Hence we conclude that <i>K</i> si a subfield of <i>F</i>. &emsp;□</p>
+<p><b>Proof</b>. Certainly if <i>K</i> is a subfield the axioms above must be satisfied. On the other hand if the axioms above are satisfied then <i>K</i> is a <a href="subrings.html">subring</a> of <i>F</i>. The remaining axioms for a field are satisfied in <i>K</i> since they are satisfied in <i>F</i> (e.g. if <i>F</i> is commutative then every subset is commutative). Hence we conclude that <i>K</i> is a subfield of <i>F</i>. &emsp;□</p>
 
 <p>To explore fields more deeply, we need some rudiments of vector space theory studied in a linear algebra course.</p>
 
-<p><b>Definition 8.1.3</b> (<i>Field Extension</i>) If <i>F</i> and <i>K</i> are fields with <i>K</i> &subseteq; <i>F</i>, we say that <i>F</i> is an extension field of <i>K</i>. &emsp;□</p>
+<p><b>Definition 8.1.4</b> (<i>Field Extension</i>) If <i>F</i> and <i>K</i> are fields with <i>K</i> &subseteq; <i>F</i>, we say that <i>F</i> is an extension field of <i>K</i>. &emsp;□</p>
 
 <p>For example, the field ℂ of complex numbers is an extension of degree 2 on ℝ, since a basis is given by 1 and <i>i</i>, whilst is of degree 1 on itself. The field ℝ(<i>x</i>) of rational functions with coefficients in ℝ has infinite dimension on ℝ, since it contains the rational functions 1, <i>x</i>, <i>x</i><sup>2</sup>, ..., <i>x<sup>i</sup></i>, whilst is an extension of degree 1 on itself.</p>
 
@@ -64,9 +64,9 @@
 
 <p>If <i>F</i> is an extension field of <i>K</i>, then multiplication in <i>F</i> defines a scalar multiplication, if we consider the elements of <i>K</i> as scalars and the elements of <i>F</i> as vectors. It is easy to check that the necessary axioms hold for this scalar multiplication, and since <i>F</i> is an abelian group under addition, we see that <i>F</i> is a <a href="../linear_algebra/vector_space.html">vector space</a> over <i>K</i>. We crystalyze this fact as a proposition.</p>
 
-<p><b>Proposition 8.1.4</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
+<p><b>Proposition 8.1.5</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
 
-<p><b>Example 8.1.5</b>. Every element of ℂ (considered as a vector space over ℝ) is a linear combination of 1 and <i>i</i> because every element can be written in the formal <i>a</i>1 + <i>bi</i>, with <i>a, b</i> &in; ℝ. Thus the set {1, <i>i</i>} spans ℂ over ℝ. The set {1 + <i>i</i>, 5<i>i</i>, 2 + 3<i>i</i>} also spans ℂ because any <i>a</i> + <i>bi</i> &in; ℂ is a linear combination of these three elements with coefficients in ℝ:</p>
+<p><b>Example 8.1.6</b>. Every element of ℂ (considered as a vector space over ℝ) is a linear combination of 1 and <i>i</i> because every element can be written in the formal <i>a</i>1 + <i>bi</i>, with <i>a, b</i> &in; ℝ. Thus the set {1, <i>i</i>} spans ℂ over ℝ. The set {1 + <i>i</i>, 5<i>i</i>, 2 + 3<i>i</i>} also spans ℂ because any <i>a</i> + <i>bi</i> &in; ℂ is a linear combination of these three elements with coefficients in ℝ:</p>
 
 <div class="eq">
 <p><i>a</i> + <i>b</i> = 3<i>a</i>(1 + <i>i</i>) + <i>b</i>/5 (5<i>i</i>) + (−<i>a</i>)(2 + 3<i>i</i>).</p>
@@ -76,12 +76,12 @@
 
 <p>Knowing that an extension field is a vector space over the base field allows us to make use of the concept of the dimension of a vector space.</p>
 
-<p><b>Proposition 8.1.4</b>. Let <i>F</i> be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
+<p><b>Proposition 8.1.7</b>. Let <i>F</i> be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
 
 <p>A tower of extensions is a sequence of successive field extensions. In a tower of extensions, the degree is multiplicative:</p>
 
 <div id="tower">
-<p><b>Theorem 8.1.6</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
+<p><b>Theorem 8.1.8</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
 
 <ol type="a">
 	<li><p><i>L</i> is a finite extension of <i>F</i></p></li>
@@ -143,7 +143,7 @@
 
 <p>The last result can be seen as an analogous for field extension of the <a href="lagrange.html">Lagrange's theorem</a> for finite groups.</p>
 
-<p><b>Corollary 8.1.8</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
+<p><b>Corollary 8.1.9</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
 
 <section aria-label="End">
 <a href="finite_abelian_groups.html">&#171;Finite Abelian Groups</a>
