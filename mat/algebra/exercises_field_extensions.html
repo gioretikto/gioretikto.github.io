@@ -22,6 +22,8 @@
 <h1>Exercises on Field Extensions</h1>
 
 <ol>
+	<li><p>If <i>F</i> is a field, then the intersection of any nonempty collection ofsubfields of <i>F</i> is also a subfield of <i>F</i>.</p></li> 
+
 	<li><p>Determine whether the polynomial <i>x</i><sup>2</sup> − 5 is irreducible over ℚ and ℚ(√3)</p></li>
 
 	<li><p>Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>, an algebraic element over <i>F</i>. Let <i>p</i>(<i>x</i>) its minimal polynomial over <i>F</i> (that is the monic polynomial &in; <i>F</i>[<i>x</i> such that <i>p</i>(<i>a</i>) = 0). Prove that <i>p</i>(<i>x</i>) is irreducible over <i>F</i>. Conversely, if <i>p</i>(<i>x</i>) is a monic and irreducible polynomial of <i>F</i>[<i>x</i>], prove this is the minimal polynomial for each one of its roots.</p></li>
@@ -74,6 +76,9 @@
 <h2>Solutions</h2>
 
 <ol>
+
+	<li><p>Let <i>S</i> = ⋂<sub><i>i</i> ∈ <i>I</i></sub> <i>F<sub>i</sub></i> where the <i>F<sub>i</sub></i> are subfields of <i>F</i>. Then by the <a href="field_extensions.html">subfield criterion</a>, 0,1 &in; <i>F<sub>i</sub></i>. Furthermore, for any <i>a,b,c</i> ∈ <i>S</i> with <i>c</i> &ne; 0, we have <i>a,b,c</i> ∈ <i>F<sub>i</sub></i> for all <i>i</i>. Thus, <i>a</i> − <i>b</i> ∈ <i>F<sub>i</sub></i> and <i>a</i>·<i>c</i><sup>−1</sup> ∈ <i>F<sub>i</sub></i> for all <i>i</i> by the subfield criterion, and therefore <i>a</i>− <i>b</i> ∈ <i>S</i> and <i>a</i> ⋅ <i>c</i><sup>−1</sup> ∈ <i>S</i>, so <i>S</i> is a subfield.&emsp;■</p></li>
+
 	<li><p>If <i>x</i><sup>2</sup> − 5 were reducible it should have a 1st degree factor in its factorization; But by <a href="ruffini.html">Ruffini's theorem</a> since there are no roots it cannot be divisible by <i>x</i> − <i>a</i>, so it's irreducible in ℚ.</p>
 
 	<p>Suppose that <i>x</i><sup>2</sup> − 5 has the root √5 &in; ℚ(√3); A basis of ℚ(√3) is {1, √3}. Then</p>
