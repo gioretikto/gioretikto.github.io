@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Subgroups"/>
-  <title>Subgroups</title>
-  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Subgroups"/>
+	<title>Subgroups</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -25,6 +25,20 @@
 
 <p><b>Definition 7.2.1</b>. A subgroup <i>S</i> of a group <i>G</i> is a non-empty subset of <i>G</i> which is itself a group under the same operation as <i>G</i>.</p>
 
+<p>When proving that a subset of a group is a subgroup, it is never necessary to check associativity. Since the associative law holds for all elements of the group, it automatically holds when the elements are in some subset <i>H</i>. <br>To determine whether a subset <i>H</i> of a group <i>G</i> with an operation ∗ is a subgroup, we need not verify all the axioms. The following axioms (S1) and (S2) are sufficient.</p>
+
+<p><b>Theorem 7.2.2</b>. A nonempty subset <i>H</i> of a group <i>G</i> is a subgroup of <i>G</i> provided that</p>
+
+<ol>
+	<li><p>(S1) if <i>a, b</i> &in; <i>H</i>, then <i>ab</i> &in; <i>H</i>;</p></li>
+	<li><p>(S2) if <i>a</i> &in; <i>H</i>, then <i>a</i><sup>−1</sup> &in; <i>H</i>.</p></li>
+</ol>
+
+<p>Properties (S1) and (S2) are the closure and inverse axioms for a group. Associativity holds in <i>H</i>, as noted above. Thus we need only verify that <i>e</i> &in; <i>H</i>. Since <i>H</i> is nonempty, there exists an element <i>c</i> &in; <i>H</i>. By (S2), <i>c</i><sup>−1</sup> &in; <i>H</i>, and by (S1) <i>cc</i><sup>−1</sup> &in; <i>e</i> is in <i>H</i>. Therefore <i>H</i> is a group. &emsp;□.</p>
+
+<p>The subset {e} that contains the identity element e of <i>G</i> alone forms a subgroup of <i>G</i>. <i>G</i> may be considered as a subgroup of itself. These two subgroups are trivial subgroups of G. The set of all integers forms a subgroup of the group of all rational numbers under real addition +. </p>
+
+<!--
 <p>Then a subset <i>S</i> of a group (<i>G</i>, ⋅) is a subgroup if and only if</p>
 
 <ol type="a">
@@ -36,7 +50,7 @@
 	</li>
 	
 	<li><p>for all <i>s</i> in <i>S</i>, <i>s</sup><sup>−1</sup></i> &in; <i>S</i>.</p>
-</ol>
+</ol>-->
 
 <p><b>Remark</b>. <i>S</i> = {−1, 1} is a nonempty subset of ℚ, and it is a group with respect to multiplication that is a subgroup (ℚ,*), but it is not a subgroup of (ℚ,+).</p>
 
@@ -48,38 +62,32 @@
 <p><i>H</i> &le; <i>G</i>, &emsp; or &emsp; <i>H</i> &lt; <i>G</i> &emsp; (if <i>H</i> &ne; <i>G</i>)</p>
 </div>
 
-<p>The conditions required in the definition of subgroup can be combined into one simple test.</p>
-
-<p><b>Proposition 7.2.2</b>. (<i>Subgroup Theorem</i>) A non-empty subset <i>S</i> of a group <i>G</i> is a subgroup if and only if whenever <i>a, b ∈ S</i>, then <i>ab</i><sup>−1</sup> ∈ <i>S</i>.</p>
-
-<p><b>Proof</b>. The condition is obviuosly necessary. We now show that is also sufficient. If <i>S</i> is reduced to the identity element, it is automatically a subgroup. Let <i>a = x</i> and <i>b = x</i> both in <i>S</i>, in the hyphothesis, we have <i>e = xx</i><sup>−1</sup> = ab<sup>−1</sup></i> is in <i>S</i>. Taking the two elements <i>a = e &in; S</i> and <i>b = x &in; S</i> in the statement of the theorem, we have <i>ex</i><sup>−1</sup> = <i>x</i><sup>−1</sup> &in; <i>S</i>. Finally, the proof will be comple when we show that <i>S</i> is closed; that is, if <i>x,y</i> belong to <i>S</i>, we muest show that <i>xy &in; S</i> also. We have already shown that <i>y</i><sup>−1</sup></i> &in; <i>S</i> if <i>y</i> &in; <i>S</i>; so, letting <i>a = x</i>, and <i>b = y</i><sup>−1</sup>, we have <i>xy = x</i>(<i>y</i><sup>−1</sup>)<sup>−1</sup> = <i>ab</i><sup>−1</sup> is in <i>S</i>.  &emsp;□</p>
-
 <div id="center">
 <p><b>7.2.3 Definition</b>. Let (<i>G</i>, ⋅) a group. The <i>center</i> of <i>G</i> is the subset of <i>G</i> consinsting of all those elements that commute with every element of <i>G</i> <i>i.e.</i></p>
 
 <div class="eq">
-<p><i>Z</i>(<i>G</i>) = {<i>g &in;  G</i> | <i>gx = xg</i> &emsp; &forall;<i>x</i> &in; <i>G</i>}</p>
+<p><i>Z</i>(<i>G</i>) = {<i>g</i> &in; <i>G</i> | <i>gx</i> = <i>xg</i> &emsp; &forall;<i>x</i> &in; <i>G</i>}</p>
 </div>
 
-<p>The notation <i>Z</i>(<i>G</i>) comes from the fact that the German word for center is <i>Zentrum</i>. The term was coined by J. A. de Séguier in 1904. Note that the centre of G is equal to <i>G</i> if and only if <i>G</i> is abelian.</p>
+<p>The notation <i>Z</i>(<i>G</i>) comes from the fact that the German word for center is <i>Zentrum</i>. The term was coined by J. A. de Séguier in 1904. Note that the centre of <i>G</i> is equal to <i>G</i> if and only if <i>G</i> is abelian.</p>
 
 <p><b>7.2.4 Proposition</b>. The center of a group <i>G</i> is a subgroup of <i>G</i>.</p>
 
-<p><b>Proof</b>. Clearly, <i>e &in; Z</i>(<i>G</i>), so <i>Z</i>(<i>G</i>) is nonempty. Now, suppose <i>a, b &in; Z</i>(<i>G</i>). Then (<i>ab</i>)<i>x</i> = <i>a</i>(<i>bx</i>) = <i>a</i>(<i>xb</i>) = (<i>ax</i>)<i>b</i> = (<i>xa</i>)<i>b</i> = <i>x</i>(<i>ab</i>) for all <i>x &in; G</i>; and, therefore, <i>ab &in; Z</i>(<i>G</i>), so that <i>Z</i>(<i>G</i>) satisfies the first axiom (associativity) for groups. Furthermore, multiplying both sides of the equation <i>xg = gx</i> first on the right side then on the left by <i>x<sup>−1</sup></i>, we deduce that <i>gx</i><sup>−1</sup> = <i>x</i><sup>−1</sup><i>g</i>, which shows that <i>x</i><sup>−1</sup> &in; <i>Z</i>(<i>G</i>). Satisfying all axioms, we conclude <i>Z</i>(<i>G</i>) is a subgroup of <i>G</i>. &emsp;□</p>
+<p><b>Proof</b>. Clearly, <i>e</i> &in; <i>Z</i>(<i>G</i>), so <i>Z</i>(<i>G</i>) is nonempty. Now, suppose <i>a, b</i> &in; <i>Z</i>(<i>G</i>). Then (<i>ab</i>)<i>x</i> = <i>a</i>(<i>bx</i>) = <i>a</i>(<i>xb</i>) = (<i>ax</i>)<i>b</i> = (<i>xa</i>)<i>b</i> = <i>x</i>(<i>ab</i>) for all <i>x</i> &in; <i>G</i>; and, therefore, <i>ab &in; Z</i>(<i>G</i>), so that <i>Z</i>(<i>G</i>) satisfies the first axiom (associativity) for groups. Furthermore, multiplying both sides of the equation <i>xg</i> = <i>gx</i> first on the right side then on the left by <i>x<sup>−1</sup></i>, we deduce that <i>gx</i><sup>−1</sup> = <i>x</i><sup>−1</sup><i>g</i>, which shows that <i>x</i><sup>−1</sup> &in; <i>Z</i>(<i>G</i>). Satisfying all axioms, we conclude <i>Z</i>(<i>G</i>) is a subgroup of <i>G</i>. &emsp;□</p>
 </div>
 
-<p><b>7.2.5 Definition</b>. Let (<i>G</i>, ⋅) a group, and let <i>g &in; G</i>. and <i>i</i> &in; ℤ. We define power <i>g<sup>i</sup></i> of <i>g</i> with exponent <i>i</i> the following element of <i>G</i>:</p>
+<p><b>7.2.5 Definition</b>. Let (<i>G</i>, ⋅) a group, and let <i>g</i> &in; <i>G</i>. and <i>i</i> &in; ℤ. We define power <i>g<sup>i</sup></i> of <i>g</i> with exponent <i>i</i> the following element of <i>G</i>:</p>
 
 <table class="noborder centertable">
-<tr> <td rowspan="3"> <i>g<sup>i</sup> =</td> <td>g ⋅ g ⋅ ⋅⋅⋅ ⋅ g</i> <br><i>i</i> times</td> <td>if <i>i</i> &gt; 0</td></tr>
+<tr> <td rowspan="3"> <i>g<sup>i</sup> =</td> <td><i>g</i> ⋅ <i>g</i> ⋅ ⋅⋅⋅ ⋅ <i>g</i> <br><i>i</i> times</td> <td>if <i>i</i> &gt; 0</td></tr>
 <tr> <td><i>e</i></td> <td>if <i>i</i> = 0</td></tr>
-<tr> <td><i>g<sup>−1</sup> ⋅  ⋅⋅⋅ ⋅ g<sup>−1</sup></i> <br><i>i</i> times</td> <td>if <i>i</i> &lt; 0</td></tr>
+<tr> <td><i>g</i><sup>−1</sup> ⋅  ⋅⋅⋅ ⋅ <i>g</i><sup>−1</sup> <br><i>i</i> times</td> <td>if <i>i</i> &lt; 0</td></tr>
 </table>
 
 <p>The usual rules for manipulation of powers hold:</p>
 
 <div class="eq">
-<p><i>g<sup>i</sup> ⋅ g<sup>j</sup> = g<sup>i+j</sup></i> &emsp; and &emsp; (<i>g<sup>i</sup></i>)<i><sup>j</sup> = g<sup>ij</sup></i></p>
+<p><i>g<sup>i</sup></i> ⋅ <i>g<sup>j</sup></i> = <i>g</i><sup><i>i</i>+<i>j</i></sup> &emsp; and &emsp; (<i>g<sup>i</sup></i>)<sup><i>j</i></sup> = <i>g<sup>ij</sup></i></p>
 </div>
 
 <p>On the other hand, (<i>gh</i>)<sup><i>i</i></sup> &ne; <i>g<sup>i</sup>h<sup>i</sup></i> in general.</p>

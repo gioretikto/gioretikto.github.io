@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Field Extensions"/>
+    <meta name="description" content="Field Extensions">
     <title>Field Extensions</title>
     <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
@@ -21,41 +21,54 @@
 
 <h1>Field Extensions</h1>
 
-<p>Abstract algebra has three basic components: groups, rings, and fields. Thus far we have covered groups and rings in some detail, and we have touched on the notion of a <a href="rings.html#field">field</a>.</p>
+<p>In this section, we introduce an algebraic system with two binary operations, called a <i>field</i> we've already touched on the notion of a <a href="rings.html#field">field</a>.</p>
 
-<p>The properties satisfied by a field <i>F</i>, are more extensive than the four <a href="groups.html">group axioms</a> applied to both binary operations. The need of extra condition is pheraps natural considering that the notion of field involves two operations on the base set, rahter the one operation of a group. Recall that ℝ under standard addition is an Abelian group. On the other hand, ℝ under standard multplication is not a group − although it comes very close: the inverse property is not satisfied, and it fails for just one real number, zero. By removing the zero and considering the set ℝ* = ℝ\{0} we have a multiplicative group. Indeed, the first group axiom holds since the product of any two nonzero real numbers is still nonzero. Multiplication of real numbers is associative, 1 plays the role of an identity element, and 1/<i>a</i> gives the inverse of an element <i>a</i> &in; ℝ*. Thus ℝ* is a group under multiplication.</p>
+<p><b>Definition 8.1.1</b>. A <b>field</b> is a set together with two laws of composition:</p>
 
-<p>Similarly, we have the groups ℚ* of all nonzero rational numbers and ℂ* of all nonzero complex numbers, under the operation of ordinary multiplication. If we attempt to form a multiplicative group from the integers ℤ, we have to restrict ourselves to just 1, since these are the only integers that have multiplicative inverses in ℤ.</p>
+<table class="centertable noborder">
 
-<p><b>Definition 8.1.1</b>. A set <i>F</i> under two binary operations, '+' and 'x' is a <b>field</b> if the following properties hold:</p>
+<tr><td><i>F</i> x <i>F</i></td> <td>+<br>⟶</td> <td><i>F</i></td> <td></td> <td></td><td><i>F</i> x <i>F</i></td> <td>⋅<br>⟶</td> <td><i>F</i></td></tr>
+
+<tr><td>a,b</td> <td>⟼</td> <td><i>a</i> + <i>b</i></td> <td></td> <td></td> <td><i>a,b</i></td> <td>⟼</td> <td><i>ab</i></td> </tr>
+
+</table>
+
+<p>called addition and multiplication, and satisfying the followin axioms:</p>
 
 <ol>
-	<li><p>The set <i>F</i> is an Abelian group under the "addition" operation +. The additive identity is called the <b>zero</b> and is denoted by 0;</p></li>
+	<li><p><i>F</i> is an Abelian group under the "addition" operation +. The additive identity is called the <b>zero</b> and is denoted by 0;</p></li>
 
-	<li><p>The set <i>F</i>* = <i>F</i>\{0} is an Abelian group under the "multiplication" operation 'x'. The multiplicative identity is called the <b>unity</b> and is denoted by 1;</p></li>
+	<li><p>The set <i>F</i>* = <i>F</i> \ {0} of nonzero elements of <i>F</i> is an Abelian group under the "multiplication" operation '⋅'. The multiplicative identity is called the <b>unity</b> and is denoted by 1;</p></li>
 
-	<li><p>The multiplication operation x distributes over the addition operation +; that is <i>a</i> x (<i>b</i> + <i>c</i>) = <i>a</i> x <i>b</i> + <i>a</i> x <i>c</i>, for every <i>a,b,c</i> &in; <i>F</i>. &emsp;□</p>
+	<li><p>The multiplication operation '⋅' distributes over the addition operation +; that is <i>a</i> ⋅ (<i>b</i> + <i>c</i>) = <i>a</i> ⋅ <i>b</i> + <i>a</i> ⋅ <i>c</i>, for every <i>a,b,c</i> &in; <i>F</i>. &emsp;□</p>
 </ol>
+
+<p>From the definition, we see that a field consists of two groups with respect to two operations, addition and multiplication. The group with respect to addition is called the <i>additive group</i> of the field, and the group with respect to multiplicatoin is called the <i>multiplicative group</i> of the field. Since these two groups must contain an identity element, a field must contain at least two elements. In a field the additive inverse of an element <i>a</i> is denoted by '−<i>a</i>', and the mutliplicative inverse of <i>a</i> is denoted <i>a</i><sup>−1</sup>, provided that <i>a</i> &ne; 0.</p>
+
+<p>The properties satisfied by a field <i>F</i>, are more extensive than the four <a href="groups.html">group axioms</a> applied to both binary operations. Recall that ℝ under standard addition is an Abelian group. On the other hand, ℝ under standard multplication is not a group − although it comes very close: the inverse property is not satisfied, and it fails for just one real number, zero. By removing the zero and considering the set ℝ* = ℝ\{0} we have a multiplicative group. Indeed, the first group axiom holds since the product of any two nonzero real numbers is still nonzero. Multiplication of real numbers is associative, 1 plays the role of an identity element, and 1/<i>a</i> gives the inverse of an element <i>a</i> &in; ℝ*. Thus ℝ* is a group under multiplication. <br> Similarly, we have the groups ℚ* of all nonzero rational numbers and ℂ* of all nonzero complex numbers, under the operation of ordinary multiplication. If we attempt to form a multiplicative group from the integers ℤ, we have to restrict ourselves to just 1, since these are the only integers that have multiplicative inverses in ℤ.</p>
 
 <p>There are actually many fields lying between ℚ and ℂ, not only ℝ. One simple example is the field ℚ(<i>i</i>) = {<i>p</i> + <i>qi</i> | <i>p, q</i> ∈ ℚ} which has already been mentioned a couple of times. A similar example is ℚ(√2) = {<i>p</i> + <i>q</i>√2 | <i>p,q</i> ∈ ℚ}. There are, on the other hand, fields whose elements are not numbers, for example, ℤ<sub><i>p</i></sub> is a (finite) field for every prime number <i>p</i>.</p>
 
-<p id="subfield"><b>Definition 8.1.2</b> (<b>Subfield</b>) A subset <i>K</i> of a field <i>F</i> is called a <b>subfield</b> of <i>F</i> if <i>K</i> is itself a field under the same binary operations, addition and multiplication, of <i>F</i> that is iff it satisfies the axioms in definition 8.1.1. &emsp;□</p>
-
-<p>To explore fields more deeply, we need some rudiments of vector space theory studied in a linear algebra course.</p>
-
-<p><b>Definition 8.1.4</b> (<i>Field Extension</i>) If <i>F</i> and <i>K</i> are fields with <i>K</i> &subseteq; <i>F</i>, we say that <i>F</i> is an extension field of <i>K</i>. &emsp;□</p>
-
-<p>For example, the field ℂ of complex numbers is an extension of degree 2 on ℝ, since a basis is given by 1 and <i>i</i>, whilst is of degree 1 on itself. The field ℝ(<i>x</i>) of rational functions with coefficients in ℝ has infinite dimension on ℝ, since it contains the rational functions 1, <i>x</i>, <i>x</i><sup>2</sup>, ..., <i>x<sup>i</sup></i>, whilst is an extension of degree 1 on itself.</p>
+<p id="subfield"><b>Definition 8.1.2</b> Let <i>F</i> be a field, A subset <i>K</i> of <i>F</i> that is itself a field under the operations of <i>F</i> is called a <b>subfield</b> of <i>F</i>. In this context, <i>F</i> is called an <b>extension field</b> of <i>K</i>. If <i>K</i> &ne; <i>F</i>, we say that <i>K</i> is a <i>proper subfield</i> of <i>F</i>. A field containing no proper subfields is called a <b>prime field</b>. &emsp;□</p>
 
 <p>To be more precise, an extension field of a field <i>F</i> is a pair (<i>K, &iota;</i>) made by a field <i>K</i> and a monomorphic (of field) <i>&iota;</i> from <i>F</i> to <i>K</i>. Generally we identify an element <i>a</i> of <i>F</i> by its image <i>&iota;</i>(<i>a</i>) in <i>K</i>, considering <i>F</i> as subfield of <i>K</i>.</p>
 
-<p>We already introduced the notion of <a href="characteristic_integral_domain.html">characteristic of a field</a> and that of a <i>prime subfield</i>. We have proved in <a href="characteristic_integral_domain.html">Theorem 4.15.5</a> that the prime subfield of every field with characteristic zero is the rational field, whilst the prime subfield of every field with characteristic <i>p</i> is the field ℤ<sub><i>p</i></sub>. Thus every field with characteristic zero is the extension the the rationals (it embeds the rational field), while every field of characteristic <i>p</i> is the extension of the field ℤ<sub><i>p</i></sub>.</p>
+<h4>Characteristic of a field</h4>
+
+<p>We already introduced the notion of <a href="char.html">characteristic of a field</a> and that of a <i>prime subfield</i>. We have proved in <a href="char.html">Theorem 4.15.6</a> that the prime subfield of every field with characteristic zero is the rational field, whilst the prime subfield of every field with characteristic <i>p</i> is the field ℤ<sub><i>p</i></sub>. Thus every field with characteristic zero is the extension the the rationals (it embeds the rational field), while every field of characteristic <i>p</i> is the extension of the field ℤ<sub><i>p</i></sub>.</p>
+
+<p>Every field ia an integral domain. Thus in order to find the characteristic of field <i>F</i>, we should find the order of the unit element 1 of <i>F</i> when regarded as a member of the additive group of <i>F</i>, (<i>F</i>,+), which is generated by the multiplicative identity 1.</p>
+
+<div class="eq">
+<p><i>n</i> ⋅ 1 := 1 + 1 + ... + 1 = 0<br>
+&emsp; <i>n</i> times</p>
+</div>
 
 <p>If <i>F</i> is an extension field of <i>K</i>, then multiplication in <i>F</i> defines a scalar multiplication, if we consider the elements of <i>K</i> as scalars and the elements of <i>F</i> as vectors. It is easy to check that the necessary axioms hold for this scalar multiplication, and since <i>F</i> is an abelian group under addition, we see that <i>F</i> is a <a href="../linear_algebra/vector_space.html">vector space</a> over <i>K</i>. We crystalyze this fact as a proposition.</p>
 
-<p><b>Proposition 8.1.5</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
+<p><b>Proposition 8.1.3</b>. If <i>F</i> is an extension field of <i>K</i>, then <i>F</i> is a vector space over <i>K</i>. &emsp;□</p>
 
-<p><b>Example 8.1.6</b>. Every element of ℂ (considered as a vector space over ℝ) is a linear combination of 1 and <i>i</i> because every element can be written in the formal <i>a</i>1 + <i>bi</i>, with <i>a, b</i> &in; ℝ. Thus the set {1, <i>i</i>} spans ℂ over ℝ. The set {1 + <i>i</i>, 5<i>i</i>, 2 + 3<i>i</i>} also spans ℂ because any <i>a</i> + <i>bi</i> &in; ℂ is a linear combination of these three elements with coefficients in ℝ:</p>
+<p><b>Example 8.1.4</b>. Every element of ℂ (considered as a vector space over ℝ) is a linear combination of 1 and <i>i</i> because every element can be written in the formal <i>a</i>1 + <i>bi</i>, with <i>a, b</i> &in; ℝ. Thus the set {1, <i>i</i>} spans ℂ over ℝ, so ℂ is an extension of degree 2 on ℝ. The set {1 + <i>i</i>, 5<i>i</i>, 2 + 3<i>i</i>} also spans ℂ because any <i>a</i> + <i>bi</i> &in; ℂ is a linear combination of these three elements with coefficients in ℝ:</p>
 
 <div class="eq">
 <p><i>a</i> + <i>b</i> = 3<i>a</i>(1 + <i>i</i>) + <i>b</i>/5 (5<i>i</i>) + (−<i>a</i>)(2 + 3<i>i</i>).</p>
@@ -63,14 +76,16 @@
 
 <p>{1, <i>i</i>} represents a basis of the vector field since it is linear inddependent; the set {1 + <i>i</i>, 5<i>i</i>, 2 + 3<i>i</i>} is not linearly independent and so it's not a basis. &emsp;■</p>
 
+<p>The field ℝ(<i>x</i>) of rational functions with coefficients in ℝ has infinite dimension on ℝ, since it contains the rational functions 1, <i>x</i>, <i>x</i><sup>2</sup>, ..., <i>x<sup>i</sup></i>, whilst is an extension of degree 1 on itself.</p>
+
 <p>Knowing that an extension field is a vector space over the base field allows us to make use of the concept of the dimension of a vector space.</p>
 
-<p><b>Proposition 8.1.7</b>. Let <i>F</i> be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
+<p><b>Proposition 8.1.5</b>. Let <i>F</i> be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
 
 <p>A tower of extensions is a sequence of successive field extensions. In a tower of extensions, the degree is multiplicative:</p>
 
 <div id="tower">
-<p><b>Theorem 8.1.8</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
+<p><b>Theorem 8.1.6</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
 
 <ol type="a">
 	<li><p><i>L</i> is a finite extension of <i>F</i></p></li>
@@ -130,9 +145,9 @@
 <p>[<i>L</i> : <i>F</i>] = [<i>L</i> : <i>K</i>][<i>K</i> : <i>F</i>] &emsp;⇒ &emsp; [<i>K</i> : <i>F</i>] | [<i>L</i> : <i>F</i>]. &emsp;□</p></li>
 </div>
 
-<p>The last result can be seen as an analogous for field extension of the <a href="lagrange.html">Lagrange's theorem</a> for finite groups.</p>
+<p>The last result can be seen as an analogous for field extension of the <a href="Lagrange.html">Lagrange's theorem</a> for finite groups.</p>
 
-<p><b>Corollary 8.1.9</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
+<p><b>Corollary 8.1.8</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
 
 <section aria-label="End">
 <a href="finite_abelian_groups.html">&#171;Finite Abelian Groups</a>

@@ -11,10 +11,10 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -26,15 +26,15 @@
 <p><b>Definition 7.15.1</b> An <i>action</i> of the group <i>G</i> on a non-empty set <i>X</i> is a function</p>
 
 <div class="eq">
-<p>*: <i>G × X → X</i><br>
-(<i>g, x</i>) ⟼ <i>g * x</i>,</p>
+<p>*: <i>G</i> × <i>X</i> → <i>X</i><br>
+(<i>g, x</i>) ⟼ <i>g</i> * <i>x</i>,</p>
 </div>
 
 <p>such that</p>
 
 <ol type="i">
-	<li><p> e * <i>x = x</i> (<i>e</i> is the identity of <i>G</i>), for any <i>x ∈ X</i>;</p></li>
-	<li><p>(<i>g</i><sub>1</sub><i>g</i><sub>2</sub>) * <i>x = g</i><sub>1</sub> * (<i>g</i><sub>2</sub> * <i>x</i>), for any <i>x ∈ X, g</i><sub>1</sub>, <i>g</i><sub>2</sub> ∈ <i>G</i> .</p></li>
+	<li><p><i>e</i> * <i>x</i> = <i>x</i> (<i>e</i> is the identity of <i>G</i>), for any <i>x ∈ X</i>;</p></li>
+	<li><p>(<i>g</i><sub>1</sub><i>g</i><sub>2</sub>) * <i>x = g</i><sub>1</sub> * (<i>g</i><sub>2</sub> * <i>x</i>), for any <i>x</i> ∈ <i>X</i>, <i>g</i><sub>1</sub>, <i>g</i><sub>2</sub> ∈ <i>G</i> .</p></li>
 </ol>
 
 <p>The notion of a group action is equivalent to the notion of a <a href="group_homomorphism.html">homomorphism</a> from a group to a symmetric group, in the following sense: if <i>&psi;</i> is a homomorphism from a group <i>G</i> to a symmetric group S(<i>X</i>), then for every element <i>g &in; G</i> there is a bijections <i>&psi;<sub>g</sub></i> from <i>X</i> to <i>X</i> given by <i>&psi;<sub>g</sub></i>(<i>x</i>) = <i>g * x</i>, with inverse <i>&psi;<sub>g</i><sup>&minus;1</sup></sub>, which defines an action of <i>G</i> on <i>X</i>. Conditions i) and ii) state that the mapping <i>&psi;</i> from <i>G</i> to the group <i>S</i>(<i>X</i>) made by of all bijections (symmetric group) from <i>X</i> to itself is given by</p>
@@ -58,31 +58,29 @@
 
 <p>If <i>&psi;</i> is a permutation representation of a group <i>G</i> on a set <i>X</i>, then <i>G</i>/ Ker(<i>&psi;</i>) ≃ Im(<i>&psi;</i>) by the <a href="fund_theo_group_homo.html">First Isomorphism Theorem 7.13.2</a>. Thus <i>G</i>/ Ker(<i>&psi;</i>) is isomorphic with a permutation group on <i>X</i>. If Ker(<i>&psi;</i>) = <i>e</i>, then <i>G</i> itself is isomorphic with a permutation group on <i>X</i>, in which case the representation <i>&psi;</i> is said to be faithful. The term faithful can also be applied to a group action by means of the associated permutation representation.</p>
 
-<p>For every <i>x</i> &in; <i>X</i> and <i>g</i> &in; <i>G</i> we shalle indicate <i>g</i> * <i>x</i> simply as <i>gx</i>: pay attention to the fact that this shorthand has not the meaning of a multiplicatoin between elements!</p>
-
-<p>We can read the equation <i>y = gx</i> by saying that the element <i>g &in; G</i>, moves the element <i>x &in; X</I> to the element <i>y &in; Y</i>, or equivantely that <i>x</i> is moved in <i>y</i> by <i>g</i>.</p>
+<p>For every <i>x</i> &in; <i>X</i> and <i>g</i> &in; <i>G</i> we shall indicate <i>g</i> * <i>x</i> simply as <i>gx</i>: pay attention to the fact that this shorthand has not the meaning of a multiplicatoin between elements!</p>
 
 <p>Given a <i>G</i>-Set <i>X</i>, it is defined the following relation on <i>X</i>:</p>
 
 <div class="eq">
-<p><i>x</i> ≡ <i>y</i> &emsp; ⇐⇒ &emsp;∃<i>g</i> &in; <i>G</i> | <i>y = gx</i>.</p>
+<p><i>x</i> ≡ <i>y</i> &emsp; ⇐⇒ &emsp;∃<i>g</i> &in; <i>G</i> | <i>y</i> = <i>gx</i>.</p>
 </div>
 
 <p>This is an equivalence relation. Equivalence classes are called <b>orbits</b>. The orbit of an element <i>x &in; X</i>, is indicated by 𝓞(<i>x</i>):</p>
 
 <div class="eq">
-<p>𝓞(<i>x</i>) := {<i>y &in; X</i> | <i>y = gx</i> for some <i>g &in; G</i>}</p>
+<p>𝓞(<i>x</i>) := {<i>y</i> &in; <i>X</i> | <i>y</i> = <i>gx</i> for some <i>g</i> &in; <i>G</i>}</p>
 </div>
 
-<p>In terms of movements, the orbit of an element <i>x &in; X</i> is made by all <i>y &in; X</i> in which the element <i>x</i> can be moved by the elements of <i>G</i>.</p>
+<p>In terms of movements, the orbit of an element <i>x &in; X</i> is made by all <i>y</i> &in; <i>X</i> in which the element <i>x</i> can be moved by the elements of <i>G</i>.</p>
 
-<p><b>Definition 7.15.2</b> Let <i>G</i> a group acting on a set <i>X</i>. We define the stibilizer of <i>G</i>, St<sub><i>x</i></sub> of an element <i>x &in; X</i>, the set of the elemnts <i>g &in; G</i>, which let <i>x</i> fixed, that is</p>
+<p><b>Definition 7.15.2</b> Let <i>G</i> a group acting on a set <i>X</i>. We define the stibilizer of <i>G</i>, St<sub><i>x</i></sub> of an element <i>x</i> &in; <i>X</i>, the set of the elemnts <i>g</i> &in; <i>G</i>, which let <i>x</i> fixed, that is</p>
 
 <div class="eq">
-<p>St<sub><i>x</i></sub> := {<i>g &in; G</i> | <i>gx = x</i>}</p>
+<p>St<sub><i>x</i></sub> := {<i>g</i> &in; <i>G</i> | <i>gx</i> = <i>x</i>}</p>
 </div>
 
-<p><b>Definition 7.15.3</b>. For a fixed element <i>a</i> of a group <i>G</i>, the set <i>C<sub>a</sub></i> = {<i>x</i> &in; <i>G</i> | <i>ax = xa</i>} is the centralizer of <i>a</i> in <i>G</i>.</p>
+<p><b>Definition 7.15.3</b>. For a fixed element <i>a</i> of a group <i>G</i>, the set <i>C<sub>a</sub></i> = {<i>x</i> &in; <i>G</i> | <i>ax</i> = <i>xa</i>} is the centralizer of <i>a</i> in <i>G</i>.</p>
 
 <p><b>Proposition 7.15.4</b>. The subgroup St<sub><i>x</i></sub> of <i>G</i>. In addition</p>
 
@@ -92,7 +90,7 @@
 
 <p>that is the stabilizers of elements which are in the same orbit are conjugates.</p>
 
-<p><b>Proof</b>. For the sencod part of the proposition. Let <i>w = gx</i> then St<sub>w</sub> := {<i>y ∈ G</i> | <i>yw = w</i>}. Then if <i>y</i> &in; St<sub><i>gx</i></sub> yw = w or y(gx) = <i>gx</i>.</p>
+<p><b>Proof</b>. For the sencod part of the proposition. Let <i>w</i> = <i>gx</i> then St<sub>w</sub> := {<i>y</i> ∈ <i>G</i> | <i>yw</i> = <i>w</i>}. Then if <i>y</i> &in; St<sub><i>gx</i></sub> <i>yw</i> = <i>w</i> or y(gx) = <i>gx</i>.</p>
 
 <div class="eq">
 <p><i>y</i> &in; St<sub><i>gx</i></sub> &emsp;⇐⇒&emsp; <i>y</i>(<i>gx</i>) = <i>gx</i> &emsp;⇐⇒ &emsp;<i>g</i><sup>&minus;1</sup><i>yg</i> &in; St<sub><i>x</i></sub>&emsp;⇐⇒&emsp; <i>y</i> &in; <i>g</i> St<sub><i>x</i></sub> <i>g</i><sup>&minus;1</sup></p>
@@ -106,14 +104,14 @@
 	<li><p><b>Action by Conjugation</b>. Conjugation is an important special case of an action of a group on a set. Every group <i>G</i> acts on itself, that is on <i>X = G</i> by conjugation. In this case</p>
 	
 	<div class="eq">
-	<p><i>g * x</i> := <i>gxg</i><sup>&minus;1</sup></p>
+	<p><i>g</i> * <i>x</i> := <i>gxg</i><sup>&minus;1</sup></p>
 	</div>
 	
-	<p>The orbit of an element <i>x</i> &in;<i>X</i> (=<i>G</i>) is made by all elements <i>y &in; G</i> (=<i>X</i>) such that <i>y = gxg</i><sup>&minus;1</sup> for some <i>g &in; G</i>. The orbits are this conjugate classes. From here it appears clear why the writing <i>g * x</i> does not represent a product <i>gx</i> in <i>G</i> (which would have sense), but thte conjugate element gxg</i><sup>&minus;1</sup>.</p>
+	<p>The orbit of an element <i>x</i> &in;<i>X</i> (=<i>G</i>) is made by all elements <i>y &in; G</i> (=<i>X</i>) such that <i>y</i> = <i>gxg</i><sup>&minus;1</sup> for some <i>g</i> &in; <i>G</i>. The orbits are this conjugate classes. From here it appears clear why the writing <i>g * x</i> does not represent a product <i>gx</i> in <i>G</i> (which would have sense), but thte conjugate element <i>gxg</i><sup>&minus;1</sup>.</p>
 	<p>The stabilizer St<sub><i>x</i></sub> of an element <i>x</i> &in; <i>X</i> is given by</p>
 	
 	<div class="eq">
-	<p>St<sub><i>x</i></sub> = {<i>g &in; G</i> | <i>gxg</i><sup>&minus;1</sup> = <i>x</i>} = {<i>g &in; G</i> | <i>gx = xg</i>}</p>
+	<p>St<sub><i>x</i></sub> = {<i>g</i> &in; <i>G</i> | <i>gxg</i><sup>&minus;1</sup> = <i>x</i>} = {<i>g</i> &in; <i>G</i> | <i>gx</i> = <i>xg</i>}</p>
 	</div>
 	
 	<p>it coincides with the centralyzer of the element <i>x</i>, C(<i>x</i>).</p>
@@ -126,9 +124,9 @@
 	<p><i>&sigma;</i> * <i>x</i> = <i>&sigma;</i>(<i>x</i>) = the trasformed through &sigma; of <i>x</i>.</p>
 	</div>
 	
-	<p>The orbit of an element <i>x &in; X</i> is made by all those element <i>y &in; X</i> such for which there exist a <i>&sigma; &in; S<sub>n</sub></i> such that <i>y = &sigma;</i>(<i>x</i>). Given an element <i>x &in; X</i> there will certainly be an element <i>y &in; X</i> because there is a permutation that sends <i>x</i> in <i>y</i></p></li>
+	<p>The orbit of an element <i>x</i> &in; <i>X</i> is made by all those element <i>y</i> &in; <i>X</i> such for which there exist a <i>&sigma;</i> &in; <i>S<sub>n</sub></i> such that <i>y</i> = <i>&sigma;</i>(<i>x</i>). Given an element <i>x &in; X</i> there will certainly be an element <i>y &in; X</i> because there is a permutation that sends <i>x</i> in <i>y</i></p></li>
 	
-	<li><p>Let <i>&sigma;</i> = (4,5) (1,3,6) (2,7,8) &in; S<sub>8</sub> and let <i>G</i> =  ⟨<i>&sigma;</i>⟩. The the orbits under which <i>X</i> = {1,2,...,8} is parted under the action of <i>G</i> on <i>X</i> are three: {4,5}, {1,3,6} and {2,7,8}. The group G here is nothing but all possible group elements  &sigma;<sup><i>n</i></sup> for nonnegative integers <i>n</i>. Remember that in any finite cyclic group, such as this <sigma>, all negative powers can be rewritten as positive powers. In this case, that sigma has order 6 (as it turns out), so &sigma;<sup>−1</sup> = &sigma;<sup>(6 - 1)</sup> = &sigma;<sup>5</sup>,   sigma<sup>−2</sup> = &sigma;<sup>(6 − 2)</sup> = &sigma;<sup>4</sup>,  etc. So, more generally, for any x of finite order n in any group at all, <i>x</i><sup>−1</sup> is the same thing as x<sup>(n-1)</sup> So for example: σ1 = 3,  σσ1 = σ3 = 6,  σσσ1 = σσ3 = σ6 = 1. So that orbit is done and we have used up 1,3,6 from <i>X</i> so far.Then then the cycle diagram of σ is a graphical depiction of the action of <i>G</i> on <i>X</i>.</p></li>
+	<li><p>Let <i>&sigma;</i> = (4,5) (1,3,6) (2,7,8) &in; S<sub>8</sub> and let <i>G</i> =  ⟨<i>&sigma;</i>⟩. The the orbits under which <i>X</i> = {1,2,...,8} is parted under the action of <i>G</i> on <i>X</i> are three: {4,5}, {1,3,6} and {2,7,8}. The group <i>G</i> here is nothing but all possible group elements  &sigma;<sup><i>n</i></sup> for nonnegative integers <i>n</i>. Remember that in any finite cyclic group, such as this <sigma>, all negative powers can be rewritten as positive powers. In this case, that sigma has order 6 (as it turns out), so &sigma;<sup>−1</sup> = &sigma;<sup>(6 - 1)</sup> = &sigma;<sup>5</sup>, &sigma;<sup>−2</sup> = &sigma;<sup>(6 − 2)</sup> = &sigma;<sup>4</sup>,  etc. So, more generally, for any x of finite order n in any group at all, <i>x</i><sup>−1</sup> is the same thing as x<sup>(n-1)</sup> So for example: σ1 = 3,  σσ1 = σ3 = 6, σσσ1 = σσ3 = σ6 = 1. So that orbit is done and we have used up 1,3,6 from <i>X</i> so far.Then then the cycle diagram of σ is a graphical depiction of the action of <i>G</i> on <i>X</i>.</p></li>
 	
 	<li><p>Let <i>G</i> = GL<sub><i>n</i></sub>(R) the linear group made by all invertible matrices with real elements. This group acts on <i>X</i> = R<sup>n</sup> by the following natural action</p>
 	
@@ -155,7 +153,7 @@
 
 <p>We remark that if the stabilizer of an element <i>x &in; X</i> is large then its orbit is small.</p>
 
-<p><b>Example: Cayley’s Theorem</b>. We know that any group <i>G</i> acts on the set <i>X</i> = <i>G</i> by left multiplication. The preceding construction produces a group homomorphism <i>φ</i>: <i>G</i> → Sym(<i>G</i>) such that φ(<i>g</i>) = L<sub>g</sub> for all <i>g</i> ∈ G, and L<sub>g</sub>(<i>x</i>) = <i>gx</i> for all <i>x</i> ∈ <i>G</i>. We claim that <i>φ</i> is injective in this situation. For, suppose <i>g, h</i> ∈ <i>G</i> and <i>L<sub>g</sub> = L<sub>h</sub></i>. Applying these two functions to <i>e</i> (the identity of <i>G</i>) gives L<sub>g</sub>(<i>e</i>) = L<sub>h</sub>(<i>e</i>), so <i>ge</i> = <i>he</i>, so <i>g</i> = <i>h</i>. It follows that <i>G</i> is isomorphic (via <i>φ</i>) to the image of <i>φ</i>, which is a subgroup of the symmetric group Sym(<i>G</i>). This proves Cayley’s Theorem, which says that any group is isomorphic to a subgroup of some symmetric group. If <i>G</i> has <i>n</i> elements, one can check that Sym(<i>G</i>) is isomorphic to S<sub>n</sub>. So every <i>n</i>-element group is isomorphic to a subgroup of the symmetric group <i>S<sub>n</sub></i>. &emsp;■</p>
+<p><b>Example: Cayley’s Theorem</b>. We know that any group <i>G</i> acts on the set <i>X</i> = <i>G</i> by left multiplication. The preceding construction produces a group homomorphism <i>φ</i>: <i>G</i> → Sym(<i>G</i>) such that φ(<i>g</i>) = L<sub>g</sub> for all <i>g</i> ∈ <i>G</i>, and L<sub>g</sub>(<i>x</i>) = <i>gx</i> for all <i>x</i> ∈ <i>G</i>. We claim that <i>φ</i> is injective in this situation. For, suppose <i>g, h</i> ∈ <i>G</i> and <i>L<sub>g</sub> = L<sub>h</sub></i>. Applying these two functions to <i>e</i> (the identity of <i>G</i>) gives L<sub>g</sub>(<i>e</i>) = L<sub>h</sub>(<i>e</i>), so <i>ge</i> = <i>he</i>, so <i>g</i> = <i>h</i>. It follows that <i>G</i> is isomorphic (via <i>φ</i>) to the image of <i>φ</i>, which is a subgroup of the symmetric group Sym(<i>G</i>). This proves Cayley’s Theorem, which says that any group is isomorphic to a subgroup of some symmetric group. If <i>G</i> has <i>n</i> elements, one can check that Sym(<i>G</i>) is isomorphic to S<sub>n</sub>. So every <i>n</i>-element group is isomorphic to a subgroup of the symmetric group <i>S<sub>n</sub></i>. &emsp;■</p>
 
 <p><b>Proposition 7.15.6</b>. Let <i>X</i> a <i>G</i>-set. The cardinality of the orbit O(<i>x</i>) of the element <i>x</i> &in; <i>X</i> is equal to the index St<sub><i>x</i></sub> in <i>G</i></p>
 
@@ -169,16 +167,16 @@
 
 <div class="eq">
 <p>O(<i>x</i>) ⟶ S<br>
-gx ↦ St<sub><i>x</i></sub>g<sup>&minus;1</sup></p>
+<i>gx</i> ↦ St<sub><i>x</i></sub>g<sup>&minus;1</sup></p>
 </div>
 
 <p>It is a well-defines application and injective. Indeed</p>
 
 <div class="eq">
-<p><i>g</i><sub>1</sub>x = g<sub>2</sub><i>x</i> ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup><i>g</i><sub>1</sub>x = x ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup>g<sub>1</sub> &in; St<sub><i>x</i></sub> ⇐⇒  St<sub><i>x</i></sub> <i>g</i><sub>1</sub><sup>&minus;1</sup> = St<sub><i>x</i></sub> <i>g</i><sub>2</sub><sup>&minus;1</sup></p>
+<p><i>g</i><sub>1</sub><i>x</i> = <i>g</i><sub>2</sub><i>x</i> ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup><i>g</i><sub>1</sub>x = <i>x</i> ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup>g<sub>1</sub> &in; St<sub><i>x</i></sub> ⇐⇒  St<sub><i>x</i></sub> <i>g</i><sub>1</sub><sup>&minus;1</sup> = St<sub><i>x</i></sub> <i>g</i><sub>2</sub><sup>&minus;1</sup></p>
 </div>
 
-<p><b>Note on the last iff</b>: Apply the definition of <a href="cosets.html">right coset</a>: <i>a ~<sub>r</sub> b ⇐⇒ ab</i><sup>&minus;1</sup> &in; St<sub><i>x</i></sub> which in this case is: g<sub>2</sub><sup>&minus;1</sup>  ~<sub>r</sub> g<sub>1</sub><sup>&minus;1</sup>.</p>
+<p><b>Note on the last iff</b>: Apply the definition of <a href="cosets.html">right coset</a>: <i>a</i> ~<sub>r</sub> <i>b</i> ⇐⇒ <i>ab</i><sup>&minus;1</sup> &in; St<sub><i>x</i></sub> which in this case is: g<sub>2</sub><sup>&minus;1</sup>  ~<sub>r</sub> g<sub>1</sub><sup>&minus;1</sup>.</p>
 
 <p>In addition the map is surjective since every right coset St<sub><i>x</i></sub> <i>g</i> has the counterimage <i>g</i><sup>&minus;1</sup><i>x</i> &in; O(<i>x</i>). &emsp; □</p>
 
@@ -190,7 +188,7 @@ gx ↦ St<sub><i>x</i></sub>g<sup>&minus;1</sup></p>
 <p>|O(<i>x</i>)| ⋅ |St<sub><i>x</i></sub>| = |<i>G</i>|</p>
 </div>
 
-<p><b>Example 7.15.9</b>. Let <i>G</i> a group which acts on a subgroup <i>H</i> of <i>G</i>, where the action is the multiplication like in example 7.15.5(e). Let <i>g &in; G</i>. Then O(<i>g</i> = Hg, St<sub>g</sub> = {<i>e</i>}, thus the <a href="cosets.html#index">index</a> of St<sub><i>g</i></sub> in <i>H</i> is equal to |<i>H</i>| as dictaded by Proposition 7.15.6. </p>
+<p><b>Example 7.15.9</b>. Let <i>G</i> a group which acts on a subgroup <i>H</i> of <i>G</i>, where the action is the multiplication like in example 7.15.5(e). Let <i>g</i> &in; <i>G</i>. Then O(<i>g</i> = Hg, St<sub>g</sub> = {<i>e</i>}, thus the <a href="cosets.html#index">index</a> of St<sub><i>g</i></sub> in <i>H</i> is equal to |<i>H</i>| as dictaded by Proposition 7.15.6. </p>
 
 <p><b>Corollary 7.15.10</b>. Consider the natural action of S<sub>4</sub> on <i>X</i> = {1,2,3,4}. Take <i>x</i> = 1 &in; <i>X</i>. Then</p>
 
@@ -243,7 +241,7 @@ gx ↦ St<sub><i>x</i></sub>g<sup>&minus;1</sup></p>
 <p><b>Remark</b> <p>Remembering the definition of <a href="subgroups.html#center">center</a> Z(<i>G</i>) of a group and observing that an element <i>x</i> belongs to the center iff its conjugacy class is made by the only element <i>x</i>:</p>
 
 <div class="eq">
-<p><i>z &in; Z</i>(<i>G</i>) ⇐⇒ <i>zg = gz ⇐⇒ g</i><sup>&minus;1</sup><i>zg = z</i>, for all <i>g</i> in G</p>
+<p><i>z</i> &in; <i>Z</i>(<i>G</i>) ⇐⇒ <i>zg</i> = <i>gz</i> ⇐⇒ <i>g</i><sup>&minus;1</sup><i>zg</i> = <i>z</i>, for all <i>g</i> in G</p>
 </div>
 
 <p>The set of elements <i>z</i> whose conjugacy class consists of <i>z</i> alone is precisely the center of the group i.e. <i>Z</i>(<i>G</i> is a union of one-element conjugacy classes), 7.15.1 can be written as</p>

@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="GCD of polynomials"/>
+ <meta name="description" content="GCD of polynomials">
  <title>GCD of polynomials</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
@@ -11,10 +11,10 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -87,24 +87,39 @@
 <p>GCD(<i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>)) = 1</p>
 </div>
 
-<div id="irreducibility">
-<p><b>Definition 5.3.8</b>. A nonconstant and non-invertible polynomial <i>f</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] is said to be <i>irreducible</i> over <i>K</i>, if</p>
+<p id="irreducibility"><b>Definition 5.3.8</b>. A nonconstant and non-invertible polynomial <i>f</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] is said to be <i>irreducible</i> over <i>K</i>, if</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), &emsp; <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in;<i>K</i>[<i>x</i>] ⇒ <i>g</i>(<i>x</i>) or <i>h</i>(<i>x</i>) invertible.</p>
+<p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), &emsp; <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] ⇒ <i>g</i>(<i>x</i>) or <i>h</i>(<i>x</i>) is invertible (is a unit).</p>
 </div>
 
-<p>this means that for *every* possible factorization in terms of two polynomials <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), one of those must be invertible; it's not enough to find one factorization <i>i.e.</i> <i>x</i><sup>2</sup> + 1 = 1/2 (2<i>x</i><sup>2</sup> + 2), and 1/2 is a unit in ℚ, but <i>x</i><sup>2</sup> + 1 is irreducible over ℚ.</p>
+<p>If it is not irreducible the polynomial is said <i>reducible</i>.&emsp;□</p>
 
-<p>An equivalent definition of irreducible polynomial is the following.</p>
+<p>The definition says that <i>f</i> is irreducible if <b>no</b> decomposition <i>f</i> = <i>gh</i> into non-zero non-units is possible. To phrase it in terms of reducibility, a polynomial <i>f</i> is reducible if there exists a decomposition <i>f</i> = <i>gh</i> such that <i>g</i> and <i>h</i> are non-zero non-units. <br> This means that for *every* possible factorization in terms of two polynomials <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), one of those must be invertible; it's not enough to find one factorization <i>i.e.</i> 2<i>x</i><sup>2</sup> − 8 = 2(<i>x</i><sup>2</sup> − 4) in ℚ[<i>x</i>] but we've also 2<i>x</i><sup>2</sup> − 8 = 2(<i>x</i> − 2)(<i>x</i> + 2) and the polynomials 2(<i>x</i> + 2) and <i>x</i> − 2 are not invertible. However 2(<i>x</i><sup>2</sup> − 4) <b>is</b> reducible in ℤ[<i>x</i>] since neither 2 nor (<i>x</i><sup>2</sup> − 4) is not a unit in ℤ.</p>
 
-<p>A polynomial <i>f</i>(<i>x</i>) of degree at least one in <i>K</i>[<i>x</i>] is called <i>irreducible</i> over <i>K</i> if it cannot be written as a product of two noncostant polynomials in <i>K</i>[<i>x</i>] of lower degree.</p>
+<p><b>Example 5.3.8</b>. The polynomial x<sup>2</sup>− 2 is reducible over ℝ as</p>
 
-<p>For example, in ℚ[<i>x</i>], <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 1 is irreducible, since there is no factorization of <i>f</i>(<i>x</i>) into polynomials both of degree less that 2 (of course, x<sup>2</sup> + 1 = 1/2 (2x<sup>2</sup> + 2), but 1/2 is unit in Q. 
+<div class="eq">
+<p>x<sup>2</sup> − 2 = (<i>x</i> + √2)(<i>x</i> − √2),</p>
+</div>
+
+<p>and <i>x</i> + 2 and <i>x</i> − 2 are irreducible polynomials with coefficients in ℝ, while it is irreducible over ℚ, as the polynomial <i>x</i><sup>2</sup> − 2 has no roots in ℚ, that is,</p>
+
+<div class="eq">
+<p>√2 &notin; ℚ &emsp; and so <i>x</i> ± √2 ∈ ℚ[<i>x</i>]</p>
+</div>
+
+<p>The polynomial <i>x</i><sup>2</sup> + 1 is reducible over ℂ and</p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> + 1 = (<i>x</i> − <i>i</i>)(<i>x</i> + <i>i</i>)</p>
+</div>
+
+<p>is a factorisation into irreducibles, but it is irreducible over ℝ and over ℚ as <i>x</i><sup>2</sup> + 1 has no roots in ℝ, and therefore it cannot factor (into linear factors).&emsp;■</p>
 
 <p>In the polynomial ring <i>K</i>[<i>x</i>] where <i>K</i> is a field, the invertible elements consist of all polynomials of degree zero, <i>i.e.</i> the factors are the elements of the field itself.</p>
 
-<p><b>Example 5.3.8</b>. Consider the polynomial <i>x</i><sup>2</sup> − 2. Note that x<sup>2</sup> − 2 has no zeroes over ℚ. This is the same as saying t hat √2 is irrational, so the polynomial cannot decomposend in terms of a linear facto (see <a href="ruffini.html">Ruffini's theorem</a>. If <i>x</i><sup>2</sup> − 2 is reducible then we may write x<sup>2</sup> − 2 = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), where the degree of g(<i>x</i>) and <i>h</i>(<i>x</i>) is less than two. As the degree ofthe LHS is two, the only possibility is that both <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) have degree one. In this case x<sup>2</sup> − 2 has a zero in ℚ, a contradiction. Thus <i>x</i><sup>2</sup> − 2 is irreducible over ℚ.On the other hand, √2 ∈ R so that x<sup>2</sup> − 2 is reducible over ℝ, <i>x</i><sup>2</sup> − 2 = (<i>x</i> − √2)(<i>x</i> + √2).</p>
+<p><b>Example 5.3.9</b>. Consider the polynomial <i>x</i><sup>2</sup> − 2. Note that <i>x</i><sup>2</sup> − 2 has no zeroes over ℚ. This is the same as saying t hat √2 is irrational, so the polynomial cannot decomposend in terms of a linear facto (see <a href="Ruffini.html">Ruffini's theorem</a>. If <i>x</i><sup>2</sup> − 2 is reducible then we may write <i>x</i><sup>2</sup> − 2 = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), where the degree of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) is less than two. As the degree ofthe LHS is two, the only possibility is that both <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) have degree one. In this case <i>x</i><sup>2</sup> − 2 has a zero in ℚ, a contradiction. Thus <i>x</i><sup>2</sup> − 2 is irreducible over ℚ.On the other hand, √2 ∈ ℝ so that <i>x</i><sup>2</sup> − 2 is reducible over ℝ, <i>x</i><sup>2</sup> − 2 = (<i>x</i> − √2)(<i>x</i> + √2).</p>
 
 <p>So 2<i>x</i> + 4 = (2)(<i>x</i> + 2) with the first factor invertible in ℝ[<i>x</i>], is not a factorization for getting 2<i>x</i> + 4 reducible. In fact 2<i>x</i> + 4 is irreducible, as are all linear polynomials over a field.</p>
 
@@ -114,17 +129,17 @@
 
 <blockquote>A nonconstant polynomial is said to be <b>irreducible over the field</b> <i>F</i> if it cannot be factored in <i>F</i>[<i>x</i>] into a product of polynomials of lower degree. It is said to be <b>reducible</b> over <i>F</i> if such a factorization exists.</blockquote>
 
+<p>When we are not dealing wihh a field this is not true: Consider 4 ∈ ℤ[<i>x</i>]. It cannot be expressed as the product of two polynomials of lower degree. But it is not irreducible, since 4 = 2×2.</p>
+
 <p>As another example <i>x</i><sup>2</sup> + 5 is irreducible in ℤ<sub>11</sub> because <i>x</i><sup>2</sup> + 5 = (2)(6<i>x</i><sup>2</sup> + 8) and 2 is the unit in <i>K</i>[<i>x</i>].</p>
 
-</div>
-
-<p><b>Definition 5.3.9</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>]), then it divides one of the two factors.</p>
+<p><b>Definition 5.3.10</b>. A non-zero and non-invertible polynomial <i>f</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>] is said to be <i>prime</i> if, every time that <i>f</i>(<i>x</i>) divides a product <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>) (with <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) &in; <i>K</i>[<i>x</i>]), then it divides one of the two factors.</p>
 
 <p>Irreducible polynomials play a role in the factorization of polynomials corresponding to the role that prime integers play in the factorization of integers.</p>
 
-<p><b>Proposition 5.3.10</b>. A polynomial in <i>K</i>[<i>x</i>] is irreducible iff is <i>prime</i>.</p>
+<p><b>Proposition 5.3.11</b>. A polynomial in <i>K</i>[<i>x</i>] is irreducible iff is <i>prime</i>.</p>
 
-<p><b>Theorem 5.3.11</b> (<i>Unique Factorization Theorem</i>) Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in <i>K</i>[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
+<p id="factorization"><b>Theorem 5.3.12</b> (<i>Unique Factorization Theorem</i>) Every polynomial <i>f</i>(<i>x</i>) of degree &ge; 1 in <i>K</i>[<i>x</i>] can be factorised as a finite product of irreducible elements. Such a factorisation is unique, that is</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>p</i><sub>1</sub>(<i>x</i>) <i>p<sub>2</sub></i>(<i>x</i>) ... <i>p<sub>s</sub></i>(<i>x</i>) = <i>q</i><sub>1</sub>(<i>x</i>) <i>q</i><sub>2</sub>(<i>x</i>) ... <i>q<sub>t</sub></i>(<i>x</i>) </p>
@@ -135,7 +150,7 @@
 <section aria-label="End">
 <a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>
 <a href="index.html">Index</a>
-<a href="ruffini.html">Ruffini's Theorem &#187;</a>
+<a href="Ruffini.html">Ruffini's Theorem &#187;</a>
 </section>
 
 </div>

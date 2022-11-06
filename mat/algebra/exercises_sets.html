@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Exercises on sets"/>
  <title>Exercises on sets</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
@@ -11,96 +11,123 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
 </nav>
-  
+
 <div class="content">
 
 <h1>Exercises on sets</h1>
 
-<p><b>Exercise 1</b>. Prove that <i>A</i> ∪ (<i>B ∪ C</i>) = (<i>A ∪ B</i>) ∪ <i>C</i>  (<i>associative laws for union of sets</i>)</p>
+<ol>
+	<li><p>Prove that <i>A</i> ∪ (<i>B</i> ∪ <i>C</i>) = (<i>A</i> ∪ <i>B</i>) ∪ <i>C</i>  (<i>associative laws for union of sets</i>)</p></li>
 
-<p><b>Solution</b>. To prove this identity it necessary to show that any element in the left-hand side is also an element of the right-hand side. We have</p>
+	<li><p>Prove that  (<i>A</i> ∩ <i>B</i>) ∩ <i>C</i> = <i>A</i> ∩ (<i>B</i> ∩ <i>C</i>) (<i>associative laws for intersections of sets</i>)</p></li>
 
-<p><i>x ∈ A ∪ (B ∪ C) ⇒ x ∈ A or x ∈ B ∪ C ⇒ x ∈ A or x ∈ B or x ∈ C ⇒ x ∈ A ∪ B or x ∈ C ⇒ x ∈ ( A ∪ B) ∪ C</i>.</p>
+	<li><p>Prove that (<i>A</i> ∪ <i>B</i>) = <i>A</i> only if <i>B</i> ⊆ <i>A</i>.</p></li>
+
+	<li><p>Prove the following distributive properties</p>
+
+	<ul>
+	 	<li><p>(<i>A</i> ∪ <i>B</i>) ∩<i>C</i> = (<i>A</i> ∩ <i>C</i>) ∪ (<i>B</i> ∩ <i>C</i>) (distributive of the intersection with regards to union)</p></li>
+	 	<li><p>(<i>A</i> ∩ <i>B</i>) ∪<i>C</i> = (<i>A</i> ∪ <i>C</i>) ∩ (<i>B</i> ∪ <i>C</i>) (distributive of the union with regards to intersection)</p></li>
+	</ul>
+	
+	<li><p id="Morgan">Prove De Morgan's laws</p>
+
+<ul>
+	<li><p> 𝓒(<i>A</i> ∩ <i>B</i>) = 𝓒<i>A</i> ∪ 𝓒<i>B</i></p></li>
+	<li><p>𝓒(<i>A</i> ∪ <i>B</i>) = 𝓒<i>A</i> ∩ 𝓒<i>B</i></p></li>
+</ul>
+</li>
+
+	<li><p>Prove that for any sets <i>A, B, C</i>:</p>
+
+<div class="eq">
+<p>(<i>A</i> − <i>B</i>) U (<i>B</i> − <i>A</i>) = (<i>A</i> U <i>B</i>) − (<i>A</i> n <i>B</i>)</p>
+</div>
+</li>
+
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>To prove this identity it necessary to show that any element in the left-hand side is also an element of the right-hand side. We have</p>
+
+<div class="eq">
+<p><i>x</i> ∈ <i>A</i> ∪ (<i>B</i> ∪ <i>C</i>) ⇒ <i>x</i> ∈ <i>A</i> or <i>x</i> ∈ <i>B</i> ∪ <i>C</i> ⇒ <i>x</i> ∈ <i>A</i> or <i>x</i> ∈ <i>B</i> or <i>x</i> ∈ <i>C</i> ⇒ <i>x</i> ∈ <i>A</i> ∪ <i>B</i> or <i>x</i> ∈ <i>C</i> ⇒ <i>x</i> ∈ (<i>A</i> ∪ <i>B</i>) ∪ <i>C</i>.</p>
+</div>
 
 <p>Analogously by inverting the order of the implications we prove that</p>
 
 <div class="eq">
-<p><i>x</i> ∈ (<i>A ∪ B</i>) ∪ C ⇒ x ∈ A ∪ (<i>B ∪ C</i>)</p>
+<p><i>x</i> ∈ (<i>A</i> ∪ <i>B</i>) ∪ <i>C</i> ⇒ <i>x</i> ∈ <i>A</i> ∪ (<i>B</i> ∪ <i>C</i>)</p>
 </div>
 
 <p>it is thus correct to remove parenthesis and write</p>
 
 <div class="eq">
-<p><i>A ∪ B ∪ C</i> = (<i>A ∪ B</i>) ∪ <i>C = A</i> ∪ (<i>B ∪ C</i>)</p>
+<p><i>A</i> ∪ <i>B</i> ∪ <i>C</i> = (<i>A</i> ∪ <i>B</i>) ∪ <i>C</i> = <i>A</i> ∪ (<i>B</i> ∪ <i>C</i>)&emsp;■</p>
 </div>
 
-<p><b>Exercise 2</b>. Prove that  (<i>A ∩ B</i>) ∩<i>C = A</i> ∩ (<i>B ∩ C</i>) (<i>associative laws for intersections of sets</i>)</p>
+</li>
 
-<p><b>Solution</b>. For the sake of simplicity let</p>
+<li><p>For the sake of simplicity let</p>
 
-<p><i>D = A ∩ B</i> and <i>E = B ∩ C</i>, then</p>
+<p><i>D</i> = <i>A</i> ∩ <i>B</i> and <i>E</i> = <i>B</i> ∩ <i>C</i>, then</p>
 
 <div class="eq">
-<p><i>D</i> = {<i>x: x &in; A</i> and <i>x &in; B</i>}</p>
-<p><i>E</i> = {<i>x: x &in; B</i> and <i>x &in; C</i>}</p>
+<p><i>D</i> = {<i>x</i>: <i>x</i> &in; <i>A</i> and <i>x</i> &in; <i>B</i>}</p>
+<p><i>E</i> = {<i>x</i>: <i>x</i> &in; <i>B</i> and <i>x</i> &in; <i>C</i>}</p>
 </div>
 
 <p>thus</p>
 <div class="eq">
-<p>(<i>A ∩ B</i>) ∩<i>C = D ∩ C</i> = {<i>x: x &in; D</i> and <i>x &in; C</i>} = {<i>x: x &in; A</i> and <i>x &in; B</i> and <i>x &in; C</i>}</p>
+<p>(<i>A</i> ∩ <i>B</i>) ∩ <i>C</i> = <i>D</i> ∩ <i>C</i> = {<i>x</i>: <i>x</i> &in; <i>D</i> and <i>x</i> &in; <i>C</i>} = {<i>x</i>: <i>x</i> &in; <i>A</i> and <i>x</i> &in; <i>B</i> and <i>x</i> &in; <i>C</i>}</p>
 </div>
 
-<p>hence the equality.</p>
+<p>hence the equality.&emsp;■</p></li>
 
-<p><b>Exercise 3</b>. Prove that (<i>A ∪ B</i>) = <i>A</i> only if <i>B ⊆ A</i>.</p>
+<li><p>[<i>A</i> ∪ <i>B</i> = <i>A</i>] ⇒ [<i>x</i> ∈ <i>A</i> ∪ <i>B</i> ⇐⇒ <i>x</i> ∈ <i>A</i>] ⇒ <i>B</i> ⊆ <i>A</i>. &emsp;■</p></li>
 
-<p><b>Solution</b>. [<i>A ∪ B = A</i>] ⇒ [<i>x ∈ A ∪ B ⇐⇒ x ∈ A</i>] ⇒ <i>B ⊆ A</i></p>
-
-<p><b>Exercise 4</b>. Prove the following distributive properties</p>
-
-	<ul>
-	 	<li><p>(<i>A ∪ B</i>) ∩<i>C</i> = (<i>A ∩ C</i>) ∪ (<i>B ∩ C</i>) (distributive of the intersection with regards to union)</p></li>
-	 	<li><p>(<i>A ∩ B</i>) ∪<i>C</i> = (<i>A ∪ C</i>) ∩ (<i>B ∪ C</i>) (distributive of the union with regards to intersection)</p></li>
-	</ul>
-	
-<p><b>Solution</b>. We have</p>
+<li><p>We have</p>
 
 <ul>
-	<li><p><i>x</i> &in; (<i>A ∪ B</i>) ∩ <i>C</i> ⇒ <i>x &in; C</i> and <i>x &in; A ∪ B</i> ⇒ [<i>x &in; C</i> and [<i>x &in; A</i> or <i>x &in; B</i>]] ⇒ [<i>x &in; C and x &in; A</i>] or [<i>x &in; C and x &in; B</i>] ⇒ <i>x</i> &in; (<i>C ∩ A</i>) ∪ (<i>C ∩ B</i>).</p></li>
+	<li><p><i>x</i> &in; (<i>A</i> ∪ <i>B</i>) ∩ <i>C</i> ⇒ <i>x &in; C</i> and <i>x</i> &in; <i>A</i> ∪ <i>B</i> ⇒ [<i>x</i> &in; <i>C</i> and [<i>x</i> &in; <i>A</i> or <i>x</i> &in; <i>B</i>]] ⇒ [<i>x</i> &in; <i>C</i> and <i>x</i> &in; <i>A</i>] or [<i>x</i> &in; <i>C</i> and <i>x</i> &in; <i>B</i>] ⇒ <i>x</i> &in; (<i>C</i> ∩ <i>A</i>) ∪ (<i>C</i> ∩ <i>B</i>).</p></li>
 	
-	<li><p><i>x</i> &in; (<i>A ∩ B</i>) ∪ <i>C</i> ⇒ <i>x &in; C</i> and <i>x &in; A ∩ B</i> ⇒ [<i>x &in; C</i> and [<i>x &in; A</i> and <i>x &in; B</i>]] ⇒ [<i>x &in; C and x &in; A</i>] and [<i>x &in; C and x &in; B</i>] ⇒ <i>x</i> &in; (<i>C ∩ A</i>) ∪ (<i>C ∩ B</i>).</p></li>
+	<li><p><i>x</i> &in; (<i>A</i> ∩ <i>B</i>) ∪ <i>C</i> ⇒ <i>x</i> &in; <i>C</i> and <i>x</i> &in; <i>A</i> ∩ <i>B</i> ⇒ [<i>x</i> &in; C</i> and [<i>x</i> &in; <i>A</i> and <i>x</i> &in; <i>B</i>]] ⇒ [<i>x</i> &in; <i>C</i> and <i>x</i> &in; <i>A</i>] and [<i>x</i> &in; <i>C</i> and <i>x</i> &in; <i>B</i>] ⇒ <i>x</i> &in; (<i>C</i> ∩ <i>A</i>) ∪ (<i>C</i> ∩ <i>B</i>).&emsp;■□</p></li>
 </ul>
 
-<p><b>Exercise 5</b>. Prove that</p>
+</li>
 
-<ul>
-	<li><p> 𝓒(<i>A ∩ B</i>) = 𝓒A ∪ 𝓒B</p></li>
-	<li><p>𝓒(<i>A ∪ B</i>) = 𝓒A ∩ 𝓒B</p></li>
-</ul>
-
-<p><b>Solution</b>. We have</p>
+<li><p>We have</p>
 
 <ul>
 
 <li>
 <div class="eq">
-<p><i>x</i> &in; 𝓒A ∪ 𝓒B ⇒ x &in; 𝓒A or x &in; 𝓒B ⇒ x ∉ A ∩ B ⇒ x &in; 𝓒(A ∩ B)</p>
+<p><i>x</i> &in; 𝓒<i>A</i> ∪ 𝓒<i>B</i> ⇒ <i>x</i> &in; 𝓒<i>A</i> or <i>x</i> &in; 𝓒<i>B</i> ⇒ <i>x</i> ∉ <i>A</i> ∩ <i>B</i> ⇒ <i>x</i> &in; 𝓒(<i>A</i> ∩ <i>B</i>)</p>
 </div>
 </li>
 
 <li>
 <div class="eq">
-<p><i>x</i> &in; 𝓒A ∩ 𝓒B ⇒ x &in; 𝓒A and x &in; 𝓒B ⇒ x ∉ A ∪ B ⇒ x &in; 𝓒(A ∩ B)</p>
+<p><i>x</i> &in; 𝓒<i>A</i>∩ 𝓒<i>B</i> ⇒ <i>x</i> &in; 𝓒<i>A</i> and <i>x</i> &in; 𝓒<i>B</i> ⇒ <i>x</i> ∉ <i>A</i> ∪ <i>B</i> ⇒ <i>x</i> &in; 𝓒(<i>A</i> ∩ <i>B</i>)&emsp;■</p>
 </div>
 </li>
+
 </ul>
 
-<section>
+</li>
+
+<li><p>(<i>A</i> − <i>B</i>) U (<i>B</i> − <i>A</i>) = {<i>x</i>: <i>x</i> &in; <i>A</i> | <i>x</i> ∉ <i>B</i>} U {<i>x</i>: <i>x</i> &in; <i>B</i> | <i>x</i> ∉ <i>A</i>} = {<i>x</i>: <i>x</i> &in; <i>A</i>, <i>x</i> &in; <i>B</i> | <i>x</i> ∉ <i>A</i>, <i>x</i> ∉ <i>B</i>} = (<i>A</i> U <i>B</i>) − (<i>A</i> n <i>B</i>).&emsp;■</p></li>
+
+</ol>
+
+<section aria-label="End">
 <a href="sets.html">&#171;Set theory</a>
 <a href="index.html">Index</a>
 <a href="relations.html">Relations &#187;</a>
