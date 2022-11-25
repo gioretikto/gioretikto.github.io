@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Ring Homomorphisms"/>
+ <meta name="description" content="Ring Homomorphisms">
  <title>Ring Homomorphisms</title>
  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
@@ -11,10 +11,10 @@
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -36,30 +36,31 @@
 <ol>
 	<li><p>The mapping <i>&phi;</i>: ℤ<sub>6</sub> ⟶ ℤ<sub>6</sub> defined by</p>
 	
-		<div class="eq">
-		<p><i>&phi;</i>([<i>a</i>]) = [3][<i>a</i>]</p>
-		</div>
-		<p>It follows from</p>
+	<div class="eq">
+	<p><i>&phi;</i>([<i>a</i>]) = [3][<i>a</i>]</p>
+	</div>
+
+	<p>It follows from</p>
 		
-		<div class="eq">
-		<p><i>&phi;</i>([<i>a</i>] + [<i>b</i>]) = [3][<i>a</i> + [<i>a</i>]]</br>
-		=[3][<i>a</i>] + [3][<i>b</i>]<br>
-		=<i>&phi;</i>([<i>a</i>]) + <i>&phi;</i>(<i>b</i>])</p>
-		</div>
+	<div class="eq">
+	<p><i>&phi;</i>([<i>a</i>] + [<i>b</i>]) = [3][<i>a</i> + [<i>a</i>]]</br>
+	=[3][<i>a</i>] + [3][<i>b</i>]<br>
+	=<i>&phi;</i>([<i>a</i>]) + <i>&phi;</i>(<i>b</i>])</p>
+	</div>
 		
-		<p>that <i>&phi;</i> preserves addition. For multiplication, we have</p>
+	<p>that <i>&phi;</i> preserves addition. For multiplication, we have</p>
 		
-		<div class="eq">
-		<p><i>&phi;</i>([<i>a</i>][<i>b</i>]) = <i>&phi;</i>([<i>ab</i>]) = [3][<i>ab</i>] = [3<i>ab</i>]</p>
-		</div>
+	<div class="eq">
+	<p><i>&phi;</i>([<i>a</i>][<i>b</i>]) = <i>&phi;</i>([<i>ab</i>]) = [3][<i>ab</i>] = [3<i>ab</i>]</p>
+	</div>
 		
-		<p>and</p>
+	<p>and</p>
+	
+	<div class="eq">
+	<p><i>&phi;</i>([<i>a</i>]) <i>&phi;</i>[<i>b</i>]) = [3][<i>a</i>] [3][<i>b</i>] = [9][<i>ab</i>] = [9<i>ab</i>] = [3<i>ab</i>]</p>
+	</div>
 		
-		<div class="eq">
-		<p><i>&phi;</i>([<i>a</i>]) <i>&phi;</i>[<i>b</i>]) = [3][<i>a</i>] [3][<i>b</i>] = [9][<i>ab</i>] = [9<i>ab</i>] = [3<i>ab</i>]</p>
-		</div>
-		
-		<p>since [9] = [3] in ℤ<sub>6</sub>. Thus <i>&phi;</i> is a homomorphism. It can be verified that the image/range is <i>&phi;</i>(ℤ<sub>6</sub>) = {[0],[3]}. So we see that <i>&phi;</i> is neither onto nor one-to-one.is thus a ring homorphism.</p>
+	<p>since [9] = [3] in ℤ<sub>6</sub>. Thus <i>&phi;</i> is a homomorphism. It can be verified that the image/range is <i>&phi;</i>(ℤ<sub>6</sub>) = {[0],[3]}. So we see that <i>&phi;</i> is neither onto nor one-to-one.is thus a ring homorphism.</p>
 	</li>
 	
 	<li><p><i>&phi;</i>: ℤ ⟶ ℤ such that <i>&phi;</i>(<i>z</i>) = 2<i>z</i>, <i>is not</i> an homomorphism between rings because even if addition is preserved, multiplication is not.</p></li>
@@ -71,7 +72,7 @@
 
 <p><b>4.2.1 Proposition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, then the image of the zero of <i>R</i> is the zero of <i>R'</i>.</p>
 
-<p><b>Proof.</b> Indeed <i>&phi;</i>(0<sub><i>R</i></sub>) = <i>&phi;</i>(0<sub><i>R</i></sub> + 0<sub>R</i></sub>) = <i>&phi;</i>(0<sub><i>R</i></sub>) + <i>&phi;</i>(0<sub><i>R</i></sub>) and it follows <i>&phi;</i>(0<sub><i>R</i></sub>) = 0<sub><i>R'</i></sub>.□</p>
+<p><b>Proof.</b> Indeed <i>&phi;</i>(0<sub><i>R</i></sub>) = <i>&phi;</i>(0<sub><i>R</i></sub> + 0<sub><i>R</i></sub>) = <i>&phi;</i>(0<sub><i>R</i></sub>) + <i>&phi;</i>(0<sub><i>R</i></sub>) and it follows <i>&phi;</i>(0<sub><i>R</i></sub>) = 0<sub><i>R'</i></sub>.□</p>
 
 <p><b>4.2.2 Corollary</b>. <i>&phi;</i>(−<i>a</i>) = −<i>&phi;</i>(<i>a</i>), &forall; <i>a</i> &in; <i>R</i>.</p>
 
@@ -237,12 +238,12 @@
 <p><b>Proof.</b> If <i>&phi;</i> is surjective every <i>r'</i> &in; <i>R'</i> is equal to <i>&phi;</i>(<i>r</i>) for some <i>r</i> &in; <i>R</i>, thus</p>
 
 <div class="eq">
-<p><i>r' = &phi;</i>(<i>r</i>) = <i>&phi;</i>(<i>r</i> ⋅ 1<sub><i>R</i></sub>) = <i>&phi;</i>(<i>r</i>) <i>&phi;</i>(1<sub><i>R</i></sub>) = <i>r</i>' <i>&phi;</i>(1<sub><i>R</i></sub>)</p>
+<p><i>r'</i> = <i>&phi;</i>(<i>r</i>) = <i>&phi;</i>(<i>r</i> ⋅ 1<sub><i>R</i></sub>) = <i>&phi;</i>(<i>r</i>) <i>&phi;</i>(1<sub><i>R</i></sub>) = <i>r</i>' <i>&phi;</i>(1<sub><i>R</i></sub>)</p>
 </div>
 
 <p>hence <i>&phi;</i>(<i>1<sub>R</sub></i>) represents the right unity for <i>R'</i>. Analogously we can notice it is also a left unity. If <i>R'</i> is an integral domain <i>&phi;</i>(<i>r</i>) = <i>&phi;</i>(<i>r</i>) <i>&phi;</i>(1<sub><i>R</i></sub>) implies that (with <i>&phi;</i>(<i>r</i>) &ne; 0) by the cancellation property <i>&phi;</i>(1<sub><i>R</i></sub>) = 1<sub><i>R</i>'</sub></i>.□</p>
 
-<p><b>4.2.4 Definition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, the <b>kernel</b> of <i>&phi;</i> is the subset of the elements of <i>R</i> which are mapped onto the zero element of <i>R'</i></p>
+<p id="Ker"><b>4.2.4 Definition</b>. If <i>&phi;</i> is a homomorphism from the ring <i>R</i> to the ring <i>R'</i>, the <b>kernel</b> of <i>&phi;</i> is the subset of the elements of <i>R</i> which are mapped onto the zero element of <i>R'</i></p>
 
 <div class="eq">
 <p>Ker <i>&phi;</i> := {<i>r</i> &in; <i>R</i> | <i>&phi;</i>(<i>r</i>) = 0<sub><i>R</i>'</sub>}&emsp;□</p>
@@ -256,21 +257,21 @@
 
 <p><b>Lemma 4.2.5</b>. Let <i>&phi;</i> a non-null homomorphism between two rings <i>R</i> and <i>R'</i>. Then <i>&phi;</i> is injective iff Ker <i>&phi;</i> = {0}.</p>
 
-<p><b>Proof</b>. Suppose <i>&phi;</i> is injective, and let <i>a</i> &in; Ker <i>&phi;</i>. Then <i>&phi;</i>(<i>a</i>) = 0 = <i>&phi;</i>(0), hence <i>a</i> = 0 by injectivity. Conversely, if Ker <i>&phi;</i> = {0} and <i>a, b</i> &in; <i>R</i> with <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>), then 0 = <i>&phi;</i>(<i>a</i>) − <i>&phi;</i>(<i>b</i>) = <i>&phi;</i>(<i>a − b</i>), which means <i>a</i> − <i>b</i> &in; Ker <i>&phi;</i>. It follows that <i>a</i> − <i>b</i> = 0, and thus <i>a</i> = <i>b</i>.&emsp;□</p>
+<p><b>Proof</b>. Suppose <i>&phi;</i> is injective, and let <i>a</i> &in; Ker <i>&phi;</i>. Then <i>&phi;</i>(<i>a</i>) = 0<sub><i>R'</i></sub> = <i>&phi;</i>(0<sub><i>R</i></sub>) (by Proposition 4.2.1), hence <i>a</i> = 0<sub><i>R</i></sub> by injectivity. Conversely, if Ker <i>&phi;</i> = {0<sub><i>R</i></sub>} and <i>a, b</i> &in; <i>R</i> with <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>), then 0<sub><i>R'</i></sub> = <i>&phi;</i>(<i>a</i>) − <i>&phi;</i>(<i>b</i>) = <i>&phi;</i>(<i>a</i> − <i>b</i>), which means <i>a</i> − <i>b</i> &in; Ker <i>&phi;</i>. It follows that <i>a</i> − <i>b</i> = 0, and thus <i>a</i> = <i>b</i>.&emsp;□</p>
 
 <p>As you can notice Ker <i>&phi;</i> is a subring; By multiplying an element of Ker <i>&phi;</i> by an element of <i>R</i> from right or left the result is again an element of Ker <i>&phi;</i>. Indeed let <i>k</i> &in; Ker <i>&phi;</i> and <i>r</i> &in; <i>R</i>, we have</p>
 
 <div class="eq">
-<p><i>&phi;</i>(<i>k⋅r</i>) = <i>&phi;</i>(<i>k</i>) ⋅ <i>&phi;</i>(<i>r</i>) = 0 ⋅ <i>&phi;</i>(<i>r</i>) = 0</p>
+<p><i>&phi;</i>(<i>k</i>⋅<i>r</i>) = <i>&phi;</i>(<i>k</i>) ⋅ <i>&phi;</i>(<i>r</i>) = 0 ⋅ <i>&phi;</i>(<i>r</i>) = 0</p>
 </div>
 
-<p>from which follows <i>k⋅r</i> &in; Ker <i>&phi;</i>. Left multiplication leads to <i>r⋅k</i> &in; Ker <i>&phi;</i>.</p>
+<p>from which follows <i>k</i>⋅<i>r</i> &in; Ker <i>&phi;</i>. Left multiplication leads to <i>r</i>⋅<i>k</i> &in; Ker <i>&phi;</i>.</p>
 
 <p><b>Example 4.2.6</b>. The kernel of <i>φ</i>: ℤ → ℤ/<i>n</i>ℤ sending <i>a</i> to [<i>a</i>] is {<i>kn</i>| <i>k</i> &in; ℤ}, in other  words, the set of all multiples of <i>n</i>. This is because [<i>kn</i>] = [0]. &emsp; ■</p>
 
-<p><b>4.2.7 Proposition</b>. The homomorphism <i>&phi;</i> is a <i>monomorphism</i> (injective) if and only if Ker <i>&phi;</i> = {0<sub>R</sub>}</p>
+<p><b>4.2.7 Proposition</b>. The homomorphism <i>&phi;</i> is a <i>monomorphism</i> (injective) if and only if Ker <i>&phi;</i> = {0<sub><i>R</i></sub>}</p>
 
-<p><b>Proof</b>. Let Ker <i>&phi;</i> = {0<sub><i>R</i></sub>} and <i>a,b</i> &in; <i>R</i>, <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>). Now <i>&phi;</i>(<i>a</i> − <i>b</i>) = <i>&phi;</i>(<i>a</i>) − <i>&phi;</i>(<i>b</i>) = 0. So <i>a</i> − <i>b</i> &in; Ker <i>&phi;</i> = {0<sub><i>R</i></sub>}, <i>i.e. a</i> − <i>b</i> = 0 or <i>a</i> = <i>b</i>. Hence <i>&phi;</i> is injective. So <i>&phi;</i> is a monomorphism, from <i>R</i>, onto <i>&phi;</i>(<i>R</i>). &emsp; □</p>
+<p><b>Proof</b>. Let Ker <i>&phi;</i> = {0<sub><i>R</i></sub>} and <i>a,b</i> &in; <i>R</i>, <i>&phi;</i>(<i>a</i>) = <i>&phi;</i>(<i>b</i>). Now <i>&phi;</i>(<i>a</i> − <i>b</i>) = <i>&phi;</i>(<i>a</i>) − <i>&phi;</i>(<i>b</i>) = 0. So <i>a</i> − <i>b</i> &in; Ker <i>&phi;</i> = {0<sub><i>R</i></sub>}, i.e. <i>a</i> − <i>b</i> = 0 or <i>a</i> = <i>b</i>. Hence <i>&phi;</i> is injective. So <i>&phi;</i> is a monomorphism, from <i>R</i>, onto <i>&phi;</i>(<i>R</i>). &emsp; □</p>
 
 <div id="ideal">
 <p>The property of the kernel of a ring homomorphism −that is closed under multiplication by arbitrary elements of the ring−is abstracted in the conept of an <b>ideal</b>.</p>

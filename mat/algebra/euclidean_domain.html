@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Euclidean domain"/>
- <title>Euclidean domain</title>
- <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Euclidean domain">
+	<title>Euclidean domain</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
 </nav>
 
 <div class="content">
@@ -43,30 +43,34 @@
 
 <p>In both cases of ℤ and the ring 𝕂[<i>x</i>] we have associated to each element of the domain a <i>positive integer</i> (the absolute value and the degree of the polynomial respectively) in a way that the integer associated to the remainder is less than the the remainder, associated to the divisor. In this way we were able to determine the gcd of two integers or two polynomials through the Euclidean algorithm. The possibility to determine the gcd in this way, was due to the decreasing attidue of the integers associated to the remainders which at some point should be zero, the last non zero remainder was identified with the gcd.</p>
 
-<p>We not want to put what has been said about the division algorithm in ℤ  and 𝕂[<i>x</i>] in a wider, abstract context.</p>
+<p>We not want to put what has been said about the division algorithm in ℤ and 𝕂[<i>x</i>] in a wider, abstract context.</p>
 
-<p><b>Definition 4.8.1</b>. A Euclidean domain is a domain <i>D</i> that can be equipped with a function <i>v</i>: <i>D</i>\{0} → ℕ that satisfies the following two criteria:</p>
+<p><b>Definition 4.8.1</b>. An integral domain <i>R</i> is called a <b>Euclidean domain</b> (or <b>euclidean ring</b>) if there exists a function <i>v</i>: <i>D</i>\{0} → ℕ that satisfies the following two criteria:</p>
 
 <ol type="a">
-	<li><p>For <i>a, b</i> ∈ <i>D</i> with <i>a,b</i> &in; <i>D</i> with <i>b</i> &ne;0 there exist <i>q, r</i> ∈ <i>D</i> (called the quotient and remainder, respectively) such that</p>
+	<li><p>For all <i>a,b</i> &in; <i>R</i> with <i>a</i> &ne;0, <i>b</i> &ne;0, <i>v</i>(<i>a</i>)<i>v</i>(<i>b</i>). &le; <i>v</i>(<i>ab</i>).</p></li>
+
+	<li><p>For <i>a, b</i> ∈ <i>R</i> with <i>a,b</i> &in; <i>R</i> with <i>b</i> &ne;0 there exist <i>q, r</i> ∈ <i>R</i> (called the quotient and remainder, respectively) such that</p>
 	
 	<div class="eq">
 	<p><i>a</i> = <i>bq</i> + <i>r</i>, &emsp; <i>r</i> = 0 or <i>v</i>(<i>r</i>) &lt; <i>v</i>(<i>b</i>).</p>
 	</div>
 	</li>
-	
-	<li><p>For all <i>a,b</i> &in; <i>D</i> with <i>a</i> &ne;0, <i>b</i> &ne;0, <i>v</i>(<i>a</i>)<i>v</i>(<i>b</i>). &le; <i>v</i>(<i>ab</i>).</p></li>
 </ol>
 
 <p>The function <i>v</i> is called a <b>Euclidean valuation</b> for <i>D</i>, which in turn known as <b>Euclidean domain</b>. You should think of the function <i>v</i> as a measure of ‘size’ of the elements. Thus, the first condition says that we can always divide an element of <i>D</i> by a non-zero element; either the division is exact, or we have a remainder ‘smaller’ than the divisor. </p>
 
-<p><b>Examples 4.8.2</b>. The ring ℤ of integers is an Euclidean domain. We can take as valuation the <i>absolute values</i>, <i>v</i>(<i>a</i>) = |<i>a</i>|, The first condition is then the Division Theorem of ℤ, and the second condition holds because |<i>ab</i>| = |<i>a</i>||<i>b</i>|; the ring 𝕂[<i>x</i>] of polynomials with coefficients in a field 𝕂, is a Euclidean domain if we take as valuation the <i>degree</i> of any non null polynomial. A field 𝕂 is an Euclidean domain, if for example we let <i>v</i>(<i>a</i>) = 1 &forall;<i>a</i> &in; 𝕂, with <i>a</i> &ne; 0; For example in the field of real numbers 15 = 4*15/4 + 0.</p>
+<p><b>Examples 4.8.2</b>. The ring ℤ of integers is an Euclidean domain. We can take as valuation the <i>absolute values</i>, <i>v</i>(<i>a</i>) = |<i>a</i>|, The first condition is then the Division Theorem of ℤ, and the second condition holds because |<i>ab</i>| = |<i>a</i>||<i>b</i>|; the ring 𝕂[<i>x</i>] of polynomials with coefficients in a field 𝕂, is a Euclidean domain if we take as valuation the <i>degree</i> of any non null polynomial. A field 𝕂 is an Euclidean domain, if for example we let <i>v</i>(<i>a</i>) = 1 &forall;<i>a</i> &in; 𝕂, with <i>a</i> &ne; 0; For example in the field of real numbers 15 = 4 ⋅ 15/4 + 0.</p>
 
 <p><b>Remark</b>. An integral domain can become an Euclidean domain with respect to different <i>valuations</i>. In the case of the field 𝕂, we can pick as well the valuation <i>v</i>(<i>a</i>) = 2, &forall;<i>a</i> &in; 𝕂, <i>a</i> &ne; 0.</p>
 
+<p id="lemma"><b>Lemma 4.8.3</b>. If <i>a</i> and <i>b</i> are elements in a euclidean ring <i>R</i>, then v(a) = v(<i>ab</i>) if and only if <i>b</i> is invertible. Otherwise, v(a) < v(ab).</p>
+
+<p><b>Proof</b>. If <i>b</i> is invertible and <i>bc</i> = 1, then v(a) &le; v(ab) &le; v(<i>abc</i>) = v(<i>a</i>). Hence v(<i>a</i>) = v(<i>ab</i>).<br> If <i>b</i> is not invertible, <i>ab</i> does not divide <i>a</i> (If ab divides a, then there exists c such that abc = a; In an integral domain cancellation holds, so bc = 1, i.e. <i>b</i> is invertible) and <i>a</i> = <i>qab</i> + <i>r</i>, where v(r) < v(<i>ab</i>). Now r = a(1 − <i>qb</i>); thus v(a) &le; v(r). Therefore, v(a) < v(<i>ab</i>). &emsp;□</p>
+
 <p>We now introduce an important example of Euclidean domain, known as <b>Gaussian integers</b>.</p>
 
-<p><b>Proposition 4.8.3</b>. The subset</p>
+<p><b>Proposition 4.8.5</b>. The subset</p>
 
 <div class="eq">
 <p>ℤ[<i>i</i>] = {<i>a</i> + <i>ib</i> | <i>a,b</i> &in; ℤ}</p>
@@ -78,9 +82,9 @@
 <p><i>v</i>(<i>a</i> + <i>b</i>) := (<i>a</i> + <i>bi</i>) (<i>a</i> − <i>bi</i>) = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup></p>
 </div>
 
-<p><b>Proof</b>. The addition and multiplication operations in ℂ are operations in ℤ[<i>i</i>] as well, and with respect to them ℤ[<i>i</i>] is a ring. Moreover being a subring of the field ℂ, of complex numbers, it is an integral domain. We now want to show that the function <i>v</i>(<i>a</i> + <i>b</i>) := <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> serves as a Euclidean valuation, and consequently that ℤ[<i>i</i>] is an Euclidean domain. This is the <i>norm</i> ||<i>a</i> + <i>ib</i>|| of a complex number, which is an integer &ge; 1 (since such are <i>a</i> and <i>b</i>) whatever non null <i>a</i> + i<i>b</i> &in; ℤ[<i>i</i>]. Since the complex norm is <b>multiplicative</b>, that is <i>v</i>(<i>xy</i>) = <i>v</i>(<i>x</i>)<i>v</i>(<i>y</i>), is verified as well the relation <i>v</i>(<i>x</i>) &le; <i>v</i>(<i>xy</i>) &forall; <i>x,y</i> &in;ℤ[<i>i</i>]. </p>
+<p><b>Proof</b>. The addition and multiplication operations in ℂ are operations in ℤ[<i>i</i>] as well, and with respect to them ℤ[<i>i</i>] is a ring. Moreover being a subring of the field ℂ, of complex numbers, it is an integral domain. We now want to show that the function <i>v</i>(<i>a</i> + <i>b</i>) := <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> serves as a Euclidean valuation, and consequently that ℤ[<i>i</i>] is an Euclidean domain. This is the <i>norm</i>, ||<i>a</i> + <i>ib</i>|| of a complex number, which is an integer &ge; 1 (since such are <i>a</i> and <i>b</i>) whatever non null <i>a</i> + i<i>b</i> &in; ℤ[<i>i</i>]. Since the complex norm is <b>multiplicative</b>, that is <i>v</i>(<i>xy</i>) = <i>v</i>(<i>x</i>)<i>v</i>(<i>y</i>), is verified as well the relation <i>v</i>(<i>x</i>) &le; <i>v</i>(<i>xy</i>) &forall; <i>x,y</i> &in;ℤ[<i>i</i>]. </p>
 
-<p>Unfortunately, the Division Theorem is not really obvious. So suppose that <i>z</i><sub>1</sub> = <i>a</i> + <i>ib</i> and  <i>z</i><sub>2</sub> = <i>a</i> + <i>ib</i> two elements of ℤ[<i>i</i>] andwe wish to verify the Division Theorem for them, where  <i>z</i><sub>2</sub> &ne; 0 will serve as the divisor.</p>
+<p>Unfortunately, the Division Theorem is not really obvious. So suppose that <i>z</i><sub>1</sub> = <i>a</i> + <i>ib</i> and  <i>z</i><sub>2</sub> = <i>a</i> + <i>ib</i> two elements of ℤ[<i>i</i>] and we wish to verify the division Theorem for them, where <i>z</i><sub>2</sub> &ne; 0 will serve as the divisor.</p>
 
 <p>We know that</p>
 
@@ -91,7 +95,7 @@
 <p>We can write the ratio of the two complex numbers as</p>
 
 <div class="eq">
-<p><i>z</i><sub>1</sub> <i>z</i><sub>2</sub><sup>−1</sup> = (<i>a</i> + <i>ib</i>) ⋅ (<i>c</i> − <i>id</i>)/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) = (<i>ac</i> + <i>bd</i>)/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) + <i>i</i> (<i>bc</i> − <i>ad</i>)/(<i>c<sup>2</sup> + <i>d</i><sup>2</sup>) &emsp; (<b>4.8.1</b>)</p>
+<p><i>z</i><sub>1</sub> <i>z</i><sub>2</sub><sup>−1</sup> = (<i>a</i> + <i>ib</i>) ⋅ (<i>c</i> − <i>id</i>)/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) = (<i>ac</i> + <i>bd</i>)/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) + <i>i</i> (<i>bc</i> − <i>ad</i>)/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) &emsp; (<b>4.8.1</b>)</p>
 </div>
 
 <p>The real and imaginary parts of this complex number certainly need not be integers; We not rewrite this equation using the fact that any fraction of integers can be written as an integer part plus a fractional one, which in absolute value is less that 1/2. Eq (4.8.1) can be rewritten as</p>
@@ -100,7 +104,7 @@
 <p><i>z</i><sub>1</sub><i>z</i><sub>2</sub><sup>−1</sup> = <i>&alpha;</i> + <i>r</i><sub>1</sub>/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) + <i>i</i> [<i>&beta;</i> + <i>r</i><sub>2</sub></i>/(<i>c</i><sup>2</sup> + d<sup>2</sup>)] = <i>&alpha;</i> + <i>i&beta;</i> + [<i>r<sub>1</sub></i>/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) + <i>i r</i><sub>2</sub></i>/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>)] &emsp; (<b>4.8.2</b>)</p>
 </div>
 
-<p>with <i>&alpha;</i> + <i>i&beta;</i> &in; ℤ[<i>i</i>], whilst <i>r<sub>1</sub></i>/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) + <i>i r</i><sub>2</sub>/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) is in ℚ[<i>i</i>] = {<i>x</i> + <i>iy</i> | <i>x,y</i> &in; ℚ}. Moreover</p>
+<p>with <i>&alpha;</i> + <i>i&beta;</i> &in; ℤ[<i>i</i>], whilst <i>r</i><sub>1</sub>/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) + <i>i r</i><sub>2</sub>/(<i>c</i><sup>2</sup> + <i>d</i><sup>2</sup>) is in ℚ[<i>i</i>] = {<i>x</i> + <i>iy</i> | <i>x,y</i> &in; ℚ}. Moreover</p>
 
 
 <div class="eq">
@@ -136,16 +140,13 @@
 
 <p>It is more easy to verify other properties that a ring <i>R</i> has to satisfy to be an integral domain, and which follows from the definition of Euclidean domain. We start by giving the following definitions. </p>
 
-<div id="PID">
-
-<p><b>Definition 4.8.4</b>. An integral domain with unit in which every ideal is principal, is known as <i>principal ideal domain</i>.</p>
-</div>
+<p id="PID"><b>Definition 4.8.6</b>. An integral domain with unit in which every ideal is principal, is known as <i>principal ideal domain</i>.</p>
 
 <p>We've already seen that in ℤ all subrings are of the form (<i>n</i>) = <i>n</i>ℤ for some <i>n</i> &in; ℤ, and how these are automatically all ideals. Thus in ℤ every ideal is a principal ideal domain. With the same proof used for ℤ we can show that 𝕂[<i>x</i>] as well is a principal ideal domain. Every field is obviously an integral domain. We prove now the folllowing proposition.</p>
 
-<p><b>Definition 4.8.5</b>. Every Euclidean domain is a principal ideal domain.</p>
+<p><b>Definition 4.8.7</b>. Every Euclidean domain is a principal ideal domain.</p>
 
-<p><b>Proof</b>. We have to prove that every Euclidean domain <i>R</i> has a unit and it is principal. Let <i>I</i> &ne; (0) an ideal of <i>R</i>, and let <i>v</i> the valuation defined on <i>R</i> \ {0}. Let <i>V</i> = {<i>v</i>(<i>a</i>) | <i>a</i> &in; <i>I</i>}. Since <i>V</i> is not empty <i>V</i> ⊆ ℕ, there exists a <i>n</i><sub>0</sub> &in; <i>V</i> and let <i>a</i><sub>0</sub> an element of <i>I</i> with mininum valuation, <i>i.e. v</i>(<i>a</i><sub>0</sub>) = <i>n</i><sub>0</sub>. We prove that <i>I</i> = <i>a</i><sub>0</sub><i>R</i>. Clearly, since that <i>a</i><sub>0</sub> &in; <i>I</i> we have <i>a</i><sub>0</sub><i>R</i> ⊆ <i>I</i>. We are left to show that every <i>a</i> &in; <i>I</i> can be written as <i>a</i><sub>0</sub><i>t</i> for some <i>t</i> &in; <i>R</i>. We divide <i>a</i> by <i>a</i><sub>0</sub>:</p>
+<p><b>Proof</b>. We have to prove that every Euclidean domain <i>R</i> has a unit and it is principal. Let <i>I</i> &ne; (0) an ideal of <i>R</i>, and let <i>v</i> the valuation defined on <i>R</i> \ {0}. Let <i>V</i> = {<i>v</i>(<i>a</i>) | <i>a</i> &in; <i>I</i>}. Since <i>V</i> is not empty <i>V</i> ⊆ ℕ, there exists a <i>n</i><sub>0</sub> &in; <i>V</i> and let <i>a</i><sub>0</sub> an element of <i>I</i> with mininum valuation, i.e. <i>v</i>(<i>a</i><sub>0</sub>) = <i>n</i><sub>0</sub>. We prove that <i>I</i> = <i>a</i><sub>0</sub><i>R</i>. Clearly, since that <i>a</i><sub>0</sub> &in; <i>I</i> we have <i>a</i><sub>0</sub><i>R</i> ⊆ <i>I</i>. We are left to show that every <i>a</i> &in; <i>I</i> can be written as <i>a</i><sub>0</sub><i>t</i> for some <i>t</i> &in; <i>R</i>. We divide <i>a</i> by <i>a</i><sub>0</sub>:</p>
 
 <div class="eq">
 <p><i>a</i> = <i>a</i><sub>0</sub><i>q</i> + <i>r</i>, &emsp; <i>r</i> = 0 &emsp; <i>v</i>(<i>r</i>) &lt; <i>v</i>(<i>a<sub>0</sub></i>).</p>
@@ -159,15 +160,15 @@
 <p><i>a</i> = <i>ut</i> = <i>tu</i> &emsp; ⇒ &emsp; <i>a</i> = <i>t</i> ⋅ <i>ue</i> = <i>tu</i> ⋅ <i>e</i> = <i>ae</i></p>
 </div>
 
-<p>Then <i>R</i> possesses unit, thus <i>I</i> = <i>a</i><sub>0</sub><i>R</i> = (<i>a</i><sub>0</sub>), <i>i.e.</i> every ideal is principal.□</p>
+<p>Then <i>R</i> possesses unit, thus <i>I</i> = <i>a</i><sub>0</sub><i>R</i> = (<i>a</i><sub>0</sub>), i.e. every ideal is principal.□</p>
 
-<p><b>Proposition 4.8.6</b>. In an Euclidean domain <i>R</i>, any two nonzero elements <i>a</i> and <i>b</i> possess a greatest common divisor.</p>
+<p><b>Proposition 4.8.8</b>. In an Euclidean domain <i>R</i>, any two nonzero elements <i>a</i> and <i>b</i> possess a greatest common divisor.</p>
 
 <p><b>Proof</b>. Let <i>S</i> = {<i>xa</i> + <i>yb</i> | <i>x,y</i> &in; <i>R</i>}. Since <i>R</i> has the unit, it must be <i>S</i> &ne; ∅, because <i>a</i> and <i>b</i> are in <i>S</i>. Moreover <i>S</i> is an ideal, and owing to the previous theorem <i>S</i> = (<i>d</i>) for some <i>d</i> &in; <i>R</i>. We prove now that <i>d</i> is the gcd(<i>a,b</i>). We have <i>d</i>|<i>a</i> and <i>d</i>|<i>b</i> since <i>a</i> &in; (<i>d</i>) and <i>b</i> &in; (<i>d</i>). If there exist another divisor <i>d'</i> such that <i>d'</i>| <i>a</i> and <i>d'</i>|<i>b</i>, then <i>d'</i>|<i>d</i> = <i>sa</i> + <i>tb</i>.□</p>
 
 <p>The fact that every Euclidean domain has a unit, has the following consequence.</p>
 
-<p><b>Proposition 4.8.7</b>. The invertible elements of an euclidean domain <i>R</i> are all and the only elements with minimum valuation, equal to the the valuation of the unit.</p>
+<p><b>Proposition 4.8.9</b>. The invertible elements of an euclidean domain <i>R</i> are all and the only elements with minimum valuation, equal to the the valuation of the unit.</p>
 
 <p><b>Proof</b>. Let <i>a</i> an invertible element of <i>R</i> (hence <i>a</i> &ne; 0). Then</p>
 
@@ -196,9 +197,9 @@
 
 <tbody>
 <tr><td>ℤ</td> <td><i>v</i>(<i>x</i>) = |<i>x</i>| &forall;<i>x</i></td> <td>1</td> <td>&pm;1</td></tr>
-<tr><td> 𝕂</td> <td><i>v</i>(<i>x</i>) = 1 &forall;<i>x</i></td> <td>1</td> <td>every <i>x</i> &ne; 0</td></tr>
-<tr><td> 𝕂[<i>x</i>]</td> <td><i>v</i>(<i>f</i>(<i>x</i>)) = ∂<i>f</i>(<i>x</i>)</td> <td>0</td> <td>non null constants</td></tr>
-<tr><td> ℤ[<i>x</i>]</td> <td><i>v</i>(<i>a</i> + <i>ib</i>) = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup></td> <td>1</td> <td>&pm;1, &pm;<i>i</i></td></tr>
+<tr><td>𝕂</td> <td><i>v</i>(<i>x</i>) = 1 &forall;<i>x</i></td> <td>1</td> <td>every <i>x</i> &ne; 0</td></tr>
+<tr><td>𝕂[<i>x</i>]</td> <td><i>v</i>(<i>f</i>(<i>x</i>)) = ∂<i>f</i>(<i>x</i>)</td> <td>0</td> <td>non null constants</td></tr>
+<tr><td>ℤ[<i>x</i>]</td> <td><i>v</i>(<i>a</i> + <i>ib</i>) = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup></td> <td>1</td> <td>&pm;1, &pm;<i>i</i></td></tr>
 </tbody>
 </table>
 
@@ -215,10 +216,10 @@
 
 	<li><p><i>a</i> &ne; 0 and not invertible is irriducible &emsp; ⇐⇒ &emsp; <i>a</i> = <i>bc</i> &emsp; ⇒ &emsp; <i>b</i> or <i>c</i> is a unit</p></li>
 
-	<li><p><i>a</i> is prime &emsp; ⇐⇒ &emsp; <i>a</i> | <i>bc</i> &emsp; ⇒ &emsp; <i>a</i> | <i>bc</i> &emsp; ⇒ &emsp; <i>a</i> |<i>b</i> o <i>a</i> | <i>c</i></p></li>
+	<li><p><i>a</i> is prime &emsp; ⇐⇒ &emsp; <i>a</i> | <i>bc</i> &emsp; ⇒ &emsp; <i>a</i> | <i>bc</i> &emsp; ⇒ &emsp; <i>a</i> |<i>b</i> or <i>a</i>| <i>c</i></p></li>
 </ul>
 
-<p>It can be proven that every prime element of an integral domain with unit is irreducible as we have already proved for ℤ in (<a href="Z_divisibility.html#prime_irr">Proposition 2.2.11</a>) but the converse is not always true. We now give an example of ring in which the irreducible elements are not prime.</p>
+<p>It can be proven that every prime element of an integral domain with unit is irreducible as we have already proved for ℤ in (<a href="Z_divisibility.html#prime_irr">Proposition 2.2.12</a>) but the converse is not always true. We now give an example of ring in which the irreducible elements are not prime.</p>
 
 <p>Let <i>a</i> &in; ℂ. We indicate as</p>
 
@@ -237,40 +238,38 @@
 <p>Let now <i>a</i> = √-3. Consider the ring</p>
 
 <div class="eq">
-<p>ℤ[√-3] = {<i>a</i> + <i>b</i>√-3 | <i>a,b</i> &in; ℤ}</p>
+<p>ℤ[√-3] = {<i>a</i> + <i>b</i>√−3 | <i>a,b</i> &in; ℤ}</p>
 </div>
 
-<p>We determine first the inevrtible elements of the ring; to every element we associate the comple norm <i>N</i>(<i>a + b</i>√-3) = <i>a<sup>2</sup> + 3b<sup>2</sup></i>, the invertibility of <i>a</i> + <i>b</i>√-3 means that there exists a <i>&beta;</i> = <i>c + d</i>√-3 such that <i>&alpha;&beta;</i> = 1. Then <i>N</i>(<i>&alpha;</i>)<i>N</i>(<i>&beta;</i>) = <i>N</i>(<i>&alpha;&beta;</i>) = <i>N</i>(1) = 1. Being <i>N</i>(<i>&alpha;</i>) a non negative integer it must be <i>N</i>(<i>&alpha;</i>) = 1. Hence, to be invertible, an element of ℤ[√-3] <i>must have norm equal to</i> 1. The expression <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> with <i>a,b</i> &in; ℤ implies <i>b</i> = 0 and <i>a</i> = &pm;1. The only invertible elements of ℤ[√-3] are thus &pm;1.</p>
+<p>We determine first the inevrtible elements of the ring; to every element we associate the comple norm <i>N</i>(<i>a</i> + <i>b</i>√−3) = <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup>, the invertibility of <i>a</i> + <i>b</i>√−3 means that there exists a <i>&beta;</i> = <i>c</i> + <i>d</i>√−3 such that <i>&alpha;&beta;</i> = 1. Then <i>N</i>(<i>&alpha;</i>)<i>N</i>(<i>&beta;</i>) = <i>N</i>(<i>&alpha;&beta;</i>) = <i>N</i>(1) = 1. Being <i>N</i>(<i>&alpha;</i>) a non negative integer it must be <i>N</i>(<i>&alpha;</i>) = 1. Hence, to be invertible, an element of ℤ[√−3] <i>must have norm equal to</i> 1. The expression <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> with <i>a,b</i> &in; ℤ implies <i>b</i> = 0 and <i>a</i> = &pm;1. The only invertible elements of ℤ[√−3] are thus &pm;1.</p>
 
-<div id= "irr_notprime">
-<p><b>Example 4.8.8</b>.  We now want to show that in ℤ[√-3] there exist irreducible elements which are not also prime elements. Such an element is for example 1 + √-3: suppose that (1 + √-3) = (<i>a</i> + <i>b</i>√-3) (<i>c</i> + <i>d</i>√-3) in ℤ[√-3]. Calculating the norm, we have</p>
+<p id= "irr_notprime"><b>Example 4.8.9</b>.  We now want to show that in ℤ[√−3] there exist irreducible elements which are not also prime elements. Such an element is for example 1 + √−3: suppose that (1 + √−3) = (<i>a</i> + <i>b</i>√−3) (<i>c</i> + <i>d</i>√−3) in ℤ[√−3]. Calculating the norm, we have</p>
 
 <div class="eq">
-<p>4 = <i>N</i>(<i>a</i> + <i>b</i>√-3) <i>N</i>(<i>c</i> + <i>d</i>√-3) = (<i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup>) (<i>c</i><sup>2</sup> + 3<i>d</i><sup>2</sup>)</p>
+<p>4 = <i>N</i>(<i>a</i> + <i>b</i>√-3) <i>N</i>(<i>c</i> + <i>d</i>√−3) = (<i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup>) (<i>c</i><sup>2</sup> + 3<i>d</i><sup>2</sup>)</p>
 </div>
 
-<p>The only possibility is that <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 1 or <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 4, since it's not possible the alternative <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 2. The first identity implies, as we've already seen <i>b</i> = 0 and <i>a</i> = &pm;1, that is <i>a</i> + <i>b</i>√-3 is invertible, in the second case <i>c</i> + <i>d</i>√-3 is invertible. Since 1 + √-3 is not null and not invertible we proved that 1 + √-3 is irreducible; But it is not prime since</p>
+<p>The only possibility is that <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 1 or <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 4, since it's not possible the alternative <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 2. The first identity implies, as we've already seen <i>b</i> = 0 and <i>a</i> = &pm;1, that is <i>a</i> + <i>b</i>√−3 is invertible, in the second case <i>c</i> + <i>d</i>√−3 is invertible. Since 1 + √−3 is not null and not invertible we proved that 1 + √−3 is irreducible; But it is not prime since</p>
 
 <div class="eq">
-<p>(1 + √-3)(1 − √-3) = 2 ⋅ 2</p> 
+<p>(1 + √−3)(1 − √−3) = 2 ⋅ 2</p> 
 </div>
 
-<p>we can verify easily that 1 + √-3 divides 2 ⋅ 2, but it does not divide 2; if 1 + √-3 would divide 2, we'd have 2 = (1 + √-3) (<i>a</i> + <i>b</i>√-3) for some <i>a,b</i> &in; ℤ, and passing to norms, we would have the following relation in ℕ</p>
+<p>we can verify easily that 1 + √-3 divides 2 ⋅ 2, but it does not divide 2; if 1 + √−3 would divide 2, we'd have 2 = (1 + √−3) (<i>a</i> + <i>b</i>√−3) for some <i>a,b</i> &in; ℤ, and passing to norms, we would have the following relation in ℕ</p>
 
 <div class="eq">
-<p>4 = 4 ⋅ (<i>a<sup>2</sup> + 3b<sup>2</sup></i>)</p>
+<p>4 = 4 ⋅ (<i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup>)</p>
 </div>
 
-<p>that implies  <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 1, thus <i>b</i> = 0 and <i>a</i> = &pm;1, that is <i>a</i> + <i>b</i>√-3 = &pm; 1, giving the absurd relation</p>
+<p>that implies  <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> = 1, thus <i>b</i> = 0 and <i>a</i> = &pm;1, that is <i>a</i> + <i>b</i>√−3 = &pm; 1, giving the absurd relation</p>
 
 <div class="eq">
-<p>2 = &pm; (1 + √-3)</p>
-</div>
+<p>2 = &pm; (1 + √−3)</p>
 </div>
 
 <p>Then we proved that in general an irreducible element is not also a prime element. There exists a particular family of rings in which irreducible elements are also prime element, we're going to study in the next paragraph.</p>
 
-<p><b>Proposition 4.8.9</b>. Suppose the number 3 + 2<i>i</i> can be written as <i>&alpha;&beta;</i> for some Gaussian integers <i>&alpha;</i> and <i>&beta;</i>. Then <i>N</i>(<i>&alpha;</i>) <i>N</i>(<i>&beta;</i>) = <i>N</i>(3 + 2<i>i</i>) = 13. So either <i>N</i>(<i>&alpha;</i>) or <i>N</i>(<i>&beta;</i>) must be 1 and the other must be 13. The factor that has norm 1 must then be &pm;1 or &pm;<i>i</i>, so 3 + 2<i>i</i> can only be written as a product of Gaussian integers if one of its factor is a unit: this means that  3 + 2<i>i</i> is irreducible in ℤ[<i>i</i>].</p>
+<p><b>Proposition 4.8.10</b>. Suppose the number 3 + 2<i>i</i> can be written as <i>&alpha;&beta;</i> for some Gaussian integers <i>&alpha;</i> and <i>&beta;</i>. Then <i>N</i>(<i>&alpha;</i>) <i>N</i>(<i>&beta;</i>) = <i>N</i>(3 + 2<i>i</i>) = 13. So either <i>N</i>(<i>&alpha;</i>) or <i>N</i>(<i>&beta;</i>) must be 1 and the other must be 13. The factor that has norm 1 must then be &pm;1 or &pm;<i>i</i>, so 3 + 2<i>i</i> can only be written as a product of Gaussian integers if one of its factor is a unit: this means that  3 + 2<i>i</i> is irreducible in ℤ[<i>i</i>].</p>
 
 <section aria-label="End">
 <a href="rings.html">&#171;Ring and ring's isomorphisms</a>

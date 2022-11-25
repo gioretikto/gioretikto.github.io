@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Splitting Field"/>
-    <title>Splitting Field</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Splitting Field">
+	<title>Splitting Field</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
@@ -59,7 +59,7 @@
 
 <p>As seen in the last examples it is important to specify over which field the polynomials splits. Further if of a polynomial <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] we know the roots, the splitting field is easily found by adjoining the roots of <i>p</i>(<i>x</i>) to <i>F</i>. In other casese the task can be more difficult for example finding the splitting field of <i>p</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1 over ℤ<sub>2</sub>[<i>x</i>]. Such a polynomial has no roots in the field ℤ<sub>2</sub>. Another instance is a polynomial of large degree <i>n</i> over ℚ, with no rational roots; finding a field containing all roots of such a polynomial can be a daunting task. Our task in this section is to determine the splitting field of a polynomial <i>p</i>(<i>x</i>) &in; <i>F</i> we do not know explicitly the roots.</p>
 
-<p>We start off by considering a simpler problem: given a polynomial find a field containing a root of the polynomial. Consider again the example of <i>x</i><sup>2</sup> − 5 &in; ℚ[<i>x</i>]. Consider the ring</p>
+<p>We start off by considering a simpler problem: given a polynomial find a field containing a root of the polynomial. Take again the polynomial <i>x</i><sup>2</sup> − 5 &in; ℚ[<i>x</i>]. Consider the ring</p>
 
 <div class="eq">
 <p><i>K</i> =  ℚ[<i>x</i>]/(<i>x</i><sup>2</sup> − 5)</p>
@@ -76,7 +76,13 @@
 	<i>f</i>(<i>x</i>) ⟼ <i>f</i>(<i>x</i>) + (<i>x</i><sup>2</sup> − 5)</p>
 	</div>
 
-<p>The set ℚ̅ = {<i>a</i> + (<i>x</i><sup>2</sup> − 5) | <i>a</i> &in; ℚ} is a field isomorphic to ℚ: indeed let <i>a,b</i> &in; ℚ, <i>a</i> + (<i>x</i><sup>2</sup> − 5) = <i>b</i> + (<i>x</i><sup>2</sup> − 5) if and only if <i>a</i> = <i>b</i>. Thus <i>K</i> =  ℚ[<i>x</i>]/(<i>x</i><sup>2</sup> − 5) ⊇ ℚ̅ ≃ ℚ.</p></li>
+<p>The set ℚ̅ = {<i>a</i> + (<i>x</i><sup>2</sup> − 5) | <i>a</i> &in; ℚ} is a field isomorphic to ℚ: indeed let <i>a,b</i> &in; ℚ, <i>a</i> + (<i>x</i><sup>2</sup> − 5) = <i>b</i> + (<i>x</i><sup>2</sup> − 5) if and only if <i>a</i> = <i>b</i>. Thus</p>
+
+<div class="eq">
+<p><i>K</i> =  ℚ[<i>x</i>]/(<i>x</i><sup>2</sup> − 5) ⊇ ℚ̅ ≃ ℚ.</p>
+</div>
+
+</li>
 
 <li><p><i>K</i> contains a root <i>&alpha;</i> of <i>x</i><sup>2</sup> − 5; let <i>&alpha;</i> = to the class <i>x</i> + (<i>x</i><sup>2</sup> − 5), then</p>
 
@@ -88,8 +94,7 @@
 <p>which is the null class of ℚ[<i>x</i>]/(<i>x</i><sup>2</sup> − 5).</p></li>
 </ol>
 
-<div id="example">
-<p><b>8.2.5. Example</b>. From last example it is clear how to proceed to find a field containing all roots of the polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 &in; ℤ<sub>2</sub>[<i>x</i>]. Being <i>f</i>(<i>x</i>) irreducible over ℤ<sub>2</sub>, ℤ<sub>2</sub>/(<i>x</i><sup>2</sup> + <i>x</i> + 1) is a field. The <a href="field_extension.html#quotient_ring">quotient field</a> ℤ<sub>2</sub>[<i>x</i>]/(<i>p</i>(<i>x</i>)) consists of residue classes. By the division algorithm</p>
+<p id="example"><b>8.2.5. Example</b>. From last example it is clear how to proceed to find a field containing all roots of the polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 &in; ℤ<sub>2</sub>[<i>x</i>]. Being <i>f</i>(<i>x</i>) irreducible over ℤ<sub>2</sub>, ℤ<sub>2</sub>/(<i>x</i><sup>2</sup> + <i>x</i> + 1) is a field. The <a href="quotient_rings_polynomial_rings.html">quotient field</a> ℤ<sub>2</sub>[<i>x</i>]/(<i>p</i>(<i>x</i>)) consists of residue classes. By the division algorithm</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) + <i>r</i>(<i>x</i>) &emsp; deg(<i>r</i>(<i>x</i>)) < deg(<i>p</i>(<i>x</i>))</p>
@@ -107,9 +112,7 @@
 <p>Z<sub>2</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) = {0 + (<i>p</i>(<i>x</i>)), 1 + (<i>p</i>(<i>x</i>)), <i>x</i> + (<i>p</i>(<i>x</i>)), 1 + <i>x</i> + (<i>p</i>(<i>x</i>))} ≃ ℤ<sub>2</sub>(&xi;) = {<i>a</i> + <i>b&xi;</i> | <i>a,b</i> &in; ℤ<sub>2</sub>, <i>&xi;</i><sup>2</sup> + <i>&xi;</i> + 1 = 0}</p>
 </div>
 
-<p>The last equality ℤ<sub>2</sub>(<i>&xi;</i>) ≃ ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + <i>x</i> + 1) by theorem <a href="field_extension.html">8.1.16 Theorem (c)</a>. Note how 0 + (p(x)) is the zero of the field and same element as <i>x</i><sup>2</sup> + <i>x</i> + 1 + (<i>p</i>(<i>x</i>)). The following are also the same elements <i>x</i><sup>2</sup> and <i>x</i> + 1 since <i>x</i><sup>2</sup> − (<i>x</i> + 1) = <i>x</i><sup>2</sup> + <i>x</i> + 1 as 1 = −1 in ℤ<sub>2</sub>, so we write <i>x</i><sup>2</sup> = <i>x</i> + 1 mod(<i>x</i><sup>2</sup> + <i>x</i> + 1). <br> 1 + (<i>p</i>(<i>x</i>)) is the multiplicative identity of the field <i>i.e.</i> the multiplicative inverse of (<i>x</i> + 1) + (<i>p</i>(<i>x</i>)) is <i>x</i> + (<i>p</i>(<i>x</i>)) since (<i>x</i>+1)<i>x</i> = <i>x</i><sup>2</sup> + <i>x</i> = 1 mod (<i>p</i>(<i>x</i>)) or (<i>x</i> + 1 + (p(x))) (<i>x</i> + (p(x))) = 1 + (p(x)))&emsp;■</p>
-
-</div>
+<p>The last equality ℤ<sub>2</sub>(<i>&xi;</i>) ≃ ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + <i>x</i> + 1) by theorem <a href="field_extension.html">8.1.16 Theorem (c)</a>. Note how 0 + (p(x)) is the zero of the field and same element as <i>x</i><sup>2</sup> + <i>x</i> + 1 + (<i>p</i>(<i>x</i>)). The following are also the same elements <i>x</i><sup>2</sup> and <i>x</i> + 1 since <i>x</i><sup>2</sup> − (<i>x</i> + 1) = <i>x</i><sup>2</sup> + <i>x</i> + 1 as 1 = −1 in ℤ<sub>2</sub>, so we write <i>x</i><sup>2</sup> = <i>x</i> + 1 mod(<i>x</i><sup>2</sup> + <i>x</i> + 1). <br> 1 + (<i>p</i>(<i>x</i>)) is the multiplicative identity of the field <i>i.e.</i> the multiplicative inverse of (<i>x</i> + 1) + (<i>p</i>(<i>x</i>)) is <i>x</i> + (<i>p</i>(<i>x</i>)) since (<i>x</i>+1)<i>x</i> = <i>x</i><sup>2</sup> + <i>x</i> = 1 mod (<i>p</i>(<i>x</i>)) or (<i>x</i> + 1 + (<i>p</i>(<i>x</i>))) (<i>x</i> + (<i>p</i>(<i>x</i>))) = 1 + (<i>p</i>(<i>x</i>)))&emsp;■</p>
 
 <p>We can now consider the general case proving that for every polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], with <i>F</i> an arbitrary field we are able to find a field containing a root of <i>f</i>(<i>x</i>). Then with an inductive method we shall prove that there exists a field containing all roots of <i>f</i>(<i>x</i>).</p>
 
@@ -123,16 +126,16 @@
 
 <p>Indeed it is a field because (<i>p</i>(<i>x</i>)) is maximal being <i>p</i>(<i>x</i>) irreducible (see <a href="ideal_generated.html#max_irr">theorem 1.6.10</a>); It is also an extension of <i>F</i> since the homomorphism &Psi;</p>
 
-	<div class="eq">
-	<p>&Psi;: ℚ[<i>x</i>] ⟶ ℚ[<i>x</i>]/(<i>p</i>(<i>x</i>))<br>
-	<i>f</i>(<i>x</i>) ⟼ <i>f</i>(<i>x</i>) + (<i>p</i>(<i>x</i>))</p>
-	</div>
+<div class="eq">
+<p>&Psi;: ℚ[<i>x</i>] ⟶ ℚ[<i>x</i>]/(<i>p</i>(<i>x</i>))<br>
+<i>f</i>(<i>x</i>) ⟼ <i>f</i>(<i>x</i>) + (<i>p</i>(<i>x</i>))</p>
+</div>
 
 <p>it results that <i>F</i>[<i>x</i>]/(<i>p</i>(<i>x</i>)) contains a <i>F̅</i> = {<i>a</i> + (<i>p</i>(<i>x</i>)) | <i>a</i> &in; <i>F</i>} which is isomorphic to <i>F</i>. It is further a <i>finite</i> extension of degree <i>n</i> of <i>F</i>, since one of its basis is</p>
 
-	<div class="eq">
-	<p>1 + (<i>p</i>(<i>x</i>)), &emsp; <i>x</i> + (<i>p</i>(<i>x</i>)), &emsp;..., &emsp;<i>x</i><sup><i>n</i> − 1</sup> + (<i>p</i>(<i>x</i>))</p>
-	</div>
+<div class="eq">
+<p>1 + (<i>p</i>(<i>x</i>)), &emsp; <i>x</i> + (<i>p</i>(<i>x</i>)), &emsp;..., &emsp;<i>x</i><sup><i>n</i> − 1</sup> + (<i>p</i>(<i>x</i>))</p>
+</div>
 
 <p>Ultimately, the class <i>&alpha;</i> = <i>x</i> + (<i>p</i>(<i>x</i>)) is a root of <i>p</i>(<i>x</i>), since <i>p</i>(<i>x</i>) = <i>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub> + ... + <i>a</i><sub>1</sub><i>x</i> + <i>a</i><sub>0</sub>, then</p>
 
@@ -214,8 +217,8 @@
 
 <p>the corresponding (through <i>&tau;̅̅</i>) factorization of <i>f'</i>(<i>x</i>). At least on of the two factors <i>p<sub>i</sub></i>(<i>x</i>) (let it <i>p</i><sub>1</sub>(<i>x</i>)) must have degree strictly greater than 1, otherwise all roots would in <i>F</i> and <i>k</i> = 0, a case which has already been proved. Let <i>&alpha;</i> a root of <i>p</i><sub>1</sub>(<i>x</i>). Then <i>f'</i>(<i>x</i>) = <i>&tau;̅̅</i><i>f</i>((<i>x</i>)) as well, has an irreducible factor, <i>p'</i>(<i>x</i>), of degree strictly greater than 1, and let <i>&alpha;'</i> a root of <i>p'</i>(<i>x</i>). Let <i>n</i> = deg(<i>p</i><sub>1</sub>(<i>x</i>)), the mapping</p></p>
 
-	<div class="eq">
-	<p><i>F</i>[<i>x</i>]/(<i>p</i><sub>1</sub>(<i>x</i>)) ⟶ <i>F'</i>[<i>x</i>]/(<i>p'</i><sub>1</sub>(<i>x</i>))<br>
+<div class="eq">
+<p><i>F</i>[<i>x</i>]/(<i>p</i><sub>1</sub>(<i>x</i>)) ⟶ <i>F'</i>[<i>x</i>]/(<i>p'</i><sub>1</sub>(<i>x</i>))<br>
 ∑<sup><i>n</i>−1</sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> + (<i>p</i><sub>1</sub>(<i>x</i>)) ⟼ ∑<sup><i>n</i>−1</sup><sub><sub><i>i</i>=0</sub></sub> <i>a'<sub>i</sub>x<sup>i</sup></i> + (<i>p</i>'<sub>1</sub>(<i>x</i>)), &emsp; <i>a<sub>i</sub>'</i> = &tau;(<i>a<sub>i</sub></i>)</p>
 </div>
 
