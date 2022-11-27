@@ -269,6 +269,8 @@ finite field for each possible order. Notice that if <i>K</i> is a finite field 
 	<li><p>Construct a field having 25 elements.</p></li>
 
 	<li><p>Let <i>K</i> a field with |<i>K</i>| = <i>p<sup>n</sup></i> elements. If <i>F</i> is a subfield of <i>K</i>, prove that |<i>F</i>| = <i>p<sup>m</sup></i>, where <i>m</i> divides <i>n</i>. Prove the converse as well: for every divisor <i>m</i> of <i>n</i> there exists a single subfield <i>F</i> of <i>K</i> with |<i>F</i>| = <i>p<sup>n</sup></i>.</p></li>
+
+	<li><p>Find all subfields of fields, with 64, 125 and 3125 elements.</p></li>
 </ol>
 
 <h2>Solution</h2>
@@ -291,7 +293,6 @@ finite field for each possible order. Notice that if <i>K</i> is a finite field 
 
 	<li><p>We know, from 8.3.11 that the multiplicative group of a finite field is cyclic. Let <i>a</i> a generator of the group <i>K</i>\{0}, then <i>a</i><sup><i>p</i><sup><i>n</i> −1</sup></sup> = 1. We shall prove that <i>a</i> is algebraic with degree <i>n</i>. Consider the polynomial <i>f</i>(<i>x</i>) = <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i> &in; ℤ<sub><i>p</i></sub>[<i>x</i>]; being a polynomial with coefficients in a field, <i>f</i>(<i>x</i>) is the product of irreducible polynomials (see <a href="pol_gcd.html#factorization">Unique factorization theorem</a>), and since <i>a</i> is a root of <i>f</i>(<i>x</i>), it must be root of some irreducible polynomial, say, <i>g</i>(<i>x</i>). Then ℤ<sub><i>p</i></sub>(<i>a</i>) ≃ ℤ<sub><i>p</i></sub>[<i>x</i>]/<i>g</i>(<i>x</i>), and since ℤ<sub><i>p</i></sub>(<i>a</i>) = <i>K</i> has <i>p<sup>n</sup></i> elements, by <a href="simple_extensions.html#8212">Theorem 8.12.2 (d)</a>, it means that <i>g</i>(<i>x</i>) has degree <i>n</i>. &emsp;■</p></li>	
 
-
 	<li><p>Such a field exists since 5<sup>2</sup> = 25. Such a field can be thought as the splitting field over of <i>x</i><sup>25</sup> − <i>x</i> (as in Theorem 8.3.10). Or using the result  "For a prime p and a monic irreducible polynomial <i>p</i>(<i>x</i>) in F<sub>p</sub>[<i>x</i>] of degree <i>n</i>, then the ring (<i>F<sub>p</sub></i>[<i>x</i>]/⟨<i>p</i>(<i>x</i>)⟩) is a field of order <i>p<sup>n</sup></i>", by taking e.g. <i>x</i><sup>2</sup> + 3 which is irreducible in ℤ<sub>5</sub>, as does <i>x</i><sup>2</sup> + 2. Those are the only two that work in ℤ<sub>5</sub>.</p>
 
 <p>ℤ<sub>5</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + 3), Then ℤ<sub>5</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + 3) = {<i>a</i>+<i>bx</i>+(<i>x</i><sup>2</sup>+3), <i>a,b</i> &in; ℤ<sub>5</sub>}. The elements of <i>K</i> are thus</p>
@@ -302,14 +303,16 @@ finite field for each possible order. Notice that if <i>K</i> is a finite field 
 
 <p>It's not hard to find that 2 + <i>x</i> is the generator of the multiplicative group <i>K</i>*.</p></li>
 
-<li><p>It results <i>K</i> ⊃ <i>F</i> ⊃ ℤ<sub><i>p</i></sub>. Now, <i>n</i> = [<i>K</i> : ℤ<sub><i>p</i></sub>] = [<i>K</i>: <i>F</i>][<i>F</i> : ℤ<sub><i>p</i></sub>], thus [<i>F</i> : ℤ<sub><i>p</i></sub>] = <i>k</i> |<i>n</i>, from which |<i>F</i>| = <i>p<sup>k</sup></i> with <i>k</i> | <i>n</i>. Conversely we shall prove now that for every divisor <i>k</i> of <i>n</i> there exists a unique subfield <i>F</i> of <i>K</i> with <i>p<sup>k</sup></i> elements. If such a field exists, every element of <i>F</i> satisfies the polynomial <i>f</i>(<i>x</i>) = <i>x<sup>p<sup>k</sup></sup></i> − <i>x</i>, and <i>f</i>(<i>x</i>) has at last <i>p<sup>k</sup></i> roots in <i>K</i>: thus if such <i>F</i> exists is necessarily unique. On the other hand the set <i>F</i> of all roots of <i>f</i>(<i>x</i>) is a subfield with <i>p<sup>k</sup></i> elements and is contained in <i>K</i>: indeed every root of <i>f</i>(<i>x</i>) is a subfield within the splitting field <i>L</i> is also root of <i>xp<sup>n</sup></i> − <i>x</i> = 0: dividing both sides by <i>x</i> we'have <i>x</i><sup>(<i>p<sup>k</sup></i>−1)</sup> = 1; By raising both sides to (<i>p<sup>n</sup></i>−1)/(<i>p<sup>k</sup></i>−1) we have <i>x</i><sup>(<i>p<sup>n</sup></i>−1)</sup> = 1. Since, <i>K</i> is the splitting field for <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i>, all roots of <i>f</i>(<i>x</i>) are in <i>K</i>, hence <i>F</i> &subseteq; <i>K</i>. &emsp;■ </p></li>
+<li><p>It results <i>K</i> ⊃ <i>F</i> ⊃ ℤ<sub><i>p</i></sub>. Now, <i>n</i> = [<i>K</i> : ℤ<sub><i>p</i></sub>] = [<i>K</i>: <i>F</i>][<i>F</i> : ℤ<sub><i>p</i></sub>], thus [<i>F</i> : ℤ<sub><i>p</i></sub>] = <i>m</i> |<i>n</i>, from which |<i>F</i>| = <i>p<sup>m</sup></i> with <i>m</i> | <i>n</i>. Conversely we shall prove that for every divisor <i>m</i> of <i>n</i> there exists a unique subfield <i>F</i> of <i>K</i> with <i>p<sup>m</sup></i> elements. If such a field exists, every element of <i>F</i> satisfies the polynomial <i>f</i>(<i>x</i>) = <i>x<sup>p<sup>m</sup></sup></i> − <i>x</i> and <i>f</i>(<i>x</i>) has at last <i>p<sup>m</sup></i> roots in <i>K</i>: thus if such <i>F</i> exists is necessarily unique. On the other hand the set <i>F</i> of all roots of <i>f</i>(<i>x</i>) is a subfield with <i>p<sup>m</sup></i> elements and is contained in <i>K</i>: indeed every root of <i>f</i>(<i>x</i>) is a subfield within the splitting field <i>L</i> is also root of <i>x<sup>p<sup>n</sup></i></sup> − <i>x</i> = 0: dividing both sides of <i>x<sup>p<sup>m</sup></sup></i> = <i>x</i>, by <i>x</i> we'have <i>x</i><sup><i>p<sup>m</sup></i>−1</sup> = 1; By raising both sides to (<i>p</i><sup><i>n</i> − 1</sup>)/(<i>p</i><sup><i>m</i> − 1</sup>) we have <i>x</i><sup><i>p<sup>n</sup></i>−1</sup> = 1, since raising both sides of an equation to (<i>p</i><sup><i>n</i>−1</sup>)/(<i>p</i><sup><i>m</i>−1</sup>) makes sense only if <i>p</i><sup><i>m</i> − 1</sup>| <i>p</i><sup><i>n</i> − 1</sup> is an integer we make sure it really is by <a href="Wedderburn.html">Lemma 8.6.1</a>. Since, <i>K</i> is the splitting field for <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i>, all roots of <i>f</i>(<i>x</i>) are in <i>K</i>, hence <i>F</i> &subseteq; <i>K</i>. &emsp;■ </p></li>
+
+<li><p>A field of order 64 = 2<sup>6</sup> has three subfields: one of order 2 (that is ℤ<sub>2</sub>), one with order 2<sup>2</sup> (i.e. ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup>+<i>x</i>+1)), 2<sup>3</sup>, and one of order 2<sup>6</sup>, i.e. the entire field itself. <br> A field of order 125 = 5<sup>3</sup> contains a subfield of order 5 (i.e. ℤ<sub>5</sub>), and the entire field. <br> A field of order 3125 = 5<sup>5</sup> has subfields of order 5 (i.e. ℤ<sub>2</sub>), and one of order 3125 i.e. the field itself. &emsp;■</p></li>
 
 </ol>
 
 <section aria-label="End">
 <a href="splitting_field.html">&#171;Splitting field</a>
 <a href="index.html">Index</a>
-<a href="Wedderburn_theorem.html">The Wedderburn theorem&#187;</a>
+<a href="Wedderburn.html">The Wedderburn theorem&#187;</a>
 </section>
 
 </div>

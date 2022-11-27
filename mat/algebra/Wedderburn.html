@@ -21,14 +21,35 @@
 
 <h1>Wedderburn's theorem</h1>
 
-<p>Every ring with unit in which every nonzero element is inverbile is called a <b>body</b> (not necessarily commutative with respect to multiplication), so a field is a commutative body.</p>
+<p>A ring <i>R</i> with unit element 1 is called a <b>skew-field</b> or <b>division ring</b> iff, any given nonzero element <i>a</i> is invertible, that is, there exists an element in <i>R</i> denoted by <i>a</i><sup>−1</sup> such that the relation <i>aa</i><sup>−1</sup> = <i>a</i><sup>−1</sup><i>a</i> = 1, holds tue (we do not require multiplication to be commutative). Thus a commutative division ring is a field.</p>
 
-<p><b>8.6.1 Wedderburn's theorem</b>. Every finite body <i>K</i> is a field.</p>
+<p>For example, the sets ℚ, ℝ and ℂ are fields, whereas the set ℍ of quaternions (introduce by Hamilton) is only a skew-field:</p>
 
-<p><b>Proof</b>. We shall show that the center Z(<i>K</i>) = {<i>k</i> &in; <i>K</i> | <i>kx</i> = <i>xk</i> &forall;<i>x</i> &in; <i>K</i>}  coincides with <i>K</i>. <br> Let |Z(<i>K</i>)| = <i>q</i>. Since Z(<i>K</i>) is a subfield of <i>K</i>, <i>K</i> is a vector space over Z(<i>K</i>), and thereby has <i>q<sup>n</sup></i> elements. We shall thus prove that <i>n</i> = 1. Let <i>a</i> &in; <i>K</i>, and let C(<i>a</i>) is <a href="group_actions.html#centralizer">Centralizer</a>:   </p>
+<div class="eq">
+<p>ℍ = {<i>ai</i> + <i>bj</i> + <i>ck</i> + <i>d</i> where <i>a,b,c,d</i> &in; ℝ, <i>i</i><sup>2</sup> = <i>j</i><sup>2</sup> = <i>k</i><sup>2</sup> = <i>ijk</i> = − 1, <i>ij</i> = −<i>ji</i> = <i>k</i>, <i>jk</i> = −<i>kj</i> = <i>i</i>, <i>ki</i> = −<i>ik</i> = <i>j</i>}</p>
+</div>
+
+<p><b>Lemma 8.6.1</b>. If <i>x</i> is an integer greater than 1, <i>x<sup>m</sup></i> − 1 divides <i>x<sup>n</sup></i> − 1 iff <i>m</i> | <i>n</i>.</p></li>
+
+<p><b>Proof</b>. If we divide <i>x<sup>n</sup></i> − 1 by <i>x<sup>m</sup></i> − 1, we get the following</p> 
+
+<div class="eq">
+<p><i>x<sup>n</sup></i> − 1 = (<i>x<sup>m</sup></i> − 1) (<i>x</i><sup><i>n</i>−<i>m</i></sup> + <i>x</i><sup><i>n</i>−2<i>m</i></sup> + <i>x</i><sup><i>n</i>−3<i>m</i></sup> + ... + <i>x</i><sup><i>n</i>−<i>km</i></sup>) + (<i>x</i><sup><i>n</i>−<i>km</i></sup> − 1)</p>
+</div>
+
+<p>where <i>k</i> is the largest positive integer sucht that <i>n</i> − <i>km</i> &ge; 0. From this we see that <i>x<sup>m</sup></i> − 1 divides <i>x<sup>n</sup></i> − 1 iff <i>n</i> = <i>km</i>. &emsp;□</p>
+
+<p><b>8.6.2 Wedderburn's theorem</b>. A finite skew field is commutative (i.e., a field).</p>
+
+<p><b>Proof</b>. We shall show that the center Z(<i>K</i>) = {<i>k</i> &in; <i>K</i> | <i>kx</i> = <i>xk</i> &forall;<i>x</i> &in; <i>K</i>}  coincides with <i>K</i>. <br> Let |Z(<i>K</i>)| = <i>q</i>. Since Z(<i>K</i>) is a subfield of <i>K</i>, <i>K</i> is a vector space over Z(<i>K</i>), and thereby has <i>q<sup>n</sup></i> elements. We shall thus prove that <i>n</i> = 1. Let <i>a</i> &in; <i>K</i>, and let C(<i>a</i>) is <a href="group_actions.html#centralizer">Centralizer</a>:  it is a sub-skew-field of <i>K</i> containing the center, thus its order is <i>m</i> which divides <i>n</i>. Let C(<i>a</i>)* = C(<i>a</i>) \{0} the multiplicative subgroup <i>K*</i>, of <i>K</i>, hence by <a href="Lagrange.html">Lagrange's theorem</a> <i>q<sup>k</sup></i> − 1 is a divisor of <i>q<sup>n</sup></i> −1, thus <i>m</i> | <i>n</i> (Lemma 8.6.1). The class equation for the group <i>K*</i> can be written as</p>
+
+<div class="eq">
+<p><i>q</i><sup><i>n</i></sup> − 1 = <i>q</i> − 1 + 
+</div>
+
 
 <section aria-label="End">
-<a href="epoxides.html">&#171;Epoxides</a>
+<a href="finite_fields.html">&#171;Finite Fields</a>
 <a href="index.html">Index</a>
 <a href="sulfides.html">Sulfides&#187;</a>
 </section>
