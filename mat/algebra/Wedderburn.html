@@ -41,12 +41,57 @@
 
 <p><b>8.6.2 Wedderburn's theorem</b>. A finite skew field is commutative (i.e., a field).</p>
 
-<p><b>Proof</b>. We shall show that the center Z(<i>K</i>) = {<i>k</i> &in; <i>K</i> | <i>kx</i> = <i>xk</i> &forall;<i>x</i> &in; <i>K</i>}  coincides with <i>K</i>. <br> Let |Z(<i>K</i>)| = <i>q</i>. Since Z(<i>K</i>) is a subfield of <i>K</i>, <i>K</i> is a vector space over Z(<i>K</i>), and thereby has <i>q<sup>n</sup></i> elements. We shall thus prove that <i>n</i> = 1. Let <i>a</i> &in; <i>K</i>, and let C(<i>a</i>) is <a href="group_actions.html#centralizer">Centralizer</a>:  it is a sub-skew-field of <i>K</i> containing the center, thus its order is <i>m</i> which divides <i>n</i>. Let C(<i>a</i>)* = C(<i>a</i>) \{0} the multiplicative subgroup <i>K*</i>, of <i>K</i>, hence by <a href="Lagrange.html">Lagrange's theorem</a> <i>q<sup>k</sup></i> − 1 is a divisor of <i>q<sup>n</sup></i> −1, thus <i>m</i> | <i>n</i> (Lemma 8.6.1). The class equation for the group <i>K*</i> can be written as</p>
+<p><b>Proof</b>. We shall show that the center Z(<i>K</i>) = {<i>k</i> &in; <i>K</i> | <i>kx</i> = <i>xk</i> &forall;<i>x</i> &in; <i>K</i>}  coincides with <i>K</i>. <br> Let |Z(<i>K</i>)| = <i>q</i>. Since Z(<i>K</i>) is a subfield of <i>K</i>, <i>K</i> is a vector space over <i>Z</i>(<i>K</i>), and thereby has <i>q<sup>n</sup></i> elements. We shall thus prove that <i>n</i> = 1. Let <i>a</i> &in; <i>K</i>, and let C(<i>a</i>) its <a href="group_actions.html#centralizer">Centralizer</a>: it is a sub-skew-field of <i>K</i> containing the center, thus its order is <i>m</i> which divides <i>n</i>. Let C(<i>a</i>)* = C(<i>a</i>) \{0} the multiplicative subgroup <i>K*</i>, of <i>K</i>, hence by <a href="Lagrange.html">Lagrange's theorem</a> <i>q<sup>k</sup></i> − 1 is a divisor of <i>q<sup>n</sup></i> −1, thus <i>m</i> | <i>n</i> (Lemma 8.6.1). The <a href="group_actions.html#class_eq">class equation</a> for the group <i>K*</i> can be written as</p>
 
-<div class="eq">
-<p><i>q</i><sup><i>n</i></sup> − 1 = <i>q</i> − 1 + 
-</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>q</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <mi>q</mi>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>m</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mo>&#x2260;</mo>
+      <mi>n</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>m</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+</math>
 
+<!-- $$q^n -1 = q -1 + \sum_{m|n, m\ne n} \frac{q^n -1} {q^m -1} $$ -->
+
+<p>which is a relation among integers. The condition <i>m</i> &ne; <i>n</i> is equivalent to <i>a</i> &notin; Z(<i>K*</i>). We shall show that if <i>n</i> &gt; 1, this relation cannot hold.</p>
 
 <section aria-label="End">
 <a href="finite_fields.html">&#171;Finite Fields</a>

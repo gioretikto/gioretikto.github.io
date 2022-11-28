@@ -21,7 +21,7 @@
 
 <h1>Group Actions</h1>
 
-<p>In this section we introduce the concept of an action of a group <i>G</i> on a non-empty set <i>X</i> and study such actions. We show that a group action of <i>G</i> on <i>X</i> assigns to each element of G a permutation on the set <i>X</i>. This leads to a proof of Cayley’s theorem that every abstract group is isomorphic to some group of permutations and, in particular, every group of order n is isomorphic to a certain subgroup of S<sub>n</sub>.</p>
+<p>In this section we introduce the concept of an action of a group <i>G</i> on a non-empty set <i>X</i> and study such actions. We show that a group action of <i>G</i> on <i>X</i> assigns to each element of G a permutation on the set <i>X</i>. This leads to a proof of Cayley’s theorem that every abstract group is isomorphic to some group of permutations and, in particular, every group of order n is isomorphic to a certain subgroup of <i>S<sub>n</sub></i>.</p>
 
 <p><b>Definition 7.17.1</b> An <i>action</i> of the group <i>G</i> on a non-empty set <i>X</i> is a function</p>
 
@@ -61,7 +61,7 @@
 <p id="orbit">The set of all images of an element <i>x</i> ∈ <i>X</i> under the action of a group <i>G</i> is called the <b>orbit</b> of <i>x</i> under <i>G</i> and is denoted by 𝓞(<i>x</i>):</p>
 
 <div class="eq">
-<p>𝓞(<i>x</i>) := {<i>y</i> &in; <i>X</i> | <i>y</i> = <i>gx</i> for some <i>g</i> &in; <i>G</i>}</p>
+<p>𝒪(<i>x</i>) := {<i>y</i> &in; <i>X</i> | <i>y</i> = <i>gx</i> for some <i>g</i> &in; <i>G</i>}</p>
 </div>
 
 <p>The orbit of <i>x</i> is the equivalence class of <i>x</i> under the equivalence relation on <i>X</i> in which <i>x</i> is equivalent to <i>y</i> if and only if <i>y</i> = <i>g</i>(<i>x</i>) for some <i>g</i> ∈ <i>G</i></p>
@@ -90,7 +90,19 @@
 	<li><p>If <i>g</i> ∈ Stab <i>x</i>, then <i>g</i><sup>−1</sup>(<i>x</i>) = <i>x</i>, so <i>g</i><sup>−1</sup> ∈ Stab <i>x</i>.&emsp;□</p></li>
 </ol>
 
-<p id="centralizer"><b>Definition 7.17.3</b>. For a fixed element <i>a</i> of a group <i>G</i>, the set <i>C<sub>a</sub></i> = {<i>x</i> &in; <i>G</i> | <i>ax</i> = <i>xa</i>} is the <b>centralizer</b> of <i>a</i> in <i>G</i>.</p>
+<p id="centralizer"><b>Definition 7.17.3</b>. The centralizer, <i>C<sub>a</sub></i> of <i>a</i> &in; <i>G</i> is its stabilizer under conjugation (see Example 7.17.58a). Thus</p>
+
+<div class="eq">
+<p><i>C<sub>a</sub></i> = {<i>g</i> &in; <i>G</i>| <i>gag</i><sup>−1</sup> = <i>a</i>} = {<i>g</i> &in; <i>G</i> | <i>ag</i> = <i>ga</i>}</p>
+</div>
+
+<p>It consists of those elements in <i>G</i> which commute with <i>a</i>. The centralizer always contains the group <a href="subgroups.html#center">center</a> of the group: <i>Z</i>(<i>G</i>) &subseteq; <i>C</i>(<i>a</i>) for all <i>a</i> &in; <i>G</i>; in fact</p>
+
+<div class="eq">
+<p><i>Z</i>(<i>G</i>) = ⋂<sub><i>a</i> &in; <i>G</i></sub> <i>C</i>(<i>a</i>)</p>
+</div>
+
+<p>Clearly <i>a</i> &in; <i>Z</i>(<i>G</i>)&emsp;⇐⇒&emsp; <i>C</i>(<i>a</i>) = <i>G</i>; In an Abelian group, the centralizer is the whole group. The centralizer is contained in the corresponding normalizer.</p>
 
 <p><b>Proposition 7.17.4</b>. The subgroup St<sub><i>x</i></sub> of <i>G</i>. In addition</p>
 
@@ -124,7 +136,7 @@
 	<p>St<sub><i>x</i></sub> = {<i>g</i> &in; <i>G</i> | <i>gxg</i><sup>&minus;1</sup> = <i>x</i>} = {<i>g</i> &in; <i>G</i> | <i>gx</i> = <i>xg</i>}</p>
 	</div>
 	
-	<p>it coincides with the centralyzer of the element <i>x</i>, C(<i>x</i>).</p>
+	<p>it coincides with the centralizer of the element <i>x</i>, C(<i>x</i>).</p>
 	
 	</li>
 	
@@ -149,7 +161,7 @@
 	<li><p>Let <i>H</i> a subgroup of a group <i>G</i>. We define the following action of the group <i>H</i> on <i>G</i>:</p>
 	
 	<div class="eq">
-	<p><i>h * g</i> := <i>hg</i> &emsp; (multiplication in <i>G</i>) &forall; <i>h</i> &in; <i>H</i>, &forall;<i>g</i> &in; <i>G</i></p>
+	<p><i>h</i> * <i>g</i> := <i>hg</i> &emsp; (multiplication in <i>G</i>) &forall; <i>h</i> &in; <i>H</i>, &forall;<i>g</i> &in; <i>G</i></p>
 	</div>
 	
 	<p>This action corresponds with the ordinary group multiplication in <i>G</i>. The orbits are the right cosets modulo the subgroup <i>H</i>. The action axione is verified since</p>
@@ -163,11 +175,11 @@
 
 <p>We remark that if the stabilizer of an element <i>x</i> &in; <i>X</i> is large then its orbit is small.</p>
 
-<p><b>Example: Cayley’s Theorem</b>. We know that any group <i>G</i> acts on the set <i>X</i> = <i>G</i> by left multiplication. The preceding construction produces a group homomorphism <i>φ</i>: <i>G</i> → Sym(<i>G</i>) such that φ(<i>g</i>) = L<sub>g</sub> for all <i>g</i> ∈ <i>G</i>, and L<sub>g</sub>(<i>x</i>) = <i>gx</i> for all <i>x</i> ∈ <i>G</i>. We claim that <i>φ</i> is injective in this situation. For, suppose <i>g, h</i> ∈ <i>G</i> and <i>L<sub>g</sub> = L<sub>h</sub></i>. Applying these two functions to <i>e</i> (the identity of <i>G</i>) gives L<sub>g</sub>(<i>e</i>) = L<sub>h</sub>(<i>e</i>), so <i>ge</i> = <i>he</i>, so <i>g</i> = <i>h</i>. It follows that <i>G</i> is isomorphic (via <i>φ</i>) to the image of <i>φ</i>, which is a subgroup of the symmetric group Sym(<i>G</i>). This proves Cayley’s Theorem, which says that any group is isomorphic to a subgroup of some symmetric group. If <i>G</i> has <i>n</i> elements, one can check that Sym(<i>G</i>) is isomorphic to S<sub>n</sub>. So every <i>n</i>-element group is isomorphic to a subgroup of the symmetric group <i>S<sub>n</sub></i>. &emsp;■</p>
+<p><b>Example: Cayley’s Theorem</b>. We know that any group <i>G</i> acts on the set <i>X</i> = <i>G</i> by left multiplication. The preceding construction produces a group homomorphism <i>φ</i>: <i>G</i> → Sym(<i>G</i>) such that φ(<i>g</i>) = L<sub>g</sub> for all <i>g</i> ∈ <i>G</i>, and L<sub>g</sub>(<i>x</i>) = <i>gx</i> for all <i>x</i> ∈ <i>G</i>. We claim that <i>φ</i> is injective in this situation. For, suppose <i>g, h</i> ∈ <i>G</i> and <i>L<sub>g</sub> = L<sub>h</sub></i>. Applying these two functions to <i>e</i> (the identity of <i>G</i>) gives L<sub>g</sub>(<i>e</i>) = L<sub>h</sub>(<i>e</i>), so <i>ge</i> = <i>he</i>, so <i>g</i> = <i>h</i>. It follows that <i>G</i> is isomorphic (via <i>φ</i>) to the image of <i>φ</i>, which is a subgroup of the symmetric group Sym(<i>G</i>). This proves Cayley’s Theorem, which says that any group is isomorphic to a subgroup of some symmetric group. If <i>G</i> has <i>n</i> elements, one can check that Sym(<i>G</i>) is isomorphic to <i>S<sub>n</sub></i>. So every <i>n</i>-element group is isomorphic to a subgroup of the symmetric group <i>S<sub>n</sub></i>. &emsp;■</p>
 
-<p><b>Proposition 7.17.6</b>. Let <i>X</i> a <i>G</i>-set. The cardinality of the orbit O(<i>x</i>) of the element <i>x</i> &in; <i>X</i> is equal to the index St<sub><i>x</i></sub> in <i>G</i></p>
+<p><b>Proposition 7.17.6</b>. Let <i>X</i> a <i>G</i>-set. The cardinality of the orbit 𝒪(<i>x</i>) of the element <i>x</i> &in; <i>X</i> is equal to the index St<sub><i>x</i></sub> in <i>G</i></p>
 
-<p><b>Proof</b>. It suffices to find a bijections between O(<i>x</i>) and right cosets</p>
+<p><b>Proof</b>. It suffices to find a bijections between 𝒪(<i>x</i>) and right cosets</p>
 
 <div class="eq">
 <p>{right cosets of St<sub><i>x</i></sub>} = {St<sub><i>x</i></sub><i>g</i> | <i>g</i> &in; <i>G</i>}</p>
@@ -186,7 +198,7 @@
 <p><i>g</i><sub>1</sub><i>x</i> = <i>g</i><sub>2</sub><i>x</i> ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup><i>g</i><sub>1</sub>x = <i>x</i> ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup>g<sub>1</sub> &in; St<sub><i>x</i></sub> ⇐⇒  St<sub><i>x</i></sub> <i>g</i><sub>1</sub><sup>&minus;1</sup> = St<sub><i>x</i></sub> <i>g</i><sub>2</sub><sup>&minus;1</sup></p>
 </div>
 
-<p><b>Note on the last iff</b>: Apply the definition of <a href="cosets.html">right coset</a>: <i>a</i> ~<sub>r</sub> <i>b</i> ⇐⇒ <i>ab</i><sup>&minus;1</sup> &in; St<sub><i>x</i></sub> which in this case is: g<sub>2</sub><sup>&minus;1</sup>  ~<sub>r</sub> g<sub>1</sub><sup>&minus;1</sup>.</p>
+<p><b>Note on the last iff</b>: Apply the definition of <a href="cosets.html">right coset</a>: <i>a</i> ~<sub>r</sub> <i>b</i> ⇐⇒ <i>ab</i><sup>&minus;1</sup> &in; St<sub><i>x</i></sub> which in this case is: <i>g</i><sub>2</sub><sup>&minus;1</sup>  ~<sub>r</sub> <i>g</i><sub>1</sub><sup>&minus;1</sup>.</p>
 
 <p>In addition the map is surjective since every right coset St<sub><i>x</i></sub> <i>g</i> has the counterimage <i>g</i><sup>&minus;1</sup><i>x</i> &in; O(<i>x</i>). &emsp; □</p>
 
@@ -195,7 +207,7 @@
 <p><b>Corollary 7.17.8</b>. If <i>G</i> is a finite group acting on a set <i>X</i>, for every <i>x</i> &in; <i>X</i> we have</p>
 
 <div class="eq">
-<p>|O(<i>x</i>)| ⋅ |St<sub><i>x</i></sub>| = |<i>G</i>|</p>
+<p>|𝒪(<i>x</i>)| ⋅ |St<sub><i>x</i></sub>| = |<i>G</i>|</p>
 </div>
 
 <p><b>Example 7.17.9</b>. Let <i>G</i> a group which acts on a subgroup <i>H</i> of <i>G</i>, where the action is the multiplication like in example 7.17.5(e). Let <i>g</i> &in; <i>G</i>. Then O(<i>g</i> = Hg, St<sub>g</sub> = {<i>e</i>}, thus the <a href="cosets.html#index">index</a> of St<sub><i>g</i></sub> in <i>H</i> is equal to |<i>H</i>| as dictaded by Proposition 7.17.6. </p>
@@ -203,10 +215,10 @@
 <p><b>Corollary 7.17.10</b>. Consider the natural action of S<sub>4</sub> on <i>X</i> = {1,2,3,4}. Take <i>x</i> = 1 &in; <i>X</i>. Then</p>
 
 <div class="eq">
-<p><i>O</i>(1) = {1,2,3,4}, St<sub>1</sub> ≃ St<sub>4</sub></p>
+<p><i>𝒪</i>(1) = {1,2,3,4}, St<sub>1</sub> ≃ St<sub>4</sub></p>
 </div>
 
-<p>thus |<i>O</i>(1)| = 4, |St<sub>1</sub>| = 6 then 4 ⋅ 6 = 24 = |S<sub>4</sub>| &emsp; ■.</p>
+<p>thus |<i>𝒪</i>(1)| = 4, |St<sub>1</sub>| = 6 then 4 ⋅ 6 = 24 = |S<sub>4</sub>| &emsp; ■.</p>
 
 <p><b>Example 7.17.11</b>. Let <i>X</i> the set of words made by seven letters. We want to count how many distict words with two As, three Bs and on two Cs are possible. The group S<sub>7</sub> acts on <i>X</i> permuting the letters: for example,</p>
 
@@ -223,10 +235,10 @@
 <p>(135) moves the 1st letter to the 3rd spot, the 3rd letter to the 5th spot, and the 5th letter to the 1st spot. In total the stabilizer has 2!3!2! = 24 elements. Then</p>
 
 <div class="eq">
-<p>|<i>O</i>(<i>x</i>)| = |S<sub>7</sub>|/|St<sub><i>x</i></sub>| = 7!/24 = 210. &emsp; ■</p>
+<p>|<i>𝒪</i>(<i>x</i>)| = |S<sub>7</sub>|/|St<sub><i>x</i></sub>| = 7!/24 = 210. &emsp; ■</p>
 </div>
 
-<h2>The Class equation</h2>
+<h2 id="class_eq">The Class equation</h2>
 
 <p>In case the action is the coniugacy action we have the following result:</p>
 
@@ -246,9 +258,9 @@
 
 <p>where an <i>x</i> is considered for every conjugacy class. Since <i>c<sub>x</sub></i> = |O(<i>x</i>)| and C(<i>x</i>) = St<sub><i>x</i></sub>, the relation follows from corollary 7.17.6. &emsp; □</p>
 
-<p>Equation 7.17.1 is known as <i>class equation</i>.</p>
+<p>Equation 7.17.1 is known as <i><b>class equation</b></i>.</p>
 
-<p><b>Remark</b> <p>Remembering the definition of <a href="subgroups.html#center">center</a> Z(<i>G</i>) of a group and observing that an element <i>x</i> belongs to the center iff its conjugacy class is made by the only element <i>x</i>:</p>
+<p><b>Remark</b>. Recalling the definition of <a href="subgroups.html#center">center</a> <i>Z</i>(<i>G</i>) of a group and noticing that an element <i>x</i> belongs to the center iff its conjugacy class is made by the only element <i>x</i>:</p>
 
 <div class="eq">
 <p><i>z</i> &in; <i>Z</i>(<i>G</i>) ⇐⇒ <i>zg</i> = <i>gz</i> ⇐⇒ <i>g</i><sup>&minus;1</sup><i>zg</i> = <i>z</i>, for all <i>g</i> in <i>G</i>.</p>
@@ -257,12 +269,12 @@
 <p>The set of elements <i>z</i> whose conjugacy class consists of <i>z</i> alone is precisely the center of the group i.e. <i>Z</i>(<i>G</i> is a union of one-element conjugacy classes), 7.17.1 can be written as</p>
 
 <div class="eq">
-<p>|<i>G</i>| = |<i>Z</i>(<i>G</i>)| + ∑ |<i>G</i>|/|<i>C</i>(<i>x</i>)|</p>
+<p>|<i>G</i>| = |<i>Z</i>(<i>G</i>)| + ∑ |<i>G</i>|/|<i>C</i>(<i>x</i>)| &emsp; (<b>7.17.2</b>)</p>
 </div>
 
 <p>where the sum is over <i>x</i> &notin; <i>Z</i>(<i>G</i>), one for every conjugacy class.</p>
 
-<p><b>Example 7.17.13</b>. Let <i>G</i> = S<sub>3</sub>. Conjugacy classes are</p>
+<p><b>Example 7.17.13</b>. Let <i>G</i> = S<sub>3</sub>. The conjugacy classes are</p>
 
 <div class="eq">
 <p><i>C</i><sub>1</sub> = {id}<br>
@@ -284,7 +296,7 @@
 <p>|<i>S</i><sub>3</sub>| = 6 = 6/|<i>C</i>(id)| + 6/|<i>C</i>(1,2)| + 6/|<i>C</i>(1,2,3)| = 6/2 + 6/2 + 6/3 = 1 + 3 + 2.</p>
 </div>
 
-<p><b>Burnside's Theorem</b>. Let <i>G</i> a finite group and let <i>X</i> a finite <i>G</i>-set. Then the number, <i>s</i> of orbits in <i>X</i> with respect to the action of <i>G</i> is given as follows</p>
+<p id="Burnside"><b>7.17.14 Burnside's Theorem</b>. Let <i>G</i> a finite group and let <i>X</i> a finite <i>G</i>-set. Then the number, <i>s</i> of orbits in <i>X</i> with respect to the action of <i>G</i> is given as follows</p>
 
 <div class="eq">
 <p><i>s</i> = 1/|<i>G</i>| ⋅ ∑<sub><i>g</i> &in; <i>G</i></sub> |<i>X<sub>g</sub></i>|</p>
@@ -298,21 +310,91 @@
 
 <p><b>Proof</b>. Let <i>N</i> the cardinality of the set made by all couple (<i>g, x</i>) such that <i>gx</i> = <i>x</i>. Fixing <i>g</i> &in; <i>G</i>, there exist |<i>X<sub>g</sub></i>| couples having <i>g</i> as first element. Fixing instead <i>x</i>, there are |St<sub><i>x</i></sub>| couples having <i>x</i> as second element. Thus we have the following equality</p>
 
-<div class="eq">
-<p><i>N</i> = ∑<sub><i>g</i> &in; G</sub> |<i>X<sub>g</sub></i>| = ∑<sub><i>x</i> &in; St<sub><i>x</i></sub></sub> |St<sub><i>x</i></sub>| &emsp; (<b>7.17.2</b>)</p>
-</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>N</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>g</mi>
+      <mo>&#x2208;</mo>
+      <mi>G</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>X</mi>
+    <mi>g</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo>&#x2208;</mo>
+      <mi>X</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>S</mi>
+  <msub>
+    <mi>t</mi>
+    <mi>x</mi>
+  </msub>
+  <mo stretchy="false">|</mo>
+<mtext>&emsp;&emsp;<b>7.17.3</b></mtext>
+</math>
+
+<!-- $$N = \sum_{g \in G} |X_g| = \sum_{x \in X} |St_x| $$ -->
 
 <p>By corollary 7.17.8, the right side of the previous relation is equal to</p>
 
 <div class="eq">
-<p>|<i>G</i>| ∑<sub><i>x</i> &in; <i>X</i></sub> 1/|O(<i>x</i>)|</p>
+<p>|<i>G</i>| ∑<sub><i>x</i> &in; <i>X</i></sub> 1/|𝒪(<i>x</i>)|</p>
 </div>
 
-<p>Since ∑<sub><i>x</i> &in; <i>X</i></sub> 1/|O(<i>x</i>)| represents exactly the number <i>s</i> of orbits we are looking for. Eq 7.17.2 can thus be written as</p>
+<p>Since ∑<sub><i>x</i> &in; <i>X</i></sub> 1/|𝒪(<i>x</i>)| represents exactly the number <i>s</i> of orbits we are looking for. Eq 7.17.2 can thus be written as</p>
 
-<div class="eq">
-<p>∑<sub><i>g</i> &in; G</sub> |<i>X<sub>g</sub></i>| = |<i>G</i>|<i>s</i>. &emsp; □</p>
-</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>g</mi>
+      <mo>&#x2208;</mo>
+      <mi>G</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>X</mi>
+    <mi>g</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>G</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>s</mi>
+</math>
+
+<!-- $$\sum_{g \in G} |X_g| = |G|s $$ -->
+
+<p>and the theorem is thus proved. &emsp;□</p>
 
 <p><b>Example 7.17.14</b>. Let us use the Burnside counting theorem to find the number of ways of seating 10 people around a circular table. Let <i>X</i> the set of all possible ordering of the 10 people. We have |<i>X</i>| = 10!, wich corresponds to the number of ways to seat the people in a row. A very obvious difference between seating people on a straight bench and seating them at a circular table is that each person has 2 neighbours in the latter case and as long as each person retains the same 2 neighbours, they can be rotated round the table without causing any difference. Hence the 10 arrangements in a row correspond to one arrangement in a circle. </p>
 
