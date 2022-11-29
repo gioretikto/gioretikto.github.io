@@ -58,7 +58,7 @@
 
 <p>If <i>&psi;</i> is a permutation representation of a group <i>G</i> on a set <i>X</i>, then <i>G</i>/ Ker(<i>&psi;</i>) ≃ Im(<i>&psi;</i>) by the <a href="fund_theo_group_homo.html">First Isomorphism Theorem 7.13.2</a>. Thus <i>G</i>/ Ker(<i>&psi;</i>) is isomorphic with a permutation group on <i>X</i>. If Ker(<i>&psi;</i>) = <i>e</i>, then <i>G</i> itself is isomorphic with a permutation group on <i>X</i>, in which case the representation <i>&psi;</i> is said to be faithful. The term faithful can also be applied to a group action by means of the associated permutation representation.</p>
 
-<p id="orbit">The set of all images of an element <i>x</i> ∈ <i>X</i> under the action of a group <i>G</i> is called the <b>orbit</b> of <i>x</i> under <i>G</i> and is denoted by 𝓞(<i>x</i>):</p>
+<p id="orbit">The set of all images of an element <i>x</i> ∈ <i>X</i> under the action of a group <i>G</i> is called the <b>orbit</b> of <i>x</i> under <i>G</i> and is denoted by 𝒪(<i>x</i>):</p>
 
 <div class="eq">
 <p>𝒪(<i>x</i>) := {<i>y</i> &in; <i>X</i> | <i>y</i> = <i>gx</i> for some <i>g</i> &in; <i>G</i>}</p>
@@ -150,7 +150,7 @@
 	
 	<li><p>Let <i>&sigma;</i> = (4,5) (1,3,6) (2,7,8) &in; S<sub>8</sub> and let <i>G</i> =  ⟨<i>&sigma;</i>⟩. The the orbits under which <i>X</i> = {1,2,...,8} is parted under the action of <i>G</i> on <i>X</i> are three: {4,5}, {1,3,6} and {2,7,8}. The group <i>G</i> here is nothing but all possible group elements  &sigma;<sup><i>n</i></sup> for nonnegative integers <i>n</i>. Remember that in any finite cyclic group, such as this <sigma>, all negative powers can be rewritten as positive powers. In this case, that sigma has order 6 (as it turns out), so &sigma;<sup>−1</sup> = &sigma;<sup>(6 − 1)</sup> = &sigma;<sup>5</sup>, &sigma;<sup>−2</sup> = &sigma;<sup>(6 − 2)</sup> = &sigma;<sup>4</sup>,  etc. So, more generally, for any <i>x</i> of finite order <i>n</i> in any group at all, <i>x</i><sup>−1</sup> is the same thing as <i>x</i><sup>(<i>n</i>−1)</sup> So for example: σ1 = 3,  σσ1 = σ3 = 6, σσσ1 = σσ3 = σ6 = 1. So that orbit is done and we have used up 1,3,6 from <i>X</i> so far.Then then the cycle diagram of σ is a graphical depiction of the action of <i>G</i> on <i>X</i>.</p></li>
 	
-	<li><p>Let <i>G</i> = GL<sub><i>n</i></sub>(R) the linear group made by all invertible matrices with real elements. This group acts on <i>X</i> = R<sup>n</sup> by the following natural action</p>
+	<li><p>Let <i>G</i> = GL<sub><i>n</i></sub>(ℝ) the linear group made by all invertible matrices with real elements. This group acts on <i>X</i> = ℝ<sup><i>n</i></sup> by the following natural action</p>
 	
 	<div class="eq">
 	<p>A * <b><i>x</i></b> : = A<b><i>x</i></b></p>
@@ -198,7 +198,7 @@
 <p><i>g</i><sub>1</sub><i>x</i> = <i>g</i><sub>2</sub><i>x</i> ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup><i>g</i><sub>1</sub>x = <i>x</i> ⇐⇒ <i>g</i><sub>2</sub><sup>&minus;1</sup>g<sub>1</sub> &in; St<sub><i>x</i></sub> ⇐⇒  St<sub><i>x</i></sub> <i>g</i><sub>1</sub><sup>&minus;1</sup> = St<sub><i>x</i></sub> <i>g</i><sub>2</sub><sup>&minus;1</sup></p>
 </div>
 
-<p><b>Note on the last iff</b>: Apply the definition of <a href="cosets.html">right coset</a>: <i>a</i> ~<sub>r</sub> <i>b</i> ⇐⇒ <i>ab</i><sup>&minus;1</sup> &in; St<sub><i>x</i></sub> which in this case is: <i>g</i><sub>2</sub><sup>&minus;1</sup>  ~<sub>r</sub> <i>g</i><sub>1</sub><sup>&minus;1</sup>.</p>
+<p><b>Note on the last iff</b>: Apply the definition of <a href="cosets.html">right coset</a>: <i>a</i> ~<sub>r</sub> <i>b</i> ⇐⇒ <i>ab</i><sup>&minus;1</sup> &in; St<sub><i>x</i></sub> which in this case is: <i>g</i><sub>2</sub><sup>&minus;1</sup> ~<sub>r</sub> <i>g</i><sub>1</sub><sup>&minus;1</sup>.</p>
 
 <p>In addition the map is surjective since every right coset St<sub><i>x</i></sub> <i>g</i> has the counterimage <i>g</i><sup>&minus;1</sup><i>x</i> &in; O(<i>x</i>). &emsp; □</p>
 
@@ -242,7 +242,31 @@
 
 <p>In case the action is the coniugacy action we have the following result:</p>
 
-<p><b>Corollary 7.17.12</b>. Let <i>G</i> a finite group. Let <i>C</i>(<i>x</i>) the <a href="conjugacy.html#centraliser">centraliser</a> of the element <i>x</i> &in; <i>G</i>, then we've the following relation</p>
+<p><b>Corollary 7.17.12</b>. Let <i>G</i> a finite group. Let <i>C</i>(<i>x</i>) the <a href="conjugacy.html#centraliser">centraliser</a> of the element <i>x</i> &in; <i>G</i>, then since the conjugacy classes parition <i>G</i>, we've the following relation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>G</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mtext>conjugacy classes C</mtext>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>C</mi>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$|G| = \sum_{\text{conjugacy classes C}} |C|$$ -->
+
+<p>then</p>
 
 <div class="eq">
 <p>|<i>G</i>| = ∑|<i>G</i>| / |C(<i>x</i>)|</p>
