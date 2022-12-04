@@ -21,7 +21,7 @@
 
 <h1>The <i>n</i>-th roots of unity</h1>
 
-<p>Let <i>n</i> &gt; 1 be an integer. An <i>n</i>-th root of unity in ℂ is a complex number <i>&alpha;</i> such that <i>&alpha;<sup>n</sup></i> = 1. All <i>n</i>th roots of unity form a group of order <i>n</i> under multiplication. Any such <i>&alpha;</i> is of the form <i>&alpha;<sub>k</sub></i> = e<sup>2ik/n</sup>, where 1 &le; <i>k</i> &lt; <i>n</i>  or equivalentely</p>
+<p>Let <i>n</i> &gt; 1 be an integer. An <i>n</i>-th root of unity in ℂ is a complex number <i>&alpha;</i> which is a zero of <i>x<sup>n</sup></i> − 1. The set of <i>n</i>-th roots of unity form a cyclic group of order <i>n</i>, 𝐶<sub><i>n</i></sub>, under multiplication and each generator of 𝐶<sub><i>n</i></sub> is called a primitive <i>n</i>th root of unity. <br> Any such <i>&alpha;</i> is of the form <i>&alpha;<sub>k</sub></i> = e<sup>2ik/n</sup>, where 1 &le; <i>k</i> &lt; <i>n</i> or equivalentely</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msub>
@@ -164,12 +164,20 @@
 
 <p>For example, <i>i</i> is an 8th root of unity (for <i>i</i><sup>8</sup> = 1), but <b>not</b> a primitive 8th root of unity; <i>i</i> is a primitive 4th root of unity.</p>
 
-<p>The zeros of <i>x<sup>n</sup></i> − 1 form a cyclic group 𝐶<sub><i>n</i></sub> and each generator of 𝐶<sub><i>n</i></sub> is called a primitive <i>n</i>th root of unity. Now for any integer 1 &le; <i>k</i> &lt; <i>n</i>, <i>&alpha;</i><sub>1</sub><sup><i>k</i></sup> is a generator of <i>G</i> iff gcd(<i>k,n</i>) = 1, see <a href="cyclic_groups.html#primitive">Lemma 7.3.10</a>. If <i>n</i> = 8 we have, <i>&alpha;</i><sub>1</sub><sup>1</sup>, <i>&alpha;</i><sub>1</sub><sup>3</sup>, <i>&alpha;</i><sub>1</sub><sup>5</sup> and <i>&alpha;</i><sub>1</sub><sup>7</sup> are generators of this cyclic group. The term "primitive" exactly refers to being a generator of the cyclic group, namely an <i>n</i>th root of unity is primitive when there is no positive integer <i>k</i> smaller than <i>n</i> such that <i>&alpha;<sub>n</sub><sup>k</sup></i> = 1. &emsp;■</p>
+<p>Now for any integer 1 &le; <i>k</i> &lt; <i>n</i>, <i>&alpha;</i><sub>1</sub><sup><i>k</i></sup> is a generator of <i>G</i> iff gcd(<i>k,n</i>) = 1, see <a href="cyclic_groups.html#primitive">Lemma 7.3.10</a>. If <i>n</i> = 8 we have, <i>&alpha;</i><sub>1</sub><sup>1</sup>, <i>&alpha;</i><sub>1</sub><sup>3</sup>, <i>&alpha;</i><sub>1</sub><sup>5</sup> and <i>&alpha;</i><sub>1</sub><sup>7</sup> are generators of this cyclic group. The term "primitive" exactly refers to being a generator of the cyclic group, namely an <i>n</i>th root of unity is primitive when there is no positive integer <i>k</i> smaller than <i>n</i> such that <i>&alpha;<sub>n</sub><sup>k</sup></i> = 1. &emsp;■</p>
 
-<p><b>7.3.2 Proposition</b>. The set of <i>n</i>-th roots of unity in ℂ forms a cyclic group 𝐶<sub><i>n</i></sub> isomorphic to (ℤ/<i>n</i>ℤ),+).</p>
+<p><b>7.3.2 Proposition</b>. The set of <i>n</i>-th roots of unity in ℂ forms a cyclic group 𝐶<sub><i>n</i></sub> isomorphic to (ℤ/<i>n</i>ℤ,+).</p>
 
 <p><b>Proof</b>. Consider the group homomorphism <i>f</i>: (ℤ, +) ⟶ ℂ* defined by <i>f</i>(<i>k</i>) = <i>e</i><sup>2ik&pi;/n</sup>. The kernel of this homomorphism is exactly <i>n</i>ℤ, and its image  𝐶<sub><i>n</i></sub>, which gives the result. (We could just note that both groups are cyclic and both have order <i>n</i>, so by general principles they are isomorphic.) &emsp;□</p>
 
+<h2 id="Z_n">The ℤ/<i>n</i>ℤ group</h2>
+
+<p>The elements of ℤ/<i>n</i>ℤ form an abelian group under addition which is isomorphic to s<sub><i>n</i></sub> the set {1, <i>&alpha;</i><sub>1</sub>, ..., <i>&alpha;</i><sub>1</sub><sup><i>n</i> − 1</sup>}, under mutliplication. The special case <i>n</i> = 2 gives 𝐶<sub>2</sub> as the group {1, −1}, under mutliplication. In general, the group elements lie on the unit circle in the plane ℂ, and multiplication by <i>&alpha;</i><sub>1</sub><sup><i>m</i></sup> really rotates the elements through <i>m</i> places. Imagine the congruence classes <i>n</i>ℤ, <i>n</i>ℤ + 1, ..., <i>n</i>ℤ + <i>n</i> − 1 (equivantely [0], [1],..., [<i>n</i>−1]), arranged in a circle, then addition of <i>n</i>ℤ + <i>m</i> in the same way seen for 𝐶<sub><i>n</i></sub>, corresponds to rotation through <i>m</i> places.</p>
+
+<figure>
+<img src="img/5th_roots_unity.png" alt="5th roots unity"/>
+<figcaption>Elements of 𝐶<sub>5</sub>. <i>&alpha;</i><sub>1</sub> is the generator of the group.</figcaption>
+</figure>
 
 <section aria-label="End">
 <a href="cyclic_groups.html">&#171;Cyclic groups</a>

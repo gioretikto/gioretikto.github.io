@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exercise on cyclotomic polynomials">
+	<title>Exercise on cyclotomic polynomials</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Exercise on cyclotomic polynomials</h1>
+
+<ol>
+	<li><p>Prove a) that the product of two nth roots of unity is again an nth root of unity, b) and the inverse of a <i>n</i>th root of unity is is a nth root of unity.</p>
+
+	<li><p>Let 𝐶<sub><i>n</i></sub> the set of the <i>n</i>th roots of unity. Prove the existence of a bijection <i>f</i> between 𝐶<sub><i>n</i></sub> and ℤ<sub><i>n</i></sub>, such that <i>f</i>(&zeta;<sub>1</sub>&zeta;<sub>2</sub>) = <i>f</i>(&zeta;<sub>1</sub>) + <i>f</i>(&zeta;<sub>2</sub>) for every <i>&zeta;</i><sub>1</sub>,&zeta;<sub>2</sub> &in; 𝐶<sub><i>n</i></sub>.</p></li>
+
+	<li><p>Prove that for every <i>d</i>|<i>n</i> there exists a <i>d</i>-th root of the unit that has <i>d</i> has order. Count for each <i>d</i> how many <i>n</i>-th roots of the unit having the same order <i>d</i> are there.</p></li>
+
+	<li><p>Evaluate the unique factorization in terms of irreducible factors over ℚ of the following polynomials:</p>
+
+	<div class="eq">
+	<p><i>x</i><sup>18</sup> − 1, &emsp; <i>x</i><sup>20</sup> − 1, &emsp; <i>x</i><sup>21</sup> − 1, &emsp; <i>x</i><sup>30</sup> − 1.</p>
+	</div>
+
+	</li>
+
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>If <i>&alpha;<sup>n</sup></i> = 1 and <i>&beta;<sup>n</sup></i> = 1 , then (<i>&alpha;&beta;</i>)<sup><i>n</i></sup> = <i>&alpha;<sup>n</sup>&beta;<sup>n</sup></i> = 1. If <i>&zeta;<sup>n</sup></i> = 1 taking the −1 power of both sides we get (1/<i>&zeta;</i>)<sup><i>n</i></sup> = 1.</p></li>
+
+	<li><p>Note that e^x e^y = e^(x + y)    for all x, y. Define <i>f</i>: 𝐶<sub><i>n</i></sub> ⟶ ℤ<sub><i>n</i></sub> as <i>f</i>(<i>&zeta;<sub>k</sub>)</i> = [<i>k</i>]; e.g. if we take 𝐶<sub>2</sub> = {−1,1} and ℤ<sub>2</sub>={[0],[1]}, then f(−1<sup>0</sup>)= [0] and f(1<sup>1</sup>)=[1]
+
+	<li><p>It sufficies to consider <i>&zeta;</i><sup><i>n</i>/<i>d</i></sup>, with <i>&zeta;</i> primitive root of <i>x<sup>n</sup></i> − 1 because</p>
+
+<div class="eq">
+<p>(ζ<sup>(<i>n</i>/<i>d</i>)</sup>)<sup>d</sup> = <i>ζ<sup>n</sup></i> = 1.</p>
+</div>
+
+<p>ζ<sup>(<i>n</i>/<i>d</i>)</sup> has order <i>d</i>. For every <i>d</i>|<i>n</i> there are <i>φ</i>(<i>d</i>) primitive <i>n</i>-th roots of unity with order <i>d</i>.</p>
+
+</li>
+
+<li><p><i>x</i><sup>18</sup> − 1 = &Phi;<sub>1</sub> ⋅ &Phi;<sub>2</sub> ⋅ &Phi;<sub>3</sub> ⋅ &Phi;<sub>6</sub> ⋅ &Phi;<sub>9</sub> ⋅ &Phi;<sub>18</sub> = (<i>x</i> − 1) (<i>x</i> + 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1) (<i>x</i><sup>2</sup> −<i>x</i> +1) (<i>x</i><sup>6</sup> + <i>x</i><sup>3</sup> + 1) (<i>x</i><sup>6</sup> − <i>x</i><sup>3</sup> + 1). Where &Phi;<sub>18</sub> can be obtained by long division oi <i>x</i><sup>18</sup> − 1 by the other lnown cyclotomic polynomials.</p>
+
+<p><i>x</i><sup>20</sup> − 1 = &Phi;<sub>1</sub> ⋅ &Phi;<sub>2</sub> ⋅ &Phi;<sub>4</sub> ⋅ &Phi;<sub>5</sub> ⋅ &Phi;<sub>10</sub> ⋅ &Phi;<sub>20</sub> = (<i>x</i> − 1) (<i>x</i> + 1) (<i>x</i><sup>2</sup> + 1) (<i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1)(<i>x</i><sup>4</sup> − <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> −<i>x</i> +1)(<i>x</i><sup>8</sup> −<i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> − <i>x</i><sup>2</sup> +1).</p>
+
+<p><i>x</i><sup>21</sup> − 1 = &Phi;<sub>1</sub> ⋅ &Phi;<sub>3</sub> ⋅ &Phi;<sub>7</sub> ⋅ &Phi;<sub>21</sub> = (<i>x</i> − 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1) (<i>x</i><sup>6</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> +<i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + <i>x</i> +1) (<i>x</i><sup>12</sup> − <i>x</i><sup>11</sup> + <i>x</i><sup>9</sup> − <i>x</i><sup>8</sup> + <i>x</i><sup>6</sup> − <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> −<i>x</i> +1).&emsp;■</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="pol_divisibility.html">&#171;Divisibility of polynomials</a>
+<a href="index.html">Index</a>
+<a href="fund_theorem_alg.html">Irreducibility of polynomials; Fundamental theorem of algebra &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

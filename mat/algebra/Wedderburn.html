@@ -87,11 +87,114 @@
       <mn>1</mn>
     </mrow>
   </mfrac>
+<mtext>&emsp;&emsp;8.4.1</mtext>
 </math>
 
 <!-- $$q^n -1 = q -1 + \sum_{m|n, m\ne n} \frac{q^n -1} {q^m -1} $$ -->
 
-<p>which is a relation among integers. The condition <i>m</i> &ne; <i>n</i> is equivalent to <i>a</i> &notin; Z(<i>K*</i>). We shall show that if <i>n</i> &gt; 1, this relation cannot hold.</p>
+<p>which is a relation among integers. The condition <i>m</i> &ne; <i>n</i> is equivalent to <i>a</i> &notin; Z(<i>K*</i>). We shall show that if <i>n</i> &gt; 1, this relation cannot hold. Suppose there exists an integer dividing (<i>q<sup>n</sup></i> − 1)/(<i>q<sup>m</sup></i> −1) in Eq. 8.4.1 then it must divide <i>q</i> − 1 as well. If this does not happen Eq. 8.4.1 could be verified only for <i>n</i> = 1. To determine this integer we resort to the <a href="cyclotomic_polynomials.html"><i>n</i>th cyclotomic polynomial</a>, <i>&Phi;<sub>n</sub></i>(<i>x</i>) a polynomial in ℤ[<i>x</i>]. The relation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>x</mi>
+    <mi>d</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>&#x2224;</mo>
+      <mi>d</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$x^n-1 = \Phi_n(x) (x^d-1) \prod_{k|n, k \nmid d} \Phi_k (x) $$ -->
+
+<p>a relation of the form</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup></i> − 1 = &Phi;<sub>n</sub>(<i>x</i>)(<i>x<sup>d</sup></i> − 1)<i>f</i>(<i>x</i>),	&emsp;&emsp; <i>f</i>(<i>x</i>) &in; ℤ[<i>x</i>]</p>
+</div>
+
+<p>which holds for every <i>x</i>. In particular if <i>q</i> is an integer</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>q</mi>
+  <mo stretchy="false">)</mo>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>m</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi mathvariant="normal">&#x2200;</mi>
+  <mi>m</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>n</mi>
+  <mo>,</mo>
+  <mi>m</mi>
+  <mo>&#x2260;</mo>
+  <mi>n</mi>
+</math>
+
+<!-- $$ \Phi_n(q) \vert \frac{q^n -1} {q^m -1} \quad \forall m|n, m \ne n$$ -->
+
+<p>Since <i>&Phi;<sub>n</sub></i>(<i>q</i>) divides <i>q<sup>n</sup></i> − 1, based on Eq. 8.4.1, it must divide <i>q</i> − 1 as well. We must have |<i>&Phi;<sub>n</sub></i>(<i>q</i>)| &le; <i>q<sup>n</sup></i> − 1. For <i>n</i> &gt; 1 this would be impossible: <i>&Phi;</i>(<i>q</i>) = &Pi;(<i>q</i> − &theta;), with &theta; variable among the <i>n</i>th primitive roots of unity, and |<i>q</i> − &theta;| &gt; |<i>q</i>| − |&theta;| = <i>q</i> − 1, that is |<i>&Phi;<sub>n</sub></i>(<i>q</i>)| &gt; <i>q</i> − 1. &emsp;□</p>
 
 <section aria-label="End">
 <a href="finite_fields.html">&#171;Finite Fields</a>
