@@ -21,7 +21,7 @@
 
 <h1>Normal Extension</h1>
 
-<p>We saw that given an irreducible polynomial in <i>F</i>[<i>x</i>] and one of its root <i>&alpha;</i>, is not generally true that the splitting field of <i>f</i>(<i>x</i>) is <i>F</i>(&alpha;), that is is not said that the field containng one root of the irreducible polynomial will contain all of them. For example ∛2 is a root of the irreducible polynomial <i>x</i><sup>3</sup> − 2, over , but ℚ(∛2) is not the splitting field for  <i>x</i><sup>3</sup> − 2.</p>
+<p>We saw that given an irreducible polynomial in <i>F</i>[<i>x</i>] and one of its root <i>&alpha;</i>, is not generally true that the splitting field of <i>f</i>(<i>x</i>) is <i>F</i>(&alpha;), that is is not said that the field containng one root of the irreducible polynomial will contain all of them. For example ∛2 is a root of the irreducible polynomial <i>x</i><sup>3</sup> − 2, over , but ℚ(∛2) is not the splitting field for <i>x</i><sup>3</sup> − 2.</p>
 
 <p><b>8.7.1 Definition</b>. Let <i>K</i> be an extension of a field <i>F</i>. Two element <i>&alpha;</i> and <i>&beta;</i> &in; <i>K</i> algebraic over <i>F</i>, are said to be <b>conjugate</b> over <i>F</i> whenever they have the same <a href="simple_extensions.html#minimal">minimal polynomial</a> over <i>F</i>. &emsp;□</p>
 
@@ -36,7 +36,31 @@
 
 </ol>
 
-<p><b>8.7.3 Definition</b>. Let <i>K</i> be an extension of <i>F</i>. We say that <i>K</i> is a <b>normal</b> extension of <i>F</i> if, whenever <i>f</i> is an irreducible polynomial in <i>F</i>[<i>x</i>] which has one root in <i>K</i>, then all the roots of <i>f</i> lie in <i>K</i> (that is, <i>f</i> splits into linear factors in <i>K</i>[<i>x</i>]).&emsp;□</p>
+<p><b>Proof</b>. (a) ⇒ (b) Let <i>&alpha;</i> a root of the irreducible polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>]. Let <i>L</i> the splitting field for <i>f</i> over <i>K</i> and <i>&beta;</i> a root of <i>f</i> &in; <i>L</i>. It results then <i>F</i> ⊆ <i>K</i> ⊆ <i>L</i> and hence being <i>K</i> closed with respect to conjugate elements <i>&beta;</i> &in; <i>K</i>. Thus <i>f</i> splits over <i>K</i>.</p>
+
+<p>(b) ⇒ (a) Let <i>F</i> ⊆ <i>K</i> ⊆ <i>L</i> and let <i>a</i> &in; <i>K</i> and <i>b</i> &in; <i>L</i>, with <i>b</i> conjugate to <i>a</i> over <i>F</i>. Then <i>a</i> and <i>b</i> have the same minimal polynomial <i>f</i> over <i>F</i>, thus <i>b</i> &in; <i>K</i> as well. &emsp;□</p>
+
+<p>Recalling that a <a href="normal_subgroups.html">normal subgroup</a> of a group <i>G</i> is such that if it contains an element it contains all conjugate elements to it. We give the following definition.</p>
+
+<p><b>8.7.3 Definition</b>. Let <i>K</i> be an extension of <i>F</i>. We say that <i>K</i> is a <b>normal</b> extension of <i>F</i> if, whenever <i>f</i> is an irreducible polynomial in <i>F</i>[<i>x</i>] which has one root in <i>K</i>, then all the roots of <i>f</i> lie in <i>K</i> (that is, <i>f</i> splits into linear factors in <i>K</i>[<i>x</i>]). Or alternitavely, the extension <i>K</i> over <i>F</i> is normal if it is closed with respect to conjugate elements.&emsp;□</p>
+
+<p>The following theorem shows the link between normal extensions and splitting fields.</p>
+
+<p><b>8.7.4 Theorem</b>. An extension <i>K</i> of a field <i>F</i> is normal and finite if and only if <i>K</i> is the splitting field of some polynomial in <i>F</i>[<i>x</i>].</p>
+
+<p><b>Proof</b>. Let <i>K</i> be a finite and normal extension of <i>F</i>. Then it results (for the sole fact of being a finite extension)</p>
+
+<div class="eq">
+<p><i>K</i> = <I>F</i>(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>)</p>
+</div>
+
+<p>for some algebraic <i>&alpha;<sub>i</sub></i> over <i>F</i>. Let <i>p<sub>i</sub></i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] the minimal polynomial of <i>&alpha;<sub>i</sub></i>. Let</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) := <i>p</i><sub>1</sub>(<i>x</i>)<i>p</i><sub>2</sub>(<i>x</i>) ⋅⋅⋅ <i>p<sub>n</sub></i>(<i>x</i>)</p>
+</div>
+
+<p>Every <i>p<sub>i</sub></i> is irreducible over <i>F</i>, possess a zero <i>&alpha;<sub>i</sub></i> in <i>K</i>, hence by normality of <i>K</i> over <i>F</i> it splits over <i>K</i>. Thus <i>f</i> as well splits over <i>K</i>. <br> Let now <i>K</i> a splitting field for <i>F</i> of some polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>]. By definition of splitting field the extension <i>K</i> over <i>F</i> is finite. We must prove it is a normal extension i.e. that every irreducible polynomial <i>g</i>(<i>x</i>) in <i>F</i>[<i>x</i>], with a root <i>&alpha;</i> &in; <i>K</i>, splits over <i>K</i>.</p> ...
 
 <section aria-label="End">
 <a href="Wedderburn.html">&#171;Wedderburn's theorem</a>
