@@ -46,12 +46,12 @@
 
 <p>The following theorem shows the link between normal extensions and splitting fields.</p>
 
-<p><b>8.7.4 Theorem</b>. An extension <i>K</i> of a field <i>F</i> is normal and finite if and only if <i>K</i> is the splitting field of some polynomial in <i>F</i>[<i>x</i>].</p>
+<p id="theo"><b>8.7.4 Theorem</b>. An extension <i>K</i> of a field <i>F</i> is normal and finite if and only if <i>K</i> is the splitting field of some polynomial in <i>F</i>[<i>x</i>].</p>
 
 <p><b>Proof</b>. Let <i>K</i> be a finite and normal extension of <i>F</i>. Then it results (for the sole fact of being a finite extension)</p>
 
 <div class="eq">
-<p><i>K</i> = <I>F</i>(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>)</p>
+<p><i>K</i> = <i>F</i>(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>) If a<sub>1</sub>...a<sub>n</sub> are a basis of K as an F-vector space then K = F(a_1...a_n)</p>
 </div>
 
 <p>for some algebraic <i>&alpha;<sub>i</sub></i> over <i>F</i>. Let <i>p<sub>i</sub></i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] the minimal polynomial of <i>&alpha;<sub>i</sub></i>. Let</p>
@@ -60,7 +60,75 @@
 <p><i>f</i>(<i>x</i>) := <i>p</i><sub>1</sub>(<i>x</i>)<i>p</i><sub>2</sub>(<i>x</i>) ⋅⋅⋅ <i>p<sub>n</sub></i>(<i>x</i>)</p>
 </div>
 
-<p>Every <i>p<sub>i</sub></i> is irreducible over <i>F</i>, possess a zero <i>&alpha;<sub>i</sub></i> in <i>K</i>, hence by normality of <i>K</i> over <i>F</i> it splits over <i>K</i>. Thus <i>f</i> as well splits over <i>K</i>. <br> Let now <i>K</i> a splitting field for <i>F</i> of some polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>]. By definition of splitting field the extension <i>K</i> over <i>F</i> is finite. We must prove it is a normal extension i.e. that every irreducible polynomial <i>g</i>(<i>x</i>) in <i>F</i>[<i>x</i>], with a root <i>&alpha;</i> &in; <i>K</i>, splits over <i>K</i>.</p> ...
+<p>Every <i>p<sub>i</sub></i> is irreducible over <i>F</i>, possess a zero <i>&alpha;<sub>i</sub></i> in <i>K</i>, hence by normality of <i>K</i> over <i>F</i> it splits over <i>K</i>. Thus <i>f</i> as well splits over <i>K</i>. <br> Let now <i>K</i> a splitting field for <i>F</i> of some polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>]. By definition of splitting field the extension <i>K</i> over <i>F</i> is finite. We must prove it is a normal extension i.e. that every irreducible polynomial <i>g</i>(<i>x</i>) in <i>F</i>[<i>x</i>], with a root <i>&alpha;</i> &in; <i>K</i>, splits over <i>K</i>. Let <i>L</i> ⊇ <i>K</i> the splitting field of the polynomial <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>), which contains the splitting field <i>K</i> of <i>f</i>(<i>x</i>). Let <i>&beta;</i> &in; <i>L</i>, another root of <i>g</i>(<i>x</i>). We must show that <i>&beta;</i> &in; <i>K</i>. Since <i>&alpha;</i> &in; <i>K</i>, it results:</p>
+
+<div class="eq">
+<p>[<i>K</i>(&alpha;) : <i>K</i>] = 1</p>
+</div>
+
+<p>It suffices to show that also [<i>K</i>(&beta;) : <i>K</i>] = [<i>K</i>(&alpha;) : <i>K</i>] (= 1). We've that <i>L</i> ⊇ <i>K</i>(<i>&alpha;</i>) and <i>L</i> ⊇ <i>K</i>(<i>&beta;</i>) such that</p>
+
+<table class="noborder centertable">
+<tr><td><i>K</i>(<i>&alpha;</i>)</td> <td>&psi;<br>⟶</td> <td><i>K</i>(<i>&beta;</i>)</td></tr>
+</table>
+
+<p>And also <i>L</i> ⊇ <i>F</i>(<i>&alpha;</i>) and <i>L</i> ⊇ <i>F</i>(<i>&beta;</i>)</p>
+
+<table class="noborder centertable">
+<tr><td><i>F</i>(<i>&alpha;</i>)</td> <td>&phi;<br>⟶</td> <td><i>F</i>(<i>&beta;</i>)</td></tr>
+</table>
+
+<p>Since <i>&alpha;</i> and <i>&beta;</i> have the same minimal polynomial <i>g</i>, it results</p>
+
+<div class="eq">
+<p>[<i>F</i>(&alpha;) : <i>F</i>] = [<i>F</i>(&beta;) : <i>F</i>]</p>
+</div>
+
+<p>further the following isomorphism holds</p>
+
+<div class="eq">
+<p><i>&phi;</i>: <i>F</i>(<i>&alpha;</i>) ⟶ <i>F</i>(&beta;)<br>
+&alpha; ⟼ &beta;<br>
+<i>a</i> ⟼ <i>b</i>&emsp;&forall;<i>a</i> &in; <i>F</i></p>
+</div>
+
+<p>Since <i>K</i> is the splitting field for <i>f</i> over <i>F</i>, <i>K</i>(&alpha;) results the splitting field of <i>f</i> over <i>F</i>(&alpha;). Analogously <i>K</i>(&beta;) is the splitting field of <i>f</i> over <i>F</i>(&beta;). There exists then an extension of <i>&phi;</i> to an isomorphism <i>&psi;</i> : <i>K</i>(<i>&alpha;</i>) ⟶ <i>K</i> (<i>&beta;</i>) such that <i>&psi;</i><sub>|<i>F</i>(&alpha;)</sub> ≡ <i>&phi;</i>. Further [<i>K</i>(&alpha;): <i>F</i>(&alpha;)] = [<i>K</i>(&beta;) : <i>F</i>(&beta;)]. Using repeatedly the compund extension degree theorem</p>
+
+<div class="eq">
+<p>[<i>K</i>(&alpha;): <i>K</i>][<i>K</i>:<i>F</i>] = [<i>K</i>(&alpha;): <i>F</i>] = [<i>K</i>(&alpha;): <i>F</i>(&alpha;)][<i>F</i>(&alpha;): <i>F</i>]<br>
+= [<i>K</i>(&beta;): <i>F</i>(&beta;)][<i>F</i>(&beta;): <i>F</i>] = [<i>K</i>(&beta;): <i>F</i>]<br>
+= [<i>K</i>(&beta;): <i>K</i>][<i>K</i>:<i>F</i>]</p>
+
+<p>from which follows, dividing by [<i>K</i>:<i>F</i>], the desired result:</p>
+
+<div class="eq">
+<p>1 = [<i>K</i>(&alpha;): <i>K</i>] = [<i>K</i>(&beta;): <i>K</i>].&emsp;□</p>
+</div>
+
+</div>
+
+<h2>Exercises</h2>
+
+<ol>
+	<li><p>Determine whether the following exensions are normal.</p></li>
+
+	<div class="eq">
+	<p>ℚ(√11<i>i</i>) over ℚ; &emsp;&emsp; ℚ(√5,3<sup>1/5</sup>) over ℚ; &emsp;&emsp; ℚ((3<sup>1/5</sup>) over ℚ.</p></li>
+	</div>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+
+
+	<li><p>We employ <a href="normal_extensions.html#theo">8.7.4 Theorem</a>: <i>x</i><sup>2</sup> + 11 in ℚ[<i>x</i>]. And any extension of ℚ containing one root contains the other.</p>
+
+	<p>√5 is a root of <i>x</i><sup>2</sup> − 5 in F, so Q(√5) is an extension of degree 1 or 2. In general if F < L is any field extension, and u in L is a root of some poly in F[x] of degree 2, then [F(u):F] is 1 or 2. It's 1 if u is in F already, and 2 otherwise.</p>
+
+	<p>then ℚ((3<sup>1/5</sup>) over ℚ is not normal, since it only one real root 3<sup>1/5</sup> while the four other conjugates 3<sup>1/5</sup> are nonreal.</p></li>
+
+</ol>
 
 <section aria-label="End">
 <a href="Wedderburn.html">&#171;Wedderburn's theorem</a>
