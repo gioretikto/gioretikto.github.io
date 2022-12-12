@@ -21,19 +21,19 @@
 
 <h1>Separable extensions</h1>
 
-<p>We now on we should consider only field of characeristic zero, i.e. extensions of the rational field. As we shall see "An algebraic field extension is Galois if and only if it is normal and separable" and this latter condition is always attained in zero characteristic field. We recall that a polynomial is separable if it has no multiple roots.</p>
+<p>From now on we consider only fields of characeristic zero, i.e. extensions of the rational field. As we shall see "An algebraic field extension is Galois if and only if it is normal and separable" and this latter condition is always attained in fields of characteristic zero. We recall that a polynomial is separable if it has no multiple roots in an algebraically closed extension.</p>
 
 <p><b>8.8.1 Definition</b>. An algebraic extension <i>K</i> of a field <i>F</i> is called a separable extension if each element of <i>K</i> is separable over <i>F</i>, i.e. its minimal polynomial is separable. &emsp;□</p>
 
-<p><b>8.8.2 Proposition</b>. Let <i>a</i> and <i>b</i> two algebraic elements overa field <i>F</i> of characteristic zero. Then there exists an element <i>&alpha;</i> &in; <i>F</i>(<i>a,b</i>) such that <i>F</i>(<i>a,b</i>) = <i>F</i>(<i>&alpha;</i>).</p>
+<p><b>8.8.2 Proposition</b>. Let <i>a</i> and <i>b</i> two algebraic elements over a field <i>F</i> of characteristic zero. Then there exists an element <i>&alpha;</i> &in; <i>F</i>(<i>a,b</i>) such that <i>F</i>(<i>a,b</i>) = <i>F</i>(<i>&alpha;</i>).</p>
 
-<p><b>Proof</b>. Let <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) in <i>F</i>[<i>x</i>] two minial polynomials of <i>a</i> and <i>b</i> respectively. Let <i>K</i> an extension in which both polynomials split, and let</p>
+<p><b>Proof</b>. Let <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) in <i>F</i>[<i>x</i>] be the minimal polynomials of <i>a</i> and <i>b</i> respectively. Let <i>K</i> be an extension in which both polynomials split, and let</p>
 
 <div class="eq">
-<p><i>a</i> = <i>a</i><sub>1</sub>,<i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> &emsp;&emsp;<i>b</i> = <i>b</i><sub>1</sub>,<i>b</i><sub>2</sub>, ..., <i>b<sub>m</sub></i></p>
+<i>a</i><sub>1</sub> = <p><i>a</i>,<i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> &emsp;&emsp;<i>b</i><sub>1</sub> = <i>b</i>,<i>b</i><sub>2</sub>, ..., <i>b<sub>m</sub></i></p>
 </div>
 
-<p>the roots in <i>K</i> of <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) respectively. We know from <a href="finite_fields.html#separable_theo">Proposion 8.3.6</a> that over a field of char. 0, every irreducible polynomial is "separable" -- its roots in any splitting field are all distinct, hence since <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) are irreducible, all the <i>a<sub>i</sub></i> (and <i>b<sub>j</sub></i>) are distinct. For every <i>i</i> = 1, ..., <i>n</i> and every <i>j</i> = 2, ..., <i>m</i>, the equation in &lambda;</p>
+<p>be the roots in <i>K</i> of <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) respectively. We know from <a href="finite_fields.html#separable_theo">Proposion 8.3.6</a> that over a field of characteristic zero, every irreducible polynomial is separable &mdash; its roots in any splitting field are all distinct, hence since <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) are irreducible, all the <i>a<sub>i</sub></i> (and <i>b<sub>j</sub></i>) are distinct. For every <i>i</i> = 1, ..., <i>n</i> and every <i>j</i> = 2, ..., <i>m</i>, the equation in &lambda;</p>
 
 <div class="eq">
 <p><i>a<sub>i</sub></i> + <i>&lambda;b<sub>j</sub></i> = <i>a</i> + <i>&lambda;b</i></p>
@@ -45,7 +45,7 @@
 <p><i>&lambda;</i> = (<i>a<sub>i</sub></i> − <i>a</i>) /(<i>b</i> − <i>b<sub>j</sub></i>)</p>
 </div>
 
-<p>Being <i>F</i> of char 0, it possesses infinite elements. We pick an element <i>&gamma;</i> &in; <i>F</i> which does not satisfy none of the previous <i>n</i>(<i>m</i> − 1) equations. Set <i>&alpha;</i> = <i>a</i> + <i>&gamma;b</i>. We shall prove that</p>
+<p><i>F</i> being of characteristic zero, it possesses infinitely many elements. We pick an element <i>&gamma;</i> &in; <i>F</i> which does not satisfy any of the above <i>n</i>(<i>m</i> − 1) equations. Set <i>&alpha;</i> = <i>a</i> + <i>&gamma;b</i>. We shall prove that</p>
 
 <div class="eq">
 <p><i>F</i>(<i>a,b</i>) = <i>F</i>(<i>&alpha;</i>)</p>
@@ -54,10 +54,10 @@
 <p>It suffices to prove that <i>F</i>(<i>&alpha;</i>) &supseteq; <i>F</i>(<i>a,b</i>) and to this end it is sufficient to prove that <i>b</i> &in; <i>F</i>(<i>&alpha;</i>). Consider the polynomial</p>
 
 <div class="eq">
-<p><i>h</i>(<i>x</i>) =: <i>f</i>(&alpha; − <i>&gamma;x</i>) &in; <i>F</i>(<i>&alpha;</i>)[<i>x</i>]</p>
+<p><i>h</i>(<i>x</i>) := <i>f</i>(&alpha; − <i>&gamma;x</i>) &in; <i>F</i>(<i>&alpha;</i>)[<i>x</i>]</p>
 </div>
 
-<p>The element <i>b</i> is a common root of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), thus <i>x</i> − <i>b</i> is a common factor in a proper extension of <i>F</i>(<i>&alpha;</i>) of both <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>). It is more precisely their gcd: indeed <i>h</i>(<i>x</i>) cannot have (in a given extension) other roots of <i>g</i>(<i>x</i>), because we chose <i>&gamma;</i> such that <i>&alpha;</i> − <i>&gamma;b<sub>j</sub></i> &ne; <i>a<sub>i</sub></i> for every <i>i</i>. We cannot have either gcd(<i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) = (<i>x</i> − <i>b</i>)<sup><i>t</i></sup> with <i>t</i> &gt; 1, because <i>g</i>(<i>x</i>) has only distinct roots. Thu (<i>x</i> − <i>b</i>) is the greatest common factors between <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) and hence belongs to <i>F</i>(<i>&alpha;</i>)[<i>x</i>], since <i>F</i>(<i>&alpha;</i>) is the common field of coefficients of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>); <i>b</i> &in; <i>F</i>(<i>&alpha;</i>). &emsp;□</p>
+<p>The element <i>b</i> is a common root of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), thus <i>x</i> − <i>b</i> is a common factor in a proper extension of <i>F</i>(<i>&alpha;</i>) of both <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>). It is more precisely their gcd: indeed <i>h</i>(<i>x</i>) cannot, in a given extension, have any other roots in common with <i>g</i>(<i>x</i>), because we chose <i>&gamma;</i> such that <i>&alpha;</i> − <i>&gamma;b<sub>j</sub></i> &ne; <i>a<sub>i</sub></i> for every <i>i</i>. Neither can we have gcd(<i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) = (<i>x</i> − <i>b</i>)<sup><i>t</i></sup> with <i>t</i> &gt; 1, because <i>g</i>(<i>x</i>) has only distinct roots. Thus (<i>x</i> − <i>b</i>) is the greatest common divisor of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) and hence belongs to <i>F</i>(<i>&alpha;</i>)[<i>x</i>], since <i>F</i>(<i>&alpha;</i>) is the common field of coefficients of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>); <i>b</i> &in; <i>F</i>(<i>&alpha;</i>). &emsp;□</p>
 
 <h2>Exercises</h2>
 
