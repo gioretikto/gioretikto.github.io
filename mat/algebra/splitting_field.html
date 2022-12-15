@@ -21,6 +21,8 @@
 
 <h1>Splitting Field</h1>
 
+<p>A <b>splitting field</b> of a polynomial <i>f</i> is a ‘<b>smallest</b>’ field containing all the roots of <i>f</i>. This is only defined over a ‘base field’ <i>F</i> containing the coefficients of <i>f</i>. For example, if we regard <i>x</i><sup>2</sup> + 1 as a real polynomial, its splitting field is ℝ(<i>i</i>) = ℂ; but if we regard it as a rational polynomial, its splitting field is the much smaller field ℚ(<i>i</i>) = {<i>a</i> + <i>bi</i> : <i>a, b</i> ∈ ℚ}. Our goal in this section is to show that splitting fields exist and are unique (over a specified base field), up to isomorphism.</p>
+
 <p>If <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] is a polynomial of positive degree <i>n</i> over the field <i>F</i>, there exists an extension field <i>E</i> of <i>F</i> that contains <i>n</i> roots of <i>p</i>(<i>x</i>).</p>
 
 <p><b>Definition 8.2.1 (Splitting Field)</b> Let <i>E</i> be an extension field of <i>F</i> and let <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] with degree at least 1. We say that <i>f</i>(<i>x</i>) splits in <i>E</i> if there are elements <i>a</i> &in; <i>F</i> and <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ... ,<i>a<sub>n</sub></i> &in; <i>E</i> such that</p>
@@ -35,7 +37,7 @@
 <p><i>E</i> = <i>F</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ... , <i>a<sub>n</sub></i>).</p>
 </div>
 
-<p><i>E</i> is called the <b>splitting field</b> (or <b>root field</b>) of <i>p</i>(<i>x</i>) because it is the “smallest” field over which <i>p</i>(<i>x</i>) “splits” into first-degree factors.&emsp;■</p>
+<p><i>E</i> is called the <b>splitting field</b> (or <b>root field</b>) of <i>p</i>(<i>x</i>) because it is the “smallest” field over which <i>p</i>(<i>x</i>) “splits” into first-degree factors, that is there are no proper subfields of <i>E</i>, over which the polynomial splits. &emsp;□</p>
 
 <p>Note that a splitting field of a polynomial over a field depends not only on the polynomial but on the field as well. Indeed, a splitting field of <i>p</i>(<i>x</i>) over <i>F</i> is just a smallest extension field of <i>F</i> in which <i>f</i>(<i>x</i>) splits. Just as it makes no sense to say "<i>p</i>(<i>x</i>) is irreducible,” it makes no sense to say "<i>E</i> is a splitting field for p(x).” In each case, the underlying field must be specified; that is, one must say "<i>p</i>(<i>x</i>) is irreducible over <i>F</i>" and "<i>E</i> is a splitting field for <i>p</i>(<i>x</i>) over <i>F</i>."</p>
 
@@ -55,7 +57,7 @@
 
 <p>Moreover ℚ(√5) is the smallest field containing a complete set of roots of <i>p</i>(<i>x</i>) and thus ℚ(√5) is a splitting field for the the polynomial <i>x</i><sup>2</sup> − 5.&emsp;■</p>
 
-<p><b>Example 8.2.3</b>. If we consider <i>x</i><sup>2</sup> + 1 as a polynomial with rational coefficients, then to obtain a splitting field we only need to adjoin <i>i</i> to ℚ. Thus ℚ(<i>i</i>) is a splitting field for <i>x</i><sup>2</sup> + 1 over ℚ. If we instead think to it as a polynomial with real coefficients, its splitting field is ℝ(<i>i</i>) = ℂ. &emsp;■</p>
+<p><b>Example 8.2.4</b>. If we consider <i>x</i><sup>2</sup> + 1 as a polynomial with rational coefficients, then to obtain a splitting field we only need to adjoin <i>i</i> to ℚ. Thus ℚ(<i>i</i>) is a splitting field for <i>x</i><sup>2</sup> + 1 over ℚ. If we instead think to it as a polynomial with real coefficients, its splitting field is ℝ(<i>i</i>) = ℂ. &emsp;■</p>
 
 <p>As seen in the last examples it is important to specify over which field the polynomials splits. Further if of a polynomial <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] we know the roots, the splitting field is easily found by adjoining the roots of <i>p</i>(<i>x</i>) to <i>F</i>. In other casese the task can be more difficult for example finding the splitting field of <i>p</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1 over ℤ<sub>2</sub>[<i>x</i>]. Such a polynomial has no roots in the field ℤ<sub>2</sub>. Another instance is a polynomial of large degree <i>n</i> over ℚ, with no rational roots; finding a field containing all roots of such a polynomial can be a daunting task. Our task in this section is to determine the splitting field of a polynomial <i>p</i>(<i>x</i>) &in; <i>F</i> we do not know explicitly the roots.</p>
 
@@ -188,7 +190,9 @@
 
 <p><b>Theorem 8.2.11</b>. All splitting fields of a polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] are isomorphic.</p>
 
-<p><b>Definition 8.2.12</b>. Let <i>&phi;</i> an isomorphism between two fields <i>F</i> and <i>F</i>'. If <i>R</i> and <i>R</i>' are two rings (or two fields) such that <i>R</i> ⊇ <i>F</i> and <i>R'</i> ⊇ <i>F</i>', then a isomorphism  <i>&psi;</i> between <i>R</i> and <i>R</i>' is called an <i>extension</i> of the isomorphism between <i>F</i> and <i>F</i>' if <i>&psi;</i>|<sub><i>F</i></sub> coincides with <i>&phi;</i>.
+<p>Before proving the theorem we need some additional definitions.</p>
+
+<p><b>8.2.12 Definition</b>. Let <i>&phi;</i> an isomorphism between two fields <i>F</i> and <i>F</i>'. If <i>R</i> and <i>R</i>' are two rings (or two fields) such that <i>R</i> ⊇ <i>F</i> and <i>R'</i> ⊇ <i>F</i>', then a isomorphism  <i>&psi;</i> between <i>R</i> and <i>R</i>' is called an <i>extension</i> of the isomorphism between <i>F</i> and <i>F</i>' if <i>&psi;</i>|<sub><i>F</i></sub> coincides with <i>&phi;</i>.
 
 <p>Let now <i>F</i> and <i>F</i>' two isomorphic fields by an isomorphism <i>&tau;</i>. It is possible to <i>extend</i> such an isomorphism <i>&tau;</i> to an isomorphism <i>&tau;̅</i> between <i>F</i>[<i>x</i>] and <i>F'</i>[<i>x</i>] by letting</p>
 
@@ -232,15 +236,15 @@
 <p>and</p>
 
 <div class="eq">
-<p><i>F</i>(&alpha;) ≃ <i>F'</i>[<i>x</i>]/(<i>p</i><sub>1</sub>(<i>x</i>))<br>
+<p><i>F</i>(<i>&alpha;</i>) ≃ <i>F'</i>[<i>x</i>]/(<i>p</i><sub>1</sub>(<i>x</i>))<br>
 <i>a</i>'<sub>0</sub> + <i>a</i><sub>1</sub>' &alpha; + ... + <i>a</i>'<sub><i>n</i>−1</sub>&alpha;<sup><i>n</i>−1</sup> ⟼ <i>a</i>'<sub>0</sub> + <i>a</i><sub>1</sub>' <i>x</i> + ... + <i>a</i>'<sub><i>n</i>−1</sub><i>x</i><sup><i>n</i>−1</sup> + (<i>p</i>'<sub>1</sub>(<i>x</i>))</p>
 </div>
 
 <p>By the transitivity property of the isomorphism, it follows that</p>
 
 <div class="eq">
-<p><i>F</i>(&alpha;) ≃ <i>F</i>'(&alpha;')<br>
-<i>a</i>'<sub>0</sub> + <i>a</i><sub>1</sub>' &alpha; + ... + <i>a</i>'<sub>n−1</sub>&alpha;<sup><i>n</i>−1</sup> ⟼ <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> &alpha; + ... + <i>a</i><sub><i>n</i>−1</sub>&alpha;<sup><i>n</i>−1</sup></p>
+<p><i>F</i>(<i>&alpha;</i>) ≃ <i>F</i>'(<i>&alpha;</i>')<br>
+<i>a</i>'<sub>0</sub> + <i>a</i><sub>1</sub>' <i>&alpha;</i> + ... + <i>a</i>'<sub><i>n</i>−1</sub>&alpha;<sup><i>n</i>−1</sup> ⟼ <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> &alpha; + ... + <i>a</i><sub><i>n</i>−1</sub>&alpha;<sup><i>n</i>−1</sup></p>
 </div>
 
 <p>The last isomorphism that we call &Psi; is an extension of <i>&tau;</i>. Let's sart now by the field <i>F</i>(&alpha;) and <i>F</i>'(&alpha;') = &Psi;(<i>F</i>(&alpha;)). Then <i>f</i>(<i>x</i>) has at last <i>k</i> − 1 roots not in <i>F</i>'(<i>a</i>'). Thus &Psi;, by the inductive hyphotesis can be externded to an isomorphism <i>&Psi;̅̅</i> between <i>E</i> and <i>E</i>'. This isomorphim <i>&Psi;̅̅</i> is clearly as well an extension of the isomorphism <i>&tau;</i>. &emsp;□</p>
@@ -249,7 +253,7 @@
 
 <p><b>Proof</b>. In the previous theorem let <i>F</i>' = <i>F</i> and <i>&tau;</i> is the identity mapping. If <i>E</i> and <i>E</i>' are two splitting fields of <i>f</i>(<i>x</i>) then <i>E</i> ≃ <i>E</i>' by the previous theorem. &emsp;□</p>
 
-<p><b>Corollary 8.2.15</b>. Let <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an irreducible polynomial and let <i>&alpha;</i> and <i>&beta;</i> two roots of <i>p</i>(<i>x</i>). Then</p>
+<p id="iso"><b>Corollary 8.2.15</b>. Let <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an irreducible polynomial and let <i>&alpha;</i> and <i>&beta;</i> two roots of <i>p</i>(<i>x</i>). Then</p>
 
 <div class="eq">
 <p><i>F</i>(<i>&alpha;</i>) ≃ <i>F</i>(<i>&beta;</i>)</p>
