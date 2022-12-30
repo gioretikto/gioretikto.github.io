@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Eisenstein’s irreducibility criterion">
+	<title>Eisenstein’s irreducibility criterion</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Eisenstein’s irreducibility criterion</h1>
+
+<p>There exists a criterion to determine whether a polynomial of arbitrary degree is irreducible over ℚ.</p>
+
+<p><b>Proposition 5.7.1</b>. (<i>Eisenstein’s irreducibility criterion</i>). Consider a polynomial <i>f</i>(<i>x</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>x</i> + ··· + <i>a<sub>n</sub> x<sup>n</sup></i> ∈ ℤ[<i>x</i>]. Let <i>p</i> be a prime number such that</p>
+
+<ol>
+	<li><p><i>p</i>∤ <i>a<sub>n</sub></i></p>
+	<li><p><i>p</i>| <i>a<sub>i</sub></i>, &emsp;&forall;<i>i</i> = 0,...,<i>n</i>−1</p>
+	<li><p><i>p</i><sup>2</sup> ∤ <i>a</i><sub>0</sub></p>
+</ol>
+
+<p>Then <i>f</i>(<i>x</i>) is irreducible over ℚ.</p>
+
+<p><b>Proof</b>. By Gauss theorem it is sufficient to prove that <i>f</i>(<i>x</i>) is irreducible over ℤ. Assume by contradiction that <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with </p>
+
+<div class="eq">
+<p><i>g</i>(<i>x</i>) = <i>b</i><sub>0</sub> + <i>b</i><sub>1</sub>x + ··· + <i>b<sub>r</sub>x<sup>r</sup></i>, &emsp; <i>h</i>(<i>x</i>) = <i>c</i><sub>0</sub> + <i>c</i><sub>1</sub> + ··· + <i>c<sub>s</sub>x<sup>s</sup></i></p>
+</div>
+
+<p>polynomials with integer coefficients of degree <i>r</i> &lt; <i>n</i> and <i>s</i> &lt; <i>n</i> respectively. Then <i>r</i> + <i>s</i> = <i>n</i> and <i>b</i><sub>0</sub><i>c</i><sub>0</sub> = <i>a</i><sub>0</sub> Notice that <i>p</i> | <i>b</i><sub>0</sub> and <i>p</i> | <i>c</i><sub>0</sub> cannot hold simultaneously, or else we would have <i>p</i><sup>2</sup>| <i>a</i><sub>0</sub>. So assume that <i>p</i> divides, say, <i>b</i><sub>0</sub> but not <i>c</i><sub>0</sub> Notice that <i>p</i> cannot divide all the <i>b<sub>i</sub></i>s, or else <i>p</i> would divide all the <i>a<sub>i</sub>s</i>, contradicting the hypothesis.□</p>
+
+<p>Notice that Eisenstein’s criterion gives a <i>sufficient</i> condition for irreducibility, but not a <i>necessary</i> one.</p>
+
+<p>If Eisenstein’s criterion does not directly apply to a polynomial, it might nevertheless be possible to apply it after having suitably modified the polynomial. Given a constant <i>α</i>, it is for instance possible to consider, rather than the polynomial <i>f</i>(<i>x</i>), a new polynomial <i>f</i>(<i>x</i> − <i>α</i>) or, for <i>α</i> &ne; 0, the polynomial <i>f</i>(<i>x/α</i>), by observing that <i>f</i>(<i>x</i>) ∈ 𝕂[<i>x</i>] is irreducible over the field 𝕂 if and only if <i>f</i>(<i>x</i> − <i>α</i>) and <i>f</i>(<i>x/α</i>) with <i>α</i> ∈ 𝕂 are as well. As an application of this idea, we prove the following result:</p>
+
+<p><b>Proposition 5.7.2</b>. If <i>p</i> is a prime number, the polynomial <i>x</i><sup><i>p</i>−1</sup> + <i>x</i><sup><i>p</i>−2</sup> + ··· + <i>x</i><sup>2</sup> + <i>x</i> + 1 is irreducible over ℚ. So, substituting <i>x</i> + 1 for <i>x</i>, we get</p>
+
+<div class="eq">
+<p>(<i>x</i> + 1)<sup><i>p</i> − 1</sup> + (<i>x</i> + 1)<sup><i>p</i> − 2</sup> + ··· + (<i>x</i> + 1)<sup>2</sup> + (<i>x</i> + 1) + 1 = (<i>x</i> + 1)<sup><i>p</i> − 1</sup>/ [(<i>x</i> + 1) − 1] = <br> = (∑<sup><i>p</i></sup><sub><sub><i>k</i>=0</sub></sub> (<i>p k</i>) <i>x</i><sup><i>p</i>−<i>k</i></sup> − 1) <i>x</i><sup>−1</sup> = <i>x</i><sup><i>p</i> − 1</sup> + (<i>p</i> 1) <i>x</i><sup><i>p</i> − 2</sup> + (<i>p</i> 2) <i>x</i><sup><i>p</i> − 3</sup> + ... + <i>p</i></p>
+</div>
+
+<p>We may now apply Eisenstein’s criterion with respect to the prime <i>p</i>, and so prove that the original polynomial is irreducible.□</p>
+
+<p>Another method, which is practical only when the degree of the polynomial under consideration is not too large, amounts to looking directly for a factorization. For instance, if <i>f</i>(<i>x</i>) is a polynomial (that we may always suppose primitive and with integer coefficients) of degree 5 and if we have previously checked that the polynomial has no rational roots, then, if <i>f</i>(<i>x</i>) is reducible, it may only decompose as the product of a degree two polynomial and a degree three one. So, writing down the factors with indeterminate coefficients and equating the coefficients of the polynomial and those of the product, we obtain a system and we are interested in its integer solutions: indeed, as we know, we may always reduce to a factorization in ℤ[<i>x</i>]. If the system is not compatible, then the original polynomial is irreducible.</p>
+
+<p><b>Proposition 5.7.3</b>. Using the method just described, we prove that <i>x</i><sup>4</sup> + 1 is irreducible over ℚ. Indeed, the polynomial has no rational roots, so it may only factor into the product of two degree two polynomials. Keeping in mind that the leading coefficient of the product is the product of the leading coefficients, and the constant term of the product is the product of the constant terms of the factors, we may write</p>
+
+<div class="eq">
+<p><i>x</i><sup>4</sup> + 1</p>
+</div>
+
+<p>where either both plus signs or both minus signs will be chosen. The system obtained by equating the coefficients is</p>
+
+<div class="eq">
+<p><i>a</i> + <i>b</i> = 0</p>
+<p><i>ab</i> = &pm;2</p>
+</div>
+
+<p>which does not admit integer solutions (By Gauss lemma you can take <i>a, b</i> to be integers). Notice that, over ℝ, <i>x</i><sup>4</sup> + 1 factors as <i>x</i><sup>4</sup> + 1 = (<i>x</i><sup>2</sup> + √2<i>x</i> + 1)(<i>x</i><sup>2</sup> − √2<i>x</i> + 1). This method is not at all computationally efficient: in particular, it becomes more and more infeasible as the degree of the polynomial increases.</p>
+
+<p>Another useful method is the following. Let <i>f</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>i</sub>x</i> be a primitive polynomial with coefficients in ℤ. Reduce the coefficients modulo a prime number <i>p</i>, that is to say, consider the polynomial <i>f</i>(<i>x</i>) as having coefficients in ℤ<sub><i>p</i></sub>. Denote by <i>f̄</i>(<i>x</i>) ∈ Z<sub><i>p</i></sub> [<i>x</i>] the new polynomial, which we shall call the <i>reduction</i> of <i>f</i>(<i>x</i>) modulo <i>p</i>. Notice that if we choose a value of <i>p</i> not dividing <i>a<sub>n</sub></i>, then <i>f</i>(<i>x</i>) and <i>f̄</i>(<i>x</i>) have the same degree. If <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>h</i>(<i>x</i>), with <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>) of positive degree in ℤ[<i>x</i>], then we also have <i>f̄</i>(<i>x</i>) = <i>ḡ</i>(<i>x</i>) <i>h̄</i>(<i>x</i>). If <i>p</i> ∤ <i>a<sub>n</sub></i>, then <i>p</i> does not divide the leading coefficients of <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), so <i>ḡ</i>(<i>x</i>) and <i>h̄</i>(<i>x</i>) have positive degree too. In conclusion, if <i>f</i>(<i>x</i>) is reducible in ℚ, then <i>f̄</i>(<i>x</i>) it is reducible in ℤ<sub><i>p</i></sub> [<i>x</i>]. So we may deduce that:</p>
+
+<blockquote>if <i>f̄</i>(<i>x</i>) is irreducible over ℤ<sub><i>p</i></sub> for some <i>p</i> ∤ <i>a<sub>n</sub></i>, then <i>f</i>(<i>x</i>) is irreducible over ℚ as well.</blockquote>
+
+<p>Notice that the converse is not true, i.e. it is not the case that if, for some <i>p</i>, <i>f̄</i>(<i>x</i>) is reducible over ℤ<sub><i>p</i></sub>, then <i>f</i>(<i>x</i>) is reducible over ℚ.</p>
+
+<p><b>Example 5.7.3</b>. We have seen that <i>x</i><sup>4</sup> + 1 is irreducible over ℚ. Still, <i>x</i><sup>4</sup> + 1 is reducible over ℤ<sub>2</sub>; indeed, <i>x</i><sup>4</sup> + 1 = (<i>x</i><sup>2</sup> + 1)(<i>x</i><sup>2</sup> + 1) in ℤ<sub>2</sub>[<i>x</i>].</p>
+
+<p>Since, the irreducibility test in ℤ<sub><i>p</i></sub>[<i>x</i>] is a finite test, working modulo <i>p</i> is convenient and not computationally expensive</p>
+
+<p><b>Example 5.7.4</b>. Let us see an example to show how this method works, by verifying that the polynomial 5<i>x</i><sup>4</sup> −2<i>x</i><sup>3</sup> + 9<i>x</i> − 1 is irreducible over ℚ. If we consider it as a polynomial with coefficients in ℤ<sub>2</sub>, the polynomial is <i>x</i><sup>4</sup> + <i>x</i> + 1. This polynomial has no roots in ℤ<sub>2</sub>, so, if it factors, it does so into the product of two second degree factors: that is, we would get</p>
+
+<div class="eq">
+<p><i>x</i><sup>4</sup> + <i>x</i> + 1 = (<i>x</i><sup>2</sup> + <i>ax</i> + 1)(<i>x</i><sup>2</sup> + <i>bx</i> + 1),</p>
+</div>
+
+<p>or</p>
+
+<div class="eq">
+<p><i>x</i><sup>4</sup> + <i>x</i> + 1 = <i>x</i><sup>4</sup> + (<i>a</i> + <i>b</i>)<i>x</i><sup>3</sup> + <i>abx</i><sup>2</sup> + (<i>a</i> + <i>b</i>)<i>x</i> + 1,</p>
+</div>
+
+<p>which is clearly impossible. So <i>x</i><sup>4</sup> + <i>x</i> + 1 is irreducible over ℤ<sub>2</sub>, which implies that the original polynomial is irreducible over ℚ.□</p>
+
+<h2>Methods to study the irreducibility of a polynomial over ℚ</h2>
+
+<ul>
+	<li><p>Consider without loss of generality only primitive polynomials <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>];</p></li>
+	
+	<li><p>If <i>f</i>(<i>x</i>) is of degree 2 or 3, it is irreducible over ℚ if and only if it has no roots in ℚ; If <i>f</i>(<i>x</i>) has degree 2 then one of its factor is a 1st degree polynomial <i>x</i> − <i>a</i>; By <a href="Ruffini.html">Ruffin's theorem</a> if <i>f</i> has no root <i>a</i>, then it cannot be divisible by <i>x</i> − <i>a</i>.</p>
+
+	<p>In the case of <i>f</i>(<i>x</i>) of degree 3, if <i>f</i> were reducible one of its factor would have degree 1, but again if <i>f</i> has no root <i>a</i>, it cannot be divisible by <i>x</i> − <i>a</i>.</p></li>
+
+	<li><p>Use the test for the existence of rational roots based upon Proposition 4.6.10 to conclude that <i>f</i>(<i>x</i>) is <i>reducible</i>: the existence of roots implies the reducibility of the polynomial;</p></li>
+	
+	<li><p>If possible, especially for low degrees, look for a factorization into polynomials with integer coefficients;</p></li>
+
+	<li><p>When there is a prime <i>p</i> verifying the hypothesis of Eisenstein’s criterion, use it to conclude that <i>f</i>(<i>x</i>) is irreducible over ℚ;</p></li>
+
+	<li><p>use transformations of the form <i>x</i> → <i>x</i> + <i>α</i> to be able to apply Eisenstein’s criterion;</p></li>
+	
+	<li><p>consider <i>f̄</i>(<i>x</i>) ∈ ℤ<sub><i>p</i></sub>[<i>x</i>] rather than <i>f</i>(<i>x</i>) ∈ ℤ[<i>x</i>]: if there exists a <i>p</i> not dividing the leading coefficient of <i>f</i>(<i>x</i>) and such that <i>f̄</i>(<i>x</i>) is irreducible over ℤ<sub><i>p</i></sub>, then <i>f</i>(<i>x</i>) is irreducible over ℚ.</p></li>
+</ul>
+
+<section aria-label="End">
+<a href="pol_irr_Q.html">&#171;Irreducibility of polynomials in ℚ</a>
+<a href="index.html">Index</a>
+<a href="pol_irr_Q.html">Irreducibility of polynomials on ℚ&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="GCD of polynomials">
- <title>GCD of polynomials</title>
- <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="GCD of polynomials">
+	<title>GCD of polynomials</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
@@ -40,8 +40,8 @@
 <p>...</p>
 <p><i>r<sub>i</sub></i>(<i>x</i>) = <i>r</i><sub><i>i</i>+1</sub>(<i>x</i>) <i>q</i><sub><i>i</i>+2</sub>(<i>x</i>) + <i>r</i><sub><i>i</i>+2</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub><i>i</i> + 2</sub>(<i>x</i>) < ∂<i>r</i><sub><i>i</i> + 1</sub>(<i>x</i>)</p>
 <p>...</p>
-<p><i>r</i><sub><i>n</i> − 2</sub>(<i>x</i>) = <i>r</i><sub><i>n</i> − 1</sub>(<i>x</i>) <i>q</i><sub>n</sub>(<i>x</i>) + <i>r</i><sub>n</sub>(<i>x</i>) &emsp; ∂<i>r</i><sub><i>n</i></sub>(<i>x</i>) < ∂<i>r<sub><i>n</i> − 1</sub></i>(<i>x</i>)</p>
-<p><i>r</i><sub><i>n</i> − 1</sub>(<i>x</i>) = <i>r</i><sub>n</sub>(<i>x</i>) <i>q</i><sub><i>n</i> + 1</sub>(<i>x</i>) + 0.</p>
+<p><i>r</i><sub><i>n</i> − 2</sub>(<i>x</i>) = <i>r</i><sub><i>n</i> − 1</sub>(<i>x</i>) <i>q<sub>n</sub></i>(<i>x</i>) + <i>r<sub>n</sub></i>(<i>x</i>) &emsp; ∂<i>r<sub>n</sub></i>(<i>x</i>) < ∂<i>r</i><sub><i>n</i> − 1</sub>(<i>x</i>)</p>
+<p><i>r</i><sub><i>n</i> − 1</sub>(<i>x</i>) = <i>r<sub>n</sub></i>(<i>x</i>) <i>q</i><sub><i>n</i> + 1</sub>(<i>x</i>) + 0.</p>
 </div>
 
 <p>Applying the same procedure as in ℤ, the last non-null remainder in the sequence of the divisions is the gcd.</p>
@@ -95,9 +95,11 @@
 
 <p>If it is not irreducible the polynomial is said <i>reducible</i>.&emsp;□</p>
 
-<p>The definition says that <i>f</i> is irreducible if <b>no</b> decomposition <i>f</i> = <i>gh</i> into non-zero non-units is possible. To phrase it in terms of reducibility, a polynomial <i>f</i> is reducible if there exists a decomposition <i>f</i> = <i>gh</i> such that <i>g</i> and <i>h</i> are non-zero non-units. <br> This means that for *every* possible factorization in terms of two polynomials <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), one of those must be invertible; it's not enough to find one factorization <i>i.e.</i> 2<i>x</i><sup>2</sup> − 8 = 2(<i>x</i><sup>2</sup> − 4) in ℚ[<i>x</i>] but we've also 2<i>x</i><sup>2</sup> − 8 = 2(<i>x</i> − 2)(<i>x</i> + 2) and the polynomials 2(<i>x</i> + 2) and <i>x</i> − 2 are not invertible. However 2(<i>x</i><sup>2</sup> − 4) <b>is</b> reducible in ℤ[<i>x</i>] since neither 2 nor (<i>x</i><sup>2</sup> − 4) is not a unit in ℤ.</p>
+<p>The definition says that <i>f</i> is irreducible if <b>no</b> decomposition <i>f</i> = <i>gh</i> into non-zero, non-units is possible. To phrase it in terms of reducibility, a polynomial <i>f</i> is reducible if there exists a decomposition <i>f</i> = <i>gh</i> such that <i>g</i> and <i>h</i> are non-zero non-units. <br> This means that for *every* possible factorization in terms of two polynomials <i>g</i>(<i>x</i>) and <i>h</i>(<i>x</i>), one of those must be invertible; it's not enough to find one factorization <i>i.e.</i> 2<i>x</i><sup>2</sup> − 8 = 2(<i>x</i><sup>2</sup> − 4) in ℚ[<i>x</i>] but we've also 2<i>x</i><sup>2</sup> − 8 = 2(<i>x</i> − 2)(<i>x</i> + 2) and the polynomials 2(<i>x</i> + 2) and <i>x</i> − 2 are not invertible. However 2(<i>x</i><sup>2</sup> − 4) <b>is</b> reducible in ℤ[<i>x</i>] since neither 2 nor (<i>x</i><sup>2</sup> − 4) is not a unit in ℤ.</p>
 
-<p><b>Example 5.3.8</b>. The polynomial x<sup>2</sup>− 2 is reducible over ℝ as</p>
+<p><b>Example</b>. f(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1 is irreducible over ℚ. If we take any unit in ℚ, say 5/3, the only possible factorization would be <i>f</i>(<i>x</i>) = <i>a</i> ⋅ <i>b</i> where <i>a</i> = 3/5 (<i>x</i><sup>2</sup> + <i>x</i> + 1) and <i>b</i> = 5/3. &emsp;■</p>
+
+<p><b>Example 5.3.8</b>. The polynomial <i>x</i><sup>2</sup> − 2 is reducible over ℝ as</p>
 
 <div class="eq">
 <p>x<sup>2</sup> − 2 = (<i>x</i> + √2)(<i>x</i> − √2),</p>

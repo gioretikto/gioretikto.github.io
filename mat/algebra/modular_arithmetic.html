@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Modular Arithmetic"/>
- <title>Modular Arithmetic</title>
- <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Modular Arithmetic">
+	<title>Modular Arithmetic</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 
 <div class="eq">
 <p>[<i>a</i>]<sub><i>n</i></sub> + [<i>b</i>]<sub><i>n</i></sub> := [<i>a</i> + <i>b</i>]<sub><i>n</i></sub></p>
-<p>[<i>a</i>]<sub><i>n</i></sub> ⋅ [<i>b</i>]<sub><i>n</i></sub> := [<i>a</i> x <i>b</i>]<sub><i>n</i></sub>&emsp;□</p>
+<p>[<i>a</i>]<sub><i>n</i></sub> ⋅ [<i>b</i>]<sub><i>n</i></sub> := [<i>a</i> ⋅ <i>b</i>]<sub><i>n</i></sub>&emsp;□</p>
 </div>
 </div>
 
@@ -166,7 +166,7 @@
 
 <p>Notice the different structure of ℤ<sub>4</sub> and ℤ<sub>5</sub>, the first set has zero divisors (see <a href="Z_divisibility.html#commutative_ring">Definition 2.4</a>) indeed we see that [2]<sub>4</sub> ⋅ [2]<sub>4</sub> = [0]<sub>4</sub> whilst ℤ<sub>5</sub> has no zero divisors. Thus ℤ<sub>4</sub> is not an <a href="Z_divisibility.html#integral_domain">integral domain</a>, but ℤ<sub>5</sub> is.</p> 
 
-<p><b>Definition 4.2.4</b> An element [<i>a</i>] &in; ℤ/<i>n</i>ℤ distinct from 0 is called <b>invertible</b> if there is an element [<i>b</i>] &in; ℤ/<i>n</i>ℤ such that [<i>a</i>][<i>b</i>] = [1].</p>
+<p><b>Definition 4.2.4</b> An element [<i>a</i>] &in; ℤ/<i>n</i>ℤ distinct from 0 is called <b>invertible</b> if there is an element [<i>b</i>] &in; ℤ/<i>n</i>ℤ such that [<i>a</i>][<i>b</i>] = [1]. &emsp;□</p>
 
 <p>An integer <i>a</i> will also be called <b>invertible</b> modulo <i>n</i> if the class <i>a</i> is invertible.</p>
 
@@ -209,7 +209,7 @@
 <p>[<i>a</i>] [<i>b</i>] = [<i>ab</i>] = [<i>n</i>] = [0]</p>
 </div>
 
-<p>Therefore, [<i>a</i>] is a zero divisor in ℤ<sub><i>n</i></sub>, and ℤ<sub><i>n</i></sub> is not an integral domain. Combining the two cases, we see that <i>n</i> is a prime if and only if ℤ<sub><i>n</i></sub> is an integral domain.□</p>
+<p>Therefore, [<i>a</i>] is a zero divisor in ℤ<sub><i>n</i></sub>, and ℤ<sub><i>n</i></sub> is not an integral domain. Combining the two cases, we see that <i>n</i> is a prime if and only if ℤ<sub><i>n</i></sub> is an integral domain.&emsp;□</p>
 </div>
 
 <p><b>Corollary 4.2.6 </b>. Let <i>n</i> a given positive integer. Then for every <i>a,b,c,d</i> &in; ℤ and if <i>a</i> ≡ <i>b</i> mod <i>n</i>, then following relations hold</p>
@@ -227,7 +227,7 @@
 <p>Suppose <i>a<sup>k</sup></i> ≡ <i>b<sup>k</sup></i> (mod <i>m</i>).</p>
 <p>Then <i>aa<sup>k</sup></i> ≡ <i>bb<sup>k</sup></i> (mod <i>m</i>) by definition of modulo multiplication.</p>
 
-<p>Thus <i>a</i><sup><i>k</i>+1</sup> ≡ <i>b</i><sup><i>k</i>+1</sup> (mod <i>m</i>).</p>
+<p>Thus <i>a</i><sup><i>k</i>+1</sup> ≡ <i>b</i><sup><i>k</i>+1</sup> (mod <i>m</i>).&emsp;□</p>
 
 <p>We have seen that some of the properties holding for the = hold true also for ≡. However, it would be wrong to assume that every property holding for the equality holds for congruences as well. For instance, in ℤ we have the following cancellation property:</p>
 
@@ -324,7 +324,7 @@
 
 <p>This means that the quotient of the division is the integer <i>q</i> − <i>h</i>, and the remainder is <i>r</i>. Thus, <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</p>
 
-<p>Let’s now prove the converse: <i>a𝓢b</i>, implies <i>a</i> ≡<sub><i>n</i></sub> <i>b</i>. By hypothesis <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>; call this common remainder <i>r</i>. Then <i>a</i> = <i>nh</i> + <i>r</i> and <i>b</i> = <i>nk</i> + <i>r</i> with <i>h</i> and <i>k</i> integers, and 0 ≤ <i>r</i> &lt; <i>n</i>. To prove that <i>a ≡<sub><i>n</i></sub> b</i> we need to check whether <i>a</i> − <i>b</i> is divisible by <i>n</i>. Using the information we have for <i>a</i> and <i>b</i> we obtain</p>
+<p>Let’s now prove the converse: <i>a𝓢b</i>, implies <i>a</i> ≡<sub><i>n</i></sub> <i>b</i>. By hypothesis <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>; call this common remainder <i>r</i>. Then <i>a</i> = <i>nh</i> + <i>r</i> and <i>b</i> = <i>nk</i> + <i>r</i> with <i>h</i> and <i>k</i> integers, and 0 ≤ <i>r</i> &lt; <i>n</i>. To prove that <i>a</i> ≡<sub><i>n</i></sub> <i>b</i> we need to check whether <i>a</i> − <i>b</i> is divisible by <i>n</i>. Using the information we have for <i>a</i> and <i>b</i> we obtain</p>
 
 <div class="eq">
 <p><i>a</i> − <i>b</i> = (<i>nh</i> + <i>r</i>) − (<i>nk</i> + <i>r</i>) = <i>nh</i> − <i>nk</i> = <i>n</i>(<i>h</i> − <i>k</i>)</p>

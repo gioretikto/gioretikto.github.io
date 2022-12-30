@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Polynomials"/>
-    <title>Polynomials</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Polynomials">
+	<title>Polynomials</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href="index.html">Algebra</a></li>
-        <li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+		<li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+	</ul>
 </nav>
 
 <div class="content">
 
 <h1>Polynomials</h1>
 
-<p>We've already seen different examples of <a href="rings.html#field">fields</a>: the rational field ℚ, the field ℝ and ℂ as well as finite fields as ℤ<sub><i>p</i></sub>, with <i>p</i> prime number. In the following treatment we shall indicate with 𝕂 a generic field and demostrate the theorems valid for any field.</p>
+<p>We've already seen different examples of <a href="rings.html#field">fields</a>: the rational field ℚ, the field ℝ and ℂ as well as finite fields as ℤ<sub><i>p</i></sub>, with <i>p</i> prime number. In the following treatment we shall indicate with <i>K</i> a generic field and demostrate the theorems valid for any field.</p>
 
-<p><b>Definition 5.1.1</b> A <i>Polynomial function</i> or <i>rational integer function</i> over the field 𝕂  is a function <i>p</i> from 𝕂 to itself such that there exists <i>n</i> &ge; 0 elements <i>a<sub>i</sub></i> &in; 𝕂 so that</p>
+<p><b>Definition 5.1.1</b> A <i>Polynomial function</i> or <i>rational integer function</i> over the field <i>K</i> is a function <i>p</i> from <i>K</i> to itself such that there exists <i>n</i> &ge; 0 elements <i>a<sub>i</sub></i> &in; <i>K</i> so that</p>
 
 <div class="eq">
-<p><i>p</i>: 𝕂 ⟶ 𝕂<br>
-<i>p</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i></p>
+<p><i>p</i>: <i>K</i> ⟶ <i>K</i><br>
+<i>p</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> &emsp;□</p>
 </div>
 
-<p>Let ℱ the set of all polynomial functions from 𝕂 to itself. We can define addition and multiplication of such functions in 𝕂, by using the addition and multiplication operations defined in 𝕂. If <i>p</i>(<i>x</i>) and <i>q</i>(<i>x</i>) are the polynomial functions</p>
+<p>Let ℱ the set of all polynomial functions from <i>K</i> to itself. We can define addition and multiplication of such functions in <i>K</i>, by using the addition and multiplication operations defined in <i>K</i>. If <i>p</i>(<i>x</i>) and <i>q</i>(<i>x</i>) are the polynomial functions</p>
 
 <div class="eq">
 <p><i>p</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> &emsp; <i>q</i>(<i>x</i>) = ∑<sup><i>m</i></sup><sub><sub><i>j</i>=0</sub></sub> <i>b<sub>j</sub>x<sup>j</sup></i> &emsp; <i>m</i> &ge; <i>n</i></p>
@@ -54,13 +54,12 @@
 <p><b>Definition 5.1.2</b> A polynomial <i>p</i>(<i>x</i>) with coefficients in a field <i>K</i> is a <i>formal expression</i> of the form</p>
 
 <div class="eq">
-<p><i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> <i>x</i><sup>0</sup> + <i>a</i><sub>1</sub><i>x</i><sup>1</sup> + ... + <i>a<sub>n</sub>x<sup>n</sup></i>, &emsp; <i>a<sub>i</sub></i> &in; <i>K</i> &emsp; (<b>4.0.0</b>)</p>
+<p><i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> <i>x</i><sup>0</sup> + <i>a</i><sub>1</sub><i>x</i><sup>1</sup> + ... + <i>a<sub>n</sub>x<sup>n</sup></i>, &emsp; <i>a<sub>i</sub></i> &in; <i>K</i> &emsp; (<b>5.1.1</b>)</p>
 </div>
 
-<p>where <i>x</i> is a variable.</p>
+<p>where <i>x</i> is a variable. &emsp;□</p>
 
-<p>It follows from the definition that two polynomials <i>p</i>(<i>x</i>) = <i>∑<sup>n</sup><sub><sub>j=0</sub></sub> a<sub>i</sub>x<sup>i</sup></i> and <i>q</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub>i=0</sub></sub> <i>b<sub>i</sub> x<sup>i</sup></i>, with <i>a<sub>i</sub>, b<sub>j</sub></i> ∈ <i>K</i>, are equal if and only if <i>a<sub>i</sub></i> = <i>b<sub>j</sub></i>, &forall;<i>i</i> (in
-particular, if <i>m</i> &gt; <i>n</i>, then <i>b</i><sub><i>n</i> + 1</sub> = <i>b</i><sub><i>n</i>+2</sub> = ··· = <i>b<sub>m</sub></i> = 0.</p>
+<p>It follows from the definition that two polynomials <i>p</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>j</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> and <i>q</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>b<sub>i</sub> x<sup>i</sup></i>, with <i>a<sub>i</sub>, b<sub>j</sub></i> ∈ <i>K</i>, are equal if and only if <i>a<sub>i</sub></i> = <i>b<sub>j</sub></i>, &forall;<i>i</i> (in particular, if <i>m</i> &gt; <i>n</i>, then <i>b</i><sub><i>n</i> + 1</sub> = <i>b</i><sub><i>n</i>+2</sub> = ··· = <i>b<sub>m</sub></i> = 0.</p>
 
 <p>The set of all polynomial with coefficients in <i>K</i> is denoted by <i>K</i>[<i>x</i>].</p>
 
@@ -68,30 +67,28 @@ particular, if <i>m</i> &gt; <i>n</i>, then <i>b</i><sub><i>n</i> + 1</sub> = <i
 
 <h3>Polynomial vs Polynomial functions</h3>
 
-<p>Usually Polynomial and Polynomial functions are indicated in the same way as <i>p</i>(<i>x</i>) = <i>a<sub>n</sub> x<sup>n</sup></i>, but there is a clear distiction between them. Two polymonial function are equal when they assume the same value for a given <i>x</i> &in; 𝕂. On the other hand two polynomials are the same if they have the same formal expression (4.0.0). It is obvious that a polynomial <i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> <i>x</i><sup>0</sup> + <i>a</i><sub>1</sub><i>x</i><sup>1</sup> + ... + <i>a<sub>n</sub>x<sup>n</sup></i> defines a polynomial function which maps a <i>c</i> in 𝕂 to <i>p</i>(<i>c</i>) = <i>a</i><sub>0</sub> <i>c</i><sup>0</sup> + <i>a</i><sub>1</sub><i>c</i><sup>1</sup> + ... + <i>a<sub>n</sub>c<sup>n</sup></i> also in 𝕂. But if we consider the mapping</p>
+<p>Usually Polynomial and Polynomial functions are indicated in the same way as <i>p</i>(<i>x</i>) = <i>a<sub>n</sub> x<sup>n</sup></i>, but there is a clear distiction between them. Two polymonial function are equal when they assume the same value for a given <i>x</i> &in; <i>K</i>. On the other hand two polynomials are the same if they have the same formal expression (5.1.1). It is obvious that a polynomial <i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> <i>x</i><sup>0</sup> + <i>a</i><sub>1</sub><i>x</i><sup>1</sup> + ... + <i>a<sub>n</sub>x<sup>n</sup></i> defines a polynomial function which maps a <i>c</i> in <i>K</i> to <i>p</i>(<i>c</i>) = <i>a</i><sub>0</sub> <i>c</i><sup>0</sup> + <i>a</i><sub>1</sub><i>c</i><sup>1</sup> + ... + <i>a<sub>n</sub>c<sup>n</sup></i> also in <i>K</i>. But if we consider the mapping</p>
 
 <div class="eq">
 <p><i>&Psi;</i>: <i>K</i>[<i>x</i>] ⟶ ℱ</p>
 <p>∑<sup><i>n</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> ⟼ <i>f</i>: <i>K</i> ⟶ <i>K</i></p>
 </div>
 
-<p>such application is for sure surjective but can be non-injective <i>i.e.</i> it can happen that different polynomials give rise to the same polynomial function. For example if 𝕂 = ℤ<sub>3</sub> the two polynomials <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> and <i>g</i>(<i>x</i>) = <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> − <i>x</i> correspond to the same polynomial function from ℤ<sub>3</sub> to ℤ<sub>3</sub>.</p>
+<p>such application is for sure surjective but can be non-injective <i>i.e.</i> it can happen that different polynomials give rise to the same polynomial function. For example if <i>K</i> = ℤ<sub>3</sub> the two polynomials <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> and <i>g</i>(<i>x</i>) = <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> − <i>x</i> correspond to the same polynomial function from ℤ<sub>3</sub> to ℤ<sub>3</sub>.</p>
 
 <p>ℤ<sub>3</sub> = {[[0]<sub>3</sub>,[1]<sub>3</sub>, [2]<sub>3</sub>} so if we take the element [2]<sub>3</sub> we have replacing into the two functions: <i>f</i>([2]<sub>3</sub>) = [2]<sup>2</sup> = [4] and <i>g</i>([2]) = [2]<sup>3</sup> + [2]<sup>2</sup> − [2] = [10 but [4]<sub>3</sub> and [10]<sub>3</sub> represent the first class.</p>
 
-<p>For a finite field <i>K</i>, <i>&Psi;</i> <i>is never injective</i>: 𝕂[<i>x</i>] is a infinite set because there are infinite polynomial expression we can write (even if coefficients are part of a finite set, the integer <i>n</i> can assume arbitrary values in ℕ). We'll soon show that when the field 𝕂 is infinite <i>&Psi;</i> is biunivoque thus it is possible in this case to make no distinction between polynomial and polynomial functions.</p>
+<p>For a finite field <i>K</i>, <i>&Psi;</i> <i>is never injective</i>: <i>K</i>[<i>x</i>] is a infinite set because there are infinite polynomial expression we can write (even if coefficients are part of a finite set, the integer <i>n</i> can assume arbitrary values in ℕ). We'll soon show that when the field <i>K</i> is infinite <i>&Psi;</i> is biunivoque thus it is possible in this case to make no distinction between polynomial and polynomial functions.</p>
 
 <p>In what follows we'll focus our attention on polynomials even if is some cases it will be useful to consider them polynomial functions.</p>
 
-<p>We can use for <i>K</i>[<i>x</i>] the same addition and multiplication defined for ℱ, with regards to these operations 𝕂[<i>x</i>] is a multiplicative ring with unit but there is a difference with ℱ: the zero polynomial is defined has the one with all coefficients a<sub>i</sub> = 0. The opposite of the polynomial <i>p</i>(<i>x</i>) is the polynomial with all coefficients oppisite to <i>a<sub>i</sub></i>.</p>
+<p>We can use for <i>K</i>[<i>x</i>] the same addition and multiplication defined for ℱ, with regards to these operations <i>K</i>[<i>x</i>] is a multiplicative ring with unit but there is a difference with ℱ: the zero polynomial is defined has the one with all coefficients a<sub>i</sub> = 0. The opposite of the polynomial <i>p</i>(<i>x</i>) is the polynomial with all coefficients oppisite to <i>a<sub>i</sub></i>.</p>
 
-<p><b>Definition 5.1.3</b>. Let <i>p</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>k</i>=0</sub></sub> <i>a<sub>k</sub>x<sup>k</sup></i>, then the degree of <i>p</i>(<i>x</i>) denoted by ∂<i>p</i>(<i>x</i>) or deg <i>p</i> is the largest integer <i>m</i> such that the coefficient of <i>x<sup>k</sup></i> is not zero, </p>
+<p id="degree"><b>Definition 5.1.3</b>. Let <i>p</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>k</i>=0</sub></sub> <i>a<sub>k</sub>x<sup>k</sup></i>, then the degree of <i>p</i>(<i>x</i>) denoted by ∂<i>p</i>(<i>x</i>) or deg <i>p</i> is the largest integer <i>m</i> such that the coefficient of <i>x<sup>k</sup></i> is not zero. &emsp;□ </p>
 
-<div id="monic">
-<p>The polynomials of degree one are called linear, those of degree two quadratic, those of degree three cubic, and so on. The coefficient <i>a<sub>n</sub></i> is called the leading coefficient of <i>p</i>(<i>x</i>). If it is equal to 1, the polynomial is said to be <b>monic</b>. Notice that the degree of a non-zero constant <i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> is zero. It is usual not to assign any degree to the zero polynomial, that is, the polynomial with all coefficients equal to zero.</p>
-</div>
+<p id="monic">The polynomials of degree one are called linear, those of degree two quadratic, those of degree three cubic, and so on. The coefficient <i>a<sub>n</sub></i> is called the leading coefficient of <i>p</i>(<i>x</i>). If it is equal to 1, the polynomial is said to be <b>monic</b>. Notice that the degree of a non-zero constant <i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> is zero. It is usual not to assign any degree to the zero polynomial, that is, the polynomial with all coefficients equal to zero.</p>
 
-<p><b>Proposition 5.1.4</b>. Let 𝕂 be an integral domain or a field. Then the set 𝕂[<i>x</i>] forms an integral domain.</p>
+<p><b>Proposition 5.1.4</b>. Let <i>K</i> be an integral domain or a field. Then the set <i>K</i>[<i>x</i>] forms an integral domain.</p>
 
 <p><b>Proof</b>. Let <i>p</i>(<i>x</i>) = ∑<sup><i>n</i></sup><sub><sub><i>j</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> and <i>q</i>(<i>x</i>) = ∑<sup><i>m</i></sup><sub><sub><i>j</i>=0</sub></sub> <i>a<sub>i</sub>x<sup>i</sup></i> be non-zero polynomial (at least one coefficient is &ne; 0) of degree <i>n</i> and <i>m</i> which means that <i>a<sub>n</sub></i> &ne; 0 and <i>b<sub>m</sub></i> &ne; 0. From the product definition of two polynomials we have that the coefficient of <i>x<sup>n+m</sup></i> is <i>a<sub>n</sub>b<sub>m</sub></i> because both <i>a<sub>n</sub></i> and <i>b<sub>n</sub></i> are different from zero and they are part of a field which does not contain zero-divisors. Thus the product <i>p</i>(<i>x</i>)<i>q</i>(<i>x</i>) cannot be equal to zero.□</p>
 
@@ -113,9 +110,7 @@ particular, if <i>m</i> &gt; <i>n</i>, then <i>b</i><sub><i>n</i> + 1</sub> = <i
 <p>∂(<i>p</i>(<i>x</i>) + <i>q</i>(<i>x</i>)) ≤ max(∂<i>p</i>(<i>x</i>), ∂<i>q</i>(<i>x</i>)), &emsp; ∂(<i>p</i>(<i>x</i>)<i>q</i>(<i>x</i>)) = ∂<i>p</i>(<i>x</i>) + ∂<i>q</i>(<i>x</i>).</p>
 </div>
 
-<div id="isomo_pol_seq">
-
-<p>In the definition of a polynomial we can disregard the variable <i>x</i> as its value does not influece the definition. We can give the following definition of polynomial.</p>
+<p id="isomo_pol_seq">In the definition of a polynomial we can disregard the variable <i>x</i> as its value does not influece the definition. We can give the following definition of polynomial.</p>
 
 <p><b>Definition 5.1.6</b>. A polynomial with coefficients in <i>K</i> is an infinite sequence</p>
 
@@ -123,7 +118,7 @@ particular, if <i>m</i> &gt; <i>n</i>, then <i>b</i><sub><i>n</i> + 1</sub> = <i
 <p>{<i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>i</sub></i>, 0, 0,...}</p>
 </div>
 
-<p>of elements in 𝕂 of which the <i>a<sub>i</sub></i> are zero from a certain index <i>i</i> onward.</p>
+<p>of elements in <i>K</i> of which the <i>a<sub>i</sub></i> are zero from a certain index <i>i</i> onward. &emsp;□</p>
 
 <p>We usually set <i>a<sub>i</sub></i> = 0 for each <i>i</i> &gt; <i>n</i>; In the set of all these sequences we define addition and multiplication of sequences in the following way</p>
 
@@ -133,7 +128,6 @@ particular, if <i>m</i> &gt; <i>n</i>, then <i>b</i><sub><i>n</i> + 1</sub> = <i
 </div>
 
 <p>We can now better understand the role of <i>x</i> and its powers, which act as a sort of benchmark.</p>
-</div>
 
 <section aria-label="End">
 <a href="complex_numbers.html">&#171; Complex numbers</a>
