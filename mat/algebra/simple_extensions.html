@@ -17,7 +17,7 @@
 	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>Simple Extensions</h1>
 
@@ -48,7 +48,7 @@ If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that
 
 <p><b>Example 8.2.2</b>. Let <i>F</i> be any field and let <i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i> be independent variables. The polynomial ring <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is an integral domain (see <a href="polynomials.html">Proposition 4.3</a>). The quotient field of <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is denoted <i>F</i>(<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>). It consists of all fractions <i>f</i>/<i>g</i>, with <i>f,g</i> &in; <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] and <i>g</i> &ne; 0, and the usual addition and multiplication. Then <i>F</i>(<i>x</i>) is an extension of <i>F</i>.&emsp;■</p>
 
-<p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, <i>i.e</i> we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. The standard procedure for constructing the complex numbers from the real numbers is to ‘adjoin’ a square root of −1; that is, an element i satisfying <i>i</i><sup>2</sup> + 1 = 0. We will now describe this procedure, ‘adjoining the root of a polynomial’, in more detail. </p>
+<p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, i.e we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. The standard procedure for constructing the complex numbers from the real numbers is to ‘adjoin’ a square root of −1; that is, an element i satisfying <i>i</i><sup>2</sup> + 1 = 0. We will now describe this procedure, ‘adjoining the root of a polynomial’, in more detail. </p>
 
 <p><b>8.2.3 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>F</i>(<i>a</i>) = <i>T</i> where <i>T</i> is the defined as the set</p>
 
@@ -552,7 +552,7 @@ If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that
 
 <p>Next theorem shows how the fininite or infinite nature <i>F</i>(<i>a</i>) over <i>F</i> <i>determines</i> whether <i>a</i> is algebraic or trascendental over <i>F</i>.</p>
 
-<p id="minimal"><b>Definition 8.2.12</b>. Let <i>K</i> be an extension of a field <i>F</i>. Let <i>a</i> &in; <i>K</i> be algebraic over <i>F</i>. Suppose <i>f</i>(<i>x</i>) is a polynomial over <i>F</i> such that <i>f</i>(<i>a</i>) = 0. Then <i>f</i>(<i>x</i>) is called the <b>minimal polynomial</b> for <i>a</i> over <i>F</i>.&emsp;□</p>
+<p id="minimal"><b>Definition 8.2.12</b>. Let <i>K</i> be an extension of a field <i>F</i>. Let <i>α</i> &in; <i>K</i> be algebraic over <i>F</i>. We define the <b>minimal polynomial</b> of <i>α</i> over <i>F</i> as the unique monic, irreducible polynomial <i>p</i> in <i>F</i>[<i>x</i>] that has <i>α</i> as a root.&emsp;□</p>
 
 <div id="8213">
 <p><b>8.2.13 Theorem</b>. Let <i>K</i> an extension <i>F</i> and let <i>a</i> an algebraic element over <i>F</i>. Then, if &Psi;<sub><i>a</i></sub> is the evaluation homomorphism from <i>F</i> to <i>K</i>,<p>
@@ -622,7 +622,7 @@ If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that
 
 <!-- $$\sum_{i=0}^{n-1} \alpha_ia^i = 0,\quad \alpha_i \in F $$ -->
 
-<p>and consider the polynomial <i>f</i>(<i>x</i>) = ∑<sup><i>n</i> − 1</sup><sub><sub><i>i</i>=0</sub></sub> <i>&alpha;<sub>i</sub>x<sup>i</sup></i> &in; <i>F</i>[<i>x</i>]. Since <i>f</i> is a polynomial zeroed by <i>a</i>, it belongs to Ker &Psi;<sub><i>a</i></sub>, thus a multiple of <i>p</i>(<i>x</i>). Being, <i>n</i> the degree of <i>p</i>(<i>x</i>), whilst <i>n</i> − 1 that of <i>f</i>(<i>x</i>), <i>f</i>(<i>x</i>) must necessarily be a null polynomial thus all the <i>&alpha;<sub>i</sub></i> must be null. The linear independence of 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> is thus proved. We now prove that the 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> are generators of <i>F</i>[<i>x</i>]. If <i>s</i> is an element of <i>F</i>[<i>a</i>], there exists a polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], such that <i>s</i> = &Psi;<sub><i>a</i></sub>(<i>f</i>(<i>x</i>)) = <i>f</i>(<i>a</i>). Dividing <i>f</i>(<i>x</i>) by <i>p</i>(<i>x</i>) we obtain</p>
+<p>and consider the polynomial <i>f</i>(<i>x</i>) = ∑<sup><i>n</i> − 1</sup><sub><sub><i>i</i>=0</sub></sub> <i>&alpha;<sub>i</sub>x<sup>i</sup></i> &in; <i>F</i>[<i>x</i>]. Since <i>f</i> is a polynomial zeroed by <i>a</i>, it belongs to Ker &Psi;<sub><i>a</i></sub>, thus a multiple of <i>p</i>(<i>x</i>) (by point a) being a zero of <i>f</i> is the same as being in Ker(&Psi;<sub>a</sub>), and this is the ideal ⟨<i>p</i>(<i>x</i>⟩ which is exactly all the multiples in F[x] of the polynomial <i>p</i>(<i>x</i>)). <br> Being, <i>n</i> the degree of <i>p</i>(<i>x</i>), whilst <i>n</i> − 1 that of <i>f</i>(<i>x</i>), <i>f</i>(<i>x</i>) must necessarily be a null polynomial thus all the <i>&alpha;<sub>i</sub></i> must be null. The linear independence of 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> is thus proved. We now prove that the 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> are generators of <i>F</i>[<i>x</i>]. If <i>s</i> is an element of <i>F</i>[<i>a</i>], there exists a polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], such that <i>s</i> = &Psi;<sub><i>a</i></sub>(<i>f</i>(<i>x</i>)) = <i>f</i>(<i>a</i>). Dividing <i>f</i>(<i>x</i>) by <i>p</i>(<i>x</i>) we obtain</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) = <i>q</i>(<i>x</i>)<i>p</i>(<i>x</i>) + <i>r</i>(<i>x</i>), &emsp; <i>r</i> = 0 or deg(<i>r</i>(<i>x</i>)) &lt; deg(<i>p</i>(<i>x</i>))</p>
@@ -640,7 +640,7 @@ If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that
 
 </div>
 
-<p>Notice how the writing <i>f</i>(<i>a</i>) = &alpha;<sub>0</sub> + &alpha;<sub>1</sub><i>a</i> + &alpha;<sub>2</sub> <i>a</i><sup>2</sup> + ... + &alpha;<sub><i>n</i> −1</sub><i>a</i><sup><i>n</i> − 1</sup> of every element <i>F</i>[<i>a</i>] is <i>unique</i>, since the elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> represent a <i>basis</i> .</p>
+<p>Notice how the writing <i>f</i>(<i>a</i>) = &alpha;<sub>0</sub> + &alpha;<sub>1</sub><i>a</i> + &alpha;<sub>2</sub> <i>a</i><sup>2</sup> + ... + &alpha;<sub><i>n</i> −1</sub><i>a</i><sup><i>n</i> − 1</sup> of every element <i>F</i>[<i>a</i>] is <i>unique</i>, since the elements 1, <i>a</i>, <i>a</i><sup>2</sup>, ..., <i>a</i><sup><i>n</i> − 1</sup> represent a <i>basis</i>.</p>
 
 <p><b>8.2.14 Corollary</b>. Let <i>K</i> an extension of the field <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>a</i> is algebraic if and only if <i>F</i>(<i>a</i>) is a finite extension, whilst is trascendental if and only if <i>F</i>(<i>a</i>) is an infinite extension.</p>
 
@@ -773,7 +773,7 @@ If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that
 <a href="splitting_field.html">Splitting Field&#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>
