@@ -1,9 +1,16 @@
+math { font-size: 1.2rem; margin-bottom:2%}
+
+ul.center {
+  display: table;
+  margin: 0 auto;
+}
+
 .left{
 	float: left;
 	padding: 0 20px 20px 0;
 }
 
-.cm { /*Per i commenti nel codice */
+.cm { /* For the comments */
     color: #408080;
     font-style: italic;
 }
@@ -12,7 +19,7 @@
 text-decoration: overline;
 }
 
-section{ 
+section{
     display: flex;
     margin-top:20px;
 }
@@ -22,6 +29,11 @@ p{
     line-height: 1.618em;
     margin-bottom: 1.618em;
     margin-top: 0;
+}
+
+p.small
+{
+    font-size: 0.9em;
 }
 
 .blue{
@@ -142,7 +154,15 @@ span.eq{
     color:#751414;
 }
 
-.content{
+.content{ /* <div class="content"> should be removed and use <article> instead */
+    margin-left:70px;
+    margin-right:70px;
+    margin-top:10px;
+    padding:80px;
+    background:#d1d1d1;
+}
+
+article{
     margin-left:70px;
     margin-right:70px;
     margin-top:10px;
@@ -153,6 +173,8 @@ span.eq{
 blockquote{
 	background:rgba(0,0,0,0.1);
 	padding: 8px;
+	display:inline-block;
+	font-size: 18px;
 }
 
 nav{
@@ -172,7 +194,6 @@ nav>ul{
 nav>ul>li{
     float:left; /* to get block elements to slide next to each other */
 }
-
 
 a.navbar{
     display: block;
@@ -199,22 +220,6 @@ input.white{
     background-color:white;
 }
 
-.lente{
-    background-image: url("lens.png");
-    padding:10px;
-    position: relative;
-    right: 30px;
-    height: 10px;
-    top:11px;
-    background-repeat: no-repeat;
-    background-color:white;
-    border:none;
-}
-
-#search{
-margin-left:40px;
-height: 40px; width:400px; }
-
 select{
     margin-top:50px;
     margin-left:100px;
@@ -229,7 +234,7 @@ li{
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin:2em; }
+  margin:5% }
   
 table tr th {
   background: #d1d1d1;
@@ -265,13 +270,13 @@ table ul.links li {
   padding: 0 1em 0 0;    
 }
 
-.centertable { margin: 0 auto; }
+.centertable { margin: 2em auto; }
 
-.noborder {
-  border-spacing: 0;  
-}
-.noborder tr td { /* !!! */
+.italictable{font-style: italic;}
+
+.noborder th, .noborder td {
   border-width: 0;
+  border-spacing: 0;  
 }
 
 th.case, td.case {
@@ -294,7 +299,7 @@ img{
 
 figcaption{
      text-align:center;
-     font-size:14px;
+     font-size:16px;
 }
 
 body {
