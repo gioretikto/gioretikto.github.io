@@ -21,8 +21,7 @@
 
 <h1>Simple Extensions</h1>
 
-<p>We shall se now how given a field <i>F</i> and one of its extension <i>K</i>, is possible to obtain intermidiate extensions between <i>K</i> and <i>F</i>. Usually if you just add a random element to a field, you lose the closure property and the inverse property unless you also add a whole slew of other elements; thus we follow a different path. <br> Starting with a field <i>F</i> and a subfield <i>K</i>.
-If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that contain both <i>u</i> and <i>K</i>? Is there a smallest such subfield? The answer to the first two questions is quite easy. Let <i>F</i> be an extension field of <i>K</i> and <i>u</i> &in; <i>F</i>. Let <i>K</i>(<i>u</i>) denote the intersection of all subfields of <i>F</i> that contain both <i>K</i> and <i>u</i> (this family of subfields is nonempty since <i>F</i> at least is in it). Since the intersection of any family of subfields of <i>F</i> is itself a field (<a href="exercises_field_extensions.html">Exercise 1</a>), <i>K</i>(<i>u</i>) is a field. By its definition, <i>K</i>(<i>u</i>) is contained in every subfield of <i>F</i> that contains <i>K</i> and <i>u</i>, and, hence, <i>K</i>(<i>u</i>) is the smallest subfield of <i>F</i> containing <i>K</i> and <i>u</i>. <i>K</i>(<i>u</i>) is said to be a <b>simple extension</b> of <i>K</i>. <br> It turns out that the structure of <i>K</i>(<i>u</i>) depends on whether or not <i>u</i> is the root of some polynomial in <i>F</i>[<i>x</i>].</p>
+<p>We shall se now how given a field <i>F</i> and one of its extension <i>K</i>, is possible to obtain intermidiate extensions between <i>K</i> and <i>F</i>. Usually if you just add a random element to a field, you lose the closure property and the inverse property unless you also add a whole slew of other elements; thus we follow a different path. <br> Starting with a field <i>F</i> and a subfield <i>K</i>. If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that contain both <i>u</i> and <i>K</i>? Is there a smallest such subfield? The answer to the first two questions is quite easy. Let <i>F</i> be an extension field of <i>K</i> and <i>u</i> &in; <i>F</i>. Let <i>K</i>(<i>u</i>) denote the intersection of all subfields of <i>F</i> that contain both <i>K</i> and <i>u</i> (this family of subfields is nonempty since <i>F</i> at least is in it). Since the intersection of any family of subfields of <i>F</i> is itself a field (<a href="exercises_field_extensions.html">Exercise 1</a>), <i>K</i>(<i>u</i>) is a field. By its definition, <i>K</i>(<i>u</i>) is contained in every subfield of <i>F</i> that contains <i>K</i> and <i>u</i>, and, hence, <i>K</i>(<i>u</i>) is the smallest subfield of <i>F</i> containing <i>K</i> and <i>u</i>. <i>K</i>(<i>u</i>) is said to be a <b>simple extension</b> of <i>K</i>. <br> It turns out that the structure of <i>K</i>(<i>u</i>) depends on whether or not <i>u</i> is the root of some polynomial in <i>F</i>[<i>x</i>].</p>
 
 <p><b>Definition 8.2.1</b>. Let <i>F</i> a field, and let <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> be elements of some extension <i>E</i> of <i>F</i>. We use <i>F</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) to denote the smallest subfield of <i>E</i> that contains <i>F</i> and the set {<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>}. Next theorem shows that <i>F</i>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) is the intersection of all subfields of <i>E</i> that contain <i>F</i> and the set {<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>}.</p>
 
@@ -48,7 +47,7 @@ If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that
 
 <p><b>Example 8.2.2</b>. Let <i>F</i> be any field and let <i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i> be independent variables. The polynomial ring <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is an integral domain (see <a href="polynomials.html">Proposition 4.3</a>). The quotient field of <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] is denoted <i>F</i>(<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>). It consists of all fractions <i>f</i>/<i>g</i>, with <i>f,g</i> &in; <i>F</i>[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] and <i>g</i> &ne; 0, and the usual addition and multiplication. Then <i>F</i>(<i>x</i>) is an extension of <i>F</i>.&emsp;■</p>
 
-<p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, i.e we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. The standard procedure for constructing the complex numbers from the real numbers is to ‘adjoin’ a square root of −1; that is, an element i satisfying <i>i</i><sup>2</sup> + 1 = 0. We will now describe this procedure, ‘adjoining the root of a polynomial’, in more detail. </p>
+<p>We now want to know which are the elements of <i>F</i>(<i>S</i>). We start by adding a single elements to a field <i>F</i>, i.e we study the case <i>S</i> = {<i>a</i>} that is <i>F</i>(<i>S</i>) is a simple extension. The standard procedure for constructing the complex numbers from the real numbers is to ‘adjoin’ a square root of −1; that is, an element <i>i</i> satisfying <i>i</i><sup>2</sup> + 1 = 0. We will now describe this procedure, ‘adjoining the root of a polynomial’, in more detail.</p>
 
 <p><b>8.2.3 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>a</i> &in; <i>K</i>. Then <i>F</i>(<i>a</i>) = <i>T</i> where <i>T</i> is the defined as the set</p>
 
@@ -268,6 +267,160 @@ If <i>u</i> &in; <i>F</i>, what can be said about the subfields of <i>F</i> that
 <p>ℚ(<i>&pi;</i>) means the smallest possible subfield of ℝ containing <i>&pi;</i> and all ℚ. Notice how ℚ is a field, but the set ℚ ∪ {<i>&pi;</i>} is not even a ring, much less a field. &emsp;■</p>
 
 <p><b>Example 8.2.5</b>. Let <i>F</i> = ℚ, <i>K</i> = ℝ and <i>a</i> = √3, then</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="double-struck">Q</mi>
+  <mo stretchy="false">(</mo>
+  <msqrt>
+    <mn>3</mn>
+  </msqrt>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>&#x3B1;</mi>
+          <mn>0</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>&#x3B1;</mi>
+          <mn>1</mn>
+        </msub>
+        <msqrt>
+          <mn>3</mn>
+        </msqrt>
+        <mo>+</mo>
+        <msub>
+          <mi>&#x3B1;</mi>
+          <mn>2</mn>
+        </msub>
+        <msup>
+          <msqrt>
+            <mn>3</mn>
+          </msqrt>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mo>&#x2026;</mo>
+        <mo>+</mo>
+        <msub>
+          <mi>&#x3B1;</mi>
+          <mi>s</mi>
+        </msub>
+        <msup>
+          <msqrt>
+            <mn>3</mn>
+          </msqrt>
+          <mi>s</mi>
+        </msup>
+      </mrow>
+      <mrow>
+        <msub>
+          <mi>&#x3B2;</mi>
+          <mn>0</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>&#x3B2;</mi>
+          <mn>1</mn>
+        </msub>
+        <msqrt>
+          <mn>3</mn>
+        </msqrt>
+        <mo>+</mo>
+        <msub>
+          <mi>&#x3B2;</mi>
+          <mn>2</mn>
+        </msub>
+        <msup>
+          <msqrt>
+            <mn>3</mn>
+          </msqrt>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mo>&#x2026;</mo>
+        <mo>+</mo>
+        <msub>
+          <mi>&#x3B2;</mi>
+          <mi>t</mi>
+        </msub>
+        <msup>
+          <msqrt>
+            <mn>3</mn>
+          </msqrt>
+          <mi>s</mi>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msub>
+      <mi>&#x3B1;</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>&#x3B2;</mi>
+      <mi>j</mi>
+    </msub>
+    <mo>&#x2208;</mo>
+    <mi mathvariant="double-struck">Q</mi>
+    <mo>,</mo>
+    <mi>s</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mo>&#x2208;</mo>
+    <mi mathvariant="double-struck">N</mi>
+    <mo>,</mo>
+    <msub>
+      <mi>&#x3B2;</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mi>&#x3B2;</mi>
+      <mn>1</mn>
+    </msub>
+    <msqrt>
+      <mn>3</mn>
+    </msqrt>
+    <mo>+</mo>
+    <msub>
+      <mi>&#x3B2;</mi>
+      <mn>2</mn>
+    </msub>
+    <msup>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo>&#x2026;</mo>
+    <mo>+</mo>
+    <msub>
+      <mi>&#x3B2;</mi>
+      <mi>t</mi>
+    </msub>
+    <msup>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+      <mi>t</mi>
+    </msup>
+    <mo>&#x2260;</mo>
+    <mn>0</mn>
+    <mo data-mjx-texclass="CLOSE">}</mo>
+  </mrow>
+</math>
+
+<!-- $$\mathbb{Q}(\sqrt{3}) = \left\{\frac{\alpha_0 + \alpha_1\sqrt{3} +\alpha_2\sqrt{3}^2 + \ldots + \alpha_s\sqrt{3}^s} {\beta_0 + \beta_1\sqrt{3} +\beta_2\sqrt{3}^2 + \ldots + \beta_t\sqrt{3}^s} | \alpha_i,\beta_j \in \mathbb{Q}, s,t \in \mathbb{N}, \beta_0 + \beta_1\sqrt{3} +\beta_2\sqrt{3}^2 + \ldots + \beta_t\sqrt{3}^t \ne 0 \right\}$$ -->
+
+<p>However given that √3<sup>2</sup> = 3, the expressions inside ℚ(√3) can be reduced to</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi mathvariant="double-struck">Q</mi>
