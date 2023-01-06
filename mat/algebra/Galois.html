@@ -25,7 +25,8 @@
 
 <p><b>9.2.1 Definition</b>. Let <i>K</i> an extension of a field <i>F</i>. A monomorphism of <i>K</i> in ℂ which fixes the elements of <i>F</i> is said <i>F-monomorphism</i> of <i>K</i> over <i>F</i>. &emsp;□</p>
 
-<p><b>Example 9.2.2</b>. Let <i>F</i> = ℚ, <i>K</i> = ℚ(<i>&alpha;</i>), where <i>&alpha;</i> is the third real root of <i>x</i><sup>3</sup> − 3, we have the following <i>F-monomorphism</i> <i>&phi;</i> from <i>K</i> to ℂ which sends <i>&alpha;</i> to <i>&omega;&alpha;</i> (with &omega; primitive third root of unity) and every <i>a</i> &in; <i>F</i> to itself. <br> We indicate with <i>I</i>(<i>K,F</i>) the set of all <i>F-monomorphism</i>. </p>
+<p><b>Example 9.2.2</b>. Let <i>F</i> = ℚ, <i>K</i> = ℚ(<i>&alpha;</i>), where <i>&alpha;</i> is the third real root of <i>x</i><sup>3</sup> − 3, we have the following <i>F-monomorphism</i> <i>&phi;</i> from <i>K</i> to ℂ which sends <i>&alpha;</i> to <i>&omega;&alpha;</i> (with &omega; primitive third root of unity) and every <i>a</i> &in; <i>F</i> to itself. <br> We indicate with <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"> <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">I</mi>
+</math>(<i>K,F</i>) the set of all <i>F-monomorphism</i>. </p>
 
 <p><b>9.2.3 Proposition</b>. If <i>F</i> = ℚ, every monomorphism of <i>K</i> is a ℚ-monomorphism.</p>
 
@@ -61,7 +62,16 @@
 = <i>&phi;</i>(<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>&alpha;</i> + <i>a<sub>n</sub>&alpha;<sup>n</sup></i>) = <i>&phi;</i>(0) = 0. &emsp;□</p>
 </div>
 
-<p>Thus the possible transformed element of a root <i>&alpha;</i> of an irreducible polynomial with coefficients in <i>F</i> can be found among the roots of the polynomial itself. For example consider the extension <i>K</i> = ℚ(√3) of ℚ. If <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> − 3, then the transformed √3 through of <i>K</i> can only be either √3 or −√3. <br> As a consequence of the previous results we have the following theorem.</p>
+<p>Thus the possible transformed element of a root <i>&alpha;</i> of an irreducible polynomial with coefficients in <i>F</i> can be found among the roots of the polynomial itself. For example consider the extension <i>K</i> = ℚ(√3) of ℚ. If <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> − 3, then the transformed √3 through of <i>K</i> can only be either √3 or −√3. As</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>x</i><sup>2</sup> − 3) = <i>&phi;</i>(0)<br>
+<i>&phi;</i>(<i>x</i><sup>2</sup>) − <i>&phi;</i>(3) = 0<br>
+<i>&phi;</i>(<i>x</i>)<i>&phi;</i>(<i>x</i>) = 3<br>
+<i>&phi;</i>(<i>x</i>) = &pm;3</p>
+</div>
+
+<p>As a consequence of the previous results we have the following theorem.</p>
 
 <p><b>9.2.5 Theorem</b>. Let <i>K</i> a finite extension of <i>F</i>, with degree <i>n</i>. Then there exist at most <i>n</i> <i>F-monomorphism</i> of <i>K</i>. In other words:</p>
 
@@ -197,7 +207,13 @@
 <p><i>K</i><sub>G</i>(<i>F,K</i>)</sub> &supseteq; <i>F</i></p>
 </div>
 
-<p><b>9.2.14 Example</b>. Let <i>K</i> = ℂ, field of the complex numbers and let <i>F</i> = ℝ. <br> If <i>&sigma;</i> &in; <i>G</i>(ℂ, ℝ), since ℂ = ℝ(<i>i</i>), it sufficies to evaluate <i>&sigma;</i>(<i>i</i>). The minimal polynomial of <i>i</i> over ℝ is <i>x</i><sup>2</sup> + 1, thus <i>&sigma;</i>(<i>i</i>) must be a root of the same polynomial, i.e. &pm;<i>i</i>. The two mappings</p>
+<p><b>9.2.14 Example</b>. Let <i>K</i> = ℂ, field of the complex numbers and let <i>F</i> = ℝ. <br> If <i>&sigma;</i> &in; <i>G</i>(ℂ, ℝ), since ℂ = ℝ(<i>i</i>). A field automorphism, is such that <i>&sigma;</i>(<i>x</i>+<i>y</i>) = <i>&sigma;</i>(x) + <i>&sigma;</i>(y), and <i>&sigma;</i>(<i>xy</i>) = <i>&sigma;</i>(<i>x</i>) <i>&sigma;</i>(<i>y</i>), so</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>a</i> + <i>bi</i>) = <i>a</i> + <i>b &sigma;</i> &emsp;<i>a, b</i> &in; ℝ</p>
+</div>
+
+<p><i>&sigma;</i>(−1) = <i>&sigma;</i>(<i>i</i><sup>2</sup>) = <i>&sigma;</i>(i)<i>&sigma;</i>(<i>i</i>). Since <i>&sigma;</i>(−1) = −1, the square of <i>&sigma;</i>(<i>i</i>), must be −1, that is <i>&sigma;</i>(<i>i</i>) must be a root of <i>x</i><sup>2</sup> + 1, i.e. &pm;<i>i</i>. Now that we know that <i>&sigma;</i>(<i>i</i>) = &pm; <i>i</i>, it's clear that can have only two possible mappings</p>
 
 <div class="eq">
 <p><i>&sigma;</i><sub>1</sub> : ℂ ⟶ ℂ<br>
@@ -223,7 +239,7 @@
 <p>ℂ<sub><i>G</i>(ℂ, ℝ)</sub> = {<i>k</i> &in; ℂ | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall; <i>&sigma;</i> &in; <i>G</i>(ℂ, ℝ)}
 </div>
 
-<p>Since that the identity fixes all the elements, it sufficies to consider the element <i>k</i> &in; ℂ that are fixed by <i>&sigma;</i><sub>2</sub>. Thus</p>
+<p>Since that the identity fixes all the elements in ℂ, it sufficies to consider the element <i>k</i> &in; ℂ that are fixed by <i>&sigma;</i><sub>2</sub>. Thus</p>
 
 <div class="eq">
 <p>ℂ<sub><i>G</i>(ℂ, ℝ)</sub> = {<i>k</i> &in; ℂ | <i>&sigma;</i><sub>2</sub>(<i>k</i>) = <i>k</i>} = {<i>a</i> + <i>ib</i> | <i>&sigma;</i><sub>2</sub>(<i>a</i> + <i>ib</i>} = {<i>a</i> + <i>ib</i> | <i>a</i> − <i>ib</i> = <i>a</i> + <i>ib</i>} = ℝ</p>
@@ -231,7 +247,19 @@
 
 <p>In this case, <i>K</i><sub>G</i>(<i>F,K</i>)</sub>, which as we know must contain <i>F</i>, is equalt to <i>F</i>. &emsp;□</p>
 
-<p><b>9.2.15 Example</b>. Let <i>K</i> = ℚ(∛5) and <i>F</i> = ℚ. To find all possible automorphisms of ℚ(∛5) (which fix ℚ), it suffices to show what are the images of <i>&alpha;</i> = ∛5. Since the minimal polynomial of <i>&alpha;</i> over ℚ is <i>x</i><sup>3</sup> − 5, <i>&sigma;</i>(<i>&alpha;</i>) must be another root of the same polynomial. Apart from <i>&alpha;</i> the other two roots are complex, hence not in ℚ(∛5) &subset; ℝ. It follows that the only possibility is <i>&sigma;</i>(<i>&alpha;</i>) = <i>&alpha;</i>, that is the unique automoprhism of <i>G</i>(ℚ(∛5), ℚ) is the identity automorphism.</p>
+<p><b>9.2.15 Example</b>. Let <i>K</i> = ℚ(∛5) and <i>F</i> = ℚ. We can express <i>K</i> as</p>
+
+<div class="eq">
+<p>ℚ(∛5) = {<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> ∛5 + <i>a</i><sub>2</sub> ∛5<sup>2</sup> | <i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub> &in; ℚ}</p>
+</div>
+
+<p>The action of <i>&sigma;</i> on a element of <i>K</i> is such that</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> ∛5 + <i>a</i><sub>2</sub> ∛5<sup>2</sup>) = <i>&sigma;</i>(<i>a</i><sub>0</sub>) + <i>&sigma;</i>(<i>a</i><sub>1</sub> ∛5) + &sigma;(<i>a</i><sub>2</sub> ∛5<sup>2</sup>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>&sigma;</i>(∛5) + <i>a</i><sub>2</sub> <i>&sigma;</i>(∛5<sup>2</sup>)</p>
+</div>
+
+<p>To and find all possible automorphisms of ℚ(∛5) (which fix ℚ), it suffices to show what are the images of <i>&alpha;</i> = ∛5, by proposition 9.2.4. Since the minimal polynomial of <i>&alpha;</i> over ℚ is <i>x</i><sup>3</sup> − 5, <i>&sigma;</i>(<i>&alpha;</i>) must be another root of the same polynomial. Apart from <i>&alpha;</i> the other two roots are complex, hence not in ℚ(∛5) &subset; ℝ. It follows that the only possibility is <i>&sigma;</i>(<i>&alpha;</i>) = <i>&alpha;</i>, that is the unique automoprhism of <i>G</i>(ℚ(∛5), ℚ) is the identity automorphism.</p>
 
 <div class="eq">
 <p><i>G</i>(ℚ(∛5), ℚ) = {id}</p>
@@ -248,6 +276,21 @@
 <div class="eq">
 <p>1 = |<i>G</i>(ℚ(∛5), ℚ)| &lt; |ℚ(∛5) : ℚ| = 3. &emsp;□</p>
 </div>
+
+<p><b>9.2.16 Example</b>. Let <i>&zeta;</i> a <i>n</i>th primitive root of unity. We calculate ℚ(<i>&zeta;</i>). We know <i>&zeta;</i> satisfief the <i>n</i>th cyclotomic polynomial <i>&Phi;<sub>n</sub></i>(<i>x</i>) which is irreducible over ℚ, thus the minimal polynomial of <i>&zeta;</i> over ℚ. It follows that</p>
+
+<div class="eq">
+<p>[ℚ(&<i>&zeta;</i> : ℚ] = <i>&phi;</i>(<i>n</i>)</p>
+</div>
+
+<p>Every element of <i>G</i>(ℚ(<i>&zeta;</i>), ℚ), maps <i>&zeta;</i> to another root of <i>&Phi;<sub>n</sub></i>(<i>x</i>), i.e. an element of the form <i>&zeta;<sup>r</sup></i> with 1 &le; <i>r</i> &le; <i>n</i> and (<i>n,r</i>) = 1. Conversely if <i>r</i> is an integer such that 1 &le; <i>r</i> &le; <i>n</i> and (<i>n,r</i>) = 1, the mapping <i>&sigma;<sub>r</sub></i> which maps <i>&zeta;</i> to <i>&zeta;<sup>r</sup></i> is an automorphism of ℚ(<i>&zeta;</i>. This fact shows us the possiblity to define the following mapping between the group <i>U</i>(ℤ<sub><i>n</i></sub>) of the invertible element of ℤ<sub><i>n</i></sub> and <i>G</i>(ℚ(<i>&zeta;</i>), ℚ):</p>
+
+<div class="eq">
+<p><i>&Psi;</i> : <i>U</i>(ℤ<sub><i>n</i></sub>) ⟶ <i>G</i>(ℚ(<i>&zeta;</i>), ℚ)<br>
+
+</div>
+
+<p>This is a bijective mapping. We prove it is a group homomorphism. If  </p>
 
 <section aria-label="End">
 <a href="constructible_points.html">«Constructible points</a>
