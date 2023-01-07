@@ -285,17 +285,23 @@
 <p>Every element of <i>G</i>(ℚ(<i>&zeta;</i>), ℚ), maps <i>&zeta;</i> to another root of <i>&Phi;<sub>n</sub></i>(<i>x</i>), i.e. an element of the form <i>&zeta;<sup>r</sup></i> with 1 &le; <i>r</i> &le; <i>n</i> and (<i>n,r</i>) = 1. Conversely if <i>r</i> is an integer such that 1 &le; <i>r</i> &le; <i>n</i> and (<i>n,r</i>) = 1, the mapping <i>&sigma;<sub>r</sub></i> which maps <i>&zeta;</i> to <i>&zeta;<sup>r</sup></i> is an automorphism of ℚ(<i>&zeta;</i>). This fact suggests us the possiblity to define the following mapping between the group <i>U</i>(ℤ<sub><i>n</i></sub>) of the <a href="modular_arithmetic.html#U">invertible elements</a> of ℤ<sub><i>n</i></sub> and <i>G</i>(ℚ(<i>&zeta;</i>), ℚ):</p>
 
 <div class="eq">
-<p><i>&Psi;</i> : <i>U</i>(ℤ<sub><i>n</i></sub>) ⟶ <i>G</i>(ℚ(<i>&zeta;</i>), ℚ)<br>
+<p><i>&Psi;</i> : (<i>U</i>(ℤ<sub><i>n</i></sub>),⋅) ⟶ (<i>G</i>(ℚ(<i>&zeta;</i>), ℚ), ∘)<br>
 <i>k̄</i> ⟶ <i>&sigma;<sub>k</sub></i></p>
 
 </div>
 
-<p>This is a bijective mapping. We prove it is a group homomorphism. If <i>ī, j̄</i> &in; <i>U</i>(ℤ<sub><i>n</i></sub>) are such that <i>īj̄</i> ≡ <i>k</i> (mod <i>n</i>), we show that <i>&sigma;<sub>i</sub>&sigma;<sub>i</sub></i> = <i>&sigma;<sub>k</sub></i>, indeed:</p>
+<p>This is a bijective mapping. We prove it is a group homomorphism. If <i>ī, j̄</i> &in; <i>U</i>(ℤ<sub><i>n</i></sub>), since we are dealing with a multiplicative group we have that <i>ij</i> ≡ <i>k</i> (mod <i>n</i>). <i>G</i>(ℚ(<i>&zeta;</i>), ℚ) is a group under composition of function so we show that <i>&sigma;<sub>i</sub> &sigma;<sub>j</sub></i> = <i>&sigma;<sub>k</sub></i>, indeed:</p>
 
 <div class="eq">
 <p><i>&sigma;<sub>i</sub>&sigma;<sub>i</sub></i>(<i>&zeta;</i>) = <i>&sigma;<sub>i</sub></i>(<i>&zeta;<sup>j</sup></i>) = <i>&zeta;<sup>ij</sup></i> = <i>&zeta;<sup>k</sup></i> = <i>&sigma;<sub>k</sub></i>(<i>&zeta;</i>)</p>
 </div>
 
+<p>We have to confirm that <i>&zeta;<sup>ij</sup></i> = <i>&zeta;<sup>k</sup></i>. Now since <i>ij</i> ≡ <i>k</i> (mod <i>n</i>) means that there exists <i>m</i> such that <i>ij</i> = <i>k</i> + <i>mn</i>, therefore,</p>
+
+<div class="eq">
+<p><i>&zeta;<sup>ij</sup></i> = <i>&zeta;</i><sup><i>k</i> + <i>mn</i></sup> = <i>&zeta;<sup>k</sup> &zeta;<sup>mn</sup></i> = <i>&zeta;<sup>k</sup></i> (<i>&zeta;<sup>n</sup></i>)<sup>m</sup> = <i>&zeta;<sup>k</sup></i> 1<sup><i>m</i></sup> = <i>&zeta;<sup>k</sup></i></p>
+</div>
+ 
 <p>which proves that</p>
 
 <div class="eq">
