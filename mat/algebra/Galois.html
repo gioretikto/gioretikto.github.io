@@ -154,7 +154,7 @@
 <p><b>Proof</b>. By definition of <i>F</i>-automorphism we have</p>
 
 <div class="eq">
-<p><i>G</i>(<i>K,F</i>) := {<i>&sigma;</i>: <i>K</i> ⟶ <i>K</i> | <i>&sigma;</i>(<i>a</i>) = <i>a</i> &forall;<i>a</i> &in; <i>F</i>}</p>
+<p><i>G</i>(<i>K,F</i>) := {<i>&sigma;</i>: <i>K</i> ⟶ <i>K</i> | <i>&sigma;</i>(<i>a</i>) = <i>a</i> &forall;<i>a</i> &in; <i>F</i>} &emsp;(<b>9.2.1</b>)</p>
 </div>
 
 <p>Let <i>&sigma;, &tau;</i> &in; <i>G</i>(<i>K,F</i>). Then their product <i>&sigma;</i> ∘ <i>&tau;</i> is an automorphism which fixes <i>F</i>, because</p>
@@ -319,7 +319,7 @@
 <p>Through definition 9.2.10 it is possible to associate to every <i>extension K</i> of a field <i>F</i> a group, its Galois group <i>G</i>(<i>K,F</i>). We shall now establish a relatin between the set of intermediate fields of an extension <i>K</i> of <i>F</i> and the set of subgroups of <i>G</i>(<i>K,F</i>). <br> Let <i>K</i> an extension of <i>F</i> and let <i>G</i>(<i>K,F</i>) its Galois group. For every intermediate field, <i>T</i> of <i>K</i> containing <i>F</i> we define</p>
 
 <div class="eq">
-<p><i>G</i>(<i>K,F</i>) := {<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) | <i>&sigma;</i>(<i>t</i>) = <i>t</i> &forall;<i>t</i> &in; <i>T</i>}</p>
+<p><i>G</i>(<i>K,T</i>) := {<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) | <i>&sigma;</i>(<i>t</i>) = <i>t</i> &forall;<i>t</i> &in; <i>T</i>} &emsp;(<b>9.2.2</b>)</p>
 </div>
 
 <p>For every subgroup <i>H</i> of <i>G</i>(<i>K,F</i>) we define</p>
@@ -364,7 +364,15 @@
 
 <ol type="a">
 	<li><p>Only <i>&sigma;</i> = id, satisfies the definition of <i>G</i>(<i>K,K</i>).</p></li>
-	<li><p>|<i>G</i>(<i>K,T</i><sub>2</sub>)| &le; [<i>K</i>:<i>T</i><sub>2</sub>] = 
+	<li><p>For <i>G</i>(<i>K,T</i><sub>2</sub>) ⊆ <i>G</i>(<i>K,T</i><sub>1</sub>), to be true, everything in the left set (automorphisms that fix <i>T</i><sub>2</sub>) need to also be in the right set (automorphisms that fix <i>T</i><sub>1</sub>): this is true, simply because <i>T</i><sub>1</sub> is a subset of <i>T</i><sub>2</sub>.</p></li>
+
+	<li><p>We must prove <i>G</i>(<i>K,T</i>) is a non-empty subset of <i>G</i>(<i>K,F</i>) which is itself a group under the same operation of composition of function. By definition of <i>F</i>-automorphim and by definition of <i>G</i>(<i>K,T</i>) (Eq. 9.2.2), we understand this latter set is a non-empty subset of <i>G</i>(<i>K,F</i>). Closure under the group operation is also easily verified, hence a subgroup.</p></li>
+
+	<li><p>K<sub>id</sub> = {<i>k</i> &in; <i>K</i> | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall;<i>&sigma;</i> &in; {id}.} = <i>K</i>.</p></li>
+
+	<li><p>The elements <i>k</i> &in; <i>K</i> that are fixed by the automorpshims of <i>H</i><sub>2</sub>, must be fixed as well by the automorphisms of <i>H</i><sub>1</sub>, because <i>H</i><sub>1</sub> is a subgroup of <i>H</i><sub>2</sub>. Thus <i>K</i><sub>H<sub>2</sub></sub> &subseteq; <i>K</i><sub><i>H</i><sub>1</sub></p></li>
+
+	<li><p>By definition of <i>K<sub>H</sub></i> is clear that <i>K<sub>H</sub></i> &subseteq; <i>K</i>. We must prove that <i>F</i> &subseteq; <i>K<sub>H</sub></i>.</p></li>
 </ol>
 
 <p><b>9.2.18 Proposition</b>. In the field ℝ of all real numbers, the identity mapping of ℝ is the only automorphism.</p>
