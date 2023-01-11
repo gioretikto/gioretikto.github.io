@@ -86,6 +86,64 @@
 <p><i>&Phi;</i>(<i>&Psi;</i>(ℚ)) = <i>&Phi;</i>(<i>G</i>(ℚ(∛5),ℚ)) = <i>&Phi;</i>({id}) = ℚ(∛5) ⊃ ℚ</p>
 </div>
 
+<p>Regarding the second inclusion, next theorem show that for finite extension the equality sign always holds.</p>
+
+<p><b>9.3.1 Theorem</b>. Let <i>K</i> a finite extension of a field <i>F</i> and let <i>H</i>, be a subgroup of <i>G</i>(<i>K,F</i>). Let <i>K<sub>H</sub></i> the field fixed by <i>H</i>, then</p>
+
+<ol type="a">
+	<li><p>[<i>K</i>: <i>K<sub>H</sub></i>] = |<i>H</i>|;</p></li>
+	<li><p><i>H</i> = <i>G</i>(<i>K,K<sub>H</sub></i>).</p></li>
+</ol>
+
+<p><b>Proof.</b> In proposition , we seen the following properties</p>
+
+<div class="eq">
+<p><i>H</i> &subseteq; <i>G</i>(<i>K,K<sub>H</sub></i>) &emsp;⇒&emsp; |<i>H</i>| &le; |<i>G</i>(<i>K,K<sub>H</sub></i>)|</p>
+</div>
+
+<p>since <i>K</i> is a finite extension, by Theorem 9.2.11, we know that</p>
+
+<div class="eq">
+<p>|<i>G</i>(<i>K,K<sub>H</sub></i>)| &le; [<i>K</i> : <i>K<sub>H</sub></i>]</p>
+</div>
+
+<p>Thus</p>
+
+<div class="eq">
+<p>|<i>H</i>| &le; |<i>G</i>(<i>K,K<sub>H</sub></i>)| &le; [<i>K</i> : <i>K<sub>H</sub></i>]</p>
+</div>
+
+<p>So it suffices to prove point a) to have also point b), because if |<i>H</i>| = [<i>K</i> : <i>K<sub>H</sub></i>], then <i>H</i>, subgroup of <i>G</i>(<i>K,K<sub>H</sub></i>) with the same order of <i>G</i>(<i>K,K<sub>H</sub></i>), must coincide wih <i>G</i>(<i>K,K<sub>H</sub></i>). We prove that</p>
+
+<div class="eq">
+<p>[<i>K</i> : <i>K<sub>H</sub></i>] = |<i>H</i>|</p>
+</div>
+
+<p>Since <i>K</i> is a finite extension of <i>F</i>, (hence as well of <i>K<sub>H</sub></i>), there exists an element <i>a</i> &in; <i>K</i> such that <i>K</i> = <i>K<sub>H</sub></i>(<i>a</i>). If [<i>K</i> : <i>K<sub>H</sub></i>] = <i>m</i>, the minimal polynomial <i>p</i>(<i>x</i>) &in; <i>K<sub>H</sub></i>[<i>x</i>] of <i>a</i> will have <i>m</i> as degree. Let <i>&sigma;</i><sub>1</sub> = id, <i>&sigma;</i><sub>2</sub>, ..., <i>&sigma;<sub>h</sub></i>, the <i>h</i> elements of <i>H</i>. We construct the <i>h</i> <a href="symmetric_polynomials.html#elem">elementary symmetric functions</a> in the <i>h</i> elements <i>a</i> = <i>&sigma;</i><sub>1</sub>(<i>a</i>), <i>&sigma;</i><sub>2</sub>(<i>a</i>), ..., <i>&sigma;<sub>h</sub></i>(<i>a</i>)</p>
+
+<div class="eq">
+<p><i>&alpha;</i><sub>1</sub> = <i>&sigma;</i><sub>1</sub>(<i>a</i>) + <i>&sigma;</i><sub>2</sub>(<i>a</i>) + ...+ i>&sigma;<sub>h</sub></i>(<i>a</i>)<br>
+<i>&alpha;</i><sub>2</sub> = <i>&Sigma;</i><sub><sub><i>i</i> &le; <i>j</i></sub></sub> <i>&sigma;<sub>i</sub></i>(<i>a</i>)<i>&sigma;<sub>j</sub></i>(<i>a</i>)<br>
+...
+<i>&sigma;<sub>h</sub></i> = <i>&sigma;</i><sub>1</sub>(<i>a</i>)<i>&sigma;</i><sub>2</sub>(<i>a</i>) ⋅⋅⋅ <i>&sigma;<sub>h</sub></i>(<i>a</i>)</p>
+</div>
+
+<p>An arbitrary element <i>&sigma;<sub>i</sub></i> &in; <i>H</i> fixes such functions, as it easily verified. Thus the elements <i>&alpha;<sub>i</sub></i> are in <i>K<sub>H</sub></i>. The polynomial</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = (<i>x</i> − <i>a</i>) (<i>x</i> − <i>&sigma;</i><sub>2</sub>(<i>a</i>)) ⋅⋅⋅ (<i>x</i> − <i>&sigma;<sub>h</sub></i>(<i>a</i>))</p>
+</div>
+
+<p>which has clearly <i>a</i> as root, and coefficients in <i>K<sub>H</sub></i> since</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>x<sup>h</sup></i> − <i>&alpha;</i><sub>1</sub><i>x<sup>h</sup></i> + ... + (−1)<sup><i>h</i></sup> <i>&alpha;<sub>h</sub></i></p>
+</div>
+
+<p>which as we saw, has coefficients in <i>K<sub>H</sub></i>. Since the miminal polynomial of <i>a</i> has degree <i>m</i> then <i>h</i> &ge; <i>m</i>, that is |<i>H</i>| &ge; [<i>K</i>: <i>H</i>]. Thus |<i>H</i>| = [<i>K</i>:<i>K<sub>H</sub></i>]. &emsp;□</p>
+
+<!-- <p>The functions <i>&Phi;</i> and <i>&Psi;</i> are known as Galois correspondence. We want to study now the circumstances under which the two mappings are one the inverse of the other.</p> -->
+
 <section aria-label="End">
 <a href="Galois.html">«Galois groups</a>
 <a href="index.html">Index</a>
