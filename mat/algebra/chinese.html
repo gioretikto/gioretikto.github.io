@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Chinese remainder theorem"/>
-    <title>Chinese remainder theorem</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Chinese remainder theorem"/>
+	<title>Chinese remainder theorem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href=/index.html">Algebra</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
-      
-<div class="content">
+
+<article>
 
 <h1>Chinese remainder theorem</h1>
 
@@ -55,8 +55,8 @@
 <p>and so</p>
 
 <div class="eq">
-<p><i>x̄ ≡ R<sub>1</sub>x̄<sub>1</sub> ≡ c<sub>1</sub></i> &emsp;mod r<sub>1</sub></p>
-<p>&emsp;&emsp;&emsp;&emsp;<i>x̄ ≡ R<sub>2</sub>x̄<sub>2</sub> ≡ c<sub>2</sub></i> &emsp; mod r<sub>2</sub> &emsp; (<b>4.7</b>)</p>
+<p><i>x̄</i> ≡ <i>R</i><sub>1</sub><i>x̄</i><sub>1</sub> ≡ c<sub>1</sub></i> &emsp;mod r<sub>1</sub></p>
+<p>&emsp;&emsp;&emsp;&emsp;<i>x̄ ≡ R<sub>2</sub>x̄<sub>2</sub> ≡ <i>c</i><sub>2</sub> &emsp; mod <i>r</i><sub>2</sub> &emsp; (<b>4.7</b>)</p>
 <p>...</p>
 <p><i>x̄ ≡ R<sub>3</sub>x̄<sub>3</sub> ≡ c<sub>3</sub></i> &emsp; mod <i>r<sub>s</sub></i></p>
 </div>
@@ -66,11 +66,11 @@
 <p>As to the unicity modulo <i>R</i>, let <i>ȳ</i> be another solution of the system; in other words, assume that</p>
 
 <div class="eq">
-<p><i>x̄ ≡ c<sub>k</sub> ≡ ȳ</i> &emsp; (mod <i>r<sub>k</sub></i>),  &emsp; for <i>k</i> = 1, ..., <i>s</i>.</p>
+<p><i>x̄</i> ≡ <i>c<sub>k</sub></i> ≡ <i>ȳ</i> &emsp; (mod <i>r<sub>k</sub></i>),  &emsp; for <i>k</i> = 1, ..., <i>s</i>.</p>
 </div>
 
-<p>so ȳ ≡ x̄ (mod <i>r<sub>k</sub></i>) for each <i>k</i>. Thus <i>r<sub>k</sub></i> | (<i>x̄ − ȳ</i>) for each <i>k</i>. But
-then, by <a href="diophantine.html">Corollary 2.20</a>, since the <i>r<sub>k</sub></i> are pairwise relatively prime, <i>r<sub>k</sub></i> | (<i>x̄ − ȳ</i>), and
+<p>so <i>ȳ</i> ≡ <i>x̄</i> (mod <i>r<sub>k</sub></i>) for each <i>k</i>. Thus <i>r<sub>k</sub></i> | (<i>x̄</i> − <i>ȳ</i>) for each <i>k</i>. But
+then, by <a href="diophantine.html">Corollary 2.20</a>, since the <i>r<sub>k</sub></i> are pairwise relatively prime, <i>r<sub>k</sub></i> | (<i>x̄</i> − <i>ȳ</i>), and
 ȳ ≡ x̄ (mod <i>R</i>).□</p>
 
 <p><b>Example 4.24</b>. Solve the problem of counting a few hundred soldiers by linining them up by 7, 10 and 13. For each alignment we have the remainders r<sub>1</sub> = 1, r<sub>2</sub> = 3, and r<sub>3</sub> = 8. Then we can set up the system</p>
@@ -178,12 +178,12 @@ x</i> ≡ 8 (mod 13).
 	
 	<li><p>It remains to show the surjectivty of <i>f</i>, i.e., for all (u mod m, v mod n) &in; ℤ<sub>m</sub> × ℤ<sub>n</sub> there is some <i>a</i> mod <i>mn</i>, such that f(a mod mn) = (u mod m, v mod n). In order to show this, let (u mod m, v mod n) be an arbitrary element of the direct product ℤ<sub>m</sub> × ℤ<sub>n</sub>. Since gcd(m,n) = 1, the Chinese remainder theorem implies that the system</p>
 			<div class="eq">
-			<p><i>x ≡ u</i> (mod <i>m</i>),</p>
-			<p><i>x ≡ v</i> (mod <i>n</i>)</p>
+			<p><i>x</i> ≡ <i>u</i> (mod <i>m</i>),</p>
+			<p><i>x</i> ≡ <i>v</i> (mod <i>n</i>)</p>
 			</div>
 	<p>has a unique solution x<sub>0</sub> mod mn such that x<sub>0</sub> ≡ u mod m and x<sub>0</sub> ≡ v mod n. Hence, </p>
 		<div class="eq">
-			<p>f(x<sub>0</sub> mod mn) = (x<sub>0</sub> mod m, x<sub>0</sub> mod n) = (u mod m, v mod n)</p>
+			<p><i>f</i>(<i>x</i><sub>0</sub> mod mn) = (<i>x</i><sub>0</sub> mod m, x<sub>0</sub> mod n) = (u mod m, v mod n)</p>
 		</div>
 		<p>and this shows that <i>f</i> is surjective.</p>
 		</li>	
@@ -197,7 +197,7 @@ x</i> ≡ 8 (mod 13).
 <a href="euler.html">Euler function and theorem &#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>

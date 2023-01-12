@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- <meta name="description" content="Symmetric Polynomials"/>
- <title>Symmetric Polynomials</title>
- <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Symmetric Polynomials">
+	<title>Symmetric Polynomials</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
- <ul>
-  <li><a class="navbar" href="../../index.html">Home</a></li>
-  <li><a class="navbar" href="index.html">Algebra</a></li>
- </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
 </nav>
-  
-<div class="content">
+
+<article>
 
 <h1>Symmetric Polynomials</h1>
 
 <p>We introduced 𝕂[<i>x</i>] the ring of polynomials in one indeterminate with coefficients over 𝕂. This definition can be extended to a case in which the coefficients vary over a commutative ring (e.g: ℤ) rather than a field. In this case we have a <i>ring of polynomials with coefficients in a ring R</i> and will be indicated by <i>R</i>[<i>x</i>].</p>
 
-<p><b>4.47. Definition</b>. The ring <i>R</i> of polynomials in <i>n</i> indeterminates and coefficients over the field 𝕂  is defined inductively in the following way</p>
+<p><b>5.10.1 Definition</b>. The ring <i>R</i> of polynomials in <i>n</i> indeterminates and coefficients over the field 𝕂  is defined inductively in the following way</p>
 
 <div class="eq">
-<p><i>R<sub>1</sub></i> ≡ 𝕂[<i>x</i>], &emsp; <i>R<sub>n</sub> ≡ R<sub>n − 1</sub></i>[<i>x</i>]</p>
+<p><i>R</i><sub>1</sub></i> ≡ 𝕂[<i>x</i>], &emsp; <i>R<sub>n</sub></i> ≡ <i>R</i><sub><i>n</i> − 1</sub>[<i>x</i>]</p>
 </div>
 
-<p>we write R<sub>n</sub> ≡ 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>].</p>
+<p>we write <i>R<sub>n</sub></i> ≡ 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>]. &emsp;□</p>
 
 <p>So a polynomials with <i>n</i> indeterminates is thought as a polynomial in one variable, with coefficients in the ring of the polynomials with <i>n-1</i> variables. An element of 𝕂[<i>x,y</i>] = (𝕂[<i>x</i>])[<i>y</i>] is of the kind</p>
 
 <div class="eq">
-<p>∑<sup><i>n</i></sup><sub><sub>j=0</sub></sub> <i>f<sub>j</sub>y<sup>j</sup></i>, &emsp; <i>f<sub>j</sub></i> &in; 𝕂[<i>x</i>]</p>
+<p>∑<sup><i>n</i></sup><sub><sub><i>j</i>=0</sub></sub> <i>f<sub>j</sub>y<sup>j</sup></i>, &emsp; <i>f<sub>j</sub></i> &in; 𝕂[<i>x</i>]</p>
 </div>
 
 <p>like for example</p>
 
 <div class="eq">
-<p>∑<sup><i>2</i></sup><sub><sub>j=0</sub></sub> (<i>∑<sup>1</sup><sub><sub>i=0</sub></sub> a<sub>ij</sub>x<sup>i</sup></i>)<i>y<sup>j</sup></i> = (<i>a<sub>00</sub> + a<sub>10</sub>x</i>) + (<i>a<sub>01</sub> + a<sub>11</sub>x</i>)<i>y</i> + (<i>a<sub>02</sub> + a<sub>12</sub> x</i>)<i>y<sup>2</sup></i> = <br> <i>a<sub>00</sub> + a<sub>10</sub>x + a<sub>01</sub>y + a<sub>02</sub>y<sup>2</sup> + a<sub>11</sub> xy + a<sub>12</sub> xy<sup>2</sup></i>.</p>
+<p>∑<sup><i>2</i></sup><sub><sub><i>j</i>=0</sub></sub> (∑<sup>1</sup><sub><sub><i>i</i>=0</sub></sub> <i>a<sub>ij</sub>x<sup>i</sup></i>)<i>y<sup>j</sup></i> = (<i>a</i><sub>00</sub> + <i>a</i><sub>10</sub><i>x</i>) + (<i>a<sub>01</sub> + <i>a</i><sub>11</sub>x</i>)<i>y</i> + (<i>a<sub>02</sub> + <i>a</i><sub>12</sub> x</i>)<i>y<sup>2</sup></i> = <br> <i>a</i><sub>00</sub> + <i>a</i><sub>10</sub>x + <i>a</i><sub>01</sub><i>y</i> + <i>a</i><sub>02</sub>y<sup>2</sup> + <i>a</i><sub>11</sub> <i>xy</i> + <i>a</i><sub>12</sub> <i>xy</i><sup>2</sup>.</p>
 </div>
 
-<p>We can represent in general the elements of 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>] in the form</p>
+<p>We can represent in general the elements of 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>] in the form</p>
 
 <div class="eq">
-<p><i>f</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>) = ∑ <i>a<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> x<sub>1</sub><sup>i<sub>1</sub></sup> x<sub>2</sub><sup>i<sub>2</sub></sup> ... x<sub>n</sub><sup>i<sub>n</sub></sup></i></p>
+<p><i>f</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>) = ∑ <i>a</i><sub><i>i</i><sub>1</sub><i>i</i><sub>2</sub>...<i>i<sub>n</sub></sub></i> <i>x</i><sub>1</sub><sup>i<sub>1</sub></sup> <i>x</i><sub>2</sub><sup>i<sub>2</sub></sup> ... <i>x<sub>n</sub><sup>i<sub>n</sub></sup></i></p>
 </div>
 
 <p>They are added and multiplied in the familiar way, making use of the associative, commutative, and distributive laws of addition and multiplication.</p>
@@ -56,154 +56,157 @@
 <p>Given the <i>monomial</i></p>
 
 <div class="eq">
-<p><i>x<sub>1</sub><sup>h<sub>1</sub></sup>, x<sub>2</sub><sup>h<sub>2</sub></sup>, ..., x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
+<p><i>x</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup>, <i>x</i><sub>2</sub><sup><i>h</i><sub>2</sub></sup>, ..., <i>x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
-<p>the degree of the polynomials is the integer <i>h<sub>1</sub> + h<sub>2</sub> + ... + h<sub>n</sub></i>. The <i>degree</i> of the polynomials <i>f</i>(<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>) is defined as the highest degree of its monomials.</p> 
+<p>the degree of the polynomials is the integer <i>h</i><sub>1</sub> + <i>h</i><sub>2</sub> + ... + <i>h<sub>n</sub></i>. The <i>degree</i> of the polynomials <i>f</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>) is defined as the highest degree of its monomials.</p> 
 
-<p>A polynomial in general can have different highest degree monomials. It is thus relevant to order the monomials of a polynomial. The common order is the <b>lexicographic ordering</b>: In practice, given an ordered alphabet of variables <i>x<sub>1</sub>, x<sub>2</sub>,...,x<sub>n</sub></i> you can sort all the monomials by first considering the exponent of <i>x<sub>1</sub>, x<sub>2</sub>,...,x<sub>n</sub></i>, then the exponent of <i>x<sub>2</sub></i> and so on, until a difference is found between the exponents. At this point, the monomial is considered minor for which the exponent is minor. In symbols</p>
+<p>A polynomial in general can have different highest degree monomials. It is thus relevant to order the monomials of a polynomial. The common order is the <b>lexicographic ordering</b>: In practice, given an ordered alphabet of variables <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x<sub>n</sub></i> you can sort all the monomials by first considering the exponent of <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x<sub>n</sub></i>, then the exponent of <i>x</i><sub>2</sub> and so on, until a difference is found between the exponents. At this point, the monomial is considered minor for which the exponent is minor. In symbols</p>
 
 <div class="eq">
-<p><i>&alpha;x<sub>1</sub><sup>h<sub>1</sub></sup>x<sub>2</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ x<sub>3</sub><sup>h<sub>n</sub></sup></i>, &emsp; <i>&alpha;</i> &in; 𝕂, &emsp; <i>h<sub>i</sub> &ge;0</i></p>
+<p><i>&alpha;x</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup><i>x</i><sub>2</sub><sup><i>h</i><sub>1</sub></sup> ⋅⋅⋅ <i>x</i><sub>3</sub><sup>h<sub>n</sub></sup></i>, &emsp; <i>&alpha;</i> &in; 𝕂, &emsp; <i>h<sub>i</sub></i> &ge; 0</p>
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p><i>&beta;x<sub>1</sub><sup>k<sub>1</sub></sup>x<sub>2</sub><sup>k<sub>1</sub></sup> ⋅⋅⋅ x<sub>3</sub><sup>k<sub>n</sub></sup></i>, &emsp; <i>&beta;</i> &in; 𝕂, &emsp; <i>k<sub>i</sub> &ge;0</i></p>
+<p><i>&beta;x</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup><i>x</i><sub>2</sub><sup><i>k</i><sub>1</sub></sup> ⋅⋅⋅ <i>x</i><sub>3</sub><sup><i>k<sub>n</sub></sup></i>, &emsp; <i>&beta;</i> &in; 𝕂, &emsp; <i>k<sub>i</sub></i> &ge;0</i></p>
 </div>
 
-<p>two mononomers of the polynomial <i>f</i>(<i>x<sub>1</sub>, x<sub>2</sub>,..,x<sub>n</sub></i>). We say that</p>
+<p>two mononomers of the polynomial <i>f</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,.., <i>x<sub>n</sub></i>). We say that</p>
 
 <div class="eq">
-<p><i>&alpha;x<sub>1</sub><sup>h<sub>1</sub></sup>x<sub>2</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ x<sub>n</sub><sup>h<sub>n</sub></sup></i> &lt; <i>&beta;x<sub>1</sub><sup>k<sub>1</sub></sup>x<sub>2</sub><sup>k<sub>1</sub></sup> ⋅⋅⋅ x<sub>n</sub><sup>k<sub>n</sub></sup></i>
+<p><i>&alpha;x</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup><i>x</i><sub>2</sub><sup><i>h</i><sub>1</sub></sup> ⋅⋅⋅ <i>x<sub>n</sub><sup>h<sub>n</sub></sup></i> &lt; <i>&beta;x</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup><i>x</i><sub>2</sub><sup><i>k</i><sub>1</sub></sup> ⋅⋅⋅ <i>x<sub>n</sub><sup>k<sub>n</sub></sup></i>
 </div>
 
-<p>if the least integer <i>m</i>, for which <i>h<sub>i</sub> &ne; k<sub>i</sub></i>, such that <i>h<sub>m</sub> &lt; k<sub>m</sub></i>.</p>
+<p>if the least integer <i>m</i>, for which <i>h<sub>i</sub> &ne; <i>k<sub>i</sub></i>, such that <i>h<sub>m</sub></i> &lt; <i>k<sub>m</sub></i>.</p>
 
 <p>For example</p>
 
 <div class="eq">
-<p><i>x<sub>1</sub><sup>4</sup>x<sub>2</sub><sup>2</sup>x<sub>3</sub> ≻ x<sub>1</sub><sup>4</sup>x<sub>2</sub>x<sub>3</sub><sup>3</sup></i> &emsp; (same total degree, equal x<sub>1</sub> exponent, greater x<sub>2</sub> exponent)</p>
-<p><i>x<sub>1</sub><sup>4</sup>x<sub>2</sub><sup>2</sup>x<sub>3</sub><sup>3</sup> ≺ x<sub>1</sub><sup>4</sup>x<sub>2</sub><sup>3</sup>x<sub>3</sub><sup>3</sup></i> &emsp; (smaller total degree)</p>
+<p><i>x</i><sub>1</sub><sup>4</sup><i>x</i><sub>2</sub><sup>2</sup><i>x</i><sub>3</sub> ≻ <i>x</i><sub>1</sub><sup>4</sup>x<sub>2</sub>x<sub>3</sub><sup>3</sup></i> &emsp; (same total degree, equal <i>x</i><sub>1</sub> exponent, greater <i>x</i><sub>2</sub> exponent)</p>
+<p><i>x</i><sub>1</sub><sup>4</sup><i>x</i><sub>2</sub><sup>2</sup>x<sub>3</sub><sup>3</sup> ≺ x<sub>1</sub><sup>4</sup>x<sub>2</sub><sup>3</sup><i>x</i><sub>3</sub><sup>3</sup> &emsp; (smaller total degree)</p>
 </div>
 
-<p>We introduce now an important class of polynomials: <i>symmetric poynomials</i>. Given the defintion of permutation we have the following</p>
+<p>We introduce now an important class of polynomials: <i>symmetric polynomials</i>. Given the definition of permutation we have the following</p>
 
-<p><b>4.48 Definition</b>. A polynomial <i>f</i>(<i>x<sub>1</sub>,x<sub>2</sub>,...x<sub>n</sub></i>) &in; 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>] is said <i>symmetric poynomial</i> if for any permutation of its indeterminate it remains invariant.</p>
+<p><b>5.10.2 Definition</b>. A polynomial <i>f</i>(<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>,..., <i>x<sub>n</sub></i>) &in; 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>] is said <i>symmetric</i> if for any permutation of its indeterminate it remains invariant.&emsp;□</p>
 
-<p>For example the polynomials in 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>3</sub></i>]</p>
+<p>For example the polynomials in 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x</i><sub>3</sub>]</p>
 
 <div class="eq">
-<p><i>2x<sub>1</sub> + 2x<sub>2</sub> + 2x<sub>3</sub> −3x<sub>1</sub><sup>2</sup> −3x<sub>2</sub><sup>2</sup> −3x<sub>3</sub><sup>2</sup></i></p>
-<p><i>x<sub>1</sub>x<sub>2</sub><sup>3</sup> + x<sub>2</sub>x<sub>1</sub><sup>3</sup> + x<sub>1</sub>x<sub>3</sub> + x<sub>3</sub>x<sub>1</sub><sup>3</sup> + x<sub>2</sub>x<sub>3</sub><sup>3</sup> + x<sub>3</sub>x<sub>2</sub><sup>3</sup></i></p>
+<p>2<i>x</i><sub>1</sub> + 2<i>x</i><sub>2</sub> + 2<i>x</i><sub>3</sub> −3<i>x</i><sub>1</sub><sup>2</sup> −3<i>x</i><sub>2</sub><sup>2</sup> −3<i>x</i><sub>3</sub><sup>2</sup></i></p>
+<p><i>x</i><sub>1</sub>x<sub>2</sub><sup>3</sup> + <i>x</i><sub>2</sub><i>x</i><sub>1</sub><sup>3</sup> + <i>x</i><sub>1</sub><i>x</i><sub>3</sub> + <i>x</i><sub>3</sub>x<sub>1</sub><sup>3</sup> + <i>x</i><sub>2</sub>x<sub>3</sub><sup>3</sup> + <i>x</i><sub>3</sub><i>x</i><sub>2</sub><sup>3</sup></i></p>
 </div>
 
 <p>instead the following are not symmetric polynomials</p>
 
 <div class="eq">
-<p><i>x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> − x<sub>3</sub><sup>2</sup>, &emsp; x<sub>1</sub> + 3x<sub>2</sub> + 7x<sub>3</sub></i></p>
+<p><i>x</i><sub>1</sub><sup>2</sup> + <i>x</i><sub>2</sub><sup>2</sup> − <i>x</i><sub>3</sub><sup>2</sup>, &emsp; <i>x</i><sub>1</sub> + 3x<sub>2</sub> + 7x<sub>3</sub></i></p>
 </div>
 
-<p>The following symmetric polynomial are said <i>elementary symmetric polynomials</i> (or functions) in 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>]</p>
+<p id="elem">The following symmetric polynomial are said <i>elementary symmetric polynomials</i> (or functions) in 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>]</p>
 
 <div class="eq">
-<p><i>&sigma;<sub>1</sub>(<i>x<sub>1</sub>,x<sub>2</sub>,...x<sub>n</sub></i>) = x<sub>1</sub> + x<sub>2</sub> + ... + x<sub>n</sub> = ∑<sup><i>n</i></sup><sub><sub>i=1</sub></sub> x<sub>1</sub></i></p>
-<p><i>&sigma;<sub>1</sub>(<i>x<sub>1</sub>,x<sub>2</sub>,...x<sub>n</sub></i>) = x<sub>1</sub> x<sub>2</sub> + x<sub>1</sub> x<sub>3</sub> + ...+x<sub>n−1</sub> x<sub>n</sub> = ∑<sup><i>n</i></sup><sub><sub>i&le;i &lt; j &le; n</sub></sub> x<sub>i</sub>x<sub>j</sub></i></p>
-<p><i>&sigma;<sub>1</sub>(<i>x<sub>1</sub>,x<sub>2</sub>,...x<sub>n</sub></i>) = x<sub>1</sub> x<sub>2</sub>x<sub>3</sub> + x<sub>1</sub> x<sub>2</sub> x<sub>4</sub> + ...+ x<sub>n−2</sub> x<sub>n−1</sub> x<sub>n</sub> = ∑<sup><i>n</i></sup><sub><sub>i&le;i &lt; j &lt; k &le; n</sub></sub> x<sub>i</sub>x<sub>j</sub>x<sub>k</sub></i></p>
+<p><i>&sigma;</i><sub>1</sub>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x<sub>n</sub></i>) = <i>x</i><sub>1</sub> + <i>x</i><sub>2</sub> + ... + <i>x<sub>n</sub></i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>x<sub>i</sub></i></p>
+
+<p><i>&sigma;</i><sub>1</sub>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x<sub>n</sub></i>) = <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> + <i>x</i><sub>1</sub> <i>x</i><sub>3</sub> + ... + <i>x</i><sub><i>n</i>−1</sub> <i>x<sub>n</sub></i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>&le;<i>i</i> &lt; <i>j</i> &le; <i>n</i></sub></sub> <i>x<sub>i</sub>x<sub>j</sub></i></p>
+
+<p><i>&sigma;</i><sub>1</sub>(<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>,..., <i>x<sub>n</sub></i>) = <i>x</i><sub>1</sub> <i>x</i><sub>2</sub><i>x</i><sub>3</sub> + <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> <i>x</i><sub>4</sub> + ...+ <i>x</i><sub><i>n</i>−2</sub> <i>x</i><sub><i>n</i>−1</sub> <i>x<sub>n</sub></i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i> &le; <i>i</i> &lt; <i>j</i> &lt; <i>k</i> &le; <i>n</i></sub></sub> <i>x<sub>i</sub>x<sub>j</sub>x<sub>k</sub></i></p>
 <p>...</p>
-<p><i>&sigma;<sub>1</sub>(<i>x<sub>1</sub>,x<sub>2</sub>,...x<sub>n</sub></i>) = x<sub>1</sub>x<sub>2</sub>⋅⋅⋅x<sub>n</sub></i></p>
+
+<p><i>&sigma;</i><sub>1</sub>(<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>,...,<i>x<sub>n</sub></i>) = <i>x</i><sub>1</sub><i>x</i><sub>2</sub>⋅⋅⋅<i>x<sub>n</sub></i></p>
 </div>
 
-<p>As we're a going to show these functions conenct coefficients and roots of a polynomial equation in one variale.</p>
+<p>We shall show, these functions connenct coefficients and roots of a polynomial equation in one variable.</p>
 
 <p>Consider the equation</p>
 
 <div class="eq">
-<p><i>f</i>(<i>t</i>) = <i>t<sup>n</sup> + a<sub>1</sub>t<sup>n−1</sup> + ... + a<sub>n−1</sub>t + a<sub>n</sub> = 0</i> &emsp; (4.49)</p>
+<p><i>f</i>(<i>t</i>) = <i>t<sup>n</sup></i> + <i>a</i><sub>1</sub><i>t</i><sup><i>n</i>−1</sup> + ... + <i>a</i><sub><i>n</i>−1</sub><i>t</i> + <i>a<sub>n</sub></i> = 0 &emsp; (<b>5.10.1</b>)</p>
 </div>
 
-<p>Let <i>r<sub>1</sub>, r<sub>2</sub>, r<sub>n</sub></i> be its roots, we can write</p>
+<p>Let <i>r</i><sub>1</sub>, <i>r</i><sub>2</sub>, <i>r<sub>n</sub></i> be its roots, we can write</p>
 
 <div class="eq">
-<p><i>f</i>(<i>t</i>) = (<i>t − r<sub>1</sub></i>) (<i>t − r<sub>2</sub></i>) ⋅⋅⋅ (<i>t − r<sub>n</sub></i>) &emsp; (4.50)</p>
+<p><i>f</i>(<i>t</i>) = (<i>t</i> − <i>r</i><sub>1</sub>) (<i>t</i> − <i>r</i><sub>2</sub>) ⋅⋅⋅ (<i>t</i> − <i>r<sub>n</sub></i>) &emsp; (<b>5.10.2</b>)</p>
 </div>
 
-<p>expanding the factored form of 4.50 and setting the coefficients equal to those of (4.49), we obtain the following relations</p>
+<p>expanding the factored form of 5.10.2 and setting the coefficients equal to those of (5.10.2), we obtain the following relations</p>
 
 <div class="eq">
-<p><i>a<sub>1</sub></i> = −(<i>r<sub>1</sub> + r<sub>2</sub> + r<sub>n</sub></i>)</p>
-<p><i>a<sub>2</sub></i> = <i>r<sub>1</sub>r<sub>2</sub> + r<sub>1</sub>x<sub>3</sub> + ... + r<sub>1</sub>x<sub>n</sub> + r<sub>2</sub>x<sub>3</sub> + ... + r<sub>n−1</sub> r<sub>n</sub></i></p>
-<p><i>a<sub>3</sub></i> = −(<i>r<sub>1</sub>r<sub>2</sub>x<sub>3</sub> + r<sub>1</sub>r<sub>2</sub>x<sub>4</sub> + ... + r<sub>n−2</sub>x<sub>n−1</sub> x<sub>n</sub></i>)</p>
+<p><i>a</i><sub>1</sub> = −(<i>r</i><sub>1</sub> + <i>r</i><sub>2</sub> + <i>r<sub>n</sub></i>)</p>
+<p><i>a</i><sub>2</sub> = <i>r</i><sub>1</sub><i>r</i><sub>2</sub> + <i>r</i><sub>1</sub><i>x</i><sub>3</sub> + ... + <i>r</i><sub>1</sub><i>x<sub>n</sub></i> + <i>r</i><sub>2</sub><i>x</i><sub>3</sub> + ... + <i>r</i><sub><i>n</i>−1</sub> <i>r<sub>n</sub></i></p>
+<p><i>a<sub>3</sub></i> = −(<i>r</i><sub>1</sub><i>r</i><sub>2</sub>x<sub>3</sub> + <i>r</i><sub>1</sub><i>r</i><sub>2</sub><i>x</i><sub>4</sub> + ... + <i>r</i><sub><i>n</i>−2</sub><i>x</i><sub><i>n</i>−1</sub> <i>x<sub>n</sub></i>)</p>
 <p>...</p>
-<p><i>a<sub>n</sub></i> = (−1)<i><sup>n</sup> r<sub>1</sub>x<sub>2</sub>⋅⋅⋅r<sub>n</sub></i></p>
+<p><i>a<sub>n</sub></i> = (−1)<sup></i>n</sup> <i>r</i><sub>1</sub><i>x</i><sub>2</sub>⋅⋅⋅<i>r<sub>n</sub></i></p>
 </div>
 
 <p>The above relations are known as the <i>Viète formulas</i>: they relate the coefficients of a polynomial to sums and products of its roots. </p>
 
 <div class="def">
-<p><b>Vieta's Formula - Quadratic Equations</b>. For <i>n = 2</i> we get the relation between the roots of a quadratic equation <i>ax<sup>2</sup> + bx + c = 0</i> and its coefficients. If the equation <i>f</i>(<i>x</i>) = 0, has roots <i>r<sub>1</sub></i> and <i>r<sub>2</sub></i>​, thenWrite the equation as</p>
+<p><b>Vieta's Formula - Quadratic Equations</b>. For <i>n</i> = 2 we get the relation between the roots of a quadratic equation <i>ax<sup>2</sup> + <i>bx</i> + <i>c</i> = 0</i> and its coefficients. If the equation <i>f</i>(<i>x</i>) = 0, has roots <i>r</i><sub>1</sub></i> and <i>r</i><sub>2</sub>​, then write the equation as</p>
 
 <div class="eq">
-<p><i>x<sup>2</sup> + (<i>b/a</i>)<i>x + c/a</i> = 0</i></p>
+<p><i>x</i><sup>2</sup> + (<i>b</i>/<i>a</i>)<i>x</i> + <i>c</i>/<i>a</i> = 0</p>
 </div>
 
-<p><i>a<sub>1</sub> = −b/a = r<sub>1</sub> + r<sub>2</sub></i></p>
-<p><i>a<sub>2</sub> = c/a = r<sub>1</sub>r<sub>2</sub></i></p>
+<p><i>a</i><sub>1</sub> = −<i>b</i>/<i>a</i> = <i>r</i><sub>1</sub> + <i>r</i><sub>2</sub></p>
+<p><i>a</i><sub>2</sub> = <i>c</i>/<i>a</i> = <i>r</i><sub>1</sub><i>r</i><sub>2</sub></p>
 </div>
 
-<p>In general we have &sigma;<sub>k</sub> = (−1)<sup>k</sup> &sigma;<sub>k</sub> (<i>r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>n</sub></i>), hence the coefficients of every monic polynomial of one indeterminate with coefficients in a field, are the elementary symmetric functions of its roots. </p>
+<p>In general we have <i>&sigma;<sub>k</sub></i> = (−1)<sup><i>k</i></sup> <i>&sigma;<sub>k</sub></i> (<i>r</i><sub>1</sub>, <i>r</i><sub>2</sub>, ..., <i>r<sub>n</sub></i>), hence the coefficients of every monic polynomial of one indeterminate with coefficients in a field, are the elementary symmetric functions of its roots.</p>
 
-<p>The set <b><i>S</i></b> of all symmetric polynomials in <i>n</i> variables with coefficients in 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>]. Every polynomial <i>f</i>(<i>&sigma;<sub>1</sub>, &sigma;<sub>2</sub>, ..., &sigma;<sub>n</sub></i>) of 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>] can be expressed in terms of elementary symmetric polynomials and thus contained in <b><i>S</i></b>. We have the following inclusions</p>
+<p>The set <b><i>S</i></b> of all symmetric polynomials in <i>n</i> variables with coefficients in 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>]. Every polynomial <i>f</i>(<i>&sigma;</i><sub>1</sub>, <i>&sigma;</i><sub>2</sub>, ..., <i>&sigma;<sub>n</sub></i>) of 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>] can be expressed in terms of elementary symmetric polynomials and thus contained in <b><i>S</i></b>. We have the following inclusions</p>
 
-<p>We make this precise in the next theorem, showing that the first inclusion is an equalty.</p>
+<p>We make this precise in the next theorem, showing that the first inclusion is an equality.</p>
 
 <div class="eq">
-<p>𝕂[<i>&sigma;<sub>1</sub>, &sigma;<sub>2</sub>, ..., &sigma;<sub>n</sub></i>] ⊆ <b><i>S</i></b> ⊂ 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>]</p>
+<p>𝕂[<i>&sigma;</i><sub>1</sub>, <i>&sigma;</i><sub>2</sub>, ..., <i>&sigma;<sub>n</sub></i>] ⊆ <b><i>S</i></b> ⊂ 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>]</p>
 </div>
 
-<p><b>4.49 Theorem</b>. (<i>Fundamental theorem of symmetric polynomials</i>). Every symmetric polynomial <i>f</i>(<i>x<sub>1</sub>,x<sub>2</sub>,..., x<sub>n</sub></i>) of 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>] can be expressed uniquely in terms of elementary symmetric polynomials
+<p><b>5.10.3 Theorem</b>. (<i>Fundamental theorem of symmetric polynomials</i>). Every symmetric polynomial <i>f</i>(<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>,..., <i>x<sub>n</sub></i>) of 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>] can be expressed uniquely in terms of elementary symmetric polynomials
 with coefficients in 𝕂.</p>
 
 <p><b>Proof.</b> Let</p>
 
 <div class="eq">
-<p><i>αx<sub>1</sub><sup>h<sub>1</sub></sup>x<sub>2</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
+<p><i>αx</i><sub>1</sub><sup>h<sub>1</sub></sup><i>x</i><sub>2</sub><sup><i>h</i><sub>1</sub></sup> ⋅⋅⋅ <i>x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
-<p>the highest degree monomial function occurring in the polynomial function using the lexicographic ordering. Then necessarily <i>h<sub>1</sub> &ge; h<sub>2</sub>, &ge; ..., &ge; h<sub>n</sub></i>; If for example we had <i>h<sub>1</sub> &lt; h<sub>2</sub></i>, we could exchange <i>x<sub>1</sub></i> with <i>x<sub>2</sub></i>, obtaining the monomial</p>
+<p>the highest degree monomial function occurring in the polynomial function using the lexicographic ordering. Then necessarily <i>h</i><sub>1</sub> &ge; <i>h</i><sub>2</sub>, &ge; ..., &ge; <i>h<sub>n</sub></i>; If for example we had <i>h<sub>1</sub> &lt; h<sub>2</sub></i>, we could exchange <i>x</i><sub>1</sub></i> with <i>x</i><sub>2</sub>, obtaining the monomial</p>
 
 <div class="eq">
-<p><i>αx<sub>2</sub><sup>h<sub>1</sub></sup>x<sub>1</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ x<sub>n</sub><sup>h<sub>n</sub></sup> = αx<sub>1</sub><sup>h<sub>1</sub></sup>x<sub>2</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
+<p><i>αx</i><sub>2</sub><sup><i>h</i><sub>1</sub></sup>x<sub>1</sub><sup><i>h</i><sub>1</sub></sup> ⋅⋅⋅ <i>x<sub>n</sub><sup>h<sub>n</sub></sup></i> = <i>αx</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup>x<sub>2</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ <i>x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
-<p>which is again a monomial of <i>f</i>(<i>x<sub>1</sub>,x<sub>2</sub>, ..., x<sub>n</sub></i>), being <i>f</i> by hyphothesis symmetric.</p>
+<p>which is again a monomial of <i>f</i>(<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>), being <i>f</i> by hypothesis symmetric.</p>
 
-<p>Consider now the symmetric polynomial (in <i>x<sub>1</sub>,x<sub>2</sub>, ...,x<sub>n</sub></i>)</p>
+<p>Consider now the symmetric polynomial (in <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>)</p>
 
 <div class="eq">
-<p><i>&phi;<sub>1</sub> = &alpha;&sigma;<sub>1</sub><sup>h<sub>1</sub>−h<sub>2</sub></sup>&sigma;<sub>2</sub><sup>h<sub>2</sub>−h<sub>3</sub></sup> ⋅⋅⋅ &sigma;<sub>n−1</sub><sup>h<sub>n−1</sub>−h<sub>n</sub></sup> &sigma;<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
+<p><i>&phi;</i><sub>1</sub> = <i>&alpha;&sigma;</i><sub>1</sub><sup>h<sub>1</sub>−<i>h</i><sub>2</sub></sup>&sigma;<sub>2</sub><sup>h<sub>2</sub>−<i>h</i><sub>3</sub></sup> ⋅⋅⋅ <i>&sigma;</i><sub><i>n</i>−1</sub><sup><i>h</i><sub><i>n</i>−1</sub>−<i>h</i><sub><i>n</i></sub></sup> <i>&sigma;<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
-<p>The leading term of <i>&phi;<sub>1</sub></i> is given by the product of <i>&alpha;</i> for the leading terms of each <i>&sigma;<sub>i</sub></i> raised to the power <i>h<sub>1</sub> − h<sub>2</sub>, h<sub>2</sub>−h<sub>3</sub></i>, .., ecc. respectively.</p>
+<p>The leading term of <i>&phi;</i><sub>1</sub> is given by the product of <i>&alpha;</i> for the leading terms of each <i>&sigma;<sub>i</sub></i> raised to the power <i>h</i><sub>1</sub> − <i>h</i><sub>2</sub>, <i>h</i><sub>2</sub>−<i>h</i><sub>3</sub>, .., ecc. respectively.</p>
 
 <div class="eq">
-<p><i>&alpha;x<sub>1</sub><sup>h<sub>1</sub>−h<sub>2</sub></sup>(<i>x<sub>1</sub>x<sub>2</sub></i>)<sup>h<sub>2</sub>−h<sub>3</sub></sup> ⋅⋅⋅(<i>x<sub>1</sub>x<sub>2</sub>⋅⋅⋅x<sub>n</sub></i>)<sup>h<sub>n</sub></sup> = <i>&alpha;x<sub>1</sub><sup>h<sub>1</sub></sup>x<sub>2</sub><sup>h<sub>2</sub></sup> ⋅⋅⋅ x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
+<p><i>&alpha;x</i><sub>1</sub><sup><i>h</i><sub>1</sub>−<i>h</i><sub>2</sub></sup>(<i>x</i><sub>1</sub><i>x</i><sub>2</sub>)<sup><i>h</i><sub>2</sub>−<i>h</i><sub>3</sub></sup> ⋅⋅⋅(<i>x</i><sub>1</sub><i>x</i><sub>2</sub>⋅⋅⋅<i>x<sub>n</sub></i>)<sup>h<sub>n</sub></sup> = <i>&alpha;x</i><sub>1</sub><sup>h<sub>1</sub></sup><i>x</i><sub>2</sub><sup><i>h</i><sub>2</sub></sup> ⋅⋅⋅ <i>x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
-<p>This shows that <i>f</i> and <i>&phi;<sub>1</sub></i> have the same leading term. Hence <i>f<sub>1</sub> = f — &phi;<sub>1</sub></i> has a strictly smaller leading term according to the lexicographic ordering. Note that <i>f<sub>1</sub></i> is symmetric, since <i>f</i> and <i>g</i> are. Now repeat this process, starting with <i>f<sub>1</sub></i> instead of <i>f</i>. Since <i>f<sub>1</sub></i> is symmetric, it has a leading term with coefficient &alpha;<sub>1</sub> and exponents <i>b<sub>1</sub> &gt; ··· &gt; b<sub>n</sub></i>. As above, this will give an expression <i>&phi;<sub>2</sub></i> in the elementary symmetric polynomials such that <i>f<sub>1</sub></i> and &phi;<sub>2</sub> have the same leading term.</p>
+<p>This shows that <i>f</i> and <i>&phi;<sub>1</sub></i> have the same leading term. Hence <i>f</i><sub>1</sub> = <i>f</i> — <i>&phi;</i><sub>1</sub></i> has a strictly smaller leading term according to the lexicographic ordering. Note that <i>f</i><sub>1</sub> is symmetric, since <i>f</i> and <i>g</i> are. Now repeat this process, starting with <i>f</i><sub>1</sub> instead of <i>f</i>. Since <i>f</i><sub>1</sub></i> is symmetric, it has a leading term with coefficient <i>&alpha;</i><sub>1</sub> and exponents <i>b</i><sub>1</sub> &gt; ··· &gt; <i>b<sub>n</sub></i>. As above, this will give an expression <i>&phi;</i><sub>2</sub> in the elementary symmetric polynomials such that <i>f</i><sub>1</sub> and <i>&phi;</i><sub>2</sub> have the same leading term.</p>
 
-<p>This process will terminate if we find some m with <i>f<sub>m</sub> = 0</i>, for the zero polynomial has no leading term. If, on the other hand, we never had <i>f<sub>m</sub> = 0</i>, then the above would give an infinite sequence of nonzero polynomials with strictly decreasing leading terms. But we showed above that there are only finitely many monomials strictly smaller than the leading term off. Hence the above process must terminate.</p>
+<p>This process will terminate if we find some m with <i>f<sub>m</sub></i> = 0, for the zero polynomial has no leading term. If, on the other hand, we never had <i>f<sub>m</sub></i> = 0, then the above would give an infinite sequence of nonzero polynomials with strictly decreasing leading terms. But we showed above that there are only finitely many monomials strictly smaller than the leading term off. Hence the above process must terminate.</p>
 
-<p>So we've proven that <i>f − &phi;<sub>1</sub>−&phi;<sub>2</sub> − ... −&phi;<sub>m</sub></i> is the zero polynomial, hence</p>
+<p>So we've proven that <i>f</i> − <i>&phi;</i><sub>1</sub>−&phi;<sub>2</sub> − ... −<i>&phi;<sub>m</sub></i> is the zero polynomial, hence</p>
 
 <div class="eq">
-<p><i>f = &phi;<sub>1</sub> + &phi;<sub>2</sub> + ... + &phi;<sub>m</sub></i></p>
+<p><i>f</i> = <i>&phi;</i><sub>1</sub> + <i>&phi;</i><sub>2</sub> + ... + <i>&phi;<sub>m</sub></i></p>
 </div>
 
-<p>Each &phi;<sub>i</sub>, is a product of the <i>σ</i>, to various powers, which proves that <i>f</i> is a polynomial in the elementary symmetric polynomials. </p>
+<p>Each <i>&phi;<sub>i</sub></i>, is a product of the <i>σ</i>, to various powers, which proves that <i>f</i> is a polynomial in the elementary symmetric polynomials. </p>
 
-<p><b>Uniqueness</b>. The uniquenesse of the expression follows from the <i>algebraic independence</i> of the elementary symmetric functions. 
+<p><b>Uniqueness</b>. The uniqueness of the expression follows from the <i>algebraic independence</i> of the elementary symmetric functions. 
 
 <p>To prove the uniqueness of the expression we have to prove that if a polynomial (symmetric) can be written in two forms as</p>
 
@@ -211,22 +214,22 @@ with coefficients in 𝕂.</p>
 <p>∑ <i>&alpha;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> &sigma;<sub>1</sub><sup>i<sub>1</sub></sup> &sigma;<sub>2</sub><sup>i<sub>2</sub></sup> ... &sigma;<sub>n</sub><sup>i<sub>n</sub></sup></i> = ∑ <i>&beta;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> &sigma;<sub>1</sub><sup>i<sub>1</sub></sup> &sigma;<sub>2</sub><sup>i<sub>2</sub></sup> ... &sigma;<sub>n</sub><sup>i<sub>n</sub></sup></i></p>
 </div>
 
-<p>then <i>&alpha;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> = &beta;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub></i> for all index <i>i<sub>j</sub>, j=1,...,n</i>. It is sufficient to prove that if <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) = 0 then all coefficients of <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) are zero i.e. the polynomial <i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>) in the indeterminates <i>z<sub>i</sub></i> is the zero polynomial. This is equivalent to say that the <i>&sigma;<sub>i</sub></i> are algebrically independent. In other words we have to prove that</p>
+<p>then <i>&alpha;</i><sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> = <i>&beta;</i><sub><i>i</i><sub>1</sub><i>i</i><sub>2</sub>...i<sub>n</sub></sub></i> for all index <i>i<sub>j</sub></i>, <i>j</i>=1,...,<i>n</i>. It is sufficient to prove that if <i>&phi;</i>(<i>&sigma;</i><sub>1</sub>,...,<i>&sigma;<sub>n</sub></i>) = 0 then all coefficients of <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) are zero i.e. the polynomial <i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>) in the indeterminates <i>z<sub>i</sub></i> is the zero polynomial. This is equivalent to say that the <i>&sigma;<sub>i</sub></i> are algebrically independent. In other words we have to prove that</p>
 
 <div class="eq">
-<p><i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>) &ne; 0 &emsp; ⇒ &emsp; <i>&phi;</i>(<i>&sigma;<sub>1</sub>,...,&sigma;<sub>n</sub></i>) &ne; 0</p>
+<p><i>&phi;</i>(<i>z</i><sub>1</sub>,...,<i>z<sub>n</sub></i>) &ne; 0 &emsp; ⇒ &emsp; <i>&phi;</i>(<i>&sigma;</i><sub>1</sub>,...,<i>&sigma;<sub>n</sub></i>) &ne; 0</p>
 </div>
 
-<p>Let <i>αz<sub>1</sub><sup>h<sub>1</sub></sup>z<sub>2</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ z<sub>n</sub><sup>h<sub>n</sub></sup></i> be the leading term (using the lexicographic order), of <i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>). Substitute <i>z<sub>i</sub> = &sigma;<sub>i</sub></i> in <i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>). By expanding <i>&sigma;<sub>i</sub></i> in terms of the x<sub>i</sub> (since &sigma;<sub>i</sub> is a function of <i>x</i>) the monomial <i>αz<sub>1</sub><sup>h<sub>1</sub></sup>z<sub>2</sub><sup>h<sub>1</sub></sup> ⋅⋅⋅ z<sub>n</sub><sup>h<sub>n</sub></sup></i> becomes the following polynomial in the <i>x<sub>i</sub></i>:</p>
+<p>Let <i>αz</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup><i>z</i><sub>2</sub><sup><i>h</i><sub>1</sub></sup> ⋅⋅⋅ <i>z<sub>n</sub><sup>h<sub>n</sub></sup></i> be the leading term (using the lexicographic order), of <i>&phi;</i>(<i>z<sub>1</sub>,...,z<sub>n</sub></i>). Substitute <i>z<sub>i</sub></i> = <i>&sigma;<sub>i</sub></i> in <i>&phi;</i>(<i>z</i><sub>1</sub>,..., <i>z<sub>n</sub></i>). By expanding <i>&sigma;<sub>i</sub></i> in terms of the x<sub>i</sub> (since <i>&sigma;<sub>i</sub></i> is a function of <i>x</i>) the monomial <i>αz</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup><i>z</i><sub>2</sub><sup><i>h</i><sub>1</sub></sup> ⋅⋅⋅ <i>z<sub>n</sub><sup>h<sub>n</sub></sup></i> becomes the following polynomial in the <i>x<sub>i</sub></i>:</p>
 
 <div class="eq">
-<p><i>&alpha;<sub>i<sub>1</sub>i<sub>2</sub>...i<sub>n</sub></sub> &sigma;<sub>1</sub><sup>i<sub>1</sub></sup> &sigma;<sub>2</sub><sup>i<sub>2</sub></sup> ... &sigma;<sub>n</sub><sup>i<sub>n</sub></sup></i> = a(<i>x<sub>1</sub> + x<sub>2</sub> + ... + x<sub>n</sub></i>)<sup>h<sub>1</sub></sup>(<i>x<sub>1</sub>x<sub>2</sub> + ...</i>)<sup>h<sub>2</sub></sup> ⋅⋅⋅ (<i>x<sub>1</sub>⋅⋅⋅x<sub>n</sub></i>)<sup>h<sub>n</sub></sup></i></p>
+<p><i>&alpha;</i><sub>i<sub>1</sub><i>i</i><sub>2</sub>...<i>i<sub>n</sub></sub> &sigma;</i><sub>1</sub><sup>i<sub>1</sub></sup> &sigma;<sub>2</sub><sup>i<sub>2</sub></sup> ... &sigma;<sub>n</sub><sup>i<sub>n</sub></sup></i> = <i>a</i>(<i>x</i><sub>1</sub> + <i>x</i><sub>2</sub> + ... + <i>x<sub>n</sub></i>)<sup>h<sub>1</sub></sup>(<i>x</i><sub>1</sub><i>x</i><sub>2</sub> + ...)<sup><i>h</i><sub>2</sub></sup> ⋅⋅⋅ (<i>x</i><sub>1</sub>⋅⋅⋅<i>x<sub>n</sub></i>)<sup>h<sub>n</sub></sup></i></p>
 </div>
 
 <p>The leading term of this polynomial is</p>
 
 <div class="eq">
-<p><i>ax<sub>1</sub><sup>h<sub>1</sub> + h<sub>2</sub> + ... + h<sub>n</sub></sup> x<sub>2</sub><sup>h<sub>1</sub> + h<sub>2</sub> + ... +h<sub>n</sub></sup>x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
+<p><i>ax</i><sub>1</sub><sup>h<sub>1</sub> + h<sub>2</sub> + ... + <i>h<sub>n</sub></sup> x</i><sub>2</sub><sup>h<sub>1</sub> + <i>h</i><sub>2</sub> + ... + <i>h<sub>n</sub></sup>x<sub>n</sub><sup>h<sub>n</sub></sup></i></p>
 </div>
 
 <p>which has a non-zero coefficient and cannot vanish by combination with any other monomial. This completes the proof.□</p>
@@ -234,48 +237,48 @@ with coefficients in 𝕂.</p>
 <p>This theorem asserts that the ring of all symmetric polynomials <b><i>S</i></b>, in <i>n</i> indeterminates is</p>
 
 <div class="eq">
-<p><b><i>S</i></b> = 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i>]</p>
+<p><b><i>S</i></b> = 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>]</p>
 </div>
 
 <div class="def">
-<p><b>Example 4.50</b> Write the symmetric polynomial in 𝕂[<i>x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub></i>]</p>
+<p><b>Example 5.10.4</b> Write the symmetric polynomial in 𝕂[<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub></i>]</p>
 
 <div class="eq">
-<p><i>f = ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub> = x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub><sup>2</sup>x<sub>3</sub> + x<sub>2</sub><sup>2</sup>x<sub>1</sub> + x<sub>2</sub><sup>2</sup>x<sub>3</sub> + x<sub>3</sub><sup>2</sup>x<sub>1</sub> + x<sub>3</sub><sup>2</sup>x<sub>2</sub></i></p>
+<p><i>f</i> = ∑<sub><sub><i>i</i> &ne; <i>j</i></sub></sub> <i>x<sub>i</sub></i><sup>2</sup><i>x<sub>j</sub></i> = <i>x</i><sub>1</sub><sup>2</sup><i>x</i><sub>2</sub> + <i>x</i><sub>1</sub><sup>2</sup><i>x</i><sub>3</sub> + <i>x</i><sub>2</sub><sup>2</sup><i>x</i><sub>1</sub> + <i>x</i><sub>2</sub><sup>2</sup>x<sub>3</sub> + <i>x</i><sub>3</sub><sup>2</sup><i>x</i><sub>1</sub> + <i>x</i><sub>3</sub><sup>2</sup><i>x</i><sub>2</sub></p>
 </div>
 
 <p>in terms of elementary symmetric polynomials <i>&sigma;<sub>k</sub></i>.</p>
 
-<p><b>Solution</b>. We use the same method applied to prove theorem 4.49. The highest degree monomial is <i>x<sub>1</sub><sup>2</sup>x<sub>2</sub></i> with <i>h<sub>1</sub> = 2, h<sub>2</sub> = 1, h<sub>3</sub> = 0</i>. <i>&phi;<sub>1</sub> = &sigma;<sub>1</sub><sup>2−1</sup> &sigma;<sub>2</sub><sup>1</sup> = &sigma;<sub>1</sub> &sigma;<sub>2</sub></i></p>
+<p><b>Solution</b>. We use the same method applied to prove theorem 5.10.3. The highest degree monomial is <i>x</i><sub>1</sub><sup>2</sup>x<sub>2</sub></i> with <i>h</i><sub>1</sub> = 2, <i>h</i><sub>2</sub> = 1, <i>h</i><sub>3</sub> = 0</i>. <i>&phi;</i><sub>1</sub> = <i>&sigma;</i><sub>1</sub><sup>2−1</sup> &sigma;<sub>2</sub><sup>1</sup> = <i>&sigma;</i><sub>1</sub> &sigma;<sub>2</sub></i></p>
 
 <div class="eq">
-<p><i>f<sub>1</sub> = f − &phi;<sub>1</sub> = ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub></i> − (<i>x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub></i>)(<i>x<sub>1</sub> x<sub>2</sub> + x<sub>1</sub>x<sub>3</sub> + x<sub>2</sub>x<sub>3</sub></i>) = ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub></i> − ∑<sub><sub>i &ne; j</sub></sub> x<sub>i</sub><sup>2</sup>x<sub>j</sub></i> − 3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>)</p>
+<p><i>f</i><sub>1</sub> = <i>f</i> − &phi;<sub>1</sub> = ∑<sub><sub><i>i</i> &ne; <i>j</i></sub></sub> <i>x<sub>i</sub></i><sup>2</sup>x<sub>j</sub></i> − (<i>x</i><sub>1</sub> + <i>x</i><sub>2</sub> + <i>x</i><sub>3</sub>)(<i>x<sub>1</sub> x<sub>2</sub> + <i>x</i><sub>1</sub><i>x</i><sub>3</sub> + <i>x</i><sub>2</sub><i>x</i><sub>3</sub>) = ∑<sub><sub><i>i</i> &ne; <i>j</i></sub></sub> <i>x<sub>i</sub></i><sup>2</sup><i>x<sub>j</sub></i> − ∑<sub><sub><i>i</i> &ne; <i>j</i></sub></sub> <i>x<sub>i</sub></i><sup>2</sup><i>x<sub>j</sub></i> − 3(<i>x</i><sub>1</sub><i>x</i><sub>2</sub><i>x</i><sub>3</sub>)</p>
 </div>
 
-<p>The highest monomial of <i>f<sub>1</sub></i> is −3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>) so <i>h<sub>1</sub> = 1, h<sub>2</sub> = 1, h<sub>3</sub> = 1</i>. We have</p>
+<p>The highest monomial of <i>f<sub>1</sub></i> is −3(<i>x</i><sub>1</sub><i>x</i><sub>2</sub><i>x</i><sub>3</sub>) so <i>h</i><sub>1</sub> = 1, <i>h</i><sub>2</sub> = 1, <i>h</i><sub>3</sub> = 1. We have</p>
 
 <div class="eq">
-<p><i>&phi;<sub>2</sub> = −3&sigma;<sub>1</sub><sup>1−1</sup> &sigma;<sub>2</sub><sup>1−1</sup> &sigma;<sub>3</sub> = −3&sigma;<sub>3</sub></i> = −3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>)</p>
+<p><i>&phi;<sub>2</sub> = −3<i>&sigma;</i><sub>1</sub><sup>1−1</sup> <i>&sigma;</i><sub>2</sub><sup>1−1</sup> <i>&sigma;</i><sub>3</sub> = −3<i>&sigma;</i><sub>3</sub> = −3(<i>x</i><sub>1</sub><i>x</i><sub>2</sub><i>x</i><sub>3</sub>)</p>
 </div>
 
 <p>and</p>
 
 <div class="eq">
-<p><i>f<sub>2</sub> = f<sub>1</sub> − &phi;<sub>2</sub></i> = −3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>) +3(<i>x<sub>1</sub>x<sub>2</sub>x<sub>3</sub></i>) = 0</p>
+<p><i>f</i><sub>2</sub> = <i>f</i><sub>1</sub> − <i>&phi;</i><sub>2</sub></i> = −3(<i>x</i><sub>1</sub><i>x</i><sub>2</sub>x<sub>3</sub></i>) +3(<i>x</i><sub>1</sub>x<sub>2</sub>x<sub>3</sub>) = 0</p>
 </div>
 
-<p>thus <i>f = &phi;<sub>1</sub> + &phi;<sub>2</sub> = &sigma;<sub>1</sub>&sigma;<sub>2</sub> −3&sigma;<sub>3</sub></i>.</p>
+<p>thus <i>f</i> = <i>&phi;</i><sub>1</sub> + &phi;<sub>2</sub> = <i>&sigma;</i><sub>1</sub>&sigma;<sub>2</sub> −3<i>&sigma;</i><sub>3</sub></i>.</p>
 </div>
 
-<p>The ring of polynoamials in <i>n</i> indeterminates in a field 𝕂, is an integral domain (see <a href="exercises_symmetric_poly.html">exercise 1</a>).</p>
+<p>The ring of polynomials in <i>n</i> indeterminates in a field 𝕂, is an integral domain (see <a href="exercises_symmetric_poly.html">exercise 1</a>).</p>
 
-<section>
+<section aria-label="End">
 <a href="cardano.html">&#171;Solutions of Cubic and Quartic equations</a>
 <a href="index.html">Index</a>
 <a href="rational_functions.html">Rational functions &#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>

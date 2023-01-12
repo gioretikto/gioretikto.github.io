@@ -17,7 +17,7 @@
 	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>Cyclotomic polynomials</h1>
 
@@ -30,13 +30,13 @@
 <p><i>&zeta;<sub>n,k</sub></i> = cos 2<i>&pi;k</i>/<i>n</i> + i sin2<i>&pi;k</i>/<i>n</i>, &emsp; 0 &le; <i>k</i> &lt; <i>n</i></p>
 </div>
 
-<p><b>Definition 5.7.1</b>. We define the <i>order</i> of the <i>n</i>-th roots of unity, &zeta;, the smallest integer <i>m</i> such that <i>&zeta;<sup>m</sup></i> = 1 and &zeta;<sup>h</sup> &ne; 1 &forall; <i>h</i> = 1,...,<i>m</i> − 1.&emsp;□ </p>
+<p><b>Definition 7.5.1</b>. We define the <i>order</i> of the <i>n</i>-th roots of unity, &zeta;, the smallest integer <i>m</i> such that <i>&zeta;<sup>m</sup></i> = 1 and &zeta;<sup>h</sup> &ne; 1 &forall; <i>h</i> = 1,...,<i>m</i> − 1.&emsp;□ </p>
 
-<p><b>Lemma 5.7.2</b>. Let &zeta; a root of unity such that for some <i>t</i> &gt; 0, <i>t</i> &in; ℕ, <i>&zeta;<sup>t</sup></i> = 1. Then the order <i>m</i> of <i>&zeta;</i> is a divisor of <i>t</i>.</p>
+<p><b>Lemma 7.5.2</b>. Let &zeta; a root of unity such that for some <i>t</i> &gt; 0, <i>t</i> &in; ℕ, <i>&zeta;<sup>t</sup></i> = 1. Then the order <i>m</i> of <i>&zeta;</i> is a divisor of <i>t</i>.</p>
 
 <p><b>Proof</b>. If <i>m</i> divides <i>t</i>, then <i>t</i> = <i>mc</i> for some integer <i>c</i>, and since <i>&zeta;<sup>m</sup></i> = 1 by the definition of order, it readily follows from <i>&zeta;<sup>t</sup></i> = (<i>&zeta;<sup>m</sup></i>)<sup><i>c</i></sup> = 1.&emsp;□</p>
 
-<p><b>Definition 5.7.3</b>. A <i>n</i>-th <b>primitive root</b> of unity is an <i>n</i>-th root of unity of order <i>n</i>.&emsp;□</p>
+<p><b>Definition 7.5.3</b>. A <i>n</i>-th <b>primitive root</b> of unity is an <i>n</i>-th root of unity of order <i>n</i>.&emsp;□</p>
 
 <p>So a complex <i>n</i>th root of unity is said to be primitive if it is a root of the polynomial <i>x</i><sup>n</sup> − 1, but is not a root of <i>x<sup>m</sup></i> = 1 for any positive integer <i>m</i> &lt; <i>n</i>.</p>
 
@@ -48,7 +48,7 @@
 
 <p>which is different from 1. Raising <i>&zeta;<sub>n</sub></i> to the power of <i>h</i> leads to all the other roots of unity.</p>
 
-<p><b>Proposition 5.7.4</b>. If <i>&zeta;</i> is a <i>n</i>-root of unity different from 1.</p>
+<p><b>Proposition 7.5.4</b>. If <i>&zeta;</i> is a <i>n</i>-root of unity different from 1.</p>
 
 <div class="eq">
 <p>1 + &zeta; + &zeta;<sup>2</sup> + ... + &zeta;<sup><i>n</i> − 1</sup> = 0</p>
@@ -68,7 +68,7 @@
 
 <p>We've found a single <i>n</i>-th primitive root of unit, and now we want to determine them all. For this task we calculate the order of all <i>n</i>-th roots and isolate the ones which have <i>n</i> as order. We start by an arbitrary <i>n</i>-th primitive root of unit and we'll calculate the order of all its powers.</p>
 
-<p><b>Proposition 5.7.5</b>. Let <i>ζ</i> be a primitive <i>n</i>-th root of unity and let <i>k</i> be an integer, then <i>ζ<sup>k</sup></i> has order <i>n</i>/gcd(<i>n,k</i>).</p>
+<p><b>Proposition 7.5.5</b>. Let <i>ζ</i> be a primitive <i>n</i>-th root of unity and let <i>k</i> be an integer, then <i>ζ<sup>k</sup></i> has order <i>n</i>/gcd(<i>n,k</i>).</p>
 
 <p><b>Proof.</b> Let <i>&delta;</i> = gcd(<i>n,k</i>); and let <i>k</i> = <i>&delta;k</i><sub>1</sub> and <i>n</i> = <i>&delta;n</i><sub>1</sub>, then (<i>n</i><sub>1</sub>, <i>k</i><sub>1</sub>) = 1. We want to determine the order <i>m</i> = <i>m</i>(<i>k</i>) of <i>ζ<sup>k</sup></i>. We have</p>
 
@@ -79,7 +79,7 @@
 <p>Since &zeta;<sup>k</sup> to the power <i>n</i><sub>1</sub> is 1 and <i>m</i> is by definition the smallest exponent for which this happens, hence <i>n</i><sub>1</sub> is a multiple of <i>m</i>:</p>
 
 <div class="eq">
-<p><i>m</i> | <i>n</i><sub>1</sub> &emsp; (<b>5.7.1</b>)</p>
+<p><i>m</i> | <i>n</i><sub>1</sub> &emsp; (<b>7.5.1</b>)</p>
 </div>
 
 <p>We have also</p>
@@ -91,14 +91,14 @@
 <p>being <i>ζ</i> a primitive <i>n</i>-th root of unity and hence of period <i>n</i> it follows that <i>n</i> | <i>km</i> ⇒ <i>n</i><sub>1</sub>&delta; | <i>n</i><sub>1</sub>&delta;<i>m</i>, which yields to <i>n</i><sub>1</sub>| <i>k</i><sub>1</sub><i>m</i>. Since (<i>n,k</i><sub>1</sub>) = 1</p>
 
 <div class="eq">
-<p><i>n</i><sub>1</sub> | <i>m</i> &emsp; (<b>5.7.2</b>)</p>
+<p><i>n</i><sub>1</sub> | <i>m</i> &emsp; (<b>7.5.2</b>)</p>
 </div>
 
-<p>Equations (5.7.1) and (5.7.2) imply that <i>m</i> = <i>n</i><sub>1</sub> = <i>n</i>/<i>&delta;</i>.&emsp; □</p>
+<p>Equations (7.5.1) and (7.5.2) imply that <i>m</i> = <i>n</i><sub>1</sub> = <i>n</i>/<i>&delta;</i>.&emsp; □</p>
 
 <p>As corollary if gcd(n,k) = 1 we've that the order of <i>&zeta;<sup>k</sup></i> is <i>n</i>, hence a primitive root of unity.</p>
 
-<p><b>Corollary 5.7.6</b>. All and the only primitive <i>n</i>th roots of unity are</p>
+<p><b>Corollary 7.5.6</b>. All and the only primitive <i>n</i>th roots of unity are</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msub>
@@ -153,9 +153,9 @@
 
 <p><i>ζ<sup>k</sup></i> is primitive if and only if <i>&delta;</i> = 1. Further, if <i>k</i> &ge; <i>n</i>, <i>&zeta;<sub>n,k</sub></i> would be one of the roots with index less than <i>k</i> given the periodicity of sin and cos.□</p>
 
-<p><b>Remark 5.7.7</b>. We've seen that the powers of <i>ζ</i><sub><i>n</i>,1</sub> are all the primitive <i>n</i>-th roots of the unit. This is true for any primitive <i>n</i>-th root of the unit, which can be used to generate all <i>n</i>-th roots of the unit. &emsp;□</p>
+<p><b>Remark 7.5.7</b>. We've seen that the powers of <i>ζ</i><sub><i>n</i>,1</sub> are all the primitive <i>n</i>-th roots of the unit. This is true for any primitive <i>n</i>-th root of the unit, which can be used to generate all <i>n</i>-th roots of the unit. &emsp;□</p>
 
-<p><b>Definition 5.7.8</b>. The <i>n</i>th <b>cyclotomic polynomial</b> <i>&Phi;<sub>n</sub></i>(<i>x</i>)  is the unique monic polynomial whose roots are the primiteve <i>n</i>th roots of unity in ℂ. </p>
+<p><b>Definition 7.5.8</b>. The <i>n</i>th <b>cyclotomic polynomial</b> <i>&Phi;<sub>n</sub></i>(<i>x</i>)  is the unique monic polynomial whose roots are the primiteve <i>n</i>th roots of unity in ℂ. </p>
 
 <div class="eq">
 <p><i>&Phi;<sub>n</sub></i>(<i>x</i>) = (<i>x</i> − <i>&zeta;</i><sub>1</sub>) (<i>x</i> − <i>&zeta;</i><sub>2</sub>) ⋅⋅⋅  (<i>x</i> − <i>&zeta;<sub>&phi;</i><sub>(<i>n</i>)</sub>)</p>
@@ -219,7 +219,7 @@
 
 <!-- $$ \Phi_n(x) := \prod_{\zeta \text{ primitive root of 1}} (x - \zeta) = \prod_{1\le k \le n, (n,k)=1} (x-\zeta_n^k) $$ -->
 
-<p><b>Lemma 5.7.9</b> For all positive integers <i>n</i>,</p>
+<p><b>Lemma 7.5.9</b> For all positive integers <i>n</i>,</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msup>
@@ -246,7 +246,7 @@
   <mo stretchy="false">(</mo>
   <mi>x</mi>
   <mo stretchy="false">)</mo>
-<mtext>&emsp;&emsp;(<b>5.7.3</b>)</mtext>
+<mtext>&emsp;&emsp;(<b>7.5.3</b>)</mtext>
 </math>
 
 <p><b>Proof</b>. If <i>n</i> = <i>de</i>, then every <i>d</i>th root <i>&zeta;</i> of 1 is an <i>n</i>th root of 1, because <i>&zeta;<sup>n</sup></i> = <i>&zeta;<sup>de</sup></i> = (<i>&zeta;<sup>d</sup></i>)<sup><i>e</i></sup> = 1. In particular, every <i>primite</i> <i>d</i>th root <i>&zeta;</i> of 1 is an <i>n</i>th root of 1.&emsp;□</p>
@@ -276,13 +276,13 @@
 
 <p>which is a property of Euler's function which can be obtained wihtout resorting to cyclotomic polynomials.</p>
 
-<p><b>Example 5.7.10</b>. Consider <i>x</i><sup>4</sup> − 1. There are four roots {1,−1,<i>i</i>,−<i>i</i>}; 1 and −1 are not primitive roots of the unity, because by definition of order even if 1<sup>4</sup> = 1 or −1<sup>4</sup> = 1 we have 1<sup>2</sup> = 1 and −1<sup>2</sup> = 1. Only <i>i</i> and −<i>i</i> are primitive because no power smaller than 4 gives <i>i<sup>m</sup></i> = 1, or (−<i>i</i>)<i><sup>m</sup></i> = 1. So that</p>
+<p><b>Example 7.5.10</b>. Consider <i>x</i><sup>4</sup> − 1. There are four roots {1,−1,<i>i</i>,−<i>i</i>}; 1 and −1 are not primitive roots of the unity, because by definition of order even if 1<sup>4</sup> = 1 or −1<sup>4</sup> = 1 we have 1<sup>2</sup> = 1 and −1<sup>2</sup> = 1. Only <i>i</i> and −<i>i</i> are primitive because no power smaller than 4 gives <i>i<sup>m</sup></i> = 1, or (−<i>i</i>)<i><sup>m</sup></i> = 1. So that</p>
 
 <div class="eq">
 <p>&Phi;<sub>4</sub> (<i>x</i>) = (<i>x</i> − <i>i</i>) (<i>x</i> + <i>i</i>) = <i>x</i><sup>2</sup> + 1</p>
 </div>
 
-<p><b>Example 5.7.11</b>. When <i>n</i> = 2, the only primitive square root of unit is −1 (note that 1 has order 1, i.e. not primitive), so that &Phi;<sub>2</sub>(<i>x</i>) = <i>x</i> + 1. When <i>n</i> = 4, the primitive fourth roots of unity are <i>i</i> and −<i>i</i>, so that</p>
+<p><b>Example 7.5.11</b>. When <i>n</i> = 2, the only primitive square root of unit is −1 (note that 1 has order 1, i.e. not primitive), so that &Phi;<sub>2</sub>(<i>x</i>) = <i>x</i> + 1. When <i>n</i> = 4, the primitive fourth roots of unity are <i>i</i> and −<i>i</i>, so that</p>
 
 <div class="eq">
 <p>&Phi;<sub>4</sub> = (<i>x</i> − <i>i</i>) (<i>x</i> + <i>i</i>) = <i>x</i><sup>2</sup> + 1</p>
@@ -294,7 +294,7 @@
 <p><i>x<sup>n</sup></i> − 1 = &Phi;<sub>1</sub>(<i>x</i>) &Phi;<sub>2</sub>(<i>x</i>) &Phi;<sub>4</sub>(<i>x</i>) = (<i>x</i> − 1) (<i>x</i> +1) (<i>x</i><sup>2</sup> + 1)&emsp;■</p>
 </div>
 
-<p>Equation 5.7.3 can be written as well as</p>
+<p>Equation 7.5.3 can be written as well as</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msup>
@@ -416,7 +416,7 @@
 
 <!-- $$Φ_n = \frac{x^n -1}{\prod_{\substack{d \mid n\\ d≠n}} Φ_d} $$ -->
 
-<p><b>5.7.12</b>. Evaluation of the first nine cyclotomic polynomials</p>
+<p><b>7.5.12</b>. Evaluation of the first nine cyclotomic polynomials</p>
 
 <div class="eq">
 <p>&Phi;<sub>1</sub>(<i>x</i>) = <i>x</i> − 1</p>
@@ -455,7 +455,7 @@
 <p><i>&Phi;<sub>p<sup>h</sup></sub></i> = <i>x<sup>p<sup>h</sup></sup></i> − 1 / <i>&Phi;</i><sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub><i>p</i><sup><i>h</i> −1</sup></sub> = <i>x<sup>p<sup>h</sup></sup></i> − 1 / <i>x</i><sup>p<sup><i>h</i> − 1</sup></sup> − 1 = 1 + <i>x</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> + ...(<i>x</i><sup><i>p</i><sup><i>h</i> − 1</sup>)<sup><i>p</i>−1</sup></p>
 </div>
 
-<p><b>Example 5.7.12</b>. Cyclotomic polynomials have the following properties:</p>
+<p><b>Example 7.5.12</b>. Cyclotomic polynomials have the following properties:</p>
 
 <ol type="a">
 	<li><p>every <i>&Phi;<sub>n</sub></i>(<i>x</i>) is monic with integers coefficients;</p></li>
@@ -672,7 +672,7 @@
 <p>This result tells us that cyclotomic polynomials are irreducible over ℚ, and we can use them to find the factorization of <i>x<sup>n</sup></i> &minus; 1. We have</p>
 
 <div class="eq">
-<p><i>x<sup>n</sup></i> − 1 = ∏<sub><sub><i>d</i>|<i>n</i></sub></sub> &Phi;<sub><i>d</i></sub>(<i>x</i>) &emsp; (<b>5.7.3</b>)</p>
+<p><i>x<sup>n</sup></i> − 1 = ∏<sub><sub><i>d</i>|<i>n</i></sub></sub> &Phi;<sub><i>d</i></sub>(<i>x</i>) &emsp; (<b>7.5.3</b>)</p>
 </div>
 
 <p>From the cyclotomic polynomials we've written above it may seem that their coefficient are all either 0 ri &pm;1. This is not true as it can be shown that for polynomials with higher <i>n</i> (about 100) other coefficients start to appear.</p> 
@@ -683,7 +683,7 @@
 <a href="pol_gcd.html">gcd of polynomials &#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>
