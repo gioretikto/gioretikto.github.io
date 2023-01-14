@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Peano axioms"/>
-  <title>Peano axioms</title>
-  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">  
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Peano axioms"/>
+	<title>Peano axioms</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">  
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>Peano axioms</h1>
 
@@ -222,8 +222,7 @@ through set theory. Here below, we introduce a few concepts arising from the Car
 
 <h2 id="induction">The principle of mathematical induction</h2>
 
-<p>The third Peano axiom ℙ<sub>3</sub> is the assertion on which the principle of mathematical induction is based. It basically says that every subset <i>U</i> of ℕ which contains 0 and contains the successor of each of its elements contains all the natural numbers.
-If we accept this axiom (We do not prove that mathematical induction is valid, but instead choose to accept the principles because is  rooted in our intuitive understanding of the integers) we obtain a method for proving that a proposition P(<i>n</i>) concerning natural numbers <i>n</i> is valid for all natural numbers. Let's see its application. Suppose that for every integer <i>n</i> &ge; 0 we can formula a proposition P(<i>n</i>), which depends on <i>n</i>, for example: "If a finite set <i>S</i> has <i>n</i> elements, then l'insieme delle parti di <i>S</i> has 2<sup><i>n</i></sup> elements". Suppose we want to prove that the proposition <i>P</i>(<i>n</i>) is true for every <i>n</i>: we should prove infinite propositions! With the methematical induction we can prove a proposition sin just two steps. We proceed as follows:</p>
+<p>The third Peano axiom ℙ<sub>3</sub> is the assertion on which the principle of mathematical induction is based. It basically says that every subset <i>U</i> of ℕ which contains 0 and contains the successor of each of its elements contains all the natural numbers. <br> If we accept this axiom (We do not prove that mathematical induction is valid, but instead choose to accept the principles because is  rooted in our intuitive understanding of the integers) we obtain a method for proving that a proposition P(<i>n</i>) concerning natural numbers <i>n</i> is valid for all natural numbers. Let's see its application. Suppose that for every integer <i>n</i> &ge; 0 we can formula a proposition P(<i>n</i>), which depends on <i>n</i>, for example: "If a finite set <i>S</i> has <i>n</i> elements, then l'insieme delle parti di <i>S</i> has 2<sup><i>n</i></sup> elements". Suppose we want to prove that the proposition <i>P</i>(<i>n</i>) is true for every <i>n</i>: we should prove infinite propositions! With the methematical induction we can prove a proposition sin just two steps. We proceed as follows:</p>
 
 <ol>
 	<li><p>Basis step: prove that <i>P</i>(0) is true;</p></li>
@@ -243,20 +242,25 @@ If we accept this axiom (We do not prove that mathematical induction is valid, b
 
 <ol>
 	<li><p>Base of the induction: <i>P</i>(1) is true for <i>n</i> = 1 both members reduce to 2<sup>3</sup>.</p></li>
+
 	<li><p>Induction step: Supposing true <i>P</i>(<i>n</i> − 1), we prove <i>P</i>(<i>n</i>). The <i>P</i>(<i>n</i> − 1) (which we are supposing true) is:</p>
+
 	<div class="eq">
-	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i>−1)<sup>2</sup>n<sup>2</sup></i></p>
+	<p>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i>−1)<sup>2</sup><i>n</i><sup>2</sup></p>
 	</div>
+
 	<p>Adding (2<i>n</i>)<sup>3</sup> to both sides of last equation, we have</p>
+
 	<div class="eq">
-	<p><i>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i> − 1)<sup>2</sup>n<sup>2</sup> + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup>[(<i>n</i> − 1)<sup>2</sup> + 4<i>n</i>] = 2<i>n</i><sup>2</sup> (<i>n</i> + 1)<sup>2</sup></i></p>
+	<p>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i> − 1)<sup>2</sup><i>n</i><sup>2</sup> + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup>[(<i>n</i> − 1)<sup>2</sup> + 4<i>n</i>] = 2<i>n</i><sup>2</sup> (<i>n</i> + 1)<sup>2</sup></p>
 	</div>
+
 	<p>which is exactly <i>P</i>(<i>n</i>).□</p>
 </ol>	
 
-<p>We now give two <i>equivalent</i> alternative formulations 𝕀  and 𝕄, of the principle of mathematical induction ℙ<sub>3</sub> because in certain cases these formulation can be more useful.</p>
+<p>We now give two <i>equivalent</i> alternative formulations 𝕊 and 𝕄, of the principle of mathematical induction ℙ<sub>3</sub> because in certain cases these formulation can be more useful.</p>
 
-<p id="strong"><b>1.5.5 𝕀: (<i>Second Principle of Mathematical Induction: strong induction</i></b>) Every subset <i>V</i> of ℕ such that</p>
+<p id="strong"><b>1.5.5 𝕊: (<i>Second Principle of Mathematical Induction: strong induction</i></b>) Every subset <i>V</i> of ℕ such that</p>
 
 <ol type="a">
 	<li><p>0 &in; <i>V</i></p></li>
@@ -273,11 +277,11 @@ If we accept this axiom (We do not prove that mathematical induction is valid, b
 
 <p>A <a href="relations.html#order">partially ordered set</a> <i>X</i> is said <i>Well-Ordered</i> if every non-empty subset of <i>X</i> has a minimum element.</p>
 
-<p><b>Proposition 1.5.7</b>. The three principles ℙ<sub>3</sub>, 𝕀  and 𝕄 are equivalent.</p>
+<p><b>Proposition 1.5.7</b>. The three principles ℙ<sub>3</sub>, 𝕊 and 𝕄 are equivalent.</p>
 
-<p><b>Proof</b>. Assumiano vero il principio di induzione forte e proviamo il principio del buon ordinamento. Suppose that <i>S</i> is a non-empty set of ℕ. Let <i>T</i> = ℕ \ <i>S</i>. Suppose by contradiction that <i>S</i> does not possess a minimum element. Then 1 &ne; <i>S</i>, otherwise it would be the minimum element of <i>S</i> since it is the minimum element of ℕ. Then 1 &in; <i>T</i>. Suppose that for a <i>k</i>, we have 1 &le; <i>i</i> &le; <i>k, i</i> &in; <i>T</i>. Consider <i>k</i> + 1. If <i>k</i>+1 were in <i>S</i>, it would be the minimum element in <i>S</i> because no <i>i</i> between 1 and <i>k</i> can be found in <i>S</i>. Since we are assuming that <i>S</i> has no minimum element, we must have <i>k</i> + 1 &in; <i>T</i>. For the strong indunction principle, <i>T</i> must contain all natural numbers, thus be equivalent to ℕ. It follows that <i>S</i> = ∅, a contradiction. We thus conclude that <i>S</i> has a minimum element.</p>
+<p><b>Proof</b>. We assume true the strong mathematical principle and prove well ordering. Suppose that <i>S</i> is a non-empty set of ℕ. Let <i>T</i> = ℕ \ <i>S</i>. Suppose by contradiction that <i>S</i> does not possess a minimum element. Then 1 &ne; <i>S</i>, otherwise it would be the minimum element of <i>S</i> since it is the minimum element of ℕ. Then 1 &in; <i>T</i>. Suppose that for a <i>k</i>, we have 1 &le; <i>i</i> &le; <i>k, i</i> &in; <i>T</i>. Consider <i>k</i> + 1. If <i>k</i>+1 were in <i>S</i>, it would be the minimum element in <i>S</i> because no <i>i</i> between 1 and <i>k</i> can be found in <i>S</i>. Since we are assuming that <i>S</i> has no minimum element, we must have <i>k</i> + 1 &in; <i>T</i>. For the strong indunction principle, <i>T</i> must contain all natural numbers, thus be equivalent to ℕ. It follows that <i>S</i> = ∅, a contradiction. We thus conclude that <i>S</i> has a minimum element.</p>
 
-<p>Adesso si supponga che il principio del buon ordinamento sia vero e proviamo il principio di induzione forte. Sia <i>U</i> un sottoinsieme di ℕ verificante le ipotesi di 𝕀 e supponiamo per assurdo che <i>U</i> &ne; ℕ. Allora detto <i>V</i> = <i>N</i> \ <i>U</i>, risulta <i>V</i> &ne; ∅. Per la 𝕄 esiste un minimo <i>m</i> &in; <i>V</i>, che sarà maggiore di zero, perchè 0 &in; <i>U</i>. Essendo <i>m</i> minimo per <i>V</i>, ogni <i>k</i> tale che sia 0 &le; <i>k</i> &lt; <i>m</i> sta in <i>U</i>. Ma allora per la (b) di 𝕀, <i>m &in; U</i>, che è un assurdo.□</p>
+<p>We now assume true well ordering and prove the strong mathematical induction. Let <i>U</i> a subset ℕ verifying the properties of 𝕊 and suppose by way of contradiction that <i>U</i> &ne; ℕ. Then given <i>V</i> = <i>N</i> \ <i>U</i>, it results <i>V</i> &ne; ∅. By 𝕄 there exists a least element <i>m</i> &in; <i>V</i>, greater than zero, because 0 &in; <i>U</i>. Since <i>m</i> is the least in <i>V</i>, every <i>k</i> such that 0 &le; <i>k</i> &lt; <i>m</i> is in <i>U</i>. But then by property (b) of 𝕊, <i>m</i> &in; <i>U</i>, which is absurd.&emsp;□</p>
 
 <p>A practical example of these two proof methods can be given to prove the following proposition regarding division in ℕ.</p>
 
@@ -310,7 +314,7 @@ If we accept this axiom (We do not prove that mathematical induction is valid, b
 <a href="cardinalità.html">Cardinalità &#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>
