@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cauchy and Sylow theorem"/>
-    <title>Cauchy and Sylow Theorem</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Cauchy and Sylow theorem"/>
+	<title>Cauchy and Sylow Theorem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href="index.html">Index</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+		<li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>Sylow and Cauchy theorems</h1>
 
-<p>We know from Lagrange’s Theorem that the order of a subgroup of a finite group <i>G</i> must divide the order of <i>G</i>. A natural related question is the following: If <i>m ∈ N</i> and <i>m</i> divides |<i>G</i>|, does there exist a subgroup of <i>G</i> of order <i>m</i>? The answer, in general, is no. For example, <i>A</i><sub>4</sub> (of order 12) has no subgroup of order 6. However, there are circumstances in which the answer will be yes. We consider one such situation here and consider three fundamental theorems of the Norwegian mathematician Ludwig Sylow (1832–1918).</p>
+<p>We know from Lagrange’s Theorem that the order of a subgroup of a finite group <i>G</i> must divide the order of <i>G</i>. A natural related question is the following: If <i>m</i> ∈ <i>N</i> and <i>m</i> divides |<i>G</i>|, does there exist a subgroup of <i>G</i> of order <i>m</i>? The answer, in general, is no. For example, <i>A</i><sub>4</sub> (of order 12) has no subgroup of order 6. However, there are circumstances in which the answer will be yes. We consider one such situation here and consider three fundamental theorems of the Norwegian mathematician Ludwig Sylow (1832–1918).</p>
 
-<p><b>7.17.1. Definition</b>. Let <i>p</i> a prime number. A finite group whose order is a power of <i>p</i> is called a <i>p</i>-group.</p>
+<p><b>7.17.1. Definition</b>. Let <i>p</i> a prime number. A finite group whose order is a power of <i>p</i> is called a <i>p</i>-group. &emsp;□</p>
 
-<p><b>7.17.2 Definition</b>. A <i>p</i>-subgroup <i>P</i> of a finite gorup, |<i>G</i>| with the property that its cardinality is the largest power of <i>p</i> dividing |<i>G</i>| is known as Sylow <i>p</i>-subgroup.</p>
+<p><b>7.17.2 Definition</b>. A <i>p</i>-subgroup <i>P</i> of a finite group, |<i>G</i>| with the property that its cardinality is the largest power of <i>p</i> dividing |<i>G</i>| is known as Sylow <i>p</i>-subgroup. &emsp;□</p>
 
 <p><b>7.17.3 First Sylow theorems</b>. Let <i>G</i> a finite group whose order is <i>p<sup>a</sup> ⋅ m</i>, with <i>p</i> a prime number and <i>m</i> not divisible by <i>p</i>. Then <i>G</i> contains a subgroup of order <i>p<sup>a</sup></i>, that is a Sylow <i>p</i>-subgroup.</p>
 
@@ -79,12 +80,12 @@
 <p>Let <i>P</i> the set of all Sylow <i>p</i>-subgroups of <i>G</i>. <i>P</i> is not empty by the first Sylow theorem. If <i>S</i> &in; <i>P</i>, then <i>P</i> contains also all conjugates of <i>S</i>, through the elements of <i>G</i>, since they are all subgroup of the same largest order <i>p<sup>a</sup></i>. Given the orbit O(<i>S</i>), of <i>S</i> with respect to the action of <i>G</i> on <i>P</i> by conjugation, we have O(<i>S</i>) &subseteq; <i>P</i>. In addition the cardinality of O(<i>S</i>) divides <i>m</i>. Indeed, since (see <a href="normal_subgroups.html#normalizer">Proposition 7.12.13</a>):</p>
 
 <div class="eq">
-<p><i>St<sub>S</sub></i> = {<i>g ∈ G</i> | <i>gSg<sup>&minus;1</sup> = S</i>} = <i>N<sub>G</sub></i>(<i>S</i>) (normalizer of <i>S</i> in <i>G</i>)</p>
+<p><i>St<sub>S</sub></i> = {<i>g ∈ G</i> | <i>gSg</i><sup>&minus;1</sup> = <i>S</i>} = <i>N<sub>G</sub></i>(<i>S</i>) (normalizer of <i>S</i> in <i>G</i>)</p>
 </div>
 
 <p>it's clear that <i>St<sub>S</sub></i> ⊇ <i>S</i>, then |<i>St<sub>S</sub></i>| = <i>p<sup>a</sup>r</i>. The cardinality of O(<i>S</i>), then divides <i>m</i>, based on the relation |O(<i>S</i>)| |St<sub><i>S</i></sub>| = |<i>G</i>| and is relatively prime to <i>p</i>.</p>
 
-<p><b>Corollary 7.17.5 (Cauchy's Theorem)</b> If <i>G</i> is a finite group whose order is divisible by a prime <i>p</i>, then <i>G</i> contains an element (and therby a subgroup) of order <i>p</i>.</p>
+<p><b>Corollary 7.17.5 (Cauchy's Theorem)</b> If <i>G</i> is a finite group whose order is divisible by a prime <i>p</i>, then <i>G</i> contains an element (thereby a subgroup) of order <i>p</i>.</p>
 
 <p><b>Proof</b>. If <i>p</i> is a prime that divides the order of a group <i>G</i>, then <i>G</i> contains a subgroup <i>K</i> of order <i>p</i> by the First Sylow theorem. Since <i>K</i> cyclic <a href="cosets.html">by Corollary 7.8.6</a> of Lagranges's Theorem, its generator is an element of order <i>p</i> in <i>G</i>.&emsp; □</p>
 
@@ -114,11 +115,11 @@
 </div>
 </li>
 
-<p>the cardinality of each orbit divides <i>p</i>, then every orbit has either one or <i>p</i> strings. If all orbits with the exception (<i>e, e,..., e</i>) were made by <i>p</i> strings, made by <i>p</i>, the order of <i>X</i> could not be a multiple of <i>p</i> contradicting point 1). Thus there must exist an orbit ( not reduced to <i>e, e,..., e</i>) which contains a single element, hence containing a string  (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>p</sub></i>) &ne;  (<i>e, e,..., e</i>) which is left fixed by every element of Z<sub><i>p</i></sub>. This implies (given the action of Z<sub><i>p</i></sub> on <i>X</i>) that  <i>g</i><sub>1</sub> = <i>g</i><sub>2</sub> = ⋅⋅⋅ = <i>g<sub>p</sub></i>, that is <i>x</i><sub>1</sub> is an element of period <i>p</i>. &emsp; □</p></li>
+<p>the cardinality of each orbit divides <i>p</i>, then every orbit has either one or <i>p</i> strings. If all orbits with the exception (<i>e, e,..., e</i>) were made by <i>p</i> strings, made by <i>p</i>, the order of <i>X</i> could not be a multiple of <i>p</i> contradicting point 1). Thus there must exist an orbit ( not reduced to <i>e, e,..., e</i>) which contains a single element, hence containing a string  (<i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, ..., <i>g<sub>p</sub></i>) &ne;  (<i>e, e,..., e</i>) which is left fixed by every element of Z<sub><i>p</i></sub>. This implies (given the action of Z<sub><i>p</i></sub> on <i>X</i>) that <i>g</i><sub>1</sub> = <i>g</i><sub>2</sub> = ⋅⋅⋅ = <i>g<sub>p</sub></i>, that is <i>x</i><sub>1</sub> is an element of period <i>p</i>. &emsp; □</p></li>
 
 </ol>
 
-<p>We've seen that given a group of order <i>n</i>, is not said that for every divisor of <i>n</i> there exists a subgroup having that as order. The theorem just proved gurantees the existence that for every <i>prime divisor</i> of the order of a group, there exists a subgroup having that divisor as order: the existence of an element with period <i>p</i> gurantees that the subgroup generated by it has order <i>p</i>.</p>
+<p>We've seen that given a group of order <i>n</i>, is not said that for every divisor of <i>n</i> there exists a subgroup having that as order. The theorem just proved guarantees the existence that for every <i>prime divisor</i> of the order of a group, there exists a subgroup having that divisor as order: the existence of an element with period <i>p</i> guarantees that the subgroup generated by it has order <i>p</i>.</p>
 
 <p><b>7.17.6. Theorem</b>. Every nontrivial <i>p</i>-group has a nontrivial center.</p>
 
@@ -126,35 +127,35 @@
 
 <p><b>7.17.7. Theorem</b>. A group <i>G</i> of order <i>p</i><sup>2</sup> is abelian.</p>
 
-<p><b>Proof</b>. For what stated in the previoud theorem, the center <i>Z</i>(<i>G</i>) is nontrivial; it possesses either <i>p</i> or <i>p</i><sup>2</sup> elements. We suppose it possesses <i>p</i> elements, letting <i>a</i> an element not in  <i>Z</i>(<i>G</i>). Then the cetralizer of <i>a</i>, C(<i>a</i>) = {<i>g</i> &in; G | <i>ga = ag</i>} is a subgroup of <i>G</i> containing properly <i>Z</i>(<i>G</i>). Then owing to Lagrange theorem, it coincides with all <i>G</i>, which is absurd because <i>a</i> should be contained in <i>Z</i>(<i>G</i>). It remains the only possibility that <i>Z</i>(<i>G</i>) has <i>p</i><sup>2</sup> elements, that is to coincide with all <i>G</i>. <i>G</i> is abelian. □</p>
+<p><b>Proof</b>. For what stated in the previous theorem, the center <i>Z</i>(<i>G</i>) is nontrivial; it possesses either <i>p</i> or <i>p</i><sup>2</sup> elements. We suppose it possesses <i>p</i> elements, letting <i>a</i> an element not in  <i>Z</i>(<i>G</i>). Then the centralizer of <i>a</i>, C(<i>a</i>) = {<i>g</i> &in; G | <i>ga</i> = <i>ag</i>} is a subgroup of <i>G</i> containing properly <i>Z</i>(<i>G</i>). Then owing to Lagrange theorem, it coincides with all <i>G</i>, which is absurd because <i>a</i> should be contained in <i>Z</i>(<i>G</i>). It remains the only possibility that <i>Z</i>(<i>G</i>) has <i>p</i><sup>2</sup> elements, that is to coincide with all <i>G</i>. <i>G</i> is abelian. □</p>
 
 <p><b>7.17.8 (Second Sylow Theorem)</b>. Let <i>G</i> be a finite group with order <i>p<sup>a</sup> ⋅ m</i> and <i>p</i> a prime such that <i>m</i> is not divisible by <i>p</i>. Then any <i>p</i>-subgroup <i>H</i> of <i>G</i> is contained in a <i>p</i>-Sylow subgroup. </p>
 
-<p><b>Proof.</b> Let <i>P</i> be the set of <i>p</i>-Sylow subgroups of <i>G</i>, and let <i>H</i> be a <i>p</i>-subgroup of <i>G</i>, and let |<i>H</i>| = <i>p<sup>s</sup></i>, <i>s &le; a</i> since a p-subgroup of <i>G</i> canno have order greater by p<sup>a</sup> by Lagrange's Theorem. Let <i>S</i> a fixed <i>p</i>-Sylow subgroup and O(<i>S</i>) its orbit under the conjugation action. Let <i>H</i> act on O(<i>S</i>): <i>hT</i> = <i>hTh</i><sup>&minus;1</sup> &forall;<i>T</i> &in; O(<i>S</i>): it's an <a href="actions_groups.html">action</a> on on O(<i>S</i>) because the conjugate of an element is still in O(<i>S</i>). O(<i>S</i>) is thus partitioned into suborbits, each one having a cardinality which divides <i>p<sup>s</sup></i>. The cardinality O(<i>S</i>) is the sum of the cardinalities of all these suborbits. Since |O(<i>S</i>)| divides <i>m</i> and is *therefore* relatively prime to <i>p</i> (for all divisors of |<i>G</i>|, being coprime to <i>p</i> is the same as dividing m: "divisor of <i>m</i>, with <i>m</i> coprime to <i>p</i>" ⇒ "divisor coprime to <i>p</i>"), there exists at least one suborbit having just one element (consider 1 + <i>p</i> + <i>p</i> + <i>p</i><sup>2</sup> + <i>p</i><sup>3</sup>, it's NOT a multiple of <i>p</i>); that is ∃<i>T</i> &in; O(<i>S</i>) such that <i>hTh</i><sup>&minus;1</sup> = <i>T</i> &emsp; &forall;<i>h</i> &in; <i>H</i>.</p>
+<p><b>Proof.</b> Let <i>P</i> be the set of <i>p</i>-Sylow subgroups of <i>G</i>, and let <i>H</i> be a <i>p</i>-subgroup of <i>G</i>, and let |<i>H</i>| = <i>p<sup>s</sup></i>, <i>s</i> &le; <i>a</i> since a p-subgroup of <i>G</i> canno have order greater by p<sup>a</sup> by Lagrange's Theorem. Let <i>S</i> a fixed <i>p</i>-Sylow subgroup and O(<i>S</i>) its orbit under the conjugation action. Let <i>H</i> act on O(<i>S</i>): <i>hT</i> = <i>hTh</i><sup>&minus;1</sup> &forall;<i>T</i> &in; O(<i>S</i>): it's an <a href="actions_groups.html">action</a> on on O(<i>S</i>) because the conjugate of an element is still in O(<i>S</i>). O(<i>S</i>) is thus partitioned into suborbits, each one having a cardinality which divides <i>p<sup>s</sup></i>. The cardinality O(<i>S</i>) is the sum of the cardinalities of all these suborbits. Since |O(<i>S</i>)| divides <i>m</i> and is *therefore* relatively prime to <i>p</i> (for all divisors of |<i>G</i>|, being coprime to <i>p</i> is the same as dividing m: "divisor of <i>m</i>, with <i>m</i> coprime to <i>p</i>" ⇒ "divisor coprime to <i>p</i>"), there exists at least one suborbit having just one element (consider 1 + <i>p</i> + <i>p</i> + <i>p</i><sup>2</sup> + <i>p</i><sup>3</sup>, it's NOT a multiple of <i>p</i>); that is ∃<i>T</i> &in; O(<i>S</i>) such that <i>hTh</i><sup>&minus;1</sup> = <i>T</i> &emsp; &forall;<i>h</i> &in; <i>H</i>.</p>
 
 <p>Then <i>H</i> ⊆ St<sub><i>T</i></sub> = {<i>g</i> &in; <i>G</i> | <i>gTg</i><sup>&minus;1</sup> = <i>T</i>} = N<sub><i>G</i></sub>(<i>T</i>) (normalizer of <i>T</i> in <i>G</i>). Clearly <i>T</i> ⊲̲ N<sub><i>G</i></sub>(<i>T</i>) (See <a href="normalizer.html">Proposition 7.12.3</a>). We can then construct the quotient group N<sub><i>G</i></sub>(<i>T</i>)/<i>T</i> and consider the subgroup <i>HT/T</i> ⊲̲ N<sub><i>G</i></sub>(<i>T</i>)/<i>T</i>. By the <a href="group_isomorphism_theo.html">First Isomorphism Theorem</a>, <i>HT</i>/<i>T</i> ≃ <i>H</i>/<i>H</i> ∩ <i>T</i>.</p>
 
-<p>Note that |<i>HT/T</i>| divides <i>m</i> and therefore relatively prime to <i>p</i>. <i>HT/T = HT</i> = {<i>hT = Th</i> | <i>h</i> in <i>H</i>}, <i>HT</i> is a subgroup of G containing T, so its order is p<sup>d</sup> k  for some k coprime to <i>p</i> and such that k|m with d &le; a. Now note that |<i>H</i> / <i>H</i> ∩ <i>T</i>| = |<i>H</i>| / <i>H</i> ∩ <i>T</i>| = [<i>H</i> : <i>H</i> ∩ <i>T</i>] = <i>p<sup>r</sup></i> for some <i>r</i> &ge; 0 and &le; <i>s</i> (we applied <a href="lagrange.html">Lagrange's theorem</a> that is |G| / |H| = (G:H) where (G:H) is the number of cosets, but this number is nothing else than |G/H|). Thus it must necessarily be |<i>H</i>/<i>H</i> ∩ <i>T</i>| = 1, that is <i>H</i> ⊆ <i>T</i>. We have so proved that every <i>p</i>-subgroup <i>H</i> is contained in a Sylow <i>p</i>-subgroup of <i>G</i>. &emsp; □</p>
+<p>Note that |<i>HT</i>/<i>T</i>| divides <i>m</i> and therefore relatively prime to <i>p</i>. <i>HT/T = HT</i> = {<i>hT = Th</i> | <i>h</i> in <i>H</i>}, <i>HT</i> is a subgroup of G containing T, so its order is p<sup>d</sup> k  for some k coprime to <i>p</i> and such that k|m with d &le; a. Now note that |<i>H</i> / <i>H</i> ∩ <i>T</i>| = |<i>H</i>| / <i>H</i> ∩ <i>T</i>| = [<i>H</i> : <i>H</i> ∩ <i>T</i>] = <i>p<sup>r</sup></i> for some <i>r</i> &ge; 0 and &le; <i>s</i> (we applied <a href="lagrange.html">Lagrange's theorem</a> that is |<i>G</i>| / |<i>H</i>| = (<i>G</i>:<i>H</i>) where (<i>G</i>:<i>H</i>) is the number of cosets, but this number is nothing else than |<i>G</i>/<i>H</i>|). Thus it must necessarily be |<i>H</i>/<i>H</i> ∩ <i>T</i>| = 1, that is <i>H</i> ⊆ <i>T</i>. We have so proved that every <i>p</i>-subgroup <i>H</i> is contained in a Sylow <i>p</i>-subgroup of <i>G</i>. &emsp; □</p>
 
 <p>The next Corollary shows that every Sylow <i>p</i>-subgroup of <i>G</i> can be obtained from a conjugate in the fashion of Lemma 7.17.7.</p>
 
 <p><b>7.17.9 Corollary</b>. Any two Sylow <i>p</i>-subgroups of a finite group <i>G</i> are conjugate in <i>G</i>.</p>
 
-<p><b>Proof</b>. We have to prove that O(<i>S</i>) = <i>P</i>, that is the oribit O(<i>S</i>) defined as in the first Sylow theorem, contains all Sylow <i>p</i>-subgroup. Let <i>Q</i> and <i>R</i> be two <i>p</i>–Sylow subgroups of <i>G</i>. According to the statement of the corollary, there is an <i>a</i> &in; <i>G</i> such that <i>aQa</i><sup>&minus;1</sup> &subseteq; <i>R</i>. We proved in the last theorem that every <i>p</i>-subgroup <i>H</i> is contained in a conjugate <i>T</i> that is <i>H</i> &subseteq; <i>T</i>. In particular in the case in which <i>H</i> is a Sylow <i>p</i>-subgroup, it must necessarily be <i>H = T</i> since every Sylow <i>p</i>-subgroup has <i>p<sup>a</sup></i> elements. &emsp; □</p>
+<p><b>Proof</b>. We have to prove that O(<i>S</i>) = <i>P</i>, that is the oribit O(<i>S</i>) defined as in the first Sylow theorem, contains all Sylow <i>p</i>-subgroup. Let <i>Q</i> and <i>R</i> be two <i>p</i>–Sylow subgroups of <i>G</i>. According to the statement of the corollary, there is an <i>a</i> &in; <i>G</i> such that <i>aQa</i><sup>&minus;1</sup> &subseteq; <i>R</i>. We proved in the last theorem that every <i>p</i>-subgroup <i>H</i> is contained in a conjugate <i>T</i> that is <i>H</i> &subseteq; <i>T</i>. In particular in the case in which <i>H</i> is a Sylow <i>p</i>-subgroup, it must necessarily be <i>H</i> = <i>T</i> since every Sylow <i>p</i>-subgroup has <i>p<sup>a</sup></i> elements. &emsp; □</p>
 
-<p><b>Corollary 7.17.10</b>. Let <i>G</i> be a finite group and <i>K</i> a Sylow p-subgroup for some prime <i>p</i>. Then <i>K</i> is normal in <i>G</i> if and only If <i>K</i> is the only Sylow <i>p</i>-subgroup in <i>G</i>.</p>
+<p><b>Corollary 7.17.10</b>. Let <i>G</i> be a finite group and <i>K</i> a Sylow <i>p</i>-subgroup for some prime <i>p</i>. Then <i>K</i> is normal in <i>G</i> if and only If <i>K</i> is the only Sylow <i>p</i>-subgroup in <i>G</i>.</p>
 
 <p><b>Proof</b>. We know that <i>x</i><sup>−1</sup><i>Kx</i> is a Sylow <i>p</i>-subgroup for every <i>x</i> &in; <i>G</i>. If <i>K</i> is the only Sylow <i>p</i>-subgroup of <i>G</i>, then we must have <i>x</i><sup>−1</sup><i>Kx</i> = <i>K</i> for every <i>x</i> &in; <i>G</i>. Therefore, <i>K</i> is normal by <a href="normal_subgroups.html">Proposition 7.12.7</a>. Conversely, suppose <i>K</i> is normal and let <i>P</i> be any Sylow <i>p</i>-subgroup. By the Second Sylow Theorem there exists <i>x</i> &in; <i>G</i> such that <i>P</i> = <i>x</i><sup>−1</sup><i>Kx</i>. Since <i>K</i> is normal, <i>P</i> = <i>x</i><sup>−1</sup><i>Kx</i> = <i>K</i>. Therefore <i>K</i> is the unique Sylow <i>p</i>·subgroup.&emsp;□</li>
 
 <p>The preceding theorems establish the existence of Sylow p-subgroups and the relationship between any two such subgroups. The next theorem tells us how many Sylow <i>p</i>-subgro ps a given group may have.</p>
 
-<p><b>7.17.11 Third Sylow Theorem</b>. The number of distinct Sylow <i>p</i>-subgroups of a finite group <i>G</i> divides |<i>G</i>| = p<sup>a</sup> ⋅ m with (<i>p,m</i>) = 1 and is congruent to 1 modulo <i>p</i>.</p>
+<p><b>7.17.11 Third Sylow Theorem</b>. The number of distinct Sylow <i>p</i>-subgroups of a finite group <i>G</i> divides |<i>G</i>| = <i>p<sup>a</sup></i> ⋅ <i>m</i> with (<i>p,m</i>) = 1 and is congruent to 1 modulo <i>p</i>.</p>
 
 <p><b>Proof</b>. Let <i>P</i> be the set of all Sylow <i>p</i>-subgroups of <i>G</i> and <i>S</i> &in; <i>P</i>. Consider the action of the Sylow <i>p</i>-subgroup <i>H</i> on O(<i>S</i>) by conjugation; there is only one suborbit of O(<i>S</i>) with one element; indeed if there were another suborbit with order 1, <i>H</i> would be identical to another Sylow <i>p</i>-subgroup. Being the cardinality of all other suborbits a power <i>p</i><sup>k</sup> (with <i>k</i> &gt; 0), the cardinality of O(<i>S</i>) is thus conruent to 1 modulo <i>p</i>.  &emsp; □</p>
 
 <p><b>7.17.12 Example</b> Find all Sylow 2 and Sylow 3-subgroups of <i>A</i><sub>4</sub>.</p>
 
-<p><b>Solution</b>: |A<sub>4</sub>| = 12 = 2<sup>2</sup> ⋅ 3. Hence by Sylow First Theorem, A<sub>4</sub> has Sylow 2-subgroups and Sylow 3- Subgroups of order 4 and 3 respectively. Let <i>n</i><sub>2</sub> and n<sub>3</sub> denote respecively the number of distinct Sylow 2 and Sylow 3-subgroups of <i>A</i><sub>4</sub>. Then by Sylow Third Theorem n<sub>2</sub> | 12 and n<sub>2</sub> = 2k + 1 for some integer <i>k</i> &le; 0. Similary, <i>n</i><sub>3</sub>| 12 and n<sub>3</sub> = 3l + 1 for some integer <i>l</i> &ge; 0. The only possibilities are <i>n</i><sub>2</sub> = 1 and <i>n</i><sub>3</sub> = 3. Both can occur.</p>
+<p><b>Solution</b>: |A<sub>4</sub>| = 12 = 2<sup>2</sup> ⋅ 3. Hence by Sylow First Theorem, A<sub>4</sub> has Sylow 2-subgroups and Sylow 3- Subgroups of order 4 and 3 respectively. Let <i>n</i><sub>2</sub> and n<sub>3</sub> denote respecively the number of distinct Sylow 2 and Sylow 3-subgroups of <i>A</i><sub>4</sub>. Then by Sylow Third Theorem n<sub>2</sub> | 12 and n<sub>2</sub> = 2k + 1 for some integer <i>k</i> &le; 0. Similary, <i>n</i><sub>3</sub>| 12 and <i>n</i><sub>3</sub> = 3<i>l</i> + 1 for some integer <i>l</i> &ge; 0. The only possibilities are <i>n</i><sub>2</sub> = 1 and <i>n</i><sub>3</sub> = 3. Both can occur.&emsp;■</p>
 
 <p><b>7.17.13 Example</b> Every subgroup of order 20 contains a normal subgroup.</p>
 
@@ -166,7 +167,7 @@
 
 <p>Another consequence of Sylow's theorems is the following:</p>
 
-<p><b>7.17.14 Theorem</b> Let <i>G</i> a group with order <i>p<sup>a</sup> ⋅ m</i>, with <i>m</i> non divisible by <i>p</i>. Then <i>G</i> possesses a chain of subgroups</p>
+<p><b>7.17.14 Theorem</b> Let <i>G</i> a group with order <i>p<sup>a</sup></i> ⋅ <i>m</i>, with <i>m</i> non divisible by <i>p</i>. Then <i>G</i> possesses a chain of subgroups</p>
 
 <div class="eq">
 <p>{<i>e</i>} = <i>H</i><sub>0</sub> &subset; <i>H</i><sub>1</sub> &subset; ⋅⋅⋅ &subset; <i>H<sub>i</sub></i> &subset; <i>H</i><sub><i>i</i>+1</sub> &subset; ⋅⋅⋅ <i>H<sub>a</sub></i></p>
@@ -189,13 +190,13 @@
 <p>and</p>
 
 <div class="eq">
-<p>|(<i>H</i><sub><i>i</i>+1</sub>/<i>H</i><sub>1</sub>) / (<i>H<sub>i</sub></i>/<i>H</i><sub>1</sub>)| = <i>p</i> &emsp; (<b>7.12.2</b>) </p>
+<p>|(<i>H</i><sub><i>i</i>+1</sub>/<i>H</i><sub>1</sub>) / (<i>H<sub>i</sub></i>/<i>H</i><sub>1</sub>)| = <i>p</i> &emsp; (<b>7.12.2</b>)</p>
 </div>
 
 <p>By the <a href="group_isomorphism_theo">2nd isomorphism theorems</a> from eq 7.12.1 we get that <i>H<sub>i</sub></i> ⊲̲ <i>H</i><sub><i>i</i>+1</sub> and from eq 7.12.2 that</p>
 
 <div class="eq">
-<p>|(<i>H<sub>i+1</sub></i>/H<sub>1</sub>) / (<i>H</i><sub>1</sub>/<i>H</i><sub>1</sub>)| = |<i>H</i><sub><i>i</i>+1</sub>/<i>H<sub>i</sub></i>| = <i>p</i> &emsp; □</p>
+<p>|(<i>H</i><sub><i>i</i>+1</sub>/<i>H</i><sub>1</sub>) / (<i>H</i><sub>1</sub>/<i>H</i><sub>1</sub>)| = |<i>H</i><sub><i>i</i>+1</sub>/<i>H<sub>i</sub></i>| = <i>p</i> &emsp; □</p>
 </div>
 
 <p><b>7.17.15 Corollary</b> Every group <i>G</i> with order <i>p<sup>a</sup>m</i>, (<i>m,p</i>) = 1, has a subgroup <i>H<sub>i</sub></i> of order <i>p<sup>i</sup></i>, for every <i>i</i> = 0, 1, ..., <i>a</i>.</p>
@@ -208,7 +209,7 @@
 
 <p><b>7.17.17 Lemma</b>. A permutation group <i>G</i> (recall this is any subgroup of <i>S<sub>n</sub></i>) which contains an odd permutation has a normal subgroup of index 2.</p>
 
-<p><b>Proof</b>. Since <i>G</i> contains an odd permutation, <i>G</i> is not contained in <i>A<sub>n</sub></i>. Also since <i>A<sub>n</sub></i> is normal in <i>S<sub>n</sub></i> the set <i>A<sub>n</sub>G</i> is a subgroup of <i>S<sub>n</sub></i> by <a href="normalizer.html">Lemma 7.12.4</a>. Thus <i>A<sub>n</sub></i> &subset; <i>A<sub>n</sub>G</i> properly. But [S<sub>n</sub>: A<sub>n</sub>] = 2 by <a href="group_isomorphism_theo.html">Proposition 7.13.6</a> and thus <i>A<sub>n</sub>G</i> = S<sub>n</sub>. By the second isomorphism theorem we have</p>
+<p><b>Proof</b>. Since <i>G</i> contains an odd permutation, <i>G</i> is not contained in <i>A<sub>n</sub></i>. Also since <i>A<sub>n</sub></i> is normal in <i>S<sub>n</sub></i> the set <i>A<sub>n</sub>G</i> is a subgroup of <i>S<sub>n</sub></i> by <a href="normalizer.html">Lemma 7.12.4</a>. Thus <i>A<sub>n</sub></i> &subset; <i>A<sub>n</sub>G</i> properly. But [<i>S<sub>n</sub></i>: <i>A<sub>n</sub></i>] = 2 by <a href="group_isomorphism_theo.html">Proposition 7.13.6</a> and thus <i>A<sub>n</sub>G</i> = S<sub>n</sub>. By the second isomorphism theorem we have</p>
 
 <div class="eq">
 <p>2 = [<i>A<sub>n</sub>G</i>: <i>A<sub>n</sub></i>] = [<i>G</i> : <i>A<sub>n</sub></i> ∩ <i>G</i>]</p>
@@ -226,7 +227,7 @@
 <a href="exercises_sylow.html">Exercises on Sylow and Cauchy theorems&#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>

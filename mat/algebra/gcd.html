@@ -17,15 +17,15 @@
 	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>gcd: greatest common divisor</h1>
 
 <p><b>Definition 2.3.1</b>. Given <i>a, b</i> ∈ ℤ. An element <i>d</i> ∈ ℤ is said to be a <i>greatest common divisor</i> of <i>a</i> and <i>b</i> if</p>
 
 <ol type="i">
- <li><p><i>d</i>|<i>a</i>, <i>d</i>|<i>b</i></p></li>
- <li><p>If <i>d'</i>|<i>a, d'</i>|<i>b</i>, then <i>d'</i>|<i>d</i>.</p></li>
+	<li><p><i>d</i>|<i>a</i>, <i>d</i>|<i>b</i></p></li>
+	<li><p>If <i>d'</i>|<i>a, d'</i>|<i>b</i>, then <i>d'</i>|<i>d</i>.</p></li>
 </ol>
 
 <p><b>Remark</b>. We said <i>a</i> greatest common divisor and not <i>the</i> greatest common divisor between two elements, because if <i>d</i> verifies i) and ii), also every associate of <i>d</i> (and thus &pm;<i>d</i> in ℤ) verifies the same conditions. For example, 2 and −2 are both greatest common divisors of 2 and 4. In general, when we talk about <i>the</i> greatest common divisor in ℤ, we mean the <i>positive</i> one, indicated in the following ways:</p>
@@ -36,7 +36,7 @@
 
 <p>It is not though defined gcd(0,0), because each <i>x</i> &in; ℤ divides zero, thus does not exists a <i>greatest divisor</i>.</p>
 
-<p><b>Definition 2.3.2</b>. Two integers <i>a</i> and <i>b</i> such that gcd(<i>a, b</i>) = 1 are said <i>coprime</i> or <i>relatively prime</i>.</p>
+<p><b>Definition 2.3.2</b>. Two integers <i>a</i> and <i>b</i> such that gcd(<i>a, b</i>) = 1 are said <i>coprime</i> or <i>relatively prime</i>. &emsp;□</p>
 
 <p>The following theorems examine the existence of the gcd.</p>
 
@@ -52,7 +52,7 @@
 
 <p><i>a</i> &ge; 0. By applying the induction principle in the form 𝕀  with regards to <i>a</i>. If <i>a</i> = 0, it enough to put <i>q</i> = <i>r</i> = 0, and thus <i>P</i>(0) is true.</p>
 
-<p>Let <i>a</i> &gt; 0. Let's see if the hypothesis <i>P</i>(<i>k</i>) true for all <i>k</i> such 0 &le; <i>k</i> &lt; <i>a</i> implies <i>P</i>(<i>a</i>) true. If |<i>b</i>| &gt; <i>a</i>, it is enough to put <i>q</i> = 0 and <i>r</i> = <i>a</i>. So we can suppose <i>a</i> &ge; |<i>b</i>|. Then <i>a</i> &gt; <i>a</i> − |<i>b</i>| &ge;0 and by the inductive hypothesis <i>P</i>(<i>a</i> − |<i>b</i>|) is true. This means there exist two integers <i>q',r'</i> such that <i>a</i> − |<i>b</i>| = <i>bq'</i> + <i>r'</i>, 0 &le; <i>r'</i> &lt; |<i>b</i>|, from which we can deduce <i>a</i> = |<i>b</i>| + <i>bq'</i> + <i>r'</i>. In the case <i>b</i> &gt; 0 or <i>b</i> &lt; 0 we'll have respectively <i>a</i> = <i>b</i>(<i>q'</i> + 1) + <i>r'</i> or <i>a</i> = <i>b</i>(<i>q</i> − 1) + <i>r'</i>, with  0 &le; <i>r'</i> &lt; |<i>b</i>|, <i>i.e.</i> <i>P</i>(<i>a</i>) is true, with <i>q</i> = <i>q'</i> + 1, <i>r</i> = <i>r'</i>, in the case <i>b</i> &gt; 0, and <i>q</i> = <i>q'</i> − 1, <i>r</i> = <i>r'</i>, if <i>b</i> &lt; 0. Owing to the inductive principle, <i>P</i>(<i>a</i>) is true for every <i>a</i>.</p>
+<p>Let <i>a</i> &gt; 0. Let's see if the hypothesis <i>P</i>(<i>k</i>) true for all <i>k</i> such 0 &le; <i>k</i> &lt; <i>a</i> implies <i>P</i>(<i>a</i>) true. If |<i>b</i>| &gt; <i>a</i>, it is enough to put <i>q</i> = 0 and <i>r</i> = <i>a</i>. So we can suppose <i>a</i> &ge; |<i>b</i>|. Then <i>a</i> &gt; <i>a</i> − |<i>b</i>| &ge;0 and by the inductive hypothesis <i>P</i>(<i>a</i> − |<i>b</i>|) is true. This means there exist two integers <i>q',r'</i> such that <i>a</i> − |<i>b</i>| = <i>bq'</i> + <i>r'</i>, 0 &le; <i>r'</i> &lt; |<i>b</i>|, from which we can deduce <i>a</i> = |<i>b</i>| + <i>bq'</i> + <i>r'</i>. In the case <i>b</i> &gt; 0 or <i>b</i> &lt; 0 we'll have respectively <i>a</i> = <i>b</i>(<i>q'</i> + 1) + <i>r'</i> or <i>a</i> = <i>b</i>(<i>q</i> − 1) + <i>r'</i>, with  0 &le; <i>r'</i> &lt; |<i>b</i>|, i.e. <i>P</i>(<i>a</i>) is true, with <i>q</i> = <i>q'</i> + 1, <i>r</i> = <i>r'</i>, in the case <i>b</i> &gt; 0, and <i>q</i> = <i>q'</i> − 1, <i>r</i> = <i>r'</i>, if <i>b</i> &lt; 0. Owing to the inductive principle, <i>P</i>(<i>a</i>) is true for every <i>a</i>.</p>
 
 <p><i>a &lt; 0</i>. In this case we get <i>−a</i> &gt; 0. There exist thus, from what we have proved in the first part two integers <i>r*</i> and <i>q*</i> such that <i>−a</i> = <i>bq*</i> − <i>r*</i>, with 0 &le; <i>r*</i> &lt; |<i>b</i>|.</p>
 
@@ -91,7 +91,7 @@
 <p>The writing of <i>d</i> = gcd(<i>a, b</i>) of two integers <i>a</i> and <i>b</i> in the form</p>
 
 <div class="eq">
-<p><i>d = sa + tb</i> &emsp; (2.15)</p>
+<p><i>d</i> = <i>sa</i> + <i>tb</i> &emsp; (2.15)</p>
 </div>
 
 <p>is known as <b>Bézout's identity</b>. This expression in not unique. For example 1 = 3 ⋅ 7 + (-4) ⋅ 5 = (-2) ⋅ 7 + 3⋅5.</p>
@@ -190,7 +190,7 @@
 <p><i>A</i><sub>2</sub> = {<i>d</i> ∈ ℤ | <i>d</i>|<i>a</i> and <i>d</i>|<i>a</i> &pm; <i>b</i>}</p>
 </div>
 
-<p>are the same. To prove that the two sets are the same we will show that if we pick an element <i>s</i> in <i>A</i><sub>1</sub> then <i>s</i> is also an element of <i>A</i><sub>2</sub> and if we pick an element <i>t</i> ∈ <i>A</i><sub>2</sub> then <i>t</i> is also an element of <i>A</i><sub>1</sub>: in mathematical language we prove that <i>A</i><sub>1</sub> ⊆ <i>A</i><sub>2</sub></i> and <i>A</i><sub>2</sub> ⊆ <i>A</i><sub>1</sub>. From the equality condition of the two sets <i>A</i><sub>1</sub> = <i>A</i><sub>2</sub> follows that if <i>d</i> = gcd(<i>a,b</i>) then it is also true that <i>d</i> = gcd(<i>a</i> &pm; <i>b</i>). We need to prove two statements:</p>
+<p>are the same. To prove that the two sets are the same we will show that if we pick an element <i>s</i> in <i>A</i><sub>1</sub> then <i>s</i> is also an element of <i>A</i><sub>2</sub> and if we pick an element <i>t</i> ∈ <i>A</i><sub>2</sub> then <i>t</i> is also an element of <i>A</i><sub>1</sub>: in mathematical language we prove that <i>A</i><sub>1</sub> ⊆ <i>A</i><sub>2</sub> and <i>A</i><sub>2</sub> ⊆ <i>A</i><sub>1</sub>. From the equality condition of the two sets <i>A</i><sub>1</sub> = <i>A</i><sub>2</sub> follows that if <i>d</i> = gcd(<i>a,b</i>) then it is also true that <i>d</i> = gcd(<i>a</i> &pm; <i>b</i>). We need to prove two statements:</p>
 
 <ol>
 	<li><p>If <i>x</i>|<i>a</i> and <i>x</i>|<i>b</i> then <i>x</i>|<i>a</i> &pm; <i>b</i>;</p></li>
@@ -205,7 +205,7 @@
 <a href="euclid_algorithm.html">Euclidean Algorithm &#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>
