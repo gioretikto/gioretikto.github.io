@@ -205,7 +205,7 @@
 
 <p><b>Definition 9.3.3</b>. A Galois extensions <i>K</i> of <I>F</i> is a finite and normal extension of <i>K</i>. &emsp;□</p>
 
-<p>We can affirm that a Galois extension is a finite extension <i>K</i> of <i>F</i> such that, if <i>&phi;</i> &in; <i>I</i>(<i>K,F</i>), then <i>&phi;</i>(<i>K</i>) &subseteq; <i>K</i>. <br> We're now able to prove two important theorems involved the in the proof of Galois correspondence theorem.</p>
+<p>We're now able to prove two important theorems involved the in the proof of Galois correspondence theorem.</p>
 
 <p><b>Theorem 9.3.4</b>. Let <i>K</i> a Galois extension of <i>F</i>. Then</p>
 
@@ -225,6 +225,8 @@
 <p>|<i>G</i>(<i>K,F</i>)| = [<i>K</i> : <i>K</i><sub><i>G</i>(<i>K,F</i>)</sub>] = [<i>K</i> : <i>F</i>].&emsp;□</p>
 </div>
 
+<p>The next proposition shows that an alternative definition of a Galois extension is that of a finite extension <i>K</i> of <i>F</i> such that, if <i>&phi;</i> &in; <i>I</i>(<i>K,F</i>), then <i>&phi;</i>(<i>K</i>) &subseteq; <i>K</i>.</p>
+
 <p><b>Proposition 9.3.5</b>. Let <i>K</i> a Galois extension <i>F</i> and let <i>T</i> an intermediate field, <i>F</i> &subseteq; <i>T</i> &subseteq; <i>K</i>. The following statements are equivalent</p>
 
 <ol type="i">
@@ -232,7 +234,17 @@
 	<li><p><i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i>, &forall;<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>).</p></li>
 </ol>
 
-<p><b>Proof</b>. (i) ⇒ (ii) Let <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), <i>t</i> &in; <i>T</i> and <i>s</i> = <i>&sigma;</i>(<i>t</i>). <i>t</i> is algebraic over <i>F</i> (because it belongs to a finite extension); let <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] it minimal polynomial, <i>&sigma;</i>(<i>t</i>) is root of the same polynomial. But then <i>t</i> and <i>s</i> are conjugates over <i>F</i>. Since <i>T</i> is normal over <i>F</i>, <i>s</i> must belong to <i>T</i>.</p>
+<p><b>Proof</b>. (i) ⇒ (ii) Let <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), <i>t</i> &in; <i>T</i> and <i>s</i> = <i>&sigma;</i>(<i>t</i>). <i>t</i> is algebraic over <i>F</i> (because it belongs to a finite extension <a href="simple_extensions.html#alg_fin">see Corollary 8.2.14</a>); let <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] it minimal polynomial, <i>&sigma;</i>(<i>t</i>) is root of the same polynomial (<a href="Galois.html">9.2.4 Proposition</a>). But then <i>t</i> and <i>s</i> are conjugates over <i>F</i>. Since <i>T</i> is normal over <i>F</i>, <i>s</i> must belong to <i>T</i>.</p>
+
+<p>(ii) ⇒ (i). Let <i>&alpha;</i> &in; <i>T</i> and <i>&beta;</i> &in; <i>K</i> conjugate over <i>F</i>. We must prove that <i>&beta;</i> &in; <i>T</i>. <i>&alpha;</i> and <i>&beta;</i>, as conjugate over <i>F</i>, are roots of the same irreducible polynomial with coefficients in <i>F</i>, hence there exists a <i>F</i>-isomorphism <i>&tau;</i> such that</p>
+
+<div class="eq">
+<p><i>&tau;</i>: <i>F</i>(<i>&alpha;</i>) ⟶ <i>F</i>(<i>&beta;</i>)<br>
+<i>&alpha;</i> ⟼ <i>&beta;</i><br>
+<i>a</i> ⟼ <i>b</i> &emsp;&forall;<i>a</i> &in; <i>F</i></p>
+</div>
+
+<p>Then <i>&tau;</i> can be extended by an autormorpshim <i>&sigma;</i>: <i>K</i> ⟶ <i>K</i> such that <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>). Thus, by the hypothesis (ii), <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i> from which <i>&beta;</i> = <i>&sigma;</i>(<i>&alpha;</i>) &in; <i>T</i>. &emsp;□</p>
 
 <section aria-label="End">
 <a href="Galois.html">«Galois groups</a>
