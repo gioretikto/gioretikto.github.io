@@ -246,6 +246,117 @@
 
 <p>Then <i>&tau;</i> can be extended by an autormorpshim <i>&sigma;</i>: <i>K</i> ⟶ <i>K</i> such that <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>). Thus, by the hypothesis (ii), <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i> from which <i>&beta;</i> = <i>&sigma;</i>(<i>&alpha;</i>) &in; <i>T</i>. &emsp;□</p>
 
+<p><b>Definition 9.3.6</b>. Let <i>f</i>(<i>x</i>) a polynomial with coefficients in a field <i>F</i>. We define the <i>Galois group of a polynomial</i> <i>f</i>(<i>x</i>), the Galois group of the extension <i>K</i> over <i>F</i>, with <i>K</i> splitting field of <i>f</i>(<i>x</i>). &emsp;□</p>
+
+
+<p><b>9.3.7 Galois Correspondence Theorem</b>. Let <i>f</i>(<i>x</i>) a polynomial with coefficients in a field <i>F</i>. Let <i>K</i> the splitting field of <i>F</i> and <i>G</i>(<i>K,F</i>) its Galois group. Let ℱ the set of all its subfields <i>T</i> of <i>K</i> containing <i>F</i> and let 𝒢 the set of all the subgroups of <i>G</i>(<i>K,F</i>), then</p>
+
+<div class="eq">
+<p><i>&Psi;</i>: ℱ ⟶ 𝒢<br>
+<i>T</i> ⟼ <i>G</i>(<i>K,T</i>)</p>
+</div>
+
+<p>is a bijection between ℱ and 𝒢, whose inverse is</p>
+
+<div class="eq">
+<p><i>&Phi;</i>: 𝒢 ⟶ ℱ<br>
+<i>H</i> ⟼ <i>K<sub>H</sub></i></p>
+</div>
+
+<p>that is</p>
+
+<div class="eq">
+<p><i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, &emsp;&emsp; <i>G</i>(<i>K,K<sub>H</sub></i>)</p>
+</div>
+
+<p>In addition the following properties hold:</p>
+
+<ol type="a">
+	<li><p>[<i>K</i>:<I>T</i>] = |<i>G</i>(<i>K,T</i>)|, &emsp;&emsp; [<i>T</i>:<i>F</i>] = |<i>G</i>(<i>K,F</i>)|/|<i>G</i>(<i>K,T</i>)|</p></li>
+	<li><p><i>T</i> is a normal extension of <i>F</i> if and only if <i>G</i>(<i>K,T</i>) is a normal subgroup of <i>G</i>(<i>K,F</i>);</p></li>
+	<li><p>If <i>T</i> is a normal extension of <i>F</i>, then the group <i>G</i>(<i>T,F</i>) is such that</p>
+
+<div class="eq">
+<p><i>G</i>(<i>T,F</i>) ≃ <i>G</i>(<i>K,F</i>)/<i>G</i>(<i>K,T</i>)</p>
+</div>
+
+</li>
+
+</ol>
+
+<p><b>Proof</b>. We saw in theorem 9.3.1 that <i>H</i> = <i>G</i>(<i>K,K<sub>H</sub></i>). Regarding <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, it derives from theorem 9.3.2, since <i>K</i> normal extension of <i>F</i>, implies that <i>K</i> is as well normal extension of <i>T</i>.<br> Both relations imply that <i>&Psi;</i> and <i>&Phi;</i> are one the inverse of the other.</p>
+
+<p>We now prove a): <i>K</i> is normal extension of <i>T</i>, hence [<i>K</i>:<i>T</i>] = |<i>G</i>(<i>K,T</i>)| based on theorem 9.3.4. Further</p> 
+
+<div class="eq">
+<p>|<i>K</i>:<i>F</i>| = [<i>K</i>:<i>T</i>] [<i>T</i>:<i>F</i>], &emsp;&emsp; [<i>K</i>:<i>F</i>] = |<i>G</i>(<i>K,F</i>)|, &emsp;&emsp; [<i>K</i>:<i>T</i>] = |<i>G</i>(<i>K,T</i>)|</p>
+</div>
+
+<p>from which</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">[</mo>
+  <mi>T</mi>
+  <mo>:</mo>
+  <mi>F</mi>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi>G</mi>
+      <mo stretchy="false">(</mo>
+      <mi>K</mi>
+      <mo>,</mo>
+      <mi>F</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi>G</mi>
+      <mo stretchy="false">(</mo>
+      <mi>K</mi>
+      <mo>,</mo>
+      <mi>T</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">|</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$[T:F] = \frac{|G(K,F)|}{|G(K,T)|} $$ -->
+
+<p>To prove b): In the proposition 9.3.5 we already seen that <i>T</i> is a normal extension of <i>F</i> if and only if for every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i>. But then, if we take <i>&tau;</i> &in; <i>G</i>(<i>K,T</i>), it results</p>
+
+<div class="eq">
+<p><i>&tau;</i>(<i>&sigma;</i>(<i>t</i>)) = <i>&sigma;</i>(<i>t</i>)&emsp;&emsp; &forall;<i>t</i> &in; <i>T</i>, &forall;<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>)</p>
+</div>
+
+<p>This relation is equivalente to</p>
+
+<div class="eq">
+<p><i>&sigma;</i><sup>−1</sup> <i>&tau;&sigma;</i>(<i>t</i>) = <i>t</i></p>
+</div>
+
+<p>that is to</p>
+
+<div class="eq">
+<p><i>&sigma;</i><sup>−1</sup><i>G</i>(<i>K,T</i>)&sigma; &subseteq; <i>G</i>(<i>K,T</i>)&emsp;&emsp; &forall;<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>)</p>
+</div>
+
+<p>which is the condition for <i>G</i>(<i>K,T</i>) is normal in <i>G</i>(<i>K,F</i>). Conversely, if <i>G</i>(<i>K,T</i>) ⊲̲ <i>G</i>(<i>K,F</i>), then <i>T</i> is a normal extension of <i>F</i>, indeed from</p>
+
+<div class="eq">
+<p><i>&sigma;</i><sup>−1</sup><i>&tau;</i> = <i>t</i>, &emsp; &forall;<i>t</i> &in; <i>T</i>, &forall;<i>&tau;</i> &in; <i>G</i>(<i>K,T</i>), &forall;<i>&tau;</i> &in; <i>G</i>(<i>K,T</i>)</p>
+</div>
+
+<p>Then, since <i>&sigma;</i>(<i>t</i>) is fixed by <i>&tau;</i> and <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, as <i>K</i> is normal extension, follows that <i>&sigma;</i>(<i>t</i>) &in; <i>T</i>. <br> We prove c). Since <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i> for every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), then every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) induces an automorphism <i>&sigma;</i>' &in; <i>G</i>(<i>T,F</i>), defined by</p>
+
+<div class="eq">
+<p><i>&sigma;</i>'(<i>t</i>) = <i>&sigma;</i>(<i>t</i>) &emsp;&emsp; &forall;<i>t</i> &in; <i>T</i></p>
+</div>
+
 <section aria-label="End">
 <a href="Galois.html">«Galois groups</a>
 <a href="index.html">Index</a>
