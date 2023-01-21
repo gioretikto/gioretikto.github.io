@@ -203,7 +203,7 @@
 
 <p>the coefficients of this polynomial (as we've already shown in theorem 9.3.1) are the <a href="symmetric_polynomials.html#elem">elementary symmetric fuctions</a> <i>&alpha;<sub>i</sub></i> in the roots <i>&sigma;</i><sub>1</sub>(<i>a</i>), <i>&sigma;</i><sub>2</sub>(<i>a</i>),..., <i>&sigma;<sub>n</sub></i>(<i>a</i>), with every <i>&sigma;<sub>i</sub></i> &in; <i>K</i><sub><i>G</i>(<i>K,F</i>)</sub> = <i>F</i>. Thus <i>f</i> is a polynomial of <i>F</i>[<i>x</i>], and since <i>K</i> contains all roots of <i>f</i> there cannot be a smaller field containing <i>all</i> the roots of <i>f</i> and <i>F</i>, because such a field should contain the root <i>a</i> and <i>F</i>, thus coincide with <i>K</i> = <i>F</i>(<i>a</i>). We conclude that <i>K</i> is the splitting field of <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], and thus normal extension of <i>F</i>. &emsp;□</p>
 
-<p><b>Definition 9.3.3</b>. A Galois extensions <i>K</i> of <I>F</i> is a finite and normal extension of <i>K</i>. &emsp;□</p>
+<p><b>Definition 9.3.3</b>. A Galois extensions <i>K</i> of <i>F</i> is a finite and normal extension of <i>K</i>. &emsp;□</p>
 
 <p>We're now able to prove two important theorems involved the in the proof of Galois correspondence theorem.</p>
 
@@ -266,7 +266,8 @@
 <p>that is</p>
 
 <div class="eq">
-<p><i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, &emsp;&emsp; <i>G</i>(<i>K,K<sub>H</sub></i>) = <i>H</i>.</p>
+<p><i>&Phi;</i>(<i>&Psi;</i>(<i>T</i>)) = <i>&Phi;</i>(<i>G</i>(<i>K,T</i>)) = <i>K</i><sub><i>G</i>(<i>K,T</i>)</sub> = <i>T</i>&emsp;<br>
+<i>&Psi;</i>(<i>&Phi;</i>(<i>H</i>)) = <i>&Psi;</i>(<i>K<sub>H</sub></i>) = <i>G</i>(<i>K,K<sub>H</sub></i>) = <i>H</i></p>
 </div>
 
 <p>In addition the following properties hold:</p>
@@ -284,9 +285,10 @@
 
 </ol>
 
-<p><b>Proof</b>. We saw in theorem 9.3.1 that <i>H</i> = <i>G</i>(<i>K,K<sub>H</sub></i>). Regarding <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, it derives from theorem 9.3.2, since <i>K</i> normal extension of <i>F</i>, implies that <i>K</i> is as well normal extension of <i>T</i>.<br> Both relations imply that <i>&Psi;</i> and <i>&Phi;</i> are one the inverse of the other.</p>
+<p><b>Proof</b>. We saw in theorem 9.3.1 that <i>H</i> = <i>G</i>(<i>K,K<sub>H</sub></i>). Regarding <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, it derives from theorem 9.3.2, since <i>K</i> normal extension of <i>F</i>, implies that <i>K</i> is as well normal extension of <i>T</i>. Both relations imply that <i>&Psi;</i> and <i>&Phi;</i> are one the inverse of the other.</p>
 
-<p>We now prove a): <i>K</i> is normal extension of <i>T</i>, hence [<i>K</i>:<i>T</i>] = |<i>G</i>(<i>K,T</i>)| based on theorem 9.3.4. Further</p> 
+<ol type="a">
+<li><p><i>K</i> is normal extension of <i>T</i>, hence [<i>K</i>:<i>T</i>] = |<i>G</i>(<i>K,T</i>)| based on theorem 9.3.4. Further</p> 
 
 <div class="eq">
 <p>|<i>K</i>:<i>F</i>| = [<i>K</i>:<i>T</i>] [<i>T</i>:<i>F</i>], &emsp;&emsp; [<i>K</i>:<i>F</i>] = |<i>G</i>(<i>K,F</i>)|, &emsp;&emsp; [<i>K</i>:<i>T</i>] = |<i>G</i>(<i>K,T</i>)|</p>
@@ -327,7 +329,9 @@
 
 <!-- $$[T:F] = \frac{|G(K,F)|}{|G(K,T)|} $$ -->
 
-<p>To prove b): In the proposition 9.3.5 we already seen that <i>T</i> is a normal extension of <i>F</i> if and only if for every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i>. But then, if we take <i>&tau;</i> &in; <i>G</i>(<i>K,T</i>), it results</p>
+</li>
+
+<li><p>In the proposition 9.3.5 we already seen that <i>T</i> is a normal extension of <i>F</i> if and only if for every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i>. But then, if we take <i>&tau;</i> &in; <i>G</i>(<i>K,T</i>), it results</p>
 
 <div class="eq">
 <p><i>&tau;</i>(<i>&sigma;</i>(<i>t</i>)) = <i>&sigma;</i>(<i>t</i>)&emsp;&emsp; &forall;<i>t</i> &in; <i>T</i>, &forall;<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>)</p>
@@ -351,11 +355,46 @@
 <p><i>&sigma;</i><sup>−1</sup><i>&tau;</i> = <i>t</i>, &emsp; &forall;<i>t</i> &in; <i>T</i>, &forall;<i>&tau;</i> &in; <i>G</i>(<i>K,T</i>), &forall;<i>&tau;</i> &in; <i>G</i>(<i>K,T</i>)</p>
 </div>
 
-<p>Then, since <i>&sigma;</i>(<i>t</i>) is fixed by <i>&tau;</i> and <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, as <i>K</i> is normal extension, follows that <i>&sigma;</i>(<i>t</i>) &in; <i>T</i>. <br> We prove c). Since <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i> for every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), then every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) induces an automorphism <i>&sigma;</i>' &in; <i>G</i>(<i>T,F</i>), defined by</p>
+<p>Then, since <i>&sigma;</i>(<i>t</i>) is fixed by <i>&tau;</i> and <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, as <i>K</i> is normal extension, follows that <i>&sigma;</i>(<i>t</i>) &in; <i>T</i>. </p>
+
+</li>
+
+<li><p>Since <i>&sigma;</i>(<i>T</i>) &subseteq; <i>T</i> for every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>), then every <i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) induces an automorphism <i>&sigma;</i>' &in; <i>G</i>(<i>T,F</i>), defined by</p>
 
 <div class="eq">
 <p><i>&sigma;</i>'(<i>t</i>) = <i>&sigma;</i>(<i>t</i>) &emsp;&emsp; &forall;<i>t</i> &in; <i>T</i></p>
 </div>
+
+<p>Clearly <i>&sigma;</i>'(<i>a</i>) = <i>a</i> &forall;<i>a</i> &in; <i>F</i>, hence <i>&sigma;</i>' &in; <i>G</i>(<i>T,F</i>). The mapping</p>
+
+<div class="eq">
+<p><i>&phi;</i> : <i>G</i>(<i>K,F</i>) ⟶ <i>G</i>(<i>T,F</i>)<br>
+<i>&sigma;</i> ⟼ <i>&sigma;</i>'</p>
+</div>
+
+<p>is a homomorphism of <i>G</i>(<i>K,F</i>) onto <i>G</i>(<i>T,F</i>) whose kernel is</p>
+
+<div class="eq">
+<p>Ker <i>&phi;</i> := {<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) | <i>&sigma;</i>' = <i>e</i><sub><i>G</i>(<i>T,F</i>)</sub>} = {<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) | <i>&sigma;</i>'(<i>t</i>) = <i>t</i> &forall;<i>t</i> &in; <i>T</i> } = <i>G</i>(<i>T,F</i>)</p>
+</div>
+
+<p>By the fundamental homomorphism theorem</p>
+
+<div class="eq">
+<p>Im <i>&phi;</i> ≃ <i>G</i>(<i>K,F</i>) /<i>G</i>(<i>T,F</i>)</p>
+</div>
+
+<p>hence</p>
+
+<div class="eq">
+<p>|Im <i>&phi;</i>| = |<i>G</i>(<i>K,F</i>)| /|<i>G</i>(<i>T,F</i>)| = [<i>T</i>: <i>F</i>] = |<i>G</i>(<i>T,F</i>|</p>
+</div>
+
+<p>thus Im <i>&phi;</i> = <i>G</i>(<i>K,T</i>), which proves the claim. &emsp;□</p>
+
+</li>
+
+</ol>
 
 <section aria-label="End">
 <a href="Galois.html">«Galois groups</a>

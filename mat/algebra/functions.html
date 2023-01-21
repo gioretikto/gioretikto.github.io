@@ -9,14 +9,15 @@
 </head>
 
 <body>
+
 <nav>
 	<ul>
 		<li><a class="navbar" href="../../index.html">Home</a></li>
-		<li><a class="navbar" href="index.html">Algebra</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
 	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>Functions</h1>
 
@@ -72,7 +73,7 @@
 
 <p><b>Definition 1.4.4</b> A <b>function</b> <i>f</i> from a set <i>X</i> to a set <i>Y</i> is a relation on <i>X</i> and <i>Y</i>, i.e., it is a subset <i>f</i> &subseteq; <i>X</i> x <i>Y</i> that satisfies the special property that</p>
 
-	<blockquote>for all <i>x</i> &in; <i>X</i> there exists exactly one <i>y</i> &in; <i>Y</i> such that (<i>x,y</i>) &in; <i>f</i></blockquote>
+<blockquote>for all <i>x</i> &in; <i>X</i> there exists exactly one <i>y</i> &in; <i>Y</i> such that (<i>x,y</i>) &in; <i>f</i></blockquote>
 
 <p>In this case we write <i>f</i>(<i>x</i>) = <i>y</i> instead of (<i>x,y</i>) &in; <i>f</i>. We use the notation <i>f</i>: <i>X</i> ⟶ <i>Y</i> to represent a function <i>f</i> from <i>X</i> to <i>Y</i>. We call <i>X</i> the <b>domain</b> of the function <i>f</i> and <i>Y</i> the <b>codomain</b> of the function <i>f</i>. &emsp;□</p>
 
@@ -127,7 +128,7 @@
 
 <p>Many authors say there extists a "one to one correspondence" to connete bijection. We avoid this term, since it can be easily confused with a "one to one mapping", that is the alternative name for injective function.</p>
 
-<p><p><b>Definition 1.4.7.</b> If <i>f</i>: <i>A</i> → <i>B</i> a bijective function, then is also <b>invertible</b>. That is there exists the function <i>f</i><sup>−1</sup>: <i>B</i> → <i>A</i> such that every <i>y</i> &in; <i>B</i> is mapped to a unique element <i>x</i> &in; <i>A</i>; we have that:</p>
+<p id="inverse"><b>Definition 1.4.7.</b> If <i>f</i>: <i>A</i> → <i>B</i> a bijective function, then is also <b>invertible</b>. That is there exists the function <i>f</i><sup>−1</sup>: <i>B</i> → <i>A</i> such that every <i>y</i> &in; <i>B</i> is mapped to a unique element <i>x</i> &in; <i>A</i>; we have that:</p>
 
 <div class="eq">
 <p><i>f</i><sup>−1</sup> (<i>f</i>(<i>x</i>)) = <i>x</i>, &emsp; &forall;<i>x</i> &in; <i>A</i>; &emsp; <i>f</i>(<i>f</i><sup>−1</sup> (<i>y</i>)) = <i>y</i>, &emsp; &forall;<i>y</i> &in; <i>Y</i>;</p>
@@ -203,9 +204,7 @@
 	<li><p>If |<i>A</i>| = |<i>T</i>|, then <i>f</i> is bijective, iff, <i>f</i> is both injective and surjective.</p></li>
 </ol>
 
-<div id="welldefined">
-
-<h2>Well-defined functions</h2>
+<h2 id="welldefined">Well-defined functions</h2>
 
 <p>The condition that a function must be <i>well defined</i> means that <i>f</i> has a definition that assigns it a unique value</p>
 
@@ -247,10 +246,7 @@
 
 <p>so <i>f</i> is well defined. &emsp;■</p>
 
-</div>
-
-<div id="characteristic_function"/>
-<h2>Characteristic function</h2>
+<h2 id="characteristic_function">Characteristic function</h2>
 
 <p><b>Notation 1.4.16</b> The writing “<i>B<sup>A</sup></i>”, or “Fun(<i>A</i>,<i>B</i>)”, is used to indicate the set {<i>f</i> | <i>f</i>: <i>A</i> → <i>B</i>}, of all functions from <i>A</i> to <i>B</i>. Particularly the symbol <b>2</b> indicates the set of two elements {0,1}. So for example <b>2</b><sup><i>X</i></sup> denotes the totality of mappings of <i>X</i> into the set {0,1}. &emsp;□</p>
       
@@ -319,7 +315,7 @@
 <p><i>&theta;</i>: 𝓟(<i>X</i>) → <b>2</b><sup>X</sup></i></p>
 </div>
 
-<p>maps every element <i>A</i> of 𝓟(<i>X</i>) to its characteristic function <i>&chi;<sub>A</sub></i>, is bijective. We have to prove both surjectivity and injectivity of <i>&chi;<sub>A</sub></i>. We first show that it is one-to-one. Suppose <i>&theta;</i>(<i>A</i>) = <i>&theta;</i>(<i>B</i>) where <i>A, B</i> &in; 𝓟(<i>X</i>). We must show <i>A</i> = <i>B</i>. Let <i>x</i> &in; <i>A</i>. Then <i>&theta;</i>(<i>A</i>) = <i>&chi;<sub>A</sub></i> that is <i>&theta;</i>(<i>A</i>) is a function from <i>X</i> to <b>2</b><sup>X</sup></i>. Let <i>x</i> &in; <i>A</i> then <i>&chi;<sub>A</sub></i>(<i>x</i>) = 1, so <i>&chi;<sub>B</sub></i>(<i>x</i>) = 1, which means <i>x</i> &in; <i>B</i>. Thus <i>A</i> &subset; <i>B</i> (&forall;<i>x</i> in <i>X</i> we've <i>&chi;<sub>A</sub></i>(<i>x</i>) = 1 ⇒ &chi;<sub>B</sub>(<i>x</i>) = 1, iff <i>A</i> &subset; <i>B</i>). Similarly <i>B</i> &subset; <i>A</i> and so <i>A</i> = <i>B</i>. Next to prove that <i>&theta;</i> is onto, let <i>f</i> &in; {0,1}<sup><i>X</i></sup>. <i>f</i> defines a unique subset <i>A</i> = <i>f</i><sup>−1</sup>{1} of <i>X</i> and it is evidently the characteristic function of the subset <i>A</i> of <i>X</i>. So <i>f</i> = <i>&chi;<sub>A</sub></i> = <i>&theta;</i>(<i>A</i>).□</p>
+<p>maps every element <i>A</i> of 𝓟(<i>X</i>) to its characteristic function <i>&chi;<sub>A</sub></i>, is bijective. We have to prove both surjectivity and injectivity of <i>&chi;<sub>A</sub></i>. We first show that it is one-to-one. Suppose <i>&theta;</i>(<i>A</i>) = <i>&theta;</i>(<i>B</i>) where <i>A, B</i> &in; 𝓟(<i>X</i>). We must show <i>A</i> = <i>B</i>. Let <i>x</i> &in; <i>A</i>. Then <i>&theta;</i>(<i>A</i>) = <i>&chi;<sub>A</sub></i> that is <i>&theta;</i>(<i>A</i>) is a function from <i>X</i> to <b>2</b><sup>X</sup></i>. Let <i>x</i> &in; <i>A</i> then <i>&chi;<sub>A</sub></i>(<i>x</i>) = 1, so <i>&chi;<sub>B</sub></i>(<i>x</i>) = 1, which means <i>x</i> &in; <i>B</i>. Thus <i>A</i> &subset; <i>B</i> (&forall;<i>x</i> in <i>X</i> we've <i>&chi;<sub>A</sub></i>(<i>x</i>) = 1 ⇒ <i>&chi;<sub>B</sub></i>(<i>x</i>) = 1, iff <i>A</i> &subset; <i>B</i>). Similarly <i>B</i> &subset; <i>A</i> and so <i>A</i> = <i>B</i>. Next to prove that <i>&theta;</i> is onto, let <i>f</i> &in; {0,1}<sup><i>X</i></sup>. <i>f</i> defines a unique subset <i>A</i> = <i>f</i><sup>−1</sup>{1} of <i>X</i> and it is evidently the characteristic function of the subset <i>A</i> of <i>X</i>. So <i>f</i> = <i>&chi;<sub>A</sub></i> = <i>&theta;</i>(<i>A</i>).□</p>
 
 <p><b>Property 1.4.18</b>. Let |<i>A</i>| = <i>n</i> and |<i>B</i>| = <i>m</i>, then <i>B<sup>A</sup></i> has cardinality <i>m<sup>n</sup></i>.</p>
 
@@ -363,7 +359,7 @@
 <a href="composite_functions.html">Composite Functions&#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>
