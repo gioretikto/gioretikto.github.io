@@ -361,7 +361,7 @@
 <p><i>&tau;</i> (<i>&sigma;</i>(<i>t</i>)) = <i>&sigma;</i>(<i>t</i>), &emsp; &forall;<i>t</i> &in; <i>T</i>, &emsp;&forall;<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>),&emsp; &forall;<i>&tau;</i> &in; <i>G</i>(<i>K,T</i>)</p>
 </div>
 
-<p>Then, since <i>&sigma;</i>(<i>t</i>) is fixed by <i>&tau;</i> and that <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, as <i>K</i> is normal extension, it follows that <i>&sigma;</i>(<i>t</i>) &in; <i>T</i>. </p>
+<p>Then, since <i>&sigma;</i>(<i>t</i>) is fixed by <i>&tau;</i> and that <i>K</i><sub><i>G</i>(<i>T,H</i>)</sub> = <i>T</i>, as <i>K</i> is a <i>normal</i> extension, it follows that <i>&sigma;</i>(<i>t</i>) &in; <i>T</i>.</p>
 
 </li>
 
@@ -402,12 +402,37 @@
 
 </ol>
 
-<p><b>9.3.8 Example</b>. We illustrate Galois correspondence theorem for the polynomial <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 2 &in; ℚ[<i>x</i>]. It results <i>x</i><sup>3</sup> − 2 = (<i>x</i> − ∛2) (<i>x</i> − <i>&omega;</i>∛2)(<i>x</i> − <i>&omega;</i><sup>2</sup>∛2), with <i>&omega;</i> primitive cubic root of the unit. The splitting field <i>K</i> of <i>x</i><sup>3</sup> − 2 is <i>K</i> = ℚ(∛2, <i>&omega;</i>). An element <i>&simga;</i> &in; <i>G</i>(<i>K</i>,ℚ) is found by knowing <i>&sigma;</i>(∛2) and <i>&sigma;</i>(<i>&omega;</i>). </p>
+<p><b>9.3.8 Example</b>. We illustrate Galois correspondence theorem for the polynomial <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − 2 &in; ℚ[<i>x</i>]. It results <i>x</i><sup>3</sup> − 2 = (<i>x</i> − ∛2) (<i>x</i> − <i>&omega;</i>∛2)(<i>x</i> − <i>&omega;</i><sup>2</sup>∛2), with <i>&omega;</i> primitive cubic root of the unit. The splitting field <i>K</i> of <i>x</i><sup>3</sup> − 2 is <i>K</i> = ℚ(∛2, <i>&omega;</i>). An element <i>&sigma;</i> &in; <i>G</i>(<i>K</i>,ℚ) is found by knowing <i>&sigma;</i>(∛2) and <i>&sigma;</i>(<i>&omega;</i>). The minimal polynomial over ℚ, of ∛2 is <i>x</i><sup>3</sup> − 2, and the minimal polynomial of <i>&omega;</i> is <i>x</i><sup>2</sup> + <i>x</i> + 1. There exist in total six automorphisms</p>
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>2</sub>(∛2) = ∛2</td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&omega;</i>) = <i>&omega;</i></td> <td><i>&sigma;</i><sub>2</sub>(∛2) = <i>&omega;</i> ∛2</td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub> = <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i><sub>4</sub>(<i>&omega;</i>) = <i>&omega;</i></td> <td><i>&sigma;</i><sub>4</sub>(∛2) = <i>&omega;</i><sup>2</sup> ∛2</td> </tr>
+
+<tr><td><i>&sigma;</i><sub>5</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>5</sub>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>5</sub>(∛2) = <i>&omega;</i><sup>2</sup> ∛2</td></tr>
+
+<tr><td><i>&sigma;</i><sub>6</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>6</sub>(∛2) = <i>&omega;</i> ∛2</td></tr>
+
+</table>
+
+<p>It results <i>G</i>(<i>K</i>, ℚ) ≃ <i>S</i><sub>3</sub>. The non-trivial subgroups of <i>G</i>(<i>K</i>, ℚ) are <i>H</i><sub>1</sub> = ⟨<i>&sigma;</i><sub>2</sub>⟩, <i>H</i><sub>2</sub> = ⟨<i>&sigma;</i><sub>5</sub>⟩, <i>H</i><sub>4</sub> = ⟨<i>&sigma;</i><sub>3</sub>⟩. |<i>H</i><sub>1</sub>| = |<i>H</i><sub>2</sub>| = |<i>H</i><sub>3</sub>| = 2, |<i>H</i><sub>4</sub>| = 3. The fixed fields are the following</p>
+
+<div class="eq">
+<p><i>K</i><sub><i>H</i><sub>1</sub></sub> = ℚ(∛2), &emsp; [ℚ(∛2) : ℚ] = 3<br>
+<i>K</i><sub><i>H</i><sub>2</sub></sub> = ℚ(<i>&omega;</i> ∛2), &emsp; [ℚ(<i>&omega;</i> ∛2) : ℚ] = 3<br>
+<i>K</i><sub><i>H</i><sub>3</sub></sub> = ℚ(<i>&omega;</i><sup>2</sup> ∛2), &emsp; [ℚ(<i>&omega;</i><sup>2</sup> ∛2) : ℚ] = 3<br>
+<i>K</i><sub><i>H</i><sub>4</sub></sub> = ℚ(<i>&omega;</i>), &emsp; [ℚ(<i>&omega;</i>) : ℚ] = 2&emsp;■</p>
+</div>
+
+<p><b>9.3.9 Proposition</b>. Let <i>n</i> &in; ℕ.  The Galois group of the polynomial <i>x<sup>n</sup></i> − 1 is isomorphic to the multiplicative group <i>U</i>(ℤ<sub><i>n</i></sub>) of the invertible elements of ℤ<sub><i>n</i></sub>. </p>
+
+<p><b>Proof</b>. The splitting field of <i>x<sup>n</sup></i> − 1 over ℚ is ℚ(<i>&zeta;</i>), where <i>&zeta;</i> is a <i>n</i>th primitive root of unity. As seen in <a href="Galois.html#examples">example 9.2.17</a>, <i>U</i>(ℤ<sub><i>n</i></sub> ≃ <i>G</i>(<i>K</i>, ℚ). &emsp;□</p>
 
 <section aria-label="End">
 <a href="Galois.html">«Galois groups</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides»</a>
+<a href="Galois_applications.html">Applications of Galois correspondence theorem»</a>
 </section>
 
 </article>

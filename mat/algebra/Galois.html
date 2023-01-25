@@ -206,7 +206,7 @@
 <p><i>K</i><sub>G</i>(<i>F,K</i>)</sub> &supseteq; <i>F</i></p>
 </div>
 
-<p><b>9.2.14 Example</b>. Let <i>K</i> = ℂ, field of the complex numbers and let <i>F</i> = ℝ. <br> If <i>&sigma;</i> &in; <i>G</i>(ℂ, ℝ), since ℂ = ℝ(<i>i</i>). A field automorphism, is such that <i>&sigma;</i>(<i>x</i>+<i>y</i>) = <i>&sigma;</i>(x) + <i>&sigma;</i>(y), and <i>&sigma;</i>(<i>xy</i>) = <i>&sigma;</i>(<i>x</i>) <i>&sigma;</i>(<i>y</i>), so</p>
+<p id="examples"><b>9.2.14 Example</b>. Let <i>K</i> = ℂ, field of the complex numbers and let <i>F</i> = ℝ. <br> If <i>&sigma;</i> &in; <i>G</i>(ℂ, ℝ), since ℂ = ℝ(<i>i</i>). A field automorphism, is such that <i>&sigma;</i>(<i>x</i>+<i>y</i>) = <i>&sigma;</i>(x) + <i>&sigma;</i>(y), and <i>&sigma;</i>(<i>xy</i>) = <i>&sigma;</i>(<i>x</i>) <i>&sigma;</i>(<i>y</i>), so</p>
 
 <div class="eq">
 <p><i>&sigma;</i>(<i>a</i> + <i>bi</i>) = <i>a</i> + <i>b &sigma;</i> &emsp;<i>a, b</i> &in; ℝ</p>
@@ -246,7 +246,7 @@
 
 <p>In this case, <i>K</i><sub>G</i>(<i>F,K</i>)</sub>, which as we know must contain <i>F</i>, is equal to <i>F</i>. &emsp;□</p>
 
-<p><b>9.2.15 Example</b>. Let <i>K</i> = ℚ(∛5) and <i>F</i> = ℚ. We can express <i>K</i> as</p>
+<p><b>9.2.15 Example</b>. Let <i>K</i> = ℚ(∛5) and <i>F</i> = ℚ. By Eisenstein and Gauss <i>x</i><sup>3</sup> − 5 is irreducible in ℚ[<i>x</i>], so [ℚ(∛5): ℚ] = 3 and aq basis is {1, ∛5, ∛5<sup>2</sup>}. So we can express <i>K</i> as</p>
 
 <div class="eq">
 <p>ℚ(∛5) = {<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> ∛5 + <i>a</i><sub>2</sub> ∛5<sup>2</sup> | <i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub> &in; ℚ}</p>
@@ -276,7 +276,35 @@
 <p>1 = |<i>G</i>(ℚ(∛5), ℚ)| &lt; |ℚ(∛5) : ℚ| = 3. &emsp;□</p>
 </div>
 
-<p><b>9.2.16 Example</b>. Let <i>&zeta;</i> a primitive <i>n</i>th root of unity. We calculate ℚ(<i>&zeta;</i>). We know <i>&zeta;</i> satisfies the <i>n</i>th cyclotomic polynomial <i>&Phi;<sub>n</sub></i>(<i>x</i>) which is irreducible over ℚ, thus the minimal polynomial of <i>&zeta;</i> over ℚ. It follows that</p>
+<p><b>9.2.16 Example</b>. Let <i>K</i> = ℚ(∛5), <i>&omega;</i>), where <i>&omega;</i> is a primitive third root of unity. Let's calculate ℚ(∛5), <i>&omega;</i>) as vector spsce over ℚ. We start by ℚ(∛5) (already calculated in the previous exercise) and then adjoin <i>&omega;</i>. <i>&omega;</i> is root of the irreducible polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 over ℚ(∛5) (as over ℚ, see <a href="exercises_splitting_fields.html">exercise 7.d</a>), so</p>
+
+<div class="eq">
+<p>[ℚ(∛5,<i>&omega;</i>) : ℚ] = [ℚ(∛5,<i>&omega;</i>) : ℚ(∛5)] = [ℚ(∛5) : ℚ] = 2 ⋅ 3 = 6.</p>
+</div>
+
+<p>Since a basis of ℚ(∛5,<i>&omega;</i>) over ℚ(∛5) is given by {1, <i>&omega;</i>} and a basis of ℚ(∛5) over ℚ is {1, ∛5, ∛5<sup>2</sup>} we have that a basis of ℚ(∛5,<i>&omega;</i>) over ℚ is given by</p>
+
+<div class="eq">
+<p>1, ∛5, ∛5<sup>2</sup>, <i>&omega;</i>, ∛5<sup>2</sup><i>&omega;</i>, ∛5<sup>2</sup><i>&omega;</i></p>
+</div>
+
+<p>The roots of <i>x</i><sup>3</sup> − 5, are ∛5, ∛5<i>&omega;</i>, ∛5<i>&omega;</i><sup>2</sup>.<br> &omega; is the root of <i>x</i><sup>3</sup> − 1 which is reducible as (<i>x</i> − 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1), only the last is irreducible over ℚ with roots −1/2 ± √3<i>i</i>/2. There are in total six automoprhisms</p>
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>2</sub>(∛5) = ∛5</td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&omega;</i>) = <i>&omega;</i></td> <td><i>&sigma;</i><sub>2</sub>(∛5) = <i>&omega;</i> ∛5</td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub> = <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i><sub>4</sub>(<i>&omega;</i>) = <i>&omega;</i></td> <td><i>&sigma;</i><sub>4</sub>(∛5) = <i>&omega;</i><sup>2</sup> ∛5</td> </tr>
+
+<tr><td><i>&sigma;</i><sub>5</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>5</sub>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>5</sub>(∛5) = <i>&omega;</i><sup>2</sup> ∛5</td></tr>
+
+<tr><td><i>&sigma;</i><sub>6</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>6</sub>(∛5) = <i>&omega;</i> ∛5</td></tr>
+
+</table>
+
+<p>it results <i>G</i>(<i>K</i>, ℚ) ≃ <i>S</i><sub>3</sub>. &emsp;■</p>
+
+<p><b>9.2.17 Example</b>. Let <i>&zeta;</i> a primitive <i>n</i>th root of unity. We calculate ℚ(<i>&zeta;</i>). We know <i>&zeta;</i> satisfies the <i>n</i>th cyclotomic polynomial <i>&Phi;<sub>n</sub></i>(<i>x</i>) which is irreducible over ℚ, thus the minimal polynomial of <i>&zeta;</i> over ℚ. It follows that</p>
 
 <div class="eq">
 <p>[ℚ(<i>&zeta;</i>) : ℚ] = <i>&phi;</i>(<i>n</i>)</p>
@@ -287,7 +315,6 @@
 <div class="eq">
 <p><i>&Psi;</i> : (<i>U</i>(ℤ<sub><i>n</i></sub>),⋅) ⟶ (<i>G</i>(ℚ(<i>&zeta;</i>), ℚ), ∘)<br>
 <i>k̄</i> ⟶ <i>&sigma;<sub>k</sub></i></p>
-
 </div>
 
 <p>This is a bijective mapping. We prove it is a group homomorphism. If <i>ī, j̄</i> &in; <i>U</i>(ℤ<sub><i>n</i></sub>), since we are dealing with a multiplicative group we have that <i>ij</i> ≡ <i>k</i> (mod <i>n</i>). <i>G</i>(ℚ(<i>&zeta;</i>), ℚ) is a group under composition of function so we show that <i>&sigma;<sub>i</sub> &sigma;<sub>j</sub></i> = <i>&sigma;<sub>k</sub></i>, indeed:</p>
@@ -330,7 +357,7 @@
 
 <p>The following properties hold true.</p>
 
-<p><b>9.2.17 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>G</i>(<i>K,F</i>) its Galois group. For every subgroup <i>H</i> of <i>G</i>(<i>K,F</i>) and every intermediate subfield <i>T</i> such that <i>F</i> &subseteq; <i>T</i> &subseteq; <i>K</i>, we have</p>
+<p><b>9.2.18 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>G</i>(<i>K,F</i>) its Galois group. For every subgroup <i>H</i> of <i>G</i>(<i>K,F</i>) and every intermediate subfield <i>T</i> such that <i>F</i> &subseteq; <i>T</i> &subseteq; <i>K</i>, we have</p>
 
 <ol type="a">
 	<li><p><i>G</i>(<i>K,K</i>) = id;</p></li>
@@ -383,17 +410,16 @@
 
 </ol>
 
-<p><b>9.2.18 Proposition</b>. In the field ℝ of all real numbers, the identity mapping of ℝ is the only automorphism.</p>
+<p><b>9.2.19 Proposition</b>. In the field ℝ of all real numbers, the identity mapping of ℝ is the only automorphism.</p>
 
 <p>Before proving it we introduce two lemmas.</p>
 
-<p><b>9.2.19 Lemma</b>. Let <i>ϕ</i>: ℝ → ℝ be an automorphism of the field of real numbers ℝ, then for any positive real number <i>x</i>
+<p><b>9.2.20 Lemma</b>. Let <i>ϕ</i>: ℝ → ℝ be an automorphism of the field of real numbers ℝ, then for any positive real number <i>x</i>
 , we have <i>ϕ</i>(<i>x</i>) &gt; 0</p>
 
 <p><b>Proof</b>. <i>ϕ</i>(<i>x</i><sup>2</sup>) = <i>ϕ</i>(<i>x</i>) <i>ϕ</i>(<i>x</i>) &ge; 0. Note that since <i>ϕ</i>(0) = 0 and <i>ϕ</i> is bijective, <i>ϕ</i>(<i>x</i>) ≠ 0 for any <i>x</i> ≠ 0. Thus, it follows that <i>ϕ</i>(<i>x</i>) &gt; 0 for each positive real number <i>x</i>.&emsp;□</p>
 
-<p><b>9.2.20 Lemma</b>. For any <i>x,y</i> ∈ ℝ such that <i>x</i> &gt; <i>y</i>, we have <i>ϕ</i>(<i>x</i>) &gt; <i>ϕ</i>(<i>y</i>) 
-. Thus, in any automorphism of the field of real numbers the order of the elements is preserved.</p>
+<p><b>9.2.21 Lemma</b>. For any <i>x,y</i> ∈ ℝ such that <i>x</i> &gt; <i>y</i>, we have <i>ϕ</i>(<i>x</i>) &gt; <i>ϕ</i>(<i>y</i>). Thus, in any automorphism of the field of real numbers the order of the elements is preserved.</p>
 
 <p><b>Proof</b>. Since <i>x</i> &gt; <i>y</i>, we have <i>x</i>−<i>y</i> &gt; 0 and it follows from the previous lemma that</p>
 
@@ -403,10 +429,9 @@
 
 <p>Hence, <i>ϕ</i>(<i>x</i>) &gt; <i>ϕ</i>(<i>y</i>).&emsp;□</p>
 
-<p><b>Proof of 9.2.18</b>. Let <i>&sigma;</i> an automorphsim of ℝ, and let <i>a,b</i> &in; ℝ such that <i>a</i> &lt; <i>b</i>. Then by the previous lemma <i>&sigma;</i>(<i>a</i>) &lt; <i>&sigma;</i>(<i>b</i>). Suppose that there exists <i>a</i> &in; ℝ such that <i>&sigma;</i>(<i>a</i>) &gt; <i>a</i>. Let <i>q</i> a rational number, such that <i>&sigma;</i>(<i>a</i>) &gt; <i>q</i> &gt; <i>a</i>, we have <i>&sigma;</i>(<i>q</i>) = <i>q</i>. This leads to a contradiction since <i>q</i> &gt; <i>a</i> but <i>&sigma;</i>(<i>a</i>) &gt; <i>&sigma;</i>(<i>q</i>) = <i>q</i>. &emsp;□</p>
+<p><b>Proof of 9.2.19</b>. Let <i>&sigma;</i> an automorphsim of ℝ, and let <i>a,b</i> &in; ℝ such that <i>a</i> &lt; <i>b</i>. Then by the previous lemma <i>&sigma;</i>(<i>a</i>) &lt; <i>&sigma;</i>(<i>b</i>). Suppose that there exists <i>a</i> &in; ℝ such that <i>&sigma;</i>(<i>a</i>) &gt; <i>a</i>. Let <i>q</i> a rational number, such that <i>&sigma;</i>(<i>a</i>) &gt; <i>q</i> &gt; <i>a</i>, we have <i>&sigma;</i>(<i>q</i>) = <i>q</i>. This leads to a contradiction since <i>q</i> &gt; <i>a</i> but <i>&sigma;</i>(<i>a</i>) &gt; <i>&sigma;</i>(<i>q</i>) = <i>q</i>. &emsp;□</p>
 
-
-<p><b>Exercise 9.2.19</b>. Determine the Galois group <i>G</i>(ℚ(∛2), ℚ) and its fixed field.</p></li>
+<p><b>Exercise 9.2.22</b>. Determine the Galois group <i>G</i>(ℚ(∛2), ℚ) and its fixed field.</p></li>
 
 <p>All the images of ∛2 are to be searched among the roots of <i>x</i><sup>3</sup> − 2. Since ℚ(∛2) has only one root, the only automorphism is the identity, <i>G</i>(ℚ(∛2), ℚ) = {id}, whereas <i>I</i>(ℚ(∛2), ℚ) has three elements. It is obvious that its fixed field is the entire ℚ(∛2). &emsp;■</p>
 
