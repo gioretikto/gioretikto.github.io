@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exercises on Galois correspondence theorem">
+	<title>Exercises on Galois correspondence theorem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Exercises on Galois correspondence theorem</h1>
+
+<ol>
+
+	<li><p>Calculate the Galois group of the following polynomials in ℚ[<i>x</i>]</p>
+
+	<ol type="a">
+		<li><p><i>x</i><sup>3</sup> + 2<i>x</i><sup>2</sup> + 5<i>x</i> + 10</p></li>
+		<li><p><i>x</i><sup>4</sup> − 7<i>x</i><sup>2</sup> + 10</p></li>
+		<li><p><i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6<i>x</i> + 12</p></li>
+		<li><p><i>x</i><sup>3</sup> − 1</p></li>
+		<li><p><i>x</i><sup>3</sup> − 7</p></li>
+		<li><p><i>x</i><sup>4</sup> − 5</p></li>
+	</ol>
+
+	</li>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+
+	<li>
+		<ol type="a">
+		<li><p><i>x</i><sup>3</sup> + 2<i>x</i><sup>2</sup> + 5<i>x</i> + 10 = (<i>x</i><sup>2</sup> + 5) (<i>x</i> + 2). The splitting field is <i>K</i> = ℚ(√5i). One automorphism is the identity and the other <i>&sigma;</i>(√5<i>i</i>) = −√5<i>i</i>; So {id, <i>&sigma;</i>} ≅ ℤ₂.&emsp; </p></li>
+
+		<li><p>If we replace <i>x</i><sup>2</sup> = <i>y</i> we get <i>y</i><sup>2</sup> −7<i>y</i> + 10. We find the two roots <i>y</i> = 2 and <i>y</i> = 5, so (<i>x</i><sup>2</sup> − 2)(<i>x</i><sup>2</sup> − 5), and each of the factor is irreducible over ℚ. Hence the splitting field is ℚ(√2,√5). The four roots of thr original polynomial are √2, −√2, √5, −√5, and an automorhpsms of the splitting field has to send each thing in {√2, −√2} to something in there, similarly for {√5, −√5}. If <i>f</i>(<i>a</i>) = −<i>a</i>, then automatically <i>f</i>(−<i>a</i>) = <i>a</i>, because f(−<i>a</i>) = −f(<i>a</i>) = −(−<i>a</i>) = <i>a</i>. Further, since <i>f</i> is an automorphism, we must have f(a)<sup>2</sup> = <i>f</i>(<i>a</i><sup>2</sup>)</p>
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(√2) = −√2</td> <td><i>&sigma;</i><sub>2</sub>(√5) = −√5</td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>3</sub>(√2) = −√2</td> <td><i>&sigma;</i><sub>3</sub>(√5) = √5</td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub>: <td><i>&sigma;</i><sub>4</sub>(√2) = √2</td> <td><i>&sigma;</i><sub>4</sub>(√5) = −√5</td> </tr>
+</table>
+
+<p><i>G</i>(ℚ(√2,√5),ℚ) ≅ ℤ₂ x ℤ₂. &emsp;■</p></li>
+
+<li><p>A factor is (<i>x</i> + 2). Dividing the polynomial by <i>x</i> + 2 yo find x<sup>4</sup>−5y<sup>2</sup>+6; by substitution of <i>y</i> = <i>x</i><sup>2</sup> I've found two roots +3;+2, so <i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6<i>x</i> + 12 = (<i>x</i> + 2) (<i>x</i><sup>2</sup> − 3) (<i>x</i><sup>2</sup> − 2). So the splitting field is ℚ(√2,√3). The four roots of thr original poly are −2, √2, −√2, √3, −√3. So we have G(ℚ(√2,√3),ℚ) with the following elements</p>
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(√2) = −√2</td> <td><i>&sigma;</i><sub>2</sub>(√3) = −√3</td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>3</sub>(√2) = −√2</td> <td><i>&sigma;</i><sub>3</sub>(√3) = √3</td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub>: <td><i>&sigma;</i><sub>4</sub>(√2) = √2</td> <td><i>&sigma;</i><sub>4</sub>(√3) = −√3</td> </tr>
+</table>
+
+<p><i>G</i>(ℚ(√2,√3),ℚ) ≅ ℤ₂ x ℤ₂. &emsp;■</p></li>
+
+<li><p>ℚ(<i>&zeta;</i>) is the splitting field with <i>&zeta;</i> = <i>e</i><sup>i2&pi;/3</sup> = cos 2&pi;/3 + <i>i</i> sin 2&pi;; cos value is −1/2, that sin value is √3/2., so <i>&zeta;</i> = (−1 + √3<i>i</i>)/2. The Galois group <i>G</i>(ℚ(<i>&zeta;</i>), ℚ) ≅ ℤ₂ since it contains the ideintity automorphism and the automorphism such that <i>&zeta;</i> ⟶ <i>&zeta;</i><sup>2</sup>. &emsp;■</p></li>
+
+<li><p>The roots are ∛7, ∛7&zeta;, ∛7<i>&zeta;</i><sup>2</sup>. So the splitting field is ℚ(∛7, <i>&zeta;</i>).</p>
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&zeta;</i>) = <i>&zeta;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>2</sub>(∛7) = ∛7</td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&zeta;</i>) = <i>&zeta;</i></td> <td><i>&sigma;</i><sub>2</sub>(∛7) = <i>&zeta;</i> ∛7</td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub> = <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i><sub>4</sub>(<i>&zeta;</i>) = <i>&zeta;</i></td> <td><i>&sigma;</i><sub>4</sub>(∛7) = <i>&zeta;</i><sup>2</sup> ∛7</td> </tr>
+
+<tr><td><i>&sigma;</i><sub>5</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>5</sub>(<i>&zeta;</i>) = <i>&zeta;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>5</sub>(∛7) = <i>&zeta;</i><sup>2</sup> ∛7</td></tr>
+
+<tr><td><i>&sigma;</i><sub>6</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i>(<i>&zeta;</i>) = <i>&zeta;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>6</sub>(∛7) = <i>&zeta;</i> ∛7</td></tr>
+
+</table>
+
+<p>So <i>G</i>(ℚ(∛7, <i>&zeta;</i>, ℚ) ≃ S<sub>3</sub>. &emsp;■</p></li>
+
+<li><p></p></li>
+
+</ol>
+
+</li>
+
+</ol>
+
+<section aria-label="End">
+<a href="Galois_extensions.html">«Galois field extensions</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
