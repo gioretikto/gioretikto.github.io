@@ -36,6 +36,8 @@
 	</ol>
 
 	</li>
+
+	<li><p>Calculate the splitting field <i>K</i> and the Galois group of <i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> − 4<i>x</i><sup>2</sup> − 4 &in; ℚ[<i>x</i>]. Determine all subfield of <i>K</i>.</p></li>
 </ol>
 
 <h2>Solutions</h2>
@@ -75,7 +77,7 @@
 <table class="noborder">
 <tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
 <tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&zeta;</i>) = <i>&zeta;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>2</sub>(∛7) = ∛7</td> </tr>
-<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&zeta;</i>) = <i>&zeta;</i></td> <td><i>&sigma;</i><sub>2</sub>(∛7) = <i>&zeta;</i> ∛7</td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>3</sub>(<i>&zeta;</i>) = <i>&zeta;</i></td> <td><i>&sigma;</i><sub>3</sub>(∛7) = <i>&zeta;</i> ∛7</td> </tr>
 <tr><td><i>&sigma;</i><sub>4</sub> = <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i><sub>4</sub>(<i>&zeta;</i>) = <i>&zeta;</i></td> <td><i>&sigma;</i><sub>4</sub>(∛7) = <i>&zeta;</i><sup>2</sup> ∛7</td> </tr>
 
 <tr><td><i>&sigma;</i><sub>5</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>5</sub>(<i>&zeta;</i>) = <i>&zeta;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>5</sub>(∛7) = <i>&zeta;</i><sup>2</sup> ∛7</td></tr>
@@ -101,7 +103,38 @@
 
 <p>so <i>G</i>(ℚ(∜5, <i>i</i>),ℚ) ≃ <i>D</i><sub>4</sub>, the group of symmetries of a square. &emsp;■ </p></li>
 
+<li><p>With the substitution <i>y</i> = <i>x</i><sup>2</sup> we obtain <i>y</i><sup>2</sup> − 4<i>y</i> +2 with roots 2 &pm; √2. The polynomial splits as (<i>x</i><sup>2</sup> − 2 + 2) (<i>x</i><sup>2</sup> + 2 + 2), so the splitting field is ℚ(√(2 + √2) and we have the four root &pm;√(2 + √2) and √(2 - √2). The Galois group  is the following</p>
+
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(√(2 + √2)) = −(2 + √2)</td>  </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>3</sub>(2 + √2) = −(2 + √2)</td> <td><i>&sigma;</i><sub>3</sub>(<i>i</i>) = −<i>i</i></td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub>:</td> <td><i>&sigma;</i><sub>4</sub>(2 + √2) = (2 + √2)</td> <td><i>&sigma;</i><sub>4</sub>(<i>i</i>) = −<i>i</i></td> </tr>
+</table>
+
+<p>so <i>G</i>(ℚ(√(2 + √2), ℚ) ≅ ℤ<sub>4</sub>. &emsp;■</p></li>
+
 </ol>
+
+</li>
+
+<li><p>By substitution <i>y</i> = <i>x</i><sup>2</sup> we have <i>y</i><sup>3</sup> + <i>y</i><sup>2</sup> − 4<i>y</i> − 4 = (<i>y</i> + 1) (<i>y</i><sup>2</sup> − 4) = (<i>x</i><sup>2</sup> + 1) (<i>x</i><sup>2</sup> − 2) (<i>x</i><sup>2</sup> + 2). Its roots are &pm; √2, &pm; <i>i</i>√2. Its splitting field is <i>K</i> = ℚ(√2, <i>i</i>). We have</p>
+
+<div class="eq">
+<p>[ℚ(√2, <i>i</i>) : ℚ] = [ℚ(√2, <i>i</i>) : ℚ(√2)]: [ℚ(√2) : ℚ]
+</div>
+
+<p>Thus <i>K</i> = [ℚ(√2, <i>i</i>) : ℚ] = 4. A basis of <i>K</i> over ℚ, is given by 1, <i>i</i>, √2, <i>i</i>√2. Every <i>&sigma;</i> &in; <i>G</i>(<i>K</i>, ℚ), is given by the images of <i>i</i> and √2. <i>&sigma;</i>(<i>i</i>) can be in {&pm;<i>i</i>} and <i>&sigma;</i>(√2) in {&pm;√2}. We have four automorphisms:</p>
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(√2) = √2</td> <td><i>&sigma;</i><sub>2</sub>(<i>i</i>) = −<i>i</i></td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>3</sub>(√2) = −√2</td> <td><i>&sigma;</i><sub>3</sub>(<i>i</i>) = <i>i</i></td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub>:</td> <td><i>&sigma;</i><sub>4</sub>(√2) = −√2</td> <td><i>&sigma;</i><sub>3</sub>(<i>i</i>) = −<i>i</i></td> </tr>
+
+</table>
+
 
 </li>
 
