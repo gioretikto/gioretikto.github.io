@@ -198,6 +198,18 @@
  
 <p>Notice that <i>φ</i>(4) = |<i>U</i>(ℤ<sub>4</sub>)| = 2, <i>φ</i>(6) = |<i>U</i>(ℤ<sub>6</sub>)| = 2, and <i>φ</i>(8) = |<i>U</i>(ℤ<sub>8</sub>)| = 4.&emsp;■</p>
 
+<p><b>Exercise</b>. Find the last two decimal digits of the decimal number 9<sup>201</sup>.</p>
+
+<p><b>Solution</b>. The last 2 digits of a number will be the remainder when it is divided by 100. This is equivalent to finding the least non-negative residue of 9<sup>201</sup>. Now 9 is coprime to 100, so Euler's theorem (with <i>a</i> = 9 and <i>n</i> = 100, and &phi;(100) = &phi;(25⋅4) = &phi;(2<sup>2</sup>)&phi;(5<sup>2</sup>); &phi;(2<sup>2</sup>) = 4 − 2; &phi;(5<sup>2</sup>) = 25 − 5 = 40; so <i>&phi;</i>(100) = 40. We have thus</p>
+
+<div class="eq">
+<p>9<sup>40</sup> ≡ 1 mod 100</p>
+</div>
+
+<p>9<sup>201</sup> = 9<sup>(40⋅5 + 1)</sup> = (9<sup>40</sup>)<sup>5</sup> ⋅ 9 ≡ 1<sup>5</sup> ⋅ 9  mod 100 ≡ 1 ⋅ 9 = 9 mod 100</p>
+
+<p>So the last two digits are 09. You can write 9 as 9 = 0⋅10<sup>1</sup> + 9. &emsp;■</p>
+
 <section aria-label="End">
 <a href="chinese.html">&#171;Chinese remainder theorem</a>
 <a href="index.html">Index</a>

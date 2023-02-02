@@ -48,7 +48,7 @@
 <p><i>r</i> ⟼ (<i>r</i>, 0)</p>
 </div>
 
-<p>is injective and such that <i>f</i>(<i>r</i> + <i>r'</i>) = <i>f</i>(<i>r</i>) + <i>f</i>(<i>r'</i>) and <i>f</i>(<i>r</i> ⋅ <i>r'</i>)  = <i>f</i>(<i>r</i>) ⋅ <i>f</i>(<i>r'</i>) &forall;<i>r,r'</i> &in; ℝ.</p>
+<p>is an injection, such that <i>f</i>(<i>r</i> + <i>r'</i>) = <i>f</i>(<i>r</i>) + <i>f</i>(<i>r'</i>) and <i>f</i>(<i>r</i> ⋅ <i>r'</i>)  = <i>f</i>(<i>r</i>) ⋅ <i>f</i>(<i>r'</i>) &forall;<i>r,r'</i> &in; ℝ.</p>
 
 <p><b>Definition 4.13.1</b> A <i>complex number</i> is an ordered pair of real numbers, i.e. an element of ℂ = ℝ x ℝ. With respect to the operations defined above, ℂ is a field, containing the real field.</p>
 
@@ -209,7 +209,7 @@
 <p>the product of two complex numbers in trigonometric form is equal to a complex number having as argument the sum of the arguments and as module the product of moduli. The trigonometric form of a complex number is particularly useful to calculate the powers; for every integer <i>n</i> &gt; 0, we have the following relation known as <i>De Moivre Formula</i>, valid for every integer <i>n</i> and every <i>&theta;</i> ∈ ℝ</p>
 
 <div class="eq">
-<p><i>z<sup>n</sup></i> = <i>r<sup>n</sup></i> (cos <i>n&theta;</i> + <i>i</i> sin <i>n&theta;</i>) &emsp; (<b>4.13.1</b>)</p>
+<p><i>ζ<sup>n</sup></i> = <i>r<sup>n</sup></i> (cos <i>n&theta;</i> + <i>i</i> sin <i>n&theta;</i>) &emsp; (<b>4.13.1</b>)</p>
 </div>
 
 <p>it results also</p>
@@ -218,21 +218,19 @@
 <p>[<i>r</i>(cos <i>&theta;</i> + <i>i</i> sin <i>&theta;</i>)]<sup>−1</sup> = <i>r</i><sup>−1</sup> (cos (−<i>&theta;</i>) + <i>i</i>(−sin <i>&theta;</i>)</p>
 </div>
 
-<div id="roots_unity">
-
-<p>Let <i>n</i> is a positive integer greater than 1, and let <i>u</i> and <i>z</i> two complex numbers. If</p>
+<p id="roots_unity">Let <i>n</i> is a positive integer greater than 1, and let <i>u</i> and <i>ζ</i> two complex numbers. If</p>
 
 <div class="eq">
-<p><i>z<sup>n</sup></i> = <i>u</i> &emsp; (<b>4.13.2</b>)</p>
+<p><i>ζ<sup>n</sup></i> = <i>u</i> &emsp; (<b>4.13.2</b>)</p>
 </div>
 
-<p>then <i>z</i> is known as an <b><i>n</i>th root of <i>u</i></b>. Let</p>
+<p>then <i>ζ</i> is known as an <b><i>n</i>th root of <i>u</i></b>. Let</p>
 
 <div class="eq">
-<p><i>u</i> = <i>r</i>(cos <i>&theta;</i> + <i>i</i> sin <i>&theta;</i>), &emsp; <i>z</i> = <i>&rho;</i>(cos <i>&phi;</i> + <i>i</i> sin <i>&phi;</i>)</p>
+<p><i>u</i> = <i>r</i>(cos <i>&theta;</i> + <i>i</i> sin <i>&theta;</i>), &emsp; <i>ζ</i> = <i>&rho;</i>(cos <i>&phi;</i> + <i>i</i> sin <i>&phi;</i>)</p>
 </div>
 
-<p>since <i>z<sup>n</sup></i> = <i>u</i>, we can deduce that <i>r</i> = <i>&rho;<sup>n</sup></i>, i.e. <i>&rho;</i> = <i>r</i><sup>1/<i>n</i></sup>, thus <i>&rho;</i> is the unique real positive number such that the <i>n</i>-th power is <i>r</i>. Moreover from <i>z<sup>n</sup></i> = <i>u</i> we can deduce as well that: cos <i>n&phi;</i> = cos <i>&theta;</i> and sin <i>n&phi;</i> = sin <i>&theta;</i>, then <i>n&phi;</i> = <i>&theta;</i> + 2<i>k&pi;, i.e.</i></p>
+<p>since <i>ζ<sup>n</sup></i> = <i>u</i>, we can deduce that <i>r</i> = <i>&rho;<sup>n</sup></i>, i.e. <i>&rho;</i> = <i>r</i><sup>1/<i>n</i></sup>, thus <i>&rho;</i> is the unique real positive number such that the <i>n</i>-th power is <i>r</i>. Moreover from <i>z<sup>n</sup></i> = <i>u</i> we can deduce as well that: cos <i>n&phi;</i> = cos <i>&theta;</i> and sin <i>n&phi;</i> = sin <i>&theta;</i>, then <i>n&phi;</i> = <i>&theta;</i> + 2<i>k&pi;</i>, i.e.</p>
 
 <div class="eq">
 <p><i>&phi;</i> = (<i>&theta;</i> + 2<i>k&pi;</i>) / <i>n</i></p>
@@ -241,16 +239,16 @@
 <p>For an arbitrary integer <i>k</i> &in; ℤ, we obtain the complex number</p>
 
 <div class="eq">
-<p><i>z<sub>k</sub></i> = <i>r</i><sup>1/<i>n</i></sup> [cos (<i>&theta;</i> + 2<i>k&pi;</i>)/ <i>n</i>  + <i>i</i> sin (<i>&theta;</i> + 2<i>k&pi;</i>)/<i>n</i>]</p>
+<p><i>ζ<sub>k</sub></i> = <i>r</i><sup>1/<i>n</i></sup> [cos (<i>&theta;</i> + 2<i>k&pi;</i>)/ <i>n</i>  + <i>i</i> sin (<i>&theta;</i> + 2<i>k&pi;</i>)/<i>n</i>]</p>
 </div>
 
-<p>For <i>k</i> = 0, 1, <i>n</i>−1 the <i>z<sub>k</sub></i> are all distincts and represent the distinct <i>n</i>-th roots of <i>u</i>. For <i>u</i> = 0 there is a unique root which is zero.</p>
+<p>For <i>k</i> = 0, 1, <i>n</i>−1 the <i>ζ<sub>k</sub></i> are all distinct and represent the distinct <i>n</i>-th roots of <i>u</i>. For <i>u</i> = 0 there is a unique root which is zero.</p>
 
-</div>
+<p><b>Definition 4.13.3 </b>The roots in ℂ of the polynomial <i>x<sup>n</sup></i> − 1 are called the <b>complex <i>n</i>th roots of unity</b>.</p>
 
-<p><b>Definition 4.13.3 </b>The roots in ℂ of the polynomial <i>x<sup>n</sup></i> − 1 are called the <b>complex <i>n</i>th roots of unity</b>.<br> A complex <i>n</i>th root of unity is said to be <b>primitive</b> if it is a root of the polynomial <i>x<sup>n</sup></i> − 1, but is not a root of <i>x<sup>m</sup></i> = 1 for any positive integer <i>m</i> &lt; <i>n</i>.</p>
+<p>If ζ is an nth root of unity, and if <i>n</i> is the smallest positive integer for which <i>ζ<sup>n</sup></i> = 1, we say that <i>ζ</i> is a <b>primitive <i>n</i>th root of unity</b>. Thus, <i>i</i> is an 8th root of unity, but it is not a primitive 8th root of unity; however, <i>i</i> is a primitive 4th root of unity.</p>
 
-<p>For <i>u</i> = 1, we have the <b><i>n</i>th roots of unity</b>: 1 = cos(<i>n&theta;</i>) + <i>i</i> sin(<i>n&theta;</i>), and hence cos(<i>n&theta;</i>) = 1 and sin(<i>n&theta;</i>) = 0. The only way this can be verifies is when <i>n&theta;</i> is an integer multiple of 2<i>&pi;</i>, or equivalently <i>&theta;</i> = 2<i>k&pi;</i>/<i>n</i> for some integer <i>k</i>. So the <i>n</i>th roots of unity are cos(2<i>k&pi;</i>/<i>n</i>) + <i>i</i> sin(2<i>k&pi;</i>/<i>n</i>), for <i>k</i> = 0,...,<i>n</i> − 1. Let</p>
+<p>For <i>u</i> = 1, we have the <b><i>n</i>th roots of unity</b>: 1 = cos(<i>n&theta;</i>) + <i>i</i> sin(<i>n&theta;</i>), and hence cos(<i>n&theta;</i>) = 1 and sin(<i>n&theta;</i>) = 0. The only way this can be verified is when <i>n&theta;</i> is an integer multiple of 2<i>&pi;</i>, or equivalently <i>&theta;</i> = 2<i>k&pi;</i>/<i>n</i> for some integer <i>k</i>. So the <i>n</i>th roots of unity are cos(2<i>k&pi;</i>/<i>n</i>) + <i>i</i> sin(2<i>k&pi;</i>/<i>n</i>), for <i>k</i> = 0,...,<i>n</i> − 1. Let</p>
 
 <div class="eq">
 <p><i>&zeta;</i><sub><i>n</i>,1</sub> = <i>&zeta;</i> = cos(<i>2k&pi;</i>/<i>n</i>) + <i>i</i> sin(<i>2k&pi;</i>/<i>n</i>), &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
@@ -262,7 +260,7 @@
 <p><i>&zeta;<sub>n,k</sub></i> = <i>&zeta;<sup>k</sup></i>, &emsp; <i>k</i> = 0, ..., <i>n</i> − 1.</p>
 </div>
 
-<p>All <i>n</i>th roots of a complex number <i>u</i> may be obtained by multiplying one of these values by all the <i>n</i>th roots of unity. Indeed let <i>z</i><sub>0</sub> be one of the values of the <i>n</i>-th root of the number <i>u</i>, <i>i.e.</i>, <i>z</i><sub>0</sub><sup><i>n</i></sup> = <i>u</i> and let <i>&zeta;</i> be an arbitrary value of the <i>n</i>-th root of unity, that is <i>&zeta;</i><sup>n</sup></i> = 1. Then</p>
+<p>All <i>n</i>th roots of a complex number <i>u</i> may be obtained by multiplying one of these values by all the <i>n</i>th roots of unity. Indeed let <i>z</i><sub>0</sub> be one of the values of the <i>n</i>-th root of the number <i>u</i>, i.e., <i>z</i><sub>0</sub><sup><i>n</i></sup> = <i>u</i> and let <i>&zeta;</i> be an arbitrary value of the <i>n</i>-th root of unity, that is <i>&zeta;</i><sup>n</sup></i> = 1. Then</p>
 
 <div class="eq">
 <p>(<i>z</i><sub>0</sub> ⋅ <i>&zeta;</i>)<sup><i>n</i></sup> = <i>u</i></p>
@@ -272,36 +270,50 @@
 <p><i>z</i><sub>0</sub>, <i>z</i><sub>0</sub><i>&zeta;</i>, <i>z</i><sub>0</sub><i>&zeta;</i><sup>2</sup>, ..., <i>z</i><sub>0</sub><i>&zeta;</i><sup><i>n</i> − 1</sup>&emsp; (<b>4.13.3</b>)</p>
 </div>
 
-<p>In the complex plane, the <i>n</i>-th roots of unity correspond to the <i>n</i> vertices of a regular <i>n</i>-sided polygon inscribed inside the unit circle. We view the vertices of the pentagon as the five 5th roots of unity, that is, the five roots of <i>z</i><sup>5</sup> − 1 = 0.</p></p>
+<p>In the complex plane, the <i>n</i>-th roots of unity correspond to the <i>n</i> vertices of a regular <i>n</i>-sided polygon inscribed inside the unit circle. We view the vertices of the pentagon as the five 5th roots of unity, that is, the five roots of <i>ζ</i><sup>5</sup> − 1 = 0.</p></p>
 
+<figure>
 <img src="img/complex_polygon.png" alt="sided polygon inscribed inside the unit circle"/>
+<figcaption>The <i>n</i>th roots of unity divide the circle into <i>n</i> segments</figcaption>
+</figure>
 
-<p><b>Exercise 4.13.4</b>. Calculate the module of the following complex numbers</p>
-
-<ol>
-	<li><p>1 + <i>i</i> + <i>i</i><sup>2</sup> + <i>i</i><sup>3</sup> + <i>i</i><sup>4</sup> + <i>i</i><sup>5</sup></p></li>
-	<li><p>(1 + <i>i</i>)<sup>2</sup></p></li>
-	<li><p>(1 + <i>i</i>)(1 − <i>i</i>)</p></li>
-</ol>
-
-<p><b>Solutions</b>.</p>
+<h2>Exercises</h2>
 
 <ol>
-	<li><p>|1 + <i>i</i> −1 + − <i>i</i> + 1 + <i>i</i>| = |1 + <i>i</i>| = √2</p></li>
-	<li><p>(1 + <i>i</i>)<sup>2</sup> = (1 + 2<i>i</i> −1) = 2<i>i</i>, thus the module is (0 + 2<sup>2</sup>)<sup>1/2</sup> = 2.</p></li>
-	<li><p>|(1 + <i>i</i>)(1 − <i>i</i>)| = |1 −<i>i</i> + <i>i</i> + 1| = |2| = 2.</p>
+	<li><p>Calculate the module of the following complex numbers</p>
+
+	<ol>
+		<li><p>1 + <i>i</i> + <i>i</i><sup>2</sup> + <i>i</i><sup>3</sup> + <i>i</i><sup>4</sup> + <i>i</i><sup>5</sup></p></li>
+		<li><p>(1 + <i>i</i>)<sup>2</sup></p></li>
+		<li><p>(1 + <i>i</i>)(1 − <i>i</i>)</p></li>
+	</ol>
+
+	<li><p>Calculate</p>
+
+	<ol type="a">
+		<li><p>The 4-th roots of <i>i</i>.</p></li>
+		<li><p>The cube roots of the unity.</p></li>
+		<li><p>The primitive 6th roots of the unity</p></li>
+	</ol>
+
+	</li>
 </ol>
 
-<p><b>Exercise 4.13.5</b>. Calculate</p>
+<h2>Solutions</h2>
 
-<ol type="a">
-	<li><p>The 4-th roots of <i>i</i>.</p></li>
-	<li><p>The cube roots of the unity.</p></li>
-	<li><p>The primitive 6th roots of the unity</p></li>
-</ol>
+<ol>
+	<li>
 
-<p><b>Solutions</b>.</p>
+	<ol>
+		<li><p>|1 + <i>i</i> −1 + − <i>i</i> + 1 + <i>i</i>| = |1 + <i>i</i>| = √2</p></li>
+		<li><p>(1 + <i>i</i>)<sup>2</sup> = (1 + 2<i>i</i> −1) = 2<i>i</i>, thus the module is (0 + 2<sup>2</sup>)<sup>1/2</sup> = 2.</p></li>
+		<li><p>|(1 + <i>i</i>)(1 − <i>i</i>)| = |1 −<i>i</i> + <i>i</i> + 1| = |2| = 2.</p>
+	</ol>
 
+	</li>
+
+
+<li>
 <ol>
 	<li><p><i>i</i> = <i>r</i> (cos <i>&theta;</i> + <i>i</i> sin <i>&theta;</i>) con <i>&theta;</i> = <i>&pi;</i>/2, <i>r</i> = 1. The four roots are <i>z<sub>k</sub></i> = cos (<i>&theta;</i> + 2<i>k&pi;</i>/4) + <i>i</i> sin (<i>&theta;</i> + 2<i>k&pi;</i>/4), with <i>k</i> = 0,1,2,3. Replacing <i>&theta;</i> = <i>&pi;</i>/2: <i>z<sub>k</sub></i> = cos (<i>&pi;</i>/2 + <i>k&pi;</i>/2) + <i>i</i> sin (<i>&pi;</i>/2 + <i>k&pi;</i>/2), with <i>k</i> = 0,1,2,3 </p></li>
 	<li><p><i>z<sub>k</sub></i> = cos (2<i>k&pi;</i>/3) + <i>i</i> sin (2<i>k&pi;</i>/3), with <i>k</i> = 0,1,2. Hence we have</p>
@@ -314,6 +326,10 @@
 	</li>
 	
 	<li><p><i>z<sub>k</sub></i> = cos (2<i>k&pi;</i>/6) + <i>i</i> sin (2<i>k&pi;</i>/6), with <i>k</i> = 0,1,2,3,4,5. The primitive roots are those satisfying <i>z<sup>k</sup></i> &ne; 1, namely those for <i>k</i> = 1, <i>k</i> = 5. </p></li>
+</ol>
+
+</li>
+
 </ol>
 
 <section aria-label="End">

@@ -60,22 +60,21 @@
 <p>When two groups are isomorphic all algebraic properties are shared: cardinality, the order of the elements, the fact to cyclic and abelian, to possess subgroups of a given order, etc. When they different for one of these properties they are not <i>isomorphic</i>.</p>
 
 <ul>
-	<li><p>(ℤ, +) is not isomorphic to (ℚ \ {0}, ⋅), since every element in ℤ different from zero has infinite order, while in ℚ \ {0} there exist two element 1 and &minus;1 with finite order.</p></li>
+	<li><p>(ℤ, +) is not isomorphic to (ℚ \ {0}, ⋅), since every element in ℤ different from zero has infinite order, while in ℚ \ {0} there exist two element 1 and −1 with finite order.</p></li>
 
-	<li><p>(ℚ, +) is not isomorphic to (ℚ \ {0}, ⋅), since every element different form the neutral element in (ℚ, +) has infinite order whilst in ℚ \ {0} the element &minus;1 has order 2.</p></li>
+	<li><p>(ℚ, +) is not isomorphic to (ℚ \ {0}, ⋅), since every element different form the neutral element in (ℚ, +) has infinite order whilst in ℚ \ {0} the element −1 has order 2.</p></li>
 
 	<li><p>(<i>U</i>(ℤ<sub>8</sub>), +) and (ℤ<sub>4</sub>, +) are both groups with order four, but they are not isomorphic since in ℤ<sub>4</sub> there exists an element of order 4, while in <i>U</i>(ℤ<sub>8</sub>) there is not such an element.</p></li>
 
 	<li><p>(ℚ \ {0}, ⋅) and (ℝ \ {0}) are not isomorphic, since in (ℝ \ {0}) the orders of the elements are &infty;, 1 and 2 while in (ℂ\{0},⋅) there exist element of any order (as <i>n</i><sup>th</sup> roots of unity).</p></li>
 </ul>
 
-<p><b>7.8.3 Cayley’s Theorem</b>. Every group is isomorphic to a group of permutations.</p>
+<p id="Cayley"><b>7.8.3 Cayley’s Theorem</b>. Every group is isomorphic to a group of permutations.</p>
 
-<p><b>Proof</b>. Let <i>G</i> be a given group. The permutations that we use in the proof will be mappings defined on the set of all elements in <i>G</i>.<br>
-For each element a in <i>G</i>, we define a mapping</p>
+<p><b>Proof</b>. Let <i>G</i> be a given group. The permutations that we use in the proof will be mappings defined on the set of all elements in <i>G</i>.<br> For each element <i>a</i> in <i>G</i>, we define a mapping</p>
 
 <div class="eq">
-<p><i>T<sub>a</sub>: <i>G</i> ⟶ <i>G</i><br>
+<p><i>T<sub>a</sub></i>: <i>G</i> ⟶ <i>G</i><br>
 <i>x</i> ⟼ <i>ax</i> &emsp; &forall;<i>x</i> &in; <i>G</i></p>
 </div>
 
@@ -86,16 +85,14 @@ For each element a in <i>G</i>, we define a mapping</p>
 ⇒ <i>x</i> = <i>y</i></p>
 </div>
 
-<p>To see that <i>T<sub>a</sub></i> is onto, let <i>b</i> be arbitrary in <i>G</i>. Then <i>x</i> = <i>i</i><sup>&minus;1</sup><i>b</i> is in <i>G</i>, and for this particular <i>x</i> we have</p>
+<p>To see that <i>T<sub>a</sub></i> is onto, let <i>b</i> be arbitrary in <i>G</i>. Then <i>x</i> = <i>i</i><sup>−1</sup><i>b</i> is in <i>G</i>, and for this particular <i>x</i> we have</p>
 
 <div class="eq">
-<p><i>T<sub>a</sub></i>(<i>x</i>) = <i>ax<br>
-⇒ <i>a</i>(<i>a<sup>&minus;1</sup>b</i>) = <i>b</i></p>
+<p><i>T<sub>a</sub></i>(<i>x</i>) = <i>ax</i><br>
+⇒ <i>a</i>(<i>a</i><sup>−1</sup><i>b</i>) = <i>b</i></p>
 </div>
 
-<p>Thus <i>T<sub>a</sub></i> is a permutation on the set of elements of <i>G</i> <i>i.e</i> <i>T<sub>a</sub></i> &in; 𝓢(<i>G</i>).</p>
-
-<p>We define the following mapping</p>
+<p>Thus <i>T<sub>a</sub></i> is a permutation on the set of elements of <i>G</i> i.e. <i>T<sub>a</sub></i> &in; 𝓢(<i>G</i>). <br> We define the following mapping</p>
 
 <div class="eq">
 <p><i>&Psi;</i> (<i>G</i>, ⋅) ⟶ 𝓢(<i>G</i>, ∘)<br>
@@ -114,7 +111,7 @@ For each element a in <i>G</i>, we define a mapping</p>
 <p><i>T<sub>ab</b></i>(<i>x</i>) = <i>ab</i> ⋅ <i>x</i> = <i>a</i>(<i>bx</i>) = <i>T<sub>a</usb></i>(<i>T<sub>b</sub></i>(<i>x</i>)) &emsp; &forall; <i>x&in;G</i></p>
 </div>
 
-<p>hence T<sub>ab</sub> = T<sub>a</sub> ∘ T<sub>b</sub></i></p>
+<p>hence <i>T<sub>ab</sub></i> = <i>T<sub>a</sub></i> ∘ <i>T<sub>b</sub></i></p>
 
 <p><i>&Psi;</i> is injective. Indeed <i>&Psi;</i>(<i>a</i>) = <i>&Psi;</i>(<i>b</i>) that is <i>T<sub>b</sub></i> = <i>T<sub>a</sub></i>.</p> In particular</p>
 
@@ -135,7 +132,7 @@ For each element a in <i>G</i>, we define a mapping</p>
 <ol>
 	<li><p>Determine four distinct subgroups of 𝓢<sub>4</sub> isomorphic to 𝓢<sub>3</sub> and nine isomorphic to 𝓢<sub>2</sub>.</p></li>
 
-	<li><p>Verify Cayley's theorem for the group <i>G</i> =  ⟨<i>g</i> | <i>g</i><sup>4</sup> = 1⟩ and for the Klein group.</p></li>
+	<li><p>Verify Cayley's theorem for the group <i>G</i> = ⟨<i>g</i> | <i>g</i><sup>4</sup> = 1⟩ and for the Klein group.</p></li>
 
 	<li><p>Let <i>G</i> the multiplicative group of invertible elements ℤ<sub>8</sub> and let <i>G</i>' the multiplicative group of invertible elements of ℤ<sub>12</sub>. Prove that they are isomorphic.</p></li>
 
@@ -196,13 +193,13 @@ For each element a in <i>G</i>, we define a mapping</p>
 <h4>Solutions</h4>
 
 <ol>
-	<li><p>Consider the symmetric group the subgroups 𝓢<sub>4</sub>. Let <i>H</i> = {<i>&sigma;</i> &in;  𝓢<sub>4</sub>| &sigma;<sub>4</sub>(4) = 4}. By definition <i>H</i> consists of those permutations in  𝓢<sub>4</sub> that leave 4 fixed. Hence elements of <i>H</i> exactly the permutations of the elements {1,2,3}. This means that <i>H</i> is a permutation group isomorphic to  𝓢<sub>3</sub>. We can identify other subgroups  <i>H<sub>i</sub></i> of permutation of 𝓢<sub>4</sub> tha leave the element <i>i</i> fixed:</p>
+	<li><p>Consider the symmetric group the subgroups 𝓢<sub>4</sub>. Let <i>H</i> = {<i>&sigma;</i> &in;  𝓢<sub>4</sub>| <i>&sigma;</i><sub>4</sub>(4) = 4}. By definition <i>H</i> consists of those permutations in 𝓢<sub>4</sub> that leave 4 fixed. Hence elements of <i>H</i> exactly the permutations of the elements {1,2,3}. This means that <i>H</i> is a permutation group isomorphic to 𝓢<sub>3</sub>. We can identify other subgroups  <i>H<sub>i</sub></i> of permutation of 𝓢<sub>4</sub> tha leave the element <i>i</i> fixed:</p>
 
 	<ol>
-		<li><p>H<sub>1</sub> = {id,(23),(24),(34),(234),(243)}</p></li>
-		<li><p>H<sub>2</sub> = {id,(13),(14),(34),(134),(143)}</p></li>
-		<li><p>H<sub>3</sub> = {id,(12),(14),(24),(124),(142)}</p></li>
-		<li><p>H<sub>4</sub> = {id,(12),(13),(23),(123),(132)}</p></li>
+		<li><p><i>H</i><sub>1</sub> = {id,(23),(24),(34),(234),(243)}</p></li>
+		<li><p><i>H</i><sub>2</sub> = {id,(13),(14),(34),(134),(143)}</p></li>
+		<li><p><i>H</i><sub>3</sub> = {id,(12),(14),(24),(124),(142)}</p></li>
+		<li><p><i>H</i><sub>4</sub> = {id,(12),(13),(23),(123),(132)}</p></li>
 	</ol>
 	
 	<p>Order 2 groups are cyclic so for {<i>e,s</i>} with <i>s</i> ∈ S<sub>4</sub> we need <i>s</i><sup>2</sup> = <i>e</i>. Thus we have the subgroups made by transpositions H<sub>1</sub> = {id, (1 2)},  H = {id, (1 2)(3 4)}</p></li>
@@ -211,11 +208,11 @@ For each element a in <i>G</i>, we define a mapping</p>
 	
 	<li><p><i>G</i> = <i>U</i>(ℤ<sub>8</sub>) = {[1]<sub>8</sub>, [3]<sub>8</sub>, [5]<sub>8</sub>, [7]<sub>8</sub>}; <i>G</i> = <i>U</i>(ℤ<sub>12</sub>) = {[1]<sub>12</sub>, [5]<sub>12</sub>, [7]<sub>12</sub>, [11]<sub>12</sub>}. An isomorphism between <i>G</i> and <i>G</i>' is the one that maps [3]<sub>8</sub> to [5]<sub>12</sub>, [5]<sub>8</sub> to [7]<sub>12</sub>. [7]<sub>8</sub> to [11]<sub>12</sub>.</p>
 	
-	<p>They are both isomorphic to the Klein group,(in V every non-trivial element is order 2), we can take the isomorphism [1]<sub>8</sub> ↦ id, [3]<sub>8</sub> ↦ r, [5]<sub>8</sub>↦ s<sub>1</sub>, [7]<sub>8</sub> ↦ s<sub>2</sub>.</p></li>
+	<p>They are both isomorphic to the Klein group,(in V every non-trivial element is order 2), we can take the isomorphism [1]<sub>8</sub> ↦ id, [3]<sub>8</sub> ↦ r, [5]<sub>8</sub>↦ <i>s</i><sub>1</sub>, [7]<sub>8</sub> ↦ <i>s</i><sub>2</sub>.</p></li>
 	
-	<li><p>The product of elements of <i>S</i> is an element of <i>S</i>, (1 0; 0 1) &in; <i>S</i>, the inverse of (<i>x y</i>; −<i>y x</i>) is 1/(<i>x<sup>2</sup> + y<sup>2</sup></i>) (<i>x −y</i>; <i>y x</i>) &in; <i>S</i>.</p>
+	<li><p>The product of elements of <i>S</i> is an element of <i>S</i>, (1 0; 0 1) &in; <i>S</i>, the inverse of (<i>x y</i>; −<i>y x</i>) is 1/(<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>) (<i>x −y</i>; <i>y x</i>) &in; <i>S</i>.</p>
 	
-	<p>An isomorphism with (ℂ*,⋅) is obtained considering the map <i>z</i> = <i>x</i> + <i>iy</i> ↦ (<i>x y</i>; −<i>y x</i>); Multiply out (<i>x<sub>1</sub> + <i>i y</i><sub>1</sub></i>)(<i>x<sub>2</sub> + <i>i y</i><sub>2</sub></i>) and (<i>x<sub>1</sub> <i>y</i><sub>1</sub>; −<i>y</i><sub>1</sub> x<sub>1</sub></i>)(<i>x<sub>2</sub> y<sub>2</sub>; −<i>y</i><sub>2</sub> <i>x</i><sub>2</sub>) to verify.</p>
+	<p>An isomorphism with (ℂ*,⋅) is obtained considering the map <i>z</i> = <i>x</i> + <i>iy</i> ↦ (<i>x y</i>; −<i>y x</i>); Multiply out (<i>x</i><sub>1</sub> + <i>i y</i><sub>1</sub></i>)(<i>x</i><sub>2</sub> + <i>i y</i><sub>2</sub></i>) and (<i>x</i><sub>1</sub> <i>y</i><sub>1</sub>; −<i>y</i><sub>1</sub> <i>x</i><sub>1</sub>)(<i>x</i><sub>2</sub> <i>y</i><sub>2</sub>; −<i>y</i><sub>2</sub> <i>x</i><sub>2</sub>) to verify.</p>
 	
 	</li>
 	

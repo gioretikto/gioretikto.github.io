@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Euclidean algorithm"/>
-  <title>Euclidean algorithm</title>
-  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Euclidean algorithm"/>
+	<title>Euclidean algorithm</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href=/index.html">Algebra</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>Euclidean algorithm</h1>
 
@@ -39,9 +39,9 @@
 <h3>Proof of the algorithm</h3>
 
 <ol>
-	<li><p>From last division you can notice that, <i>r<sub>n</sub></i> divides <i>r</i><sub><i>n</i>−1</sub>, and in addition, going from downward to upward of the <i>n</i>-th division we can notice that <i>r<sub>n</sub></i>, divides <i>r</i><sub><i>n</i>−2</sub>. Risalendo le equazioni si ha <i>r<sub>n</sub></i> is a divisor of <i>a</i> and <i>b</i>. It must be &le; gcd(<i>a,b</i>).</p></li>
+	<li><p>From last division you can notice that, <i>r<sub>n</sub></i> divides <i>r</i><sub><i>n</i>−1</sub>, and in addition, going from downward to upward of the <i>n</i>-th division we can notice that <i>r<sub>n</sub></i>, divides <i>r</i><sub><i>n</i>−2</sub>. Raising back we've that <i>r<sub>n</sub></i> is a divisor of <i>a</i> and <i>b</i>. It must be &le; gcd(<i>a,b</i>).</p></li>
 	
-	<li><p>Each common divisor <i>a</i> and <i>b</i> is also a divisor of <i>r<sub>1</sub></i>, sinche if a number divides <i>a</i> and <i>b</i> then it divides the difference as well (<a href="Z_divisibility.html#lemma_219">Lemma 2.19</a>). This line of thought holds for all remainder of the next divisions till the remainder <i>r<sub>n</sub></i>, which is the last &ne; 0. Thus every common divisor of <i>a</i> and <i>b</i> divides <i>r<sub>n</sub></i> as well. By steps 1) and 2) we conclude that <i>r<sub>n</sub></i> = MCD(<i>a,b</i>).</p>
+	<li><p>Each common divisor <i>a</i> and <i>b</i> is also a divisor of <i>r</i><sub>1</sub>, since if a number divides <i>a</i> and <i>b</i> then it divides the difference as well (<a href="Z_divisibility.html#lemma_219">Lemma 2.19</a>). This line of thought holds for all remainder of the next divisions till the remainder <i>r<sub>n</sub></i>, which is the last &ne; 0. Thus every common divisor of <i>a</i> and <i>b</i> divides <i>r<sub>n</sub></i> as well. By steps 1) and 2) we conclude that <i>r<sub>n</sub></i> = MCD(<i>a,b</i>).</p>
 </ol>
 
 <p>Let's calculate gcd(34, 19) with the Euclidean algorithm.</p>
@@ -54,7 +54,7 @@
 3 = 1 ⋅3 + 0
 </pre>
 
-<p>Quindi, gcd(34, 19) = 1.</p>
+<p>Thus, gcd(34, 19) = 1.</p>
 
 <p>Further, these relations offer us a way to write gcd(<i>a,b</i>) as Bézout's identity in the form <i>d</i> = gcd(<i>a,b</i>) = <i>sa</i> + <i>tb</i>. To find a Bézout's identity for per gcd(34, 19) = 1 = <i>d</i>, we proceed backward.</p> 
 
@@ -72,7 +72,7 @@
 <a href="diophantine.html">Linear Diophantine equations &#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>

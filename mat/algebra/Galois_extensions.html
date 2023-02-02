@@ -203,7 +203,7 @@
 
 <p>the coefficients of this polynomial (as we've already shown in theorem 9.3.1) are the <a href="symmetric_polynomials.html#elem">elementary symmetric fuctions</a> <i>&alpha;<sub>i</sub></i> in the roots <i>&sigma;</i><sub>1</sub>(<i>a</i>), <i>&sigma;</i><sub>2</sub>(<i>a</i>),..., <i>&sigma;<sub>n</sub></i>(<i>a</i>), with every <i>&sigma;<sub>i</sub></i> &in; <i>K</i><sub><i>G</i>(<i>K,F</i>)</sub> = <i>F</i>. Thus <i>f</i> is a polynomial of <i>F</i>[<i>x</i>], and since <i>K</i> contains all roots of <i>f</i> there cannot be a smaller field containing <i>all</i> the roots of <i>f</i> and <i>F</i>, because such a field should contain the root <i>a</i> and <i>F</i>, thus coincide with <i>K</i> = <i>F</i>(<i>a</i>). We conclude that <i>K</i> is the splitting field of <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>], and thus normal extension of <i>F</i>. &emsp;□</p>
 
-<p><b>Definition 9.3.3</b>. A Galois extensions <i>K</i> of <i>F</i> is a finite and normal extension of <i>K</i>. &emsp;□</p>
+<p id="extension"><b>Definition 9.3.3</b>. A Galois extensions <i>K</i> of <i>F</i> is a finite and normal extension of <i>K</i>. &emsp;□</p>
 
 <p>We're now able to prove two important theorems involved the in the proof of Galois correspondence theorem.</p>
 
@@ -419,9 +419,22 @@
 </div>
 </section>
 
-<p>And the function composition of these automorpshisms leads to other automorphisms preserving the algebraic relations: <i>&phi;</i><sub>2</sub> ∘  <i>&phi;</i><sub>3</sub> = <i>&phi;</i><sub>1</sub>. This means that the set of automorphsims preserving algebraic relations is a group, with group operation, the composition of functions and identity element <i>&phi;</i><sub>id</sub> which leaves the elements unchanged.</p>
+<p>And the function composition of these automorpshisms leads to other automorphisms preserving the algebraic relations: <i>&phi;</i><sub>2</sub> ∘  <i>&phi;</i><sub>3</sub> = <i>&phi;</i><sub>1</sub>. This means that the set of automorphsims preserving algebraic relations is a group, with group operation, the composition of functions and identity element <i>&phi;</i><sub>id</sub> which leaves the elements unchanged. So</p>
 
-<p>But there are automorphisms that do not preserve the relations, for example just swapping <i>&zeta;</i><sup>4</sup> ⟶ <i>&zeta;</i><sup>3</sup>, or just <i>&zeta;</i> ⟶ <i>&zeta;</i><sup>2</sup>, and the equation above does not hold anymore.</p>
+<div class="eq">
+<p>[ℚ(<i>&zeta;</i>):ℚ] = |<i>G</i>(ℚ(<i>&zeta;</i>),ℚ)| = 4</p>
+</div>
+
+<p>We've endend up with <i>G</i>(ℚ(<i>&zeta;</i>),ℚ) being cyclic of order 4.</p>
+
+<p>But there are automorphisms that do not preserve the relations, for example just swapping <i>&zeta;</i><sup>4</sup> ⟶ <i>&zeta;</i><sup>3</sup>, or just <i>&zeta;</i> ⟶ <i>&zeta;</i><sup>2</sup>, and the equation above does not hold anymore. We have the following mapping between the set of all the subgroups of <i>G</i>(ℚ(<i>&zeta;</i>),ℚ) the set of all the subfields <i>T</i> of ℚ(<i>&zeta;</i>) containing ℚ</p>
+
+<table>
+<tr><th>Galois Group</th> <th>Subfield</th></tr>
+<tr><td><i>&phi;</i><sub>id</sub></td> <td>ℚ(<i>&zeta;</i>)</td><tr>
+<tr><td><i>&phi;</i><sub>id</sub>, <i>&phi;</i><sub>2</sub></td> <td>ℚ(√5)</td><tr>
+<tr><td><i>&phi;</i><sub>id</sub>, <i>&phi;</i><sub>1</sub>, <i>&phi;</i><sub>2</sub>, <i>&phi;</i><sub>3</sub></td> <td>ℚ</td><tr>
+</table>
 
 <p>The basic question of Galois theory is, "given the conjugates elements over a field how many ways are there to swap them preserving algebraic relations?"
 
