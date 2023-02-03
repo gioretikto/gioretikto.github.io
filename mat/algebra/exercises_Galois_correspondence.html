@@ -42,6 +42,11 @@
 	<li><p>Let <i>K</i> the splitting field of the polynomial <i>x</i><sup>3</sup> + √3<i>x</i><sup>2</sup> − 2<i>x</i> − 2√3 &in; ℚ(√3)[<i>x</i>]. Calculate <i>G</i>(<i>K</i>, ℚ(√3)).</p></li>
 
 	<li><p>Let <i>K</i> the field ℚ(<i>i</i>, ∛5). Calculate the autormorphism group of <i>K</i>. Check whether <i>K</i> is a Galois extension of ℚ.</p></li>
+
+	<li><p>Let <i>K</i> the field ℚ(<i>i</i>∜2). Calculate the autormorphism group of <i>K</i>. Check whether <i>K</i> is a Galois extension of ℚ.</p></li>
+
+	<li><p>The Galois group of the polynomial <i>x</i><sup>3</sup> − 5 &in; ℚ(<i>&zeta;</i>), over ℚ(<i>&zeta;</i>), with <i>&zeta;</i> primitive fifth root of unity.</p></li>
+
 </ol>
 
 <h2>Solutions</h2>
@@ -63,7 +68,7 @@
 
 <p><i>G</i>(ℚ(√2,√5),ℚ) ≅ ℤ₂ x ℤ₂. &emsp;■</p></li>
 
-<li><p>A factor is (<i>x</i> + 2). Dividing the polynomial by <i>x</i> + 2 yo find x<sup>4</sup>−5y<sup>2</sup>+6; by substitution of <i>y</i> = <i>x</i><sup>2</sup> I've found two roots +3;+2, so <i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6<i>x</i> + 12 = (<i>x</i> + 2) (<i>x</i><sup>2</sup> − 3) (<i>x</i><sup>2</sup> − 2). So the splitting field is ℚ(√2,√3). The four roots of thr original poly are −2, √2, −√2, √3, −√3. So we have G(ℚ(√2,√3),ℚ) with the following elements</p>
+<li><p>A factor is (<i>x</i> + 2). Dividing the polynomial by <i>x</i> + 2 yo find <i>x</i><sup>4</sup>−5<i>x</i><sup>2</sup>+6; by substitution of <i>y</i> = <i>x</i><sup>2</sup> I've found two roots +3;+2, so <i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6<i>x</i> + 12 = (<i>x</i> + 2) (<i>x</i><sup>2</sup> − 3) (<i>x</i><sup>2</sup> − 2). So the splitting field is ℚ(√2,√3). The four roots of thr original poly are −2, √2, −√2, √3, −√3. So we have G(ℚ(√2,√3),ℚ) with the following elements</p>
 
 <table class="noborder">
 <tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
@@ -149,8 +154,18 @@
 
 <p>So the splitting field is <i>K</i> = ℚ(√2,√3)) The roots of the polynomial are −√3 and &pm;√2. An element <i>&sigma;</i> &in; <i>G</i>(<i>K</i>, ℚ(√3)) sends each root in {√2, −√2}, to the same set; The only automorphism, in addition to the identity is <i>&sigma;</i>(√2) = √2. Hence <i>G</i>(<i>K</i>, ℚ(√3)) ≅ ℤ₂.&emsp;■ </p></li>
 
-<li><p>The minimal polynomial of <i>i</i> over ℚ is <i>x</i><sup>2</sup> + 1, <i>&sigma;</i>(<i>i</i>) = &pm; <i>i</i>. The minimal polynomial of ∛5 is <i>x</i><sup>3</sup> −5, <i>&sigma;</i>(∛5) must be a root of <i>x</i><sup>3</sup> − 5: the roots are ∛5 and ∛5<i>&zeta;</i>, ∛5<i>&zeta;</i><sup>2</sup>, with <i>&zeta;</i> primitive 3rd root of unity. These last two roots do not belong to <i>K</i>, otherwise 
-√3 as well, would be in <i>K</i>. So we must have <i>&sigma;</i>(∛5) = ∛5. Thus there are two autormorphisms: the identity automorphism, and the automorphism <i>&sigma;</i> that sends <i>i</i> to −<i>i</i> and ∛5 to ∛5: every element of <i>K</i> = {<i>q</i><sub>0</sub>, <i>q</i><sub>1</sub> ∛5 + <i>q</i><sub>2</sub> (∛5)<sup>2</sup> + <i>q</i><sub>3</sub><i>i</i> + <i>q</i><sub>4</sub> <i>i</i> + <i>q</i><sub>5</sub><i>i</i>(∛5)<sup>2</sup>} is sent to its complex conjugate. Hence <i>G</i>(<i>K</i>, ℚ(√3)) ≅ ℤ₂. This is not a Galois extension 
+<li><p>The minimal polynomial of <i>i</i> over ℚ is <i>x</i><sup>2</sup> + 1, <i>&sigma;</i>(<i>i</i>) = &pm; <i>i</i>. The minimal polynomial of ∛5 is <i>x</i><sup>3</sup> −5, <i>&sigma;</i>(∛5) must be a root of <i>x</i><sup>3</sup> − 5: the roots are ∛5 and the complex roots ∛5<i>&zeta;</i>, ∛5<i>&zeta;</i><sup>2</sup>, with <i>&zeta;</i> primitive 3rd root, so 1/2(−1 &pm; <i>i</i> √3)∛5. These last two roots do not belong to <i>K</i>, otherwise √3 as well, would be in <i>K</i>. So <i>K</i> is not a splitting field for the polynomial and it cannot be a Galois extension of ℚ. So we must have <i>&sigma;</i>(∛5) = ∛5. Thus there are two autormorphisms: the identity automorphism, and the automorphism <i>&sigma;</i> that sends <i>i</i> to −<i>i</i> and ∛5 to ∛5: every element of <i>K</i> = {<i>q</i><sub>0</sub>, <i>q</i><sub>1</sub> ∛5 + <i>q</i><sub>2</sub> (∛5)<sup>2</sup> + <i>q</i><sub>3</sub><i>i</i> + <i>q</i><sub>4</sub> <i>i</i> + <i>q</i><sub>5</sub><i>i</i>(∛5)<sup>2</sup>} is sent to its complex conjugate and [<i>K</i>:ℚ] = 6. Hence <i>G</i>(<i>K</i>, ℚ(√3)) ≅ ℤ₂. This is not a Galois extension since |Aut(<i>K</i>/ℚ)| = 2 and by <a href="Galois_extensions.html#extension">theorem 9.3.4</a> we should have |<i>G</i>(<i>K,F</i>)| = [<i>K</i> : <i>F</i>]. &emsp;■</p></li>
+
+<li><p>The minimal polynomial is <i>x</i><sup>4</sup> − 2. An element of <i>K</i> is <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> (<i>i</i>∜2) + <i>a</i><sub>2</sub>(<i>i</i>∜2)<sup>2</sup> + <i>a</i><sub>3</sub> (<i>i</i>∜2)<sup>3</sup>, with <i>a<sub>i</sub></i> &in; ℚ. The splitting field of <i>x</i><sup>4</sup> − 2 is ℚ(<i>i</i>,∜2). In a Galois group, <i>G</i>(<i>E</i>, ℚ), <i>E</i> must be the splitting field of the polynomial; So we must show that ℚ(<i>i</i>,∜2) and ℚ(<i>i</i>∜2) are not the same extension. ℚ(∜2) and ℚ(<i>i</i>∜2) are isomorphic: composing the isomorphism <i>&phi;</i> : ℚ(<i>i</i>∜2) ⟶ ℚ(∜2) with the embedding Q(∜2) ⟶ ℝ, we have an embedding ℚ(<i>i</i>∜2) ⟶ ℝ. However, the splitting field of <i>x</i><sup>4</sup> − 2 cannot be embedded in ℝ, because it contains <i>i</i>. Thus <i>K</i> is not a Galois extension of ℚ. Therefore, the fixed field of Aut(K/ℚ) is larger than just ℚ. Let's find out what this field is . Notice that an automorphism <i>&sigma;</i> : <i>K</i> ⟶ <i>K</i> must send “i∜2” to a root of <i>x</i><sup>4</sup> − 2. The possibilities are “i∜2” and “−i∜2”, (Since the other two roots of <i>x</i><sup>4</sup> − 2, namely, “∜2” and “−∜2”, are missing from <i>K</i>.). We thus have only two automorphisms: the identity and <i>&sigma;</i>(<i>i</i>∜2) = −<i>i</i>∜2. To calculate the fixed field of Aut(<i>K</i>/ℚ), we let <i>&sigma;</i> act on an element of <i>K</i></p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> (<i>i</i>∜2) + <i>a</i><sub>2</sub>(<i>i</i>∜2)<sup>2</sup> + <i>a</i><sub>3</sub> (<i>i</i>∜2)<sup>3</sup>) = <i>a</i><sub>0</sub> − <i>a</i><sub>1</sub> (<i>i</i>∜2) + <i>a</i><sub>2</sub>(<i>i</i>∜2)<sup>2</sup> − <i>a</i><sub>3</sub> (<i>i</i>∜2)<sup>3</sup></p>
+</div>
+
+<p>So it fixes only <i>a</i><sub>0</sub> + <i>a</i><sub>2</sub> (<i>i</i>∜2)<sup>2</sup> = <i>a</i><sub>0</sub> − √2. So the fixed field by Aut(<i>K</i>/ℚ) is ℚ(√2). &emsp;■</p></li>
+
+<li><p>Let <i>b</i> = 3<sup>1/5</sup>. The splitting fiels of the polynomial is ℚ(<i>b, &zeta;</i>). Let's call <i>&sigma;<sub>i</sub></i> the automorphism defined by <i>&sigma;<sub>i</sub></i>(<i>b</i>) = <i>b&zeta;<sup>i</sup></i>. Then <i>&sigma;<sub>i</sub></i>(b&zeta;<sup>j</sup>) = <i>&sigma;<sub>i</sub></i>(<i>b</i>) ⋅ <i>&sigma;<sub>i</sub></i>(&zeta;)<sup>j</sup> = <i>b&zeta;<sup>i</sup></i> ⋅ <i>&zeta;<sup>j</sup></i> = <i>b&zeta;</i><sup><i>i</i>+<i>j</i></sup>, since <i>&sigma;<sub>i</sub></i> &in; Gal(ℚ(<i>b,&zeta;</i>) / ℚ(<i>&zeta;</i>)), we must have <i>&sigma;<sub>i</sub></i>(<i>&zeta;</i>) = &zeta;.</p></li>
+
 </ol>
 
 <section aria-label="End">
