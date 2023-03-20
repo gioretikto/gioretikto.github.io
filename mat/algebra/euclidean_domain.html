@@ -21,7 +21,7 @@
 
 <h1>Euclidean domain</h1>
 
-<p>In early chapters we analyzed the structure of ℤ and the polynomial ring 𝕂[<i>x</i>] and seen how in these fields is possible to perform the <i>Euclidean division</i>. In ℤ given two integers <i>a</i> and <i>b</i>, with <i>b</i> &ne; 0, there exist two integers <I>q</i> and <i>r</i> such that <i>a</i> = <i>bq</i> + <i>r</i>, with 0 &le; <i>r</i> |<i>b</i>|, or in a more general way</p>
+<p>In early chapters we analyzed the structure of ℤ and the polynomial ring 𝕂[<i>x</i>] and seen how in these fields is possible to perform the <i>Euclidean division</i>. In ℤ given two integers <i>a</i> and <i>b</i>, with <i>b</i> &ne; 0, there exist two integers <i>q</i> and <i>r</i> such that <i>a</i> = <i>bq</i> + <i>r</i>, with 0 &le; <i>r</i> |<i>b</i>|, or in a more general way</p>
 
 <div class="eq">
 <p><i>a</i> = <i>bq</i> + <i>r</i>, &emsp; <i>r</i> = 0, &emsp; or |<i>r</i>| &lt; |<i>b</i>|</p>
@@ -41,7 +41,7 @@
 <p><i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>)<i>q</i>(<i>x</i>) + <i>r</i>(<i>x</i>)&emsp; <i>r</i>(<i>x</i>) = 0, &emsp; or &emsp; ∂<i>r</i>(<i>x</i>) &lt; ∂<i>g</i>(<i>x</i>)</p>
 </div>
 
-<p>In both cases of ℤ and the ring 𝕂[<i>x</i>] we have associated to each element of the domain a <i>positive integer</i> (the absolute value and the degree of the polynomial respectively) in a way that the integer associated to the remainder is less than the the remainder, associated to the divisor. In this way we were able to determine the gcd of two integers or two polynomials through the Euclidean algorithm. The possibility to determine the gcd in this way, was due to the decreasing attidue of the integers associated to the remainders which at some point should be zero, the last non zero remainder was identified with the gcd.</p>
+<p>In both cases of ℤ and the ring 𝕂[<i>x</i>] we have associated to each element of the domain a <i>positive integer</i> (the absolute value and the degree of the polynomial respectively) in a way that the integer associated to the remainder is less than the the remainder, associated to the divisor. In this way we were able to determine the gcd of two integers or two polynomials through the Euclidean algorithm. The possibility to determine the gcd in this way, was due to the decreasing attitude of the integers associated to the remainders which at some point should be zero, the last non zero remainder was identified with the gcd.</p>
 
 <p>We not want to put what has been said about the division algorithm in ℤ and 𝕂[<i>x</i>] in a wider, abstract context.</p>
 
@@ -64,11 +64,11 @@
 
 <p><b>Remark</b>. An integral domain can become an Euclidean domain with respect to different <i>valuations</i>. In the case of the field 𝕂, we can pick as well the valuation <i>v</i>(<i>a</i>) = 2, &forall;<i>a</i> &in; 𝕂, <i>a</i> &ne; 0.</p>
 
-<p id="lemma"><b>Lemma 4.8.3</b>. If <i>a</i> and <i>b</i> are elements in a euclidean ring <i>R</i>, then v(a) = v(<i>ab</i>) if and only if <i>b</i> is invertible. Otherwise, v(a) < v(ab).</p>
+<p id="lemma"><b>Lemma 4.8.3</b>. If <i>a</i> and <i>b</i> are elements in a euclidean ring <i>R</i>, then v(<i>a</i>) = v(<i>ab</i>) if and only if <i>b</i> is invertible. Otherwise, v(a) < v(ab).</p>
 
-<p><b>Proof</b>. If <i>b</i> is invertible and <i>bc</i> = 1, then v(a) &le; v(ab) &le; v(<i>abc</i>) = v(<i>a</i>). Hence v(<i>a</i>) = v(<i>ab</i>).<br> If <i>b</i> is not invertible, <i>ab</i> does not divide <i>a</i> (If ab divides a, then there exists c such that abc = a; In an integral domain cancellation holds, so bc = 1, i.e. <i>b</i> is invertible) and <i>a</i> = <i>qab</i> + <i>r</i>, where v(r) < v(<i>ab</i>). Now r = a(1 − <i>qb</i>); thus v(a) &le; v(r). Therefore, v(a) < v(<i>ab</i>). &emsp;□</p>
+<p><b>Proof</b>. If <i>b</i> is invertible and <i>bc</i> = 1, then v(<i>a</i>) &le; v(<i>ab</i>) &le; v(<i>abc</i>) = v(<i>a</i>). Hence v(<i>a</i>) = v(<i>ab</i>).<br> If <i>b</i> is not invertible, <i>ab</i> does not divide <i>a</i> (If ab divides a, then there exists c such that <i>abc</i> = <i>a</i>; In an integral domain cancellation holds, so <i>bc</i> = 1, i.e. <i>b</i> is invertible) and <i>a</i> = <i>qab</i> + <i>r</i>, where v(<i>r</i>) < v(<i>ab</i>). Now <i>r</i> = a(1 − <i>qb</i>); thus v(<i>a</i>) &le; v(<i>r</i>). Therefore, v(<i>a</i>) < v(<i>ab</i>). &emsp;□</p>
 
-<p>We now introduce an important example of Euclidean domain, known as <b>Gaussian integers</b>.</p>
+<p id="Gaussian">We now introduce an important example of Euclidean domain, known as <b>Gaussian integers</b>.</p>
 
 <p><b>Proposition 4.8.5</b>. The subset</p>
 
@@ -142,7 +142,7 @@
 
 <p id="PID"><b>Definition 4.8.6</b>. An integral domain with unit in which every ideal is principal, is known as <i>principal ideal domain</i>.</p>
 
-<p>We've already seen that in ℤ all subrings are of the form (<i>n</i>) = <i>n</i>ℤ for some <i>n</i> &in; ℤ, and how these are automatically all ideals. Thus in ℤ every ideal is a principal ideal domain. With the same proof used for ℤ we can show that 𝕂[<i>x</i>] as well is a principal ideal domain. Every field is obviously an integral domain. We prove now the folllowing proposition.</p>
+<p>We've already seen that in ℤ all subrings are of the form (<i>n</i>) = <i>n</i>ℤ for some <i>n</i> &in; ℤ, and how these are automatically all ideals. Thus in ℤ every ideal is a principal ideal domain. With the same proof used for ℤ we can show that 𝕂[<i>x</i>] as well is a principal ideal domain. Every field is obviously an integral domain. We prove now the following proposition.</p>
 
 <p><b>Definition 4.8.7</b>. Every Euclidean domain is a principal ideal domain.</p>
 
@@ -203,7 +203,7 @@
 </tbody>
 </table>
 
-<p>The notion of divisibilty given for irreducible elements, prime elements and associated elements that were given in the previous chapters for ℤ and 𝕂[<i>x</i>] that lead to the notion of factorization, can be extended to every integral domain with unit.</p>
+<p>The notion of divisibility given for irreducible elements, prime elements and associated elements that were given in the previous chapters for ℤ and 𝕂[<i>x</i>] that lead to the notion of factorization, can be extended to every integral domain with unit.</p>
 
 <p>Let <i>R</i> an integral domain with 1.</p>
 
@@ -214,7 +214,7 @@
 
 	<li><p><i>u</i> is unit or invertible element  &emsp; ⇐⇒ &emsp;  ∃<i>u</i> &in; <i>R</i> | <i>uv</i> = <i>vu</i> = 1</p></li>
 
-	<li><p><i>a</i> &ne; 0 and not invertible is irriducible &emsp; ⇐⇒ &emsp; <i>a</i> = <i>bc</i> &emsp; ⇒ &emsp; <i>b</i> or <i>c</i> is a unit</p></li>
+	<li><p><i>a</i> &ne; 0 and not invertible is irreducible &emsp; ⇐⇒ &emsp; <i>a</i> = <i>bc</i> &emsp; ⇒ &emsp; <i>b</i> or <i>c</i> is a unit</p></li>
 
 	<li><p><i>a</i> is prime &emsp; ⇐⇒ &emsp; <i>a</i> | <i>bc</i> &emsp; ⇒ &emsp; <i>a</i> | <i>bc</i> &emsp; ⇒ &emsp; <i>a</i> |<i>b</i> or <i>a</i>| <i>c</i></p></li>
 </ul>
@@ -233,15 +233,13 @@
 <p>ℤ[<i>i</i>] = {<i>a</i> + <i>ib</i> | <i>a,b</i> &in; ℤ}</p>
 </div>
 
-<p>since it has {<i>a</i> | <i>a</i> &in; ℤ} = ℤ  as a subset and <i>i</i>.</p>
-
-<p>Let now <i>a</i> = √-3. Consider the ring</p>
+<p>Let now <i>a</i> = √−3. Consider the ring</p>
 
 <div class="eq">
-<p>ℤ[√-3] = {<i>a</i> + <i>b</i>√−3 | <i>a,b</i> &in; ℤ}</p>
+<p>ℤ[√−3] = {<i>a</i> + <i>b</i>√−3 | <i>a,b</i> &in; ℤ}</p>
 </div>
 
-<p>We determine first the inevrtible elements of the ring; to every element we associate the comple norm <i>N</i>(<i>a</i> + <i>b</i>√−3) = <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup>, the invertibility of <i>a</i> + <i>b</i>√−3 means that there exists a <i>&beta;</i> = <i>c</i> + <i>d</i>√−3 such that <i>&alpha;&beta;</i> = 1. Then <i>N</i>(<i>&alpha;</i>)<i>N</i>(<i>&beta;</i>) = <i>N</i>(<i>&alpha;&beta;</i>) = <i>N</i>(1) = 1. Being <i>N</i>(<i>&alpha;</i>) a non negative integer it must be <i>N</i>(<i>&alpha;</i>) = 1. Hence, to be invertible, an element of ℤ[√−3] <i>must have norm equal to</i> 1. The expression <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> with <i>a,b</i> &in; ℤ implies <i>b</i> = 0 and <i>a</i> = &pm;1. The only invertible elements of ℤ[√−3] are thus &pm;1.</p>
+<p>We determine first the inevrtible elements of the ring; to every element we associate the complete norm <i>N</i>(<i>a</i> + <i>b</i>√−3) = <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup>, the invertibility of <i>a</i> + <i>b</i>√−3 means that there exists a <i>&beta;</i> = <i>c</i> + <i>d</i>√−3 such that <i>&alpha;&beta;</i> = 1. Then <i>N</i>(<i>&alpha;</i>)<i>N</i>(<i>&beta;</i>) = <i>N</i>(<i>&alpha;&beta;</i>) = <i>N</i>(1) = 1. Being <i>N</i>(<i>&alpha;</i>) a non negative integer it must be <i>N</i>(<i>&alpha;</i>) = 1. Hence, to be invertible, an element of ℤ[√−3] <i>must have norm equal to</i> 1. The expression <i>a</i><sup>2</sup> + 3<i>b</i><sup>2</sup> with <i>a,b</i> &in; ℤ implies <i>b</i> = 0 and <i>a</i> = &pm;1. The only invertible elements of ℤ[√−3] are thus &pm;1.</p>
 
 <p id= "irr_notprime"><b>Example 4.8.9</b>.  We now want to show that in ℤ[√−3] there exist irreducible elements which are not also prime elements. Such an element is for example 1 + √−3: suppose that (1 + √−3) = (<i>a</i> + <i>b</i>√−3) (<i>c</i> + <i>d</i>√−3) in ℤ[√−3]. Calculating the norm, we have</p>
 

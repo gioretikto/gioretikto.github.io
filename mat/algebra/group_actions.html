@@ -74,23 +74,23 @@
 
 <p>In terms of movements, the orbit of an element <i>x</i> &in; <i>X</i> is made by all <i>y</i> &in; <i>X</i> in which the element <i>x</i> can be moved by the elements of <i>G</i>.</p>
 
-<p id="stabilizer"><b>Proposition 7.17.2</b> If <i>G</i> acts on a set <i>X</i> and <i>x</i> ∈ <i>X</i> then</p>
+<p id="stabilizer"><b>Definition 7.17.2 (Stabilizer)</b>. The <b>stabilizer</b> of an element <i>x</i> in <i>G</i> is the set of group elements <i>g</i> that don't move <i>x</i> that is the set of elements of <i>G</i> that fix <i>x</i>. It is denoted as Stab(<i>x</i>). </p>
 
 <div class="eq">
-<p>Stab <i>x</i> = {<i>g</i> ∈ <i>G</i>|<i>g</i>(<i>x</i>) = <i>x</i>}</p>
+<p>Stab <i>x</i> = {<i>g</i> ∈ <i>G</i>|<i>g</i>(<i>x</i>) = <i>x</i>}&emsp;□</p>
 </div>
 
-<p>is a subgroup of <i>G</i>, called the <b>stabilizer</b> of <i>x</i>. It is the set of elements of <i>G</i> that fix <i>x</i>.</p>
+<p><b>Proposition 7.17.3</b> If <i>G</i> acts on a set <i>X</i> and <i>x</i> ∈ <i>X</i> then Stab (<i>x</i>) is a subgroup of <i>G</i>.</p>
 
 <p><b>Proof</b>. Stab <i>x</i> is a <a href="subgroups.html">subgroup</a> because</p>
 
 <ol type="i">
-	<li><p>If <i>g</i><sub>1</sub>, <i>g</i><sub>2</sub> ∈ Stab <i>x</i>, then (<i>g</i><sub>1</sub><i>g</i><sub>2</sub>)(<i>x</i>) = <i>g</i><sub>1</sub>(<i>g</i><sub>2</sub>(<i>x</i>)) = <i>g</i><sub>1</sub>(<i>x</i>) = <i>x</i>, so <i>g</i><sub>1</sub><i>g</i><sub>2</sub> ∈ Stab <i>x</i>.</p></li>
+	<li><p>If <i>g</i><sub>1</sub>, <i>g</i><sub>2</sub> ∈ Stab (<i>x</i>), then (<i>g</i><sub>1</sub><i>g</i><sub>2</sub>)(<i>x</i>) = <i>g</i><sub>1</sub>(<i>g</i><sub>2</sub>(<i>x</i>)) = <i>g</i><sub>1</sub>(<i>x</i>) = <i>x</i>, so <i>g</i><sub>1</sub><i>g</i><sub>2</sub> ∈ Stab <i>x</i>.</p></li>
 
 	<li><p>If <i>g</i> ∈ Stab <i>x</i>, then <i>g</i><sup>−1</sup>(<i>x</i>) = <i>x</i>, so <i>g</i><sup>−1</sup> ∈ Stab <i>x</i>.&emsp;□</p></li>
 </ol>
 
-<p id="centralizer"><b>Definition 7.17.3</b>. The centralizer, <i>C<sub>a</sub></i> of <i>a</i> &in; <i>G</i> is its stabilizer under conjugation (see Example 7.17.58a). Thus</p>
+<p id="centralizer"><b>Definition 7.17.4</b>. The centralizer, <i>C<sub>a</sub></i> of <i>a</i> &in; <i>G</i> is its stabilizer under conjugation (see Example 7.17.58a). Thus</p>
 
 <div class="eq">
 <p><i>C<sub>a</sub></i> = {<i>g</i> &in; <i>G</i>| <i>gag</i><sup>−1</sup> = <i>a</i>} = {<i>g</i> &in; <i>G</i> | <i>ag</i> = <i>ga</i>}</p>
@@ -104,7 +104,7 @@
 
 <p>Clearly <i>a</i> &in; <i>Z</i>(<i>G</i>)&emsp;⇐⇒&emsp; <i>C</i>(<i>a</i>) = <i>G</i>; In an Abelian group, the centralizer is the whole group. The centralizer is contained in the corresponding normalizer.</p>
 
-<p><b>Proposition 7.17.4</b>. The subgroup St<sub><i>x</i></sub> of <i>G</i>. In addition</p>
+<p><b>Proposition 7.17.5</b>. The subgroup St<sub><i>x</i></sub> of <i>G</i>. In addition</p>
 
 <div class="eq">
 <p>St<sub><i>gx</i></sub> = <i>g</i> St<sub><i>x</i></sub> <i>g</i><sup>&minus;1</sup></p>
@@ -120,7 +120,7 @@
 
 <p>Every group acts on itself, by left and right multiplication, and by conjugation.</p>
 
-<p><b>Examples 7.17.5</b></p>
+<p><b>Examples 7.17.6</b></p>
 
 <ol type="a">
 	<li><p><b>Action by Conjugation</b>. Conjugation is an important special case of an action of a group on a set. Every group <i>G</i> acts on itself, that is on <i>X</i> = <i>G</i> by conjugation. In this case</p>
@@ -177,7 +177,7 @@
 
 <p><b>Example: Cayley’s Theorem</b>. We know that any group <i>G</i> acts on the set <i>X</i> = <i>G</i> by left multiplication. The preceding construction produces a group homomorphism <i>φ</i>: <i>G</i> → Sym(<i>G</i>) such that <i>φ</i>(<i>g</i>) = L<sub>g</sub> for all <i>g</i> ∈ <i>G</i>, and L<sub>g</sub>(<i>x</i>) = <i>gx</i> for all <i>x</i> ∈ <i>G</i>. We claim that <i>φ</i> is injective in this situation. For, suppose <i>g, h</i> ∈ <i>G</i> and <i>L<sub>g</sub> = L<sub>h</sub></i>. Applying these two functions to <i>e</i> (the identity of <i>G</i>) gives L<sub>g</sub>(<i>e</i>) = L<sub>h</sub>(<i>e</i>), so <i>ge</i> = <i>he</i>, so <i>g</i> = <i>h</i>. It follows that <i>G</i> is isomorphic (via <i>φ</i>) to the image of <i>φ</i>, which is a subgroup of the symmetric group Sym(<i>G</i>). This proves Cayley’s Theorem, which says that any group is isomorphic to a subgroup of some symmetric group. If <i>G</i> has <i>n</i> elements, one can check that Sym(<i>G</i>) is isomorphic to <i>S<sub>n</sub></i>. So every <i>n</i>-element group is isomorphic to a subgroup of the symmetric group <i>S<sub>n</sub></i>. &emsp;■</p>
 
-<p><b>Proposition 7.17.6</b>. Let <i>X</i> a <i>G</i>-set. The cardinality of the orbit 𝒪(<i>x</i>) of the element <i>x</i> &in; <i>X</i> is equal to the index St<sub><i>x</i></sub> in <i>G</i></p>
+<p><b>Proposition 7.17.7</b>. Let <i>X</i> a <i>G</i>-set. The cardinality of the orbit 𝒪(<i>x</i>) of the element <i>x</i> &in; <i>X</i> is equal to the index St<sub><i>x</i></sub> in <i>G</i></p>
 
 <p><b>Proof</b>. It suffices to find a bijections between 𝒪(<i>x</i>) and right cosets</p>
 
@@ -202,17 +202,17 @@
 
 <p>In addition the map is surjective since every right coset St<sub><i>x</i></sub> <i>g</i> has the counterimage <i>g</i><sup>&minus;1</sup><i>x</i> &in; O(<i>x</i>). &emsp; □</p>
 
-<p><b>Corollary 7.17.7</b>. The cardinality of the conjugacy class of an element <i>x</i> of a group <i>G</i> is equal to the index of the centralizer C(<i>x</i>).</p>
+<p><b>Corollary 7.17.8</b>. The cardinality of the conjugacy class of an element <i>x</i> of a group <i>G</i> is equal to the index of the centralizer C(<i>x</i>).</p>
 
-<p><b>Corollary 7.17.8</b>. If <i>G</i> is a finite group acting on a set <i>X</i>, for every <i>x</i> &in; <i>X</i> we have</p>
+<p><b>Corollary 7.17.9</b>. If <i>G</i> is a finite group acting on a set <i>X</i>, for every <i>x</i> &in; <i>X</i> we have</p>
 
 <div class="eq">
 <p>|𝒪(<i>x</i>)| ⋅ |St<sub><i>x</i></sub>| = |<i>G</i>|</p>
 </div>
 
-<p><b>Example 7.17.9</b>. Let <i>G</i> a group which acts on a subgroup <i>H</i> of <i>G</i>, where the action is the multiplication like in example 7.17.5(e). Let <i>g</i> &in; <i>G</i>. Then O(<i>g</i> = Hg, St<sub>g</sub> = {<i>e</i>}, thus the <a href="cosets.html#index">index</a> of St<sub><i>g</i></sub> in <i>H</i> is equal to |<i>H</i>| as dictated by Proposition 7.17.6. </p>
+<p><b>Example 7.17.10</b>. Let <i>G</i> a group which acts on a subgroup <i>H</i> of <i>G</i>, where the action is the multiplication like in example 7.17.5(e). Let <i>g</i> &in; <i>G</i>. Then O(<i>g</i> = Hg, St<sub>g</sub> = {<i>e</i>}, thus the <a href="cosets.html#index">index</a> of St<sub><i>g</i></sub> in <i>H</i> is equal to |<i>H</i>| as dictated by Proposition 7.17.6. </p>
 
-<p><b>Corollary 7.17.10</b>. Consider the natural action of S<sub>4</sub> on <i>X</i> = {1,2,3,4}. Take <i>x</i> = 1 &in; <i>X</i>. Then</p>
+<p><b>Corollary 7.17.11</b>. Consider the natural action of S<sub>4</sub> on <i>X</i> = {1,2,3,4}. Take <i>x</i> = 1 &in; <i>X</i>. Then</p>
 
 <div class="eq">
 <p><i>𝒪</i>(1) = {1,2,3,4}, St<sub>1</sub> ≃ St<sub>4</sub></p>
@@ -220,7 +220,7 @@
 
 <p>thus |<i>𝒪</i>(1)| = 4, |St<sub>1</sub>| = 6 then 4 ⋅ 6 = 24 = |S<sub>4</sub>| &emsp; ■.</p>
 
-<p><b>Example 7.17.11</b>. Let <i>X</i> the set of words made by seven letters. We want to count how many distinct words with two As, three Bs and on two Cs are possible. The group S<sub>7</sub> acts on <i>X</i> permuting the letters: for example,</p>
+<p><b>Example 7.17.12</b>. Let <i>X</i> the set of words made by seven letters. We want to count how many distinct words with two As, three Bs and on two Cs are possible. The group S<sub>7</sub> acts on <i>X</i> permuting the letters: for example,</p>
 
 <div class="eq">
 <p>(135)(27)ABCAGFE = GEAACFB</p>
@@ -242,7 +242,7 @@
 
 <p>In case the action is the coniugacy action we have the following result:</p>
 
-<p><b>Corollary 7.17.12</b>. Let <i>G</i> a finite group. Let <i>C</i>(<i>x</i>) the <a href="conjugacy.html#centraliser">centraliser</a> of the element <i>x</i> &in; <i>G</i>, then since the conjugacy classes partition <i>G</i>, we've the following relation</p>
+<p><b>Corollary 7.17.13</b>. Let <i>G</i> a finite group. Let <i>C</i>(<i>x</i>) the <a href="conjugacy.html#centraliser">centraliser</a> of the element <i>x</i> &in; <i>G</i>, then since the conjugacy classes partition <i>G</i>, we've the following relation</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mo stretchy="false">|</mo>
@@ -298,7 +298,7 @@
 
 <p>where the sum is over <i>x</i> &notin; <i>Z</i>(<i>G</i>), one for every conjugacy class.</p>
 
-<p><b>Example 7.17.13</b>. Let <i>G</i> = S<sub>3</sub>. The conjugacy classes are</p>
+<p><b>Example 7.17.14</b>. Let <i>G</i> = S<sub>3</sub>. The conjugacy classes are</p>
 
 <div class="eq">
 <p><i>C</i><sub>1</sub> = {id}<br>
@@ -420,11 +420,11 @@
 
 <p>and the theorem is thus proved. &emsp;□</p>
 
-<p><b>Example 7.17.14</b>. Let us use the Burnside counting theorem to find the number of ways of seating 10 people around a circular table. Let <i>X</i> the set of all possible ordering of the 10 people. We have |<i>X</i>| = 10!, which corresponds to the number of ways to seat the people in a row. A very obvious difference between seating people on a straight bench and seating them at a circular table is that each person has 2 neighbours in the latter case and as long as each person retains the same 2 neighbours, they can be rotated round the table without causing any difference. Hence the 10 arrangements in a row correspond to one arrangement in a circle.</p>
+<p><b>Example 7.17.15</b>. Let us use the Burnside counting theorem to find the number of ways of seating 10 people around a circular table. Let <i>X</i> the set of all possible ordering of the 10 people. We have |<i>X</i>| = 10!, which corresponds to the number of ways to seat the people in a row. A very obvious difference between seating people on a straight bench and seating them at a circular table is that each person has 2 neighbours in the latter case and as long as each person retains the same 2 neighbours, they can be rotated round the table without causing any difference. Hence the 10 arrangements in a row correspond to one arrangement in a circle.</p>
 
 <p>The number of ways to arrange 10 men at a round table is 10!/10 = 9!</p>
 
-<p><b>Example 7.17.15</b>. How many distinct bracelets can be made with five red beads and three blue beads?</p>
+<p><b>Example 7.17.16</b>. How many distinct bracelets can be made with five red beads and three blue beads?</p>
 
 <p>Every configuration is determined once we fix three beads, thus all the configurations are C<sub>8,3</sub> = 56. For each combination by rotating the pearls in the bracelet we consider it to be the same braeclet D<sub>8</sub> because you can flip the bracelet over and its the same one. Rotation means that you rotate the beads around the bracelet respecting the same ordering of beads. If <i>x</i> = RRRRRBBB when is rotated becomes <i>y</i> = RRRRBBBR. So rotations do not leave any element fixed. Reflections through the axes of the polygon do not fix any configuration whilst reflections along the diagonal of the polygon fix 6 configurations (those having a red and blue bead on the vertex of the polygon)</p>
 

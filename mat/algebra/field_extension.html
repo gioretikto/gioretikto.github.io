@@ -21,39 +21,152 @@
 
 <h1>Field Extensions</h1>
 
-<p>The most useful number systems are those in which we can divide by nonzero elements (we've already touched on the notion of a <a href="rings.html#field">field</a>). A <b>field</b> is a <a href="rings.html">ring</a> in which the nonzero elements form an abelian group under multiplication. In other words, a field is a nontrivial commutative ring <i>R</i> satisfying the following extra axiom.</p>
+<p>We are familiar with the observation that the equation <i>x</i><sup>2</sup> = 2 cannot be solved within the rational field, but has the solutions ± √3 in the field ℝ of real numbers. In fact its solutions lie within a much smaller field than ℝ, namely, the extension</p>
 
-<p>For each nonzero element <i>a</i> ∈ <i>R</i> there exists <i>a</i><sup>−1</sup> ∈ <i>R</i> such that <i>a</i> · <i>a</i><sup>−1</sup> = 1.</p>
+<div class="eq">
+<p>ℚ(√3) = = {<i>a</i> + <i>b</i>√3 : <i>a, b</i> ∈ ℚ}</p>
+</div>
 
-<p>The rings ℚ, ℝ and ℂ are all fields, but the integers do not form a field.</p>
+<p>of ℚ. It is not perhaps quite obvious that this is a field, but it is easy to verify the <a href="subfield.html">subfield conditions</a>. If <i>a</i> + <i>b</i> √3, <i>c</i> + <i>d</i>√3 ∈ ℚ(√3), then</p>
 
-<p>It was also Dedekind who baptized what we know as fields (with the German word Körper, literally “body”), because it " denotes a system with a certain completeness, fullness and self-containment". </p>
+<div class="eq">
+<p>(<i>a</i> + <i>b</i>√3) − (<i>c</i> + <i>d</i>√3) = (<i>a</i> − <i>c</i>) + (<i>b</i> − <i>d</i>) √3 &in; ℚ(√3)</p>
+</div>
 
-<p><b>Definition 8.1.1</b>. A <b>field</b> is a set together with two laws of composition:</p>
+<p>and (if <i>c</i> + <i>d</i>√3 &ne; 0)</p>
 
-<table class="centertable noborder">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <msqrt>
+    <mn>3</mn>
+  </msqrt>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mi>c</mi>
+  <mo>+</mo>
+  <mi>d</mi>
+  <msqrt>
+    <mn>3</mn>
+  </msqrt>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo>+</mo>
+      <mi>b</mi>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo>&#x2212;</mo>
+      <mi>d</mi>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo>+</mo>
+      <mi>d</mi>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo>&#x2212;</mo>
+      <mi>d</mi>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>u</mi>
+  <mo>+</mo>
+  <mi>v</mi>
+  <msqrt>
+    <mn>3</mn>
+  </msqrt>
+</math>
 
-<tr><td><i>F</i> x <i>F</i></td> <td>+<br>⟶</td> <td><i>F</i></td> <td></td> <td></td><td><i>F</i> x <i>F</i></td> <td>⋅<br>⟶</td> <td><i>F</i></td></tr>
+<!-- $$(a+b \sqrt{3}) (c +d\sqrt{3})^{-1} = \frac{(a+b \sqrt{3}) (c - d \sqrt{3})} {(c+d \sqrt{3}) (c-d \sqrt{3})} = u + v\sqrt{3} $$ -->
 
-<tr><td>a,b</td> <td>⟼</td> <td><i>a</i> + <i>b</i></td> <td></td> <td></td> <td><i>a,b</i></td> <td>⟼</td> <td><i>ab</i></td> </tr>
+<p>where</p>
 
-</table>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>u</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mi>b</mi>
+      <mi>d</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <msup>
+        <mi>d</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>v</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>b</mi>
+      <mi>c</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+      <mi>d</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <msup>
+        <mi>d</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
 
-<p>called addition and multiplication, and satisfying the following axioms:</p>
+<!-- $$u = \frac{ac - 2bd}{c^2-2d^2}, \quad v = \frac{bc - ad}{c^2-2d^2} $$ -->
 
-<ol>
-	<li><p><i>F</i> is an Abelian group under the "addition" operation +. The additive identity is called the <b>zero</b> and is denoted by 0;</p></li>
-
-	<li><p>Multiplication is associative and commutative and makes the set <i>F</i>* = <i>F</i> \ {0} of nonzero elements of <i>F</i> is an Abelian group under the "multiplication" operation '⋅'. The multiplicative identity is called the <b>unity</b> and is denoted by 1;</p></li>
-
-	<li><p>The multiplication operation '⋅' distributes over the addition operation +; that is <i>a</i> ⋅ (<i>b</i> + <i>c</i>) = <i>a</i> ⋅ <i>b</i> + <i>a</i> ⋅ <i>c</i>, for every <i>a,b,c</i> &in; <i>F</i>. &emsp;□</p>
-</ol>
-
-<p>From the definition, we see that a field consists of two groups with respect to two operations, addition and multiplication. The group with respect to addition is called the <i>additive group</i> of the field, and the group with respect to multiplicatoin is called the <i>multiplicative group</i> of the field. Since these two groups must contain an identity element, a field must contain at least two elements. In a field the additive inverse of an element <i>a</i> is denoted by '−<i>a</i>', and the mutliplicative inverse of <i>a</i> is denoted <i>a</i><sup>−1</sup>, provided that <i>a</i> &ne; 0.</p>
-
-<p>The properties satisfied by a field <i>F</i>, are more extensive than the four <a href="groups.html">group axioms</a> applied to both binary operations. Recall that ℝ under standard addition is an Abelian group. On the other hand, ℝ under standard multplication is not a group − although it comes very close: the inverse property is not satisfied, and it fails for just one real number, zero. By removing the zero and considering the set ℝ* = ℝ\{0} we have a multiplicative group. Indeed, the first group axiom holds since the product of any two nonzero real numbers is still nonzero. Multiplication of real numbers is associative, 1 plays the role of an identity element, and 1/<i>a</i> gives the inverse of an element <i>a</i> &in; ℝ*. Thus ℝ* is a group under multiplication. <br> Similarly, we have the groups ℚ* of all nonzero rational numbers and ℂ* of all nonzero complex numbers, under the operation of ordinary multiplication. If we attempt to form a multiplicative group from the integers ℤ, we have to restrict ourselves to just 1, since these are the only integers that have multiplicative inverses in ℤ.</p>
-
-<p>There are actually many fields lying between ℚ and ℂ, not only ℝ. One simple example is the field ℚ(<i>i</i>) = {<i>p</i> + <i>qi</i> | <i>p, q</i> ∈ ℚ} which has already been mentioned a couple of times. A similar example is ℚ(√2) = {<i>p</i> + <i>q</i>√2 | <i>p,q</i> ∈ ℚ}. There are, on the other hand, fields whose elements are not numbers, for example, ℤ<sub><i>p</i></sub> is a (finite) field for every prime number <i>p</i>.</p>
+<p>Similarly there are actually many fields lying between ℚ and ℂ, not only ℝ. One simple example is the field ℚ(<i>i</i>) = {<i>p</i> + <i>qi</i> | <i>p, q</i> ∈ ℚ} which has already been mentioned a couple of times. A similar example is ℚ(√2) = {<i>p</i> + <i>q</i>√2 | <i>p,q</i> ∈ ℚ}.</p>
 
 <p id="subfield"><b>Definition 8.1.2</b> Let <i>F</i> be a field, A subset <i>K</i> of <i>F</i> that is itself a field under the operations of <i>F</i> is called a <b>subfield</b> of <i>F</i>. In this context, <i>F</i> is called an <b>extension field</b> of <i>K</i>. If <i>K</i> &ne; <i>F</i>, we say that <i>K</i> is a <i>proper subfield</i> of <i>F</i>. A field containing no proper subfields is called a <b>prime field</b>. &emsp;□</p>
 
@@ -88,52 +201,311 @@
 
 <p id="finite"><b>Proposition 8.1.5</b>. Let <i>F</i> be an extension field of <i>K</i>. If the dimension of <i>F</i> as a vector space over <i>K</i> is finite, then <i>F</i> is said to be a <b>finite</b> extension of <i>K</i>. The dimension of <i>F</i> as a vector space over <i>K</i> is called the degree of <i>F</i> over <i>K</i>, and is denoted by [<i>F</i> : <i>K</i>].&emsp;□</p>
 
+<p>ℂ &supseteq; ℝ is finite, and [ℂ : ℝ] = 2 because {1, <i>i</i>} is an ℝ-basis of ℂ.</p>
+
 <p>A tower of extensions is a sequence of successive field extensions. In a tower of extensions, the degree is multiplicative:</p>
 
-<p id="tower"><b>Theorem 8.1.6</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
+<p id="tower"><b>8.1.6 Mutliplication Theorem</b> Let <i>L</i> be a finite extension of <i>K</i> and let <i>K</i> in turn be a finite extension of <i>F</i>. Then</p>
 
 <ol type="a">
 	<li><p><i>L</i> is a finite extension of <i>F</i></p></li>
 	<li><p>[<i>L</i> : <i>F</i>] = [<i>L</i> : <i>K</i>][<i>K</i> : <i>F</i>].</p></li>
 </ol>
 
+<p>Schematically the situation is the following</p>
+
+<div class="eq">
+<p>L<br>
+|<br>
+|<br>
+K<br>
+|<br>
+|<br>
+F</p>
+</div>
+
 <p><b>Proof</b>. Let [<i>L</i> : <i>K</i>] = <i>m</i>, [<i>K</i> : <i>F</i>] = <i>n</i> and let <i>X</i> = {<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>} a basis of <i>L</i> over the field <i>K</i> and let <i>Y</i> = {<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, ..., <i>y<sub>n</sub></i>} a basis of <i>K</i> over the field <i>F</i>. We shall prove that the set of <i>mn</i> products {<i>x<sub>i</sub>y<sub>j</sub></i>}<sub><i>i</i> = 1,...,<i>m</i>, <i>j</i> = 1, ..., <i>n</i></sub> is a basis of <i>L</i> over <i>F</i>, proving both assertions of the theorem.</p>
 
 <ol type="a">
 
-	<li><p>The <i>x<sub>i</sub>y<sub>j</sub></i> are generators. Let <i>l</i> an arbitrary element of <i>L</i>. Then</p>
+	<li><p>The <i>x<sub>i</sub>y<sub>j</sub></i> are <i>generators</i>. Let <i>l</i> an arbitrary element of <i>L</i>. Then</p>
 
-	<div class="eq">
-	<p><i>l</i> = ∑<sup><i>m</i></sup><sub><sub><i>i</i> = 1</sub></sub> <i>k<sub>i</sub>x<sub>i</sub></i>, &emsp; <i>k<sub>i</sub></i> &in; <i>L</i>.</p>
-	</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>l</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <msub>
+    <mi>k</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>k</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>&#x2208;</mo>
+  <mi>K</mi>
+</math>
 
-	<p>since the <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i> are a basis of <i>L</i> over <i>K</i>. Since <i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, ..., <i>y<sub>n</sub></i> is a basis of <i>K</i> over the field <i>F</i>, every <i>k<sub>i</sub></i> can be written a lineare combination of the <i>y<sub>i</sub></i> with coefficients in <i>F</i>. It follows that</p>
+<!-- $$l = \sum_{i=1}^m k_ix_i, \quad k_i \in K $$ -->
 
-	<div class="eq">
-	<p><i>l</i> = ∑<sup><i>m</i></sup><sub><sub><i>i</i> = 1</sub></sub> (∑<sup><i>n</i></sup><sub><sub><i>j</i> = 1</sub></sub> <i>a<sub>ij</sub>y<sub>j</sub></i>)<i>x<sub>i</sub></i> = ∑<sub><sub><i>i,j</i></sub></sub> <i>a<sub>ij</sub>y<sub>j</sub>x<sub>i</sub></i></p>
-	</div>
+<p>since the <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i> are a basis of <i>L</i> over <i>K</i>. Since <i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, ..., <i>y<sub>n</sub></i> is a basis of <i>K</i> over the field <i>F</i>, every <i>k<sub>i</sub></i> can be written a linear combination of the <i>y<sub>i</sub></i> with coefficients in <i>F</i>:</p>
 
-	</li>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>k</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>y</mi>
+    <mi>j</mi>
+  </msub>
+</math>
 
-	<li><p>To show that {<i>x<sub>i</sub>y<sub>j</sub></i>}<sub><i>i</i> = 1, ..., <i>m</i>, <i>j</i> = 1, ..., <i>n</i></sub> forms a linearly independent set, suppose that</p>
+<!-- $$k_i = \sum_{j=1}^n a_{ij}y_j $$ -->
 
-	<div class="eq">
-	<p>∑<sub><sub><i>i,j</i></sub></sub> <i>a<sub>ij</sub></i>(<i>y<sub>j</sub>x<sub>i</sub></i>) = 0, &emsp; <i>a<sub>ij</sub></i> &in; <i>F</i></p>
-	</div>
+<p>It follows that</p>
 
-	<p>We have then</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>l</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <msub>
+      <mi>a</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <msub>
+      <mi>y</mi>
+      <mi>j</mi>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>,</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mi>j</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>y</mi>
+    <mi>j</mi>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+</math>
 
-	<div class="eq">
-	<p>0 = ∑<sup><i>m</i></sup><sub><sub><i>i</i> = 1</sub></sub> (∑<sup><i>n</i></sup><sub><sub><i>j</i> = 1</sub></sub> <i>a<sub>ij</sub>y<sub>j</sub></i>)<i>x<sub>i</sub></i></p>
-	</div>
+<!-- $$l = \sum_{i=1}^m \left (\sum_{j=1}^n a_{ij}y_j \right) x_i, = \sum_{i,j} a_{ij}y_jx_i$$ -->
+</li>
 
-	<p>From the independe of the <i>x<sub>i</sub></i> over <i>K</i>,</p>
+<li><p><i>x<sub>i</sub>y<sub>j</sub></i> are a linearly independent set over <i>F</i>. Suppose that</p>
 
-	<div class="eq">
-	<p>∑<sup><i>n</i></sup><sub><sub><i>j</i> = 1</sub></sub> <i>a<sub>ij</sub>y<sub>j</sub></i> = 0</p>
-	</div>
 
-	<p>Since the <i>y<sub>j</sub></i> are independent over <i>F</i>, thus <i>a<sub>ij</sub></i> = 0 for every <i>i,j</i>.&emsp;□</p></li>
+<!-- $$l = \sum_{i,j} a_{ij}(y_jx_i) =0, \quad a_{ij} \in F $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>l</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mi>j</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>y</mi>
+    <mi>j</mi>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2208;</mo>
+  <mi>F</mi>
+</math>
+
+<p>We have then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>0</mn>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <munderover>
+            <mo data-mjx-texclass="OP">&#x2211;</mo>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>n</mi>
+          </munderover>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>i</mi>
+              <mi>j</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>y</mi>
+            <mi>j</mi>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2208;</mo>
+      <mi>K</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<!-- $$0 = \sum_{i=1}^m  \underbrace {\left(\sum_{j=1}^n a_{ij}y_j \right)}_{\in K} x_i $$ -->
+
+<p>From the independence of the <i>x<sub>i</sub></i> over <i>K</i>,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>y</mi>
+    <mi>j</mi>
+  </msub>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\sum_{j=1}^n a_{ij}y_j = 0 $$ -->
+
+<p>Since the <i>y<sub>j</sub></i> are independent over <i>F</i>, it must follow <i>a<sub>ij</sub></i> = 0 for every <i>i,j</i>.&emsp;□</p></li>
+
 </ol>
 
 <p><b>Corollary 8.1.7</b> Let <i>L</i> a finite extension of <i>F</i> and <i>K</i> a subfield of <i>L</i> embedding <i>F</i>. Then</p>
@@ -153,8 +525,8 @@
 <p><b>Corollary 8.1.8</b> If <i>K</i> is a field extension of <i>F</i> which has a degree a prime number <i>p</i>, then there aren't intermediate field betweem <i>K</i> and <i>F</i>.</p>
 
 <section aria-label="End">
-<a href="finite_abelian_groups.html">&#171;Finite Abelian Groups</a>
-<a href="index.html">Index</a>
+<a href="fields.html">&#171;Fields</a>
+<a href="index.html#8">Index</a>
 <a href="simple_extensions.html">Simple Extensions&#187;</a>
 </section>
 

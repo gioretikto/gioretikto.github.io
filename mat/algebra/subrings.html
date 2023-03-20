@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Subrings"/>
- <title>Subrings</title>
- <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Subrings"/>
+	<title>Subrings</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 	</ul>
 </nav>
 
-<div class="content">
+<article>
 
 <h1>Subrings</h1>
 
@@ -45,9 +45,64 @@
 
 <p>(the associativity with respect to + is automatically verified). Since condition (6.2.1) is true for every <i>a,b</i> &in; <i>S</i> it also hold true for <i>a</i> = <i>b</i> hence <i>a</i> − <i>a</i> = 0 &in; <i>S</i>. If we take the elements <i>a</i> and 0, it follows that 0 −<i>a</i> = −<i>a</i> &in; <i>S</i>. It is also true that given <i>a,b</i> &in; <i>S</i> also <i>a</i> and −<i>b</i> are in <i>S</i> and thus follows <i>a</i>−(−<i>b</i>) = <i>a</i> + <i>b</i> &in; <i>S</i>.□</p>
 
-<p>For example, (ℤ, +, ·) is a subring of (<i>R</i>, +, ·), (2ℤ, +, ·) is a subring of (Z, +, ·).</p>
-
 <h2>Example of subrings</h2>
+
+<p>Many rings live inside other rings. For example, (ℤ, +, ·) is a subring of (ℚ, +, ·), (2ℤ, +, ·) is a subring of (ℤ, +, ·). <br> We have seen different example of rings as</p>
+
+<div class="eq">
+<p>ℤ[<i>x</i>] = {all polynomials in the variable <i>x</i> whose coefficients are integers}<br>
+ℝ[<i>x</i>] = {all polynomials in the variable <i>x</i> whose coefficients are real numbers}</p>
+</div>
+
+<p>Let <i>a</i> &in; ℂ. We indicate as</p>
+
+<div class="eq">
+<p>ℤ[<i>a</i>]</p>
+</div>
+
+<p id="Gaussian">the intersection all subrings of ℂ, containing ℤ and <i>a</i>. For example, in the case of <i>a</i> = <i>i</i>, we have</p>
+
+<div class="eq">
+<p>ℤ[<i>i</i>] = {<i>a</i> + <i>ib</i> &in; ℂ | <i>a,b</i> &in; ℤ}</p>
+</div>
+
+<p>So inside the ring ℂ, there is the subring ℤ[<i>i</i>]. Geometrically this consists of the lattice of points in the complex plane whose coordinates are integers. The elements of ring ℤ[<i>i</i>] are known as <i><b>Gaussian integers</b></i>. We shall explore ℤ[<i>i</i>] thoroughly, but just to show the difference with ℤ, consider the multiplication of (1+2<i>i</i>)(1+2<i>i</i>); what do you get is 5. Notice that 5 in ℤ is a prime, which cannot be factored; yet we have just seens that in ℤ[<i>i</i>], which contains ℤ, 5 is no longer prime!.</p>
+
+<p>We obserde that ℤ[<i>i</i>] is obtained by adjoining a root of the equation <i>x</i><sup>2</sup> + 1 = 0 to ℤ, hence the name of <b>quadratic extension</b> of ℤ. The general quadratic extension of ℤ is formed by adjoining to ℤ a root of a quadratic equation:</p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> + <i>ax</i> + <i>b</i> = 0, &emsp;where <i>a,b</i> &in; ℤ</p>
+</div>
+
+<p>Thus this extension ring is ℤ[√<i>d</i>], with nonsquare <i>d</i>, so that we know that <i>d</i> is an irrational number, e.g. ℤ[√2]. You can think of ℤ[√<i>d</i>] as polynomials with integers coefficients and powers of √<i>d</i>. Of course since (<i>d</i>)<sup>2</sup> = <i>d</i> is an integer, we really don't have to worry about any powers higher than the first: for example take ℤ[√2] and consider 4<i>x</i><sup>3</sup> − 5<i>x</i><sup>2</sup> + <i>x</i> − 3 and replace each <i>x</i> with √2 we get,</p>
+
+<div class="eq">
+<p>4(√2)<sup>3</sup> −5(√2)<sup>2</sup> + (√2)<sup>1</sup> − 3 = 16√2 − 10 + √2 − 3 = 17√2 −13.</p>
+</div>
+
+<p>So we really have the following definition</p>
+
+<div class="eq">
+<p>ℤ[√<i>d</i>] = {<i>a</i> + <i>b</i> √<i>d</i> &in; ℝ | <i>a,b</i> &in; ℤ}</p>
+</div>
+
+<p>So</p>
+
+<div class="eq">
+<p>ℤ[√2] = {<i>a</i> + <i>b</i> √2 &in; ℝ | <i>a,b</i> &in; ℤ}</p>
+</div>
+
+<p>And by similar reasoning</p>
+
+<div class="eq">
+<p>ℤ[∛2] = {<i>a</i> + <i>b</i> ∛2 + <i>c</i>(∛2)<sup>2</sup> &in; ℝ | <i>a,b,c</i> &in; ℤ}</p>
+</div>
+
+<p>Similarly since <i>i</i><sup>2</sup> −1 &in; ℤ, we get</p>
+
+<div class="eq">
+<p>ℤ[<i>i</i>] = {<i>a</i> + <i>bi</i> &in; ℝ | <i>a,b</i> &in; ℂ}</p>
+</div>
 
 <ul>
 	<li><p>Every ring posseses two subrings, known as <i>trivial subrings</i>: the whole ring and the ring containing only 0.</p></li>
@@ -91,7 +146,7 @@
 &emsp; <i>a</i><sub>1</sub> ⟶ <i>aa</i><sub>1</sub></p>
 </div>
 
-<p>by <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>aa<sub>i</sub></i>. If <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>&Psi;</i>(<i>a<sub>j</sub></i>) then <i>aa<sub>i</sub> = aa<sub>j</sub></i>, so by the cancellation property, <i>a<sub>i</sub></i> = <i>a<sub>j</sub></i> hence the <i>n</i> products <i>aa<sub>i</sub></i> are all distinct and the set {<i>aa<sub>1</sub>, ...,aa<sub>n</sub></i>} coincides with the set <i>D*</i>. Thus we see that <i>&Psi;</i> is a one-to-one function. Since <i>D*</i> is finite, the mapping <i>&Psi;</i> is onto <i>D*</i>. But one of the elements of <i>D*</i> is the multiplicative identity 1. Therefore, <i>&Psi;</i>(<i>a<sub>k</sub></i>) = 1 for some <i>a<sub>k</sub></i> &in; <i>D*</i>; that is <i>aa<sub>k</sub></i> = 1. This shows that <i>a</i> has a multiplicative inverse and hence <i>D</i> is a field. Note that since <i>D</i> is commutative that <i>aa<sub>j</sub></i> = <i>a<sub>j</sub>a</i>.□</p>
+<p>by <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>aa<sub>i</sub></i>. If <i>&Psi;</i>(<i>a<sub>i</sub></i>) = <i>&Psi;</i>(<i>a<sub>j</sub></i>) then <i>aa<sub>i</sub></i> = <i>aa<sub>j</sub></i>, so by the cancellation property, <i>a<sub>i</sub></i> = <i>a<sub>j</sub></i> hence the <i>n</i> products <i>aa<sub>i</sub></i> are all distinct and the set {<i>aa<sub>1</sub>, ...,aa<sub>n</sub></i>} coincides with the set <i>D*</i>. Thus we see that <i>&Psi;</i> is a one-to-one function. Since <i>D*</i> is finite, the mapping <i>&Psi;</i> is onto <i>D*</i>. But one of the elements of <i>D*</i> is the multiplicative identity 1. Therefore, <i>&Psi;</i>(<i>a<sub>k</sub></i>) = 1 for some <i>a<sub>k</sub></i> &in; <i>D*</i>; that is <i>aa<sub>k</sub></i> = 1. This shows that <i>a</i> has a multiplicative inverse and hence <i>D</i> is a field. Note that since <i>D</i> is commutative that <i>aa<sub>j</sub></i> = <i>a<sub>j</sub>a</i>.□</p>
 
 <section aria-label="End">
 <a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>
@@ -99,7 +154,7 @@
 <a href="exercises_rings.html">Exercises on rings &#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>

@@ -25,7 +25,7 @@
 
 <p>The message to be sent is called the <b>plaintext</b> message. The disguised message is called the <b>ciphertext</b>. The plaintext and the ciphertext are both written using alphanumeric characters. Characters can include the familiar alphabetic characters <i>a, A, ..., Z, z</i> and also digits, punctuation marks, and blanks. A <b>cryptosystem</b>, or <b>cipher</b>, is characterized by two parts: <b>encryption</b>, the process of transforming a plaintext message to a ciphertext message, and <b>decryption</b>, the reverse transformation of changing a ciphertext message into a plaintext message.</p>
 
-<p>With <b>private key</b> (<b>symmetric</b>) encryption, you use a key to encrypt data and then use the same key to decrypt that data.</p>
+<p><b>Symmetric</b> (or private key) encryption algorithms encrypt and decrypt with the same key. <b>Asymmetric</b> (or Public-key encryption) encryption algorithms encrypt and decrypt with different keys: Data is encrypted with a public key and decrypted with a private key.</p>
 
 <p>An early cryptological system, called the Caesar cipher, was employed by Julius Caesar in the Gallic wars. Julius Caesar used a cipher that simply shifted each letter in the alphabet three letters to the right in this way (<i>A</i> → <i>D</i>, <i>B</i> → <i>E</i>, etc.). This is an example of a <i>shift cipher</i>, sometimes called a <i>Caesar cipher</i>, in which each letter is shifted by a fixed number, <i>k</i>, of places in the alphabet. This is equivalent to representing each letter from A to Z by the “numbers” 1, 2, 3, ..., 25 and the cipher merely replaces a given letter <i>X</i> by the letter <i>X + k</i>. In the cipher adopted by Ceaser</p>
 
@@ -41,7 +41,7 @@
 
 <p>Accepting the notational convention: <i>a</i> mod <i>n</i> is the remainder when <i>a</i> is divided by <i>n</i>; in this way 27 mod 26 = 1 and 1 corresponds to <i>A</i>. Analogously for <i>Y</i> = 25 and 28 ≡ 2 mod 26, yielding the <i>B</i> letter.</p>
 
-<p>That is there is a bijective function on the set of the Alphabet letters which can be inverted by the receiver to decipher the crypted message. This is equivalent to say that function (4.11) is a bijection on the set ℤ<sub>26</sub> = {[1], [2], ..., [26]}. We can invert 4.11 obtaining <i>x ≡ y</i> − 3 (mod 21). So if <i>y</i> = 4 is the cipher text which corresponds to <i>D</i>, we have <i>x</i> ≡ 1  mod 21, so the original message is <i>x</i> = 1 which is <i>A</i>.</p>
+<p>That is there is a bijective function on the set of the Alphabet letters which can be inverted by the receiver to decipher the crypted message. This is equivalent to say that function (4.11) is a bijection on the set ℤ<sub>26</sub> = {[1], [2], ..., [26]}. We can invert 4.11 obtaining <i>x</i> ≡ <i>y</i> − 3 (mod 21). So if <i>y</i> = 4 is the cipher text which corresponds to <i>D</i>, we have <i>x</i> ≡ 1  mod 21, so the original message is <i>x</i> = 1 which is <i>A</i>.</p>
 
 <p>Inspired by this result we can choose different enciphering functions, for example</p>
 
@@ -59,21 +59,21 @@
 
 <p>which is the inverse function to decipher the message.</p>
 
-<h2>Public-Key Systems: RSA</h2>
+<h2 id="RSA">Public-Key Systems: RSA</h2>
 
-<p>Let’s look at the RSA encryption system by Rivest, Shamir, and Adleman based on the difficulty of factoring large numbers and on (Euler’s theorem of 1760) to make this work. We begin by choosing two distinct prime numbers, which we label as <i>p</i> and <i>q</i>, and we form the product</p>
+<p>The RSA encryption system by Rivest, Shamir, and Adleman, is the most popular <b>asymmetric</b> encyption algorithm. It is based on the difficulty of factoring large numbers and on (Euler’s theorem of 1760) to make this work. We begin by choosing two distinct prime numbers, which we label as <i>p</i> and <i>q</i>, and we form the product</p>
 
 <div class="eq">
 <p><i>n</i> = <i>pq</i></p>
 </div>
 
-<p>This is the heart of the matter: the value of <i>n</i> is public information, but the values of <i>p</i> and <i>q</i> are secret. The larger the value of <i>n</i>, the more secure this system will be, since breaking the code relies on knowing the prime factors <i>p</i> and <i>q</i> of <i>n</i>. Next we choose <i>e</i> to be relatively prime to the product <i>&phi;</i>(<i>n</i>) = (<i>p</i> − 1)(<i>q</i> − 1); that is, <i>e</i> is defined by (<i>e, &phi;</i>(<i>n</i>)) = 1.</p>
+<p>This is the heart of the matter: the value of <i>n</i> is the publick key, but the values of <i>p</i> and <i>q</i> are secret, they make the private key. The larger the value of <i>n</i>, the more secure this system will be, since breaking the code relies on knowing the prime factors <i>p</i> and <i>q</i> of <i>n</i>. Next we choose <i>e</i> to be relatively prime to the product <i>&phi;</i>(<i>n</i>) = (<i>p</i> − 1)(<i>q</i> − 1); that is, <i>e</i> is defined by (<i>e, &phi;</i>(<i>n</i>)) = 1.</p>
 
 <p>The exponential enciphering operation is <i>y</i> ≡ <i>x</i><sup>e</sup> (mod <i>n</i>).</p>
 
 <p>We suppose the message <i>x</i> to satisfy the following condition: <i>x</i> &lt; <i>n</i>.</p>
 
-<p>The first requirement  For the second is enough to chunk the original message into smaller pieces.</p>
+<p>The first requirement. For the second is enough to chunk the original message into smaller pieces.</p>
 
 <p>The receiver who got the ciphertext <i>y</i> can decipher it in the following way: since <i>e</i> is relatively prime to <i>φ</i>(<i>n</i>), it is invertible modulo φ(<i>n</i>); we call its inverse <i>d</i>.</p>
 
@@ -111,7 +111,7 @@
 <p><i>x<sup>ed</sup></i> ≡ <i>x</i><sup>1 + <i>k&phi;</i>(<i>n</i>)</sup> &emsp; mod <i>n</i> &emsp; (<b>4.12</b>)</p>
 </div>
 
-<p>By <a href="euler.html#theorem">Euler’s theorem</a>, x<sup>φ(<i>n</i>)</sup> ≡ 1 (mod <i>n</i>), if we both sides of the congruence by <i>k</i> we have</p>
+<p>By <a href="euler.html#theorem">Euler’s theorem</a>, <i>x</i><sup>φ(<i>n</i>)</sup> ≡ 1 (mod <i>n</i>), if we both sides of the congruence by <i>k</i> we have</p>
 
 <div class="eq">
 <p><i>x</i><sup>k&phi;(<i>n</i>)</sup> ≡ (<i>x</i><sup>&phi;(<i>n</i>)</sup>)<sup>k</sup> ≡ 1 &emsp; mod <i>n</i></p>
@@ -126,7 +126,7 @@
 <p>thus</p>
 
 <div class="eq">
-<p>x</i><sup>1 + k&phi;(<i>n</i>)</sup> ≡ <i>x</i> &emsp; mod <i>n</i> &emsp; (<b>4.13</b>)</p></p>
+<p><i>x</i><sup>1 + <i>k&phi;</i>(<i>n</i>)</sup> ≡ <i>x</i> &emsp; mod <i>n</i> &emsp; (<b>4.13</b>)</p></p>
 </div>
 
 <p>by adding up (4.12) and (4.13) we completed the proof.□</p>

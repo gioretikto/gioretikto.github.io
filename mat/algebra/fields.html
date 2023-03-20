@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Fields">
+	<title>Fields</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Fields</h1>
+
+<p>The most useful number systems are those in which we can divide by nonzero elements (we've already touched on the notion of a <a href="rings.html#field">field</a>). A <b>field</b> is a <a href="rings.html">ring</a> in which the nonzero elements form an abelian group under multiplication. In other words, a field is a nontrivial commutative ring <i>R</i> satisfying the following extra axiom.</p>
+
+<p>For each nonzero element <i>a</i> ∈ <i>R</i> there exists <i>a</i><sup>−1</sup> ∈ <i>R</i> such that <i>a</i> · <i>a</i><sup>−1</sup> = 1.</p>
+
+<p>The rings ℚ, ℝ and ℂ are all fields, but the integers do not form a field.</p>
+
+<p>It was also Dedekind who baptized what we know as fields (with the German word Körper, literally “body”), because it " denotes a system with a certain completeness, fullness and self-containment". </p>
+
+<p><b>Definition 8.1.1</b>. A <b>fleld</b> is a commutative ring <i>R</i> with identity 1<sub>R</sub> &ne; O<sub>R</sub> that satisfies this axiom:</p>
+
+<div class="eq">
+<p>For each <i>a</i> &ne; 0<sub>R</sub>, the equation <i>ax</i> = 1<sub>R</sub> has a solution in <i>R</i>&emsp;□</p>
+</div>
+
+<p>Then a <b>field</b> is a set together with two laws of composition:</p>
+
+<table class="centertable noborder">
+
+<tr><td><i>F</i> x <i>F</i></td> <td>+<br>⟶</td> <td><i>F</i></td> <td></td> <td></td><td><i>F</i> x <i>F</i></td> <td>⋅<br>⟶</td> <td><i>F</i></td></tr>
+
+<tr><td>a,b</td> <td>⟼</td> <td><i>a</i> + <i>b</i></td> <td></td> <td></td> <td><i>a,b</i></td> <td>⟼</td> <td><i>ab</i></td> </tr>
+
+</table>
+
+<p>called addition and multiplication, which satisfy the following axioms:</p>
+
+<ol>
+	<li><p><i>F</i> is an Abelian group under the "addition" operation +. The additive identity is called the <b>zero</b> and is denoted by 0;</p></li>
+
+	<li><p>Multiplication is associative and commutative and makes the set <i>F</i>* = <i>F</i> \ {0} of nonzero elements of <i>F</i> is an Abelian group under the "multiplication" operation '⋅'. The multiplicative identity is called the <b>unity</b> and is denoted by 1;</p></li>
+
+	<li><p>The multiplication operation '⋅' distributes over the addition operation +; that is <i>a</i> ⋅ (<i>b</i> + <i>c</i>) = <i>a</i> ⋅ <i>b</i> + <i>a</i> ⋅ <i>c</i>, for every <i>a,b,c</i> &in; <i>F</i>. &emsp;□</p>
+</ol>
+
+<p>From the definition, we see that a field consists of two groups with respect to two operations, addition and multiplication. The group with respect to addition is called the <i>additive group</i> of the field, and the group with respect to multiplicatoin is called the <i>multiplicative group</i> of the field. Since these two groups must contain an identity element, a field must contain at least two elements. In a field the additive inverse of an element <i>a</i> is denoted by '−<i>a</i>', and the mutliplicative inverse of <i>a</i> is denoted <i>a</i><sup>−1</sup>, provided that <i>a</i> &ne; 0.</p>
+
+<p>The properties satisfied by a field <i>F</i>, are more extensive than the four <a href="groups.html">group axioms</a> applied to both binary operations. Recall that ℝ under standard addition is an Abelian group. On the other hand, ℝ under standard multplication is not a group − although it comes very close: the inverse property is not satisfied, and it fails for just one real number, zero. By removing the zero and considering the set ℝ* = ℝ\{0} we have a multiplicative group. Indeed, the first group axiom holds since the product of any two nonzero real numbers is still nonzero. Multiplication of real numbers is associative, 1 plays the role of an identity element, and 1/<i>a</i> gives the inverse of an element <i>a</i> &in; ℝ*. Thus ℝ* is a group under multiplication. <br> Similarly, we have the groups ℚ* of all nonzero rational numbers and ℂ* of all nonzero complex numbers, under the operation of ordinary multiplication. If we attempt to form a multiplicative group from the integers ℤ, we have to restrict ourselves to just 1, since these are the only integers that have multiplicative inverses in ℤ.</p>
+
+<p>There are, on the other hand, fields whose elements are not numbers, for example, ℤ<sub><i>p</i></sub> is a (finite) field for every prime number <i>p</i>.</p>
+
+<h2 id="subfields">Subfields</h2>
+
+<p>ℤ is a <a href="subrings.html">subring</a> of the ring ℚ of rational numbers and ℚ is a subring of the field ℝ of all real numbers. Since ℚ is itself a field, we say that ℚ is a <b>subfietd</b> of ℝ.
+Similarly, ℝ is a subfield of the field ℂ of complex numbers. Then a <b>subfield</b> of a field <i>K</i> is a subring which is a field. Equivalently, it is a subset <i>F</i> of <i>K</i> satisying the <a href="subrings.html">subring Criterion</a> i.e. containing at least two elements, such that</p>
+
+<div class="eq">
+<p><i>a, b</i> ∈ <i>F</i> &emsp;⇒&emsp; <i>a</i> − <i>b</i> ∈ <i>F</i>, &emsp;&emsp; <i>a</i> ∈ <i>F</i>, <i>b</i> ∈ <i>F</i> \ {0} &emsp;⇒&emsp; <i>ab</i><sup>−1</sup> ∈ <i>F</i></p>
+</div>
+
+<section aria-label="End">
+<a href="finite_abelian_groups.html">«Classification of finite abelian groups</a>
+<a href="index.html#8">Index</a>
+<a href="field_extension.html">Field extensions»</a>
+</section>
+
+</article>
+
+</body>
+</html>
