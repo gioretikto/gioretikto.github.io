@@ -71,8 +71,9 @@
 <tr><td>| o :</td> <td>such that</td></tr>
 <tr><td>:=</td> <td>equal by definition</td></tr>
 <tr><td>⇐⇒ and the word “iff”</td> <td>both mean “if and only if.”</td></tr>
+<tr><td>v</td> <td>o (inclusivo), <i>vel, or</i></td></tr> 
+<tr><td>∧</td> <td><i>e, et, and</i> (congiunzione)</td></tr>
 </tbody>
-
 </table>
 
 <p>If <i>B</i> is a set whose elements are included in a set <i>A</i> we say that <i>B</i> is included in <i>A</i> or that <i>B</i> <i>subset</i> of <i>A</i></p>
@@ -123,7 +124,7 @@
 <p><i>A</i> &cap; <i>B</i> = {<i>a, d</i>}, &emsp; <i>A</i> &cup; <i>B</i> = {<i>a, b, c, d, e, f, l, m, n</i>}</p>
 </div>
 
-<p>If <i>A</i> and <i>B</i> are two sets, the difference set <i>A</i> \ <i>B</i> or <i>A</i> − <i>B</i>, is the set of all elements of <i>A</i> which do not belong to <i>B</i>.</p>
+<p id="complement">If <i>A</i> and <i>B</i> are two sets, the difference set <i>A</i> \ <i>B</i> or <i>A</i> − <i>B</i>, is the set of all elements of <i>A</i> which do not belong to <i>B</i>.</p>
 
 <div class="eq">
 <p><i>A</i> \ <i>B</i> = {<i>x</i> &in; <i>A</i> | <i>x</i> &notin; <i>B</i>}</p>
@@ -188,21 +189,23 @@
 
 <h2 id="power">Power set</h2>
 
-<p>For any set <i>A</i>, the power set of <i>A</i>, denoted by 𝒫(<i>A</i>), is the set of all subsets of <i>A</i> and is written as</p>
+<p>For any set <i>A</i>, the power set of <i>A</i>, denoted by <i>P</i>(<i>A</i>), is the set of all subsets of <i>A</i> and is written as</p>
 
 <div class="eq">
-<p>𝒫(<i>A</i>) := {<i>B</i> | <i>B</i> &subseteq; <i>A</i>}</p>
+<p><i>P</i>(<i>A</i>) := {<i>B</i> | <i>B</i> &subseteq; <i>A</i>}</p>
 </div>
 
-<p>so the <i>elements</i> of 𝒫(<i>A</i>) are <i>subsets</i> (or <i>parts</i>) of <i>A</i>. The <i>subset</i> of <i>A</i> containing only one element <i>a</i> is known as <i>singleton</i> and it is indicated by {<i>a</i>}, to avoid confusion with the element <i>a</i> &in; <i>A</i>. Thus <i>a</i> &in; <i>A</i> but <i>a</i> ∉ 𝒫(<i>A</i>). On the other hand {<i>a</i>} &subseteq; 𝒫(<i>A</i>).</p>
+<p>so the <i>elements</i> of <i>P</i>(<i>A</i>) are <i>subsets</i> (or <i>parts</i>) of <i>A</i>. The <i>subset</i> of <i>A</i> containing only one element <i>a</i> is known as <i>singleton</i> and it is indicated by {<i>a</i>}, to avoid confusion with the element <i>a</i> &in; <i>A</i>. Thus <i>a</i> &in; <i>A</i> but <i>a</i> ∉ <i>P</i>(<i>A</i>). On the other hand {<i>a</i>} &subseteq; <i>P</i>(<i>A</i>).</p>
+
+<p><b>Note</b>. Another notation for power set is {0, 1}<sup><i>A</i></sup>, often even using 2 instead of {0,1}, as 2<sup><i>A</i></sup>. &emsp;■</p>
 
 <p><b>Example 1.1.2</b> Let <i>A</i> = {<i>a, b, c</i>}, the power set is</p>
 
 <div class="eq">
-<p>𝒫(<i>A</i>) = {Ø, {<i>a</i>}, {<i>b</i>}, {<i>c</i>}, {<i>a,b</i>}, {<i>a,c</i>}, {<i>b,c</i>}, {<i>a,b,c</i>}}</p>
+<p><i>P</i>(<i>A</i>) = {Ø, {<i>a</i>}, {<i>b</i>}, {<i>c</i>}, {<i>a,b</i>}, {<i>a,c</i>}, {<i>b,c</i>}, {<i>a,b,c</i>}}</p>
 </div>
 
-<p>The power set of a finite set with <i>n</i> elements has 2<sup><i>n</i></sup> elements because, in defining a subset, we have two independent choices for each element (does it belong to the subset or not?). In Example 1.1.2, <i>A</i> has 3 elements and 𝒫(<i>A</i>) has 2<sup>3</sup> = 8 elements.</p>
+<p>The power set of a finite set with <i>n</i> elements has 2<sup><i>n</i></sup> elements because, in defining a subset, we have two independent choices for each element (does it belong to the subset or not?). In Example 1.1.2, <i>A</i> has 3 elements and <i>P</i>(<i>A</i>) has 2<sup>3</sup> = 8 elements.</p>
 
 <h3 id="Morgan">De Morgan's Laws</h3>
 

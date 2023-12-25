@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Composition of Functions"/>
+    <title>Composition of Functions</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+		<li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Composition of Functions</h1>
+
+<p><b>Definition 1.4.1</b>. Let <i>f</i>: <i>X</i> ⟶ <i>Y</i> and <i>g</i>: <i>Y</i> ⟶ <i>Z</i> be two functions. Then the function <i>g</i> ∘ <i>f</i>: <i>X</i> ⟶ <i>Z</i> given by</p>
+
+<div class="eq">
+<p>(<i>g</i> ∘ <i>f</i>) (<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>))</p>
+</div>
+
+<p>is called the <i>composition of the function</i> <i>f</i> and <i>g</i>. &emsp;□</p>
+
+<p><i>g</i> ◦ <i>f</i> reads as <i>g</i> composed with <i>f</i>, or as <i>f</i> followed by <i>g</i>.</p>
+
+<p><b>Example 1.4.2</b>. Consider the functions <i>f</i> : ℤ ⟶ ℤ and <i>g</i>:  ℚ ⟶ ℚ, given by <i>f</i>(<i>x</i>) = 2<i>x</i>/3  &forall; <i>x</i> &in; ℤ and <i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> &forall; <i>x</i> &in; ℚ. Observe that <i>g</i> ∘ <i>f</i> : ℤ ⟶ ℚ is given by (<i>g</i> ∘ <i>f</i>) (<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>)) = <i>g</i>(2<i>x</i>/3)  = 4<i>x</i><sup>2</sup>/9 &forall; <i>x</i> &in; ℤ. But <i>f</i> ∘ <i>g</i> is not defined as for example 1/4 &in; ℚ, <i>g</i>(1/4) = 1/16 &notin; ℤ and hence <i>f</i>(1/16) makes no sense. The reason for this is that Im(<i>g</i>) ⊈ D(<i>f</i>).&emsp;■</p>
+
+<p><b>Exanoke 1.4.3</b>. Let <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup></i> and <i>g</i>(<i>x</i>) = sin (<i>x</i>). The composite function <i>g</i> ∘ <i>f</i> is</p>
+
+<div class="eq">
+<p><i>h</i>(<i>x</i>) = <i>g</i>[<i>f</i>(<i>x</i>)] = sin(<i>x</i><sup>2</sup>)</p>
+</div>
+
+<p>Since <i>g</i> is well-defined over all ℝ, also <i>h</i> is. The function <i>k</i> = <i>f</i> ∘ <i>g</i> is also well defined by the relation</p>
+
+<div class="eq">
+<p><i>k</i>(<i>x</i>) = <i>f</i>[<i>g</i>(<i>x</i>)] = [sin(<i>x</i>)]<sup>2</sup></i> &emsp;■</p>
+</div>
+
+<p>A basic fact about functional composition is that it satisfies the associative law. First let us agree that two functions <i>f</i> and <i>g</i> are to be considered <i>equal</i> − in symbols <i>f</i> = <i>g</i> if they have the same domain and codomain and if <i>f</i>(<i>g</i>) = <i>g</i>(<i>x</i>) for all <i>x</i>.</p>
+
+<p id="144"><b>Theorem 1.4.4</b>. Let <i>f</i>: <i>X</i> ⟶ <i>Y</i>, <i>g</i>: <i>U</i> ⟶ <i>V</i> and <i>h</i>: <i>R</i> ⟶ <i>S</i> be functions such tha Im(<i>h</i>) is contained in <i>U</i> and Im(<i>g</i>) is contained in <i>X</i>. Then
+
+<div class="eq">
+<p><i>f</i> ∘ (<i>g</i> ∘ <i>h</i>) = (<i>f</i> ∘ <i>g</i>) ∘ <i>h</i></p>
+</div>
+
+<p><b>Proof</b>. First observe that the various composited in the formula make sense; this is is because of the assumptions about Im(<i>h</i>) and Im(<i>g</i>). Let <i>x</i> be an element of <i>X</i>. Then, by the definition of a compositive,</p>
+
+<div class="eq">
+<p><i>f</i> ∘ (<i>g</i> ∘ <i>h</i>) = <i>f</i>((<i>g</i> ∘ <i>g</i>)(<i>x</i>)) = <i>f</i>(<i>g</i>(<i>h</i>(<i>x</i>))</p>
+</div>
+
+<p>In a similar manner we find that (<i>f</i> ∘ <i>h</i>) ∘ <i>h</i>(<i>x</i>) is also equal to this element. Therefore <i>f</i> ∘ (<i>g</i> ∘ <i>h</i>) = (<i>f</i> ∘ <i>g</i>) ∘ <i>h</i>, as claimed. &emsp;□</p>
+
+<p>Another basic result asserts that a function is unchanged when it is composed with an identity function.</p>
+
+<p id="145"><b>Theorem 1.4.5</b>. If <i>f</i>: <i>X</i> ⟶ <i>Y</i> is any function, then <i>f</i> ∘ 1<sub>X</sub> = <i>f</i> = 1<sub>Y</sub> ∘ <i>f</i>.</p>
+
+<p><b>Proof</b>. Left as an exercise. &emsp;□</p>
+
+<section aria-label="End">
+<a href="functions.html">&#171;Functions</a>
+<a href="index.html">Index</a>
+<a href="inverse.html">Inverse Function &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

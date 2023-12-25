@@ -60,17 +60,25 @@
 <p><i>f</i> injective ⇐⇒ <i>f</i> surjective ⇐⇒ <i>f</i> bijective. &emsp;□</p>
 </div>
 
-<p><b>1.8.4 Definition</b>. As set is said to possess the <i>cardinality of the countable set</i> (or that it is <i>countable</i>) if there is a bijection of the set onto the set ℕ of all natural numbers. &emsp;□</p>
+<h2 id="countable">Countable sets</h2>
 
-<p>This means that for a countable set <i>S</i> there exists an enumeration or written as infinite sequence as follows:</p>
+<p>A countable set is a set with the same cardinality (number of elements) as some subset of the set of natural number. A countable set is either a finite set or a countably infinite set. </p>
+
+<p><b>1.8.4 Definition</b>. A set is said <b>denumerable</b> (or <b>countable infinite</b>) if it equipotent to ℕ, i.e. if there is a bijection of the set onto the set ℕ of all natural numbers. A set is <b>countable</b> if it is either finite or denumerable. If a set is not countable then we say that the set is <b>uncountable</b>.&emsp;□</p>
+
+<p>This terminology is not universal. Some texts use the word <i>countable</i> more narrowly to refer to countably infinite sets, and do not include finite sets. Today countable sets form a branch of mathematics called <i>discrete mathematics</i>.</p>
+
+<p>If a set is countable then it is often convenient to write the set as a list, i.e. for a countable set <i>S</i> there exists an enumeration or written as infinite sequence as follows:</p>
 
 <div class="eq">
-<p><i>S</i> = {<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>a</i><sub>3</sub>,..., <i>a<sub>i</sub></i>, ...}</p>
+<p><i>S</i> = {<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>a</i><sub>3</sub>,...,}</p>
 </div>
+
+<p><b>Example</b>. The set of even number <i>A</i> = {2, 4, 6, 8, ..} is countably infinite. A bijection <i>f</i>: <i>A</i> ⟶ ℕ is given by <i>f</i>(<i>n</i>) = <i>n</i>/2 − 1. &emsp;■</p>
 
 <p>It is not hard to prove that a subset of a countable set is finite, or it is as well countable. The following theorem allows us to find many countable sets.</p>
 
-<p>The set ℤ of integers and the set ℚ of the rational numbers a countable sets. The set ℝ of the real numbers and the set ℂ of the complex numbers are noncountable sets. These sets are equinumerous to 𝒫(ℕ), the power set of the natural numbers, and their cardinality is called <i>continuum</i>.</p>
+<p>The set ℤ of integers and the set ℚ of the rational numbers a countable sets. The set ℝ of the real numbers and the set ℂ of the complex numbers are noncountable sets. These sets are equinumerous to <i>P</i>(ℕ), the power set of the natural numbers, and their cardinality is called <i>continuum</i>.</p>
 
 <p><b>1.8.5 Axiom of Choice</b>. If {<i>A<sub>i</sub></i>: <i>i</i> &in; <i>I</i>} is a nonempty set of nonempty sets, then there is a function <i>f</i>: <i>I</i> ⟶ U<sub><i>i</i> &in; <i>I</i></sub> <i>A<sub>i</sub></i> satisfying <i>f</i>(<i>i</i>) &in; <i>A<sub>i</sub></i> for each <i>i</i> &in; <i>I</i>. In other words, the Cartesian product of a nonempty set of nonempty sets is itself a nonempty set. &emsp;□</p>
 
@@ -197,27 +205,27 @@
 
 <p>Cantor's Theorem states that the cardinality of a set is strictly less than the cardinality of its power set.</p>
 
-<p><b>1.8.9 (Cantor's Theorem)</b> Given an arbitrary countable set <i>A</i>, it results</p>
+<p><b>1.8.9 (Cantor's Theorem [1883])</b> Given an arbitrary countable set <i>A</i>, it results</p>
 
 <div class="eq">
-<p>Card(<i>A</i>) &lt; Card(𝒫(<i>A</i>))</p>
+<p>Card(<i>A</i>) &lt; Card(<i>P</i>(<i>A</i>))</p>
 </div>
 
-<p>1<sup><i>a</i></sup> Proof</i>. The application <i>h</i>: <i>A</i> → 𝒫(<i>A</i>) defined as <i>h</i>(<i>x</i>) = {<i>x</i>} &forall;<i>x</i> &in; <i>A</i> is an injective mapping from <i>A</i> to 𝒫(<i>A</i>), thus Card(<i>A</i>) &le; Card(𝒫(<i>A</i>)). Since (see <a href="functions.html#characteristi_function">Theorem 1.4.19</a>: there a bijection between 𝒫(<i>A</i>) with the function from <i>A</i> to {0,1})</p>
+<p><b>1<sup><i>a</i></sup> Proof</b>. The application <i>h</i>: <i>A</i> → <i>P</i>(<i>A</i>) defined as <i>h</i>(<i>x</i>) = {<i>x</i>} &forall;<i>x</i> &in; <i>A</i> is an injective mapping from <i>A</i> to <i>P</i>(<i>A</i>), thus Card(<i>A</i>) &le; Card(<i>P</i>(<i>A</i>)). Since (see <a href="functions.html#characteristi_function">Theorem 1.4.19</a>: there a bijection between <i>P</i>(<i>A</i>) with the function from <i>A</i> to {0,1})</p>
 
 <div class="eq">
-<p>𝒫(<i>A</i>) ~ <b>2</b><sup><i>A</i></sup> = {<i>f</i>: <i>A</i> → {0,1}}</p>
+<p><i>P</i>(<i>A</i>) ~ <b>2</b><sup><i>A</i></sup> = {<i>f</i>: <i>A</i> → {0,1}}</p>
 </div>
 
-<p>To prove the theorem we must show that <i>f</i> is not surjective. It suffices to find an element in 𝒫(<i>A</i>) which is not in the image of <i>f</i>. Such an element is:</p>
+<p>To prove the theorem we must show that <i>f</i> is not surjective. It suffices to find an element in <i>P</i>(<i>A</i>) which is not in the image of <i>f</i>. Such an element is:</p>
 
 <div class="eq">
-<p><i>B</i> = {<i>x</i> &in; <i>A</i>: <i>x</i> ∉ <i>f</i>(<i>x</i>)} &in; 𝒫(<i>A</i>)</p>
+<p><i>B</i> = {<i>x</i> &in; <i>A</i>: <i>x</i> ∉ <i>f</i>(<i>x</i>)} &in; <i>P</i(<i>A</i>)</p>
 </div>
 
 <p>(Notice that if <i>B</i> is empty the proof is still valid).</p>
 
-<p>Suppose now that <i>f</i> is surjective. Then there exists <i>ξ</i> ∈ <i>A</i> such that <i>f</i>(<i>ξ</i>) = <i>B</i>. By construction, <i>ξ</i> ∈ <i>B</i> ⟺ <i>ξ</i> ∉ <i>f</i>(<i>ξ</i>) = <i>B</i>. Which is a contradiction. Then, <i>f</i> cannot be surjective. Since, <i>h</i>: <i>A</i> → 𝒫(<i>A</i>) defined by <i>x</i> ↦ {<i>x</i>} in an injective function. Consequently, we have Card(<i>A</i>) &lt; Card (P(<i>A</i>)). □</p>
+<p>Suppose now that <i>f</i> is surjective. Then there exists <i>ξ</i> ∈ <i>A</i> such that <i>f</i>(<i>ξ</i>) = <i>B</i>. By construction, <i>ξ</i> ∈ <i>B</i> ⟺ <i>ξ</i> ∉ <i>f</i>(<i>ξ</i>) = <i>B</i>. Which is a contradiction. Then, <i>f</i> cannot be surjective. Since, <i>h</i>: <i>A</i> → <i>P</i>(<i>A</i>) defined by <i>x</i> ↦ {<i>x</i>} in an injective function. Consequently, we have Card(<i>A</i>) &lt; Card (<i>P</i>(<i>A</i>)). □</p>
 
 <p><i>2nd Proof</i>. To prove there is no bijection between <b>2</b><sup>A</sup> and <i>A</i>, it sufficies to prove that which is not possible arrange in a numerable sequence <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, <i>A</i><sub>3</sub>, ..., the set <b>2</b><sup>A</sup> of the sequences of 0s and 1s. By way of contradiction assume there exists such a correspondence between <b>2</b><sup>A</sup> and ℕ. This means that every sequence of symbols 0s and 1 we can map an index <i>k</i> &in; ℕ, that is</p>
 
@@ -240,17 +248,57 @@
 
 <h3>Cantor's continuum hypothesis</h3>
 
-<p>In 1877 Cantor proposed the “continuum hypothesis”: It is the statement that there are no sets intermediate in size between a countable set and its powerset. This means that there is no intermediate size between ℕ and 𝒫(ℕ). This means that 𝒫(ℕ) has the same cardinality of the real numbers ℝ, so |ℝ| = 2<sup>ℵ<sub>0</sub></sup>. Cantor therefore denoted it ℵ<sub>1</sub>. The continuum hypothesis states that the set of real numbers (the continuum) is in a sense as small as it can be.</p>
+<p>Some sets are infinite, these sets have more than <i>n</i> elements for any integer <i>n</i>. For example, ℕ has infinitely many elements, and we canno use any normal number to give its size. Nonetheless, it turns out that inifnite sets do have a well-defined notion of size (or more properly, of cardinality), and not all infinite sets have the same cardinality.</p>
+
+<p>In 1877 Cantor proposed the “continuum hypothesis”: It is the statement that there are no sets intermediate in size between a countable set and its power set. This means that there is no intermediate size between ℕ and <i>P</i>(ℕ). This means that <i>P</i>(ℕ) has the same cardinality of the real numbers ℝ, so |ℝ| = 2<sup>ℵ<sub>0</sub></sup>. Cantor therefore denoted it ℵ<sub>1</sub>. The continuum hypothesis states that the set of real numbers (the continuum) is in a sense as small as it can be.</p>
+
+<p><b>Lemma 1.8.10</b>. If a set a is uncountable and <i>A</i> &subseteq; <i>B</i>, then <i>B</i> is also uncountable.</p>
+
+<p><b>Proof</b>. Suppose by way of contradiction that <i>B</i> is countable. Then since <i>A</i> &subseteq; <i>B</i>, we can say that <i>A</i> is also countable, which is a contradiction as <i>A</i> is given uncountable. Hence <i>B</i> is uncountable. &emsp;□</p>
+
+<p><b>Proposition 1.8.10</b> (Cantor [1873]) ℝ is uncountable.</p>
+
+<p><b>Proof</b>. We will show that the subset <i>I</i> = {<i>x</i> &in; ℝ | 0 &le; <i>x</i> &le; 1} = [0, 1] is uncountable. Suppose on the contrary that [0,1] is countable. Then each element of</p>
+
+<div class="eq">
+<p><i>I</i> = {<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ...}</p>
+</div>
+
+<p>can be written in the form of sequence (having distinct elements). So, let each elements in <i>I</i> be written in the form</p>
+
+<div class="eq">
+<p><i>x</i><sub>1</sub> = 0.<i>a</i><sub>11</sub><i>a</i><sub>12</sub><i>a</i><sub>13</sub> ... <i>a</i><sub>1n</sub><br>
+<i>x</i><sub>2</sub> = 0.<i>a</i><sub>21</sub><i>a</i><sub>22</sub><i>a</i><sub>23</sub> ... <i>a</i><sub>2n</sub><br>
+<i>x</i><sub>3</sub> = 0.<i>a</i><sub>31</sub><i>a</i><sub>32</sub><i>a</i><sub>33</sub> ... <i>a</i><sub>3n</sub><br>
+... &emsp;<br>
+<i>x<sub>n</sub></i> = 0.<i>a</i><sub><i>n</i>1</sub> <i>a</i><sub><i>n</i>2</sub><i>a</i><sub><i>n</i>3</sub> ... <i>a<sub><i>nn</i></sub></i></p>
+</div>
+
+<p>where <i>a<sub>ij</sub></i> &in; {0,1,2,..,9} and where each decimal expression contains an infinite number of non-zero elements. Now construct the real number</p>
+
+<div class="eq">
+<p><i>y</i> = 0.<i>b</i><sub>1</sub><i>b</i><sub>2</sub>...<i>b<sub>n</sub></i></p>
+</div>
+
+<p>where <i>b</i><sub>1</sub> is any digit such taht <i>b</i><sub>1</sub> &ne; 0, <i>b</i><sub>1</sub> &ne; <i>a</i><sub>11</sub> and <i>b</i><sub>2</sub> &ne; <i>a</i><sub>22</sub> and so on (i.e. <i>b<sub>i</sub></i> &ne; 0 and <i>b<sub>i</sub></i> &ne; <i>a<sub>ii</sub></i>, we exclude 0 because *preferring* decimal expansions with an infinite number of non-zero digits). Observe that</p>
+
+<div class="eq">
+<p><i>y</i> &ne; <i>x</i><sub>1</sub>&emsp;because&emsp;<i>b</i><sub>1</sub> &ne; <i>a</i><sub>11</sub><br>
+<i>y</i> &ne; <i>x</i><sub>2</sub>&emsp;because&emsp;<i>b</i><sub>2</sub> &ne; <i>a</i><sub>22</sub><br>
+...</p>
+</div>
+
+<p>Hence, <i>y</i> &ne; <i>I</i>. But clearly <i>y</i> &in; <i>I</i>. Thus we arrive at a contradiction. Hence <i>I</i> = [0,1] is not countable and by Lemma 1.8.10, ℝ is not countable as well .&emsp;□</p>
 
 <p>The continuum hypothesis is the first of David's Hilbert famous list of twenty-three unanswered questions posed in 1900. It was proved that the continuum hypothesis is independent of the other axioms of set theory, this implies that it is not possible to prove or disprove the continuum hypothesis, starting from these axioms.</p>
 
-<p>The <i>Generalized Continuum Hypothesis</i>, states for every infinite set <i>X</i> there are not sets with intermediate cardinality between that of <i>X</i> and of 𝒫(<i>X</i>).</p>
+<p>The <i>Generalized Continuum Hypothesis</i>, states for every infinite set <i>X</i> there are not sets with intermediate cardinality between that of <i>X</i> and of <i>P</i>(<i>X</i>).</p>
 
 <p><b>Axiom of Choice</b>. Let <i>X</i> be a set whose members are nonempty sets. Then there is a function <i>f</i> with domain <i>X</i> which assigns to each <i>A</i> &in; <i>X</i> an element <i>f</i>(<i>A</i>) &in; <i>A</i>.</p>
 
 <p>In particular, it should be noticed that the element <i>f</i>(<i>A</i>) is uniquely determined for each <i>A</i> &in; <i>X</i>. The function <i>f</i> is called a <i>choice function</i>. </p>
 
-<p>the family of set of function <i>F</i> = {{<i>f</i>:<i>A<sub>j</sub></i> ⟶  ℕ | f bijective} | <i>j</i> in ℕ} by the Zermelo's axiom it is possible to pick representative of a particular set {f:A_j -> N | f bijective} of the class F is an injective function f: A_j -> N.</p>
+<p>the family of set of function <i>F</i> = {{<i>f</i>:<i>A<sub>j</sub></i> ⟶ ℕ | f bijective} | <i>j</i> in ℕ} by the Zermelo's axiom it is possible to pick representative of a particular set {f:A_j -> N | f bijective} of the class F is an injective function f: A_j -> N.</p>
  
 each set B_j = {all bijections A_j -> N} is nonempty. Thus the cartesian product B_1 x B_2 x ...  is nonempty. Thus there is a map phi: N -> cup_j B_j  with phi(j) in B_j  for each j. So now we have a single specific map phi(j) : A_j -> N   for each j. Now we use *those* maps to make a single specific bijection  phi(j) : A_j -> N  for each j
 
