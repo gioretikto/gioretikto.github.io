@@ -1,3 +1,54 @@
+body{
+	background: #2B2A33;
+	font-size: 16px;
+}
+
+body, h5 {
+    font-family: 'Open Sans',sans-serif;
+}
+
+h1{color: #aaaaaa;}
+
+b, strong
+{
+	color:#e3dada;
+}
+
+article{
+	margin-left:70px;
+	margin-right:70px;
+	margin-top:10px;
+	padding:80px;
+	background:#2B2A33;
+	color: #aaaaaa;
+}
+
+.content{ /* <div class="content"> should be removed and use <article> instead */
+	margin-left:70px;
+	margin-right:70px;
+	margin-top:10px;
+	padding:80px;
+	background:#d1d1d1;
+}
+
+a
+{
+	color:#8c7591;
+}
+
+a.navbar{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+code {
+	padding: 1px;
+	color: #8f8383;
+}
+
 math { font-size: 1.2rem; margin-bottom:2%}
 
 ul.center {
@@ -10,18 +61,21 @@ ul.center {
 	padding: 0 20px 20px 0;
 }
 
-.cm { /* For the comments */
-    color: #408080;
-    font-style: italic;
-}
-
 .overline{ /* horizontal line over a word */
-text-decoration: overline;
+	text-decoration: overline;
 }
 
 section{
     display: flex;
     margin-top:20px;
+}
+
+section>p{
+    margin:17px;
+}
+
+section>a{
+    margin:40px;
 }
 
 p{
@@ -49,15 +103,11 @@ p.small
 }
 
 .viola{
-color:#cc99ff;
-}
-
-section>p{
-    margin:17px;
+	color:#cc99ff;
 }
 
 pre {
-    background: #1e2a37;
+    background: black;
     color:white;
     text-shadow: 0 1px rgba(0,0,0,.3);
     font-family: Consolas,Monaco,andale mono,ubuntu mono,monospace;
@@ -98,21 +148,16 @@ pre {
     color: #a6e22e;
 }
 
-code {
-    padding: 1px;
-	background: rgba(0,0,0,0.1);
-}
-
 code, pre {
-    font-size: 14px !important;
+	font-size: 14px !important;
 }
 
 .arrow-down {
-  width: 0; 
-  height: 0; 
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid #751414;
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid #751414;
 }
 
 /* Vertical Line */
@@ -124,51 +169,28 @@ code, pre {
     margin-bottom: 5px;
 }
 
-section>a{
-    margin:40px;
-}
-
-body{
-  background:#d1d1d1;
-}
-
 ul{
     list-style:square;
 }
 
 .def{
-    padding: 30px;
-    border: 2px solid black;
-    margin: 25px;
-    width: 770px;
-    margin-left:auto; 
-    margin-right:auto;
+	padding: 30px;
+	border: 2px solid black;
+	margin: 25px;
+	width: 770px;
+	margin-left:auto; 
+	margin-right:auto;
+	background:rgba(0,0,0,0.09);
+	display:inline-block;
 }
 
 .eq{
-    text-align:center;
+	text-align:center;
 }
 
 span.eq{    
-    margin-left:200px;
-    color:#751414;
-}
-
-.content{ /* <div class="content"> should be removed and use <article> instead */
-    margin-left:70px;
-    margin-right:70px;
-    margin-top:10px;
-    padding:80px;
-    background:#d1d1d1;
-}
-
-article{
-    margin-left:70px;
-    margin-right:70px;
-    margin-top:10px;
-    padding:80px;
-    background:#d1d1d1;
-	color: #000;
+	margin-left:200px;
+	color:#751414;
 }
 
 blockquote{
@@ -179,7 +201,7 @@ blockquote{
 }
 
 nav{
-    background: #751414;
+    background: #331a1a;
     clear:both;
 }
 
@@ -196,21 +218,13 @@ nav>ul>li{
     float:left; /* to get block elements to slide next to each other */
 }
 
-a.navbar{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
 img.inline{
     display:inline-block;
 }
 
 /* Change the link color to #374936 (green) on hover */
 nav>ul>li>a:hover {
-    background-color: #374936;
+    background-color: #331a1a;
 }
 
 input{
@@ -237,14 +251,15 @@ table {
   border-spacing: 0;
   margin:5%
 }
-  
-table tr th {
-  background: #d1d1d1;
+
+th
+{
+	color:#8c7591;
 }
 
 table tr th a:hover {
-  color: #751414;
-  font-weight: normal;
+	font-weight: normal;
+
 }
 
 table tbody tr th {
@@ -282,7 +297,6 @@ table ul.links li {
 }
 
 th.case, td.case {
-    background:#d1d1d1;
     width: 70px;
   /* Tablet Styles */ }
   @media screen and (max-width: 600px) {
@@ -302,16 +316,6 @@ img{
 figcaption{
      text-align:center;
      font-size:16px;
-}
-
-body {
-    color: #444;
-    font-size: 16px;
-}
-
-body, h5 {
-    font-family: 'Open Sans',sans-serif;
-    line-height: 24px;
 }
 
 html {
