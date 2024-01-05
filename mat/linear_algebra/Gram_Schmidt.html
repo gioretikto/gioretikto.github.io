@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gram Schmidt Orthogonalization Process">
+	<title>Gram Schmidt Orthogonalization Process</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Gram - Schmidt Orthogonalization Process</h1>
+
+<p>Orthogonal vectors are by definition independent, but independent vectors are not necessarily orthogonal . A set of independent vectors, however, can be rendered orthogonal. In this section we focus on orhonormal bases of a vector space <i>V</i> and examine a procedure whereby we can transform or convert any basis <i>B</i> of <i>V</i> into an orthonormal basis.</p>
+
+<p>Descriviamo ora in dettaglio un metodo, noto come procedimento di ortonormalizzazione di <b>Gram–Schmidt</b>, che permette di costruire una base ortonormale partendo da una base qualsiasi di <i>V</i>.
+Consideriamo quindi uno spazio vettoriale V di dimensione n sul campo dei numeri reali, dotato di una forma bilineare simmetrica definita positiva ⟨ ⋅ ⟩. Sia <i>v</i> = {<i>v</i><sub>1</sub>, . . . , <i>v<sub>n</sub></i>} una base qualunque di <i>V</i> . Poniamo <i>w</i><sub>1</sub> = <i>v</i><sub>1</sub> e cerchiamo un vettore <i>w</i><sub>2</sub>, ortogonale a <i>w</i><sub>1</sub>, della forma <i>w</i><sub>2</sub> = <i>α</i><sub>1</sub><i>w</i><sub>1</sub> + <i>v</i><sub>2</sub> (notiamo che, in questo modo, il sottospazio vettoriale generato da <i>w</i><sub>1</sub> e <i>w</i><sub>2</sub> coincide con quello generato da <i>v</i><sub>1</sub> e <i>v</i><sub>2</sub>). La condizione di ortogonalità tra <i>w</i><sub>1</sub> e <i>w</i><sub>2</sub> si esprime ponendo ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>⟩ = 0. Si ha pertanto</p>
+
+<div class="eq">
+<p>⟨<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>⟩ = ⟨<i>w</i><sub>1</sub>, <i>α</i><sub>1</sub><i>w</i><sub>1</sub> + <i>v</i><sub>2</sub>⟩ = <i>α</i><sub>1</sub> ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩ + ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>⟩ = 0</p>
+</div>
+
+<p>da cui si ottiene</p>
+
+<div class="eq">
+<p><i>α</i><sub>1</sub> = −⟨<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>⟩ / ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩ </p>
+</div>
+
+<p>Il vettore cercato è quindi</p>
+
+<div class="eq">
+<p><i>w</i><sub>2</sub> = <i>v</i><sub>2</sub>  −⟨<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>⟩ / ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>⟩<i>w</i><sub>1</sub> </p>
+</div>
+
+<p>Cerchiamo ora un vettore <i>w</i><sub>3</sub> ortogonale al sottospazio generato da <i>w</i><sub>1</sub> e <i>w</i><sub>2</sub>, della forma <i>w</i><sub>3</sub> = <i>α</i><sub>1</sub><i>w</i><sub>1</sub> + <i>α</i><sub>2</sub><i>w</i><sub>2</sub> + <i>v</i><sub>3</sub>. Imponendo che <i>w</i><sub>3</sub> sia ortogonale a <i>w</i><sub>1</sub> e <i>w</i><sub>2</sub>, si ottengono le equazioni⟨<i>w</i><sub>1</sub>, <i>w</i><sub>3</sub>⟩ = 0 e ⟨<i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>⟩ = 0. Sviluppando i calcoli, si trova:</p>
+
+<div class="eq">
+<p>⟨<i>w</i><sub>1</sub>, <i>w</i><sub>3</sub>⟩ = ⟨<i>w</i><sub>1</sub>, <i>α</i><sub>1</sub><i>w</i><sub>1</sub> + <i>α</i><sub>2</sub><i>w</i><sub>2</sub> + <i>v</i><sub>3</sub>⟩<br> = <i>α</i><sub>1</sub> ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩ + <i>α</i><sub>2</sub>⟨<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>⟩ + ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>3</sub>⟩<br>
+= <i>α</i><sub>1</sub> ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩ + ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>3</sub>⟩ = 0</p>
+</div>
+
+<div class="eq">
+<p>⟨<i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>⟩ = ⟨<i>w</i><sub>2</sub>, <i>α</i><sub>1</sub><i>w</i><sub>1</sub> + <i>α</i><sub>2</sub><i>w</i><sub>2</sub> + <i>v</i><sub>3</sub>⟩<br> = <i>α</i><sub>1</sub> ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩ + <i>α</i><sub>2</sub>⟨<i>w</i><sub>2</sub>, <i>w</i><sub>2</sub>⟩ + ⟨<i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>⟩<br>
+= <i>α</i><sub>2</sub> ⟨<i>w</i><sub>2</sub>, <i>w</i><sub>2</sub>⟩ + ⟨<i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>⟩ = 0</p>
+</div>
+
+<p>da cui si ottiene</p>
+
+<div class="eq">
+<p><i>α</i><sub>1</sub> = −⟨<i>w</i><sub>1</sub>, <i>w</i><sub>3</sub>⟩ / ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩<br>
+<i>α</i><sub>2</sub> = −⟨<i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>⟩ / ⟨<i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>⟩ </p>
+</div>
+
+<p>Il vettore cercato è quindi</p>
+
+<div class="eq">
+<p><i>w</i><sub>3</sub> = <i>v</i><sub>3</sub> − ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>3</sub>⟩<i>w</i><sub>1</sub>  / ⟨<i>w</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩−  ⟨<i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>⟩ <i>w</i><sub>2</sub>/ ⟨<i>w</i><sub>2</sub>, <i>w</i><sub>2</sub>⟩</p>
+</div>
+
+<h2>Constructing an Orthogonal basis for ℝ<sup>2</sup></h2>
+
+<p>The transformation of a basis <i>B</i> = {<i><b>u</b></i><sub>1</sub>, <i><b>u</b></i><sub>2</sub>} for ℝ<sup>2</sup> into an orthogonal basis <i>B'</i> = {<i><b>v</b></i><sub>1</sub>, <i><b>v</b></i><sub>2</sub>} consists of two steps. See Fig.1. The first step is simple, we merely choose one of the vectors in <i>B</i>, say, <i><b>u</b></i><sub>1</sub> and rename it <i><b>v</b></i><sub>1</sub>. Next as shown in Fig.1b, we project the remaining vector <i><b>u</b></i><sub>2</sub> in <i>B</i> onto the vector <i><b>v</b></i><sub>1</sub> and define a second vector to be <i><b>v</b></i><sub>2</sub> = <i><b>u</b></i><sub>2</sub> − proj<sub><b><i>v</i></b><sub>1</sub> <i><b>u</b></i><sub>2</sub>. </p>
+
+<figure>
+<img src="img/Gram_Schmidt.png" alt="Gram Schmidt process"/>
+<figcaption>The orthogonal vectors <b><i>v</i></b><sub>1</sub> and <i><b>v</b></i><sub>2</sub> are defined in terms of <i><b>u</b></i><sub>1</sub> and <i><b>u</b></i><sub>2</sub>.</figcaption>
+</figure>
+
+<p>As seen in Fig.1(c), the vectors</p>
+
+<div class="eq">
+<p><i><b>v</b></i><sub>1</sub> = <i><b>u</b></i><sub>1</sub><br>
+<i><b>v</b></i><sub>2</sub> = <i><b>u</b></i><sub>2</sub> − proj<sub><b><i>v</i></b><sub>1</sub> <i><b>u</b></i><sub>2</sub></p>
+</div>
+
+<p><b>Example 1</b>. Consideriamo, in ℝ<sup>3</sup>, i due vettori indipendenti:</p>
+
+<div class="eq">
+<p><i>v</i><sub>1</sub> = (1,0,−1)&emsp;<i>v</i><sub>2</sub> = (0,1,−1)</p>
+</div>
+
+<p>detto <i>V</i> il sottospazio vettoriale di ℝ<sup>3</sup>, generato da <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub> (non è altro che il piano passante per l'origine di equazione <i>x</i> + <i>y</i> + <i>z</i> = 0), proponiamoci di costruire una base ortonormale di <i>V</i>, ossia di ortonormalizzare la base <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>. I passi sono i seguenti</p>
+
+<ol>
+	<li><p>Normalizziamo <i>v</i><sub>1</sub>:</p>
+
+<div class="eq">
+<p><i>u</i><sub>1</sub> = <i>v</i><sub>1</sub>/|<i>v</i><sub>1</sub>| = (1/√2, 0, −1/√2)</p>
+</div>
+
+</li>
+
+<li><p>Calcoliamo la componente di <i>v</i><sub>2</sub> nella direzione di <i>u</i><sub>1</sub>, data da:</p>
+
+<div class="eq">
+<p>(<i>v</i><sub>2</sub> ⋅ <i>u</i><sub>1</sub>) <i>u</i><sub>1</sub> = 1/√2(1/√2,0,−1/√2) = (1/2, 0,1/2)</p>
+</div>
+
+</li>
+
+<li><p>Sottraiamo a <i>v</i><sub>2</sub> la sua componente nella direzione di <i>u</i><sub>1</sub>, ottenendo così un vettore ortogonale a <i>u</i><sub>1</sub> e che insieme ad esso genera <i>V</i>:</p>
+
+<div class="eq">
+<p><i>v</i><sub>2</sub> − (<i>v</i><sub>2</sub> ⋅ <i>u</i><sub>1</sub>)  <i>u</i><sub>1</sub> = (0,1,−1) −(1/2, 1, −1/2) = (−1/2, 1, −1/2)</p>
+</div>
+
+</li>
+
+<li><p>Normalizziamo quest'ultimo vettore,</p>
+
+<div class="eq">
+<p><i>u</i><sub>2</sub> = (−1/2, 1, −1/2)/sqrt(1/4 + 1 + 1/4) = sqrt(2/3) (−1/2,1,−1/2) = (−1/6,sqrt(2/3),−1/sqrt(6))</p>
+</div>
+
+</li>
+
+<li><p>Scegliamo un vettori di ℝ<sup>3</sup> indipendente da <i>u</i><sub>1</sub>,<i>u</i><sub>2</sub>, per esempio</p>
+
+<div class="eq">
+<p><i>v</i><sub>3</sub> = (0,0,1)</p>
+</div>
+
+</li>
+
+<li><p>Sottraiamo a <i>u</i><sub>3</sub> la sua proiezione su <i>V</i></p>
+
+<div class="eq">
+<p><i>u</i><sub>3</sub>' = <i>v</i><sub>3</sub> − {(<i>u</i><sub>3</sub> ⋅ <i>u</i><sub>1</sub>) <i>u</i><sub>1</sub> + (<i>u</i><sub>3</sub> ⋅ <i>u</i><sub>2</sub>)<i>u</i><sub>2</sub>} = (0,0,1) −{ −1/2 (1/√2,0,−(1/√2) − 1/√6(1/√6, sqrt(2/3), −1/√6) } = (1/3,1/3,1/2)</p>
+</div>
+
+</li>
+
+<li><p>Normalizziamo <i>u</i><sub>3</sub>' ottenendo</p>
+
+</a><div class="eq">
+<p><i>u</i><sub>3</sub> = (1/3,1/3,1/3) /sqrt(1/3) = (  (1/√3,1/√3,1/√3)&emsp;■</p>
+</div>
+
+</ol>
+
+<p><b>(Gram-Schmidt process). Let {<i><b>v</b></i><sub>1</sub>, ..., <i>v<sub>n</sub></i></b>} &subset; 𝔽<sup><i>n</i></sup> be linearly independent. Construct {<i><b>v</b></i><sub>1</sub>, ..., <i>v<sub>p</sub></i></b>} as follows:</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>z</mi>
+          <mn>1</mn>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msub>
+          <mi>v</mi>
+          <mn>1</mn>
+        </msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>z</mi>
+          <mi>k</mi>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msub>
+          <mi>v</mi>
+          <mi>k</mi>
+        </msub>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mrow>
+            <mo fence="false" stretchy="false">&#x27E8;</mo>
+            <msub>
+              <mi>v</mi>
+              <mi>k</mi>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>z</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>k</mi>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+            <mo fence="false" stretchy="false">&#x27E9;</mo>
+          </mrow>
+          <mrow>
+            <mo fence="false" stretchy="false">&#x27E8;</mo>
+            <msub>
+              <mi>z</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>k</mi>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>z</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>k</mi>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+            <msub>
+              <mi>z</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>k</mi>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+            <mo fence="false" stretchy="false">&#x27E9;</mo>
+          </mrow>
+        </mfrac>
+        <mo>&#x2212;</mo>
+        <mo>&#x2026;</mo>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mrow>
+            <mo fence="false" stretchy="false">&#x27E8;</mo>
+            <msub>
+              <mi>v</mi>
+              <mi>k</mi>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>z</mi>
+              <mn>1</mn>
+            </msub>
+            <mo fence="false" stretchy="false">&#x27E9;</mo>
+          </mrow>
+          <mrow>
+            <mo fence="false" stretchy="false">&#x27E8;</mo>
+            <msub>
+              <mi>z</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>1</mn>
+              </mrow>
+            </msub>
+            <mo>,</mo>
+            <msub>
+              <mi>z</mi>
+              <mn>1</mn>
+            </msub>
+            <mo fence="false" stretchy="false">&#x27E9;</mo>
+          </mrow>
+        </mfrac>
+        <msub>
+          <mi>z</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>,</mo>
+        <mstyle scriptlevel="0">
+          <mspace width="2em"></mspace>
+        </mstyle>
+        <mi>k</mi>
+        <mo>=</mo>
+        <mn>2</mn>
+        <mo>,</mo>
+        <mo>&#x2026;</mo>
+        <mo>,</mo>
+        <mi>p</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{align}
+z_1 &= v_1 \\
+z_k &= v_k - \frac{\langle v_k, z_{k-1} \rangle} {\langle z_{k-1}, z_{k-1} z_{k-1} \rangle} - \ldots - \frac{\langle v_k, z_1 \rangle} {\langle z_{1}, z_1\rangle} z_1, \qquad k = 2, \ldots, p
+\end{align}$$ -->
+
+<p>Then for <i>k</i> = 1, ..., <i>p</i>, we have that {<i><b>z</b></i><sub>1</sub>, ..., <i>z<sub>p</sub></i></b>} is an orthogonal linearly independent set satisfying</p>
+
+<div class="eq">
+<p>Span {<i><b>v</b></i><sub>1</sub>, ..., <i>v<sub>k</sub></i></b>} = Span {<i><b>z</b></i><sub>1</sub>, ..., <i>z<sub>k</sub></i></b>} = Span {<i><b>z</b></i><sub>1</sub>/||<i><b>z</b></i><sub>1</sub>||, ..., <b><i>z<sub>p</sub></i></b>/||<b><i>z<sub>p</sub></i></b>||}</p>
+</div>
+
+<p>The set {<i><b>z</b></i><sub>1</sub>/||<i><b>z</b></i><sub>1</sub>||, ..., <b><i>z<sub>p</sub></i></b>/||<b><i>z<sub>p</sub></i></b>||} is an orthonormal set.</p>
+
+<p><b>Proof</b>. We prove this by induction. Clearly when <i>p</i> = 1, then <i><b>z</b></i><sub>1</sub> = <i><b>v</b></i><sub>1</sub>, and the statements are trivial.</p>
+
+<p>Next suppose that the theorem has been proven for sets with up to <i>p</i> - 1 vectors. Next, we are given {<i><b>v</b></i><sub>1</sub>, ..., <i>v<sub>p</sub></i></b>} and we construct {<i><b>z</b></i><sub>1</sub>, ..., <i>z<sub>p</sub></i></b>}. Notice that {<i><b>z</b></i><sub>1</sub>, ..., <i><b>z</b></i><sub>p-1</sub>} are obtained by applying the Gram-Schmidt process to {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v</b></i><sub>p-1</sub>}, and thus by the induction assumption {<i><b>z</b></i><sub>1</sub>, ..., <i><b>z</b></i><sub>p-1</sub>} is a linearly independent set and holds for <i>k</i> = 1, ..., <i>p</i> -1. Let <i><b>z<sub>p</sb></b></i> be defined via the GS orthogonalization process. Observe that for <i>k</i> &le; <i>p</i> -1.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <msub>
+    <mi>z</mi>
+    <mi>p</mi>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>z</mi>
+    <mi>k</mi>
+  </msub>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>=</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <msub>
+    <mi>v</mi>
+    <mi>p</mi>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>z</mi>
+    <mi>k</mi>
+  </msub>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>&#x2212;</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo fence="false" stretchy="false">&#x27E8;</mo>
+      <msub>
+        <mi>v</mi>
+        <mi>p</mi>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>j</mi>
+      </msub>
+      <mo fence="false" stretchy="false">&#x27E9;</mo>
+    </mrow>
+    <mrow>
+      <mo fence="false" stretchy="false">&#x27E8;</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>j</mi>
+      </msub>
+      <mo fence="false" stretchy="false">&#x27E9;</mo>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mi>z</mi>
+    <mi>j</mi>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>z</mi>
+    <mi>k</mi>
+  </msub>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo fence="false" stretchy="false">&#x27E8;</mo>
+    <msub>
+      <mi>v</mi>
+      <mi>p</mi>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>z</mi>
+      <mi>k</mi>
+    </msub>
+    <mo fence="false" stretchy="false">&#x27E9;</mo>
+  </mrow>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <mo fence="false" stretchy="false">&#x27E8;</mo>
+      <msub>
+        <mi>v</mi>
+        <mi>p</mi>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>k</mi>
+      </msub>
+      <mo fence="false" stretchy="false">&#x27E9;</mo>
+    </mrow>
+    <mrow>
+      <mo fence="false" stretchy="false">&#x27E8;</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>k</mi>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>k</mi>
+      </msub>
+      <mo fence="false" stretchy="false">&#x27E9;</mo>
+    </mrow>
+  </mfrac>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <msub>
+    <mi>z</mi>
+    <mi>k</mi>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>z</mi>
+    <mi>k</mi>
+  </msub>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \langle z_p, z_k \rangle = \langle v_p, z_k \rangle - \langle \sum_{j=1}^{p-1} \frac{\langle v_p, z_j \rangle}{\langle z_j, z_j \rangle} z_j, z_k \rangle = {\langle v_p, z_k \rangle} - \frac{\langle v_p, z_k \rangle} {\langle z_k, z_k \rangle} \langle z_k, z_k \rangle = 0 $$ -->
+
+<p>where we used that ⟨<i><b>z<sub>j</sub>, z<sub>k</sub></i></b>⟩  = 0 for <i>j</i> &ne; <i>k</i>, 1 &le;, <i>k</i> &le; <i>p</i> - 1. This proves the orthogonality. Also, we see that</p>
+
+<div class="eq">
+<p><i><b>z<sub>p</sub></i></b> &in; Span {<i><b>z<sub>p</sub></i></b>} + Span {<i><b>z</b></i><sub>1</sub>, ..., <i><b>z</b></i><sub>p-1</sub>} = Span {<i><b>v<sub>p</sub></i></b>} + Span {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v</b></i><sub><i>p</i>-1</sub>} + Span{<i><b>v</b></i><sub>1</sub>, ..., <i><b>v</b><sub>p</sub></i>}</p>
+</div>
+
+<p>Next, since</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>v</mi>
+    <mi>p</mi>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>z</mi>
+    <mi>p</mi>
+  </msub>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo fence="false" stretchy="false">&#x27E8;</mo>
+      <msub>
+        <mi>v</mi>
+        <mi>p</mi>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>j</mi>
+      </msub>
+      <mo fence="false" stretchy="false">&#x27E9;</mo>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>z</mi>
+        <mi>j</mi>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mi>z</mi>
+    <mi>j</mi>
+  </msub>
+</math>
+
+<!-- $$v_p = z_p + \sum_{j=1}^{p-1} \frac{ \langle v_p, z_j \rangle} {z_j, z_j} z_j$$ -->
+
+<p>We have that</p>
+
+<div class="eq">
+<p><i><b>v</b><sub>p</sub></i> &in; Span {<i><b>z</b></i><sub>1</sub>, ..., <i><b>z</b><sub>p</sub></i>}</p>
+</div>
+
+<p>Combining these observations with the induction assumption yields</p>
+
+<div class="eq">
+<p>Span {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>p</sub></b></i>} = Span {<i><b>z</b></i><sub>1</sub>, ..., <i><b>z</b><sub>p</sub></i>}</p>
+</div>
+
+<p>Since {<i><b>v</b></i><sub>1</sub>, ..., <i><b>v<sub>p</sub></b></i>} is linearly independent, they span a <i>p</i> dimensional space. Then {<i><b>z</b></i><sub>1</sub>, ..., <i><b>z<sub>p</sub></b></i>} also span a <i>p</i> dimensional space (the same one), and thus this set of vectors is also linearly independent. Finally, dividing each <i><b>z<sub>i</sub></b></i> by its length does not change the span, and makes the vectors orthonormal. &emsp;□</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
