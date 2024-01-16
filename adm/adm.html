@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="addition adm"/>
+	<title>addition adm</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Legendre transformation</h1>
+
+<h2>Helmholtz Free Eneregy A(T, V, N)</h2>
+
+<p>If we want a formulation of thermodynamics in which temperature <i>T</i>, rather than entropy <i>S</i>, is regarded as an independent variable, all we have to do is to take the Legendre transform of the energy <i>U</i>(S, V, N), transforming from the variable S to its conjugate variable <i>T</i> = (∂<i>U</i>/∂<i>S</i>)<sub>V,N</sub>.</p>
+
+<div class=eq">
+<p><i>U</i>(<i>S,V,N</i>), (∂<i>U</i>/∂<i>S</i>)<sub><i>V,N</i></sub> = T(<i>S,V,N</i>)</p>
+</div>
+
+<p>transform to</p>
+
+<div class="eq">
+<p>A(T, V, N) = <i>U</i> − TS with (∂<i>A</i>/∂<i>T</i>)<sub><i>V,N</i></sub>= −<i>S</i>(<i>T, V, N</i>)</p>
+</div>
+
+<p>We start from A(T, V, N ) = E(S(T, V, N ), V, N ) − T S(T, V, N ), which by the chain rule,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>A</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>T</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>E</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>S</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>S</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>T</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mi>T</mi>
+  <msub>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>S</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>T</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mi>S</mi>
+  <mo stretchy="false">(</mo>
+  <mi>T</mi>
+  <mo>,</mo>
+  <mi>V</mi>
+  <mo>,</mo>
+  <mi>N</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\frac{\partial A}{\partial T}_{V,N} = \frac{\partial E}{\partial S}_{V,N} \frac{\partial S}{\partial T}_{V,N} - T \frac{\partial S}{\partial T}_{V,N} - S(T,V,N) $$ -->
+
+
+------------------------------------
+
+Il numero di Reynolds
+
+Il termine avvezione indica il fenomeno del trasporto di una quantità causato da un movimento aperto della corrente, mentre il termine convezione indica lo stesso fenomeno causato da un movimento ciclico del fluido. Per esempio, riferendosi all'acqua, si parla di avvezione quando il vento asciuga i panni appesi; si parla invece di convezione quando un vento ascensionale assorbe acqua dal mare, ascende, la rilascia nell'alta atmosfera e discende sul mare. 
+
+Il passaggio da un regime all'altro avviene in dipendenza dei valori assunti dalla velocità, dalla densità e dalla viscosità del fluido e dalle dimensioni geometriche del condotto; Reynolds definì un rapporto adimensionale fra queste grandezze, detto <i>numero di Reynolds<i>, il cui valore permette di individuare il regime di moto che si verifica in una determinanta corrente.</p>
+
+R<sub>e</sub> = &rho; v r /&eta;
+
+<p>dove &rho; indica la densità del fluido, v la velocità, r il raggio del condotto ed &eta; la viscosità del fluido. Si tratta di una grandezza adimensionale.</p>
+
+Péclet number
+--------------------------
+
+Two types of terms contribute to the evolution of solute concentration: those representing the effects of advection, and those accounting for diffusion and dispersion. 
+The Péclet number is is the ratio od advective over diffusive transport rates. 
+
+In an interval of time &Delta;t, advention carrties a non-reacting solute across a distance L = v<sub>x</sub>&Delta;<i>t</i>. For any given time &Delta;<i>t</i>, then, advection and dispersion ob
+
+P<sub>e</sub> = v<sub>x</sub>L/D
+
+<p>Here, v its speed (e.g. sinking speed), and D is the diffusivity of the solutes.  Values much greater than one signify the dominance of advection, and those less than one indicate that diffusion or dispersion dominates. </p>
+
+Prandtl number is hte ratio of momenutm to energy in a fluid. We can also describe the Prandtl number as the ratio of momentum diffusivity to thermal diffusivity.
+
+Pr = C<sub>p</sub>&mu;/<i>k</i>
+
+<h2>S-Adenosyl methionine donates -CH<sub>3</sub> groups</h2>
+
+<p>Methylation reactions transfer a methhyl group (-CH<sub>3</sub>) to an acceptor molecule. The donor of the methyl group is in most cases <b>S-adenosyl methionine (SAM), which is synthesized in the body from ATP and the amino acid methionine. The methylation reaction converts SAM to S-adenosyl homocysteine (SAH), which can be converted back to SAM in a sequence of reactions. Like CoA, SAM is a cosubstrate rather thatn a prosthetic group.</p>
+
+<h2>Cardenolides</h2>
+
+<p>Cardenolides are a subclass of plant-derived steroidal compounds found within the class of cardianc glycosides. Historically, this class of toxic compounds has been used by native Amozonian and African communities as arrow poisons during hunting and as weapons during civil unrest. Cardenolides are a 23-carbon molecule composed of three parts: (I) a steroidal backbone of four fused carbon rings, (II) a lactone group, and (III) a sugar moiety is located on the first carbon ring. The focal enzymatic target of cardenolides in the ubiquitous Na<sup>+</sup>/K<sup>+</sup>-ATPase. This enzyme, located on the cell membrane of animal cells, is active in maintanining the Na<sup>+</sup>/K<sup>+</sup> ions balance of the cytoplasm with the extracellular fluid. This is especially important in cardiac myocytes, as the balance of Na<sup>+</sup> and K<sup>+</sup> ions is coupled with intracellular calcium ions which is important in regulating contractility. Cardenolides are also part of the plan's defense agains herbivory. Many genera such as <i>Nerium, Asclepias, Thevetia, Cerbera, and Apocynum</i>, within Apocynaace, are known to contain cardenolides. Over 200 different cardenolides were identifies from <i>Asclepias</i> species (milkweeds). The cardenolides calactin, calotropin, and vorusharin, identifies in milkweeds, are active in plant defense and are primarily responsible fro anticancer, antrimicrobial, antiviral, and anti-inflammatory pharmalogical activities. </p>
+
+<section aria-label="End">
+<a href="dlconfiguration.html">&#171;D- and L- configuration</a>
+<a href="index.html">Index</a>
+<a href="I.html">Iodine&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+
