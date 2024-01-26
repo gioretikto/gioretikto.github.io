@@ -60,7 +60,7 @@ abstractly as a linear mapping that takes a direction and returns a real number 
 <p>where <b><i>v</i>*</b> : ℝ<sup><i>n</i><sub><i>d</i></sub></sup> → ℝ. We have replaced the vector <i><b>v</b></i> with a linear mapping <i><b>v</b></i>[ ] that provides the same “service.” The set of linear mappings from ℝ<sup><i>n</i><sub><i>d</i></sub></sup> to ℝ forms a new vector space ℝ<sup><i>n</i>*<sub><i>d</i></sub></sup>, called the <b>dual space</b> of ℝ<sup><i>n</i><sub><i>d</i></sub></sup>. The elements of ℝ<sup><i>n</i><sub><i>d</i>*</sub></sup> are called dual vectors or covectors to distinguish them from vectors belonging to the original vector space ℝ<sup><i>n</i><sub><i>d</i></sub></sup>. <br> It can be shown that every vector <i><b>v</b></i> ∈ ℝ<sup><i>n</i><sub><i>d</i></sub></sup> is uniquely associated with a covector <i><b>v</b></i><sup>∗</sup> ∈ ℝ<sup><i>n</i>*<sub><i>d</i></sub></sup> and vice versa, so that ℝ<sup><i>n</i><sub><i>d</i></sub>*</sup> is <i>isomorphic</i> to ℝ<sup><i>n</i><sub><i>d</i></sub></sup>. Hence vectors and covectors occupy two parallel universes. In one we have the standard definition of a vector and in the other, vectors are replaced by linear mappings. The connection between the two representations follows from the requirement that sd in Eqns. (2.1) and (2.2) is the same:</p>
 
 <div class="eq">
-<p><i><b>v</b></i>* [<i><b>d</b></i>] <i><b>v</b></i> · <i><b>d</b></i> &emsp;(2.3)</p>
+<p><i><b>v</b></i>* [<i><b>d</b></i>] = <i><b>v</b></i> · <i><b>d</b></i> &emsp;(2.3)</p>
 </div>
 
 <p>Thus, we can fully characterize the linear mapping v∗ by the vector <i><b>v</b></i>. What about the reverse direction? Given the linear mapping <i><b>v</b></i>*, how can we determine the associated vector <i><b>v</b></i> (assuming that it is not known)? To answer this question, we begin by focusing on the left-hand side of Eqn. (2.3) and use the linearity of <i><b>v</b></i>* to obtain</p>
@@ -75,13 +75,19 @@ abstractly as a linear mapping that takes a direction and returns a real number 
 <p><i><b>v</b></i>* [<i><b>e<sub>i</sub></b></i>]<i>d<sub>i</sub></i> = <i>v<sub>i</sub>d<sub>j</sub></i> (<i><b>e</b><sub>i</sub></i> · <i><b>d</b><sub>j</sub></i>) &emsp;</p>
 </div>
  
-<p>For an orthonormal basis, <i><b>e<sub>i</sub></b></i> · <i><b>e</b><sub>j</sub> = δ<sub><i>ij</sub></i>, so that <i><b>v</b></i>*[<i><b>e<sub>i</sub></i>]<i>d<sub>i</sub></i> = <i>v<sub>i</sub>d<sub>i</sub></i>. Since <i><b>d</b></i> is arbitrary, this implies that</p>
+<p>For an orthonormal basis, <i><b>e<sub>i</sub></b></i> · <i><b>e</b><sub>j</sub></i> = <i>δ<sub>ij</sub></i>, so that <i><b>v</b></i>*[<i><b>e</b><sub>i</sub></i>]<i>d<sub>i</sub></i> = <i>v<sub>i</sub>d<sub>i</sub></i>. Since <i><b>d</b></i> is arbitrary, this implies that</p>
 
 <div class="eq">
 <p><i><b>v</b></i>* [<i><b>e<sub>i</sub></b></i>] = <i>v<sub>i</sub></i> &emsp; (2.4)</p>
 </div>
 
-<p>Thus, the components <i>v<sub>i</sub></i> of the vector v are obtained by evaluating the associated linear mapping v∗ on the orthonormal Cartesian basis {ei}. This means that given <i><b>v</b></i>*, we can always revert to a vector representation, <i><b>v</b></i> = <i>v<sub>i</sub><b>e</b><sub>i</sub></i>, where we define <i>v<sub>i</sub></i> ≡ <i><b>v</b></i>*[<i>e<sub>i</sub></i>].</p>
+<p>Thus, the components <i>v<sub>i</sub></i> of the vector <i><b>v</b></i> are obtained by evaluating the associated linear mapping v∗ on the orthonormal Cartesian basis {<b><i>e<sub>i</sub></i></b>}. This means that given <i><b>v</b></i>*, we can always revert to a vector representation, <i><b>v</b></i> = <i>v<sub>i</sub><b>e</b><sub>i</sub></i>, where we define <i>v<sub>i</sub></i> ≡ <i><b>v</b></i>*[<i>e<sub>i</sub></i>].</p>
+
+<p><b>Example</b>. (<b>Gradient</b>). Another example of dual vector is the gradient of a scalar function. Indeed, the gradient maps a vector to a numnber, as it can be thought as a machine which given a direction (vector), tells you how much a function is changing in that direction. Since we know that the gradient is linear, and directions are just (unit) vectors, it certainly seems to match the criterion exactly.</p>
+
+<div class="eq">
+<p>D<sub><b>v</b></sub> <i>f</i>(<i><b>x</b></i>)=∇<i>f</i>(<i><b>x</b></i>) ⋅ <i><b>v</b></i>(<i><b>x</b></i>)</p>
+</div>
 
 <section aria-label="End">
 <a href="index.html">Index</a>
