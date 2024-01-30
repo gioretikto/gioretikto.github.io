@@ -29,8 +29,7 @@
 
 <p>In general, a <i>manifold</i> is any set that can be continuously parameterised. The number of independent parameters required to specify any point in the set uniquely is the <i>dimension</i> of the manifold, and the parameters themselves are the coordinates of the manifold. An abstract example is the the phase space of a particle in classical mechanics that can be parameterised by three position coordinates (<i>q</i><sub>1</sub>, <i>q</i><sub>2</sub>, <i>q</i><sub>3</sub>) and three momentum coordinates (<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>, <i>p</i><sub>3</sub>), and thus the set of points in this phase space forms a six-dimensional manifold. In fact, one can regard ‘manifold’ as just a fancy word for ‘space’ in the general mathematical sense. In its most primitive form a general manifold is simply an amorphous collection of points. Most manifolds used in physics, however, are ‘<b>differential manifolds</b>’, which are continuous and differentiable in the following way. A manifold is continuous if, in the neighbourhood of every point <i>P</i>, there are other points whose coordinates differ infinitesimally from those of <i>P</i>. A manifold is differentiable if it is possible to define a scalar field at each point of the manifold that can be differentiated everywhere. Both our examples above are differential manifolds <br> The association of points with the values of their parameters can be thought of as a mapping of the points of a manifold into points of the Euclidean space of the same dimension. This means that ‘locally’ a manifold looks like the corresponding Euclidean space: it is ‘smooth’ and has a certain number of dimensions.</p>
 
-<p><b>Definition</b>. An <i>n</i>-dimensional topological manifold is a topological space <i>X</i> which admits an open cover {<i>U<sub>&alpha;</sub></i>} and for each <i>&alpha;</i> a homeomorphism <i>&phi;<sub>&alpha</sub></i> : <i>U<sub>&alpha;</sub></i> ⟶ <i>V<sub>&alpha;</sub></i>, where <i>V<sub>&alpha;</sub></i> is an open set in ℝ<sup><i>n</i></sup>. The pair 
-(<i>U<sub>&alpha;</sub></i>, <i>&phi;<sub>&alpha;</sub></i>) is called a chart for <i>X</i>. The collection {(<i>U<sub>&alpha;</sub></i>, <i>&phi;<sub>&alpha;</sub></i>)} is called an atlas for the manifold <i>X</i>.</p>
+<p><b>Definition</b>. An <i>n</i>-dimensional topological manifold is a topological space <i>X</i> which admits an open cover {<i>U<sub>&alpha;</sub></i>} and for each <i>&alpha;</i> a <a href="../math/topology/homeomorphisms.html">homeomorphism</a> <i>&phi;<sub>&alpha</sub></i> : <i>U<sub>&alpha;</sub></i> ⟶ <i>V<sub>&alpha;</sub></i>, where <i>V<sub>&alpha;</sub></i> is an open set in ℝ<sup><i>n</i></sup>. The pair (<i>U<sub>&alpha;</sub></i>, <i>&phi;<sub>&alpha;</sub></i>) is called a chart for <i>X</i>. The collection {(<i>U<sub>&alpha;</sub></i>, <i>&phi;<sub>&alpha;</sub></i>)} is called an atlas for the manifold <i>X</i>.</p>
 
 <p>Each chart <i>&phi;</i>: <i>U<sub>&alpha;</sub></i> ⟶ <i>V<sub>&alpha;</sub></i> provides a system of coordinate on <i>U<sub>&alpha;</sub></i>, namely the usual coordinates (<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>) on <i>V<sub>&alpha;</sub></i> &subset; ℝ<sup><i>n</i></sup>. These are called <i>local coordinates</i> on <i>U<sub>&alpha;</sub></i>.</p>
 
@@ -38,13 +37,15 @@
 	<li><p>The mapping <i>f</i>: <i>U</i> ⟶ <i>V</i> is called a <b>chart</b> or a <b>coordinate system</b>.</p></li>
 </ul>
 
+<p><b>Example 1 (Cirle S<sup>1</sup></b>). Locally, the circle looks like a line. It is 1D, that is, only, one coordinate is needed to say where a point is on the circle locally. A small piece of a circle appears to be like a slightlyIbent part of a straight line segment, but overall the circle and the segment are different 1D manifolds.
+
 <p><b>Example</b>. A monoatomic gas is described by thermodynamic variable <i>p</i> (pressure), <i>V</i> (volume), and <i>T</i> (temperature); each of these variables must be positive. The states of thermal equilibrium must satisfy an equation of state of the form.</p>
 
 <div class="eq">
 <p><i>f</i>(<i>p,V,T</i>) = 0</p>
 </div>
 
-<p>so that these states from a two-dimensional manifold. Note that there is no natura notion of distance on the thermodynamic manifold, in contrast to the other examples, where the Euclidean metric of the R<sup>n</sup> in which the manifolds are embedded leads to a natural definition of distance on the manifold.</p>
+<p>so that these states from a two-dimensional manifold. Note that there is no natural notion of distance on the thermodynamic manifold, in contrast to the other examples, where the Euclidean metric of the R<sup>n</sup> in which the manifolds are embedded leads to a natural definition of distance on the manifold.</p>
 
 <p><b>Definition (Homeomorphism)</b>. Let <i>X</i> be a topological space and let <i>U</i> &subset; <i>X</i> open. A Homeomorphism is a <i>function f: X ⟶ Y</i> between two topological spaces <i>X</i> and <i>Y</i> such that</p>
 
@@ -54,7 +55,6 @@
 </ul>
 
 <p>if such a function exists, we say that <i>X</i> and <i>Y</i> are homeomorphic. &emsp;□</p>
-
 
 
 <section aria-label="End">
