@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Compactness">
+	<title>Compactness</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Compactness</h1>
+
+<p>Compactness is a generalization of being bounded and closed in Euclidean space.</p>
+
+<p>Like connectivity, compactness is one of the most important concepts in topology and analysis. One reason for its importance is that a continuous function whose domain is a compact set behaves very well. Indeed, you have already encountered compactness in calculus in the theorem that says that a continuous real-valued function on a closed and bounded interval attains both its maximum and minimum values; since all of the theory of the Riemann integral rests on this theorem, it is one of the most important theorems underlying the calculus. It relates to compactness because a closed and bounded interval is an example of a compact subset of ℝ. <br> In this chapter, we will investigate compactness in general. At first you may find the study of compactness more difficult than <a href="connectivity.html">connectivity</a>, but after you get used to the somewhat strange definition, you should find it a fascinating subject.</p>
+
+<p><b>Definition 5.1.1</b> Let <i>A</i> and <i>I</i> be two sets. A collection {U<sub>i</sub>}<sub>i∈I</sub> of sets is said to be a <b>cover</b> (or a covering) for <i>A</i> if</p>
+
+<div class="eq">
+<p><i>A</i> &subset; ⋃<sub><i>i</i> &in; <i>I</i></sub> <i>U<sub>i</sub></i></p>
+</div>
+
+<p>If all <i>U<sub>i</sub></i> are open, then we say an <b>open cover</b>. &emsp;□</p>
+
+<p><b>Definition</b>. Let <i>A</i> be a subset of a topological space (<i>X</i>, <i>&tau;</i>). Then <i>A</i> is said to be <b>compact</b> if for every set <i>I</i> and every family of open sets, <i>O<sub>i</sub></i>, <i>i</i> &in; <i>I</i>, such that <i>A</i> &subseteq; U<sub><i>i</i> &in; <i>I</i></sub> <i>O<sub>i</sub></i> there exists a finite subfamility <i>O</i><sub><i>i</i>1</sub>, <i>O</i><sub><i>i</i>2</sub>, ...., <i>O<sub>i<sub>n</sub></sub> such that <i>A</i> &subseteq; <i>O</i><sub><i>i</i>1</sub> u <i>O</i><sub><i>i</i>2</sub> U .... U <i>O<sub>i<sub>n</sub></sub>
+
+<p><b>Example</b>. If (<i>X</i>, <i>&tau;</i>) = ℝ and <i>A</i> = (0, &infty;), then <i>A</i> is <u>not</u> compact.</p>
+
+<p><b>Proof</b>. For each positive integer <i>i</i>, let <i>O<sub>i</sub></i> be the open interval (0,<i>i</i>). Then, clearly, <i>A</i> = U<sub><i>i</i>=1</sub><sup>&infty;</sup> <i>O<sub>i</sub></i>.  <br>But there do not exist <i>i</i><sub>1</sub>, <i>i</i><sub>2</sub>, ..., <i>i<sub>n</sub></i> such that <i>A</i> &subseteq; (0,<i>i</i><sub>1</sub>) U (0, <i>i</i><sub>2</sub>) U .... U (0,<i>i<sub>n</sub></i>). <br>Threfore <i>A</i> is not compact.</p>
+
+<p><b>Examples 5.1.2</b></p>
+
+<ol>
+	<li><p>Let <i>X</i> be a topological space. Then {<i>X</i>} is an open (and a closed) cover for any subset <i>A</i> of <i>X</i>.</p></li>
+	<li><p>In usual ℝ, {[−<i>n, n</i>)}<sub><i>n</i> ∈ ℕ</sub> is a cover for ℝ. Similarly, {(−<i>n, n</i>)}<sub><i>n</i> ∈ ℕ</sub> is an open cover for ℝ.&emsp;■</p></li>
+</ol>
+
+<p><b>Definition 5.1.3</b>. Let (<i>X, &tau;</i>) be a topological space. Then <i>X</i> is called <b>compact</b> if every open cover of <i>X</i> has a finite subcollection (also called subcover) that still covers <i>X</i>. &emsp;■</p>
+
+<p><b>Example 5.1.2</b>. If ℝ = (<i>X, &tau;</i>), and <i>A</i>= [1, ∞) is not compact since for each positive integer <i>i</i>, let O<sub>i</sub> be the open interval (1, <i>n</i>). Then 
+clearly, <i>A</i> ⊆ ⋃<sub>i=1</i><sup>∞</sup></sub> O<sub>i</sub>. But there do not exist <i>i</i><sub>1</sub>, i<sub>2</sub>, ..., i<sub>n</sub> such that <i>A</i> ⊆ (0, <i>i</i><sub>1</sub>) ∪ (0, <i>i</i><sub>2</sub>) ∪ ··· ∪ (0, <i>i<sub>n</sub></i>). Therefore <i>A</i> is not compact. <br> Similarly the (bounded) open set (0,1) is <i>not</i> compact because the open cover {(1/n,1)}<sub><i>n</i> ∈ ℕ</sub> has not fine subcover. These examples suggest that compact sets <i>cannot</i> be unbounded or open. It is in fact easy to show that they have to be <i>bounded and closed</i> sets that we know play a big role in real analysis;&emsp;■</p>
+
+<section aria-label="End">
+<a href="connectedness.html">«Connectedness</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
