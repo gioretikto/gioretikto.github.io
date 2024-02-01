@@ -25,19 +25,69 @@
 
 <p>Like connectivity, compactness is one of the most important concepts in topology and analysis. One reason for its importance is that a continuous function whose domain is a compact set behaves very well. Indeed, you have already encountered compactness in calculus in the theorem that says that a continuous real-valued function on a closed and bounded interval attains both its maximum and minimum values; since all of the theory of the Riemann integral rests on this theorem, it is one of the most important theorems underlying the calculus. It relates to compactness because a closed and bounded interval is an example of a compact subset of ℝ. <br> In this chapter, we will investigate compactness in general. At first you may find the study of compactness more difficult than <a href="connectivity.html">connectivity</a>, but after you get used to the somewhat strange definition, you should find it a fascinating subject.</p>
 
-<p><b>Definition 5.1.1</b> Let <i>A</i> and <i>I</i> be two sets. A collection {U<sub>i</sub>}<sub>i∈I</sub> of sets is said to be a <b>cover</b> (or a covering) for <i>A</i> if</p>
+<p><b>Definition 5.1.1</b> Let <i>A</i> be a subset of a topological space <i>X</i>. An <b>open cover</b> of <i>A</i> is a collection {<i>U<sub>i</sub></i>}<sub><i>i</i>∈<i>I</i></sub> of open subsets of <i>X</i> so that <i>A</i> lies in the union of the elements of {<i>U<sub>i</sub></i>}<sub><i>i</i>∈<i>I</i></sub>, i.e.</p>
 
-<div class="eq">
-<p><i>A</i> &subset; ⋃<sub><i>i</i> &in; <i>I</i></sub> <i>U<sub>i</sub></i></p>
-</div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>&#x2286;</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x22C3;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>&#x2208;</mo>
+      <mi>I</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>U</mi>
+    <mi>i</mi>
+  </msub>
+</math>
 
-<p>If all <i>U<sub>i</sub></i> are open, then we say an <b>open cover</b>. &emsp;□</p>
+<!-- $$ A \subseteq \bigcup_{i\in I} U_i $$ -->
 
-<p><b>Definition</b>. Let <i>A</i> be a subset of a topological space (<i>X</i>, <i>&tau;</i>). Then <i>A</i> is said to be <b>compact</b> if for every set <i>I</i> and every family of open sets, <i>O<sub>i</sub></i>, <i>i</i> &in; <i>I</i>, such that <i>A</i> &subseteq; U<sub><i>i</i> &in; <i>I</i></sub> <i>O<sub>i</sub></i> there exists a finite subfamility <i>O</i><sub><i>i</i>1</sub>, <i>O</i><sub><i>i</i>2</sub>, ...., <i>O<sub>i<sub>n</sub></sub> such that <i>A</i> &subseteq; <i>O</i><sub><i>i</i>1</sub> u <i>O</i><sub><i>i</i>2</sub> U .... U <i>O<sub>i<sub>n</sub></sub>
+<p>A <b>subcover</b> of {<i>U<sub>i</sub></i>}<sub><i>i</i>∈<i>I</i></sub> is a collection {<i>U'<sub>i</sub></i>}<sub><i>i</i>∈<i>I</i></sub> &subseteq; {<i>U<sub>i</sub></i>}<sub><i>i</i>∈<i>I</i></sub> so that <i>A</i> lies in the union of the elements of {<i>U'<sub>i</sub></i>}<sub><i>i</i>∈<i>I</i></sub>, i.e.</p>
 
-<p><b>Example</b>. If (<i>X</i>, <i>&tau;</i>) = ℝ and <i>A</i> = (0, &infty;), then <i>A</i> is <u>not</u> compact.</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>&#x2286;</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x22C3;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>&#x2208;</mo>
+      <mi>I</mi>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mi>U</mi>
+    <mi>i</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+</math>
 
-<p><b>Proof</b>. For each positive integer <i>i</i>, let <i>O<sub>i</sub></i> be the open interval (0,<i>i</i>). Then, clearly, <i>A</i> = U<sub><i>i</i>=1</sub><sup>&infty;</sup> <i>O<sub>i</sub></i>.  <br>But there do not exist <i>i</i><sub>1</sub>, <i>i</i><sub>2</sub>, ..., <i>i<sub>n</sub></i> such that <i>A</i> &subseteq; (0,<i>i</i><sub>1</sub>) U (0, <i>i</i><sub>2</sub>) U .... U (0,<i>i<sub>n</sub></i>). <br>Threfore <i>A</i> is not compact.</p>
+<!-- $$ A \subseteq \bigcup_{i\in I} U'_i $$ -->
+
+<p>A cover if <i>finite</i> if there are only finitely many sets in the family (that is, if the index set is finite). &emsp;□</p>
+
+<p><b>Definition</b> (Compactness of Subsets). Let <i>A</i> be a subset of a topological space (<i>X</i>, <i>&tau;</i>). Then <i>A</i> is said to be <b>compact</b> if every open cover of <i>A</i> has a finite subcover.&emsp;□</p>
+
+<p><b>Example</b>. The interval (0,1) in Euclidean line is not compact. Consider the open intervals <i>U<sub>n</sub></i> = (1,/1/<i>n</i>), <i>n</i> = 1,2,.. The family {<i>u<sub>n</sub></i>: <i>n</i> &in; ℕ} is an open cover for (0,1) since for every <i>a</i> &in; (0,1) there exists a positive integer <i>k</i> such that <i>k</i> &gt; 1/<i>a</i> (Archimedean property of integers), and therefore <i>a</i> &in; <i>U<sub>k</sub></i>. However. no finite subfamily of this family can cover (0,1) since the union of any such subfamily <i>U</i><sub><i>n</i>1</sub>, ..., <i>U<sub>n</sub></i>, is equal to (1/<i>m</i>,1), where <i>m</i> = max {<i>n</i><sub>1</sub>, ..., <i>n<sub>s</sub></i>}.</p>
+
+
+<p><b>Example</b>. If (<i>X, &tau;</i>) = ℝ and <i>A</i> = (0, &infin;), then <i>A</i> is <u>not</u> compact.</p>
+
+<p><b>Proof</b>. For each positive integer <i>i</i>, let <i>O<sub>i</sub></i> be the open interval (0,<i>i</i>). Then, clearly, <i>A</i> = U<sub><i>i</i>=1</sub><sup>&infin;</sup> <i>O<sub>i</sub></i>.  <br>But there do not exist <i>i</i><sub>1</sub>, <i>i</i><sub>2</sub>, ..., <i>i<sub>n</sub></i> such that <i>A</i> &subseteq; (0,<i>i</i><sub>1</sub>) U (0, <i>i</i><sub>2</sub>) U .... U (0,<i>i<sub>n</sub></i>). <br>Threfore <i>A</i> is not compact.</p>
+
+<p>Not only is compactness a topological property (preserved by homeomorphisms), it is preserved by any continuous function.</p>
+
+<p><b>Theorem</b>. The continuous image of a compact set is compact. That is, if <i>f</i>: <i>X</i> → <i>Y</i> is a continuous function and <i>A</i> &subseteq; <i>X</i> is compact, then <i>f</i>(<i>A</i>) is compact in <i>Y</i>.</p>
+
+<p><b>Proof</b>. Suppose <i>f</i>: <i>X</i> → <i>Y</i> is a continuous function, <i>A</i> &subseteq; <i>X</i> is compact, and <i>C</i> is an open cover of <i>f</i>(<i>A</i>). Then <i>f</i>sup>&minus;1</sup>(<i>C</i>) = {<i>f</i><sup>&minus;1</sup>(<i>V</i>): <i>V</i> &in; <i>C</i>} is an open cover of <i>A</i>, so there exists a finite subcover {<i>f</i><sup>&minus;1</sup>(V<sub>1</sub>, ..., <i>f</i><sup>&minus;1</sup>(<i>V<sub>n</sub></i>)} covering <i>A</i>. Now {<i>V</i><sub>1</sub>, ..., <i>V<sub>n</sub></i>} is a finite subcover from <i>C</i> covering <i>f</i>(<i>A</i>).</p>
+
+<h2>Euclidean Space</h2>
+
+<p>For any subset <i>A</i> of Euclidean space ℝ<sup><i>n</i></sup>, <i>A</i> is compact if and only if it is closed and bouned; this is the Hein-Borel theorem.</p>
 
 <p><b>Examples 5.1.2</b></p>
 
