@@ -36,10 +36,24 @@
 <p>Each chart <i>&phi;</i>: <i>U<sub>&alpha;</sub></i> ⟶ <i>V<sub>&alpha;</sub></i> provides a system of coordinate on <i>U<sub>&alpha;</sub></i>, namely the usual coordinates (<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>) on <i>V<sub>&alpha;</sub></i> &subset; ℝ<sup><i>n</i></sup>. These are called <i>local coordinates</i> on <i>U<sub>&alpha;</sub></i>.</p>
 
 <ul>
-	<li><p>The mapping <i>f</i>: <i>U</i> ⟶ <i>V</i> is called a <b>chart</b> or a <b>coordinate system</b>.</p></li>
+	<li><p>The mapping <i>&phi;</i>: <i>U</i> ⟶ <i>V</i> is called a <b>chart</b> or a <b>coordinate system</b>.</p></li>
 </ul>
 
-<p><b>Example 1 (Cirle S<sup>1</sup></b>). Locally, the circle looks like a line. It is 1D, that is, only, one coordinate is needed to say where a point is on the circle locally. A small piece of a circle appears to be like a slightlyIbent part of a straight line segment, but overall the circle and the segment are different 1D manifolds.
+<figure>
+<img src="img/chart.png" alt="chart"/>
+<figcaption>Each point <i>x</i> &in; <i>M</i> of manifold <i>M</i> is given coordinates (<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>), specified by an homeomorphism (coordinate map) from a neighborhood <i>U</i> of <i>x</i> to ℝ<sup><i>n</i></sup>.</figcaption>
+</figure>
+
+<p><b>Example 1 (Cirle S<sup>1</sup></b>). Locally, the circle looks like a straight line. A straight line is nothing but an 1-dimensional euclidean space. So the circle is 1D, that is, only, one coordinate is needed to say where a point is on the circle locally. A small piece of a circle appears to be like a slightlyIbent part of a straight line segment, but overall the circle and the segment are different 1D manifolds. There is a conventional coordinate system &theta;: <i>S</i><sup>1</sup> ⟶ ℝ, where <i>&theta;</i> = 0 at the top of the circle and wraps around to 2&pi;. However, in the definition of a chart we have required that the image <i>&theta;</i>(<i>S</i><sup>1</sup>) be open in ℝ. If we include either 
+<i>&theta;</i> = 0 or <i>&theta;</i> = 2&pi; we have a closed interval rather than an open one; if we exclude both points, e haven't covered the whole circle. So we need at least two charts, as shown in Fig.1. A square and a circle are homeomorphic, but a circle and a straight line are not.</p>
+
+<h2>Transition map</h2>
+
+<p>The charts in an atlas may overlap and a point iùof a manifold may be represented in several charts. if two  charts overlap, parts of them represent the same region of the manifold. Given two overlapping charts, a <i>transition function</i> can be defined that goes from an open ball in ℝ<sup><i>n</i></sup> to the manifold and then back to another (or perhaps the  same) open ball in ℝ<sup><i>n</i></sup>.</p>
+
+<img src="img/transition_map.png" alt="transition map"/>
+
+<p>If point <i>x</i> &in; <i>M</i> belongs to two neighborhood <i>U</i><sub>1</sub> and <i>U</i><sub>2</sub> equipped with respective coordinate maps <i>ϕ</i><sub>1</sub> and <i>ϕ</i><sub>2</sub>, the mapping <i>ϕ</i><sub>2</sub><i>ϕ</i><sub>1</sub> is a homeomorphism from <i>ϕ</i><sub>1</sub>(<i>U</i><sub>1</sub> &cup; <i>U</i><sub>2</sub>) &subset; ℝ<sup><i>n</i></sup> to <i>ϕ</i><sub>2</sub>(<i>U</i><sub>1</sub> &cup; <i>U</i><sub>2</sub>) &subset; ℝ<sup><i>n</i></sup>.</p>
 
 <p><b>Example</b>. A monoatomic gas is described by thermodynamic variable <i>p</i> (pressure), <i>V</i> (volume), and <i>T</i> (temperature); each of these variables must be positive. The states of thermal equilibrium must satisfy an equation of state of the form.</p>
 
@@ -57,6 +71,7 @@
 </ul>
 
 <p>if such a function exists, we say that <i>X</i> and <i>Y</i> are homeomorphic. &emsp;□</p>
+
 
 <section aria-label="End">
 <a href="epoxides.html">«Epoxides</a>
