@@ -76,11 +76,7 @@
 </tbody>
 </table>
 
-<p>If <i>B</i> is a set whose elements are included in a set <i>A</i> we say that <i>B</i> is included in <i>A</i> or that <i>B</i> <i>subset</i> of <i>A</i></p>
-
-<div class="eq">
-<p><i>B</i> ⊆ <i>A</i></p>
-</div>
+<p><b>Definition 1.1</b>. A is a subset of B, written A ⊆ B, if and only if every element of A is an element of B.&emsp;□</p>
 
 <p>To exclude the possibility of equality between <i>B</i> and <i>A</i> i.e. if there are elements of <i>A</i> not within <i>B</i> we use the notation</p>
 
@@ -92,7 +88,7 @@
 
 <div class="eq">
 <p><i>A</i> ⊊ <i>B</i>  &emsp; ⇐⇒ &emsp; [&forall;<i>a, a</i> &in; <i>A</i> ⇒ <i>a</i> &in; <i>B</i>, and ∃<i>b</i> &in; <i>B</i> | <i>b</i> &ne; <i>A</i>]or<br>
-<i>A</i> ⊊ <i>B</i>  &emsp; ⇐⇒ &emsp; [(<i>A</i> &subseteq; <i>B</i> ∧ (<i>A</i> &ne; <i>B</i>)]</p>
+<br><i>A</i> ⊊ <i>B</i>  &emsp; ⇐⇒ &emsp; [(<i>A</i> &subseteq; <i>B</i> ∧ (<i>A</i> &ne; <i>B</i>)]</p>
 </div>
 
 <p>For example, ℤ ⊊ ℝ because every integer is a real number but there are real numbers that are not integers.</p>
@@ -188,6 +184,9 @@
 <p><i>X</i><sub>1</sub> ∩ <i>X</i><sub>2</sub> = ∅, &emsp; <i>X</i><sub>1</sub> ∩ <i>X</i><sub>3</sub> = ∅, &emsp; <i>X</i><sub>2</sub> ∩ <i>X</i><sub>3</sub> = ∅.</p>
 </div>
 
+The elements of <i>T</i> are ∅ and {{∅}}. <i>T</i> is transitive as the members of {{ø}} is only {ø}, and {ø} is a subset of <i>A</i>.</p></li> 
+</ul>
+
 <h2 id="power">Power set</h2>
 
 <p>For any set <i>A</i>, the power set of <i>A</i>, denoted by <i>P</i>(<i>A</i>), is the set of all subsets of <i>A</i> and is written as</p>
@@ -207,6 +206,16 @@
 </div>
 
 <p>The power set of a finite set with <i>n</i> elements has 2<sup><i>n</i></sup> elements because, in defining a subset, we have two independent choices for each element (does it belong to the subset or not?). In Example 1.1.2, <i>A</i> has 3 elements and <i>P</i>(<i>A</i>) has 2<sup>3</sup> = 8 elements.</p>
+
+<p id="transitive"><b>Definition</b>. A set <i>Z</i> is said to be transitive if each element of <i>Z</i> is also a subset of <i>Z</i>; that is a set <i>Z</i> (whose elements are sets) is <b>transitive</b> if a set <i>X</i> is contained in <i>Z</i> whenever there exists a set <i>Y</i> such that <i>X</i> &in; <i>Y</i> and <i>Y</i> &in; <i>Z</i>.&emsp;□</p>
+
+<p><b>Examples</b>.</p>
+
+<ul>
+	<li><p>Since ∅ has no elements, it is vacuosly true that each element is a subset of ∅. Hence ∅ is transitive.</p></li>
+	<li><p><i>T</i> := {ø, {{ø}}}. Considering the set {{ø}} which has the element, {ø}, we have to ask ourselves if this is an element of <i>T</i>. The answer is no, hence <i>T</i> is not transitive.</p></li>
+	<li><p><i>S</i>:= {∅, {{∅}}, {∅}}. This thim the set {{ø}} which has the element, {ø} is a subset of <i>S</i>.</p></li>
+</ul>
 
 <h3 id="Morgan">De Morgan's Laws</h3>
 
