@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Truth Tables and Logical Equivalences">
+	<title>Truth Tables and Logical Equivalences</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Truth Tables and Logical Equivalences</h1>
+
+<p>Recall from section 1.1 that a statement or proposition is a declarative sentence that is either true or false, but not both true and false.</p>
+
+<p><b>Definition 1.3.1</b>. (<b>Truth Value and Truth Table</b>) The truth value of a statement is true (denoted by T) if the statement is true and is false (denoted by F) if the statement is false.&emsp;□</p>
+
+<p>A truth table is a table which shows the truth values of a statement for all possible combinations of truth values of its simple statement components. The German mathematician and philosopher Friedrich Ludwig Gottlob Frege (1848-1925) is considered to be one of the founders of modern symbolic logic. Frege believed that mathematics was reducible to logic. In 1879, he published his ﬁrst major work <i>Begriﬀsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens</i> (Conceptual notation, a formal language modeled on that of arithmetic, for pure thought). In this work, Frege introduced a logical system with negation, implication, universal quantiﬁers, and the idea of a truth table, although it was not presented in our current notational form. Later in 1893, Frege published <i>Die Grundgesetze der Arithmetik</i>, I. (The Basic Laws of Arithmetic, I.). Here, he introduced the terms “True” and “False” and described the truth value of the statement “P implies Q” for each of the four possible combinations of truth values of P, Q. That is, he verbally described the truth table for P implies Q (which we will study in the next section); but he did not display an actual truth table. Let P represent a statement. P may have the truth value T or the truth value F. By deﬁnition, the negation of P, ¬ P, is false when P is true and true when P is false. Consequently, the truth table for ¬ P is as follows:</p>
+
+<table>
+<tr><th>P</th> <th>¬ P</th></tr>
+
+<tr><td>T</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>T</td></tr>
+
+</table>
+
+<p>Since this truth table explains completely the result of negating the statement P, it may be taken as the deﬁnition of ¬P, the negation of P. The negation symbol “¬” is a <b>unary logical operator</b>. The term “unary” means the operator acts on a single statement.</p>
+
+<p>Given a collection of propositional components, say P, Q, and R, we can assign truth values to these components. Truth talbe (1) has four rows (not including the header). The columns beneath P and Q list all the possible pairs of truth values that can be assigned to the components P and Q. For each such pair, the corresponding truth value for P ∧ Q appears to the right. </p>
+
+<section>
+
+<table>
+<caption>Conjuction</caption>
+<tr><th>P</th> <th>Q</th> <th>P ∧ Q</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>F</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td> </tr>
+
+<tr><td>F</td> <td>F</td> <td>F</td> </tr>
+
+</table>
+
+
+<table>
+<caption>Disjuction</caption>
+
+<tr><th>P</th> <th>Q</th> <th>P ∨ Q</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>F</td> <td>F</td> </tr>
+
+</table>
+
+</section>
+
+<p>Now that we know how to build tables for the sentences P ∧ Q, P ∨ Q and ¬P, we will discuss how to build truth tables for more complicated propositional sentences. Given a compound sentence, we identify the "outside" connective to be the "last connective that one needs to evaluate". Once the outside connective has been identified, one can break up the sentence into its "parts". For example, in the compound sentence ¬P ∨ (Q ∧ P) we see that ∨ is the outside connective with two parts ¬P and Q ∧ P.</p>
+
+<table>
+
+<tr><th>P</th> <th>Q</th> <th>¬P</th> <th>Q ∧ P</th> <th>¬P ∨ (Q ∧ P)</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> <td>F</td> <td>T</td></tr>
+
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td> </tr>
+
+<tr> <td>1</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <th>STEP #</th></tr>
+
+</table>
+
+<p>In the construction of the above truth table, observe that whenever we broke up a sentence into parts, the columns for the parts appear to the left of the columns for the sentence.</p>
+
+<p>We now describe in steps how we obtained the truth values in the above table. STEP 1: Specify all of the possible truth values that can be assigned to the components. STEP 2: IN each row, use the truth value assigned to the component P to obtain the corresponding truth value for ¬P. STEP 3: In each row, use that truth values assigned to Q and P, to determine the corresponding truth value in the column under Q ∧ P. STEP 4: IN each row, use the truth values in the columns under ¬P and Q ∧ P to obtain the matching truth value for the final column under th sentence ¬P ∨ (Q ∧ P).</p>
+
+<p>We will do it this agains in our next example.</p>
+
+<p><b>Example</b>. Construct a truth table that can be used to evaluate the truth value of the sentence P ∧ (Q ∨ ¬R) as function of the truth of the components P,Q, R.</p>
+
+<p><b>Solution</b>. We know that the components P,Q and R will each need a column in our truth table. Since 
+
+<table>
+
+<tr><th>P</th> <th>Q</th> <th>R</th> <th>¬R</th> <th>Q ∨ ¬R</th> <th>¬P ∨ (Q ∨ ¬R)</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td></tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>F</td></tr>
+
+<tr>> <td>1</td> <td>1</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <th>STEP #</th</tr>
+
+</table>
+
+<p>Let S be a compound statement which contains only the one simple statement P. In order to list all of the possible combinations of truth values for P, the truth table for S must have exactly two rows. In this case, the standard truth table form for the statement S is</p>
+
+<p>The ﬁrst entry in the column labeled P must be T and the second entry in the column must be F. The dots, · · · , indicate the possible presence of columns of truth values with appropriate headings needed to “build-up” the statement S.<br> Next let P and Q represent two simple statements. In order to list all of the possible combinations of truth values of P, Q, the truth table for any compound statement S containing exactly the two simple statements P and Q will have exactly four rows. In this case, the standard truth table form for the statement S is</p>
+
+
+<p>Since this truth table explains completely the result of conjuncting the statement P with the statement Q, it may be taken as the deﬁnition of P ∧ Q. The conjunction symbol “∧” is a binary logical operator. The term “binary” means the operator acts on two statement.</p>
+
+<h2>Tautologies and Contradictions</h2>
+
+<p>Suppose, after contructing a truth table for a propositional sentence (statement), you see that each entry in the final column is true. This indicates a situation where the sentence is true no matter what truth values are assigned to its components. When this occurs, the sentence is called a <b>tautology</b>.</p>
+
+<p><b>Definition</b>. We shall say that a propositional sentence is a <b>tautology</b> when its truth value is true regardless of the truth values of its components.</p>
+
+<p>Thus, a propositional sentence is a tautology if it is always true. For example, one can see from the following truth table that the sentence P ∨ ¬P is a tautology</p>
+
+<table>
+<tr><th>P</th> <th>¬P</th> <th>P ∨ ¬P</th></tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> </tr>
+
+</table>
+
+<p><b>Definition</b>. A <b>contradiction</b> is a statement that is false for every assignment of truth values of its component statements. Thus a contradiction is the negation of a tautology.</p>
+
+<p>So the negation of the tautology P ∨ ¬P which is ¬(P ∨ (¬P)) is an example of a contradiction.</p>
+
+<p><b>Definition</b> (<b>Truth Value Equivalent or Logically Equivalent</b>) Two statements are <b>truth value equivalent</b> or <b>logically equivalent</b> if and only if they have the same truth values for all assignments of truth values to their component statements.</p>
+
+<p>It follows from the definition above that two statements which appear in the same truth table are logically equivalent if and only if their truth value columns are identical. Two statements which appear in different truth tables are logically equivalent if and only if both tables are in standard form, both tables are for statements with the same components, and their truth value columns are identical.<br> We need to develop an algebra for symbolic logic, so we can make calculations similar to the way in which we make algebraic calculations for real numbers. One algebraic property of real numbers is that −(−x) = x. So let us produce a truth value table for the statement ¬ (¬ P). We start our truth table with a row of column headings labeled P, ¬ P, and ¬ (¬ P). In the column labeled P, we enter as the first entry T and as the second entry F. (See 5a.) Then using the negation truth table, we compute the entries for the second column labeled ¬ P. Since negation changes the truth value T to F and the truth value F to T, the first entry in the second column is F and the second entry is T. (See 5b.) Applying negation to the second column, the column labeled ¬ P, we obtain T for the first entry in the third column and F for the second entry. (See 5c.)</p>
+
+<table>
+<tr><th>P</th> <th>¬ P</th> <th>¬ (¬ P)</th></tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td> </tr>
+
+</table>
+
+<p>Observe that the truth value entries in the first column are identical to the truth value entries in the third column. Hence, we have shown that the statements P and ¬ (¬ P) are truth value equivalent. In order to denote that P and ¬(¬P) are truth value equivalent or logically equivalent, we write P ≡ ¬(¬P), which is read “P is truth value equivalent to ¬(¬P)” or “P is
+logically equivalent to ¬(¬P)” Thus, we have used a truth table to prove the Double Negation Law.</p>
+
+<div class="eq">
+<p><b>Double Negation</b> Law: ¬(¬P) ≡ P</p>
+</div>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
