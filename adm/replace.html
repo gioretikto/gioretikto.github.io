@@ -1,0 +1,73 @@
+<!-- Written by Giovanni Resta giovannirestadev@gmail.com replace a string with another-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Replace string</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+	<script type="text/javascript" id="MathJax-script" async src="js/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<article>
+
+<h1>Replace string</h1>
+
+<table class="noborder">
+
+<tr><th>Input text</th> <th>Search string</th> <th>Replace string</th></tr>
+
+<tr><td rowspan="2">
+  <textarea>s. m. [der. del gr. ὅλος «tutto, intero, totale»]. – Teoria biologica generale derivata dal &lt;em class="MuiTypography-root MuiTypography-italic css-uehu9e"&gt;vitalismo&lt;/em&gt;, proposta negli anni Venti in contrapp. al meccanicismo, secondo la quale le manifestazioni vitali degli organismi devono essere interpretate sulla base delle interrelazioni e delle interdipendenze funzionali tra le parti che compongono l’individuo, il quale nel suo complesso presenta caratteristiche proprie, non riconducibili alla somma delle sue parti.
+&lt;aside&gt;&lt;div data-src="https://www.treccani.it/vocabolario/olismo/" data-widget-id="AR_8" class="OUTBRAIN"&gt;&lt;/div&gt;&lt;/aside&gt;&lt;script type="text/javascript" async="true" src="https://widgets.outbrain.com/outbrain.js"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;table summary="Tabella sinottica che riassume i principali dati del soggetto" class="sinottico"&gt;</textarea>
+  <br>
+  <input id="myClearBtn" type="button" value="Clear">
+  <input id="myReplaceBtn" type="button" value="Replace all">
+</td><td>
+  <input type="text" id="search1" name="search1" value=' class="MuiTypography-root MuiTypography-body1 css-1rmcmsc"'></td><td>
+  <input type="text" id="replace1" name="replace1" >
+</td></tr>
+
+<tr><td>
+  <input type="text" id="search2" name="search2" value=' class="MuiTypography-root MuiTypography-italic css-uehu9e"'></td><td>
+  <input type="text" id="replace2" name="replace2">
+</td></tr>
+</table>
+
+<script type="text/javascript">
+const txtarea = document.querySelector('textarea');
+
+const stringToFind = document.getElementById("search1");
+const stringToReplaceWith = document.getElementById("replace1");
+const stringToFind2 = document.getElementById("search2");
+const stringToReplaceWith2 = document.getElementById("replace2");
+
+txtarea.addEventListener('keyup', () => {
+		const content = txtarea.value;
+})
+
+function eraseText() {
+	const txtarea = document.querySelector('textarea');
+	txtarea.value = "";
+}
+
+function replaceText() {
+	txtarea.value = txtarea.value.replaceAll(stringToFind.value, stringToReplaceWith.value);
+	txtarea.value = txtarea.value.replaceAll(stringToFind2.value, stringToReplaceWith2.value);
+  txtarea.value = txtarea.value.substring(0, txtarea.value.indexOf('<aside>'))
+}
+
+const clearButton = document.getElementById("myClearBtn");
+clearButton.addEventListener("click", eraseText);
+	  
+const replaceButton = document.getElementById("myReplaceBtn");
+replaceButton.addEventListener("click", replaceText);
+</script>
+
+</article>
+
+</body>
+
+</html>
