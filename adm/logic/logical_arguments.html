@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Logical Arguments">
+	<title>Logical Arguments</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Logical Arguments</h1>
+
+<p>Proofs play a major role in mathematics, and deductive reasoning is the foundation on which proofs rest. In mathematics, as in law, a logical argument is a claim that from certain <b>premises</b> (statements that are assumed to be true) one can infer a certain <b>conclusion</b> (statement) is true. Logic is concerned with the connections between statements and with what deductions can be made, assuming that the premises are true. Let the symbol .· . stand for the word “therefore.” The symbolic form of a logical argument written in horizontal form is</p>
+
+<div class="eq">
+<p><i>P</i><sub>1</sub>, ..., <i>P<sub>n</sub></i> .·.  C</p>
+</div>
+
+<p>and written in vertical form is</p>
+
+<div class="eq">
+<p>P<sub>1</sub><br>
+.<br>
+.<br>
+ <br>
+P<sub>n</sub><br>
+—— <br>
+ .·.  C</p>
+</div>
+
+<p>where <i>P</i><sub>1</sub>, ..., <i>P<sub>n</sub></i> are premises and <i>C</i> is the conclusion. In logic, we study the methods and principles used in distinguishing valid (“correct”) arguments from invalid (“incorrect”) arguments. Notice that statements are said to be true or false, while arguments are said to be valid or invalid. We make the following deﬁnitions regarding arguments.</p>
+
+<p><b>Definition</b> (<b>Valid and Invalid Arguments</b>) An argument <i>P</i><sub>1</sub>, ..., <i>P<sub>n</sub></i> .·.  C with premises <i>P</i><sub>1</sub>, ..., <i>P<sub>n</sub></i> and conclusion <i>C</i> is <b>valid</b> if and only if <i>P</i><sub>1</sub> ∧ <i>P</i><sub>2</sub> ∧ ... ∧ <i>P<sub>n</sub></i> ⇒ <i>C</i> is a <a href="tautologies.html">tautology</a>.</p>
+
+<p>If an argument is not valid, it is called <b>invalid</b>.</p>
+
+<p>(restating the logical formula in words: a conjunction is true iff all the constituents are true, and an implication is true if, whenever the premise is true, the conclusion is also true) Thus, an argument is valid if and only if when the premises are all true, the conclusion must be true. Stated another way, an argument is valid if and only if it is not possible for the conclusion to be false unless at least one of the premises is false. Validity concerns the relationship between the premises and the conclusion, and not the truth values of the premises and conclusions. <br>Let us consider the argument</p>
+
+<div class="eq">
+<p>The sun is shining<br>
+————<br>
+Therefore, the sun is shining or it is raining.</p>
+</div>
+
+<p>Let P denote the premise “The sun is shining.” And let Q denote the statement “It is raining.” Then this argument can be written symbolically as</p>
+
+<div class="eq">
+<p>P<br>
+————<br>
+.·. P ∨ Q</p>
+</div>
+
+<p>We construct the following standard truth table for P ⇒ (P ∨ Q).</p>
+
+<table>
+<tr><th>P</th> <th>Q</th> <th>P ∨ Q</th> <th>P ⇒ (P ∨ Q)</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>F</td> <td>F</td> <td>T</td></tr>
+</table>
+
+<p>Observe that the statement <i>P</i> ⇒ (<i>P</i> ∨ <i>Q</i>) is a tautology and, consequently,</p>
+
+<div class="eq">
+<p><i>P</i><br>
+————<br>
+.·. <i>P</i> ∨ <i>Q</i></p>
+</div>
+
+<p>is a valid argument. Thus, we have just proven the rule of disjunction.</p>
+
+<p><b>Proposition</b>. (<b>Rule of Disjunction</b>) The argument <i>P</i> .·. <i>P</i> ∨ <i>Q</i> is a valid argument known as the <b>rule of disjunction</b>.</p>
+
+<p>Now, let us consider the symbolic argument</p>
+
+<div class="eq">
+<p><i>P</i><br>
+————<br>
+.·. <i>P</i> ∧ <i>Q</i></p>
+</div>
+
+<p>We construct the following standard truth table for P ⇒ (P ∧ Q).</p>
+
+<table>
+<tr><th>P</th> <th>Q</th> <th>P ∧ Q</th> <th>P ⇒ (P ∧ Q)</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>F</td></tr>
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>F</td> <td>F</td> <td>T</td></tr>
+</table>
+
+<p>Observe that the statement P ⇒ (P ∧ Q) is not a tautology and; therefore,</p>
+
+<div class="eq">
+<p><i>P</i><br>
+————
+.·. <i>P</i> ∧ <i>Q</i></p>
+</div>
+
+<p>is an invalid argument. In order to show that an argument is invalid, it is not necessary to construct an entire truth table. It is sufficient to show how to choose the truth values of the component statements in such a way that the premises are true and the conclusion is false. Thus, to show that the argument <i>P</i> .·. <i>P</i> ∧ <i>Q</i> is invalid, we need to show only the first three columns of row two of the proceeding truth table. That is,</p>
+
+<table>
+<tr><td>P</td> <td>Q</td> <td>P ∧ Q</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td></tr>
+</table>
+
+<p>shows that the argument P .·. P ∧ Q is invalid.</p>
+
+<p>The following three arguments are valid.</p>
+
+<p><b>Proposition</b> (<b>Rule of Conjunction</b>) The argument P, Q .·. P ∧ Q is a valid argument known as the rule of conjunction.</p>
+
+<p><b>Proposition</b> (<b>Rule of Conjunctive Simplification</b>) The argument P ∧Q .·. P is a valid argument called the rule of conjunctive simplification.</p>
+
+<p><b>Proposition</b> (<b>Rule of Disjunctive Syllogism</b>) The argument P ∨ Q, ¬P .·. Q is a valid argument called the rule of disjunctive syllogism.</p>
+
+<p>Truth tables which verify that these arguments are valid appear below.</p>
+
+<table>
+<caption>Rule of Conjunction</caption>
+<tr><th>P</th> <th>Q</th> <th>P ∧ Q</th> <th>(P ∧ Q) ⇒ (P ∧ Q)</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>F</td> <td>F</td> <td>T</td></tr>
+</table>
+
+<table>
+<caption>Rule of Conjunctive Simplification</caption>
+<tr><th>P</th> <th>Q</th> <th>P ∧ Q</th> <th>(P ∧ Q) ⇒ P</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>F</td> <td>F</td> <td>T</td></tr>
+</table>
+
+<table>
+<caption>Rule of Disjunctive Syllogism</caption>
+<tr><th>P</th> <th>Q</th> <th>¬P</th> <th>P ∨ Q (P ∨ Q) ∧ (¬P)</th> <th>(P ∨ Q) ∧ (¬P) ⇒ Q</th></tr>
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td></tr>
+</table>
+
+<p>When an argument contains three or more different simple statements, it becomes tedious to determine the validity of the argument by making a truth table. A more convenient way to prove an argument is valid is to deduce its conclusion from its premises by a sequence of elementary arguments which are known to be valid. Hence, a <b>formal proof</b> of a given argument is a sequence of statements such that each statement is either: (1) a premise of the argument, or (2) a statement which follows from preceding statements by an elementary valid argument, or (3) a statement which is logically equivalent to a preceding statement in the sequence, or (4) the last statement in the sequence—the conclusion of the argument. The proper way to write a formal proof is to list the premises and the sequence of statements deduced from them along with a justification for each statement. The justification of each deduced statement specifies the preceding statement or statements from which it was deduced and the rule of inference which was used. Thus far, we have proved by the use of truth tables that four elementary arguments are valid—namely, the rule of disjunction, the rule of conjunction, the rule of conjunctive simplification, and the rule of disjunctive syllogism.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

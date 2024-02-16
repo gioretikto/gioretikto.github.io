@@ -21,12 +21,53 @@
 
 <h1>Biconditional Statements</h1>
 
-<p>In mathematics, it is highly valued when one can prove that a certain concept, say <i>A</i>, is equivalent to a seemingly different concept <i>B</i>. One uses the phrase "if and only if" (often abbreviated by “iff") to assert that two concepts are equivalent, that is, alternatives ways of saying the same thing.</p>
+<p>In mathematics, it is highly valued when one can prove that a certain concept, say <i>A</i>, is equivalent to a seemingly different concept <i>B</i>. One uses the phrase "if and only if" (often abbreviated by iff") to assert that two concepts are equivalent, that is, alternatives ways of saying the same thing. For example, let <i>P</i>: 2 divides 5 and <i>Q</i>: 5 divides 15, then their statement <i>P</i> ⇔ <i>Q</i> denotes the statement: "2 divides 4 if and only if 5 divides 15".</p>
+
+<p>The biconditial statement P ⇔ Q is defined to be true only when <i>P</i> and <i>Q</i> have the same truth value, and it is defined by the following table.</p>
+
+<table>
+<caption>Biconditional</caption>
+<tr><th>P</th> <th>Q</th> <th>P ⇔ Q</th></tr>
+
+<tr><td>T</td> <td>T</td> <td>T</td></tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>F</td> <td>F</td></tr>
+</table>
+
+<p><b>Proposition</b>. (<b>Conditional Laws</b>)</p>
+
+<ol>
+	<li><p>(P ⇒ Q) ⇔ (¬P v Q);</p></li>
+	<li><p>(P ⇒ Q) ⇔ ¬(P ∧ ¬Q);</p></li>
+	<li><p>¬(P ⇒ Q) ⇔ ¬(P ∧ ¬Q);</p></li>
+</ol>
+
+<p><b>Proof</b>. Compare the tables for each statement. Since all the final columns agree, we see that (P ⇒ Q), ¬(P v Q), ¬(P ∧ ¬Q) are logically equivalent. By constructing truth tables for ¬(P ⇒ Q) and (P ∧ ¬Q), one can also show that ¬(P ⇒ Q) (P ∧ ¬Q). &emsp;□</p>
+
+<p><b>Example</b>. (<b>Constructing a Truth Table for (P ⇒ Q)∧(Q ⇒ P)</b>) Construct the standard truth table for (P ⇒ Q) ∧ (Q ⇒ P) and adjoin the column of truth values for the biconditional statement P ⇔ Q at the right. What can you conclude about (P ⇒ Q) ∧ (Q ⇒ P) and (P ⇔ Q)?</p>
+
+<p><b>Solution</b>. We make column headings P, Q, P ⇒ Q, Q ⇒ P, (P ⇒ Q) ∧ (Q ⇒ P), and (P ⇔ Q). We fill in the appropriate truth value columns for P and Q, and then we determine and enter the remaining truth values by column from left to right. Thus, we obtain the following standard truth table.</p>
+
+<table>
+<tr><th>P</th> <th>Q</th> <th>P ⇒ Q</th> <th>Q ⇒ P</th> <th>(P ⇒ Q) ∧ (Q ⇒ P)</th> <th>(P ⇔ Q)</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td></tr>
+<tr><td>F</td> <td>T</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td></tr>
+<tr><td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+</table>
+
+<p>Since the truth value columns for (P ⇒ Q) ∧ (Q ⇒ P) and (P ⇔ Q) are identical,(P ⇒ Q) ∧ (Q ⇒ P) is logically equivalent to (P ⇔ Q)—that is, (P ⇒ Q) ∧ (Q ⇒ P) ≡ (P ⇔ Q). &emsp;□</p>
+
+<p>In algebra, we have an established hierarchy for operations. For algebraic expression with no parentheses, the operation of exponentiation is performed first and from left to right; next, the operations of multiplication and division are performed from left to right; and finally, the operations of addition and subtraction are performed from left to right. Thus, it is understood that x + y ∗ z written without any additional parentheses means x + (y ∗ z) and not (x+y) ∗ z. The hierarchy for connectives in symbolic logic for expressions with no parentheses is: negation ¬ is performed first, next conjunction ∧ and disjunction ∨ are performed, and lastly the conditional ⇒ and biconditional ⇔ connectives are performed. Hence, by this convention ¬P ⇒ Q∧R means (¬P) ⇒ (Q∧R). However, without parentheses the meaning of the expression P ∧Q∨R is ambiguous. Does it mean (P ∧Q)∨R or P ∧(Q∨R)? So in this case, a set of parentheses is necessary to indicate which expression is intended.</p>
 
 <section aria-label="End">
-<a href="epoxides.html">«Epoxides</a>
+<a href="conditional_statements.html">«Conditional statementes</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides»</a>
+<a href="logical_arguments.html">Logical arguments»</a>
 </section>
 
 </article>
