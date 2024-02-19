@@ -45,7 +45,7 @@ P<sub>n</sub><br>
 
 <p>If an argument is not valid, it is called <b>invalid</b>.</p>
 
-<p>(restating the logical formula in words: a conjunction is true iff all the constituents are true, and an implication is true if, whenever the premise is true, the conclusion is also true) Thus, an argument is valid if and only if when the premises are all true, the conclusion must be true. Stated another way, an argument is valid if and only if it is not possible for the conclusion to be false unless at least one of the premises is false. Validity concerns the relationship between the premises and the conclusion, and not the truth values of the premises and conclusions. <br>Let us consider the argument</p>
+<p>The "argument" is an implication; For the implication to always be true, it is sufficient (and necessary) that the conclusion is true if the premise is true. The premise can be false as well and then the conclusion doesn't matter (See the definition <a href="conditional_statements.html">implication</a>). Thus, an argument (by definition of <a href="conditional_statements.html">implication</a>) is valid if and only if it is not possible for its premises to all be true while its conclusion is false. Stated another way, an argument is valid if and only if it is not possible for the conclusion to be false unless at least one of the premises is false. Validity concerns the relationship between the premises and the conclusion, and not the truth values of the premises and conclusions. <br>Let us consider the argument</p>
 
 <div class="eq">
 <p>The sun is shining<br>
@@ -105,7 +105,7 @@ Therefore, the sun is shining or it is raining.</p>
 
 <div class="eq">
 <p><i>P</i><br>
-————
+————<br>
 .·. <i>P</i> ∧ <i>Q</i></p>
 </div>
 
@@ -148,7 +148,7 @@ Therefore, the sun is shining or it is raining.</p>
 
 <table>
 <caption>Rule of Disjunctive Syllogism</caption>
-<tr><th>P</th> <th>Q</th> <th>¬P</th> <th>P ∨ Q (P ∨ Q) ∧ (¬P)</th> <th>(P ∨ Q) ∧ (¬P) ⇒ Q</th></tr>
+<tr><th>P</th> <th>Q</th> <th>¬P</th> <th>P ∨ Q</th> <th>(P ∨ Q) ∧ (¬P)</th> <th>(P ∨ Q) ∧ (¬P) ⇒ Q</th></tr>
 <tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
 <tr><td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
 <tr><td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
@@ -156,6 +156,71 @@ Therefore, the sun is shining or it is raining.</p>
 </table>
 
 <p>When an argument contains three or more different simple statements, it becomes tedious to determine the validity of the argument by making a truth table. A more convenient way to prove an argument is valid is to deduce its conclusion from its premises by a sequence of elementary arguments which are known to be valid. Hence, a <b>formal proof</b> of a given argument is a sequence of statements such that each statement is either: (1) a premise of the argument, or (2) a statement which follows from preceding statements by an elementary valid argument, or (3) a statement which is logically equivalent to a preceding statement in the sequence, or (4) the last statement in the sequence—the conclusion of the argument. The proper way to write a formal proof is to list the premises and the sequence of statements deduced from them along with a justification for each statement. The justification of each deduced statement specifies the preceding statement or statements from which it was deduced and the rule of inference which was used. Thus far, we have proved by the use of truth tables that four elementary arguments are valid—namely, the rule of disjunction, the rule of conjunction, the rule of conjunctive simplification, and the rule of disjunctive syllogism.</p>
+
+<h3>Modus Tollens</h3>
+
+<p>Latin phrases <b>modus ponens</b> and <b>modus tollens</b> carry the meaning of ''method of affirming'' and ''method of denying'' respectively.</p>
+
+<div class="eq">
+<p><i>P</i> ⇒ <i>Q</i><br>
+¬<i>Q</i><br>
+————<br>
+.·. ¬<i>P</i></p>
+</div>
+
+<p><b>Example</b>. </p>
+
+<div class="eq">
+<p>Se piove la strada si bagna<br>
+la strada non si sta bagnando<br>
+————<br>
+.·. non piove</p>
+</div>
+
+<p>We must prove that ((<i>P</i> ⇒ <i>Q</i>) ∧ (¬<i>Q</i>)) ⇒ ¬<i>P</i> is a tautology.</p>
+
+<table>
+<caption>Truth table</caption>
+<tr><th>P</th> <th>Q</th> <th>¬<i>Q</i></th> <th><i>P</i> ⇒ <i>Q</i></th> <th>(<i>P</i> ⇒ <i>Q</i>) ∧ (¬<i>Q</i>)</th> <th>¬<i>P</i></th> <th>((<i>P</i> ⇒ <i>Q</i>) ∧ (¬<i>Q</i>)) ⇒ ¬<i>P</i></th> 
+
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> </tr>
+
+</table>
+
+<p>Then we have proved the argument is valid.&emsp;□</p>
+
+<h3>Modus Ponens</h3>
+
+<p>Latin: "modus ponendo ponens" − the mode that affirms by affirming. That is, the consequent is affirmed (proven true) by affirming (asserting the truth of) the antecedant.</p>
+
+<div class="eq">
+<p><i>P</i> ⇒ <i>Q</i><br>
+<i>P</i><br>
+————<br>
+.·. <i>Q</i></p>
+</div>
+
+<p>We must prove that (<i>P</i> ∧ ( <i>P</i>  ⇒ <i>Q</i>))  ⇒ <i>Q</i> is a tautology.</p>
+
+<table>
+<caption>Truth table of Modus Ponens</caption>
+<tr><th>P</th> <th>Q</th> <th><i>P</i> ⇒ <i>Q</i></th> <th>(<i>P</i> ∧ ( <i>P</i>  ⇒ <i>Q</i>))</th> <th>¬<i>P</i></th> <th>(<i>P</i> ∧ ( <i>P</i>  ⇒ <i>Q</i>))  ⇒ <i>Q</i></th> 
+
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td> <td>T</td>  </tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td> </tr>
+
+</table>
 
 <section aria-label="End">
 <a href="epoxides.html">«Epoxides</a>

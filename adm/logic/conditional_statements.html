@@ -37,7 +37,9 @@
 
 <p>Your teacher, however, did not say anything about what would happen if you did not do your homework. After the final exam, you obtain your course grade. You may have done very well, or not so well, on the final exam. Under what conditions can you call your teacher a liar? A liar is one who clearly and knowingly tells a lie, that is, a falsehood. You can declare your teacher as being guilty of a lie only when there is clear evidence of such guilt. Without such evidence, we must presume that your teacher told the truth. <br> Let us define some propositional symbols that concisely express the teacher’s statement. Let H stand for the assertion “you do your homework” and let P represent the statement “you will pass.” Thus, H ⇒ P represents your teacher’s statement, that is, “If you do your homework, then you will pass.” Consider the truth table</p>
 
-<table class="centertable">
+<table id="def" class="centertable">
+
+<caption>This table represents the definition of the ⇒ symbol</caption>
 
 <tr><th>H</th> <th>P</th> <th>H ⇒ P</th></tr>
 
@@ -70,8 +72,40 @@
 <p>The essential meaning of the conditional statement appears in the partial truth table above. Earlier, we indicated that in English the word “or” has two meanings—the meaning of the “inclusive or” and the meaning of the “exclusive or.” Since we have two missing truth values in the truth table for the conditional statement, there are four possible ways to complete the truth table. The question is: “For use in mathematical discussions, what truth value assignments should we make in the last two rows of the truth table?” Observe that when the hypothesis, P , is true, the truth value of the conditional statement P ⇒ Q is identical to the truth value of the conclusion, Q. Also observe that when P is true, the truth value of the statement (¬P )∨Q is identical to the truth value of Q. Hence, we deﬁne P ⇒ Q to be logically
 equivalent to (¬P ) ∨ Q. That is, we take P ⇒ Q to be an abbreviation for (¬P ) ∨ Q. Below, we have constructed the standard truth table for (¬P ) ∨ Q and have attached at the right a column labeled P ⇒ Q. Since we have deﬁned the conditional statement P ⇒ Q to be logically equivalent to the statement (¬P ) ∨ Q, the column of truth values for P ⇒ Q is identical to the column of truth values for (¬P ) ∨ Q.</p>
 
+<p>Every conditional statement has associated with it three other statements: the <b>converse</b>, the <b>inverse</b>, and <b>contrapositive</b>.</p>
+
+<p><b>Definition</b>. (<b>Converse, Inverse, and Contrapositive</b>)</p>
+
+<ul>
+	<li><p>The <b>converse</b> of P ⇒ Q is Q ⇒ P.</p></li>
+	<li><p>The <b>inverse</b> of P ⇒ Q is (¬P) ⇒ (¬Q).</p></li>
+	<li><p>The <b>contrapositive</b> of P ⇒ Q is (¬Q) ⇒ (¬P).</p></li>
+</ul>
+
+<p><b>Example</b> (<b>The Converse, Inverse, and Contrapositive of a Conditional Statement</b>) Write the converse, inverse, and contrapositive of the conditional statement “If we win the game, we will celebrate.”</p>
+
+<p><b>Solution</b>. </p>
+
+<ul>
+	<li><p>The converse is “If we celebrate, we will win the game.”</p></li>
+	<li><p>The inverse is “If we do not win the game, we will not celebrate.”</p></li>
+	<li><p>The contrapositive is “If we do not celebrate, we will not win the game.”</p></li>
+</ul>
+
+<p>We constructed the following truth table for the conditional statement, P ⇒ Q; its converse, Q ⇒ P ; its inverse, (¬P) ⇒ (¬Q) ; and its contrapositive, (¬Q) ⇒ (¬P) .</p>
+
+<table class="centertable">
+<tr><th>P</th> <th>Q</th> <th>P ⇒ Q</th> <th>Q ⇒ P</th> <th>¬P</th> <th>¬Q</th> <th>(¬P) ⇒ (¬Q)</th> <th>(¬Q) ⇒ (¬P)</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>T</td> </tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> <td>F</td></tr>
+<tr><td>F</td> <td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td> </tr>
+<tr><td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> </tr>
+</table>
+
+<p>Examining the columns of truth values, we find that P ⇒ Q is logically equivalent to (¬Q) ⇒ (¬P), since their columns of truth values are identical and that Q ⇒ P is logically equivalent to (¬P) ⇒ (¬Q) since their columns of truth values are identical.</p>
+
 <section aria-label="End">
-<a href="epoxides.html">«Epoxides</a>
+<a href="DeMorgan.html">«De Morgan's Laws</a>
 <a href="index.html">Index</a>
 <a href="biconditional_statements.html">Biconditional statements»</a>
 </section>
