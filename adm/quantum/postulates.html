@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Postulates of quantum mechanics"/>
+	<title>Postulates of quantum mechanics</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+ 
+<h1>Postulates of quantum mechanics</h1>
+
+<p>Certain hypotheses, or postulates, serve as the foundation on which a physical theory is built up. The theory considers these postulates as fundamental. In other words, an <i>explanation</i> of the postulates is beyond the scope of the theory; the theory is rather concerned wth the <i>consequences</i> of the postulates. In fact, the theory is nothing but the mathematical framework which connects the postulates to their observable consequences. Of couse, one often regards the postulates as part of the theory itself, in which case the consequences are referred to as <i>predictions</i> of the theory. Agreement between these predictions and the experimental observations providews a <i>verification</i> of the theory, and thus, an indirect justification of the postulates. </p>
+
+<p><b>Postulate I</b>:  The quantum mechanical description of a system is contained in its wave function or state vector |<i>&psi;</i>⟩  which lives in an abstract "Hilbert space". </p>
+
+<p><b>Postulate II</b>:  Corresponding to every observable physical quantity, there exists a Hermitian operator. The only measurable values of a physical observable are the various eigenvalues of the corresponding operator.</p>
+
+<p>Let <i>A</i> be a physical property and <i>Â</i> the corresponding operator with eigenfunctions from the complete set of function {<i>&Psi;<sub>i</sub></i>}. If the system is, for example, in sate <i>&Psi;<sub>2</sub></i> and we measure property <i>A</i>, the result cannot be anything else but the eigenvalues <i>&lambda;</i><sub>2</sub>.  If the system is in sate <i>&Psi;</i><sub>7</sub>  we can be sure that the result of the measurement will be equal to <i>&lambda;</i><sub>7</sub>.</p>
+
+<table class="centertable">
+<tr><th>State of system before measurement</th> <th>Measurement</th> <th>Result</th> <th>State of system after measurement</th></tr>
+<tr><td><i>&Psi;</i><sub>1</sub></td> <td>⟶</td> <td><i>&lambda;</i><sub>1</sub></td> <td><i>&Psi;</i><sub>1</sub></td> </tr>
+<tr><td><i>&Psi;</i><sub>2</sub></td> <td>⟶</td> <td><i>&lambda;</i><sub>2</sub></td> <td><i>&Psi;</i><sub>2</sub></td> </tr>
+<tr><td>.<br>.<br>.</td> <td>⟶</td> <td>.<br>.<br>.</td> <td>.<br>.<br>.</td> </tr>
+<tr><td><i>&Psi;<sub>n</sub></i></td> <td>⟶</td> <td><i>&lambda;<sub>n</sub></i></td> <td><i>&Psi;<sub>n</sub></i></td> </tr>
+</table>
+
+<p>Now let us assume that the system is in state <i>&psi;</i>, which is <i>not</i> an eigenstate of <i>Â</i>.  Such a state is referred to as a <i>mixed state</i> because it can be expressed a mixture of <i>pure sates</i>, as linear combination of the basis functions {<i>&Psi;<sub>i</sub></i>}. </p>
+
+<div class="eq">
+<p>|<i>&psi;</i>⟩ = &Sigma; <i>c<sub>i</sub></i> |<i>&psi;<sub>i</sub></i>⟩ &emsp; 1.5.1</p>
+</div>
+
+<p>The act of measurement changes the state of the system from |<i>&psi;</i>⟩ to |<i>&psi;<sub>i</sub></i>⟩. The measurement singles out one eigenstate from the mixture of states and "forces" the system on it and subsequent measurements will always yield the same value. The state vector has been <i>projected</i> onto the eigenstate by the process of performing the measurement. This also implies that we cannot tell the past of a microsystem, we can only determine its present state by measurements. Assume that the system is in a mixed state |<i>&psi;</i>⟩ and we measure property <i>A</i>. We expect then to observe one of the <i>&lambda;<sub>i</sub></i> eigenvalues of operator <i>Â</i>. We have no idea which one, but we still calculate the expectation value using the next postulate.</p>
+
+<p><b>Postulate III</b>. The expectation value, ⟨<i>A</i>⟩, of any observable physical quantity is equal to the following scalar product:</p>
+
+<div class="eq">
+<p>⟨<i>A</i>⟩ = ⟨<i>&psi;</i>|<i>A&psi;</i>⟩&emsp; 1.5.2</p>
+</div>
+
+<p>Since the wavefunction is normalized, the integral gives a weighted average of the possible observable values.</p>
+
+<p>Experimentally, in principle, the average value of an observable (e.g. the momentum) is determined as follows. One prepares large number, say <i>N</i>, of identical systems (called <i>ensemble</i>), all in one and the same state |<i>&psi;<sub>i</sub></i>⟩. One then measures the observable in question for each system. In general, a range of measured values is obtained (the distribution depending on the state). The observable is truly a random variable. <br> At the end of our experiment, the eigenvalue <i>&lambda;<sub>i</sub></i> has been seen <i>f<sub>i</sub></i> times, where 0 &le; <i>f<sub>i</sub></i> &le; <i>N</i>. The experimental average value of the observable is the sum of the measured values divided by <i>N</i>.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>A</mi>
+      <mo stretchy="false">&#xAF;</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>f</mi>
+        <mi>i</mi>
+      </msub>
+      <msub>
+        <mi>&#x3BB;</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+    <mi>N</mi>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <msub>
+    <mi>p</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi>&#x3BB;</mi>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<!-- $$\bar{A} = \sum_i \frac{f_i \lambda_i}{N} = \sum_i p_i \lambda_i $$ -->
+
+<p>where <i>p<sub>i</sub></i> = <i>f<sub>i</sub></i>/<i>N</i> is the probability to find an individual system of the ensemble to be described by the state |<i>&psi;<sub>i</sub></i>⟩. If <i>N</i> is sufficienlty large, this number (known is statistics as the estimated expected value of <i>A</i>) will be very close to ⟨<i>&psi;</i>|<i>A&psi;</i>⟩.</p>
+
+<p>For this series of measured values, any function (e.g., a power) of the measured values can be computed. Again taking the average value, one obtains the experimental average value of a function of the observable. Axioms III and II state how these average values are computed quantum mechanically by means of the operator corresponding to the observable and the wave function.</p>
+
+<p>Now we show that |<i>c<sub>i</sub></i>|<sup>2</sup>, with regard to 1.5.1, is the porbability of the occurence of the state |<i>&psi;<sub>i</sub></i>⟩. For simplicity, suppose the normalized wavefunction is the sum of two eigenfuctnion (the general case can easily be developed). Then, from 1.5.2</p>
+
+<div class="eq">
+<p>⟨<i>A</i>⟩ = &int;(<i>c</i><sub>1</sub> <i>&psi;</i><sub>1</sub> + <i>c</i><sub>2</sub> <i>&psi;</i><sub>2</sub>)* <i>Â</i> (<i>c</i><sub>1</sub> <i>&psi;</i><sub>1</sub> + <i>c</i><sub>2</sub> <i>&psi;</i><sub>2</sub>) d<i>&tau;</i> <br>= &int;(<i>c</i><sub>1</sub> <i>&psi;</i><sub>1</sub> + <i>c</i><sub>2</sub> <i>&psi;</i><sub>2</sub>)* (<i>c</i><sub>1</sub> <i>&lambda;</i><sub>1</sub> <i>&psi;</i><sub>1</sub> + <i>c</i><sub>2</sub><i>&lambda;</i><sub>2</sub> <i>&psi;</i><sub>2</sub>) d<i>&tau;</i> <br>= <i>c</i><sub>1</sub>*<i>c</i><sub>1</sub> &int; <i>&psi;</i><sub>1</sub>*<i>&psi;</i><sub>1</sub> d<i>&tau;</i> + <i>c</i><sub>2</sub>*<i>c</i><sub>1</sub> &int;<i>&psi;</i><sub>2</sub>* <i>&psi;</i><sub>1</sub>d<i>&tau;</i><br>
++ <i>c</i><sub>2</sub>*<i>c</i><sub>2</sub> &int;<i>&psi;</i><sub>2</sub>* <i>&psi;</i><sub>2</sub>d<i>&tau;</i><br>
+= |<i>c</i><sub>1</sub>|<sup>2</sup> <i>&lambda;</i><sub>1</sub> + |<i>c</i><sub>2</sub>|<sup>2</sup> <i>&lambda;</i><sub>2</sub></p>
+</div>
+
+<p>Note that we used the orthonormalization of eigenfunctions, <i>&psi;</i><sub>1</sub> and <i>&psi;</i><sub>2</sub> correspond to different eigenvalues of an hermitian operator, so the integral in which they appear are both zero, while the first and last integral are equal to 1. From 1.5.1 and orthonormality it follows that</p>
+
+<div class="eq">
+<p><i>c<sub>n</sub></i> = ⟨<i>&lambda;<sub>n</sub></i>|<i>&psi;</i>⟩</p>
+</div>
+
+<p>For the system in state |<i>ψ</i>〉, the probability of obtaining the result qn on measuring <i>A</i> is |〈<i>q<sub>n</sub></i>|<i>ψ</i>〉|2 provided 〈<i>ψ</i>|<i>ψ</i>〉 = 1.</p>
+
+<p><b>Postulate IV</b>. The time evolution of the states is described by the Schrödinger equation:</p>
+	
+<div class="eq">
+<p>iℏ∂/∂t <i>&psi;</i>(<i><b>x</b>,t</i>) = Ĥ <i>&psi;</i>(<i><b>x</b>,t</i>)</p>
+</div>
+
+<p>where <i>H</i> is the Hamiltonian of the system and the equation is linear, deterministic and the time evolution governed by its unitary.</p>
+
+<p>The basic postulates of quantum mechanics are:</p>
+
+<ol>
+	<li><p>The state of a system is described by the wave function <i>&psi;</i>(<i><b>x</b>,t</i>); |<i>&psi;</i>(<i><b>x</b>,t</i>)|<sup>2</sup> d<sup>3</sup><i>x</i> expresses the probability of finding the particle at the time <i>t</i> at the position <i><b>x</b></i> in the volume element d<sup>3</sup><i>x</i>.</p></li>
+	
+	<li><p>Quantum mechanically, operators <i>A, B, ...</i> are assigned to the physically measureable quantities (observables) of classical mechanics. Any result of a measurement of a dynamical variable is one of the eigenvalues of the corresponding operator.</p></li>
+	
+	<li><p>The average values of operators are given by</p>
+	
+	<div class="eq">
+	<p>⟨Â⟩ = ∫d<sup>3</sup><i>x</i> <i>&psi;</i><sup>*</sup>(<i><b>x</b>,t</i>) Â <i>&psi;</i>(<i><b>x</b>,t</i>)</p>
+	</div>
+	
+	<p>if the system is in the state <i>&psi;</i>(<i><b>x</b>,t</i>).</p></li>
+	
+</ol>
+
+<section aria-label="End">
+<a href="blackbody.html">&#171;The Blackbody</a>
+<a href="index.html">Index</a>
+<a href="Compton.html">Compton effect&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+	
