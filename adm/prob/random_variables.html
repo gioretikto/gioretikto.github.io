@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Random Variables">
+	<title>Random Variables</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Random Variables</h1>
+
+<p>Consider a random experiment with sample space Ω. Let <i>w</i> be a sample point in Ω. We are interested in assigning a real number to each <i>w</i> &in; <i>Ω</i>. A random variable, <i>X</i>(<i>w</i>), is a single-valued real function that assigns a real number, called the value of <i>X</i>(<i>w</i>), to each sample point <i>w</i> &in; <i>Ω</i> That is, it is a mapping of the sample space onto the real line. Generally a random variable is represented by a single letter <i>X</i> instead of the function <i>X</i>(<i>w</i>). Therefore, in the remainder of the book we use <i>X</i> to denote a random variable. The sample space Ω is called the domain of the random variable <i>X</i>. Also, the collection of all numbers that are values of <i>X</i> is called the range of the random variable <i>X</i>. Figure 2.1 illustrates the concepts of domain and range of X.</p>
+
+<p>A random variable that assumes either a finite number of values or a countable infinite number of possible values is termed as a <b>discrete random variable</b>. For example, consider an experiment to measure the number of customers who arrive in a shop during a time interval of 3 minutes. The possible outcome may vary from 0 customers to <i>n</i> customers. The outcomes (0, 1, 2, ..., <i>n</i>) are the values of the discrete radom variable.</p>
+
+<p>By contrast, a <b>continuous random variable</b> is one for which the number of possible outcomes cannot be counted and therefore, probabilities cannot be attached to specific outcomes.</p>
+
+<p><b>Example</b>. A coin-tossing experiment has two sample points: Heads and Tails. Thus, we may define the random variable <i>X</i> associated with the experiment as follows:</p>
+
+<div class="eq">
+<p><i>X</i> (heads) = 1<br>
+<i>X</i>(tails) = 0&emsp;■</p>
+</div>
+
+<h2 id="CDF">Distribution Functions</h2>
+
+<p>Associated with both types of random variables is the concept of cumulative distribution function, <i>F<sub>X</sub></i>(<i>x</i>).</p>
+
+<p>The <b>cumulative distribution function (CDF)</b> of a real-valued random variable <i>X</i> is the function given by:</p>
+
+<div class="eq">
+<p><i>F<sub>X</sub></i>(<i>x</i>) = P⁡ (<i>X</i> ≤ <i>x</i>)</p>
+</div>
+
+<p>where the right-hand side represents the probability that the random variable <i>X</i> takes on a value less than or equal to <i>x</i>. If <i>X</i> is a real-valued discrete random variable that takes on specific values <i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>, ..., the CDF is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>F</mi>
+    <mi>X</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>x</mi>
+        <mi>i</mi>
+      </msub>
+      <mo>&#x2264;</mo>
+      <mi>x</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>p</mi>
+    <mi>X</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$F_X(x) = \sum_{x_i \le x} p_X (x_i) $$ -->
+
+<p id="mass">where <i>p<sub>X</sub></i>(<i>x<sub>i</sub></i>) is the <b>probability mass function</b> i.e. the probability <i>X</i> takes on the value <i>x<sub>i</sub></i>. Thus one would write</p>
+
+<div class="eq">
+<p><i>p<sub>X</sub></i>(<i>x<sub>i</sub></i>) = P(<i>X</i> = <i>x<sub>i</sub></i>)</p>
+</div>
+
+<p>When the random variable only takes on a handful of possible values, we can write out the probabilities in a table.</p>
+
+<table class="centertable">
+<thead>
+<tr><th></th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> </tr>
+</thead>
+<tbody>
+<td>p<sub>X</sub>(x)</td> <td>.2546</td> <td>.4243</td> <td>.2496</td> <td>.0642</td> <td>.0071</td> <td>.0002</td> </tr>
+</tbody>
+</table>
+
+<figure>
+<img src="img/mass_function.png" alt="probability mass function"/>
+<figcaption>The graph of a probability mass function. All the values of this function must be non-negative and sum up to 1.</figcaption>
+</figure>
+
+<p id="PDF">The <b>probability density function (PDF)</b>, <i>f<sub>X</sub></i>(<i>x</i>), for a continuous random variable <i>X</i> is the analogue of the <i>probability mass function</i> of a discrete random variable. The PDF is a nonnegative function defined for all real <i>x</i> &in; (-&infin;, &infin). A random variable <i>X</i> has density <i>f<sub>X</sub></i>, where <i>f<sub>X</sub></i> is a non-negative Lebesgue-integrable function, if:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="OP" movablelimits="true">P</mo>
+  <mo stretchy="false">[</mo>
+  <mi>a</mi>
+  <mo>&#x2264;</mo>
+  <mi>X</mi>
+  <mo>&#x2264;</mo>
+  <mi>b</mi>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>a</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+    </mrow>
+  </msubsup>
+  <msub>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>X</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>d</mi>
+  <mi>x</mi>
+</math>
+
+<!-- $$\P[a\leq X\leq b]=\int _{a}^{b}f_{X}(x)\,dx$$ -->
+
+<p>Thus, the area under the curve defined by the PDF is the probability that the random variable lies between the values limiting the area. Intuitively, one can think of <i>f<sub>X</sub></i>(<i>x</i>) d<i>x</i> as being the probability of <i>X</i> falling within the infinitesimal interval [<i>x, x</i> + d<i>x</i>].
+
+<p>For any real number <i>a</i>, the probability that the random variable <i>X</i> is less than <i>a</i> is given by <i>cumulative distribution function, F<sub>X</sub></i>(<i>a</i>)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>X</mi>
+  <mo>&#x2264;</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>F</mi>
+    <mi>X</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mi>a</mi>
+  </msubsup>
+  <msub>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>X</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$P(X \le a) = F_X(a) = \int_{-\infty}^a  f_{X}(t)\,\text{d}t$$ -->
+
+<p>Hence either <i>f<sub>X</sub></i>(<i>x</i>) or <i>F<sub>X</sub></i> can be used to calculate the probability that <i>X</i> falls into the interval [<i>a,b</i>] by means of</p>
+
+<div class="eq">
+<p>P(<i>a</i> &le; <i>X</i> &le; <i>b</i>) = <i>F<sub>X</sub></i>(<i>b</i>) - <i>F<sub>X</sub></i>(<i>a</i>) = ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f<sub>X</sub></i>(<i>x</i>) d<i>x</i></p>
+</div>
+
+<p>Because integration and differentiation are inverse procedures, the PDF is the derivative of the cumulative distribution function</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>X</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <msub>
+        <mi>F</mi>
+        <mi>X</mi>
+      </msub>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x2265;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$f_{X}(x) = \frac{\text{d}F_X(x)} {\text{d}x} \ge 0 $$ -->
+
+<p>The properties of <i>f<sub>X</sub></i>(<i>x</i>) are as follows:</p>
+
+<ol>
+	<li><p><i>f<sub>X</sub></i>(<i>x</i>) &ge; 0; that is, it is a nonnegative function, as stated earlier.</p></li>
+	<li><p>Since <i>X</i> must assume some value, ∫<sup><sup>&infin;</sup></sup><sub><sub>-&infin;</sub></sub> <i>f<sub>X</sub></i>(<i>x</i>) d<i>x</i> = 1;</p></li>
+	<li><p><i>P</i>[<i>a</i> &le; <i>X</i> &le; <i>b</i>] = ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f<sub>X</sub></i>(<i>x</i>) d<i>x</i>, which means that <i>P</i>[<i>X</i> = <i>a</i>] = ∫<sup><sup><i>a</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f<sub>X</sub></i>(<i>x</i>) d<i>x</i> = 0; Thus, the probability that a continuous random variable will assume any fixed value is zero.</p></li>
+</ol>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="discrete_distributions.html">Discrete Probability Distributionss»</a>
+</section>
+
+</article>
+
+</body>
+</html>
+ 
