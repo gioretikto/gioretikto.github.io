@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Legendre"/>
+	<title>Legendre</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Legendre transformation</h1>
+
+Thermal Analysis of Polymeric Materials - Bernhard Wunderlich
+
+<p>A Legendre transform converts from a function of one set of variables to another function of a conjugate set of variables. Both functions will have the same units.</p>
+
+<ol>
+	<li><p>Convert from the Lagrangian <i>L</i>(<i>x, ẋ</i>) to the Hamiltonian <i>H</i>(<i>x, p</i>). Here the velocity <i>ẋ</i> and the linear momentum p are conjugate variables, and both <i>L</i> and <i>H</i> have units of energy.</p></li>
+
+	<li><p>Convert between the internal energy <i>U</i>, enthalpy <i>H</i>, Helmholtz free energy <i>A</i>, and Gibbs free energy <i>G</i>. The two conjugate pairs of variables are pressure <i>p</i> and volume <i>V</i>, and temperature T and entropy S. (Optionally, the chemical potential μ and number of particles <i>N</i> can be added in as another conjugate pair.) All of these thermodynamic potentials have units of energy.</p></li>
+
+</ol>
+
+<p>Total differentials of the different thermodynamics functions can be related to each other through the Legendre transformations:<p>
+
+<div class="eq">
+<p>d<i>f</i> = <i>f</i><sub>1</sub>d<i>x</i><sub>1</sub> + <i>f</i><sub>2</sub>d<i>x</i><sub>2</sub> + ... + <i>f<sub>n</sub></i>d<i>x<sub>n</sub></i></p>
+</div>
+
+<p>wherer <i>f</i> is the dependent variable <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i> are the independent variables, and <i>f</i><sub>1</sub> = (∂<i>f</i>/∂<i>x</i><sub>1</sub>)<sub><i>x</i><sub>1</sub>, ... <i>x<sub>n</sub></i></sub>. Consider the new function</p>
+
+<div class="eq">
+<p><i>g</i> = <i>f</i> - <i>f</i><sub>1</sub><i>x</i><sub>1</sub></p>
+</div>
+
+<p>one gets on differentiation:</p>
+
+<div class="eq">
+<p>d<i>g</i> = d<i>f</i> - <i>f</i><sub>1</sub>d<i>x</i><sub>1</sub> -<i>x</i><sub>1</sub> d<i>f</i><sub>1</sub></p>
+</div>
+
+<p>or substituting the top equation:</p>
+
+<div class="eq">
+<p>d<i>g</i> = <i>x</i><sub>1</sub>d<i>f</i><sub>1</sub> + <i>f</i><sub>2</sub> + ... + <i>f<sub>n</sub></i>d<i>x<sub>n</sub></i></p>
+</div>
+
+<p>i.e., the independent variable <i>x</i><sub>1</sub> has changed to <i>f</i><sub>1</sub> and the dependent one from <i>f</i> to <i>g</i>.</p>
+
+<p>Applied to d<i>U</i> = -<i>p</i>d<i>V</i> + <i>T</i>d<i>S</i> the Legendre transformation leads to:</p>
+
+<div class="eq">
+<p><i>H</i> = <i>U</i> - (∂<i>U</i>/∂<i>V</i>)<sub><i>S</i></sub> <i>V</i> = <i>U</i> + <i>pV</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>d<i>H</i> = <i>V</i> d<i>p</i> + <i>T</i>d<i>S</i></p>
+</div>
+
+<p>Similarly, since <i>T</i> = (∂<i>U</i>/∂<i>S</i>)<sub><i>V</i></sub> and also <i>T</i> = (∂<i>H</i>/∂<i>S</i>)<sub><i>p</i></sub>, one can write:</p>
+
+<div class="eq">
+<p><i>F</i> = <i>U</i> - (∂<i>U</i>/∂<i>S</i>)<sub><i>V</i></sub><i>S</i><br>
+<i>G</i> = <i>H</i> - (∂<i>H</i>/∂<i>S</i>)<sub><i>p</i></sub><i>S</i></p>
+</div>
+
+<p>This leads to the total differentials:</p>
+
+<div class="eq">
+<p>d<i>F</i> = d<i>U</i> - Td<i>S</i> - <i>S</i>d<i>T</i> = -<i>p</i>d<i>V</i> - <i>S</i>d<i>T</i><br>
+d<i>G</i> = d<i>H</i> - <i>T</i>d<i>S</i> - <i>S</i>d<i>T</i> = <i>V</i>d<i>P</i> - <i>S</i>d<i>T</i></p>
+</div>
+
+<p>Mathematically <i>H, F</i> and <i>G</i> are thus Legendre transformations of the basi function of state <i>U</i>(<i>S,V</i>).</p>
+
+<h2>Legendre transform from the Lagrangian L to the Hamiltonian H</h2>
+
+<p>Suppose we have a mechanical system with a single generalized coordinate q and corresponding velocity !q . Then the Lagrangian is defined as the difference between the kinetic and potential energies, <i>L</i>(<i>q, q̇</i>) = <i>K</i> - <i>U</i>. We wish to transform to a new function <i>H</i> (<i>q, p</i>) where <i>p</i> is the momentum. </p>
+
+<!-- $$\left(\frac{\partial L}{\partial \qdot{q}}\right)_q = -->
+
+<p>The Legendre transformation is</p>
+
+<div class="eq">
+<p>H = L - pq̇</p>
+</div>
+
+
+<h2>Helmholtz Free Eneregy A(T, V, N)</h2>
+
+<p>If we want a formulation of thermodynamics in which temperature <i>T</i>, rather than entropy <i>S</i>, is regarded as an independent variable, all we have to do is to take the Legendre transform of the energy <i>U</i>(S, V, N), transforming from the variable S to its conjugate variable <i>T</i> = (∂<i>U</i>/∂<i>S</i>)<sub>V,N</sub>.</p>
+
+<div class=eq">
+<p><i>U</i>(<i>S,V,N</i>), (∂<i>U</i>/∂<i>S</i>)<sub><i>V,N</i></sub> = T(<i>S,V,N</i>)</p>
+</div>
+
+<p>transform to</p>
+
+<div class="eq">
+<p>A(T, V, N) = <i>U</i> − TS with (∂<i>A</i>/∂<i>T</i>)<sub><i>V,N</i></sub>= −<i>S</i>(<i>T, V, N</i>)</p>
+</div>
+
+<p>We start from A(<i>T, V, N</i>) = <i>U</i>(S(T, V, N ), V, N ) − <i>TS</i>(<i>T, V, N</i>), which by the chain rule,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>A</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>U</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>S</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>S</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mi>T</mi>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>S</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mi>S</mi>
+  <mo stretchy="false">(</mo>
+  <mi>T</mi>
+  <mo>,</mo>
+  <mi>V</mi>
+  <mo>,</mo>
+  <mi>N</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\left(\frac{\partial A}{\partial T}\right)_{V,N} = \left(\frac{\partial U}{\partial S}\right)_{V,N} \left(\frac{\partial S}{\partial T}\right)_{V,N} - T \left(\frac{\partial S}{\partial T}\right)_{V,N} - S(T,V,N) $$ -->
+
+<p>but (∂<i>U</i>/∂<i>S</i>)<sub><i>V,N</i></sub> = <i>T</i>, so</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>A</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mi>T</mi>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>S</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mi>T</mi>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>S</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mi>S</mi>
+  <mo stretchy="false">(</mo>
+  <mi>T</mi>
+  <mo>,</mo>
+  <mi>V</mi>
+  <mo>,</mo>
+  <mi>N</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>S</mi>
+  <mo stretchy="false">(</mo>
+  <mi>T</mi>
+  <mo>,</mo>
+  <mi>V</mi>
+  <mo>,</mo>
+  <mi>N</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\left(\frac{\partial A}{\partial T}\right)_{V,N} = T\left(\frac{\partial S}{\partial T}\right)_{V,N} - T\left(\frac{\partial S}{\partial T}\right)_{V,N} -S(T,V,N) = -S(T,V,N) $$ -->
+
+<p>Similarly we can consider the other first partial derivatives of <i>A</i>.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>A</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>T</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>U</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>S</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>V</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>S</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>T</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>U</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>S</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2212;</mo>
+        <mi>T</mi>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>S</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>T</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mi>T</mi>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>S</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>T</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>U</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>S</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2212;</mo>
+        <mi>T</mi>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>S</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>T</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msub>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>U</mi>
+              </mrow>
+              <mrow>
+                <mi>&#x2202;</mi>
+                <mi>V</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>S</mi>
+            <mo>,</mo>
+            <mi>N</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mi>p</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{align} \left(\frac{\partial A}{\partial V}\right)_{T,N} &= \left(\frac{\partial U}{\partial S}\right)_{V,N} \left(\frac{\partial S}{\partial V}\right)_{T,N} + \left(\frac{\partial U}{\partial V}\right)_{S,N} - T \left(\frac{\partial S} {\partial V} \right)_{T,N} \\
+&= T\left(\frac{\partial S}{\partial V}\right)_{T,N} + \left(\frac{\partial U}{\partial V}\right)_{S,N} - T\left(\frac{\partial S}{\partial V}\right)_{T,N} \\
+&= \left(\frac{\partial U}{\partial V}\right)_{S,N} = -p
+\end{align} $$ -->
+
+<p>Similarly we can show,</p>
+
+<p>(∂<i>A</i>/∂<i>S</i>)<sub><i>V,N</i></sub> = (∂<i>U</i>/∂<i>N</i>)<sub><i>S,N</i></sub> = <i>&mu;</i>(<i>T,V,N</i>). We can now write for the differential of <i>A</i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>d</mi>
+  <mi>A</mi>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>A</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>T</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mi>d</mi>
+  <mi>T</mi>
+  <mo>+</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>A</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>V</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>T</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mi>d</mi>
+  <mi>V</mi>
+  <mo>+</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>A</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>N</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>T</mi>
+      <mo>,</mo>
+      <mi>V</mi>
+    </mrow>
+  </msub>
+  <mi>d</mi>
+  <mi>N</mi>
+</math>
+
+<!-- $$ d A = \left(\frac{\partial A}{\partial T}\right)_{V,N} dT + \left(\frac{\partial A}{\partial V}\right)_{T,N} dV + \left(\frac{\partial A}{\partial N}\right)_{T,V}dN $$ -->
+
+<div class="eq">
+<p>d<i>A</i> = -SdT - pdV + &mu;dN</p>
+</div>
+
+<p>When one wants to use pressure instead of volume, one constructs the enthalpy <i>H</i>(<i>S, p, N</i>) by taking a Legendre transform of <i>U</i>(<i>S, V, N</i>) from <i>V</i> to <i>p</i>.</p>
+
+<p>E(S, V, N ) with (∂E/∂V)<sub>S,N</sub> = −<i>p</i></p>
+
+<p>transform to</p>
+
+<div class="eq">
+<p>H(S, p, N ) = E + pV with (∂H/∂p)<sub>S,N</sub> = V </p>
+</div>
+
+<p>Note, since (∂<i>U</i>/∂V )<sub>S,N</sub> = −<i>p</i>, with the minus sign, the conjugate variable to V is really −p. That is why we define the enthalpy as <i>H</i> = <i>U</i> − (−p)V = E + pV , and (∂H/∂(−p))S,N = −V ⇒ (∂H/∂p)<sub>S,N</sub> = <i>V</i>. One can also show that,</p>
+
+<div class="eq">
+<p>(∂H/∂S)<sub>p,N</sub> = T and (∂H/∂N)<sub>S,N</sub> = <i>μ</i></p>
+</div>
+
+<p>As we saw with A, the partials with respect to the variables that are not involved in the Legendre transform remain the same as the partials of <i>U</i> The differential of the enthalpy is then.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>d</mi>
+  <mi>H</mi>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>H</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>S</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mi>d</mi>
+  <mi>T</mi>
+  <mo>+</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>H</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>p</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>S</mi>
+      <mo>,</mo>
+      <mi>N</mi>
+    </mrow>
+  </msub>
+  <mi>d</mi>
+  <mi>p</mi>
+  <mo>+</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>H</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>N</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>S</mi>
+      <mo>,</mo>
+      <mi>p</mi>
+    </mrow>
+  </msub>
+  <mi>d</mi>
+  <mi>N</mi>
+</math>
+
+<!-- $$ dH = \left(\frac{\partial H}{\partial S}\right)_{p,N} dT + \left(\frac{\partial H}{\partial p}\right)_{S,N} dp + \left(\frac{\partial H}{\partial N}\right)_{S,p}dN $$ -->
+
+<div class="eq">
+<p>dH = TdS + Vdp + &mu; dN</p>
+</div>
+
+<section aria-label="End">
+<a href="dlconfiguration.html">&#171;D- and L- configuration</a>
+<a href="index.html">Index</a>
+<a href="I.html">Iodine&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+
