@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exercise on probability">
+	<title>Exercise on probability</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Exercise on probability</h1>
+
+<ol>
+	<li><p>If <i>n</i> people are present in a room, what is the probability that no two of them celebrate their birthday on the same day of the year? How large need <i>n</i> be so that this probability is less than 12?</p></li>
+
+	<li><p>Durante la preparazione di una bottiglia di vino vengono mescolati 2 vini diversi scelti a caso da 4 damigiane rispettivamente nominate: A,B,C,D. Qual è la probabilità che la bottiglia ottenuta non contenga il vino della damigiana A?</p></li>
+	
+	<li><p>A box contains 3 white balls and 2 black balls. Two balls are drawn without replacement. What is the probability that the second ball is black given that the first is black?</p></li>
+	
+	<li><p>In a classroom there are 25 students, 15 italians and 10 strangers. Two students are drawn. What's the probability that one student is italian and the other stranger?</p></li>
+	
+	<li><p>Una classe è composta da 10 ragazzi e 8 ragazze. Tra i 18 allievi se ne scelgono 2 a caso: qual è la probabilità che essi siano tutti maschi?</p></li>
+
+	<li><p>Una commissione di 5 persone viene estratta da un gruppo composto di 6 uomini e 9 donne. Se la selezione avviene in modo casuale, qual è la probabilità che la commissione const di 3 uomini 2 donne?</p></li>
+
+	<li><p>Nel lancio di un dado qual è la probabilità che esca un numero dispari o maggiore di 4?</p></li>
+
+	<li><p>In una classe ci sono 25 studenti, 15 italiani e 10 stranieri. Se ne estraggono a sorte 2, qual è la probabilità che i due estratti siano uno straniero e un italiano?</p></li>
+
+	<li><p>Lanciando due volte un dado cubico regolare, con facce numerate da 1 a 6, qual è la probabilità che escano 2 numeri multipli di 3?</p></li>
+
+	<li><p>In un mazzo di carte francesi (52 carte e 4 semi), la probabilità di estrarre 2 figure di picche è?</p></li>
+
+	<li><p>Due dadi equilibrati, uno rosso e uno nero, vengono lanciati insieme. Sia a il punteggio che si ottiene col dado rosso e sia b il punteggio che si ottiene col dado nero. Si ponga infine n = | b − a |. Allora la probabilità che risulti n = 5 è?</p></li>
+
+	<li><p>La probabilità che, lanciando due dadi, il prodotto dei numeri usciti sia un multiplo di 5 è?</p></li>
+
+	<li><p>what's the probability od drawing 3 balls, without replacement, one red and two blacks in a box containing 15 red, 10 white and 5 black balls?</p></li>
+
+	<li><p>In a box there are 5 red balls and 6 black balls; How may balls must be drawn to be sure to have drawn three balls of the same color?</p></li>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>(We are ignoring the possibility of someone having been born on February 29.) There are (365)(364)(363)·(365 − <i>n</i> + 1) possible outcomes that result in no two of the people having the same birthday. This is so because the first person could have any one of 365 birthdays, the next person any of the remaining 364 days, the next any of the remaining 363, and so on. Because each person can celebrate his or her birthday on any one of 365 days, there are a total of (365)<sup><i>n</i></sup> possible outcomes.</p>
+	
+<p>Hence, assuming that each outcome is equally likely, we see that the desired probability is</p>
+
+<div class="eq">
+<p>(365)(364)(363)···(365 − <i>n</i> + 1)/(365)<sup><i>n</i></sup></p>
+</div>
+
+<p>It is a rather surprising fact that when <i>n</i> ≥ 23, this probability is less than 1/2. That is, if there are 23 or more people in a room, then the probability that at least two of them have the same birthday exceeds 1/2. Many people are initially surprised by this result, since 23 seems so small in relation to 365, the number of days of the year. However, every pair of individuals has probability 365/(365)<sup>2</sup> = 1/365 of having the same birthday, and in a group of 23 people there are <i>C</i><sub>23,2</sub> = 253 different pairs of individuals. Looked at this way, the result no longer seems so surprising. &emsp;■</p></li>
+
+	<li><p>I casi possibili sono C<sub>4,2</sub>. I casi favorevoli C<sub>3,2</sub>. Quindi la probabilità è data da C<sub>3,2</sub>/ C<sub>4,2</sub> = 3/6 = 1/2.&emsp;■</p></li>
+
+<li><p>Let <i>A</i> be the event that the first ball is black and let <i>B</i> be the event that the second ball is black. We wish to find P(B|A). First P(A) = 2/5 given that there are 2 black balls out of a total of 5. Next <i>A</i> ∩ <i>B</i> represents that both balls are black. There are 5 ⋅ 4 = 20 possible ordered pairs of balls drawn. Of these, two correspond to <i>A</i> ∩ <i>B</i>. Thus P(<i>A</i> ∩ <i>B</i>) = 2/20. So:</p>
+	
+<div class="eq">
+<p>P(B|A) = P(A ∩ B)/P(A) = 5/20 = 1/4. &emsp; ■</p>
+</div>
+
+</li>
+
+<li><p>The probability is P(I|S) + P(S|I). The probability to draw an italian first is P(I) = 15/25 = 3/5, whilst to draw a stranger first is P(S) = 10/25 = 2/5. Thus</p>
+	
+<div class="eq">
+<p>(10/25 ⋅ 15/24) + (15/25 ⋅ 10/24) = 1/4 + 1/4 = 1/2. &emsp;■</p>
+</div>
+
+</li>
+
+<li><p>Supponiamo che la locuzione "in modo casuale" significhi che ognuna delle C<sub>15,5</sub> = (15 5) possibili combinazioni venga estratta in modo equiprobabile. La probabilità desiderata è pari a</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="OPEN">
+          <mo minsize="1.2em" maxsize="1.2em">(</mo>
+        </mrow>
+        <mfrac linethickness="0">
+          <mn>6</mn>
+          <mn>3</mn>
+        </mfrac>
+        <mrow data-mjx-texclass="CLOSE">
+          <mo minsize="1.2em" maxsize="1.2em">)</mo>
+        </mrow>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="OPEN">
+          <mo minsize="1.2em" maxsize="1.2em">(</mo>
+        </mrow>
+        <mfrac linethickness="0">
+          <mn>9</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mrow data-mjx-texclass="CLOSE">
+          <mo minsize="1.2em" maxsize="1.2em">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mrow data-mjx-texclass="OPEN">
+        <mo minsize="1.2em" maxsize="1.2em">(</mo>
+      </mrow>
+      <mfrac linethickness="0">
+        <mn>15</mn>
+        <mn>5</mn>
+      </mfrac>
+      <mrow data-mjx-texclass="CLOSE">
+        <mo minsize="1.2em" maxsize="1.2em">)</mo>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>240</mn>
+    <mn>1001</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{\binom{6}{3} \binom{9}{2}} {\binom{15}{5}} = \frac{240}{1001} $$ -->
+
+</li>
+
+<li><p>I casi favorevoli sono 4: 1,3,5,6; mentre i casi possibili 6, quindi 4/6 = 2/3.&emsp;■</p></li>
+
+<li><p>L’evento che ci interessa si presenta come unione di due eventi disgiunti: vengono estratti prima un italiano poi uno straniero, vengono estratti prima uno straniero poi un italiano, il primo evento con probabilità 15/25 ⋅ 10/24 = 1/4, il secondo evento con uguale probabilità 10/25 ⋅ 15/24 = 1/4, per cui la probabilità dell’evento in questione (“i due estratti sono uno straniero e un italiano”) è 1/4 + 1/4 = 1/2.&emsp;■</p></li>
+
+<li><p><b>Prima soluzione</b>. Considera l’uscita di un multiplo di 3 con un solo dado</p>
+
+<div class="eq">
+<p>eventi: {1, 2, 3, 4, 5, 6}<br>
+numero eventi: #{1, 2, 3, 4, 5, 6} = 6<br>
+multipli di 3: {3, 6}<br>
+numero multipli di 3: #{3, 6} = 2<br>
+p = 2/6 = 1/3</p>
+</div>
+
+<p>Se lanci il dado 2 volte: p = 1/3 ⋅ 1/3 = 1/9. </p>
+
+<p><b>Seconda soluzione</b>. Oppure considera il lancio di 2 dadi</p>
+
+<div class="eq">
+<p>eventi: {{1, 1}, …, {6, 6}}<br>
+numero eventi: #{{1, 1}, …, {6, 6}} = 36<br>
+eventi favorevoli: {{3, 3}, {3, 6}, {6, 3}, {6, 6}}<br>
+numero eventi favorevoli: #{{3, 3}, {3, 6}, {6, 3}, {6, 6}} = 4<br>
+p = 4/36 = 1/9&emsp;■</p>
+</div>
+
+</li>
+
+<li><p>Le figure sono 3 per seme, quindi 3/52 ⋅ 2/51 = 6/2652 semplificando risulta 1/442.&emsp;■</p></li>
+
+<li><p>I casi possibili sono 6 ⋅ 6 = 26, quelli favoreli 2: (6R,1N) e (6N,1R), quindi 2/36 = 1/18.&emsp;■</p></li>
+
+<li><p>Perchè il prodotto sia un multiplo di 5 occorre che almeno uno dei due punteggi dei dadi sia un "5". La probabilità che nessuno dei due punteggi sia un 5 è (5/6)(5/6) = 25/36, per cui la probabilità cercata è 1 − 25/36 = 11/36.&emsp;■</p></li>
+
+<li><p>3⋅ [15/30 ⋅ 5/30 ⋅ 5/30].&emsp;■</p></li>
+
+<li><p>The minimum number to guarantee one color on three balls drawn is 5, since either you draw 3 red and 2 blacks or 3 blacks and 2 red, there aren't alternatives. &emsp;■</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="consonants.html">The consonants&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

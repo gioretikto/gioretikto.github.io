@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Discrete Probability Distributions">
+	<title>Discrete Probability Distributions</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Discrete Probability Distributions</h1>
+
+<h2>Bernoulli Distribution</h2>
+
+<p>Let</p>
+
+<ul>
+	<li><p><i>p</i> be a constant, where 0 &lt; <i>p</i> &lt; 1;</p></li>
+	<li><p><i>X</i> be a random variable that can only take the values 0 or 1;</p></li>
+	<li><p>P(<i>x</i>) be the probability that <i>X</i> = <i>x</i> (<i>x</i> = 0, 1).</p></li>
+</ul>
+
+<p>The random variable, <i>X</i>, has a Bernoulli distribution if P(<i>x</i>) is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>p</mi>
+        </mtd>
+        <mtd>
+          <mtext>for&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mi>p</mi>
+        </mtd>
+        <mtd>
+          <mtext>for&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{equation*}
+P(x) =
+\begin{cases}
+p & \text{for } x = 1\\
+1-p & \text{for } x = 0
+\end{cases}
+\end{equation*}$$ -->
+
+<figure>
+<img src="img/Bernoulli_distribution.png" alt="Bernoulli distribution"/>
+<figcaption>Example of the Bernoulli distribution</figcaption>
+</figure>
+
+<p>Note that the Bernoulli distribution P(<i>x</i>) (<i>x</i> = 0,1) is used to characterize a random experiment with two possible outcomes. The outcomes are generally referred to as "success" (<i>x</i> = 1) and "failure" (<i>x</i> = 0), with probabilities <i>p</i> and 1 - <i>p</i>, respectively. We've already encountered <a href="Bernoulli.html">Bernoulli trials</a>.</p>
+
+<h2>Binomial Distribution</h2>
+
+<p>Let</p>
+
+<ul>
+	<li><p><i>N</i> be a positive integer;</p></li>
+	<li><p><i>p</i> be a constant, where 0 &lt; <i>p</i> &lt; 1;</p></li>
+	<li><p><i>X</i> be a random variable that can take the values 0, 1, 2, ..., <i>N</i>;</p></li>
+	<li><p>P(<i>x</i>) be the probability that <i>X</i> = <i>x</i> (<i>x</i> = 0, 1, 2, ..., <i>N</i>).</p></li>
+</ul>
+
+<p>The random variable <i>X</i> has a binomial distribution if P(<i>x</i>) is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>N</mi>
+      <mi>x</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <msup>
+    <mi>p</mi>
+    <mi>x</mi>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mi>p</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>N</mi>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+    </mrow>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mn>2</mn>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+  <mo>,</mo>
+  <mi>N</mi>
+</math>
+
+<!-- $$P(x) =\binom{N}{x} p^x (1-p)^{N-x} \quad x = 0,1,2, \ldots, N$$ -->
+
+<p>The mean, E[x], and the variance Var[x], for the binomial distribution are given by</p>
+
+<div class="eq">
+<p>E[<i>X</i>] = Np</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>Var[<i>X</i>] = Np(1 - p)</p>
+</div>
+
+<p>respectively.</p>
+
+<p>The binomial distribution P(<i>x</i>) gives the probability of <i>x</i> successes out of <i>N</i> Bernoulli trials, where each trial has a probability <i>p</i> of success and a probability (1 - <i>p</i>) of failure. In the special case <i>N</i> = 1, the binomial distribution reduces to the Bernoulli distribution. The probabilities, P(<i>x</i>) for each <i>x</i> (=0,1,2,.., <i>N</i>) given by the above equation are the successive terms in the binomial expansion of [(1-p) + p]<sup>N</sup>. Since [(1-p) + p]<sup>N</sup> = 1 for any <i>p</i> and <i>N</i>, the sum of the terms in the expansion is equal to 1, as required for P(<i>x</i>) to be a probability distribution.</p>
+
+<h2>Geometric Distribution</h2>
+
+<p>Let</p>
+
+<ul>
+	<li><p><i>p</i> be a constant, where 0 &lt; <i>p</i> &lt; 1;</p></li>
+	<li><p><i>X</i> be a random variable that can take the values 0, 1, 2, ..., <i>N</i>;</p></li>
+	<li><p>P(<i>x</i>) be the probability that <i>X</i> = <i>x</i> (<i>x</i> = 0, 1, 2, ..., <i>N</i>).</p></li>
+</ul>
+
+<p>The random variable <i>X</i> has a geometric distribution if P(<i>x</i>) is given by</p>
+
+<div class="eq">
+<p>P(<i>x</i>) = <i>p</i>(1-<i>p</i>)<sup><i>x</i></sup> &emsp; (<i>x</i> = 0,1,2,...)</p>
+</div>
+
+<p>The mean, E[<i>X</i>], and the variance, Var[<i>X</i>], for the geometric distribution are given by</p>
+
+<div class="eq">
+<p>E[<i>X</i>] = (1-p)/<i>p</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>Var[<i>X</i>] = (1-p)/<i>p</i><sup>2</sup></p>
+</div>
+
+<p>respectively.</p>
+
+<h2>Negative Binomial Distribution</h2>
+
+<p>Let</p>
+
+<ul>
+	<li><p><i>r</i> be a constant, where 0 &lt; <i>r</i> &lt; &infin;</p></li>
+	<li><p><i>p</i> be a constant, where 0 &lt; <i>p</i> &lt; 1;</p></li>
+	<li><p><i>X</i> be a random variable that can take the values 0, 1, 2, ..., <i>N</i>;</p></li>
+	<li><p>P(<i>x</i>) be the probability that <i>X</i> = <i>x</i> (<i>x</i> = 0, 1, 2, ..., <i>N</i>).</p></li>
+</ul>
+
+<p>The random variable <i>X</i> has a negative binomial distribution if P(<i>x</i>) is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mrow>
+        <mi>r</mi>
+        <mo>+</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>x</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <msup>
+    <mi>p</mi>
+    <mi>r</mi>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mi>p</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>x</mi>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mn>2</mn>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+</math>
+
+<!-- $$P(x) = \binom{r+x-1}{x} p^r (1-p)^x \quad x = 0,1,2,\ldots $$ -->
+
+<p>The negative binomial distribution, P(<i>x</i>), is definied only for nonnegative integer values of <i>x</i>. The constant, <i>r</i>, may be any positive number, not necessarily an integer.</p>
+
+<h2>Poisson Distribution</h2>
+
+<p>Let</p>
+
+<ul>
+	<li><p><i>&mu;</i> be a constant, where 0 &lt; <i>&mu;</i> &lt; &infin;</p></li>
+	<li><p><i>X</i> be a random variable that can take the values 0, 1, 2, ...;</p></li>
+	<li><p>P(<i>x</i>) be the probability that <i>X</i> = <i>x</i> (<i>x</i> = 0, 1, 2, ...).</p></li>
+</ul>
+
+<p>The random variable <i>X</i> has a Poisson distribution if P(<i>x</i>) is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x2212;</mo>
+          <mi>&#x3BC;</mi>
+        </mrow>
+      </msup>
+      <msup>
+        <mi>&#x3BC;</mi>
+        <mi>x</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>x</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mn>2</mn>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+</math>
+
+<!-- $$P(x) = \frac{e^{-\mu}\mu^x} {x!} \quad x = 0,1,2,\ldots $$ -->
+
+<p>The mean, of the Poisson distribution is given by</p>
+
+<div class="eq">
+<p>E[<i>X</i>] = &Sigma; x P(x) = &Sigma; x (e<sup>-&mu:</sup> &mu;<sup>x</sup>)/x!, &emsp; <i>x</i> = 1, 2, 3, and P(x) = 0 for <i>x</i> = 0</p>
+</div>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="continuous_distributions.html">Continuous Probability Distributionss»</a>
+</section>
+
+</article>
+
+</body>
+</html>
