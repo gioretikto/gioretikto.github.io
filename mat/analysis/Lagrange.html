@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Mean value theorem"/>
@@ -16,215 +16,37 @@
         <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
     </ul>
 </nav>
-
+      
 <div class="content">
 
 <h1>Mean value theorem</h1>      
 
-<p><b>Theorem 5.6.1</b> (<i>Mean value theorem</i>) - Let <i>f</i>: [<i>a , b</i>] → ℝ differentiable on the open interval (<i>a, b</i>), where <i>a</i> &lt; <i>b</i>. Then there exists some <i>&xi;</i> &in; (<i>a, b</i>) such that</p>
+<div class="def">
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>f</mi>
-    <mo data-mjx-alternate="1">&#x2032;</mo>
-  </msup>
-  <mo stretchy="false">(</mo>
-  <mi>&#x3BE;</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>b</mi>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>a</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>b</mi>
-      <mo>&#x2212;</mo>
-      <mi>a</mi>
-    </mrow>
-  </mfrac>
-</math>
+<p><b>Theorem 6.1</b> (<i>Mean value theorem</i>) - Let <i>f</i>: [<i>a , b</i>] → ℝ be a continuous function on the closed interval [<i>a, b</i>], and differentiable on the open interval (<i>a, b</i>), where <i>a &lt; b</i>. Then there exists some <i>&xi;</i> &in; (<i>a, b</i>) such that</p>
 
-<!-- $$ f'(\xi) = \frac{f(b) - f(a) } {b -a} $$ -->
+<img src="img/derivate/lagrange.png" alt="Mean value theorem" />
 
-<p><b>Proof.</b> The geometrical meaning of the theorem is illustrated by the following figure which indicates that the tanget to the point (&xi; <i>f</i>(<i>&xi;</i>)) is parallel to the secant to <i>a</i> and <i>b</i>.</p>
+<p><b>Proof.</b> The geometrical meaning of the theorem is illustrated by the following figure:</p>
 
 <img src="img/derivate/valoremedio.png" alt="Teorema del valore medio" />
 
-<p>The equation of the secant line that passes through the points (<i>a</i>,<i>f</i>(<i>a</i>)) and (<i>b</i>,<i>f</i>(<i>b</i>)) is :</p>
+<p>The secant to <i>a</i> and <i>b</i>, has equation:</p>
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>y</mi>
-  <mo>=</mo>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>a</mi>
-  <mo stretchy="false">)</mo>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>b</mi>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>a</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>b</mi>
-      <mo>&#x2212;</mo>
-      <mi>a</mi>
-    </mrow>
-  </mfrac>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo>&#x2212;</mo>
-  <mi>a</mi>
-  <mo stretchy="false">)</mo>
-</math>
+<img src="img/derivate/secante.png" alt="Retta secante" />
 
-<!-- $$ y = f(a) + \frac{f(b) - f(a)} {b-a} (x-a) $$ -->
+<p>Consider the auxiliary map</p>
 
-<p>Consider the auxiliary map <i>&omega;</i>(<i>x</i>) defined as the difference between <i>f</i>(<i>x</i>) and <i>y</i>. Then</p>
+<img src="img/derivate/lagrange1.png" alt="dimostrazione teorema lagrange" />
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>&#x3C9;</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>&#x2212;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mi>f</mi>
-    <mo stretchy="false">(</mo>
-    <mi>a</mi>
-    <mo stretchy="false">)</mo>
-    <mo>+</mo>
-    <mfrac>
-      <mrow>
-        <mi>f</mi>
-        <mo stretchy="false">(</mo>
-        <mi>b</mi>
-        <mo stretchy="false">)</mo>
-        <mo>&#x2212;</mo>
-        <mi>f</mi>
-        <mo stretchy="false">(</mo>
-        <mi>a</mi>
-        <mo stretchy="false">)</mo>
-      </mrow>
-      <mrow>
-        <mi>b</mi>
-        <mo>&#x2212;</mo>
-        <mi>a</mi>
-      </mrow>
-    </mfrac>
-    <mo stretchy="false">(</mo>
-    <mi>x</mi>
-    <mo>&#x2212;</mo>
-    <mi>a</mi>
-    <mo stretchy="false">)</mo>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+<p>From its definition: <i>w</i>(<i>a</i>) = <i>w</i>(<i>b</i>) = 0</i>, <i>w</i> is continuous in [<i>a,b</i>] and differentiable in (<i>a,b</i>) so for <a href="rolle.html">Rolle's theorem</a> there exists at least a point <i>&xi;</i> ∈ (<i>a, b</i>) such that <i>f</i>'(<i>&xi;</i>) = 0.□</p>
 
-<!-- $$ \omega(x) = f(x) - \left[ f(a) + \frac{f(b) - f(a)} {b-a} (x-a) \right] $$ -->
-
-<p>Because <i>f</i> is continuous on [<i>a, b</i>], it follows that <i>&omega;</i> is also continuous on [<i>a, b</i>]. Furthermore, because <i>f</i> is differentiable on (<i>a, b</i>) then <i>&omega;</i> also differentiable on (<i>a,b</i>). Applying <a href="rolle.html">Rolle's theorem</a> to the function <i>&omega;</i>, there exists a number <i>&xi;</i> such that <i>&omega;'</i>(&xi;) = 0. So there exists a number &xi; in (<i>a,b</i>) such that</p>
-
-<div class="eq">
-<p><i>f'</i>(&xi;) − [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>) = 0 &emsp;⇒&emsp; <i>f'</i>(<i>&xi;</i>) = <i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)/(<i>b</i> − <i>a</i>) &emsp;□</p>
 </div>
 
-<p>Note that Rolle's Theorem, is a special case of the Mean Value Theorem, where <i>f</i>(<i>b</i>) = <i>f</i>(<i>a</i>).</p>
-
-<h2 id="monotonicity">Applications</h2>
-
-<p>Many of the most basic results in calculus follow from the Mean Value Theorem. A function <i>f</i> defined on (<i>a,b</i>) is <b>increasing</b> if <i>f</i>(<i>x</i><sub>1</sub>) &le; <i>f</i>(<i>x</i><sub>2</sub>) whenever <i>a</i> &lt; <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>b</i>; and <i>f</i> is <b>decreasing</b> on (<i>a,b</i>) if <i>f</i>(<i>x</i><sub>1</sub>) &ge; <i>f</i>(<i>x</i><sub>2</sub>)  whenever <i>a</i> &lt; <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>b</i>. (So <i>f</i> is decreasing on (<i>a,b</i>) ⇔ −<i>f</i> is increasing on (<i>a,b</i>)). The function <i>f</i> being <b>strictly increasing</b> means that the &le; above can  be replaced with &lt;, and the function <i>f</i> being <b>strictly decreasing</b> means that the &ge; above can be replaced with &gt;.</p>
-
-<p><b>Lemma 5.6.2</b> (<i>Monotonicity test</i>). Suppose that <i>f</i> is differentiable on (<i>a, b</i>):</p>
-
-<ol type="i">
-	<li><p>If <i>f'</i> &gt; 0 on (<i>a, b</i>) then <i>f</i> is increasing on (<i>a, b</i>);</p></li>
-	<li><p>If <i>f'</i> &lt; 0 on (<i>a, b</i>) then <i>f</i> is is decreasing on (<i>a, b</i>);</p></li>
-	<li><p>If <i>'</i>(<i>x</i>) = 0 for every <i>x</i> &in; (<i>a,b</i>), then <i>f</i> is constant on (<i>a,b</i>).</p></li>
-</ol>
-
-<p><b>Proof</b>. We let <i>a</i> &lt; <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>b</i> and apply the Mean Value Theorem to <i>f</i> on [<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>]: Then there is <i>c</i> &in; (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) such that</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>f</mi>
-    <mo data-mjx-alternate="1">&#x2032;</mo>
-  </msup>
-  <mo stretchy="false">(</mo>
-  <mi>c</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>2</mn>
-      </msub>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>1</mn>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msub>
-        <mi>x</mi>
-        <mn>2</mn>
-      </msub>
-      <mo>&#x2212;</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>1</mn>
-      </msub>
-    </mrow>
-  </mfrac>
-</math>
-
-<!-- $$ f'(c) = \frac{ f(x_2) - f(x_1)} {x_2 - x_1} $$ -->
-
-<p>That is,</p>
-
-<div class="eq">
-<p><i>f</i>(<i>x</i><sub>2</sub>) − <i>f</i>(<i>x</i><sub>1</sub>) = <i>f'</i> (<i>x</i><sub>2</sub> − <i>x</i><sub>1</sub>).</p>
-</div>
-
-<ol type="i">
- 	<li><p>If <i>f'</i> &gt; 0 then the right-hand side is &ge; 0; and so the left-hand side is &ge; 0. That is, <i>f</i>(<i>x</i><sub>2</sub>) &ge; <i>f</i>(<i>x</i><sub>1</sub>);</p></li>
-	<li><p>If <i>f'</i> &lt; 0 then the right-hand side is &le; 0; and so the left-hand side is &le; 0. That is, <i>f</i>(<i>x</i><sub>2</sub>) &le; <i>f</i>(<i>x</i><sub>1</sub>);</p></li>
-	<li><p>We must have <i>f'</i>(<i>c</i>) = 0 and so the right-hand side is = 0: Therefore <i>f</i>(<i>x</i><sub>1</sub>) = <i>f</i>(<i>x</i><sub>2</sub>): This is true for any choice of <i>x</i><sub>1</sub> &lt; <I>x</i><sub>2</sub> in (<i>a, b</i>) and so <i>f</i> must be constant.&emsp;□</p></li>
-</ol>
-
-<section aria-label="End">
-<a href="Rolle.html">&#171;Rolle's theorem</a>
+<section>
+<a href="rolle.html">&#171;Rolle's theorem</a>
 <a href="index.html">Index</a>
-<a href="Cauchy_MVT.html">Cauchy MVT &#187;</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
 </section>
 
 </div>
