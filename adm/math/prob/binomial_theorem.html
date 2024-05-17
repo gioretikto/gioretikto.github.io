@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Monomials, Binomials and Multinomials"/>
+	<title>Monomials, Binomials and Multinomials</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Monomials, Binomials and Multinomials</h1>
+
+<p>Two of the simplest types of polynomials are <b>monomials</b>, which consist of just a single term (like 4<i>x</i><sup>2</sup> or −5x<sup>2</sup><i>y</i><sup>3</sup><i>z</i>), and <b>binomials</b>, which consist of two terms added together (like 5x<sup>2</sup> + 3<i>x</i> or 7<i>xy</i><sup>2</sup> − 5<i>x</i><sup>3</sup><i>y</i>). If we take a power of a binomial like (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> then it is often useful to know what the coefficient of each term in the resulting polynomial is once everything is expanded out. For example, it is straightforward to check that</p>
+
+<div class="eq">
+<p>(<i>x</i> + <i>y</i>)<sup>2</sup> = <i>x</i><sup>2</sup> + 2<i>xy</i> + <i>y</i><sup>2</sup>, &emsp; and &emsp; (<i>x</i> + <i>y</i>)<sup>3</sup> = <i>x</i><sup>3</sup> + 3<i>x</i><sup>2</sup><i>y</i> + 3<i>xy</i><sup>2</sup> + <i>y</i><sup>3</sup></p>
+</div>
+
+<p>More generally, we can notice that when we compute</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>y</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>y</mi>
+          <mo stretchy="false">)</mo>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>y</mi>
+          <mo stretchy="false">)</mo>
+          <mo>&#x22EF;</mo>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>y</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mtext>&#xA0;times</mtext>
+    </mrow>
+  </munder>
+</math>
+
+<!-- $$(x+y)^n = \underbrace {(x+y)(x+y)\cdots(x+y)}_{n \text{ times}} $$ -->
+
+<p>by repeatedly applying distributivity of multiplication over addition, we get 2<sup><i>n</i></sup> terms in total—we can imagine constructing these terms by choosing either <i>x</i> or <i>y</i> in each copy of (<i>x</i> + <i>y</i>), so we can make a choice between 2 objects <i>n</i> times. However, expanging (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> this way, many of the resulting terms are duplicates of each other due to commutativity of multiplication.  For example (<i>x</i> + <i>y</i>)<sup>3</sup> = (<i>x</i> + <i>y</i>)(<i>x</i> + <i>y</i>)(<i>x</i> + <i>y</i>), there are 3 ways to form the term 3<i>x</i><sup>2</sup><i>y</i></p>
+
+<pre>
+xxy
+xyx
+yxx
+</pre>
+
+<p>If in a factor <i>y</i> appears <i>k</i> times then <i>x</i> appears <i>n</i> −<i>k</i>. The number of factors in which <i>y</i> is repeated <i>k</i> times (and thus <i>x</i> is repeated <i>n</i> −<i>k</i> times is the coefficient of <i>x</i><sup><i>n</i>−<i>k</i></sup><i>y<sup>k</sup></i> and this coefficient corresponds to the numeber of ways we can choose <i>k</i>, <i>y</i> from the <i>n</i> binomes;  This quantity is precisely <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"> <mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="OPEN"> <mo minsize="2.047em" maxsize="2.047em">(</mo> </mrow> <mfrac linethickness="0">     <mi>n</mi>      <mi>k</mi>    </mfrac>    <mrow data-mjx-texclass="CLOSE"> <mo minsize="2.047em" maxsize="2.047em">)</mo>  </mrow>
+</mrow> </math> <!-- $$\binom{n}{k}$$ --> called a <b>binomial coefficient</b> (due to this connection with binomials) and is read as “<i>n</i> choose <i>k</i>”, and is given by the formula</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>+</mo>
+  <mi>n</mi>
+  <msup>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mi>b</mi>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <msup>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+  </msup>
+  <msup>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msup>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <mi>n</mi>
+  <mi>a</mi>
+  <msup>
+    <mi>b</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>+</mo>
+  <msup>
+    <mi>b</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <msup>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+  </msup>
+  <msup>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msup>
+</math>
+
+<!-- $$(a+b)^n = a^n + na^{n-1}b + \ldots + \binom{n}{k} a^{n-k}b^k + \ldots + nab^{n-1} + b^n = \sum_{k=0}^n \binom{n}{k} a^{n-k}b^k $$ -->
+
+<p>holds and it is known a <b>Newton's binomial expansion</b> but is most often referred to as simply <b>the binomial theorem</b> discovered by Isaac Newton in 1676. The biomial theorem can be prove by <a href="../algebra/exercises_induction.html">mathematical induction</a>.</p>
+
+<p>The <i>binomial coefficient</i> has an important combinatorial meaning: it represents the number of ways of choosing <i>k</i> elements from a set of <i>n</i> elements, without considering the order of the objects in each subset. Equivalently, it is the number of subsets of <i>k</i> elements of a set of cardinality <i>n</i>. It is denoted by <i>C<sub>n,k</sub></i>.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <mrow>
+              <mi>C<sub>n,k</sub></mi>
+              <mo>=</mo>
+                <mo>(</mo>
+                <mfrac linethickness="0">
+                  <mi>n</mi>
+                  <mi>k</mi>
+                </mfrac>
+                <mo>)</mo>
+</math>
+
+<p>More generally, we can use a similar technique to come up with an explicit formula for the coefficients of powers of any polynomials—not just binomials. In particular, when expanding out an expression like</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          <mo>+</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msub>
+          <mo>+</mo>
+          <mo>&#x2026;</mo>
+          <mo>+</mo>
+          <msub>
+            <mi>x</mi>
+            <mi>n</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>&#x22EF;</mo>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+          <mo>+</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msub>
+          <mo>+</mo>
+          <mo>&#x2026;</mo>
+          <mo>+</mo>
+          <msub>
+            <mi>x</mi>
+            <mi>n</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mtext>&#xA0;times</mtext>
+    </mrow>
+  </munder>
+</math>
+
+<!-- $$(x_1+x_2+\ldots+x_n)^n = \underbrace {(x_1+x_2+\ldots+x_n) \cdots (x_1+x_2+\ldots+x_n)}_{p \text{ times}} $$ -->
+
+<p>we find that the number of times that a particular term <i>x</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup> <i>x</i><sub>2</sub><sup><i>k</i><sub>2</sub></sup> ··· <i>x<sub>n</sub><sup>k<sub>n</sub></sup></i> occurs equals the number of ways that we can choose <i>x</i><sub>1</sub> from the <i>p</i> factors a total of <i>k</i><sub>1</sub> times, <i>x</i><sub>2</sub> from the <i>p</i> factors a total of <i>k</i><sub>2</sub> times, and so on. This quantity is called a <b>multinomial coefficient</b>, and it is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>p</mi>
+      <mrow>
+        <msub>
+          <mi>k</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>k</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>,</mo>
+        <mo>&#x2026;</mo>
+        <mo>,</mo>
+        <msub>
+          <mi>k</mi>
+          <mi>n</mi>
+        </msub>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>p</mi>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>k</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>!</mo>
+      <msub>
+        <mi>k</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>!</mo>
+      <mo>&#x22EF;</mo>
+      <msub>
+        <mi>k</mi>
+        <mi>n</mi>
+      </msub>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \binom{p}{k_1,k_2,\ldots,k_n} = \frac{p!}{k_1!k_2! \cdots k_n!} $$ -->
+
+<section aria-label="End">
+<a href="combinations.html">&#171;Combinations</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

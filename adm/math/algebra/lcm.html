@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Least common multiple"/>
+	<title>Least common multiple</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Least common multiple</h1>
+
+<p><b>Definition 2.7.1</b>. Let <i>a,b</i> &in; ℤ. We define <i>Least common multiple</i> between <i>a</i> and <i>b</i> a integer <i>m</i> such that</p>
+
+<ol type="a">
+	<li><p><i>m</i> is a multiple of <i>a</i> and <i>b</i>;</p></li>
+	<li><p>if <i>m'</i> is a common multiple of <i>a</i> and <i>b</i>, then <i>m'</i> is a multiple of <i>m</i> as well.</p></li>
+</ol>
+
+<p>The positive <i>least common multiple</i> between <i>a</i> and <i>b</i> is denoted by lcm(<i>a,b</i>).</p>
+
+<div class="def">
+<p><b>Example</b>. What is the lcm of 4 and 6?</p>
+
+<p>Multiples of 4 are:</p>
+
+<p>4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, ...</p>
+
+<p>and the multiples of 6 are:</p>
+
+<p>6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, ...</p>
+
+<p>Common multiples of 4 and 6 are simply the numbers that are in both lists:</p>
+
+<p>12, 24, 36, 48, 60, 72, ....</p>
+
+<p>So, from this list of the first few common multiples of the numbers 4 and 6, their least common multiple is 12. </p>
+</div>
+
+<p>The fundamental theorem of arithemtic gives us a method for the calculation of the <a href="gcd.html">gcd</a> and another for the calculation of the lcm of two integers (same method learned at school). The integers <i>a</i> and <i>b</i> are decomposed in primes (we know that this factorization is always possible and unique). Let</p>
+
+<div class="eq">
+<p><i>a</i> = <i>p</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup> <i>p</i><sub>2</sub><sup><i>h</i><sub>2</sub></sup> ... <i>p<sub>r</sub><sup>h<sub>r</sub></sup></i>, &emsp; <i>b</i> = <i>p</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup> <i>p</i><sub>2</sub><sup><i>k</i><sub>2</sub></sup> ... <i>p<sub>r</sub><sup>k<sub>r</sub></sup></i></p>
+</div>
+
+<p>are the factorisations of <i>a</i> and <i>b</i> with <i>p</i><sub>1</sub>, ... , <i>p<sub>r</sub></i> distinct prime numbers and <i>h</i><sub>1</sub></sup>, <i>h</i><sub>2</sub></sup> ... <i>h<sub>r</sub><sup>h<sub>r</sub></sup></i>, k</i><sub>1</sub>, ... , <i>k<sub>r</sub></i> non-negative numbers; The number of distinct prime numbers is equal in both factorization because we admit exponents to be null. In this way "we force" into the factorization primes numbers that are not part of it. It is easy noticable that</p>
+
+<div class="eq">
+<p>gcd(<i>a,b</i>) = <i>p</i><sub>1</sub><sup><i>m</i><sub>1</sub></sup> <i>p</i><sub>2</sub><sup>m<sub>2</sub></sup> ... <i>p<sub>r</sub><sup>m<sub>r</sub></sup></i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>lcm(<i>a,b</i>) = <i>p</i><sub>1</sub><sup><i>M</i><sub>1</sub></sup> <i>p</i><sub>2</sub><sup><i>M</i><sub>2</sub></sup> ... <i>p<sub>r</sub><sup>M<sub>r</sub></sup></i></p>
+</div>
+
+<p>with <i>m<sub>i</sub></i> = min {<i>h<sub>i</sub>, k<sub>i</sub></i>}, <i>M<sub>i</sub></i> = max{<i>h<sub>i</sub>, k<sub>i</sub></i>}. By the way this method of computation of the lcm and gcd is not very efficient. Conviene osservare che vale la seguente relazione tra gcd(<i>a, b</i>) and lcm(<i>a,b</i>):</p>
+
+<div class="eq">
+<p>lcm (<i>a,b</i>) = |<i>a</i> ⋅ <i>b</i>| / gcd(<i>a,b</i>)</p>
+</div>
+
+<p>Allora, per calcolare il minimo comune multiplo di due interi <i>a</i> and <i>b</i>, it is more conven to use the Euclidean algorith and then use the relation above.</p>
+
+<div class="def">
+<p>Example the number 90 can be factorized as:</p>
+
+<div class="eq">
+<p>90 = 2<sup>1</sup> ⋅ 3<sup>2</sup> ⋅ 5<sup>1</sup> = 2 ⋅ 3 ⋅ 3 ⋅ 5</p>
+</div>
+
+<p>Here we have the composite number 90 made up of one atom of the prime number 2, two atoms of the prime number 3 and one atom of the prime number 5.</p>
+
+<p>This knowledge can be used to find the LCM of a set of numbers. Example: Find the value of lcm(8,9,21).</p>
+
+<p>First, factor each number and express it as a product of prime number powers.</p>
+
+<p><i>8 = 2<sup>3</sup></i></p>
+
+<p><i>9 = 3<sup>2</sup></i></p>
+
+<p><i>21 = 3<sup>1</sup> ⋅ 7<sup>1</sup></i></p>
+
+<p>The lcm will be the product of multiplying the highest power of each prime number together. The highest power of the three prime numbers 2, 3, and 7 is 2<sup>3</sup>, 3<sup>2</sup>, and 7<sup>1</sup>, respectively. Thus,</p>
+
+<p>lcm⁡ (8 ,9, 21) = 2<sup>3</sup> ⋅ 3<sup>2</sup> ⋅ 7<sup>1</sup> = 8 ⋅ 9 ⋅ 7 = 504</p>
+</div>
+
+<p>This method is not as efficient as reducing to the greatest common divisor, since there is no known general efficient algorithm for integer factorization, but is useful for illustrating concepts.</p>
+
+<p>This method can be illustrated using a Venn diagram as follows. Find the prime factorization of each of the two numbers. Put the prime factors into a Venn diagram with one circle for each of the two numbers, and all factors they share in common in the intersection. To find the LCM, just multiply all of the prime numbers in the diagram.</p>
+
+<p>Here is an example:</p>
+
+<p>48 = 2 × 2 × 2 × 2 × 3,</p>
+<p>180 = 2 × 2 × 3 × 3 × 5,</p>
+
+<p>and what they share in common is two "2"s and a "3":</p>
+
+<img src="img/Venn_mcm_MCD.png" alt="Venn diagram mcm MCD"/>
+
+<p>Least common multiple = 2 × 2 × 2 × 2 × 3 × 3 × 5 = 720</p>
+<p>Greatest common divisor = 2 × 2 × 3 = 12</p>
+
+<p>This also works for the greatest common divisor (GCD), except that instead of multiplying all of the numbers in the Venn diagram, one multiplies only the prime factors that are in the intersection. Thus the GCD of 48 and 180 is 2 × 2 × 3 = 12. </p>
+
+<p>The fundamental theorem of arithmetic allows us to prove that the number of primes is infinite; This proof was given by the ancient Greek mathematician Euclid.</p>
+
+<div id="Euclid_primes">
+<p><b>Proposition 2.7</b> (Euclid’s Theorem on Primes). There exist infinite prime numbers</p>
+
+<p><b>Proof</b>. See <a href="../logic/proofs.html#Euclid">proof by contradiction</a>. &emsp;□</p>
+
+<section aria-label="End">
+<a href="fund_theo_arithmetic.html">&#171; The Fundamental Theorem of Arithmetic</a>
+<a href="index.html">Index</a>
+<a href="lcm.html">Least common multiple &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The Laplacian of a scalar field">
+	<title>The Laplacian of a scalar field</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The Laplacian of a scalar field</h1>
+
+<p>Recall that grad <i>U</i> of any scalar field <i>U</i> is a vector field. Recall also that we can compute the divergence of any vector field. So we can certainly compute div (grad<i>U</i>), even if
+we don’t know what it means yet.<br> Here is where the ∇ operator starts to be really handy.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="normal">&#x2207;</mi>
+  <mo>&#x22C5;</mo>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x2207;</mi>
+  <mi>U</mi>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mi>&#x2202;</mi>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>&#x131;</mi>
+        <mo stretchy="false">^</mo>
+      </mover>
+    </mrow>
+    <mo>+</mo>
+    <mfrac>
+      <mi>&#x2202;</mi>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>y</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>&#x237;</mi>
+        <mo stretchy="false">^</mo>
+      </mover>
+    </mrow>
+    <mo>+</mo>
+    <mfrac>
+      <mi>&#x2202;</mi>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>z</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>k</mi>
+        <mo stretchy="false">^</mo>
+      </mover>
+    </mrow>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mi>&#x2202;</mi>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>x</mi>
+        </mrow>
+      </mfrac>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>&#x131;</mi>
+          <mo stretchy="false">^</mo>
+        </mover>
+      </mrow>
+      <mo>+</mo>
+      <mfrac>
+        <mi>&#x2202;</mi>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>y</mi>
+        </mrow>
+      </mfrac>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>&#x237;</mi>
+          <mo stretchy="false">^</mo>
+        </mover>
+      </mrow>
+      <mo>+</mo>
+      <mfrac>
+        <mi>&#x2202;</mi>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>z</mi>
+        </mrow>
+      </mfrac>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>k</mi>
+          <mo stretchy="false">^</mo>
+        </mover>
+      </mrow>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>U</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>&#x2202;</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>U</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>&#x2202;</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>U</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>&#x2202;</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>U</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msup>
+        <mi>z</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \nabla \cdot (\nabla U) \left(\frac{\partial }{\partial x}\hat{\imath} + \frac{\partial }{\partial y}\hat{\jmath} + \frac{\partial }{\partial z} \hat{k} \right) \cdot \left( \left(\frac{\partial }{\partial x}\hat{\imath} + \frac{\partial }{\partial y}\hat{\jmath} + \frac{\partial }{\partial z} \hat{k} \right) U \right) = \frac{\partial^2 U}{\partial x^2} + \frac{\partial^2 U}{\partial y^2} + \frac{\partial^2 U}{\partial z^2} $$ -->
+
+<p>This last expression occurs frequently in engineering science (you will meet it next in solving Laplace’s Equation in partial differential equations). For this reason, the operator ∇<sup>2</sup> is called the “Laplacian”</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi mathvariant="normal">&#x2207;</mi>
+    <mn>2</mn>
+  </msup>
+  <mi>U</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>&#x2202;</mi>
+          <mn>2</mn>
+        </msup>
+        <mi>U</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>&#x2202;</mi>
+          <mn>2</mn>
+        </msup>
+        <mi>U</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <msup>
+          <mi>y</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>&#x2202;</mi>
+          <mn>2</mn>
+        </msup>
+        <mi>U</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <msup>
+          <mi>z</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mi>U</mi>
+</math>
+
+<!-- $$ \nabla^2 U = \left( \frac{\partial^2 U}{\partial x^2} + \frac{\partial^2 U}{\partial y^2} + \frac{\partial^2 U}{\partial z^2} \right) U $$ -->
+
+<p>The equation</p>
+
+<div class="eq">
+<p>∇<sup>2</sup> <i>U</i> = 0</p>
+</div>
+
+<p>is known as <b>Laplace’s equation</b>.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Conditional Probability">
+	<title>Conditional Probability</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Conditional Probability; Dependent And Independent Events</h1>
+
+<p>So far, we have calculate probabilities of various events on the assumption that no information was available about the random experimento other than the sample space &Omega;. If, however, it is known that an event <i>B</i> has occured, the the probability of the event <i>A</i> has to be calculated with the condition that the event <i>B</i> has already occured. In defining this (conditional) probability of <i>A</i> given that <i>B</i> has occured, we take <i>B</i> to be the new sample space, and relative to this, we define the probability of <i>A</i>. The usual notation for 'event <i>A</i> occurs given that event <i>B</i> has occured", is <i>A</i>|<i>B</i>. Note that in the <a href="classical.html">classical interpretation of probability</a>, the definition for the conditional probability of <i>A</i>, given that <i>B</i> has occured, will be</p>
+
+<div class="eq">
+<p><i>P</i>(<i>A</i>|<i>B</i>) = <i>n</i>(<i>A</i> ∩ <i>B</i>) / <i>n</i>(<i>B</i>) &emsp; where <i>n</i>(<i>B</i>) &ne; 0&emsp;2.3.1</p>
+</div>
+
+<p><b>Example 2.3.2</b>. Consider the experiment of tossing two fair coins. Then, the sample space &Omega; is</p>
+
+<div class="eq">
+<p>&Omega; = {HH, HT, TH, TT}</p>
+</div>
+
+<p>Consider the two events <i>A</i> and <i>B</i> defines by</p>
+
+<ul>
+	<li><p><i>A</i>: Both coins show the same face.</p></li>
+	<li><p><i>B</i>: At least one coin shows <i>T</i>.</p></li>
+</ul>
+
+<p>Then, we know that the favourable cases for <i>A</i> are HH and TT so that <i>n</i>(<i>A</i>) = 2. In this case,</p>
+
+<div class="eq">
+<p>P(<i>A</i>) = 2/4 = 1/2</p>
+</div>
+
+<p>Suppose that the event <i>B</i> has already occured i.e. we are given the information "at least one coin shows T". This information <i>changes</i> the favourable number of cases for <i>A</i>. In fact, the favourable case for <i>A</i>, given the condition that <i>B</i> has occured, is just one point, viz <i>TT</i>. Note that the sample space has also changed. Since <i>B</i> has already occured, the sample space for <i>A</i> is the event <i>B</i>. Note that <i>B</i> contains only the outcomes TH, HT, TT so that <i>n</i>(<i>B</i>) = 3. Thus, the (conditional) probability of <i>A</i> (given that <i>B</i> has occured) is obtained as</p>
+
+<div class="eq">
+<p><i>P</i>(<i>A</i>|<i>B</i>) = <i>n</i>(<i>A</i> ∩ <i>B</i>) / <i>n</i>(<i>B</i>) = 1/3</p>
+</div>
+
+<p><b>Example 2.3.3</b>. What is the probability of rolling a prime number in one roll of a die? Let &Omega; = {1, 2, 3, 4, 5, 6}, so <i>n</i>(&Omega;) = 6; and let <i>A</i> = {2, 3, 5}, so <i>n</i>(<i>A</i>) = 3. Therefore,</p>
+
+<div class="eq">
+<p><i>P</i>(<i>A</i>) = <i>n</i>(<i>A</i>) / <i>n</i>(&Omega;) = 3/6 = 1/2</p>
+</div>
+
+<p>Next, what is the probability of rolling a prime number in one roll of a die, given that an odd number has turned up? Let <i>B</i> = {1, 3, 5} be the new sample space of odd numbers. Then <i>n</i>(<i>B</i>) = 3. We are now interested in only that part of <i>A</i> (rolling a prime number) that is also in <i>B</i>, in other words, <i>A</i> ∩ <i>B</i>. Therefore, because <i>E</i> ∩ <i>B</i> = {3, 5}, the probability of <i>A</i> given <i>B</i> is<p>
+
+<div class="eq">
+<p><i>P</i>(<i>A</i>|<i>B</i>) = <i>n</i>(<i>A</i> ∩ <i>B</i>) / <i>n</i>(<i>B</i>) = 2/3&emsp;■</p>
+</div>
+
+<p>The above two examples are in the framework of classical interpretation of probability, namely, the number of outcomes of the random experiment are finite and equally likely. To derive a general definition for conditional probability of the event <i>A</i>, given that <i>B</i> has occured, we rewrite 2.3.1 as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>A</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>B</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>A</mi>
+      <mo>&#x2229;</mo>
+      <mi>B</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>B</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>A</mi>
+      <mo>&#x2229;</mo>
+      <mi>B</mi>
+      <mo stretchy="false">)</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi mathvariant="normal">&#x3A9;</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>B</mi>
+      <mo stretchy="false">)</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi mathvariant="normal">&#x3A9;</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>P</mi>
+      <mo stretchy="false">(</mo>
+      <mi>A</mi>
+      <mo>&#x2229;</mo>
+      <mi>B</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>P</mi>
+      <mo stretchy="false">(</mo>
+      <mi>B</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>where</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>B</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2260;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$P(A|B) = \frac{n(A \cap B)} {n(B)} = \frac{n(A \cap B) / n(\Omega)} {n(B)/ n(\Omega)} = \frac{P(A \cap B)}{P(B)} \quad \text{where} \quad P(B) \ne 0 $$ -->
+
+<figure>
+<img src="img/conditional_probability.png" alt="Conditional probability"/>
+<figcaption>Conditional probability and its interpretation</figcaption>
+</figure>
+
+<p>These observations lead to the following formal definition of <i>conditional proability</i> of an event given that another event has happened.</p>
+
+<p><b>Definition 2.3.4</b>. Let (&Omega;, ℱ, ℙ) be a probability space, and the events <i>A,B</i> &in; ℱ. The <i>conditional probability</i> of <i>A</i> given <i>B</i>, denoted ℙ(<i>A</i>|<i>B</i>), is defined as</p>
+
+<div class="eq">
+<p>ℙ(<i>A</i>|<i>B</i>) = ℙ(<i>A</i> ∩ <i>B</i>)/ℙ(<i>B</i>), &emsp; ℙ(<i>B</i>) &ne; 0&emsp;□</p>
+</div>
+
+<p><b>Example 2.3.5</b>. A family has two children. What is the probability that both are boys, given that at least one is a boy? The older and younger child may each be male
+or female, so there are four possible combinations of sexes, which we assume to be equally likely. Hence we can represent the sample space in the obvious way as</p>
+
+<div class="eq">
+<p>&Omega; = {GG, GB, BG, BB}</p>
+</div>
+
+<p>where P(GG) = P(BB) = P(GB) = P(BG) = 1/4. From the definition of conditional probability,</p>
+
+<div class="eq">
+<p>P(BB|one boy at least) = P(BB | GB ∪ BG ∪ BB) = P(BB ∩ (GB ∪ BG ∪ BB))/P(GB ∪ BG ∪ BB) = P(BB) / P(GB ∪ BG ∪ BB) = 1/3.</p>
+</div>
+
+<p>A popular but incorrect answer to the question is 1/2. This is the correct answer to another question: for a family with two children, what is the probability that both are boys given that the younger is a boy? In this case,</p>
+
+<div class="eq">
+<p>P(BB|younger is a boy) = P(BB | GB ∪ BB) = P(BB ∩ (GB ∪ BB))/P(GB ∪ BB) = P(BB) / P(GB ∪ BB) = 1/2.&emsp;■</p>
+</div>
+
+<p><b>Example 2.3.6</b>. A die is tossed. Find the probability that a 4 came up if it is known that an even number turned up.</p>
+
+<p><b>Solution</b>. Let <i>E</i> be the event of rolling a 4, and let <i>F</i> be the event of rolling an even number. Therefore, <i>E</i> = {4} and <i>F</i> = {2, 4, 6}, from which we obtain <i>E</i> ∩ <i>F</i> = {4}. Using the previous definition, we obtain</p>
+
+<div class="eq">
+<p><i>P</i>(<i>E</i>|<i>F</i>) = <i>P</i>(<i>E</i> ∩ <i>F</i>)/<i>P</i>(<i>F</i>) = (1/6) / (3/6) = 1/3</p>
+</div>
+
+<p><b>2.2.3 Example</b>. Suppose the probability that a student will enroll in a mathematics course is 0.45, the probability that he or she will enroll in a science course is 0.38, and the probability that he or she will enroll in both courses is 0.26. Find the probability that a student will enroll in a mathematics course, given that he or she is also enrolled in a science course. Also, find the probability that a student will enroll in a science course given that he or she is enrolled in mathematics.</p>
+
+<p>Let <i>M</i> be the event Will enroll in mathematics, and let <i>S</i> be the event Will enroll in science. Therefore, using Definition 10.3, we obtain</p>
+
+<div class="eq">
+<p><i>P</i>(<i>M</i>|<i>S</i>) = <i>P</i>(<i>M</i> ∩ <i>S</i>)/<i>P</i>(<i>S</i>) = 0.26 / 0.38 = 26/38 = 13/19</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>P</i>(<i>M</i>|<i>S</i>) = <i>P</i>(<i>M</i> ∩ <i>S</i>)/<i>P</i>(<i>M</i>) = 0.26 / 0.45 = 26/45 = 26/45</p>
+</div>
+
+<section aria-label="End">
+<a href="events.html">&#171;Events</a>
+<a href="index.html">Index</a>
+<a href="independent_events.html">Independent Events&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

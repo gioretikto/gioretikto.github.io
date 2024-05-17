@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Logical Equivalences">
+	<title>Logical Equivalences</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Logical Equivalences</h1>
+
+<p>In algebra, finding identities or equivalences among operarions on numbers is a main goal. That the sum of 3 and 1 is equivalent to the sum of 1 and 3 is of interest to a mathematician; the equivalence is an istance of the fact that <i>x</i> + <i>y</i> = <i>y</i> + <i>x</i> for any two numbers <i>x</i> and <i>y</i>; that is, the "+" sign is commutative. In logic too, there are important equivalences between statementes that are necessary result of how our operators function. </p>
+
+<p><b>Definition</b> (<b>Truth Value Equivalent or Logically Equivalent</b>) Two statements, <i>P,Q</i> are <b>truth value equivalent</b> or <b>logically equivalent</b>, denoted by <i>P</i> &equiv; <i>Q</i> if and only if they have the same truth values for all assignments of truth values to their component statements.</p>
+
+<p>For example the sentences 1 + 1 = 3 and 5 &lt; 7 are logically equivalent, the reason being they have the same truth value. The fact they have nothing to do with each other is irrelevant from the point of view of sentential logic, although the logical statemente we study will be more useful.</p>
+
+<p>It follows from the definition above that two statements which appear in the same truth table are logically equivalent if and only if their truth value columns are identical. Two statements which appear in different truth tables are logically equivalent if and only if both tables are in standard form, both tables are for statements with the same components, and their truth value columns are identical.<br> We need to develop an algebra for symbolic logic, so we can make calculations similar to the way in which we make algebraic calculations for real numbers. One algebraic property of real numbers is that −(−x) = x. So let us produce a truth value table for the statement ¬ (¬ P). We start our truth table with a row of column headings labeled P, ¬ P, and ¬ (¬ P). In the column labeled P, we enter as the first entry T and as the second entry F. (See 5a.) Then using the negation truth table, we compute the entries for the second column labeled ¬ P. Since negation changes the truth value T to F and the truth value F to T, the first entry in the second column is F and the second entry is T. (See 5b.) Applying negation to the second column, the column labeled ¬ P, we obtain T for the first entry in the third column and F for the second entry. (See 5c.)</p>
+
+<table>
+<tr><th>P</th> <th>¬ P</th> <th>¬ (¬ P)</th></tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td> </tr>
+
+</table>
+
+<p>Observe that the truth value entries in the first column are identical to the truth value entries in the third column. Hence, we have shown that the statements P and ¬ (¬ P) are truth value equivalent. In order to denote that P and ¬(¬P) are truth value equivalent or logically equivalent, we write P ≡ ¬(¬P), which is read “P is truth value equivalent to ¬(¬P)” or “P is
+logically equivalent to ¬(¬P)” Thus, we have used a truth table to prove the Double Negation Law.</p>
+
+<div class="eq">
+<p><b>Double Negation</b> Law: ¬(¬P) ≡ P</p>
+</div>
+
+<p>Let <i>t</i> represent a statement which is a tautology, let <i>f</i> represent a statement which is a contradiction, and let P represent any statement. We state the following useful laws involving tautologies and contradictions. You can prove these laws by considering appropriate truth tables.</p>
+
+<div class="eq">
+<p><b>Tautology Laws</b>: &emsp;¬ t ≡ f &emsp;P∧ t ≡ P &emsp;P ∨ t ≡ t<br>
+<b>Contradiction Laws</b>: &emsp;¬ f ≡ t &emsp;P∧ f ≡ f &emsp; P∨ f ≡ P</p>
+</div>
+
+<p>The following six laws can easily be proven using truth tables.</p>
+
+<table class="noborder centertable">
+<tr><td><b>Idempotent Law for Conjunction</b>:</td> <td>P ∧ P ≡ P</td></tr>
+<tr><td><b>Idempotent Law for Disjunction</b>:</td> <td>P ∨ P ≡ P</td></tr>
+<tr><td><b>Commutative Law for Conjunction</b>:</td> <td>P ∧ Q ≡ Q ∧ P</td></tr>
+<tr><td><b>Commutative Law for Disjunction</b>:</td> <td>P ∨ Q ≡ Q ∨ P</td></tr>
+<tr><td><b>Absorption Laws</b>:</td> <td>P ∧ (P ∨ Q) ≡ P<br>P ∨ (P ∧ Q) ≡ P</td></tr>
+</table>
+
+<section aria-label="End">
+<a href="tautologies.html">«Tautologies</a>
+<a href="index.html">Index</a>
+<a href="DeMorgan.html">De Morgan's laws»</a>
+</section>
+
+</article>
+
+</body>
+</html>

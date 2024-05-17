@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The Fundamental Theorem of Arithmetic"/>
+	<title>The Fundamental Theorem of Arithmetic</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The Fundamental Theorem of Arithmetic</h1>
+
+<p><b>Theorem 2.20</b> (<i>Fundamental theorem of Arithmetic</i>). Let <i>n</i> be an integer greater than 1. Then it is possible to factorise (represent) <i>n</i> as a product of a finite number of irreducible elements (or <i>prime number</i>) <i>p<sub>j</sub></i> &gt; 1:</p>
+
+<div class="eq">
+<p><i>n</i> = <i>p</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup> <i>p</i><sub>2</sub><sup>h<sub>2</sub></sup> <i>p</i><sub>3</sub><sup>h<sub>3</sub></sup>  ... <i>p<sub>s</sub><sup>h<sub>s</sub></sup></i> &emsp; 2.17</p>
+</div>
+
+<p>where <i>p<sub>j</sub>, j</i> = 1, ..., <i>s</i>, are all distinct, and the exponents <i>h<sub>j</sub></i> are positives and <i>s</i> &ge; 1. Moreover such factorisation is unique: if <i>n</i> can represented also as</p>
+
+<div class="eq">
+<p><i>n</i> = <i>q</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup> <i>q</i><sub>2</sub><sup>k<sub>2</sub></sup> <i>q</i><sub>3</sub><sup>k<sub>3</sub> </sup> ... <i>q<sub>t</sub><sup>k<sub>t</sub></sup></i></p>
+</div>
+
+<p>with <i>q<sub>i</sub></i> distinct irreducible elements greater than 1, then the number of factors in the first factorisation is the same as in the second, and <i>q<sub>i</sub></i> and <i>p<sub>j</sub></i> are equal up to the order.</p>
+
+<p><b>Proof</b>. <i>Existence of a factorisation</i>. We use the <a href="assiomi_peano.html#I">induction principle 𝕀</a> on the integer <i>n</i> we want to factorise. If <i>n</i> = 2, we get 2 = 2, a factorisation composed by irreducible elements &gt; 1. Suppose we have proven the existence of a factorisation for every positive integer <i>k</i> &lt; <i>n, k</i> &ge; 2; we now have to prove it for <i>n</i>. If <i>n</i> is irreducible, nothing is left to prove, so let <i>n</i> be reducible, so it may be written as <i>n</i> = <i>ab</i> with <i>a</i> and <i>b</i>, both both &ge; 2 and smaller than <i>n</i>. Then by the inductive hyphotesis, <i>a</i> and <i>b</i> are factorisable as products of primes:</p>
+
+<div class="eq">
+<p><i>a</i> = <i>p</i><sub>1</sub> <i>p</i><sub>2</sub> ⋅⋅⋅ <i>p<sub>r</sub></i> &emsp; <i>b</i> = <i>p̄</i><sub>1</sub> <i>p̄</i><sub>2</sub> ⋅⋅⋅ <i>p̄<sub>s</sub></i></p>
+</div>
+
+<p>thus</p>
+
+<div class="eq">
+<p><i>n</i> = <i>p</i><sub>1</sub> <i>p</i><sub>2</sub> ⋅⋅⋅ <i>p<sub>r</sub> p̄</i><sub>1</sub> <i>p̄</i><sub>2</sub> ⋅⋅⋅ <i>p̄<sub>s</sub></i></p>
+</div>
+
+<p>It is a matter of grouping together, in the right-hand side, equal prime numbers in order to get the result in the form.</p>
+
+<p><i>Uniqueness of the factorisation</i>. In order to prove the uniqueness of the factorisation for any integer <i>n</i>, we proceed by induction, this time on the number <i>m</i> of irreducible factors in any factorisation of <i>n</i>. If <i>m</i> = 1, then the number <i>n</i> having that factorisation is an irreducible element (or prime number); <i>p</i> &gt; 1: suppose that <i>n</i> = <i>p</i> has another factorization: <i>q<sub>1</sub><sup>k<sub>1</sub></sup> q<sub>2</sub><sup>k<sub>2</sub></sup> ... <i>q<sub>t</sub><sup>k<sub>t</sub></sup></i> allora:</p>
+
+<div class="eq">
+<p><i>p</i> = <i>q</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup> <i>q</i><sub>2</sub><sup><i>k</i><sub>2</sub></sup> ... <i>q<sub>t</sub><sup>k<sub>t</sub></sup></i> &emsp; <i>q<sub>i</sub></i> &gt; 1</i></p>
+</div>
+
+<p>Being <i>p</i> a <i>prime</i> that divides the right side, <i>p</i> will divide also one of the factors of the right side; let <i>p</i>| <i>q<sub>i</sub></i>. Also <i>q<sub>i</sub></i>, is irreducible, thus it canno factorised, hence <i>p</i> = <i>q<sub>i</sub></i>. For the cancellation law valid in ℤ, we get:</p>
+
+<div class="eq">
+<p>1 = <i>q</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup> <i>q</i><sub>2</sub><sup><i>k</i><sub>2</sub></sup> ... <i>q</i><sub>i</sub><sup><i>k</i>−1</sup> ... <i>q<sub>t</sub><sup>k<sub>t</sub></sup></i></p>
+</div>
+
+<p>This relation implies that all exponents on the right-hand side are null, otherwise we would have a product of integers greater than 1 whose results give 1. Then the right-hand side is <i>q<sub>i</sub></i>, hence <i>p</i> = <i>q<sub>i</sub></i> is the only factorization of <i>n</i>. We've thus prove the basis step of induction. We suppose the unicity of the factorization true for every factorization in <i>m</i> − 1 irriducible factors. Let <i>n</i> an integer with a factorization in <i>m</i> irriducible factors, and let</p>
+
+<div class="eq">
+<p><i>n</i> = <i>p</i><sub>1</sub><sup>h<sub>1</sub></sup> <i>p</i><sub>2</sub><sup>h<sub>2</sub></sup> ⋅⋅⋅ <i>p<sub>s</sub><sup>h<sub>s</sub></sup></i> = <i>q</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup>  q<sub>2</sub><sup>k<sub>2</sub></sup> </sup> ... <i>q<sub>t</sub><sup>k<sub>t</sub></sup></i> &emsp; <i>p<sub>i</sub>, q<sub>k</sub></i> &gt; 1</p>
+</div>
+
+<p>two factorisations of <i>n</i> in irreducible factors, the factorisation on the left side has <i>m</i> irreducibles factors, thus <i>h</i><sub>1</sub> + <i>h</i><sub>2</sub> + ... + <i>h<sub>s</sub></i> = <i>m</i>. Since, <i>p<sub>1</sub></i> is a prime that divides the right side, it will divide also a <i>q<sub>i</sub></i>. As before, we have <i>p</i><sub>1</sub> = <i>q<sub>i</sub></i>, thus they can both be canceled by both sides, and obtain</p>
+
+<div class="eq">
+<p><i>n</i> = <i>p</i><sub>1</sub><sup><i>h</i><sub>1</sub>−1</sup> p<sub>2</sub><sup>h<sub>2</sub></sup> ⋅⋅⋅ <i>p<sub>s</sub><sup>h<sub>s</sub></sup></i> = <i>q</i><sub>1</sub><sup><i>k</i><sub>1</sub></sup>  q<sub>2</sub><sup>k<sub>2</sub></sup> </sup> ... <i>q</i><sub>i</sub><sup>k−1</sup> ... <i>q<sub>t</sub><sup>k<sub>t</sub></sup></i></p>
+</div>
+
+<p>On the left side the number of irreducible factors is <i>m</i> − 1. By the inductive hypothesis the unicity of the factorization holds, thus the <i>q<sub>j</sub></i> coincide with the <i>p<sub>i</sub></i>, disregarding order. So the factorization of <i>n</i> is unique.□</p>
+
+<p>Note as during the proo the equivalency in ℤ between prime element and irreducible element was frequently employed.</p>
+
+<p>Il teorema precedente vale anche per interi arbitrari.</p>
+
+<p><b>Proposition 2.24</b>. Let <i>z</i> an integer &ne; 0 and &ne; &pm; 1, it can only be written in the form</p>
+
+<div class="eq">
+<p><i>z</i> = &pm;<i>p</i><sub>1</sub><sup><i>h</i><sub>1</sub></sup> <i>p</i><sub>2</sub><sup><i>h</i><sub>2</sub></sup> ... <i>p<sub>s</sub><sup>h<sub>s</sub></sup></i> &emsp; <i>p<sub>i</sub></i> irriducibile &gt; 1</i></p>
+</div>
+
+<section aria-label="End">
+<a href="gcd.html">&#171; gcd</a>
+<a href="index.html">Index</a>
+<a href="lcl.html">Least common multiple &#187;</a>
+</section>
+</article>
+
+</body>
+</html>

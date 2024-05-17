@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Relations">
+	<title>Relations</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Relations</h1>
+
+<p>We often need to relate the elements of a set to those of another set or to other elements of the same set: take for example the equality relation among the elements of a given set. In working with the integers, we encounter relations such as "<i>x</i> is less than <i>y</i>" and "<i>x</i> is a factor of <i>y</i>". These relations can all be described by the following definition.</p>
+
+<div class="def">
+<p><b>Definition 1.2.1</b> (<i>Relation</i>). Let <i>A</i> and <i>B</i> two nonempty sets, a <i>relation</i> indicated with &real; is the subset &real; ⊆ <i>A</i> x <i>B</i></p>
+</div>
+
+<p>When <i>A</i> = <i>B</i>, we say that &real;, is defined on <i>A</i>. Intuitively a relation &real; in <i>A</i> is a law that to each element of a subset <i>A</i> (that could also be the whole <i>A</i>), associates one or more elements of <i>A</i> itself.</p>
+
+<p>Instead of writing (<i>a,b</i>) &in; &real;, it is usually written <i>a</i> &real; <i>b</i>.</p>
+
+<p>When we build up a set by choosing only some elements of a cartesian product we are creating a <i>relation</i>. Consider the following example given by the Cartesian product [<i>a,b</i>] x [1,3]:</p>
+
+<img src="img/relazione.png" alt="relazione Relazioni" />
+
+<p>By choosing some pairs of the cartesian product we obtain a subset (relation) like that enclosed in the blue frame &real;= {(2<i>a</i>), (2<i>b</i>), (3<i>a</i>), (3<i>b</i>)}. The term <i>relation</i> is thus justified since we are relating the elements</p>
+
+<div class="def">
+<p><b>Definition 1.2.2</b>. Let <i>A</i> a set. A relation &real; on <i>A</i> is a subset of <i>A</i> x <i>A</i>. If (<i>a,b</i>) ∈ &real; then we write <i>a</i> &real; <i>b</i> and we say that <i>a</i> is related with <i>b</i> through the relation &real;.</p>
+</div>
+
+<h4>Examples</h4>
+
+<ul>
+	<li><p>the relation &le;, defined on ℕ.</p></li>
+	<li><p>the relation of <i>being friend of</i>, defined on a given group <i>A</i> of people.</p></li>
+	<li><p>the relation &real; made by all pairs (<i>a,b</i>) di ℝ x ℝ such that <i>a</i> + <i>b</i> = 1: geometrically, this relation coincides with the line <i>x</i> + <i>y</i> = 1</i> of the plane ℝ x ℝ.</p></li>
+</ul>
+
+<p>There exists multiple relations which can be chategorized based on the the property they satisfy</p>
+
+<ul>
+    <li><p><i>Functional relations</i></p></li>
+    <li><p><i>Ordering relations</i></p></li>
+    <li><p><i>Equivalence relations</i></p></li>
+</ul>
+
+<p>Functional relations are simply <a href="functions.html">functions</a>. To a set theorist a <i>function</i> <i>f</i>: <i>A</i> ⟶ <i>B</i> from a set <i>A</i> to a set <i>B</i> is simply a relation
+<i>f</i> &subseteq; <i>A</i> x <i>B</i> such that for each <i>a</i> &in; <i>A</i> there is exactly one <i>b</i> &in; <i>B</i> such that (<i>a,b</i>) &in; <i>f</i>. It is common to write <i>f</i>(<i>a</i>) = <i>b</i> instead of (<i>a,b</i>) &in; <i>f</i>. <br> The set <i>A</i> is called the <i>domain of f</i> and is denoted by dom (<i>f</i>). </p>
+
+<p>The particular subset of ℝ x ℝ<sup>+</sup> identified by the rule <i>y</i> = <i>x</i><sup>2</sup> is a function we define as</p>
+
+<div class="eq">
+<p><i>f</i> = {(<i>x,y</i>) : <i>x</i> &in; ℝ <i>y</i> &in; ℝ<sup>+</sup>, <i>y</i> = <i>x</i><sup>2</sup>}</p>
+</div>
+
+<h3 id="eq">Equivalence relation</h3>
+
+<p><b>Definition 1.2.3</b>. An equivalence relation indicated with the symbol ∼ (to be read "equivalent to", from left to right) is a binary relation on a set <i>A</i> satisfying the following conditions:</p>
+
+<ul>
+    <li><p><i>x</i> ∼ <i>x</i> &emsp; ∀<i>x</i> ∈ <i>A</i> &emsp; Reflexive Property</p></li>
+    <li><p><i>x</i> ~ <i>y</i> implies <i>y</i> ~ <i>x</i> &emsp; ∀<i>x,y</i> ∈ <i>A</i> &emsp; Symmetric Property</p></li>
+    <li><p><i>x</i> ∼ <i>y</i> and <i>y</i> ~ <i>z</i> imply <i>x</i> ∼ <i>z</i> &emsp; ∀<i>x,y,z</i> ∈ <i>A</i> &emsp; Transitive Property.</p></li>    
+</ul>
+
+<p>Two element that satisfy the conditions above are said <i>equivalent</i> for the relation ∼: the symmetric property allows us to disregard the order in which the elements appear in the relation.</p>
+
+<p><b>1.2.4 Example</b>. Let <i>A</i> = {2,3,4} and <i>B</i> = {2,6,8,12} and let <i>R</i> be the "divides" relation from <i>A</i> to <i>B</i>: For all (<i>x,y</i>) &in; <i>A</i> x <i>B</i>,</p>
+
+<div class="eq">
+<p><i>x</i> <i>R</i> <i>y</i> &emsp;⇐⇒&emsp; <i>x</i> | <i>y</i>&emsp; <i>x</i> divides <i>y</i></p>
+</div>
+
+<p>We have <i>R</i> = {(2,2), (2,6), (2,8), (2,12), (3,6), (3,12), (4,8), (4,12), (6.12)}. The relation <i>R</i> on set ℕ, defined by "<i>x</i> divides <i>y</i>" for all <i>x,y</i> &in; ℕ is a transitive relation because if <i>x</i> divides <i>y</i> and <i>y</i> divides <i>z</i>, then <i>x</i> divides <i>z</i>. &emsp;■</p>
+
+<p id="equivalence_class"><b>Definition 1.2.4</b>. If <i>A</i> is a set and if ~ is an equivalence relation on <i>A</i>, then the <b>equivalence class</b> in <i>A</i> is the subset of all those elements of <i>A</i> which are related to <i>a</i> by the relation ~. Usually it is indicated by [<i>x</i>]<sub>∼</sub> or {<i>x</i>}<sub>∼</sub>. Symbolically</p>
+
+<div class="eq">
+<p>[<i>a</i>] = {<i>x</i> &in; <i>A</i> | <i>a</i> ~ <i>x</i>}</p>
+</div>
+
+<p>Observe that equivalence class is never empty as <i>a</i> &in; [<i>a</i>].</p>
+
+<p>Given an equivalence relation <i>R</i>, the set <i>I</i> can be divided into classes, known as equivalence classes which groups equivalent element in a same class.</p>
+
+<p>The set of equivalence classes under ∼ is called the <b>quotient set</b> of <i>A</i> with respect to ∼; it is usually indicated as <i>A</i> / ∼. An equivalence relation on a set induces a partition on it, and any partition induces an equivalence relation.</p>
+
+<p>to denote an equivalence relation the symbol ~, is frequently employed. Thus (<i>x, y</i>) <i>&in; &real;</i>, can be expressed using the notation <i>x</i> ~ <i>y</i>.</p>
+
+<p><b>1.2.5 Example</b>. Let <i>A</i> {1,2,3,4} and R = {(1,1), (2,2), (2,4), (3,3), (4,2),(4,4)} be a binary relation on <i>A</i>. Note that <i>R</i> is reflexive, symmetric and transitive hence an equivalence relation.&emsp;■</p>
+
+<p><b>1.2.5 bis Examples of equivalence relations</b></p>
+
+<ol type="a">
+	<li><p>The <i>equality</i> relation defined on a set <i>A</i>: <i>a</i> = <i>b</i></p></li>
+
+	<li><p>The relation of having the same age in a group of people;</p></li>
+
+	<li><p>The relation &rho; defined on a set <i>A</i>, declaring a relation among all elements of the set that is <i>a</i> &rho; <i>b</i> &forall;<i>a,b</i> &in; <i>A</i>.</p></li>
+
+	<li><p>Considering the citizens of a country, the relation "lives in the same city" is an equivalence relations: it is reflexive, symmetric and transitive.</p></li>
+
+	<li><p>In ℕ, the relation "is greater or equal to" is not of equivalence: is reflexive and transitive, but not symmetric. </p></li>
+
+	<li><p>Considering a family, the relation "is brother of", is of equivalence: indeed it is reflexive, symmetric and transitive.</p></li>
+
+	<li><p>Considering a family, the relation "He is father of", is not an equivalence relation: it is not reflexive nor symmetric nor transitive.</p></li>
+
+	<li><p>The relation <i>P</i> of parallelism between lines is an equivalence relation, <i>r</i> P <i>s</i> means "the line <i>r</i> is parallel to the line <i>s</i>.</p></li>
+</ol>
+
+<p><b>Definition 1.2.6</b>. Let ~ an equivalence relation defined on a set <i>A</i>. We denote as [<i>a</i>] (or also <i>ā</i>) the set containing all and only the elements equivalent to an element <i>a</i> of <i>A</i> and call it <i>equivalence class modulo</i> ~. In symbols</p>
+
+<div class="eq">
+<p>[<i>a</i>] := {<i>b</i> &in; <i>A</i> | <i>b</i> ~ <i>a</i>}</p>
+</div>
+
+<p>In example 1.2.5 a) the equality relation is an equivalence relation; The equivalence classes are all singletons (i.e. subsets made of single elements). In example 1.2.5 b) an equivalence class contains all people with same age and each class can be labeled by a number corresponding to an age. In example 1.2.5 c) there is only a single equivalence class that coincides with set <i>A</i> itself. </p>
+
+<p>The following proposition illustrates that is possible to pass from an equality of equivalence classes to an equivalence relations between elements of the set.</p>
+
+<p><b>Theorem 1.2.7</b>. Let &rho; be an equivalence relation on a set <i>A</i>. Then</p>
+
+<div class="eq">
+<p>[<i>a</i>] = [<i>b</i>] &emsp;⇐⇒&emsp; <i>a</i> &rho; <i>b</i></p>
+</div>
+
+<p><b>Proof.</b> Let [<i>a</i>] = [<i>b</i>]. By the reflexive property of <i>&rho;</i>, &forall; <i>b</i> &in; <i>A</i> we have <i>b</i> &rho; <i>b</i> thus <i>b</i> &in; [<i>b</i>]. By hypothesis [<i>a</i>] = [<i>b</i>], hence <i>b</i> &in; <i>A</i> from which by definition of equivalence class <i>b</i> &rho; <i>a</i> and by symmetry <i>a</i> &rho; <i>b</i>. <br> Conversely, suppose that <i>a</i> &rho; <i>b</i>, we shall show the double inclusion [<i>a</i>] &subseteq; [<i>b</i>] and [<i>b</i>] &subseteq; [<i>a</i>]. Let <i>c</i> &in; [<i>a</i>]. Then <i>a</i> &rho; <i>c</i> which along to <i>b</i> &rho; <i>a</i> imply by transitivity <i>b</i> &rho; <i>c</i>, thus (by definition of [<i>b</i>]), <i>c</i> &in; [<i>b</i>]. We just proved that [<i>a</i>] &subseteq; [<i>b</i>]. To prove the other inclusion is analogous exchanging the roles of <i>a</i> and <i>b</i>. Thus [<i>a</i>] = [<i>b</i>]. &emsp;□</p>
+
+<p><b>Definition 1.2.8</b>. Let &rho; be an equivalence relation defined on a set <i>A</i>. We define the <i>quotient set</i> of <i>A</i> with respect to &rho;, and we indicate it as <i>A</i> / <i>&rho;</i>, the set of all equivalence classes modulo &rho;. In symbols</p>
+
+<div class="eq">
+<p><i>A</i>/&rho;</i> := {[<i>a</i>] | <i>a</i> &in; <i>A</i>}</p>
+</div>
+
+<p>The previous definition states that equivalent elements <i>a</i> in <i>A</i> are transformed in a single element, [<i>a</i>] of <i>A</i>/<i>&rho;</i>.</p>
+
+<h2 id="partitions">Partitions</h2>
+
+<p><b>Definition 1.2.9</b>. A partition of a set <i>A</i> is a set of pairwise disjoint non-empty subsets <i>A<sub>&alpha;</sub></i> called <i>parts</i> (or members) of <i>A</i> such that</p>
+
+<ol>
+	<li><p>U<sub><i>&alpha;</i></sub> <i>A<sub>&alpha;</sub></i> = <i>A</i> (the parts cover <i>A</i> entirely)</p></li>
+	<li><p><i>A<sub>&alpha;</sub></i> ∩ <i>A<sub>&beta;</sub></i> &ne; ∅ ⇐⇒ <i>A<sub>&alpha;</sub></i> = <i>A<sub>&beta;</sub></i> (either the parts <i>coincide</i> or are <i>disjoint</i>)</p></li>
+</ol>
+
+<p>For example the sets</p>
+
+<p>{2,3}, {1,5}, {4}</p>
+
+<p>For a partition of the set {1,2,4,5}. <br>The two subsets of ℤ, of even and odd integers form a partition of ℤ.</p>
+
+<p><b>Theorem 1.2.10</b>. Let &rho; be an equivalence relation on <i>A</i>. The equivalence classes of <i>A</i> modulo &rho; make a partition of <i>A</i>.</p>
+
+<p><b>Proof</b>. (1) They cover <i>A</i>: indeed, since <i>a</i> &rho; <i>a</i> for every <i>a</i> &in; <i>A</i>, every <i>a</i> &in; <i>A</i>, belongs to its equivalence class. (2) The equivalence classes either <i>coincide</i> or are <i>disjoint</i>: let <i>z</i> &in; [<i>a</i>] &Cup; [<i>b</i>], i.e. [<i>a</i>] and [<i>b</i>] not disjoint. Then <i>z</i> &rho; <i>a</i> and <i>z</i> &rho; <i>b</i>, from which, by symmetry and transitivity, <i>a</i> &rho; <i>b</i>. By Proposition 1.2.9, [<i>a</i>] = [<i>b</i>], that is the two classes coincide.□</p>
+
+<p><b>Theorem 1.2.11</b>. Every partition of a set <i>A</i> determines on <i>A</i> an equivalence relation, with the parts of the partition the equivalence classes.</p>
+
+<p><b>Proof</b>. Indicating with <i>A<sub>&alpha;</sub></i> the subsets of the partition, it suffices to define the following relation</p>
+
+<div class="eq">
+<p><i>a</i> &rho; <i>b</i>, &nbsp; &emsp; ⇐⇒ &emsp; ∃<i>A<sub>&alpha;</sub></i> | <i>a,b</i> &in; <i>A<sub>&alpha;</sub></i></p>
+</div>
+
+<p>which is an equivalence relation, whose classes are the parts <i>A<sub>&alpha;</sub></i>.&emsp;□</p>
+
+<p><b>Definition 1.2.12</b>. A relation &rho; defined on a set <i>A</i> is said <i>antisymmetric</i> if</p>
+
+<div class="eq">
+<p><i>a</i> &rho; <i>b</i>, &nbsp; <i>b</i> &rho; <i>a</i> &emsp; ⇒ &emsp; <i>a</i> = <i>b</i></p>
+</div>
+
+<h2 id="composition">Composition of relation</h2>
+
+<p>Let <i>A,B</i> and <i>C</i> be ordinary sets. Let <i>R</i> be a relation from <i>A</i> to <i>B</i>, and let <i>S</i> be a relation from <i>B</i> to <i>C</i>. The composition of <i>R</i> and <i>S</i> is a new relation (called <b>composite relation</b>) denoted <i>R</i> ∘ <i>S</i> and defined by</p>
+
+<div class="eq">
+<p><i>R</i> ∘ <i>S</i> = {(<i>a,c</i>) |(<i>a,b</i>) &in; <i>R</i>, (<i>b,c</i>) &in; <i>S</i>, <i>a</i> &in; <i>A</i>, <i>b</i> &in; <i>B</i>, <i>c</i> &in; <i>C</i>}</p>
+</div>
+
+<p>The composition of two relation can be extended to the composition of <i>n</i> relations as <i>R</i><sub>1</sub> ∘ <i>R</i><sub>2</sub> ∘ ... ∘ <i>R<sub>n</sub></i>. Since composition operation is associative, that is, (<i>R</i><sub>1</sub> ∘ <i>R</i><sub>2</sub>) ∘ <i>R</i><sub>3</sub> = <i>R</i><sub>1</sub> ∘ (<i>R</i><sub>2</sub> ∘ <i>R</i><sub>3</sub>), we can drop the parentheses and simply write <i>R</i><sub>1</sub> ∘ <i>R</i><sub>2</sub> ∘ <i>R</i><sub>3</sub>.</p>
+
+<section aria-label="End">
+<a href="sets.html">&#171;Sets</a>
+<a href="index.html">Index</a>
+<a href="functions.html">Functions &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

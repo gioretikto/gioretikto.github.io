@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Taylor Series">
+	<title>Taylor Series</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Taylor Series</h1>
+
+<p>In the last section we approximated <i>f</i>(<i>x</i>) at a value <i>x</i><sub>0</sub> by its linearization (a straight line). The linear approximation</p>
+
+<div class="eq">
+<p><i>T</i><sub>1</sub>(<i>x</i>) = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>agrees with both <i>f</i>(<i>x</i><sub>0</sub>) and <i>f'</i>(<i>x</i><sub>0</sub>) at the value <i>x</i><sub>0</sub>, and it approximates <i>f</i>(<i>x</i>) near <i>x</i><sub>0</sub>.</p>
+
+<p>To better approximate the graph of <i>f</i> at the neighborhood of a point (<i>x</i><sub>0</sub>, <i>f</i>(<i>x</i><sub>0</sub>)), we must use a curve that has the same concavity as the graph of <i>f</i>. As we knwow the second <i>f''</i> derivative of a function captures <a href="second_derivative.html">curvature information</a> of a function. Let us find a polynomial <i>T</i><sub>2</sub>(<i>x</i>) with derivatieves at <i>x</i><sub>0</sub> that agree with those of <i>f</i> up to order 2. We can try a parabolic approximation defined by</p>
+
+<div class="eq">
+<p><i>T</i><sub>2</sub>(<i>x</i>) = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i> − <i>x</i><sub>0</sub>) + <i>c</i><sub>2</sub>(<i>x</i> − <i>x</i><sub>0</sub>)<sup>2</sup></p>
+</div>
+
+<p>where <i>c</i><sub>2</sub> is to be determined and such that</p>
+
+<div class="eq">
+<p><i>T</i><sub>2</sub>(<i>x</i><sub>0</sub>) = <i>f</i>(<i>x</i><sub>0</sub>), &emsp; <i>T'</i>(<i>x</i><sub>0</sub>) = <i>f'</i>(<i>x</i><sub>0</sub>) &emsp;and&emsp; <i>T''</i>(<i>x</i><sub>0</sub>) = <i>f''</i>(<i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>By direct differentiation we get <i>T''</i><sub>2</sub>(<i>x</i><sub>0</sub>) = 2<i>c</i><sub>2</sub>. So we choose <i>c</i><sub>2</sub> = <i>f''</i>(<i>x</i><sub>0</sub>)/2. Then</p>
+
+<div class="eq">
+<p><i>T</i><sub>2</sub>(<i>x</i>) = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i> − <i>x</i><sub>0</sub>) + <i>f''</i>(<i>x</i><sub>0</sub>)/2(<i>x</i> − <i>x</i><sub>0</sub>)<sup>2</sup></p>
+</div>
+
+<p>which is a <b>quadratic</b>, or parabolic, <b>approximation</b>.</p>
+
+<p>Let <i>f</i>(<i>x</i>) = cos <i>x</i>. We have</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i><sub>0</sub>) = cos(0) = 1, &emsp; <i>f'</i>(<i>x</i><sub>0</sub>) = −sin(0) = 0 &emsp;and&emsp; <i>f''</i>(<i>x</i><sub>0</sub>) = −cos(0) = −1</p>
+</div>
+
+<p>Then <i>T</i><sub>2</sub>(<i>x</i>) = 1 − <i>x</i><sup>2</sup>/2.</p>
+
+<img src="img/cos_quadratic_approx.png" alt="cos quadratic approximation"/>
+
+<p>The function cos <i>x</i> is approximated by the parabola <i>y</i> = 1 − <i>x</i><sup>2</sup>/2</i> better off than its tangent line <i>y</i> = 1, for <i>x</i> → 0: Indeed, the difference between <i>f</i> and this polynomiral is o(<i>x</i><sup>2</sup>), <i>i.e.</i> tends to zero more rapidly than <i>x</i><sup>2</sup> (and not only more rapidly <i>x</i>).</p>
+
+<p>To do even better, we can try to add a cubic term to make the the 3rd derivative equal as well. So let</p>
+
+<div class="eq">
+<p><i>T</i><sub>3</sub>(<i>x</i>) = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i> − <i>x</i><sub>0</sub>) + <i>f''</i>(<i>x</i><sub>0</sub>)/2(<i>x</i> − <i>x</i><sub>0</sub>)<sup>2</sup> + <i>c</i><sub>3</sub>(<i>x</i> − <i>x</i><sub>0</sub>)<sup>3</sup></p>
+</div>
+
+<p>Requiring that <i>T''</i>(<i>x</i><sub>0</sub>) = <i>f'''</i>(<i>x</i><sub>0</sub>) forces <i>T'''</i>(<i>x</i><sub>0</sub>) = 3 ⋅ 2 <i>c</i><sub>3</sub> = <i>f'''</i>(<i>x</i><sub>0</sub>) which means that <i>c</i><sub>3</sub> = 1/(2⋅3)<i>f'''</i>(<i>x</i><sub>0</sub>). Therefore</p>
+
+<div class="eq">
+<p><i>T</i><sub>3</sub>(<i>x</i>) = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i> − <i>x</i><sub>0</sub>) + <i>f''</i>(<i>x</i><sub>0</sub>)/2(<i>x</i> − <i>x</i><sub>0</sub>)<sup>2</sup> + <i>f'''</i>/3⋅2 (<i>x</i> − <i>x</i><sub>0</sub>)<sup>3</sup></p>
+</div>
+
+<p>which is called the <b>cubic approximation</b>. We can continue this process indefinetly, assuming that <i>f</i> has the required derivatives, to obtain</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mi>k</mi>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>k</mi>
+  </msup>
+</math>
+
+<!-- $$T_{n,x_0} (x) = \sum_{k=0}^n \frac{f^k(x_0)}{k!} (x-x_0)^k $$ -->
+
+<p>which is called <i>n</i>th-degree Taylor polynomial of <i>f</i> at <i>x</i><sub>0</sub>.</p>
+
+<p>So by supposing that <i>f</i> is any function that can be represented by a power series</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>c</i><sub>0</sub> + <i>c</i><sub>1</sub>(<i>x</i> − <i>a</i>) + <i>c</i><sub>2</sub>(<i>x</i> − <i>a</i>)<sup>2</sup> + <i>c</i><sub>3</sub>(<i>x</i> − <i>a</i>)<sup>3</sup> + ..., &emsp; |<i>x</i> − <i>a</i>| &lt; <i>R</i></p>
+</div>
+
+<p>è interessante notare che i coefficienti <i>c<sub>i</sub></i> possono essere espressi in termini dei valori di <i>f</i> e delle sue derivate in <i>a</i>. Se <i>x=a</i>, tutti i termini eccetto il primo si annullano e risulta:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>a</i>) = <i>c</i><sub>0</sub></p>
+</div>
+
+<p>per ottenere il coefficiente <i>c</i><sub>1</sub> deriviamo ambo i membri della (4.0)</p>
+
+<div class="eq">
+<p><i>f</i>'(<i>x</i>) = <i>c</i><sub>1</sub> + 2<i>c</i><sub>2</sub>(<i>x</i> − <i>a</i>) + 3<i>c</i><sub>3</sub>(<i>x</i> − <i>a</i>)<sup>3</sup> + ..., &emsp; |<i>x</i> − <i>a</i>| &lt; <i>R</i></p>
+</div>
+
+<p>again in <i>x</i> = <i>a</i> we have:</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>a</i>) = <i>c</i><sub>1</sub></p>
+</div>
+
+<p>derivando la (4.1) abbiamo:</p>
+
+<div class="eq">
+<p><i>f</i>''(<i>x</i>) = 2<i>c</i><sub>2</sub> + 6<i>c</i><sub>3</sub>(<i>x</i> − <i>a</i>) + 12<i>c</i><sub>4</sub>(<i>x</i> − <i>a</i>) + ..., &emsp; |<i>x</i> − <i>a</i>| &lt; <i>R</i></p>
+</div>
+
+<p>determiniamo il terzo coefficiente ponendo <i>x</i> = <i>a</i></p>
+
+<div class="eq">
+<p><i>f</i> ''(<i>a</i>) = 2<i>c</i><sub>2</sub></p>
+</div>
+
+<p>In generale la relazione tra coefficienti della serie di potenze e le derivate di <i>f</i> è la seguente:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+    </mrow>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>n</mi>
+  <mo>!</mo>
+  <msub>
+    <mi>c</mi>
+    <mi>n</mi>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>or&#xA0;</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>c</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$f^{n}(a) = n!c_n \quad \text{or } \quad c_n = \frac{f^{n}(a)}{n!} $$ -->
+
+<div class="def">
+<p><b>Definizione 5.1 (Polinomio di Taylor)</b> - Data una funzione derivabile <i>n</i> volte in un punto <i>x</i><sub>0</sub> definiamo il seguente polinomio:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>T</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>,</mo>
+            <msub>
+              <mi>x</mi>
+              <mn>0</mn>
+            </msub>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2033;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>3</mn>
+        </mfrac>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2034;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>3</mn>
+        </msup>
+        <mo>+</mo>
+        <mo>&#x2026;</mo>
+        <mo>+</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mi>n</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <msup>
+          <mi>f</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mo stretchy="false">(</mo>
+                <mi>k</mi>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <msub>
+              <mi>x</mi>
+              <mn>0</mn>
+            </msub>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <mi>k</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>k</mi>
+        </msup>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{align} T_{n,x_0} (x) &= f(x_0) + f'(x_0) (x - x_0) + \frac{1}{2} f''(x_0) ((x-x_0)^2 + \frac{1}{3}f'''(x_0) (x-x_0)^3+ \ldots + \frac{1}{n!} f^{n}(x_0) (x-x_0)^n \\ &= \sum_{k=0}^n \frac{f^{(k)} (x_0) } {k!} (x- x_0)^k  \end{align}$$ -->
+
+<p>noto come <b>polinomio di Taylor di grado <i>n</i></b>.</p>
+</div>
+
+<p>Notiamo che il polinomio <i>T<sub>n</sub></i> solitamente è proprio di grado <i>n</i>, ma può acere grado minore se <i>f</i><sup>(<i>n</i>)</sup> (0) = 0. <br> Il prossimo teorema afferma che è possibile approssimare la funzione <i>f</i> con il suo polinomio di Taylor, localmente nell'itorno di <i>x<sub>0</sub></i>.</p>
+
+<p><b>Theorem 4.3 - (Formula di Taylor all'ordine <i>n</i> con resto secondo Peano</b>). Let <i>f</i>:(<i>a,b</i>) → ℝ dervabile <i>n</i> volte in <i>x</i><sub>0</sub> &in; (<i>a,b</i>).  Allora, vale la relazione</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>T</i><sub><i>n,x</i><sub>0</sub>(<i>x</i>) + o((<i>x</i> − <i>x</i><sub>0</sub>))<sup><i>n</i></sup>, &emsp; <i>x</i> ⟶ <i>x</i><sub>0</sub></p>
+</div>
+
+<p><b>Proof</b>. It suffices to prove that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>L</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>T</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>,</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+        </mrow>
+      </msub>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ L = \lim_{x \to x_0} \frac{f(x) - T_{n,x_0}} {(x-x_0)^n } = 0 $$ -->
+
+<p>si tratta di una forma indeterminata del tipo 0/0, applicando il teorema di de L'Hopital ottemiamo il limite:</p>
+
+<img src="img/taylor/hopital.png" alt="hopital dimostrazione taylor" />
+
+<p>questa è ancora una forma indeterminata così come per <i>n</i> &ge; 1. Reiterando <i>n</i> − 1 volte l'applicazioen di l'Hopital sinchè non giungiamo al limite:</p>
+
+$$\lim_{x \to x_0} \frac{f^{(n-1)}(x) - T_{n,x}}{x - x_0} = \lim_{x \to x_0} \frac{f^{(n-1) (x) - f^{(n-1)}(x_0) - f^{(n)}(x_0)(x-x_0)}{n!(x-x_0)} = \frac{1}{n!} \left( \frac{^{(n-1) (x) - f^{(n-1)}(x_0) }{x-x_0} - f^{(n)}(x_0) \right)= 0 $$
+
+<img src="img/taylor/taylorend.png" alt="dimostrazione taylor" />
+
+<p>dalla definizione di derivata segue che il limite è nullo.</p>
+
+<p>For the special case <i>x</i><sub>0</sub> = 0  the Taylor series becomes, what is known as a MacLuarin's series</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup></i> = 1 + x + <i>x</i><sup>2</sup>/2! + ... + <i>x</i><sup>2</sup>/<i>n</i>! + o(<i>x</i><sup>n</sup>)<br>
+cos <i>x</i> = 1 - <i>x</i><sup>2</sup>/2!  + <i>x</i><sup>4</sup>/4! + ... + (-1)<sup><i>n</i></sup> x<sup>2n</sup>/(2<i>n</i>)! + o(<i>x</i><sup>2<i>n</i></sup>)<br>
+sin <i>x</i> = 1 - <i>x</i><sup>3</sup>/2!  + <i>x</i><sup>5</sup>/5! + ... + (-1)<sup><i>n</i></sup> x<sup>2<i>n</i>+1</sup>/(2<i>n</i> +1)! + o(<i>x</i><sup>2<i>n</i>+1</sup>)<br>
+cosh <i>x</i> = 1 + <i>x</i><sup>2</sup>/2!  + <i>x</i><sup>4</sup>/4! + ... + <i>x</i><sup>2<i>n</i></sup>/(2<i>n</i>)! + o(<i>x</i><sup>2<i>n</i></sup>)<br>
+sinh <i>x</i> = 1 + <i>x</i><sup>3</sup>/2!  + <i>x</i><sup>5</sup>/5! + ... + <i>x</i><sup>2<i>n</i>+1</sup>/(2<i>n</i>+1)! + o(<i>x</i><sup>2<i>n</i>+1</sup>)<br>
+ln(1 + <i>x</i>) = <i>x</i> - <i>x</i><sup>2</sup>/2 + <i>x</i><sup>3</sup>/3 + ... + (-1)<sup><i>n</i>-1</sup> <i>x<sup>n</sup></i>/<i>n</i> + o(<i>x</i><sup>n</sup>)</p> 
+</div>
+
+<img src="img/taylor/maclaurin.png" alt="sviluppi di MacLuarin" />
+
+<p id="T"><b>Taylor's Theorem - (Formula di Taylor all'ordine <i>n</i> con resto di Lagrange)</b>. Suppose <i>f</i> is a real function on [<i>a,b</i>], <i>n</i> is a positive integer, <i>f</i><sup>(<i>n</i> -1)</sup> is continuous on [<i>a,b</i>], <i>f<sup>(n)</sup></i>(<i>t</i>) exits for every <i>t</i> &in; (<i>a,b</i>). Let <i>&alpha;&beta;</i> be distinct points of [<i>a,b</i>], and define</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>&#x3B1;</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B1;</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>k</mi>
+  </msup>
+</math>
+
+<!-- $$ P(t) = \sum_{k=0}^{n-1} \frac{f^{(k)} (\alpha)} {k!} (t- \alpha)^k $$ -->
+
+<p>Then there exits a point <i>x</i> between <i>&alpha;</i> and <i>&beta;</i> such that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B2;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B2;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B2;</mi>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B1;</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$ f(\beta) = P(\beta) + \frac{f^{(n)} (x)} {n!} (\beta - \alpha)^n $$ -->
+
+<p>For <i>n</i> = 1, this is just the <a href="Lagrange.html">mean value theorem</a>. In general, the theorem shows that <i>f</i> can be approximated by a polynomial of degree <i>n</i> -1, and that the previous relation allows to estimate the error, if we know bounds on |<i>f<sup>n</sup></i>(<i>x</i>)|. If we know the value of <i>f</i> at the point α. You wonder what the value is at the point β, so you build the polynomial P(x) with data from f at the point α. Then P(β) is your guess of the unknown value f(β).</p>
+
+<p><b>Proof</b>. Let <i>M</i> be the number defined by</p>
+
+<div class="eq">
+<p><i>f</i>(<i>&beta;</i>) = <i>P</i>(<i>&beta;</i>) + <i>M</i>(<i>&beta;</i> − <i>&alpha;</i>)<sup><i>n</i></sup> &emsp;(<b>1</b>)</p>
+</div>
+
+<p>and put</p>
+
+<div class="eq">
+<p><i>g</i>(<i>t</i>) = <i>f</i>(<i>t</i>) - <i>P</i>(<i>t</i>) - <i>M</i>(<i>t</i> - <i>&alpha;</i>)<sup><i>n</i></sup> &emsp; (<i>a</i> &le; <i>t</i> &le; <i>b</i>)&emsp;(<b>2</b>)</p>
+</div>
+
+<p>We have to show that <i>n</i>!<i>M</i> = <i>f</i><sup>(<i>n</i>)</sup>(<i>x</i>) for some <i>x</i> between <i>&alpha;</i> and <i>&beta;</i>. By (1) and (2),</p>
+
+<div class="eq">
+<p><i>g</i><sup>(<i>n</i>)(<i>t</i>) = <i>f</i><sup>(<i>n</i>)(<i>t</i>) − <i>n!M</i> &emsp; (<i>a</i> &lt; <i>b</i>)</p>
+</div>
+
+<p>Hence the proof will be complete if we can show that <i>g</i><sup>(<i>n</i>)</sup>(<i>x</i>) = 0 for some <i>x</i> between <i>&alpha;</i> and <i>&beta;</i>. <br> Since <i>P</i><sup>(<i>k</i>)</sup> (<i>&alpha;</i>) = <i>f</i><sup>(<i>k</i>)</sup>(<i>&alpha;</i>) for <i>k</i> = 0, ..., <i>n</i> - 1, we have</p>
+
+<div class="eq">
+<p><i>g</i>(<i>&alpha;</i>) = <i>g'</i>(<i>&alpha;</i>) = ... = <i>g</i><sup>(<i>n</i> − 1)</sup>(<i>&alpha;</i>) = 0</p>
+</div>
+
+<p>Our choice of <i>M</i> shows that <i>g</i>(<i>&beta;</i>) = 0, so that <i>g</i>'(<i>x</i><sub>1</sub>) = 0 for some <i>x</i><sub>1</sub> between <i>&alpha;</i> and <i>&beta;</i>, by the mean value theorem. Since <i>g</i>'(<i>&alpha;</i>) = 0, we conclude similarly that <i>g</i>'(<i>x</i><sub>2</sub>) = 0 for some <i>x</i><sub>2</sub> between <i>&alpha;</i> and <i>x</i><sub>1</sub>. After <i>n</i> steps we arrive at the conclusion that <i>g</i><sup>(<i>n</i>)</sup>(<i>x<sub>n</sub></i>) between <i>&alpha;</i> and <i>x</i><sub><i>n</i> -1</sub>, that is, between <i>&alpha;</i> and <i>&beta;</i>.&emsp;□</p>
+
+
+<p>La formula ha la struttura:</p>
+
+<div class="eq">
+<p>funzione da approssimare = polinomio approssimante + errore di approsimazione</p>
+</div>
+
+
+<p><b>Example 4.5</b>.  The 3rd degree Taylor approximation for sin <i>x</i> with <i>x</i><sub>0</sub> = 0 is sin <i>x</i> ≈ <i>x</i> − <i>x</i><sup>3</sup>/3!. This gives an estimate for the value of sin (1) which is</p>
+
+<div class="eq">
+<p>sin 1 ≈ 1 − 1<sup>3</sup>/3!<br>
+≈ 1 − 0.1666.. = 0.8333...</p>
+</div>
+
+<p>But how accurate is this? The remainder formula tells us that the error R<sub>3</sub>(1) is given by</p>
+
+<div class="eq">
+<p>R<sub>3</sub>(1) = (sin <i>x</i>)<sup>(4)</sup>(<i>c</i>) (1)<sup>4</sup>/4!</p>
+</div>
+
+<p>for some <i>c</i> with 0 &le; <i>c</i> &le; 1. We don't know what this <i>c</i> is, but amazingly enough, we don't need to know what it is in order to bound R<sub>3</sub>(1). Sine the fourth derivative (sin x)<sup>(4)</sup> is equal to sin <i>x</i>, and the values of sin <i>x</i> are always beteween −1 and 1, we know that |(sin <i>x</i>)<sup>(4)</sup>(<i>c</i>)| &le; 1. So</p>
+
+<div class="eq">
+<p>|R<sub>3</sub>(1)| &le; 1/4! = 1/24 &le; 0.042</p>
+</div>
+
+<p>The error is no large than this number, no matter what the value of <i>c</i> might be. The remainder formula tells us that the true value of sin (1) lies between (0.8333... - 0.042) and (0.8333... + 0.042). Just to verify this, note that the actual value of sin (1) is 0.8414709848079..., which is within this range. &emsp;■</p>
+
+<section aria-label="End">
+<a href="linear_approximation.html">&#171;The Linear Approximation</a>
+<a href="index.html">Index</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Properties of the integral">
+	<title>Properties of the integral</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Properties of the integral</h1>
+    
+<p>Following directly from the definition of integral we can prove the followin propertis.</p>
+
+<p><b>Theorem 7.2.1</b>. Assume that <i>f, g</i>: [<i>a, b</i>] → ℝ are integrable and <i>α,&beta;</i> ∈ ℝ. Then, the following hold: Let <i>f</i>, <i>g</i> continuos functions in [<i>a, b</i>].</p>
+      
+<p><i><b>Linearity</b></i>. If <i>&alpha;</i> and <i>&beta;</i> are two constants:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mo stretchy="false">[</mo>
+  <mi>&#x3B1;</mi>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>&#x3B2;</mi>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">]</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mi>&#x3B1;</mi>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>&#x3B2;</mi>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+<mtext>&emsp;7.2.2</mtext>
+</math>
+
+<!-- $$\int_a^b [\alpha f(x) + \beta g(x)] \text{d}x = \alpha  \int_a^b  f(x) \, \text{d}x + \beta  \int_a^b  g(x) \, \text{d}x $$ -->
+
+<p><i><b>Additivity with respect to the domain of integration</b></i> Let <i>c</i> &in; ℝ, either inside or outside the interval [<i>a,b</i>], then:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>c</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>+</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>c</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\int_a^b f(x) \, \text{d}x = \int_a^c f(x) \, \text{d}x +  \int_c^b  f(x) \, \text{d}x $$ -->
+
+<p>This property tells one how to integrate over adjacent intervals [<i>a,c</i>] and [<i>c,b</i>] where <i>c</i> need not be between <i>a</i> and <i>b</i>.</p>
+      
+<p><i><b>Convention</b></i>. If <i>a</i> &lt; <i>b</i>, then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>b</mi>
+    <mi>a</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ \int_a^b f(x) \, \text{d}x = -\int_b^a f(x) \, \text{d}x$$ -->
+
+<p>For this reasong the previous property on the additivity with respect to the domain of integration, holds either if <i>c</i> is inside or outside the interval [<i>a,b</i>].</p>
+  
+<p><i><b>Monotonicity</i></b>. If <i>f</i> &lt; <i>g</i> in [<i>a, b</i>], then:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>&#x2264;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\int_a^b f(x) \, \text{d}x \le \int_a^b  g(x) \, \text{d}x $$ -->
+
+<p><b>Upper and lower bounds</b>: If <i>a</i> &lt; <i>b</i>. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&#x2264;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$|\int_a^b f(x) \, \text{d}x|  \le \int_a^b  |f(x)| \, \text{d}x $$ -->
+
+<p><b>Proof</b>. We prove linearity, directly from the definition of integral</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo stretchy="false">[</mo>
+  <mi>&#x3B1;</mi>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3BE;</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>&#x3B2;</mi>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3BE;</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <mi>&#x3B1;</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mrow>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+        <mi>a</mi>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3BE;</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>+</mo>
+  <mi>&#x3B2;</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mrow>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+        <mi>a</mi>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <mi>g</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3BE;</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$ S_n = \frac{b-a}{n} \sum_{i=1}^n [\alpha f(\xi_i) + \beta f(\xi_i)] = \alpha \left [ \frac{b-a}{n} \sum_{i=1}^n  f(\xi_i) \right ] + \beta \left [ \frac{b-a}{n} \sum_{i=1}^n  g(\xi_i) \right ]$$ --> 
+
+<p>From <i>n</i> ⟶ &infin; we pass from sums to integrals. The left-hand side becomes</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mo stretchy="false">[</mo>
+  <mi>&#x3B1;</mi>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>&#x3B2;</mi>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">]</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ \int_a^b [\alpha f(x) + \beta f(x)]\text{d}x$$ -->
+
+<p>while the right hand side</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3B1;</mi>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>&#x3B2;</mi>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ \alpha \int_a^b f(x)\,\text{d}x + \beta \int_a^b  g(x) \, \text{d}x$$ -->
+
+<p>from which follows the equality between the two expression, proving linearity.</p>
+
+<p><b>Proof 2</b> (of <i>linearity</i>) Suppose <i>F</i>(<i>x</i>) is a primitive of <i>f</i>(<i>x</i>) and <i>G</i>(<i>x</i>) a primitive of <i>g</i>(<i>x</i>). By liinearity of the derivative</p>
+
+<div class="eq">
+(<i>&alpha;F</i>(<i>x</i>) + <i>&beta;G</i>(<i>x</i>))' = <i>&alpha;F</i>(<i>x</i>) + <i>&beta;G</i>(<i>x</i>) = <i>&alpha;f</i>(<i>x</i>) + <i>&beta;g</i>(<i>x</i>), &emsp; &forall;<i>x</i> &in; <i>I</i></p>
+</div>
+
+<p>That is <i>&alpha;F</i>(<i>x</i>) + <i>&beta;G</i>(<i>x</i>) is a primite of <i>&alpha;f</i>(<i>x</i>) + <i>&beta;g</i>(<i>x</i>) on [<i>a,b</i>], which is the same as 7.2.2 for indefinite integrals. &emsp;□.</p>
+
+<p><b>Theorem</b> (Mean Value Theorem). If <i>f</i>: [<i>a,b</i>] ⟶ ℝ, a continuous function, then there is a number <i>c</i> in [<i>a,b</i>] for which</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>c</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \frac{1}{b-a} \int_a^b f(x) \, \text{d}x = f(c) $$ -->
+
+<p><b>Proof</b>. By the extreme value theorem, <i>f</i> has a minimum value <i>m</i> and a maximum value <i>M</i> on [<i>a,b</i>]. Then from the monotonicity property we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>m</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>m</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>&#x2264;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>c</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>M</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mi>M</mi>
+</math>
+
+<!-- $$ m = \frac{1}{b-a} \int_a^b m \, \text{d}x \le f(c) =  \int_a^b f(x) \, \text{d}x \le \frac{1}{b-a} \int_a^b M \, \text{d}x = M $$ -->
+
+<p>Since a continuous fuction takes on all values between its minimum and maximum, there is a number <i>c</i> in [<i>a,b</i>] for which the thesis holds. &emsp;□</p>
+
+<section aria-label="End">
+<a href="integral.html">&#171;Integral</a>
+<a href="index.html">Index</a>
+<a href="fundamental_calculus.html">The Fundamental Theorem of Calculus&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

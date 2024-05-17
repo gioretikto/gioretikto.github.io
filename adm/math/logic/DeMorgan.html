@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="De Morgan's laws">
+	<title>De Morgan's laws</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>De Morgan's laws</h1>
+
+<p>Two useful logical equivalences are <b>De Morgan's Laws</b>:</p>
+
+<div class="eq">
+<p>¬(P ∧ Q) ≡ (¬P) ∨ (¬Q)<br>
+¬(P ∨ Q) ≡ (¬P) ∧ (¬Q)</p>
+</div>
+
+<table class="centertable">
+<caption>Verification of De Morgan's Law</caption>
+<tr><th>P</th> <th>Q</th> <th>P ∨ Q</th> <th>¬P ∨ Q</th> <th>¬P</th> <th>¬Q</th> <th>¬P ∧ ¬Q</th></tr>
+<tr> <td>T</td> <td>T</td> <td>T</td> <td><b>F</b></td> <td>F</td> <td>F</td> <td><b>F</b></td> </tr>
+<tr> <td>T</td> <td>F</td> <td>T</td> <td><b>F</b></td> <td>F</td> <td>T</td> <td><b>F</b></td> </tr>
+<tr> <td>F</td> <td>T</td> <td>T</td> <td><b>F</b></td> <td>T</td> <td>F</td> <td><b>F</b></td> </tr>
+<tr> <td>F</td> <td>F</td> <td>F</td> <td><b>T</b></td> <td>T</td> <td>T</td> <td><b>T</b></td> </tr>
+</table>
+
+<p><b>Example 1</b> (<b>Negating a Compound Statement</b>) Negate the statement “I will get up and I will go to work.”</p>
+
+<p><b>Solution</b>. It is correct to say: “It is not the case that I will get up and I will go to work.” However, using the De Morgan ¬(P ∧ Q) ≡ (¬P) ∨ (¬Q), we can express the negation better as “I will not get up or I will not go to work.”&emsp;■</p>
+
+<p><b>Example 2</b>. L'affermazione "tutti i sabati vado in birreria e poi in discoteca" è falsa. Se ne deduce che "qualche sabato non vado in birreria o in discoteca".&emsp;■</p>	
+
+<p><b>Proposition</b>. (<b>Rule of Substitution</b>) Let <i>P</i> and <i>Q</i> be statements. Let C(<i>P</i>) be a compound statement containing the statement <i>P</i>. And let C(<i>Q</i>)  be the same compound statement in which each occurrence of P is replaced by Q. If P and Q are logically equivalent, then C(P) and C(Q) are logically equivalent. That is,</p>
+
+<div class="eq">
+<p>If P ≡ Q, then C(P) ≡ C(Q).</p>
+</div>
+
+<p><b>Example</b>. (<b>Proving a Logical Equivalence Algebraically</b>) Using stated laws and the rule of substitution, prove algebraically that P ∧ Q ≡ ¬((¬P) ∨ (¬Q))</p>
+
+<p><b>Solution</b>. </p>
+
+<ol>
+	<li><p>P ∧ Q ≡ ¬(¬(P ∧ Q)) &emsp;By the Double Negation Law</p></li>
+	<li><p>¬(P ∧ Q) ≡ (¬P) ∨ (¬Q) &emsp;By a De Morgan Law</p></li>
+	<li><p>P ∧ Q ≡ ¬((¬P) ∨ (¬Q)) &emsp;By the Rule of Substitution (Substituting 2. into 1.)&emsp;■</p></li>
+</ol>
+
+<p>This example proves that it is logically possible to eliminate the conjunction operator, ∧ , because the operator can be expressed in terms of the negation operator, ¬ , and the disjunction operator, ∨. Hence, all statements could be written using ¬ and ∨ only. If we were to write the statement “I will get up and I will go to school.” using only “not” and “or” as indicated in 3, we would have to write “It is not the case that I will not get up or I will not go to school.” Clearly, you can see why we prefer to use all three logical operators “not,” “and,” and “or.” A proof similar to the one presented in the previous example can be constructed to show that P ∨ Q ≡ ¬((¬P) ∧ (¬Q)). Consequently, every statement could be written in terms of ¬ and ∧ only.</p>
+
+<p><b>Example</b>. (<b>Simplifying a Statement Algebraically</b>) The statement ¬(P ∨ (¬P)) is a contradiction. Simplify this contradiction using stated laws and the rule of substitution.</p>
+
+<p><b>Solution</b>.</p>
+
+<ol>
+	<li><p>¬(P ∨ (¬P)) ≡ (¬P) ∧ (¬(¬P)) By a De Morgan Law</p></li>
+	<li><p>¬(¬P) ≡ P By the Double Negation Law</p></li>
+	<li><p>¬(P ∨ (¬P)) ≡ (¬P) ∧ P By the Rule of Substitution (Substituting 2. into 1.)&emsp;■</p></li>
+</ol>
+
+<p>Since ¬(P ∨ (¬P)) is a contradiction, its logical equivalent (¬P) ∧ P is a contradiction also. The contradiction (¬P) ∧ P is called the law of the excluded middle. The fact that the statement (¬P) ∧ P is always false simply means that “not P” and “P” can not both be true simultaneously.</p>
+
+<p>One algebraic property of the real numbers is the distributive law. The distributive law for real numbers says: “For all real numbers x, y, and z, x· (y +z) = (x· y)+(x· z).” Thus, “multiplication distributes over addition.” Analogously in logic, if disjunction is to distribute over conjunction, we must be able to prove P ∨ (Q ∧ R) ≡ (P ∨ Q) ∧ (P ∨ R). We have seen that a truth table for a compound statement which contains exactly one simple statement P has two rows and that a truth table for a compound statement which contains exactly two simple statements P and Q has four rows. Thus, a truth table for a compound statement which contains exactly three simple statements P, Q, and R has eight rows, since P can assume two values (T or F), Q can assume two values, R can assume two values, and 2 × 2 × 2 = 8. We construct two truth tables in standard form—one for P ∨ (Q ∧ R) and one for (P ∨ Q) ∧ (P ∨ R). Hence, we construct one truth table with column headings P, Q, R, Q ∧ R, and P ∨ (Q∧R). And, we construct a second truth table with column headings P, Q, R, (P ∨ Q), (P ∨ R), and (P ∨ Q) ∧ (P ∨ R). In each table, we fill in the columns for P, Q, and R as shown and, then, successively calculate the columns of the table.</p>
+
+<table class="centertable">
+<tr><th>P</th> <th>Q</th> <th>R</th> <th>Q ∧ R</th> <th>P ∨ (Q ∧ R)</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td></tr>
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td></tr>
+<tr><td>F</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td></tr>
+</table>
+
+<table class="centertable">
+<tr><th>P</th> <th>Q</th> <th>R</th> <th>P ∨ Q</th> <th>P ∨ R</th> <th>(P ∨ Q) ∧ (P ∨ R)</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td></tr>
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td></tr>
+<tr><td>F</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td></tr>
+</table>
+
+<p>Since the truth values appearing in the column P ∨ (Q ∧ R) are identical to the truth values appearing in the column (P ∨ Q) ∧ (P ∨ R), we have proven the distributive law for disjunction: P ∨ (Q ∧ R) ≡ (P ∨ Q) ∧ (P ∨ R). The distributive law for conjunction and the associative laws for disjunction and conjunction stated below can easily be proved using truth tables.</p>
+
+<div class="eq">
+<p><b>Distributive Law for Disjunction</b>: P ∨(Q∧R) ≡ (P ∨Q)∧(P ∨R)<br>
+<b>Distributive Law for Conjunction</b>: P ∧(Q∨R) ≡ (P ∧Q)∨(P ∧R)<br>
+<b>Associative Law for Disjunction</b>: (P ∨ Q) ∨ R ≡ P ∨ (Q ∨ R)<br>
+<b>Associative Law for Conjunction</b>: (P ∧ Q) ∧ R ≡ P ∧ (Q ∧ R)</p>
+</div>
+
+<section aria-label="End">
+<a href="tautologies.html">«Tautologies</a>
+<a href="index.html">Index</a>
+<a href="conditional_statements.html">Conditional and Biconditional Statements»</a>
+</section>
+
+</article>
+
+</body>
+</html>

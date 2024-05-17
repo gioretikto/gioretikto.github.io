@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Fourier Series">
+	<title>Fourier Series</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Fourier Series</h1>
+
+<p>Our first motivation for the development of the Fourier series is to express a periodic function in a manner which is both concise and easy to manipulate. An important difference between Fourier series and <a href="Taylor.html">Taylor series</a> is that Fourier series can be used to represent and approximate non-continuous functions as well as continuous ones, whereas Taylor series are applicable only to infinitely differentiable functions. Taylor series are constructed from the expansion of the function <i>around a point<7i>, which means that Taylor series are in fact a local description of a function. Adding more terms toa Taylor series therefore only augments the local accuracy of the function, which is equivalent to noting that a Taylor series converges <a href="sequences_of_functions.html#pointwise">pointwise</a> to the function of interest for a large enough domain.<br> The mathematical function that spring imeediately to mind as building blocks for any periodic function are the trigonometric ones sine and cosine. A great advantage of the trigonometric functions is that they are very easy to integrate and to differentiate.  Jean Baptiste Joseph Fourier (1768–1830), showed that all periodic functions, could be expressd as a combination of such terms. <br> If <i>f</i>  is <a href="periodic_functions.html">periodic function</a> of period 2&pi;, then we attempt to represent <i>f</i> in the form of an infinite series</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>n</mi>
+  <mi>t</mi>
+  <mo>+</mo>
+  <msub>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msub>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>n</mi>
+  <mi>t</mi>
+  <mo stretchy="false">)&emsp;(1)</mo>
+</math>
+
+<!-- $$ f(t)  = a_0 + \sum_{n=1}^n (a_k\cos nt + b_k\sin nt) $$ -->
+
+<p>Each term of the series has period 2&pi;, so if the series coverges, its sum will be a function of period 2&pi;. </p>
+
+<p>We define the <b>trigonometric polynomial</b> of order <i>n</i>, as the function:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>P</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>:=</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>k</mi>
+  <mi>x</mi>
+  <mo>+</mo>
+  <msub>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msub>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>k</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$P_n(x) := a_0 + \sum_{k=1}^n (a_k\cos kx + b_k\sin kx) $$ -->
+
+<p>where <i>a<sub>k</sub>, b<sub>k</sub></i> are given real or complex numbers. It is a regular function, infinitely differentiable, with period 2&pi; (or submultiples of 2&pi;). </p>
+
+<p>Eq. 1 has two implications, Fourier synthesis and Fourier analysis; Fourier <i>synthesis</i> is something that you already know about from your study of vibrations and waves: A complicated vibration can be created by adding up simple harmonic motions of various frequncies, i.e. by adding up sine waves. The opposite of synthesis is <i>analysis</i>: one begins with a complex wave and discovers what the sine waves are that make it. Just as a chemist analyzes a material to discover how much of what elements are present, the acoustician analyzes a complex tone to discover how much of what sine frequencies are present.</p>
+
+<p>There are two questions to be answered:</p>
+
+<ol type="a">
+	<li><p>What values must <i>a</i><sub>0</sub>, <i>a<sub>n</sub>, b<sub>n</sub></i> have?</p></li>
+
+	<li><p>If the appropriate values are assigned to the coefficients, does the series actually represent the given function <i>f</i>?</p></li>
+</ol>
+
+<p>On the face of it, the first question is tremendously difficult, for Fourier series represents an equation in an infinite number of unknowns. But a reasonable answer can be found easily by using the <i>orthogonality</i> relations shown in Table 1.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x2212;</mo>
+            <mi>&#x3C0;</mi>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mtext>d</mtext>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x2212;</mo>
+            <mi>&#x3C0;</mi>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mtext>d</mtext>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">{</mo>
+          <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mstyle scriptlevel="0">
+                  <mspace width="1em"></mspace>
+                </mstyle>
+                <mi>n</mi>
+                <mo>&#x2260;</mo>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+                <mi>&#x3C0;</mi>
+                <mo>,</mo>
+                <mstyle scriptlevel="0">
+                  <mspace width="1em"></mspace>
+                </mstyle>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x2212;</mo>
+            <mi>&#x3C0;</mi>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mstyle scriptlevel="0">
+          <mspace width="0.167em"></mspace>
+        </mstyle>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>m</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mtext>d</mtext>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x2212;</mo>
+            <mi>&#x3C0;</mi>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mstyle scriptlevel="0">
+          <mspace width="0.167em"></mspace>
+        </mstyle>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>m</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mtext>d</mtext>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">{</mo>
+          <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mstyle scriptlevel="0">
+                  <mspace width="1em"></mspace>
+                </mstyle>
+                <mi>n</mi>
+                <mo>&#x2260;</mo>
+                <mi>m</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>&#x3C0;</mi>
+                <mo>,</mo>
+                <mstyle scriptlevel="0">
+                  <mspace width="1em"></mspace>
+                </mstyle>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x2212;</mo>
+            <mi>&#x3C0;</mi>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mstyle scriptlevel="0">
+          <mspace width="0.167em"></mspace>
+        </mstyle>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>m</mi>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mtext>d</mtext>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">{</mo>
+          <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mstyle scriptlevel="0">
+                  <mspace width="1em"></mspace>
+                </mstyle>
+                <mi>n</mi>
+                <mo>&#x2260;</mo>
+                <mi>m</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>&#x3C0;</mi>
+                <mo>,</mo>
+                <mstyle scriptlevel="0">
+                  <mspace width="1em"></mspace>
+                </mstyle>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+                <mo>&#x2260;</mo>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{align}
+
+\int_{-\pi}^{\pi} \sin (nx) \text{d}x = 0\\
+
+\int_{-\pi}^{\pi} \cos (nx) \text{d}x = \begin{cases} 0, \quad n \ne 0 \\ 2\pi, \quad n = 0 \end{cases}\\
+
+\int_{-\pi}^{\pi} \sin (nx) \, \cos (mx) \text{d}x = 0\\
+
+\int_{-\pi}^{\pi} \sin (nx) \, \sin (mx) \text{d}x = \begin{cases} 0, \quad n \ne m \\ \pi, \quad n = m \end{cases}\\
+
+\int_{-\pi}^{\pi} \cos (nx) \,  \cos (mx) \text{d}x = \begin{cases} 0, \quad n \ne m \\ \pi, \quad n = m \ne 0 \end{cases}\\
+
+\end{align}
+
+$$ -->
+
+<p>We may summarize these relations by saying: The definite integral (over the interval −π to π ) of the product of any two different functions from the series in Eq. 1 is zero. <br> The fundamental idea is that if the equality proposed in Eq.1  is to be a real equality, then both sides must give the same result after the same operation. The orthogonality relations then suggest operations that simplify the righthand side of Eq. (1). Namely, we multiply both sides of the proposed equation by one of the functions that appears there and integrate from −π to π . (We must assume that the integration of the series can be carried out term by term. This is sometimes difficult to justify, but we do it nonetheless.) <br> Multiplying both sides of Eq. (1) by the constant 1 (= cos(0<i>x</i>)) and integrating from −π to π , we find</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3C0;</mi>
+    </mrow>
+  </msubsup>
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>n</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>b</mi>
+    <mi>n</mi>
+  </msub>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>n</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\int_{-\pi}^\pi f(x) \text{d}x = \int_{-\pi}^{\pi} a_0 \text{d} x + \sum_{n=1}^\infty \int_{-\pi}^\pi (a_n \cos (nx) + b_n \sin nx ) \text{d} x $$ -->
+
+<p>Each of the terms in the integrated series is zero, so the right-hand side of this equation reduces to 2π · <i>a</i><sub>0</sub> , giving</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>2</mn>
+      <mi>&#x3C0;</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$a_0 = \frac{1}{2\pi} \int_{-\pi}^\pi f(x) \, \text{d}x $$ -->
+
+<p>(In words, <i>a</i><sub>0</sub> is the mean value of <i>f</i>(<i>x</i>) over one period.) <br> Now multiplying each side of Eq. (1) by sin(mx), where <i>m</i> is a fixed integer, and integrating from −π to π , we find</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>n</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <msub>
+    <mi>b</mi>
+    <mi>n</mi>
+  </msub>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>n</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>n</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\int_{-\pi}^\pi f(x) \sin (mx) \, \text{d}x = \int_{-\pi}^\pi a_0 \sin (mx) \, \text{d}x + \sum_{n=1}^\infty \int_{-\pi}^\pi  a_n \cos (nx) \, \sin (mx) \, \text{d}x + \sum_{n=1}^\infty \int_{-\pi}^\pi  b_n \sin (nx) \sin (nx) \, \sin (mx) \, \text{d}x $$ -->
+
+<p>All terms containing <i>a</i><sub>0</sub> or an disappear, according to the orthogonality relations. Furthermore, of all those containing a <i>b<sub>n</sub></i>, the only one that is not zero is the one in which <i>n</i> = <i>m</i>. (Notice that n is a summation index and runs through all the integers 1, 2, . . . . We chose <i>m</i> to be a fixed integer, so <i>n</i> = <i>m</i> once.) We now have the formula</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>b</mi>
+    <mi>m</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>&#x3C0;</mi>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$b_m = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \, \sin(mx) \text{d}x $$ -->
+
+<p>By multiplying both sides of Eq. (1) by cos(<i>mx</i>) (<i>m</i> is a fixed integer) and integrating, we also find</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>a</mi>
+    <mi>m</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>&#x3C0;</mi>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>&#x3C0;</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$a_m = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \, \cos(mx) \text{d}x $$ -->
+
+<p>When the coefficients are chosen this way, the right-hand side of Eq. (1) is called the <i>Fourier series</i> of <i>f</i> . The <i>a</i>’s and <i>b</i>’s are called <i>Fourier coefficients</i>.</p>
+
+<h2>Trigonometric series convergence</h2>
+
+<p>Considering the trigonometric series associated to 10.1.1. If the coefficients <i>a<sub>k</sub>,b<sub>k</sub></i> do not tend to zero, certainly the series cannot converge. If they tend to zero such that the series &Sigma;|<i>a<sub>k</sub></i>| &Sigma;|<i>b<sub>k</sub></i>| are convergent, by theorem xx the series 10.1.1 converges totally in ℝ, to a continous function, as</p>
+
+<div class="eq">
+<p>|<i>a<sub>k</sub></i> cos <i>kx</i> + <i>b<sub>k</sub></i>sin <i>kx</i>| &le; |<i>a<sub>k</sub></i>| + |<i>b<sub>k</sub></i>| </p>
+</div>
+
+<section aria-label="End">
+<a href="periodic_functions.html">«Periodic functions</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

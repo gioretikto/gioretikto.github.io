@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The number e"/>
+    <title>The number e</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The number e</h1>
+
+<p>We are not always able to express the limit explicitly (i.e. the real number itself), in fact some real numbers are defined as limits of sequences. For instance consider</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mi>n</mi>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$ a_n = \left(1 + \frac{1}{n} \right)^n $$ -->
+
+<p>We shall show now that {<i>a<sub>n</sub></i>} is increasing and bounded above. Therefore it is convergent. The real number which is the limit of this sequence is denoted by <i>e</i> and called the Euler number.</p>
+
+<p><b>Proposition 3.4.1</b>. The sequence {<i>a<sub>n</sub></i>} = (1 + 1/<i>n</i>)<sup><i>n</i></sup> is strictly increasing.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msup>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mfrac>
+              <mn>1</mn>
+              <mi>n</mi>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mi>n</mi>
+        </msup>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="OPEN">
+            <mo minsize="2.047em" maxsize="2.047em">(</mo>
+          </mrow>
+          <mfrac linethickness="0">
+            <mi>n</mi>
+            <mi>k</mi>
+          </mfrac>
+          <mrow data-mjx-texclass="CLOSE">
+            <mo minsize="2.047em" maxsize="2.047em">)</mo>
+          </mrow>
+        </mrow>
+        <mfrac>
+          <mn>1</mn>
+          <msup>
+            <mi>n</mi>
+            <mi>k</mi>
+          </msup>
+        </mfrac>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mi>k</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mfrac>
+          <mrow>
+            <mi>n</mi>
+            <mo stretchy="false">(</mo>
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2026;</mo>
+            <mo stretchy="false">(</mo>
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <msup>
+            <mi>n</mi>
+            <mi>k</mi>
+          </msup>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mi>k</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mfrac>
+          <mi>n</mi>
+          <mi>n</mi>
+        </mfrac>
+        <mfrac>
+          <mrow>
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </mfrac>
+        <mo>&#x2026;</mo>
+        <mfrac>
+          <mrow>
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mi>k</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>&#x22C5;</mo>
+        <mn>1</mn>
+        <mo>&#x22C5;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>n</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x2026;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mrow>
+              <mi>k</mi>
+              <mo>&#x2212;</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>n</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
+<mtext>&emsp; 3.3.1</mtext>
+</math>
+
+<!-- $$ \begin{align*} a_n &= \left(1 + \frac{1}{n} \right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1} {n^k} = \sum_{k=0}^n \frac{1} {k!} \frac{n(n-1) \ldots (n-k+1)}{n^k} \\
+ &= \sum_{k=0}^n \frac{1} {k!} \frac{n}{n} \frac{n-1}{n} \ldots \frac{n-k+1}{n} \\ 
+&= \sum_{k=0}^n \frac{1} {k!} \cdot 1 \cdot \left( 1-\frac{1}{n} \right) \ldots \left (1 - \frac{k-1}{n} \right) \end{align*}$$ -->
+
+<p>similarly</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mn>1</mn>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x2026;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+<mtext>&emsp; 3.3.2</mtext>
+</math>
+
+<!-- $$ a_{n+1} = \sum_{k=0}^{n+1} \frac{1} {k!} \cdot 1 \cdot \left( 1-\frac{1}{n+1} \right) \ldots \left (1 - \frac{k-1}{n+1} \right) $$ -->
+
+<p>We know that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>n</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo>&#x2026;</mo>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ \left ( 1 - \frac{1}{n} \right) \lt  \left ( 1 - \frac{1}{n+1} \right), \quad \ldots, \quad  \left ( 1 - \frac{k-1}{n} \right) \lt \left ( 1 - \frac{k-1}{n+1} \right) $$ -->
+
+<p>so each summand of 3.3.1 is smaller than the corresponding term in (3.3.2). The latter sum, moreover, contains an additional positive summand labelled by <i>k</i> = <i>n</i> + 1. Therefore <i>a<sub>n</sub></i> &lt; <i>a</i><sub><i>n</i>+1</sub> for each <i>n</i>. &emsp;□</p>
+
+<p><b>Proposition 3.4.2</b>. The sequence <i>a<sub>n</sub></i> is bounded; precisely</p>
+
+<div class="eq">
+<p>2 &lt; <i>a<sub>n</sub></i> &lt; 3, &emsp;&emsp; &forall;<i>n</i> &gt; 1</p>
+</div>
+
+<p><b>Proof</b>. Since <i>a</i><sub>1</sub> = 2, and the sequence is strictly monotone by the previous property, we have <i>a<sub>n</sub></i> &gt; 2, ∀<i>n</i> &gt; 1. Let us show that <i>a<sub>n</sub></i> &gt; 3, ∀<i>n</i> &gt; 1. By (3.3.1) and observing that</p>
+
+<div class="eq">
+<p>for <i>k</i> &ge;1, &emsp;<i>k</i>! &ge; 2<sup><i>k</i>−1</sup> &emsp;⇒&emsp; 1/<i>k</i>! &le; 1/2<sup><i>k</i>−1</sup> &emsp;⇒&emsp; &Sigma;<sub><i>k</i>=1</sub> 1/<i>k</i>! &le; &Sigma;<sub><i>k</i>=1</sub> 1/2<sup><i>k</i> − 1</sup></p>
+</div>
+
+<p>we have that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mi>k</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>&#x22C5;</mo>
+        <mn>1</mn>
+        <mo>&#x22C5;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>n</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x22EF;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mrow>
+              <mi>k</mi>
+              <mo>&#x2212;</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>n</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&lt;</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mi>k</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mi>k</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>&#x2264;</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <msup>
+            <mn>2</mn>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mo>&#x2212;</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+        </mfrac>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <msup>
+            <mn>2</mn>
+            <mi>k</mi>
+          </msup>
+        </mfrac>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{align} a_n &= \sum_{k=0}^n \frac{1}{k!}  \cdot 1 \cdot \left( 1 - \frac{1}{n} \right) \cdots \left( 1 - \frac{k-1}{n} \right) \lt \sum_{k=0}^n \frac{1}{k!}\\
+&= 1+ \sum_{k=1}^n \frac{1}{k!} \le 1 + \sum_{k=1}^n \frac{1}{2^{k-1}} = 1 + \sum_{k=0}^{n-1} \frac{1}{2^k} \end{align}$$ -->
+
+<p>the majorative sum is that of a <a href="series.html#geometric">geometric progression</a> that we know to be</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mn>2</mn>
+      <mi>k</mi>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mfrac>
+        <mn>1</mn>
+        <msup>
+          <mn>2</mn>
+          <mi>n</mi>
+        </msup>
+      </mfrac>
+    </mrow>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mn>2</mn>
+      </mfrac>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msup>
+        <mn>2</mn>
+        <mi>n</mi>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mn>2</mn>
+</math>
+
+<!-- $$ \sum_{k=0}^{n-1} \frac{1}{2^k} = \frac{1 - \frac{1}{2^n}} {1 - \frac{1}{2}} = 2 \left (1 - \frac{1}{2^n} \right) \lt 2 $$ -->
+
+<p>We conclude that <i>a<sub>n</sub></i> &lt; 3. &emsp;□</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Constructions with Straightedge and Compass">
+	<title>Constructions with Straightedge and Compass</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Constructions with Straightedge and Compass</h1>
+
+<p>Let 𝒫, a set of points (finite or infinite) in the plane ℝ x ℝ. Consider the following fundamental operations</p>
+
+<ol>
+	<li><p>Draw the line between two arbitrary points of 𝒫 (ruler);</p></li>
+	<li><p>draw the line through arbitrary two points of 𝒫;</p></li>
+	<li><p>draw a circle having as center a point of 𝒫 and as radius a segment identified by two points of 𝒫.(Compass)</p></li>
+</ol>
+
+<p><b>Definition 9.1.1</b> A point is said to be <i>constructible in one step starting from</i> 𝒫 if it is given by the intersection of any two straight lines, of a circle with a straight line, of two circles, drawn with the operations listed above. &emsp;□</p>
+
+<p>A point is constructible in a finite succession of steps starting from 𝒫, if it can be obtained iterating this construction finitely many times adding to 𝒫 the points constructed in the previous steps.</p>
+
+<p><b>Definition 9.1.2</b>. A point <i>P</i> in the plane is said to be constructible in <i>n</i> steps from 𝒫 if there exists a finite sequence <i>P</i><sub>1</sub>, <i>P</i><sub>2</sub>, ... , <i>P<sub>n</sub></i> of points in the plane such that <i>P<sub>n</sub></i> = <i>P</i> and for <i>i</i> = 1, ... , <i>n</i>, <i>P<sub>i</sub></i> is constructible in one step from</p>
+
+<div class="eq">
+<p>𝒫 ∪ {<i>P</i><sub>1</sub>, P<sub>2</sub>, ..., <i>P</i><sub><i>i</i> − 1</sub>} &emsp;□</p>
+</div>
+
+<p>A straight edge and compass constructions a finite succession of basic operations.</p>
+
+<h2>Examples of Classical Constructions</h2>
+
+<p><b>Example 9.1.3</b> (Construction of the midpoint of a segment). Let (<i>AB</i>) be a line passing through two points <i>A</i> and <i>B</i>. Draw the circles, 𝐶<sub>1</sub>, 𝐶<sub>2</sub>, respectively of center <i>A</i> and <i>B</i> radius the length of the segment <i>AB</i>. Let <i>P</i><sub>1</sub>, and <i>P</i><sub>2</sub> the intersection points of 𝐶<sub>1</sub> and 𝐶<sub>2</sub>. The mid point, <i>M</i>, is given by of the line (<i>AB</i>) with the line passing through <i>P</i><sub>1</sub>, and <i>P</i><sub>2</sub>. &emsp;■</p>
+
+<figure>
+<img src="img/mid_point_construction.png" alt="mid point construction"/>
+<figcaption>Construction of the midpoint of a segment</figcaption>
+</figure>
+
+<p><b>Example 9.1.4</b> (Construction of the line perpendicular to a given line, passing through a given point <i>P</i> which may or may not lie on the line <i>r</i>). Suppose first <i>P</i> &notin; <i>r</i>. The line <i>r</i> is given by two points <i>P</i><sub>1</sub>, and <i>P</i><sub>2</sub>. Draw the circle, 𝐶 of center <i>P</i> and radius the length between <i>P</i> and one of the two points, say <i>P</i><sub>1</sub>. If the circle 𝐶 is tangent to the line <i>r</i>, the line passing through <i>P</i> and <i>P</i><sub>1</sub> is the perpendicular we look for. If not let <i>P</i>'<sub>1</sub> another intersection point of 𝐶 with the line <i>r</i>, the perpendicular is the line passing through <i>P</i> and the midpoint of the segment <i>P</i><sub>1</sub><i>P</i><sub>1</sub>'. <br> If <i>P</i> &in; <i>r</i>, we draw a circle of a given radius around <i>P</i>, intersecting <i>r</i> at <i>A</i> and <i>B</i>. Then similarly to example 9.1.3 we draw two circles 𝐶<sub>1</sub>, 𝐶<sub>2</sub>, respectively of center <i>A</i> and <i>B</i> radius the length of the segment <i>AB</i> (see figure below). Let <i>C</i> the intersection between the two circles, then the line passing through <i>C</i> and <i>P</i> is the perpendicular we look for.&emsp;■</p>
+
+<img src="img/perp_line_throughP.png" alt="perpendicular line through P"/>
+
+<p><b>Example 9.1.5</b> (Given a point <i>P</i> external to a line <i>L</i>, construct the parallel line to <i>L</i>, passing through <i>P</i>). It suffices to repeat twice the construction of the perpendicular: given a line <i>L</i> and a point <i>P</i>, produces another line <i>L'</i> which is perpendicular to <i>L</i> and passes through <i>P</i>. Now, using this procedure again, you can construct a line <i>L</i>'' which is perpendicular to L' and passes through <i>P</i>. Since <i>L, L</i>' and <i>L</i>'' are lines on the same plane, and L and L'' are both perpendicular to <i>L</i>', then <i>L</i> and <i>L</i>'' must be parallel. &emsp;■ </p>
+
+<h2>Constructible lenghts and numbers</h2>
+
+<p>We want to answer the following question given a line segment in the plane, which we say is of lenght 1, for what values <i>α</i> can we construct a line segment of length <i>α</i>? To be able to deal with lenghts, we must define a <i>unit of measure</i>; We start by two random points, and we define the unit length as the distance between them; The <b>unit of measurement</b> has length = 1 by definition
+. We begin by observing that all the natural numbers can be constructed. In general we give the following definition:</p>
+
+<p><b>Definition 9.1.6</b>. A real number <i>α</i> is said to be <i>constructible</i>, if with straightedge, the unit of measurement and compass it is possible to construct a segment of length |<i>α</i>|.&emsp;□</p>
+
+<p>Thus the integers are constructible because the natural numbers are. But real numbers like <i>&pi;</i> are not.</p>
+
+<p>Notice that with straightedge and compass is possible to construct in ℝ x ℝ a system of Cartesian axes. It follows that a point <i>P</i> is constructible if and only if, its coordinates with respect to a Cartesian axes are.</p>
+
+<p>We shall now prove that both ℤ and ℚ are contained in the set of numbers that can be constructed starting from only two points (the extremes of the unit of measurement); called ℭ the set of such constructible points, it is shown that ℭ is a field.</p>
+
+<p><b>Proposition 9.1.7</b>.</p>
+
+<ol type="a">
+	<li><p>ℭ &supset; ℤ;</p></li>
+	<li><p>ℭ &supset; ℚ;</p></li>
+	<li><p>ℭ is a field.</p></li>
+</ol>
+
+<p><b>Proof</b>. a) Let the unit of lenght be provided by the line segment joining two points <i>A</i> and <i>B</i>. Let us rename these points as 0 and 1. The numbers 0 and 1 result constructible by definition. We can construct the number 2 by placing the point of out compass at 1 and draw the circle with radius from 1 to 0. Then clearly 3 can be constructed by placing the compass with radius 1 so as to make a circle centeres at 2, and similarly all the natural numbers can be constructed. <br> b) It suffices to show that every number of the form 1/<i>n</i> is constructible. To this end we employ Thales' theorem. </p>
+
+<img src="img/Q_constructible.png" alt="Q constructible"/>
+
+<p>Every rational number is also sum of fraction of the form 1/<i>n</i>, which are constructible.</p>
+
+<p>c) To prove ℭ is a field, it sufficies to show that given <i>&alpha;</i> and <i>&beta;</i> &in; ℭ, then <i>&alpha;</i> &pm; <i>&beta;</i>, <i>&alpha;</i> ⋅ <i>&beta;</i> and <i>&alpha;</i> / <i>&beta;</i> with <i>&beta;</i> &ne; 0. are constructible. Regarding <i>&alpha;</i> &pm; <i>&beta;</i> the construction is obviuos. The figure below show how to construct &alpha;&beta; and <i>&alpha;</i>/<i>&beta;</i> based on Thales theorem.</p>
+
+<img src="img/number_construction.png" alt="construction of numbers"/>
+
+<p>We thus proved that the set of constructible numbers is a subfield of ℝ, which contains the rational numbers. &emsp;□</p>
+
+<p>We shall now give an <i>algebraic</i> characterization of the elements of ℭ. Let <i>F</i> an arbritary field of ℝ.</p>
+
+<p><b>Definition 9.1.8</b>. We define <i>plane</i> of <i>F</i> the subset <i>F</i> x <i>F</i> of ℝ x ℝ. We define <i>line</i> of <i>F</i> a line connecting two points in the plane of <i>F</i>. We define <i>circle</i> of <i>F</i>, a circle with center in the plane of <i>F</i> and ray equal to the lenght of a number of <i>F</i>. &emsp;□</p>
+
+<p>We can easily verify that lines and circle of <i>F</i> have the following form:</p>
+
+<div class="eq">
+<p><i>ax</i> + <i>by</i> + <i>c</i> = 0, &emsp; <i>a,b,c</i> &in; <i>F</i><br>
+<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> + <i>ax</i> + <i>by</i> + <i>c</i> = 0, &emsp;<i>a,b,c</i> &in; <i>F</i></p>
+</div>
+
+<p>Starting from the points of 𝒫 in the plane of <i>F</i>, which new points of the real plane can be obtained by Euclidean construction? We can obtain points by</p>
+
+<ul>
+	<li><p><i>Intersection of two lines of F</i>: in this however we do not obtain new points, since two lines intersecting in the plane of <i>F</i>, intersect in a point with coordinate in <i>F</i>.</p></li>
+
+	<li><p><i>Intersection of a line and a circle of F</i>;</p></li>
+
+	<li><p><i>Intersection of two circles of F</i>: as in the second case.</p></li>
+</ul>
+
+<p>In the second case, the point of intersection has coordinates whch are solutions of a quadratic equation, hence belonging to either <i>F</i> or a quadratic extension of <i>F</i>, <i>F</i>(√<i>a</i>), <i>a</i> &in; <i>F</i>. The only points of the real plane which are constructible starting from the the plane <i>F</i> are those points whose coordinates are in fields of the form <i>F</i>(<i>&alpha;</i>), <i>&alpha;</i> &in; ℝ, <i>&alpha;</i><sup>2</sup> &in; <i>F</i>. Every point with coordinates in <i>F</i> is constructible, consider indeed the following method offers a way to construct the square root, of a constructible number <i>a</i>: draw the circle of radius 1 + <i>a</i>. Draw the perpendicular to the point 1 and let <i>P</i> the point of intersectrion of this perpendicular with the center, the lenght <i>x</i> of a segment {1, <i>P</i>} is the square root we were looking for: for the <a href="../euclidean/primo_teorema_euclide.html">Euclid's theorem</a>, <i>x</i><sup>2</sup> = <i>a</i>. </p>
+
+<img src="img/Euclide_costruibili.png" alt="Euclide numeri costruibili"/>
+
+<p>Thus all and the only points of the real plane constructible in a step starting from the plane of <i>F</i> are the points of coordinates in field of the form <i>F</i>(&alpha;), with <i>&alpha;</i> &in; ℝ, <i>&alpha;</i><sup>2</sup> &in; <i>F</i>. The points of the real plane constructible in a step starting from the plane of <i>F</i><sub>1</sub> are all form <i>F</i><sub>1</sub>(&alpha;), with <i>&beta;</i> &in; ℝ, <i>&beta;</i><sup>2</sup> &in; <i>F</i><sub>1</sub>. Iterating the method this way, we see that a point <i>c</i> of the real plane is constructible starting from the plane of a field <i>F</i> if and only if and only if there exists a finite sequence of subfields: </p>
+
+<div class="eq">
+<p><i>F</i><sub>0</sub> = <i>F</i> &subseteq; <i>F</i><sub>1</sub> &subseteq; <i>F</i><sub>2</sub> &subseteq; .... &subseteq; <i>F<sub>n</sub></i></p>
+</div>
+
+<p>such that &forall;<i>i</i> = 1,...,<i>n</i></p>
+
+<div class="eq">
+<p><i>F<sub>i</sub></i> = <i>F</i><sub><i>i</i> − 1</sub> (<i>&alpha;<sub>i</sub></i>), &emsp; <i>&alpha;<sub>i</sub></i> &in; ℝ, <i>&alpha;<sub>i</sub></i> &in; <i>F</i><sub><i>i</i> − 1</sub></p>
+</div>
+
+<p>with <i>c</i> having coordinates in <i>F<sub>n</sub></i>. Since we know that all constructible numbers contain the field ℚ, we thus proved the following algebraic characterization of real points (or number) which are constructible:</p>
+
+<p><b>Definition 9.1.9</b>. A real number <i>c</i> is constructible if and only if there exists a finite number of real numbers such that <i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>, such that</p>
+
+<div class="eq">
+<p><i>&alpha;</i><sub>1</sub><sup>2</sup> &in; ℚ, &emsp; <i>&alpha;<sub>i</sub></i><sup>2</sup> &in; ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;</i><sub><i>i</i>−1</sub>) &emsp; <i>i</i> = 2, ..., <i>n</i></p>
+</div>
+
+<p>such that</p>
+
+<div class="eq">
+<p><i>c</i> = ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>)</p>
+</div>
+
+<p>We can calculate the degree of the extension ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>) in which <i>c</i> is contained as</p>
+
+<div class="eq">
+<p>[ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>) : ℚ] = [ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>) : ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;</i><sub><i>n</i> − 1</sub>)] <br> ⋅ [ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;</i><sub><i>n</i> − 1</sub>)] : ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;</i><sub><i>n</i> − 2</sub>)] ⋅⋅⋅<br>
+⋅[ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>) : ℚ(<i>&alpha;</i><sub>1</sub>)] ⋅ [ℚ(<i>&alpha;</i><sub>1</sub>) : ℚ]</p>
+</div>
+
+<p>Every factor in the right side has either degree 1 or 2, thus</p>
+
+<div class="eq">
+<p>[ℚ(<i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i>) : ℚ] = 2<sup><i>h</i></sup></p>
+</div>
+
+<p>for a given <i>h</i> &in; ℕ. We sum up this result in the following proposition</p>
+
+<p><b>Proposition 9.1.10</b>. If a real number satisfies an irreducible polynomial of degree <i>n</i> which is not a power of two, then it is not constructible.</p>
+
+<p><b>Proof</b>. If <i>&alpha;</i> satisfies an <i>irreducible polynomial</i> with degree <i>n</i>, we know that this is the minimal polynomial; thus the extension [ℚ(<i>&alpha;</i>) : ℚ] = <i>n</i> &ne; 2<sup><i>h</i></sup>, and &alpha; cannot belong to an extension with degree a power of 2, as it would be in the case of &alpha; constructible. &emsp;□</p>
+
+<p>The ancient Greeks were interested in the geometry that is constructible using only. We shall prove now that certain constructions are impossible.</p>
+
+<p><b>9.1.11 Doubling the cube</b>. Can one construct a cube having double the volume of a given cube? Given a cube of unitary volume <i>V</i> to construct a cube of volume 2, we must construct a segment of length ∛2. If we let <i>&alpha;</i> = ∛2, the number <i>&alpha;</i> saisfies the irreducible polynomial over ℚ: <i>x</i><sup>3</sup> − 2. Since the degree of this polynomial is not a a power of 2, by proprosition 9.1.10 it cannot be constructed. &emsp;□ </p>
+
+<p id="squaring_circle"><b>9.1.12 Squaring the circle</b>. Another classical construction problem is that of <i>squaring the circle</i>, the problem of constructing a square whose area is the same as the ara of a given circle with a given radius. Since the unit circle has area &pi;, this amounts to constructing the number √&pi;, which would be the side length of a square of that same area. But Ferdinand von Lindemann proved in 1882 that &pi; is transcendental, and so also √&pi; is not algebraic, and therefore not constructible by straightedge and compass. So it is impossible to square the circle with those means onnly. The transcendence of &pi; implies also that the converse problem of <i>circling the square</i>, to construct a circle whose area is the same as that of a given square, is impossible by straightedge and compass, since a unit square has area 1 and the circle of this area would have radius 1/√&pi;, which is not algebraic because &pi; is transcendental. &emsp;□</p>
+
+<p><b>9.1.13 Rectification of the circle</b>. The term <i>rectification</i> is often used to refer to the determination of the length of a curve. Given a circle with unitary radius the problem is that of drawing a segment having length 2&pi;. Since 2&pi; is trascendental this construction is not possible. &emsp;□</p>
+
+<p><b>9.1.14 Trisecting Angles</b>. Consider the trisection of angles by ruler and compass. We can easily trisect a 90° angle. Simply construct an equilateral triangle and then bisect one of its 60° angles. However there is no <i>general</i> ruler and compass method for trisecting all angles. It suffices to consider the angle 3&theta; = &pi;/3, and try trisect it to have &theta; = &pi;/9. It is the same thing as constructing cos &theta;. From the well-known trigonometric relation.</p>
+
+<div class="eq">
+<p>cos 3&theta; = 4 cos<sup>3</sup> &theta; − 3cos &theta; &emsp;(9.1.1)</p>
+</div>
+
+<p>which for 3&theta; = &pi;/3,</p>
+
+<div class="eq">
+<p>1/2 = 4 cos<sup>3</sup> &pi;/9 − 3cos &pi;/9</p>
+</div>
+
+<p>Thus cos(&pi;/9) satisfies the polynomial (irreducible over ℚ, see <a href="pol_irr_Q.html#ex">exercise 1</a>)</p>
+
+<div class="eq">
+<p>8<i>x</i><sup>3</sup> −6<i>x</i> − 1 = 0</p>
+</div>
+
+<p>with degree not a power of two. Thus cos &pi;/9 is not constructible and &pi;/3 cannot be trisected. <br> By the same method we can show now that &pi;/2 can be trisected. From eq. 9.1.1 it results</p>
+
+<div class="eq">
+<p>0 = 4 cos<sup>3</sup> &pi;/6 − 3cos &pi;/6</p>
+</div>
+
+<p>which yields that cos &pi;/6 satisfies the polynomial 4<i>x</i><sup>3</sup> −3<i>x</i>, which is not irreducible; the minimal polynomial of cos &pi;/6 is the second degree polynomial 4<i>x</i><sup>2</sup> − 3. The number cos &pi;/6 is thus contained in a quadratic extension of ℚ and hence constructible: indeed it results that cos &pi;/6 = √3/2, which we know to be constructible. &emsp;□</p>
+
+<p><b>Nota Bene</b>. If an element satisfies an irreducible polynomial having as degree a power of two, we <i>cannot</i> conclude that the element is constructible. In the example above related to the construction of cos &pi;/6, we concluded its constructibility since the degree was <i>exactly</i> 2.&emsp;■</p>
+
+<h2>Exercises</h2>
+
+<ol>
+	<li><p>Prove that with ruler and compass is possible to construct a system of cartesian axes.</p></li>
+	<li><p>Prove that <i>&alpha;</i> and <i>&beta;</i> are two transcendental numbers then either <i>&alpha;</i> + &beta; or <i>&alpha;&beta;</i> is transcendental</p></li>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p></p></li>
+	<li><p>By <a href="simple_extensions.html#alg_closed_fields">Theorem 8.2.22</a> we known that the roots of a polynomial with algebraic coefficients, are algebraic. If both <i>&alpha;</i> and <i>&beta;</i> were algebraic then <i>&alpha;</i> and <i>&beta;</i> would be roots of the polynomial</p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> − (<i>&alpha;</i> + <i>&beta;</i>)<i>x</i> + <i>&alpha;&beta;</i></p>
+</div>
+
+<p>having algebraic coefficients, thus <i>&alpha;</i> and <i>&beta;</i> would be algebraic. &emsp;■</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="separable_extensions.html">«Separable Extensions</a>
+<a href="index.html">Index</a>
+<a href="F-automorphisms.html">F-automorphisms»</a></li>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="Dimension of a vector space"/>
+	<title>Dimension of a vector space</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Dimension of a vector space</h1>
+
+<p>A fundamental fact concerning vector spaces is that if a vector space <i>V</i> has a finite basis, meaning a basis consisting of a finite number of vectors, then all bases of <i>V</i> contain precisely the same number of vectors. We must show that any basis is a maximal linearly independent set and a minimal set of generators and these are true also in the infinite-dimensional case. <br>In order to prove this, we first need to establish the following definition.</p>
+
+<p><b>1.5.5. Definition</b>. A <b>maximal</b> linearly independent set in <i>V</i> is a linearly independent set 𝓑 in <i>V</i> such that if a vector <b><i>v</i></b> in <i>V</i> but not in 𝓑 is added to 𝓑, then the new set is linearly dependent. &emsp;□</p>
+
+<p><b>1.5.6. Proposition</b>. Let ℬ = {<i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <i><b>v<sub>n</sub></b></i>} a basis of a vector space <i>V</i>, then ℬ is a maximal set of linear independent vectors of <i>V</i>.</p>
+
+<p><b>Proof.</b> By definition the vectors {<i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <b><i>v<sub>n</sub></i></b>} are linear independent; we must show that for any other vector <b><i>v</i></b> &in; <i>V</i>, <i><b>v</b></i> &notin; ℬ the vectors <i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <i><b>v<sub>n</sub>, v</b></i> are linear dependent. Since ℬ  spans <i>V</i>, there exist <i>&lambda;</i><sub>1</sub>, ..., <i>&lambda;<sub>n</sub></i> &in; 𝕂, such that</p>
+
+<div class="eq">
+<p><i><b>v</b></i> = <i>&lambda;</i><sub>1</sub><b><i>v</i><sub>1</sub></b> + ... + <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i></p>
+</div>
+
+<p>thus we have</p>
+
+<div class="eq">
+<p><i><b>v</b></i> &minus; <i>&lambda;</i><sub>1</sub><i><b>v</b></i><sub>1</sub> &minus; ... &minus; <i>&lambda;<sub>n</sub><b>v<sub>n</sub></b></i> = <b>O</b></p>
+</div>
+
+<p>which is a linear dependence relation between the vectors <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ...,<i><b>v</b><sub>n</sub></i> (the coefficient of <b><i>v</i></b> is 1, which is not null). &emsp; □</p>
+
+<p>The converse is also true as we shall prove after introducing the following lemma.</p>
+
+<p><b>1.5.7. Lemma</b>. Let ℬ = {<i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <i><b>v<sub>r</sub></b></i>} a subset of a vector space <i>V</i>. Suppose that Span(ℬ) contains a set of generators of <i>V</i>. Then <i>V</i> = Span(ℬ), i.e. ℬ is also a set of generators.</p>
+
+<p><b>Proof</b>. Let 𝒜 &subset; Span(ℬ) a set of generators of <i>V</i>. We can write a generic vector <i>v</i> &in; <i>V</i> as linear combination of the vectors of 𝒜. Since 𝒜 &subset; Span(ℬ), we can also write an element of 𝒜  as linear combination of elements of ℬ, that is <i>v</i> &in; Span(ℬ). Since <i>v</i> is arbitrary, we have shown that ℬ is a set of generators of <i>V</i>. &emsp;□</p>
+
+<p><b>1.5.8. Proposition</b>. Let 𝒜 = {<i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <i><b>v<sub>k</sub></b></i>} a set of generators of <i>V</i>. Let ℬ &subseteq; 𝒜 a maximal subset of <i>A</i> of linearly independent vectors. Then ℬ is basis of <i>V</i>.</p>
+
+<p><b>Proof</b>. Let ℬ = {<i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <i><b>v<sub>r</sub></b></i>} with <i>r</i> &le; <i>k</i>. Since the elements of ℬ are linearly independent we are left to prove that <i>V</i> = Span (ℬ). By Lemma 1.5.7, it suffices to show that 𝒜 &subset; span(ℬ). Let <i>w</i> &in; 𝒜, which is not in ℬ. Then <i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <i><b>v<sub>r</sub>, w</b></i> are linearly dependent, thus there exist <i>&alpha;</i><sub>1</sub>, <i>&alpha;<sub>r</sub></i> &in; ℝ such that</p>
+
+<div class="eq">
+<p><i>&alpha;</i><sub>1</sub><b><i>v</i></b><sub>1</sub> + ... + <i>&lambda;<sub>r</sub><b>v<sub>r</sub></b></i> + <i>&beta;<b>w</b></i> = <b>O</b></p>
+</div>
+
+<p><i>&beta;</i> &ne; 0, otherwise, we would have written a relation of linear dependence among the vectors of ℬ. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">w</mi>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msub>
+      <mi>&#x3B1;</mi>
+      <mn>1</mn>
+    </msub>
+    <mi>&#x3B2;</mi>
+  </mfrac>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mo>&#x2026;</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msub>
+      <mi>&#x3B1;</mi>
+      <mi>r</mi>
+    </msub>
+    <mi>&#x3B2;</mi>
+  </mfrac>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi mathvariant="bold">r</mi>
+  </msub>
+  <mo>&#x2208;</mo>
+  <mtext>Span{&#x212C;}</mtext>
+</math>
+
+<!-- $$ \mathbf{w} = -\frac{\alpha_1}{\beta}\mathbf{v}_1 - \ldots - \frac{\alpha_r}{\beta} \mathbf{v_r} \in \text{Span{ℬ}} $$ -->
+
+<p>Since <i><b>w</b></i> is an arbitrary element of 𝒜, then 𝒜 &subset; Span(ℬ). &emsp;□</p>
+
+<b><p>Theorem 1.5.10</b> The following conditions for a finite subset <i>X</i> of a vector space are equivalent:</p>
+
+<ol type="a">
+	<li><p><i>X</i> is a maximal linearly independent set;</p></li>
+	<li><p><i>X</i> is a minimal spanning set;</p></li>
+	<li><p><i>X</i> is a linearly independent spanning set.</p></li>
+</ol>
+
+<p><b>Proof</b>. We show that each of (a) and (b) is equivalent to (c).</p>
+
+<p>(c) ⇒ (a): If <i>X</i> is a basis for <i>V</i>, then every vector in <i>V</i> is a linear combination of <i>X</i>; so adding any vector to <i>X</i> gives a linearly dependent set, which means that <i>X</i> is maximal.</p>
+
+<p>(a) ⇒ (c): If <i>X</i> is maximal independent, then any vector v added to <i>X</i> gives a linearly dependent set. In a dependence relation, the coefficient of <b><i>v</i></b> must be non-zero (else <i>X</i> would be linearly dependent); so we can use the relation to express <b><i>v</i></b> as a linear combination of <i>X</i>. So <i>X</i> spans <i>V</i>, and is a basis.</p>
+
+<p>(c) ⇒ (b): If <i>X</i> is a basis, then no element of <i>X</i> is a linear combination of the others, so no proper subset is spanning.</p>
+
+<p>b) ⇒ (c): If <i>X</i> is a minimal spanning set, then no element of <i>X</i> is a linear combination of the others (or it could be dropped without losing the spanning property); so <i>X</i> is linearly independent.&emsp;□</p>
+
+<p id="Steinitz"><b>Theorem 1.5.11 (Properties of linear independence)</b> Let <sub>V</sub> be a vector space, and let <i>I</i> denote the set of linearly independent finite subsets of <i>V</i>. By
+definition, the empty set is linearly independent. The following conditions hold</p>
+
+<ol type="a">
+	<li><p>If <i>X</i> ∈ <i>I</i> and <i>Y</i> ⊂ <i>X</i>, then <i>Y</i> ∈ <i>I</i>;</p></li>
+	<li><p>(Steinitz exchange axiom) Suppose that <i>X, Y</i> ∈ <i>I</i> with |<i>Y</i>| > |<i>X</i>|. Then there exists <i>y</i> ∈ <i>Y</i> \ <i>X</i> such that <i>X</i> ∪ {<i>y</i>} ∈ <i>I</i>.</p></li>
+</ol>
+
+<p><b>Proof</b></p>
+
+<ol type="a">
+
+	<li><p>If we have a linear combination of a subset <i>Y</i> of <i>X</i> equal to zero, then we obtain a linear combination of all of <i>X</i> with the same value, by taking the coefficients of the remaining vectors to be zero. Since <i>X</i> is linearly independent, all the coefficients must be zero. So <i>Y</i> is linearly independent.</p></li>
+
+	<li><p>Suppose that both {<b><i>x</i></b><sub>1</sub>, ..., <i><b>x</b><sub>m</sub></i>} and {<b><i>y</i></b><sub>1</sub>, ..., <i><b>y</b><sub>m</sub></i>} are linearly independent, with <i>m</i> < <i>n</i>. Let us also suppose, arguing for a contradiction, that the set {<b><i>x</i></b><sub>1</sub>, ..., <i><b>x</b><sub>m</sub>, <b>y</b><sub>i</sub></i>} is linearly dependent, for any <i>i</i> (with 1 ≤ <i>i</i> ≤ <i>n</i>). This means that there is a linear combination of <b><i>x</i></b><sub>1</sub>, ..., <i><b>x</b><sub>m</sub>, <b>y</b><sub>i</sub></i> which is equal to zero, with not all the coefficients zero. The coefficient of <i>y<sub>i</sub></i> must be non-zero, since <b><i>x</i></b><sub>1</sub>, ..., <i><b>x</b><sub>m</sub>, <b>y</b><sub>i</sub></i> are linearly independent. Dividing by this coefficient, and taking <i>y<sub>i</sub></i> to the other side of the equation, we find that <i>y<sub>i</sub></i> is a linear combination of <b><i>x</i></b><sub>1</sub> , ..., <i><b>x</b><sub>m</sub>, <b>y</b><sub>i</sub></i> for every <i>i</i>. Suppose that</p>
+
+<div class="eq">
+<p><i><b>y</b><sub>i</sub></i> = <i>a</i><sub><i>i</i>1</sub><i><b>x</b></i><sub>1</sub> + ... + <i>a<sub>im</sub><b>x</b><sub>m</sub></i></p>
+</div>
+
+<p>for <i>i</i> = 1, ..., <i>n</i>. We claim that the vectors <i><b>y</b></i><sub>1</sub>, ..., <i><b>y</b><sub>n</sub></i> are linearly dependent, so that</p>
+
+<div class="eq">
+<p><i>c</i><sub>1</sub><i><b>y</b></i><sub>1</sub> + ... + <i>c<sub>n</sub><b>y</b><sub>n</sub></i> = 0</p>
+</div>
+
+<p>for not all the <i>c<sub>i</sub></i> equal to zero. Substituting the expression for the ys in terms of the <i>x</i>s, we find that the coefficient of <i>x<sub>j</sub></i> is</p>
+
+<div class="eq">
+<p><i>c</i><sub>1</sub><i>a</i><sub>1<i>j</i></sub> + ... + <i>c<sub>n</sub>a<sub>nj</sub></i> = 0</p>
+</div>
+
+<p>Regarding these as <i>m</i> linear equations for the <i>n</i> unknowns <i>c</i><sub>1</sub>, ..., <i>c<sub>n</sub></i>, we see from the proposition that they have a non-zero solution. So <b><i>y</i></b><sub>1</sub>, ..., <i><b>y</b><sub>m</sub></i> are linearly dependent. But this contradicts the fact that they are linearly independent! So the original assumption, that <i><b>x</b></i><sub>1</sub> , ..., <i><b>x</b><sub>m</sub>, <b>y</b><sub>i</sub></i> is linearly dependent for all <i>i</i> must be wrong; so this set is linearly independent for some value of <i>i</i>, as required. This completes the proof.&emsp;□</p>
+
+<p>From this theorem we can deduce an important property. If there are no bases, then we call the vector space <b>infinite-dimensional</b>; it is <b>finite-dimensional</b> otherwise. So a space is  if every linearly independent set can be enlarged to a larger linearly independent set. Infinite-dimensional spaces are important, but here we are only concerned with the finite-dimensional ones.</p>
+
+<p><b>Theorem 1.5.12</b> If <i>V</i> has a basis, then any two bases have the same number of elements.</p>
+
+<p><b>Proof</b>. Suppose that <i>X</i> and <i>Y</i> are both maximal. By the Steinitz exchange axiom, if |<i>X</i>| < |<i>Y</i>|, then we could obtain a linearly independent set containing <i>X</i> by adding an element of <i>Y</i>, which contradicts the maximality of <i>X</i>. Similarly, the assumption that |<i>Y</i>| < |<i>X</i>| leads to a contradiction. So |<i>X</i>| = |<i>Y</i>|.&emsp;□</p>
+
+<p><b>Definition 1.5.13</b> Let <i>V</i> be a vector space having a basis consisting of <i>n</i> elements. We shall say that <i>n</i> is the <b>dimension</b> of <i>V</i>. If <i>V</i> consists of <b>0</b> alone, then <i>V</i> does not have a basis, and we hall say that <i>V</i> has dimension <b>0</b>.&emsp;□</p>
+
+<p><b>1.5.7. Example</b>. Over the field of complex numbers, the vector space of complex numbers has dimension 1. A basis is {1}. Over the field of real numbers, the vector space of complex number has dimension 2. A basis is {1, <i>i</i>}. &emsp;□</p>
+
+<p>Most properties of bases of subspaces of ℝ<sup><i>n</i></sup> carry over to bases of arbitrary vector spaces, as long as those bases are finite. However, we will see in the next section that vector spaces with infinite bases (like 𝒫, "polynomials") can behave somewhat strangely, and for some vector spaces (like ℱ) it can be difficult to even say whether or not they have a basis.</p>
+
+<section aria-label="End">
+<a href="bsis.html">&#171;Bases of a vector space</a>
+<a href="index.html">Index of Physics</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

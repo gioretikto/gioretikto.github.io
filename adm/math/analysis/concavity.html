@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Concavity and the second derivative test">
+	<title>Concavity and the second derivative test</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Concavity and the second derivative test</h1>
+
+<p><b>Definition</b>. Say that <i>f is a continuously differentiable function</i> on (<i>a,b</i>) if it is a differentiable function and <i>f</i>': (<i>a,b</i>) ⟶ ℝ is a continuous function. The collection of all continuously differentiable functions on (<i>a,b</i>) is denoted by <i>C</i><sup>1</sup>(<i>a,b</i>). Functions in <i>C</i>(<i>a,b</i>) are also called <i>smooth functions</i>. Now <i>f'</i> can also be differentiable, in which case we say that <i>f</i> is <i>twice differentiable</i> function. The second derivative is denoted by <i>f''</i>. If <i>f''</i>: (<i>a,b</i>) ⟶ ℝ is continuous, we say that <i>f</i> si twice continuosly differentiable function; denote the collection of all twice continuosly differentiable functions on (a,b) by C<sup>2</sup>(<i>a,b</i>). This continues with the definition of higher derivatives denoted by <i>f</i><sup>(3)</sup>, ..., <i>f</i><sup>(n)</sup>. If <i>f</i><sup>(n)</sup> defined a continuous function, we say that <i>f</i> is <i>n</i>-times continuosly differentiable and we denote the space of all such functions on (<i>a,b</i>) by <i>C</i><sup>(n)</sup>(<i>a,b</i>). If we can form all the derivatives <i>f</i><sup>(n)</sup> for <i>n</i> &ge; 1, we say that <i>f</i> is infinitely differentiable and denote the space of all such functions as C<sup>(&infin;)</sup>(<i>a,b</i>). In some places in the literature the term "smooth function" is reserved for functions in C<sup>(&infin;)</sup>(<i>a,b</i>), where we have used the term for functions in C<sup>1</sup>(<i>a,b</i>). &emsp;□</p>
+
+<p><b>Example</b>. Let</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>x</mi>
+          </mfrac>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2260;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ f(x) = \begin{cases}
+x^2 \sin \frac{1}{x} & \text{if } x \ne 0 \\
+0 & \text{if } x = 0 \\
+\end{cases}$$ -->
+
+<p>Note that <i>f</i> is continuous at every point included at <i>x</i> = 0 as lim_{x ⟶ 0} f(x) = 0 and f(0) = 0. Clearly <i>f</i> is differentiable at <i>x</i> &ne; 0. In fact <i>f</i>'(<i>x</i>) = 2<i>x</i> sin(1/<i>x</i>) − cos (1/<i>x</i>) when <i>x</i> &ne; 0. When <i>x</i> = 0, not that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mi>h</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{h\to 0} \frac{f(0+h) -f(0)} {h}  = \lim_{h\to 0} h \sin \frac{1}{h} = 0 $$ -->
+
+<p>so <i>f</i> is differentiable at <i>x</i> = 0, and <i>f'</i>(0) = 0. However, <i>f</i> is not continuosly differentiable on all of ℝ, it isn't true that lim_{x -> 0} <i>f'</i>(<i>x</i>) = 0, though it is on any open interval not containing 0. Since <i>f</i> is not continuos at 0, <i>f</i> is not twice differentiable. &emsp;■</p>
+
+<p>In the last section we saw  that <a href="Lagrange.html#monotonicity">Monotonicity test</a> allows the classification of critical points of a function by studying the first derivative sign changes. We can apply the same test to <i>f'</i>(<i>x</i>) when <i>f</i> is a function twice differentiable. Let <i>f</i>: <i>I</i> ⟶ ℝ be a twice differentiable function</p>
+
+<ol type="a">
+	<li><p>If <i>f''</i>(<i>x</i><sub>0</sub>) &ge; 0; &emsp;⇐⇒&emsp; <i>f</i>' is increasing in <i>I</i>;</p></li>
+	<li><p>If <i>f''</i>(<i>x</i><sub>0</sub>) &le; 0; &emsp;⇐⇒&emsp; <i>f</i>' is decreasing in <i>I</i>.</p></li>
+</ul>
+
+<ul>
+    <li><p>When <i>f</i> satisfies a) <i>f</i> is said <b>convex</b> or <b>concave upward</b>.</p></li>
+    <li><p>When <i>f</i> satisfies b), <i>f</i> is said <b>concave</b> or <b>concave downward</b>.</p></li>
+</ul>
+
+<p>Geometrically when <i>f</i> is convex, as <i>x</i> increases the slope of the tange line to the graph of <i>f</i> increases as well. As a consequence if a function is convex in an interval (<i>a,b</i>) its graph lies above the tangent line at every point <i>x</i> &in; (<i>a,b</i>):</p>
+
+<figure>
+<img src="img/derivate/convessa.png" alt="funzione convessa" />
+<figcaption><b>Fig.1</b>. <b>Convex function</b> the slope of the tanget line goes from negative to positive values, hence increases.</figcaption>
+</figure>
+
+<p>The tangent line to the graph of <i>f</i> at a point <i>x</i><sub>0</sub> has equation</p>
+
+<div class="eq">
+<p><i>y</i> = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i><sub>0</sub>) (<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>If <i>f</i> is convex, its graph never goes below that line; this means that</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i><sub>0</sub>) &ge; <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i><sub>0</sub>) (<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>holds for every <i>x</i> with <i>x</i><sub>0</sub> &in; (<i>a,b</i>). For concave function it is enough to reverse the inequality in the previous relation. The same condition also implies that every stationary point of a convex or concave function is a point of global minimum or maximum respectively.</p>
+
+<h2 id="inflection">Inflection points</h2>
+
+<p>Ovviamente il verso della concavità di una funzione piò cambiare: se una funzione <i>f</i> derivabile due vole in un intervallo [<i>a,c</i>] è concava in unverso in [<i>a,b</i>] e nel verso opposto in [<i>b,c</i>], il punto <i>b</i> di "transizione" tra le due concavità opposte si dice <b>punto di flesso</b>. <br> Attraverso un punto di flesso, la derivata seconda di <i>f</i> cambia segno. È quindi intuitivo che nel punto di flesso <i>f''</i> si annulli.</p>
+
+<p><b>Definition 5.9.3</b>. An <i>inflection point</i> is a point where the graph of a function changes from convex to concave or vice versa.&emsp;□</p>
+
+<p>At the inflection point the sign of <i>f''</i>, changes, hence is necesaary that <i>f''</i> is zero at the inflection point; This is a necessary condition but not sufficient, <i>i.e.</i>:</p>
+
+<div class="eq">
+<p><i>x</i><sub>0</sub> &emsp; inflection point &emsp;⇒&emsp; <i>f''</i>(<i>x</i><sub>0</sub>) = 0</p>
+</div>
+
+<p>but the converse is <b>not</b> true, that is at points where <i>f''</i> = 0, the second derivative test is inconclusive. For example consider <i>f</i>(<i>x</i>) = <i>x</i><sup>4</sup>, <i>f</i>''(0) = 0, but the second derivative of x<sup>4</sup>, which is 12<i>x</i><sup>2</sup>, does not flip signs at 0. On the other hand, the function <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> is such that <i>f''</i>(0) = 0, and the second derivative which is 6<i>x</i> flips sign at <i>x</i> = 0.</p>
+
+<p><b>Example 5.9.4</b>. Let <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup>. Since <i>f'</i>(<i>x</i>) = 3<i>x</i><sup>2</sup> &ge; 0 the function is increasinig over all ℝ, the stationary point at <i>x</i> = 0 cannot be an extreme point. Since <i>f</i>''(<i>x</i>) = 6<i>x</i>, the function is convex for <i>x</i> &gt; 0 and concave for <i>x</i> &lt; 0 and has a horizontal inflection point at <i>x</i> = 0. &emsp;■</p>
+
+<img src="img/x^3.png" alt="cubic function"/>
+
+<p>The inflection point of the cubic function is known as a <i>horizontal inflection point</i>.</p>
+
+<p><b>Definition 5.95</b> (<b>Horizontal inflection point</b>). Consider a differentiable function <i>f</i>(<i>x</i>). Assume that <i>f'</i>(<i>x</i><sub>0</sub>) = 0, and that, in any neighborhood of <i>x</i><sub>0</sub> we have <i>f</i>(<i>x</i>) &gt; <i>f</i>(<i>x</i><sub>0</sub>) on one side of <i>x</i><sub>0</sub>, and <i>f</i>(<i>x</i>) &lt; <i>f</i>(<i>x</i><sub>0</sub>) on the other. Then, the point <i>x</i><sub>0</sub> is called a <i>horizontal inflection point</i>. &emsp;□</p>
+
+<p>In the case the graph of a function that has a <a href="maxmin.html#vertical_tangents">Vertical Tangent</a>, its concavity changes when the graph intercept the vertical tangent. We call such a point a <i>vertical tangent inflection point</i>.</p>
+
+<img src="img/vertical_tangents.png" alt="vertical tangents"/>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
