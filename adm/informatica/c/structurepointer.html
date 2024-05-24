@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Declaring and Initializing a Structure Pointer"/>
+    <title>Declaring and Initializing a Structure Pointer</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Declaring and Initializing a Structure Pointer</h1>
+
+<p>Declaration is as easy as can be:</p>
+
+<pre>struct guy * him;</pre>
+
+<p>First is the keyword <i>struct</i>, then the structure tag <i>guy</i>, and then an asterisk ( * ) followed by
+the pointer name. The syntax is the same as for the other pointer declarations you have seen.</p>
+
+<p>This declaration does not create a new structure, but the pointer him can now be made to point
+to any existing structure of the <i>guy</i> type. For instance, if barney is a structure of the guy type,
+you could do this:</p>
+
+<pre>him = &amp;barney;</pre>
+
+<p>Unlike the case for arrays, the name of a structure is not the address of the structure; you need
+to use the &amp; operator.</p>
+
+<p>In the example, fellow is an array of structures, which means that fellow[0] is a structure, so
+the code initializes him by making it point to fellow[0]:</p>
+
+<pre>him = &amp;fellow[0];</pre>
+
+<p>The first two output lines show the success of this assignment. Comparing the two lines, you
+see that him points to <i>fellow[0]</i> , and him + 1 points to fellow[1]. Note that adding 1 to
+him adds 84 to the address. In hexadecimal, 874 − 820 = 54 (hex) = 84 (base 10) because each
+guy structure occupies 84 bytes of memory: names.first is 20, names.last is 20, favfood is
+20, job is 20, and income is 4, the size of float on our system. Incidentally, on some systems,
+the size of a structure may be greater than the sum of its parts. That’s because a system’s align-
+ment requirements for data may cause gaps. For example, a system may have to place each
+member at an even address or at an address that is a multiple of four. Such structures might
+end up with unused “holes” in them.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

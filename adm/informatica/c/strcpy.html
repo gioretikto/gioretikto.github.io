@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="strcpy()"/>
+    <title>strcpy()</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>strcpy()</h1>
+
+<p>strcpy è una funzione della libreria standard del C definita nel file header string.h che copia una stringa da una locazione
+ ad un'altra.</p>
+
+<p>Il prototipo della funzione è:</p>
+
+<pre>char *strcpy(char *destinazione, const char *sorgente);</pre>
+
+<p>L'ordine degli argomenti fa in modo che l'assegnazione sia fatta in modo che sorgente sia copiato in destinazione.
+ Notice that source is preceded by the const modifier because <code>strcpy()</code> function is not allowed to change the source string.</p>
+
+<p>The second pointer, which points to the original string, can be a declared pointer, an array name, or a string constant.</p>
+
+<p>It is your responsibility to make sure the destination array has enough room to copy the source.</p>
+
+<h3>Return Value</h3>
+
+<p>This returns a pointer to the destination string dest.</p>
+
+<h3>Examples</h3>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+	char target[20];
+	const char input[] = "Hi there!";
+	
+	strcpy(target, input);	
+	printf("%s\n", target);
+	
+	return 0;
+}
+</pre>
+
+<h3>Dynamic memory allocation</h3>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int main(int argc, char *argv[])
+{
+    /* Get word to capitalize from command line */
+    char *word = "hello world";
+
+    /* Dynamically allocate temporary buffer */
+    char *tmp = malloc(strlen(word) + 1);
+    /* Return error if allocation failed */
+    if (tmp == NULL)
+        return (EXIT_FAILURE);
+
+    /* Initialize tmp with null bytes for good practice */
+    memset(tmp, '\0', strlen(word) + 1);
+
+    printf("Before capitalization: %s\n", word);
+
+    /* Copy word into tmp */
+    strcpy(tmp, word);
+
+    /*
+        * If first character of word is lowercase letter, capitalize it.
+        * Capitalized version of a lowercase letter is -ASCII value 32.
+        */
+    if (tmp[0] >= 'a' && tmp[0] <= 'z')
+        tmp[0] -= 32;
+
+    /* Reassign capitalized word */
+    word = tmp;
+
+    printf("After capitalization: %s\n", word);
+
+    /* One free for each malloc */
+    free(tmp);
+
+    return (EXIT_SUCCESS);
+}
+</pre>
+
+<p>produrrà l'output:</p>
+
+<pre>
+Before capitalization: hello world
+After capitalization: Hello world
+</pre>
+
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

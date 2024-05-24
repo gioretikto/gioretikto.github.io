@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="iwlist Command"/>
+
+    <title>iwlist Command</title>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li> <a class="navbar" href="../../index.php">Home</a></li>
+        <li> <a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>iwlist Command</h1>
+
+<p>Il comando iwlist permette di fare lo scan delle reti wireless:</p>
+
+<pre>iwlist wla0 scanning</pre>
+
+<p>Per ottenere il canale di un particolare ESSID e memorizzarlo in una variabile:</p>
+
+<pre>var="$(iwlist wlan0 scanning | sed '/ESSID.*Giovanni/,/ESSID/!d; /Channel:/!d; s/.*Channel: *//; s/ .*//')"</pre>
+
+
+<div class="parent">
+<div class="child"><a href="integrale.html">&#171;Definizione dell'integrale</a></p></div>
+<div class="child"><a href="index.html">Indice</a></div>
+<div class="child"><a href="pronunciation.html">The Pronunciation of Classical Latin&#187;</a></p></div>
+</div>
+
+</div>
+
+</body>
+</html>

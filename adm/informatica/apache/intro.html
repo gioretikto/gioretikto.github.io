@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<title>Introduzione a MySQL</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+
+<body>
+
+<h1>Introduzione a MySQL</h1>
+
+    <p>Apache è il web server più utilizzato, sviluppato dalla Apache Software Foundation (http://www.apache.org/).</p>
+    <p>In questa sezione installeremo e configureremo Apache2, operazione che necessiterà i privilegi di root.</p>
+
+
+    <p>Si può avviare Apache automaticamente durante il boot o manualmente a seguito dell'avviamento del sistema.</p>
+    <p>To make sure that Apache is automatically started during boot in the targets <code>multi-user.target</code> and <code>graphical.target</code>, eseguire il seguente comando:</p>
+        
+    <p><pre><code>root #  systemctl enable apache2</code></pre>><p>
+
+   <p>Se all'avvio si ottiene il messaggio Access forbidden!, assicurarsi che ci sia la pagina index.html in htdocs/.</p>
+   
+   <p>Se non si riesce a visualizzare la pagina index.php, assicurarsi che il modulo php7 sia installato e caricato, con <i>a2enmod -l</i>:</p>
+   
+   <p>Per caricare il modulo usare:</p>
+   
+   <code>
+   <p>a2enmod php7</p>
+   </code>
+   
+    </body>
+
+</html>

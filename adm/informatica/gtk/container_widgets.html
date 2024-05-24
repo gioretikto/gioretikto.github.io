@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GtkContainer"/>
+    <title>GtkContainer</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="inedx.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>GtkContainer</h1>
+
+<p>A “widget” is a GUI element, for example a button, some text, a menu, etc. And there are some special kinds of widgets that are called “<b>containers</b>”, which can contain other widgets, to assemble the
+elements in a window. GTK+ provides a broad range of widgets and containers.</p>
+
+<p>The main purpose of the <i>GtkContainer</i> container class is to allow a parent widget to contain one or more children. There are two types of container widgets in GTK+, those used for laying out children and decorators and those that add some sort of functionality beyond positioning to a child.</p>
+
+<h2>GtkBox widget</h2>
+
+<p><i>GtkBox</i> is an abstract container widget that allows multiple children to be packed in a one dimensional, rectangular area. There are two types of boxes: GtkVBox and GtkHBox.</p>
+
+<p><b>GtkHBox widget</b>: This widget is a single row horizontal packing box widget.</p>
+<p><b>GtkVBox widget</b>: This widget is a single column vertical packing box widget.</p>
+
+
+<h2>gtk_container_add ()</h2>
+
+<pre>
+void
+gtk_container_add (GtkContainer *container,
+                   GtkWidget *widget);
+</pre>
+
+<p>Adds widget to container. Typically used for simple containers such as GtkWindow, GtkFrame, or GtkButton; for more complicated layout containers such as GtkBox or GtkGrid, this function will pick default packing parameters that may not be correct. So consider functions such as gtk_box_pack_start() and gtk_grid_attach() as an alternative to gtk_container_add() in those cases. A widget may be added to only one container at a time; you can’t place the same widget inside two different containers.</p>
+
+<p>Note that some containers, such as GtkScrolledWindow or GtkListBox, may add intermediate children between the added widget and the container.</p>
+
+<h5>Parameters</h5>
+
+<ul>
+	<li><p>container: a GtkContainer</p></li>
+	<li><p>widget: a widget to be placed inside container.</p>
+</ul>
+
+<p>For exampple to add a box to a window</p>
+
+<pre>gtk_container_add (GTK_CONTAINER (window), main_vbox)</pre>
+
+<h2>Examples</h2>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+/* Our new improved callback.  The data passed to this function is printed
+ * to stdout. */
+void callback (GtkWidget *widget, gpointer *data)
+{
+    g_print ("Hello again - %s was pressed\n", (char *) data);
+}
+
+/* another callback */
+void destroy (GtkWidget *widget, gpointer *data)
+{
+    gtk_main_quit ();
+}
+
+int main (int argc, char *argv[])
+{
+    /* GtkWidget is the storage type for widgets */
+    GtkWidget *window;
+    GtkWidget *button;
+    GtkWidget *box1;
+
+    /* this is called in all GTK applications.  arguments are parsed from
+     * the command line and are returned to the application. */
+    gtk_init (&argc, &argv);
+
+    /* create a new window */
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+
+    /* this is a new call, this just sets the title of our
+     * new window to "Hello Buttons!" */
+    gtk_window_set_title (GTK_WINDOW (window), "Hello Buttons!");
+
+    /* It's a good idea to do this for all windows. */
+    g_signal_connect (G_OBJECT (window), "destroy",
+                        G_CALLBACK (destroy), NULL);
+                        
+    gtk_window_set_default_size (GTK_WINDOW (window), 200, 200);
+
+    /* we create a box to pack widgets into.  this is described in detail
+     * in the "packing" section below.  The box is not really visible, it
+     * is just used as a tool to arrange widgets. */
+    box1 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
+
+    /* put the box into the main window. */
+    gtk_container_add (GTK_CONTAINER (window), box1);
+
+    /* creates a new button with the label "Button 1". */
+    button = gtk_button_new_with_label ("Button 1");
+
+    /* Now when the button is clicked, we call the "callback" function
+     * with a pointer to "button 1" as it's argument */
+    g_signal_connect (G_OBJECT (button), "clicked",
+                        G_CALLBACK (callback), (gpointer) "button 1");
+
+    /* instead of gtk_container_add, we pack this button into the invisible
+     * box, which has been packed into the window. */
+
+    gtk_container_add (GTK_CONTAINER (box1), button);
+
+    /* always remember this step, this tells GTK that our preparation for
+     * this button is complete, and it can be displayed now. */
+    gtk_widget_show(button);
+
+    /* do these same steps again to create a second button */
+    button = gtk_button_new_with_label ("Button 2");
+
+    /* call the same callback function with a different argument,
+     * passing a pointer to "button 2" instead. */
+    g_signal_connect (G_OBJECT (button), "clicked",
+                        G_CALLBACK (callback), (gpointer) "button 2");
+
+    gtk_container_add (GTK_CONTAINER (box1), button);
+
+    /* The order in which we show the buttons is not really important, but I
+     * recommend showing the window last, so it all pops up at once. */
+    gtk_widget_show(button);
+
+    gtk_widget_show(box1);
+
+    gtk_widget_show (window);
+
+    /* rest in gtk_main and wait for the fun to begin! */
+    gtk_main ();
+
+    return 0;
+}
+</pre>
+
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

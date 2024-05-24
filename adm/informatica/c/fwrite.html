@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="fread() e fwrite()"/>
+	<title>fwrite()</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Sequential and Random Access Files: fwrite()</h1>
+
+<p><b>Field</b>: group of characters conveying meaning  •Example: your name</p>
+
+<p><b>Record</b>: group of related fields •  Represented by a  struct or a  class•  Example: In a payroll system, a record for a particular employee that contained his/her identification number, name, 
+address, etc.</p>
+
+<p>Consider writing data to a file for example fi we want to store 524 in a data file, even though it occupies only 2 bytes in the memory, when transferred to the hard disk with the <code>fprintf()</code> function, it is converted to ASCII and it needs 3 bytes (a char is 1 byte), one byte each for 5, 2, and 4. Similarly, if a real number 26.92 is to be stored with the <code>fprintf()</code> function, it needs 5 bytes of storage. When a data file is created with the <code>fprintf()</code> function, normally a sequential file is created. Addition of new data in a sequential file is very difficult because it requires shifting of all records from one end to a particular position. Moreover, in case of a sequential file, the records may be of different lengths and a large amount of space is required to store numbers.</p>
+
+<p>Records in a random access file are of the same length. Therefore, accessing a random access file is easier than accessing a sequential file. This is why files are random in nature in almost all the systems. Modification of a record in a random access file is easy because the exact location of the record in number of bytes can be calculated as a function of the record key. Random access files are created with the <code>fwrite()</code> function. The syntax is</p>
+
+<p>size_t fwrite(const void *ptr, size_t size, size_t n, FILE *fp);</p>
+
+<p>The <code>fwrite()</code> function writes the data specified by the void pointer ptr to the file.</p>
+
+<ul>
+	<li><p><b>ptr</b>: it points to the block of memory which contains the data items to be written.</p></li>
+
+	<li><p><b>size</b>: It specifies the number of bytes of each item to be written.</p></li>
+
+	<li><p><b>n</b>: It is the number of items to be written.</p></li>
+
+	<li><p><b>fp</b>: It is a pointer to the file where data items will be written. </p></li>
+</ul>
+
+<p>On success, it returns the count of the number of items successfully written to the file. On error, it returns a number less than n. Notice that two arguments (size and n) and return value of fwrite() are of type size_t which on the most system is unsigned int. </p>
+
+<p>Here, the <code>sizeof()</code> function calculates the size of num in bytes and then <code>fwrite()</code> writes this size as one single block of a particular data type in the disk. Therefore, the third argument is 1.</p>
+
+<h2>Binary Files</h2>
+
+<p>Binary files are very similar to arrays of structures, except the structures are in a disk file rather than in an array in memory. Because the structures in a binary file are on disk, you can create very large collections of them (limited only by your available disk space). They are also permanent and always available. The only disadvantage is the slowness that comes from disk access time.</p>
+
+<p>Binary files have two features that distinguish them from text files:</p>
+
+<ul>
+	<li><p>You can jump instantly to any structure in the file, which provides random access as in an array.</p></li>
+	<li><p>You can change the contents of a structure anywhere in the file at any time.</p></li>
+</ul>
+
+<p>it returns a non-zero value if the ened-of-file flag associated with argument <i>stream</i> is set; otherwise, it returns zero.</p>
+
+<h2>Example</h2>
+
+<p>The following create a .dat file and store in it account information.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+struct clientData {
+	int acctNum; 		/* account number */
+	char lastName[15];  /* account last name */
+	char firstName[10]; /* account first name */
+	double balance;		/* account balance */
+};
+
+int main()
+{	
+	/* create clientData with default information */
+	struct clientData blankClient = {1, "", "", 0 };
+
+	FILE *cfPtr;
+	/* credit.dat file pointer */
+	
+	/* fopen opens the file; exits if file cannot be opened */
+	if ((cfPtr = fopen("credit.dat", "wb")) == NULL) {
+		printf("File could not be opened.\n");
+	}
+	
+	else
+	{
+		/* output 3 blank records to file for each client */
+		for (blankClient.acctNum; blankClient.acctNum <= 3; blankClient.acctNum++) {
+			fwrite(&blankClient, sizeof(struct clientData), 1, cfPtr);
+		}
+		
+		fclose (cfPtr); 	/* fclose closes the file */
+	}
+	/* end else */
+	return 0;
+
+}/* end main */
+</pre>
+
+<p>To read this file we use <code>fread</code>.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+struct clientData {
+	int acctNum; /* account number */
+	char lastName[15]; /* account last name */
+	char firstName[10];/* account first name */
+	double balance;/* account balance */
+};
+
+int main()
+{
+	struct clientData client;
+	FILE *cfPtr;
+	int n;
+	
+	/* fopen opens the file; exits if file cannot be opened */
+	if ((cfPtr = fopen( "credit.dat", "rb")) == NULL) {
+		printf("File could not be opened.\n");
+	}
+	
+	else
+	{		
+		printf("%-6s%-16s%-11s%10s\n", "Acct", "Last Name","First Name", "Balance");
+		
+		/* read all records from file (until eof) */
+	 while(n = fread(&client, 1, sizeof(struct clientData), cfPtr), n > 0) { printf("%-6d%-16s%-11s%10.2f\n", client.acctNum, client.lastName, client.firstName, client.balance); } if(ferror(cfPtr)) { perror("got a read error"); }
+	}
+		
+	fclose(cfPtr); /* fclose closes the file */
+	return 0;	
+}
+</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

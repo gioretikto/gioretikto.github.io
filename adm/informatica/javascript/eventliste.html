@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Event Listener"/>
+    <title>Event Listener</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Event Listener</h1>
+
+<p>If you click insise the inner <i>div</i> element, you'll see a massage printed inside the console. The addEventListener() method is available on all HTML element and has two required parameters: the name of the event and a reference to the function that will be called when the event occurs.</p>
+
+<pre>
+&lt;!DOCTYPE html>
+&lt;html lang="en"> 
+  &lt;head> 
+    &lt;meta charset="utf-8" />
+    &lt;title>Prova&lt;/title>
+  &lt;/head> 
+
+  &lt;body> 
+     &lt;div id="div2"&gt;&lt;p&gt;Clicca qui&lt;p&gt; &lt;/div&gt;
+     
+         
+         &lt;script&gt; 
+            function someAction(){
+                console.log("Bene funziona");
+            }
+            
+            var div = document.getElementById("div2");
+            div.addEventListener("click", someAction);
+         &lt;/script&gt;
+  &lt;/body&gt; 
+&lt;/html&gt;
+</pre>
+
+<p>This is another example, of usage of addEventListener() method used to play an audio file by clicking on a button:</p>
+<pre>
+
+&lt;script&gt; 
+var butt = document.querySelector('button');
+butt.addEventListener("click", playfile);
+ function playfile(){
+       var audio = document.querySelector("audio");
+       audio.play();
+ }
+&lt;/script&gt;
+
+</pre>
+
+<h2>Mostrare un elemento div nascosto</h2>
+
+<pre>
+&lt;p&gt;&lt;b>Werden&lt;/b> noun = il divenire&lt;/p&gt;
+
+&lt;div class="arrow-down" data-target="#Werden"&gt;&lt;/div> 
+
+&lt;&lt;div class="entry" id="Werden" style="display: none;">
+
+&lt;&lt;ul&gt;
+    &lt;li&gt;&lt;p>il libro è ancora in divenire (od in fieri)&lt;/p>&lt;/li&gt;
+    &lt;li&gt;&lt;p>das Buch ist noch im Werden&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p>grandi cose stanno per accadere&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p>große Dinge sind im Werden&lt;/p&gt;&lt;/li&gt;
+&lt;/ul>
+
+&lt;/div&gt;
+
+</pre>
+
+<p>con il seguente codice javascript</p>
+
+<pre>
+&lt;script&gt;
+document.querySelectorAll('.arrow-down').forEach(el => {
+	el.nextElementSibling.style.display = 'none';
+  el.addEventListener('click', () => {
+    const sibling = el.nextElementSibling;
+    const {
+      display
+    } = sibling.style;
+    sibling.style.display = display === 'none' ? '' : 'none';
+  })
+});
+&lt;/script&gt;
+</pre>
+
+<section>
+<a href="alteralius.html">&#171; Distributive and reciprocal use of alter and alius</a>
+<a href="index.html">Index</a>
+<a href="ceteri.html">Indeterminative alii, relĭqui, cetĕri &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Local Area Network (LAN)">
+	<title>Local Area Network (LAN)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Local Area Network (LAN)</h1>
+
+<p>A <b>Local Area Network (LAN)</b> is a collection of devices connected together in one physical location, such as a building, office, or home. Hosts are conncted with the switch in the same netweork and can communicate with each other. A <b>switch</b> is a small hardware device used in the same building that joins the hosts to communicate with each other within one LAN. Technically, network switchd operate Data Link Layer. It can take a decision for the route of information. There is no need for a <b>router</b> to transmit the information between the hosts in the same network. <br> Diagram 1 depicts the simple architecture of the LAN</p>
+
+<table class="noborder centertable">
+<caption>Block diagram of a LAN</caption>
+<tr> <td colspan="2">Switch 1</td> <td>←→</td> <td colspan="2">Switch 2</td> </tr>
+<tr> <td>⤢</td> <td>⤡</td> <td></td>  <td>⤢</td> <td>⤡</td> 
+<tr><td>Host 1</td> <td>Host 2</td> <td></td> <td>Host 3</td> <td>Host 4</td></tr>
+</table>
+
+<p>Network switches appear nearly identical to network hubs, but a switch generally contains more intelligence (and a slightly higher price tag) than a hub. Unlike hubs, network switches are capable of inspecting data packets as they are received, determining the source and destination device of each packer, and forwarding them appropiately. By delivering messages only to the connected device intended, a network switch conserves network and offers generally better performance than a hub.
+
+<p>One LAN can be connected to other LANs over any distance via telephone line and radio waves. <br> A <b>WAN</b> is a communications network that spans a large geographic area such as across cities, states, or countries. A WAN is used to communicate outside the organization, city and country.</p>
+
+<p>A <b>router</b> derives its name from the fact that it can route data it receives from one network onto another. Routers are used to link the LAN to the WAN. A router is an intelligent device that is used to transmit information far away and can decide the shortest path to go to the destination.</p>
+
+<table class="noborder centertable">
+<tr><td>Router A<br>⊗</td> <td>←→</td> <td>Router B<br>⊗</td> </tr>
+<tr> <td>↕</td> <td></td>  <td>↕</td> </tr>
+<tr> <td colspan="2">Switch 1</td> <td></td> <td colspan="2">Switch 2</td> </tr>
+<tr> <td>⤢</td> <td>⤡</td> <td></td>  <td>⤢</td> <td>⤡</td> 
+<tr><td>Host 1</td> <td>Host 2</td> <td></td> <td>Host 3</td> <td>Host 4</td></tr>
+</table>
+
+<p>A router is a layer three device. The network is identified by the router. Router A at the left-hand side is connected to Router B. Hosts are connected in the LAN with a switch and the switch is connected with the router. When Host 1 desires to connect to Host 4, Router A will route the information to Router B which will send this information to the host 4. </p>
+
+<h2>Routers</h2>
+
+<p>Router—A network device that forwards data by logical address and can also be used to segment large networks into smaller subnetworks. This logical addressing scheme is maintained by the IP protocol at the Internet layer. The logical address is called the <a href="IP_address.html">IP address</a>. So Routers operate at the Network layer (layer 3) of the <a href="OSI.html">OSI model</a>. <br> Fig.1 describes communitation between a host on Network 1 and one on Network 2. The host at network 1 sends the message by using an application layer that is the user layer. The communication is moved to the transport layer. The information is used to break into small parts called segments. The port number and header are attached to segments. Segments are changed into an IP address at the netweork layer that is also called a packet. Packets are change to frame ath the data link layer. Error detection and flow control are the responsibilities of the data link layer. The frame in an envelope that has to be transmitted. The frame at the physical layer is converted into bits. Bits cannot be transmitted to the receiver. Bits are converted to signals and then transmitted to the receiver. The receiver repeats the same process in down to up approach. The message is seen by the user on the device.</p>
+
+<figure>
+<img src="img/internetworking.png" alt="internetworking"/>
+<figcaption><b>Fig. 1</b> Working of Layers in TC/IP suite</figcaption>
+</figur>
+
+<p>A <b>Router</b> is a key component used to forward data from one network to other networks. A sophisticated network device that reads and resolves network adresses from incoming traffic. Routers perform all kinds on interesting functions on such data, including filtering incoming data by address, managing multiple protocols, either blocking or allowing certain types of protocols as well as certain ranges of addresses associated with certain protocols, and more. A router is also a gateway, since it interprets data from one network protocol to another. A router is connected to at least two networks, commonly two LANs or WANs or a LAN and its ISP's network.</p>
+
+<p>A router interfaces configured with an IP address and subnet mask and attached to a directly connected network becomes a host on that attached network.</p>
+
+<h3>Principles of Routing</h3>
+
+<p>The terms <i>forwarding</i> and <i>routing</i> are often used interchangeably by authors discussing the network layer. We’ll use these terms much more precisely in this book. <b>Forwarding</b> refers to the router-local action of transferring a packet from an input link interface to the appropriate output link interface. Forwarding takes place at very short timescales (typically a few nanoseconds), and thus is typically implemented in hardware.</p>
+
+<p><b>Routing</b> refers to the network-wide process that determines the end-to-end paths that packets take from source to destination.</p>
+
+<p>The role of the routing table is to deliver the data to the propr local network. The routing table, therefore, does not need to store complete IP address and can simply list addreesses by Network ID. A <b>routing table</b> essentially maps destination network IDs to the IP address of the next hop—the next stop the datagram makes on its path to the destination network. 
+
+<h2>Gateways</h2>
+
+<p>A <b>gateway</b> is a networking device that enables data to enter and exit a LAN, and is where the host computers forward data packets that need to exit the LAN. Gateways are distinct from routers or switches in that they communicate using more than one protocol to connect multiple networks and can operate at any of the seven layers of the open systems interconnection model (OSI). An important concept is that the IP address of the gateway must be in the same subnet as the LAN that connects to the gateway, and this same gateway enables data traffic to enter and exit the LAN.</p>
+
+<p>Gateways are more versatile devices than routers. Gateways perform all of the functions of a router and more. They perform protocol conversion between different types of networks, architectures, or applications and serve as translators and interpreters for network computers that communicate in different protocols and operate in dissimilar networks, for example, OSI and TCP/IP. Because the networks are different with different technologies, each network has its own routing algorithms, protocols, domain names servers, and network administration procedures and policies. 
+
+<p>A <b>Gateways</b>, is an interface providing compatibility between networks by converting transmission speeds, protocols, codes, or security measures. It transfers information and converts it to a form compatible with the receiving network's protocols for this they are also called protocol converters, because networks connected with gateways may uses different protocols (e.g., an e-mail gateway could translate the Internet messages into short messaging system (SMS) messages for mobile phoes). Several types of gateway exist, including data gateways, e-mail gateways, application gateways, secutre gateways, XPN gateways and VPN gateways; The activities of a gateway are more complex than that of the router or switch as it communitactes using more than one protocol; Gateways operates in the Application and session layers of OSI model. A router may operate between layer 3 and 4 but will never move up beyond layer 4, such as to the application layer of the TCP/IP model.</p>
+
+<p>The circuitry that enables a device to access a LAN is called a <b>network interface controller (NIC)</b>. NICs are built inot the circuit boards of most digital devices and they operate at data-link layer. NICs contain a <b>MAC address</b> (media access control address) used to uniquely identify devices on LANs. MAC addresses are usually assigned by the manufacturer of digital devices and embedded in the hardware. A MAC address functions in conjuction with an IP address on a LAN. Each device on a LAN has a MAC address. DHCP assign an IP address to a device and link it to the device's MAC address.</p>
+
+<h2>Networking Devices</h2>
+
+<p>A <b>bridge</b> is a device that connects similar or dissimilar two or more LANs together to from an extended LAN. Bridges are protocol independent devices and are designed to store and then forward frames destined for another LAN. Bridges are transparent to the end-stations conencting through the bridge. It works at the data link layer and therefore works with MAC addresses and connects the different networks together and develops communications between them. When a frame arrives at a bridge, the bridge determines whether or not the MAC address is on the local network segment.</p>
+
+<p id="hub"><b>Hubs</b> and <b>Switches</b> are used to exchange data within a LAN. A <b>hub</b> is a device with multiple ports that single Ethernet cables are connected to. If you need to add a new computer to the network, you can simply connect it to the hub. The hub simply takes the pulse it receives and multiplies it – that is, sends it to all other ports. For example, if A sends a frame to B, the hub will send this frame to B, C and D – all ports except A’s port that is a <i>hub</i> is a device that broadcasts data to every computer or Ethernet-based device connected to it. The hub doesn’t understand Ethernet, and doesn’t know anything about MAC addresses. For the hub, all bits are just bits transmitted over the wire, and these bits should get to all other ends. Hubs operate at layer 1 of the OSI model.</p> 
+
+<p>Ethernet <b>switches</b> were introduced that could handle packets more intelligently. Unlike the hubs, a <b>switch</b> does not broadcast the data to all the computers; it sends the data packets only to the destined computer. Therefore, switch provides more security as compared to hub. 
+
+<p>A major player in the standards world is <b>IEEE (Institute of Electrical and Electronics Engineers)</b>, the largest professional organization in the world. In addition to publishing scores of journals and running hundreds of conferences each year, IEEE has a standardization group that develops standards in the area of electrical engineering and computing. IEEE’s 802 committee has standardized many kinds of LANs. We will study some of its output later. The actual work is done by a collection of working groups, which are listed in Tab. 1. The success rate of the various 802 working groups has been low; having an 802.x number is no guarantee of success. Still, the impact of the success stories (espe- cially 802.3 and 802.11) on the industry and the world has been enormous.</p>
+
+<table>
+<caption>The 802 working groups. The important ones are marked with *. The ones marked with ↓ are hibernating. The one marked with † gave up and disbanded itself.</caption>
+<tr><th>Number</th> <th>Topic</th></tr>
+<tr><td>802.1</td> <td>Overview and architecture of LANs</td></tr>
+<tr><td>802.2 ↓</td> <td>Logical link control</td></tr>
+<tr><td>802.3 *</td> <td>Ethernet</td></tr>
+<tr><td>802.4 ↓</td> <td>Token bus (was briefly used in manufacturing plants)</td></tr>
+<tr><td>802.5</td> <td>Token ring (IBM’s entry into the LAN world)</td></tr>
+<tr><td>802.6 ↓</td> <td>Dual queue dual bus (early metropolitan area network)</td></tr>
+<tr><td>802.7 ↓</td> <td>Technical advisory group on broadband technologies</td></tr>
+<tr><td>802.8 †</td> <td>Technical advisory group on fiber optic technologies</td></tr>
+<tr><td>802.9 ↓</td> <td>Isochronous LANs (for real-time applications)</td></tr>
+<tr><td>802.10 ↓</td> <td>Virtual LANs and security</td></tr>
+<tr><td>802.11 *</td> <td>Wireless LANs (WiFi)</td></tr>
+<tr><td>802.12 ↓</td> <td>Demand priority (Hewlett-Packard’s AnyLAN)</td></tr>
+<tr><td>802.13</td> <td>Unlucky number; nobody wanted it</td></tr>
+<tr><td>802.14 ↓</td> <td>Cable modems (defunct: an industry consortium got there first)</td></tr>
+<tr><td>802.15 *</td> <td>Personal area networks (Bluetooth, Zigbee)</td></tr>
+<tr><td>802.16 *</td> <td>Broadband wireless (WiMAX)</td></tr>
+<tr><td>802.17</td> <td>Resilient packet ring</td></tr>
+<tr><td>802.18</td> <td>Technical advisory group on radio regulatory issues</td></tr>
+<tr><td>802.19</td> <td>Technical advisory group on coexistence of all these standards</td></tr>
+<tr><td>802.20</td> <td>Mobile broadband wireless (similar to 802.16e)</td></tr>
+<tr><td>802.21</td> <td>Media independent handoff (for roaming over technologies)</td></tr>
+<tr><td>802.22</td> <td>Wireless regional area network</td></tr>
+</table>
+
+<h2>Ethernet</h2>
+
+<p>The first computer networks were configured with wired connections. These networks ised a variety of topologies and protocols, but a technology called Ethernet emerged s the dominant standard and became a ket element in large and small computer networks. Ethernet is a wired network technology that is defined by IEEE 802.3 standards. It was first deployed in 1976 and is now used for wired connections in just about every LAN. </p>
+
+<section aria-label="End">
+<a href="OSI.html">«OSI and TCP/IP models</a>
+<a href="index.html">Index</a>
+<a href="NAT.html">NAT (Network Address Translation)»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Buffer Overflow"/>
+    <title>Buffer Overflow</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Buffer Overflow</h1>
+
+<p>Un tipico errore di programmazione che può causare il verificarsi di un buffer overflow è il mancato controllo sulla dimensione dei dati letti 
+da input.
+
+<pre>
+char name [20]; /* buffer di 20 caratteri */
+printf ("Inserisci il tuo nome: ");
+scanf("%s", name); /* se l'utente inserisce più di 19 caratteri il carattere '\0' viene sempre aggiunto in automatico da scanf()
+				   si verifica un buffer overflow*/
+</pre>
+
+<p>Alcune funzioni della libreria standard C <b>non</b> permettono di effettuare controlli sulla dimensione dell'input e per questo sono potenzialmente fonte di errori che possono causare buffer overflow. Tra queste ci sono ad esempio: scanf, gets, strcpy, strcat.</p>
+
+<p>Un'alternativa è la funzione <b>fgets</b>:</p>
+
+<pre>
+#define BUF_SIZE 20
+char name [BUF_SIZE];  /*buffer di 20 caratteri */
+printf("Inserisci il tuo nome: ");
+fgets(name, BUF_SIZE, stdin); 
+</pre>
+ 
+<p><b>fgets</b> garantisce che al massimo BUF_SIZE caratteri verranno scritti nel buffer name. Se l'utente inserisce più di BUF_SIZE caratteri, quelli in eccesso non vengono scritti in name. In questo modo un buffer overflow non si può verificare.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

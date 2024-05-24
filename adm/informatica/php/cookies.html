@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Cookies"/>
+    <title>Cookies</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Cookies</h1>
+
+<p>To find out what a specific user is doing on your site, you need to store information about that user, such as the username, password, time between visits, preferences, and so on. In web programming, two popular techniques for this are cookies and session.</p>
+
+<p>PHP transparently supports HTTP cookies. Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying return users. You can set cookies using the setcookie() or setrawcookie() function. Cookies are part of the HTTP header, so setcookie() must be called before any output is sent to the browser. This is the same limitation that header() has. You can use the output buffering functions to delay the script output until you have decided whether or not to set any cookies or send any headers.</p>
+
+<p>Any cookies sent to server from the client will automatically be included into a $_COOKIE auto-global array if variables_order contains "C". If you wish to assign multiple values to a single cookie, just add [] to the cookie name.</p>
+
+<p>On older PHP systems (5.3 or earlier), register_globals may be enabled, which may cause undesirable and insecure operation. If this is enabled, cookies will be registered as global variables.</p>
+
+<h3>Advantages</h3>
+
+<ul>
+<li><p>Cookies can store information for years</p></li>
+<li><p>Cookies work well with the kind of distributed, load-balanced webservers necessary for high-traffic sites, because all of the data is on the user's computer.</p></li>
+</ul>
+
+<h3>Disadvantages</h3>
+
+<ul>
+<li><p>You need to be careful to follow the rules or lots o browsers will not accept your cookies, and they won't tell you of that refusal.</p></li>
+<li><p>Cookies are limited in size (it's generally best not to exceed 512 Kb)</p></li>
+<li><p>Users can easily delete the cookies if they want to.</p></li>
+<li><p>Cookies are generally specific to one user on one computer. If a user switches to another computer, he generally will not use any of the old cookies.</p></li>
+</ul>
+
+
+
+<h2>Sessions</h2>
+
+<p><i>Sessions</i> consist of a unique session ID and some sort of storage mechanism on your server. Becauase the data is on your server, the user doesn't get a change to manipulate it.</p>
+
+<h2>Check if Cookies are Enabled</h2>
+
+<p>The following example creates a small script that checks whether cookies are enabled. First, try to create a test cookie with the setcookie() function, then count the $_COOKIE array variable:</p>
+
+<pre>
+<code>
+&lt;?php
+setcookie("test_cookie", "test", time() + 3600, '/');
+?>
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+if(count($_COOKIE) > 0) {
+    echo "Cookies are enabled.";
+} else {
+    echo "Cookies are disabled.";
+}
+?>
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</code>
+
+</div>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="binet.html">Teorema di Binet, Regola di Sarrus &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

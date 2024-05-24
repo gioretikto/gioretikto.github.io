@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Internet Control Message Protocol (ICMP)">
+	<title>Internet Control Message Protocol (ICMP)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Internet Control Message Protocol (ICMP)</h1>
+
+<p>Data sent to a remote computer often travels through one or more routers; these routers can encounter a number of problems in sending the message to its ultimate destination. Routers use Internet Control Message Protocol (ICMP) messages to notify the source IP of these problems. ICMP is also used for other diagnosis and troubleshooting functions.</p>
+
+<p>The most common ICMP messages are listed here. Quite a few other conditions generate ICMP messages but their frequency of occurrence is quite low.</p>
+
+<ul>
+	<li><p><b>Echo Request and Echo Reply</b> —ICMP is often used during testing. A technician who uses the ping command to check connectivity with another host is using ICMP. ping sends a datagram to an IP address and requests the destination computer to return the data sent in a response datagram. The commands actually used by ping are the ICMP Echo Request and Echo Reply.</p></li>
+
+	<li><p><b>Source Quench</b> —If a fast computer is sending large amounts of data to a remote computer, the volume can overwhelm the router. The router might use ICMP to send a Source Quench message to the source IP to ask it to slow down the rate at which it is shipping data. If necessary, additional source quenches can be sent to the source IP.</p></li>
+
+	<li><p><b>Destination Unreachable</b> —If a router receives a datagram that cannot be delivered, ICMP returns a Destination Unreachable message to the source IP. One reason that a router cannot deliver a message is a network that is down because of equipment failure or maintenance.</p></li>
+
+	<li><p><b>Time Exceeded</b> —ICMP sends this message to the source IP if a datagram is discarded because TTL reaches zero. This indicates that the destination is too many router hops away to reach with the current TTL value, or it indicates router table problems that cause the datagram to loop through the same routers continuously.</p></li>
+
+	<li><p><b>A routing loop</b> occurs when a datagram circulates endlessly and never reaches its destination. Suppose three routers are located in Los Angeles, San Francisco, and Denver. The Los Angeles router sends datagrams to San Francisco, which sends them to Denver, which sends them back to Los Angeles again. The datagram becomes trapped and will circulate continuously through these three routers until the TTL reaches zero. A routing loop should not occur, but occasionally it does. Routing loops sometimes occur when a network administrator places static routing entries in a routing table.</p></li>
+
+	<li><p><b>Fragmentation Needed</b> —ICMP sends this message if it receives a datagram with the Don’t Fragment bit set and if the router needs to fragment the datagram to forward it to the next router or the destination.</p></li>
+
+</ul>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

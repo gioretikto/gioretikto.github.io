@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Shell Variables"/>
+    <title>Shell Variables</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Shell Variables</h1>
+
+<p>You can define variables and their values by assigning them:</p>
+
+<pre>myvar=3</pre>
+
+<p>There must be no space on either side of the equal sign,
+and if the value is more than one word, it must be
+surrounded by quotes. To refer to a value, simply place a dollar sign in front of the variable name:</p>
+
+<pre>echo $myvar</pre>
+
+<h2>Setting global environment variables</h2>
+
+<p>Global environment variables are visible from any child processes created by the parent process that sets the variable. The method used to create a global environment variable is to first create a local variable and then export it to the global environment.</p>
+
+<p>This is done by using the export command and the variable name minus the dollar sign:</p>
+
+<pre>
+$ my_variable="I am Global now"
+$
+$ export my_variable
+$
+$ echo $my_variable
+I am Global now
+$
+$ bash
+$
+$ echo $my_variable
+I am Global now
+$
+$ exit
+exit
+$
+$ echo $my_variable
+I am Global now
+$
+</pre>
+
+<p>After defi ning and exporting the local variable my_variable, a child shell was started by the bash command. The child shell was able to properly display the my_variable variable’s value. The variable kept its value, because the export command made it a global environment variable.
+Changing a global environment variable within a child shell does not affect the variable’svalue in the parent shell:</p>
+
+<pre>
+$ my_variable="I am Global now"
+$ export my_variable
+$
+$ echo $my_variable
+I am Global now
+$
+$ bash
+$
+$ echo $my_variable
+I am Global now
+$
+$ my_variable="Null"
+$
+$ echo $my_variable
+Null
+$
+$ exit
+exit
+$
+$ echo $my_variable
+I am Global now
+$
+</pre>
+
+<p>After defining and exporting the variable my_variable, a subshell was started by the bash command. The subshell properly displayed the value of the my_variable global environment variable. The variable’s value was then changed by the child shell. However, the variable’s value was modifi ed only within the child shell and not in the parent’s shell. A child shell cannot even use the export command to change the parent shell’s global
+environment variable’s value:</p>
+
+<pre>
+$ my_variable="I am Global now"
+$ export my_variable
+$
+$ echo $my_variable
+I am Global now
+$
+$ bash
+$
+$ echo $my_variable
+I am Global now
+$
+$ my_variable="Null"
+$
+$ export my_variable
+$
+$ echo $my_variable
+Null
+$
+$ exit
+exit
+$
+$ echo $my_variable
+I am Global now
+$
+</pre>
+
+<p>Even though the child shell redefi ned and exported the variable my_variable, the parent shell’s my_variable variable kept its original value.</p>
+
+<h2>Removing Environment Variables</h2>
+
+<p>Of course, if you can create a new environment variable, it makes sense that you can also remove an existing environment variable. You can do this with the unset command. When referencing the environment variable in the unset command, remember not to use the dollar sign:</p>
+
+<pre>
+$ echo $my_variable
+I am Global now
+$ unset my_variable
+$ echo $my_variable
+
+$
+</pre>
+
+<p>Some variables are standard and commonly defined by your shell upon login.</p>
+
+<p>The Linux system sets several global environment variables when you start your bash session. (For more details about what variables are started at that time, see the “Locating System Environment Variables” section later in this chapter.) The system environment variables almost always use all capital letters to differentiate them from normal user environment variables.</p>
+
+<table>
+
+<thead>
+<tr><th>Variable</th> <th>Meaning</th></tr>
+</thead>
+
+<tbody>
+<tr><td>$DISPLAY</td> <td>The name of your X window display</td></tr>
+
+<tr><td>$HOME</td> <td>Your home directory, such as /home/smith</td></tr>
+
+<tr><td>$LOGNAME</td> <td>Your login name, such as smith</td></tr>
+
+<tr><td>$MAIL</td> <td>Your incoming mailbox, such as /var/spool/mail/smith</td></tr>
+
+<tr><td>$OLDPWD</td> <td>Your shell’s previous directory, prior to the last cd command</td></tr>
+
+<tr><td>$PATH</td> <td>Your shell search path: directories separated by colons</td></tr>
+
+<tr><td>$PWD</td> <td>Your shell’s current directory</td></tr>
+
+<tr><td>$SHELL</td> <td>The path to your shell, e.g., /bin/bash</td></tr>
+
+<tr><td>$TERM</td> <td>The type of your terminal, e.g., xterm or vt100</td></tr>
+
+<tr><td>$USER</td> <td>Your login name</td></tr>
+</tbody>
+</table>
+
+<p>To view global environment variables, use the env or the printenv command:</p>
+
+<pre>$ printenv</pre>
+
+<h2>Command variables</h2>
+
+<p>It is possible to assign the output of a shell command to a shell variable:</p>
+
+<p>now=$(command-name)</p>
+
+<p>For example:</p>
+
+<pre>
+<code>
+now=$(date)
+echo "$now"
+</code>
+</pre>
+
+<h2>Assigning a mathematical values</h2>
+
+<p>The bash shell includes the <a href="expr.html">expr</a> command for processing mathematical equations; however, it also provides a much easier way of performing mathematical equations. In bash, when assigning a mathematical value to a variable, you can enclose the mathematical equation using a dollar sign and square brackets ($[ operation ]):</p>
+
+<pre>
+$ var1=$[1 + 5]
+$ echo $var1
+6
+$ var2=$[$var1 * 2]
+$ echo $var2
+</pre>
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="misure.html">Misura&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

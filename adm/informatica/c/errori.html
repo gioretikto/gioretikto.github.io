@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestione degli errori"/>
+    <title>Gestione degli errori</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Gestione degli errori</h1>
+
+<p>Per gestire gli errori esiste un secondo flusso in uscita, detto <code>stderr</code> (da standard error).</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+    FILE *fp;
+    if( (fp = fopen(argv[1], "r")) == NULL ){
+        fprintf(stderr, "%s: non riesco ad aprire %s\n",argv[0],argv[1]);
+        exit(1);
+    }
+</pre>
+
+<p>L'analisi degli errori prodotta da <code>fprintf</code> è convogliata sullo <code>stderr</code>, quindi raggiunge lo schermo invece di scomparire. La funzione <code>exit</code> della librearia standard che , una volta hciamata, termina l'esecuzione del programma e dunque il la riuscita o fallimeno dell'esecuzione.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

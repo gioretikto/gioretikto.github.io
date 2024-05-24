@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Strings"/>
+	<title>Strings</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Strings</h1>
+
+<p>A <b>string</b> is a 1D array of characters that is terminated by an escape sequence known as a NULL ("\0") character.</p>
+
+<h3>Declaration of a String</h3>
+
+<p>A string can be declared like a 1D array</p>
+
+<pre>char stringName[size];</pre>
+
+<p>For example</p>
+
+<pre>char string2[18];</pre> 
+
+<p>creates a character array capable of storing a string of at most 17 characters and a terminating null character.</p>
+
+<h3>Initialization of a String</h3>
+
+<p>We can initialize a string in two way. One way is to use the traditional initialization process as for a 1D array with an extra character "\0" appended at the end, e.g.</p>
+
+<pre>char week[] = {'M','O','N','D','A','Y','\0'};</pre>
+
+<p>The C language provides another most uncomplicated way to initialize an array that does not require appending the "\0" at the end of the string.</p>
+
+<pre>char week[] = "MONDAY";</pre>
+
+<p>By far the most common mistake that programmers make with C strings is that they forget to allocate space for the '\0' character. For example, the string "MONDAY" appears to be 6 characters, but seven characters wprth of space are needed in memory to store the value.</p>
+
+<p>A string is stored in memory as ASCII codes of the character. The compiler takes care of storing the ASCII codes of the characters of the string in memory and also stores the null terminator at the end.</p>
+
+<table class="noborder">
+<tr><th>Memory address</th> <td>2000</td> <td>2001</td> <td>2002</td> <td>2003</td> <td>2004</td> <td>2005</td> <td>2006</td> </tr>
+
+<tr><td></td> <td>M</td> <td>O</td> <td>N</td> <td>D</td> <td>A</td> <td>Y</td> <td>'\0'</td> </tr>
+
+<tr><th>Index number</th> <td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> </tr>
+</table>
+
+<p>Una <i>costante stringa</i>, scritta come</p>
+
+<pre>"Sono una stringa"</pre>
+
+<p>è un vettore di caratteri. Nella rappresentazione interna il vettore termina con il carattere nullo '\0' così i programmi  possano individuarne la fine. La lunghezza occupata in memoria è dunque di un carattere in più di quelli tra vigolette. L'accesso alla costante stringa è mediato da un puntatore. <i>printf</i> riceve un puntatore all'inizio del vettore di caratteri. <br> Tramite</p>
+
+<pre>const char *pmessage;</pre>
+
+<p>l'istruzione</p>
+
+<pre>pmessage = "now starts the fun";</pre>
+
+<p>assegna a <i>pmessage</i> un puntatore al vettore di caratteri.</p>
+
+<p>We can think of RAM as divided into three sections, static storage, the stack and the heap. Static storage is used for variable that can stay at the same address for the entire life of the program. Allocations of static storage is determined before execution begins. Fi
+
+<p>Esiste una differenza importante tra puntatori e vettori di caratteri:</p>
+
+<pre>char message[] = "sono una stringa" /* un vettore */</pre>
+
+<pre>char *pmessage[] = "adesso sono un puntatore" /*un puntatore */</pre>
+
+<p><i>message</i> è un vettore, grande quanto basta per contenere la sequenza di caratteri (seguita da '\0') che lo iniziallizza. Singoli caratteri del vettore possono essere cambiati, ma <i>message</i> farà riferimento sempre alla stessa zona di memoria. D'altra parte, <i>pmessage</i> è un puntatore, inizializzato, per puntare a una costante stringa; esso potrà essere modificato per denotare qualcos'altro.</p>
+
+<pre>
+char vowels[] = {'A', 'E', 'I', 'O', 'U'};
+char *pvowels = &amp;vowels;
+int i;
+
+// Print the addresses
+for (i = 0; i &lt; 5; i++) {
+    printf("&amp;vowels[%d]: %u, pvowels + %d: %u, vowels + %d: %u\n", i, &amp;vowels[i], i, pvowels + i, i, vowels + i);
+}
+
+// Print the values
+for (i = 0; i &lt; 5; i++) {
+    printf("vowels[%d]: %c, *(pvowels + %d): %c, *(vowels + %d): %c\n", i, vowels[i], i, *(pvowels + i), i, *(vowels + i));
+}
+</pre>
+
+<p>A typical output of the above code is shown below.</p>
+
+<pre>
+
+    &amp;vowels[0]: 4287605531, pvowels + 0: 4287605531, vowels + 0: 4287605531
+
+    &amp;vowels[1]: 4287605532, pvowels + 1: 4287605532, vowels + 1: 4287605532
+
+    &amp;vowels[2]: 4287605533, pvowels + 2: 4287605533, vowels + 2: 4287605533
+
+    &amp;vowels[3]: 4287605534, pvowels + 3: 4287605534, vowels + 3: 4287605534
+
+    &amp;vowels[4]: 4287605535, pvowels + 4: 4287605535, vowels + 4: 4287605535
+
+    vowels[0]: A, *(pvowels + 0): A, *(vowels + 0): A
+
+    vowels[1]: E, *(pvowels + 1): E, *(vowels + 1): E
+
+    vowels[2]: I, *(pvowels + 2): I, *(vowels + 2): I
+
+    vowels[3]: O, *(pvowels + 3): O, *(vowels + 3): O
+
+    vowels[4]: U, *(pvowels + 4): U, *(vowels + 4): U
+</pre>
+
+<p>As you rightly guessed, &amp;vowels[i] gives the memory location of the ith element of the array vowels. Moreover, since this is a character array, each element occupies one byte so that the consecutive memory addresses are separated by a single byte. We also created a pointer, pvowels, and assigned the address of the array vowels to it. <code>pvowels + i</code> is a valid operation; although in general, this may not always be meaningful (explored further in Pointer Arithmetics ). In particular, the output shown above indicates that &amp;vowels[i] and <code>pvowels + i</code> are equivalent. Feel free to alter the data types of the array and pointer variables to test this out.</p>
+
+<p>If you look carefully at the previous code, you will notice that we also used another apparently surprising notation: vowels + i. Moreover, pvowels + i and vowels + i returns the same thing — address of the ith element of the array vowels. On the other hand, *(pvowels + i) and *(vowels + i) both return the ith element of the array vowels. Why is that so?</p>
+
+<p>This is because the name of an array itself is a (constant) pointer to the first element of the array. In other words, the notations vowels, &amp;vowels[0], and vowels + 0 all point to the same location.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="arrays_of_strings.html">Arrays of strings &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

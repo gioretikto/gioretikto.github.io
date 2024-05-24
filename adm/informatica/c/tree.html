@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="tree"/>
+    <title>tree</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>tree</h1>
+
+<p>Trees: Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, trees are hierarchical data structures.</p>
+
+<p>Tree Vocabulary: The topmost node is called root of the tree. The elements that are directly under an element are called its children. The element directly above something is called its parent. For example, ‘a’ is a child of ‘f’, and ‘f’ is the parent of ‘a’. Finally, elements with no children are called leaves.</p>
+
+<pre>
+      tree
+      ----
+       j    &lt;-- root
+     /   \
+    f      k  
+  /   \      \
+ a     h      z    &lt;-- leaves
+</pre>
+
+<h2>Why Trees?</h2>
+<p>One reason to use trees might be because you want to store information that naturally forms a hierarchy. For example, the file system on a computer: 
+
+<pre>
+file system
+-----------
+     /    &lt;-- root
+  /      \
+...       home
+      /          \
+   ugrad        course
+    /       /      |     \
+  ...      cs101  cs112  cs113 
+</pre>
+
+
+<h2>Example</h2>
+
+<p>Programma che genera numeri casuali compresi tra 0 e 15 e li inerisce nell'albero se ancora non presenti</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+struct tree {
+	struct tree *left;
+	int data;
+	struct tree *right;
+};
+
+struct tree *insertnode(struct tree *p, int value);
+void treeprint(struct tree *p);
+
+int main()
+{
+	int i;
+	int item;
+	
+	struct tree *root = NULL;
+	srand(time(NULL));
+	printf("The numbers being place in the tree are:\n");
+	
+	for (i=0; i<=10; i++) {
+		item = rand() % 15;
+		printf("%3d", item);
+		root = insertnode(root, item);		
+	}
+	
+	printf("\nThe ordered tree is\n");
+	
+	treeprint(root);
+	
+	free(root);
+	
+	return 0;
+}
+
+struct tree *insertnode(struct tree *p, int value) {
+
+	if(p == NULL) {
+		 p = malloc(sizeof(struct tree));			
+		 p->data = value;
+		 p->left = p->right = NULL;
+	 }
+	 
+	 else {
+	 	if(value &lt; p->data)
+	 		p->left = insertnode(p->left, value);
+	 	if(value &gt; p->data)
+	 		p->right = insertnode(p->right, value);	 
+	 }
+	 
+	 return p;
+}
+
+void treeprint(struct tree *p)
+{
+	if(p != NULL) {
+		treeprint(p->left);
+		printf("%d\n", p->data);
+		treeprint(p->right);
+	}
+}
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

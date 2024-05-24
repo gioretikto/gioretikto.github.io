@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Memtest86+"/>
+    <title>Memtest86+</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Memtest86+</h1>
+
+<p>Most major Linux distributions include an easy to use RAM testing tool called <b>Memtest86+</b> that, in some cases, is not only installed by default, it's ready as a boot option found in GRUB, aimed at memory failures detection.</p>
+
+<p>The main question becomes when to run <b>Memtest86+</b> on a machine. In my experience, symptoms of bad memory are almost never the same from one machine to another. Usually, you'll run into a situation where a server doesn't boot properly, applications close
+unexpectedly, applications don't start at all, or perhaps an application is behaving irregularly. In my view, testing memory should be done whenever you experience a problem that doesn't necessarily seem straightforward. In addition, you may want to consider testing the memory on your server before you roll it out into production. That way, you can assure that it starts out as free of hardware issues as possible. If you install new memory modules, make sure to test the RAM right away.</p>
+
+<p>If the test does report errors, you'll next want to find out which memory module is faulty. This can be difficult, as some servers can have more than a dozen memory modules installed. To narrow it down, you'd want to test each memory module independently if you can, until you find out which one is defective. You should also continue to test the other modules, even after you discover the culprit. The reason for this is that having multiple memory modules going bad isn't outside the realm of possibility, considering whatever situation led to the first module becoming defective may have affected others.</p>
+
+<p>Another tip I'd like to pass along regarding memory is that when you do discover a bad stick of memory, it’s best to erase the hard disk and start over if you can. I understand that this isn't always feasible, and you could have many hours logged into setting up a server. Some servers can take weeks to rebuild, depending on their workload. But at least keep in mind that any data that passes through defective RAM can become corrupted. This means that data at rest (data stored on your hard disk) may be corrupt if it was sitting in a
+defective area of RAM before it was written to disk. When a server or workstation encounters defective RAM, you really can't trust it anymore. I'll leave the decision on how to handle this situation up to you (hopefully you'll never encounter it at all), but just keep
+this in mind as you plan your course of action. Personally, I don't trust an installation of any operating system after its hardware has encountered such issues.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

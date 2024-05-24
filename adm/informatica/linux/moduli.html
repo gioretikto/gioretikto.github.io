@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="I moduli del kernel ed i firmware"/>
+    <title>I moduli del kernel ed i firmware</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>I moduli del kernel ed i firmware</h1>
+
+<p>I moduli sono archiviati in /lib/modules/; ciascuna versione del kernel ha i propri moduli (ad es. /lib/modules/3.16.7-53-desktop/ ). I moduli che vengono caricati durante il boot sono presenti in file separati nella direcotry /etc/modules-load.d/. La maggior parte dei moduli relativi all'Hardware possono essere caricati in maniera dinamica, quando il sistema li riconosce, quindi questa  directory potrebbe non contenerne molti.</p>
+
+<p>È possibile personalizzare i parametri di un modulo kernel come le specifiche hardware di un certo dispositivo tramite il file di configurazione /etc/conf.modules.</p>
+
+<h2>Comandi gestrione Moduli</h2>
+
+<p>Il comando <b>lsmod</b>, lista tutti i moduli installati sul sistema.</p>
+
+<pre>$ lsmod
+
+Module                  Size  Used by
+ctr                    13049  0 
+ccm                    17773  0 
+fuse                  100461  3 
+bnep                   19624  2 
+bluetooth             483238  5 bnep
+6lowpan_iphc           18702  1 bluetooth
+af_packet              40034  8 
+arc4                   12608  2 
+xfs                  1011981  1 
+libcrc32c              12644  1 xfs
+ath9k_htc              70064  0 
+ath9k_common           25638  1 ath9k_htc
+ath9k_hw              442224  2 ath9k_common,ath9k_htc
+ath                    33102  3 ath9k_common,ath9k_htc,ath9k_hw
+mac80211              691383  1 ath9k_htc
+cfg80211              547052  4 ath,ath9k_common,mac80211,ath9k_htc
+rfkill                 26772  4 cfg80211,bluetooth
+snd_hda_codec_realtek    78976  1 
+snd_hda_codec_generic    77203  1 snd_hda_codec_realtek
+snd_hda_codec_hdmi     55740  1 
+gpio_ich               13586  0 
+iTCO_wdt               13480  0 
+</pre>
+
+<h2>Drivers</h2>
+
+<p>Quante volte ci siamo imbattuti in frasi del tipo “hai installato i dirver per la periferica X?”</p>
+
+<p>In GNU/Linux questa è un’operazione che non serve quasi mai, vediamo perchè.</p>
+
+<p>I driver per l’hardware sono a corredo del kernel, in forma di “moduli” caricabili al momento dal kernel stesso, a seconda della tipologia di periferica collegata.</p>
+
+<p>Per chiarirci le idee facciamo un esempio pratico.</p>
+
+<p>Ho sotto mano questo adattatore usb bluetoth D-Link DBT-122 leggo sull’etichetta.
+Cosa succede se lo collego alla porta USB?. Vediamo nel dettaglio; per vedere i messaggi dal kernel usiamo il comando <code>dmesg</code> in una finestra di terminale</p>
+
+<pre>
+[ 8154.406518] usb 1-1.4: USB disconnect, device number 7
+[ 8154.472651] usb 1-1.4: ath9k_htc: USB layer deinitialized
+[ 8156.164450] usb 1-1.4: new high-speed USB device number 8 using ehci-pci
+[ 8156.290183] usb 1-1.4: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08
+[ 8156.290187] usb 1-1.4: New USB device strings: Mfr=16, Product=32, SerialNumber=48
+[ 8156.290190] usb 1-1.4: Product: USB2.0 WLAN
+[ 8156.290192] usb 1-1.4: Manufacturer: ATHEROS
+[ 8156.290194] usb 1-1.4: SerialNumber: 12345
+[ 8156.290613] usb 1-1.4: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested
+[ 8156.290850] usb 1-1.4: firmware: direct-loading firmware ath9k_htc/htc_9271-1.4.0.fw
+[ 8156.579325] usb 1-1.4: ath9k_htc: Transferred FW: ath9k_htc/htc_9271-1.4.0.fw, size: 51008
+[ 8156.831430] ath9k_htc 1-1.4:1.0: ath9k_htc: HTC initialized with 33 credits
+[ 8157.107674] ath9k_htc 1-1.4:1.0: ath9k_htc: FW Version: 1.4
+[ 8157.107677] ath9k_htc 1-1.4:1.0: FW RMW support: On
+[ 8157.107679] ath: EEPROM regdomain: 0x809c
+[ 8157.107680] ath: EEPROM indicates we should expect a country code
+[ 8157.107682] ath: doing EEPROM country->regdmn map search
+[ 8157.107683] ath: country maps to regdmn code: 0x52
+[ 8157.107685] ath: Country alpha2 being used: CN
+[ 8157.107686] ath: Regpair used: 0x52
+[ 8157.115973] ieee80211 phy2: Atheros AR9271 Rev:1
+[ 8157.117243] ath9k_htc 1-1.4:1.0 wlxf4f26d13b2bd: renamed from wlan0
+</pre>
+
+<p>Analizziamo questo output:</p>
+
+<p>le prime 4 righe ci dicono come il kernel ha riconosciuto l’hardware in questione, si appoggia ad un database dei codici identificativi dei produttori e dei modelli, ha anche identificato correttamente la pennetta con il suo nome esatto!.</p>
+
+<p>Come facciamo invece a scoprire quale modulo (ovvero Driver) è utilizzato? Il comando <code>lsmod</code> ci viene in soccorso:</p>
+
+<pre>sudo lsmod | grep usb</pre>
+
+<p>generea la lista</p>
+
+<pre>
+usbnet                 49152  2 rndis_host,cdc_ether
+mii                    16384  1 usbnet
+usb_storage            73728  1 uas
+usbhid                 57344  0
+hid                   135168  2 usbhid,hid_generic
+scsi_mod              249856  6 sd_mod,usb_storage,firewire_sbp2,uas,libata,sg
+usbcore               294912  9 ath9k_htc,ehci_pci,usbnet,usbhid,usb_storage,rndis_host,ehci_hcd,cdc_ether,uas
+usb_common             16384  1 usbcore
+</pre>
+
+<p>Alcuni firmware sono proprietari e di base non sono inclusi nelle distribuzioni più sensibili alla filosofia free software per cui potrebbero non essere installati di default.</p>
+
+<h2>Ottenere informazioni sui moduli</h2>
+
+<pre>$ modinfo bluetooth
+filename:      /lib/modules/3.16.7-53-desktop/kernel/net/bluetooth/bluetooth.ko
+alias:          net-pf-31
+license:        GPL
+version:        2.19
+description:    Bluetooth Core ver 2.19
+author:         Marcel Holtmann &lt;marcel@holtmann.org&gt;
+srcversion:     8AD068D4881CCE6999D8A72
+depends:        6lowpan_iphc,rfkill
+intree:         Y
+vermagic:       3.16.7-53-desktop SMP preempt mod_unload modversions 
+parm:           disable_esco:Disable eSCO connection creation (bool)
+parm:           disable_ertm:Disable enhanced retransmission mode (bool)</pre>
+</p>
+
+<h2>Installare nuovi moduli</h2>
+
+<p>Per Installare nuovi moduli esistono due comandi:</p>
+
+<ul style="list-style-type: square;">
+<li><p>insmod</p></li>
+
+<li><p>modprobe</li></p>
+</ul>
+
+<p>Lo svantaggio di usare insmod è la possibilità di insorgere in problemi di dipendenze da altri moduli non installati.
+Per ovviare al problema basta usare modprobe.</p>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Mathematics</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

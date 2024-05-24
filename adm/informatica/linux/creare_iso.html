@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Creare immagini ISO"/>
+	<title>Creare immagini ISO</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Creare immagini ISO</h1>
+
+<p>Per creare copie identiche di un CD, DVD, o Blue ray o del contenuto di una directory all'interno di una immagine ISO si possono usare semplici comandi linux.</p>
+
+<h2>Create an ISO image from optical media</h2>
+
+<p>In questo esempio copieremo il contenuto di un CD/DVD drive (/dev/cdrom) all'interno di una immagine ISO. All'interno di una shell, eseguire il seguente comando:</p>
+
+<pre>dd if=/dev/cdrom of=/directory/example.iso</pre>
+
+<p>Notazioni utilizzate:</p>
+
+<ul style = "list-style-type: square;">
+	<li><p><b>dd</b> è il programma usato per convertire e copiare il file.</li></p>
+	<li><p><b>if</b> definisce il file di input.</li></p>
+	<li><p> <b>of</b> definisce  il  file di output.</li></p>
+	<li><p><b>iso</b> è la risultante immagine ISO.</li></p>
+</ul>
+
+<p>Volendo caricare il file ISO su una pendrive USB. To prepare the USB stick, you will need a system where GNU/Linux is already running and where USB is supported. With current GNU/Linux systems the USB stick should be automatically recognized when you insert it. If it is not you should check that the usb-storage kernel module is loaded. When the USB stick is inserted, it will be mapped to a device named /dev/sdX, where the “X” is a letter in the range a-z.</p>
+
+<pre>sudo dd if=/Downloads/debian-12.0.0-amd64-netinst.iso of=/dev/sdb</pre>
+
+<p>Fai attenzione a non aggiungere i numeri della partizione come /dev/sdb1.</p>
+
+<h2>Creare una immagine ISO partendo da files in una directory</h2>
+
+<p>To create an ISO image from files within a directory is just as simple. State an output directory and name of the ISO to create, along with a source directory. For example:
+
+<pre>mkisofs -o /home/linuxlookup/example.iso /source/directory/</pre>
+
+<h2>Convertire un'immagine mdf ad ISO</h2>
+
+<p>Basta utilizzare il programma mdf2iso, tramite il seguente comando</p>
+
+<pre>mdf2iso image.mdf image.iso</pre>
+
+<h2>Copiare l'ISO su una pendrive</h2>
+
+<pre>
+# umount /dev/sdX
+# dd if=/path/to/downloaded.iso of=/dev/sdX bs=4M status=progress &amp;&amp; sync
+</pre>
+
+<section aria-label="End">
+<a href="DNS.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="NAT.html">Network Address Translation (NAT)»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Find"/>
+    <title>Find</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Find</h1>
+
+<p>The find command is useful for locating files (and directories) that meet your search criteria.</p>
+
+<p>Find all the files whose name is tecmint.txt in a current working directory.</p>
+
+<pre>find . -name tecmint.txt</pre>
+
+<p>Find all the files under /home directory with name tecmint.txt.</p>
+
+<pre>find /home -name tecmint.txt</pre>
+
+<p>Find all the files whose name is tecmint.txt and contains both capital and small letters in /home directory.</p>
+
+<per>find /home -iname tecmint.txt</pre>
+
+<p>Find all directories whose name is reaver in / directory.</pre>
+
+<pre>find / -type d -name reaver</pre>
+
+<p>To find all hidden files, use below command.</p>
+
+<pre>find /tmp -type f -name ".*"</pre>
+
+<p>find options starting/path expression</p>
+
+<ul>
+    <li><p>The options attribute will control the behavior and optimization method of the find process.</p></li>
+    <li><p>The starting/path attribute will define the top level directory where find begins filtering.</p></li>
+    <li><p>The expression attribute controls the tests that search the directory hierarchy to produce output.</p></li>
+</ul>
+
+<p>Consider the following example command:</p>
+
+<pre>find -O3 -L /var/www/ -name "*.html"</pre>
+
+<p>This command enables the maximum optimization level (-O3) and allows find to follow symbolic links (-L). find searches the entire directory tree beneath /var/www/ for files that end with .html.</p>
+
+<h2>Find Linux Files by Name or Extension</h2>
+
+<p>Use find from the command line to locate a specific file by name or extension. The following example searches for *.err files in the /home/username/ directory and all sub-directories:</p>
+
+<pre>find /home/username/ -name "*.err"</pre>
+
+<section>
+<a href="comparative_sup.html">&#171; The comparative of superiority</a></p>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</body>
+</html>

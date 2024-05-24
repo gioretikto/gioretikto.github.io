@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="DNS server /etc/resolv.conf">
+	<title>DNS server /etc/resolv.conf</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Translating Names to IP Addresses:DNS server /etc/resolv.conf</h1>
+
+<p>DNS is a TCP/IP service that belongs to the Application layer of the OSI model used to translate computer domain names to IP addresses. When the early TCP/IP networks went online, users quickly realized that it was not healthy or efficient to attempt to remember the IP address of every computer on the network.</p>
+
+<p>To understand the order in which the system checks resources to resolve names, take a look at the <b>/etc/nsswitch.conf</b> file. There's a line in this file that begins with the word <i>hosts</i>. Here is the output of the relevant line from the file on my system.</p>
+
+<pre>hosts:          files dns</pre>
+
+<p>This means the system is configurees to first check local files, and then the DNS if the request isn't found. Specifically the file that will be checked is /etc/hosts. If it doesn't find what it needs there, it will move on to the DNS.</p>
+
+<h2>/etc/hosts</h2>
+
+<p>The <b>hostname</b> (also called a <b>computer name</b>) system is a simple name resolution technique developed early in the history of TCP/IP. In this system, each computer is assigned an alphanumeric name called a hostname. If the operating system encounters an alphanumeric name where it is expecting an IP address, the operating system consults a <b>hosts file</b>. The <b>/etc/hosts</b> text file contains a list of hostname-to-IP-address associations.</p>
+
+<pre>
+127.0.0.1 localhost #this machine
+198.1.14.2 bobscomputer #Bob’s workstation
+198.1.14.128 r4downtown #gateway
+</pre>
+
+<p>For example if a websiste is blocked by an authority instead of resolving the hostname via a DNS server we would add it to /etc/hosts like this</p>
+
+<pre>104.21.57.230 libgen.li</pre>
+
+<p>If the alphanumeric name is on the list of hostnames, the computer reads the IP address associated with the name. The computer then replaces the hostname in the command with the corresponding IP address and executes the command. <br> The hosts file system worked well (and still does) on small local networks. However, this system becomes inefficient on larger networks. The host-to-address associations have to reside in a single file, and the search efficiency of that file diminishes as the file expands. In the ARPAnet days, a single master file called <i>hosts.txt</i> maintained a list of name-to-address associations, and local administrators had to continually update hosts.txt to stay current. Furthermore, the hosts name space was essentially flat. All nodes were equal, and the name resolution system could not make use of the efficient, hierarchical structure of the IP address space.</p>
+
+<p>The hosts file contains entries for hosts that a computer needs to communicate with, allowing you to enter an IP address with a corresponding hostname, an FQDN, or other aliases statically. Also, the file usually contains an entry for the <b>loopback address</b>, 127.0.0.1. The loopback address is used for TCP/IP diagnostics and represents “this computer.”</p>
+
+<o>To effectively mangage the the netwoek, you need to become familiar with the TCP/IP configuration file so that you can edit the file, if necessary. </p>
+
+<table>
+<caption>Basic TCP/IP Network Configuration Files</caption>
+<tr><th>File</th> <th>Contains the following</th></tr>
+
+<tr><td>/etc/hosts</td> <td>IP addresses and host names for your local network as well as any other sysmtes that you access often</td></tr>
+
+<tr><td>/etc/networks</td> <td>Names IP addresses of networks</td></tr>
+
+<tr><td>/etc/host.conf</td> <td>Instructions on how to translate host names into IP addresses</td></tr>
+
+<tr><td>/etc/resolv.conf</td> <td>IP addresses of nameservers</td></tr>
+
+<tr><td>/etc/nsswitch.conf</td> <td>Instructions on how to translate host names into IP addresses</td></tr>
+
+</table>
+
+<h3 id="URL">Uniform Resource Locator (URL)</h3>
+
+<p>When you visit a website, you enter something called a <b>Uniform Resource Locator (URL)</b>. The URL consists, commonly of two parts. The first is the <b>Uniform Resource Identifier (URI)</b>. This is the protocol used (e.g http:// or ftp://). Following the URI is the FQDN. Your browser will issue a request to the operating system to open a connection to the FQDN at the default port indicated by the URI. The <i>port</i> is often omitted for a common retrieval scheme with a well-known default (e.g. port 21 ftp; 22 ssh; 25 smtp; 80 http; 443 https). Before the connection can be opened, however, the system needs to have an IP address to put into the layer 3 headers. So, it issues a name resolution request. A typical URL could have the form http://www.example.com/index.html, which indicates a protocol (http), a hostname (www.example.com), and a file name (index.html). </p>
+
+<h2>DNS Name Resolution</h2>
+
+<p>The designers of DNS wanted to avoid having to keep an up-to-date name resolution file on each computer. DNS instead places name resolution data on one or more special servers. The DNS servers provide name resolution services for the network . If a computer on the network encounters a hostname where it is expecting an IP address, it sends a query to the server asking for the IP address associated with the hostname. If the DNS server has the address, it sends the address back to the requesting computer. The computer then invisibly substitutes the IP address for the hostname and executes the command. When a change occurs on the network (such as a new computer or a change to a hostname), the network administrator has to change only the DNS configuration once (on the DNS server). The new information will then be available to any computer that initiates a DNS query to the server.</p>
+
+<p>When you type a URL into your browser, your computer first contacts the DNS server and asks for the IP address that it is associated with. The DNS server then searches its database for the name and returns the IP address to your computer. The whole process is called a DNS query.</p>
+
+<p>when a DNS client sends a name resolution request to a name server, the name server does one of the following:</p>
+
+<ul>
+	<li><p>If the name server can find the requested address in its own address database, it immediately sends the address to the client.</p></li>
+
+	<li><p>If the name server cannot find the address in its own records, it queries other name servers to find the address and then sends the address to the client.</p></li>
+</ul>
+
+<p>Domain names are usually constructed with three elements: top-level domains, second-level domains, and machine names, read from left to right and often separated by periods, which are also referred to in domain reference as dots.</p>
+
+<p><b>The name is hierarchical</b>. The hierarchy of domains descends from right to left. The domains listed at the right-most side of the address are higher-level domains. As you move left, each portion zooms in on the actual machine or service that is specified by the address. </p>
+
+<p id="FQDN">Keep in mind that DNS is not working strictly with a <i>hostname</i>. DNS works with <b>fully qualified domain names (FQDNs)</b>. An FQDN identifies a computer and the network to which it belongs.  consists of a hostname and a domain name. A <b>domain name</b> identifies a network. A <b>domain name</b> consists of a series of one or more dotseparated parts, with the exception of the DNS root, which is denoted by a dot “.” alone </p>
+
+<p id="TLD">Domain names must be registered with an Internet naming authority that works on behalf of ICANN. The letters after the period (<i>com</i> or <i>org</i>) for example are called the <b>top-level domains (TLDs)</b> and tell you something about the domain. Topl level domains include the familiar .com (commercial), .org (nonprofit), .gov (government), and .info (general use) and as well as domains for national governments, such as .us (United States), .uk (United Kingdom), .fr (France), and .jp (Japan).</p>
+
+<h3>Second-Level Domains</h3>
+
+<p>Below top-level domains are <b>second-level domains</b>, the names that are registered on the Internet. Typically, second-level domains represent major organizations such as a company, college, governmental branch. <br> Under second-level domains are subdomains. Every domain can have as many levels of subdomain in www.adm.gov.it, the subdomain is <i>adm</i>, and it belongs to the domain <i>gov.it</i>. Subdomains are not regulated by any central authority, and each organization or company is free to use whatever subdomain naming structure it chooses, since the second-level and top-level domains are regulated to ensure uniqueness. </p>
+
+<h3>Host Names</h3>
+
+<p>Host names represent individual computes within domains or subdomains. When the host name is appended to the domain name, we ca
+
+<p>An example of an FQDN is www.cisco.com. The host name is www (a web server), <i>cisco</i> is the domain name, and <i>com</i> is the top-level domain. For example in the domain name mary.senave.gov.it, <i>mary</i> is the hostname. When the host name is appendent to the domain name, we call the resulting concatenation a <i>fully qualified domain name (FQDN)</i>.</p>
+
+<table>
+
+<tr><th>Host<br>name</th> <th></th> <th>TLD</th></tr>
+
+<tr><td>www.</td> <td>cisco</td> <td>.com</td></tr>
+
+<tr><td></td> <td colspan="2">Domain name</td></tr>
+
+</table>
+
+<p id="etc">The DNS servers are called <i>nameservers</i> and are usually listed in the <i>/etc/resolv.conf</i> file. The nameserver line in <i>/etc/resolv.conf</i> provides the IP address of a nameserver that your system is allowed to query against.</p>
+
+<pre>$ cat /etc/resolv.conf
+# Generated by dhcpcd from enx1a83be04cfa5.dhcp
+# /etc/resolv.conf.head can replace this line
+nameserver 192.168.42.129
+# /etc/resolv.conf.tail can replace this line
+</pre>
+
+<p>First you can see that the resolv.conf file was generated by dhcpcd. In general. this file should not need to be edited; often it will be overwritten by the NetworkManager. Next we have the <i>nameservers)</i> we wish to query for our domain name resolution. These should be in IP address format. If the first nameserver is unavailable, the second will be used.</p>
+
+<p>In some cases, you may want to use another DNS server. To do so, you'll edit a plaintext file named /etc/resolv.conf on the system. IF I want to add Google's public DNS server at 8.8.8.8, I'll add the line</p>
+
+<pre>nameserver 8.8.8.8</pre>
+
+<p>This can mean domain names take a little longer to resolve (probably millisecods). Therfore, to mantain speed but keep the option of using a public server, you might want to retain the local DNS server in the <i>resolv.conf</i> file and follow it with a public DNS server. The operating system queries each DNS server listed in the order it appears in <i>/etc/resolv.conf</i>, so the system will only refer to the public DNS server if the domain name can't be found in the local DNS server.</p>
+
+<p><b>Note</b>. If you're using a DHCP address and the DHCP server provides a DNS setting, the DHCP server will replace the contents the file when it renews the DHCP address. To avoid this make the fille immutable with the <a href="chattr.html">chattr command</a></p>
+
+<pre>chattr +i /etc/resolv.conf</pre>
+
+<h3>How it works in detail</h3>
+
+<p>When your system attempts to contact a site, such as <i>www.example.org</i>, the browser will attempt to see if the matching IP address already exists in the browser's hostname cache.</p>
+
+<p>If it does not, it issues a <code>gethosbyname</code> request to the local C library, which the checks its local configuration in /etc/nsswitch.conf</i> to determine how lookups should be performed. You may find something similar to <code>hosts: files dns</code> in that file, which indicates that for finding host information, you should first look at local files, such as <i>/etc/hosts</i>, and you should check DNS if that fails.</p>
+
+<p>Assuming that you didn't have a matching entry in <i>/etc/hosts</i>, you C library's stub DNS resolver will look in <i>/etc/resolv.conf</i> for the IP address of your DNS server and will then send a DNS query with recursion enabled over UDP port 53 to the listed DNS server. The server will check its local cache for an answer and will issue queries to the various authoritative nameservers, starting with the nameservers of the DNS root (.), followed by <i>org</i>, and the finally, <i>example</i>- The nameservers, for example, will pass back the IP address associated with <i>www.example.org</i> to you recursive nameserver, which will the pass it back to you.</p>
+
+<div class="def">
+<h3>I nomi dominio</h3>
+
+<p>I nomi dominio si compongono di livelli: i <b>domini di primo livello</b> più comuni sono .com, .edu, .gov, .it, .net. e .org. Il dominio di primo livello .it può includere il dominio di <i>secondo livello</i> <i>uniroma1.it</i>, di <i>terzo livello</i> <i>diss.uniroma1.it</i>, etc. Una struttura gerarchica governa i domini e ognuno, tremine un proprio ente, assegna in maniera univoca un IP ad un suo nodo senza creare conflitti.</p>
+
+</div>
+
+<p>See also <a href="../linux/dig.html">Dig command</a></p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="DHCP.html">DHCP, Dynamic Host Configuration Protocol&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="fprintf"/>
+    <title>fprintf</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>fprintf</h1>
+
+<h2>Streams</h2>
+
+<p>The standard C library provides standard input and output streams <code>stdin</code> and <code>stdout</code>, respectively. These are used by <code>scanf, printf</code> and other library functions.</p>
+
+<p>The C library also provides <code>stderr</code>, the standard error stream. Programs should print warning and error messages to standard error instead of standard output. This allows users to separate normal output and error messages, for instance, by redirecting standard output to a file while allowing standard error to print on the console. The <code>fprintf</code> function can be used to print to <code>stderr</code>, for example:</p>
+
+<pre>fprintf( stderr, "my %s has %d chars\n", "string format", 30);</pre>
+
+<p>The output to stdout is <i>buffered</i> meaning that for efficiency reasons it doesn't output the characters to the console right away: so it is not sent to the console until the buffer fills, the program exits normally, or stdout is closed. <code>stderr</code> isn't, it prints it as soon as it gets it. You can explicitly flush the buffer by calling the following:</p>
+
+<pre>fflush(stdout);</pre>
+
+<p>This can produce some surprising results. For example, this loop does not print one period every second; instead, the periods are buffered, and a bunch of them are printed together when the buffere fills.</p>
+
+<pre>
+while(1){
+	printf(".");
+	sleep(1);
+}
+</pre>
+
+<p>In this loop, however, the periods do appear once a second:</p>
+
+<pre>
+while(1){
+	fprintf(stderr,".");
+	sleep(1);
+}
+</pre>
+
+<p>The syntax is almost the same as printf. With printf you give the string format and its contents ie:</p>
+
+<pre>printf("my %s has %d chars\n", "string format", 30);</pre>
+
+<p>With fprintf it is the same as printf, except now you are also specifying the place to print to:</p>
+
+<pre>
+File *myFile;
+...
+fprintf( myFile, "my %s has %d chars\n", "string format", 30);
+</pre>
+
+<p>These three stream are also accessible with the underlying UNIX/IO commands (<code>read, write</code> and so on) via file descriptors.</p>
+
+<ul>
+	<li><p>0 for <code>stdin</code></p></li>
+	<li><p>1 for <code>stdout</code></p></li>
+	<li><p>2 for <code>stderr</code></p></li>
+</ul>
+
+<p>When invoking a program, it is sometimes useful to redirect both standard output and standard erro to a file or pipe.</p>
+
+<P>The following will redirect program error message to a file called error.log:</p>
+
+<pre>$ program-name 2> error.log</pre>
+
+<p>Here is another useful example where both stderr and stdout sent to the <code>more</code> command instead of a file:</p>
+
+<pre>program > output file.txt 2&gt;&1</pre>
+<pre># find /usr/home -name .profile 2&gt;&1 | more</pre>
+
+<p>The syntax <code>2&gt;&1</code> indicates that file descriptor 2 (stderr) should be merged into file descripto 1(stdout). Note that 2&gt;&1 must follow a file redirection (first example) but must precede a pipe redirection (second example).</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

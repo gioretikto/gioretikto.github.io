@@ -1,0 +1,31 @@
+
+
+<html>
+<head><title>Binding parameters</title></head>
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+<meta charset="utf-8">
+<title>Binding parametersging</title>
+
+<body>
+<h1>Binding parameters</h1>
+<p>Per associare ad un parametro una variabile si usa il seguente codice:</p>
+
+<p>
+<pre>
+
+&lt;?php
+/* Execute a prepared statement by binding PHP variables */
+$calories = 150;
+$colour = 'red';
+$sth = $dbh->prepare('SELECT name, colour, calories
+    FROM fruit
+    WHERE colour = ?');
+$sth->bindParam(1, $colour);
+$sth->execute();
+?&gt;
+
+</pre>
+</p>
+
+</body>
+</html>

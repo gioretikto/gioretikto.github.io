@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="sudo and su"/>
+	<title>sudo and su</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>sudo and su</h1>
+
+<p>The <code>su</code> command allows the current user to assume the identity of another user on a Linux system. It stands for "<b>switch user</b>" or "<b>substitute user</b>", not "superuser" (although it defaults to prompting for the root password if invoked without any arguments). A popular misconception is that <code>su</code> command is short for <i>super user</i>;</p>
+
+<pre>su option username arguments</pre>
+
+<p>The man page for <code>su</code> gives more details, but some highlights of the <code>su</code> command are here:</p>
+
+<pre>
+-c, --command COMMAND
+	pass a single COMMAND to the shell with -c
+-m, --preserve-environment
+	do not reset environment variable
+-l a full login simultation for the substituted user,
+	the same as specifying the dash alone
+</pre>
+
+<p>You can invoke the <code>su</code> command in different ways that yield diverse results. By using <code>su</code> alone, you can become root, but <b>you keep your regular user environment</b>. This can be verifies by using the <code>printenv</code> command before and after the change.</p>
+
+<p>By executing the following, you become root and inherit root's environment:</p>
+
+<pre>su -</pre>
+
+<p>Without appending the -, you do not inherit the path variable that include <i>/bin</i> or <i>/sbin</i>, so you must always enter the full path to those commands when you just <code>su</code> to <i>root</i>.</p>
+
+<p>To become another user, specify a different user's name on the command line:</p>
+
+<pre>su - other_user</pre>
+
+<p>When leaving an identity to return to you user identity, use the <code>exit</code> command.</p>
+
+<h2 id="sudo">sudo</h2>
+
+<p><b>sudo</b> is a program for Unix-like computer operating systems that allows users to run programs with the security privileges of another user, by default the superuser.</p>
+
+<p><code>sudo</code> is usually employed to execute a command as root, but you can also use it to execute a command as another user. Unlike the similar command su, users must, by default, supply their own password for authentication, rather than the password of the target user. After authentication, and if the configuration file, which is typically located at <i>/etc/sudoers</i>, permits the user access, the system invokes the requested command.</p>
+
+<p>To add a user to suoders:</p>
+
+<pre>$su -
+# usermod -a -G sudo cadmio
+</pre>
+
+<p>To start a shell session as root, type <b>sudo -s</b> or <b>sudo -i</b>. The difference between these commands is subtle but important. If you type <b>sudo -s</b>, the new shell session preserves the evironment of your existing shell - for example, if you're using the default bah shell, anything specified in your <i>.bash_profile</i> file, such as aliases and PATH variables, also applies to the root session, and you maintain the home directory of your existing account. On the other hand, <b>sudo -i</b>, starts a clean session with the root user's home directory, environment, and even login scripts. Which one you use depends on your preferences and needs.</p>
+</div>
+
+<section aria-label="End">
+<a href="comparative_sup.html">&#171; The comparative of superiority</a>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

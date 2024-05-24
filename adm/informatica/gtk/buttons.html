@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Buttons"/>
+    <title>Buttons</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Buttons</h1>
+
+<p>If we put a single widget into a window, then the window resizes to fit around the contained widget. In this example we create a Button with a label.</p>
+
+<pre>
+// gcc  -Wall -Wextra -o Ex2 Ex2.c $(pkg-config gtk+-3.0 --cflags --libs)
+#include &lt;gtk/gtk.h&gt;
+ 
+ int main ( int argc, char **argv) {
+     GtkWidget *window;
+     GtkWidget *quitButton;
+     gtk_init (&argc , &argv);
+ 
+     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+     
+     quitButton = gtk_button_new_with_label("QUIT");
+     gtk_container_add(GTK_CONTAINER (window), quitButton);
+ 
+     gtk_widget_show_all (window);
+     gtk_main ();
+     return 0;
+ }
+</pre>
+
+<ul>
+	<li><p>Declares the variable "quitButton" as a pointer to a GtkWidget.</p></li>
+	<li><p>Creates a GtkButton containing a GtkLabel displaying the text "QUIT"</p></li>
+	<li><p>Puts the quitButton into the window</p></li>
+</ul>
+
+<p>The first parameter to <code>gtk_container_add</code> has to be a pointer to a GtkContainer, but the window variable is a pointer to a GtkWidget so it cannot be used directly. Without some form of casting, the following compiler error is produced:</p>
+
+<p>While it is possible to use a traditional C cast like this</p>
+
+<pre>gtk_container_add((GtkContainer *) window, quitButton);</pre>
+
+<p>it is better to use GTK's type conversion macros that preform additional compile time checking. For example</p>
+
+<pre>GTK_CONTAINER(window)</pre>
+
+<p>checks that the window variable is a pointer to a type that is a subclass of GtkContainer and therefore can be used as the first parameter to gtk_container_add.</p>
+
+<p>When you run this example there are three things to note:</p>
+
+<ul>
+    <li><p>Clicking the "QUIT" button does not close the application. A little more work is need to make that happen.</p></li>
+    The window defaults to the size of the button, and when it is resized the button grows and shrinks to fill the window. This is probably not the behaviour you want !</p></li>
+    <li><p>As before, closing the window with the "Close Window" button or with the keyboard short cut (Alt+F4) does not terminate the application (i.e. the application has to be killed by pressing Ctrl-C)</p></li>
+</ul>
+
+<h2>Mnemonic</h2>
+
+<p>There are three ways to activate the button:</p>
+
+<ul>
+	<li><p>A left mouse button click</p></li>
+	<li><p>By using the Alt + Key shortcut</p></li>
+	<li><p>The Space key (provided the button has the focus).</p></li>
+</ul>
+
+<p><i>Mnemonics</i> are shortcut keys that activate a widget that supports mnemonics. They can be used with labels, buttons, or menu items. The mnemonic is
+ created by adding the _ character to the widget's label. It causes the next character to be the mnemonic. The character is combined with the mouseless
+  modifier, usually Alt. The chosen character is underlined,  but it may be emphasized in a platform specific manner.</p>
+  
+<p>We set a mnemonic for a button widget. It can be activated with the Alt+B keyboard shortcut.</pre>
+
+<pre>button = gtk_button_new_with_mnemonic("_Button");</pre>
+
+<p>The gtk_button_new_with_mnemonic() function creates a new GtkButton containing a label. If characters in label are preceded by an underscore,
+ they are underlined.</p>
+
+<pre>
+g_signal_connect(button, "clicked", 
+    G_CALLBACK(print_msg), NULL); 
+</pre>
+
+<p>When we fire the button, a message is printed to the console. With the g_signal_connect() function, we connect a clicked signal to the print_msg
+ function.</p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+void print_msg(GtkWidget *widget, gpointer window) {
+
+  g_print("Button clicked\n");
+}
+
+int main(int argc, char *argv[]) {
+
+  GtkWidget *window;
+  GtkWidget *button;
+
+  gtk_init(&argc, &argv);
+
+  window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title(GTK_WINDOW(window), "Mnemonic");
+  gtk_window_set_default_size(GTK_WINDOW(window), 300, 200);
+  gtk_container_set_border_width(GTK_CONTAINER(window), 15);
+  
+  button = gtk_button_new_with_mnemonic("_Button");
+  
+  g_signal_connect(button, "clicked", 
+      G_CALLBACK(print_msg), NULL);
+      
+  gtk_container_add (GTK_CONTAINER (window), button);
+  
+  gtk_widget_set_halign (button, GTK_ALIGN_START);
+  gtk_widget_set_valign (button, GTK_ALIGN_START);
+
+  gtk_widget_show_all(window);
+  
+  g_signal_connect(G_OBJECT(window), "destroy",
+      G_CALLBACK(gtk_main_quit), NULL); 
+
+  gtk_main();
+
+  return 0;
+}
+</pre>
+
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

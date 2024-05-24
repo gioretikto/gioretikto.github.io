@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="OpenSSL"/>
+    <title>OpenSSL</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>OpenSSL</h1>
+
+<p>OpenSSL is a powerful cryptography toolkit that can be used for encryption of files and messages.</p>
+
+<p>If you want to use the same password for both encryption of plaintext and decryption of ciphertext, then you have to use a method that is known as symmetric-key algorithm.</p>
+
+<p>From this article you’ll learn how to encrypt and decrypt files and messages with a password from the Linux command line, using OpenSSL.</p>
+
+<h2>HowTo: Encrypt a File</h2>
+
+<pre>openssl enc -aes-256-cbc -pbkdf2 -in message.txt -out message.bin</pre>
+
+
+<table>
+<tbody>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>openssl</td>
+<td>OpenSSL command line tool</td>
+</tr>
+<tr>
+<td>enc</td>
+<td>Encoding with Ciphers</td>
+</tr>
+<tr>
+<td>-aes-256-cbc</td>
+<td>The encryption cipher to be used</td>
+</tr>
+<tr>
+<td>-salt</td>
+<td>Adds strength to the encryption</td>
+</tr>
+<tr>
+<td>-in</td>
+<td>Specifies the input file</td>
+</tr>
+<tr>
+<td>-out</td>
+<td>Specifies the output file.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Interesting fact: 256bit AES is what the United States government uses to encrypt information at the Top Secret level.</p>
+
+<p>Warning: The -salt option should ALWAYS be used if the key is being derived from a password.</p>
+
+<p>Without the -salt option it is possible to perform efficient dictionary attacks on the password and to attack stream cipher encrypted data.</p>
+
+<p>The reason for this is that without the salt the same password always generates the same encryption key.</p>
+
+<p>When the salt is being used the first eight bytes of the encrypted data are reserved for the salt: it is generated at random when encrypting a file and read from the encrypted file when it is decrypted.</p>
+
+<h2>HowTo: Decrypt a File</h2>
+
+<p>Se si vuole mostrare il contenuto del file criptato</p>
+
+<pre>openssl enc -d -aes-256-cbc -pbkdf2 -in message.bin</pre>
+
+<p>se si vuole produrre un file con il contenuto del file decriptato</p>
+
+<pre>openssl enc -d -aes-256-cbc -pbkdf2 -in message.bin -out message.dec</pre>
+
+<table>
+<tbody>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>-d</td>
+<td>Decrypts data</td>
+</tr>
+<tr>
+<td>-in</td>
+<td>Specifies the data to decrypt</td>
+</tr>
+<tr>
+<td>-out</td>
+<td>Specifies the file to put the decrypted data in</td>
+</tr>
+</tbody>
+</table>
+
+<p>Base64 encoding is a standard method for converting 8-bit binary information into a limited subset of ASCII characters.</p>
+
+<p>It is needed for safe transport through e-mail systems, and other systems that are not 8-bit safe.</p>
+
+<p>By default the encrypted file is in a binary format. If you are going to send it by email, IRC, etc. you have to save encrypted file in Base64-encode.</p>
+
+<p>To encrypt file in Base64-encode, you should add -a option:</p>
+
+<pre>$openssl enc -aes-256-cbc -salt -a -in file.txt -out file.txt.enc</pre>
+
+<table>
+<tbody>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>-a</td>
+<td>Tells OpenSSL that the encrypted data is in Base64-ensode</td>
+</tr>
+</tbody>
+</table>
+
+<p>Option -a should also be added while decryption:</p>
+
+<pre>$openssl enc -aes-256-cbc -d -a -in file.txt.enc -out file.txt</pre>
+
+<h2>Non Interactive Encrypt & Decrypt</h2>
+
+<p>Warning: Since the password is visible, this form should only be used where security is not important.</p>
+
+<p>By default a user is prompted to enter the password.</p>
+
+<p>If you are creating a BASH script, you may want to set the password in non interactive way, using -k option.</p>
+
+<p>Public key cryptography was invented just for such cases.</p>
+
+<p>Encrypt a file using a supplied password:</p>
+
+<pre>$openssl enc -aes-256-cbc -salt -in file.txt -out file.txt.enc -k PASS</pre>
+
+<h2>Decrypt a file using a supplied password:</h2>
+
+<pre>$openssl enc -aes-256-cbc -d -in file.txt.enc -out file.txt -k PASS</pre>
+
+<section>
+<a href="comparative_sup.html">&#171; The comparative of superiority</a></p>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

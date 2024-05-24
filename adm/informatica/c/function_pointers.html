@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Function Pointers"/>
+    <title>Function Pointers</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Function Pointers</h1>
+
+<p>Since Pointers can point to an address in any memory location, they can also point to at the beginning of executable code as functions in memory. A pointer to function is declared with the * , the general statement of its declaration is:</p>
+
+<pre>return_type (*function_name)(arguments)</pre>
+
+<p>The parentheses around (*function_name) are important because without them, the compiler will think the <code>function_name</code> is returning a pointer of <code>return_type</code>.</p>
+
+<pre>int *function_name (void *, void*) /* WRONG */</pre>
+
+<p>the previous states that <code>function_name</code> is a function returning a pointer to an integer, which is different from what stated before.</p>
+
+<p>After defining the function pointer, we have to assign it to a function. For example, the next program declares an ordinary function, defines a function pointer, assigns the function pointer to the ordinary function and after that calls the function through the pointer:</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+void greet_function (int times)
+{
+	int k;
+	for (k = 0; k < times; k++) printf("Hello\n");
+}
+
+int main()
+{
+	void (*function_ptr)(int);  /* function pointer Declaration */
+	function_ptr = greet_function;  /* pointer assignment */
+	function_ptr (3);  /* function call */
+	return 0;
+}
+</pre>
+
+<p>Output:</p>
+
+<pre>
+Hello
+Hello
+Hello
+</pre>
+
+<h2>Array of Function Pointers</h2>
+
+<p>An array of function pointers can play a switch or an if statement role for making a decision, as the followin code shows:</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+enum functions {SUM, SUB, MULT, DIV};
+
+int sum(int x, int y) {return(x + y);}
+int sub(int x, int y) {return(x - y);}
+int mult(int x, int y) {return(x * y);}
+int div(int x, int y) {if (y != 0) return (x / y); else  return 0;}
+
+int main() 
+{
+	int x, y, choice, result;
+	int (*func[4])(int, int); /* defines the array of function pointers */
+
+	func[SUM] = sum;
+	func[SUB] = sub;
+	func[MULT] = mult;
+	func[DIV] = div;
+
+	printf("Enter two integer numbers separeted by a space: ");
+	scanf("%d%d", &x, &y);
+
+	printf("Enter 0 to sum, 1 to subtract, 2 to multiply, or 3 to divide: ");
+	scanf("%d", &choice);
+
+	result = func[choice](x, y);
+	printf("%d", result);
+
+	return 0;
+}
+</pre>
+
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

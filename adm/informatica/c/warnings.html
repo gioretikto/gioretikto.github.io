@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Warnings"/>
+    <title>Warnings</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Warnings</h1>
+
+<h3>warning: declaration of ‘name’ shadows a previous local</h3>
+
+<p>It is due to the fact that you are declaring a new variable inside your conditionals. To fix, remove the declaration inside the conditionals.</p>
+
+<h3>warning: array subscript has type ‘char’ [-Wchar-subscripts]</h3>
+
+<p>The line array[c] is very likely a bug, because the type char can be signed or unsigned. The compiler doesn't want you to inadvertantly specify a negative array index. And hence the warning!. It is enough to define the char as unsigned char.</p>
+ 
+<h3>error: function declaration isn’t a prototype [-Werror=strict-prototypes]</h3>
+
+<pre>void print_menu();</pre>
+
+<p> This error is being shown for the function declaration. The compiler is expecting us to pass "void" in case we are not passing any arguments to the function. That is we need to modify the above function to </p>
+
+<pre>void print_menu(void);</pre>
+
+<h3>error: ‘variable’ undeclared (first use in this function)</h3>
+
+<p>You can only declare variables once. The Following code is wrong:</p>
+
+<pre>
+if(1 == 1)
+{
+	int a = 42;
+}
+
+else
+{
+	int a = 1;
+}
+
+printf("a is %d ", a);</pre>
+
+<p>The correct declation of <i>a</i> is the following</p>
+
+<pre>
+int a;
+
+if (1 == 1)
+{
+	a = 42;
+}
+
+else
+{
+	a = 1;
+}
+
+printf("a is %d ", a);
+</pre>
+
+<h2>error: variable-sized object may not be initialized</h2>
+
+<pre>int arr_size = 3; int arr[arr_size] = {1, 2, 3}; // error: variable-sized object may not be initialized.</pre>
+
+<p>Static objects like <code>arr</code> in this case must be initialized with a constant value and not a variable.</p>
+
+<p>just use</p>
+
+<pre>int a[] = {8,2,7,4,5,6,3,1}; </pre>
+
+<p>Notice that even using the <code>const</code> qualifier for the <code>ARR_SIZE</code> variable:</p>
+
+<pre>const int ARR_SIZE = 3; int arr[ARR_SIZE] = {1, 2, 3};</pre>
+
+<p>since <code>ARR_SIZE</code> is still a variable, the error is still present.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

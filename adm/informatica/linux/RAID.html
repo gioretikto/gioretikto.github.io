@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="RAID (Redundant Array of Independent Disks)">
+	<title>RAID (Redundant Array of Independent Disks)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>RAID (Redundant Array of Independent Disks)</h1>
+
+<p>To protect the server from catastrophic disk failure, the storage drives on most servers are configured with a redundancy storage technique. RAID (Redundant Array of Independent Disks) is a collection of storage drives (called an array) interfaced in a way to ensure one or more layers of redundant copies of data across the drive array. The data redundancy techinique eomployed by RAID include <i>parity, striping</i> and mirroring. RAID is not a replacement for backup and recovery processes; instead it serves as a valuable complement to provide high availability for data.</p>
+
+<ul>
+	<li><p><b>Mirroring</b>− With this technique, the system writes data simultaneously to separate hard drives or drive arrays. The advantage of mirroring are minimal downtime, simple data recovery, and increased performance reading from disk. If one hard drive or disk array fails, the system can operate from the workinghard drive or disk array, or the system can une one disk to process a read request and another disk for a different processing request. The disavantage of mirroring is that both drive or disk arrays are processing in th writing-to-disks function, which can hinder system performance. Mirroring has a high tolerance and can be implemented through a hardware RAID controller or through the operating system.</p></li>
+
+	<li><p><b>Parity</b>− refers to a technique of determining whether data had been lost or overwritten (error-checking information). Parity has a lower fault tolerance than mirroring. The advantage of parity is that data can be protected without having to store a copy of the data, as is required with mirroring. Two most popular error detecting and correcting code are parity bits and hamming codes. In memory system, each byte is associated with a parity bit. The parity bit is set to 0 if the number of bits in the byte that are set to 1 is even; otherwise the parity is set to 1. If any one bit in the byte gets changes, the n parity of that byte will not march withe the stored parity bit. In this way, use of parity bit detects all 1 bit errors in the memory system. Hamming code has the ability to detect the damaged bit. It stores tow or more extra bits to find the damaged bit and by complementing the value of damaged bit, the original data can be recovered. RADI</p></li>
+
+	<li><p><b>Striping</b> improves the performance of the hardware array controller by distributing data across al drives. In striping, a data element is broken into multiple pieces, and a piece is distributed to each drive. Data transfer performance is increased using striping because the drives may access each data piece simultaneously. Striping can be implemented in bytes or blocks. Byte-level striping breaks the data into bytes and stores the bytes sequentially across the hard drives. Block-level striping breaks the data into a given-size block, and each block is distributed to a disk.</p></li>
+</ul>
+
+<p>There are many forms of RAID. Except for the first RAID techinique which is called RAID 0, RAID offers the ability to recover lost data if one or more drives in the array is lost. <br>The following are the more common RAID techniques:</p>
+
+<ul>
+	<li><p><b>RAID 0</b> − Data is broken into pieces, and each consecutive piece is stored on a different drive (<b>stripping</b>). There is no redundancy of data in this technique; if one drive fails, data is lost. The advantage of this techinique, however, is the speed at which data can be read or written across multiple drives at the same time.</p></li>
+
+	<li><p><b>RAID 1</b> − Data is stored on at least two drives, in duplicate, to provide a level of redundancy (or fault tolerance) should one drive become corrupted (mirroring). RAID 1, however, does not provide protection against certain risks to data such as ransomware or a virus, as those kinds of attacks would affect data on both drives. Therefore, RAID 1 is not considered a reliable data backup method. Further, 50% of total disk space is lost because all data is duplicated on both disks.</p></li>
+
+	<li><p><b>RAID 2</b>, striping is performed at the bit level. RAID 2 configuration is costly, difficult to implement, and, therefore, not used in practice. RAID 2 requires theree redundant disks to store error detecing and correcting information for four original disks. Thus, effective space utilization is about 57% in this case.</p></li>
+
+	<li><p><b>RAID 3</b> − Data is stored across multiple drives (striping), and error-checking information concerning the stored data is kept on a separate drive (parity), can be used to detect errors and possibly reconstruct the data should some of it become corrupted. RAID 3 is rarely used in modern RAID arrays and has been replaced by RAID 5.</p></li>
+
+	<li><p><b>RAID 4</b> − implements striping at the block level and use a dedicated parity disk. RAID4 is not used in practice.</p></li>
+
+	<li><p><b>RAID 5</b> − uses block-level striping with parity information that is distributed across multiple disks. In the event that a single disk fails, the data on hte disk can be re-created based on the data stored on the remaining disks.</p></li>
+
+</ul>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

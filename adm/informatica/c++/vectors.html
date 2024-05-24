@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Vectors"/>
+    <title>Vectors</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Vectors</h1>
+
+<p>Vectors are sequence containers representing arrays that can change in size.</p>
+
+<p>Just like arrays, vectors use contiguous storage locations for their elements, which means that their elements can also be accessed using offsets on regular pointers to its elements, and just as efficiently as in arrays. But unlike arrays, their size can change dynamically, with their storage being handled automatically by the container.</p>
+
+<p>Internally, vectors use a dynamically allocated array to store their elements. This array may need to be reallocated in order to grow in size when new elements are inserted, which implies allocating a new array and moving all elements to it. This is a relatively expensive task in terms of processing time, and thus, vectors do not reallocate each time an element is added to the container.</p>
+
+<p>Instead, vector containers may allocate some extra storage to accommodate for possible growth, and thus the container may have an actual capacity greater than the storage strictly needed to contain its elements (i.e., its size). Libraries can implement different strategies for growth to balance between memory usage and reallocations, but in any case, reallocations should only happen at logarithmically growing intervals of size so that the insertion of individual elements at the end of the vector can be provided with amortized constant time complexity (see <code>push_back</code>).</p>
+
+<p>Therefore, compared to arrays, vectors consume more memory in exchange for the ability to manage storage and grow dynamically in an efficient way.</p>
+
+<p>Compared to the other dynamic sequence containers (deques, lists and forward_lists), vectors are very efficient accessing its elements (just like arrays) and relatively efficient adding or removing elements from its end. For operations that involve inserting or removing elements at positions other than the end, they perform worse than the others, and have less consistent iterators and references than lists and forward_lists.</p>
+
+<p>To use a vector, we must include the appropriate header. In our examples, we also assume that an appropriate using declaration is made:</p>
+
+<pre>
+#include &lt;vector&gt;
+using std::vector;
+</pre>
+
+<h2>Value Initialization</h2>
+
+<p>We can usually omit the value and supply only a size. In this case the library creates a value-initialized element initializer for us. This library-generated value is used to initialize each element in the container. The value of the element initializer depends on the type of the elements stored in the vector. If the vector holds elements of a built-in type, such as int, then the element initializer has a value of 0. If the elements are of a class type, such as string, then the element initializer is itself default initialized:</p>
+<pre>
+std::vector<int> ivec(10); // ten elements, each initialized to 0
+std::vector<string> svec(10); // ten elements, each an empty string
+std::vector<int> a = {2,4,3,5,6};
+</pre>
+
+<p>We can access last element using size of vector using following <code>size()</code></p>
+
+<pre>
+int main() 
+{ 
+    vector<int> v{10, 20, 30, 40, 50}; 
+      
+    // Accessing last element 
+    int n = v.size(); 
+    cout << v[n - 1] << endl; 
+  
+    // modifying last element 
+    v[n - 1] = 100; 
+  
+    cout << v[n - 1] << endl; 
+    return 0; 
+}
+</pre>
+
+<p>Using <code>back()</code> We can access and modify last value</p>
+
+<pre>
+#include <iostream> 
+#include <vector>
+
+using namespace std; 
+  
+int main() 
+{ 
+    vector<int> v{10, 20, 30, 40, 50}; 
+      
+    // Accessing last element 
+    cout << v.back() << endl; 
+  
+    // modifying last element 
+    v.back() = 100; 
+  
+    cout << v.back() << endl; 
+    return 0; 
+} 
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

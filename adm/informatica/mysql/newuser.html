@@ -1,0 +1,78 @@
+<html>
+
+<head>
+
+<title>Creare nuovi utenti</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+
+<body>
+
+<h1>Creare nuovi utenti</h1>
+<p>Per mostrare tutti gli account presenti nel sistema utilizzare:</p>
+
+<pre>
+mysql> select distinct User from mysql.user;
+</pre>
+
+<p>Per mostrare i privilegi di un utente:</p>
+
+<pre>
+mysql> SHOW GRANTS FOR 'user'@'localhost';
+</pre>
+
+
+<p>Per creare un nuovo account per un utente, effettuiamo dapprima il login come root:</p>
+
+<pre>
+
+mysql -h localhost -u root -p
+
+</pre>
+
+
+<p>
+<pre>
+
+mysql> CREATE USER 'gino'@'localhost' IDENTIFIED BY 'some_pass';
+mysql> GRANT SELECT, INSERT, UPDATE ON 'secure_login'.* TO 'gino'@'localhost';
+</pre>
+</p>
+
+<h2>Mostrare i databases</h2>
+
+<p><p>
+<pre>
+MariaDB [(none)]><b>SHOW DATABASES</b>;
+</pre>
+</p>
+
+<p>Come noterete i comandi MySQL terminano con un ;.</p>
+
+<p>Per creare un database si utilizza il comando:</p>
+<p>
+<pre>
+MariaDB [(none)]><b>CREATE db</b>;
+</pre>
+</p>
+
+<p>Adesso comunichiamo a MySQL di voler utilizzare un dato database con il comando:</p>
+<p><p>
+<pre>
+MariaDB [(none)]> <b>USE db</b>;
+</pre>
+</p>
+
+
+<p>Se qualcosa va storto MySQL fornisce degli avvertimenti per mostrarli usare il comando:</p>
+
+<p><p>
+<pre>
+MariaDB [(none)]> <b>SHOW WARNINGS</b>;
+</pre>
+</p>
+
+</body>
+
+</html>

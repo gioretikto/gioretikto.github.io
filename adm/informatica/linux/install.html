@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The install command">
+	<title>The install command</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The install command</h1>
+
+<p><b>install</b> is <i>cp</i> on steroids. It can set file permissions, create directories, take backups, and much more, all from a single command line. It is most often used in <a href="../c/makefile.html">makefiles</a>, to copy the compiled program executable and supporting files to the system.</p>
+
+<p>To copy files using the install command use the following syntax:</p>
+
+<pre>install [OPTION]… SOURCE… DIRECTORY</pre>
+
+<p>This will copy the file at the source to the destination directory with the same name.</p>
+
+<p>Let’s see an example:</p>
+
+<pre>install sample.txt test_directory</pre>
+
+<p>You can also get a verbose output from the install command with the <b>-v flag</b>.</p>
+
+<pre>install -v sample.txt test_directory</pre>
+
+<h2>How to create directories using the install command?</h2>
+
+<p>You can also use the <i>install</i> command for creating directories. Let’s try running the following command in Linux:</p>
+
+<pre>install sample.txt new_parent/new_file</pre>
+
+<p>The directory ‘new_parent‘ does not exist. Therefore the output we get is:</p>
+	
+<pre>install: cannot create regular file 'new_parent/new_file': No such file or</pre>
+
+<p>However, if we use the <b>-D flag</b> along with the command above then install command creates the parent directory and then performs the copy operation. An example</p>
+
+<pre>install -D myexec dest</pre>
+
+<p>will either</p>
+
+<ol>
+	<li><p>if <code>dest</code> doesn't already exist, create a file named <code>dest</code> with the content of <code>myexec</code>.</p></li>
+	<li><p>if <code>dest</code> exists as a directory, copy in it <code>myexec</code>.</p></li>
+</ul>
+
+<p>The command</p>
+
+<pre>install -D -t dest myexec</pre>
+
+<p>ensures that you always end up with the latter case.</p>
+
+<pre>install -D -v sample.txt new_parent/new_file</pre>
+
+<p>in case the directory <code>new_parent</code> does not exist it will be created and <code>sample.txt</code> will be copied in it with the name <code>new_file.</code></p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

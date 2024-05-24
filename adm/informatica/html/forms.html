@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Forms">
+	<title>Forms</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Forms</h1>
+
+<p>An HTML form is used to collect user input. The user input is most often sent to a server for processing. The HTML &lt;form&gt; element is used to create an HTML form for user input:</p>
+
+<pre>
+&lt;form&gt;
+.
+form elements
+.
+&lt;/form&gt;
+</pre>
+
+<p>The &lt;form&gt; element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+
+<h2>The &lt;input&gt; Element</h2>
+
+<p>The HTML &lt;input&gt; element is the most used form element. An &lt;input&gt; element can be displayed in many ways, depending on the <code>type</code> attribute.</p>
+
+<table>
+<tbody><tr>
+  <th>Type</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td>&lt;input type="text"&gt;</td>
+  <td>Displays a single-line text input field</td>
+ </tr>
+ <tr>
+  <td>&lt;input type="radio"&gt;</td>
+  <td>Displays a radio button (for selecting one of many choices)</td>
+ </tr>
+ <tr>
+  <td>&lt;input type="checkbox"&gt;</td>
+  <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+ </tr>
+ <tr>
+  <td>&lt;input type="submit"&gt;</td>
+  <td>Displays a submit button (for submitting the form)</td>
+ </tr>
+ <tr>
+  <td>&lt;input type="button"&gt;</td>
+  <td>Displays a clickable button</td>
+ </tr>
+ <tr>
+  <td>&lt;input type="password"&gt;</td>
+  <td>Displays a password input field</td>
+ </tr>
+ <tr>
+  <td>&lt;input type="date"&gt;</td>
+  <td>Displays a date input field</td>
+ </tr>
+
+ <tr>
+  <td>&lt;input type="color"&gt;</td>
+  <td>Displays a color input field</td>
+ </tr>
+
+ </tbody>
+</table>
+
+<p>The option <code>value</code> attribute assigns a default value to the element, and the <code>name</code> attribute is the name that is paired  with the value to fom the name/value pair that can be accessed through the DOM and that is submitted along with the rest of the form values when the form is submitted.</p>
+
+&lt;input type="text" name="streetAddress" value="Viale giotto"&gt;
+<br>
+<br>
+<input type="text" name="streetAddress" value="Viale giotto">
+<br>
+<br>
+<p>If the value attribute contains double quotes, you can escape them by using <code>value=''</code>, as in</p>
+
+&lt;input type="text" name="class" value='class="myClass" '&gt;
+
+<h3>Text Fields</h3>
+
+<p>The &lt;input type="text"&gt; defines a single-line input field for text input.</p>
+
+<pre>
+&lt;form&gt;
+	&lt;label for="fname">First name:&lt;/label&gt;&lt;br&gt;
+	&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;
+	&lt;label for="lname">Last name:&lt;/label&gt;&lt;br&gt;
+	&lt;input type="text" id="lname" name="lname"&gt;
+&lt;/form&gt;
+</pre>
+
+ <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<h2>The &lt;label&gt; Element</h2>
+
+<p>Notice the use of the &lt;label&gt; element in the example above. <br> The &lt;label&gt; tag defines a label for many form elements. <br> The &lt;label&gt; element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on the input element. <br> The &lt;label&gt; element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the &lt;label&gt; element, it toggles the radio button/checkbox. <br> The <b>for</b> attribute of the &lt;label&gt; tag should be equal to the id attribute of the &lt;input&gt; element to bind them together. </p>
+
+<h2>The Submit Button</h2>
+
+<p>The &lt;input type="submit"&gt; defines a button for submitting the form data to a form-handler. <br> The form-handler is typically a file on the server with a script for processing input data. <br> 
+The form-handler is specified in the form's action attribute. Example</p>
+
+<pre>
+&lt;form action="action_page.php"&gt;
+  &lt;label for="fname">First name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" name="fname" value="John">&lt;br&gt;
+  &lt;label for="lname">Last name:&lt;/label>&lt;br&gt;
+  &lt;input type="text" id="lname" name="lname" value="Doe">&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</pre>
+
+<h2>The action Attribute</h2>
+
+<p>The <b>action</b> attribute is used to specify the location of the file that the form data should be sent to. This should be an absolute or relative path. The file referenced in the <i>action</i> attribute would then perform an <i>action</i>, such as saving the data to the database or checking a user's log-in details. If you look at the form in the example above, you can see that the <code>action</code> attribute references a <code>action_page.php</code> file.</p>
+
+<pre>&lt;form action="action_page.php"&gt;</pre>
+
+<p>or</p>
+
+<pre>&lt;form action="https://example.com">…&lt;/form&gt;&lt;/p&gt;</pre>
+
+<p>The fact that you've used a relative path here means that hte <i>action_page.php</i> file must be in the same folder as the page you're currently visiting.</p>
+
+<h3>The method attribute</h3>
+
+<p>The <b>method</b> attribute is used to specify how you want the form data to be sent to the server. There are two ways of sending form data, <i>GET</i> requests and <i>POST</i> requests. If you forget to specify a method attrivute on your form, the <i>GET</i> method is used by default.</p>
+
+<p>The <b>GET</b> methos sends your form data within a URL. This method is commonly used when performing tasks that just need to fetch existing data from a web server, such a seaches or product filters on e-commerce websites. When a user submits the form, the browser will start to create a new URL to send the user to. This will look something like this:</p>
+
+<pre>http://www.html5.com/action_page.php?fname=Giovanni&lname=Rossi</pre>
+
+<p>The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (?) followed by the name/value pairs, each one separated by an ampersand (&). In this case, we are passing two pieces of data to the server:
+
+<ul>
+	<li><p><i>fname</i>, which has a value of <i>Giovanni</i>;</p></li>
+    	<li><p><i>lname</i> which has a value of <i>Rossi</i>;</p></li>
+</ul>
+
+<p>The HTTP request looks like this:</p>
+
+<pre>
+GET /?say=Hi&to=Mom HTTP/2.0
+Host: foo.com
+</pre>
+
+<h2>Radio Buttons</h2>
+
+<p>The &lt;input type="radio"&gt; defines a radio button. <br> Radio buttons let a user select ONE of a limited number of choices.</p>
+
+<pre>
+ &lt;p&gt;Choose your favorite Web language:&lt;/p&gt;
+
+&lt;form&gt;
+  &lt;input type="radio" id="html" name="fav_language" value="HTML">
+  &lt;label for="html">HTML&lt;/label>&lt;br&gt;
+  &lt;input type="radio" id="css" name="fav_language" value="CSS">
+  &lt;label for="css">CSS&lt;/label>&lt;br&gt;
+  &lt;input type="radio" id="javascript" name="fav_language" value="JavaScript"&gt;
+  &lt;label for="javascript">JavaScript&lt;/label&gt;
+&lt;/form&gt;
+</pre>
+
+<p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+
+<h2>Checkboxes</h2>
+
+<p>The &lt;input type="checkbox"&gt; defines a checkbox. <br> Checkboxes let a user select ZERO or MORE options of a limited number of choices. For example</p>
+
+<pre>
+&lt;form&gt;
+  &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&gt;
+  &lt;label for="vehicle1"&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"&gt;
+  &lt;label for="vehicle2"&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&gt;
+  &lt;label for="vehicle3"&gt; I have a boat&lt;/label&gt;
+&lt;/form&gt;
+</pre>
+
+ <form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" value="John"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

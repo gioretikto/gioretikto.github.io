@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="iwconfig"/>
+    <title>iwconfig</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>iwconfig</h1>
+
+<p>Configurare rete con WEP, interrompere NetoworkManager</p>
+
+<pre>service network-manager stop</pre>
+
+<pre>ip link set wlxf4f26d13b2bd down
+
+iw wlxf4f26d13b2bd set type managed
+
+iwconfig wlxf4f26d13b2bd essid AcquistaIlTuoInternet
+iwconfig wlxf4f26d13b2bd key s:eragoldeyepes
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="seriesegnovar.html">Serie a termini di segno variabile&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

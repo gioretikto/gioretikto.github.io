@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Introduzione a MySQL"/>
+
+    <title>Introduzione a MySQL</title>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li> <a class="navbar" href="../../index.php">Home</a></li>
+        <li> <a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+         
+</nav>
+
+      
+<div class="content">
+ 
+<h1>Introduzione a MySQL</h1>
+
+<p>Avviare prima di tutto il database tramite il comando</p>
+<p>
+<pre>
+# systemctl start mysql
+</p>
+</pre>
+
+<p>Se è il primo log in che si effettua, non sarà stata impostata nessuna password, e per loggarsi come <i>root</i> sarà necessario il comando:</p>
+
+<p>
+<pre>
+
+mysql -u root
+
+</pre>
+</p>
+
+<p>per impostare la password:</p>
+
+<p>
+<pre>
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_password');</pre>
+</p>
+
+<p>Provare a loggarsi adesso con phpMyAdmin http://localhost/phpMyAdmin/index.php</p>
+
+
+<p>In tutti i sistemi operativi per connetersi al server MySQL si utilizza il seguente comando:</p>
+
+<p>
+<pre>
+
+mysql -h hostname -u username -p
+
+</pre>
+</p>
+
+<p>L'argomento -p chiede al programma il prompt per la vostra password. Sarà necessario sostituire <i>hostname</i> con il nome host o indirizzo IP del computer sul quale il server MySQL è presente, ad esempio -h localhost oppure -h 127.0.0.1. </p>
+
+
+
+<p>Una volta connessi al server MySQL, si presenterà il client che vi porterà al prompt di comando MySQL:</p>
+
+
+<pre>
+MariaDB [(none)]> 
+</pre>
+
+
+<h2>Mostrare e creare databases</h2>
+
+<pre>
+MariaDB [(none)]><b>SHOW DATABASES</b>;
+</pre>
+
+<p>Come noterete i comandi MySQL terminano con un ;.</p>
+
+<p>Per creare un database si utilizza il comando:</p>
+
+<pre>
+MariaDB [(none)]><b>CREATE database mydb</b>;
+</pre>
+
+<p>Adesso comunichiamo a MySQL di voler utilizzare un dato database con il comando:</p>
+
+<pre>
+MariaDB [(none)]> <b>USE db</b>;
+</pre>
+
+<p>Se qualcosa va storto MySQL fornisce degli avvertimenti per mostrarli usare il comando:</p>
+
+
+<pre>
+MariaDB [(none)]> <b>SHOW WARNINGS</b>;
+</pre>
+
+
+<div class="parent">
+<div class="child"><a href="absoluteablative.html">&#171;Absolute Ablative</a></p></div>
+<div class="child"><a href="index.html">Indice</a></div>
+<div class="child"><a href="gerundive.html">The gerundive&#187;</a></p></div>
+</div>
+
+</div>
+
+</body>
+</html>

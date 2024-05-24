@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="mount"/>
+	<title>mount</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>mount</h1>
+
+<p>To mount devices by hand, you have to use the mount command. The structure of this command is easy to understand:</p>
+
+<pre>mount device directory</pre>
+
+<p>You'll need to know what the drive is called to mount it. To do that enter the command below.</p>
+
+<pre>lsblk</pre>
+
+<p>which gives as output</p>
+
+<pre>NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0 111.8G  0 disk 
+├─sda1   8:1    0 110.8G  0 part /
+├─sda2   8:2    0     1K  0 part 
+└─sda5   8:5    0   975M  0 part [SWAP]
+sdb      8:16   1  14.9G  0 disk 
+└─sdb1   8:17   1  14.9G  0 par
+</pre>
+
+<p>For the directory, tou can basically, you can use any directory, but it doesn’t make sense to mount a device, for example, on <code>/usr</code>; it can even be dangerous because it will temporarily make all the other files in that directory unavailable. Therefore, on most systems, two directories are created as default mount points. The first of these directories is the directory <code>/mnt</code>. This is typically the directory you would use for a mount that happens only occasionally.</p>
+
+<pre>mount /dev/sdb1 /mnt</pre>
+
+<p>To remove a mounted drive from the virtual directory, use the <b>umount</b> command (note the missing 'n'). You can remove the mounted drive by specifying either the device or the mount point directory.</p>
+
+<pre>umount /dev/sdb1</pre>
+
+<p>The second is the directory <code>/media</code>. In there, you would mount devices that are connected on a more regular basis. You would, for example, mount a CD, DVD, or USB stick in that directory with the command</p>
+
+<pre>mount /dev/cdrom /media/cdrom</pre>
+
+<p>The mount command makes it possible not only to mount devices such as CDs and DVDs but also network shares. If you want to do that, you must be a little bit more specific, however. For example, if you want to mount a share with the name myshare on your Windows computer that has the name mira, you would use the following command:</p>
+
+<pre>mount -t smbfs -o username=yourname //mira/myshare /mnt</pre>
+
+<h2 id="fstab">Automatically Mounting Devices</h2>
+
+<p>The downside to the <i>mount</i> command is that it only temporarily mounts the device in the virtual directory. When you reboot the system, you have to manually mount the devices agains. This is usually fine for removable devices, such as USB memory stricks, but for more permanent devices, it would be nice if Linux could mount them for us automatically. <br> For permanent storage devices, Linux maintains the <b>/etc/fstab</b> file to indicate which drive devices should be mounted to the virtual directory at boot time. The <i>/etc/fstab</i> file is a table that indicates the drive device file (either the raw file or one of its permanent <i>udev</i> file names), the mount point location, the file system type, and any additional options required to mount the drive. The <i>/etc/fstab</i> file references the devices by their udev UUID value, ensuring the correct drive partition is accessed no matter qhat order it appears inthe raw device table.</p>
+
+<h2>Mount ISO images</h2>
+
+<p>An ISO image is a disk image of an optical disc. In other words, it is an archive file that contains everything that would be written to an optical disc, sector by sector, including the optical disc file system.[1] ISO image files bear the .iso filename extension. The name ISO is taken from the ISO 9660 file system used with CD-ROM media, but what is known as an ISO image might also contain a UDF (ISO/IEC 13346) file system (commonly used by DVDs and Blu-ray Discs).</p>
+
+<p>An ISO can be "mounted" with suitable driver software, <b>i.e. treated by the operating system as if it were a physical optical disc</b>.</p>
+
+<h3>Loopback Devices</h3>
+
+<p>The Linux operating system offers support for an additional unique type of filesystem. This type of filesystem is known as the loopback filesystem. Most Linux distributions have the loopback device compiled into the kernel. The kernel supports the transformation of a special file containing an image of another filesystem into a device that can be used like any other Linux partition or device. Linux loopback devices are commonly used for CD/DVD ISO images. The disk image created of the CD/DVD disc contains the UDF or ISO 9660 filesystem format. Prior to accessing the loopback device, the ISO image must be downloaded and mounted. The Linux mount command is used to attach the virtual filesystem image.</p>
+
+<p>Per montare una ISO</p>
+
+<pre>sudo mount whatever.iso /mnt</pre>
+
+<h2>Mount an hard drive</h2>
+
+<p>with <code>fdisk -l</code> we identify the hard drive</p>
+
+<pre>
+$ sudo fdisk -l
+[sudo] password for gidna: 
+Disk /dev/sdb: 465.8 GiB, 500107862016 bytes, 976773168 sectors
+Disk model: ST500DM005 HD502
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xe86fd452
+
+Device     Boot  Start       End   Sectors   Size Id Type
+/dev/sdb1  *      2048    206847    204800   100M  7 HPFS/NTFS/exFAT
+/dev/sdb2       206848 976771071 976564224 465.7G  7 HPFS/NTFS/exFAT
+
+
+Disk /dev/sda: 111.8 GiB, 120034123776 bytes, 234441648 sectors
+Disk model: KINGSTON SA400S3
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x13443ad3
+
+Device     Boot     Start       End   Sectors   Size Id Type
+/dev/sda1  *         2048 222007295 222005248 105.9G 83 Linux
+/dev/sda2       222009342 234440703  12431362     6G  5 Extended
+/dev/sda5       222009344 234440703  12431360     6G 82 Linux swap / Solaris
+</pre>
+
+<p>We have to install install <code>ntfs-3g</code> package. Then We can mount on of the two partitions</p>
+
+<pre>mount /dev/sdb1 /home/gidna/media</pre>
+
+<section aria-label="End">
+<a href="alteralius.html">&#171; Distributive and reciprocal use of alter and alius</a>
+<a href="index.html">Index</a>
+<a href="ceteri.html">Indeterminative alii, relĭqui, cetĕri &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

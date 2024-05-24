@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Structures"/>
+	<title>Structures</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Structures</h1>
+
+<p>A structure is a heterogeneous collection of variables grouped under a signle logical entity. These variables may qualify a logical entity and hence groupede together. For example, the details of students in a college contain attributes of different types. The details could be the student name, roll number, class and yeas. It is cumbersome and hard to mantain if these variables are maintained as different entities. To represent details in a signle entity, structures are used in a way similar a class in an OOP language.</p>
+
+<p>The <b>struct</b> keyword is used to create the blue-print of a structure.</p>
+
+<pre>
+struct circle
+{
+	int x_cord;
+	int y_cord;
+	int radius;
+};
+</pre>
+
+<p>or</p>
+
+<pre>
+struct Person {
+	char *name;
+	int age;
+	int height;
+	int weight;
+};
+</pre>
+
+<p>A structure variable can be declared in the following two ways</p>
+
+<pre>
+struct circle
+{
+	int x_cord;
+	int y_cord;
+	int radius;
+}circle1;
+</pre>
+
+<p>or as</p>
+
+<pre>struct circle circle1;</pre>
+
+<h2>Inizialization of struct variables</h2>
+
+<p>A structure element can be initialized when it is declared. The Inizialization is performed through a braces enclosed list of initializers. For example,</p>
+
+<pre>struct circle c1 = {10, 12, 4};</pre>
+
+<p>oppure tutti gli elementi possono essere posti uguale a zero al momento del'inizializzione tramite:</p>
+
+<pre>struct circle c1 = {0}</pre>
+
+<h3>Size of a structure</h3>
+
+<p>The size of a structure is the sum of all its member variables.</p>
+
+<h3>Referencing a Structure's Element</h3>
+
+<p>A member element in the structure variable is accessd by the "." operator and "->" operator.</p>
+
+<p>Suppose we have a structure variable circle1 representing a circle, the members of circle1 can be accessed by using the following notation</p>
+
+<pre>circle1.x = 12;
+circle2.y = 2;
+circle1.radius = 5;</pre>
+
+<h2 id="typedef">typedef</h2>
+
+<p>The <a href="typedef.html">typedef</a> feature is quite useful for defining structures, since it avoids the need to repeatedly write <code>struct</code> keyword to refer to a structure. Using it we can refer the structure more concisely.</p>
+
+<pre>
+typedf struct {
+	int x;
+	int y;
+} POINT;
+
+POINT a;
+</pre>
+
+<p>Here the first declaration defines POINT as a user defined data type and the second declariation defines <code>a</code> as structure variable of type <code>POINT</code>.</p>
+
+<p>On the other hand, using a tag and having the <code>struct</code> keyword explicit makes it clear that it is a structure being declared.</p>
+
+<h2>Pointers to Structures</h2>
+
+<p>If a large structure is to be passed to a function, it is generally more efficient to pass a pointer than to copy the whole structure. Structure pointers are just like pointers to ordinary variables. The declaration</p>
+
+<pre>struct point *p;</pre>
+
+says that <i>p</i> is a pointer to a structure of type struct point . If <i>p</i> points to a point structure, <i>*p</i> is the structure, and (<i>*p</i>).x and (<i>*pp</i>).y are the members. To use <i>p</i>, we might write, for example,</p>
+
+<pre>struct point origin, *pp;
+pp = &origin;
+printf("origin is (%d,%d)\n", (*pp).x, (*pp).y);
+</pre>
+
+<p>The parentheses are necessary in (*pp).x because the precedence of operator . is higher then *. The expression *pp.x means *(pp.x), which is illegal here because <i>x</i> is not a pointer.</p>
+
+<p>Pointers to structures are so frequently used that an alternative notation is provided as a shorthand. The -> operator is introduced to formulate user-friendly way for accessing member variables of a structure through its pointer. If <i>p</i> is a pointer, then</p>
+
+<pre>p->member-of-structure</pre>
+
+<p>refers to the particular member. The following two expressions are equivalent ways to dereference the pointer</p>
+
+<pre>
+(*ptr).i = value;
+ptr->i = value;
+</pre>
+
+<h3>Structure and double pointers</h3>
+
+<p>The following is an example of using pointers to pointers with structures</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+struct point
+{
+	int x;
+	int y;
+};
+
+void printPoint(struct point **p);
+
+int main()
+{
+	struct point a;
+
+	a.x = 2;
+	a.y = 3;
+
+	printf("Coordinate x of point a as printed from %s is: %d\n", __func__, a.x);
+	printf("Coordinate y of point a as printed from %s is: %d\n\n", __func__, a.y);
+
+	struct point *b = &amp;a;
+
+	printf("Coordinate x of point a as printed from %s through the pointer is: %d\n", __func__, b->x);
+	printf("Coordinate y of point as printed from %s through the pointer is: %d\n\n", __func__, b->y);
+
+	printPoint(&b);
+
+	return 0;
+
+}
+
+void printPoint(struct point **p)
+{
+	printf("Coordinate x of point a as printed from %s is: %d\n",__func__, (*p)->x);
+	printf("Coordinate y of point a as printed from %s is: %d\n\n",__func__, (*p)->y);
+}
+</pre>
+
+<p>it produces the followin output</p>
+
+<pre>
+Coordinate x of point a as printed from main is: 2
+Coordinate y of point a as printed from main is: 3
+
+Coordinate x of point a as printed from main through the pointer is: 2
+Coordinate y of point as printed from main through the pointer is: 3
+
+Coordinate x of point a as printed from printPoint is: 2
+Coordinate y of point a as printed from printPoint is: 3
+</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

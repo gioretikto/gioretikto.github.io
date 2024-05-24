@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Il comando sort"/>
+    <title>Il comando sort</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Il comando sort</h1>
+
+<p>Prima di procedere con le modifiche di un file bisogna accertarsi che questi sia nello Unix format con:</p>
+
+<pre>dos2unix pwd passwords.txt</pre>
+
+<p>Per ordinare una wordlist utilizzare il comando:</p>
+
+<pre>sort -o pwd pwd</pre>
+
+<p>Per eliminare righe doppie da una wordlist, utilizzare il comando <b>uniq</b>:</p>
+
+<pre>sort pwd | uniq >> prova</pre>
+
+<p>Per sostituire un carattere con un altro all'interno di una worlist si utilizza il comand <b>tr</b>:</p>
+
+<pre>
+&lt;password.txt tr : $'\n' > newfile
+</pre>
+
+<p>Quest'ultimo comando sostituisce il carattere ":" con un carattere di newline '\n'.</p>
+
+<p>Per eliminare dalla wordlist le parole con meno di 8 caratteri:</p>
+
+<pre>awk 'length($0)>8' newfile > newfile2</pre>
+
+<p>Per sottrarre il contenuto di una wordlist a quello di una seconda:</p>
+
+<pre>grep -vxF -f pwd passwords.txt &gt;&gt; out</pre>
+
+<p>che sottrare il contenuto di <i>pwd</i> a quello di passwords.txt.</p>
+
+<p>Per eliminare tutte le righe che iniziano per "S" e per "e":</p>
+
+<pre>sed -e '/^[Se]/d' -e '/^$/d' myspace > space</pre>
+
+<p>So to delete all empty lines from a file called /tmp/data.txt, enter:</p>
+
+<pre>sed '/^$/d' /tmp/data.txt > /tmp/output.txt</pre>
+
+<section>
+<a href="misura.html">&#171;Misure</a>
+<a href="index.html">Index</a>
+<a href="misure.html">Misura&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

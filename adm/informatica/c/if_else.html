@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="L'istruzione if"/>
+	<title>L'istruzione if</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>L'istruzione if</h1>
+
+<p>Mole istruzioni C si basano su un'espressione condizionale che determina l'azione che deve essere eseguita. Un'espressione condizionale può fornire un risultato vero o falso (rispettivamente <code>true</code> e <code>false</code>). In C il valore <b>vero</b> corrispondene a qualsiasi valore <b>diverso da zero, inclusi</b> i numeri <b>negativi</b>. Il valore falso corrisponde allo 0.</p>
+
+<p>Vi sono due istruzioni di selezione <code>if</code> e <code>switch</code>. In alcue circostanze in alternativa si può usare l'operatore <code>?</code>. <br> La forma generale dell'istruzione <code>if</code> è la seguente:</p>
+
+<pre>
+if (espressione)
+	istruzione;
+else
+	istruzione;
+</pre>
+
+<p>dove istruzione può essere una singola istruzione, un blocco di istruzioni o un'istruzione nulla. La clausola <code>else</code> è opzionale. Se <i>espressione</i> fornisce un risultato vero (diverso da zero), viene eseguita l'istruzione o blocco relativo alla parte <code>if</code>; in caso contrario verrà eseguita, l'isutrzione (o il blocco) <code>else</code>.</p>
+
+<p>L'istruzione condizionale che controlla <code>if</code> deve produrre un risultato scalare. Uno <i>scalare</i> può essere un intero, un carattere, un puntatore o un numero in virgola mobile. In C99 anche _Bool è uno scalare e pertanto può essere utilizzato in un'istruzione <code>if</code>.</p> 
+
+<p>Raramente si usa un numero in virgola mobile per controllare un'istruzione condizionale in quanto questo rallenta molto il tempo di esecuzione (poiché per eseguire un'operazione in virgola mobile occorrono molte più istruzioni di codice macchina rispetto alla corrispondente operazione eseguita su un intero o un carattere.</p>
+
+<h2>Costrutto if-else-if</h2>
+
+<p>Quando viene trovata una condizione vera, viene eseguita l'<i>istruzione</i> associata e la parte rimanente del costrutto viene ignorata.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+	if (0)
+		printf("Ciao mondo\n");
+	else if (-1)
+		printf("print -1\n");
+	else if (2)
+		printf("print 2\n");
+	else
+		printf("Basta");
+	
+	return 0;
+	
+}
+</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Text"/>
+    <title>Text</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+ 
+<h1>Text</h1>
+
+<h2>Text color</h2>
+
+<p>The color property is used to set the color of the text. The color is specified by:
+
+<ul>
+    <li><p>a color name - like "red"</p></li>
+    <li><p>a HEX value - like "#ff0000"</p></li>
+    <li><p>an RGB value - like "rgb(255,0,0)"</p></li>
+</ul>
+
+<p>Look at CSS Color Values for a complete list of possible color values.</p>
+
+<p>The default text color for a page is defined in the body selector.</p>
+
+<h4>Example</h4>
+
+<pre>
+body {
+  color: blue;
+}
+
+h1 {
+  color: green;
+} 
+</pre>
+
+<h3>Text Alignment</h3>
+
+<p>The text-align property is used to set the horizontal alignment of a text.</p>
+
+<p>A text can be left or right aligned, centered, or justified.</p>
+
+<p>The following example shows center aligned, and left and right aligned text (left alignment is default if text direction is left-to-right, and right alignment is default if text direction is right-to-left):</p>
+
+<h4>Example</h4>
+
+<pre>
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+} 
+</pre>
+
+<h3>Text Decoration</h3>
+
+<p>The text-decoration property is used to set or remove decorations from text.</p>
+
+<p>The value text-decoration: none; is often used to remove underlines from links:</p>
+
+<h4>Example</h4>
+
+<pre>
+a {
+  text-decoration: none;
+}
+</pre>
+
+<pre>
+&lt;p style="text-decoration: overline;">BELLO 0 1 2 &lt;/p&gt;
+</pre>
+
+<p style="text-decoration: overline;">BELLO 0 1 2</p>
+
+h2 {
+  text-decoration: line-through;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+h4 {
+  text-decoration: underline overline;
+}
+</pre>
+
+<h3>Text Transformation</h3>
+
+<p>The text-transform property is used to specify uppercase and lowercase letters in a text.</p>
+
+<p>It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word:</p>
+
+<h4>Example</h4>
+
+<pre>
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+</pre>
+
+
+<h3>Text Indentation</h3>
+
+<p>The text-indent property is used to specify the indentation of the first line of a text:</p>
+
+<h4>Example</h4>
+<pre>
+p {
+  text-indent: 50px;
+} 
+</pre>
+
+<h3>Letter Spacing</h3>
+
+<p>The letter-spacing property is used to specify the space between the characters in a text.</p>
+
+<p>The following example demonstrates how to increase or decrease the space between characters:</p>
+
+<h4>Example</h4>
+
+<pre>
+h1 {
+  letter-spacing: 3px;
+}
+
+h2 {
+  letter-spacing: -3px;
+} 
+</pre>
+
+<h3>Line Height</h3>
+
+<p>The line-height property is used to specify the space between lines:</p>
+
+<h4>Example</h4>
+
+<pre>
+p.small {
+  line-height: 0.8;
+}
+
+p.big {
+  line-height: 1.8;
+} </pre>
+
+<h3>Text Direction</h3>
+
+<p>The direction property is used to change the text direction of an element:</p>
+
+<h4>Example</h4>
+
+<pre>
+p {
+  direction: rtl;
+} 
+</pre>
+
+<h3>Word Spacing</h3>
+
+<p>The word-spacing property is used to specify the space between the words in a text.</p>
+
+<p>The following example demonstrates how to increase or decrease the space between words: </p>
+
+<h4>Example</h4>
+
+<pre>
+h1 {
+  word-spacing: 10px;
+}
+
+h2 {
+  word-spacing: -5px;
+} 
+</pre>
+
+<h3>Text Shadow</h3>
+
+<p>The text-shadow property adds shadow to text.</p>
+
+<p>The following example specifies the position of the horizontal shadow (3px), the position of the vertical shadow (2px) and the color of the shadow (red):</p>
+
+<h4>Example</h4>
+
+<pre>
+h1 {
+  text-shadow: 3px 2px red;
+} 
+</pre>
+
+<h2>Font Family</h2>
+
+<p>The font family of a text is set with the font-family property.<p>
+
+<p>The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on.</p>
+
+<p>Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.</p>
+
+<p><b>Note</b>: If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman".</p>
+
+<p>More than one font family is specified in a comma-separated list:</p>
+
+<p>Examples Specify the font for three paragraphs:</p>
+
+<pre>
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
+</pre>
+
+<h2>The font-style Property</h2>
+
+<p>The font-style property can be used to italicize text. It has three possible values, normal, which is the default, italic, which renders the text in the same way as the &lt;i&gt; tag, and oblique, which is somewhere between italic and normal, and is not as well supported by browsers as the italic style is</p>
+
+<pre>
+h2 { font-style: italic;}
+</pre>
+
+<h2>Font Size</h2>
+
+<p>Set Font Size With Pixels</p>
+
+<p>Setting the text size with pixels gives you full control over the text size:</p>
+
+<pre>
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+</pre>
+
+<h3>Use a Combination of Percent and Em</h3>
+
+<p>The solution that works in all browsers, is to set a default font-size in percent for the &lt;body&gt; element:</p>
+
+<pre>
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+</pre>
+
+<p>Our code now works great! It shows the same text size in all browsers, and allows all browsers to zoom or resize the text!</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

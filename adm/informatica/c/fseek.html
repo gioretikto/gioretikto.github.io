@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="fseek"/>
+    <title>fseek</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>fseek</h1>
+
+<p>The C library function int fseek(FILE *stream, long int offset, int whence) sets the file position of the stream to the given offset.</p>
+
+<p>Following is the declaration for fseek() function.</p>
+
+<pre>
+int fseek(FILE *stream, long int offset, int whence)
+</pre>
+
+<ul>
+<li><p><b>stream</b> - This is the pointer to a FILE object that identifies the stream.</p></li>
+
+<li><p><b>offset</b>-  This is the number of bytes to offset from whence.</p></li>
+
+<li><p><b>whence</b>- This is the position from where offset is added. It is specified by one of the following constants</p></li>
+</ul>
+
+<h3>Example</h3>
+
+<p>The following example shows the usage of fseek() function.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main () {
+   FILE *fp;
+
+   fp = fopen("file.txt","w+");
+   fputs("This is tutorialspoint.com", fp);
+  
+   fseek( fp, 7, SEEK_SET );
+   fputs(" C Programming Language", fp);
+   fclose(fp);
+   
+   return(0);
+}
+</pre>
+
+<p>Let us compile and run the above program that will create a file file.txt with the following content. Initially program creates the file and writes This is tutorialspoint.com but later we had reset the write pointer at 7th position from the beginning and used puts() statement which over-write the file with the following content −</p>
+
+<pre>
+This is C Programming Language
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

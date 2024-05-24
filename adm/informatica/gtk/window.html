@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="GtkApplication and GtkApplicationWindow">
+	<title>GtkApplication and GtkApplicationWindow</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>GtkApplication and GtkApplicationWindow</h1>
+
+<h2>GtkApplication</h2>
+
+<p>We write programs to make applications, i.e. softwares that runs using libraries, which are the OS, frameworks and so on. <br> <b>GtkApplication</b> is the base class of a GTK Application. This class encompasses many repetitive tasks that a modern application needs such as handling multiple instances, D-Bus activation, opening files, command line parsing, startup/shutdown, menu management, window management, and more.</p>
+
+<p>In GTK 4 programming, the GtkApplication is a program (or executable) that runs using Gtk libraries. The basic way to write a GTK application is as follows:</p>
+
+<ul>
+	<li><p>Create a GtkApplication instance.</p></li>
+	<li><p>Run the application.</p></li>
+</ul>
+
+<p>To begin our introduction to GTK, we’ll start with a very simple application. This program will create an empty 200 × 200 pixel window.</p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+static void
+activate (GtkApplication* app,
+          gpointer        user_data)
+{
+  GtkWidget *window;
+
+  window = gtk_application_window_new (app);
+  gtk_window_set_title (GTK_WINDOW (window), "Window");
+  gtk_window_set_default_size (GTK_WINDOW (window), 200, 200);
+  gtk_widget_show (window);
+}
+
+int
+main (int    argc,
+      char **argv)
+{
+  GtkApplication *app;
+  int status;
+
+  app = gtk_application_new ("org.gtk.example", G_APPLICATION_DEFAULT_FLAGS);
+  g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
+  status = g_application_run (G_APPLICATION (app), argc, argv);
+  g_object_unref (app);
+
+  return status;
+}
+</pre>
+
+<p>Here we shall use the word <b>instance</b>. Instance, class and object are terminologies in Object Oriented Programming. I use these words in the same way. But, I will often use "object" instead of "instance" in this tutorial. That means "object" and "instance" is the same. Object is a bit ambiguous word. In a broad sense, object has wider meaning than instance. So, readers should be careful of the contexts to find the meaning of "object". In many cases, object and instance are interchangeable.</p>
+
+<p>In a GTK application, the purpose of the <code>main()</code> function is to create a <b>GtkApplication</b> object and run it. In this example a <b>GtkApplication</b> pointer named <code>app</code> is declared and then initialized using <code>gtk_application_new()</code>.</p>
+
+<p>When creating a <b>GtkApplication</b>, you need to pick an application identifier (a name) and pass it to <code>gtk_application_new()</code> as parameter. For this example org.gtk.example is used. For choosing an identifier for your application, see this guide. Lastly, gtk_application_new() takes GApplicationFlags as input for your application, if your application would have special needs.</p>
+
+<p>Next the activate signal is connected to the <code>activate()</code> function above the <code>main()</code> function. The activate signal will be emitted when your application is launched with <code>g_application_run()</code> on the line below. The <code>g_application_run()</code> call also takes as arguments the command line arguments (the argc count and the argv string array). Your application can override the command line handling, e.g. to open files passed on the commandline.</p>
+
+<p>You can compile the program above with GCC using:</p>
+
+<pre>gcc $( pkg-config --cflags gtk4 ) -o example-0 example-0.c $( pkg-config --libs gtk4 )</pre>
+
+<h1>Widgets</h1>
+
+<p>Any program will have some user interface elements, such as windows, buttons, labels, boxes, etc.. In the X tradition, these are called <b>widgets</b>. All widgets are subclasses of the <b>GtkWidget</b> base class, so you can use a GtkWidget* to refer to them. <b>GtkWidget</b> is a base object from which all the GUI objects derive.</p>
+
+<pre>
+parent <-----> child
+GtkWidget -- GtkWindow
+</pre>
+
+<h2>GtkWindow and GtkApplicationWindow</h2>
+
+<h3>GtkWindow</h3>
+
+<p>The class <b>GtkWindow</b> allows to create a toplevel window which can contain other widgets. To add a window to as program, we need to</p>
+
+<ul>
+	<li><p>Create a GtkWindow;</p></li>
+	<li><p>Connect it to the <i>GtkApplication</i>;</p></li>
+	<li><p>Show the window.</p></li>
+</ul>
+
+<p>The function <code>gtk_window_new</code> is defined as follows.</p>
+
+<pre>
+GtkWidget *
+gtk_window_new (void);
+</pre>
+
+<p>By this definition, it returns a pointer to GtkWidget, not GtkWindow. For historical reasons, a lot of widget constructors return GtkWidget instead of the type they are constructing; This is because every widget in GTK+ is actually a GtkWidget itself. <code>gtk_window_new</code> actually creates a new GtkWindow instance (not GtkWidget) but returns a pointer to GtkWidget. However,the pointer points the GtkWidget and at the same time it also points GtkWindow that contains GtkWidget in it.</p>
+
+<p>If you want to use <code>window</code> as a pointer to a GtkWindow type instance, you need to cast it.</p>
+
+<pre>(GtkWindow *) window</pre>
+
+<p>It works, but isn't usually used. Instead, <code>GTK_WINDOW</code> macro is used.</p>
+
+<pre>GTK_WINDOW (window)</pre>
+
+<p>The macro is recommended because it does not only cast the pointer but it also checks the type.</p>
+
+<h3>Connect it to the GtkApplication</h3>
+
+<p>The function <code>gtk_window_set_application</code> is used to connect GtkWindow to GtkApplication.</p>
+
+<pre>gtk_window_set_application (GTK_WINDOW (win), GTK_APPLICATION (app));</pre>
+
+<p>You need to cast <code>window</code> to GtkWindow and <code>app</code> to GtkApplication with <code>GTK_WINDOW</code> and <code>GTK_APPLICATION</code> macro. <br>A window title is set using <code>gtk_window_set_title()</code>. This function takes a GtkWindow pointer and a string as input. As our window pointer is a GtkWidget pointer, we need to cast it to GtkWindow; instead of casting window via a typical C cast like (GtkWindow*), window can be cast using the macro <code>GTK_WINDOW()</code>. <code>GTK_WINDOW()</code> will check if the pointer is an instance of the GtkWindow class, before casting, and emit a warning if the check fails. More information about this convention can be found in the GObject documentation.</p>
+
+<p id="appwin"><i>GtkApplicationWindow</i> is a <i>GtkWindow</i> subclass that offers some extra functionality for better integration with <i>GtkApplication</i> features. Notably, it can handle both the application menu as well as the menubar. See <code>gtk_application_set_app_menu ()</code> and <code>gtk_application_set_menubar ()</code>.</p>
+
+<h2>Signals</h2>
+
+<p>While the program is running, GTK is receiving events. These are typically input events caused by the user interacting with your program, but also things like messages from the window manager or other applications. GTK processes these and as a result, signals may be emitted on your widgets. Connecting handlers for these signals is how you normally make your program do something in response to user input. <br> A <a href="signals.html">signal</a> is emitted when something happens. For example, a window is created, a window is destroyed and so on. The signal "activate" is emitted when the application is activated. (Activated is a bit different from started, but you can think of them both as almost the same so far.) If the signal is connected to a function, which is called a signal handler or simply handler, then the function is invoked when the signal is emitted.</p>
+
+<p>The flow is like this:</p>
+
+<ul>
+	<li><p>Something happens.</p></li>
+	<li><p>If it's related to a certain signal, then the signal is emitted.</p></li>
+	<li><p>If the signal has been connected to a handler in advance, then the handler is invoked.</p></li>
+</ul>
+
+<p>Signals are defined in objects. For example, the "activate" signal belongs to the <b>GApplication</b> object, which is a parent object of GtkApplication object. The GApplication object is a child object of the GObject object. GObject is the top object in the hierarchy of all the objects.</p>
+
+<pre>
+GObject -- GApplication -- GtkApplication
+<---parent                      --->child
+</pre>
+
+<p>A child object inherits signals, functions, properties and so on from its parent object. So, GtkApplication also has the "activate" signal.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="lab_butt_box.html">GtkLabel, GtkButton and GtkBox»</a>
+</section>
+
+</article>
+
+</body>
+</html>

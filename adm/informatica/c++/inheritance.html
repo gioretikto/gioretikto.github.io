@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Inheritance"/>
+    <title>Inheritance</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Inheritance</h1>
+
+<p>The special thing about OOP programming is that it uses <i>inheritance</i>. Using inheritance, you can create new types on the basis of existing types, which you extend with further attributes. It is possible to create relations based on  <i>inheritance</i>. For example we can express relations such as a "an athlete is a person". In C++ inheritance is introduced by creating subclasses of existing classes.</p>
+
+<p>A child class inherits both behaviors (member functions) and properties (member variables) from the parent (subject to some access restrictions that we’ll cover in a future lesson). These variables and functions become members of the derived class.</p>
+
+<p>Because child classes are full-fledged classes, they can (of course) have their own members that are specific to that class. We’ll see an example of this in a moment.</p>
+
+<h4>A Person class</h4>
+
+<p>Here’s a simple class to represent a generic person:</p>
+	
+<pre>
+#include &lt;string&gt;
+ 
+class Person
+{
+// In this example, we're making our members public for simplicity
+public: 
+    std::string m_name;
+    int m_age;
+ 
+    Person(std::string name = "", int age = 0)
+        : m_name(name), m_age(age)
+    {
+    }
+ 
+    std::string getName() const { return m_name; }
+    int getAge() const { return m_age; }
+ 
+};
+</pre>
+
+Because this Person class is designed to represent a generic person, we’ve only defined members that that would be common to any type of person. Every person (regardless of gender, profession, etc…) has a name and age, so those are represented here.
+
+Note that in this example, we’ve made all of our variables and functions public. This is purely for the sake of keeping these examples simple right now. Normally we would make the variables private. We will talk about access controls and how those interact with inheritance later in this chapter.
+
+<h4>A BaseballPlayer class</h4>
+
+<p>Let’s say we wanted to write a program that keeps track of information about some baseball players. Baseball players need to contain information that is specific to baseball players -- for example, we might want to store a player’s batting average, and the number of home runs they’ve hit.</p>
+
+<p>Here’s our incomplete Baseball player class:</p>
+
+<pre>	
+class BaseballPlayer
+{
+// In this example, we're making our members public for simplicity
+public:
+    double m_battingAverage;
+    int m_homeRuns;
+ 
+    BaseballPlayer(double battingAverage = 0.0, int homeRuns = 0)
+       : m_battingAverage(battingAverage), m_homeRuns(homeRuns)
+    {
+    }
+};
+</pre>
+
+<p>Now, we also want to keep track of a baseball player’s name and age, and we already have that information as part of our Person class.</p>
+
+<p>We have three choices for how to add name and age to BaseballPlayer:</p>
+
+<ol>
+	<li><p>Add name and age to the BaseballPlayer class directly as members. This is probably the worst choice, as we’re duplicating code that already exists in our Person class. Any updates to Person will have to be made in BaseballPlayer too.</p></li>
+	<li><p>Add Person as a member of BaseballPlayer using composition. But we have to ask ourselves, “does a BaseballPlayer have a Person”? No, it doesn’t. So this isn’t the right paradigm.</p></li>
+	<li><p>Have BaseballPlayer inherit those attributes from Person. Remember that inheritance represents an is-a relationship. Is a BaseballPlayer a Person? Yes, it is. So inheritance is a good choice here.</p></li>
+</ol>
+
+<h3>Making BaseballPlayer a derived class</h3>
+
+<p>To have BaseballPlayer inherit from our Person class, the syntax is fairly simple. After the class BaseballPlayer declaration, we use a colon, the word “public”, and the name of the class we wish to inherit. This is called public inheritance. We’ll talk more about what public inheritance means in a future lesson.</p>
+
+<pre>
+// BaseballPlayer publicly inheriting Person
+class BaseballPlayer : public Person
+{
+public:
+    double m_battingAverage;
+    int m_homeRuns;
+ 
+    BaseballPlayer(double battingAverage = 0.0, int homeRuns = 0)
+       : m_battingAverage(battingAverage), m_homeRuns(homeRuns)
+    {
+    }
+};
+</pre>
+
+<p>Using a derivation diagram, our inheritance looks like this:</p>
+
+<p>Person</p>
+
+<p>&emsp;&emsp;├── BaseballPlayer</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

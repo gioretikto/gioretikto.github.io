@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Character Handling: ctype.h"/>
+    <title>Character Handling: ctype.h</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Character Handling: ctype.h</h1>
+
+<p>These functions take int arguments, which should be able to be represented as either unsigned char values or as EOF; the effect of supplying other values is undefined. In Table RS.V.4 , “true” is used as shorthand for £a nonzero value." Interpretation of some definitions depends on the current locale setting, which is controlled by the functions of locale.h ; the table shows the interpretations for the "C" locale.</p>
+
+<table>
+<thead>
+<tr><th>Function Prototype</th> <th>Description</th></tr>
+</thead>
+
+<tbody>
+<tr><td>int isalnum(int c);</td> <td>Returns true if c is alphanumeric (alphabetic or numeric).</td></tr>
+<tr><td>int isalpha(int c);</td> <td>Returns true if c is alphabetic.</td></tr>
+<tr><td>int isblank(int c);</td> <td>Returns true if c is a space or a horizontal tab. (C99)</td></tr>
+<tr><td>int iscntrl(int c);</td> <td>Returns true if c is a control character, such as Ctrl+B.</td></tr>
+<tr><td>int isdigit(int c);</td> <td>Returns true if c is a digit.</td></tr>
+<tr><td>int isgraph(int c);</td> <td>Returns true if c is any printing character other than a space.</td></tr>
+<tr><td>int islower(int c);</td> <td>Returns true if c is a lowercase character.</td></tr>
+<tr><td>int isprint(int c);</td> <td>Returns true if c is a printing character.</td></tr>
+<tr><td>int ispunct(int c);</td> <td>Returns true if c is a punctuation character (any printing character other than a space or an alphanumeric character).</td></tr>
+<tr><td>int isspace(int c);</td> <td> Returns true if c is a whitespace character: space, newline, form feed, carriage return, vertical tab, horizontal tab, or, possibly, another implementation-defined character.</td></tr>
+<tr><td>int isupper(int c);</td> <td>Returns true if c is an uppercase character.</td></tr>
+<tr><td>int isxdigit(int c);</td> <td>Returns true if c is a hexadecimal-digit character.</td></tr>
+<tr><td>int tolower(int c);</td> <td>If the argument is an uppercase character, returns the lowercase version; otherwise, just returns the original argument.</td></tr>
+<tr><td>int toupper(int c);</td> <td>If the argument is a lowercase character, returns the uppercase version; otherwise, just returns the original argument.</td></tr>
+</tbody>
+</table>
+
+<p>Example of usage of <b>toupper()</b></p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+ 
+int main(int argc, char **argv)
+{
+	char c ='a';
+	c = toupper (c);
+	printf("%c\n", c);
+	return 0;
+}
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

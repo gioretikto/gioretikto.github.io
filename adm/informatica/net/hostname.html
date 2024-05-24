@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="hostname"/>
+    <title>hostname</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>hostname: how to change</h1>
+
+<p>The hostname of a Linux system is important because it's used to identify the device on a network. The hostname is also shown in other prominent places, such as in the terminal prompt. This gives you a constant reminder of which system you're working with. It's a real life saver when you're managing multiple systems through SSH and those command line terminals start to blend together in your mind.</p>
+
+<p>Of course, IP addresses are used when devices need to communicate with each other, but those can change frequently. Hostnames give us a way to know which device we're interacting with either on the network or physically, without remembering a bunch of numbers that are subject to change. Thus, it's important that your system bears a hostname which helps you to identify it quickly. For example, "backup-server" is much more informative than "server2."</p>
+
+
+
+<p>Lastly, edit the <i>/etc/hosts</i> file to reflect the change. For example, change this:</p>
+
+<pre>
+127.0.0.1 localhost
+127.0.1.1 linux-server
+</pre>
+
+<p>To this:</p>
+
+<pre>
+127.0.0.1 localhost
+127.0.1.1 linuxconfig
+</pre>
+
+<p>Alternatively we could edit directly /etc/hostname and /etc/hosts, with the former cotaining the name we chosen and /etc/hosts as above.</p>
+
+<p>Long ago, before DNS, hosts on a network had to be defined locally in the file <i>/etc/hosts</i>. If there were 31 hosts on a network and a new one was added, then 32 hosts had to update their /etc/hosts file to reflect the correct IP address and corresponding hostname for each of their neighbors. This process didn’t scale well for bigger networked systems such as the World Wide Web (the Internet), and so DNS was invented, and the concept of hostnames largely was abstracted away from local computers to instead be managed by the network.</p>
+
+<section aria-label="End">
+<a href="dlconfiguration.html">&#171;D- and L- configuration</a>
+<a href="index.html">Index</a>
+<a href="apposition.html">Internal Accusative&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

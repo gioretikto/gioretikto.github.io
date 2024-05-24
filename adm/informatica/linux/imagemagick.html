@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="ImageMagick"/>
+
+    <title>ImageMagick</title>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li> <a class="navbar" href="../../index.php">Home</a></li>
+        <li> <a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h2>Configure ImageMagick policies</h2>
+
+<p>Il problema di conversione dei pdf in png, incontrato con il comando.</p>
+
+<p><i>pdflatex --shell-escape formula.tex &amp;&amp; convert -resize 50% formula.png formula1.png</i></p>
+
+<pre>Class standalone Warning: Conversion unsuccessful!
+(standalone)              There might be something wrong with your
+(standalone)              conversation software or the file permissions!
+ 
+ ) )</pre>
+ 
+ 
+<p>E' dovuto alla policy di ImageMagick, che non permette la lettura dei pdf. E' necessario creare il file: ~/.config/ImageMagick/policy.xml . Con all'interno il seguente contenuto</p>
+
+<pre>
+&lt;policymap&gt;                                                                                                                                    
+    &lt;policy domain="coder" rights="read | write" pattern="PDF" /&gt;                                                                               
+&lt;/policymap&gt; 
+</pre>
+
+ 
+ 
+
+<div class="parent">
+<div class="child"><a href="integrale.html">&#171;Definizione dell'integrale</a></p></div>
+<div class="child"><a href="index.html">Indice</a></div>
+<div class="child"><a href="pronunciation.html">The Pronunciation of Classical Latin&#187;</a></p></div>
+</div>
+
+</div>
+
+</body>
+</html>

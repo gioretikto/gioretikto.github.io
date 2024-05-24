@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Using bash a a calculator"/>
+	<title>Using bash a a calculator</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Using bash a a calculator</h1>
+
+<p>BASH's builtin arithmetic uses integers only:</p>
+
+<pre>$ echo "$((10 / 3))"3
+</pre>
+
+<p>For most operations involving non-integer numbers, an external program must be used, e.g. bc, AWK or dc:</p>
+
+<pre>$ echo 'scale=3; 10/3' | bc3.333</pre>
+
+<p>The "scale=3" command notifies bc that three digits of precision after the decimal point are required. </p>
+
+<h2>Binary to decimal conversion</h2>
+
+<pre>echo "$((2#100))"</pre>
+
+<p>output</p>
+
+<pre>4</pre>
+
+<section aria-label="End">
+<a href="comparative_sup.html">&#171; The comparative of superiority</a></p>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

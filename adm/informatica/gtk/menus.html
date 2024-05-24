@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Legge">
+	<title>Legge</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Menu bars</h1>
+
+<p>GtkApplicationWindow is a GtkWindow subclass that integrates with GtkApplication. Notably, GtkApplicationWindow can handle an application menubar.</p>
+
+<h4>A GtkApplicationWindow with a menubar</h4>
+
+<p>The code sample below shows how to set up a GtkApplicationWindow with a menu bar defined on the GtkApplication:</p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+ 
+static void
+app_activate (GApplication *app) {
+
+	GtkWidget *window = gtk_application_window_new (GTK_APPLICATION (app));
+	gtk_window_set_default_size (GTK_WINDOW (window), 400, 300);
+
+	GtkBuilder *builder = gtk_builder_new_from_string (
+	    "<interface>"
+	    "  <menu id='menubar'>"
+	    "    <submenu>"
+	    "      <attribute name='label' translatable='yes'>_Edit</attribute>"
+	    "      <item>"
+	    "        <attribute name='label' translatable='yes'>_Copy</attribute>"
+	    "        <attribute name='action'>win.copy</attribute>"
+	    "      </item>"
+	    "      <item>"
+	    "        <attribute name='label' translatable='yes'>_Paste</attribute>"
+	    "        <attribute name='action'>win.paste</attribute>"
+	    "      </item>"
+	    "    </submenu>"
+	    "  </menu>"
+	    "</interface>",
+	    -1);
+
+	GMenuModel *menubar = G_MENU_MODEL (gtk_builder_get_object (builder, "menubar"));
+	gtk_application_set_menubar (GTK_APPLICATION (app), menubar);
+	gtk_application_window_set_show_menubar(GTK_APPLICATION_WINDOW(window), TRUE);
+	g_object_unref (builder);
+ 
+	gtk_window_present (GTK_WINDOW (window));
+}
+
+int
+main (int argc, char **argv) {
+	int stat;
+	GtkApplication *app = gtk_application_new ("org.gtk.test", 0);
+	g_signal_connect (app, "activate", G_CALLBACK (app_activate), NULL);
+	stat = g_application_run (G_APPLICATION (app), argc, argv);
+	g_object_unref (app);
+	return stat;
+}
+</pre>
+
+<p>If the desktop environment does not display the menubar, then use <code>gtk_application_window_set_show_menubar(GTK_APPLICATION_WINDOW(window), TRUE)</code>;</p>
+
+<p><b>GMenuModel</b> is an interface for reading a menu; GMenu is the implementation of that interface, which you actually use to create the menu. GtkBuilder on encountering a <i>menu</i> tag will use it to build up a GMenu, then you pass that as a GMenuModel to the application or other consumers. So in the last example we did use GMenu, just didn't mention it by that exact name. To render the code more explicit</p>
+
+<pre>
+GtkBuilder *builder = gtk_builder_new_from_resource ("/my/favourite/spells/menu.ui");
+GMenu *menu = G_MENU_MODEL (gtk_builder_get_object ("menu");</pre>
+
+<h2>GtkBuilder</h2>
+
+<p>A <b>GtkBuilder</b> reads XML descriptions of a user interface and instantiates the described objects. To create a GtkBuilder from a user interface description, call <code>gtk_builder_new_from_file(), gtk_builder_new_from_resource()</code> or <code>gtk_builder_new_from_string()</code>.</p>
+
+<p>n the (unusual) case that you want to add user interface descriptions from multiple sources to the same GtkBuilder you can call <code>gtk_builder_new()</code> to get an empty builder and populate it by (multiple) calls to <code>gtk_builder_new_from_file(), gtk_builder_new_from_resource()</code> or <code>gtk_builder_new_from_string()</code>.</p>
+
+<p><i>GtkBuilder</i> parses textual descriptions of user interfaces which are specified in XML format. We refer to these descriptions as “GtkBuilder UI definitions” or just “UI definitions” if the context is clear.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

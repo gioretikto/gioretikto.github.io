@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="vi"/>
+    <title>vi</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>vi</h1>
+
+<p>The vi editor (short for visual editor) is a screen editor which is
+available on almost all Unix systems.  Once you have learned vi, you will find
+that it is a fast and powerful editor.  vi has no menus but instead uses
+combinations of keystrokes in order to accomplish commands. </p>
+
+<h2>Starting vi</h2>
+
+<p>To start using vi, at the Unix prompt type <b>vi</b> followed by a
+file name.  If you wish to edit an existing file, type in its name; if you are
+creating a new file, type in the name you wish to give to the new file.</p>
+
+<pre>%vi <i>filename</i></p></pre>
+
+<p>Then hit <b>Return</b>.  You will see a screen similar to the one below which
+shows blank lines with tildes and the name and status of the file.<p>
+
+<pre>
+~
+~
+"myfile" [New file]
+</pre>
+
+<h2>vi's Modes and Moods</h2>
+
+<p>vi has two modes:  the command mode and the insert mode.  It is
+essential that you know which mode you are in at any given point in time.  When
+you are in command mode, letters of the keyboard will be interpreted as
+commands.  When you are in insert mode the same letters of the keyboard will
+type or edit text.  vi always starts out in command mode.  When you wish to
+move between the two modes, keep these things in mind.  You can type <b>i</b>
+to enter the insert mode.  If you wish to leave insert mode and return to the
+command mode, hit the <b>ESC</b> key.  If you're not sure where you are, hit
+<b>ESC</b> a couple of times and that should put you back in commandmode.</p>
+
+<h4>General Command Information</h4>
+
+<p>As mentioned previously, vi uses letters as commands. It is important to note that in general vi commands:
+
+<ul>
+<li>are case sensitive - lowercase and uppercase command letters do different
+things
+</li><li>are not displayed on the screen when you type them
+</li><li>generally do not require a <b>Return</b> after you type the
+command.</li></ul>You will see some commands which start with a colon (<b>:</b>).
+These commands are <i>ex</i> commands which are used by the <i>ex</i>  editor.
+<i>ex </i>is the true editor which lies underneath vi -- in other words, vi is
+the interface for the ex editor.
+</p>
+<h2>Entering Text</h2>
+<p>To begin entering text in an empty file, you must first change from
+the command mode to the insert mode.  To do this, type the letter <b>i</b>.
+When you start typing, anything you type will be entered into the file.  Type a
+few short lines and hit <b>Return</b> at the end of each of line.  Unlike word
+processors, vi does not use word wrap.  It will break a line at the edge of the
+screen.  If you make a mistake, you can use the Backspace key to remove your
+errors.  If the Backspace key doesn't work properly on your system, try using
+the Ctrl h key combination.</p>
+<h2>Cursor Movement</h2>
+<p>You must be in command mode if you wish to move the cursor to
+another position in your file.  If you've just finished typing text, you're
+still in insert mode and will need to press <b>ESC</b> to return to the command
+mode.  </p><h4>
+Moving One Character at a Time</h4>
+<p>Try using your direction keys to move up, down, left and right in
+your file.  Sometimes, you may find that the direction keys don't work.  If
+that is the case, to move the cursor one character at the time, you may use the
+<b>h</b>, <b>j</b>, <b>k</b>, and <b>l</b> keys.  These keys move you in the
+following directions:<pre><b>h</b>	left one space		<b>l</b>	right one space<b>
+j</b>	down one space		<b>k</b>	up one space</pre>If you move the cursor as
+far as you can in any direction, you may see a screen flash or hear a beep.
+</p><h4>
+Moving among Words and Lines</h4>
+<p>While these four keys (or your direction keys) can move you just
+about anywhere you want to go in your file, there are some shortcut keys that
+you can use to move a little more quickly through a document.  To move more
+quickly among words, you might use the following:<pre><b>w</b>	moves the cursor forward one word <b>
+b</b>	moves the cursor backward one word (if in the middle of a 
+ 	word, b will move you to the beginning of the current word).<b>
+e</b>	moves to the end of a word.</pre>To build on this further, you can
+precede these commands with a number for greater movement.  For example, 5w
+would move you forward five words; 12b would move you backwards twelve words.
+[You can also use numbers with the commands mentioned earlier.  For example, 5j
+would move you down 5 characters.]  </p><h4>
+Command Keys and Case</h4>
+<p>You will find when using vi that lower case and upper case command
+keys are interpreted differently.  For example, when using the lower case
+<b>w</b>, <b>b</b>, and <b>e</b> commands, words will be defined by a space or
+a punctuation mark.  On the other hand, <b>W</b>, <b>B</b>, and <b>E</b>
+commands may be used to move between words also, but these commands ignore
+punctuation.</p>
+
+<h4>Shortcuts</h4>
+
+<p>Two short cuts for moving quickly on a line include the <b>$</b>
+and the <b>0</b> (zero) keys.  The <b>$</b> key will move you to the end of a
+line, while the <b>0</b> will move you quickly to the beginning of a line.</p><h4>
+Screen Movement</h4><p>
+To move the cursor to a line within your current screen use the following
+keys:
+<pre><b>H</b>	moves the cursor to the top line of the screen.<b>
+M</b>	moves the cursor to the middle line of the screen.<b>
+L</b>	moves the cursor to the last line of the screen.</pre>
+To scroll through the file and see other screens use:<pre><b>
+ctrl-f</b>	scrolls down one screen<b>
+ctrl-b</b>	scrolls up one screen<b>
+ctrl-u</b>	scrolls up a half a screen<b>
+ctrl-d</b>	scrolls down a half a screen</pre>
+Two other useful commands for moving quickly from one end to the other of a
+document are <b>G</b> to move to the end of the file and <b>1G</b> to move to
+the beginning of the file.  If you precede <b>G</b> with a number, you can move
+to a specific line in the document (e.g. 15G would move you to line
+15).</p><h4>
+Moving by Searching</h4>
+<p>One method for moving quickly to a particular spot in your file is
+to search for specific text.  When you are in command mode, type a <b>/
+</b>followed the text you wish to search for.  When you press <b>Return</b>,
+the cursor will move to the first incidence of that string of text.  You can
+repeat the search by typing <b>n</b> or search in a backwards direction by
+using <b>N</b>.
+</p><h2>
+Basic Editing</h2>
+<p>To issue editing commands, you must be in command mode.  As
+mentioned before, commands will be interpreted differently depending upon
+whether they are issued in lower or upper case.  Also, many of the editing
+commands can be preceded by a number to indicate a repetition of the
+command.</p><h4>
+Deleting (or Cutting) Characters, Words, and Lines</h4>
+<p>To delete a character, first place your cursor on that character.
+Then, you may use any of the following commands:<pre><b>
+x</b>	deletes the character under the cursor.<b>
+X</b>	deletes the character to the left of your cursor.<b>
+dw</b>	deletes from the character selected to the end of the word.<b>
+dd</b>	deletes all the current line.<b>
+D	</b>deletes from the current character to the end of the line.</pre>
+Preceding the command with a number will delete multiple characters.  For
+example, <b>10x</b> will delete the character selected and the next 9
+characters; <b>10X</b> will delete the 10 characters to the left of the
+currently selected character.  The command <b>5dw</b> will delete 5 words,
+while <b>4dd</b> deletes four lines.</p><h4>
+Pasting Text using Put</h4>
+<p>Often, when you delete or cut text, you may wish to reinsert it in
+another location of the document.  The Put command will paste in the last
+portion of text that was deleted since deleted text is stored in a buffer.  To
+use this command, place the cursor where you wish the deleted text to appear.
+Then use <b>p</b> to reinsert the text.  If you are inserting a line or
+paragraph use the lower case <b>p</b> to insert on the line below the cursor or
+upper case <b>P </b>to place in on the line above the cursor.</p><h4>
+Copying Text with Yank</h4>
+<p>If you wish to make a duplicate copy of existing text, you may use
+the yank and put commands to accomplish this function.  Yank copies the
+selected text into a buffer and holds it until another yank or deletion occurs.
+Yank is usually used in combination with a word or line object such as the ones
+shown below:<pre><b>
+yw</b>	copies a word into a buffer (7yw copies 7 words)<b>
+yy</b>	copies a line into a buffer (3yy will copy 3 lines)</pre>
+Once the desired text is yanked, place the cursor in the spot in which you wish
+to insert the text and then use the put command (<b>p</b> for line below or
+<b>P </b>for line above) to insert the contents of the buffer.</p><h4>
+Replacing or Changing Characters, Words, and Lines</h4>
+<p>When you are using the following commands to replace text, you will
+be put temporarily into insert mode so that you can change a character, word,
+line, or paragraph of text.<pre><b>
+r</b>	replaces the current character with the next character you enter/type.
+   	Once you enter the character you are returned to command mode.<b>
+R</b>	puts you in overtype mode until you hit <b>ESC</b> which will then return
+   	you to command mode.<b>
+cw</b>	changes and replaces the current word with text that you type.  A dollar
+   	sign marks the end of the text you're changing.  Pressing <b>ESC</b> when you
+   	finish will return you to command mode.</pre></p><h4>
+Inserting Text</h4>
+<p>If you wish to insert new text in a line, first position the cursor
+to the right of where you wish the inserted text to appear.  Type <b>i</b> to
+get into insert mode and then type in the desired text (note that the text is
+inserted before the cursor).  Press <b>ESC</b> to return to command
+mode.</p><h4>
+Inserting a Blank Line</h4>
+<p>To insert a blank line below the line your cursor is currently
+located on, use the <b>o</b> key and then hit <b>ESC</b> to return to the
+command mode .  Use <b>O</b> to insert a line above the line the cursor is
+located on.</p><h4>
+Appending Text</h4>
+<p>You can use the append command to add text at any place in your
+file.  Append (<b>a</b>) works very much like Insert (<b>i</b>) except that it
+insert text <i>after</i> the cursor rather than before it.  Append is probably
+used most often for adding text to the end of a line.  Simply place your cursor
+where you wish to append text and press <b>a. </b> Once you've finished
+appending, press <b>ESC</b> to go back to command mode.</p><h4>
+Joining Lines</h4>
+<p>Since vi does not use automatic word wrap, it is not unusual in
+editing lines to end up with lines that are too short and that might be
+improved if joined together.  To do this, place your cursor on the first line
+to be joined and type <b>J</b>.  As with other commands, you can precede
+<b>J</b> with a number to join multiple lines (<b>4J</b> joins 4
+lines).</p><h4>
+Undoing</h4>
+<p>Be sure to remember this command.  When you make a mistake you can
+undo it.  <b>DO NOT</b> move the cursor from the line where you made the
+change.  Then try using one of the following two commands:<pre><b>
+u</b>	undoes the last change you made anywhere in the file.  Using <b>u</b> again 
+   	will "undo the undo".<b>
+U</b>	undoes all recent changes to the current line.  You can not have moved
+	from the line to recover the original line.</pre>
+</p><h2>
+Closing and Saving Files</h2>
+<p>When you edit a file in vi, you are actually editing a copy of the
+file rather than the original.  The following sections describe methods you
+might use when closing a file, quitting vi, or both.</p><h4>
+Quitting and Saving a File</h4>
+<p>The command <b>ZZ</b> (notice that it is in uppercase) will allow
+you to quit vi and save the edits made to a file.  You will then return to a
+Unix prompt.  Note that you can also use the following commands:<pre><b>
+:w</b>	to save your file but not quit vi (this is good to do periodically in
+	case of machine crash!).<b>
+:q</b>	to quit if you haven't made any edits.<b>
+:wq</b>	to quit and save edits (basically the same as ZZ).</pre></p><h4>
+Quitting without Saving Edits</h4>
+<p>Sometimes, when you create a mess (when you first start using vi
+this is easy to do!) you may wish to erase all edits made to the file and
+either start over or quit.  To do this, you can choose from the following two
+commands:<pre><b>
+:e!</b>	reads the original file back in so that you can start over.<b>
+:q!</b>	wipes out all edits and allows you to exit from vi.</pre>
+</p><h2>
+More about Combining Commands, Objects, and Numbers</h2>
+<p>Now that you've learned some basic vi commands you might wish to
+expand your skills by trying some fancy combination steps.  Some commands are
+generally used in combination with a text object.  We've already seen some
+examples of this.  For example, when you use the command <b>dw</b> to delete a
+word, that combines the delete (<b>d</b>) command with the word (<b>w</b>) text
+object.  When you wish to delete multiple words, you might add a number to this
+combination.  If you wished to delete 2 words you might use <b>2dw</b> or
+<b>d2w</b>.  Either of these combinations would work.  So, as you can see, the
+general format for a command can be<p>
+<i>(number) (command) (text object)</i>    <b>or</b>    <i>(command)
+(number) (text object)</i>
+</p>
+You might wish to try out some of the following combinations of commands
+and objects:
+<pre><b>Command       Text Object</b>
+<b>d </b>(delete)	<b>w</b> (word to the left)<b>
+y</b> (yank/copy)	<b>b</b> (word to the right or backward)<b>
+c</b> (change)	<b>e</b> (end of word)
+		<b>H</b> (top of the screen)
+		<b>L</b> (bottom of the screen)
+		<b>M</b> (middle of the screen)
+		<b>0</b> (zero - first character on a line)
+		<b>$</b> (end of a line)
+		<b>(</b> (previous sentence)
+		<b>)</b> (next sentence)
+		<b>[</b> (previous section)
+		<b>] </b>(next section)</pre></p><h2>
+Repeating a Command</h2>
+<p>If you are doing repetitive editing, you may wish to use the same
+command over and over.  vi will allow you to use the dot (.) to repeat the last
+basic command you issued.  If for example, you wished to deleted several lines,
+you could use <b>dd</b> and then <b>.</b> (dot) in quick succession to delete a
+few lines.</p><h2>
+A Quick Word about Customizing Your vi Environment</h2>
+<p>There are several options that you can set from within vi that can
+affect how you use vi.  For example, one option allows you to set a right
+margin that will then force vi to automatically wrap your lines as you type.
+To do this, you would use a variation of the <b>:set</b> command.  The
+<b>:set</b> command can be used to change various options in vi.  In the
+example just described, you could, while still in vi, type <b>:set
+wrapmargin=10 </b>to specify that you wish to have a right margin of 10.
+Another useful option is <b>:set number</b>.  This command causes vi to display
+line numbers in the file you are working on.</p><h4>
+Other Options</h4>
+<p>To view a listing of other options, you could type <b>:set all</b>.
+To view only those options which are currently in effect, you can type
+<b>set:</b> by itself.<b>  </b>Options that you set while in a vi session will
+apply during that session only.  To make permanent changes to your vi
+environment, you could edit your .exrc file.  However, you should not edit this
+file unless you know<b> </b>what you are doing!
+</p><h2>
+Useful vi Commands</h2>
+<h4>
+Cut/Paste Commands: </h4>
+<p>
+<pre>x 		delete one character (destructive backspace)
+dw		delete the current word (Note: ndw deletes n numbered words)
+dd 		delete the current line (Note: ndd deletes n numbered lines)
+D		delete all content to the right of the cursor
+d$		same as above
+:u		undo last command
+p,P		paste line starting one line below/above current cursor location
+J		combine the contents of two lines 
+"[a-z]nyy   	yank next n lines into named buffer [a-z] 
+"[a-z]p/P	place the contents of selected buffer below/above the current line</pre>
+</p><h4>
+Extensions to the Above Commands:</h4>
+<p><pre>:3,18d		delete lines 3 through 18
+16,25m30	move lines 16 through 25 to after line 30
+23,29co62	copy specified lines and place after line 62
+</pre>
+</p><h4>
+Cursor Relocation commands:</h4>
+<p><pre>:[n]		goto line [n]
+shift g		place cursor on last line of text
+h/l/j/k		move cursor left, right, down and up 
+^f/^b		move forward, backward in text, one page
+^u/^d		move up, down one half page
+$		move to end of line
+0		move to beginning of line</pre>
+</p><h4>
+Extensions to the Above:</h4>
+<p><pre>b 		move backwards one word (Note: nb moves back n number of words)
+e		move to end of current word
+(		move to beginning of curent block
+)		move to the end of current block
+</pre></p><h4>
+Searching and Substitution commands:</h4>
+<p><pre>/ [string]	search forward for string
+? [string]	search backwards for string
+n		repeat last search
+N		repeat search in opposite direction
+cw		change the contents of the current word, (use ESC to stop
+		replacement mode)
+c$		Replace all content to the right of cursor (exit replacement
+		mode with ESC)
+c0		Replace all content to the left of cursor (exit with ESC)
+:1,$s/s1/s2/g	(Yow!) global replacement of string1 with string2 
+r 		replace current character with next character typed</pre></p><h4>
+Entering the Insert Mode:</h4>
+<p><pre>i		Begin inserting text at current cursor location 
+I		Begin inserting text at the beginning of the current line
+a		Begin appending text, one character to the right of current
+		cursor location
+A		Begin appending text at the end of the current line
+o/O		Begin entering text one line below\above current line
+ESC		Exit insertion mode and return to command mode</pre>
+</p><h4>
+Exiting and Entering VI</h4>
+<p><pre>ZZ		save file and exit VI
+:wq		same as above
+:e!		return to last saved version of current file
+:q		quit without save, (Note :q! is required if changes have been made)
+:w		write without exit (:w! to force write)</pre>
+</p><h4>
+Fancy Stuff:</h4>
+<p><pre>:1,10w file   		write lines 1 through 10 to file newfile
+:340,$w &gt;&gt; file		write lines 340 through the end of the file and append
+			to file newfile
+:sh			escape temporarily to a shell
+^d			return from shell to VI
+:![command]		execute UNIX command without leaving VI
+:r![command]		read output of command into VI
+:r[filename]		read filename into VI
+:$r newfile		read in newfile and attach at the end of current document
+:r !sort file		read in contents of file after it has been passed through
+			the UNIX sort
+:n			open next file (works with wildcard filenames,
+			ex: vi file*)
+:^g			list current line number
+:set number		show line numbers
+:set showinsert		show flag ("I") at bottom of screen when in insert mode
+:set all		display current values of VI variables
+:set ai			set autoindent; after this enter the insert mode and
+			tab, from this point on VI will indent each line to
+			this location.  Use ESC to stop the indentations.
+^T 			set the autoindent tab one tab stop to the right 
+^D 			set the autoindent tab one stop to the left
+:set tabstop=n		sets default tab space to number n
+&gt;&gt;			shift contents of line one tab stop to the right
+&lt;&lt;			shift contents of line one tab stop to the left		
+</pre>
+</p>
+
+<h2>Find and replace text</h2>
+
+<p>To find each occurrence of ‘eth0’ in the current line only, and replace it with ‘br0’, enter (first press Esc key and type):</p>
+
+<pre>
+:%s/eth0/br0/g
+</pre>
+
+<p>To find and replace all occurrences of ‘eth1’ with ‘br1’, enter:</p>
+
+<pre>
+:%s/eth1/br1/g
+</pre>
+
+<p>To find and replace all occurrences of ‘eth1’ with ‘br1’, but ask for confirmation first, enter:</p>
+
+<pre>
+:%s/eth1/br1/gc
+</pre>
+
+<p>To find and replace all occurrences of case insensitive ‘eth1’ with ‘br1’, enter:</p>
+
+<pre>
+:%s/eth1/br1/gi
+</pre>
+
+<p>The above example will find eth1, ETH1, eTh1, ETh1 and so on and replace with br1. To find and replace all occurrences of ‘eth1’ with ‘br1’ for lines from 3 to 7, enter:</p>
+
+<pre>:3,7s/eth1/br1/g</pre>
+
+<h2>Jump to a line</h2>
+
+<p>You can go to a particular line or word in a file using vi in several ways:</p>
+
+<p>To make vi start at a particular line in a file, add +line_num to the command you use to start vi. Replace line_num with the line number, for example:</p>
+
+<pre>vi +36 foo.c</pre>
+
+<p>If you're already in vi, you can use the goto command. To do this, press Esc, type the line number, and then press Shift-g. If you press Esc and then Shift-g without specifying a line number, it will take you to the last line in the file.
+You can also use the ex command line to go to a line. (For information about the ex mode, see Use the vi text editor) For instance, if you wanted to go to line 14, you could press Esc and then enter:</p>
+
+<pre>:14</pre>
+
+<section>
+<a href="comparative_sup.html">&#171; The comparative of superiority</a></p>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

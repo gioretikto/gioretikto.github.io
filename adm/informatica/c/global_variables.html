@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Global Variables"/>
+    <title>Global Variables</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Global Variables</h1>
+
+<p>A differenza delle variabili locali, le <i>variabili globali</i> sono note all'intero programma e possono essere utilizzate in ogni punto del codice. Inoltre, esse conservano il proprio valore durante l'intera esecuzione del programma. Le variabili globali devono essere dichiarate all'esterno di ogni funzione. In seguito queste variabili potranno essere utilizzate da ogni espressione, indipendentemente dal blocco di codice in cui si trova l'espressione.</p>
+
+<p>Nel seguente programm, la variabile globale <code>count</code> è stata dichiarata all'esterno di tutte le funzioni. Anche se la sua dichiarazione si trova prima della funzione <code>main()</code>, la si sarebbe potuta posizionare in qualsiasi altro punto che precede il suo primo uso, ma non all'interno di una funzione. Tuttavia, in genere è meglio dichiarare le variabili globali all'inizio del programma.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int count; /* count è globale */
+
+void func1(void);
+void func2(void);
+
+int main(void)
+{
+	count = 50;
+	func1();
+	
+	return 0;
+}
+
+void func1(void)
+{
+	int temp;
+	func2();
+	printf("Il valore della variabile count è %d", count); /* visualizza 50 */
+}
+
+void func2(void)
+{
+	int count;
+
+	four(count=1; count &lt;10; count++)
+		putchar('.');
+}
+</pre>
+
+<p>Osservando attentamente questo programma, si può notare che sebbene la variabile <code>count</code> non sia dichiarata né in <code>main()</code> né in <code>func1()</code>, entrambe le funzioni ne fanno uso. Al contrario <code>func2()</code> viene dichiarata la variabile locale <code>count</code>. Quando <code>func2()</code>,utilizza <code>count</code> accede alla propria variabile locale e non alla variabile globale avente lo stesso nome. Se una variabile globale e una variabile locale hanno lo stesso nome, ogni riferimento posto all'interno del blocco di dodice in cui è dichiarata la variabile locale, farà riferimento alla variabile locale e non avrà alcun effetto sulla variabile globale.</p>
+
+<p>Le variabili globali vengono conservate dal compilatore in una regione fissa della memoria che ha proprio questo scopo. Le variabili globali sono utili quando più funzioni del programma devono utilizzare gli stessi dati. In generale, si deve però evitare di utilizzare le variabili globali quando non sono necessarie. Infatti esse occupano la propria area di memoria per l'intera esecuzione del programma e non solo quando ve ne è bisogno. Inoltre, utilizzando una variabile globale in punti in cui si sarebbe potuta utilizzare una variabile locale si rende una funzione meno generale, in quanto essa fa affidamento su qualcosa che deve essere definito al suo esterno. Infine, utilizzando un gran numero di variabili globali, il programma può essere soggetto a errori a causa di effetti collaterali sconosciuti e indesiderati. Il problema principale nello sviluppo di grossi programmi è il sorgere di modifiche accidentali al valore di una variabile utilizzata in altri punti di un programma. Lo stesso può avvenire in C se si fa uso di troppe variabili globali.</p>
+	
+
+
+
+<h2>Why Global Variables Should Be Avoided When Unnecessary</h2>
+
+<ul><li> <strong>Non-locality</strong> -- Source code is easiest to understand when the scope of its individual elements are limited.  Global variables can be read or modified by any part of the program, making it difficult to remember or reason about every possible use.
+</li><li> <strong>No Access Control or Constraint Checking</strong> -- A global variable can be get or set by any part of the program, and any rules regarding its use can be easily broken or forgotten.  (In other words, get/set accessors are generally preferable over direct data access, and this is even more so for global data.) By extension, the lack of access control greatly hinders achieving security in situations where you may wish to run untrusted code (such as working with 3rd party plugins).
+</li><li> <strong>Implicit coupling</strong> -- A program with many global variables often has tight couplings between some of those variables, and couplings between variables and functions.  Grouping coupled items into cohesive units usually leads to better programs.
+</li><li> <strong>Concurrency issues</strong> -- if globals can be accessed by multiple threads of execution, synchronization is necessary (and too-often neglected). When dynamically linking modules with globals, the composed system might not be thread-safe even if the two independent modules tested in dozens of different contexts were safe.
+</li><li> <strong>Namespace pollution</strong> -- Global names are available everywhere.  You may unknowingly end up using a global when you think you are using a local (by misspelling or forgetting to declare the local) or vice versa.  Also, if you ever have to link together modules that have the same global variable names, if you are lucky, you will get linking errors.  If you are unlucky, the linker will simply treat all uses of the same name as the same object.
+</li><li> <strong>Memory allocation issues</strong> -- Some environments have memory allocation schemes that make allocation of globals tricky. This is <em>especially</em> true in languages where "constructors" have side-effects other than allocation (because, in that case, you can express unsafe situations where two globals mutually depend on one another).  Also, when dynamically linking modules, it can be unclear whether different libraries have their own instances of globals or whether the globals are shared.
+</li><li> <strong>Testing and Confinement</strong> -- source that utilizes globals is somewhat more difficult to test because one cannot readily set up a 'clean' environment between runs. More generally, source that utilizes global services of any sort (e.g. reading and writing files or databases) that aren't explicitly provided to that source is difficult to test for the same reason. For communicating systems, the ability to test system invariants may require running more than one 'copy' of a system simultaneously, which is greatly hindered by any use of shared services - including global memory - that are not provided for sharing as part of the test. 
+<p></p></li>
+</ul>
+ 
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

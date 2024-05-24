@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="apt"/>
+	<title>apt</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>apt</h1>
+
+<p>There are multiple ways to install packages in Debian of which the most common and easiest method is to use the set of default package management tools called <i>apt</i> which is an acronym for 'advanced packaging tool', the tool maintais a local database of software which are available on debian linux software repositories.</p>
+
+<h2>apt install <package name></h2>
+
+<p>This is used for installing packages, upon issuing this command the apt package manager will provide a list of all dependencies which need to be satisfied for the given package along with the space required for installation ask for confirmation, if a confirmation is given by the user the package manager will go ahead and install the package along with all the dependencies required for the package.</p>
+
+<p>Per evitare di installare la documentazione quando si installa un pacchetto usare l'opzione <code>--no-install-recommends</code>:</p>
+
+<pre>sudo apt install xfce4-screenshooter --no-install-recommends</pre>
+
+<h2>apt search <search string></h2>
+
+<p>Search option in apt is used for finding packages by name or type, this option provides a list of packages available within the repository matching the search criteria, this is particularly helpful when the exact package names arent' available. For example if we are interested in a program for taking screenshots, we could use</p>
+
+<pre>apt search screenshot</p>
+
+<h2>apt remove <package name></h2>
+
+<p>The remove option is used to remove the package matching the name provided, upon issuing this command the apt package manager will ask the user for confirmation for package removal, if a confirmation is given by the user the package manager will proceed to remove the package from the system.</p>
+
+<h2>apt pruge</h2>
+
+<p>purge, means to completely wipe away a package, including its configuration files.  Use «apt purge $package»</p>
+
+<h2>dpkg</h2>
+
+<p>Per mostrare i file inclusi in un pacchetto installato e loro collorazione usare <code>dpkg -L package</code>. Esempio</p>
+
+<pre>dpkg -L libglew-dev</pre>
+
+<h2>apt-dev</h2>
+
+<p>"dev package", on debian, is just files from the upstream source separated out, for the purpose of building packages that link to that. headers and supporting files, when you download the source git repo, you're downloading the entire source, which, yes, you can use to build and link other programs against</p>
+
+<section aria-label="End">
+<a href="dlconfiguration.html">&#171;D- and L- configuration</a>
+<a href="index.html">Index</a>
+<a href="apposition.html">Internal Accusative&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

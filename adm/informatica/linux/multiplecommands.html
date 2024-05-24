@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Logical AND/OR Operators"/>
+    <title>The Logical AND/OR Operators</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Logical AND/OR Operators</h1>
+
+<p>If you use Linux, you know how useful the command line can be for working with files, installing software, and launching programs. But it can be even more efficient if you run multiple commands at once.</p>
+
+<p>Combining two or more commands on the command line is also known as “command chaining”. We’ll show you different ways you can combine commands on the command line.</p>
+
+<p>Here’s a useful summary of each of the operators used to combine commands:</p>
+
+<ul>
+    <li><p>A ; B  – Run A and then B, regardless of the success or failure of A</p></li>
+    <li><p>A &amp;&amp; B  – Run B only if A succeeded</p></li>
+    <li><p>A || B  – Run B only if A failed</p></li>
+</ul>  
+
+<h2>Option One: The Semicolon (;) Operator</h2>
+
+<p>The semicolon (;) operator allows you to execute multiple commands in succession, regardless of whether each previous command succeeds. Then, type the following three commands on one line, separated by semicolons, and press Enter. This will give you a listing of the current directory ( ls ), find out which directory you’re currently in ( pwd ), and display your login name (whoami) all at once.</p>
+
+<pre>
+ls ; pwd ; whoami
+</pre>
+
+<p>You don’t have to put spaces between the semicolons and the commands, either. You can enter the three commands as <i>ls;pwd;whoami</i>. However, spaces make the combined command more readable, which is especially useful if you’re putting a combined command into a shell script.</p>
+
+<h2>Option Two: The Logical AND Operator (&amp;&amp;)</h2>
+
+<p>If you want the second command to only run if the first command is successful, separate the commands with the logical AND operator, which is two ampersands ( &amp;&amp; ). For example, we want to make a directory called MyFolder and then change to that directory–provided it was successfully created. So, we type the following on the command line and press Enter.</p>
+
+<pre>
+mkdir MyFolder &amp;&amp; cd MyFolder
+</pre>
+
+<p>The folder was successfully created, so the <i>cd</i> command was executed and we are now in the new folder.</p>
+
+<p>We recommend using the logical AND operator rather than the semicolon operator most of the time (;). This ensures that you don’t do anything disastrous. For example, if you run a command to change to a directory and then force remove everything in that directory recursively ( cd /some_directory ; rm -Rf * ), you could end up ruining your system if the directory change didn’t happen. Not that we recommend you run a command to unconditionally remove all files in a directory at once.</p>
+
+<h2>Option Three: The Logical OR Operator (||)</h2>
+
+<p>Sometimes you might want to execute a second command only if the first command does not succeed. To do this, we use the logical OR operator, or two vertical bars ( || ). For example, we want to check to see if the MyFolder directory exists ( [ -d ~/MyFolder ] ) and create it if it doesn’t ( mkdir ~/MyFolder ). So, we type the following command at the prompt and press Enter.</p>
+
+<pre>
+[ -d ~/MyFolder ] || mkdir ~/MyFolder
+</pre>
+
+<p>Be sure there is a space after the first bracket and before the second bracket or the first command that checks if the directory exists will not work.</p>
+
+<p>In our example, the MyFolder directory does not exist, so the second command creates the directory.</p>
+
+<h2>Combining Multiple Operators</h2>
+
+<p>You can combine multiple operators on the command line, too. For example, we want to first check if a file exists ( [ -f ~/sample.txt ] ). If it does, we print a message to the screen saying so ( echo “File exists.” ). If not, we create the file ( touch ~/sample.txt ). So, we type the following at the command prompt and press Enter.</p>
+
+<pre>
+[ -f ~/sample.txt ] &amp;&amp; echo “File exists.” || touch ~/sample.txt
+</pre>
+
+<p>In our example, the file didn’t exist, so it was created.</p>
+
+<section aria-label="End">
+<a href="misura.html">&#171;Misure</a>
+<a href="index.html">Index</a>
+<a href="misure.html">Misura&#187;</a>
+</section>
+
+</body>
+</html>

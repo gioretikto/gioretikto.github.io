@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="TCP/IP Dynamic Host Configuration Protocol (DHCP)">
+	<title>TCP/IP Dynamic Host Configuration Protocol (DHCP)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>TCP/IP Dynamic Host Configuration Protocol (DHCP)</h1>
+
+<p>DHCP (Dynamic Host Configuration Protocol) is an Application layer protocol in the TCP/IP suite that manages the dynamic distribution of IP addresses on a network. Every computer, as you learned in a previous hour, must have an <a href="IP_address.html">IP address</a> to operate on a TCP/IP network. The IP addressing system was originally designed for the logical condition in which each computer is preconfigured with an IP address. This condition is known as <b>static</b> IP addressing. Each computer knows its IP address from the moment it boots and is able to use the network immediately. Static IP addressing works well for small, permanent networks, but on larger networks that are subject to reconfiguration and change (such as new computers coming and going from the network), static IP addressing has some limitations.</p>
+
+<p>The principal shortcomings of static IP addressing are</p>
+
+<ul>
+	<li><p><b>More configuration</b>—Each client must be configured individually. A change to the IP address space or to some other parameter (such as the DNS server address) means that each client must be reconfigured separately.</p></li>
+
+	<li><p><b>More addresses</b>—Each computer uses an IP address whether it is currently on the network or not.</p></li>
+
+	<li><p><b>Reduced flexibility</b>—A computer must be manually reconfigured if it is assigned to a different subnetwork.</p></li>
+</ul>
+
+<p>As an answer to these limitations, an alternative IP addressing system has evolved in which IP addresses are assigned upon request using the DHCP protocol. DHCP was developed from an earlier protocol called BOOTP, which was used primarily to boot diskless computers. (A diskless computer receives a complete operating system over the network as it boots.) DHCP has become increasingly popular in recent years
+because of the dwindling supply of IP addresses and the growth of large, dynamic networks.</p>
+
+<p>It is quite likely that the majority of all computers with Internet access receive their configurations through DHCP. The small router/firewall device that brings the Internet to your home network is probably also acting as a DHCP server.</p>
+
+<h2>How DHCP works</h2>
+
+<p>A client-server approach is used by the DHCP service to assing IP addresses. During the IP address assignment, one or more preconfigured DHCP servers should be reacheable in the network. When a computer that is the DHCP client boots up, it searched for a DHCP server by broadcasting a DHCP discovery packet called DHCPDISCOVER. The broadcast address 255.255.255.255 is used by the DHCP service to reach eahc network host in the local network. Once the DHCP server receives the DHCP discovery packet, the DHCP server responds by broadcasting a packet called DHCPOFFER, which contain the IP address, the IP address lease time, the subnet mask, and the information about the default gateway. If ther are multiple servers in the local network, the DHCP clien will receive multiple responses from these DHCP servers. Usually, the DHCP client takes the first offer. Once the DHCP server is chose, the DHCP client will send the broadcast packet DHCPREQUEST to inform all the servers about which DHCP server has bee accepted. The chosen DHCP server broadcasts a packet DHCPPACK back to the DHCP client to inform it that it can now use the IP address for communication. The dynamic IP address assignment process is illustrated in Figure 1.</p>
+
+<img src="img/DHCP.png" alt="DHCP"/>
+
+<p>Notice that the DHCPDISCOVER and DHCPREQUEST messages are broadcasts, which means two important things. First, every computer on the network segment receives and needs to process the broadcast message. Excessive broadcasts can dramatically slow network performance. Second, broadcasts do not go through router. Thus, if the client and the DHCP server are on opposite sides of a router, there will be a problem. There are two resolutions.
+
+<ol>
+	<li><p><b>DHCPDISCOVER</b>—The DHCP client initiates the process by broadcasting a datagram destined for UDP port 68 (used by BOOTP and DHCP servers). This first datagram is known as a DHCP Discover message, which is a request to any DHCP server that receives the datagram for configuration information. The DHCP discover datagram contains many fields, but the one that is most important contains the physical address of the DHCP client.</p></li>
+
+	<li><p><b>DHCPOFFER</b>— A DHCP server configured to lease addresses for the network on which the client computer resides constructs a response datagram known as a DHCP offer and sends it via broadcast to the computer that issued the DHCP discover. This broadcast is sent to UDP port 67 and contains the physical address of the DHCP client. Also contained in the DHCP offer are the physical and IP addresses of the DHCP server, as well as the values for the IP address and subnet mask that are being offered to the DHCP client. At this point it is possible for the DHCP client to receive several DHCP offers, assuming there are multiple DHCP servers with the capability to offer the DHCP client an IP address. In most cases, the DHCP client accepts the first DHCP offer that arrives.</p></li>
+
+	<li><p><b>DHCPREQUEST</b>—The client selects an offer and constructs and broadcasts a DHCP request datagram. The DHCP request datagram contains the IP address of the server that issued the offer and the physical address of the DHCP client. The DHCP request performs two basic tasks. First it tells the selected DHCP server that the client requests it to assign the DHCP client an IP address (and other configuration settings). Second, it notifies all other DHCP servers with outstanding offers that their offers were not accepted.</p></li>
+
+	<li><p><b>DHCPACK</b>—When the DHCP server from which the offer was selected receives the DHCP request datagram, it constructs the final datagram of the lease process. This datagram is known as a DHCP ack (short for acknowledgment). The DHCP ack includes an IP address and subnet mask for the DHCP client. Optionally, the DHCP client is often also configured with IP addresses for the default gateway, several DNS servers, and possibly one or two WINS servers. In addition to IP addresses, the DHCP client can receive other configuration information such as a NetBIOS node type, which can change the order of
+NetBIOS name resolution. </p>
+
+<p>Three other key fields are contained in the DHCP ack, all of which indicate time periods. One field identifies the length of the lease. Two other time fields, known as T1 and T2, are used when the client attempts to renew its lease.</p></li>
+
+</ol>
+
+<p>DHCP is considered an application layer (7) protocol in the OSI model, but the initial DHCP discovery mechanism operates at the data link layer (2).</p>
+
+<h2>DHCP Server Configuration</h2>
+
+<p>Unless you are a system administrator on a mid- to large-size network, you probably won’t ever have occasion to configure a computer to act as a DHCP server, and if you do, you probably have access to other documentation that is far more attuned to the peculiarities of your configuration than this book is. Linux systems provide DHCP services through <i>dhcpd</i>, the DHCP daemon. Instructions for installing dhcpd vary according to the vendor. DHCP configuration information is stored in the configuration file /etc/dhcpd.conf.</p>
+
+<p>The <code>/etc/dhcpd.conf</code> file contains the IP address configuration information that the DHCP daemon will assign to clients. /etc/dhcpd.conf also contains optional settings such as the broadcast address, domain name, DNS server address, and the addresses of routers. A sample <code>/etc/dhcpd.conf</code> file follows:</p>
+
+<pre>
+default-lease-time 600;
+max-lease-time 7200;
+option domain-name “macmillan.com”;
+option subnet-mask 255.255.255.0;
+option broadcast-address 185.142.13.255;
+subnet 185.142.13.0 netmask 255.255.255.0 {
+range 185.142.13.10 185.142.13.50;
+range 185.142.13.100 185.142.13.200;
+}
+</pre>
+
+<h2 id="APIPA">Automatic Private IP Addressing</h2>
+
+<p>Automatic Private IP Addressing (APIPA) is a TCP/IP standard used to automatically configure IP-based hosts that are unable to reach a DHCP server. APIPA addresses are in the 169.254.0.0 − 169.254.255.255 range, with a subnet mask of 255.255.0.0. If you see a computer that has an IP address beginning with 169.254, you knwo that it has configured itself. <br> Typically, the only time that you will see this is when a computer is supposed to receive configuration information from a DHCP server but for some reason that server is unavailable. Even while configured with this address, the client will continue to broadcast for a DHCP server to that it can be given a real address once the server becomes available.</p>
+
+<section aria-label="End">
+<a href="DNS.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="NAT.html">Network Address Translation (NAT)»</a>
+</section>
+
+</article>
+
+</body>
+</html>

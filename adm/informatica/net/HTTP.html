@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HTTP (HyperText Transfer Protocol)">
+	<title>HTTP (HyperText Transfer Protocol)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>HTTP (HyperText Transfer Protocol)</h1>
+
+<p>HTTP (HyperText Transfer Protocol) is the application layer protocol that form the foundation of the World Wide Web (WWW). HTTP is a request/response protocol, relying on a client-server model. As illustrated in Fig. 1, the client's browser makes a request for Web objects (whether HTML page, an image, a video or a file). The server responses by sending back HTTP data over the same TCP connection that was used for the request. These HTTP responses return the message body, which contains the requested data or content. The response also contain HTTP headers that describe the data.</p>
+, and the server's response contain the objects requested. HTTP uses <a href="TCP.html">TCP</a> as its transport protocol, the actual transport of the data happens through the protocols at the transport layer, usually the . </p>
+
+<img src="img/HTTP.png" alt="HTTP (HyperText Transfer Protocol)"/>
+
+<p>Some of the fundamental characteristics of the HTTP protocol are:</p>
+
+<ul>
+	<li><p>HTTP is stateless protocol, that is each request-response echange is treated independently. Clients and servers are not required to retain a state. </p></li>
+
+	<li><p>HTTP is media independent. Any type of data can be sent by HTTP if bothe the client and the serve know how to handle the data content.</p></li>
+</ul>
+
+<h2>HTTP Headers</h2>
+
+<p>HTTP stores information about both requests and responses in <b>HTTP headers</b>, which the browser and the web server read. These headers aren't visibile to users, but they transmit various types of information between client and server, such as what type of data is returned, your deveice's operating system, the type of browser that you're using and the type of content being requested. They also transmit an <b>HTTP status code</b> that reports on the completion of the request:</p>
+
+<ul>
+	<li><p>200 = ok (request completed)</p></li>
+	<li><p>301 = moved permanently (redirection)</p></li>
+	<li><p>404 = not found;</p></li>
+	<li><p>418 = I'm a teapot</p></li>
+	<li><p>451 = unabailable for legal reasons</p></li>
+	<li><p>500 = internal server error</p></li>
+</ul>
+
+<h2>HTTPS</h2>
+
+<p>HTTP isn't privacy sensitive. Routers and intermediate devices, such as those controlled by your ISP, and the websites you visit can read and modify all of the information transmitted over HTTP, including the HTTP headers, the originatic and destination IP addresses, and even the response data. This is because HTTP itself isn't encrypted.</p>
+
+<p>HTTPS is not actually an acronym. HTTPS is purely defined as securing HTTP connections by means of the cryptographic protocol <b>Transport Layer Security (TLS)</b>.</p>
+
+<h2>Transport Layer Security (TLS)</h2>
+
+<p>The Transport Layer Security (TLS) is a protocol for providing confidentiality, integrity, and authentication to Internet applicatoins. TLS fits between the application and TCP layers adding encryption and authentication functions above the TCP protocol, thus providing a secure communication service the the application layer (including HTTP).</p>
+
+<p>TLS, like SSL, works using digital certificates and a type of cryptography called public key encryption. TLS relies on trusted third-party organizations called <b>certifica authorities (CA)</b>. CAs issue digital <b>certificates</b> to service operators that attest the ownership of the operator's key. The certificate contains information about the server name, the owner's identity, a copy of the public ket, and a cryptographic signature of the CA. Certificates can be issud for single or multiple domain names.<br> Client applications need to make sure that they are communicating with the correct server by verifying the certificate prior to exchanging data. This is done automatically during the handshake by the application, through comparing the signature on the certificate agains a list of trusted CAs.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

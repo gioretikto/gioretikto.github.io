@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="ip command">
+	<title>ip command</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>ip command</h1>
+
+<p>You can configure IP addresses, network interfaces, and routing rules on the fly with the Linux <code>ip</code> command. We’ll show you how you can use this modern replacement of the classic (and now deprecated) <code>ifconfig</code>.</p>
+
+<p>To display a list of all network interfaces and the associated ip address type the following equivalent commands:</p>
+
+<ul>
+	<li><pre>ip addr</pre></li>
+	<li><pre>ip address show</pre>
+	<li><pre>ip addr show</pre></li>
+	<li><pre>ip address</pre></li>
+	<li><pre>ip a</pre></li>
+</ul>
+
+<p>The output will look something like this:</p>
+
+<pre>
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 52:54:00:8c:62:44 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.121.241/24 brd 192.168.121.255 scope global dynamic eth0
+       valid_lft 2900sec preferred_lft 2900sec
+    inet6 fe80::5054:ff:fe8c:6244/64 scope link 
+       valid_lft forever preferred_lft forever
+</pre>
+
+<h2>Assign IP addresses to an interface</h2>
+
+<p>With <code>ip</code>, you can assign an IP addresses to an interface. For example:</p>
+
+<pre>sudo ip address add 192.168.121.241/24 dev eth0</pre>
+
+<p>To <b>Remove</b> / Delete an IP address from the interface, use the syntax</p>
+
+<pre>sudo ip address del 192.168.121.45/24 dev eth0</pre>
+
+<h2>Alter the status of the interface UP/DOWN</h2>
+
+<pre>ip link set dev usb0 up</pre>
+
+<h2>Displaying and Altering the Routing Table</h2>
+
+<p>To get a list of the kernel route entries, use one of the following commands:</p>
+
+<pre>ip route</pre>
+
+<p>as output you get something like</p>
+
+<pre>default via 192.168.192.41 dev enx92f8a92aeb8e proto dhcp src 192.168.192.214 metric 1003 
+192.168.192.0/24 dev enx92f8a92aeb8e proto dhcp scope link src 192.168.192.214 metric 1003</pre>
+
+<ul>
+	<li><p>192.168.192.214 represents the IP address of the machine you're currently one.</p></li>
+	<li><p>192.168.192.41 is the router IP address.</p></li>
+	<li><p>192.168.192.0/24, the network address and mask.</p></li>
+</ul>
+
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Media Access Control (MAC) Address">
+	<title>Media Access Control (MAC) Address</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Media Access Control (MAC) Address</h1>
+
+<p>A Media Access Control (MAC) address is a unique address that is represented by a 6-byte hexadecimal number that gets assigned to every network interface, including Ethernet and wireless. It’s used by many system programs and protocols in order to identify a network interface.  The <a href="ARP.html">Address Resolution Protocol (ARP)</a> is used to convert IP addresses to MAC addresses. When you type in a web address, the DNS protocol is used to translate that into an IP address; then the ARP protocol will translate that IP address into a specific MAC address of an individual NIC.<br> One of the most common examples would be in the case of DHCP, where a router assigns an IP address to a network interface automatically. The router will know which device it has assigned an IP address to by referring to the MAC address.</p>
+
+<p>Unlike an IP address, which is temporary and can be changed easily, MAC addresses are hardcoded into a network interface from the manufacturer. However, it’s still possible to change or “spoof” a MAC address temporarily. On Linux systems, one of the easiest ways to do this is with the macchanger command line program. There are both legitimate and shady reasons for why a Linux user may find the need to change a MAC address.</p>
+
+<p>To install macchanger on Debian</p>
+
+<pre>$ sudo apt install macchanger</pre>
+
+<p>On some systems, you may get the following prompt during installation.</p>
+
+<pre>Please specify whether machanger should be set up to run automatically .....</pre>
+
+<p>In most cases, you’ll probably want to select <b>no</b>. Otherwise, your network interfaces will be given a new MAC address every time they come online or you reboot the system. In specific scenarios, this could be a good thing, but in most cases, probably not. We’ll still be able to assign a new MAC address whenever we want to.</p>
+
+<h3>Use macchanger to change an interface’s MAC address</h3>
+
+Before we start using the macchanger command, you’ll need to know the name of the network interface that you want to work with. You can execute the ip a command to see a list of all the available network interfaces on your system. In most cases this will include a wired, wireless, and loopback interface.</p>
+
+<pre>$ ip a</pre>
+
+<p>following <code>link/ether</code> our current MAC address.</p>
+
+<p>Now we can begin to change the MAC address. Follow along with the step by step instructions below to see how. Note that you will need root permissions in order to execute the macchanger command. Use the <code>-r</code> option to get a random MAC address. In addition, just specify the name of your network interface. </p>
+
+<pre>sudo macchanger -r wlxf4f26d13b2bd</pre>
+
+<p>To verify the change, try running the <code>ip a</code> command again and you should see the new MAC address listed. </p>
+
+<p>If you need to use a specific MAC address, you can do that with the <code>-m</code> option and the following command syntax.</p>
+
+<pre>$ sudo macchanger -m b2:aa:0e:56:ed:f7 wlxf4f26d13b2bd</pre>
+
+<p>Various vendors have different MAC address prefixes. Therefore, you can usually identify the manufacturer of a network device by looking at the first few bits of the MAC address. This means we can use macchanger to make our device look as if it belongs to a certain manufacturer. To see a list of known MAC addresses and their corresponding vendors, use the -l option.</p>
+
+<pre>$ macchanger -l</pre>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="OSI.html">OSI model&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

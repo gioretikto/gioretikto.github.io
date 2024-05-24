@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Loop device"/>
+
+    <title>Loop device</title>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li> <a class="navbar" href="../../index.php">Home</a></li>
+        <li> <a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Loop device</h1>
+
+<p>In Unix-like operating systems, a <b>loop device</b>, vnd (vnode disk), or lofi (loop file interface) is a pseudo-device that makes a file accessible as a block device (like a disk partition). A loop device is a device that facilitates an image file to be mounted as though it were a normal block device (an hard disk, CD-ROM, etc.). The primary advantage to this is that it's a simple way to create or work with a CD-ROM without needing the physical device. You can mount a CD image without having to burn an actual CD.</p>
+
+<p>Mounting a file containing a disk image on a directory requires two steps:</p>
+
+<ul>
+    <li><p>association of the file with a loop device node,</p></li>
+    <li><p>mounting of the loop device at a mount point directory</p></li>
+</ul>
+
+<p>These two operations can be performed either using two separate commands, or through special flags to the mount command. The first operation may be performed by programs such as losetup in Linux. As an example, if example.img is a regular file containing a filesystem and /home/you/dir is a Linux user's directory, the superuser (root) may mount the file on the directory by executing the following two commands:</p>
+
+<pre>
+<code>
+losetup /dev/loop0 example.img
+mount /dev/loop0 /home/you/dir
+</pre>
+</code>
+
+<p>The second command mounts the device on the directory /home/you/dir. The overall effect of executing these two commands is that the content of the file is used as a file system rooted at the mount point.</p>
+
+<p>To identify an available loop device for use in the above commands, the superuser (root) can use:</p>
+
+<p>losetup -f</p>
+
+<p>The mount utility is usually capable of handling the entire procedure:</p>
+
+<pre>
+<code>
+mount -o loop example.img /home/you/dir
+</code>
+</pre>
+
+<p>To mount an existing CD image file as a filesystem, use the loop option to <i>mount</i>:</p>
+
+<pre>
+<code>
+mount -t iso9660 -o loop image.iso /mnt
+</code>
+</pre>
+
+
+<section>
+<a href="determinative.html">&#171; Determinative Pronouns</a>
+<a href="index.html">Index</a>
+<a href="indefinite.html">Indefinite Pronouns and Adjectives &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

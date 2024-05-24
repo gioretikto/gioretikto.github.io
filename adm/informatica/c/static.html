@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Static keyword"/>
+	<title>Static keyword</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Static keyword</h1>
+
+<ol>
+	<li><p>A static variable inside a function keeps its value between invocations.</p></li>
+	<li><p>A static global variable or a function is "seen" only in the file it's declared in</p></li>
+</ol>
+
+<pre>
+#include &lt;tdio.h&gt;
+
+void foo()
+{
+    int a = 10;
+    static int sa = 10;
+
+    a += 5;
+    sa += 5;
+
+    printf("a = %d, sa = %d\n", a, sa);
+}
+
+
+int main()
+{
+    int i;
+
+    for (i = 0; i &lt; 10; ++i)
+        foo();
+}
+</pre>
+
+<p>This prints:</p>
+
+<pre>
+a = 15, sa = 15
+a = 15, sa = 20
+a = 15, sa = 25
+a = 15, sa = 30
+a = 15, sa = 35
+a = 15, sa = 40
+a = 15, sa = 45
+a = 15, sa = 50
+a = 15, sa = 55
+a = 15, sa = 60
+</pre>
+
+<p>(1) This is useful for cases where a function needs to keep some state between invocations, and you don't want to use global variables. Beware, however, this feature should be used very sparingly - it makes your code not thread-safe and harder to understand.</p>
+
+<p>(2) Is used widely as an "access control" feature. If you have a .c file implementing some functionality, it usually exposes only a few "public" functions to users. The rest of its functions should be made static, so that the user won't be able to access them. This is encapsulation, a good practice.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="arrays_of_strings.html">Arrays of strings &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>>

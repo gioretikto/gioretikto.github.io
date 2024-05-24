@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Display Filesystem types">
+	<title>Display Filesystem types</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Display Filesystem types</h1>
+
+<p>Linux supports numerous <a href="filesystem.html">filesystems</a>, such as Btrfs, ext4, ext3, ext2, exFAT, sysfs, securityfs, FAT16, FAT32, NTFS, and many. The most commonly used filesystems are Ext4 and Btrfs. Have you ever wondered which filesystem you are currently using in your Linux system? No? No problem! This guide lists all possible ways to find the mounted filesystem type in Linux and Unix-like operating systems.</p>
+
+<p>The most commonly used command to determine the type of the underlying filesystem in Linux is Findmnt. The <b>findmnt</b> command will list all mounted filesystems or search for a filesystem. The findmnt command can be able to search in <code>/etc/fstab, /etc/mtab</code> or <code>/proc/self/mountinfo</code>. <br>  The Findmnt command is the part of the util-linux package, which comes pre-installed in most Linux distributions. Just in case if findmnt command is not available in your system, simply install util-linux package as shown below. <br> To install util-linux package in Debian-based systems using command:</p>
+
+<pre>$ sudo apt install util-linux</pre>
+
+<p>Let us go ahead and see how to use findmnt command to find the mounted filesystems types in Linux. When you run findmnt command without any options, it will list all mounted filesystems in a tree-like format:</p>
+
+<pre>$ findmnt</pre>
+
+<p>which displays the target mount point (TARGET), source device (SOURCE), file system type (FSTYPE), and relevant mount options, like whether the filesystem is read/write or read-only. (OPTIONS). In my case, my root(/) filesystem type is EXT4.</p>
+
+<p>If you don't want to display the output in tree-like format, you can use -l flag to display filesystem types in simple, plain list format.</p>
+
+<pre>$ findmnt -l</pre>
+
+<p>You can also list the partitions of a particular filesystem only, for example ext4, using -<i>t</i> option.</p>
+
+<pre>$ findmnt -t ext4
+TARGET SOURCE FSTYPE OPTIONS
+/ /dev/sda2 ext4 rw,relatime,commit=360
+└─/boot /dev/sda1 ext4 rw,relatime,commit=360,data=ordered</pre>
+
+<p>Findmnt can also produce df style output as well.</p>
+
+<pre>$ findmnt --df</pre>
+
+<p>Or,</p>
+
+<pre>$ findmnt -D</pre>
+
+<p>This is equivalent to <cde>df -T command</code>.</p>
+
+<p>You can also display the underlying filesystem of a specific partition, or mountpoint as well.</p>
+
+<p>Search for a device:</p>
+
+<pre>$ findmnt /dev/nvme0n1p2
+TARGET                SOURCE         FSTYPE OPTIONS
+/                     /dev/nvme0n1p2 ext4   rw,relatime,errors=remount-ro
+/run/timeshift/backup /dev/nvme0n1p2 ext4   rw,relatime,errors=remount-ro</pre>
+
+<p>Search for a mountpoint:</p>
+
+<pre>$ findmnt /
+TARGET SOURCE         FSTYPE OPTIONS
+/      /dev/nvme0n1p2 ext4   rw,relatime,errors=remount-ro</pre>
+
+<p>You can even find filesystems with specific label:</p>
+
+<pre>$ findmnt LABEL=Storage</pre>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

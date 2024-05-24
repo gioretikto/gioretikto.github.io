@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Destructors"/>
+    <title>Destructors</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Destructors</h1>
+
+<p>A destructor, like a constructor, is a special function, too. A constructor is invoked at object instantiation, and a destructor is automatically invoked when an object is destroyed</p>
+
+<p>The destructor looks like a function that takes the name of the class, yet has a tilde ( ~ )
+preceding it. So, class Human would have a destructor that is declared like this:</p>
+
+<pre>
+class Human
+{
+	~Human(); // declaration of a destructor
+};
+</pre>
+
+<p>This destructor can either be implemented inline in the class or externally outside the
+class declaration. An implementation or definition inside the class looks like this:</p>
+
+<pre>
+class Human
+{
+public:
+	~Human()
+	{
+		// destructor code here
+	}
+};
+</pre>
+
+<p>A variant enabling you to define the destructor outside the class’s declaration looks like
+this:</p>
+
+<pre>
+class Human
+{
+public:
+~Human(); // destructor declaration
+};
+// destructor definition (implementation)
+Human::~Human()
+{
+// destructor code here
+}
+</pre>
+
+<p>As you can see, the declaration of the destructor differs from that of the constructor slightly in that this contains a tilde ( ~ ). The role of the destructor is, however, diametrically opposite to that of the constructor.</p>
+
+<p>A destructor is always invoked when an object of a class is destroyed when it goes out of scope or is deleted via delete . This property makes a destructor the ideal place to reset variables and release dynamically allocated memory and other resources.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

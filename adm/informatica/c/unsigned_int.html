@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The Concept of Signed and Unsigned integers"/>
+    <title>The Concept of Signed and Unsigned integers</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>The Concept of Signed and Unsigned integers</h1>
+
+<p>Sign implies positive or negative. All numbers you work with using a computer are stored in the memory in the form of bits and bytes. A memory location that is 1 byte large contains 8 bits. Each bit can either be a 0 or 1 (that is, carry one of these two values at best). Thus, a memory location that is 1 byte large can contain a maximum of 2 to the power 8 values—that is, 256 unique values. Similarly, a memory location that is 16 bits large can contain 2 to the power 16 values—that is, 65,536 unique values.</p>
+
+<pre>16 bits of			:	 1 1 1 1 1 1 1 1 1 1 1 1 1 1 = 65535
+a unsigned short integer</pre>
+
+<p>How to model negative numbers in this space? One way is to "sacrifice" a bit as the sign-bit that would indicate if the values contained in the other bits are positive or negative (see Figure 3.2). The sign-bit needs to be the most-significant-bit (MSB) as the least-significant-one would be required to model odd numbers. So, when the MSB contains sign-information, it is assumed that 0 would be positive and 1 would mean negative, and the other bytes contain the absolute value.</p>
+
+<pre>
+1 | 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+▼					 	▼
+Sing Bit				15 bits contain absolute value
+0:Indicates positive
+1: Indicates negative integer
+</pre> 
+
+<p>Thus, a signed number that occupies 8 bits can contain values ranging from -128 through 127, and one that occupies 16 bits can contain values ranging from -32,768 through 32,767. If you look at Table 3.1 again, note that the (<code>signed</code>) short is the type that supports positive and negative integer values in a 16-bit space.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

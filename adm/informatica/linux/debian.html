@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="debian"/>
+	<title>debian</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>debian</h1>
+
+<pre>cat /etc/debian_version</pre>
+
+<p>First login as root through</p>
+
+<pre>su -l</pre>
+
+<pre>usermod -a -G sudo cadmio</pre>
+
+<p>the -l options allows to inheirt the environment from the user. Now you've to <b>log out</b> in order for the change to take place.</p>
+
+<h2>Programs to install at fresh install</h2>
+
+<pre>apt install xorg icewm dhcpcd xfce4-terminal xfce4-screenshooter alsa-utils evince</pre>
+
+<p>Then configure audio (read <a href="alsamixer.html">this</a>).</p>
+
+<h3>Latex</h3>
+
+<p>sudo apt install texlive-latex-base texlive-latex-extra texlive-fonts-recommended --no-install-recommends</p>
+
+<h2>Archive type</h2>
+
+<p>The first word on each line, deb or deb-src, indicates the type of archive. Deb indicates that the archive contains binary packages (deb), the pre-compiled packages that we normally use. Deb-src indicates source packages, which are the original program sources plus the Debian control file (.dsc) and the diff.gz containing the changes needed for packaging the program.</p>
+
+<h2>Find packages a program depends on</h2>
+
+<p>Go to https://tracker.debian.org/pkg/mousepad choose the versions on the left side, click the entry for stable to list all packages a program relies on (e.g https://packages.debian.org/source/stable/mousepad). </p>
+
+<h2>Repository URL</h2>
+
+<p>The next entry on the line is a URL to the repository that you want to download the packages from. The main list of Debian repository mirrors is located here.</p>
+
+<h2>Distribution</h2>
+
+<p>The 'distribution' can be either the release code name / alias (jessie, stretch, buster, sid) or the release class (oldstable, stable, testing, unstable) respectively. If you mean to be tracking a release class then use the class name, if you want to track a Debian point release, use the code name. Avoid using stable in your sources.list as that results in nasty surprises and broken systems when the next release is made; upgrading to a new release should be a deliberate, careful action and editing a file once every two years is not a burden.</p>
+
+<p>For example, if you always want to help test the testing release, use 'testing'. If you are tracking bullseye and want to stay with it from testing to end of life, use 'bullseye'.</p>
+
+<h2>Component</h2>
+
+<ul>
+	<li><p><b>main</b> consists of DFSG-compliant packages, which do not rely on software outside this area to operate. These are the only packages considered part of the Debian distribution.</p></li>
+
+	<li><p><b>contrib</b> packages contain DFSG-compliant software, but have dependencies not in main (possibly packaged for Debian in non-free).</p></li>
+
+	<li><p><b>non-free</b> contains software that does not comply with the DFSG.</p></li>
+
+</ul>
+
+<h2>Example sources.list</h2>
+
+<p>Below is an example of <code>/etc/apt/sources.list</code> for Debian 10/Buster.</p>
+
+<pre>
+deb http://deb.debian.org/debian buster main
+deb-src http://deb.debian.org/debian buster main
+
+
+deb http://deb.debian.org/debian-security/ buster/updates main
+deb-src http://deb.debian.org/debian-security/ buster/updates main
+
+deb http://deb.debian.org/debian buster-updates main
+deb-src http://deb.debian.org/debian buster-updates main
+</pre>
+
+<h2>Adding non-free components</h2>
+
+<p>If you also need the contrib and non-free components, add contrib non-free after main. For example, for Debian 10/Buster:</p>
+
+<pre>
+deb http://deb.debian.org/debian buster main contrib non-free
+deb-src http://deb.debian.org/debian buster main contrib non-free
+
+deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+
+deb http://deb.debian.org/debian buster-updates main contrib non-free
+deb-src http://deb.debian.org/debian buster-updates main contrib non-free
+</pre>
+
+<p>Do an <code>apt update</code> every time you add or change something in sources.list.</p>
+
+<h2 id="debug">Install gtk debug symbols</h2>
+
+<p>Without dbg stmbols for all libs, the trace we obtain from gdb doesn't clearly identify any culprit. &lt;dpkg&gt; Packages that end in '*-dbgsym' contain the symbols required for debugging executables and libraries. The dbgsym packages are automatically generated packages that are in a separate archive; add the following line to your <code>/etc/apt/sources.list</code>.</p>
+
+<pre>deb https://deb.debian.org/debian-debug/ bookworm-debug main</pre>
+
+<p>and then <code>apt update</code>. Now if we do <code>apt search libgtk-4</code> we are able to find a packed that ends with dbgsym:</p>
+
+<pre>libgtk-4-media-gstreamer-dbgsym/stable-debug 4.8.3+ds-2 amd64</pre>
+
+<h2>Audio</h2>
+
+<p>Install rhythmbox</p>
+
+<pre>sudo apt-get install rhythmbox</pre>
+
+<p>Per l'audio su firefox: support.mozilla.org says "The PulseAudio software is required to play any audio from Firefox."</p>
+
+<pre>sudo apt-get install pulseaudio</pre>
+
+<h2>Schede grafiche</h2>
+
+<p>Per installare il firmare della scheda grafica:</p>
+
+<pre>apt-get install firmware-amd-graphics</pre>
+
+<h2>Atheros AR9271, AR7010 devices (ath9k_htc)</h2>
+
+<p>Dopo aver aggiunto le componenti non-free:</p>
+
+<pre>apt-get update && apt-get install firmware-atheros</pre>
+
+<h2>Enable user list on LightDM</h2>
+
+<p>By default, LightDM is configured so that the user should enter login name and password. Login name is considered sensitive information.</p>
+
+<p>It is possible to provide the user with selection of available user accounts. The most recently used login name will be selected in the list. The user still has to enter password to login. This provides useful compromise between security and convenience for a single-user desktop system.</p>
+
+<p>To enable user list, place the following settings into /usr/share/lightdm/lightdm.conf.d/01_my.conf:</p>
+
+<pre>
+[Seat:*]
+greeter-hide-users=false
+</pre>
+
+<section aria-label="End">
+<a href="comparative_sup.html">&#171; The comparative of superiority</a></p>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

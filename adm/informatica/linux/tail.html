@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Il comando tail</title>
+<link rel="stylesheet" href="../style.css" type="text/css" />
+<meta charset="utf-8">
+</head>
+
+<body>
+<h1>Il comando tail</h1>
+
+<p>Il comando <b>tail</b> mostra le ultime 10 righe di un file ed è di particolare importanza per analizzare i log files generati dai programmi a fini diagnostici:</p></p>
+
+<p><pre>
+tail -f /var/log/apache2/*
+</pre></p>
+
+<p>L'opzione -f è utile poichè permette di guardare al file in tempo reale.</p>
+
+<h2>Opzioni utili</h2>
+
+<ul style="list-style-type: square;">
+
+<li>-N  Print the last N lines of the file instead of 10.</li>
+<li>-n N    Print the last N lines of the file instead of 10.</li>
+<li>+ N     Print all lines except the first N.</li>
+<li>-c N       Print the last N bytes of the file.</li>
+<li> -f      Keep the file open, and whenever lines are appended to the file, print them. This
+is extremely useful. Add the --retry option if the file doesn’t exist yet, but you
+want to wait for it to exist.</li>
+
+<li>-q  Quiet mode: when processing more than one file, don’t print a banner above
+each file. Normally tail prints a banner containing the filename.</li>
+
+
+
+
+
+
+
+</ul>
+
+
+</body>
+
+</html>

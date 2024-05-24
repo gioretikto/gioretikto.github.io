@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WPA Supplicant"/>
+    <title>WPA Supplicant</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>WPA Supplicant</h1>
+
+<p><b>wpa_supplicant</b> is a cross-platform supplicant (An entity at one end of a point-to-point LAN segment that seeks to be authenticated by an authenticator attached to the other end of that link) with support for WEP, WPA and WPA2 (IEEE 802.11i). It is suitable for desktops, laptops and embedded systems. It is the IEEE 802.1X/WPA component that is used in the client stations. It implements key negotiation with a WPA authenticator and it controls the roaming and IEEE 802.11 authentication/association of the wireless driver.</p>
+
+<p>Install with</p>
+
+<pre>sudo apt-get install wpasupplicant</pre>
+
+<h2>Configuration</h2>
+
+<p>Creare il file <i>wpa_supplicant.conf</i> in <i>/etc/wpa_supplicant</i> con il seguente contenuto</p>
+
+<pre>
+network={
+         ssid="TP-LINK_2.4GHz_4F7005_2GEXT"
+         psk="46781314"
+}
+</pre>
+
+<p>or</p>
+
+<pre>
+network={
+         ssid="TP-LINK_834432"
+         psk="8QBNQU5HHAZ26"
+}
+</pre>
+
+<p>Utilizzare il seguente script per collegarsi</p>
+
+<pre>
+ip link set wlxf4f26d13b2bd down
+macchanger -m 0a:be:d9:23:28:8e wlxf4f26d13b2bd
+ip link set wlxf4f26d13b2bd up
+wpa_supplicant -B -i wlxf4f26d13b2bd -c /etc/wpa_supplicant/wpa_supplicant.conf -Dnl80211,wext
+dhclient wlxf4f26d13b2bd
+</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="seriesegnovar.html">Serie a termini di segno variabile&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

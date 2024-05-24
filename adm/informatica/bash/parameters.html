@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Positional Parameters"/>
+    <title>Positional Parameters</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Positional Parameters</h1>
+
+<p>The most important special, built-in variables are called <i>positional parameters</i>. These hold the command-line arguments to scripts when they are invoked. Positional parameters have the names <b>1, 2, 3</b>, etc., meaning that their values are denoted by <b>$1, $2, $3</b>, etc. There is also a positional parameter <b>0</b>, whose value is the name of the script (i.e., the command typed in to invoke it).</p>
+
+<pre>
+a=$1
+echo "$1"
+</pre>
+
+<pre>
+#!/bin/bash
+
+echo "My name is 'basename $0' - I was called as $0"
+echo "My first parameter is $1"
+echo "My second parameter is $2"
+</pre>
+
+<p>invoking <code>./params.sh one two</code>, yields the following output</p>
+
+<pre>
+My name is params.sh - I was called as ./params.sh
+My first parameter is: one
+My second parameter is: two
+</pre>
+
+<p>So in general:</p>
+
+<table class="noborder">
+<tr><td>bash_script</td> <td>arg1</td> <td>arg2</td> <td>arg3</td> <td>...</td></tr>
+<tr><td>$0</td> <td>$1</td> <td>$2</td> <td>$3</td> </tr>
+</table>
+
+<p>Two special variables contain all of the positional parameters (except positional parameter 0): <b>*</b> and <b>@</b>. The difference between them is subtle but important, and it's apparent only when they are within double quotes. "$*" is a single string that consists of all of the positional parameters, separated by the first character in the value of the environment variable IFS (internal field separator), which is a space, TAB, and NEWLINE by default. On the other hand, "$@" is equal to "$1" "$2"... "$ N", where N is the number of positional parameters. That is, it's equal to N separate double-quoted strings, which are separated by spaces. If there are no positional parameters, "$@" expands to nothing. We'll explore the ramifications of this difference in a little while.</p>
+
+<p>The variable # holds the number of positional parameters (as a character string). All of these variables are "read-only," meaning that you can't assign new values to them within scripts.</p>
+
+<p>For example, assume that you have the following simple shell script:</p>
+
+<pre>
+<code>
+echo "alice: $@"
+echo "$0: $1 $2 $3 $4"
+echo "$# arguments"
+</code>
+</pre>
+
+<p>Assume further that the script is called alice. Then if you type alice in wonderland, you will see the following
+output:</p>
+
+<pre>
+<code>
+alice: in wonderland
+alice: in wonderland
+2 arguments
+</code>
+</pre>
+
+<p>In this case, $3 and $4 are unset, which means that the shell will substitute the empty (or null) string for them.</p>
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="misure.html">Misura&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

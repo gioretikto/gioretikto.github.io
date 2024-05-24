@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Switch"/>
+	<title>Switch</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Switch</h1>
+
+<p>The conditional operator and the <i>if else</i> construction make it easy to write programs that choose between two alternatives. Sometimes, however, a program needs to choose one of several alternatives. You can do this by using if else if...else. However, in many cases, it is more convenient to use the C <b>switch</b> statement. Listing 7.11 shows how the switch statement works. This program reads in a letter and then responds by printing an animal name that begins with that letter.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;ctype.hgt;
+int main(void)
+{
+	char ch;
+	printf("Give me a letter of the alphabet, and I will give ");
+	printf("an animal name\nbeginning with that letter.\n");
+	printf("Please type in a letter; type # to end my act.\n");
+	while ((ch = getchar()) != '#')
+	{
+		if('\n' == ch)
+		continue;
+		if (islower(ch))
+		/* lowercase only
+		*/
+		switch (ch)
+		{
+		case 'a' :
+			printf("argali, a wild sheep of Asia\n");
+			break;
+		case 'b' :
+			printf("babirusa, a wild pig of Malay\n");
+			break;
+		case 'c' :
+			printf("coati, racoonlike mammal\n");
+			break;
+		case 'd' :
+			printf("desman, aquatic, molelike critter\n");
+			break;
+		case 'e' :
+			printf("echidna, the spiny anteater\n");
+			break;
+		case 'f' :
+			printf("fisher, brownish marten\n");
+			break;Multiple Choice: switch and break
+		default :
+			printf("That's a stumper!\n");
+		/* end of switch
+	}
+	*/
+	else
+		printf("I recognize only lowercase letters.\n");
+	while (getchar() != '\n')
+		continue;
+	/* skip rest of input line */
+	printf("Please type another letter or a #.\n");
+	}
+	/* while loop end */
+	printf("Bye!\n");
+	return 0;
+}
+</pre>
+
+<p>The expression in the parentheses following the word switch is evaluated. In this case, it has whatever value you last entered for ch . Then the program scans the list of labels (here, case 'a' : , case 'b' : , and so on) until it finds one matching that value. The program then jumps to that line. What if there is no match? If there is a line labeled default:, the program jumps there. Otherwise, the program proceeds to the statement following the switch .</p>
+ 
+<p>What about the <b>break</b> statement? It causes the program to break out of the switch and skip to the next statement after the switch. Without the break statement, every statement from the matched label to the end of the switch would be processed.</p>
+ 
+<p>The switch test expression in the parentheses should be one with an integer value (including type char ). The case labels must be integer-type (including char ) constants or integer constant expressions (expressions containing only integer constants). You can’t use a variable for a case label. Here, then, is the structure of a switch:</p>
+
+<pre>
+switch ( integer expression )
+{
+	case constant1 :
+	statements
+	case constant2 :
+	statements
+	default :
+	statements
+}
+</pre>
+
+<h2>Multiple Labels</h2>
+
+<p>You can use multiple case labels for a given statement, as shown in the following.</p>
+
+<pre>
+/* uses multiple labels */
+#include &lt;stdio.h&gt;
+int main(void)
+{
+	char ch;
+	int a_ct, e_ct, i_ct, o_ct, u_ct;
+	a_ct = e_ct = i_ct = o_ct = u_ct = 0;
+	printf("Enter some text; enter # to quit.\n");
+	while ((ch = getchar()) != '#')
+	{
+		switch (ch)
+		{
+			case 'a' :
+			case 'A' : a_ct++;
+			break;
+			case 'e' :
+			case 'E' : e_ct++;
+			break;
+			case 'i' :
+			case 'I' : i_ct++;
+			break;
+			case 'o' :
+			case 'O' : o_ct++;
+			break;
+			case 'u' :
+			case 'U' : u_ct++;
+			break;
+			default :
+			break;
+		}	/* end of switch */
+	}
+	/* while loop end*/
+	printf("number of vowels:	A	E	I	O	U\n");
+	printf("%4d %4d %4d %4d %4d\n",	a_ct, e_ct, i_ct, o_ct, u_ct);
+	return 0;
+}
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
