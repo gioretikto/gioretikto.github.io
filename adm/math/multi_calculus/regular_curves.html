@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Derivative of a vector-valued function">
+	<title>Derivative of a vector-valued function</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Derivative of a vector-valued function</h1>
+
+<p>We want now generalize the concept of derivative of vector-valued functions, <i><b>r</b></i>: ℝ ⟶ ℝ<sup><i>n</i></sup>. The same definition given in calculus, of the derivative of a function in ℝ as limit tending to zero of the incremental ratio, applies as well to vector-valued functions</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi mathvariant="bold">r</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi mathvariant="bold">r</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>t</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi mathvariant="bold">r</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>t</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+</math>
+
+<!-- $$\mathbf{r'}(t) = \lim_{h \to 0} \frac{\mathbf{r}(t_0+h) - \mathbf{r}(t_0)} {h} $$ -->
+
+<p>Note that the incremental ratio is between a vector and a scalar, thus a vector; the limit is with respect the distance in ℝ<sup><i>n</i></sup>. As we have studied, limits of vector-valued functions are computed componentwise, thue the above derivative is equal to</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munder>
+      <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>h</mi>
+        <mo accent="false" stretchy="false">&#x2192;</mo>
+        <mn>0</mn>
+      </mrow>
+    </munder>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>r</mi>
+          <mn>1</mn>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>t</mi>
+          <mn>0</mn>
+        </msub>
+        <mo>+</mo>
+        <mi>h</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>r</mi>
+          <mn>1</mn>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>t</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mrow>
+      <mi>h</mi>
+    </mfrac>
+    <mo>,</mo>
+    <mo>&#x2026;</mo>
+    <mo>,</mo>
+    <munder>
+      <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>h</mi>
+        <mo accent="false" stretchy="false">&#x2192;</mo>
+        <mn>0</mn>
+      </mrow>
+    </munder>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>r</mi>
+          <mi>n</mi>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>t</mi>
+          <mn>0</mn>
+        </msub>
+        <mo>+</mo>
+        <mi>h</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>r</mi>
+          <mi>n</mi>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>t</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mrow>
+      <mi>h</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ \left(\lim_{h \to 0} \frac{r_1(t_0+h) - r_1(t_0)} {h}, \ldots, \lim_{h \to 0} \frac{r_n(t_0+h) - r_n(t_0)} {h} \right) $$ -->
+
+<p>So we conclude that</p>
+
+<div class="eq">
+<p><i><b>r</b></i>'(<i>t</i><sub>0</sub>) = (<i>r'</i><sub>1</sub>(<i>t</i><sub>0</sub>), <i>r'<sub>2</sub></i>(<i>t</i><sub>0</sub>), ..., <i>r'<sub>n</sub></i>(<i>t</i><sub>0</sub>)) &emsp; 3.2.5</p>
+</div>
+
+<p>hence the derivative is as well computed componentwise: the derivative vector of <i><b>r</b></i>, is the vector whose components are the derivatives of <i><b>r</b></i>.</p>
+
+<p>The geometrical meamning of the derivative is the following</p>
+
+<img src="img/vector_derivative.png" alt="vector valued function derivative"/>
+
+<p>The deirvative represents the <i>instantaneuous velocity</i>, at <i>t</i><sub>0</sub>, of a particle as it moves along a smooth path. Thus <i><b>r'</b></i>(<i>t</i>) is the velocity of the particle and it is tangent to the trace, pointing in the direction of motion.</p>
+
+<p><b>Example 3.2.3</b>. For ellipse <i><b>r</b></i>(<i>t</i>) = (2cos <i>t</i>, 3sin<i>t</i>), we have</p>
+
+<div class="eq">
+<p><i><b>r</b></i>'(<i>t</i>) = (−2sin <i>t</i>, 3cos<i>t</i>)&emsp;■</p>
+</div>
+
+<p>It also possible to define the speed (scalar velocity) as</p>
+
+<div class="eq">
+<p><i>v</i>(<i>t</i>) = |<i><b>r'</b></i>(<i>t</i>)|</p>
+</div>
+
+<p><i><b>r'</b></i>(<i>t</i>) gives a direction only in the case its components are not all null. This justifies the next definition</p>
+
+<p id="regular"><b>Definition 3.2.4</b>. A regular curve is a curve <i><b>r</b></i>: <i>I</i> ⟶ ℝ<sup><i>n</i></sup> (with <i>I</i> &subseteq; ℝ) that has for every <i>t</i> a non-null tangent vector, i.e. <i><b>r'</b></i>(<i>t</i>) &ne; 0, &forall;<i>t</i> &in; <i>I</i>.</p>
+
+<p>For regular curves, the <i>tangent versor</i>, is well defines</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">t</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi mathvariant="bold">r</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <msup>
+        <mi mathvariant="bold">r</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">|</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \mathbf{t} = \frac{\mathbf{r'}(t)}{|\mathbf{r'}(t)|} $$ -->
+
+<p><b>Example 3.2.4</b>. The ellipse <i><b>r</b></i>(<i>t</i>) = (2cos <i>t</i>, 3sin<i>t</i>), <i>t</i> &in; [0,2&pi;] is regular, indeed <i><b>r'</b></i>(<i>t</i>) = (−2sin <i>t</i>, 3 cos <i>t</i>) &ne; (0,0) for every <i>t</i>. The tangent versor is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>t</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mn>3</mn>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <msqrt>
+      <mn>4</mn>
+      <mo stretchy="false">(</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>t</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>9</mn>
+      <mo stretchy="false">(</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>t</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+</math>
+
+<!-- $$ t = \frac{(-2\sin t, 3 \cos t)} {\sqrt{4(\sin t)^2 + 9(\cos t)^2}} $$ -->
+
+<p><b>Example 3.2.5</b>. The Astroid</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mo stretchy="false">(</mo>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+          <msup>
+            <mo stretchy="false">)</mo>
+            <mn>3</mn>
+          </msup>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mo stretchy="false">(</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+          <msup>
+            <mo stretchy="false">)</mo>
+            <mn>3</mn>
+          </msup>
+        </mtd>
+        <mtd>
+          <mi>&#x3B8;</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mi>&#x3C0;</mi>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ \begin{cases} x= (\cos \theta)^3\\ y= (\sin \theta)^3 & \theta \in [0,2\pi] \end{cases} $$ -->
+
+<p>is not regular as <i><b>r'</b></i>(<i>&theta;</i>) = {−3(cos <i>&theta;</i>)<sup>2</sup>, sin(<i>&theta;</i>)<sup>2</sup>, 3(sin(<i>&theta;</i>))<sup>2</sup> is zero for <i>&theta;</i> = <i>k</i>&pi;/2. And as it can be seen form the trace, cusps are present at such points.</p>
+
+<img src="img/astroid.png" alt="Astroid"/>
+
+<h2>Rules for computation of derivatives</h2>
+
+<p>From the definition of derivative of a function <i><b>r</b></i>: ℝ ⟶ ℝ<sup><i>n</i></sup> and by property 3.2.5, follow immediately the usual rules as wekk for the computation of derivatives of vector-valued functions.</p>
+
+<ul>
+	<li><p>if <i><b>u,v</b></i>: ℝ ⟶ ℝ<sup><i>n</i></sup> are differentiable, then</p>
+
+	<div class="eq">
+	<p>(<i><b>u</b></i> + <i><b>v</b></i>)' = <i><b>u</b></i>' + <i><b>v</b></i>';<br>
+	(<i>c<b>u</b></i>)' = <i>c<b>u'</b></i></p>
+	</div>
+
+	</li>
+
+	<li><p>if <i>&phi;</i>: ℝ ⟶ ℝ is a differentiable function</p>
+
+	<div class="eq">
+	<p><i><b>u</b></i>(<i>&phi;</i>(<i>t</i>)) = <i><b>u'</b></i>(<i>&phi;</i>(<i>t</i>)) <i>&phi;</i>(<i>t</i>)<p>
+	</div>
+
+	</li>
+
+	<li>
+
+	<div class="eq">
+	<p>(<i><b>u</b></i> ⋅ <i><b>v</b></i>)' = <i><b>u</b></i>' ⋅ <i><b>v</b></i> + <i><b>u</b></i> ⋅ <i><b>v</b></i>';<br>
+	</div>
+
+	<p>In the case <i><b>u</b></i> = <i><b>v</b></i>, which yields to 2<i><b>u</b>'</i> ⋅ <i><b>u</b></i> = 0. Which means that if a vector-valued function has constant module, it is always orthogonal to its velocity vector, e.g. if a particles moves with constant speed <i>v</i>, the velocity <i><b>u</b></i> and acceleration, <i><b>u'</b></i> vectors are orhogonal to each other at any instant. </p>
+
+	</li>
+</ul>
+
+<h2>Polar form equations</h2>
+
+<p>A particular form parametric equations of a plane curve can have is the <i>polar</i> form. The equation</p>
+
+<div class="eq">
+<p><i>&rho;</i> = <i>f</i>(<i>&theta;</i>)</p>
+</div>
+
+<p>stands for (by letting <i>x</i> = <i>&rho;</i> cos <i>&theta;</i>, <i>y</i> = <i>&rho;</i> sin <i>&theta;</i>)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>&#x3B8;</mi>
+          <mo stretchy="false">)</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>&#x3B8;</mi>
+          <mo stretchy="false">)</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ \begin{cases} x = f(\theta) \,\cos \theta \\ y = f(\theta) \,\sin \theta \end{cases} $$ -->
+
+<p><b>Archimede Spiral</b> has equation</p>
+
+<div class="eq">
+<p><i>&rho;</i> = A<i>&theta;</i>, &emsp; <i>&theta;</i> &in; [0, +&infin;]</p>
+</div>
+
+<p>with <i>A</i> a positive constant. The previous equation is equivalent to the parametric equations</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>A</mi>
+          <mi>&#x3B8;</mi>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>A</mi>
+          <mi>&#x3B8;</mi>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>&#x3B8;</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">[</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \begin{cases} x = A\theta \,\cos \theta \\ y = A\theta \,\sin \theta\end{cases} \; \qquad \theta \in [0,+\infty) $$-->
+
+<figure>
+<img src="img/Archimede_spiral.png" alt="Archimede spiral"/>
+<figcaption>Archimede spiral for <i>&theta;</i> &in; [0, 6&pi;]</figcaption>
+</figure>
+
+<p>The tangent vector is <i><b>r</b>'</i>(<i>&theta;</i>) = <i>A</i>(cos &theta; − <i>&theta;</i> sin &tehta;, sin &tehta; + &theta;cos &theta;) and is never null as it can be seen calculating the module of the vector</p>
+
+<div class="eq">
+<p><i>v</i>(<i>&theta;</i>) = |<i><b>r</b>'</i>(<i>&theta;</i>)| = <i>A</i> √1(1 + <i>&theta;</i><sup>2</sup>) &gt; 0, &emsp; &forall;<i>&theta;</i></p>
+</div>
+
+<h2>Conic Sections in Polar Form</h2>
+
+<p><b>Definition 3.2.6</b>. The set of points in a plane such that the distance from a fixed point (called the <b>focus</b>) is in constant ratio to its distance from a fixed line (called the <b>directrix</b>) is called a <b>conic</b>. This set of points <i>P</i>(<i>x,y</i>) that satisfy the equation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>distance of&#xA0;</mtext>
+      <mi>P</mi>
+      <mtext>&#xA0;from the focus</mtext>
+    </mrow>
+    <mrow>
+      <mtext>distance of&#xA0;</mtext>
+      <mi>P</mi>
+      <mtext>&#xA0;from the line&#xA0;</mtext>
+      <mi>d</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x3B5;</mi>
+</math>
+
+<!-- $$\frac{\text{distance of } P \text{ from the focus}} {\text{distance of } P \text{ from the line } d} = \varepsilon $$ -->
+
+<p>is said <b>conic</b> with <b>eccentricity</b> <i>&epsilon;</i>. Since in polar coordinate we have</p>
+
+<div class="eq">
+<p>distance of <i>P</i> from the focus = <i>r</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>distance of <i>P</i> from the <i>d</i> = <i>p</i> + <i>r</i> cos &theta;</p>
+</div>
+
+<img src="img/conics.png" alt="conics"/>
+
+<p>The single equation for all these conics is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>r</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>&#x3B5;</mi>
+      <mi>p</mi>
+    </mrow>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>&#x3B8;</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ r = \frac{\varepsilon p} {1 - \varepsilon \cos \theta} $$ -->
+
+<p>The eccentricity <i>&epsilon;</i> can be used to distinguish one conic section from another. For <i>&psilon;</i> ⟶ 0 and <i>p</i> = <i>R</i>/<i>&epsilon;</i> we find the equation of the circle</p>
+
+<div class="eq">
+<p><i>r</i> = <i>R</i></p>
+</div>
+
+<p>While for <i>&psilon;</i> ⟶ +&infin; we find</p>
+
+<div class="eq">
+<p><i>r</i> = −<i>p</i>/cos <i>&theta;</i></p>
+</div>
+
+<p>which is the quation of a line.</p>
+
+<section aria-label="End">
+<a href="limits_vector_functions.html">«Limits of vector-valued functions</a>
+<a href="index.html">Index</a>
+<a href="arc_length.html">Length of an arc»</a>
+</section>
+
+</article>
+
+</body>
+</html>

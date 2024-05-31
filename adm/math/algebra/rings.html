@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Rings">
+	<title>Rings</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Rings</h1>
+
+<p>Different sets are naturally endowed with two binary operations: addition and multiplication. Examples that quickly come to mind are the integers, the integers modulo <i>n</i>, the real numbers, matrices, and polynomials. The <i>notion</i> of Rings describing this kind of sets was originated in the mid-19th century by Richard Dedekind.</p>
+ 
+<p><b>6.1.1 Definition</b> A ring (<i>R</i>, +, ⋅) is a set <i>R</i> equipped with <i>two binary operations</i>, <b>addition</b> and <b>multiplication</b> indicated by + and ·,</p>
+
+<div class="eq">
+<p><i>R</i> x <i>R</i> ⟶ <i>R</i> &emsp;&emsp; <i>R</i> x <i>R</i> ⟶ <i>R</i></p>
+<p>(<i>a, b</i>) ⟼ <i>a</i> + <i>b</i> &emsp;&emsp; (<i>a, b</i>) ⟼ <i>a</i> ⋅ <i>b</i></p>
+</div>
+
+<p>satisfying the following three sets of axioms, called the ring axioms</p>
+
+<p><b>Axioms for addition</b></p>
+<ul>
+
+	<li><p>A1: <i>closure under addition</i>. To any pair of elements <i>a</i> and <i>b</i> of <i>R</i> (in the given order) there is associated an element <i>a</i> + <i>b</i> in <i>R</i>. This elements <i>a</i> + <i>b</i> is called the <b>sum</b> of <i>a</i> + <i>b</i>;</p></li>
+
+	<li><p>A2: <i>associative law for addition</i>: (<i>a</i> + <i>b</i>) + <i>c</i> = <i>a</i> + (<i>b</i> + <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
+
+	<li><p>A3: <i>identity for addition</i>: There is an element 0 &in; <i>R</i> such that <i>a</i> + 0 = <i>a</i> &forall;<i>a</i> &in; <i>R</i> (that is, 0 is the additive identity).</p></li>
+
+	<li><p>A4: <i>inverse for addition</i>: &forall;<i>a</i> &in; <i>R</i> there exists −<i>a</i> &in; <i>R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
+
+	<li><p>A5: <i>commutative law for addition</i>: We have <i>a</i> + <i>b</i> = <i>b</i> + <i>a</i> &forall;<i>a, b</i> &in; <i>R</i></p></li>
+</ol></li>
+
+</ul>
+
+<p><b>Axioms for multiplication</b></p>
+
+<ul>
+	<li><p>M1: <i>closure under mutliplication</i>. If <i>a</i> &in; <i>R</i> and <i>b</i> &in; <i>R</i>, then their product <i>ab</i> is in <i>R</i>. This element <i>ab</i> is called the <b>product</b> of <i>a</i> and <i>b</i>;</p></li>
+
+	<li><p>M2: <i>associative law for multiplication</i>: (<i>a</i> · <i>b</i>) · <i>c</i> = <i>a</i> · (<i>b</i> · <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
+</ul>
+
+<p id="distributive_law">Axioms relating addition and multiplication</i></p>
+
+<ul>
+	<li><p>D1: Multiplication is distributive with respect to addition, meaning that:</p>
+
+	<div class="eq">
+	<p><i>a</i> · (<i>b</i> + <i>c</i>) = <i>a</i> · <i>b</i> + <i>a</i> · <i>c</i>, &emsp; (<i>a</i> + <i>b</i>) · <i>c</i> = <i>a</i> · <i>c</i> + <i>b</i> · <i>c</i> &emsp; &forall;<i>a, b, c</i> &in; <i>R</i></p>
+	</div>
+</li>
+
+</ul>
+
+<p>From now on we'll write <i>ab</i> instead of <i>a</i> · <i>b</i>. A set satisfying A1 to A4 is called <a href="groups.html">group</a>: hence (<i>R</i>, +) is a group. If A5 is also satisfied we have a <i>commutative group</i> or <i>abelian group</i>. (<i>R</i>, +) is oftentimes referred to as additive group of the ring.</p>
+
+<p>One says that the ring, is <b>commutative</b>, if, moreover:</p>
+
+<ul>
+	<li><p>M3: <i>multiplication is commutative</i>, for every <i>a</i> and <i>b</i> in <i>R</i>, <i>ab</i> = <i>ba</i>.&emsp;□</p></li>
+</ul>
+
+<p><b>6.1.2</b>. <b>Examples of non-rings and rings</b></p>
+
+<ul>
+	<li><p>The set of natural numbers ℕ with the usual operations is not a ring, since (ℕ, +) is not even a group (the elements are not all invertible with respect to addition, e.g. there is no natural number which can be added to 2 to get 0 as a result).</p></li>
+
+	<li><p>The set of odd integers with the usual addition and multiplication is not a ring. Among other things, Axiom 1 fails: The sum of two odd integers is not odd.</p></li>
+
+</ul>
+
+<p>Examples of rings</p>
+
+<ul>
+
+	<li><p>Let <i>E</i> be the set of even integers with the usual addition and multiplication. Since the sum or product of two even integers is also even, the closure axioms hold. Since 0 is an even integer, E has an additive identity element. If <i>a</i> is even, then − <i>a</i> is also even, and so Axiom <i>i)c</i> holds. The remaining axioms hold for all integers and, therefore, are true whenever <i>a, b, c</i>, are even. Consequently, E is a commutative ring. E does <i>not</i> have an identity, however, because no <i>even</i> integer <i>e</i> has the property that <i>ae</i> = <i>a</i> = <i>ea</i> for every even integer <i>a</i>.</p></li>
+
+	<li><p>ℤ, ℚ, ℝ, ℂ, with respect to addition and multiplication.</p></li>
+	
+	<li><p>𝕂[<i>x</i>], 𝕂[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] with respect to addition and multiplication defined for this rings.</p></li>
+	
+	<li><p>The set ℤ<sub><i>n</i></sub> of congruence class modulo <i>n</i> with the addition and the multiplication defined by [<i>a</i>] + [<i>b</i>] = [<i>a</i> + <i>b</i>] and [<i>a</i>] [<i>b</i>] = [<i>ab</i>]. Note that [0] is the 0 required by our axioms for a ring, and [1] is the unit element of <i>R</i>.</p></li>
+	
+	<li><p>The set <i>M<sub>n</sub></i>(𝕂) of square matrices <i>n</i> x <i>n</i>, over a field 𝕂, along with the standard matrix addition and multiplication.</p></li>
+	
+	<li><p>The power set of a set is a commutative ring under the natural operations of union and intersection</p>
+	
+		<div class="eq">
+		<p><i>A</i> + <i>B</i> := (<i>A</i> ∪ <i>B</i>) ∩ 𝐶(<i>A</i> ∩ <i>B</i>), &emsp; <i>A</i> · <i>B</i> := <i>A</i> ∩ <i>B</i></p>
+		</div>
+		
+		<p>it is easy to notice that it is an Abelian group with respect to the first operation (the neuter element is ∅ and the inverse of an <i>A</i> &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributive properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent i.e.</i> <i>A</i><sup>2</sup> = <i>A</i> · <i>A</i> = <i>A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
+		
+		<li><p>The set of continuous functions, in one variable <i>x</i> &in; <i>X</i></p>
+		
+		<div class="eq">
+		<p><i>R<sup>X</sup></i> := {<i>f</i>: <i>X</i> ⟶ <i>R</i>}</p>
+		</div>
+		
+		<p>with the addition and multiplication defined by</p>
+		
+		<div class="eq">
+		<p>(<i>f</i>+<i>g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) := <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) &emsp; &forall;<i>f,g</i> &in; <i>R<sup>X</sup></i>, &forall;<i>x</i> &in; <i>X</i></p>
+		</div>
+		
+		<p>(<i>R<sup>X</sup></i>, +, ·) is a ring: it is a commutative ring only if <i>R</i> is commutative; it is unitary only if <i>R</i> is unitary as well. The unit function is that mapping every element of <i>X</i> to the unit of <i>R</i>.</p>
+		</li>
+		
+		<div id="direct_sum">
+		
+		<li><p>Let <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, ..., <i>R<sub>n</sub></i> be rings. We can use these to construct a new ring by Cartesian product</p>
+		
+		<div class="eq">
+		<p><i>R</i><sub>1</sub> x <i>R</i><sub>2</sub> x <i>R<sub>n</sub></i></p>
+		</div>
+		
+		<p>and perform component addition and multiplication, defined as</p>
+		
+		<div class="eq">
+		<p>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) + (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>n</sub></i>) = (<i>a</i><sub>1</sub> + <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub> + <i>b</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> + <i>b<sub>n</sub></i>)</p>
+		</div>
+		
+		<p>and</p>
+		
+		<div class="eq">
+		<p>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>n</sub></i>) = (<i>a</i><sub>1</sub> <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub><i>b</i><sub>2</sub>, ..., <i>a<sub>n</sub>b<sub>n</sub></i>)</p>
+		</div>
+		
+		<p>This ring is called the <i>direct sum</i> of <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, ..., <i>R<sub>n</sub></i> and usually indicated as</p>
+		</li>
+		
+		<div class="eq">
+		<p><i>R</i><sub>1</sub> ⊕ <i>R</i><sub>2</sub> ⊕ ... ⊕ <i>R<sub>n</sub></i></p>
+		</div>
+		</div>
+	</ul>
+
+<p>The following properties follow from ring axioms, we do not prove them since we've already proved it in the case of <a href="Z.html">integers</a> (without making it specific for integers alone).</p>
+
+<ol type="i">
+	<li><p><i>a</i> ⋅ 0 = 0 ⋅ <i>a</i> = 0;</p></li>
+	<li><p>(−<i>a</i>) ⋅ <i>b</i> = −(<i>a</i> ⋅ <i>b</i>);</i></p></li>
+</ol>
+
+<p id="iso"><b>6.1.2 Definition.</b> Let [<i>R</i>, +, ⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>a</i> + <i>b</i>) = <i>&phi;</i>(<i>a</i>) +' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; <i>R</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>a</i>⋅<i>b</i>) = <i>&phi;</i>(<i>a</i>) ⋅' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; <i>R</i></p>
+</div>
+
+<p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R</i> ≅ <i>R'</i>. The relation of being isomorphic is an equivalence relation.</p>
+
+<img src="img/isomorphism.png" alt="ring isomorphism"/>
+
+<p>Any algebraic property that holds on <i>R</i> is also true on <i>R'</i> and viceversa owning to the bijective map, hence from an algebraic point of view they are identical. When we'll study a particular ring we'll refer to its isomorphism class containing all rings isomorphic to the first.</p>
+
+<h3>Examples of ring isomorphism</h3>
+
+<ul>
+	<li><p>The isomorphism between the ring 𝕂[<i>x</i>] of polynomials with coefficients over 𝕂  and the ring of sequences having from a point on all 0 terms. We the operations we defined when discussing <a href="polynomials.html#isomo_pol_seq">polynomials</a></p></li>
+
+	<li><p>The map from ℂ to ℂ of complex numbers to their complex conjugates.</p></li>
+</ul>
+
+<p>Some properties satisfied by rings do not appear among ring axioms and are used to further characterize rings</p>
+
+<ul>
+	<li><p>A <i>commutative ring</i> satisfies the commutative property for multiplication.</p></li>
+
+	<li><p>A <i>commutative ring with identity</i> is a ring with a nonzero element, 1 &in; <i>R</i>, that is an identity under multiplication i.e. if 1 ⋅ <i>a</i> = <i>a</i> &forall;<i>a</i> &in; <i>R</i>.</p>
+	
+	<p>Let <i>R</i> be a ring with identity. The element <i>a</i> ∈ <i>R</i> is a <b>unit</b> or <b>invertible elements</b>, if it has a multiplicative inverse in <i>R</i>, that is if there exists <i>b</i> ∈ <i>R</i> such that <i>ab</i> = <i>ba</i> = 1, that is <i>a</i> divides 1. The element <i>b</i> is called the <b>inverse</b> of <i>a</i>, and is written <i>a</i><sup>−1</sup>. It is unique; for if <i>b</i> and <i>c</i> are both inverses of <i>a</i>, then</p>
+
+	<div class="eq">
+	<p><i>c</i> = 1<i>c</i> = (<i>ba</i>)<i>c</i> = <i>b</i>(<i>ac</i>) = <i>b</i> ⋅ 1 = <i>b</i>.</p>
+	</div>
+
+	<p>The units in ℤ are 1 and −1.</p>
+
+	<p><b>Remark</b> Let <i>u</i> &in; <i>R</i> be a unit with inverse <i>v</i>, so that <i>uv</i> = 1. For any <i>b</i> &in; <i>R</i>  we have <i>u</i>(<i>vb</i>) = (<i>uv</i>)<i>b</i> = 1<i>b</i> = <i>b</i>. Therefore</p>
+	
+	<div class="eq">
+	<p>a unit divides every element of <i>R</i></p>
+	</div>
+	
+	</li>
+	
+	<li><p>An <i>integral domain</i> is a commutative ring with identity and no ­zero-­divisors i.e. <i>ab</i> = 0 ⇒ <i>a</i> = 0 or <i>b</i> = 0.</p></li>
+
+	<li><p>A <a href="fields.html">field</a> is a <a href="rings.html">ring</a> in which the nonzero elements form an abelian group under multiplication.</p></li>
+
+	<li><p>A <i>division ring</i> is a ring with identity (not necessarily commutative).</p></li>
+</ul>
+
+<p><b>Proposition</b> The axioms for addition imply the following statements.</p>
+
+<ol type"a">
+	<li><p>If x + y = x + z then y = z.</p></li>
+	<li><p>If x + y = x then y = 0.</p></li>
+	<li><p>If x + y = 0 then y = - x.</p></li>
+	<li><p>-(-x) = x.</p></li>
+</ol>
+
+<p>Statement (a) is a cancellation law. Note that (b) asserts the uniqueness of the element whose existence is assumed in (A4), and that (c) does the same for (A5).</p>
+
+<p><b>Proof</b>. If x + y = x + z, the axioms (A) give</p>
+
+<div class="eq">
+<p>y = 0 + y = (-x + x) + y = - x + (x + y)<br>
+= -x + (x + z) = ( - x + x) + Z = 0 + Z = z.</p>
+</div>
+
+<p>This proves (a). Take Z = 0 in (a) to obtain (b). Take <i>z</i> = -<i>x</i> in (a) to obtain (c).<br>Since - x + x = 0, (c) (with -x in place of x) gives (d).</p>
+
+<p>It is clear that only rings sharing the properties mentioned above can be considered isomorphic e.g. a ring with unit cannot be isomorphic to a ring without unit. For example for any integer <i>n</i> &in; ℕ, let</p>
+
+<div class="eq">
+<p><i>n</i>ℤ = {<i>nk</i> : <i>k</i> &in; ℤ}</p>
+</div>
+
+<p>be the set of integer multiplies of <i>n</i>. The set <i>n</i>ℤ is a subset of ℤ and inherits addition and multiplication from ℤ. If we take two elements from <i>n</i>ℤ, say <i>nh</i> and <i>nk</i> we can see that</p>
+
+<div class="eq">
+<p><i>nk</i> + <i>nh</i> = <i>n</i> (<i>k</i> + <i>h</i>) &emsp; and &emsp; (<i>nk</i>)(<i>nh</i>) = <i>n</i>(<i>knh</i>)</p>
+</div>
+
+<p>by the distributive and associative laws. Addition and multiplication are both associative in <i>n</i>ℤ and multiplication is distributive with respect to addition. In <i>n</i>ℤ, 0 is the additive identity. However, there is no multiplicative identity in <i>n</i>ℤ unless <i>n</i> = &pm; 1. There are also no multiplicative inverses for <i>nk</i> unless <i>n</i> = &pm; 1 and <i>k</i> = &pm; 1.</p>
+
+<p>As a consequence ℤ is not isomorphic to 2ℤ. We can view <i>n</i>ℤ as a "substructure" of ℤ.</p>
+
+<p><b>6.1.4 Proposition.</b> Let <i>R</i> be a ring with identity.</p>
+
+<ol type="a">
+	<li><p>The identity is a unit; it is equal to its inverse.</p></li>
+	<li><p>If <i>a</i> is a unit, then so is <i>a</i><sup>−1</sup>; its inverse is <i>a</i>.</p></li>
+	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup>.</p></li>
+</ol>
+
+<p><b>Proof</b>.</p>
+
+<ol type="a">
+	<li><p>1 ⋅ 1 = 1</p></li>
+
+	<li><p>This is shown by the equation <i>aa</i><sup>−1</sup> = <i>a</i><sup>−1</sup> <i>a</i> = 1</p></li>
+
+	<li><p>We have (<i>ab</i>)(<i>b</i><sup>−1</sup><i>a</i><sup>−1</sup>) = <i>a</i> (<i>bb</i><sup>−1</sup>) <i>a</i><sup>−1</sup> = <i>aa</i><sup>−1</sup> = 1.</p>
+	<p>and, similarly, (<i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup>)(<i>ab</i>) = 1.□</p></li>
+</ol>
+
+<div id="associates">
+
+<p><b>6.1.5 Definition.</b> Two elements <i>a, b</i> of the integral domain <i>R</i> are said to be <b>associates</b> if there is a unit <i>u</i> ∈ <i>R</i> such that <i>b</i> = <i>au</i>. This is not a different proposition from the one we already gave when studying the integers: Two elements <i>a</i> and <i>b</i> of ℤ such that <i>a</i>|<i>b</i> and <i>b</i>|<i>a</i> are said associates</p>
+
+<p>If <i>a</i> and <i>b</i> are associates, <i>a</i> = <i>cb</i> and <i>b</i> = <i>da</i>, hence <i>a</i> = <i>cda</i>. The cancellation law gives 1 = <i>cd</i>, so both <i>c</i> and <i>d</i> are units. </p>
+
+<p>Note that, by the above Proposition, it follows that being associates is an equivalence relation: it is</p>
+
+<ul>
+	<li><p><i>reflexive</i>, since <i>a</i> = <i>a</i>1;</p></li>
+	<li><p><i>symmetric</i>, since <i>b</i> = <i>au</i> implies <i>a</i> = <i>bu</i><sup>−1</sup>;</p></li>
+	<li><p><i>transitive</i>, since <i>b</i> = <i>au</i> and <i>c</i> = <i>bv</i> imply <i>c</i> = <i>a</i>(<i>uv</i>).</p></li>
+</ul>
+
+<p><i>R</i> is partitioned into equivalence classes, called <b>associate classes</b>. For example, in ℤ, the associate classes are the sets {<i>n</i>, −<i>n</i>} for all non-negative integers <i>n</i>.</p>
+</div>
+
+<section aria-label="End">
+<a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>
+<a href="index.html">Index</a>
+<a href="subrings.html">Subrings &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

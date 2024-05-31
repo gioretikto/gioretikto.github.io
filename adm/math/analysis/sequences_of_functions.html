@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Sequences of Functions"/>
+	<title>Sequences of Functions</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Sequences of Functions</h1>
+
+<p>Let</p>
+
+<div class="eq">
+<p><i>f</i><sub>1</sub>(<i>x</i>), <i>f</i><sub>2</sub>(<i>x</i>), ...., <i>f<sub>n</sub></i>(<i>x</i>), ...</p>
+</div>
+
+<p>a sequence of real functions defined on a common interval <i>I</i> of ℝ. An example is</p>
+
+<div class="eq">
+<p>sin(<i>x</i>), sin(2<i>x</i>), sin(3<i>x</i>), ...</p>
+</div>
+
+<p>and we will write <i>f<sub>n</sub></i>(<i>x</i>) = sin <i>nx</i>. The difference with the <a href="sequences.html">sequences</a> that we already studied is that the terms are no longer real numbers but functions.</p>
+
+<p id="pointwise"><b>Deinition 8.2.1</b> (<i>Pointwise convergence</i>). Let <i>I</i> be a nonempty subset of ℝ. A sequence of real-valued functions {<i>f<sub>n</sub></i>}, where for each <i>n</i> ∈ ℕ, <i>f<sub>n</sub></i>: <i>I</i> → ℝ is said to converge pointwise on <i>I</i> to a function <i>f</i> iff for each x<sub>0</sub> ∈ <i>I</i> the sequence {<i>f<sub>n</sub></i>(<i>x</i><sub>0</sub>)} converges to a real number <i>f</i>(<i>x</i><sub>0</sub>). Thus, {<i>f<sub>n</sub></i>} converges pointwise on <i>I</i> to the function <i>f</i> iff given ε &gt; 0 and <i>x</i><sub>0</sub> ∈ <i>I</i> there is an <i>N</i> ∈ ℕ (depending on <i>ε</i> and the point <i>x</i><sub>0</sub>) such that <i>n</i> &gt; <i>N</i> implies |<i>f<sub>n</sub></i>(<i>x</i><sub>0</sub>) − <i>f</i>(<i>x</i><sub>0</sub>)| &lt; <i>ε</i>. The function <i>f</i> is called the pointwise limit of the sequence {<i>f<sub>n</sub></i>} on <i>I</i>. Clearly, the pointwise limit of a sequence, if it exists, it is unique. &emsp;□</p>
+
+<p><b>Example 8.2.2</b>. Consider the functions <i>f<sub>n</sub></i>(<i>x</i>) = sin <i>nx</i>/<i>n</i> defined for all <i>x</i> in the interval [0,&pi;]. From the inequality |sin <i>nx</i>/<i>n</i>| &le; 1/<i>n</i> it follows that <i>f<sub>n</sub></i>(<i>x</i>) ⟶ 0 as <i>n</i> ⟶ &infin;. Hence, the sequence {<i>f<sub>n</sub></i>} converges to 0 pointwise on the interval [0,&pi;]. </p>
+
+<p><b>Example 8.2.2</b>. For each natural number <i>n</i>, define</p>
+
+<div class="eq">
+<p><i>f</i><sub>n</sub>(<i>x</i>) = <i>x<sup>n</sup></i> &emsp; for 0 &le; <i>x</i> &le; 1</p>
+</div>
+
+<p>Since {<i>f<sub>n</sub></i>(1)} is a constant sequence whose constant values is 1.</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>f<sub>n</sub></i>(1) = 1</p>
+</div>
+
+<p>On the other hand,</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>x<sup>n</sup></i> = 0&emsp;if &emsp;0 &le; <i>x</i> &lt; 1 </p>
+</div>
+
+<p>Thus, the sequence of functions {<i>f<sub>n</sub></i>} converges pointwise on [0,1] to the function <i>f</i> defined by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mn>0</mn>
+          <mo>&#x2264;</mo>
+          <mi>x</mi>
+          <mo>&lt;</mo>
+          <mn>1.</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ f(x) = \begin{cases} 1, \quad &{\text{if }\quad}x = 1\\0,&{\text{if }\quad} 0 \le x \lt 1.\end{cases} $$ -->
+
+<p>Observe that in this example we have a sequence of continuous functions that converges pointwise to a discontinuous function.&emsp;■</p>
+
+<p><b>Example 8.2.3</b>. Consider <i>f<sub>n</sub></i>(<i>x</i>) = <i>nx</i>, <i>x</i> ∈ ℝ<sup>+</sup>. Since lim<sub><i>n</i>→∞</sub> <i>f<sub>n</sub></i>(<i>x</i>) = ∞ for any <i>x</i> > 0, the sequence {<i>f<sub>n</sub></i>} does not converge pointwise on ℝ<sup>+</sup>. Consider <i>f<sub>n</sub></i>(<i>x</i>) = cos<sup>n</sup> <i>x</i>, − π/2 ≤ <i>x</i> ≤ π/2. Clearly, the sequence {f<sub>n</sub>} converges pointwise to the function,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>x</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">[</mo>
+          <mo>&#x2212;</mo>
+          <mi>&#x3C0;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>0</mn>
+          <mo stretchy="false">)</mo>
+          <mo>&#x222A;</mo>
+          <mo stretchy="false">(</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mi>&#x3C0;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+          <mo>.</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ f(x) = \begin{cases} 0, \quad &{\text{if }\quad} x \in [-\pi/2,0) \cup (0, \pi/2]\\ 1,&{\text{if }\quad} x=0 .\end{cases} $$ -->
+
+<p><b>Example 8.2.4</b>. Consider <i>f<sub>n</sub></i>(<i>x</i>) = <i>n</i>/(<i>nx</i> + 1), <i>x</i> ∈ (0, 1). Clearly, the sequence {<i>f<sub>n</sub></i>} converges pointwise to the function <i>f</i>(<i>x</i>) = 1/<i>x</i>, <i>x</i> ∈ (0, 1). Since |<i>f<sub>n</sub></i>(<i>x</i>)| &lt; <i>n</i>, <i>x</i> ∈ (0, 1) each <i>f<sub>n</sub></i> is bounded on (0,1), but the pointwise limiting function <i>f</i>(<i>x</i>) = 1/<i>x</i> is not bounded on (0, 1). Hence, the pointwise limit function of bounded functions is not necessarily bounded. &emsp;■</p>
+
+<p><b>Example 8.2.5</b>. Consider <i>f<sub>n</sub></i>(<i>x</i>) = <i>x<sup>n</sup></i>; clearly <i>f<sub>n</sub></i> converges pointwise on [0,1] to the function</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mn>0</mn>
+          <mo>&#x2264;</mo>
+          <mi>x</mi>
+          <mo>&lt;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+          <mo>.</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ f(x) = \begin{cases} 0, \quad &{\text{if }\quad} 0 \le x \lt 1 \\ 1,&{\text{if }\quad} x=1 .\end{cases} $$ -->
+
+<p>Here each <i>f<sub>n</sub></i> is continuous and differentiable on [0, 1], but <i>f</i> is neither differentiable nor continuous at <i>x</i> = 1. Hence, the pointwise limit function of continuous (differentiable) functions is not necessarily continuous (differentiable).&emsp;■</p>
+
+<p>From the preceding examples it is clear that for a given sequence of functions pointwise convergence is only of limited importance, it does not guarantee that <i>f</i> is continuous as <i>f<sub>n</sub></i> and therefore, we need a stronger concept which we introduce now.</p>
+
+<p><b>Definition 8.2.6</b>. The sequence {<i>f<sub>n</sub></i>} of functions <b>converges uniformly</b> on a set <i>E</i> to the function <i>f</i>, if, for any <i>&epsilon;</i> &gt; 0, there is a <i>n</i><sub>0</sub> such that</p>
+
+<div class="eq">
+<p>|<i>f</i><sub>n</sub>(<i>x</i>) − <i>f</i>(<i>x</i>)| &lt; <i>&epsilon;</i> &emsp;forl all&emsp; <i>n</i> &gt; <i>n</i><sub>0</sub> &emsp; and all &emsp; <i>x</i> &in; <i>E</i>.</p>
+</div>
+
+<p>we write</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>f<sub>n</sub></i>(<i>x</i>) = <i>f</i>(<i>x</i>)&emsp;□</p>
+</div>
+
+<p>The crucial part of the previous definition is that |<i>f</i><sub>n</sub>(<i>x</i>) − <i>f</i>(<i>x</i>)| &lt; <i>&epsilon;</i> for <i>every x</i> in <i>E</i> (if <i>n</i> &gt; <i>n</i><sub>0</sub>). That is, <i>n</i><sub>0</sub> depends on <i>&epsilon;</i>, but <i>not</i> on <i>x</i>.</p>
+
+<p>Uniform convergence means that eventually the graph of <i>f<sub>n</sub></i> is arbitrarly close to the graph of <i>f</i>. <br>We underline that uniform convergence of a sequence entails its point-wise convergence. The converse is false as the next example shows.</p>
+
+<p><b>Example 8.2.7</b>. The sequence of functions <i>f<sub>n</sub></i>(<i>x</i>) = <i>x<sup>n</sup></i> defined for <i>x</i> &in; [0,1] converges pointwise to the function <i>f</i> defined by <i>f</i>(<i>x</i>) = 0 if 0 &le; <i>x</i> &lt; 1 and <i>f</i>(1) = 1, but is not uniformly converging to <i>f</i>, since just before <i>x</i> =1:</p>
+
+<div class="eq">
+<p>sup |<i>f<sub>n</sub></i> - <i>f</i>| = sup |<i>f<sub>n</sub></i> - 0| = sup |<i>f<sub>n</sub></i>| = 1</p>
+</div>
+
+<p><i>f<sub>n</sub></i> assumes some value really close to 1, before <i>x</i> = 1, as the Figure shows. </p>
+
+<img src="img/x_n^n.png" alt="sequence x_n^n"/>
+
+<p><b>Example 8.2.8</b>. Consider <i>f<sub>n</sub></i>(<i>x</i>) = (sin <i>nx</i>)/<i>n</i>, <i>x</i> ∈ ℝ. The sequence {<i>f<sub>n</sub></i>} converges pointwise to <i>f</i>(<i>x</i>) = 0, <i>x</i> ∈ ℝ. Now since |<i>f<sub>n</sub></i>(<i>x</i>) − 0| = | sin <i>nx</i>|/<i>n</i> &le; 1/<i>n</i> < <i>ε</i> for all <i>x</i> ∈ ℝ, <i>n</i> > 1/<i>ε</i>, the convergence is in fact uniform. Note that the sequence {<i>f'<sub>n</sub></i>} of derivatives <i>f'<sub>n</sub></i>(<i>x</i>) = cos <i>nx</i> does not converge pointwise on ℝ. Hence, there exists differentiable functions <i>f<sub>n</sub></i> and <i>f</i> such that <i>f<sub>n</sub></i> → <i>f</i> uniformly, but lim<sub><i>n</i> → ∞</sub> <i>f'<sub>n</sub></i>(<i>x</i>) does not exist at least for some <i>x</i>. &emsp;■</p>
+
+<p>From the previous example we see that in general uniform convergence does not guarantee that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <munder>
+        <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo accent="false" stretchy="false">&#x2192;</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+        </mrow>
+      </munder>
+      <msub>
+        <mi>f</mi>
+        <mi>n</mi>
+      </msub>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mi>f</mi>
+    <mi>n</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+ <mtext>&emsp; 8.2.1</mtext>
+</math>
+
+<!-- $$ \left(\lim_{n \to \infty} f_n(x) \right)' = \lim_{n \to \infty} f'_n(x) $$ -->
+
+<p>holds.</p>
+
+<p>Thus the uniform convergnce of continous functions implies the limit function <i>f</i> to be also continous, on the same domain but differentiabily is not guarantee.</p>
+
+<p><b>Theorem 8.2.9</b>. Let {<i>f<sub>n</sub></i>} be a sequence of bounded functions which converge uniformly on <i>I</i> to the function <i>f</i>. Then, <i>f</i> is bounded on <i>I</i>.</p>
+
+<p><b>Proof</b>. In the definition of uniform convergence of {<i>f<sub>n</sub></i>} on <i>I</i> let <i>ε</i> = 1, so that there exists an <i>N</i> ∈ ℕ such that |<i>f<sub>n</sub></i>(<i>x</i>) − <i>f</i>(<i>x</i>)| < 1 for all <i>x</i> ∈ <i>I</i>, <i>n</i> ≥ <i>N</i>, which implies that |<i>f</i>(<i>x</i>)| ≤ 1 + |<i>f<sub>n</sub></i>(<i>x</i>)|. Now since each <i>f<sub>n</sub></i> is bounded on <i>I</i>, the result follows. &emsp;□</p>
+
+<p><b>Theorem 8.2.10</b>. Let {<i>f<sub>n</sub></i>} be a sequence of continuous functions on the domain <i>I</i>. Assume that the sequence converges uniformly on the domain <i>I</i> to the function <i>f</i>. Then <i>f</i> is continuous on <i>I</i>.</p>
+
+<p><b>Proof</b>. Let <i>x</i><sub>0</sub> &in; <i>I</i>. We shall show that <i>f</i> is continuous at <i>x</i><sub>0</sub>. Let <i>&epsilon;</i> &gt; 0. Uniform convergence implies that there exists an integer <i>N</i>, such that if <i>n</i> &gt; <i>N</i>, then |<i>f<sub>n</sub></i>(<i>x</i>) − <i>f</i>(<i>x</i>)| &lt; <i>&epsilon;</i>/3 for all <i>x</i> &in; <i>I</i>. Then in particular since <i>f<sub>n</sub></i> is continuous at <i>x</i><sub>0</sub>, there exsts a <i>&delta;</i> &gt;, in which we have |<i>f<sub>n</sub></i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>)| &lt; <i>&epsilon;</i>/3 for all <i>x</i> &in; <i>I</i> with |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i>. We have that if <i>x</i> in <i>I</i> and |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i></p>
+
+<div class="eq">
+<p>|<i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>)| = |<i>f</i>(<i>x</i>) − <i>f<sub>n</sub></i>(<i>x</i>) + <i>f<sub>n</sub></i>(<i>x</i>) − <i>f<sub>n</sub></i>(<i>x</i><sub>0</sub>) + <i>f<sub>n</sub></i>(<i>x</i><sub>0</sub>)| &le; |<i>f</i>(<i>x</i>) − <i>f<sub>n</sub></i>(<i>x</i>)| + |<i>f<sub>n</sub></i>(<i>x</i>) − <i>f<sub>n</sub></i>(<i>x</i><sub>0</sub>)| + |<i>f<sub>n</sub></i>(<i>x</i><sub>0</sub>) − <i>f</i>(<i>x</i><sub>0</sub>)| <br>&lt; <i>&epsilon;</i>/3 + <i>&epsilon;</i>/3 + <i>&epsilon;</i>/3 = <i>&epsilon;</i>. &emsp;□ </p>
+</div>
+
+<p><b>Remark 8.2.11</b>. In Theorem 8.2.10 uniform convergence is a sufficient condition but not a necessary condition. For this, consider the sequence of continuous functions with <i>f<sub>n</sub></i> (<i>x</i>) = <i>nx</i>/(1 + <i>n</i><sup>2</sup>x<sup>2</sup>), <i>x</i> ∈ ℝ, which converges pointwise to a continuous function <i>f</i>(<i>x</i>) = 0, <i>x</i> ∈ ℝ (see <a href="exercises_sequences_functions.html">exercise 1</a>). Since <i>f<sub>n</sub></i> (1/<i>n</i>) = 1/2, <i>n</i> ≥ 1 the convergence is not uniform. &emsp;■</p>
+
+<p><b>Theorem 8.2.12</b>. Let {<i>f<sub>n</sub></i>} be a sequence of Riemann integrable functions on [<i>a, b</i>], which converge uniformly to the function <i>f</i>. Then, <i>f</i> is Riemann integrable on [<i>a, b</i>].</p>
+
+<p><b>Proof</b>. Since Riemann integrable functions on [<i>a, b</i>] are bounded and the convergence of the sequence {<i>f<sub>n</sub></i>} on [<i>a, b</i>] is uniform, from Theorem 8.2.9 it follows that the limiting function <i>f</i> is also bounded on [<i>a, b</i>]. &emsp;□</p>
+
+<p><b>Theorem 8.2.13</b>. Let {<i>f<sub>n</sub></i>} be a sequence of Riemann integrable functions on [<i>a, b</i>], which converge uniformly to the function <i>f</i>. Then, <i>f</i> is Riemann integrable on [<i>a, b</i>], and</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <msub>
+    <mi>f</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>f</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ \lim_{n \to \infty} \int_a^b f_n(x)\text{d}x = \int_a^b \lim_{n \to \infty} f_n(x) \text{d}x = \int_a^b f(x) \text{d}x $$ -->
+
+<p>Since the sequence {<i>f<sub>n</sub></i>} converges uniformly to <i>f</i>, there exists <i>N</i> ∈ ℕ such that for all <i>x</i> ∈ [<i>a, b</i>],</p>
+
+<div class="eq">
+<p>|<i>f<sub>n</sub></i>(<i>x</i>) − <i>f</i>(<i>x</i>)| &lt; &epsilon;/(<i>b</i> − <i>a</i>), &emsp;<i>n</i> &gt; <i>N</i></p>
+</div>
+
+<p>In view of Theorem 8.2.12, the function <i>f</i> is Riemann integrable on [<i>a, b</i>]. Thus, together with <a href="integral_properties.html">Theorem 7.2.1</a>, the functions <i>f<sub>n</sub>, f</i>, and <i>f<sub>n</sub></i> − <i>f</i> are Riemann integrable on [<i>a, b</i>]. Hence, from Threom 8.2.9, for all <i>x</i> ∈ [<i>a, b</i>], it follows that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <msubsup>
+            <mo data-mjx-texclass="OP">&#x222B;</mo>
+            <mi>a</mi>
+            <mi>b</mi>
+          </msubsup>
+          <msub>
+            <mi>f</mi>
+            <mi>n</mi>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mtext>d</mtext>
+          <mi>x</mi>
+          <mo>&#x2212;</mo>
+          <msubsup>
+            <mo data-mjx-texclass="OP">&#x222B;</mo>
+            <mi>a</mi>
+            <mi>b</mi>
+          </msubsup>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mtext>d</mtext>
+          <mi>x</mi>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <msubsup>
+            <mo data-mjx-texclass="OP">&#x222B;</mo>
+            <mi>a</mi>
+            <mi>b</mi>
+          </msubsup>
+          <mo stretchy="false">[</mo>
+          <msub>
+            <mi>f</mi>
+            <mi>n</mi>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mo>&#x2212;</mo>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mo stretchy="false">]</mo>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>&#x2264;</mo>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mi>a</mi>
+          <mi>b</mi>
+        </msubsup>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <mo stretchy="false">[</mo>
+          <msub>
+            <mi>f</mi>
+            <mi>n</mi>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mo>&#x2212;</mo>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mo stretchy="false">]</mo>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mi>x</mi>
+        <mo>&lt;</mo>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mi>a</mi>
+          <mi>b</mi>
+        </msubsup>
+        <mfrac>
+          <mi>&#x3B5;</mi>
+          <mrow>
+            <mi>b</mi>
+            <mo>&#x2212;</mo>
+            <mi>a</mi>
+          </mrow>
+        </mfrac>
+        <mtext>d</mtext>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>&#x3B5;</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{align} \left|\int_a^b f_n(x) \text{d}x - \int_a^b f(x) \text{d}x \right| &= \left| \int_a^b [f_n(x) - f(x)] \right| \\
+&\le \int_a^b \left| [f_n(x) - f(x)] \right| \text{d}x \lt \int_a^b \frac{\varepsilon}{b-a} \text{d}x = \varepsilon \end{align} $$ -->
+
+<p><b>Remark 8.2.14</b>. In Theorem 8.2.10 uniform convergence is a sufficient condition but not a necessary condition. To show this, we consider again (see Remark 8.2.11) the sequence of continuous functions <i>f<sub>n</sub></i>(<i>x</i>) = <i>nx</i>/(1 + <i>n</i><sup>2</sup><i>x</i><sup>2</sup>), <i>x</i> ∈ [0, 1], which converges pointwise to a continuous function <i>f</i>(<i>x</i>) = 0, <i>x</i> ∈ [0, 1], but not uniformly to <i>f</i>(<i>x</i>) = 0, <i>x</i> ∈ [0, 1]. For this sequence, we have</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> ∫<sup><sup>1</sup></sup><sub><sub>0</sub></sub> <i>f<sub>n</sub></i>(<i>x</i>) d<i>x</i> = lim<sub><i>n</i> ⟶ &infin;</sub> ∫<sup><sup>1</sup></sup><sub><sub>0</sub></sub> <i>nx</i>d<i>x</i>/(1 + <i>n</i><sup>2</sup><i>x</i><sup>2</sup>) = <br> lim<sub><i>n</i> ⟶ &infin;</sub> ln(1 + <i>n</i><sup>2</sup>)/2<i>n</i> = 0 = ∫<sup><sup>1</sup></sup><sub><sub>0</sub></sub> <i>f</i>(<i>x</i>) d<i>x</i> &emsp;■</p>
+</div>
+
+<p>The following result gives sufficient conditions for the equality in (Eq. 8.2.1).</p>
+
+<p><b>Theorem 8.2.15</b>. Let {<i>f<sub>n</sub></i>} be a sequence of differentiable functions on [<i>a, b</i>]. Suppose that {<i>f<sub>n</sub></i>} converges pointwise on [<i>a, b</i>] to <i>f</i>, and {<i>f'<sub>n</sub></i>} converges uniformly on [<i>a, b</i>] to <i>g</i>, then <i>f</i> is continuously differentiable on [<i>a, b</i>], further {<i>f<sub>n</sub></i>} converges uniformly to <i>f</i> and {<i>f'<sub>n</sub></i>} converges uniformly to <i>f'</i> on [<i>a, b</i>], i.e., lim<sub><i>n</i>→∞</sub> <i>f'<sub>n</sub></i>(<i>x</i>) = <i>f'</i>(<i>x</i>) = <i>g</i>(<i>x</i>), <i>x</i> ∈ [<i>a, b</i>].</p>
+
+<p><b>Proof</b>. Since {<i>f'<i>n</i></i>} convergece uniformly to <i>g</i> [<i>a,b</i>]. Theorem 8.2.13 implies that the function <i>g</i> is continuous on [<i>a. b</i>]. Thus, for each <i>x</i> &in; [<i>a,b</i>], Theorem 8.2.14 implies that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>x</mi>
+  </msubsup>
+  <msubsup>
+    <mi>f</mi>
+    <mi>n</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>x</mi>
+  </msubsup>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ \lim_{n \to \infty} \int_a^x f'_n(t) \text{d}t = \int_a^x g(t) \text{d}t $$ -->
+
+<p>Now, from <a href="fundamental_calculus.html">Corollary 7.3.4</a>, we have</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> [<i>f'<sub>n</sub></i>(<i>x</i>) − <i>f<sub>n</sub></i>(<i>a</i>)] = ∫<sup><sup><i>a</i></sup></sup><sub><sub><i>x</i></sub></sub> <i>g</i>(<i>t</i>) d<i>t</i></p>
+</div>
+
+<p>which in view of lim<sub><i>n</i> → ∞</sub> <i>f<sub>n</sub></i>(<i>x</i>) = <i>f</i>(<i>x</i>) and lim<sub><i>n</i>→∞</sub> <i>f<sub>n</sub></i>(<i>a</i>) = <i>f</i>(<i>a</i>) implies that</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) − <i>f</i>(<i>a</i>) = ∫<sup><sup><i>a</i></sup></sup><sub><sub><i>x</i></sub></sub> <i>g</i>(<i>t</i>) d<i>t</i>, &emsp; <i>x</i> &in; [<i>a,b</i>]</p>
+</div>
+
+<p>But, from The Fundamental Theorem of Calculus, we find <i>f′</i>(<i>x</i>) = <i>g</i>(<i>x</i>), <i>x</i> ∈ [<i>a, b</i>].&emsp;□</p>
+
+<section aria-label="End">
+<a href="improper_integrals_unbounded.html">&#171;Improper Integrals over Unbounded Interval</a>
+<a href="index.html">Index</a>
+<a href="series_functions.html">Series of functions&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

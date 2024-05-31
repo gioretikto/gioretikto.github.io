@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Limiti continuità e differenziabilità per funzioni vettoriali"/>
+    <title>Limiti continuità e differenziabilità per funzioni vettoriali</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Limiti continuità e differenziabilità per funzioni vettoriali</h1>
+
+<p>Definiamo ora i concetti di limite, continuità, differenziabilità per una funzione di più variabili a valori vettoriali. Per studiare una funzione a valori vettoriali si può ragionare componente per componente. Valgono quindi le nozioni di limite, continuità e differenziabilità già viste per funzioni reali di più variabili.</p>
+
+<p>Consideriamo la funzione <i><b>f</b>: A &subseteq; ℝ<sup>n</sup> → ℝ<sup>m</sup></i>; la variazione della funzione quando <b>x</b> passa da <i><b>x</b></i> a <i><b>x<sub>0</sub> + h</b></i> è un vettore ossia <b>f(x<sub>0</sub> + h</b>) - <b>f(x<sub>0</sub></b>) &in; ℝ<sup>m</sup>.</i></p>
+
+<div class="def">
+<p><b>Teorema FV.1- Limite di funzione vettoriale</b> - I limiti di funzioni a valori vettoriali possono essere calcolati componente per componente. In formule</p>
+
+<img src="img/f_vettoriale_limite2.png" alt="limite funzione vettoriale"/>
+
+</div>
+
+<p>È naturale, ora che abbiamo a disposizione il concetto di limite, definire la nozione di funzione continua in un punto e in un insieme.</p>
+
+<div class="def">
+<p><b>Definizione - Continuità funzione vettoriale</b> - Sia <i><b>f</b>: A &subseteq; ℝ<sup>n</sup> → ℝ<sup>m</sup></i>, sia <i><b>x<sub>0</sub></b></i> ∈ A. La funzione <b>f</b> dicesi continua in <i><b>x</b><sub>0</sub></i> se per ogni ε > 0 esiste un δ > 0 tale che</p>
+
+<div class="eq">
+<p><i>&forall; <b>x</b> &in; A, &emsp; ||<b>x-x</b><sub>0</sub>|| &lt; &delta; ⇒||f(<b>x</b>) -<b>x</b><sub>0</sub>|| &lt; &epsilon;</i></p>
+</div>
+
+<p>se</p>
+
+<p>dove quest'ultimo è il limite di una funzione <i>reale</i> di più variabili, che è stato già definito.</p>
+
+</div>
+
+<p><p>le <i>f<sup>i</sup></i> si diranno <i>componenti di <b>f</b></i> e sono funzioni <i>reali di più variabili</i>. Si dimostra che il limite si calcola componente per componente, ossia</p>
+
+<img src="img/f_vettoriale_limite.png" alt="limite funzione vettoriale"/>
+
+<p>Così pure, definito in maniera naturale il concetto di <i>funzione continua</i> (in un punto o un aperto) si dimostra che la funzione <i>f</i> è continua se e solo se lo sono tutte le sue componenti.</p>
+
+<p>Si può facilmente dimostrare una caratterizzazione equivalente della continuità basata sulla convergenza delle successioni.</p>
+
+<div class="def">
+<p><b>f</b> è una funzione continua in <b>x<sub>0</sub></b> se e soltanto se per ogni successione convergente ad <b>x<sub>0</sub></b> si ha</p>
+
+<p><i>lim <sub>n → ∞</sub> f(x<sub>n</sub>) = f(<b>x<sub>0</sub></b>)</i></p>
+</div>
+
+<p>Per quanto riguarda la <i>differenziabilità</i>:</p>
+
+<div class="def">
+
+<p><b>Definizione- Differenziabilità</b> - Una funzione <i><b>f</b>: D &subseteq; ℝ<sup>n</sup> → ℝ<sup>m</sup></i> si dice differenziabile in <b>x<sub>0</sub></b> se tutte le componenti <i>f<sub>i</sub></i> lo sono. Esplicitamente, questo significa che, per <i>i = 1,2,...,m</i> valgono le relazioni:</p>
+
+<div class="eq">
+<img src="img/differenziabilità_vettoriali.png" alt="differenziabilità funzioni vettoriali"/>
+<!--f_i(\mathbf{x_0} + \mathbf{h}) - f_i(\mathbf{x_0}) = \sum_{j=i}^n \frac{\partial f_i} {\partial x_j} (\mathbf{x_0}) h_j + o(|\mathbf{h}|) \quad \text{per } \mathbf{h}\to \mathbf{0} -->
+</div>
+
+<p>Si possono scrivere queste <i>m</i> relazioni in forma compatta usando una <i>notazione matriciale</i>. Rappresentiamo la funzione <b>f</b> e i punti di ℝ<sup>n</sup> come vettori colonna delle loro componenti.</p>
+
+<img src="img/diff_vettoriali_compatta.png" alt="differenziabilità funzioni vettoriali"/>
+
+<p>e introduciamo la <i>matrice Jacobiana</i> di <b>f</b>, che ha per righe i gradienti delle componenti di <b>f</b> calcolati nel punto <b>x<sub>0</sub></b>:</p>
+
+<p>La matrice Jacobiana ha <i>m</i> righe e <i>n</i> colonne. La differenziabilità di <b>f</b> si esprime allora con la relazione:</p>
+
+<div class="eq">
+<p><i><b>f</b>(<b>x<sub>0</sub></b> + <b>h</b>) - <b>f</b>(<b>x<sub>0</sub></b>) = <b>J</b> f(<b>x<sub>0</sub></b>) <b>h</b> + o(|<b>h</b>|), &emsp; <b>h</b> → <b>0</b></i></p>
+</div>
+
+<p>dove <i><b>J</b> f(<b>x<sub>0</sub></b>) <b>h</b></i> denota il prodotto matriciale (righe per colonne) tra la matrice Jacobiana di <i><b>f</b></i> calcolata in <i><b>x<sub>0</sub></b></i> e il vettore incremento <b>h</b> e il simbolo o(|<b>h</b>|) indica ora un <i>vettore</i> che, diviso per |<b>h</b>|, tende a zero per <i><b>h</b> → <b>0</b></i>.</p>
+
+<p>Il <i>differenziale</i> di <i><b>f</b></i> (calcolato in <b>x<sub>0</sub></b>) è la funzione lineare d<b>f</b>(<b>x<sub>0</sub></b>): ℝ<sup>n</sup> → ℝ<sup>m</sup></i> definita da:</p>
+
+<div class="eq">
+<p><i>d<b>f</b>(<b>x<sub>0</sub></b>): <b>h</b> ↦ J <b>f</b>(<b>x<sub>0</sub></b>)<b>h</b></i></p>
+</div>
+
+</div>
+
+<p>Ragionando componente per componente e applicando la condizione sufficiente per la differenziabilità delle funzioni a valori reali, si vede subito che:</p>
+
+<div class="def">
+<p><b>Teorema</b> - Condizione sufficiente affinché una funzione <i><b>f</b>: A &subseteq; ℝ<sup>n</sup> → ℝ<sup>m</sup></i>, con <i>A</i> aperto, risulti differenziabile in <i>A</i> è che tutti gli elementi della sua matrice Jacobiana siano funzioni continue in <i>A</i>.</p>
+</div>
+
+<p>Questo criterio è quello che applicheremo di solito per garantire la differenziabilità di una funzione di più variabili a valori vettoriali, senza dover verificare direttamente la definizione. Anche nel aso vettoriale, inoltre, è vero che se <b>f</b> è differenziabile, a maggior ragione è derivabile e continua (ma non vale il viceversa). Naturalmente le funzioni <i>f: ℝ<sup>n</sup> → ℝ</i> e <i><b>f</b>: ℝ → ℝ<sup>m</sup></i> rientrano come casi particolari nella definizione appena data di differenziabilità. COn le notazioni che abbiamo introdotto, per una funzione <i>f: ℝ<sup>n</sup> → ℝ</i> la matrice Jacobiana è semplicemente il gradiente di <i>f</i>, scritto come <i>vettore riga</i>, mentre per una funzione <i><b>f</b>: ℝ → ℝ<sup>m</sup></i> la matrice Jacobiana è semplicemente il vettore derivato di <i><b>f</b></i>, scritto come <i>vettore colonna</i>. (Non c'è niente di assoluto nella convenzione assunta su come scrivere righe e colonne della matrice J acobiana, tuttavia è comodo fissare una convenzione e
+attenersi sempre a quella).</p>
+
+<p>La nozione di matrice J acobiana permette di enunciare il teorema di differenziazione delle fu,nzioni composte in un'unica forma generale.</p>
+
+<div class="def">
+<p>Siano <i><b>f</b>: A &subseteq; ℝ<sup>n</sup> → ℝ<sup>m</sup></i> e <i><b>g</b>: B &subseteq; ℝ<sup>m</sup> → ℝ<sup>k</sup></i> e supponiamo che sia ben definita almeno in un intorno <i>C</i> di <i><b>x</b><sub>0</sub> &in; A</i> la funzione composta <i><b>g</b></i> o <i>f</b>: C &subseteq;  ℝ<sup>n</sup> → ℝ<sup>k</sup></i>. Se <i><b>f</b></i> differenziabile in <i><b>x</b><sub>0</sub></i> e <i><b>g</b></i> differenziabile in <i><b>y</b><sub>0</sub> = <b>f</b>(<b>x</b><sub>0</sub>), acnhe <i><b>g</b> o <b>f</b></i> è differenziabile in <b>x</b><sub>0</sub> e la sua matrice Jacobiana si ottiene come prodotto (matriciale) delle matrici Jacobiane di <b>f</b> e <b>g</b>, calcolate nei punti <i><b>x</b><sub>0</sub></i> e <i><b>f</b>(<b>x</b><sub>0</sub>)</i>, rispettivamente:</p>
+
+<div class="eq">
+<p><i>J(<b>g</b> o f) (x<sub>0</sub>) = J <b>g</b>(f(<b>x</b><sub>0</sub>) J <b>f</b>(<b>x</b><sub>0</sub>)</i></p>
+</div>
+</div>
+
+<p>La dimostrazione di questo teorema usa le stesse tecniche viste nella dimostrazione dei suoi casi particolari che abbiamo appena citato e perciò verrà omessa. Nei prossimi paragrafi ci occuperemo del calcolo differenziale per due classi di funzioni introdotte nel paragrafo 1: le superfici in forma parametrica e le trasformazioni di coordinate in ℝ<sup>n</sup>. Generalizzando il concetto di superficie in forma parametrica ci occuperemo poi di varietà <i>k</i>-dimensionali in ℝ<sup>n</sup> I argomento connesso alla generalizzazione del teorema di Dini sulle funzioni definite implicitamente. Legato allo studio delle trasformazioni di coordinate nello spazio, invece, è il problema di fornire delle condizioni per l'invertibilità almeno locale di una trasformazione. Infine, potremo riprendere il tema dell'ottimizzazione, trattando il caso in cui il problema è soggetto a vincoli, espressi da equazioni o disequazioni, argomento che richiederà alcuni degli strumenti sviluppati in questo capitolo.</p>
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="superfici.html">Superfici &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!-- Written by Giovanni Resta giovannirestadev@gmail.com replace a string with another-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Replace string</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+	<script type="text/javascript" id="MathJax-script" async src="js/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<article>
+
+<h1>Replace string</h1>
+
+<table class="noborder">
+
+<tr><th>Input text</th> <th>Search string</th> <th>Replace string</th></tr>
+
+<tr><td rowspan="2">
+  <textarea></textarea>
+  <br>
+  <input id="myClearBtn" type="button" value="Clear">
+  <input id="myReplaceBtn" type="button" value="Replace all">
+</td>
+<td>
+  <input class="dark" type="text" id="search1" name="search1" value=' class="MuiTypography-root MuiTypography-body1 css-1rmcmsc"'></td><td>
+  <input class="dark" type="text" id="replace1" name="replace1" ></td></tr>
+
+<tr><td>  <input class="dark" type="text" id="search2" name="search2" value=' class="MuiTypography-root MuiTypography-italic css-uehu9e"'></td><td>
+  <input class="dark" type="text" id="replace2" name="replace2">
+</td></tr>
+
+<tr><td></td> <td>  <input class="dark" type="text" id="search3" name="search3" value='<span class="tc-smallcaps">'></td><td>
+  <input class="dark" type="text" id="replace3" name="replace3" ></td></tr>
+
+<tr><td></td> <td>  <input class="dark" type="text" id="search4" name="search4" value="</span>"></td><td>  <input class="dark" type="text" id="replace4" name="replace4" ></td>
+</tr>
+</table>
+
+<script type="text/javascript">
+const txtarea = document.querySelector('textarea');
+
+const stringToFind1 = document.getElementById("search1");
+const stringToReplaceWith1 = document.getElementById("replace1");
+
+const stringToFind2 = document.getElementById("search2");
+const stringToReplaceWith2 = document.getElementById("replace2");
+
+const stringToFind3 = document.getElementById("search3");
+const stringToReplaceWith3 = document.getElementById("replace3");
+
+const stringToFind4 = document.getElementById("search4");
+const stringToReplaceWith4 = document.getElementById("replace4");
+
+txtarea.addEventListener('keyup', () => {
+		const content = txtarea.value;
+})
+
+function eraseText() {
+	const txtarea = document.querySelector('textarea');
+	txtarea.value = "";
+}
+
+function replaceText() {
+	txtarea.value = txtarea.value.replaceAll(stringToFind1.value, stringToReplaceWith1.value);
+	txtarea.value = txtarea.value.replaceAll(stringToFind2.value, stringToReplaceWith2.value);
+	txtarea.value = txtarea.value.replaceAll(stringToFind3.value, stringToReplaceWith3.value);
+	txtarea.value = txtarea.value.replaceAll(stringToFind4.value, stringToReplaceWith4.value);
+
+	if (txtarea.value.indexOf('<aside>') != -1)
+		txtarea.value = txtarea.value.substring(0, txtarea.value.indexOf('<aside>'))
+
+	txtarea.value = `<p>${txtarea.value}</p>`;
+}
+
+const clearButton = document.getElementById("myClearBtn");
+clearButton.addEventListener("click", eraseText);
+	  
+const replaceButton = document.getElementById("myReplaceBtn");
+replaceButton.addEventListener("click", replaceText);
+</script>
+
+</article>
+
+</body>
+
+</html>

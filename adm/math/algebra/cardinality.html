@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cardinality"/>
+    <title>Cardinality</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Cardinality</h1>
+
+<p>The concept of a bijective function allows us to compare qunatitavely two sets: per sapere se i coperchi sono tanti quanto le pentole, basta coprire ogni pentola con un coperchio: se ogni pentola riceve un coperchio e non restano coperchi vuol dire che i coperchi sono tanti quanto le pentole.</p>
+
+<p><b>1.8.1 Definition</b>. Two sets <i>X</i> and <i>Y</i> are said to have the same cardinality if there exists a bijection <i>f</i>: <i>X</i> → <i>Y</i>, in which case we write |<i>X</i>| = |<i>Y</i>|. If there is an injection <i>f</i>: <i>X</i> → <i>Y</i>, then <i>X</i> is said to have cardinality less than or equal to that of <i>Y</i>, and we write |<i>X</i>| ≤ |<i>Y</i>|.&emsp;□</p>
+
+<p>Two finite sets have the same cardinality if, and only if, they have the same number of elements. It is thus common to write |<i>X</i>| for a finite set <i>X</i> to indicate the number of elements in <i>X</i>.</p>
+
+<p>It can be easily verified that the property of <i>having the same cardinality</i> in as equivalence relations among sets. Two equipotent sets are indicate as</p>
+
+<div class="eq">
+<p><i>A</i> ~ <i>B</i></p>
+</div>
+
+<p><b>1.8.2 Definition</b>. We define the <i>cardinality</i> or <i>cardinal number</i> or <i>power/potency</i> of a set <i>X</i>, the equipotency class to which <i>X</i> belongs to. We indicate it as Card(<i>X</i>). &emsp;□</p>
+
+<p>So a cardinal number is the class of sets equipotent to a given set.</p>
+
+<p><b>1.8.3 Definition</b>. A set <i>A</i> is said <i>finite</i> if for some <i>n</i> &in; ℕ, <i>n</i> &ne; 0, <i>A</i> is equipotent to <i>I<sub>n</sub></i> = {0, 1, 2, ..., <i>n</i> − 1}. A set which is not finite is said <i>infinite</i>.&emsp;□</p>
+
+<p>In the case of <i>finite</i> sets the notion of cardinality coincides with the notion of <i>number of elements</i> of the set and the cardinality of <i>I<sub>n</sub></i> is <i>n</i>.</p>
+
+<p>For example, given the set <i>A</i> = {1, 2, 5, Italy, {6,π}, 0.3} we can count the number of elements it contains, a total of six. Thus, the cardinality of the set <i>A</i> is 6, or |<i>A</i>| = 6. Since sets can be infinite, the cardinality of a set can be an infinity.</p>
+
+<p>In other words, natural numbers 0, 1, 2,.. become cardinal numbers (finite): 0 is the cardinal number of the empty set Ø, 1 is the cardinal number of {Ø} (and of any other set belonging to the same equipotency class), 2 is the cardinal number of {Ø,{Ø}} (and of any other set of the same class), 3 is the cardinal number of {Ø,{Ø},{Ø,{Ø}}, and so on. Thus, natural numbers are nothing more that particular cardinalities. The potency of ℕ, is represented by ℵ<sub>0</sub> (read <i>alef-zero</i>) and it known as the cardinality of the countable set.</p>
+
+<p id="pigeon"><b>1.8.3 Theorem</b>. Let <i>f</i>: <i>X</i> ⟶ <i>Y</i> be a function where, <i>X,Y</i> are finite sets. Then,</p>
+
+<ol type="i">
+	<li><p>if |<i>X</i>| = |<i>Y</i>| then <i>f</i> is one-to-one if and onlu if it is onto;</p></li>
+	<li><p>if |<i>X</i>| &gt; |<i>Y</i>| then <i>f</i> cannot be one-to-one. More generally, if <i>k</i> is a positive integer such that |<i>X</i>| &gt; <i>k</i>|<i>Y</i>| then there exist at least <i>k</i> + 1 distinct points, say <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x</i><sub><i>k</i>+1</sub> in <i>X</i> such that <i>f</i>(<i>x</i><sub>1</sub>), <i>f</i>(<i>x</i><sub>2</sub>), ..., <i>f</i>(<i>x</i><sub><i>k</i>+1</sub>). &emsp;□</p></li>
+</ol>
+
+<p>The second statement is what is called the <b>pigeon-hole principle</b>. In essence it says that if (<i>n</i>+1) pigeons occupy <i>n</i> holes, then some hole must have at least 2 pigeons. Thus if 5 pigeons occupy 4 holes, then there must be some hole with at least 2 pigeons. Another way to state it is</p>
+
+<p><b>Pigeon-hole principle</b>. Given two sets <i>X</i> and <i>Y</i> with the same cardinality. Let <i>f</i> be a map <i>X</i> ⟶ <i>Y</i>. Then</p>
+
+<div class="eq">
+<p><i>f</i> injective ⇐⇒ <i>f</i> surjective ⇐⇒ <i>f</i> bijective. &emsp;□</p>
+</div>
+
+<h2 id="countable">Countable sets</h2>
+
+<p>A countable set is a set with the same cardinality (number of elements) as some subset of the set of natural number. A countable set is either a finite set or a countably infinite set. </p>
+
+<p><b>1.8.4 Definition</b>. A set is said <b>denumerable</b> (or <b>countable infinite</b>) if it equipotent to ℕ, i.e. if there is a bijection of the set onto the set ℕ of all natural numbers. A set is <b>countable</b> if it is either finite or denumerable. If a set is not countable then we say that the set is <b>uncountable</b>.&emsp;□</p>
+
+<p>This terminology is not universal. Some texts use the word <i>countable</i> more narrowly to refer to countably infinite sets, and do not include finite sets. Today countable sets form a branch of mathematics called <i>discrete mathematics</i>.</p>
+
+<p>If a set is countable then it is often convenient to write the set as a list, i.e. for a countable set <i>S</i> there exists an enumeration or written as infinite sequence as follows:</p>
+
+<div class="eq">
+<p><i>S</i> = {<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>a</i><sub>3</sub>,...,}</p>
+</div>
+
+<p><b>Example</b>. The set of even number <i>A</i> = {2, 4, 6, 8, ..} is countably infinite. A bijection <i>f</i>: <i>A</i> ⟶ ℕ is given by <i>f</i>(<i>n</i>) = <i>n</i>/2 − 1. &emsp;■</p>
+
+<p>It is not hard to prove that a subset of a countable set is finite, or it is as well countable. The following theorem allows us to find many countable sets.</p>
+
+<p>The set ℤ of integers and the set ℚ of the rational numbers a countable sets. The set ℝ of the real numbers and the set ℂ of the complex numbers are noncountable sets. These sets are equinumerous to <i>P</i>(ℕ), the power set of the natural numbers, and their cardinality is called <i>continuum</i>.</p>
+
+<p><b>1.8.5 Axiom of Choice</b>. If {<i>A<sub>i</sub></i>: <i>i</i> &in; <i>I</i>} is a nonempty set of nonempty sets, then there is a function <i>f</i>: <i>I</i> ⟶ U<sub><i>i</i> &in; <i>I</i></sub> <i>A<sub>i</sub></i> satisfying <i>f</i>(<i>i</i>) &in; <i>A<sub>i</sub></i> for each <i>i</i> &in; <i>I</i>. In other words, the Cartesian product of a nonempty set of nonempty sets is itself a nonempty set. &emsp;□</p>
+
+<p><b>1.8.6 Theorem</b>. The union of a finite or a countably infinite number of countable sets is countable.</p>
+
+<p><b>Proof</b>. We prove the theorem in the case of a countably infinite lists of countable sets which are pairwise disjoint: the other cases derive from this. Let <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ..., <i>A<sub>j</sub></i>... a countably infinite lists of countable sets. The elements of <i>A<sub>j</sub></i> are thus</p>
+
+<div class="eq">
+<p><i>a</i><sub><i>j</i>,1</sub>, <i>a</i><sub><i>j</i>,2</sub>, <i>a</i><sub><i>j</i>,3</sub>, ... , <i>a</i><sub><i>j</i>,i</sub>..</p>
+</div>
+
+<p>Applying the axiom of choice on the set of functions <i>B<sub>j</sub></i> = {all bijections <i>A<sub>j</sub></i> ⟶ ℕ} a nonempty set, we can find a map <i>f</i>: ℕ ⟶ U<sub><i>j</i></sub> <i>B<sub>j</sub></i> with <i>f</i>(<i>j</i>) in <i>B<sub>j</sub></i> for each <i>j</i>; so <i>A</i> = <i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ <i>A</i><sub>3</sub> ∪ ... is as well countable. We show this mapping by <i>numbering</i> the elements of <i>A</i>. To this end, we put the elements of this union of sets in a table in which on the <i>j</i>-th row we find the elements <i>a<sub>j,i</sub></i> of the set <i>A<sub>j</sub></i>.</p>
+
+<div class="eq">
+<p><i>A</i><sub>1</sub> &emsp; <i>a</i><sub>1,1</sub> &emsp; <i>a</i><sub>1,2</sub> &emsp; <i>a</i><sub>1,3</sub> &emsp; ... &emsp; <i>a</i><sub>1,<i>i</i></sub></p>
+<p><i>A</i><sub>2</sub> &emsp; <i>a</i><sub>2,1</sub> &emsp; <i>a</i><sub>2,2</sub> &emsp; <i>a</i><sub>2,3</sub> &emsp; ... &emsp; <i>a</i><sub>2,<i>i</i></sub></p>
+<p><i>A</i><sub>3</sub> &emsp; <i>a</i><sub>3,1</sub> &emsp; <i>a</i><sub>3,2</sub> &emsp; <i>a</i><sub>3,3</sub> &emsp; ... &emsp; <i>a</i><sub>3,<i>i</i></sub></p>
+<p>...</p>
+<p><i>A</i><sub>j</sub> &emsp; <i>a</i><sub>j,1</sub> &emsp; <i>a</i><sub>j,2</sub> &emsp; <i>a</i><sub>j,3</sub> &emsp; ... &emsp; <i>a<sub>j,i</sub></i></p>
+<p>...</p>
+</div>
+
+<p>Consider the <i>j</i>-th diagonal, <i>D<sub>j</sub></i>, that is</p>
+
+<div class="eq">
+<p><i>D<sub>j</sub></i> = {<i>a</i><sub><i>j</i>,1</sub>, <i>a</i><sub><i>j</i> − 1, 2</sub>, <i>a</i><sub><i>j</i> − 2,3</sub>,...} = {<i>a<sub>h,k</sub></i> &in; <i>A</i> | <i>h</i> + <i>k</i> = <i>j</i> + 1}</p>
+</div>
+
+<p>Every element <i>a<sub>h,k</sub></i> &in; <i>A</i> belongs to one and only one diagonal, namely the diagonal <i>D</i><sub><i>h</i>+<i>k</i>−1</sub>. We can set forth the following correspondence between <i>A</i> and ℕ:</p>
+
+<div class="eq">
+<p><i>a<sub>h,k</sub></i> ↦ 1 + 2 + 3 + ... + (<i>h</i> + <i>k</i> − 2) + <i>k</i></p>
+</div>
+
+<div class="eq">
+<p><i>a<sub>1,1</sub></i> &emsp;↦&emsp; (1 + 1 −2) + 1 = 1</p>
+<p><i>a<sub>2,1</sub></i> &emsp;↦&emsp; (2 + 1 −2) + 1 = 2</p>
+<p><i>a<sub>1,2</sub></i> &emsp;↦&emsp; (2 + 2 −2) + 1 = 3</p>
+<p><i>a<sub>3,1</sub></i> &emsp;↦&emsp; 1 + (3 + 1 −2) + 1 = 4</p>
+<p><i>a<sub>2,2</sub></i> &emsp;↦&emsp; 1 + (2 + 2 −2) + 2 = 5</p>
+<p><i>a<sub>1,3</sub></i> &emsp;↦&emsp; 1 + (1 + 3 −2) + 3 = 6</p>
+<p><i>a<sub>4,1</sub></i> &emsp;↦&emsp; 1 + 2 + (4 + 1 −2) + 1 = 7</p>
+<p>...</p>
+</div>
+
+<p>The elements of <i>A</i> are thus numbered as follows</p>
+
+<table class="noborder centertable">
+<td><i>a</i><sub>1,1</sub></td> <td><i>a</i><sub>2,1</sub></td> <td><i>a</i><sub>1,2</sub></td> <td><i>a</i><sub>3,1</sub></td> <td><i>a</i><sub>2,2</sub></td> <td><i>a</i><sub>1,3</sub> <td><i>a</i><sub>4,1</sub></td> <td>...</td></tr>
+<tr><td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>...</td></tr>
+</table>
+
+<p>we can use arrows to visualize this pairing which is known as <i>Cantor's diagonal argument</i>:</p>
+
+<table class="noborder centertable">
+<td><i>a</i><sub>1,1</sub></td> <td><i>a</i><sub>1,2</sub></td> <td><i>a</i><sub>1,3</sub></td> <td><i>a</i><sub>1,4</sub></td> <td>...</td></tr>
+<td>↗<br><i>a</i><sub>2,1</sub></td> <td>↗<br><i>a</i><sub>2,2</sub></td> <td>↗<br><i>a</i><sub>2,3</sub></td> <td>↗<br><i>a</i><sub>2,4</sub></td> <td>...</td></tr>
+<td>↗<br><i>a</i><sub>3,1</sub></td> <td>↗<br><i>a</i><sub>3,2</sub></td> <td>↗<br><i>a</i><sub>3,3</sub></td> <td>↗<br><i>a</i><sub>3,4</sub></td> <td>...</td></tr>
+<td>↗<br><i>a</i><sub>3,1</sub></td> <td>↗<br><i>a</i><sub>3,2</sub></td> <td>↗<br><i>a</i><sub>3,3</sub></td> <td>↗<br><i>a</i><sub>3,4</sub></td> <td>...</td></tr>
+<tr> <td>...</td> <td>...</td> <td>...</td> <td>...</td> <td>...</td></tr>
+</table>
+
+<p>We obtain thus a bijection between <i>A</i> and ℕ, hence the set <i>A</i> is countable.&emsp;□</p>
+
+<p><b>1.8.7 Corollary</b> The set ℤ of the integers is countable as ℕ x ℕ.</p>
+
+<p><i>Proof</i>. It suffices to write these sets as union of a finite numnber or an countably infinite lists of countable sets. We have:</p>
+
+<div class="eq">
+<p>ℤ = ℕ ∪ {−1,−2,−3,...}</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow class="MJX-TeXAtom-ORD">
+    <mi mathvariant="double-struck">N</mi>
+  </mrow>
+  <mo>&#x00D7;<!-- × --></mo>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mi mathvariant="double-struck">N</mi>
+  </mrow>
+  <mo>=</mo>
+  <munderover>
+    <mo>&#x22C3;<!-- ⋃ --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+    </mrow>
+  </munderover>
+  <msub>
+    <mi>A</mi>
+    <mi>h</mi>
+  </msub>
+</math>
+</div>
+
+<p>where</p>
+
+<div class="eq">
+<p><i>A<sub>h</sub></i> = {(<i>h</i>,1}, (<i>h</i>,2), (<i>h</i>,3), ...}</p>
+</div>
+
+<p>is countable for every <i>h</i>.&emsp;□</p>
+
+<p><b>1.8.8 Definition</b>. We say that a set <i>A</i> has cardinality <i>less</i> or <i>equal</i> to that of a set <i>B</i> if there exists an injective mapping <i>f</i>: <i>A</i> → <i>B</i>. We write</p>
+
+<div class="eq">
+<p>Card(<i>A</i>) &le; Card(<i>B</i>)</p>
+</div>
+
+<p>If it results Card(<i>A</i>) &le; Card(<i>B</i>) and Card(<i>A</i>) &ne; Card(<i>B</i>), then we write</p>
+
+<div class="eq">
+<p>Card(<i>A</i>) &lt; Card(<i>B</i>). &emsp;□</p>
+</div>
+
+<p>We shall see now that there exists as well cardinality larger than that of the countable infinity.</p>
+
+<h3>Cantor's Theorem</h3>
+
+<p>By using the the idea of "power set" we are able to rate bigger infinities. For example if we take the set {1,2,3} (with cardinality 3) its power set contains the empty set, {1}, {2}, {3}, {1,2}, {1,3}, {2,3} and {1,2,3} and so has cardinality 8. The formula is that, if the original set has cardinality <i>n</i>, then its power set has size 2<sup><i>n</i></sup>. Amazingly, the same conclusion is true for infinite sets: the power set of an infinite set creates a new set of a bigger infinity.</p>
+
+<p>Cantor's Theorem states that the cardinality of a set is strictly less than the cardinality of its power set.</p>
+
+<p><b>1.8.9 (Cantor's Theorem [1883])</b> Given an arbitrary countable set <i>A</i>, it results</p>
+
+<div class="eq">
+<p>Card(<i>A</i>) &lt; Card(<i>P</i>(<i>A</i>))</p>
+</div>
+
+<p><b>1<sup><i>a</i></sup> Proof</b>. The application <i>h</i>: <i>A</i> → <i>P</i>(<i>A</i>) defined as <i>h</i>(<i>x</i>) = {<i>x</i>} &forall;<i>x</i> &in; <i>A</i> is an injective mapping from <i>A</i> to <i>P</i>(<i>A</i>), thus Card(<i>A</i>) &le; Card(<i>P</i>(<i>A</i>)). Since (see <a href="functions.html#characteristi_function">Theorem 1.4.19</a>: there a bijection between <i>P</i>(<i>A</i>) with the function from <i>A</i> to {0,1})</p>
+
+<div class="eq">
+<p><i>P</i>(<i>A</i>) ~ <b>2</b><sup><i>A</i></sup> = {<i>f</i>: <i>A</i> → {0,1}}</p>
+</div>
+
+<p>To prove the theorem we must show that <i>f</i> is not surjective. It suffices to find an element in <i>P</i>(<i>A</i>) which is not in the image of <i>f</i>. Such an element is:</p>
+
+<div class="eq">
+<p><i>B</i> = {<i>x</i> &in; <i>A</i>: <i>x</i> ∉ <i>f</i>(<i>x</i>)} &in; <i>P</i(<i>A</i>)</p>
+</div>
+
+<p>(Notice that if <i>B</i> is empty the proof is still valid).</p>
+
+<p>Suppose now that <i>f</i> is surjective. Then there exists <i>ξ</i> ∈ <i>A</i> such that <i>f</i>(<i>ξ</i>) = <i>B</i>. By construction, <i>ξ</i> ∈ <i>B</i> ⟺ <i>ξ</i> ∉ <i>f</i>(<i>ξ</i>) = <i>B</i>. Which is a contradiction. Then, <i>f</i> cannot be surjective. Since, <i>h</i>: <i>A</i> → <i>P</i>(<i>A</i>) defined by <i>x</i> ↦ {<i>x</i>} in an injective function. Consequently, we have Card(<i>A</i>) &lt; Card (<i>P</i>(<i>A</i>)). □</p>
+
+<p><i>2nd Proof</i>. To prove there is no bijection between <b>2</b><sup>A</sup> and <i>A</i>, it sufficies to prove that which is not possible arrange in a numerable sequence <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, <i>A</i><sub>3</sub>, ..., the set <b>2</b><sup>A</sup> of the sequences of 0s and 1s. By way of contradiction assume there exists such a correspondence between <b>2</b><sup>A</sup> and ℕ. This means that every sequence of symbols 0s and 1 we can map an index <i>k</i> &in; ℕ, that is</p>
+
+<div class="eq">
+<p><i>A</i><sub>1</sub> = <i>a</i><sub>11</sub>a<sub>12</sub><i>a</i><sub>12</sub>...</p>
+<p><i>A</i><sub>2</sub> = <i>a</i><sub>21</sub>a<sub>22</sub>a<sub>22</sub>...</p>
+<p><i>A</i><sub>3</sub> = <i>a</i><sub>31</sub>a<sub>32</sub>a<sub>32</sub>...</p>
+<p><i>...</i></p>
+<p><i>A<sub>k</sub></i> = <i>a</i><sub>k1</sub><i>a</i><sub>k2</sub>a<sub>k2</sub>...</p>
+</div>
+
+<p>all sequences of 0s and 1. If we are able to find a sequences of 0s and 1 not appearing in the list, we would have found a contradiction. To this end we define a sequence <i>S</i> = <i>s</i><sub>1</sub><i>s</i><sub>2</sub><i>s</i><sub>3</sub>... in the following way:</p>
+
+<div class="eq">
+<p><i>s<sub>k</sub></i> = 0 &emsp;if <i>a<sub>kk</sub></i> = 1</p>
+<p><i>s<sub>k</sub></i> = 1 &emsp;if <i>a<sub>kk</sub></i> = 0</p>
+</div>
+
+<p>it results clearly <i>S</i> &ne; <i>A</i> for every <i>i</i> and the theorem is proves.&emsp;□</p>
+
+<h3>Cantor's continuum hypothesis</h3>
+
+<p>Some sets are infinite, these sets have more than <i>n</i> elements for any integer <i>n</i>. For example, ℕ has infinitely many elements, and we canno use any normal number to give its size. Nonetheless, it turns out that inifnite sets do have a well-defined notion of size (or more properly, of cardinality), and not all infinite sets have the same cardinality.</p>
+
+<p>In 1877 Cantor proposed the “continuum hypothesis”: It is the statement that there are no sets intermediate in size between a countable set and its power set. This means that there is no intermediate size between ℕ and <i>P</i>(ℕ). This means that <i>P</i>(ℕ) has the same cardinality of the real numbers ℝ, so |ℝ| = 2<sup>ℵ<sub>0</sub></sup>. Cantor therefore denoted it ℵ<sub>1</sub>. The continuum hypothesis states that the set of real numbers (the continuum) is in a sense as small as it can be.</p>
+
+<p><b>Lemma 1.8.10</b>. If a set a is uncountable and <i>A</i> &subseteq; <i>B</i>, then <i>B</i> is also uncountable.</p>
+
+<p><b>Proof</b>. Suppose by way of contradiction that <i>B</i> is countable. Then since <i>A</i> &subseteq; <i>B</i>, we can say that <i>A</i> is also countable, which is a contradiction as <i>A</i> is given uncountable. Hence <i>B</i> is uncountable. &emsp;□</p>
+
+<p><b>Proposition 1.8.10</b> (Cantor [1873]) ℝ is uncountable.</p>
+
+<p><b>Proof</b>. We will show that the subset <i>I</i> = {<i>x</i> &in; ℝ | 0 &le; <i>x</i> &le; 1} = [0, 1] is uncountable. Suppose on the contrary that [0,1] is countable. Then each element of</p>
+
+<div class="eq">
+<p><i>I</i> = {<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ...}</p>
+</div>
+
+<p>can be written in the form of sequence (having distinct elements). So, let each elements in <i>I</i> be written in the form</p>
+
+<div class="eq">
+<p><i>x</i><sub>1</sub> = 0.<i>a</i><sub>11</sub><i>a</i><sub>12</sub><i>a</i><sub>13</sub> ... <i>a</i><sub>1n</sub><br>
+<i>x</i><sub>2</sub> = 0.<i>a</i><sub>21</sub><i>a</i><sub>22</sub><i>a</i><sub>23</sub> ... <i>a</i><sub>2n</sub><br>
+<i>x</i><sub>3</sub> = 0.<i>a</i><sub>31</sub><i>a</i><sub>32</sub><i>a</i><sub>33</sub> ... <i>a</i><sub>3n</sub><br>
+... &emsp;<br>
+<i>x<sub>n</sub></i> = 0.<i>a</i><sub><i>n</i>1</sub> <i>a</i><sub><i>n</i>2</sub><i>a</i><sub><i>n</i>3</sub> ... <i>a<sub><i>nn</i></sub></i></p>
+</div>
+
+<p>where <i>a<sub>ij</sub></i> &in; {0,1,2,..,9} and where each decimal expression contains an infinite number of non-zero elements. Now construct the real number</p>
+
+<div class="eq">
+<p><i>y</i> = 0.<i>b</i><sub>1</sub><i>b</i><sub>2</sub>...<i>b<sub>n</sub></i></p>
+</div>
+
+<p>where <i>b</i><sub>1</sub> is any digit such taht <i>b</i><sub>1</sub> &ne; 0, <i>b</i><sub>1</sub> &ne; <i>a</i><sub>11</sub> and <i>b</i><sub>2</sub> &ne; <i>a</i><sub>22</sub> and so on (i.e. <i>b<sub>i</sub></i> &ne; 0 and <i>b<sub>i</sub></i> &ne; <i>a<sub>ii</sub></i>, we exclude 0 because *preferring* decimal expansions with an infinite number of non-zero digits). Observe that</p>
+
+<div class="eq">
+<p><i>y</i> &ne; <i>x</i><sub>1</sub>&emsp;because&emsp;<i>b</i><sub>1</sub> &ne; <i>a</i><sub>11</sub><br>
+<i>y</i> &ne; <i>x</i><sub>2</sub>&emsp;because&emsp;<i>b</i><sub>2</sub> &ne; <i>a</i><sub>22</sub><br>
+...</p>
+</div>
+
+<p>Hence, <i>y</i> &ne; <i>I</i>. But clearly <i>y</i> &in; <i>I</i>. Thus we arrive at a contradiction. Hence <i>I</i> = [0,1] is not countable and by Lemma 1.8.10, ℝ is not countable as well .&emsp;□</p>
+
+<p>The continuum hypothesis is the first of David's Hilbert famous list of twenty-three unanswered questions posed in 1900. It was proved that the continuum hypothesis is independent of the other axioms of set theory, this implies that it is not possible to prove or disprove the continuum hypothesis, starting from these axioms.</p>
+
+<p>The <i>Generalized Continuum Hypothesis</i>, states for every infinite set <i>X</i> there are not sets with intermediate cardinality between that of <i>X</i> and of <i>P</i>(<i>X</i>).</p>
+
+<p><b>Axiom of Choice</b>. Let <i>X</i> be a set whose members are nonempty sets. Then there is a function <i>f</i> with domain <i>X</i> which assigns to each <i>A</i> &in; <i>X</i> an element <i>f</i>(<i>A</i>) &in; <i>A</i>.</p>
+
+<p>In particular, it should be noticed that the element <i>f</i>(<i>A</i>) is uniquely determined for each <i>A</i> &in; <i>X</i>. The function <i>f</i> is called a <i>choice function</i>. </p>
+
+<p>the family of set of function <i>F</i> = {{<i>f</i>:<i>A<sub>j</sub></i> ⟶ ℕ | f bijective} | <i>j</i> in ℕ} by the Zermelo's axiom it is possible to pick representative of a particular set {f:A_j -> N | f bijective} of the class F is an injective function f: A_j -> N.</p>
+ 
+each set B_j = {all bijections A_j -> N} is nonempty. Thus the cartesian product B_1 x B_2 x ...  is nonempty. Thus there is a map phi: N -> cup_j B_j  with phi(j) in B_j  for each j. So now we have a single specific map phi(j) : A_j -> N   for each j. Now we use *those* maps to make a single specific bijection  phi(j) : A_j -> N  for each j
+
+<section aria-label="End">
+<a href="Peano.html">&#171; Peano's Axioms</a>
+<a href="index.html">Index</a>
+<a href="Z.html">The Integers &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elementary Convergence Tests"/>
+    <title>Elementary Convergence Tests</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Documentation</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<article>
+
+<h1>Elementary Convergence Tests</h1>
+
+<p>By comparing the terms of a given series with the terms of a series for which convergence or divergence is known, we are then able to determine whether the series converges too.</p>
+
+<p id="comparison"><b>Theorem 3.2.1</b> (<b>The Comparison Test</b>) Let &Sum; <i>a<sub>n</sub></i> and &Sum; <i>b<sub>n</sub></i> two series of positive terms such that 0 &le; <i>a<sub>n</sub></i> &le; <i>b<sub>n</sub>,</i> &forall;<i>n</i></p>
+
+<ul>
+	<li><p>&Sum; <i>b<sub>n</sub></i> convergent &emsp;⇒&emsp; &Sum; <i>a<sub>n</sub></i> convergent.</p></li>
+	<li><p>&Sum; <i>a<sub>n</sub></i> divergent &emsp;⇒&emsp; &Sum; <i>b<sub>n</sub></i> divergent.</p></li>
+</ul>
+
+<p>The series &Sum; <i>b<sub>n</sub></i> is said the <i>majorant</i>, of &Sum; <i>a<sub>n</sub></i> which is said <i>minorant</i>.</p>
+
+<p><b>Proof.</b> Because the first &Sum; <i>b<sub>n</sub></i> converges, it satisfies the Cauchy criterion for series. Hence given, given <i>&epsilon;</i> &gt; 0, there is an <i>N</i> so large that if <i>n</i> &ge; <i>m</i> &gt; <i>N</i> then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mi>m</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>j</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mi>m</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <msub>
+    <mi>b</mi>
+    <mi>j</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mi>&#x3B5;</mi>
+</math>
+
+<!-- $$ |\sum_{j=m+1}^m a_j| \lt |\sum_{j=m+1}^m b_j| \lt \varepsilon $$ -->
+
+<p>thus Cauchy criterion is satisfied by &Sum; <i>a<sub>n</sub></i> too. Therefore it converges &emsp;□</p>
+
+<p id="root"><b>Thereom 3.2.2</b> (<b>The root test</b>). Let &Sum; <i>a<sub>n</sub></i> a positive term series. If</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mroot>
+    <msub>
+      <mi>a</mi>
+      <mi>n</mi>
+    </msub>
+    <mi>n</mi>
+  </mroot>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mo>&lt;</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\lim_{n \to \infty} \sqrt[n]{a_n} = \ell \lt 1 $$ -->
+
+<p>then the series converges.</p>
+
+<p><b>Proof.</b> Consider first the case <i>ℓ</i> &lt; 1. Since |(<i>a<sub>n</sub></i>)<sup>1/<i>n</i></sup> − <i>ℓ</i>| &le; <i>&epsilon;</i>/2 for a given <i>&epsilon;</i> &gt; 0, we have (<i>a<sub>n</sub></i>)<sup>1/<i>n</i></sup> &le; <i>ℓ</i> + <i>&epsilon;</i>/2. <br> Since <i>ℓ</i> &lt; 1, we have also that <i>ℓ</i> &lt; 1 − <i>&epsilon;</i> for a suitable <i>&epsilon;</i> &gt; 0. For this <i>&epsilon;</i> we have that</p>
+
+<div class="eq">
+<p>(<i>a<sub>n</sub></i>)<sup>1/<i>n</i></sup> &le; ℓ + <i>&epsilon;</i>/2 &lt; (1 − <i>ε</i>) + <i>&epsilon;</i>/2 = 1 − <i>&epsilon;</i>/2</p>
+</div>
+
+<p>Thus</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &lt; (1 − <i>&epsilon;</i>/2)<sup><i>n</i></sup></p>
+</div>
+
+<p>which by comparison with the geometric series &Sigma; (1 − <i>&epsilon;</i>/2)<sup><i>n</i></sup>, we deduce that the original series converges.</p>
+
+<p>If instead <i>ℓ</i> &gt; 1, with a similar argument we deduce that</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &gt; (1 − <i>&epsilon;</i>/2)<sup><i>n</i></sup></p>
+</div>
+
+<p>for a give <i>ε</i> &gt; 0. Thus <i>a<sub>n</sub></i> → ∞, and the series diverges.&emsp;□</p>
+
+<p id="ratio"><b>Thereom 3.2.3</b>. (<b>D'Alembert's ratio test</b>) Let &Sum; <i>a<sub>n</sub></i> a series of positive terms. If the following limit exists</p>
+
+<!-- $$ \lim_{n \to \infty } \frac{a_{n+1}}{a_n} = \ell \lt 1 $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <msub>
+      <mi>a</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <msub>
+      <mi>a</mi>
+      <mi>n</mi>
+    </msub>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mo>&lt;</mo>
+  <mn>1</mn>
+</math>
+
+<p>Then if <i>ℓ</i> &lt; 1, the series converges; If <i>ℓ</i> &gt; 1, the series diverges.</p>
+
+<p><b>Proof.</b> Let <i>ℓ</i> finite. By similar reasoning used to prove the root test we have for the case <i>ℓ</i> &lt; 1</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <msub>
+      <mi>a</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <msub>
+      <mi>a</mi>
+      <mi>n</mi>
+    </msub>
+  </mfrac>
+  <mo>&lt;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>&#x3B5;</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ \frac{a_{n+1}}{a_n} \lt \left(1- \frac{\varepsilon} {2} \right) $$ -->
+
+<p>for some <i>&epsilon;</i> &gt; 0. This implies by reasoning iteratively that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>&lt;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>&#x3B5;</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>&lt;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>&#x3B5;</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>&#x3B5;</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>&lt;</mo>
+  <mo>&#x2026;</mo>
+  <mo>&lt;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mfrac>
+        <mi>&#x3B5;</mi>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>n</mi>
+  </msup>
+  <msub>
+    <mi>a</mi>
+    <mn>1</mn>
+  </msub>
+</math>
+
+<!-- $$a_{n+1} < \left(1 - \frac{\varepsilon}{2} \right) a_n < \left( 1-\frac{\varepsilon}{2} \right) \cdot \left(1-\frac{\varepsilon}{2} \right) a_{n-1} < \ldots <  \left(1 - \frac{\varepsilon}{2} \right)^n a_1 $$ -->
+
+<p>By comparison with the geometric series &Sum; (1 − <i>ε</i>/2)<sup><i>n</i></sup> <i>a</i><sub>1</sub>, the initial series converges.</p>
+
+<p>If instead <i>ℓ</i> &gt;1, with a similar argument we deduce that</p>
+
+<img src="img/serie/rapporto_dim3.png" alt="dimostrazione criterio rapporto"/>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>&gt;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mfrac>
+        <mi>&#x3B5;</mi>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>n</mi>
+  </msup>
+  <msub>
+    <mi>a</mi>
+    <mn>1</mn>
+  </msub>
+</math>
+
+<!-- $$a_{n+1} \gt \left(1 + \frac{\varepsilon} {2} \right)^n a_1 $$ -->
+
+<p>for a given, <i>ε</i> &gt; 0. Thus <i>a<sub>n</sub></i> → +∞, and the series diverges.&emsp;□</p>
+
+<p><b>Thereom 3.2.4</b> (<b>Asymptotic comparison test</b>). Let {<i>a<sub>n</sub></i>} and {<i>b<sub>n</sub></i>} two Asymptotic positive sequences</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> ~ <i>b<sub>n</sub></i></p>
+</div>
+
+<p>then the correspondent series &Sum; <i>a<sub>n</sub></i> and &Sum; <i>b<sub>n</sub></i>, have the same behaviour, either they are both convergent or divergent.</p>
+
+<p><b>Proof.</b>. To say that <i>a<sub>n</sub></i> ~ <i>b<sub>n</sub></i> means that <i>a<sub>n</sub></i>/<i>b<sub>n</sub></i> → 1 for <i>n</i> → ∞. This implies that for every <i>ε</i> &gt; 0 sia definitivamente 1 − <i>ε</i> &lt; <i>a<sub>n</sub></i>/<i>b<sub>n</sub></i> &lt; 1 + <i>ε</i>; for example taking (<i>ε</i>=1/2), we have</p>
+
+<div class="eq">
+<p>1/2 &lt; <i>a<sub>n</sub></i> / <i>b<sub>n</sub></i> &lt; 3/2<p>
+</div>
+
+<p>or being by hyphothesis <i>b<sub>n</sub></i> &gt; 0</p>
+
+<div class="eq">
+<p>1/2 <i>b<sub>n</sub></i> &lt; <i>a<sub>n</sub></i> &lt; 3/2 <i>b<sub>n</sub></i><p>
+</div>
+
+<p>By the comparison test, the first inequality implies that if &Sum; <i>a<sub>n</sub></i> conveges, then also <i>b<sub>n</sub></i> converges; the second inequality implies that if &Sum; <i>a<sub>n</sub></i> diverges, then also &Sum; <i>b<sub>n</sub></i> diverges. This is precisely what is meant by "having the same behaviour". &emsp;□</p>
+
+<p><b>Remark</b>. Note that in general the fact that &Sum; <i>a<sub>n</sub></i> conveges, then also <i>b<sub>n</sub></i> converges, does not mean that the two series have the same sum: <i>a<sub>n</sub></i> ~ <i>b<sub>n</sub></i> says that the terms of the two series are "similar" but the value of a sum depends upon all terms of the sum.</p>
+
+<p><b>Example 3.2.5</b> The series &Sigma; 1/<i>n</i><sup>2</sup> converge since 1/<i>n</i><sup>2</sup> ~ 1/<i>n</i>(<i>n</i> + 1) and Mengoli's series &Sigma; 1/<i>n</i>(<i>n</i> + 1) converges.&emsp;■</p>
+
+<div id="harmonic">
+<p><b>Example 3.2.6</b> (Generalized harmonic series) The generalized harmonic series is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>n</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$ \sum_{n=1}^\infty \frac{1}{n^\alpha} $$ -->
+
+<p>if <i>&alpha;</i> &ge; 2 then the series converges by the comparison test 1/<i>n</i><sup>&alpha;</sup> &le; 1/<i>n</i><sup>2</sup> and &Sigma; 1/<i>n</i><sup>2</sup> converges. However if <i>&alpha;</i> &le; 1 the series diverges by comparison with the harmonic series. It can be proved (we shall use <a href="improper_integrals_unbounded.html">integral calculus for the proof</a>) that for the intermediate values 1 &lt; <i>&alpha;</i> &lt; 2, there's still convergence. To recap we have that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>n</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>convergent if&#xA0;</mtext>
+  <mi>&#x3B1;</mi>
+  <mo>&gt;</mo>
+  <mn>1</mn>
+  <mo>;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>divergent if&#xA0;</mtext>
+  <mi>&#x3B1;</mi>
+  <mo>&#x2264;</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$ \sum_{n=1}^\infty \frac{1}{n^\alpha}, \quad\text{convergent if } \alpha \gt 1; \quad \text{divergent if } \alpha \le 1 $$ -->
+
+<p>&emsp;■</p>
+
+</div>
+
+<section aria-label="End">
+<a href="series.html">&#171;Series</a>
+<a href="index.html">Index</a>
+<a href="seriesegnovar.html">Serie a termini di segno variabile&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

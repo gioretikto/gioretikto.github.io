@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Finite Fields">
+	<title>Finite Fields</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Finite Fields</h1>
+
+<p>In this section we consider finite fields. In particular we show that if <i>K</i> is a finite field then |<i>K</i>| = <i>p<sup>n</sup></i> for some prime <i>p</i> and natural number <i>n</i> &gt; 0. Further we show that if <i>K</i><sub>1</sub>, <i>K</i><sub>2</sub> are finite fields with |<i>K</i><sub>1</sub>| = |<i>K</i><sub>2</sub>| then <i>K</i><sub>1</sub> ≌ <i>K</i><sub>2</sub>. Hence there is a unique
+finite field for each possible order. Notice that if <i>K</i> is a finite field then by necessity char <i>K</i> = <i>p</i> &ne; 0 (see Remark <a href="char.html">Remark 4.15.4</a>).</p>
+
+<p><b>8.3.1 Definition</b>. Let <i>F</i> a field and let <i>f</i>(<i>x</i>) = <i>a<sub>n</sub>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> − 1</sub><i>x</i><sup><i>n</i> − 1</sup> + ... + <i>a</i><sub>1</sub><i>x</i> + <i>a</i><sub>0</sub> a polynomial in <i>F</i>[<i>x</i>]. We define the <i>derivative</i> of <i>f</i>(<i>x</i>), and we indicate it by <i>f</i>'(<i>x</i>), the polynomial in <i>F</i>[<i>x</i>]:</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) := <i>na<sub>n</sub>x</i><sup><i>n</i> − 1</sup> + (<i>n</i> − 1)<i>a</i><sub><i>n</i> − 1</sub><i>x</i><sup><i>n</i> − 2</sup> + ... + 2<i>a</i><sub>2</sub><i>x</i> + <i>a</i><sub>1</sub></p>
+</div>
+
+<p>which is a polynomial of degree at most <i>n</i> − 1. It is to verify that the ordinary rules of calculus hold:</p>
+
+<div class="eq">
+<p>(<i>f</i> + <i>g</i>)' = <i>f</i>' + <i>g</i>';<br>
+(<i>f</i><i>g</i>)' = <i>f</i>'<i>g</i> + <i>f</i><i>g</i>'</p>
+</div>
+
+<p><b>8.3.2 Proposition</b>. A polynomial <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] has a multiple root (in some extension field) if and only if <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor (<i>i.e.</i> with degree greater than one).</p>
+
+<p><b>Proof</b>. First notice that it is immaterial to specify over which field <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor; If they have a common non-trivial factor in a field <i>K</i> &subseteq; <i>F</i> then they have a common non-trivial factor in <i>F</i> as well, indeed from the relation</p>
+
+<div class="eq">
+<p><i>s</i>(<i>x</i>) <i>f</i>(<i>x</i>) + <i>t</i>(<i>x</i>)<i>f</i>'(<i>x</i>) = 1, &emsp;<i>s</i>(<i>x</i>),<i>t</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>]</p>
+</div>
+
+<p>which says that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) are coprime in <i>F</i> would be a relation true in <i>K</i> as well, then the two polynomials would be coprime in <i>K</i> as well. Let <i>&alpha;</i> an arbitrary multiple root of <i>f</i>(<i>x</i>), that is</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = (<i>x</i> − &alpha;)<sup><i>m</i></sup><i>g</i>(<i>x</i>), &emsp; <i>m</i> &gt; 1</p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p><i>f</i>'(<i>x</i>) = <i>m</i> (<i>x</i> − &alpha;)<sup><i>m</i> −1</sup><i>g</i>(<i>x</i>) + (<i>x</i> − &alpha;)<sup><i>m</i></sup><i>g</i>'(<i>x</i>)</p>
+</div>
+
+<p>from which it results that <i>&alpha;</i> is a root of <i>f</i>'(<i>x</i>) as well.<br> Conversely, suppose that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor. By contradiction, suppose first that <i>f</i>(<i>x</i>) has no multiple roots, that is let</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = ∏<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> (<i>x</i> − &alpha;<sub><i>i</i></sub>)</p>
+</div>
+
+<p>with <i>&alpha;<sub>i</sub></i>, all distinct among each other. Then, applying the product rule (<i>fg</i>)' = <i>f'g</i> + <i>fg</i>' to calculate the derivative</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mn>2</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mo>&#x22EF;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mrow>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>&#x3B1;</mi>
+          <mi>i</mi>
+        </msub>
+      </mrow>
+      <mo>^</mo>
+    </mover>
+  </mrow>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mo>&#x22EF;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ f'(x) = \sum_{i=1}^n (x-\alpha_1) (x - \alpha_2) \,\cdots\, (\widehat{x - \alpha_i}) \,\cdots\, (x - \alpha_n) $$ -->
+
+<p>notice that the product rule extends to (<i>fgh</i>)' = <i>f'gh</i> + <i>fg'h</i> + <i>fgh'</i>; for example if <i>f</i>(<i>x</i>) = (<i>x</i> − <i>a</i><sub>1</sub>)(<i>x</i> − <i>a</i><sub>2</sub>)(<i>x</i> − <i>a</i><sub>3</sub>), then <i>f'</i>(<i>x</i>) = (<i>x</i> − <i>a</i><sub>2</sub>)(<i>x</i> − <i>a</i><sub>3</sub>) + (<i>x</i>−<i>a</i><sub>1</sub>)(<i>x</i> − <i>a</i><sub>3</sub>) + (<i>x</i> − <i>a</i><sub>1</sub>)(<i>x</i> − <i>a</i><sub>2</sub>), and <i>f'</i>(a<sub>1</sub>) = (<i>a</i><sub>1</sub> − <i>a</i><sub>2</sub>)(<i>a</i><sub>1</sub> − <i>a</i><sub>3</sub>) &ne; 0. <br> From which it results that <i>f</i>'(<i>&alpha;<sub>i</sub></i>) &ne; 0 for every <i>i</i> = 1, ..., <i>n</i> and this contradicts the assumption that <i>f</i>(<i>x</i>) and <i>f</i>'(<i>x</i>) have a common non-trivial factor. &emsp;□</p>
+
+<p>Indeed, In the example above, imagine <i>&alpha;</i><sub>1</sub> = <i>&alpha;</i><sub>2</sub> is a double root. Notice that (<i>x</i> − &alpha;<sub>1</sub>) divides both <i>f</i> and <i>f'</i>.</p>
+
+<p id="separable"><b>8.3.3 Definition</b> An irreducible polynomial <i>p</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] is <i>separable</i> if it has no multiple roots in any extension of <i>F</i>, otherwise it is called <i>inseparable</i> over <i>F</i>. &emsp;□</p>
+
+<p><b>8.3.4 Example</b> The polynomial <i>f</i>(<i>x</i>) = <i>x</i> − 5 &in; ℚ[<i>x</i>] is irreducible over ℚ, and has all distinct roots.&emsp;■</p>
+
+<p><b>8.3.5 Example</b> Let <i>K</i> = ℤ<sub>3</sub>(<i>t</i>) is the field of rational functions in the indeterminate <i>t</i>, with coefficients in ℤ<sub>3</sub>. The polynomial</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − <i>t</i> &in; ℤ<sub>3</sub>(<i>t</i>)[<i>x</i>]</p>
+</div>
+
+<p>is inseparable. Let <i>&alpha;</i> one of its roots (in its splitting field). Then it results &alpha;<sup>3</sup> = <i>t</i>, from which</p>
+
+<div class="eq">
+<p>(<i>x</i> − <i>&alpha;</i>)<sup>3</sup> = <i>x</i><sup>3</sup> − &alpha;<sup>3</sup> = <i>x</i><sup>3</sup> − <i>t</i> = <i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>so if <i>&beta;</i> is another root of <i>f</i>(<i>x</i>), then</p>
+
+<div class="eq">
+<p>0 = <i>f</i>(&beta;) = (<i>x</i> − &beta;)<sup>3</sup> &emsp;⇒  &emsp; &beta; = &alpha;</p>
+</div>
+
+<p>It remains to prove that <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> − <i>t</i> is irreducible over ℤ<sub>3</sub>(<i>t</i>). If it were reducible, being a polynomial of 3rd degree it would possess a root.  Elements of ℤ<sub>3</sub>(<i>t</i>) are of the form</p>
+
+<div class="eq">
+<p><i>&alpha;</i>(<i>t</i>) = (<i>a</i> + <i>b t</i> + <i>c t</i><sup>2</sup> + ...)/(<i>x</i> + <i>y t</i> + <i>z t</i><sup>2</sup> + ...). </p>
+</div>
+
+<p>Suppose by contradiction that &alpha;(<i>t</i>) = <i>A</i>(<i>t</i>)/<i>B</i>(<i>t</i>) is a root of <i>x</i><sup>3</sup> − <i>t</i>. Then <i>&alpha;</i><sup>3</sup> − <i>t</i> = 0 <i>i.e A</i>(<i>t</i>)<sup>3</sup> / <i>B</i>(<i>t</i>)<sup>3</sup> − <i>t</i> = 0, so so <i>A</i>(<i>t</i>)<sup>3</sup> = <i>t B</i>(<i>t</i>)<sup>3</sup>, which is clearly impossible. Similarly to how you might show √2 = a/b is impossible. certainly, a is not in ℤ<sub>3</sub>(<i>t</i>) just like how √2 is not in ℚ but we can extend it to get ℤ<sub>3</sub>(<i>t</i>)[<i>a</i>], as we did ℚ[√2]&emsp;■</p>
+
+<p>The following proposition indicates in which cases an irreducible polynomial has no multiples roots: irreducibility + char 0 of <i>F</i> ⇒ separability. We give first a sketch of the proof with an example. <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1 is irreducible over ℚ. We have <i>f'</i>(<i>x</i>) = 2<i>x</i> + 1. Suppose <i>f</i>(<i>x</i>) and <i>f'</i>(<i>x</i>) had a common factor. Since <i>f'</i>(<i>x</i>) has degree 1, then this common factor cannot have degree > 1. But <i>f</i>(<i>x</i>) is irreducible, so any factor of <i>f</i>(<i>x</i>) of degree < 2 must be a constant. Therefore, the only common factors of <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1 and <i>f'</i>(<i>x</i>) = 2<i>x</i> + 1 are the (nonzero) constants and by Proposition 8.3.2, <i>f</i>(<i>x</i>) must be separable. </p>
+
+<p id="separable_theo"><b>8.3.6 Proposition</b> Let <i>f</i>(<i>x</i>) &in; <i>F</i>[<i>x</i>] an irreducible polynomial. Then, if <i>F</i> has characteristic zero, <i>f</i>(<i>x</i>) is always separable. If <i>F</i> has characteristic <i>p</i>, <i>f</i>(<i>x</i>) is inseparable if and only if <i>f</i>(<i>x</i>) = <i>g</i>(<i>x<sup>p</sup></i>), i.e. <i>f</i> is a polynomial in the variable <i>x<sup>p</sup></i>:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>x<sup>p</sup></i> + ... + <i>a<sub>n</sub>x<sup>np</sup></i></p>
+</div>
+
+<p><b>Proof</b>. We know that a polynomial <i>f</i>(<i>x</i>) is inseparable if and only if <i>f</i>(<i>x</i>) and <i>f'</i>(<i>x</i>) have a common factor of degree &ge; 1. But, being in this case <i>f</i>(<i>x</i>) irreducible, and since <i>f'</i>(<i>x</i>) has degree less than that of <i>f</i>(<i>x</i>), it follows that an irreducible polynomial is inseparable if and only if <i>f'</i>(<i>x</i>) = 0, that is</p>
+
+<div class="eq">
+<p><i>ia<sub>i</sub></i> = 0 &emsp; &forall;<i>i</i> = 1, ..., <i>n</i> &emsp;(<b>8.3.1</b>)</p>
+</div>
+
+<p>(the derivative of <i>a<sub>i</sub> x<sup>i</sup></i> is <i>i a<sub>i</sub> x</i><sup><i>i</i> − 1</sup>). Now, if the characteristic is zero, these relations imply that <i>a<sub>i</sub></i> = 0 for every <i>i</i> = 1, ..., <i>n</i>, that is <i>f</i>(<i>x</i>) is a constant <i>a</i><sub>0</sub>, hence, without roots. If the characteristic if <i>p</i>, relations 8.3.1 imply that the coefficients <i>a<sub>i</sub></i> for which  <i>i</i> ≡ 0 (mod <i>p</i>) is <i>not</i> verified must be zero. Thus <i>f</i>(<i>x</i>) is a polynomial composed by powers of <i>x<sup>p</sup></i>. Conversely every such a polynomial is inseparable since its derivative is zero. &emsp;□ </p>
+
+<p><b>8.3.7 Proposition</b> Every finite field <i>F</i> has <i>p<sup>n</sup></i> elements, with <i>p</i> prime.</p>
+
+<p><b>Proof</b>. We've already proved the theorem in <a href="exercises_field_extensions.html">exercise 11</a>; we repeat it for the sake of completeness. Every finite field <i>F</i> has finite characteristic <i>p</i>, and hence extension of the field ℤ<sub><i>p</i></sub> (see <a href="characteristic_integral_domain.html">Theorem 4.15.5</a>). It results thus a vector space of dimension <i>n</i> over ℤ<sub><i>p</i></sub>, for some positive integer <i>n</i>, then <i>K</i> has <i>p<sup>n</sup></i> elements . &emsp;□</p>
+
+<p><b>8.3.7 Lemma</b>. Every element <i>a</i> of a finite field with <i>p<sup>n</sup></i> elements satisfies the relation</p>
+
+<div class="eq">
+<p><i>a<sup>p<sup>n</sup></sup></i> = <i>a</i></p>
+</div>
+
+<p><b>Proof</b>. If <i>a</i> is 0 the relation is true. Consider then the elements <i>a</i> &ne; 0 in <i>F</i>. These elements constitute a group (<i>F</i>\{0} is always a group under *). From <a href="lagrange.html">Corollary 7.9.5</a> of Lagrange's theorem:</p>
+
+<div class="eq">
+<p><i>a</i><sup><i>p</i><sup><i>n</i> −1</sup></sup> = 1</p>
+</div>
+
+<p>which multiplied by both sides by <i>a</i>, leads to the relation sought. &emsp;□</p>
+
+<p><b>8.3.8 Lemma</b>. A field <i>F</i> with <i>p<sup>n</sup></i> elements is the splitting field of the polynomial</p>
+
+<div class="eq">
+<p><i>x<sup>p<sup>n</sup></sup></i> − <i>x</i> &in; ℤ<sub><i>p</i>[<i>x</i>]</sub></p>
+</div>
+
+<p><b>Proof</b>. By the previous lemma the <i>p<sup>n</sup></i> elements of the field <i>F</i> satisfy the polynomial <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i>. Such polynomial can't have more roots since the degree is <i>p<sup>n</sup></i>. Thus the polynomial <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i> splits in <i>F</i>. It cannot split in a smaller field since some roots would not be included. Thus <i>F</i> is the splitting field for <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i>. &emsp;□</p>
+
+<p><b>8.3.9 Lemma</b>. Two fields with <i>p<sup>n</sup></i> elements are isomorphic.</p>
+
+<p><b>Proof</b>. They are both the splitting fields of the same polynomial <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i>, thus they are isomorphic by the uniqueness of the splitting field of a polynomial. &emsp;□</p>
+
+<p><b>8.3.10 Theorem</b>. Given a prime <i>p</i> and an integer <i>n</i> there exists a field with <i>p<sup>n</sup></i> elements.</p>
+
+<p><b>Proof</b>. Starting from the integer <i>n</i> and prime number <i>p</i>, we construct the polynomial</p>
+
+<div class="eq">
+<p><i>x<sup>p<sup>n</sup></sup></i> − <i>x</i> &in; ℤ<sub><i>p</i>[<i>x</i>]</sub></p>
+</div>
+
+<p>In the splitting field <i>L</i>, of the polynomial, consider the subset</p>
+
+<div class="eq">
+<p><i>K</i> := {<i>a</i> &in; <i>L</i> | <i>a<sup>p<sup>n</sup></sup></i> = <i>a</i>}</p>
+</div>
+
+<p>The cardinality of <i>L</i> is equal to the distinct roots of <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i>; but these roots are all distinct (calculate the derivative: since <i>p<sup>n</sup></i> = 0 then f'(<i>x</i>) = −1, so it has no nontrivial common factors with <i>f</i>, see Proposition 8.3.2). Thus |<i>K</i>| = <i>p<sup>n</sup></i>. By showing that this subset is a field, we would have found the desired field coincident with <i>L</i>. It suffices to show that for every <i>a,b</i> &in; <i>K</i>, <i>a</i> &pm; <i>b</i>, <i>ab</i> and <i>ab</i><sup>−1</sup> are in <i>K</i> as well. Indeed the following relations modulo <i>p</i> are satisfied</p>
+
+<div class="eq">
+<p>(<i>a</i> &pm; <i>b</i>)<sup><i>p</i><sup><i>n</i></sup></sup> = <i>a<sup>p<sup>n</sup></sup></i> &pm; <i>b<sup>p<sup>n</sup></sup></i> = <i>a</i> &pm; <i>b</i>,<br>
+(<i>ab</i>)<sup><i>p</i><sup><i>n</i></sup></sup> = <i>a<sup>p<sup>n</sup></sup> b<sup>p<sup>n</sup></sup></i> = <i>ab</i><br>
+(<i>ab</i><sup>−1</sup>)<sup><i>p</i><sup><i>n</i></sup></sup> = <i>a<sup>p<sup>n</sup></sup></i>(<i>b<sup>p<sup>n</sup></sup></i>)<sup>−1</sup> = <i>ab</i><sup>−1</sup>. &emsp;□</p>
+</div>
+
+<p id="cyclic"><b>8.3.11 Theorem</b>. The multiplicative group of a finite field is cyclic.</p>
+
+<p><b>Proof 1</b>. Let <i>F</i> a finite field and consider its multiplicative group <i>F*</i> = <i>F</i> \ {0}. Being a <i>finite abelian group</i>, (using the same notation employed in the <a href="finite_abelian_groups.html">theorem on the structure of finite abelian groups</a>):</p>
+
+<div class="eq">
+<p><i>K*</i> = &Sigma;<sub><i>q</i><sub>1</sub></sub> x &Sigma;<sub><i>q</i><sub>2</sub></sub> x ⋅⋅⋅ x &Sigma;<sub><i>q</i><sub><i>t</i></sub></sub></p>
+</div>
+
+<p>where the <i>q<sub>i</sub></i> are primes that appear in the factorization of the order |<i>K</i>*| = <i>p<sup>n</sup></i> − 1, and each &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> is the product of cyclic groups. To prove that <i>K*</i> is cyclic it suffices to show that each &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> is cyclic, that is, possesses an element with period its order. For the sake of simplicity, let's drop the <sub>i</sub> here, we don't need it. We have</p> 
+
+<div class="eq">
+<p>&Sigma;<sub><i>q</i></sub> = ℤ<sub><i>q</i><sup>&alpha;<sub>1</sub></sub> x ℤ<sub><i>q</i></sub><sup>&alpha;<sub>2</sub></sub> x ... x ℤ<sub><i>q</i><sup>&alpha;<sub><i>r</i></sub></sub></p>
+</div>
+
+<p>with <i>&alpha;</i><sub>1</sub> + <i>&alpha;</i><sub>2</sub> + ... <i>&alpha;<sub><i>r</i></sub></i>  = &alpha;, and |&Sigma;<sub><i>q</i></sub>| = <i>q<sub><i>i</i></sub><sup>&alpha;</sup></i>. By way of contradiction suppose that the maximum order of the elements of &Sigma;<sub><i>q</i></sub> is <i>q<sup>&alpha;<sub>1</sub></sup></i> &lt; <i>q<sup>&alpha;</sup></i>. Then for every element <i>s</i> of &Sigma;<sub><i>q</i><sub><i>i</i></sub></sub> we have that <i>s</i><sup><i>q</i><sup>&alpha;<sub>1</sub></sup></sup> = 1. But this is a contradiction since the polynomial <i>x</i><sup><i>q</i><sup>&alpha;<sub>1</sub></sup></sup> − 1 has more roots (which are <i>q<sup>&alpha;</sup></i>) than its degree. &emsp;□</p>
+
+<p><b>Proof 2</b>. Let <i>F</i> = <i>n</i>. Then <i>F</i>* is a finite abelian group <i>n</i> − 1 elements. Let <i>q</i> be the lcm of the orders of all elements of <i>F</i>*. Then <i>a<sup>m</sup></i> = <i>e</i> for all <i>a</i> &in; <i>F</i>*. Hence every element in <i>F</i>* is a root of the polynomial <i>x<sup>m</sup></i> − 1. But a polynomial of degree <i>m</i> can have at most <i>m</i> roots. Hence <i>n</i> − 1 &le; <i>m</i>. We already showed in <a href="abelian_groups_order.html">Lemma 7.4.3</a> that, there exists an element <i>c</i> in <i>F</i>* of order <i>m</i>. Hence <i>m</i> divides <i>n</i> − 1, and this proves <i>q</i> = <i>n</i> − 1. <i>F</i>* is a cyclic group generated by <i>c</i>. &emsp;□</p>
+
+<p id="Frobenius"><b>8.3.12 Proposition</b>. Every finite field <i>F</i> with characteristic <i>p</i> has an automorphism <i>&sigma;</i>, known as Frobenius automorphism, such that <i>&sigma;</i>(<i>a</i>) = <i>a<sup>p</sup></i> for every <i>a</i> &in; <i>F</i></sub>.</p>
+
+<p><b>Proof</b>. <i>&sigma;</i> is bijective and preserves group operations. &emsp;□</p>
+
+<h2 id="exercise">Exercises</h2>
+
+<ol>
+	<li><p>Check whether fields of the following order exists, and in case construct them: 16, 24, 167, 2867.</p></li>
+	<li><p>Let <i>K</i> a field, with |<i>K</i>| = <i>p<sup>n</sup></i>. Prove that there exists a polynomial <i>p</i>(<i>x</i>) &in; ℤ<sub><i>p</i></sub>[<i>x</i>] with degree <i>n</i> such that <i>K</i> ≃ ℤ<sub><i>p</i></sub>[<i>x</i>]/(<i>p</i>(<i>x</i>)).</p></li>
+
+	<li><p>Construct a field having 25 elements.</p></li>
+
+	<li><p>Let <i>K</i> a field with |<i>K</i>| = <i>p<sup>n</sup></i> elements. If <i>F</i> is a subfield of <i>K</i>, prove that |<i>F</i>| = <i>p<sup>m</sup></i>, where <i>m</i> divides <i>n</i>. Prove the converse as well: for every divisor <i>m</i> of <i>n</i> there exists a single subfield <i>F</i> of <i>K</i> with |<i>F</i>| = <i>p<sup>n</sup></i>.</p></li>
+
+	<li><p>Find all subfields of fields, with 64, 125 and 3125 elements.</p></li>
+</ol>
+
+<h2>Solution</h2>
+
+<ol>
+	<li>
+
+	<ul>
+		<li><p>16 = 2<sup>4</sup>, so there exits a field with 16 as order. A field can be constructed as ℤ<sub>2</sub>/(<i>p</i>(<i>x</i>), with <i>p</i>(<i>x</i>) is an irreducible polynomial od degree 4 over ℤ<sub>2</sub>. For example <i>p</i>(<i>x</i>) = <i>x</i><sup>4</sup> + <i>x</i> + 1 is irreducible: since <i>x</i><sup>2</sup> + 1 has a zero of 1 in ℤ<sub>2</sub>, you know that <i>x</i><sup>2</sup> + 1 cannot be a factor, so you are left with (<i>x</i><sup>2</sup> + <i>x</i> + 1)(<i>x</i><sup>2</sup> + <i>x</i> + 1) = <i>x</i><sup>4</sup> + <i>x</i><sup>2</sup> + 1. The elements of the field are all of the form <i>q</i>(<i>x</i>) + ⟨<i>x</i><sup>4</sup> + <i>x</i> + 1⟩ where <i>q</i>(<i>x</i>) is a degree 3 or less polynomial, and there are 2<sup>4</sup> polynomials of the form <i>ax</i><sup>3</sup> + <i>bx</i><sup>2</sup> + c<i>x</i> + <i>d</i> in ℤ<sub>2</sub>.&emsp;■</p></li>
+
+		<li><p>24 cannot be expressed in terms of any power, hence there's no field with cardinality 24.&emsp;■</p></li>
+
+		<li><p>It suffices to show that it's not divisible by 2,3,5,7,12. Since 167 is prime there exists a field which 167 elements which is ℤ<sub>167</sub>.&emsp;■</p></li>
+
+		<li><p>Use Fermat's method to find a factorization 2867 = 47 ⋅ 61, so it's not expressible as <i>p<sup>k</sup></i>.&emsp;■</p></li>
+
+	</ul>
+
+	</li>
+
+	<li><p>We know, from 8.3.11 that the multiplicative group of a finite field is cyclic. Let <i>a</i> a generator of the group <i>K</i>\{0}, then <i>a</i><sup><i>p</i><sup><i>n</i> −1</sup></sup> = 1. We shall prove that <i>a</i> is algebraic with degree <i>n</i>. Consider the polynomial <i>f</i>(<i>x</i>) = <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i> &in; ℤ<sub><i>p</i></sub>[<i>x</i>]; being a polynomial with coefficients in a field, <i>f</i>(<i>x</i>) is the product of irreducible polynomials (see <a href="pol_gcd.html#factorization">Unique factorization theorem</a>), and since <i>a</i> is a root of <i>f</i>(<i>x</i>), it must be root of some irreducible polynomial, say, <i>g</i>(<i>x</i>). Then ℤ<sub><i>p</i></sub>(<i>a</i>) ≃ ℤ<sub><i>p</i></sub>[<i>x</i>]/<i>g</i>(<i>x</i>), and since ℤ<sub><i>p</i></sub>(<i>a</i>) = <i>K</i> has <i>p<sup>n</sup></i> elements, by <a href="simple_extensions.html#8212">Theorem 8.12.2 (d)</a>, it means that <i>g</i>(<i>x</i>) has degree <i>n</i>. &emsp;■</p></li>	
+
+	<li><p>Such a field exists since 5<sup>2</sup> = 25. Such a field can be thought as the splitting field over of <i>x</i><sup>25</sup> − <i>x</i> (as in Theorem 8.3.10). Or using the result  "For a prime p and a monic irreducible polynomial <i>p</i>(<i>x</i>) in F<sub>p</sub>[<i>x</i>] of degree <i>n</i>, then the ring (<i>F<sub>p</sub></i>[<i>x</i>]/⟨<i>p</i>(<i>x</i>)⟩) is a field of order <i>p<sup>n</sup></i>", by taking e.g. <i>x</i><sup>2</sup> + 3 which is irreducible in ℤ<sub>5</sub>, as does <i>x</i><sup>2</sup> + 2. Those are the only two that work in ℤ<sub>5</sub>.</p>
+
+<p>ℤ<sub>5</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + 3), Then ℤ<sub>5</sub>[<i>x</i>]/(<i>x</i><sup>2</sup> + 3) = {<i>a</i>+<i>bx</i>+(<i>x</i><sup>2</sup>+3), <i>a,b</i> &in; ℤ<sub>5</sub>}. The elements of <i>K</i> are thus</p>
+
+<div class="eq">
+<p>0,1,2,3,4,<br>x,2x,3x,4x,<br>1+x,1+2x,1+3x,1+4x,<br> 2 +x, 2+2x, 2+3x, 2+4x,<br> 3+x, 3+2x, 3+3x, 3+4x,<br> 4+x, 4+2x, 4+3x,3+4x</p>
+</div>
+
+<p>It's not hard to find that 2 + <i>x</i> is the generator of the multiplicative group <i>K</i>*.</p></li>
+
+<li><p>It results <i>K</i> ⊃ <i>F</i> ⊃ ℤ<sub><i>p</i></sub>. Now, <i>n</i> = [<i>K</i> : ℤ<sub><i>p</i></sub>] = [<i>K</i>: <i>F</i>][<i>F</i> : ℤ<sub><i>p</i></sub>], thus [<i>F</i> : ℤ<sub><i>p</i></sub>] = <i>m</i> |<i>n</i>, from which |<i>F</i>| = <i>p<sup>m</sup></i> with <i>m</i> | <i>n</i>. Conversely we shall prove that for every divisor <i>m</i> of <i>n</i> there exists a unique subfield <i>F</i> of <i>K</i> with <i>p<sup>m</sup></i> elements. If such a field exists, every element of <i>F</i> satisfies the polynomial <i>f</i>(<i>x</i>) = <i>x<sup>p<sup>m</sup></sup></i> − <i>x</i> and <i>f</i>(<i>x</i>) has at most <i>p<sup>m</sup></i> roots in <i>K</i>: thus if such <i>F</i> exists is necessarily unique. On the other hand the set <i>F</i> of all roots of <i>f</i>(<i>x</i>) is a subfield with <i>p<sup>m</sup></i> elements and is contained in <i>K</i>: indeed every root of <i>f</i>(<i>x</i>) in the subfield contained within the splitting field <i>L</i>, is also root of <i>x<sup>p<sup>n</sup></i></sup> − <i>x</i> = 0: dividing both sides of <i>x<sup>p<sup>m</sup></sup></i> = <i>x</i>, by <i>x</i> we have <i>x</i><sup><i>p<sup>m</sup></i>−1</sup> = 1; By raising both sides to (<i>p</i><sup><i>n</i> − 1</sup>)/(<i>p</i><sup><i>m</i> − 1</sup>) we have <i>x</i><sup><i>p<sup>n</sup></i>−1</sup> = 1; since raising both sides of an equation to (<i>p</i><sup><i>n</i>−1</sup>)/(<i>p</i><sup><i>m</i>−1</sup>) makes sense only if <i>p</i><sup><i>m</i> − 1</sup>| <i>p</i><sup><i>n</i> − 1</sup> is an integer we make sure it really is by <a href="Wedderburn.html">Lemma 8.6.1</a>. Since, <i>K</i> is the splitting field for <i>x<sup>p<sup>n</sup></sup></i> − <i>x</i>, all roots of <i>f</i>(<i>x</i>) are in <i>K</i>, hence <i>F</i> &subseteq; <i>K</i>. &emsp;■ </p></li>
+
+<li><p>A field of order 64 = 2<sup>6</sup> has three subfields: one of order 2 (that is ℤ<sub>2</sub>), one with order 2<sup>2</sup> (i.e. ℤ<sub>2</sub>[<i>x</i>]/(<i>x</i><sup>2</sup>+<i>x</i>+1)), 2<sup>3</sup>, and one of order 2<sup>6</sup>, i.e. the entire field itself. <br> A field of order 125 = 5<sup>3</sup> contains a subfield of order 5 (i.e. ℤ<sub>5</sub>), and the entire field. <br> A field of order 3125 = 5<sup>5</sup> has subfields of order 5 (i.e. ℤ<sub>2</sub>), and one of order 3125 i.e. the field itself. &emsp;■</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="splitting_field.html">&#171;Splitting field</a>
+<a href="index.html">Index</a>
+<a href="Wedderburn.html">The Wedderburn theorem&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

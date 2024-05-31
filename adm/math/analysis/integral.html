@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Riemann integral"/>
+    <title>The Riemann integral</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<article>
+
+<h1>The Riemann integral</h1>
+
+<p>L'<b>integrale definito</b> è un numero che nel caso particolare di funzioni positive può essere assunto come misura dell'area del trapezoide o sottografico <i>T</i> individuato dalla funzione, ma la cui definizione può essere estesa al caso generale di funzioni qualunque (in questo caso perdendo l'interpretazione geometria).</p>
+
+<div class="eq">
+<p><i>T</i> = {(<i>x,y</i>) : <i>a</i> &le; <i>x</i> &le; <i>b</i>, 0 &le; <i>y</i> &le; <i>f</i>(<i>x</i>)}</p>
+</div>
+
+<p>Si chiama trapezoide, perché se <i>f</i>(<i>x</i>) è una funzione lineare, la regione si riduce ad un trapezio.</p>
+
+<p>Let's consider the problem of calculating the area under the grapf of the function <i>y</i> = <i>x</i><sup>2</sup> for <i>x</i> &in;[0,1].</br> We divide up the inteval [0, 1] in <i>n</i> equal subintervals</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mi>i</mi>
+    <mi>n</mi>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>i</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>i</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+  <mo>,</mo>
+  <mi>n</mi>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$ x_i = \frac{i}{n}, \quad x_{i+1} = \frac{i+1}{n}, \quad i = 0, \ldots, n-1 $$ -->
+
+<figure>
+<img src="img/xquadrointegrale.png" alt="calcolo area trapezoide x^2"/>
+<figcaption><p><b>Fig.1</b> - L'area sottostante la curva è approssimata dalla somma delle aree dei rettangoli.</p>
+</figcaption>
+</figure>
+
+<p>Approssimiamo l'area sottesa la curva, con la somma delle aree dei rettangoli:</p>
+
+<img src="img/riemann0.png" alt="area trapezoide x^2"/>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>Area</mtext>
+  <mo>&#x2248;</mo>
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>n</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mi>n</mi>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>n</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <msup>
+    <mi>i</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mn>2</mn>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mn>6</mn>
+      <msup>
+        <mi>n</mi>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\text{Area} \approx S_n = \sum_{i=1}^{n-1} \left(\frac{1}{n} \right) \cdot \left(\frac{1}{n} \right)^2 = \frac{1}{n^3} \sum_{i=1}^{n-1} i^2 = \frac{(n-1)n(2n-1)}{6n^3} $$ -->
+
+<p>For <i>n</i> ⟶ &infin; we obtain</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mn>2</mn>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mn>6</mn>
+      <msup>
+        <mi>n</mi>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{n\to \infty} S_n = \frac{(n-1)n(2n-1)}{6n^3} = \frac{1}{3} $$ -->
+
+<p>The area is thus 1/3.</p>
+
+<p>Proviamo a generalizzare questo procedimento a qualsiasi funzione, considerando una funzione <i>continua</i>, <i>f</i>: [<i>a, b</i>] ⟶ ℝ. Effettuiamo la partizione dell'intervallo di definizione, in <i>n</i> intervallini, i cui estremi sono individuati dai punti</p>
+
+<div class="eq">
+<p><i>a</i> = <i>x</i><sub>0</sub>,&emsp; <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x</i><sub><i>n</i>−1</sub>,&emsp; <i>x<sub>n</sub></i> = <i>b</i></p>
+</div>
+
+<p>with</p>
+
+<div class="eq">
+<p><i>x<sub>i</sub></i> = <i>a</i> + <i>ih</i>, &emsp; <i>h</i> = (<i>b</i> − <i>a</i>)/<i>h</i>, &emsp; <i>i</i> = 0, ..., <i>n</i></p>
+</div>
+
+<p>inside each of the <i>n</i> intervals [<i>x</i><sub><i>i</i>−1</sub>, <i>x<sub>i</sub></i>] we pick an arbitrary point <i>&xi;</i> &in; [<i>x</i><sub><i>n</i>−1</sub>, <i>x<sub>i</sub></i>]. We define the sum of <b>Cauchy-Riemann</b>, as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3BE;</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3BE;</mi>
+    <mi>i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ S_n = \sum_{i = 1}^n f(\xi_i) ⋅(x_i - x_{i-1}) = \frac{b-a}{n} \sum_{i = 1}^n f(\xi_i) $$ -->
+
+<p>The quantity <i>S<sub>n</sub></i> is known as the <i>partial sum</i>.</p>
+
+<img src="img/integralecostruzione.png" alt="integrale costruzione aree rettangoli"/>
+
+<img src="img/integralecostruzione1.png" alt="integrale costruzione aree rettangoli"/>
+
+<p>Passando al limite per <i>n</i> tendente ad infinito si passa da una somma ad un integrale:</p>
+
+<p><b>Teorema 4.2</b>. Given a continuos function <i>f</i>: [<i>a, b</i>] ⟶ ℝ, there exists finite the limit of <i>S<sub>n</sub></i>, indipendently by <i>&xi;<sub>i</sub></i>, called <b>definite integral</b> of <i>f</i> on [<i>a, b</i>] expressed as:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3BE;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ S = \lim_{n\to \infty} S_n = \lim_{n \to \infty} \frac{b-a} {n} \sum_{i=1}^n f(\xi) = \int_a^b f(x) \text{d}x $$ -->
+
+<p>If, as we let the number of partions tend to &infin;, the partial sum <i>S<sub>n</sub></i> tends to a limit, then we say the function <i>f</i> is <i>Riemann integrable</i> (integrable, hereafter) on [<i>a, b</i>] and the limit to which the partials sums converge is known as the integral of <i>f</i> over [<i>a,b</i>].</p>
+
+<h2>A definition of Area</h2>
+
+<p>The Riemann integral permits a precise definition of the geometrical concept of "area" under a curve and not viceversa. </p>
+
+<p>Reconsidering the Cauchy-Riemann sum (6.3). Let <i>f</i> &ge; 0 a continuos function on [<i>a,b</i>]. Over each subinterval [<i>x</i><sub><i>i</i>−1</sub>, <i>x<sub>i</sub></i>] whose height is the value of <i>f</i>(<i>&xi;</i>) with <i>&xi;</i> a selected point in the subinterval. The sum <i>S<sub>n</sub></i> is an approximation of the area between the graph of <i>f</i> and the <i>x</i>-axis, in the interval <i>a</i> &gt; <i>x</i> &gt; <i>b</i>. This region is known as <b>trapezoid</b>.</p> 
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>S<sub>n</sub></i> = ∫<sup><i>b</i></sup><sub><sub><i>a</i></sub></sub>  f(x) dx = area of the trapezoid</p>
+</div>
+
+<p>When <i>f</i> has no fixed sign, the integral measures the difference of the positive regions (above the <i>x</i>-axis) and the negative regions (below it). Consider for example sin(<i>x</i>):</p>
+
+<img src="img/sinx02pi.png" alt="funzione seno"/>
+
+<p>because of symmetry we have:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mi>&#x3C0;</mi>
+    </mrow>
+  </msubsup>
+  <mi>s</mi>
+  <mi>i</mi>
+  <mi>n</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\int_0^{2\pi} sin(x) \, \text{d}x = 0 $$ -->
+
+<h2>Length of a Curve</h2>
+
+<p>Another important geometrical concept associated with a curve leads to an integration. This is the <i>lenght of arc</i>. </p>
+
+<p>Let <i>y</i> = <i>f</i>(<i>x</i>) a continuous function and <i>f'</i>(<i>x</i>) its interval in the interval [<i>a, b</i>]. An increment d<i>x</i> along the <i>x</i>-axis corresponds to an increment d<i>y</i> = <i>f'</i> d<i>x</i> along the <i>y</i>-axis. Then we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>d</mtext>
+  <mi>l</mi>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mtext>d</mtext>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <mtext>d</mtext>
+    <mi>y</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mtext>d</mtext>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>f</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">(</mo>
+    <mtext>d</mtext>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <mn>1</mn>
+    <mo>+</mo>
+    <msup>
+      <mi>f</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ \text{d}l = \sqrt{(\text{d}x)^2 + (\text{d}y)^2} = \sqrt{(\text{d}x)^2 + f'(x) (\text{d}x)^2} = \sqrt{1 + f'(x)^2} \text{d}x $$ -->
+
+<p>Summing up along all of the infinitesimal distances along the entire length of the curve:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>l</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <msqrt>
+    <mn>1</mn>
+    <mo>+</mo>
+    <msup>
+      <mi>f</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ l = \int_a^b \sqrt{1 + f'(x)^2} \text{d}x $$ -->
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index</a>
+<a href="integral_properties.html">Properties of the integral &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

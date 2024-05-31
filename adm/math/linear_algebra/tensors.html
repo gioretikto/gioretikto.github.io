@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Tensors">
+	<title>Tensors</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Tensors</h1>
+
+<p>Tensors respect two properties</p>
+
+<ol type="a">
+	<li><p>Tensors are invariant under coordinate transformations</p></li>
+	<li><p>Tensor components obey given transformation laws under coordinate transformations.</p></li>
+</ol>
+
+<p>Example of tensors are scalars (rank 0 tensors), vector (rank 1), matrices (rank 2). <br>An example of a) is the acceleration of gravity which is the physical object and always poins towards the center of the earth, no matter what coordinate system is used and similarly the stress tensor is the same function that maps the outward normal on a surface into the force on that surface, irrespective of the coordinate system used.</p>
+
+<p>b) refers to the components of say a vector which depend on the the choice of basis. For instance the acceleration of gravity has the coordinate representation (<i>g</i>, 0, 0) in a coordinate system where the first basis vector points down, but has representation (0,<i>g</i>, 0) in a coordinate system where the second basis vector points down. Yet it remains the same physical object. The same for the strees tensor whose matrix representation of the tensor must change in a systematic way as the coordinate system changes.</p>
+
+<figure>
+<img src="img/coordinate_transformation.png" alt="coordinate transformation"/>
+<figcaption>The pencil (vector) is invariant under a change of coordinate system, but its components representation varies, i.e. the vector components are not invariant.</figcaption>
+</figure>
+
+<h2>Coordinate transformation</h2>
+
+<p>Consider two coordinate systems represented by the following two bases</p>
+
+<div class="eq">
+<p>Old Basis : {<b><i>e</i></b><sub>1</sub>, <b><i>e</i></b><sub>2</sub>}<br>
+New Basis : {<b><i>ẽ</i></b><sub>1</sub>, <b><i>ẽ</i></b><sub>2</sub>}</p>
+</div>
+
+<img src="img/coordinate_transformation2.png" alt="change of basis"/>
+
+<p>Such that</p>
+
+<div class="eq">
+<p><b><i>ẽ</i></b><sub>1</sub> = 2<b><i>e</i></b><sub>1</sub> + 1 ⋅ <b><i>e</i></b><sub>2</sub><br>
+<i><b>ẽ</b></i></b><sub>2</sub> = −1/2⋅ <b><i>e</i></b><sub>1</sub> + 1/4 ⋅ <b><i>e</i></b><sub>2</sub></p>
+</div>
+
+<p>which can be expressed in matrix form as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mrow data-mjx-texclass="ORD">
+              <mover>
+                <mi mathvariant="bold">e</mi>
+                <mo mathvariant="bold" stretchy="false">~</mo>
+              </mover>
+            </mrow>
+            <mn mathvariant="bold">1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mrow data-mjx-texclass="ORD">
+              <mover>
+                <mi mathvariant="bold">e</mi>
+                <mo mathvariant="bold" stretchy="false">~</mo>
+              </mover>
+            </mrow>
+            <mn mathvariant="bold">2</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mfrac>
+            <mn>1</mn>
+            <mn>4</mn>
+          </mfrac>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mn mathvariant="bold">1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mn mathvariant="bold">2</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{pmatrix}  \mathbf{\tilde{e}_1} \\ \mathbf{\tilde{e}_2} \end{pmatrix}  = \begin{pmatrix} 2 & -\frac{1}{2} \\ 1 & \frac{1}{4} \end{pmatrix} \begin{pmatrix} \mathbf{e_1} \\ \mathbf{e_2} \end{pmatrix} $$ -->
+
+<p>To construct the old basis from the new basis we invert the matrix</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mfrac>
+            <mn>1</mn>
+            <mn>4</mn>
+          </mfrac>
+        </mtd>
+        <mtd>
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$A^{-1} = \begin{pmatrix} \frac{1}{4} & \frac{1}{2} \\ -1 & 2 \end{pmatrix} $$ -->
+
+<p>we can generalize to <i>n</i> dimension and write</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi mathvariant="bold">e</mi>
+        <mo mathvariant="bold" stretchy="false">~</mo>
+      </mover>
+    </mrow>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mi>i</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">j</mi>
+  </msub>
+<mtext>&emsp;8.1.1</mtext>
+</math>
+
+<!-- $$ \mathbf{\tilde{e}_i} = \sum_{j=1}^n A_{ji} \mathbf{e_j} $$ -->
+
+<p>And for the backward transformation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msubsup>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mi>i</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <msub>
+        <mi mathvariant="bold">e</mi>
+        <mi mathvariant="bold">j</mi>
+      </msub>
+      <mo mathvariant="bold" stretchy="false">~</mo>
+    </mover>
+  </mrow>
+<mtext>&emsp;8.1.2</mtext>
+</math>
+
+<!-- $$ \mathbf{e_i} = \sum_{j=1}^n A_{ji}^{-1} \mathbf{\tilde{e_j}}$$ -->
+
+<h3>Vector components</h3>
+
+<img src="img/coordinate_transformations3.png" alt="vector components"/>
+
+<p>A vector, <i><b>v</b></i> is invariant under change of coordinates so it ca been written equally as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mi mathvariant="bold">v</mi>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msub>
+          <mi>v</mi>
+          <mn>1</mn>
+        </msub>
+        <msub>
+          <mi mathvariant="bold">e</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>v</mi>
+          <mn>2</mn>
+        </msub>
+        <msub>
+          <mi mathvariant="bold">e</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x2026;</mo>
+        <mo>+</mo>
+        <msub>
+          <mi>v</mi>
+          <mi>n</mi>
+        </msub>
+        <msub>
+          <mi mathvariant="bold">e</mi>
+          <mi>n</mi>
+        </msub>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <msub>
+          <mi>v</mi>
+          <mi>i</mi>
+        </msub>
+        <msub>
+          <mi mathvariant="bold">e</mi>
+          <mi>i</mi>
+        </msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi mathvariant="bold">v</mi>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>v</mi>
+              <mo stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mn>1</mn>
+        </msub>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi mathvariant="bold">e</mi>
+              <mo mathvariant="bold" stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>v</mi>
+              <mo stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mn>2</mn>
+        </msub>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi mathvariant="bold">e</mi>
+              <mo mathvariant="bold" stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x2026;</mo>
+        <mo>+</mo>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>v</mi>
+              <mo stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mi>n</mi>
+        </msub>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi mathvariant="bold">e</mi>
+              <mo mathvariant="bold" stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mi>n</mi>
+        </msub>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>v</mi>
+              <mo stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mi>i</mi>
+        </msub>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi mathvariant="bold">e</mi>
+              <mo mathvariant="bold" stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mi>i</mi>
+        </msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi mathvariant="bold">v</mi>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <msub>
+          <mi>v</mi>
+          <mi>i</mi>
+        </msub>
+        <msub>
+          <mi mathvariant="bold">e</mi>
+          <mi>i</mi>
+        </msub>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mi>n</mi>
+        </munderover>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>v</mi>
+              <mo stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mi>i</mi>
+        </msub>
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi mathvariant="bold">e</mi>
+              <mo mathvariant="bold" stretchy="false">~</mo>
+            </mover>
+          </mrow>
+          <mi>i</mi>
+        </msub>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{align} \mathbf{v} &= v_1 \mathbf{e}_1 + v_2 \mathbf{e}_2 + \ldots + v_n \mathbf{e}_n = \sum_{i=1}^n v_i \mathbf{e}_i  \\ 
+\mathbf{v} &= \tilde{v}_1 \mathbf{\tilde{e}}_1 + \tilde{v}_2 \mathbf{\tilde{e}}_2 + \ldots + \tilde{v}_n \mathbf{\tilde{e}}_n = \sum_{i=1}^n \tilde{v}_i \mathbf{\tilde{e}}_i \\  \mathbf{v} &= \sum_{i=1}^n v_i \mathbf{e}_i = \sum_{i=1}^n \tilde{v}_i \mathbf{\tilde{e}}_i \end{align} $$ -->
+
+<p>By replacing Eq. 8.1.1 in the first of the above equation we get</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>v</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>v</mi>
+    <mi>i</mi>
+  </msub>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <msubsup>
+      <mi>A</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mi>i</mi>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msubsup>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <msub>
+          <mi mathvariant="bold">e</mi>
+          <mi mathvariant="bold">j</mi>
+        </msub>
+        <mo mathvariant="bold" stretchy="false">~</mo>
+      </mover>
+    </mrow>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <msub>
+      <mi>v</mi>
+      <mi>i</mi>
+    </msub>
+    <msubsup>
+      <mi>A</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mi>i</mi>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msubsup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <msub>
+        <mi mathvariant="bold">e</mi>
+        <mi mathvariant="bold">j</mi>
+      </msub>
+      <mo mathvariant="bold" stretchy="false">~</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>v</mi>
+        <mo stretchy="false">~</mo>
+      </mover>
+    </mrow>
+    <mi>j</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <msub>
+        <mi mathvariant="bold">e</mi>
+        <mi mathvariant="bold">j</mi>
+      </msub>
+      <mo mathvariant="bold" stretchy="false">~</mo>
+    </mover>
+  </mrow>
+</math>
+
+<!-- $$ \mathbf{v} = \sum_{i=1}^n v_i \mathbf{e}_i = \sum_{i=1}^n v_i \left ( \sum_{j=1}^n A_{ji}^{-1} \mathbf{\tilde{e_j}} \right) = \sum_{j=1}^n \left (\sum_{i=1}^n v_i A_{ji}^{-1} \right) \mathbf{\tilde{e_j}} = \sum_{j=1}^n \tilde{v}_j \mathbf{\tilde{e_j}} $$ -->
+
+<p>so the components of <b><i>v</i></b>, in the two basis transform as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <msub>
+        <mi>v</mi>
+        <mi>j</mi>
+      </msub>
+      <mo stretchy="false">~</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>v</mi>
+    <mi>i</mi>
+  </msub>
+  <msubsup>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mi>i</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msubsup>
+</math>
+
+<!-- $$\tilde{v_j} = \sum_{i=1}^n v_i A_{ji}^{-1}  $$  -->
+
+<img src="img/coordinate_transformations4.png" alt="coordinate transformations4"/>
+
+<p>Because vector components behave contrary to the basis vectors, we say vector components are <b>contravariant</b>. We'll see that vectors are <b>contravariant tensors</b>. We usually represent them as follows</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msup>
+    <mi>v</mi>
+    <mi>i</mi>
+  </msup>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>v</mi>
+        <mo stretchy="false">~</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msup>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi mathvariant="bold">e</mi>
+        <mo mathvariant="bold" stretchy="false">~</mo>
+      </mover>
+    </mrow>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+</math>
+
+<!-- $$ \mathbf{v} = \sum_{i=1}^n v^i\mathbf{e_i} = \sum_{i=1}^n \tilde{v}^i\mathbf{\tilde{e}_i} $$ -->
+
+<p>which is sort of a reminder that they behave in opposite ways</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="tesnros_def.html">Tensor formal definition»</a>
+</section>
+
+</article>
+
+</body>
+</html>

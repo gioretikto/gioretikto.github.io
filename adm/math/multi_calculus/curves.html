@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Curves"/>
+	<title>Curves</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Curves</h1>
+
+<p><b>Example 2.1.1. (of Curves)</b> Curves in the plane can be described in at least three different ways:</p>
+
+<ul>
+	<li><p>as the graph of a function <i>y</i> = <i>g</i>(<i>x</i>); e.g. a straight line is represented as <i>y</i> = <i>mx</i> + <i>q</i> or <i>x</i> = <i>my</i> + <i>q</i>;</p></li>
+	<li><p>as the vanishing locus of a two variable function, <i>f</i>(<i>x,y</i>) = 0; for a line the first degree polynomial <i>ax</i> + <i>by</i> + <i>c</i> = 0;</p></li>
+	<li><p>in parametric form as the image of a map <i>f</i>: ℝ → ℝ<sup>2</sup> having the form <i>f</i>(<i>t</i>) = (<i>αt</i> + <i>β, γt</i> + <i>δ</i>).&emsp;■</p></li>
+</ul>
+
+<p><b>Definition 2.1.2</b> A continuous function <i><b>γ</b></i>: <i>I</i> ⊆ ℝ → ℝ<sup><i>m</i></sup> is called a <b>curve</b>. The set <i>Γ</i> = <i>γ</i>(<i>I</i>) ⊆ ℝ<sup><i>m</i></sup> is said <b>trace</b> of the curve. We says that a subset <i>S</i> of ℝ<sup><i>m</i></sup> is <b>parametrized by <i>&gamma;</i></b> provided there is a subset <i>I</i> &subseteq; ℝ such that <i>&gamma;</i>: <i>I</i> ⟶  ℝ<sup><i>m</i></sup> is a curve for which <i>&gamma;</i>(<i>I</i>) = <i>S</i>. &emsp;□</p>
+
+<p><b>Definition 2.1.3</b> Let <i>f</i> and <i>g</i> be continuous functions of a variable <i>t</i> on an interval <i>I</i> ⊆ ℝ. The the equations <i>x</i> = <i>f</i>(<i>t</i>) and <i>y</i> = <i>g</i>(<i>t</i>) are called parametric equations, with <i>parameter</i> <i>t</i>. The set of points (<i>x,y</i>) = (<i>f</i>(<i>t</i>,<i>g</i>(<i>t</i>) trace out a parametric curve as <i>t</i> varies over the interval <i>I</i>. Here, the domain set <i>I</i> is called the parametric set.&emsp;□</p>
+
+<p>A parametrization is not unique, there can by many different pairs of functions that can exactly describe a given geometrical locus.</p>
+
+<p>If the trace of the curve lies on a plane, one speaks about a plane curve. The most common curves are those in the plane (<i>m</i> = 2)</p>
+
+<div class="eq">
+<p><i>γ</i>(<i>t</i>) = (<i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>)) = <i>x</i>(<i>t</i>) <b>i</b> + <i>y</i>(<i>t</i>) <b>j</b></p>
+</div>
+
+<p>and curves in space (<i>m</i> = 3)</p>
+
+<div class="eq">
+<p><i><b>γ</b></i>(<i>t</i>) = <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>) = <i>x</i>(<i>t</i>) <b><i>i</i></b> + <i>y</i>(<i>t</i>) <i><b>j</b></i> + <i>z</i>(<i>t</i>) <i><b>k</b></i></p>
+</div>
+
+<p>It's important to stress the difference occurring between a <i>curve</i>, which is a function of one real variable, and its <i>trace</i> (sostegno), a set in Euclidean space ℝ<sup><i>m</i></sup>. A curve provides a way to parametrise its trace by associating to the parameter <i>t</i> ∈ <i>I</i> one (and only one) point of the trace. Still, <i>Γ</i> may be the trace of many curves, because it may be parametrised in distinct ways. For instance the plane curves <i><b>γ</b></i>(<i>t</i>) = (<i>t, t</i>), <i>t</i> ∈ [0, 1], and <b><i>δ</i></b>(<i>t</i>) = (t<sup>2</sup>, t<sup>2</sup>), <i>t</i> ∈ [0, 1] have the segment AB of end points <i>A</i> = (0, 0) and <i>B</i> = (1, 1) as common trace; <i><b>γ</b></i> and <i><b>δ</b></i> are two parametrisations of the segment. The mid-point of <i>AB</i>, for example, corresponds to the value <i>t</i> = 1/2 for <i><b>γ</b></i>, <i>t</i> = 1/2 for <i><b>δ</b></i>.</p>
+
+<p>A <b>curve <i>γ</i></b> is said <b>simple</b> if <b>γ</b> is a one-to-one map, i.e., if distinct parameter’s values determine distinct points of the trace. <br> If the interval <i>I</i> = [<i>a, b</i>] is closed and bounded, as in the previous examples, the curve <i>γ</i> will be named arc. We call <b>end points</b> of the arc the points <i>P</i><sub>0</sub> = <i><b>γ</b></i>(<i>a</i>), <i>P</i><sub>1</sub> = <i><b>γ</b></i>(<i>b</i>); precisely, <i>P</i><sub>0</sub> is the <b>initial point</b> and <i>P</i><sub>1</sub> the <b>end point</b>, and <i><b>γ</b></i> joins <i>P</i><sub>0</sub> and <i>P</i><sub>1</sub>. An <b>arc</b> is <b>closed</b> if its end points coincide: <i><b>γ</b></i>(<i>a</i>) = <i><b>γ</b></i>(<i>b</i>); although a closed arc cannot be simple, one speaks anyway of a simple closed arc (or <b>Jordan arc</b>) when the point <i><b>γ</b></i>(<i>a</i>) = <i><b>γ</b></i>(<i>b</i>) is the unique point on the trace where injectivity fails. Figure 4.13 illustrates a few arcs; in particular, the trace of the Jordan arc (bottom left) shows a core property of Jordan arcs, known as Jordan Curve Theorem.</p>
+
+<p><b>Example 1</b>. Consideriamo la parametrizzazione:</p>
+
+<p><b><i>r</i></b>(<i>t</i>) = 2 cos <i>t <b>i</b></i> + 2 sin <i>t <b>j</b>, t</i> ∈ [<i>a, b</i>].</p>
+
+<p>Se [<i>a, b</i>] = [0, 2π] è facile convincersi che <b>r</b> parametrizza la circonferenza γ di raggio 2 centrata nell’origine del piano <i>xy</i>. Si tratta perciò di una curva chiusa e piana, la cui parametrizzazione risulta semplice (ogni punto di γ eccetto (2, 0) = <b>r</b>(0) = <b>r</b>(2π) corrisponde ad esattamente un valore del parametro). Se invece [<i>a, b</i>] = [0, 3π] otteniamo ancora una parametrizzazione di γ, che questa volta viene “percorsa” una volta e mezza. Perciò la parametrizzazione non è semplice, né chiusa. Infine si consideri la paramettrizzazione:</p>
+
+<p><b><i>r</i></b>(<i>t</i>) = 2 cos <i>t <b>j</b></i> + 2 sin <i>t <b>i</b>, t</i> ∈ [0, 2π].</p>
+
+<p>Si tratta di un'altra parametrizzazione di <b>r</b>, stavolta percorsa in senso orario. &emsp;■</p>
+
+<p>Risulta chiaro dall’esempio precedente che un sostegno può essere parametrizzato in infiniti modi diversi.</p>
+
+<p>La parametrizzazione di una curva induce  un'<i>orientazione</i> del proprio sostegno, cioè il verso in cui <b>&gamma;</b>(t) percorre il sotegno all'aumentare di <i>t</i>. L'orientazione del sostegno viene indicata con frecce. Per cambiare orientazione occorre cambiare paramettrizzazione. Ad esempio la circonferenza unitaria percorsa in senso orario ha la parametrizzazione:</p>
+
+<p><b>r</b>(t) = cos t <b>i</b> − sin t <b>j</b>, <i>t</i> ∈ [0, 2π]</p>
+
+<p>Il sostegno di una curva piana, semplice e chiusa divide il piano in due insiemi aperti e connessi, di cui uno è limitato e si chiama <b>interno</b> della curva, l'altro è illimitato e si chiama <b>esterno</b> della curva. Ciò porta alla seguente definizione:</p>
+
+<div class="def">
+<p><b>Definizione 5.2</b>- Una curva <b>&gamma;</b> piana, semplice e chiusa si dice <b>curva di Jordan</b>. Una curva di Jordan si dice <b>orientata positivamente</b> (negativamente) se <b>&gamma;</b>(t) percorre il sostegno in senso antiorario (orario), ovvero tenendo l'interno della curva a sinistra.</p>
+</div>
+
+<section aria-label="End">
+<a href="limits_vector_functions.html">&#171;Limits and continuity of Vector-Valued Functions</a>
+<a href="index.html">Index</a>
+<a href="limits_vector_functions.html">Limits and continuity of Vector-Valued Functions&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

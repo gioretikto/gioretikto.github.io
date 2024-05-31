@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Transformation Groups"/>
+	<title>Transformation Groups</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Transformation Groups</h1>
+
+<p>A bijection <i>X</i> → <i>X</i> is often called a <i>transformation</i> on the set <i>X</i>, so a <i>transformation group</i> on <i>X</i> is a set of bijections on <i>X</i> which form a group under composition. Let <i>X</i> an arbitrary set. Consider the set 𝓢(<i>X</i>) of all <i>transformations</i> or <i>bijections</i> from <i>X</i> to itself: <i>X</i> → <i>X</i>. Under the operation of composition of functions (<i>f ∘ g</i>) (<i>x</i>) = <i>f</i>(<i>g</i>(<i>x</i>)), 𝓢(<i>X</i>) is a group since composition is associative, composition of bijections is a bijections, 1<sub><i>X</i></sub> is a bijections, and every bijection has an inverse. I can be easily seen that 𝓢(<i>X</i>, ∘) is a non-Abelian group. </p>
+
+<p><b>7.3.1 Definition</b> A group <i>G</i> is said transformation group of a set <i>X</i> if <i>G</i> is a subgroup of the group 𝓢(<i>X</i>, ∘) of all bijections from <i>X</i> to itslef. &emsp;□</p>
+
+<p>An example of transformation group is the group of planar isometries; <b>Isometries</b> are transformations that preserve distance. An isometry of ℝ<sup>2</sup> is a transformation <i>φ</i>: ℝ<sup>2</sup> → ℝ<sup>2</sup> that preserves distance, so that the distance between points <i>P</i> and <i>Q</i> is the same as the distance between the points <i>φ</i>(<i>P</i>) and <i>φ</i>(<i>Q</i>) for all points <i>P</i> and <i>Q</i> in ℝ<sup>2</sup>. Note that if <i>&phi;</i>: ℝ<sup>2</sup> → ℝ<sup>2</sup> is a rigid motion, then <i>&phi;</i> sends the vertices of a triangle to the corresponding vertices of a congruent triangle. Hence, <i>φ</i> preserves the angles of a triangle.</p>
+
+<p>If <i>ψ</i> is also an isometry of ℝ<sup>2</sup>, then the distance between <i>ψ</i>(<i>φ</i>(<i>P</i>)) and <i>ψ</i>(<i>φ</i>(<i>Q</i>)) must be the same as the distance between <i>φ</i>(<i>P</i>) and <i>φ</i>(<i>Q</i>), which in turn is the distance between <i>P</i> and <i>Q</i>, showing that the composition of two isometries is again an isometry. Since the identity map is an isometry and the inverse of an isometry is an isometry, we see that the isometries of ℝ<sup>2</sup> form a subgroup of the group of all transformations of ℝ<sup>2</sup>.</p>
+
+<p>The isometries of the plane form a group under composition of function, the so called Euclidean group <i>E</i><sub>2</sub>. Euclidean group is built from the translational group <i>T</i> and the orthogonal group O<sub>2</sub>(R).</p>
+
+<h3>Rotations and Reflections</h3>
+
+<p>Every element of O<sub>2</sub>(R) can be represented by a 2 x 2 matrix, where any such matrix satisfies the condition <i>A<sup>T</sup>A</i> = <i>I</i>. Let <i>A</i> be the matrix with respect to the standard basis for an element in O<sub>2</sub>(R). If</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>then the condition <i>A<sup>T</sup>A</i> = <i>I</i> gives</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msup>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>a</mi>
+          <mi>b</mi>
+          <mo>+</mo>
+          <mi>c</mi>
+          <mi>d</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+          <mi>b</mi>
+          <mo>+</mo>
+          <mi>c</mi>
+          <mi>d</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <msup>
+            <mi>d</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>d</mi>
+            <mn>2</mn>
+          </msup>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>The relation above is satisfied for an angle &theta; with <i>a</i> = cos &theta;, <i>c</i> = cos &theta;, (<i>b d</i>) = (−sin <i>&theta;</i>, cos <i>&theta;</i>), or (<i>b,d</i>) = (sin &theta;, −cos &theta;). The first choice gives a matrix <i>A</i> with determinant 1 that represents a <b>rotation</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>which are elements of the subgroup SO<sub>2</sub>(R) of O<sub>2</sub>. In particular, we have R<sub>θ</sub>R<sub>φ</sub> = R<sub>φ</sub>R<sub>θ</sub>, so the group SO<sub>2</sub> is Abelian.</p>
+
+<p>On the other hand the second choice gives a matrix of determinant −1 </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>that represents a reflection across a line through the origin. The elements of O<i>2</i>(R) \ SO<sub>2</sub>(R) are <b>reflections</b>.</p>
+
+<p>We can think of a reflection or a flip across a line <i>l</i> moves each point <i>P</i> to <i>P</i> ' such that line <i>l</i> is the perpendicular bisector of the segment connecting <i>P</i> and <i>P</i>′. If <i>P</i> is on <i>l</i>, then <i>P</i> is mapped to itself, or <i>P</i> = <i>P</i>'. </p>
+	
+	<img src="img/reflection.png" alt="reflection"/>
+	
+	<p>Reflections take the form</p>
+	
+	<div class="eq">
+	<p><i>x</i>' = <i>x</i> cos <i>&theta;</i> + <i>y</i> sin <i>&theta;</i>.</p>
+	<p><i>y</i>' = − <i>x</i> sin <i>&theta;</i> − <i>y</i> cos <i>&theta;</i>.</p>
+	</div>
+	
+	<p>By applying two times such a transformation, the identity is obtained.</p></li>
+	
+	<li><p><i>Rotations</i>: Consider the following situation in which a point <i>P</i> of coordinates (<i>x, y</i>) is rotated about the origin of an angle &theta; to the point <i>P'</i> of coordinates (<i>x', y'</i>).</p>
+
+	<img src="img/rotations_plane.png" alt="plane rotations"/>
+
+	<p>From the trigonometric relations</p>
+
+	<div class="eq">
+	<p><i>x</i> = <i>&rho;</i> cos <i>&phi;</i>, &emsp; <i>y</i> = &rho; sin &phi;</p>
+	</div>
+
+	<p>and</p>
+
+	<div class="eq">
+	<p><i>x'</i> = <i>&rho;</i> cos (<i>&theta;</i> + <i>&phi;</i>) , &emsp; <i>y</i> = &rho; sin (<i>&theta;</i> + <i>&phi;</i>)</p>
+	</div>
+
+	<p>where &rho; indicates the length of both OP and OP'. Since</p>
+
+	<div class="eq">
+	<p><i>&rho;</i> cos (<i>&theta;</i> + <i>&phi;</i>) = <i>&rho;</i> cos &theta; <i>&rho;</i> sin &phi; − <i>&rho;</i> sin &theta; cos &phi; = <i>x</i> cos &theta; − <i>y</i> sin &theta;</p>
+	<p><i>&rho;</i> sin (<i>&theta;</i> + <i>&phi;</i>) = <i>&rho;</i> sin &theta; <i>&rho;</i> cos &phi; + <i>&rho;</i> cos &theta; sin &phi; = <i>x</i> sin &theta; + <i>y</i> cos &theta;</p>
+	</div>
+
+	<p>we have</p>
+
+	<div class="eq">
+	<p><i>x'</i> = <i>x</i> cos &theta; − <i>y</i> sin &theta;<br>
+	<i>y'</i> = <i>x</i> sin &theta; + <i>y</i> sin &theta;</p>
+	</div>
+
+	<p>Introducing the column vector (<i>x y</i>) and (<i>x' y'</i>) we can write the transformation as</p>
+
+	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>x</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>y</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>To reverse it, we apply the rotation −&theta; and obtain <i>A</i><sup>−1</sup></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>&#x3B8;</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>s</mi>
+          <mi>i</mi>
+          <mi>n</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>c</mi>
+          <mi>o</mi>
+          <mi>s</mi>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<h3>Translations</h3>
+
+<p>Let <i>T</i> denote the subgroup of <i>E</i><sub>2</sub> which consists of all the translations. Translations slide every point the same distance in the same direction. Example: <i>T</i>(<i>x, y</i>) = (<i>x, y</i>) + (<i>a, b</i>) = (<i>x</i> + <i>a</i>, <i>y</i> + <i>b</i>), with <i>a,b</i> &in;ℝ<sup>2</sup> or equivalently</p>
+	
+	<div class="eq">
+	<p><i>x'</i> = <i>x</i> + <i>a</i></p>
+	<p><i>y'</i> = <i>y</i> + <i>b</i></p>
+	</div>
+
+<p>In vector form a translations by the vector <b>v</b> is the function <i>&tau;</i>: ℝ ⟶ ℝ<sup>2</sup> defined by <i>&tau;</i>(<b><i>x</i></b>) = <i><b>v</i> + <i>x</b></i> for all <b>x</b> &in; ℝ<sup>2</sup>. Translations— other than the trivial one, when <i><b>v</b></i> = <b>0</b> — cannot be linear because.</p>
+
+<div class="eq">
+<p><i>&tau;</i>(<b><i>x</i> + <i>y</i></b>) = <b><i>x</i> + <i>y</i> + <i>v</i></b> &ne; <i>&tau;</i>(<b>x</b>) + <i>&tau;</i>(<b>y</b>) = <b>x</b> + <b>y</b> + 2<b>v</b></p>
+</div>
+
+<p>Or, even more simply, we note that <i>&tau;</i>(<b>0</b>) = <b>v</b>, which must be <b>0</b> if <i>&tau;</i> is to be linear.</p>
+
+<p>Since &tau;(<b>0</b>) = <b>v</b>, a translation is completely determined if we know where it sends the origin. This is easily checked <i>&tau;</i>(<b><i>x</i></b>) = <i><b>0 + x</b></i> is the identity element. If <i>&tau;<sub>1</sub>, &tau;<sub>2</sub></i> &in; <i>T</i> are defined by <i>&tau;</i><sub>1</sub>(<b>x</b>) = <b>u</b> + <b>x</b> and <i>&tau;</i><sub>2</sub>(<b>x</b>) = <b>v</b> + <b>x</b> for all <b>x</b> &in; ℝ<sup>2</sup>, then</p>
+
+<div class="eq">
+<p><i>&tau;</i><sub>1</sub><i>&tau;</i><sub>2</sub><sup>−1</sup>(<b>x</b>) = <i>&tau;</i><sub>1</sub>((−<b>v</b>) + <b>x</b>)<br>
+ = <b>u</b> + ((−<b>v</b>) + <b>x</b>)<br>
+=(<b>u</b> − <b>v</b>) + <b>x</b></p>
+</div>
+
+<p>So <i>&tau;</i><sub>1</sub><i>&tau;</i><sub>2</sub><sup>−1</sup> is translation by <b>u − v</b> and therefore belongs to <i>T</i>.</p>
+
+<p>All these transformations can be represented by the following equations</p>
+	
+	<div class="eq">
+		<p><i>x' = x</i> cos <i>&theta;</i> + <i>y</i> sin <i>&theta; +  &alpha;</i>.<br>
+		<i><i>y</i>' = <i>&epsilon; x</i> sin <i>&theta;</i> −&epsilon; <i>y</i> cos <i>&theta; + &beta;</i>.</p>
+	</div>
+	
+<p>with <i>&epsilon;</i> = &pm; 1. The matrix <i>A</i> = [cos <i>&theta;</i>, sin <i>&theta;; &epsilon; x</i> sin <i>&theta;</i>], is orthogonal with determinant &pm;1.</p></li>
+	
+</ol>
+
+<p>It can be proved that the group of planar isometries is <i>generated</i> by translations, rotations and reflections. More precisely, reflections are sufficient to generate the entire group of planar isometries (every isometry can be expressed as product of at last three reflections).</p>
+
+<p>Other planar isometries are</p>
+
+<ol>
+	<li><p>The group of Affine transformations constitute the class of linear transformations (i.e., line preserving) that maps parallel lines into parallel lines. They can be represented though the following equations</p>
+	
+	<div class="eq">
+	<p><i>x'</i> = <i>ax</i> + <i>by</i> + <i>&alpha;</i></p>
+	<p><i>y'</i> = <i>cx</i> + <i>dy</i> + <i>&beta;</i></p>
+	</div>
+	
+	<p>with <i>&alpha;&beta;a,b,c,d</i> &in; ℝ.</p>
+	</li>
+	
+	<li><p>The group of a <i>graph</i></p>
+	
+	<p><b>7.3.2 Definition</b> A graph <i>&Gamma;</i> = (<i>V,L</i>) is a non-empty set of vertices <i>V</i> and a set of sides <i>L</i> of non ordered pairs.&emsp;□</p>
+	
+	<p>In 1872, Felix Klein, an eminent German mathematician, in his famous Erlanger Programm attempted to define geometry as the study of those properties which are invariant under a given group of transformation: different geometries corresponding in this way to different transformation groups. Geometries may be classified according to the group of transformations which preserve the intrinsic
+properties of the geometry. In the case of Euclidean geometry, this is the group of Euclidean isometries: in line with the above, these will be seen to be the rotations, reflections and translations of the plane.</p>
+</ol>
+
+<section aria-label="End">
+<a href="characteristic_integral_domain.html">&#171;The characteristic of an integral domain</a>
+<a href="index.html">Index</a>
+<a href="Sn.html">Symmetric group&#187;</a>
+</section>
+</article>
+
+</body>
+</html>

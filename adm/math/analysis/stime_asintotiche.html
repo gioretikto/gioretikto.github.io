@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Confronti e stime asintotiche"/>
+    <title>Confronti e stime asintotiche</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Confronti e stime asintotiche</h1>
+
+<p>I limiti notevoli sono espressi in tramite il simbolo di equivalenza asintotica ~, già introdotto per le successioni.</p>
+
+<div class="def">
+<p>Si dice che due funzioni <i>f,g</i>, definite almeno in un intorno di <i>x<sub>0</sub></i> sono <i>asintotiche</i> per <i>x → x<sub>0</sub></i> se</p>
+
+<img src="img/limiti/equivalenza_asintotica.png" alt="equivalenza asintotica"/>
+
+<p>e si scrive <i>f ~ g</i> per <i>x → x<sub>0</sub></i></p>
+
+</div>
+
+<p>I limiti notevoli si possono allora riscrivere come segue:</p>
+
+<div class="eq">
+<p><i>sin x ~ x, &emsp; 1 - cos x ~ x<sup>2</sup>/2, &emsp; e<sup>x</sup> -1 ~ x</i></p>
+<p><i>log(1+x) ~ x, &emsp; (1+x)<sup>&alpha;</sup> - 1 ~ &alpha;x</i></p>
+<p><i>per x → 0</i></p>
+</div>
+
+<p>Si può dire che <i>sin x , log (1+x)</i>, e <i>e<sup>x</sup> - 1</i>, <i>in prima approssimazione</i> o al <i>primo ordine</i>, si comportano come <i>x</i> per <i>x → 0</i>.</p>
+
+<p>Tali relazioni possono essere generalizzate tramite il teorema del limite della funzione composta. Se <i>&epsilon;(x)</i> è una funzione che tende a zero (cioè un <i>infinitesimo</i>), si può scrivere tramite il cambio di variabile <i>y = &epsilon;(x)</i>:</p>
+
+<div class="eq">
+<p><i>sin &epsilon;(x) ~ &epsilon;(x)</i></p>
+<p><i>1 - cos &epsilon;(x)~ &epsilon;(x)<sup>2</sup>/2</i></p>
+<p><i>&epsilon;<sup>&epsilon;(x)</sup> - 1 ~ &epsilon;(x)</i></p>
+<p><i>log(1 + &epsilon;(x)) ~ &epsilon;(x)</i></p>
+<p><i>(1 + &epsilon;(x))<sup>&alpha;</sup> - 1 ~ &alpha;&epsilon;(x)</i></p>
+<p><i>per &epsilon;(x) → 0</i></p>
+</div>
+
+<h2>Proprietà del simbolo ~</h2>
+
+<p>Il simbolo di asintotico gode di tutte le proprietà enunciate per le successioni. </p>
+
+<h3>Stesso limite</h3>
+
+<p>Se <i>f<sub>1</sub>(x) ~ f<sub>2</sub>(x)</i> per <i>x → x<sub>0</sub></i> allora le due funzioni hanno lo stesso limite (finito o infinito) per <i>x → x<sub>0</sub></i>, oppure entrambe non hanno limite. Questo è il motivo per cui è utile sapere che due funzioni sono asintotiche.</p>
+
+<h3>Proprietà riflessiva</h3>
+
+<p>Se <i>f<sub>1</sub>(x) ~ f<sub>2</sub>(x)</i> per <i>x → x<sub>0</sub></i>, allora anche <i>f<sub>2</sub>(x) ~ f<sub>1</sub>(x)</i>.</p>
+
+<p>Questo è il motivo per cui è corretto dire che "due funzioni sono asintotiche tra loro" per <i>x → x<sub>0</sub></i>, e non che "la prima è asintotica alla seconda".</p>
+
+<h3>Proprietà transitiva</h3>
+
+<p>Se per <i>x → x<sub>0</sub></i> <i>f<sub>1</sub>(x) ~ f<sub>2</sub>(x)</i> per <i>x → x<sub>0</sub></i> e <i>f<sub>2</sub>(x) ~ f<sub>3</sub>(x)</i> allora anche <i>f<sub>1</sub>(x) ~ f<sub>3</sub>(x)</i> per <i>x → x<sub>0</sub></i>.</p>
+
+<p>Questo significa che si può procedere con <i>catene di relazioni asintotiche</i>, per concludere alla fine che l'ultimo termine della catena è asintotico al primo.</p>
+
+<h3>Funzione asintotica a una costante</h3>
+
+<p>Per <i>x → x<sub>0</sub></i>, <i>f<sub>1</sub>(x) ~ c</i> (numero reale diverso da zero) se e solo se <i>f(x) ~ c</i>.</p>
+
+<p>Spesso l'ultimo termine di una catena di stime asintotiche è una costante: in tal caso, coincide col limite.</p>
+
+<h3>Uso di asintotico con prodotti e quozienti</h3>
+
+<p>Se per <i>x → x<sub>0</sub></i>, <i>f<sub>1</sub>(x) ~ f<sub>2</sub>(x)</i> e <i>g<sub>1</sub>(x) ~ g<sub>2</sub>(x)</i> allora anche</p>
+
+<div class="eq">
+<p><i>f<sub>1</sub>(x) g<sub>1</sub>(x) ~ f<sub>2</sub>(x) g<sub>2</sub>(x)</i></p>
+<p><i>f<sub>1</sub>(x) / g<sub>1</sub>(x) ~ f<sub>2</sub>(x) / g<sub>2</sub>(x)</i></p>
+<p><i>f<sub>1</sub>(x)<sup>&alpha;</sup> ~ g<sub>1</sub>(x)<sup>&alpha;</sup></i></p>
+</div>
+
+<p>Per certi esponenti reali &alpha; occorre che le funzioni siano non negative.</p>
+
+<p>Il simbolo di asintotico si comporta in modo naturale quindi rispetto a <i>prodotti, quozienti ed elevamento a potenza.</i> Non è altrattanto vero con operazione come la somma o l'esponenziale.</p>
+
+<h3>Non usare "asintotico"come "uguale"</h3>
+
+<p>Il simbolo si asintotico condivide qualche proprietà col simbolo uguale (simmetria, transitività), ma non si può usare come un uguale. Ad esempio per <i>x → 0</i> si ha la relazione</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup> - 1 ~ x</i></p>
+</div>
+
+<p>Sempre per <i>x → 0</i> si ha anche</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup> ~ 1 ~ 1 + x<sup>2</sup></i></p>
+</div>
+
+<p>Non è lecito scrivere</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup> - 1 ~ x<sup>2</sup></i></p>
+</div>
+
+<blockquote>Qundi non è lecito portare una quantità da una parte all'altra del segno di ~ cambiandola di segno, come si farebbe con un'uguaglianza.</blockquote>
+
+<h2>Stime asintotiche e parte principale di una somma</h2>
+
+<p>La parie principale di una funzione <i>f(x)</i> per <i>x → x<sub>0</sub></i> è, la più semplice funzione asintotica a <i>f(x)</i>, per <i>x → x<sub>0</sub></i>. Mostriamo come si utilizza il simbolo asintotico per mettere in evidenza la parte principale di una somma di più termini. Si noti come generalmente la parte principale di una somma di termini è data da un solo termine (che eventualmente è il <i>prodotto</i>, ma non la somma, di più espressioni.</p>
+
+<table>
+<thead>
+<tr><th>La parte principale di ..</th> <th><i>per x → ..</th> <th>è ..</th></tr>
+</thead>
+
+<tbody>
+<tr>a)</td></td> <td>sin x</td> <td>0</td> <td>x</td></tr>
+<tr>b)</td></td> <td>sin x +2</td> <td>0</td> <td>2</td></tr>
+<tr>c)</td></td> <td>(2x<sup>3</sup> + 2x<sup>2</sup> - x)</td> <td>&pm;∞</td> <td>2x<sup>3</sup></td></tr>
+<tr>d)</td></td> <td>(2x<sup>3</sup> + 2x<sup>2</sup> - x)</td> <td>0</td> <td>-x</td></tr>
+<tr>e</td></td> <td>(5x<sup>3</sup> + 2<sup>x</sup> + 3log<sup>4</sup>x)</td> <td>+∞</td> <td>2<sup>x</sup></td></tr>
+</tbody>
+</table>
+
+<p>Dimostrazione di alcune affermazioni precedenti.</p>
+
+<p>a) è un limite notevole. b) sin x + 2 → 2, perciò sin x + 2 ~ 2.</p>
+
+<p>c) (2x<sup>3</sup> + 2x<sup>2</sup> - x) = 2x<sup>3</sup>( 1 + 1/x - 1/2x<sup>2</sup>) ~ 2x<sup>3</sup></i></p>
+
+<p>d) (2x<sup>3</sup> + 2x<sup>2</sup> - x) = -x(1 -2x -2x<sup>2</sup>) ~ 2x<sup>3</sup></i></p>
+
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
