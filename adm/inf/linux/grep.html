@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="grep"/>
+	<title>grep</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Il comando grep</h1>
+
+<p>Il comando <b>grep</b> mostra le linee che combaciano con un pattern. Può essere utilizzato per trovare del testo in un file and search a directory structure of files recursively. It also supports showing the context of a match by showing lines before and after the result and has support for regular expressions in pattern matching.</p>
+
+<h3>Mostrare il numero della linea del match</h3>
+
+<p>Per mostrare la linea del risultato del matching basta aggiungere l'opzione <b>-n</b>. Questo comando mostrerà il match e la linea in cui questo occorre nel file.</p>
+
+<pre>grep 'computer' -n /usr/share/dict/myfile
+    1545</pre>
+
+<p>Per cercare una stessa parola all'interno di più file, come ad esempio la parola 'Template' in file sorgente .c:</p>
+
+<pre>grep -n Template *.c</pre>
+
+<p>Questa opzione è molto utitle volendo modificare un file ad esempio con vim and subito alla linea del file che si vuole modificare.</p>
+
+<pre>vim +1545 /usr/share/dict/myfile</pre>
+
+<h3>How to print lines before and after a match</h3>
+
+<p>To print lines before and after a match the <b>-A</b> and <b>-B</b> options can be used. Both expect a number and will print this number of lines.</p>
+
+<pre>grep -B 2 -A 2 'computer' /usr/share/dict/words
+    computativeness
+    compute
+    computer
+    computist
+    computus</pre>    
+    
+<h3>How to use extended regular expressions when searching</h3>
+
+<p>To use extended regular expressions use the -e option. The following line matches lines that do not contain the words ‘foo’ or ‘bar’.</p>
+
+<pre>grep -v -e 'foo' -e 'bar'</pre>   
+
+<h2>Subtraction of file1 from file2</h2>
+
+<p>Per sottrarre il contenuto di una wordlist a quello di una seconda:</p>
+
+<pre>grep -vxF -f pwd passwords.txt >> out</pre>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="GPU.html">GPU&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

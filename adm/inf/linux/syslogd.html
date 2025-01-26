@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="System Logging"/>
+    <title>System Logging</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>System Logging</h1>
+
+<p>Most system programs write their diagnostic output as messages to the <i>syslog</i> service. The traditional syslogd daemon performs this service by waiting for messages and, upon receiving one, sending it to an appropriate channel, such as a file or a database. On most contemporary systems, journald (which comes with systemd) does most of the work. Though we’ll concentrate on journald in this book, we’ll also cover many aspects of the traditional syslog. The system logger is one of the most important parts of the system. When something goes wrong and you don’t know where to start, it’s always wise to check the log.</p>
+
+<p>The /var/log directory is the standard location for log files to be placed by the <b>syslogd</b> and <b>rsyslogd</b> daemons. The following describes some of the more comoonly created files:</p>
+
+<ul>
+	<li><p><i>/var/log/auth.log</i>: Log entries related to the authentication operations (typically users logging into system).</p></li>
+	<li><p><i>/var/log/syslog</i>: A variety of log entries are stored in this file.</p></li>
+	<li><p><i>/var/log/kern.log</i>: Log entries from the kernel.</p></li>
+</ul>
+
+<p>Not all log files in the <i>/var/log</i> directory are created by the <b>syslogd</b> daemon. Many modern services create and manage log files separate from <b>syslogd</b>. Two examples are <i>wtmp</i> and <i>lastlog</i>, the logfiles that utilities such as last and lastlog access in order to get login records. In addition, there may be further subdirectories in <i>/var/log</i> containing logs. These nearly always come from other services. One of them, <i>/var/log/</i> <i>journal</i>, is where journald stores its (binary) logfiles.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

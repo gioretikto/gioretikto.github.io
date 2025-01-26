@@ -1,0 +1,251 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Comando lsof"/>
+
+    <title>Comando lsof</title>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li> <a class="navbar" href="../../index.php">Home</a></li>
+        <li> <a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Comando lsof</h1>
+
+<p>It is easy to remember lsof command if you think of it as “ls + of”, where ls stands for list, and of stands for open files.</p>
+
+<p>It is a command line utility which is used to list the information about the files that are opened by various processes. In unix, everything is a file, ( pipes, sockets, directories, devices, etc.). So by using lsof, you can get the information about any opened files.</p>
+
+<p>Simply typing lsof will provide a list of all open files belonging to all active processes.</p>
+
+<pre># lsof
+
+COMMAND  PID       USER   FD      TYPE     DEVICE  SIZE/OFF       NODE NAME
+init       1       root  cwd       DIR        8,1      4096          2 /
+init       1       root  txt       REG        8,1    124704     917562 /sbin/init
+init       1       root    0u      CHR        1,3       0t0       4369 /dev/null
+init       1       root    1u      CHR        1,3       0t0       4369 /dev/null
+init       1       root    2u      CHR        1,3       0t0       4369 /dev/null
+init       1       root    3r     FIFO        0,8       0t0       6323 pipe
+...</pre>
+
+<p>FD – Represents the file descriptor. Some of the values of FDs are:</p>
+
+<ul>
+    <li>cwd – Current Working Directory</li>
+    <li>txt – Text file</li>
+    <li>mem – Memory mapped file</li>
+    <li>mmap – Memory mapped device</li>
+    <li>NUMBER – Represent the actual file descriptor. The character after the number i.e ‘1u’, represents the mode in which the file is opened. r for read, w for write, u for read and write.</li>
+</ul>
+
+<p>TYPE – Specifies the type of the file. Some of the values of TYPEs are,</p>
+    
+<ul>
+    <li>REG – Regular File</li>
+    <li>DIR – Directory</li>
+    <li>FIFO – First In First Out</li>
+    <li>CHR – Character special file</li>
+</ul>
+
+<p>For a complete list of FD &amp; TYPE, refer man lsof.</p>
+
+<h3>List processes which opened a specific file</h3>
+
+<p>You can list only the processes which opened a specific file, by providing the filename as arguments.</p>
+
+<pre># lsof /var/log/syslog
+
+COMMAND  PID   USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME
+rsyslogd 488 syslog    1w   REG    8,1     1151 268940 /var/log/syslog
+</pre>
+
+<h3> List opened files under a directory</h3>
+
+<p>You can list the processes which opened files under a specified directory using ‘+D’ option. +D will recurse the sub directories also. If you don’t want lsof to recurse, then use ‘+d’ option.</p>
+
+<pre># lsof +D /var/log/
+
+COMMAND   PID   USER  FD   TYPE DEVICE SIZE/OFF   NODE NAME
+rsyslogd  488 syslog   1w   REG    8,1     1151 268940 /var/log/syslog
+rsyslogd  488 syslog   2w   REG    8,1     2405 269616 /var/log/auth.log
+console-k 144   root   9w   REG    8,1    10871 269369 /var/log/ConsoleKit/history</pre>
+
+<h3>List opened files based on process names starting with</h3>
+
+<p>You can list the files opened by process names starting with a string, using ‘-c’ option. -c followed by the process name will list the files opened by the process starting with that processes name. You can give multiple -c switch on a single command line.</p>
+
+<pre># lsof -c ssh -c init
+
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME
+init         1       root  txt    REG        8,1   124704  917562 /sbin/init
+init         1       root  mem    REG        8,1  1434180 1442625 /lib/i386-linux-gnu/libc-2.13.so
+init         1       root  mem    REG        8,1    30684 1442694 /lib/i386-linux-gnu/librt-2.13.so
+...
+ssh-agent 1528 lakshmanan    1u   CHR        1,3      0t0    4369 /dev/null
+ssh-agent 1528 lakshmanan    2u   CHR        1,3      0t0    4369 /dev/null
+ssh-agent 1528 lakshmanan    3u  unix 0xdf70e240      0t0   10464 /tmp/ssh-sUymKXxw1495/agent.1495</pre>
+
+<h3>List processes using a mount point</h3>
+
+<p>Sometime when we try to umount a directory, the system will say “Device or Resource Busy” error. So we need to find out what are all the processes using the mount point and kill those processes to umount the directory. By using lsof we can find those processes.</p>
+
+<pre># lsof /home</pre>
+<p>The following will also work.</p>
+<pre># lsof +D /home/</pre>
+
+<h3>List files opened by a specific user</h3>
+
+<p>In order to find the list of files opened by a specific users, use ‘-u’ option.</p>
+
+<pre># lsof -u lakshmanan
+
+COMMAND    PID       USER   FD   TYPE     DEVICE SIZE/OFF       NODE NAME
+update-no 1892 lakshmanan   20r  FIFO        0,8      0t0      14536 pipe
+update-no 1892 lakshmanan   21w  FIFO        0,8      0t0      14536 pipe
+bash      1995 lakshmanan  cwd    DIR        8,1     4096     393218 /home/lakshmanan</pre>
+
+<p>Sometimes you may want to list files opened by all users, expect some 1 or 2. In that case you can use the ‘^’ to exclude only the particular user as follows</p>
+
+<pre># lsof -u ^lakshmanan
+
+COMMAND    PID       USER   FD      TYPE     DEVICE  SIZE/OFF       NODE NAME
+rtkit-dae 1380      rtkit    7u     0000        0,9         0       4360 anon_inode
+udisks-da 1584       root  cwd       DIR        8,1      4096          2 /</pre>
+<p>The above command listed all the files opened by all users, expect user ‘lakshmanan’.</p>
+<h3>7. List all open files by a specific process</h3>
+<p>You can list all the files opened by a specific process using ‘-p’ option. It will be helpful sometimes to get more information about a specific process.</p>
+<pre># lsof -p 1753
+
+COMMAND  PID       USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+bash    1753 lakshmanan  cwd    DIR    8,1     4096  393571 /home/lakshmanan/test.txt
+bash    1753 lakshmanan  rtd    DIR    8,1     4096       2 /
+bash    1753 lakshmanan  255u   CHR  136,0      0t0       3 /dev/pts/0
+...</pre>
+
+<h3>Kill all process that belongs to a particular user</h3>
+
+<p>When you want to kill all the processes which has files opened by a specific user, you can use ‘-t’ option to list output only the process id of the process, and pass it to kill as follows</p>
+
+<pre># kill -9 `lsof -t -u lakshmanan`</pre>
+
+<p>The above command will kill all process belonging to user ‘lakshmanan’, which has files opened.</p>
+
+<p>Similarly you can also use ‘-t’ in many ways. For example, to list process id of a process which opened /var/log/syslog can be done by</p>
+
+<pre># lsof -t /var/log/syslog
+
+489</pre>
+
+<p>Talking about kill, did you know that there are <a href="http://www.thegeekstuff.com/2009/12/4-ways-to-kill-a-process-kill-killall-pkill-xkill/">4 Ways to Kill a Process</a>?</p>
+
+<h3>9. Combine more list options using OR/AND</h3>
+
+<p>By default when you use more than one list option in lsof, they will be ORed. For example,</p>
+
+<pre># lsof -u lakshmanan -c init
+
+COMMAND    PID       USER   FD   TYPE     DEVICE SIZE/OFF       NODE NAME
+init         1       root  cwd    DIR        8,1     4096          2 /
+init         1       root  txt    REG        8,1   124704     917562 /sbin/init
+bash      1995 lakshmanan    2u   CHR      136,2      0t0          5 /dev/pts/2
+bash      1995 lakshmanan  255u   CHR      136,2      0t0          5 /dev/pts/2
+...</pre>
+
+<p>The above command uses two list options, ‘-u’ and ‘-c’. So the command will list process belongs to user ‘lakshmanan’ as well as process name starts with ‘init’.</p>
+<p>But when you want to list a process belongs to user ‘lakshmanan’ and the process name starts with ‘init’, you can use ‘-a’ option.</p>
+
+<pre># lsof -u lakshmanan -c init -a</pre>
+<p>The above command will not output anything, because there is no such process named ‘init’ belonging to user ‘lakshmanan’.</p>
+
+<h3>10. Execute lsof in repeat mode</h3>
+
+<p>lsof also support Repeat mode. It will first list files based on the given parameters, and delay for specified seconds and again list files based on the given parameters. It can be interrupted by a signal.</p>
+<p>Repeat mode can be enabled by using ‘-r’ or ‘+r’. If ‘+r’ is used then, the repeat mode will end when no open files are found. ‘-r’ will continue to list,delay,list until a interrupt is given irrespective of files are opened or not.</p>
+
+<p>Each cycle output will be separated by using ‘=======’. You also also specify the time delay as ‘-r’ | ‘+r’.</p>
+
+<pre># lsof -u lakshmanan -c init -a -r5
+
+=======
+=======
+COMMAND   PID       USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+inita.sh 2971 lakshmanan  cwd    DIR    8,1     4096  393218 /home/lakshmanan
+inita.sh 2971 lakshmanan  rtd    DIR    8,1     4096       2 /
+inita.sh 2971 lakshmanan  txt    REG    8,1    83848  524315 /bin/dash
+inita.sh 2971 lakshmanan  mem    REG    8,1  1434180 1442625 /lib/i386-linux-gnu/libc-2.13.so
+inita.sh 2971 lakshmanan  mem    REG    8,1   117960 1442612 /lib/i386-linux-gnu/ld-2.13.so
+inita.sh 2971 lakshmanan    0u   CHR  136,4      0t0       7 /dev/pts/4
+inita.sh 2971 lakshmanan    1u   CHR  136,4      0t0       7 /dev/pts/4
+inita.sh 2971 lakshmanan    2u   CHR  136,4      0t0       7 /dev/pts/4
+inita.sh 2971 lakshmanan   10r   REG    8,1       20  393578 /home/lakshmanan/inita.sh
+=======</pre>
+<p>In the above output, for the first 5 seconds, there is no output. After that a script named “inita.sh” is started, and it list the output.</p>
+
+<h2>Finding Network Connection</h2>
+
+<p>Network connections are also files. So we can find information about them by using lsof.</p>
+
+<h3>List all network connections</h3>
+
+<p>You can list all the network connections opened by using ‘-i’ option.</p>
+
+<pre># lsof -i
+
+COMMAND    PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+avahi-dae  515 avahi   13u  IPv4   6848      0t0  UDP *:mdns
+avahi-dae  515 avahi   16u  IPv6   6851      0t0  UDP *:52060
+cupsd     1075  root    5u  IPv6  22512      0t0  TCP ip6-localhost:ipp (LISTEN)</pre>
+
+<p>You can also use ‘-i4’ or ‘-i6’ to list only ‘IPV4’ or ‘<a href="http://www.thegeekstuff.com/2012/01/ip-address-fundamentals/">IPV6</a>‘ respectively.</p>
+
+<h3>12. List all network files in use by a specific process</h3>
+
+<p>You can list all the network files which is being used by a process as follows</p>
+
+<pre># lsof -i -a -p 234</pre>
+
+<p>You can also use the following</p>
+
+<pre># lsof -i -a -c ssh</pre>
+<p>The above command will list the network files opened by the processes starting with ssh.</p>
+
+<h3>13. List processes which are listening on a particular port</h3>
+<p>You can list the processes which are listening on a particular port by using ‘-i’ with ‘:’ as follows</p>
+
+<pre># lsof -i :25
+
+COMMAND  PID        USER   FD   TYPE DEVICE SIZE NODE NAME
+exim4   2541 Debian-exim    3u  IPv4   8677       TCP localhost:smtp (LISTEN)
+</pre>
+
+<h3>14. List all TCP or UDP connections</h3>
+
+<p>You can list all the TCP or UDP connections by specifying the protocol using ‘-i’.</p>
+<pre># lsof -i tcp; lsof -i udp;</pre>
+<h3>15. List all Network File System ( NFS ) files</h3>
+<p>You can list all the NFS files by using ‘-N’ option. The following lsof command will list all NFS files used by user ‘lakshmanan’.</p>
+
+<pre># lsof -N -u lakshmanan -a</pre>
+
+<div class="parent">
+<div class="child"><a href="sistemi.html">&#171;Sistemi di equazioni lineari</a></p></div>
+<div class="child"><a href="index.html">Index</a></div>
+<div class="child"><a href="grupposimm.html">Gruppo Simmetrico»</a></p></div>
+</div>
+
+</div>
+
+
+</body>
+</html>

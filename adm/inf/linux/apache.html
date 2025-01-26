@@ -1,0 +1,103 @@
+<html>
+<head><title>Configurare Apache2</title>
+<link rel="stylesheet" href="../style.css" type="text/css" />
+<meta charset="utf-8">
+</head>
+
+<body>
+
+<h1>Configurare Apache2</h1>
+
+<h2>Installazione di apache2</h2>
+
+<p>Il web server Apache2 può essere installato usando zypper. Open a terminal and become root. Type the below command:</p>
+<p><pre># zypper in apache2</pre></p>
+
+<h2>Firewall Adjustments</h2>
+
+<p>By default the firewall configuration blocks all traffic coming on port 80 to your machine. So if you need to allow access so that the web server can be accessed from within a LAN we need to fine tune the firewall configuration. The below step needs to be performed as root user. The supplied configurations are called apache2 and apache2-ssl. They can be enabled via <b>YaST</b>, by adding them to <b>FW_CONFIGURATIONS_EXT</b> in <i>/etc/sysconfig/SuSEfirewall2</i></p>
+<p><pre>
+# sysconf_addword /etc/sysconfig/SuSEfirewall2 FW_CONFIGURATIONS_EXT apache2
+# sysconf_addword /etc/sysconfig/SuSEfirewall2 FW_CONFIGURATIONS_EXT apache2-ssl
+# rcSuSEfirewall2 restart
+</p>
+</pre>
+
+<h2>Starting Server</h2>
+
+<p>Start the server and configure it to automatically start at boot time.</p>
+
+<p><pre>
+# rcapache2 start
+# chkconfig -a apache2
+</p>
+</pre>
+
+<h2>Apache Modules</h2>
+
+<p>To enable required Apache Modules we can edit APACHE_MODULES in /etc/sysconfig/apache2. Modules can also be enabled/disabled/listed with the commands below. Any such operation requires a restart of the service and of course needs root privileges.</p>
+
+<p><pre>
+# a2enmod php5
+# a2enmod -l
+# rcapache2 restart
+</pre></p>
+
+<h2>Virtual Hosts</h2>
+
+<p>The directory for virtual host configurations is /etc/apache2/vhosts.d/. As you can see there are two sample configuration files - one with ssl; one without ssl. We use the template without ssl. Only files ending with ".conf" are automatically included to the apache configuration.
+In the following instructions, please replace {DOMAINNAME} with an IP or an domain-name you want.</p>
+
+<p>Plan your website infrastructure. It's helpful to use a directory (/srv/www/vhosts) including one subdirectory for each virtual host.</p>
+
+
+    <p>Copy the sample configuration file <b>vhost.templat</b>e to <b>{DOMAINNAME}.conf</b> and create the subdirectory for this virtual host.</p>
+    
+<pre><p>
+    # cd /etc/apache2/vhosts.d
+    # cp vhost.template {DOMAINNAME}.conf
+    # mkdir -p /srv/www/vhosts/{DOMAINNAME}/
+</pre></p>
+
+    <p>Now edit the copied configuration file and adjust the following as needed:</p>
+
+        <p>
+        <ul>
+        <li>Change the document root for your virtual host: <b>DocumentRoot /srv/www/vhosts/{DOMAINNAME}</b></li>
+        You also need to change corresponding directory directive: &lt;Directory "/srv/www/vhosts/{DOMAINNAME}"&gt;</li>
+        <li>&lt;VirtualHost *:80&gt; It is possible to replace the "*" with an IP addess and "80" with a non standard http port. See Apache Documentation.</li>
+        </ul>
+        </p>
+        
+        <p>Per accedere al localhost bisogna creare un secondo file di configurazione lo chiameremo localhost.conf, avente come Root Directory /srv/www/htdocs.</p>
+        
+        <pre><p>
+    # cd /etc/apache2/vhosts.d
+    # cp vhost.template localhost.conf
+        </pre></p>
+                      
+        
+        <p>Modificare il file httpd.conf in modo da inserire le seguenti righe:</p>
+        
+        <pre><p>
+        IncludeOptional /etc/apache2/vhosts.d/paolo.conf
+        IncludeOptional /etc/apache2/vhosts.d/localhost.conf
+
+        </pre></p>
+
+    <p>Restart Apache</p>
+
+    <pre><p>
+    # /etc/init.d/apache2 restart
+</pre></p>
+
+<h2>Trouble Shooting</h2>
+
+<p>Read any error messages when you start the service. Reproduce what is not working and see how it is reflected in the logs. The log files can be monitored in a root shell with the following command:</p>
+<pre><p>
+# tail -F /var/log/apache2/*
+</pre></p>
+
+</body>
+
+</html>

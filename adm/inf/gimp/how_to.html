@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="How to in GIMP?">
+	<title>How to in GIMP?</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>How to in GIMP?</h1>
+
+<h2>Draw a Dotted Line</h2>
+
+<p>The simplest way to make a dotted line in GIMP is by drawing out the line using the <b>Path tool</b> and then applying a stroke to it. Then click the <b>Stroke Path button</b> and eventually modify the <b>Line Style</b>. </p>
+
+<img src="../../mat/topology/img/punctured_disk.png" alt="punctured disk"/>
+
+<h2>Get a transparent backgorund</h2>
+
+<p>Volendo far diventare il colore dello sfondo trasparente andare su "Colors" poi Color to Alpha:</p>
+
+<p>Se accade che l'opzione <i>Color to alpha</i> non è selezionabile bisogna andare a <b>Layers</b>, poi <b>Add Alpha Channel</b>.</p>
+
+<p>Un'altra possibilità è di andare su "Image" poi "Mode" e selezionare RGB, a questo punto l'opzione "Color to Alpha" dovrebbe essere attiva.</p>
+
+<p>Ultimo rimedio è utilizzare il <b>Fuzzy Select Tool</b> (bacchetta magica) selezionare il colore e tagliare.</p>
+
+<h3>3rd Possibility</h3>
+
+<p>Select white as the background color and do image->flatten image. Flatten image uses the currently selected background color from the gimp color selector. If the alpha channel is not clean, you did not get a clean white after flattening. After flattening you don't have opaque anymore but gray, so we need to use the "levels tool" in "Colors" to tweak the background until it becomes white. Then go to "Color to Alpha" and turn the white background to transparent.</p>
+
+<h3>Flatten Image</h3>
+
+<p>The Flatten Image command merges all of the layers of the image into a single layer with no alpha channel. After the image is flattened, it has the same appearance it had before. The difference is that all of the image contents are in a single layer without transparency. If there are any areas which are transparent through all of the layers of the original image, the background color is visible. This operation makes significant changes to the structure of the image. It is normally only necessary when you would like to save an image in a format which does not support levels or transparency (an alpha channel). You can access this command from the image menubar through Image → Flatten Image.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

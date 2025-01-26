@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Different ways to add Breaks and Spaces in HTML">
+	<title>Different ways to add Breaks and Spaces in HTML</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Different ways to add Breaks and Spaces in HTML</h1>
+
+<p><strong>&amp;nbsp; Entity:</strong></b><span> The &amp;nbsp; entity represents a non-breaking space, preventing the browser from collapsing consecutive spaces.</span></p>
+
+<p>If you wanted to display the following:</p>
+
+<pre>three   spaces.</pre>
+
+<p>You could insert 3 &amp;nbsp; entities instead of using spaces like so:</p>
+
+<pre>three &amp;nbsp;&amp;nbsp;&amp;nbsp; spaces.</pre>
+
+<ul>
+	<li><p>Type “&amp;nbsp;” to add a single space.
+	<li><p>Type “&amp;nsp;” to add 2 spaces.</p></li>
+	<li><p>Type “&amp;msp;” to add 4 spaces.</p></li>
+	<li><p>Use the non-breaking space (&amp;nbsp;) 4 times to insert a tab.</p></li>
+</ul>
+
+<p>Sometimes, HTML might break up words that are supposed to be together into another line – For example, if the author was referring to the name <i>Pepsi Cola</i> and he wanted to be certain that the Cola part didn't break to the next line on the web page he would type Pepsi&nbsp;Cola in the source code.</p>
+
+<p>The <b>&lt;pre&gt;</b> tag defines preformatted text and preserves both spaces and line breaks.</p>
+
+<pre>
+Preformatted
+Text with Spaces
+</pre>
+
+<h2>CSS white-space Property</h2>
+
+<span>&lt;style&gt;</span><br><span>  .preserve-space {</span><br><span>    white-space: pre;</span><br><span>  }</span><br><span>&lt;/style&gt;</span><br><br><span>&lt;div class="preserve-space"&gt;Preserve  Spaces&lt;/div&gt;</span>
+
+<div class="preserve-space">Preserve  Spaces</div>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

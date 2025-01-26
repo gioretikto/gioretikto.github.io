@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Functions"/>
+    <title>Functions</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Functions</h1>
+
+<pre>
+function greet(name) {
+
+	console.log('Hello ' + name);
+}
+
+greet ('John');
+</pre>
+
+<ul>
+	<li><p><b>Parameter</b>: il parametro è ciò che abbiamo nella dichiarazione della funzione <code>name</code> nell'esempio.</p></li>
+	<li><p><b>Arguments</b>: il valore che si passa alla funzione <code>'john'</code> nell'esempio.</p>
+</ul>
+
+<pre>
+&lt;body&gt;
+
+&lt;button onclick="square('3')"&gt;Fai il quadrato di 3&lt;/button&gt;
+&lt;button onclick="square('9')"&gt;Fai il quadrato di 9&lt;/button&gt;
+
+&lt;script&gt;
+function square(n){
+    var square = n * n;
+    console.log(square);
+}
+&lt;/script>
+
+&lt;/body&gt;
+</pre>
+
+<h2>Clearing a textarea</h2>
+
+<pre>
+<input type="button" value="Clear" onclick="javascript:eraseText();"> 
+<textarea id='output' rows=20 cols=90></textarea>
+</pre>
+
+<p>Try this in your js file:</p>
+
+<pre>
+function eraseText() {
+    document.getElementById("output").value = "";
+}
+</pre>
+
+<<section aria-label="End">>
+<a href="alteralius.html">&#171; Distributive and reciprocal use of alter and alius</a></p>
+<a href="index.html">Index</a>
+<a href="ceteri.html">Indeterminative alii, relĭqui, cetĕri &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

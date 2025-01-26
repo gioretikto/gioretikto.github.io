@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="How to dynamically allocate a 2D array">
+	<title>How to dynamically allocate a 2D array</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>How to dynamically allocate a 2D array</h1>
+
+<p>A 2D array can be dynamically allocated in C using a single pointer. This means that a memory block of size row*column*dataTypeSize is allocated using <code>malloc</code> and pointer arithmetic can be used to access the matrix elements.</p>
+
+<p>Following are different ways to create a 2D array on heap (or dynamically allocate a 2D array).</p>
+
+<p>In the following examples, we have considered ‘r‘ as number of rows, ‘c‘ as number of columns and we created a 2D array with r = 3, c = 4 and following values</p>
+
+<pre>
+  1  2  3  4
+  5  6  7  8
+  9  10 11 12 
+</pre>
+
+<p>The compiler will allocate the memory for the above two dimensional array row-wise meaning the first element of the second row will be placed after the last element of the first row. </p>
+
+<pre>1  2  3  4  5  6  7  8  9  10  11  12</pre> 
+
+<h2>Address mapping</h2>
+
+<p>We can compute the address of an element of the array by using the rows and columns of the array. For this we use the following formula.</p>
+
+<pre>arr[i][j] = baseAddress + [(i x no_of_cols + j) x size_of_data_type]</pre>
+
+<p>Where, <code>arr</code> is a two dimensional array. <code>i</code> and <code>j</code> denotes the ith row and jth column of the array.</p>
+
+<p><code>baseAddress</code> denotes the address of the first element of the array. And no_of_cols is the total number of columns in the row.</p>
+
+<p>And <code>size_of_data_type</code> is the size of the type of the pointer. If the type is <code>int</code> then size_of_data_type = 2 bytes and if the type is <code>char</code> then size_of_data_type = 1 bytes.</p>
+
+<p>For example, in the case of num array the baseAddress = 1000, no_of_cols = 4 and size_of_data_type = 2.</p>
+
+<p>So, we can compute the memory address location of the element num[2][3] as follows.</p>
+
+<pre>
+// address of element at cell 2,3
+num[2][3] = baseAddress + [(i x no_of_cols + j) x size_of_data_type]
+          = 1000 + [(2 x 4 + 3) x 2]
+          = 1000 + [(8 + 3) x 2]
+          = 1000 + 22
+          = 1022
+</pre>
+
+<h2>Using a single pointer</h2>
+
+<p>Accessing the value of the two dimensional array via pointer using row and column of the array</p>
+
+<p>If we want to get the value at any given row, column of the array then we can use the value at the address of * operator and the following formula.</p>
+
+<pre>arr[i][j] = *(ptr + (i x no_of_cols + j))</pre>
+
+<p>Where, arr is a two dimensional array and i and j denotes the ith row and jth column of the array.</p>
+
+<p><code>ptr</code> holds the address of the first element of the array.</p>
+
+<p>And no_of_cols denotes the total number of column in the row of the array.</p>
+
+<p>In the following example we are finding the value at the location 2nd row and 3rd column of the array num.</p>
+
+<pre>
+// value at num[2][3] where, i = 2 and j = 3
+num[2][3] = *(ptr + (i x no_of_cols + j))
+          = *(ptr + (2 x 4 + 3))
+          = *(ptr + 11)
+</pre>
+
+<p>Complete code</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main(void) {
+  
+  // 2d array
+  int num[3][4] = {
+    {1, 2,  3,  4},
+    {5, 6,  7,  8},
+    {9, 10, 11, 12}
+  };
+  
+  int ROWS = 3, COLS = 4, i, j;
+
+  // pointer
+  int *ptr = &amp;num[0][0];
+  
+  // print the element of the array via pointer ptr
+  for (i = 0; i &lt; ROWS; i++) {
+    for (j = 0; j &lt; COLS; j++) {
+      printf("%d ", *(ptr + i * COLS + j));
+    }
+    printf("\n");
+  }
+  
+  return 0;
+}
+</pre>
+
+
+<p>A simple way is to allocate memory block of size r*c and access elements using simple pointer arithmetic.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() 
+{ 
+    int r = <span class="number">3</span>, c = <span class="number">4</span>; 
+    int *arr = (int *)<span class="function">malloc</span>(r * c * <span class="function">sizeof</span>(int)); 
+  
+    int i, j, count = <span class="number">0</span>; 
+    <span class="keyword">for </span>(i = <span class="number">0</span>; i &lt;  r; i++) 
+      <span class="keyword">for </span>(j = <span class="number">0</span>; j &lt; c; j++) 
+         *(arr + i*c + j) = ++count; 
+  
+    <span class="keyword">for </span>(i = <span class="number">0</span>; i &lt;  r; i++){
+      <span class="keyword">for </span>(j = <span class="number">0</span>; j &lt; c; j++) 
+         <span class="function">printf</span>(<span class="string">"%d "</span>, *(arr + i*c + j)); 
+      <span class="function">putchar</span>('\n');
+    }
+    
+   <span class="keyword">return</span> <span class="number">0</span>; 
+}
+</pre>
+
+<h2>Using an array of pointers</h2>
+
+<p>We can create an array of pointers of size r. Note that from C99, C language allows variable sized arrays. After creating an array of pointers, we can dynamically allocate memory <code>for</code>every row.</p>
+
+<pre>
+#include &lt;stdio.h>&gt;
+#include &lt;stdlib.h&gt;
+  
+int main() 
+{ 
+    int r = <span class="number">3</span>, c = <span class="number">4</span>, i, j, count; 
+  
+    int *arr[r]; 
+    <span class="keyword">for </span>(i=0; i&lt;r; i++) 
+         arr[i] = (int *)<span class="function">malloc</span>(c * <span class="function">sizeof</span>(int)); 
+  
+    // Note that arr[i][j] is same as *(*(arr+i)+j) 
+    count = <span class="number">0</span>; 
+    <span class="keyword">for </span>(i =<span class="number">0</span>; i &lt;  r; i++) 
+      <span class="keyword">for </span>(j =<span class="number">0</span>; j &lt; c; j++) 
+         arr[i][j] = ++count; // Or *(*(arr+i)+j) = ++count 
+  
+    <span class="keyword">for </span>(i =<span class="number">0</span>; i &lt;  r; i++){
+      <span class="keyword">for </span>(j =<span class="number">0</span>; j &lt; c; j++) 
+         <span class="function">printf</span>(<span class="string">"%d "</span>, arr[i][j]); 
+      <span class="function">putchar</span>('\n');
+    }
+  
+   <span class="keyword">return</span> <span class="number">0</span>; 
+}
+</pre>
+
+<h2>Using pointer to a pointer (double pointer)</h2>
+
+<p>We can create an array of pointers also dynamically using a double pointer. Once we have an array pointers allocated dynamically, we can dynamically allocate memory and <code>for </code>every row like method 2.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+  
+int main() 
+{ 
+    int r=<span class="number">3</span>, c = <span class="number">4</span>, len=0; 
+    int *ptr, **arr; 
+    int count = <span class="number">0</span>,i,j; 
+  
+    len = <span class="function">sizeof</span>(int *) * r + <span class="function">sizeof</span>(int) * c * r; 
+    arr = (int **)<span class="function">malloc</span>(len); 
+  
+    // ptr is now pointing to the first element in of 2D array 
+    ptr = (int *)(arr + r); 
+  
+    // for loop to point rows pointer to appropriate location in 2D array 
+    <span class="keyword">for</span>(i =<span class="number">0</span>; i &lt; r; i++) 
+        arr[i] = (ptr + c * i); 
+  
+    <span class="keyword">for </span>(i =<span class="number">0</span>; i &lt; r; i++) 
+        <span class="keyword">for </span>(j =<span class="number">0</span>; j &lt; c; j++) 
+            arr[i][j] = ++count; // OR *(*(arr+i)+j) = ++count 
+  
+    <span class="keyword">for </span>(i =<span class="number">0</span>; i &lt; r; i++){ 
+        <span class="keyword">for </span>(j =<span class="number">0</span>; j &lt; c; j++) 
+            <span class="function">printf</span>(<span class="string"><span class="string">"%d "</span></span>, arr[i][j]);
+        <span class="function">putchar</span>('\n');
+    }
+  
+    <span class="keyword">return</span> <span class="number">0</span>; 
+}
+</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

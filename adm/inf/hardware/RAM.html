@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Random access memory (RAM)">
+	<title>Random access memory (RAM)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Random Access Memory (RAM)</h1>
+
+<p>Whenever, a program needs to be executed, it must be first loaded into the main memory (called <b>Random-Access Memory</b>, RAM) where it is stored. RAM is the only storage area that can be directly accessed by the CPU. RAM consists of an array or memory words, where each word has its unique address. The two instructions, namely, <i>load</i> and <i>store</i> are used to interact with the RAM memory.</p>
+
+<ul>
+	<li><p>The <i>load</i> instruction is used to move a word from the main memory to the CPU register;</p></li>
+	<li><p>The <i>store</i> instruction is used to move the content of the CPU register to the main memory.</p></li>
+</ul>
+
+<p>This is a type of memory in which any particular storage location (address) may be directly selected without first having to sequence through other location, i.e. one storage location may be accessed as easily as any other (same amount of time) regardless of its physical position within the particular memory device. This method is called "serial access" and speeds up data retrieval s the CPU can go directly to any RAM location. The semiconductors memories are, generally,random access memories.</p>
+
+<p>Unlike <b>ROM</b> chips, RAM chips can be both read from and written to by the computer, but their contents are lost when the power is switched off (a volatile memory). </p>
+
+<p>There are two different types of RAM:</p>
+
+<ul>
+	<li><p><b>Dynamic RAM (DRAM)</b>− uses a memory cell, consisting of a MOS transistor and capacitory to store a bit. Information is stored as a charge or non-charge of a capacitor. To store a ‘1’ in such a cell, first che word line is made high to switch on the transistor. Then a voltage in the data line is used to charge the capacitor. After the charging is over, the transistor is switched off by making the word line low. The presence of charge in a capacitor indicates a ‘1’, and the absence of charge indicates a ‘0’. However, due to leakage as the capacitor gets discharged very quickly, a DRAM cell has a very short data lifetime of about 4 millisecond. This is true even if power is applied constantly.</p>
+
+	<figure>
+	<img src="img/DRAM.png" alt="DRAM"/>
+	<figcaption>A DRAM cell</figcaption>
+	</figure>
+
+<p>To retain the data for a longer time, the DRAM chip is refreshed at regular intervals of time before the data is lost. As the capacitor needs to be recharged at regular intervals of time, such a RAM is called a dynamic RAM.  Each bit thus requires only one transistor, resulting in more compact memory than SRAM. Due to the presence of only a transistor and a capacitor, it is possible to fabricate a large number of these cells in a small area, resulting in a high bit density and lower cost. The access time of a DRAM is of the order of several nanoseconds. Due to their low price and high packing density, these are used for the bulk manufacturing of RAM in the form of IC chips of 512MB, 1GB, 2GB (see picture above of a 512MB RAM module).</p></li>
+
+	<li><p><b>Static RAM (SRAM)</b>− Static RAM (SRAM): Unlike a DRAM, SRAM is a type of RAM which can retain its contents as long as electrical power is applied to the chip. However, if power is switched off, its contents will be lost forever. Instead of a transistor and capacitor, the memory cell of a SRAM consists of a memory latch (made using flip-flop circuits). Once a latch is turned ON, it can retain its value as long as the power is ON without any refreshing. Since these RAM do not require periodic refreshing of the existing data, these are called static RAM and are much faster than Dynamic RAM. However, since a flip-flop circuit requires more transistors than a DRAM cell, these memories have lower packing densities and hence are costly. Therefore SRAM is used in applications, where faster memories are required (as in <a href="CPU.html#cache">cache memories</a>), but are used in smaller quantities like 512KB, 1MB, 2MB.</p>
+
+	<figure>
+	<img src="img/SRAM.png" alt="SRAM"/>
+	<figcaption>A SRAM cell</figcaption>
+	</figure>
+</li> 
+</ul>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

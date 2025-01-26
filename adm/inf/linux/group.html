@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Groups"/>
+	<title>Groups</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Groups</h1>
+
+<h2>Add a New Group</h2>
+
+<p>If you want to create a new group on your system, use the groupadd command following command, replacing new_group with the name of the group you want to create. You’ll need to use sudo with this command as well (or, on Linux distributions that don’t use sudo, you’ll need to run the su command on its own to gain elevated permissions before running the command).</p>
+
+<pre>sudo groupadd mynewgroup</pre>
+
+<h2>Add an Existing User Account to a Group</h2>
+
+<p>To add an existing user account to a group on your system, use the usermod command, replacing examplegroup with the name of the group you want to add the user to andexampleusername  with the name of the user you want to add.</p>
+
+<pre>usermod -a -G examplegroup exampleusername</pre>
+
+<p>For example, to add the user <i>gidna</i> to the group sudo, use the following command:</p>
+
+<pre>usermod -a -G sudo cadmio</pre>
+
+<h2>Change password of a user</h2>
+
+<p>Digita</p>
+
+<pre>passwd</pre>
+
+<p>The user is first prompted for his/her old password if one is present. This password is then encrypted and compared against the stored password.</p>
+
+<h2>View All Groups on the System</h2>
+
+<p>If you want to view a list of all groups on your system, you can use the getent command:</p>
+
+<pre>getent group</pre>
+
+<p>This output will also show you which user accounts are members of which groups. So, in the screenshot below, we can see that the user accounts syslog and chris are members of the adm group.</p>
+
+<h2>Change a User’s Primary Group</h2>
+
+<p>While a user account can be part of multiple groups, one of the groups is always the “primary group” and the others are “secondary groups”. The user’s login process and files and folders the user creates will be assigned to the primary group.</p>
+
+<p>To change the primary group a user is assigned to, run the usermod command, replacingexamplegroup  with the name of the group you want to be the primary and exampleusernamewith the name of the user account.</p>
+
+<pre>usermod -g groupname username</pre>
+
+<p>Note the -g here. When you use a lowercase g, you assign a primary group. When you use an uppercase -G , as above, you assign a new secondary group.</p>
+
+<h2>View the Groups a User Account is Assigned To</h2>
+
+<p>To view the groups the current user account is assigned to, run the groups  command. You’ll see a list of groups.</p>
+
+<pre>groups</pre>
+
+<p>To view the numerical IDs associated with each group, run the <i>id</i> command instead:</p>
+
+<p>id</p>
+
+<P>To view the groups another user account is assigned to, run the groups command and specfy the name of the user account.</p>
+
+<pre>groups exampleusername</pre>
+
+<p>You can also view the numerical IDs associated with each group by running the id command and specifying a username.</p>
+
+<pre>id exampleusername</pre>
+
+<p>The first group in the groups list or the group shown after “gid=” in the id list is the user account’s primary group. The other groups are the secondary groups. So, in the screenshot below, the user account’s primary group is example.</p>
+
+<h2>Create a New User and Assign a Group in One Command</h2>
+
+<p>You may sometimes want to create a new user account that has access to a particular resource or directory, like a new FTP user. You can specify the groups a user account will be assigned to while creating the user account with the useradd command, like so:</p>
+
+<pre>useradd -G examplegroup exampleusername</pre>
+
+<p>For example, to create a new user account named jsmith and assign that account to the ftp group, you’d run:</p>
+
+<pre>useradd -G ftp jsmith</pre>
+
+<p>You’ll want to assign a password for that user afterwards, of course:</p>
+
+<pre>passwd jsmith</pre>
+
+<h2>Add a User to Multiple Groups</h2>
+
+<p>While assigning the secondary groups to a user account, you can easily assign multiple groups at once by separating the list with a comma.</p>
+
+<pre>usermod -a -G group1,group2,group3 exampleusername</pre>
+
+<p>For example, to add the user named geek to the ftp, sudo, and example groups, you’d run:</p>
+
+<pre>usermod -a -G ftp,sudo,example geek</pre>
+
+<p>You can specify as many groups as you like—just separate them all with a comma.</p>
+
+<section aria-label="End">
+<a href="comparative_sup.html">&#171; The comparative of superiority</a></p>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

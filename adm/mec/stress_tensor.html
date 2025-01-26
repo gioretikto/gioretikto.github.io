@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Stress Tensor">
+	<title>Stress Tensor</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Stress Tensor</h1>
+
+<p><b>Continuum mechanics</b> is a branch of mechanics that deals with the deformation of and transmission of forces through materials modeled as a continuous mass rather than as discrete particles. The French mathematician Augustin-Louis Cauchy was the first to formulate such models in the 19th century. </p>
+
+<p>Consider an object under the influence of some external forces. One would like to know how these forces “flow” inside the material and what deformations do they cause. In what follows we will assume that the deformations are not too large, and that the material therefore behaves elastically. If the external forces are removed, an elastic object springs back to its original shape and dimensions (this is known as a <i>linear</i> behavior). In contrast, so-called plastic materials do not return to their original form if the forces are removed and thus require a different treatment (non-linear behavior). Most realistic materials behave elastically at first, then break down into plasticity once the forces exceed a certain threshold; hence our assumption of small deformations.</p>
+
+<p>Since we are looking at continuous matter as opposed to point masses, it is useful to define the concept of stress, which has units of force per unit area. <br> Think of the stress forces in liquids and solids. In a liquid, let us single out a small piece of imaginary surface, which separates the liquid on both sides. Each side exerts a force on the other side (Figure 1.1a). Let us use a vector <b><i>S</i></b> to represent the surface, where <b><i>S</i></b> is a normal vector of the surface, and the magnitude of <b><i>S</i></b> represents the area of the surface. Let <b><i>F</i></b> be the vector representing the force that the liquid on one side exerts on the other side. Because liquids cannot have shear forces, the force <b><i>F</i></b> must be in the normal direction of the surface, which is the same as <b><i>S</i></b>. <b><i>F</i></b> is linearly related to <b><i>S</i></b>,</p>
+
+<div class="eq">
+<p><i>σ</i> = <i><b>F</b></i>/<i><b>S</b></i></p>
+</div>
+
+<p>where <i>σ</i> is a scalar coefficient, which is called the pressure.</p>
+
+<figure>
+<img src="img/pressure_stress.png" alt="pressure and stress"/>
+<figcaption>(a) Stress in liquids (b) Stress in solids</figcaption>
+</figure>
+
+<p>Things are different in solids, like crystals; the force <b>F</b> in general is not in the same direction as <i><b>A</b></i>. <b>F</b> can be decomposed into normal stress, and shear stress (in the tangent direction of the surface). However, <b>F</b> is still linearly related to <i><b>S</b></i> (Figure 1.1b). This relation is a linear transformation:</p>
+
+<div class="eq">
+<p><i><b>F</b></i> = &Sigma; <i><b>S</b></i></p>
+</div>
+
+<p>where Σ is a linear transformation which can be represented by a matrix [Σ] with components <i>σ<sub>ij</sub></i>,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>F</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>F</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>F</mi>
+            <mn>3</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>12</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>13</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>21</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>22</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>23</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>31</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>32</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>33</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>S</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>S</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>S</mi>
+            <mn>3</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$ \begin{bmatrix}F_1\\F_2\\F_3\end{bmatrix} = \begin{bmatrix} \sigma_{11} & \sigma_{12} & \sigma_{13}\\  \sigma_{21} & \sigma_{22} & \sigma_{23} \\ \sigma_{31} & \sigma_{32} & \sigma_{33} \end{bmatrix} \begin{bmatrix}S_1\\S_2\\S_3\end{bmatrix} $$ -->
+
+<p>Σ is called the stress tensor. This can be written as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>F</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mn>3</mn>
+  </munderover>
+  <msub>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>S</mi>
+    <mi>j</mi>
+  </msub>
+</math>
+
+<!-- $$F_i = \sum_{j=1}^3 \sigma_{ij}S_j $$ -->
+
+<p>The matrix of the stress tensor Σ can be viewed as three column vectors.</p>
+
+<div class="eq">
+<p><i><b>&sigma;</b></i><sub>1</sub> = (σ<sub>11</sub>, σ<sub>21</sub>, σ<sub>31</sub>), &emsp; <i><b>&sigma;</b></i><sub>2</sub> = (σ<sub>12</sub>, σ<sub>22</sub>, σ<sub>32</sub>), &emsp; <i><b>&sigma;</b></i><sub>3</sub> = (σ<sub>13</sub>, σ<sub>23</sub>, σ<sub>33</sub>)</p>
+</div>
+
+<p>What are the physical meanings of these three vectors? Imagine we have a small cube. Their faces are along the three axes with normal vectors <b>s</b><sub>1</sub> = (1, 0, 0), <b>s</b><sub>2</sub> = (0, 1, 0), <b>s</b><sub>3</sub> = (0, 0, 1) and unit area. σ<sub>1</sub> is the stress force acted on the face s 1 , σ 2 is the stress force acted on the face s 2 , and so on (Figure 1.2a). Each force σ i has three components and together the stress matrix has nine components. What is the physical meaning of the component σ<sub>ij</sub>? σ<sub>ij</sub> represents the ith component of σ j , which is the force acting on the face s j (orthogonal to x<sub>j</sub> axis). On face <b>s</b><sub>1</sub>, σ<sub>11</sub> is the normal stress while σ<sub>21</sub> and σ<sub>31</sub> are the tangent stresses. On face <b>s</b><sub>2</sub>, σ<sub>22</sub> is the normal stress while σ<sub>12</sub> and σ<sub>32</sub> are the tangent stresses (Figure 1.2).</p>
+
+<p>To generalize this concept consider an element of mass d<i>m</i> = ρ(<b><i>r</i></b>) d<i>V</i> inside an elastic object, as shown in Fig. [3.4]. One would like to know which stresses are acting
+on this element, their directions, and the overall response of the material due to them. Firstly, we need to construct an object that contains not only the components of the internal stresses, but also the orientations of the surfaces that such stresses are acting on. Obviously we need a tensor—in this case one with nine components, each describing one of the three components of the stress as well as the surface it is acting on. Such is the second-rank <b>stress tensor</b> <i>σ<sub>ij</sub></i>, also known as the <b>Cauchy stress tensor</b>. The components of the stress tensor describe the stresses on each of the surfaces of our mass element, as shown in Fig. [3.5]. The stresses perpendicular to the surfaces arise from forces perpendicular (orthogonal, or normal) to the surfaces, while the ones tangential to the surfaces arise from the tangential, or shearing, forces. As such σ<sub>11</sub>, σ<sub>22</sub>, and σ<sub>33</sub> can be termed the normal stresses, while the remaining components are called the shearing stresses. The numbering of the indices in the figure should be self-explanatory; for example, σ<sub>23</sub> is the <i>second</i> component of the stress acting on the surface perpendicular to the <i>third</i> axis.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

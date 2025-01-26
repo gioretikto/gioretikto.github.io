@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Special characters"/>
+    <title>Special characters</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Special characters</h1>
+
+<p>Some characters are evaluated by Bash to have a non-literal meaning. Instead, these characters carry out a special instruction, or have an alternate meaning; they are called "special characters", or "meta-characters".</p>
+
+<p>Here are some of the more common special characters uses:</p>
+
+<table>
+<thead>
+<tr><th>Char.</th> <th>Description</th></tr>
+</thead>
+
+<tbody>
+<tr><td>" "</td> <td>Whitespace — this is a tab, newline, vertical tab, form feed, carriage return, or space. Bash uses whitespace to determine where words begin and end. The first word is the command name and additional words become arguments to that command.</td></tr>
+
+<tr><td>$</td> <td>Expansion — introduces various types of expansion: parameter expansion (e.g. $var or ${var}), command substitution (e.g. $(command)), or arithmetic expansion (e.g. $((expression))). More on expansions later.</td></tr>
+
+<tr><td>''</td> <td>Single quotes — protect the text inside them so that it has a literal meaning. With them, generally any kind of interpretation by Bash is ignored: special characters are passed over and multiple words are prevented from being split.</td></tr>
+
+<tr><td>""</td> <td>Double quotes — protect the text inside them from being split into multiple words or arguments, yet allow substitutions to occur; the meaning of most other special characters is usually prevented.</td></tr>
+
+<tr><td>\</td> <td>Escape — (backslash) prevents the next character from being interpreted as a special character. This works outside of quoting, inside double quotes, and generally ignored in single quotes.</td></tr>
+
+<tr><td>#</td> <td>Comment — the # character begins a commentary that extends to the end of the line. Comments are notes of explanation and are not processed by the shell.</td></tr>
+
+<tr><td>=</td> <td>Assignment -- assign a value to a variable (e.g. logdir=/var/log/myprog). Whitespace is not allowed on either side of the = character.</td></tr>
+
+<tr><td>[[ ]]</td> <td>Test — an evaluation of a conditional expression to determine whether it is "true" or "false". Tests are used in Bash to compare strings, check the existence of a file, etc. More of this will be covered later.</td></tr>
+
+<tr><td>!</td> <td>Negate — used to negate or reverse a test or exit status. For example: ! grep text file; exit $?.</td></tr>
+
+<tr><td>>, >>, <</td> <td>Redirection — redirect a command's output or input to a file. Redirections will be covered later.</td></tr>
+
+<tr><td>|</td> <td>Pipe — send the output from one command to the input of another command. This is a method of chaining commands together. Example: echo "Hello beautiful." | grep -o beautiful.</td></tr>
+
+<tr><td>;</td> <td>Command separator — used to separate multiple commands that are on the same line.</td></tr>
+
+<tr><td>{ }</td> <td>Inline group — commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted.</td></tr>
+
+<tr><td>( )</td> <td>Subshell group — similar to the above but where commands within are executed in a subshell (a new process). Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell.</td></tr>
+
+<tr><td>(( ))</td> <td>Arithmetic expression — with an arithmetic expression, characters such as +, -, *, and / are mathematical operators used for calculations. They can be used for variable assignments like (( a = 1 + 4 )) as well as tests like if (( a &lt; b )). More on this later.</td></tr>
+
+<tr><td>$(( ))</td> <td>Arithmetic expansion — Comparable to the above, but the expression is replaced with the result of its arithmetic evaluation. Example: echo "The average is $(( (a+b)/2 ))".</td></tr>
+
+<tr><td>*, ?</td> <td>Globs -- "wildcard" characters which match parts of filenames (e.g. ls *.txt).</td></tr>
+
+<tr><td>~</td> <td>Home directory — the tilde is a representation of a home directory. When alone or followed by a /, it means the current user's home directory; otherwise, a username must be specified (e.g. ls ~/Documents; cp ~john/.bashrc .).</td></tr>
+
+<tr><td>&</td> <td>Background -- when used at the end of a command, run the command in the background (do not wait for it to complete).</td>
+</tbody>
+</table>
+
+<h2>Example</h2>
+
+<p>To use parenthesis you have to escape them with '\':</p>
+
+<pre>$ echo (ciao)
+bash: syntax error near unexpected token `ciao'
+</pre>
+
+<pre>
+$ echo \(ciao\)
+(ciao)
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

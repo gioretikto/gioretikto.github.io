@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reordering arrays"/>
+    <title>Reordering arrays</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Reordering arrays</h1>
+
+<p>Suppose we've an array of 8 elements and we want to move the last element in the 3rd position. This is how the algorithm works</p>
+
+<pre>Initial state:
+1, 2, 3, 4, 5, 6, 7  positions
+a, b, c, d, e, f, g  contents
+
+To move the value in position 7 to position 3:
+
+Swap 7 and 6
+1, 2, 3, 4, 5, 6, 7
+a, b, c, d, e, g, f
+
+Swap 6 and 5
+1, 2, 3, 4, 5, 6, 7
+a, b, c, d, g, e, f
+
+Swap 5 and 4
+1, 2, 3, 4, 5, 6, 7
+a, b, c, g, d, e, f
+
+Swap 4 and 3
+1, 2, 3, 4, 5, 6, 7
+a, b, g, c, d, e, f
+
+Done.</pre>
+
+<p>This is the code for swapping the elements</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+void swap(int *list, int a, int b)
+{
+	int tmp = list[a];
+
+	list[a] = list[b];
+
+	list[b] = tmp;
+}
+
+int main()
+{
+	int a[8] = {1,2,3,4,5,6,7,8};
+
+	int i = 0;
+	int start_page = 6;
+	int dest_page = 2; /* destination page */
+
+	printf("The array at the beginning is\n");
+
+	for(i = 0; i &lt; 8; i++)
+		printf("%d\t", a[i]);
+
+	if (start_page &gt; dest_page)
+		for(i = start_page; i &gt; dest_page; i--) { swap(a, i - 1, i); }
+
+	else
+		for(i = start_page; i &lt; dest_page; i++) { swap(a, i + 1, i); }
+
+	printf("\nThe array after reordering is\n");
+
+	for(i = 0; i &lt; 8; i++)
+		printf("%d\t", a[i]);
+
+	return 0;
+}
+</pre>
+
+<h2>Bubblesort</h2>
+
+<p>There exist complex algorithms for sorting arrays. We discuss a rather elementary and inefficient sorting algorithm called <b>BubbleSort</b>. The basic idea of this algorithm is to let greater elements "<i>bubble</i>" (as bubbles rise in a liquid, hence the algoritm name) to the right-hand side of the array. The sorting process is as follows</p>
+
+<ul>
+	<li><p>First, compare two elements in the neighbor. If they are not in the proper order, exchange them (that is swap them). Therefore, the greatest elements "bubbles" to the most right. Thus <i>n</i> numbers require <i>n</i> − 1 comparisons;</p></li>
+
+	<li><p>each number is examines at most <i>n</i> times.</p></li>
+</ul>
+
+<pre>
+#include <stdio.h>
+
+void bubbleSort(int *list, int size)
+{
+	int i,j,tmp;
+
+	for (i = 0; i &lt; size - 1; i++)
+	{
+		for (j = size - 1; j &gt; i; j--)
+		{
+			if(list[j-1] &gt; list[j])
+			{
+				tmp = list[j-1];
+				list[j-1] = list[j];
+				list[j] = tmp;
+			}
+		}
+	}
+}
+
+int main()
+{
+	const int size = 8;
+
+	int a[] = {8,2,7,4,5,6,3,1};
+
+	int i = 0;
+
+	printf("The array at the beginning is\n");
+
+	for(i = 0; i &lt; size; i++)
+		printf("%d\t", a[i]);
+
+	bubbleSort(a, size);
+
+	printf("\nThe array after sorting is\n");
+
+	for(i = 0; i &lt; size; i++)
+		printf("%d\t", a[i]);
+
+	return 0;
+}
+</pre>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

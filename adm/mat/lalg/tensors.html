@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Tensors">
+	<title>Tensors</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Tensors</h1>
+
+<p>Physical laws must be independent of any particular coordinate systems used in describing them mathematically. Tensor analysis has been developed to a large extent for the purpose of expressing physical laws in forms which do not imply a particular coordinate system. A law which expresses a particular relationship among tensors is invariant under a transfomration of coordinates. <br>A vector does not change its orientation and magnitude in space as a result of a coordinate transformation. The transformation of the components of a vector under a rotation of the coordinates preserves the vector as a geometric entity (such as an arrow in space), independent of the orientation of the reference frame.</p>
+
+<figure>
+<img src="img/coordinate_transformation.png" alt="coordinate transformation"/>
+<figcaption>The pencil (vector) is invariant under a change of coordinate system, but its components representation varies, i.e. the vector components are not invariant.</figcaption>
+</figure>
+
+<p>The term "tensor" comes from Latin <i>tensio</i>, tension or stress; The stress tensor was the first tensor to be described and used by scientists and engineers. </p>
+
+<p>A <b>tensor of rank</b> <i>n</i> has 3<sup><i>n</i></sup> components thar transform in a definite way. In three-dimensional space, a <b>vector</b> is specified by 3 = 3<sup>1</sup> real numbers, for example, its Cartesian components, and is a <b>tensor of rank 1</b>. A scalar is specified by one real number and is a tensor of rank 0. Of course, a tensor of order <i>n</i> is much more than just a set of 3<sup><i>n</i></sup> numbers. The key proprty of a tensor, which will emerge in the course of this chapter, is the <i>transformation law</i> of its components, i.e., the way its components in one coordinate system are related to its components in another coordinate system. The precise form of this transformation law is a consequence of the physical or geometric meaning of the tensor. <br> Suppose we have a law involving components <i>a,b,c</i>, ... of various physical quantitites with trespect to some 3D coordinate system <i>K</i>. Then it is an empirical fact that the law has the same form when written in terms of the components <i>a,b,c</i>, ... of the same quantities with respect to another coordinate system <i>K'</i> which is shifted relative to <i>K</i> ("space is homogeneous") or rotated with respect to <i>K</i> ("space is isotropic"). In other words, properly formulates physical laws are "invariant under shifts and rotations".</p>
+
+<p>Tensors respect two properties</p>
+
+<ol type="a">
+	<li><p>Tensors are invariant under coordinate transformations</p></li>
+	<li><p>Tensor components obey given transformation laws under coordinate transformations.</p></li>
+</ol>
+
+<h2>Definition of Tensors as Linear Mappings</h2>
+
+<p>Having defined vectors and one-forms we can now define tensors. A tensor of rank (<i>m, n</i>), also called a (<i>m, n</i>) tensor, is defined to be a scalar function of <i>m</i> one-forms and <i>n</i> vectors that is linear in all of its arguments. It follows at once that scalars are tensors of rank (0, 0), vectors are tensors of rank (1, 0) and one-forms are tensors of rank (0, 1). We may denote a tensor of rank (2, 0) by T(<i>P̃, Q̃</i>); one of rank (2, 1) by T(<i>P̃, Q̃, A</i>), etc. Our notation will not distinguish a (2, 0) tensor <i>T</i> from a (2, 1) tensor <i>T</i>, although a notational distinction could be made by placing <i>m</i> arrows and <i>n</i> tildes over the symbol, or by appropriate use of dummy indices (Wald 1984). </p>
+
+<p>With the aid of the inner product, we can regard any vector <i><b>A</b></i> as a tensor of rank one: the real numbr that is produced when an arbitraty vector <i><b>C</b></i> is insterted into <i><b>A</b></i>'s single slot is</p>
+
+<div class="eq">
+<p><b><i>A</i></b> (<i><b>C</b></i>) = <i><b>A</b></i> · <i><b>C</b></i></p>
+</div>
+
+<p>The scalar product is a tensor of rank (1, 1), which we will denote <i>I</i> and call the identity tensor:</p>
+
+<div class="eq">
+<p>I(<i><b>P,V</b></i>) ≡ ⟨<i><b>P,V</b></i>⟩ = <i>P̃</i>(<i><b>V</b></i>)</p>
+</div>
+
+<p>We call <i>I</i> the identity because, when applied to a fixed one-form <i>P̃</i> and any vector <i><b>V</b></i>, it returns <i>P̃</i>(<i><b>V</b></i>). Although the identity tensor was defined as a mapping from a one-form and a vector to a scalar, we see that it may equally be interpreted as a mapping from a one-form to the same one-form: I(<i>P̃</i>, ·) = <i>P̃</i>, where the dot indicates that an argument (a vector) is needed to give a scalar. A similar argument shows that I may be considered the identity operator on the space of vectors <i><b>V</b></i>: <i>I</i>(·, <b><i>V</i></b>) = <i><b>V</b></i>.<br> A tensor of rank (<i>m, n</i>) is linear in all its arguments. For example, for (m = 2, n = 0) we have a straightforward extension of equation (2):</p>
+
+<div class="eq">
+<p><i>T</i>(<i>aP̃</i> + <i>bQ̃, cR̃</i> + <i>dS̃</i>) = <i>ac</i> T(<i>P̃, R̃</i>) + <i>ad</i> T(<i>P̃, S</i>) + <i>bc</i> T(<i>Q̃, R̃</i>) + <i>bd</i> T(<i>Q̃, S̃</i>)</p>
+</div>
+
+<p>Tensors of a given rank form a linear algebra, meaning that a linear combination of tensors of rank (<i>m, n</i>) is also a tensor of rank (<i>m, n</i>), defined by straightforward extension of equation (3). Two tensors (of the same rank) are equal if and only if they return the same scalar when applied to all possible input vectors and one-forms. Tensors of different rank cannot be added or compared, so it is important to keep track of the rank of each tensor. Just as in the case of scalars, vectors and one-forms, tensor fields <i>T<sub><b>X</b></sub></i> are defined by associating a tensor with each spacetime point.</p>
+
+<h2>Tensor product</h2>
+
+<p>There are three ways to change the rank of a tensor. The first, called the tensor (or outer) product, combines two tensors of ranks (<i>m</i><sub>1</sub>, <i>n</i><sub>1</sub>) and (<i>m</i><sub>2</sub>, <i>n</i><sub>1</sub>) to form a tensor of rank (<i>m</i><sub>1</sub> + <i>m</i><sub>2</sub>, <i>n</i><sub>1</sub> + <i>n</i><sub>2</sub>) by simply combining the argument lists of the two tensors and thereby expanding the dimensionality of the tensor space. For example, the tensor product of two vectors <i><b>A</b></i> and <i><b>B</b></i> gives a rank (2, 0) tensor</p>
+
+<div class="eq">
+<p><i>T</i> = <i><b>A</b></i> ⊗ <i><b>B</b></i>, <p><i>T</i>(<i>P̃,Q̃</i>) ≡ <i><b>A</b></i>(<i>P̃</i>)  ⊗ <i><b>B</b></i>(<i>Q̃</i>)</p>
+</div>
+
+<p>We use the symbol ⊗ to denote the tensor product; later we will drop this symbol for notational convenience when it is clear from the context that a tensor product is implied. Note that the tensor product is non-commutative: <i><b>A</b></i> ⊗ <i><b>B</b></i> &ne; <i><b>B</b></i> ⊗ <i><b>A</b></i> (unless <i><b>B</b></i> = <i>c<b>A</b></i> for some scalar c) because <i><b>A</b></i>(<i>P̃</i>) <i><b>B</b></i>(<i>Q̃</i>) &ne; <i><b>A</b></i>(<i>Q̃</i>) <i><b>B</b></i>(<i>P̃</i>) for all <i>P̃</i> and <i>Q̃</i>. We use the symbol ⊗ to denote the tensor product of any two tensors, e.g., P̃ ⊗ T = P̃ ⊗ <i><b>A</b></i> ⊗ <i><b>B</b></i> is a tensor of rank (2, 1). The second way to change the rank of a tensor is by contraction, which reduces the rank of a (<i>m, n</i>) tensor to (<i>m</i> − 1, <i>n</i> − 1). The third way is the gradient. We will discuss contraction and gradients later.</p>
+
+
+<section aria-label="End">
+<a href="dual_space.html">«Dual vectors</a>
+<a href="index.html">Index</a>
+<a href="tesnros_def.html">Tensor formal definition»</a>
+</section>
+
+</article>
+
+</body>
+</html>

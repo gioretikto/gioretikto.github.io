@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="VoIP, Voice over IP (Internet Protocol)">
+	<title>VoIP, Voice over IP (Internet Protocol)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>VoIP, Voice over IP (Internet Protocol)</h1>
+
+<p>VoIP, which stands for Voice over IP (Internet Protocol) works much the same as a regular telephone. However, instead of connecting to the public telephone network, your phone system connects directly to the Internet. The main benefits are</p>
+
+<ul>
+	<li><p>reduced cost, especially if you make a lot of long distance phone calls;</p></li>
+	<li><p>include servizi, come le chat testuali, scambio di file e videochiamate.</p></li>
+</ul>
+
+<p>When you use a normal phone to make a long distance call, your voice is transmitted (usually in digital form) over a networkd called the <i>Public Switched Telephone Network</i>, or PSTN. <br> When you use VoIP, you voice is still converted into digital form. The voice is samples at normally a variety of millisecond increments. That being the case, a sample is 160 bytes of voice traffic. However, instead of being sent over private networks owned by telephone companies, it is sent over the Internet and decoded back into your voice at the other end. Because the internet uses the TCP/IP protocols, the digital data that represents your voice must be converted into packets that can be sent reliably. Hence the name VoIP.</p>
+
+<p><i>IP telephones</i> − Most new VoIP installations use <i>IP telephones</i>, which, unline traditional phones, transmit and receive only digital signals. To communicate on the network, each IP phone must have a unique IP address. The IP phone looks like a traditional touch-tone phone, but connects to an RJ-45 wall jack, like a computer workstation.</p>
+
+<h2>RTP (Real-time Transport Protocol)</h2>
+
+<p>Since TCP protocol is optimized for accurate delivery rather than timely delivery, sometimes it results in relatevely long delays in the orders of seconds. This delay is caused while the TCP protocol waits for out-of-order messages or retrasmissions of lost messanges. As a result , TCP protocol is not particularly suitable for real-time applications such as VoIP in which delays more than a hundred milliseconds cause undesirable disturbance. For such applications, the connectionless <a href="UDP.html">UDP</a> is usually replacing the TCP protocol. Another protocol on top of UDP, the <b>Real-Time Transport Protocol (RTP)</b>, extends UDP's very basic capabilities to support sequence numbering and time stamps, which are necessary for packet audio. Because UDP does not provide sequence indication (and other features needed by VoIP) the audio packets need to be wrapped in an additional protocol: the real-time transport protocol (RTP) was developed for this.</p>
+
+<h2>SIP, (Session Initiation Protocol)</h2>
+
+<p>Session Initiation Protocol is an application layer control protocol that enables the creation, modification, and termination of multimedia sessions with one or more participants. A VoIP call and a multimedia conference are examplesof multimedia sessions. SIP can run over any transport layer protocol, but UDP is typically used with the default port of 5060. The endpoints of a session such as participants are called <i>user agents</i>. A user agent that makes a SIP request is called a <i>User Agent Client</i>, and a user agent that responds to a SIP request is called a <i>User Agent Server</i>. Of course, the same device may be a User Agent Client at one time and a User Agent Server at another time. The protocol's developers modeled it on HTTP. A User Agent Client (UAC) initiates SIP requests and a User Agent Server (UAS) responds to SIP requests. </p>
+
+<h2>How much bandwidth do I need for VoIP?</h2>
+
+<p>The amount of bandwidth needed for VoIP depends on how many phone lines you have running at once. For instance, if you are a small company with only 5 users who only sometimes use your phone lines, your bandwidth needs will be much different than a medium company with 20 users all using their phone lines regularly.</p>
+<p>Take a look at these bandwidth requirements and recommendations:</p>
+
+<table><tbody><tr><td><strong>Number of Concurrent Calls</strong></td><td><strong>Minimum Bandwidth Required</strong></td><td><strong>Ideal Bandwidth</strong></td></tr><tr><td>1</td><td>100 Kbps</td><td>3 Mbps</td></tr><tr><td>3</td><td>300 Kbps</td><td>3 Mbps</td></tr><tr><td>5</td><td>500 Kbps</td><td>5 Mbps</td></tr><tr><td>10</td><td>1 Mbps</td><td>5-10 Mbps</td></tr><tr><td>15</td><td>1.5 Mbps</td><td>10+ Mbps</td></tr><tr><td>20</td><td>2 Mbps</td><td>10+ Mbps</td>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Isomorphisms">
+	<title>Isomorphisms</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Isomorphisms</h1>
+
+<p><b>6.1.3 Definition.</b> Let [<i>R</i>, +, ⋅] and [<i>R'</i>, +', ⋅'] be rings. An isomorphism <i>&phi;</i> between <i>R</i> and <i>R'</i> is a biunivoque correspondence between <i>R</i> and <i>R'</i> preserving the operations, i.e. such that</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>a</i> + <i>b</i>) = <i>&phi;</i>(<i>a</i>) +' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; <i>R</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>a</i>⋅<i>b</i>) = <i>&phi;</i>(<i>a</i>) ⋅' <i>&phi;</i>(<i>b</i>) &emsp; <i>a, b</i> &in; <i>R</i></p>
+</div>
+
+<p>If an isomorphism from <i>R</i> to <i>R'</i> exists, we say that <i>R</i> is isomorphic to <i>R'</i> and use the notation <i>R</i> ≅ <i>R'</i>. The relation of being isomorphic is an equivalence relation.</p>
+
+<img src="img/isomorphism.png" alt="ring isomorphism"/>
+
+<p>Any algebraic property that holds on <i>R</i> is also true on <i>R'</i> and viceversa owning to the bijective map, hence from an algebraic point of view they are identical. When we'll study a particular ring we'll refer to its isomorphism class containing all rings isomorphic to the first.</p>
+
+<h3>Examples of ring isomorphism</h3>
+
+<ul>
+	<li><p>The isomorphism between the ring 𝕂[<i>x</i>] of polynomials with coefficients over 𝕂  and the ring of sequences having from a point on all 0 terms. We the operations we defined when discussing <a href="polynomials.html#isomo_pol_seq">polynomials</a></p></li>
+
+	<li><p>The map from ℂ to ℂ of complex numbers to their complex conjugates.</p></li>
+</ul>
+
+<p>Some properties satisfied by rings do not appear among ring axioms and are used to further characterize rings</p>
+
+<ul>
+	<li><p>A <i>commutative ring</i> satisfies the commutative property for multiplication.</p></li>
+
+	<li><p>A <i>commutative ring with identity</i> is a ring with a nonzero element, 1 &in; <i>R</i>, that is an identity under multiplication i.e. if 1 ⋅ <i>a</i> = <i>a</i> &forall;<i>a</i> &in; <i>R</i>.</p>
+	
+	<p>Let <i>R</i> be a ring with identity. The element <i>a</i> ∈ <i>R</i> is a <b>unit</b> or <b>invertible elements</b>, if it has a multiplicative inverse in <i>R</i>, that is if there exists <i>b</i> ∈ <i>R</i> such that <i>ab</i> = <i>ba</i> = 1, that is <i>a</i> divides 1. The element <i>b</i> is called the <b>inverse</b> of <i>a</i>, and is written <i>a</i><sup>−1</sup>. It is unique; for if <i>b</i> and <i>c</i> are both inverses of <i>a</i>, then</p>
+
+	<div class="eq">
+	<p><i>c</i> = 1<i>c</i> = (<i>ba</i>)<i>c</i> = <i>b</i>(<i>ac</i>) = <i>b</i> ⋅ 1 = <i>b</i>.</p>
+	</div>
+
+	<p>The units in ℤ are 1 and −1.</p>
+
+	<p><b>Remark</b> Let <i>u</i> &in; <i>R</i> be a unit with inverse <i>v</i>, so that <i>uv</i> = 1. For any <i>b</i> &in; <i>R</i>  we have <i>u</i>(<i>vb</i>) = (<i>uv</i>)<i>b</i> = 1<i>b</i> = <i>b</i>. Therefore</p>
+	
+	<div class="eq">
+	<p>a unit divides every element of <i>R</i></p>
+	</div>
+	
+	</li>
+	
+	<li><p>An <i>integral domain</i> is a commutative ring with identity and no ­zero-­divisors i.e. <i>ab</i> = 0 ⇒ <i>a</i> = 0 or <i>b</i> = 0.</p></li>
+
+	<li><p>A <a href="fields.html">field</a> is a <a href="rings.html">ring</a> in which the nonzero elements form an abelian group under multiplication.</p></li>
+
+	<li><p>A <i>division ring</i> is a ring with identity (not necessarily commutative).</p></li>
+</ul>
+
+<p>It is clear that only rings sharing the properties mentioned above can be considered isomorphic e.g. a ring with unit cannot be isomorphic to a ring without unit. For example for any integer <i>n</i> &in; ℕ, let</p>
+
+<div class="eq">
+<p><i>n</i>ℤ = {<i>nk</i> : <i>k</i> &in; ℤ}</p>
+</div>
+
+<p>be the set of integer multiplies of <i>n</i>. The set <i>n</i>ℤ is a subset of ℤ and inherits addition and multiplication from ℤ. If we take two elements from <i>n</i>ℤ, say <i>nh</i> and <i>nk</i> we can see that</p>
+
+<div class="eq">
+<p><i>nk</i> + <i>nh</i> = <i>n</i> (<i>k</i> + <i>h</i>) &emsp; and &emsp; (<i>nk</i>)(<i>nh</i>) = <i>n</i>(<i>knh</i>)</p>
+</div>
+
+<p>by the distributive and associative laws. Addition and multiplication are both associative in <i>n</i>ℤ and multiplication is distributive with respect to addition. In <i>n</i>ℤ, 0 is the additive identity. However, there is no multiplicative identity in <i>n</i>ℤ unless <i>n</i> = &pm; 1. There are also no multiplicative inverses for <i>nk</i> unless <i>n</i> = &pm; 1 and <i>k</i> = &pm; 1.</p>
+
+<p>As a consequence ℤ is not isomorphic to 2ℤ. We can view <i>n</i>ℤ as a "substructure" of ℤ.</p>
+
+<p><b>6.1.4 Proposition.</b> Let <i>R</i> be a ring with identity.</p>
+
+<ol type="a">
+	<li><p>The identity is a unit; it is equal to its inverse.</p></li>
+	<li><p>If <i>a</i> is a unit, then so is <i>a</i><sup>−1</sup>; its inverse is <i>a</i>.</p></li>
+	<li><p>If <i>a</i> and <i>b</i> are units, then so is <i>ab</i>; its inverse is <i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup>.</p></li>
+</ol>
+
+<p><b>Proof</b>.</p>
+
+<ol type="a">
+	<li><p>1 ⋅ 1 = 1</p></li>
+
+	<li><p>This is shown by the equation <i>aa</i><sup>−1</sup> = <i>a</i><sup>−1</sup> <i>a</i> = 1</p></li>
+
+	<li><p>We have (<i>ab</i>)(<i>b</i><sup>−1</sup><i>a</i><sup>−1</sup>) = <i>a</i> (<i>bb</i><sup>−1</sup>) <i>a</i><sup>−1</sup> = <i>aa</i><sup>−1</sup> = 1.</p>
+	<p>and, similarly, (<i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup>)(<i>ab</i>) = 1.□</p></li>
+</ol>
+
+<p id="associates"><b>6.1.5 Definition.</b> Two elements <i>a, b</i> of the integral domain <i>R</i> are said to be <b>associates</b> if there is a unit <i>u</i> ∈ <i>R</i> such that <i>b</i> = <i>au</i>. This is not a different proposition from the one we already gave when studying the integers: Two elements <i>a</i> and <i>b</i> of ℤ such that <i>a</i>|<i>b</i> and <i>b</i>|<i>a</i> are said associates</p>
+
+<p>If <i>a</i> and <i>b</i> are associates, <i>a</i> = <i>cb</i> and <i>b</i> = <i>da</i>, hence <i>a</i> = <i>cda</i>. The cancellation law gives 1 = <i>cd</i>, so both <i>c</i> and <i>d</i> are units. </p>
+
+<p>Note that, by the above Proposition, it follows that being associates is an equivalence relation: it is</p>
+
+<ul>
+	<li><p><i>reflexive</i>, since <i>a</i> = <i>a</i>1;</p></li>
+	<li><p><i>symmetric</i>, since <i>b</i> = <i>au</i> implies <i>a</i> = <i>bu</i><sup>−1</sup>;</p></li>
+	<li><p><i>transitive</i>, since <i>b</i> = <i>au</i> and <i>c</i> = <i>bv</i> imply <i>c</i> = <i>a</i>(<i>uv</i>).</p></li>
+</ul>
+
+<p><i>R</i> is partitioned into equivalence classes, called <b>associate classes</b>. For example, in ℤ, the associate classes are the sets {<i>n</i>, −<i>n</i>} for all non-negative integers <i>n</i>.</p>
+
+<section aria-label="End">
+<a href="rings.html">&#171;Rings</a>
+<a href="index.html">Index</a>
+<a href="subrings.html">Subrings &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

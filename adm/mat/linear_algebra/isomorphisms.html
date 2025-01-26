@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Isomorphisms"/>
+	<title>Isomorphisms</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Isomorphisms</h1>
+
+<p>Bijective linear maps are of particular importance since they can be used to identify two vector spaces and this motivates introducing the following terminology.</p>
+
+<p><b>Definition 3.2.1</b>. A bijective linear map <i>f</i> : <i>V</i> → <i>W</i> is called a vector space isomorphism, or isomorphism for short, from <i>V</i> to <i>W</i>. If such an isomorphism from <i>V</i> to <i>W</i> exists then <i>V</i> and <i>W</i> are called isomorphic, written as <i>V</i> ≅ <i>W</i>.</p>
+
+<p>Isomorphic vector spaces should be regarded as identical with regard to their vector space structure. In other words, it does not matter in which of the two spaces calculations are carried out — the isomorphism (and its inverse) can always be used to translate to the other space in a way that is consistent with addition and scalar multiplication. <br> The notion of vector spaces being isomorphic is an <a href="../algebra/relations.html#equivalence">equivalence relation</a>. Indeed, every vector space is isomorphic to itself, <i>V</i> ≅ <i>V</i> (since the identity map id<sub><i>V</i></sub> is linear and bijective), so the relation is reflexive. If <i>V</i> ≅ <i>W</i> then, by definition, there is a bijective linear map <i>f</i> : <i>V</i> → <i>W</i> and, from Prop. 12.2 (ii) we know that its inverse <i>f</i><sup>−1</sup>: <i>W</i> → <i>V</i> is also linear. Therefore, <i>V</i> ≅ <i>W</i> implies that <i>W</i> ≅ <i>V</i>, so the relation is symmetric. For transitivity, consider three vector spaces <i>V, W, U</i> with <i>V</i> ≅ <i>U</i>, so that there are bijective linear maps <i>f</i> : <i>V</i> → <i>W</i> and <i>g</i> : <i>W</i> → <i>U</i>. Then, the map <i>g</i> ◦ <i>f</i> : <i>V</i> → <i>U</i> is linear from <a href="../algebra/composite_functions.html">Proposition 1.4.5</a> and bijective from <a href="Hom.html#comp">Proposition 3.4.3</a>, so that <i>V</i> ≅ <i>U</i>. In conclusion, being isomorphic is an equivalence relation. As a result, the vector spaces over a fixed field fall into disjoint equivalence classes each of which consists of all vector spaces isomorphic to each other. We will soon learn how to characterize these equivalence classes.</p>
+
+
+
+<p>As we have seen every finite-dimensional vector space <i>V</i> has a basis <i>B</i>, and we can use that basis to represent a vector <i><b>v</b></i> ∈ <i>V</i> as a coordinate vector [<i><b>v</b></i>]<sub><i>B</i></sub> ∈ 𝔽<sup><i>n</i></sup>, where 𝔽  is the ground field. We used this correspondence between <i>V</i> and 𝔽<sup><i>n</i></sup> to motivate the idea that these vector spaces are “the same” in the sense that, in order to do a linear algebraic calculation in <i>V</i>, we can instead do the corresponding calculation on coordinate vectors in 𝔽<sup><i>n</i></sup>. We now make this idea of vector spaces being “the same” more rigorous and clarify under exactly which conditions this similarity happens.</p>
+
+<p>We can think of isomorphic vector spaces as having the same structure and the same vectors as each other, but different labels on those vectors. This is perhaps easiest to illustrate by considering the vector spaces <i>M</i><sub>1,3</sub> and <i>M</i><sub>3,1</sub>.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">[</mo>
+  <mi>a</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mo>,</mo>
+  <mi>c</mi>
+  <mo stretchy="false">]</mo>
+  <mo>&#x2208;</mo>
+  <msub>
+    <mi>M</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>and</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>a</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>b</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>c</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>&#x2208;</mo>
+  <msub>
+    <mi>M</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>3</mn>
+      <mo>,</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+</math>
+
+<!-- $$ [a,b,c] \in M_{1,3} \quad \text{and} \quad \begin{bmatrix} a \\ b \\ c  \end{bmatrix} \in M_{3,1} $$ -->
+
+<p>To formally see that <i>M</i><sub>1,3</sub> and <i>M</i><sub>3,1</sub> are isomorphic, we just construct the “obvious” isomorphism between them: the transpose map <i>T</i> : <i>M</i><sub>1,3</sub> → <i>M</i><sub>3,1</sub> satisfies</p>
+
+<div class="eq">
+<p><i>T</i>([<i>a b c</i>]) = [<i>a b c</i>]<sup>T</sup></p>
+</div>
+
+<p>Furthermore, we already noted in <a href="linear_transformations.html">Example 1.2.6</a> that the transpose is a linear transformation, and it is clearly invertible (it is its own inverse, since transposing twice gets us back to where we started), so it is indeed an isomorphism. The same argument works to show that each of 𝔽<sup><i>n</i></sup>, <i>M</i><sub><i>n</i>,1</sub>, and <i>M</i><sub>1,<i>n</i></sub> are isomorphic.</p>
+
+<p>Some basic properties of isomorphisms that follow almost immediately from facts that we already know about (invertible) linear transformations in general:</p>
+
+<ul>
+	<li><p>If <i>T</i> : <i>V</i> → <i>W</i> is an isomorphism then so is <i>T</i><sup>−1</sup> : <i>W</i> → <i>V</i>.</p></li>
+	<li><p>If <i>T</i> : <i>V</i> → <i>W</i> and <i>S</i> : <i>W</i> → <i>X</i> are isomorphisms then so is <i>S</i> ◦ <i>T</i> : <i>V</i> → <i>X</i> . In particular, if <i>V</i> ≌ <i>W</i> and <i>W</i> ≌ <i>X</i> then <i>V</i> ≌ <i>X</i>.</p></li>
+</ul>
+
+<p><b>Theorem 3.2.2</b>. Suppose <i>V</i> is an <i>n</i>-dimensional vector space over a field 𝔽. Then <i>V</i> ≌ 𝔽<sup><i>n</i></sup></p>
+
+<p><b>Proof</b>. We just recall from Exercise 1.2.22 that if <i>B</i> is any basis of <i>V</i> then the function <i>T</i> : <i>V</i> → 𝔽<sup><i>n</i></sup> defined by <i>T</i>(<i><b>v</b></i>) = [<i><b>v</b></i>]<sub><i>B</i></sub> is an invertible linear transformation (i.e., an isomorphism). </p>
+
+<p><b>Corollary 3.2.3</b>. Suppose <i>V</i> and <i>W</i> are vector spaces over the same field and <i>V</i> is finite-dimensional. Then <i>V</i> ≌ <i>W</i> if and only if dim(<i>V</i>) = dim(<i>W</i>).</p>
+
+<p><b>Proof</b>. Theorem 3.2.2 gives us the “if” direction, so we now prove the “only if” direction. To this end, we just note that if <i>V</i> ≌ <i>W</i> then there is an invertible linear transformation <i>T</i> : <i>V</i> → <i>W</i> so Exercise 1.2.21 tells us that dim(<i>V</i>) = dim(<i>W</i>).</p>
+
+<p><b>Exercise 3.4.2</b>. Suppose <i>V, W</i> are vector spaces and <i>T</i> : <i>V</i> → <i>W</i> is a linear transformation. Show that if <i>T</i> is invertible then dim(<i>V</i>) = dim(<i>W</i>).</p>
+
+<p>From Exercise 1.2.20(c) follows that if {<i><b>v</b></i><sub>1</sub>, <i><b>v</b></i><sub>2</sub> , ... , <i><b>v</b></i><sub>n</sub>} is a basis of <i>V</i> then {<i>T</i> (<i><b>v</b></i><sub>1</sub>), <i>T</i> (<i><b>v</b></i><sub>2</sub>), ... , <i>T</i> (<i><b>v</b></i><sub>n</sub>)} is a basis of <i>W</i>, so dim(<i>W</i>) = <i>n</i> = dim(<i>V</i>). &emsp;■</p>
+
+<section aria-label="End">
+<a href="Hom.html">&#171;Addition and scalar multiplication of linear maps</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

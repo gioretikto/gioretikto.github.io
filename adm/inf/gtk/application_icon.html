@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The application icon"/>
+    <title>The application icon</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>The application icon</h1>
+
+<p>In the next example, we show the application icon. Most window managers display the icon in the left corner of the titlebar and also on the taskbar.
+icon.c</p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+GdkPixbuf *create_pixbuf(const gchar * filename) {
+    
+   GdkPixbuf *pixbuf;
+   GError *error = NULL;
+   pixbuf = gdk_pixbuf_new_from_file(filename, &error);
+   
+   if (!pixbuf) {
+       
+      fprintf(stderr, "%s\n", error->message);
+      g_error_free(error);
+   }
+
+   return pixbuf;
+}
+
+int main(int argc, char *argv[]) {
+    
+  GtkWidget *window;
+  GdkPixbuf *icon;
+
+  gtk_init(&argc, &argv);
+
+  window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title(GTK_WINDOW(window), "Icon");
+  gtk_window_set_default_size(GTK_WINDOW(window), 230, 150);
+  gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+  
+  icon = create_pixbuf("web.png");  
+  gtk_window_set_icon(GTK_WINDOW(window), icon);
+  
+  gtk_widget_show(window);
+
+  g_signal_connect(G_OBJECT(window), "destroy",
+      G_CALLBACK(gtk_main_quit), NULL);
+      
+  g_object_unref(icon);    
+
+  gtk_main();
+
+  return 0;
+}
+</pre>
+
+<p>The code example shows an application icon.</p>
+
+<pre>pixbuf = gdk_pixbuf_new_from_file(filename, &error);</pre>
+
+<p>The <code>gdk_pixbuf_new_from_file()</code> function creates a new pixbuf by loading an image from a file. The file format is detected automatically.
+ If NULL is returned, then an error will be set.</p>
+
+<pre>
+if (!pixbuf) {
+    
+    fprintf(stderr, "%s\n", error->message);
+    g_error_free(error);
+}
+</pre>
+
+<p>An error message is printed if the icon could not be loaded.</p>
+
+<pre>
+icon = create_pixbuf("web.png");  
+gtk_window_set_icon(GTK_WINDOW(window), icon);
+</pre>
+
+<p>The gtk_window_set_icon() displays the icon for the window. The create_pixbuf() creates a GdkPixbuf from a PNG file.</p>
+
+<pre>g_object_unref(icon);</pre>
+
+<p>The g_object_unref() decreases the reference count of the pixbuf object. When its reference count drops to 0, the object is finalized
+ (i.e. its memory is freed).</p>
+   
+<h2>Beschriftung</h2>
+
+<p>Eine Beschriftung („Label“) kann Text enthalten, der mit HTML-ähnlichen Auszeichnungen („Markup“) versehen wurde. 
+Die Beschriftung lässt sich auch drehen, wie folgender Code zeigt. </p>
+
+<pre>#include &lt;gtk/gtk.h&gt;
+
+static void on_window_closed (GtkWidget *widget, gpointer data)
+{
+    gtk_main_quit ();
+}
+
+int main (int argc, char *argv[])
+{
+    GtkWidget *window, *label;
+
+    gtk_init (&argc, &argv);
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    g_signal_connect (window, "destroy", G_CALLBACK(on_window_closed), NULL);
+    label = gtk_label_new (NULL);
+    <span class="cm">/* Beschriftungstext mit Auszeichnungen */</span>
+    gtk_label_set_markup (GTK_LABEL(label),
+            "&lt;small>Kleiner Text&lt;/small&gt;\n"
+            "&lt;big>Large&lt;/big&gt;\n"
+            "&lt;b>Fett&lt;/b&gt;\n"
+            "&lt;span foreground=\"#ff0000\">ROT&lt;/span&gt;");
+    <span class="cm">/* Label um 45 Grad gegen den Uhrzeigersinn drehen */</span>
+    gtk_label_set_angle (GTK_LABEL(label), 45);
+    gtk_container_add (GTK_CONTAINER(window), label);
+    gtk_window_set_title (GTK_WINDOW(window), "Mein kleines Fenster");
+    gtk_window_set_default_size (GTK_WINDOW(window), 640, 480);
+    gtk_window_set_resizable (GTK_WINDOW(window), FALSE);
+    gtk_widget_show_all (window);
+    gtk_main ();
+
+    return 0;
+}
+</pre>
+
+<h2>Druckknopf</h2>
+
+<p>Das folgende Programm demonstriert, wie man mit Knöpfen umgeht. Diese senden ein Signal aus, wenn sie gedrückt werden. Das Signal kann man abfangen und nutzen, wie das folgende Programm zeigt.
+C</p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+static void on_window_closed (GtkWidget *widget, gpointer data)
+{
+    gtk_main_quit ();
+}
+
+<span class="cm">/* Liefert TRUE zurück, wenn gerade Zahl, FALSE, wenn ungerade */</span>
+static gboolean is_even (int number)
+{
+    return number % 2 == 0;
+}
+
+static void on_button_clicked (GtkWidget *widget, gpointer data)
+{
+    static int click_count;
+    <span class="cm">/* Jedes 2. Mal soll "Danke!" bzw "Nochmal?" ausgegeben werden */</span>
+    gtk_button_set_label (GTK_BUTTON(widget), is_even (click_count) ? "Danke!" : "Nochmal?");
+    <span class="cm">/* Anzahl der Klicks vergrößern */</span>
+    click_count++;
+}
+
+int main (int argc, char *argv[])
+{
+    GtkWidget *window, *button;
+
+    gtk_init (&argc, &argv);
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    g_signal_connect (window, "destroy", G_CALLBACK(on_window_closed), NULL);
+    <span class="cm">/* Füge einen Druckknopf ein */</span>
+    button = gtk_button_new_with_label ("Drück mich!");
+    <span class="cm">/* Signal "draufklicken" wird verknüpft mit einer Rückruf-Funktion */</span>
+    g_signal_connect(button, "clicked", G_CALLBACK(on_button_clicked), NULL);
+    gtk_container_add (GTK_CONTAINER(window), button);
+    gtk_window_set_title (GTK_WINDOW(window), "Mein kleines Fenster");
+    gtk_window_set_default_size (GTK_WINDOW(window), 200, 200);
+    gtk_widget_show_all (window);
+    gtk_main ();
+
+    return 0;
+}
+</pre>
+
+<p>Ein neuer Knopf wird mit der Funktion gtk_button_new_with_label() erzeugt. Wenn Sie keine Beschriftung im Knopf wünschen, oder eine eigene Beschriftung
+ später einfügen wollen, reicht als Alternative auch gtk_button_new() aus. Ein Druckknopf kann verschiedene Signale aussenden.
+  Wird die Maus über dem Knopf gedrückt und anschließend losgelassen wird das Signal „clicked“ ausgesendet, welches wir abfangen wollen.
+   In unserem Fall wollen wir zählen, wie oft der Knopf gedrückt wurde.</p>
+
+<p>In der Callback-Funktion on_button_clicked() haben wir dazu eine Zählvariable click_count vorgesehen. Diese ist statisch („static“) deklariert,
+ damit ihr Wert nach Ende der Funktion nicht verloren geht, sondern beibehalten wird. Wurde der Knopf einmal gedrückt, so wird „Danke“ ausgegeben,
+  beim zweiten Mal „Nochmal“ und dann wieder von vorne. Dabei hilft die von uns definierte Funktion is_even(), die uns sagt, ob eine Zahl
+   gerade oder ungerade ist. Der Button-Text wird mit der Funktion gtk_button_set_label() gesetzt.</p>   
+
+<h2>Zusammenfassung</h2>
+
+<p>In diesem Kapitel haben Sie die Grundlagen von GTK+ kennen gelernt. Sie kennen nun Fenster, Beschriftungen und Druckknöpfe und können diese mit einigen 
+Funktionen manipulieren. Ebenfalls wissen Sie, dass Widgets Signale aussenden können und dass Signale mit Callbacks genutzt werden. </p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="signals_callbacks.html">Signal and Callbasck: buttons&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

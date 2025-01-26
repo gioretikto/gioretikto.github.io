@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Days elapsed between two dates</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<article>
+
+<h1>Days elapsed between two dates</h1>
+
+<input type="date" id="startDate">
+<input type="date" id="endDate">
+<button id="processDates">Go!</button>
+
+<output id="output"></output>
+
+</article>
+
+<script type="text/javascript">
+//Set the two dates
+const startDate =  document.getElementById('startDate');
+const endDate =  document.getElementById('endDate');
+//Get 1 day in milliseconds
+const one_day=1000*60*60*24
+const button = document.getElementById('processDates');
+const output = document.getElementById('output')
+ 
+button.addEventListener('click', processDates);
+ 
+function processDates() {
+    //Calculate difference btw the two dates, and convert to days
+    const sD = new Date(startDate.value);
+    const eD = new Date(endDate.value);
+	const days = Math.ceil(
+		(eD.getTime()-sD.getTime())/
+		(one_day)
+	);
+    output.innerText = `${days} days has gone by since the date entered!`;
+}
+</script>
+</body>
+</div>
+</html>

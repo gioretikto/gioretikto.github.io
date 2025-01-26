@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Escape characters"/>
+	<title>Escape characters</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h2>Escape characters</h2>
+
+<p>A lot of keys have special meanings in some context or other. Quoting is used to remove the special meaning of characters or words: quotes can disable special treatment for special characters, they can prevent reserved words from being recognized as such and they can disable parameter expansion.</p>
+
+<p>Escape characters are used to remove the special meaning from a single character. A non-quoted backslash, \, is used as an escape character in Bash. It preserves the literal value of the next character that follows, with the exception of newline. If a newline character appears immediately after the backslash, it marks the continuation of a line when it is longer that the width of the terminal; the backslash is removed from the input stream and effectively ignored.</p>
+
+<pre>
+franky ~> date=20021226
+
+franky ~> echo $date
+20021226
+
+franky ~> echo \$date
+$date
+</pre>
+
+<p>In this example, the variable date is created and set to hold a value. The first echo displays the value of the variable, but for the second, the dollar sign is escaped.</p>
+
+<h2>Single quotes</h2>
+
+<p>Single quotes ('') are used to preserve the literal value of each character enclosed within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.</p>
+
+<p>We continue with the previous example:</p>
+
+<pre>
+franky ~> echo '$date'
+$date
+</pre>
+
+<h2>Double quotes " "</h2>
+
+<p>Using double quotes the literal value of all characters enclosed is preserved, except for the dollar sign, the backticks (backward single quotes, ``) and the backslash.</p>
+
+<p>The dollar sign and the backticks retain their special meaning within the double quotes.</p>
+
+<p>The backslash retains its meaning only when followed by dollar, backtick, double quote, backslash or newline. Within double quotes, the backslashes are removed from the input stream when followed by one of these characters. Backslashes preceding characters that don't have a special meaning are left unmodified for processing by the shell interpreter.</p>
+
+<p>A double quote may be quoted within double quotes by preceding it with a backslash.</p>
+
+<pre>
+franky ~> echo "$date"
+20021226
+
+franky ~> echo "`date`"
+Sun Apr 20 11:22:06 CEST 2003
+
+franky ~> echo "I'd say: \"Go for it!\""
+I'd say: "Go for it!"
+
+franky ~> echo "\"
+More input>"
+
+franky ~> echo "\\"
+\
+</pre>
+
+<h2>ANSI-C quoting</h2>
+
+<p>Words in the form "$'STRING'" are treated in a special way. The word expands to a string, with backslash-escaped characters replaced as specified by the ANSI-C standard. Backslash escape sequences can be found in the Bash documentation.
+3.3.6. Locales</p>
+
+<p>A double-quoted string preceded by a dollar sign will cause the string to be translated according to the current locale. If the current locale is "C" or "POSIX", the dollar sign is ignored. If the string is translated and replaced, the replacement is double-quoted.</p>
+
+<section aria-label="End">
+<a href="nominative.html.html">&#171;Nominative case</a>
+<a href="index.html">Index</a>
+<a href="apposition.html">Internal Accusative&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

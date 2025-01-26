@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Topology of ℝ<sup>n</sup>"/>
+	<title>Topology of ℝ<sup>n</sup></title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Topology of ℝ<sup>n</sup></h1>
+
+<p>In calculus of a real variable, one does not study functions defined over a discrete set of real values because the notions behind continuity and differentiability do not make sense over such sets. Instead, one often assumes the function is defined over some interval. Similarly, for the analysis of functions ℝ<sup><i>n</i></sup> to ℝ<sup><i>m</i></sup>, one does not study functions defined from any subset of ℝ<sup><i>n</i></sup> into ℝ<sup><i>m</i></sup>. One typically considers functions defined over what is called an <b>open set</b> in ℝ<sup><i>n</i></sup>, a notion we define now:</p>
+
+<p><b>Definition 3.1.1</b>. The <i>open ball</i> around <b><i>x</i></b><sub>0</sub> of radius <i>r</i> is the set</p>
+
+<div class="eq">
+<p><i>B<sub>r</sub></i> (<b><i>x</i></b><sub>0</sub>) = {<b><i>x</i></b> ∈ ℝ<sup><i>n</i></sup> : |<i><b>x</b></i> − <b><i>x</i></b><sub>0</sub>| &lt; <i>r</i>}
+</div>
+
+<p>A subset <i>U</i> ⊂ ℝ<sup><i>n</i></sup> is called <b>open</b> if for all <b><i>x</i></b> ∈ <i>U</i> there exists an <i>r</i> > 0 such that <i>B<sub>r</sub></i> (<b><i>x</i></b>) ⊂ <i>U</i>. &emsp;□ </p>
+
+<p>Intuitively speaking, the definition of an open set <i>U</i> in ℝ<sup><i>n</i></sup> implies that at every point <i>p</i> ∈ <i>U</i> it is possible to “move” in any direction by at least a little amount &epsilon; and still remain in <i>U</i>. This is why, when studying the analysis of functions from ℝ<sup><i>n</i></sup> to ℝ<sup><i>m</i></sup>, we narrow our attention to functions <i>F</i> : <i>U</i> → ℝ<sup><i>m</i></sup>, where <i>U</i> is an open subset of ℝ<sup><i>n</i></sup>.</p>
+
+<p>Clearly, discrete sets are not open. A simple example of an open set in ℝ is all points <i>x</i> for which <i>a</i> &lt; <i>x</i> &lt; <i>b</i> for two real numbers <i>a</i> and <i>b</i>. But the set of points for which <i>a</i> &le; <i>x</i> &lt; <i>b</i> is <i>not</i> open, because the point <i>x</i> = <i>a</i> does not have a neighborhood entirely contained in the set: somep oint of <i>any</i> neighborhood of <i>x</i> = <i>a</i> must be less than <i>a</i> and therefore outside the set.</p>
+
+<!-- 
+
+<p><b>Definition 3.1.2</b>. A set <i>E</i> is said <i><b>open</b></i> if can be written in the form</p>
+
+<div class="eq">
+<p><i>E</i> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &gt; 0} &emsp; <b>3.1.1</b></p>
+</div>
+
+<p>where <i>f</i> : ℝ<sup>2</sup> ⟶ ℝ, is a function defined and continuous over ℝ<sup>2</sup>. <br> A set, <i>E</i>, is said <b>closed</b> if it can be written as</p>
+
+<div class="eq">
+<p><i>E</i> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &ge; 0}</p>
+</div>
+
+<p><p>where <i>f</i> : ℝ<sup>2</sup> ⟶ ℝ, is a function defined and continuous over ℝ<sup>2</sup>. &emsp;□</p>
+
+<p id="theo"><b>Theorem 3.1.3</b>. (Topological properties of open and closed sets).</p>
+
+<ol type="a">
+	<li><p>The union of any number of open sets is open, and any finite intersection of open sets is open.</p></li>
+	<li><p>A set of the form</p>
+
+<div class="eq">
+<p><i>E</i> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &lt; 0} &emsp;or&emsp; <i>E</i> = {<i>x,y</i> &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &ne;; 0}</p>
+</div>
+
+<p>is <i>open</i>. A set of the form</p>
+
+<div class="eq">
+<p><i>E</i> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &le; 0} &emsp;or&emsp; <i>E</i> = {<i>x,y</i> &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) = 0}</p>
+</div>
+
+<p>is <i>closed</i>.</p></li>
+
+<li><p>The complement of an open set is closed, and viceversa.</p></li>
+
+<li><p>If <i>E</i> is an open set, every point (<i>x</i><sub>0</sub>,<i>y</i><sub>0</sub>) &in; <i>E</i> has an circular neighborhood contained in <i>E</i>. In words, moving "a bit" from a point of <i>E</i> we do not leave the set.</p></li>
+
+</ol>
+
+<p><b>Proof</b>. <b>(a)</b> We prove that the union of two open sets is an open set. Let</p>
+
+<div class="eq">
+<p><i>A</i><sub>1</sub> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i><sub>1</sub>(<i>x,y</i>) &le; 0} &emsp;and&emsp; <i>A</i><sub>3</sub> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i><sub>3</sub>(<i>x,y</i>) &le; 0}</p>
+</div>
+
+<p>with <i>f</i><sub>1</sub>,<i>f</i><sub>2</sub>: ℝ<sup>2</sup> ⟶ ℝ, continuous functions. <br> All we need is to prove that there exists a function <i>f</i><sub>3</sub> such that</p>
+
+<div class="eq">
+<p><i>A</i><sub>1</sub> u <i>A</i><sub>2</sub> = {(<i>x,y</i>) &in; ℝ<sup>2</sup> : <i>f</i><sub>3</sub>(<i>x,y</i>) &gt; 0}</p>
+</div>
+
+<p>We can consider the function <i>f</i><sub>3</sub> = max(<i>f</i><sub>1</sub>, <i>f</i><sub>2</sub>). It can be proven that the maximum of two continuous functions is as well continuous. you can write max(<i>f</i><sub>1</sub>, <i>f</i><sub>2</sub>) as 1/2(f<sub>1</sub> + f<sub>2</sub> + |f<sub>1</sub> − f<sub>2</sub>|), which makes it fairly easy to show if it is continuous or not. If max(<i>f</i><sub>1</sub>, <i>f</i><sub>2</sub>) = f<sub>1</sub> then f<sub>1</sub> &ge; f<sub>2</sub>, so |f<sub>1</sub> − f<sub>2</sub>| = f<sub>1</sub> − f_2, giving you 1/2(f_1 + f_2 + f_1 - f_2) = 1/2(2*f_1) = f_1
+similar if max(<i>f</i><sub>1</sub>, <i>f</i><sub>2</sub>) = f<sub>2</sub>; So really continuity of max(<i>f</i><sub>1</sub>, <i>f</i><sub>2</sub>) is dependent on the continuity of absolute value, addition, and scalar multiplication -- you can do a similar thing for min(<i>f</i><sub>1</sub>, <i>f</i><sub>2</sub>). <p>
+
+<p><b>b)</b>. We prove that</p>
+
+<div class="eq">
+<p><i>E</i> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &lt; 0}</p>
+</div>
+
+<p>is open, with <i>f</i> continuous function. Indeed if <i>f</i> is continuous, then −<i>f</i> as well is continuous and we can write the same set as <i>E</i> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : −<i>f</i>(<i>x,y</i>) &lt; 0}.</p>
+
+<p><b>c)</b>. We prove that the complement of an open set is closed. If <i>f</i>, is a continuous function such that</p>
+
+<div class="eq">
+<p><i>E</i> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &gt; 0}</p>
+</div>
+
+<p>then the complement of <i>E</i> is</p>
+
+<div class="eq">
+<p><i>E</i><sup>C</sup> = {(<i>x,y</i>) &in; : ℝ<sup>2</sup> : <i>f</i>(<i>x,y</i>) &le; 0}</p>
+</div>
+
+<p>by point b) we known that it is closed.</p>
+
+<p><b>d)</b>. Take <i>E</i> as defined in 3.1.1. and let (<i>x</i><sub>0</sub>,<i>y</i><sub>0</sub>) &in; <i>E</i>. Then by the sign permanence theorem, there exists a circular neighborhood <i>U<sub>r</sub></i>(<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub></i>) in which <i>f</i> &gt; 0, i.e. contained in <i>E</i>. &emsp;□</p>
+
+<p>Dunque <i><span class="overline">U</span><sub>r</sub>(<b>x</b><sub>0</sub>)</i> è il cerchio (se <i>n</i> = 2) oppure la sfera (se <i>n</i> = 3) di centro <b>x</b><sub>0</sub> e raggio <i>r</i>, mentre <i>U<sub>r</sub></i>(<i><b>x</b></i><sub>0</sub>) è il cerchio o la sfera senza bordo.</p>
+
+-->
+
+<p><b>Definition 3.1.2</b>. Let <i>A</i> ⊆ ℝ<sup><i>n</i></sup>. A point <b><i>x</i></b> &in; <i>A</i> si dice:</p>
+
+<ol>
+	<li><p><b>punto interno</b> a <i>A</i> se esiste un intorno <i>U<sub>r</sub></i>(<i><b>x</b></i>) contenuto in <i>A</i>.</p></li>
+	<li><p><b>punto esterno</b> a <i>A</i> se è un punto interno al complementare <i>∁A = ℝ<sup>n</sup> \ A</i>.</p></li>
+	<li><p><b>boundary point of</b> <i>E</i> if every circular neighborhood <i>U<sub>r</sub></i>(<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub></i>) contains at least a point of <i>E</i> and a point of the complementar of <i>E</i>. The <b>border</b> of <i>E</i>, indicated as ∂<i>E</i>, is defined as the set of boundary points of <i>E</i>. </p></li>
+	<img src="img/interno_esterno_frontiera.png" alt="punto interno esterno frontiera"/>
+</ol>
+
+<p><b>Definizione 3.1.2</b> Un punto (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) &in; <i>A</i>, si dice di <b>frontiera</b> per <i>A</i> se ogni suo intorno <i>U<sub>r</sub>(x<sub>0</sub>,y<sub>0</sub>)</i> contiene almeno un punto di <i>A</i> e un punto del complementare di <i>A</i>. Si dice frontiera o bordo di <i>A</i>, e si indica con ∂<i>A</i>, l'insieme dei punti di frontiera di <i>A</i>. Si dice chiusura di <i>A</i> e si indica con <span class="overline">A</span>, l'insieme <i>A &cup; ∂A</i>. &emsp;□</p>
+
+<p><b>Definizione 3.1.3</b> Si dice <b>interno</b> di <i>A</i>, e si indica con <i>Å</i>, l'insieme <i>A</i> \ ∂<i>A</i>, costituito dai punti interni di <i>A</i>. In particolare si ha sempre:</p>
+
+<div class="eq">
+<p><i>Å</i> &subseteq; <i>A</i> &subseteq; <span class="overline"><i>A</i></span> &emsp;□</p>
+</div>
+
+<p>Ad esempio se <i>A</i>:= {3, 4, 6}</i>, si ha Å = ∅ e lo stesso per ogni insieme di ℝ<sup><i>n</i></sup> costituito da un numero finito di elementi. </p>
+
+<p id="open"><b>Definizione 4.1</b>. Un insieme <i>A</i> si dice <b>aperto</b> se ogni suo punto è interno, cioè se <i>Å</i> = <i>A</i>, ossia esiste un intorno circolare <i>U<sub>r</sub></i>(<i>x<sub>0</sub>,y<sub>0</sub></i>) cotenuto in <i>A</i>. Si dice <i>chiuso</i>, se il suo complementare è aperto cioè se <i>A</i> = <span class="overline">A</span></i>.</p>
+
+<p><b>Examples 3.1.4</b></p>
+
+<ul>
+	<li><p>The sets ℝ<sup><i>n</i></sup> and ∅ are at the same time open and closed (e sono gli unici sottoinsiemi di ℝ<sup><i>n</i></sup> con tale proprietà). La loro frontiera è vuota.</p></li>
+	
+	<li><p>Il semipiano <i>A</i> = {(<i>x, y</i>) ∈ ℝ<sup>2</sup>: <i>x</i> > 1</i>} è aperto. Infatti, preso (<i>x<sub>0</sub>, y<sub>0</sub></i>) ∈ A, si verifica facilmente che ogni intorno di raggio <i>r ≤ x<sub>0</sub> - 1</i> è contenuto in <i>A</i> (si veda la Figura 4.4, a sinistra). La sua frontiera ∂A è la retta di equazione x = 1 (parallela all’asse delle y), come illustrato nella Figura 4.4, a destra. Il suo complementare ∁A = {(<i>x, y</i>) ∈ ℝ<sup>2</sup>: x ≤ 1} è dunque chiuso. In generale ogni semipiano <i>A ⊂ ℝ<sup>2</sup></i> definito da una disuguaglianza del tipo</p>
+	<div class="eq">
+	<p><i>ax</i> + by &gt; c &emsp; oppure &emsp; ax + by &lt; <i>c</i></p>
+	</div>
+<p>con <i>a</i> e <i>b</i> non entrambi nulli, è aperto mentre se è definito da una disuguaglianza del tipo	</p>
+
+	<div class="eq">
+	<p><i>ax</i> + <i>by</i> &ge; c &emsp; oppure &emsp; <i>ax</i> + <i>by</i> &le; <i>c</i></p>
+	</div>
+
+<p>è chiuso. In entrambe le situazioni, la frontiera ∂<i>A</i> è la retta di equazione <i>ax</i> + <i>by</i> = <i>c</i>.</p>
+
+<img src="img/aperto_esempio.png" alt="esempio insieme aperto"/>
+</li>
+
+</ul>
+
+<p><b>Definizione 3.1.5</b>. A point <b><i>x</i></b> ∈ ℝ<sup><i>n</i></sup> is said <b>accumulation point</b> of <i>A</i> (<b>x</b> può appartenere o non appartenere ad <i>A</i>) se ogni suo intorno contiene almeno un punti di <i>A</i> diverso da <b>x</b>, ossia</p>
+
+<div class="eq">
+<p>∀<i>r</i> &gt; 0, (<i>U<sub>r</sub></i> (<b>x</b>) \ {<b>x</b>}) ∩ <i>A</i> &ne; ∅</p>
+</div>
+
+<p>Un punto <b>x</b> ∈ <i>A</i> dicesi <b>punto isolato</b> di <i>A</i> se esiste un intorno <i>U<sub>r</sub></i> (<b>x</b>) che non contiene punti di <i>A</i> diversi da <b>x</b>, ossia</p>
+
+<div class="eq">
+<p>∃<i>r</i> &gt; 0  <i>U<sub>r</sub></i> (<b>x</b>) \ {<b>x</b>} ∩ <i>A</i> = ∅</p>
+</div>
+
+<p>vale a dire</p>
+
+<div class="eq">
+<p>∃<i>r</i> &gt; 0, <i>U<sub>r</sub></i> (<b><i>x</i></b>) ∩ <i>A</i> = {<b><i>x</i></b>}</p>
+</div>
+
+<figure>
+<img src="img/punto_accumulazione.png" alt="punto accumulazione"/>
+<figcaption>Accumulation point</figcaption>
+</figure>
+
+<p>Osserviamo che ogni punto interno di <i>A</i> è punto di accumulazione di <i>A</i>, mentre nessun punto esterno può essere punto di accumulazione di <i>A</i>. Un punto di frontiera di <i>A</i> è o punto di accumulazione di <i>A</i> (appartenente o meno a <i>A</i>) o un punto isolato di <i>A</i>. Viceversa, un punto di accumulazione o è interno a <i>A</i> o è punto di frontiera di <i>A</i>, non isolato. Un punto isolato è necessariamente un punto di frontiera.</p>
+
+<p>Definiamo ora alcune proprietà degli insiemi che saranno utili nel seguito.</p>
+
+<p><b>Definizione 3.1.6</b> Un <i>dominio</i> è la chiusura di un insieme aperto. Pertanto un dominio è un insieme chiuso, ed è unione di un insieme aprto e della sua frontiera. &emsp;□</p>
+
+<p>Ad esempio, un cerchio chiuso di ℝ<sup>2</sup> è un dominio, mentre l'insieme unione di un cerchio chiuso e di un punto isolato esterno al cerchio non è un dominio di ℝ<sup>2</sup>.</p>
+
+<p><b>Definizione 3.1.7</b> Un insieme <i>A</i> dicesi limitato se esiste un numero reale <i>M</i> &gt; 0 tale che</p>
+
+<div class="eq">
+<p>||<i><b>x</b></i>|| &le; <i>M</i>, ∀<i><b>x</b></i> ∈ <i>A</i>,</p>
+</div>
+
+<p>ossia <i>A</i> è contenuto in un intorno chiuso <i><span class="overline">U</span><sub>M</sub></i> (<b>0</b>) dell’origine.&emsp;□</p>
+
+<h2>Connected sets</h2>
+
+<p>An open set of <i>A</i> ⊆ ℝ<sup><i>n</i></sup> is said <b>connected</b> if there aren't two disjoint and non-empty open sets of ℝ<sup><i>n</i></sup> whose union is the set <i>A</i>.</p>
+
+<p><b>Definition 3.1.8</b>. An open set of <i>A</i> ⊆ ℝ<sup><i>n</i></sup> is said <b>connected</b> if the conditions</p>
+
+<div class="eq">
+<p><i>A</i><sub>1</sub>, <i>A</i><sub>2</sub> open sets of ℝ<sup><i>n</i></sup>, &emsp; <i>A</i><sub>1</sub> &cap; <i>A</i><sub>2</sub> = ∅, &emsp; <i>A</i><sub>1</sub> &cup; <i>A</i><sub>2</sub> = <i>A</i>
+</div>
+
+<p>imply that either <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub> is the empty, set. &emsp;□</p>
+
+<p><b>Definizione 3.1.9</b>. Un insieme <i>A</i> dicesi <b>compatto</b> se è <i>chiuso e limitato</i>. &emsp;□</p>
+
+<p><b>Definizione 3.1.10</b> Un insieme <i>A</i> si dice connesso (per archi) se per ogni coppia di punti <i>S,T &in; A</i> esiste un <a href="curves/arco_curva.html">arco di curva</a> continuo in <i>A</i>, che ha per estremi <i>S</i> e <i>T</i>. &emsp;□</p>
+
+<p><b>Definition 3.1.11</b> An open connected set <i>A</i> ⊆ ℝ<sup><i>n</i></sup> is <b>simply connected</b> if the trace <i>Γ</i> of any arc in <i>A</i> can be deformed with continuity to a point, always
+staying within <i>A</i>.&emsp;□</p>
+
+<p><b>Examples of simply connected sets</b>. </p>
+
+<ul>
+	<li><p>The Euclidean plane ℝ<sup>2</sup> is simply connected, but ℝ<sup>2</sup> minus the origin (0, 0) is not. If <i>n</i> > 2, then both  ℝ<sup><i>n</i></sup> and  ℝ<sup><i>n</i></sup> minus the origin are simply connected. Observe, though that while an annulus (the region between two concentric circles of different radii) in the plane is not simply connected, a spherical shell in dimention <i>n</i> &ge; 3 is;</p></li>
+
+	<li><p>A <b>sphere</b> is simply connected because every loop can be contracted (on the surface) to a point;</p></li>
+
+</ul>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="weierstrass.html">Proprietà topologiche delle funzioni continue &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

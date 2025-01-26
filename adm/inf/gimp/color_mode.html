@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Color Mode"/>
+    <title>Color Mode</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Color Mode</h1>
+
+<p>When working with images, GIMP uses one of three color modes:</p>
+
+<ul>
+	<li><p>RGB</p></li>
+	<li><p>Grayscale</p></li>
+	<li><p>Indexed</p></li>
+</ul>
+
+<p>A <b>color model</b> is the set of colors you can display.</p>
+
+<p>Every image loaded into GIMP has a color mode, represented in the title bar of the image window.</p>
+
+<p>In the RGB color mode, each individual pixel is assigned a unique color value consisting of combinations of red, green, and blue. Each of these colors is saved to its own <b>color channel</b>. Each channel uses 8-bit grayscale information defining the amount of each color component of the full color image. Therefore defines a color by a set of integer that ranges from 0 to 255. A CMYK image uses four channels and is often refeerred to as 32-bit image.</p>
+
+<h3>Grayscale mode</h3>
+
+<p><b>Grayscale</b>: The grayscale mode uses one channel to display a gray image. GIMP supports grayscale well and is usable for most tools that don't specifically require colour information. The resulting grayscale image will have a single channel composed of various shades of gray ranging from black to white. </p>
+
+<h2>Bit depth</h2>
+
+<p>Bit depth, or pixel depth or color depth, measures how much color information is available to display or print each pixel in an image. Greater bit depth means more available colors and more accurate color representation in the digital image.</p>
+
+<p>For example, a 24-bit RGB color image is made up of three 8-bit image channels, where each 8-bit channels, where each 8-bit channel can contain up to 256 levels of tones i.e. 256 provisional brightness levels in each RGB color channel.</p>
+
+<p>You can change the color mode in GIMP:</p>
+
+<pre>
+    Image > Mode > RGB
+    Image > Mode > Grayscale
+    Image > Mode > Indexed
+</pre>
+
+<h2>Alpha Channel</h2>
+
+<p>Regardless of the mode, images can have an optional alpha channel for transparency. An image with an alpha channel can have transparent and semitransparent pixels, the degree of transparency of each pixel ranging from 0 to 255. Using transparency enabled by alpha channel, you can create a picture by stacking several layers on top of each other, save images for the web, or create images for 3D graphics that have holes or semi-opaque areas. Alpha information is not "on" or "off", it is gradually "less opaque" and "more opaque", so it can contain the same kind of noise as a badly scanned grayscale image).</p>
+
+<p>This is crucial if you e.g. want to work with layers in gimp. If you stack multiple layers atop of each other the lower layers (usually) are only visible if the upper layers are at least somewhat transparent.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="seriesegnovar.html">Serie a termini di segno variabile&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

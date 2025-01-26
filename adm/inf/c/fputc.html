@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="fputc()"/>
+    <title>fputc()</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>fputc()</h1>
+
+<p>fputc() is used to write a single character at a time to a given file. It writes the given character at the position denoted by the file pointer and then advances the file pointer. This function returns the character that is written in case of successful write operation else in case of error EOF is returned.
+
+<p>Syntax:</p>
+
+<pre>int fputc(int char, FILE *pointer)</pre>
+
+<ul>
+    <li><p><b>char</b>:  character to be written, passed as int.</p></li>
+
+    <li><p><b>pointer</b>: pointer to a FILE object that identifies the 
+    stream where the character is to be written.</p></li>
+
+</ul>
+
+<h3>Example</h3>
+
+<pre>
+// C program to illustate fputc() function 
+#include&lt;stdio.h&gt;
+int main() 
+{ 
+    int i = 0; 
+    FILE *fp = fopen("output.txt","w"); 
+  
+    // Return if could not open file 
+    if (fp == NULL) 
+      return 0; 
+  
+    char string[] = "good bye", received_string[20]; 
+  
+    for (i = 0; string[i]!='\0'; i++) 
+  
+        // Input string into the file 
+        // single character at a time 
+        fputc(string[i], fp); 
+  
+    fclose(fp); 
+    fp = fopen("output.txt","r"); 
+  
+    // Reading the string from file 
+    fgets(received_string,20,fp); 
+  
+    printf("%s", received_string); 
+  
+    fclose(fp); 
+    return 0; 
+} 
+</pre>
+
+<p>Output:</p>
+
+<pre>good bye</pre>
+
+<p>When fputc() is executed characters of string variable are written into the file one by one. When we read the line from the file we get the same string that we entered.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

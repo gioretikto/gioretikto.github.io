@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="feof"/>
+    <title>feof</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>feof</h1>
+
+<p>The C library function int feof(FILE *stream) tests the end-of-file indicator for the given stream.</p>
+
+<h3>Declaration</h3>
+
+<p>Following is the declaration for feof() function.</p>
+
+<pre>int feof(FILE *stream)</pre>
+
+<h3>Parameters</h3>
+
+<ul>
+    <li><p><b>stream</b> − This is the pointer to a FILE object that identifies the stream.</p></li>
+</ul>
+
+<h3>Return Value</h3>
+
+<p>This function returns a non-zero value when End-of-File indicator associated with the stream is set, else zero is returned.</p>
+
+<h3>Example</h3>
+
+<p>The following example shows the usage of feof() function.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main () {
+   FILE *fp;
+   int c;
+  
+   fp = fopen("file.txt","r");
+   if(fp == NULL) {
+      perror("Error in opening file");
+      return(-1);
+   }
+   
+   while(1) {
+      c = fgetc(fp);
+      if( feof(fp) ) { 
+         break ;
+      }
+      printf("%c", c);
+   }
+   fclose(fp);
+   
+   return(0);
+}
+</pre>
+
+<p>Assuming we have a text file file.txt, which has the following content. This file will be used as an input for our example program −</p>
+
+<pre>This is tutorialspoint.com</pre>
+
+<p>Let us compile and run the above program, this will produce the following result −
+
+<pre>This is tutorialspoint.com</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

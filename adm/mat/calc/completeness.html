@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Completeness"/>
+	<title>Completeness</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Completeness</h1>
+
+<p>The <a href="../alg/Q.html">rational number system</a> is inadequate for many purposes, both as a field and an ordered set. The rationals lack the property that some (even simple) bounded sets
+fail to admit a supremum and an infimum.For instance there is no rational <i>p</i> such that <i>p</i><sup>2</sup> = 2 (see Example 1.3.2). This leads to the introduction of so-called "irrational numbers" which are often written as infinite decimal expansions and are considered to be "approximated" by corresponding finite decimals. Thus the sequence</p>
+
+<div class="eq">
+<p>1, 1.4, 1.41, 1.414, 1.4142, ...</p>
+</div>
+
+<p>"tends to √2". But unless hte irrational number √2 has been clearly defined, the question must arise: Just what is that this sequence "tends to"?. This sort of question can be answered as soon as the so-called "real number system" is constructed.</p>
+
+<p>We have seen that all the properties - the properies of an ordered field, described so far, are possessed by both ℚ and ℝ. We shall now state a property, the property of <i>completeness</i> (or <i>order-completeness</i>) which is possessed by ℝ but not by ℚ. This propery not only distinguishes ℝ from ℚ, but together with the ordered field property, it characterises ℝ, i.e., the set of real numbers is the only set which is a <i>Complete Ordered Field</i>.</p>
+
+<h2>Order-Completeness</h2>
+
+<p><b>Definition 1.3.1</b> (<b>Axiom of Completeness or Least Upper Bound Property</b>). Let <i>U</i> be and ordered set. Then <i>U</i> is complete if, whenever a nonempty subset <i>E</i> ⊆ <i>U</i> is bounded above, then <i>E</i> has a least upper bound in <i>U</i>, i.e. sup <i>E</i> exists in <i>U</i>.&emsp;□</p>
+
+<p>The real numbers ℝ ordered by &lt; possess the least upper bound property, while the rational numbers ℚ ordered by &lt; do not, as the following example shows.</p>
+
+<p id="sqrt2"><b>Example 1.3.2</b> We now show that the equation</p>
+
+<div class="eq">
+<p><i>p</i><sup>2</sup> = 2 &emsp;(1)</p>
+</div>
+
+<p>is not satisfied by any rational <i>p</i>. If there were such a <i>p</i>, we could write <i>p</i> = <i>m</i>/<i>n</i> where <i>m</i> and <i>n</i> are integers that are not both even. Let us assume this is done. Then (1) implies</p>
+
+<div class="eq">
+<p><i>m</i><sup>2</sup> = 2<i>n</i><sup>2</sup>&emsp;(2)</p>
+</div>
+
+<p>This shows that <i>m</i><sup>2</sup> is even. Hence <i>m</i> is even (if <i>m</i> were odd, <i>m</i><sup>2</sup> would be odd), and so <i>m</i><sup>2</sup> is divisible by 4. It follows that the right side of (2) is divisible by 4, so that <i>n</i><sup>2</sup> is even, which implies that <i>n</i> is even.<br> The assumption that (1) holds thus leads to the conclusion that both <i>m</i> and <i>n</i> are even, contrary to our choice of <i>m</i> and <i>n</i>. Hence (1) is impossible for rational <i>p</i>.<br> We now examine this situation a little more closely. Let <i>A</i> be the set of all positive rationals <i>p</i> such that <i>p</i><sup>2</sup> &lt; 2 and let <i>B</i> consist of all positive rationals <i>p</i> such that <i>p</i><sup>2</sup> &gt; 2. We shall show that <i>A contains no largest number and B contains no smallest</i>.<br> More explicitly, for every <i>p</i> in <i>A</i> we can find a rational <i>q</i> in <i>A</i> such that <i>p</i> &lt; <i>q</i>, and for every <i>p</i> &in; <i>B</i> we can find a rational <i>q</i> in <i>B</i> such that <i>q</i> &lt; <i>q</i>. <br> To do this, we associate with each rational <i>p</i> &gt; 0 the number:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>q</mi>
+  <mo>=</mo>
+  <mi>p</mi>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+    </mrow>
+    <mrow>
+      <mi>p</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>p</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </mrow>
+    <mrow>
+      <mi>p</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </mrow>
+  </mfrac>
+<mtext>(3)</mtext>
+</math>
+
+<!-- $$ q = p - \frac{p^2-2}{p+2} = \frac{2p + 2}{p+2} $$ -->
+
+<p>Then</p>
+
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>q</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>2</mn>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>p</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+<mtext>(4)</mtext>
+</math>
+
+<!-- $$ q^2  - 2 = 2\frac{p^2-2}{(p+2)^2} $$ -->
+
+<p>If <i>p</i> in <i>A</i> then <i>p</i><sup>2</sup> - 2 &lt; 0, (3) shows that <i>q</i> &gt; <i>p</i>, and (4) shows that <i>q</i><sup>2</sup>. Thus <i>q</i> is in <i>A</i>.<br> If <i>p</i> is in <i>B</i> then <i>p</i><sup>2</sup> - 2 &gt;, (3) shows that 0 &lt; <i>q</i> &lt; <i>p</i>, and (4) shows that <i>q</i><sup>2</sup> &gt; 2. Thus <i>q</i> is in <i>B</i>. &emsp;■</p>
+
+<p><b>Remark 1.3.3</b> The prurpose of the above discussion has been to show that ℚ has certain gaps, in spite of the fact that between any two rationals there is another: If <i>r</i> &lt; <i>s</i> then <i>r</i> &lt; (<i>r</i> + <i>s</i>)/2 &lt; 2. The real number system fills theese gaps. This is the principal reason for the fundamental role which it plays in analysis.&emsp;■</p>
+
+<p><b>Example 1.1.2</b>. Consider the set <i>A</i> = {<i>q</i> &in; ℚ: 0 &le; <i>q</i> &le; √2}. The set <i>A</i> is certainly bounded above. Taking <i>s</i> = 2 works, as does <i>s</i> = 5/2. But notice what happens as we go in search of the least upper bound which is a rational number. It may be useful here to know that the decimal expansion for √2 begins 1.4142 ....) We might try <i>r</i> = 142/100, which is indeed an upper bound, but then we discover that <i>r</i> = 1415/1000 is an upper bound that is smaller still. In the real numbers, there is, but in the rational numbers, there is not whatever rational upper bound is discovered, it is always possible to find one smaller. In ℚ, the set <i>A</i> has not least upper bound, since √2 is irrational as shown here. &emsp;■</p>
+
+<p>The reason for the term "completeness" is that this property eliminates the possibility of gaps in the real line. Suppose there was a gap at some value <i>x*</i>. Then the set <i>A</i> = {<i>x</i> &in; ℝ | <i>x</i> &lt; <i>x</i>} is bounded above by <i>x*</i> + 1. However sup <i>A</i> = <i>x*</i> and <i>x*</i> &notin; ℝ contradicts the least upper bound property. Therefore there can be no gaps in the real line.</p>
+
+<p><b>Example 1.1.3</b> (Completeness of ℤ). The set ℤ of all integers is complete. Let <i>A</i> be any non-empty set of ℤ which is bounded above. Then <i>A</i> must possess a greatest integer. For, if <i>A</i> does not possess a greatest integer, then however great an integer <i>n</i> we may take, there exists an integer <i>m</i> &in; <i>A</i> such that <i>m</i> &gt; <i>n</i> and so <i>A</i> cannot be bounded above. But this is a contradiction. Hence <i>A</i> must contain a greatest integer, say <i>a</i>.&emsp;■</p>
+
+<p>The idea that the real numbers form a <i>continuum</i>—a property which immediately distinguishes them from the rational numbers which present gaps between their elements. This property is embodied in an axiom which we call the completeness axiom for the real number system.</p>
+
+<p><b>1.1.9. Axiom of Completeness</b>. Every nonempty subset <i>A</i> of ℝ is <b>complete</b>. In other words, sup <i>A</i> exists and is a real number.&emsp;□</p>
+
+<p>There exists an equivalent way of characterizing least upper bounds. Recall that <a href="sup_inf.html">definition of the supremum</a> has two parts. Part (i) says that sup <i>A</i> must be an upper bound, and part (ii) states that it must be the smallest one. The following lemma offers an alternative way to restate part (ii).</p>
+
+<p><b>Lemma 1.1.10</b>. Assume <i>s</i> ∈ ℝ is an upper bound for a set <i>A</i> ⊆ ℝ. Then, <i>s</i> = sup <i>A</i> if and only if, for every choice of <i>&epsilon;</i> &gt; 0, there exists an element <i>a</i> ∈ <i>A</i> satisfying <i>s</i> − <i>&epsilon;</i> &lt; <i>a</i>.</p>
+
+<p><b>Proof</b>. By definition if <i>s</i> is an upper bound, <i>s</i> is the least upper bound if and only if any number smaller than <i>s</i> is not an upper bound. To be more precise we will examine both directions. (⇒) For the forward direction, we assume <i>s</i> = sup <i>A</i> and consider <i>s</i> − <i>&epsilon;</i>, where <i>&epsilon;</i> &gt; 0 has been arbitrarily chosen. Because <i>s</i> − <i>&epsilon;</i> &lt; <i>s</i>, part (ii) of Definition 1.1.2 implies that <i>s</i> − <i>&epsilon;</i> is not an upper bound for <i>A</i>. If this is the case, then there must be some element <i>a</i> ∈ <i>A</i> for which <i>s</i> − <i>&epsilon;</i> &lt; <i>a</i> (because otherwise <i>s</i> − <i>&epsilon;</i> would be an upper bound). This proves the lemma in one direction.</p>
+
+<p>(⇐) Conversely, assume <i>s</i> is an upper bound with the property that no matter how <i>&epsilon;</i> &gt; 0 is chosen, <i>s</i> − <i>&epsilon;</i> is no longer an upper bound for <i>A</i>. Notice that what this implies is that if <i>b</i> is any number less than <i>s</i>, then <i>b</i> is not an upper bound. (Just let <i>&epsilon;</i> = <i>s</i> − <i>b</i>.) To prove that <i>s</i> = sup <i>A</i>, we must verify part (ii) of Definition 1.1.2. (Read it again.) Because we have just argued that any number smaller than <i>s</i> cannot be an upper bound, it follows that if <i>b</i> is some other upper bound for <i>A</i>, then <i>b</i> ≥ <i>s</i>.&emsp;■</p>
+
+<p>We introduce now the definitions for <i>supremum</i> and <i>infimum</i> values of a set. These are also know as the set's least upper bound and greatest lowew bound, of the set respectively.</p>
+
+<p>Some sets have a supremum and others do not. For example the set A = [0,1), has a supremum which is 1, but it is not in <i>A</i> and a infimum 0 which is in <i>A</i> so it is also a <i>minimum</i>. The set <i>A</i> = [0,+&infin;) does not have any upper bound: the supremum of the set is not defined.</p>
+
+<p><b>Theorem 1.1.4</b> (<i>Uniqueness</i>) A set <i>E</i> can have at most one least upper bound.</p>
+
+<p><b>Proof</b>. Let <i>M</i><sub>0</sub> and <i>M</i><sub>1</sub> be least upper bounds of <i>E</i>. We must prove that <i>M</i><sub>0</sub> = <i>M</i><sub>1</sub>. Since <i>M</i><sub>1</sub> is upper bound, and <i>M</i><sub>0</sub> a least upper bound, we have <i>M</i><sub>0</sub> &le; <i>M</i><sub>1</sub> and <i>M</i><sub>1</sub> &le; <i>M</i><sub>0</sub>. Hence <i>M</i><sub>0</sub> = <i>M</i><sub>1</sub>. □</p>
+</div>
+
+<h2>Dedekind's Form of Completeness Property</h2>
+
+<p>We now state the completeness property of real numbers in another form, due to Dedekind.</p>
+
+<p><b>Dedekinds' Property</b>. If <i>L</i> and <i>U</i> are two subsets of ℝ such that</p>
+
+<ol type="i">
+	<li><p><i>L</i> &ne; ∅, <i>U</i> &ne; ∅ (each class has at least one member);</p></li>
+	<li><p><i>L</i> ∪ <i>U</i> = ℝ (every real number has a class);</p></li>
+	<li><p>Every member of <i>L</i> is less than every member of <i>U</i>, i.e.</p>
+
+	<div class="eq">
+	<p><i>x</i> &in; <i>L</i> ∧ <i>y</i> &in; <i>U</i> &emsp;⇒&emsp; <i>x</i> &lt; <i>y</i></p>
+	</div>
+
+	<p>Then either <i>L</i> has the greatest member or <i>U</i> has the smallest member.</p></li>
+</ol>
+
+<p>Let us now prove the <b>equivalence</b> of the two forms of completeness.</p>
+
+<ol>
+	<li><p>First we show that the <i>order completeness property of real numbers implies Dedekind's property</i>. The set ℝ has the order completeness property <i>i.e.</i>, every non-empty subset of ℝ wich is bounded above (below) has the Supremum (Infimum).</p></li>
+
+<section aria-label="End">
+<a href="../alg/ordered_sets.html.html">&#171;Orederd sets</a>
+<a href="index.html">Index</a>
+<a href="superfici.html">superfici &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

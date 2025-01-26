@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="isalpha()"/>
+	<title>isalpha()CPU</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>isalpha()</h1>
+
+<p>In C programming, <code>isalpha()</code> function checks whether a character is an alphabet (a to z and A-Z) or not. If a character passed to <code>isalpha()</code> is an alphabet, it returns a non-zero integer, if not it returns 0. The isalpha() function is defined in &lt;ctype.h&gt; header file.</p>
+
+<h2>C isalpha() Prototype</h2>
+
+<pre>int isalpha(int argument);</pre>
+
+<p>Function <code>isalpha()</code> takes a single argument in the form of an integer and returns an integer value. Even though, <code>isalpha()</code> takes integer as an argument, character is passed to <coed>isalpha()</code> function. Internally, the character is converted into the integer value corresponding to its ASCII value when passed.</p>
+
+<h2>isalpha() Return Value</h2>
+
+<pre>
+Return Value 	Remarks
+Zero (0) 	If the parameter isn't an alphabet.
+Non zero number 	If the parameter is an alphabet.
+</pre>
+
+<h3>Example: C isalpha() function</h3>
+
+<pre>
+    #include &lt;stdio.h&gt;
+    #include &lt;ctype.h&gt;
+    int main()
+    {
+        char c;
+        c = 'Q';
+        printf("\nResult when uppercase alphabet is passed: %d", isalpha(c));
+        c = 'q';
+        printf("\nResult when lowercase alphabet is passed: %d", isalpha(c));
+        c='+';
+        printf("\nResult when non-alphabetic character is passed: %d", isalpha(c));
+        return 0;
+    }
+</pre>
+
+<p>Output</p>
+
+<pre>
+Result when uppercase alphabet is passed: 1
+Result when lowercase alphabet is passed: 2
+Result when non-alphabetic character is passed: 0
+</pre>
+
+<p><b>Note</b>: You can get a different non-zero integer when alphabetic character is passed to isalpha() on your system. But, when you pass non-alphabetic character to isalpha(), it always returns 0.</p>
+
+<p>Example: C Program to Check whether a Character Entered by User is Alphabet or not</p>
+
+<pre>
+    #include &lt;stdio.h&gt;
+    #include &lt;ctype.h&gt;
+    int main()
+    {
+        char c;
+        printf("Enter a character: ");
+        scanf("%c", &c);
+        if (isalpha(c) == 0)
+             printf("%c is not an alphabet.", c);
+        else
+             printf("%c is an alphabet.", c);
+        return 0;
+    }
+</pre>
+
+<p>Output</p>
+
+<pre>Enter a character: 5
+5 is not an alphabet.</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="extern keyword"/>
+    <title>extern keyword</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>extern keyword</h1>
+
+<p>An <b>external variable</b> is a variable defined outside any function block. On the other hand, a <b>local</b> (automatic) variable is a variable defined inside a function block. </p>
+
+<p>To understand how external variables relate to the extern keyword, it is necessary to know the difference between defining and declaring a variable. When a variable is <b>defined</b>, the compiler allocates memory for that variable and possibly also initializes its contents to some value. When a variable is declared, the compiler requires that the variable be defined elsewhere. The declaration informs the compiler that a variable by that name and type exists, but the compiler does not need to allocate memory for it since it is allocated elsewhere. The <b>extern</b> keyword means "declare without defining". In other words, it is a way to explicitly declare a variable, or to force a declaration without a definition. It is also possible to explicitly define a variable, i.e. to force a definition. It is done by assigning an initialization value to a variable. If neither the extern keyword nor an initialization value are present, the statement can be either a declaration or a definition. It is up to the compiler to analyse the modules of the program and decide. </p>
+
+<p>An external variable can be accessed by all the functions in all the modules of a program. It is a <b>global variable</b>. For a function to be able to use the variable, a declaration or the definition of the external variable must lie before the function definition in the source code. Or there must be a declaration of the variable, with the keyword extern, inside the function. </p>
+
+<h2>Example</h2>
+
+<p>File 1:</p>
+
+<pre>
+  // Explicit definition, this actually allocates
+  // as well as describing
+  int Global_Variable;
+
+  // Function prototype (declaration), assumes 
+  // defined elsewhere, normally from include file.       
+  void SomeFunction(void);        
+
+  int main(void) {
+    Global_Variable = 1;
+    SomeFunction();
+    return 0;
+  }
+</pre>
+
+<p>File 2:</p>
+
+<pre>
+  // Implicit declaration, this only describes and
+  // assumes allocated elsewhere, normally from include
+  extern int Global_Variable;  
+
+  // Function header (definition)
+  void SomeFunction(void) {       
+    ++Global_Variable;
+  }
+</pre>
+
+<p>In this example, the variable <code>Global_Variable</code> is defined in File 1. In order to utilize the same variable in File 2, it must be declared. Regardless of the number of files, a global variable is only defined once; however, it must be declared in any file outside of the one containing the definition.</p>
+
+<p>Remembder that</p>
+
+<ul>
+	<li><p><strong>Declaration</strong> of a variable or function simply declares that the variable or function exists somewhere in the program, but the memory is not allocated for them. The declaration of a variable or function serves an important role–it tells the program what its type is going to be. In case of <i>function</i> declarations, it also tells the program the arguments, their data types, the order of those arguments, and the return type of the function. So that’s all about the declaration.</li>
+
+	<li><p>Coming to the <strong>definition</strong>, when we <i>define</i> a variable or function, in addition to everything that a declaration does, it also allocates memory for that variable or function. Therefore, we can think of definition as a superset of the declaration (or declaration as a subset of definition).</li>
+</ul>
+
+<p>A variable or function can be declared any number of times, but it can be defined only once. (Remember the basic principle that you can’t have two locations of the same variable or function).</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

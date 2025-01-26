@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The X Window System"/>
+	<title>The X Window System</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The X Window System</h1>
+
+<p>In 1984, Jim Gettys and Bob Scheifler created the <b>X Window System (X11)</b> at Massachusetts Institute of Technology as a platform-independent <b>display environment</b> for debugging the Argus system. Currently developed by The X.Org Foundation, X11 is the standard display manager on Linux and other UNIX-like operating systems. In the most basic terms, X11 provides windowing functionality for bitmap displays.<br>While the X Window System is used on Linux, many other operating systems such as Microsoft Windows do not use it.</p>
+
+<p>The X Window System follows client-server architecture, that comprises X line, X server, X protocol and X window manager. The X protocol provides communication between client and server that details are given in the Xlib library. In constrast with the original X Window System and early versions of X.Org, the newer X.Org now supports modules. This means developers can create libraries and hardware drivers to support new hardware that can be installed without the need to rebuild the whole X Window System from scratch. By using the command <code>startx</code> on command prompt, you can start the X Window System along with window manager and desktop. </p>
+
+<p>X11 manages windows in their most basic and abstract form. It draws windows on the screen and handles their movements. X11 also controls input devices, such as mice and keyboards, in graphical environments.<br> X11’s basic programming interface, <b>Xlib</b>, provides the tools necessary to create graphical user interfaces. Although developing with Xlib is possible, most programmers prefer to use a graphical toolkit such as GTK+, since all of the low-level calls are hidden and managed by the library’s methods.<br> One of the major features that makes X11 unique among display managers is that it assumes the client and server are treated independently of each other. This allows the client to exist at a remote location independent of the server.</p>
+
+<p><b>Note</b>. The definitions of client and server in the X Window System differ from their traditional ones. The client is the machine where the application is run. The server refers to the user’s local display, rather than the remote machine.</p>
+
+<p>Another advantage of the X Window System is that it does not strictly mandate user interfaces. This allows the graphical user interfaces (GUI) of window managers to be highly customizable. It is also why window managers can provide such differing interfaces and themes. This enables the freedom of choice Linux users enjoy today. Ironically, this freedom is also one of the biggest criticisms of X11. Many people fear that it will encourage fragmentation within the community of Linux developers. But for now, we can continue to enjoy the ability to choose the window manager that best suits our own needs. The GTK+ libraries were created so that you, as the programmer, do not need to interface with the X Window System directly. You can create windows and widgets, and you can handle interactions between those widgets and the user, but all direct rendering to the screen and Xlib function calls are handled automatically. </p>
+
+<h2>X11 version</h2>
+
+<pre>xdpyinfo | grep version</pre>
+
+<h2>Setting double languages in X</h2>
+
+<pre>setxkbmap -layout it,ru -variant ,phonetic -option grp:shifts_toggle</pre>
+
+<p>per rendere la modifica permanente il comando va inserito nel file <b>.xsessionrc</b>; crearlo se non esiste nella home directory.</p>
+
+<h3>Activate screensaver</h3>
+
+<p><code>xdg-screensaver</code> provides commands to control the screensaver. xdg-screensaver is for use inside a desktop session only. </p>
+
+<pre>xdg-screensaver activate</pre> 
+
+<h2>The Difference Between Window Managers and Desktop Environments</h2>
+
+<p id="WM"><b>Desktop environments</b> like Xfce, KDE and GNOME, usually have more features than bare window managers (<i>e.g.</i> <a href="icewm.html">IceWM</a>). For example, Xfce comes bundled with several small applications (mousepad, parole, etc),, control panels for changing the background, and so on. In addition, desktop environments often have better integration with applications than window managers. (Applications are often written for specific desktop environments. In addition, they usually support features such as drag-and-drop, which window managers often don’t support. However, running a bare window manager such as twm on top of X Windows, instead of a full-featured desktop environment, also has its advantages. The primary one is that such window managers are usually much smaller and much less resource intensive then desktop environments. This means that they tend to be faster and take up far less memory while running. This makes them useful on older systems with limited processing power or low memory, as well as lower-end laptops. In addition, it makes them useful on servers in which the graphical interface is rarely used anyway. Another advantage that window managers have over desktop environments is that they are often simpler to use for the end user, especially if you are setting up a specialized workstation of a particular purpose. With a window manager—such as Blackbox. for example—you can create a simple menu listing only the applications that are relevant to the purpose of the workstation. Thus, the only thing the end user has to worry about is selecting the application that she wants from the menu.</p>
+
+<p>One more common thing that advocates of window managers say is that window managers tend to do a better job of staying out of your way and just letting you work. Now that we have said all this, it should also be noted that the line between window managers and desktop environments has blurred quite a bit these days. Some window managers, such as WindowMaker, have many of the features of desktop environments— dockable applets, integrated applications written specifically for it, and the like. Other window managers, most of which are less full-featured but with certain design aspects that many users find attractive (such as a specific “look and feel” or just the right kind of configurability) are Enlightenment, Qvwm, IceWM, and dozens more, which can all be found in the ports at /usr/ports/x11-wm. Each window manager has a Web site where you can find screenshots and descriptions that you can peruse before deciding to experiment with a new window manager.</p>
+
+<section aria-label="End">
+<a href="dlconfiguration.html">&#171;D- and L- configuration</a>
+<a href="index.html">Index</a>
+<a href="apposition.html">Internal Accusative&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

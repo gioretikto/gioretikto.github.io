@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="IP address"/>
+	<title>IP address</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>IP address</h1>
+
+<p>A defining feature of IPv4 is its 32-bit addresses, such addresses are often represented in so-called dotted-quad or dotted-decimal notation, for example, 165.194.128.117. The dotted-quad notation consists of four decimal numbers separated by periods. Each such number is a nonnegative integer in the range [0, 255] and represents one-quarter of the entire IP address. Every host and router on the Internet has an IP address that can be used in the <i>Source address</i> and <i>Destination address</i> fields of IP packets. It is important to note that an IP address does not actually refer to a host, tt really refers to a network interface. IP addresses are hierarchical, unlike Ethernet addresses. Each 32-bit IP address is made up of two different pieces:</p>
+
+<ul>
+	<li><p>A Network portion − Defines the <b>network address</b>;</p></li>
+	<li><p>A Host portion − Defines hosts on that specific network;</p></li>
+</ul>
+
+<h2>Subnetting</h2>
+
+<p>Chanes are that today's enterprise network is divided into subnets to accomodate the company's unique needs and circumstances. There are good reasons to segment an enterprise network into smaller subnets.</p>
+
+<ol type="a">
+	<li><p>Security management: Subnets allows customized planning and implementations of network security at different levels (e.g. at a university's campus network, core academic system that handle student records, human resources, and financials should be securely protected with additional layer of defense.</p></li>
+
+	<li><p>limit broadcasting effect: The negative effects of message broadcasting are contained at the subnet level. Unlike switched that relay broadcated packets, routers block them by default and prevent a network from becoming a victim of excessive and unwarranted traffic.</p></li>
+</ol>
+
+<p>This allows the block of addresses to be split into several parts for internal use as multiple networks, while still acting like a single network to the outside world. This is called <b>subnetting</b> and the networks (such as Ethernet LANs) that result from dividing up a larger network are called <b>subnets</b>.</p>
+
+<p>The network portion of an IP address, has the same value for all hosts on a single network, such as an Ethernet LAN. <br> Hierarchical addresses have significant advantages and disadvantages. The key advantage of prefixes is that routers can forward packets based on only the network portion of the address, as long as each of the networks has a unique address block. The host portion does not matter to the routers because all hosts on the same network will be sent in the same direction. It is only when the packets reach the network for which they are destined that they are forwarded to the correct host. This makes the routing tables much smaller than they would otherwise be. Consider that the number of hosts on the Internet is approaching one billion. That would be a very large table for every router to keep. However, by using a hierarchy, routers need to keep routes for only around 300,000 prefixes.</p>
+
+<h3>Subnet masks</h3>
+
+<p>An ip address on its own is not sufficient to communicate with other computers. You need ways to contact other ip addresses. Part of that is knowing if they are on the same subnet as you. <br>A <b>subnet mask</b> is also a 32-bit number that tells the router which bits of the IP address are for the network portion and which bits are for the host portions. For example, a router receives a packet destined for 192.168.1.51. By “ANDing” the IP address and the subnet mask,</p>
+
+<table>
+<tr><th>Destination Address</td> <td>192.168.1.51</td> <td>11000000.10101000.00000001.00110011</td></tr>
+<tr><th>Subnet Mask</td> <td>255.255.255.0</td> <td>11111111.11111111.11111111.00000000</td></tr>
+<tr><th>Network Address</td> <td>192.168.1.0</td> <td>11000000.10101000.00000001.00000000</td></tr>
+</table>
+
+<p id="CIDR">The subnet mask splits an IP address into the "Network" and "Host" portions, identifying what part of that network address is shared by all devices on the same subnet. Another was to descrive the subnetmaks is by using a prefix value known as <b>CIDR prefix</b> (slash notation) '/24' e.g. 192.168.1.0/24, the value '/24' represents the number of continuous 1s in the subnet mask i.e. "1"s followed by however many "0"s are needed to make 32 bits. So if the network address is 192.168.1.0 and the mask 255.255.255.0, I can write both info as 192.168.1.0/24. A CDIR block is simply another term for a subnet. </p>
+
+<p><b>Example</b>. Consider a university with three departements: the Electrical Engineering Dept. the Scienct dept and the Art Dept. <br>The university owns the entire /16 of the Network: Note that in IPv4, there are 2<sup>32</sup> total addresses (some 4.3 billion) and cutting out 2<sup>16</sup> of them for this university is only 65,536.</p></p>
+
+<img src="img/subnet.png" alt="subnet"/>
+
+<p>When a packet comes into the main router, how does the router know which subnet to give it to? This is where the details of our prefixes come in. One way would be for each router to have a table with 65,536 entries telling it which outgoing line to use for each host on campus. But this would undermine the main scaling benefit we get from using a hierarchy. Instead, the routers simply need to know the subnet masks for the networks on campus. When a packet arrives, the router looks at the destination address of the packet and checks which subnet it belongs to. The router can do this by ANDing the destination address with the mask for each subnet and checking to see if the result is the corresponding prefix. For example, consider a packet destined for IP address 128.208.2.151. To see if it is for the Computer Science Dept., we AND with 255.255.128.0 to take the first 17 bits (which is 128.208.0.0) and see if they match the prefix address (which is 128.208.128.0). They do not match. Checking the first 18 bits for the Electrical Engineering Dept., we get 128.208.0.0 when ANDing with the subnet mask. This does match the prefix address, so the packet is forwarded onto the interface which leads to the Electrical Engineering network.</p>
+
+<p>The subnet divisions can be changed later if necessary, by updating all subnet masks at routers inside the university. Outside the network, the subnetting is not visible. &emsp;■</p>
+
+<h2>Class-Based IP Addressing</h2>
+
+<p>On the Internet, IPv4 networks are organized into three classes depending on their size, in the following classes:</p>
+
+<ul>
+	<li><p><b>Class A addresses</b>—The first 8 bits of the IP address are used for the network ID. The final 24 bits are used for the host ID.</p></li>
+
+	<li><p><b>Class B addresses</b>—The first 16 bits of the IP address are used for the network ID. The final 16 bits are used for the host ID.</p></li>
+
+	<li><p<<b>Class C addresses</b>—The first 24 bits of the IP address are used for the network ID. The final 8 bits are used for the host ID.</p></li>
+
+</ul>
+
+<p>A <b>class A</b> network uses only the first segment for the network address and the remaining three for the host, allowing a great many computers to be connected to the same network. Most IP addresses reference smaller, class C, networks. For a class C network, the first three segments are used to identify the network, and only the last segment identifies the host. Altogether, this forms a unique address with which to identify any network interface on computers in a TCP/IP network. For example, in the IP address 192.168.1.72, the network part is 192.168.1 and the interface/host part is 72. The interface/host is a part of a network whose own address is 192.168.1.0.</p>
+
+<p>In a class C network, the first three numbers identify the network part of the IP address. This part is divided into three network numbers, each identifying a subnet. Networks on the Internet are organized into subnets, beginning with the largest and narrowing to small subnetworks. The last number is used to identify a particular computer, referred to as a host. You can think of the Internet as a series of networks with subnetworks; these subnetworks have their own subnetworks. The rightmost number identifies the host computer, and the number preceding it identifies the subnetwork of which the computer is a part. The number to the left of that identifies the network the subnetwork is part of, and so on. The Internet address 192.168.187.4 references the fourth computer connected to the network identified by the number 187. Network 187 is a subnet to a larger network identified as 168. This larger network is itself a subnet of the network identified as 192.</p>
+
+<pre>192.168.187.4 IPv4 address
+192.168.187 Network identification
+4 Host identification</pre>
+
+<h2>Netmask</h2>
+
+<p>Systems derive the network address from the host address using the netmask. You can think of an IP address as a series of 32 binary bits, some of which are used for the network and the remainder for the host. The netmask has the network set of bits set to 1s, with the host bits set to Os (see Figure 18-1). In a standard class-based IP address, all the numbers in the network part of your host address are set to 255, and the host part is set to 0. This has the effect of setting all the binary bits making up the network address to 1s. This, then, is your netmask. So, the netmask for the host address 192.168.1.72 is 255.255.255.0. The network part, 192.168.1, has been set to 255.255.255, and the host part, 72, has been set to 0. Systems can then use your netmask to derive your network address from your host address. They can determine what part of your host address makes up your network address and what those numbers are.</p>
+
+<p>For those familiar with computer programming, a bitwise AND operation on the netmask and the host address results in zeroing the host part, leaving you with the network part of the host address. You can think of the address as being implemented as a four-byte integer, with each byte corresponding to a segment of the address. In a class C address, the three network segments correspond to the first three bytes, and the host segment corresponds to the fourth byte. A netmask is designed to mask out the host part of the address, leaving the network segments alone. In the netmask for a standard class C network, the first three bytes are all 1s and the last byte consists of 0s. The Os in the last byte mask out the host part of the address and the 1s in the first three bytes leave the network part of the address alone. Figure 18-1 shows the bitwise operation of the netmask on the address 192.168.1.4. This is a class C address to the mask, which consists of twenty-four 1s making up the first three bytes and eight 0s making up the last byte. When it is applied to the address 192.168.1.4, the network address remains (192.168.1) and the host address is masked out (4), giving you 192.168.1.0 as the network address.</p>
+
+<p>The netmask as used in Classless Interdomain Routing (CIDR) is much more flexible. Instead of having the size of the network address and its mask determined by the network class, it is determined by a number attached to the end of the IP address. This number simply specifies the size of the network address, how many bits in the address it takes up. For example, in an IP address whose network part takes up the first three bytes (segments), the number of bits used for that network part is 24, eight bits to a byte (segment). Instead of using a netmask to determine the network address, the number for the network size is attached to the end of the address with a slash, as shown here</p>
+
+<pre>192.168.1.72/24</pre>
+
+<h2>IPv4 Reserved Addresses</h2>
+
+<p>Certain numbers are reserved. The numbers 127, 0, and 255 cannot be part of an official IP address. The number 127 is used to designate the network address for the <b>loopback interface</b> on your system. The loopback interface enables users on your system to communicate with each other, within the system, without having to route through a network connection. Its network address would be 127.0.0.0, and its IP address is 127.0.0.1. For class-based IP addressing, the number 255 is a special broadcast identifier you can use to broadcast messages to all sites on a network. Using 255 for any part of the IP address references all nodes connected at that level. For example, 192.168.255.255 broadcasts a message to all computers on network 192.168, all its subnetworks, and their hosts. The address 192.168.187.255 broadcasts to every computer on the local network. If you use 0 for the network part of the address, the host number references a computer within your local network. For example, 0.0.0.6 references the sixth computer in your local network. If you want to broadcast to all computers on your local network, you can use the number 0.0.0.255. For CIDR IP addressing, the broadcast address may appear much like a normal IP address. As indicated in the preceding section, CIDR addressing allows the use of any number of bits to make up the IP address for either the network or the host part. For a broadcast address, the host part must have all its bits set to 1 (see Figure 18-3).</p>
+
+<p>A special set of numbers is reserved for use on non-Internet Local Area Networks (LANs) (see RFC 1918). These are numbers that begin with the special network number 192.168 (for class C networks), as used in these examples. If you are setting up a LAN, such as a small business or a home network, you are free to use these numbers for your local machines. You can set up an intranet using network cards, such as Ethernet cards and Ethernet hubs, and then configure your machines with IP addresses starting from 192.168.0.1. The host segment can go up to 256. If you have three machines on your home network, you could give them the addresses 192.168.0.1, 192.168.0.2, and 192.168.0.3. You can implement Internet services, such as FTP, Web, and mail services, on your local machines and use any of the Internet tools to make use of those services. They all use the same TCP/IP protocols used on the Internet. For example, with FTP tools, you can transfer files among the machines on your network. With mail tools, you can send messages from one machine to another, and with a Web browser, you can access local websites that may be installed on a machine running its own Web servers. If you want to have one of your machines connected to the Internet or some other network, you can set it up to be a gateway machine. By convention, the gateway machine is usually given the address 192.168.0.1. With IP masquerading, you can have any of the non-Internet machines use a gateway to connect to the Internet.</p>
+
+<table class="noborder">
+<caption>Table 18-4: Non-Iinternet IPv4 Local Network IP Addresses</caption>
+<tr><th>IPv4 Private Network Addresses</th> <th>Network Classes</th></tr>
+<tr><td>10.0.0.0</td> <td>Class A network</td></tr>
+<tr><td>172.16.0.0-172.31.255.255</td> <td>Class B network</td></tr>
+<tr><td>192.168.0.0</t> <td>Class C network</td></tr>
+<tr><td>127.0.0.0</td> <td>Loopback network (for system self-communication)</td></tr>
+</table>
+
+<p>Numbers are also reserved for class A and class B non-Internet local networks. Table 18-4 lists these addresses. The possible addresses available span from 0 to 255 in the host segment of the address. For example, class B network addresses range from 172.16.0.0 to 172.31.255.255, providing you a total of 32,356 possible hosts. The class C network ranges from 192.168.0.0 to 192.168.255.255, providing you 256 possible subnetworks, each with 256 possible hosts. The network address 127.0.0.0 is reserved for a system’s loopback interface, which allows it to communicate with itself, enabling users on the same system to send messages to each other.</p>
+
+<p><b>Example</b>. Data la rete 187.24.0.0, si vogliono realizzare delle sottoreti alle quali connettere 32 host per ognuna. Quale può essere una maschera di sottorete?</p>
+
+<ul>
+	<li><p>255.255.255.0</p></li>
+	<li><p>255.255.255.192</p></li>
+	<li><p>255.255.0.0</p></li>
+</ul>
+
+<p><b>Solution</b>. 187.24.0.0/26 or 255.255.255.192 which gives 62 hosts to accomodate. Remember the are also two reserved addresses not usable for hosts. &emsp;■</p>
+
+<h2>Broadcast Addresses</h2>
+
+<p>The broadcast address allows a system to send the same message to all systems on your network at once. With IPv4 class-based IP addressing, you can easily determine the broadcast address using your host address: the broadcast address has the host part of your address set to 255. The network part remains untouched. So the broadcast address for the host address 192.168.1.72 is 192.168.1.255 (you combine the network part of the address with 255 in the host part). For CIDR IP addressing, you need to know the number of bits in the netmask. The remaining bits are set to 1 (see Figure 18- 3). For example, an IP address of 192.168.4.6/22 has a broadcast address of 192.168.7.255/22. In this case, the first 22 bits are the network address and the last 10 bits are the host part set to the broadcast value (all 1s).</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="NAT.html">NAT—Network Address Translation&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

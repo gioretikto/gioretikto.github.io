@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="time"/>
+    <title>time</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>time</h1>
+
+<p>The C library function <code>time_t time(time_t *seconds)</code> returns the time since the Epoch (00:00:00 UTC, January 1, 1970), measured in seconds. If seconds is not NULL, the return value is also stored in variable seconds.</p>
+
+<h3>Declaration</h3>
+
+<p>Following is the declaration for time() function.</p>
+
+<pre>time_t time(time_t *t)</pre>
+
+<h3>Parameters</h3>
+
+<ul>
+    <li><p>seconds − This is the pointer to an object of type time_t, where the seconds value will be stored.</p></li>
+</ul>
+
+<h3>Return Value</h3>
+
+<p>The current calendar time as a time_t object.</p>
+
+<h3>Example</h3>
+
+<p>The following example shows the usage of time() function.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+
+int main () {
+   time_t seconds;
+
+   seconds = time(NULL);
+   printf("Hours since January 1, 1970 = %ld\n", seconds/3600);
+  
+   return(0);
+}
+</pre>
+
+<p>Let us compile and run the above program that will produce the following result:</p>
+
+<pre>Hours since January 1, 1970 = 393923</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Filesystem types in Linux"/>
+	<title>Filesystem types in Linux</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Filesystem types in Linux</h1>
+
+<p>Just like storing stuff in a closet, storing daa in a Linux system requires some method of organization for it to be efficient. Linux utilizes file systems to manage data stored on storage devices. <br> A <b>file system</b> is a method and data structure that the operating system uses to control how data are stored and retrieved. Without a file system, data placed in a storage medium would be one large body of data with no way to tell where one piece of data stopped and the next began, or where any piece of data was located when it was time to retrieve it. By separating the data into pieces and giving each piece a name, the data are easily isolated and identified. Taking its name from the way a paper-based data management system is named, each group of data is called a "file". The structure and logic rules used to manage the groups of data and their names is called a "file system."</p>
+
+<h2>Block Allocation</h2>
+
+<p>The operating systems discussed in this book use a method called block allocation to keep track of where specific files are stored on the disk. Block allocation divides the disk into logical blocks called <b>clusters</b> or allocation units in Windows systems, which in turn correlate to a group of sectors on the disk.</p>
+
+<p>Block allocation data is stored on the disk itself using one of two techniques. One technique uses a fixed portion of the disk to store this data—for example, the file allocation table (FAT) file system initially implemented in MS-DOS and supported by all versions of Windows and most other OSs. The other technique uses various locations on the disk to store a special type of file that is used for folder and file allocation information; examples include the New Technology File System (NTFS) and the UNIX/Linux file systems. On NTFS-formatted disks, the allocation table is called the Master File Table (MFT), which
+is discussed later in the chapter. As you can imagine, the areas of the disk in which allocation information and folder information are stored are very important; without this data, it would be impossible to access any of the files on the system without using specialized disk repair tools.</p>
+
+<h2>Partitions</h2>
+
+<p>Before a file system can be placed on a hard disk, the disk must be partitioned and formatted. <b>Partitioning</b> is the process of blocking a group of tracks and sectors to be used by a particular file system, such as FAT or NTFS. After a disk is partitioned, it must be <b>high-level formatted</b> (or simply formatted) so that the partition contains the disk divisions and patterns needed by a particular operating system to store files. With today’s technology creating disks of greater capacity, and as disks are used in more diverse applications, sometimes it is desirable to have more than one file system on a single disk, which is accomplished by having a partition for each file system. You might need multiple file systems to allow the installation of Windows 10 alongside Windows 7, or to install Red Hat Enterprise Linux and Windows 10 on the same computer, for example. Multiple operating systems may be required on a single system to accommodate certain applications designed for Linux and other applications designed for Windows 10.</p>
+
+<p>When you want to have multiple file systems on one disk, you can partition the disk so that different file systems can be installed on different disk partitions. You can also create partitions in one operating system to segment a single <b>physical drive</b>, the hard disk in a computer, into multiple logical volumes to which you can assign distinct drive letters. This technique of dividing a hard disk into multiple logical drives is very useful for organizing file storage, and was necessary with older operating systems, such as MS-DOS and Windows 3.1, which did not recognize very large hard drives.</p>
+
+<p>There are several types of filesystems, some being native to the Linux ecosystem, while others are not, such as specific Windows or macOS filesystems. In this section, we will describe only the Linux-native filesystems.</p>
+
+<p>The most widely used filesystems in Linux are the Extended filesystems, known as <i>Ext, Ext2, Ext3</i>, and <i>Ext4</i>, the <i>XFS</i> filesystem, <i>ZFS</i>, and <i>btrfs</i> (short for B-tree filesystem). Each of these have their strengths and weaknesses, but they are all able to do the job they were designed for. The Extended filesystems are the ones that were most widely used in Linux, and they have proven trustworthy all this time. <i>Ext4</i>, the latest iteration, is similar to <i>Ext3</i>, but better, with improved support for larger files, fragmentation, and performance. The <i>Ext3</i> filesystem uses 32-bit addressing, and <i>Ext4</i> uses 48-bit addressing, thus supporting files up to 16 TB in size. It also offers support for unlimited subdirectories, as <i>Ext3</i> only supports 32 k subdirectories. Also, support for extended timestamps was added in <i>Ext4</i>, offering two more bits for up to year 2446 AD, and online defragmentation at kernel level.</p>
+
+<p>Nonetheless, <i>Ext4</i> is not a truly next-gen filesystem, more an improved, trustworthy, robust, and stable <i>workhorse</i> that failed the data protection and integrity test. Its journaling system is not suitable for detecting and repairing data corruption and degradation. That is why other filesystems, such as <i>XFS</i> and <i>ZFS</i>, started to resurface by being used in Red Hat Enterprise Linux, starting from version 7 (<i>XFS</i>) and in Ubuntu since version 16.04 (<i>ZFS</i>). The case of btrfs is somewhat controversial. It is considered a modern filesystem, but it is still used as a single disk filesystem, and not used in multiple disk volume managers, due to a number of performance issues compared to other filesystems. It is used in SUSE Linux Enterprise and in openSUSE, is no longer supported by Red Hat, and has been voted as the future default filesystem in Fedora, starting with version 33.</p>
+
+<h2>The Ext4 filesystem features</h2>
+
+<p>The <i>Ext4</i> filesystem was designed for Linux right from the outset. Even though it is slowly being replaced with other filesystems, this one still has powerful features. It offers block size selection, with values between 512 and 4,096 bytes. There is also a feature called inode reservation, which saves a couple of inodes when you create a directory, for improved performance when creating new files.</p>
+
+<p>The layout is simple, written in little-endian order, with block groups containing inode data for lower access times. Each file has data blocks pre-allocated for reduced fragmentation. There are also many enhancements that the <i>Ext4</i> takes advantage of. Among them, we will bring the following into the discussion: a maximum filesystem size of 1 <b>Exabyte (EB)</b>, the ability to use multi-block allocation, splitting large files into the largest possible sizes for better performance, application of the allocate-on-flush technique for better performance, the use of the handy <i>fsck</i> command for speedy filesystem checks, the use of <i>checksums</i> for journaling and better reliability, and the use of improved timestamps.</p>
+
+<h2>The XFS filesystem features</h2>
+
+<p>Enterprise Linux is starting to change, by moving away from <i>Ext4</i> to other competent filesystem types. Among those is <i>XFS</i>. This filesystem was first created by SGI and used in the IRIX operating system. Its most important key design element is performance, capable of dealing with large datasets. Furthermore, it is designed to handle parallel I/O tasks with a guaranteed high I/O rate. The filesystem supported is up to 16 EB with support for individual files up to 8 EB. <i>XFS</i> has a feature to journal quota information, together with online maintenance tasks such as defragmenting, enlarging, or restoring. There are also specific tools for backup and restore, including <i>xfsdump</i> and <i>xfsrestore</i>.</p>
+
+<h2>The btrfs filesystem features</h2>
+
+<p>The B-tree filesystem (<i>btrfs</i>) is still under development, but it addresses issues associated with existing filesystems, including the lack of snapshots, pooling, checksums, and multi-device spanning. Those are features that are required in an enterprise Linux environment. The ability to take snapshots of the filesystem and maintain its own internal framework for managing new partitions makes btrfs a viable newcomer in terms of the critical enterprise ecosystem.</p>
+
+<p>There are other filesystems that we did not discuss here, including reiserFS and GlusterFS , NFS (Network File System), SMB (Samba CIFS File System), ISO9660 for CD-ROMs and Joliet extensions, and non-native Linux ones, including FAT, NTFS, exFAT , and APFS , or MacOS Extended, among others. If you want to learn about these in more detail, feel free to investigate further, and a good starting point is Wikipedia: https://en.wikipedia.org/wiki/File_system. To check the list of supported filesystems on your Linux distribution, run the following command:</p>
+
+<pre>cat /proc/filesystems</pre>
+
+<p>Linux implements a special software system that is designed to run specific functions of the filesystems. It is known as the Virtual File System, and acts as a bridge between the kernel and the filesystem types and hardware. Therefore, when an application wants to
+open a file, the action is delivered through the Virtual File System as an abstraction layer:</p>
+
+<table>
+<caption>The Linux Virtual File System abstraction layer</caption>
+<tr><th>Kernel</th></tr>
+<tr><th>Virtual File System</th></tr>
+<tr><th>Supported FileSystems<br>EXT3, EXT4, XFS, BTFRS, NTFS, NAT, APFS, NFS, SMB, ..</th></tr>
+</table>
+
+<p>Basic filesystem functions include the provision of namespaces, metadata structures as a logical foundation for hierarchical directory structures, disk block usage, file size and access information, and high-level data for logical volumes and partitions. There is also an <b>application programming interface (API)</b> available for every filesystem. Thus, developers are able to access system function calls for filesystem object manipulation with specific algorithms for creating, moving, and deleting files, or for indexing, searching, and finding files. Furthermore, every modern filesystem provides a special access rights scheme, used to determine the rules governing a user's access to files.</p>
+
+<p>At this point, we have already covered the principal Linux filesystems, including <i>EXT4, btrfs</i>, and <i>XFS</i>. In the next section, we will teach you the basics of disks and partition management in Linux.</p>
+
+<h2 id="swap">Swap</h2>
+
+<p>Linux works on the concept of “<b>virtual memory</b>” by which it makes available larger amount of memory to users than the actual physical RAM installed on your system. The <b>swap fylesystem</b> allows you to create virtual memory for you system using space of a physical drive. The system can then swap data out of normal memory into the swap space, prvoviding a method of adding memory to your system. This is not intended for storing persistent data. Swap is significantly slower than RAM.</p>
+
+<section aria-label="End">
+<a href="system_calls.html">&#171;System Calls</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

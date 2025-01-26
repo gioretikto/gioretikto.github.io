@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Towers of Hanoi - Case study of recursion"/>
+    <title>Towers of Hanoi - Case study of recursion</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Towers of Hanoi - Case study of recursion</h1>
+
+<p><i>Towers of Hanoi</i> is a popular children's game, consisting of three poles and a number of different sized discs. Initially, the discs are stacked on the leftmost pole in order of theri size, with the largest disc on the bottom and the smallest on hte top. Let the poles be named as Peg A, Peg B, and Peg C from left to right. Assume that there are <i>n</i> discs. The objective of the game is to transfer the discs from the leftmost pole (Peg A) to the rightmost pole (Peg C) without ever placing a larger disc on top of a smaller disc. Only one disc can be moved at a time, and each disc must always be placed over any one of the poles.</p>
+
+<p>To obtain a solution for the above problem, the following approach may be adopted:</p>
+
+<ol>
+	<li><p>First move the top (n-1) discs from Peg A to Peg B via Peg C.</p></li>
+	<li><p>Move the nth disc from Peg A to Peg C.</p></li>
+	<li><p>Move the (n-1) discs from Peg B to Peg C via Peg A.</p></li>
+</ol>
+
+<p>Thus, we find that the solution is inherently recursive and can be implemented using recursion. As an example, if there is only one disc, the 1st and the 3rd steps are not applicable, and step 2 accomplishes the task. The program is presented below, after which we shall be going into a more detailed explanation of what is happening with the discs and the way the algorithm works.</p>
+
+<pre>
+/*A recursive solution to the towers of Hanoi problem*/
+#include &lt;stdio.h&gt;
+void Hanoi(int, char, char, char);
+int main()
+{
+	char src,aux,dest;
+	int n;
+	src='A’;
+	aux='B';
+	dest='C';
+	printf("Enter the number of discs in the game: ");
+	scanf("%d",&n);
+	if(n == 0)
+		printf("\nNothing has to be moved.\n");
+	else
+		Hanoi(n,src,aux,dest);
+	return 0;
+}
+	void Hanoi(int n, char src, char aux, char dest)
+	{
+		if(n == 1)
+			printf("Move disc from peg %c to peg %c.\n",src,dest);
+		else{
+			Hanoi(n-1,src,dest,aux);
+			Hanoi(1,src,aux,dest);
+			Hanoi(n-1,aux,src,dest);
+		}
+	}
+</pre>
+
+<h3>Caso n=1</h3>
+
+<img src="img/hanoi_n1.png" alt="hanoi one disc"/>
+
+<h3>Caso n=2</h3>
+
+<img src="img/hanoi_n2.png" alt="hanoi two discs"/>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

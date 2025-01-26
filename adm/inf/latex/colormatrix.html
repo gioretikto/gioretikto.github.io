@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="How to color a matrix"/>
+    <title>How to color a matrix</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>How to color a matrix</h1>
+
+<p>Per evidenziare colonne o righe di una matrice</p>
+
+<pre>
+<code>
+\documentclass[preview, border=1pt, convert={outext=.png}]{standalone}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[table]{xcolor}
+\newcommand\x{\times}
+\newcommand\y{\cellcolor{green!10}}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\begin{equation*}
+    M_{ij} = \det\left(\begin{array}{cc>{\columncolor{red!20}}ccc}
+    a_{11} & \ldots  & a_{1j} & \ldots & a_{1n} \\
+    \ldots  &  & \ldots &  & \ldots \\
+    \rowcolor{blue!20}
+    a_{1j} & \ldots  & a_{ij} & \ldots & a_{in} \\
+    \ldots &  & \ldots &  & \ldots \\
+    a_{n1} &  \ldots  & a_{nj} & \ldots & a_{nm}\\
+  \end{array}\right)
+\end{equation*}
+\end{document}
+</pre>
+</code>
+
+<img src="../../mat/linearalgebra/img/minore.png" alt="minore complementare di un elemento"/>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Mathematics</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

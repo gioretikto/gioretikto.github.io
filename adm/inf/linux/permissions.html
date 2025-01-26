@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Permissions"/>
+	<title>Permissions</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Permissions</h1>
+
+<p>Ogni file e directory in linux ha un <b>proprietario</b> (owner) che ha il permesso di fare ciò che vuole con il file. Tipicamente questo è l'utente che ha creato il file. Inoltre un <b>gruppo</b> di utenti può avere il permesso di accedere al file. I gruppi sono gestiti dall'amministratore di sistema. Infinie un file può essere accessibile da <b>tutti gli altri utenti</b>.</p>
+
+<p>Un file può essere letto (read), eseguito (excute), e modificato (write). Per conoscere i permessi di compiere queste operazioni su un file, si usa il comando <b>ls</b></p>
+
+<pre>
+ls -l words
+-rw-r--r-- 1 gino users 58143 Mar 28 10:05 words
+</pre>
+
+
+<p>I permessi del file sono rappresentati dai 10 caratteri più a sinistra dai caratteri <b>r</b>, (read) leggi , <b>w</b> (write) scrivi, <b>x</b> (execute) esegui, e dai -. Per esempio:</p>
+
+<img src="img/permessi.gif" alt="permessi linux" />
+
+<h2 id="id">Identifiers</h2>
+
+<p>Linux, like all Unix uses <b>user and group identifiers</b> to check for access rights to files and images in the system. All of the files in a Linux system have ownerships and permissions, these permissions describe what access the system's users have to that file or directory. Basic permissions are read, write and execute and are assigned to three classes of user; the owner of the file, processes belonging to a particular group and all of the processes in the system. Each class of user can have different permissions, for example a file could have permissions which allow its owner to read and write it, the file's group to read it and for all other processes in the system to have no access at all. </p>
+
+<p><b>Groups</b> are Linux's way of assigning privileges to files and directories to a group of users rather than to a single user or to all processes in the system. You might, for example, create group for all of the users in a software project and arrange it so that only they could read and write the source code for the project. <br> A file is accessed through a <b>process</b>, for instance, <b>ls, cat, rm, vim</b>, or your Shell (to <b>cd</b>, for example). To enforce access control, Linux uses the userid and groupid of a process to grant or deny acess to a file accordind to the file's access mode. The userid and groupid of a process are usually that of the user who invoked the process. A user may belong to more than one group; thus, a process also keeps a <i>supplementary groupid</i> list. <br> Specifically, if the userid of the process is the same as the userid of the file, then the access permissions for <i>user</i> apply. Otherwise, if the groupid of the file matched a groupid of the process, then the <i>group</i> permissions apply. Otherwise, the <i>other</i> settings apply.</p>
+
+<p>Each user is identified by a unique <b>user ID (UID)</b>, which is nonnegative intger. Mapping of usernames to UIDs provided by system password file <i>/etc/passwd/</i>.</p>
+
+<pre>cadmio:x:1000:1000:cadmio,,,:/home/cadmio:/bin/bash</pre>
+
+<p>the user <i>cadmio</i> has a user ID of 1000 and a group ID of 1000.</p>
+
+<p>Mapping of groupnames to GIDs provided by system group file <i>/etc/group</i>. In particular each group belongs to one <b>primary group</b> and zero or more <b>supplementary groups</b>.</p>
+
+<ul>
+	<li><p>UID 0 is reserved to <i>superuser</i> (i.e. system admin) having also GID 0</p></li>
+	<li><p>UIDs from 0 to 99 for static use by system.</p></li>
+	<li><p>UIDS from 100 to 499 for dynamic use by system.</p></li>
+	<li><p>UIDS from 500 upwards for normal user.</p></li>
+</ul>
+
+<h2>chmod</h2>
+
+<p>The chmod command is used to change the permissions of a file or directory. To use it, you specify the desired permission settings and the file or files that you wish to modify.
+There are two ways to specify the permissions, but I am only going to teach one way.</p>
+
+<p>It is easy to think of the permission settings as a series of bits (which is how the computer thinks about them). Here's how it works:</p>
+
+<pre>rwx rwx rwx = 111 111 111
+rw- rw- rw- = 110 110 110
+rwx --- --- = 111 000 000</pre>
+
+<p>che è equivalente a:</p>
+
+<pre>rwx = 111 in binary = 7
+rw- = 110 in binary = 6
+r-x = 101 in binary = 5
+r-- = 100 in binary = 4</pre>
+
+<p>Now, if you represent each of the three sets of permissions (owner, group, and other) as a single digit, you have a pretty convenient way of expressing the possible permissions settings. For example, if we wanted to set some_file to have read and write permission for the owner, but wanted to keep the file private from others, we would:</p>
+
+<pre>$ chmod 600 some_file</pre>
+
+<p>La seguente tabella riassume il significato dei vari codici che si possono usare:</p>
+
+<table>
+<th>Value</th> <th>Meaning</th></tr>
+<tr> <td>777</td> <td>(rwxrwxrwx) Nessuna restrizione. Tutti possono fare tutto sul file.</td></tr>
+<tr> <td>755</td> <td>(rwxr-xr-x)  The file's owner may read, write, and execute the file. All others may read and execute the file. This setting is common for programs that are used by all users.</td></tr>
+<tr><td>700</td> <td>(rwx------)  The file's owner may read, write, and execute the file. Nobody else has any rights. This setting is useful for programs that only the owner may use and must be kept private from others.</td></tr>
+<tr> <td>666</td> <td>(rw-rw-rw-)  All users may read and write the file.</td></tr>
+<tr> <td>644</td> <td>(rw-r--r--)  The owner may read and write a file, while all others may only read the file. A common setting for data files that everybody may read, but only the owner may change.</td></tr>
+<tr> <td>600</td> <td>(rw-------)  The owner may read and write a file. All others have no rights. A common setting for data files that the owner wants to keep private.
+</td></tr>		
+</table>
+  
+<p>Per cambiare i permessi di una directory e delle sue subdirectories si può usare l'opzione <b>-R</b> il comando:</p>
+  
+<pre>$ chmod -R 600 /home/piero</pre>
+  
+<h2>Changing file ownership</h2>
+
+<p>You can change the owner of a file by using the chown command. Here's an example: Suppose I wanted to change the owner of some_file from "me" to "you". I could:</p>
+
+<pre>[me@linuxbox me]$ su
+Password:
+[root@linuxbox me]# chown you some_file</pre>
+
+<p>Notice that in order to change the owner of a file, you must be the superuser. To do this, our example employed the su command, then we executed <i>chown</i>, and finally we typed exit to return to our previous session.</p>
+
+<p>chown works the same way on directories as it does on files.</p>
+
+<h2>Symbolic modes</h2>
+
+<p>The <i>chmod</i> command also accepts a finer-grained symbolic notation, which allows modifying specific modes while leaving other modes untouched. The symbolic mode is composed of three components, which are combined to form a single string of text; For example to add write permission (w) to the group's(g) access modes of a directory, allowing users in the same group to add files:  </p>
+
+<pre>chmod g+w shared_dir</pre>
+
+<p>To add read permission for all classes (i.e. user, group and others)</p>
+
+<pre>chmod a+r publicComments.txt</pre> 
+
+<h2>Changing group ownership</h2>
+
+<p>The group ownership of a file or directory may be changed with chgrp. This command is used like this:</p>
+
+<pre>[me@linuxbox me]$ chgrp new_group some_file</pre>
+
+<p>In the example above, we changed the group ownership of some_file from its previous group to "new_group". You must be the owner of the file or directory to perform a chgrp.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="chattr.html">chattr command: How to make a file immutable&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

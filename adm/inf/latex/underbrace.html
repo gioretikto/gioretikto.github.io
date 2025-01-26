@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="\underbrace">
+	<title>\underbrace</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>\underbrace</h1>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>0</mn>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <munderover>
+            <mo data-mjx-texclass="OP">&#x2211;</mo>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>n</mi>
+          </munderover>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>i</mi>
+              <mi>j</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>y</mi>
+            <mi>j</mi>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2208;</mo>
+      <mi>K</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<pre>$$0 = \sum_{i=1}^m  \underbrace {\left(\sum_{j=1}^n a_{ij}y_j \right)}_{\in K} x_i $$</pre>
+
+<p>Other examples are</p>
+
+<pre>$$G = \underbrace {\mathbb{Z}_{{p_1}^{a_{1,1}}} \times \mathbb{Z}_{{p_2}^{a_{1,2}}}
+ \times \ldots \mathbb{Z}_{{p_2}^{a_{1,s}}}}_{\Sigma_{p_1}} \times \underbrace {\mathbb{Z}_{p_2}^{a_{2,1}}
+ \times \mathbb{Z}_{p_2}^{a_{2,2}} \times \ldots
+ \mathbb{Z}_{p_2}^{a_{2,t}}}_{\Sigma_{p_2}} \times \ldots \times \underbrace{\ldots}_{\Sigma_{p_k}}$$
+</pre>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>G</mi>
+  <mo>=</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <msub>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msup>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                  </msub>
+                </mrow>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>a</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                      <mo>,</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </msup>
+            </mrow>
+          </msub>
+          <mo>&#xD7;</mo>
+          <msub>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msup>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>p</mi>
+                    <mn>2</mn>
+                  </msub>
+                </mrow>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>a</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                      <mo>,</mo>
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </msup>
+            </mrow>
+          </msub>
+          <mo>&#xD7;</mo>
+          <mo>&#x2026;</mo>
+          <msub>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msup>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>p</mi>
+                    <mn>2</mn>
+                  </msub>
+                </mrow>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>a</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                      <mo>,</mo>
+                      <mi>s</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </msup>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi mathvariant="normal">&#x3A3;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>p</mi>
+            <mn>1</mn>
+          </msub>
+        </mrow>
+      </msub>
+    </mrow>
+  </munder>
+  <mo>&#xD7;</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <msubsup>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>a</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msub>
+            </mrow>
+          </msubsup>
+          <mo>&#xD7;</mo>
+          <msubsup>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>a</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mn>2</mn>
+                </mrow>
+              </msub>
+            </mrow>
+          </msubsup>
+          <mo>&#xD7;</mo>
+          <mo>&#x2026;</mo>
+          <msubsup>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>a</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                </mrow>
+              </msub>
+            </mrow>
+          </msubsup>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi mathvariant="normal">&#x3A3;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>p</mi>
+            <mn>2</mn>
+          </msub>
+        </mrow>
+      </msub>
+    </mrow>
+  </munder>
+  <mo>&#xD7;</mo>
+  <mo>&#x2026;</mo>
+  <mo>&#xD7;</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mo>&#x2026;</mo>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi mathvariant="normal">&#x3A3;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>p</mi>
+            <mi>k</mi>
+          </msub>
+        </mrow>
+      </msub>
+    </mrow>
+  </munder>
+</math>
+
+<p>If braces are not needed</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mfrac>
+    <mrow>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>h</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>h</mi>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <munderover>
+    <mstyle scriptlevel="0">
+      <mo data-mjx-texclass="REL">&#x2192;</mo>
+    </mstyle>
+    <mpadded width="+1.056em" lspace="0.389em" voffset=".15em" depth="-.15em">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+      <mspace height=".75em"></mspace>
+    </mpadded>
+    <mpadded width="+1.056em" lspace="0.389em" voffset="-.2em" height="-.2em">
+      <mspace depth=".25em"></mspace>
+    </mpadded>
+  </munderover>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+</math>
+
+<pre>$$\sin x \frac{\cos h -1 }{h} + \frac{\sin h}{h} \cos x \xrightarrow[h\to0]{} \cos x $$</pre>
+
+
+<p>Another example</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mi>i</mi>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <munder>
+            <mrow data-mjx-texclass="OP">
+              <munder>
+                <mrow>
+                  <mi>g</mi>
+                  <mo>&#x2217;</mo>
+                  <mi>g</mi>
+                  <mo>&#x2217;</mo>
+                  <mo>&#x22EF;</mo>
+                  <mo>&#x2217;</mo>
+                  <mi>g</mi>
+                </mrow>
+                <mo>&#x23DF;</mo>
+              </munder>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mi>i</mi>
+              <mtext>&#xA0;times</mtext>
+            </mrow>
+          </munder>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mi>i</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>e</mi>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <munder>
+            <mrow data-mjx-texclass="OP">
+              <munder>
+                <mrow>
+                  <mo stretchy="false">(</mo>
+                  <msup>
+                    <mi>g</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mo>&#x2212;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <mo>&#x2217;</mo>
+                  <msup>
+                    <mi>g</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mo>&#x2212;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <mo>&#x2217;</mo>
+                  <mo>&#x22EF;</mo>
+                  <mo>&#x2217;</mo>
+                  <msup>
+                    <mi>g</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mo>&#x2212;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mo>&#x23DF;</mo>
+              </munder>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x2212;</mo>
+              <mi>i</mi>
+              <mtext>&#xA0;times</mtext>
+            </mrow>
+          </munder>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mi>i</mi>
+          <mo>&lt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<pre>$$ g^i = \begin{cases} \underbrace{g * g * \dots * g}_{i \text{ times}}, & i > 0 \\ e, & i = 0 \\ \underbrace{(g^{-1} * g^{-1} * \dots * g^{-1}}_{-i \text{ times}},&i < 0\end{cases} $$</pre>
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Mathematics</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

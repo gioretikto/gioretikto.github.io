@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The Center of gravity">
+	<title>The Center of gravity</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The Center of gravity</h1>
+
+<p>The gravitational force on an extended body is the vector sum of the gravitational forces acting on the individual mass elements (the atoms) of the body. Let <i>m<sub>i</sub></i> represent the mass of one of these elements, we have</p>
+
+<div class="eq">
+<p><i>F<sub>g</sub></i> = &Sigma;<sub>i</sub> <i>m<sub>i</sub>g</i> = (&Sigma;<sub>i</sub> <i>m<sub>i</sub></i>)<i>g</i> = <i>Mg</i></p>
+</div>
+
+<p>where &Sigma;<sub>i</sub> <i>m<sub>i</sub></i> is the total mass of the body and <i>g</i> ther gravitational acceleration. <br> By summing the weights of each of the elemental parts we obtain the total  weight of the body which is independent on the application point of the single forces.</p>
+
+<p>However there exist torques created by the weights. The weight of each elementa part of the body will create a moment with respect to an axis. For the force <i>F<sub>i</sub></i> = <i>m<sub>i</sub>g</i>, the component of the moment <i>&tau;<sub>zi</sub></i> is</p>
+
+<div class="eq">
+<p><i>&tau;<sub>zi</sub></i> = −(<i>x<sub>i</sub></i>)(<i>m<sub>i</sub>g</i>)</p>
+</div>
+
+<p>where <i>x<sub>i</sub></i> is the <i>x</i> coordinate of the <i>i</i>th elemental mass part and the negative sign indicated that the rotation is clockwise. By summing over all the moments produced by all the elemental mass parts we obtain</p>
+
+<div class="eq">
+<p><i>&tau;<sub>z</sub></i> = &Sigma;<sub>i</sub> [−(<i>x<sub>i</sub></i>)(<i>m<sub>i</sub>g</i>)]&emsp;11.3.1</p>
+</div>
+
+<p>From this relation we can see that the net torque due to the weight of a body depends on how the single parts of the body are distributed in space. It is possible to find a point in the body known as <b>center of gravity</i> at which the entire mass or weight of the body may be considered to be applied generating the same torque of the previoud equation. If <i>x<sub>cg</sub></i> is the <i>x</i> coordinate of such a point, the component of the moment due to the total weightm of intensity <i>F<sub>g</sub></i> = &Sigma;<sub>i</sub> <i>m<sub>i</sub>g</i>, is</p>
+
+<div class="eq">
+<p><i>&tau;<sub>z</sub></i> = −<i>x<sub>cg</sub>F<sub>g</sub></i> − <i>x<sub>cg</sub></i> &Sigma;<sub>i</sub> <i>m<sub>i</sub>g</i>&emsp;11.3.2</p>
+</div>
+
+<p>The <i>x</i> coordinate of the center of gravity is determined by equating the right-hand sides of equations 11.3.1 and eq. 11.3.2:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mtext>cg</mtext>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <munder>
+        <mo data-mjx-texclass="OP">&#x2211;</mo>
+        <mi>i</mi>
+      </munder>
+      <msub>
+        <mi>x</mi>
+        <mi>i</mi>
+      </msub>
+      <msub>
+        <mi>m</mi>
+        <mi>i</mi>
+      </msub>
+      <mi>g</mi>
+    </mrow>
+    <mrow>
+      <munder>
+        <mo data-mjx-texclass="OP">&#x2211;</mo>
+        <mi>i</mi>
+      </munder>
+      <msub>
+        <mi>m</mi>
+        <mi>i</mi>
+      </msub>
+      <mi>g</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$x_{\text{cg}} = \frac{\sum_i x_i m_ig}{\sum_i m_ig} $$ -->
+
+<blockquote>The center of gravity is the point at which the entire mass or weight of the body may be considered to be concentrated .</blockquote>
+
+<p>In vast majority of cases the value of <i>g</i> is the same for all parts of the body and can thus be eliminated, obtaining</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mtext>cg</mtext>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <munder>
+        <mo data-mjx-texclass="OP">&#x2211;</mo>
+        <mi>i</mi>
+      </munder>
+      <msub>
+        <mi>x</mi>
+        <mi>i</mi>
+      </msub>
+      <msub>
+        <mi>m</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+    <mrow>
+      <munder>
+        <mo data-mjx-texclass="OP">&#x2211;</mo>
+        <mi>i</mi>
+      </munder>
+      <msub>
+        <mi>m</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$x_{\text{cg}} = \frac{\sum_i x_i m_i}{\sum_i m_i} $$ -->
+
+<p>We recognize on the right-hand side of this equation the <a href="CM.html">center of mass</a> of the body. In general, there is a difference between the centers of mass and gravity of an object. Htis may be worth considering if the object is large enough for the magnitude of <i>g</i> to vary at different parts of the object.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

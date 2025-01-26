@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="GTK">
+	<title>GTK</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>GTK</h1>
+
+<p>GTK, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK is suitable for projects ranging from small one-off tools to complete application suites. It is one of the most popular toolkits for the Wayland and X11 windowing systems.</p>
+
+<h2>A Brief History of GTK+</h2>
+
+<p>The GIMP Toolkit (GTK+) was originally designed for a raster graphics editor called the GNU Image Manipulation Program (GIMP). Three individuals, Peter Mattis, Spencer Kimball, and Josh MacDonald created GTK+ in 1997 while working in the eXperimental Computing Facility at the University of California, Berkeley. Licensed under the Lesser General Public License (LGPL), GTK+ was adopted as the default graphical toolkit of GNOME and XFCE, two of the most popular Linux desktop environments. While it was originally used on the Linux operating system, GTK+ has since beenexpanded to support other UNIX-like operating systems: Microsoft Windows, BeOS, Solaris, Mac OS X, and others.</p>
+
+<h2>Where can I use it?</h2>
+
+<p>Everywhere! GTK is cross-platform and boasts an easy to use API, speeding up your development time. Take a look at the screenshots to see a number of platforms GTK will run.</p>
+
+<h2>What languages are supported?</h2>
+
+<p>GTK is written in C but has been designed from the ground up to support a wide range of languages, not only C/C++. Using GTK from languages such as Perl and Python (especially in combination with the Glade GUI builder) provides an effective method of rapid application development.</p>
+    
+<h2>Are there any licensing restrictions?</h2>
+
+<p>GTK is free software and part of the GNU Project. However, the licensing terms for GTK, the GNU LGPL, allow it to be used by all developers, including those developing proprietary software, without any license fees or royalties.</p>
+
+<p>Get an overview of GTK. Understand who started it, the basic architecture and why we use the license we do.</p>
+
+<p>GTK has been involved in many projects and some big platforms. To get a glimpse of what people think of GTK and how it has been used in commercial projects, read the success stories...</p>
+
+<p>To find out how more about what GTK can do for you, visit our features page. If you want to contribute, you are more than welcome. As seen in Figure 1, GTK+ is built on top of a number of other libraries</p>
+
+<p>The GTK+ itself depends on the following libraries:</p>
+
+<ul>
+	<li><p><a href="glib.html">Glib</a>: provides low-level data structures, types, thread support, the event loop, and dynamic loading.</p></li>
+	<li><p>pango - supports text rendering and layout.</p></li>
+	<li><p>ATK: ATK (Accessability ToolKit) - helps you create accessible applications and allows users to run your applications with screen readers and other accessibility tools.</p></li>
+	<li><p><b>GDK</b>: (GIMP Drawing Kit) - handles low-level graphics rendering on top of the Xlib. GDK (GIMP Drawing Kit) is a library that acts as a wrapper around the low-level functions provided by the underlying windowing and graphics systems. GDK lies between the display server and the GTK library, handling basic rendering such as drawing primitives, raster graphics (bitmaps), cursors, fonts, as well as window events and drag-and-drop functionality. </p></li>
+	<li><p>GdkPixbuf</p></li>
+	<li><p>Cairo</p></li>
+</ul>
+
+<p>The following program prints the version of the GTK+ and the Glib libraries. </p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+int main(int argc, char *argv[]) {
+
+    gtk_init(&argc, &argv);
+
+    g_print("GTK+ version: %d.%d.%d\n", gtk_major_version, 
+        gtk_minor_version, gtk_micro_version);
+    g_print("Glib version: %d.%d.%d\n", glib_major_version,
+        glib_minor_version, glib_micro_version);    
+        
+    return 0;
+}
+</pre>
+
+<p>GTK+3 is an event-driven toolkit, which mean it is always dormiant in a loop function and waiting (<i>listening</i>) for events to occur; then it passes control to the approprieate function. Examples of events are a click on a button, menu item activation, ticking a checkbox, and so forth. When widgets receive an event, they frequently emit one or more signals. That signal will then evoke functions that you have connected to, in this case known as <b>callbacks</b>.</p>
+
+<p>(See also <a href="../linux/X.html">The X Window System</a>).</p>
+
+<h2>Debugging</h2>
+
+<p>Add debug symbols with <code>-ggdb3</code> option and run the program in gdb with the <coe>G_DEBUG=fatal-warnings</code> environment variable set, that will cause the program to crash when the error occurs and you can get a backtrace in gdb using `bt`. First make sure you've installed <a href="../linux/debian.html#debug">gtk debug symbols</a>.</p>
+
+<pre>G_DEBUG=fatal-warnings gdb ./a.out</pre>
+
+<p>Or for critical warnings</p>
+
+<pre>G_DEBUG=fatal-criticals gdb ./a.out</pre>
+
+<h2>GTK Inspector</h2>
+
+<p>Launch the inspector with</p>
+
+<pre>GTK_DEBUG=interactive your-app</pre>
+
+<p>The button in the top left allows you to select a widget by clicking.</p>
+
+<h2>Devhelp</h2>
+
+<p>Devhelp is a developer tool for browsing and searching API documentation that you can read by invoking <code>devhelp</code> in a shell.</p>
+
+<pre>sudo apt-get install devhelp</pre>
+
+<p>It provides an easy way to navigate through libraries and to search by function, struct, or macro. The documentation must be installed locally, so an internet connection is not needed to use Devhelp. Devhelp works natively with GTK-Doc, so the GTK and GNOME libraries are well supported. But other development platforms can be supported as well, as long as the API documentation is available in HTML and a *.devhelp2 index file is generated. </p>
+ 
+<h2>Utilities: gtk-3-examples</h2>
+
+<p>On debian, install them with</p>
+
+<pre>sudo apt-get install gtk-3-examples</pre>
+ 
+<p>After the gtk-3-examples are installed, you can access the demo by typing in</p>
+
+<pre>gtk3-demo</pre>
+
+<p><code>gtk3-icon-browser</code> is a utility to explore the icons in the current icon theme. It shows icons in various sizes, their symbolic variants where available, as well as a description of the icon and its context.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</artcle>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="/etc/network/interfaces"/>
+    <title>/etc/network/interfaces</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>         
+</nav>
+
+<div class="content">
+
+<h1>Epoxides</h1>
+
+<p>The file <b>/etc/network/interfaces</b> available in Debian and its derived distributions allows to define static and dynamic IP addresses for the interfaces, setup routing information and default gateways, masquerading network bonding and more. The default interfaces file looks like the following:</p>
+
+<pre>
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug usb0
+iface usb0 inet dhcp
+</pre>
+
+<p>Where <b>auto</b> starts the interface at boot and <b>iface</b> calls the network interface (in this case lo, loopback). All lines beginning with "<b>auto</b>" specify the interfaces which will be enabled when running "<b>ifup -a</b>", a command executed at boot.</p>
+
+<p>Lines beginning with “iface” have the following syntax:</p>
+
+<pre>iface  &lt;interface&gt; &lt;address_family&gt;  &lt;method&gt;</pre>
+
+<p>For example:</p>
+
+<pre>iface enp2s0 inet dhcp</pre>
+
+<p>The following example shows how to setup a network card using DHCP and wpa supplicant:</p>
+
+<pre>
+# cat /etc/network/interfaces
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug usb0
+iface usb0 inet dhcp
+
+# The wifi network interface
+iface wlxf4f26d13b2bd inet dhcp
+	wpa-driver nl80211
+	wpa-ssid TP-LINK_2.4GHz_4F7005_2GEXT
+	wpa-psk 46781314
+</pre>
+
+<ul>
+	<li><p>Where <b>allow-hotplug</b> will start the interface upon event detection.</p></li>
+	<li><p>you can set mac address with '<code>pre-up macchanger -m</code>' inside the iface stanza. But it's better off to use</p>
+
+		<pre>macchanger -m 02:0F:B5:23:28:8E wlxf4f26d13b2bd; ifup -v wlxf4f26d13b2bd</pre>
+
+	</li>
+</ul>
+
+<p>When you make a change to a network inteface file, the configuration are not immediately applied. To put the changes into effect, you'll need to restart the network interface.</p>
+
+<pre>systemctl restart networking</pre>
+
+<p>Then do</p>
+
+<pre>sudo ifup -v wlxf4f26d13b2bd</pre>
+
+<p>The -<b>v</b> for verbose should produce some output indicating what's happening behind the scenes.</p>
+
+<p>The <b>ifup</b> and <b>ifdown</b> interface scripts are symbolic links to scripts in the /<b>sbin</b> directory. When either of these scripts are called, they require the value of the interface to be specified, such as the above command. These should be the only scripts that the user use to bring up and take down network interfaces.</p>
+
+<h2>static IP</h2>
+
+<p>To configure a static IP address:</p>
+
+<pre>
+# The wifi network interface
+iface wlxf4f26d13b2bd inet static 
+	wpa-driver nl80211
+	wpa-ssid TP-LINK_2.4GHz_4F7005_2GEXT
+	wpa-psk 46781314	
+	address 192.168.1.120
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+</pre>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

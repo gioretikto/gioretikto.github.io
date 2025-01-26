@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="GMP"/>
+    <title>GMP</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>GMP</h1>
+
+<p>GNU MP, or GMP, from the GNU project, is a portable C library for arithmetic with arbitrarily large integers, as well as rational and real numbers. GMP achieves excellent performance due to the use of assembler code for an impressive array of CPUs.</p>
+
+<pre>
+#include &lt;stdio.hgt;
+#include &lt;assert.hgt;
+#include &lt;limits.h&gt;
+
+int main(){
+   int k,x,i;
+
+   /* 1. Print the machine native size and the max/min integer */
+   printf ("Size of integers in this computer = %d bits \n", sizeof(int) * 8);
+   printf ("The largest int representable is %d \n", INT_MAX);
+   printf ("The smallest int representable is %d \n", INT_MIN);
+
+   /* 2. Let us add 1 to INT_MAX */
+   k = INT_MAX;
+
+   printf (" %d + 1 = %d \n", k,k+1);
+
+   /* 3. Input a number x and print its binary representation out */
+
+   printf ("Enter x:");
+   scanf("%d",&x);
+   printf ("The binary reprentation LSB --> MSB is: ");
+   for (i=0; i < 8 * sizeof(int); ++i){
+
+       if (x %2 == 0)
+          printf ("0");
+       else
+          printf("1");
+
+       x = x >> 1; /* Shift right by 1*/
+
+   }
+
+   printf ("\n");
+
+}
+</pre>
+
+<p>sizeof(int) gives the number of bytes for an integer. INT_MAX is macro defined in limits.h to the largest possible integer. Similarly for INT_MIN. Notice that the computer can represent numbers in the range -2147483648 to 2137483647. Any attempt to add one to the maximum int wraps around to the minimum integer. This is fine for most applications that need some addition. For instance, a bank has to worry if someone has 2 billion or more dollars in their account that if they deposit a single dollar, their balance will wrap around. C also has a type long that supports 64 bit arithmetic. In fact, intel processors manufactured today have 64 bit word sizes. Moving to 64 bits roughly gives us a LONG_MAX with 20 decimal digits. But it is still a limit.</p>
+
+<h2>Headers and Libraries</h2>
+
+<p>All declarations needed to use GMP are collected in the include file gmp.h. It is designed to work with both C and C++ compilers.</p>
+
+<pre>#include &lt;gmp.h&gt;</pre>
+
+<p>Note however that prototypes for GMP functions with FILE * parameters are only provided if &lt;stdio.h&gt; is included too.</p>
+
+#include &lt;stdio.h&gt;
+#include &lt;gmp.h&gt;
+
+Likewise &lt;stdarg.h&gt; is required for prototypes with va_list parameters, such as gmp_vprintf. And &lt;obstack.h&gt; for prototypes with struct obstack parameters, such as gmp_obstack_printf, when available.
+
+All programs using GMP must link against the libgmp library. On a typical Unix-like system this can be done with ‘<b>-lgmp</b>’, for example
+
+<pre>gcc myprogram.c -lgmp</pre>
+
+<p>GMP C++ functions are in a separate libgmpxx library. This is built and installed if C++ support has been enabled (see Build Options). For example,</p>
+
+<pre>g++ mycxxprog.cc -lgmpxx -lgmp</pre>
+
+GMP is built using Libtool and an application can use that to link if desired, see GNU Libtool in GNU Libtool.
+
+<p>If GMP has been installed to a non-standard location then it may be necessary to use ‘-I’ and ‘-L’ compiler options to point to the right directories, and some sort of run-time path for a shared library.</p>
+
+<pre>
+	#include &lt;stdio.h&gt;
+	#include &lt;gmp.h&gt;
+
+	int main(void) {
+	mpz_t x,y,result;
+
+	mpz_init_set_str(x, "7612058254738945", 10);
+	mpz_init_set_str(y, "9263591128439081", 10);
+	mpz_init(result);
+
+	mpz_mul(result, x, y);
+	gmp_printf("    %Zd\n"
+            "*\n"
+            "    %Zd\n"
+            "--------------------\n"
+            "%Zd\n", x, y, result);
+
+	/* free used memory */
+	mpz_clear(x);
+	mpz_clear(y);
+	mpz_clear(result);
+	return 0;
+}
+</pre>
+
+<h2>Multiplication</h2>
+
+<pre>Function: void mpz_mul (mpz_t rop, mpz_t op1, mpz_t op2)</pre>
+
+<p>Here is an example of C code showing the use of the GMP library to multiply and print large numbers:</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;gmp.h&gt;
+
+int main(void) {
+ mpz_t x,y,result;
+
+ mpz_init_set_str(x, "7612058254738945", 10);
+ mpz_init_set_str(y, "9263591128439081", 10);
+ mpz_init(result);
+
+ mpz_mul(result, x, y);
+ gmp_printf("    %Zd\n"
+            "*\n"
+            "    %Zd\n"
+            "--------------------\n"
+            "%Zd\n", x, y, result);
+
+ /* free used memory */
+ mpz_clear(x);
+ mpz_clear(y);
+ mpz_clear(result);
+
+ return 0;
+}
+</pre>
+
+
+<h2>Exponentiation Functions</h2>
+
+<pre>void mpz_pow_ui (mpz_t ROP, mpz_t BASE, unsigned long int EXP)</pre>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;gmp.h&gt;
+
+int main() {
+
+	mpz_t result, base;
+	
+	unsigned long int exp = 46;
+	
+	/* Initializes base exp and result */
+
+ 	mpz_init_set_str(base, "302", 10);
+
+    mpz_init(result);
+
+	mpz_pow_ui(result, base, exp);
+	
+	gmp_printf("%Zd\n", result);
+	
+	mpz_clear(base);
+ 	mpz_clear(result);
+
+	return 0;
+}
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

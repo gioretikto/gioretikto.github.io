@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="scanf()"/>
+    <title>scanf()</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>scanf()</h1>
+
+<p><code>scanf</code> is a function that reads data with specified format from a given string stream source, originated from C programming language, and is present in many other programming languages.</p>
+
+<p>The scanf function prototype is:</p>
+
+<pre>int scanf(const char *format, ...);</pre>
+
+<h2>Return type</h2>
+
+<p>scanf returns EOF if end of file (or an input error) occurs before any values are stored. If any values are stored, it returns the number of items stored; that is, it returns the number of times a value is assigned by one of the scanf argument pointers. EOF is returned if an error occurs before any items are matched.</p>
+
+<p>The scanf() function requires the memory address of the variable to which you want to save the input value. While pointers (variables storing memory addresses) can be used here, this is a concept that won't be approached until later in the text. Instead, the simple technique is to use the address-of operator, &amp;. For now it may be best to consider this "magic" before we discuss pointers. </p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int a;
+
+    printf("Please input an integer value: ");
+    scanf("%d", &amp;a);
+    printf("You entered: %d\n", a);
+
+    return 0;
+}
+</pre>
+
+<p>You can read in multiple strings with scanf() by including more than one %s in the format string. For each %s in the format string, scanf() uses the preceding rules to find the requested number of strings in the input. For example</p>
+
+<p><b>IMPORTANT!</b>: formats like <code>%d</code> also discard leading whitespace, so you usually don't need explicit whitespace in scanf format strings at all.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+
+	int a,b;
+	
+	printf("The number of values assigned by scanf is: %d\n", scanf("%d%d", &a,&b));
+	
+	printf("%d\n%d\n",a,b);
+	
+	return 0;
+}
+</pre>
+
+<pre>
+scanf("%s%s%s, s1, s2, s3);
+</pre>
+
+<p>If you enter ciao bello come, ciao is assigned to the string, s1, bello is assigned to s2, 
+and come to s3.</p>
+
+<table>
+
+<caption>scanf() conversion characters</caption>
+
+<thead>
+<tr><th>Conversion character</th> <th>Remarks</th></tr>
+</thead>
+
+<thbody>
+<tr><td>n</td> <td>No character in the input stream matched. The corresponding argument is a pointer to an integer, into which gets stored the number of characters read so far.</td></tr>
+</thbody>
+</table>
+
+<h3>%n character</h3>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+    int a;
+    int n;
+    char s[] ="   123ciaobello";
+    sscanf(s,"%d%n",&amp;a,&amp;n);
+    printf("%d\n",n);
+    return 0;
+}
+</pre>
+
+<p>Ci sono 3 spazi prima di "123"; <code>sscanf</code> ignora gli spazi vuoti iniziali ('\n', '\t', etc), questi entrano comunque nel computo dei caratteri letti: 6.</p>
+
+<p>%n non entra nel computo dei caratteri assegnati da scanf:</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+    int a;
+    int n;
+    char s[] ="   123heybabe";    
+    printf("%d\n",sscanf(s,"%d%n",&a,&n));
+    return 0;
+}
+</pre>
+
+<p>dà come output: <code>1</code>.</p>
+
+<h2>Using strings</h2>
+
+<p>Nel caso della lettura di una stringa <code>scanf</code> si ferma al primo whitespace.</p> 
+
+<pre>
+#include &lt;stdio.h&gt;
+#define PRAISE "You are an extraordinary being."
+int main(void)
+{
+	char name[40];
+	printf("What's your name? ");
+	scanf("%s", name);
+	printf("Hello, %s. %s\n", name, PRAISE);
+	return 0;
+}
+</pre>
+
+<p>The <code>%s</code> tells <code>printf()</code> to print a string. The <code>%s</code> appears twice because the program prints two strings: the one stored in the name array and the one represented by PRAISE . Running praise1.c should produce an output similar to this:</p>
+
+<pre>
+What's your name? Gino Rossi
+Hello, Gino. You are an extraordinary being.
+</pre>
+
+<p>You do not have to put the null character into the name array yourself. That task is done for you by scanf() when it reads the input. Nor do you include a null character in the character string constant PRAISE . We’ll explain the #define statement soon; for now, simply note that  
+the double quotation marks that enclose the text following PRAISE identify the text as a string. The compiler takes care of putting in the null character.</p>
+
+<p>Note (and this is important) that scanf() just reads Gino Rossi’s first name. After <code>scanf()</code> starts to read input, it stops reading at the first <i>whitespace</i> (blank, tab, or newline) it encounters. Therefore, it stops scanning for name when it reaches the blank between Angela and Plains .
+In general, scanf() is used with <code>%s</code> to read only a single word, not a whole phrase, as a string. C has other input-reading functions, such as fgets() , for handling general strings. Later chapters will explore string functions more fully.</p>
+
+<h2>Caution when reading char with scanf()</h2>
+
+<p>Quando si leggono consecutivamente caratteri con <code>scanf()</code> si può incorrere nel seguente tipo di errore. Si cerca di leggere tre caratteri dall'utente:</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    char c;
+     
+    printf("Input No.1\n");
+    scanf("%c", &c);
+    printf("c = %c\n", c);
+     
+    printf("Input No.2\n");
+    scanf("%c", &c);
+    printf("c = %c\n", c);
+     
+    printf("Input No.3\n");
+    scanf("%c", &c);
+    printf("c = %c\n", c);
+     
+    return 0;
+}
+</pre>
+
+<p>l'output è il seguente:</p>
+
+<pre>
+Input No.1
+s
+c = s
+Input No.2
+c = 
+ 
+Input No.3
+a
+c = a
+</pre>
+
+<p>As you see, the input No.2 was skipped. Well not really, not at all. The problem is that scanf("%d", &c) leaves a newline in the input buffer, which is only consumed by scanf("%c", &a) (and hence a is assigned a newline character). You have to consume the newline with getchar();. </p>
+
+<p>Another “fix to scanf to do what you intend it to do” is to leave a space before %c. That way you say to scanf to automatically eat whitespaces and special characters, like enter! So, just change scanf(“%c”, &c); to scanf(” %c”, &c); and you will be just fine. See by yourself in the code bellow: </p>
+
+<pre>
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    char c;
+    /* FIX: Leave a space before %c */
+     
+    printf("Input No.1\n");
+    scanf("%c", &c);
+    printf("c = %c\n", c);
+     
+    printf("Input No.2\n");
+    scanf(" %c", &c);
+    printf("c = %c\n", c);
+     
+    printf("Input No.3\n");
+    scanf(" %c", &c);
+    printf("c = %c\n", c);
+     
+    return 0;
+}
+</pre>
+
+<p>which outputs, what you expect:</p>
+
+<pre>
+Input No.1
+s
+c = s
+Input No.2
+a
+c = a
+Input No.3
+m
+c = m
+</pre>
+
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="buffer_overflow.html">scanf() e il buffer overflow &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

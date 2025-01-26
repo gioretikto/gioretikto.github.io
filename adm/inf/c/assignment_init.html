@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Declaration, Assigment and initialization"/>
+    <title>Declaration, Assigment and initialization</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Declaration, Assigment and initialization</h1>
+
+<h2>Declaring and Defining variables</h2>
+
+<p>A variable <b>declaration</b>, is a program statement that specifies the name of a variable of a given type. For example</p>
+
+<pre>int age;</pre>
+
+<p>This declares a variable with the name <code>age</code> that can store integers. The type of data that can be stored in the variable <code>age</code> is specifies by the keywork <code>int</code>.</p>
+
+<p>In C a variable declaration is also a definition. A <b>variable definition</b> associates a piece of the computer's memory with the variable name, in order to store data. That space is associated with a unique address</p>
+
+<p>You use the term <b>declaration</b> when you introduce a name into your program, with information on what the name will be used for. The term <b>definition</b> refers to the allotment of computer memory to the name. In the case of variables, you can declare and define in a single statement, as in the preceding line. The reason for this apparently pedantic differentiation between a declaration and a definition is that you will meet statements that are declarations but not definitions.</p>
+
+<p>More than one variable of the same type can also be declared in one statement. In this case, the names of the variables are written after the keyword separated by commas. For example, to declare three variable of type int</p>
+
+<pre>int a,b,c;</pre>
+
+<h2>Initialization and Assignment</h2>
+
+<p>Two similar but logically distinct, operations:</p>
+
+<ul>
+	<li><p>Initialization (giving a variable its initial value)</p></li>
+	<li><p>Assignment (giving a variable a new value)</p></li>
+</ul>
+
+<p>These operations are so similar that C allows us to use the same notation (the = ) for both:</p>
+
+<pre>
+int y = 8; // initialize y with 8
+x = 9;    // assign 9 to x
+</pre>
+
+<h2>Variable scope</h2>
+
+<p>The scope of a variable is the area of the program where that variable is valid, i.e. the parts of the program that have acess to that variable. This is determined by the location of the declaration. There are four types of variables scopes: block, function, file and program scope.</p>
+
+<h2>Block or function Scope</h2>
+
+<p>Most scopes in C are delimited by curly braces.</p>
+
+<p>A statement block is a group of statements enclosed within an opening and closing curly brackets: {}. If you declare a variable within a statement block, when the program exits the block, the variable will be destroyed from memory. This type of variable, is said to have BLOCK SCOPE, and is also known as a LOCAL VARIABLE. Your program may contain a nested blocks. If you declare and initialize a variable x in outer block and then declare initialize the same variable called x inside the inner block, they will occupy up different memory slots and are considered as different variables.</p>
+
+<h2>Program Scope</h2>
+
+<p>If you want to avoid passing arguments to your functions you can declare your variables outside any function blocks. Such variables are sometimes known as GLOBAL VARIABLES. Their value can be accessed from anywhere within the ENTIRE program.</p>
+
+<h2>File Scope</h2>
+
+<p>FILE SCOPE is when a variable is only accessible until the end of the file. A variable with file scope is a global variable declared with the static keyword before the data type, like this: <pre>static int x = 15</pre>; This makes it impossible for <i>x</i> to be accessible by other files, other than the one it's declared and initialized in. This is useful for wnen you come to write your own header files as it can prevent compilation errors and bugs.</p>
+
+<h3>Examples of scopes</h3>
+
+<pre>
+void f()
+{
+	g();		// error: g() isn’t (yet) in scope
+}
+void g()
+{
+	f();		// OK: f() is in scope
+}
+void h()
+{
+	int x = y;		// error: y isn’t (yet) in scope
+	int y = x;		// OK: x is in scope
+	g();			// OK: g() is in scope
+}
+</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

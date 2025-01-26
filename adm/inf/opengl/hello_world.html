@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Hello World program"/>
+    <title>Hello World program</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Hello World program</h1>
+
+<p>Vediamo come creare una finestra nera</p>
+
+<pre>
+#include &lt;GLFW/glfw3.h&gt;
+
+int main(void)
+{
+    GLFWwindow* window;
+
+    /* Initialize the library */
+    if (!glfwInit())
+        return -1;
+
+    /* Create a windowed mode window and its OpenGL context */
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!window)
+    {
+        glfwTerminate();
+        return -1;
+    }
+
+    /* Make the window's context current */
+    glfwMakeContextCurrent(window);
+
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+    	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)    /*handle the escape key to easily return to the desktop */
+			glfwSetWindowShouldClose(window, GL_TRUE);
+		
+		/* Render here */
+        glClear(GL_COLOR_BUFFER_BIT);
+			
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
+
+        /* Poll for and process events */
+        glfwPollEvents();
+    }
+
+    glfwTerminate();
+    return 0;
+}
+</pre>
+
+<p>per compilare con bisogna include -lGL in your compiler options.</p>
+
+<pre>g++ prova.cpp -Wall -std=c++17 -Wextra -lGL `pkg-config --libs --cflags glfw3`</pre>
+
+<h2>Comments</h2>
+
+<p>To use GLFW, it needs to be initialised when the program starts and you need to give it a chance to clean up when your program closes. The glfwInit and
+glfwTerminate functions are geared towards that purpose.</p> 
+
+<pre>
+glfwInit();
+...
+glfwTerminate();
+</pre>
+
+<p>Next It is specified that we require the OpenGL context to support OpenGL 3.2 at the least. The <code>GLFW_OPENGL_PROFILE</code> option specifies that we
+want a context that only supports the new core functionality.</p>
+
+<p>The first two parameters of glfwCreateWindow specify the width and height of the drawing surface and the third parameter specifies the window
+title. The fourth parameter should be set to NULL for windowed mode and <code>glfwGetPrimaryMonitor()</code> for fullscreen mode. The last parameter allows you to specify an existing OpenGL context to share resources like textures with. The glfwWindowHint function is used to specify additional requirements for a window.</p>
+
+<p>After creating the window, the OpenGL context has to be made active:</p>
+
+<pre>glfwMakeContextCurrent(window)</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

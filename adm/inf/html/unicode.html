@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Unicode"/>
+	<title>Unicode</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Unicode</h1>
+
+<p>Writing is a way of recording language in a medium more permanent than speech. The precondition for writing is the existence of a <i>script</i>. A script is a set of conventional symbols that can be used to represent one or more languages in writing. We refer to the elements of a script as characters; an alternative term is <i>grapheme</i>. We follow the terminology of Sproat (2000) and use the term <i>writing system</i> to describe the use of a script for a particular language. A writing system defines language-specific rules and conventions, which assign meanings to the characters of the script. The linguistic unit associated with a character depends on the properties of the script and the writing system, and characters correspond to different linguistic units in alphabetic, syllabic, or logographic writing systems.</p>
+
+<p>Note that a character is an abstract concept and does not have an inherent meaning or form. In fact, one could say that the only inherent property of a character in some script is that it is different from all other characters of this script. The graphical representation of a character is called a glyph. There is no general one-to-one correspondence between characters and glyphs. On the one hand, one character may be represented by several different glyphs, for example, the Latin characters <i>a</i> and <i>g</i> each have two basic glyph variants (the single-story forms <i>a</i> and <i>g</i>, and the double-story forms a and g), or the Greek character sigma has the two positional glyph variants &sigma; and ς. In the Arabic script, all characters have initial, medial, final, and isolated glyphs. In addition, there are thousands of font-specific variations; in handwriting, glyphs must also be considered abstractions, as each individual instance differs from the next. On the other hand, a glyph also does not necessarily correspond to a single character.</p>
+
+<p>Unicode is the first character encoding that draws a clear distinction between characters and glyphs; apart from so-called <i>compatibility characters</i> (encoded for interoperability with legacy encodings), Unicode aims to encode only characters, not glyphs. By making this distinction, Unicode has a clear definition of the entities it encodes.</p>
+
+<p>Unicode also considers diacritics as characters, which simply have the property to graphically combine in some way with a base character. An accented character such as <i>È</i> is thus seen as a combination of the base character <i>E</i> and a <i>combining character</i>, here a grave accent. In Unicode, combining characters always follow the base character to which they apply. In principle, any number of combining characters can follow a base character, and all combining characters can be used with any script, but obviously not all combinations can necessarily be displayed in a reasonable way. Due to compatibility considerations, numerous combinations of base characters with diacritics are also available as precomposed characters, for example, A is available as a precomposed character for compatibility with ISO 8859-1. Since these characters can thus be encoded in different ways, Unicode also defines equivalence relations such as <i>B + Ä = B + A + ¨</i> and normalization forms, i.e., rules for maximally composing or decomposing characters. The policy of the Unicode Consortium is not to encode any new characters that could be encoded using combining characters.</p>
+
+<p>Unicode makes a further important distinction, namely between <i>code points</i>, i.e., the number assigned to a character, and the <i>encoding scheme</i>, i.e., the representation of this number by a concrete sequence of bits. Unicode code points are usually written as “U+” followed by the number in hexadecimal, for example, U+0065 for the Latin lowercase letter <i>e</i>. Some unicode code points are not themselves characters. Instead they are combined with the preceding unicode character to alter the character. For instance, a character with an accent over it could be represented by first the character code point followed by the accent code point. Unicode defines a number of different encoding schemes; the two most important ones are UTF-8 and UTF-16.</p>
+
+<p>UTF-8 is a variable-width encoding; it encodes each Unicode code point using one to four 8-bit bytes. The first 128 characters of Unicode, which correspond to ASCII, are encoded using a single byte and with the same bit sequence as in ASCII; thus, any valid ASCII text is also valid UTF-8-encoded Unicode. This property, and the fact that no null bytes (i-e., bytes in which all bits are 0) can occur, are two important advantages of the UTF-8 encoding scheme, as they ensure compatibility with legacy software. Many standards require support for UTF-8; for example, XML uses UTF-8 as default encoding. Table 5.1 shows the principles of the UTF-8 encoding scheme.</p>
+
+<p>The UTF-16 encoding scheme is the successor of the original 16-bit fixed-width encoding proposed in Unicode 88. In principle, it works like UTF-8, but the code units have a length of 16 bits. </p>
+
+<h2>Combining Diacritical Marks</h2>
+
+<p>To type the letter <i>v̄</i>, type the letter <i>v</i> then Ctrl-Shit+u and enter 0304.</p>
+
+<table>
+<tbody><tr>
+<th>Code</th>
+<th>Glyph</th>
+<th>Decimal</th>
+<th>Description</th></tr>
+<tr>
+<td>U+0300</td>
+<td>&#160;&#160; ̀</td>
+<td>768</td>
+<td>Combining Grave Accent</td></tr>
+<tr>
+<td>U+0301</td>
+<td>&#160;&#160; ́</td>
+<td>769</td>
+<td>Combining Acute Accent</td></tr>
+<tr>
+<td>U+0302</td>
+<td>&#160;&#160; ̂</td>
+<td>770</td>
+<td>Combining Circumflex Accent</td></tr>
+<tr>
+<td>U+0303</td>
+<td>&#160;&#160; ̃</td>
+<td>771</td>
+<td>Combining Tilde</td></tr>
+<tr>
+<td>U+0304</td>
+<td>&#160;&#160; ̄</td>
+<td>772</td>
+<td>Combining Macron</td></tr>
+<tr>
+<td>U+0305</td>
+<td>&#160;&#160; ̅</td>
+<td>773</td>
+<td>Combining Overline</td></tr>
+<tr>
+<td>U+0306</td>
+<td>&#160;&#160; ̆</td>
+<td>774</td>
+<td>Combining Breve</td></tr>
+<tr>
+<td>U+0307</td>
+<td>&#160;&#160; ̇</td>
+<td>775</td>
+<td>Combining Dot Above</td></tr>
+<tr>
+<td>U+0308</td>
+<td>&#160;&#160; ̈</td>
+<td>776</td>
+<td>Combining Diaeresis</td></tr>
+<tr>
+<td>U+0309</td>
+<td>&#160;&#160; ̉</td>
+<td>777</td>
+<td>Combining Hook Above</td></tr>
+<tr>
+<td>U+030A</td>
+<td>&#160;&#160; ̊</td>
+<td>778</td>
+<td>Combining Ring Above</td></tr>
+<tr>
+<td>U+030B</td>
+<td>&#160;&#160; ̋</td>
+<td>779</td>
+<td>Combining Double Acute Accent</td></tr>
+<tr>
+<td>U+030C</td>
+<td>&#160;&#160; ̌</td>
+<td>780</td>
+<td>Combining Caron</td></tr>
+<tr>
+<td>U+030D</td>
+<td>&#160;&#160; ̍</td>
+<td>781</td>
+<td>Combining Vertical Line Above</td></tr>
+<tr>
+<td>U+030E</td>
+<td>&#160;&#160; ̎</td>
+<td>782</td>
+<td>Combining Double Vertical Line Above</td></tr>
+<tr>
+<td>U+030F</td>
+<td>&#160;&#160; ̏</td>
+<td>783</td>
+<td>Combining Double Grave Accent</td></tr>
+<tr>
+<td>U+0310</td>
+<td>&#160;&#160; ̐</td>
+<td>784</td>
+<td>Combining Candrabindu</td></tr>
+<tr>
+<td>U+0311</td>
+<td>&#160;&#160; ̑</td>
+<td>785</td>
+<td>Combining Inverted Breve
+</td></tr>
+<tr>
+<td>U+0312</td>
+<td>&#160;&#160; ̒</td>
+<td>786</td>
+<td>Combining Turned Comma Above</td></tr>
+<tr>
+<td>U+0313</td>
+<td>&#160;&#160; ̓</td>
+<td>787</td>
+<td>Combining Comma Above</td></tr>
+<tr>
+<td>U+0314</td>
+<td>&#160;&#160; ̔</td>
+<td>788</td>
+<td>Combining Reversed Comma Above</td></tr>
+<tr>
+<td>U+0315</td>
+<td>&#160;&#160; ̕</td>
+<td>789</td>
+<td>Combining Comma Above Right
+</td></tr>
+<tr>
+<td>U+0316</td>
+<td>&#160;&#160; ̖</td>
+<td>790</td>
+<td>Combining Grave Accent Below</td></tr>
+<tr>
+<td>U+0317</td>
+<td>&#160;&#160; ̗</td>
+<td>791</td>
+<td>Combining Acute Accent Below</td></tr>
+<tr>
+<td>U+0318</td>
+<td>&#160;&#160; ̘</td>
+<td>792</td>
+<td>Combining Left Tack Below</td></tr>
+<tr>
+<td>U+0319</td>
+<td>&#160;&#160; ̙</td>
+<td>793</td>
+<td>Combining Right Tack Below</td></tr>
+<tr>
+<td>U+031A</td>
+<td>&#160;&#160; ̚</td>
+<td>794</td>
+<td>Combining Left Angle Above
+</td></tr>
+<tr>
+<td>U+031B</td>
+<td>&#160;&#160; ̛</td>
+<td>795</td>
+<td>Combining Horn
+</td></tr>
+<tr>
+<td>U+031C</td>
+<td>&#160;&#160; ̜</td>
+<td>796</td>
+<td>Combining Left Half Ring Below</td></tr>
+<tr>
+<td>U+031D</td>
+<td>&#160;&#160; ̝</td>
+<td>797</td>
+<td>Combining Up Tack Below</td></tr>
+<tr>
+<td>U+031E</td>
+<td>&#160;&#160; ̞</td>
+<td>798</td>
+<td>Combining Down Tack Below</td></tr>
+<tr>
+<td>U+031F</td>
+<td>&#160;&#160; ̟</td>
+<td>799</td>
+<td>Combining Plus Sign Below
+</td></tr>
+<tr>
+<td>U+0320</td>
+<td>&#160;&#160; ̠</td>
+<td>800</td>
+<td>Combining Minus Sign Below</td></tr>
+<tr>
+<td>U+0321</td>
+<td>&#160;&#160; ̡</td>
+<td>801</td>
+<td>Combining Palatalized Hook Below</td></tr>
+<tr>
+<td>U+0322</td>
+<td>&#160;&#160; ̢</td>
+<td>802</td>
+<td>Combining Retroflex Hook Below</td></tr>
+<tr>
+<td>U+0323</td>
+<td>&#160;&#160; ̣</td>
+<td>803</td>
+<td>Combining Dot Below
+</td></tr>
+<tr>
+<td>U+0324</td>
+<td>&#160;&#160; ̤</td>
+<td>804</td>
+<td>Combining Diaeresis Below</td></tr>
+<tr>
+<td>U+0325</td>
+<td>&#160;&#160; ̥</td>
+<td>805</td>
+<td>Combining Ring Below</td></tr>
+<tr>
+<td>U+0326</td>
+<td>&#160;&#160; ̦</td>
+<td>806</td>
+<td>Combining Comma Below</td></tr>
+<tr>
+<td>U+0327</td>
+<td>&#160;&#160; ̧</td>
+<td>807</td>
+<td>Combining Cedilla</td></tr><tr>
+<td>U+0328</td>
+<td>&#160;&#160; ̨</td>
+<td>808</td>
+<td>Combining Ogonek
+</td></tr>
+<tr>
+<td>U+0329</td>
+<td>&#160;&#160; ̩</td>
+<td>809</td>
+<td>Combining Vertical Line Below</td></tr>
+<tr>
+<td>U+032A</td>
+<td>&#160;&#160; ̪</td>
+<td>810</td>
+<td>Combining Bridge Below
+</td></tr>
+<tr>
+<td>U+032B</td>
+<td>&#160;&#160; ̫</td>
+<td>811</td>
+<td>Combining Inverted Double Arch Below</td></tr>
+<tr>
+<td>U+032C</td>
+<td>&#160;&#160; ̬</td>
+<td>812</td>
+<td>Combining Caron Below</td></tr>
+<tr>
+<td>U+032D</td>
+<td>&#160;&#160; ̭</td>
+<td>813</td>
+<td>Combining Circumflex Accent Below</td></tr>
+<tr>
+<td>U+032E</td>
+<td>&#160;&#160; ̮</td>
+<td>814</td>
+<td>Combining Breve Below
+</td></tr>
+<tr>
+<td>U+032F</td>
+<td>&#160;&#160; ̯</td>
+<td>815</td>
+<td>Combining Inverted Breve Below</td></tr>
+<tr>
+<td>U+0330</td>
+<td>&#160;&#160; ̰</td>
+<td>816</td>
+<td>Combining Tilde Below</td></tr>
+<tr>
+<td>U+0331</td>
+<td>&#160;&#160; ̱</td>
+<td>817</td>
+<td>Combining Macron Below</td></tr>
+<tr>
+<td>U+0332</td>
+<td>&#160;&#160; ̲</td>
+<td>818</td>
+<td>Combining Low Line
+</td></tr>
+<tr>
+<td>U+0333</td>
+<td>&#160;&#160; ̳</td>
+<td>819</td>
+<td>Combining Double Low Line
+</td></tr>
+<tr>
+<td>U+0334</td>
+<td>&#160;&#160; ̴</td>
+<td>820</td>
+<td>Combining Tilde Overlay</td></tr>
+<tr>
+<td>U+0335</td>
+<td>&#160;&#160; ̵</td>
+<td>821</td>
+<td>Combining Short Stroke Overlay</td></tr>
+<tr>
+<td>U+0336</td>
+<td>&#160;&#160; ̶</td>
+<td>822</td>
+<td>Combining Long Stroke Overlay</td></tr>
+<tr>
+<td>U+0337</td>
+<td>&#160;&#160; ̷</td>
+<td>823</td>
+<td>Combining Short Solidus Overlay</td></tr>
+<tr>
+<td>U+0338</td>
+<td>&#160;&#160; ̸</td>
+<td>824</td>
+<td>Combining Long Solidus Overlay</td></tr>
+<tr>
+<td>U+0339</td>
+<td>&#160;&#160; ̹</td>
+<td>825</td>
+<td>Combining Right Half Ring Below</td></tr>
+<tr>
+<td>U+033A</td>
+<td>&#160;&#160; ̺</td>
+<td>826</td>
+<td>Combining Inverted Bridge Below</td></tr>
+<tr>
+<td>U+033B</td>
+<td>&#160;&#160; ̻</td>
+<td>827</td>
+<td>Combining Square Below</td></tr>
+<tr>
+<td>U+033C</td>
+<td>&#160;&#160; ̼</td>
+<td>828</td>
+<td>Combining Seagull Below</td></tr>
+<tr>
+<td>U+033D</td>
+<td>&#160;&#160; ̽</td>
+<td>829</td>
+<td>Combining X Above
+</td></tr>
+<tr>
+<td>U+033E</td>
+<td>&#160;&#160; ̾</td>
+<td>830</td>
+<td>Combining Vertical Tilde
+</td></tr>
+<tr>
+<td>U+033F</td>
+<td>&#160;&#160; ̿</td>
+<td>831</td>
+<td>Combining Double Overline
+</td></tr>
+<tr>
+<td>U+0340</td>
+<td>&#160;&#160; ̀</td>
+<td>832</td>
+<td>Combining Grave Tone Mark
+</td></tr>
+<tr>
+<td>U+0341</td>
+<td>&#160;&#160; ́</td>
+<td>833</td>
+<td>Combining Acute Tone Mark
+</td></tr>
+<tr>
+<td>U+0342</td>
+<td>&#160;&#160; ͂</td>
+<td>834</td>
+<td>Combining Greek Perispomeni
+</td></tr>
+<tr>
+<td>U+0343</td>
+<td>&#160;&#160; ̓</td>
+<td>835</td>
+<td>Combining Greek Koronis</td></tr>
+<tr>
+<td>U+0344</td>
+<td>&#160;&#160; ̈́</td>
+<td>836</td>
+<td>Combining Greek Dialytika Tonos</td></tr>
+<tr>
+<td>U+0345</td>
+<td>&#160;&#160; ͅ</td>
+<td>837</td>
+<td>Combining Greek Ypogegrammeni</td></tr>
+<tr>
+<td>U+0346</td>
+<td>&#160;&#160; ͆</td>
+<td>838</td>
+<td>Combining Bridge Above</td></tr>
+<tr>
+<td>U+0347</td>
+<td>&#160;&#160; ͇</td>
+<td>839</td>
+<td>Combining Equals Sign Below</td></tr>
+<tr>
+<td>U+0348</td>
+<td>&#160;&#160; ͈</td>
+<td>840</td>
+<td>Combining Double Vertical Line Below</td></tr>
+<tr>
+<td>U+0349</td>
+<td>&#160;&#160; ͉</td>
+<td>841</td>
+<td>Combining Left Angle Below
+</td></tr>
+<tr>
+<td>U+034A</td>
+<td>&#160;&#160; ͊</td>
+<td>842</td>
+<td>Combining Not Tilde Above</td></tr>
+<tr>
+<td>U+034B</td>
+<td>&#160;&#160; ͋</td>
+<td>843</td>
+<td>Combining Homothetic Above</td></tr>
+<tr>
+<td>U+034C</td>
+<td>&#160;&#160; ͌</td>
+<td>844</td>
+<td>Combining Almost Equal To Above</td></tr>
+<tr>
+<td>U+034D</td>
+<td>&#160;&#160; ͍</td>
+<td>845</td>
+<td>Combining Left Right Arrow Below</td></tr>
+<tr>
+<td>U+034E</td>
+<td>&#160;&#160; ͎</td>
+<td>846</td>
+<td>Combining Upwards Arrow Below</td></tr>
+<tr>
+<td>U+034F</td>
+<td>&#160;&#160; ͏</td>
+<td>847</td>
+<td>Combining Grapheme Joiner</td></tr>
+<tr>
+<td>U+0350</td>
+<td>&#160;&#160; ͐</td>
+<td>848</td>
+<td>Combining Right Arrowhead Above</td></tr>
+<tr>
+<td>U+0351</td>
+<td>&#160;&#160; ͑</td>
+<td>849</td>
+<td>Combining Left Half Ring Above</td></tr>
+<tr>
+<td>U+0352</td>
+<td>&#160;&#160; ͒</td>
+<td>850</td>
+<td>Combining Fermata
+</td></tr>
+<tr>
+<td>U+0353</td>
+<td>&#160;&#160; ͓</td>
+<td>851</td>
+<td>Combining X Below
+</td></tr>
+<tr>
+<td>U+0354</td>
+<td>&#160;&#160; ͔</td>
+<td>852</td>
+<td>Combining Left Arrowhead Below</td></tr>
+<tr>
+<td>U+0355</td>
+<td>&#160;&#160; ͕</td>
+<td>853</td>
+<td>Combining Right Arrowhead Below</td></tr>
+<tr>
+<td>U+0356</td>
+<td>&#160;&#160; ͖</td>
+<td>854</td>
+<td>Combining Right Arrowhead And Up Arrowhead Below</td></tr>
+<tr>
+<td>U+0357</td>
+<td>&#160;&#160; ͗</td>
+<td>855</td>
+<td>Combining Right Half Ring Above</td></tr>
+<tr>
+<td>U+0358</td>
+<td>&#160;&#160; ͘</td>
+<td>856</td>
+<td>Combining Dot Above Right</td></tr>
+<tr>
+<td>U+0359</td>
+<td>&#160;&#160; ͙</td>
+<td>857</td>
+<td>Combining Asterisk Below</td></tr>
+<tr>
+<td>U+035A</td>
+<td>&#160;&#160; ͚</td>
+<td>858</td>
+<td>Combining Double Ring Below</td></tr>
+<tr>
+<td>U+035B</td>
+<td>&#160;&#160; ͛</td>
+<td>859</td>
+<td>Combining Zigzag Above</td></tr>
+<tr>
+<td>U+035C</td>
+<td>&#160;&#160; ͜</td>
+<td>860</td>
+<td>Combining Double Breve Below</td></tr>
+<tr>
+<td>U+035D</td>
+<td>&#160;&#160; ͝</td>
+<td>861</td>
+<td>Combining Double Breve</td></tr>
+<tr>
+<td>U+035E</td>
+<td>&#160;&#160; ͞</td>
+<td>862</td>
+<td>Combining Double Macron</td></tr>
+<tr>
+<td>U+035F</td>
+<td>&#160;&#160; ͟</td>
+<td>863</td>
+<td>Combining Double Macron Below</td></tr>
+<tr>
+<td>U+0360</td>
+<td>&#160;&#160; ͠</td>
+<td>864</td>
+<td>Combining Double Tilde</td></tr>
+<tr>
+<td>U+0361</td>
+<td>&#160;&#160; ͡</td>
+<td>865</td>
+<td>Combining Double Inverted Breve</td></tr>
+<tr>
+<td>U+0362</td>
+<td>&#160;&#160; ͢</td>
+<td>866</td>
+<td>Combining Double Rightwards Arrow Below</td></tr>
+<tr>
+<td>U+0363</td>
+<td>&#160;&#160; ͣ</td>
+<td>867</td>
+<td>Combining Latin Small Letter A</td></tr>
+<tr>
+<td>U+0364</td>
+<td>&#160;&#160; ͤ</td>
+<td>868</td>
+<td>Combining Latin Small Letter E</td></tr>
+<tr>
+<td>U+0365</td>
+<td>&#160;&#160; ͥ</td>
+<td>869</td>
+<td>Combining Latin Small Letter I</td></tr>
+<tr>
+<td>U+0366</td>
+<td>&#160;&#160; ͦ</td>
+<td>870</td>
+<td>Combining Latin Small Letter O</td></tr>
+<tr>
+<td>U+0367</td>
+<td>&#160;&#160; ͧ</td>
+<td>871</td>
+<td>Combining Latin Small Letter U</td></tr>
+<tr>
+<td>U+0368</td>
+<td>&#160;&#160; ͨ</td>
+<td>872</td>
+<td>Combining Latin Small Letter C</td></tr>
+<tr>
+<td>U+0369</td>
+<td>&#160;&#160; ͩ</td>
+<td>873</td>
+<td>Combining Latin Small Letter D</td></tr>
+<tr>
+<td>U+036A</td>
+<td>&#160;&#160; ͪ</td>
+<td>874</td>
+<td>Combining Latin Small Letter H</td></tr>
+<tr>
+<td>U+036B</td>
+<td>&#160;&#160; ͫ</td>
+<td>875</td>
+<td>Combining Latin Small Letter M</td></tr>
+<tr>
+<td>U+036C</td>
+<td>&#160;&#160; ͬ</td>
+<td>876</td>
+<td>Combining Latin Small Letter R</td></tr>
+<tr>
+<td>U+036D</td>
+<td>&#160;&#160; ͭ</td>
+<td>877</td>
+<td>Combining Latin Small Letter T</td></tr><tr>
+<td>U+036E</td>
+<td>&#160;&#160; ͮ</td>
+<td>878</td>
+<td>Combining Latin Small Letter V</td></tr>
+<tr>
+<td>U+036F</td>
+<td>&#160;&#160; ͯ</td>
+<td>879</td>
+<td>Combining Latin Small Letter X</td></tr>
+</tbody></table>
+
+<section aria-label="End">
+<a href="numerals.html">&#171;Numerals</a>
+<a href="index.html">Index</a>
+<a href="gerundive.html">The Gerundive &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

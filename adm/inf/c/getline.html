@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="getline()">
+	<title>getline()</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>getline()</h1>
+
+<p>getline() is available in the C Standard IO library (#include &lt;stdio.h&gt;). Syntat</p>
+
+<pre>ssize_t getline(char **lineptr, size_t *n, FILE *stream);</pre>
+
+<p>The <i>getline()</i> function returns −1 on an error (including end of file), and the number of bytes read (not counting the null terminator byte) on success. Note that the return type is <code>ssize_t</code>, which stands for "signed size_t" − that is, the signed integer type, which is the same number of bytes as <i>size_t</i> (so it can return −1, [-1, 32767] for ssize_t and [0, 65534] for size_t).</p>
+
+<p>The <i>getline()</i> function is similar to the <a href="fgets.html">fgets()</a> function by can dynamically allocate memory for the input buffer. If passed a null pointer, getline() dynamically allocates a buffer of sufficient size to hold the input. If passed a pointer allocate to dynamically allocated storage that is too small to hold the contents of the string, the <i>getline()</i> function resizes the buffer, using <i>realloc()</i>, rather than truncating the input. If successful, the <i>getline()</i> function retrurns the number of characters read, which can be used to determine if the input has any null characters bofore the new-line. The <i>getline()</i> function works only with dynamically allocated buffers. Allocated memory must be explicitly deallocated by the caller to avoid memory leaks.</p>
+
+<pre>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(void)
+{
+	FILE *fp;
+	char *line = NULL;
+	size_t len = 0;
+	ssize_t read;
+	fp = fopen("/home/cadmio/prova.c", "r");
+	if (fp == NULL)
+	exit(1);
+	while ((read = getline(&line, &len, fp)) != -1) {
+		printf("Retrieved line of length %zu :\n", read);
+		printf("%s", line);
+	}
+	if (ferror(fp)) {
+	/* handle error */
+	}
+	free(line);
+	fclose(fp);
+	return 0;
+}
+</pre>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</div>
+
+</body>
+</html>

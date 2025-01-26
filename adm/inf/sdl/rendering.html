@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Rendering"/>
+    <title>Rendering</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Rendering</h1>
+
+<p>In computer graphics <b>rendering</b> means the process of synthesizing the final image on your screen from the individual basic data structures</p>
+
+<p>Every SDL2 program that shall show some graphic output has to have at least one <b>SDL2 window</b> and a <b>SDL2 renderer</b>. The window is the entity that is showing the graphic output and the renderer is the “machine” that is generating the output to be shown in the window.</p>
+
+<h2>Software Rendering</h2>
+
+<p><b>Software Rendering</b> is the process of generating the image on the screen with the use of CPU only. In SDL2, software rendering is done via structure called <code>SDL_Surface</code> which is then, used to get all color values of all the positions of an image. This surface is then, blitted on to the surface of the <code>SDL_Window</code> to get the image on to the screen. There is no need to have the <code>SDL_Renderer</code> instance! </p>
+
+<p>Getting image into the SDL_Surface</p>
+
+<pre>
+SDL_Surface* surface = NULL;
+
+surface = SDL_LoadBMP("your_image.bmp"); //Works with BMP images only
+
+//Codes here...
+
+SDL_FreeSurface(surface); //Deleting the surface at the end
+</pre>
+
+<p>The release of SDL2 added the ability to use the GPU. All this time, we've been doing software rendering which is where the CPU is doing all the graphics calculations. The CPU is fast but is not optimized for the doing the necessary calculations to output graphics onto the screen.</p>
+
+<h2>Hardware Rendering with SDL2</h2>
+
+<p>Hardware Rendering is the process of generating the image on the screen with the use of GPU. CPU is also used, not for rendering but for getting the resources and giving it to the GPU. In SDL2, hardware rendering is done via structures called <code>SDL_Texture</code> and <code>SDL_Renderer</code>. <p><b>Texture</b> is a general term used for the resources that are going to be used by the GPU for rendering purposes. <code>SDL_Texture</code> don't have any methods to get the image for rendering. In order to do that, we use <code>SDL_Surface</code>.  The <code>SDL_Renderer</code> is a structure that contains a rendering state.</p>
+
+<h3>How do we use the GPU with SDL2?</h3>
+
+<p>We have to use an <code>SDL_Renderer</code> for that. To create one, we use the <code>SDL_CreateRenderer()<7code> function and it takes the following arguments:</p>
+
+<pre>
+SDL_Renderer* SDL_CreateRenderer
+(
+    SDL_Window* window,
+    int index,
+    Uint32 flags
+)
+</pre>
+
+<ul>
+    <li><p><b>window</b> - A pointer to an SDL_Window</p></li>
+    <li><p>The index for what rendering driver we want to use</p></li>
+    <li><p>And 0 or more SDL_RendererFlags OR'd together.</p></li>
+</ul>
+
+
+<p>If you don't want to set the index manually, just supply -1 and let SDL2 do the work for you. We'll be the using <code>SDL_RENDERER_ACCERELATED</code> renderer flag to get 2DS accelerated graphics.</p>
+
+<pre>
+SDL_Window *window = ...;
+
+SDL_Renderer *window_renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+</pre>
+
+<p>The <code>SDL_Renderer</code> works by having pixels copied into it and then <code>SDL_RenderPresent()</code> is called. The function used to copy the pixel data is <code>SDL_RenderCopy()</code> and it takes an <code>SDL_Texture</code>.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

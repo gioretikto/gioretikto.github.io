@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="typedef">
+	<title>typedef</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>typedef</h1>
+
+<p>A typedef allows the programmer to give a name of his own choice to a data type. For example, another name may be given to any of the standard data types:</p>
+
+<pre>typdef int whole_number;</pre>
+
+<p>gives the alternative name <i>whole_number</i> to the standard data type <i>int</i>. From then on, the type <i>whole_number</i> may be used to set up memory spaces to hold integer values. So</p>
+
+<pre>whole_number num1, num2;</pre>
+
+<p>Giving alternative names in this way, is more useful for complex types as a program can be made readable. The typedef feature is quite useful for defining <a href="struct.html#typedef">structures</a>, since it avoids the need to repeatedly write <code>struct</code> keyword to refer to a structure. Using it we can refer the structure more concisely.</p>
+
+<pre>struct plane_point
+{
+	int x;
+	int y;
+};
+</pre>
+
+<p>It can then be given a typede − to avoid repeatedly referring to it as <i>struct point</i>.</p>
+
+<pre>typdef struct plane_point point</pre>
+
+<p>allow the type <i>point</i> to be used in definitions as an alternative to using <i>struct plane_point</i>. A more concise way is</p>
+
+<pre>
+typedef struct {
+	int x;
+	int y;
+} POINT;
+
+
+POINT a;
+POINT b;
+</pre>
+
+<p>Similarly, the declaration</p>
+
+<pre>typedef char *String;</pre>
+
+<p>makes String a synonym for char *</p>
+
+<p><i>typedef</i> does not really create a new type, it merely renames an existing type. Another example is</p>
+
+<pre>typedef int *IntPointer;
+Intpointer myIntPointer;</pre>
+
+<p>The types <code>size_t</code> and <code>off_t</code>, are <i>typdefs</i> defined by the Standard Library.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

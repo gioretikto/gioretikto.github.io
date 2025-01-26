@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Menus and toolbars"/>
+    <title>Menus and toolbars</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Menus and toolbars</h1>
+
+<p>In this part of the GTK+ programming tutorial, we work with menus and toolbars. A menubar is a common part of a GUI application. It is a group of  commands located in various menus.</p>
+
+<p>GtkMenuBar is a widget that creates a menubar. It contains one to many GtkMenuItems. A menu item is an object which a user can select. GtkMenu implements a drop down menu consisting of a list of GtkMenuItem objects, which can be navigated and activated by the user to perform application
+  functions. A GtkMenu is attached to the menu items of the menubar or menu items of another menu.</p>
+  
+<img src="img/menus.png" alt="menus"/>
+
+<p>In our first example, we create a menubar with one File menu.</p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+int main(int argc, char *argv[]) {
+
+  GtkWidget *window;
+  GtkWidget *vbox;
+
+  GtkWidget *menubar;
+  GtkWidget *fileMenu;
+  GtkWidget *fileMi;
+  GtkWidget *quitMi;
+
+  gtk_init(&argc, &argv);
+
+  window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+  gtk_window_set_default_size(GTK_WINDOW(window), 300, 200);
+  gtk_window_set_title(GTK_WINDOW(window), "Simple menu");
+
+  vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
+  gtk_container_add(GTK_CONTAINER(window), vbox);
+
+  menubar = gtk_menu_bar_new();
+  fileMenu = gtk_menu_new();
+
+  fileMi = gtk_menu_item_new_with_label("File");
+  quitMi = gtk_menu_item_new_with_label("Quit");
+
+  gtk_menu_item_set_submenu(GTK_MENU_ITEM(fileMi), fileMenu);
+  gtk_menu_shell_append(GTK_MENU_SHELL(fileMenu), quitMi);
+  gtk_menu_shell_append(GTK_MENU_SHELL(menubar), fileMi);
+  gtk_box_pack_start(GTK_BOX(vbox), menubar, FALSE, FALSE, 0);
+
+  g_signal_connect(G_OBJECT(window), "destroy",
+        G_CALLBACK(gtk_main_quit), NULL);
+
+  g_signal_connect(G_OBJECT(quitMi), "activate",
+        G_CALLBACK(gtk_main_quit), NULL);
+
+  gtk_widget_show_all(window);
+
+  gtk_main();
+
+  return 0;
+}
+</pre>
+
+<p>The menu in the examle has one menu item. By selecting the item, the application quits.</p>
+
+<pre>
+menubar = gtk_menu_bar_new();
+</pre>
+
+<p>The gtk_menu_bar_new() creates a new GtkMenuBar.</p>
+
+<pre>
+filemenu = gtk_menu_new();
+</pre>
+
+<p>The gtk_menu_new() function creates a new GtkMenu.</p>
+
+<pre>
+gtk_menu_item_set_submenu(GTK_MENU_ITEM(fileMi), fileMenu);
+</pre>
+
+<p>The fileMenu is set to the File menu item with the gtk_menu_item_set_submenu() function. Menus are containers which hold menu items.
+ They are themselves plugged to a particular menu item.</p>
+
+<pre>
+gtk_menu_shell_append(GTK_MENU_SHELL(fileMenu), quitMi);
+</pre>
+
+<p>The quitMi is added to the File menu with the gtk_menu_shell_append() function.</p>
+
+<pre>
+gtk_menu_shell_append(GTK_MENU_SHELL(menubar), fileMi);
+</pre>
+
+<p>The File menu item is added to the menubar with the gtk_menu_shell_append() function. Both GtkMenu and GtkMenuBar are derived from the GtkMenuShell.</p>
+
+<pre>
+g_signal_connect(G_OBJECT(quitMi), "activate",
+    G_CALLBACK(gtk_main_quit), NULL);
+</pre>
+
+<p>By selecting the quit menu item, we terminate the application. </p>
+
+<p> We have used the <code>gtk_box_new ()</code> function that creates a new GtkBox; The prototype is as follows:</p>
+
+<pre>
+GtkWidget *
+gtk_box_new (GtkOrientation orientation,
+             gint spacing);
+</pre>
+
+<p>The parameters are:</p>
+
+<ul>
+	<li><p>orientation - the box’s orientation.</p></li>
+	<li><p>spacing - the number of pixels to place by default between children.</p></li>
+</ul>
+
+<h2>Submenu</h2>
+
+
+
+<p>The example creates a menu inside another menu. The submenu has three menu items. We also add a horizontal separator.</p>
+
+<pre>
+imprMenu = gtk_menu_new();
+imprMi = gtk_menu_item_new_with_label("Import");
+feedMi = gtk_menu_item_new_with_label("Import news feed...");
+bookMi = gtk_menu_item_new_with_label("Import bookmarks...");
+mailMi = gtk_menu_item_new_with_label("Import mail...");
+</pre>
+
+<p>This is a submenu with its menu items.</p>
+
+<pre>gtk_menu_item_set_submenu(GTK_MENU_ITEM(imprMi), imprMenu);</pre>
+
+<p>The imprMenu submenu is added to its own menu item.</p>
+
+<pre>
+gtk_menu_shell_append(GTK_MENU_SHELL(imprMenu), feedMi);
+gtk_menu_shell_append(GTK_MENU_SHELL(imprMenu), bookMi);
+gtk_menu_shell_append(GTK_MENU_SHELL(imprMenu), mailMi);
+</pre>
+
+<p>The three menu items are added to the submenu with the <code>gtk_menu_shell_append()</code> function.</p>
+
+<pre>sep = gtk_separator_menu_item_new();</pre>
+
+<p>A horizontal menu separator is created with the gtk_separator_menu_item_new() function.</p>
+
+<pre>gtk_menu_shell_append(GTK_MENU_SHELL(fileMenu), imprMi);
+gtk_menu_shell_append(GTK_MENU_SHELL(fileMenu), sep);
+</pre>
+
+<p>The imprMi and the separator are added to the File menu with the gtk_menu_shell_append() function.</p>
+
+<section>
+<a href="signals_callbacks.html">&#171;Signal and Callbacks</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

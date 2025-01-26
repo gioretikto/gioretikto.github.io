@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Corpo continuo. Densità. Posizione del centro di massa">
+	<title>Corpo continuo. Densità. Posizione del centro di massa</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+corpo rigido
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Corpo continuo. Densità. Posizione del centro di massa</h1>
+
+<p>La schematizzazione di un <a href="corpo_rigido.html">corpo rigido</a> come sistema di punti materiali necessita di un approfondimento. Un corpo esteso reale appare avere una struttura continua rispetto a qualsiasi suddivisione macroscopica: d'altra parte sappiamo che è costituito da aotmi o molecole. Il singolo punto materiale va allora pernsato come un piccolo volume d<i>V</i> contenente una massa d<i>m</i>; d<i>V</i> è piccolo nella scala macroscopica (potrebbe essere un cuvetto di spigolo 10<sup>−6</sup> m), ma molto grande nella scala atomica (dove le dimensioni lineari sono dell' ordine di 10<sup>−9</sup> - 10<sup>−10</sup>m), così da contenere un grandissimo numero di atomi: ad es., in 1&mu;m di alluminio ci sono circa 10<sup>10</sup> atomi.<br> Questa suddivisione concettuale ha vari vantaggi.- Innanzitutto essa permette di utilizzare i risultati trovai per i sitemi discreti di punti nel capitolo 6; l'estensione ai sistemi continui idi punti comporta la sostituzione di sommatorie con integrali, come vedremo subito. Ciò mette in luce un secondo vantaggio: la suddivisione della massa del corpo e del volume da essa occupato in un numero (praticamente) infinito di elementi (praticamente) infinitesimi consente di applicare i metodi del calcolo integrale per la determinazione di alcune grandezze di interesse. Il fatto che la suddivisione suddetta igni l'effettiva struttura granulare del corpo solido non è significativo in quanto tale struttura è irrilevante i fini della dinamica macroscopica. <br>Un ulteriore vantaggio è che si riesce a tener conto in modo semplice di come la massa è distribuita all' interno del corpo. Ciò viene fatto introducendo la grandezza <b>densità</b> (di massa), definita come rapporto tra la massa infitesima e il volume da essa occupato:</p>
+
+<div class="eq">
+<p>&rho; = d<i>m</i>/d<i>V</i>&emsp;(7.1)</p>
+</div>
+
+<p>Anche supponendo che i volumi infinitesimi d<i>V</i> siano tutti eguali, non è detto che essi contengano tutti la stessa massa: d<i>m</i> può variare a seconda del volume considerato. Scrivendo la (7.1) d<i>m</i> = &rho; d<i>V</i> l'eventuale variazione della distribuzione di massa all'interno del corpo è espressa appunto dalla funzione &rho;(x,y,z). La massa totale del corpo è quindi</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>m</mi>
+  <mo>=</mo>
+  <mo data-mjx-texclass="OP">&#x222B;</mo>
+  <mtext>d</mtext>
+  <mi>m</mi>
+  <mo>=</mo>
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>V</mi>
+  </msub>
+  <mi>&#x3C1;</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>V</mi>
+  <mtext>&emsp;(7.2)</mtext>
+</math>
+
+<!-- $$m = \int \text{d}m = \int_V \rho \, \text{d}V $$ -->
+
+<p>dove l'integrale è esteso a tutto il volume del corpo. <br> Un corpo nel quale la densità è costante si dice <b>omogeneo</b>; per esso (7.1) e (7.2) diventano</p>
+
+<div class="eq">
+<p><i>&rho;</i> = <i>m</i>/<i>V</i>&emsp;<i>m</i> = <i>&rho;V</i></p>
+</div>
+
+<p>I corpi in cui ciò non succede si dicono <i>non omogenei</i>. In essi si usa comunque definire una <b>densità media</b> &rho;̅ = <i>m</i>/<i>V</i>, valore medio nel volume <i>V</i> della funzione &rho;. Ripetiamo che la valutazione della variazione di densità eè fatta sulla scala macroscopica tipica del volume d<i>V</i>, scala nella quale la materia appare continua. <br> Esempi di corpi omogenei sono un blocco di metallo o di vetro, una massa  d'acqua o un volume di gas (il conetto di densità si estende anche ai fluidi). Corpi non omogenei si possono trovare in natura, come certi tipi di legno o di roccia, oppure possono essere costruiti artificialmente, ad es. incollando lamine di materiali diversi. Su grande scala non sono omogenee né la terra né l'atmosfera terrestre. <br> In casi particolari la massa può essere distribuita invece che in un volume su una superficie <i>S</i>, come avviene per membrane, disci, bolle di sapone, oppure lungo una linea <i>l</i>, come per fili e bacchette sottili. In corrispondeza si introducono i concetti di <b>densità superficiale</b> e di <b>densità lineare</b>:</p>
+
+<div class="eq">
+<p><i>&rho;</i> = d<i>m</i>/d<i>S</i> &emsp;⇒ &emsp; <i>m</i> = &int; &rho;<sub>s</sub>d<i>S</i>, &emsp; &rho;<sub>l</sub> = d<i>m</i>/d<i>l</i> &emsp;⇒&emsp; <i>m</i> = &int; &rho;<sub>l</sub> d<i>l</i></p>
+</div>
+
+<p>La grandezza <i>v</i> = 1/&rho; = d<i>V</i> = d<i>m</i> si chiama <b>volume specifico</b>; mentre la densità può essere pensata come la massa contenuta nell'ìunità di volume, il volume specifico raprpesenta il volume occupato dall'unità di massa. <br> Nella prima parte della tabella 7.1 sono riportati i valori della densità di alcune sostanze solide. Nella seconda parte diamo la densità media della terra, del sole, dell'ipotetico sole ridotta a buco nero che sarà citato nel paragrafo 11.5 e, per confronto, quella del nucleo del ferro. </p>
+
+<section>
+
+<table>
+<caption>Densità di alcune sostanze</caption>
+<tr><td>Be</td> <td>1.85 ⋅ 10<sup>3</sup> kg/m<sup>3</sup></td></tr>
+<tr><td>C</td> <td>2.27 g/cm<sup>3</sup></td></tr>
+<tr><td>Al</td> <td>2.70 g/cm<sup>3</sup></td></tr>
+<tr><td>Si</td> <td>2.33 g/cm<sup>3</sup></td></tr>
+<tr><td>Fe</td> <td>7.87 g/cm<sup>3</sup></td></tr>
+<tr><td>Cu</td> <td>8.96 g/cm<sup>3</sup></td></tr>
+<tr><td>Ag</td> <td>10.5 g/cm<sup>3</sup></td></tr>
+<tr><td>Au</td> <td>19.3 g/cm<sup>3</sup></td></tr>
+<tr><td>W</td> <td>19.35 g/cm<sup>3</sup></td></tr>
+<tr><td>Pt</td> <td>21.45 g/cm<sup>3</sup></td></tr>
+<tr><td>Pb</td> <td>11.35 g/cm<sup>3</sup></td></tr>
+<tr><td>Ioduro di sodio</td> <td>3.67 ⋅ 10<sup>3</sup> kg/m<sup>3</sup></td></tr>
+<tr><td>Vetro comune</td> <td>2.4-2.8 ⋅g/cm<sup>3</sup></td></tr>
+<tr><td>Vetro Pyrex</td> <td>2.23 ⋅g/cm<sup>3</sup></td></tr>
+<tr><td>Quarzo</td> <td>2.64 g/cm<sup>3</sup></td></tr>
+<tr><td>Plexigas</td> <td>1.18 g/cm<sup>3</sup></td></tr>
+<tr><td>ghiaccio</td> <td>0.92 g/cm<sup>3</sup></td></tr>
+<tr><td>legno (quercia)</td> <td>0.6 - 0.9 g/cm<sup>3</sup></td></tr>
+<tr><td>cemento armato</td> <td>0.6 - 0.9 g/cm<sup>3</sup></td></tr>
+<tr><td>Hg</td> <td>13.59 g/cm<sup>3</sup></td></tr>
+<tr><td>Acqua a 4°C</td> <td>1 g/cm<sup>3</sup></td></tr>
+</talbe>
+
+
+<table>
+<tr><th></th> <th>Raggio (m)</th> <th>V(m<sup>3</sup>)</th> <th>m (kg)</th> <th>&rho; (kg/m<sup>3</sup></th></tr>
+<tr><td>Terra</td> <td>6.37 ⋅ 10<sup>6</sup></td> <td>1.08 ⋅10<sup>21</sup></td> <td>5.98 ⋅10<sup>24</sup></td> <td>5.54 ⋅ 10<sup>3</sup></td></tr>
+<tr><td>Sole</td> <td>6.96 ⋅ 10<sup>8</sup></td>  <td>1.41⋅10<sup>27</sup></td> <td>1.98 ⋅10<sup>30</sup></ts> <td>1.40 ⋅ 10<sup>3</sup></td></tr>
+<tr><td>Sole collassato 880</td> <td>6.96 ⋅ 10<sup>8</sup></td> <td>2.85 ⋅ 10<sup>9</sup></tyd> <td>1.98 ⋅10<sup>30</sup></td> <td>6.95 ⋅ 10<sup>20</sup></td></tr>
+<tr><td>nucleo del ferro</td> <td>5.60 ⋅ 10<sup>−15</sup></td> <td>7.36 ⋅ 10<sup>−43</sup></td> <td>9.27 ⋅10e</td> <td>1.26 ⋅ 10<sup>17</sup></td></tr>
+</table>
+
+</section>
+
+<h2>Calcolo della posizione del centro di massa</h2>
+
+<p>La posizione di ciasun punto di un corpo rigido, di massa d<i>m</i> = &rgho; d<i>V</i>, è individuadta dal raggio vettore <b><i>r</i></b>; in accordo con la definizione (6.3) la posizione del centro di massa è data dalla somma degli infiniti vettori <b>r</b>d<i>m</i> divisa per la massa totale, ovvero da integrali estesi al volume del corpo in considerazione:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="bold">r</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>C</mi>
+      <mi>M</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo data-mjx-texclass="OP">&#x222B;</mo>
+      <mi mathvariant="bold">r</mi>
+      <mtext>d</mtext>
+      <mi>m</mi>
+    </mrow>
+    <mrow>
+      <mo data-mjx-texclass="OP">&#x222B;</mo>
+      <mtext>d</mtext>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mi>V</mi>
+      </msub>
+      <mi mathvariant="bold">r</mi>
+      <mi>&#x3C1;</mi>
+      <mtext>d</mtext>
+      <mi>V</mi>
+    </mrow>
+    <mrow>
+      <msub>
+        <mo data-mjx-texclass="OP">&#x222B;</mo>
+        <mi>V</mi>
+      </msub>
+      <mi>&#x3C1;</mi>
+      <mtext>d</mtext>
+      <mi>V</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>m</mi>
+  </mfrac>
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>V</mi>
+  </msub>
+  <mi mathvariant="bold">r</mi>
+  <mi>&#x3C1;</mi>
+  <mtext>d</mtext>
+  <mi>V</mi>
+</math>
+
+<!-- $$\mathbf{r}_{CM} = \frac{\int \mathbf{r}\text{d}m} {\int \text{d}m} = \frac{\int_V \mathbf{r} \rho \text{d}V} {\int_V \rho\text{d}V} = \frac{1}{m} \int_V \mathbf{r}\rho \text{d}V $$ -->
+
+<p>Se il corpo è omogeneo (&rho; = costante),</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="bold">r</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>C</mi>
+      <mi>M</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mi>&#x3C1;</mi>
+    <mi>m</mi>
+  </mfrac>
+  <mo data-mjx-texclass="OP">&#x222B;</mo>
+  <mi mathvariant="bold">r</mi>
+  <mtext>d</mtext>
+  <mi>V</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>V</mi>
+  </mfrac>
+  <mo data-mjx-texclass="OP">&#x222B;</mo>
+  <mi mathvariant="bold">r</mi>
+  <mtext>d</mtext>
+  <mi>V</mi>
+<mtext>(&emsp;7.6)</mtext>
+</math>
+
+<!-- $$\mathbf{r}_{CM} = \frac{\rho}{m} \int \mathbf{r}\text{d}V = \frac{1}{V} \int \mathbf{r}\text{d}V $$ -->
+
+<p>Nel risolvere gli integrali si osservi che <i><b>r</b></i> e <i>&rho;</i> sono funzioni delle coordinate e che anche d<i>V</i> è esprimibile in termini di coordinate: per es., in coordinate cartesiane, d<i>V</i> = d<i>x</i>d<i>y</i>d<i>z</i>. L'integrale è un integrale triplo. <br> Dalla (7.6) è evidente che in un corpo omogeneo la posizioen del centro di massa, data dal raggio vettore <i><b>r</b></i><sub>CM</sub> che è la media della funzioen vettoriale <b>r</b>(<i>x,y,z</i>) nel volume <i>V</i>, non dipende dal valore della massa del corpo, ma solo dalla forma: ad es. il centro di massa di un'asta omogenea è sempre nel centro qualunque sia il materiale di cui essa è costituita. Anche se meno evidente, ciò continua as essere vero per un corpo non omogeneo se la distribuzione di massa, cioè la funzione &rho;(x,y,z) è la stessa indipendentemente dal materiale costituente. <br> Se un corpo omogeneo è simmetrico rispetto ad un putno, un asse o un piano, il centro di massa rispettivamente coincide col centro di simmetria o è un punto dell'asse o del piano di simmetria. Se eistono pià assi o piani di simmetria, il centro di massa sta sulla loro intersezione. Ad es., in un triangolo piano qualsiasi ci sono tre assi di simmetria che sono le tre mediante; il centro di massa sta nel loro punto di intersezione.</p>
+
+<h2>Centro di massa e forza peso</h2>
+
+<p>Consideriamo un corpo continuo sottoposto alla forza peso; su ciascun elemento agisce la forza <i><b>g</b></i>d<i>m</i> e la risultante di tutte queste forze parallele è</p>
+
+<div class="eq">
+<p>&int;<i><b>g</b></i>d<i>m</i> = <i><b>g</b></i> &int; d<i>m</i> = <i>m<b>g</b></i></p>
+</div>
+
+<p>applicata nel cen tro di massa. Rispetto ad un polo fisso, che potrebbe essere l'origine delle coordinate, il momento risultante è</p>
+
+<div class="eq">
+<p><b>M</b> = &int;<i><b>r</b></i> x <i><b>g</b></i>d<i>m</i> = (&int;<i><b>r</b></i> d<i>m</i>) x <b>g</b></i> = <i>m<b>r</b></i><sub>CM</sub> x <i><b>g</b></i> = <i><b>r</b></i><sub>CM</sub> x <i>m<b>g</b></i></p>
+</div>
+
+<p>eguale al momento della risultante, cioè alla forza peso rispetto allo stesso polo. Questi risultati sono l'estensione ad un sistema continuo di punti di quanto visto nel paragrafo 6.10 per i sistemi di forze parallele. <br> Anche l'enegia potenziale si calcola integrando:</p>
+
+<div class="eq">
+<p><i>E<sub>p</sub></i> = &int; <i>gz</i> d<i>m</i> = <i>g</i> &int; <i>z</i> d<i>m</i> = <i>mg z</i><sub>CM</sub></p>
+</div>
+
+<p>secondo (7.5) proiettata sull'asse <i>z</i> verticale; la formula è indentica a (6.22), ricavata per un sistema discreto. <br> Se il corpo è libero e agisce solo la forza peso, la traiettoria del CM è vertivale rettilinea opure parabolica a seconda delle condizioni iniziali.</p>
+
+<section aria-label="End">
+<a href="corpo rigido.html">«Corpo rigido</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Moto di un corpo rigido»</a>
+</section>
+
+</article>
+
+</body>
+</html>

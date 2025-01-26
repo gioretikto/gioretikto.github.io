@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daemon Processes"/>
+    <title>Daemon Processes</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Daemon Processes</h1>
+
+<p>On Linux, there are many hidden processes that work quietly in the background to perform a variety of tasks as though by magic. These
+are the so-called <i>daemon</i> processes, and they run concurrently with other active user processes.</p>
+
+<blockquote>When a Linux service program runs continually as background process, it's called a <i>daemon</i>.</blockquote>
+
+<pre>
+$ ps ax | grep mysql
+5793 ?       Sl    0:00 /usr/sbin/mysqld --daemonize --pid
+file=/run/mysqld/mysql.pid
+ 5900 pts/0  S+    0:00 grep --color=auto mysql
+</pre>
+
+<p>The <i>mysqld</i> daemon program listen for network connections from clients. When the daemon receives a request from a client, it processes the request and returns data to the client via the same network channel.</p> 
+
+<p>Linux daemon programs often end with the letter <i>d</i> to indicate they're daemon processes. For example,</p>
+
+<ul>
+	<li><p>The <b>cron</b> daemon (usually /usr/sbin/crond) executes commands at specified dates and times scheduled through the crontab command (Section ).</p></li>
+
+	<li><p>The <b>httpd</b> Web server (usually /usr/sbin/httpd) is a daemon that handles HTTP requests.</p></li>
+* Several daemons, including rpe.nfsd, rpc.lockd, rpc.statd, and rpc.mountd provide the Network Filesystem (NFS) service (Section
+).</p></li>
+	<li><p>The <b>named</b> (usually /usr/sbin/named) is the Internet DNS server (Section ).</p></li>
+	<li><p>The <b>sendmail</b> daemon (usually /usr/sbin/sendmail -bd) is the Internet email server.</p></li>
+	<li><p>The <b>sshd</b> daemon (usually /usr/sbin/sshd) is the secure Shell login server.</p></li>
+	<li><p>The <i>System Control</i> daemon systemd performs system booting and, after that, manages system processes. The systemct] command is supported by systemd.</p></li>
+
+<p>Many other network servers not listed here run as daemons, but there are also servers, such as the X Window server, that are not
+considered daemons. Newer workstations have multiple hardware processors to execute several processes in parallel, resulting in greatly
+increased system speed.</p>
+
+<h2>Programming a Daemon</h2>
+
+<p>Daemon programs such as sshd, httpd, and sendmail -bd have these four important characteristics:</p>
+
+<ol>
+	<li><p>A daemon never exits.</p></li>
+	<li><p>A daemon has no control terminal window.</p></li>
+	<li><p>A daemon does not use standard I/O.</p></li>
+	<li><p>A system daemon is normally started at boot time, is controlled by the init process (process 1), and can be restarted if it dies for some reason.</p></li>
+</ol>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

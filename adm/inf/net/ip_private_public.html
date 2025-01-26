@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Scoprire IP pubblico e privato"/>
+    <title>Scoprire IP pubblico e privato</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Scoprire IP pubblico e privato</h1>
+
+<h2>IP privato</h2>
+
+<p>You can determine the IP address or addresses of your Linux system by using the <code>hostname</code>, or <code>ip</code> commands. To display the IP addresses using the hostname command, use the -I option. In this example the IP address is 192.168.122.236.</p>
+
+<pre>
+$ hostname -I
+192.168.122.236 
+</pre>
+
+<p>Let’s do the same thing with the ip command. To view ip addresses, use ip addr show. Like ifconfig, you can specify an interface.</p>
+
+<pre>$ ip addr show</pre>
+
+<h2>IP pubblico</h2>
+
+<p>With <code>wget</code> by enabling quiet mode with -q and sending the output to standard output (STDOUT) with -O-.</p>
+
+<pre>
+$ wget -qO- ifconfig.me
+216.239.32.10
+</pre>
+
+<section>
+<a href="comparative_sup.html">&#171; The comparative of superiority</a></p>
+<a href="index.html">Index</a>
+<a href="peculiaritiescomp.html">Peculiarities of comparatives and superlatives &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

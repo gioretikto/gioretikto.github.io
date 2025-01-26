@@ -1,0 +1,128 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="The expr command"/>
+
+    <title>The expr command</title>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li> <a class="navbar" href="../../index.php">Home</a></li>
+        <li> <a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>The expr command</h1>
+
+<p>Originally, the Bourne shell provided a special command that was used for processing mathematical equations. The <b>expr</b> command allowed the processing of equations from the command line, but it is extremely clunky:</p>
+
+<pre>
+$ expr 8 + 3
+11
+</pre>
+
+<p>Although the standard operators work fi ne in the expr command, the problem occurs when using them from a script or the command line. Many of the expr command operators have other meanings in the shell (such as the asterisk). Using them in the expr command produces odd results:</p>
+
+<pre>$ expr 5 * 2
+expr: syntax error
+$
+</pre>
+
+<p>To solve this problem, you need to use the shell escape character (the backslash) to identify any characters that may be misinterpreted by the shell before being passed to the expr command:</p>
+
+<pre>
+$ expr 5 \* 2
+10
+$
+</pre>
+
+<p>Now that’s really starting to get ugly! Using the expr command in a shell script is equally cumbersome:</p>
+
+<pre>$ cat test6
+#!/bin/bash
+# An example of using the expr command
+var1=10
+var2=20
+var3=$(expr $var2 / $var1)
+echo The result is $var3
+</pre>
+
+<p>The expr command recognizes a few different mathematical and string operators, shown in
+the following Table:</p>
+
+<table>
+
+<th>Operator</th> <th>Description</th>
+
+<tr><td>ARG1 | ARG2</td> <td>Returns ARG1 if neither argument is null or zero; otherwise, returns
+ARG2</td></tr>
+
+<tr><td>ARG1 &amp; ARG2</td> <td>Returns ARG1 if neither argument is null or zero; otherwise, returns
+0</td></tr>
+
+<tr><td>ARG1 &lt; ARG2</td> <td>Returns 1 if ARG1 is less than ARG2; otherwise, returns 0</td></tr>
+
+
+<tr><td>ARG1 &lt;= ARG2</td> <td>Returns 1 if ARG1 is less than or equal to ARG2; otherwise, returns 0</td></tr>
+
+
+<tr><td>ARG1 = ARG2</td> <td>Returns 1 if ARG1 is equal to ARG2; otherwise, returns 0</td></tr>
+
+
+<tr><td>ARG1 != ARG2</td> <td>Returns 1 if ARG1 is not equal to ARG2; otherwise, returns 0</td></tr>
+
+ 
+<tr><td>ARG1 &gt;= ARG2</td> <td>Returns 1 if ARG1 is greater than or equal to ARG2; otherwise,
+returns 0</td></tr>
+
+<tr><td>ARG1 &gt; ARG2</td> <td>Returns 1 if ARG1 is greater than ARG2; otherwise, returns 0</td></tr>
+
+
+<tr><td>ARG1 + ARG2</td> <td>Returns the arithmetic sum of ARG1 and ARG2</td></tr>
+
+<tr><td>ARG1 - ARG2</td> <td>Returns the arithmetic difference of ARG1 and ARG2</td></tr>
+
+<tr><td>ARG1 * ARG2</td> <td>Returns the arithmetic product of ARG1 and ARG2</td></tr>
+
+<tr><td>ARG1 / ARG2</td> <td>Returns the arithmetic quotient of ARG1 divided by ARG2</td></tr>
+
+<tr><td>ARG1 % ARG2</td> <td>Returns the arithmetic remainder of ARG1 divided by ARG2</td></tr>
+
+<tr><td>STRING : REGEXP</td> <td>Returns the pattern match if REGEXP matches a pattern in STRING</td></tr>
+
+<tr><td>match STRING REGEXP</td> <td>Returns the pattern match if REGEXP matches a pattern in STRING</td></tr>
+
+<tr><td>substr STRING POS LENGTH</td> <td>Returns the substring LENGTH characters in length, starting at position POS (starting at 1)</td></tr>
+
+<tr><td>index STRING CHARS</td> <td>Returns position in STRING where CHARS is found; otherwise,
+returns 0</td></tr>
+
+<tr><td>length STRING</td> <td>Returns the numeric length of the string STRING</td></tr>
+
+<tr><td>+ TOKEN</td> <td>Interprets TOKEN as a string, even if it’s a keyword</td></tr>
+
+<tr><td>(EXPRESSION)</td>  <td>Returns the value of EXPRESSION</td></tr>
+
+</table>
+
+
+
+<div class="parent">
+<div class="child"><a href="sistemi.html">&#171;Sistemi di equazioni lineari</a></p></div>
+<div class="child"><a href="index.html">Index</a></div>
+<div class="child"><a href="grupposimm.html">Gruppo Simmetrico»</a></p></div>
+</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Tensors"/>
+	<title>Tensors</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Tensors</h1>
+
+<p>The more formal definition of tensor is that of collection of vector and covectors combined together using the tensor product.</p>
+
+<p>The basic idea is that a tensor is a scalar-valued multilinear forms with variables in both <i>V</i> and <i>V</i>*, that is multilinear forms acting on Cartesian products of a vector space and its dual. A (<i>m n</i>) tensors is a function, linear in each argument, which takes <i>p</i> one-forms and <i>q</i> vectors as arguments and maps them to a scalar.</p>
+
+<p><b>Definition 8.2.1</b>. A function</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>T</mi>
+  <mo>:</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <msup>
+            <mi>V</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x2217;</mo>
+            </mrow>
+          </msup>
+          <mo>&#xD7;</mo>
+          <mo>&#x22EF;</mo>
+          <mo>&#xD7;</mo>
+          <msup>
+            <mi>V</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x2217;</mo>
+            </mrow>
+          </msup>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mtext>&#xA0;copies</mtext>
+      </mrow>
+    </mrow>
+  </munder>
+  <mo>&#xD7;</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <mi>V</mi>
+          <mo>&#xD7;</mo>
+          <mo>&#x22EF;</mo>
+          <mo>&#xD7;</mo>
+          <mi>V</mi>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>q</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mtext>&#xA0;copies</mtext>
+      </mrow>
+    </mrow>
+  </munder>
+  <mo stretchy="false">&#x2192;</mo>
+  <mi mathvariant="double-struck">F</mi>
+</math>
+
+<!-- $$ T:\underbrace {V^{*}\times \dots \times V^{*}} _{p{\text{ copies}}}\times \underbrace {V\times \dots \times V} _{q{\text{ copies}}}\rightarrow \mathbb {F}$$ -->
+
+<p>is said a tensor <i>T</i> of type (or rank) (<i>p, q</i>). The space of all tensors of a fixed type (<i>p, q</i>) forms a vector space; they can be added together and multiplied by real numbers. </p>
+
+<p>For example we can write the (2 1) tensor <i>T</i> as</p>
+
+<div class="eq">
+<p>T( ⋅̃, ⋅̃, ⋅̅)</p>
+</div>
+
+<p>Recalling that the elements of <i>V</i>* are maps <i>V</i> ⟶ 𝔽, hence a dual vector is a tensor of type (0,1). <br> A vector is an element of <i>V</i>, hence (up to a canonical isomorphism) an element of <i>V</i>**, hence an element of <i>V</i>* ⟶ 𝔽, hence a tensor of type (1,0). A scalar is a type (0, 0) tensor.</p>
+
+<p>Similarly <i>n</i> x <i>x</i> matrices <i>A</i>, are examples of (1 1) tensors, if you left-multiply a matrix by a row vector, and right-multiply it by a column vector, then you end up with a scalar:</p>
+
+<div class="eq">
+<p>w<sup>T</sup> <i>A</i> <i>v</i></p>
+</div>
+
+<p>this means that the <i>n</i>-component <i>row</i> vectors are the one-forms in the vector space dual to the column vectors. For example, we can think of <i>A</i> as a map, A(<i>w</i>, <i>v</i>) = A<sub>i</sub><sup>j</sup> w<sub>i</sub> v<sup>j</sup>, assigning a number to a pair comprising a dual vector and vector. In index-free notation, this reads as <i>w<sup>T</sup>Av</i>, where <i>w</i> is a row vector with covariant components w<sub>i</sub>.</p>
+
+<h2>Tensor Product</h2>
+
+<p>The tensor product is a way to make a new vector space out of two given ones. This operation can be thought of as a
+generalization of the <a href="Kronecker_product.html">Kronecker product</a> that not only lets us multiply together vectors (from 𝔽<sup><i>n</i></sup>) and matrices of different sizes, but also allows us to multiply together vectors from any vector spaces.</p>
+
+<p>Tthe tensor product <i>V</i> ⊗ <i>W</i> of two vector spaces <i>V</i> and <i>W</i> (over the same field) is a vector space to which is associated a bilinear map <i>V</i> × <i>W</i> → <i>V</i> ⊗ <i>W</i> that maps a pair (<i><b>v, w</b></i>), <b>v</b> ∈ <i>V</i>, <b>w</b> ∈ <i>W</i> to an element of <i>V</i> ⊗ <i>W</i> denoted <b>v</b> ⊗ <b>w</b>, so that the following properties hold for all <i><b>v,x</i></b> &in; <i>V</i>, <i><b>w,y</i></b> &in; <i>W</i>, and <i>c</i> &in; 𝔽</p>
+
+<ul>
+	<li><p><b>v</b> ⊗ (<b>w</b> + <b>y</b>) = (<b>v</b> ⊗ <b>w</b>) + (<b>v</b> ⊗ <b>y</b>)</p></li>
+	<li><p>(<b>v</b> + <b>x</b>) ⊗ <b>w</b> = (<b>v</b> ⊗ <b>w</b>) + (<b>x</b> ⊗ <b>w</b>)</p></li>
+	<li><p>(c<b>v</b>) ⊗ <b>w</b> = <b>v</b> ⊗ (<i>c<b>w</b></i>) = <i>c</i>(<b>v</b> ⊗ <b>w</b>).</p></li>
+</ul>
+
+<p>In other words, we would like the tensor product to be bilinear.</p>
+
+<p>For each <b>v</b> = ∑<sub>i</sub> c<sub>i</sub> <b>e</b><sub>i</sub> ∈ <i>V</i> and <b>w</b> = ∑<sub>j</sub> d<sub>j</sub> f<sub>j</sub> ∈ <i>W</i> (where c<sub>i</sub>, d<sub>j</sub> ∈ 𝔽, <b>e</b><sub>i</sub> ∈ <i>B</i>, and <b>f</b><sub>j</sub> ∈ <i>B'</i> for all <i>i</i> and <i>j</i>) we then similarly define</p>
+
+<div class="eq">
+<p><b>v</b> ⊗ <b>w</b> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub> ∑<sup><i>m</i></sup><sub><sub><i>j</i>=1</sub> (<b>e</b><sub>i</sub> ⊗ <b>f</b><sub>j</sub>)</p>
+</div>
+
+<p>ℝ<sup>2</sup> is spanned by <b>e</b><sub>1</sub>, <b>e</b><sub>2</sub> and ℝ<sup>2</sup> ⊗ ℝ<sup>2</sup> is spanned by</p>
+
+<div class="eq">
+<p><b>e</b><sub>1</sub> ⊗ <b>e</b><sub>1</sub>, <b>e</b><sub>1</sub> ⊗ <b>e</b><sub>2</sub>, <b>e</b><sub>2</sub> ⊗ <b>e</b><sub>2</sub>, <b>e</b><sub>2</sub> ⊗ <b>e</b><sub>2</sub></p>
+</div>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

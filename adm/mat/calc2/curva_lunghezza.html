@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Lenght of an arc">
+	<title>Lenght of an arc</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Lenght of an arc</h1>
+
+<p>Consider a regular plane curve <i><b>r</b></i>: [<i>a,b</i>] ⟶ ℝ<sup>2</sup>. We subdivide the interval [<i>a,b</i>] in <i>n</i> identical intervals, with extreme points <i>t</i><sub>0</sub> = <I>a</i>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t<sub>n</sub></i> = <i>b</i> and consider the corresponding points on the curve</p>
+
+<div class="eq">
+<p>(<i>x</i>(<i>t<sub>i</sub></i>), <i>y</i>(<i>t<sub>i</sub></i>)), <i>i</i> = 0,1,2,..,<i>n</i></p>
+</div>
+
+<p>The length of the segment joining these points is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <mi>x</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <mi>y</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <mi>y</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ \sum_{i=1}^n \sqrt{(x(t_i) - x(t_{i-1}))^2  + (y(t_i) - y(t_{i-1)})^2} $$ -->
+
+<p>By applying the Lagrange theorem to the function <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>) on each intevals [<i>t</i><sub><i>i</i> − 1</sub>, <i>t<sub>i</sub></i>], we find that there exist the points <i>&xi;<sub>i</sub>, &eta;<sub>i</sub></i> &in; [<i>t</i><sub><i>i</i> − 1</sub>, <i>t<sub>i</sub></i>] such that the expression above is equal to</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msqrt>
+    <mo stretchy="false">[</mo>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3BE;</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">]</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">[</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3B7;</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">]</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>t</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3BE;</mi>
+      <mi>i</mi>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3B7;</mi>
+      <mi>i</mi>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ \sum_{i=1}^n \sqrt{[x'(\xi_i)(t_i - t_{i-1})]^2  + [y'(\eta_i)(t_i - t_{i-1})]^2}  = \sum_{i=1}^n (t_i - t_{i-1}) \sqrt{x'(\xi_i)^2 + y'(\eta_i)^2} $$ -->
+
+<p>For <i>n</i> ⟶ &infin; the amplitude of each interval tends to zero, hence <i>&xi;<sub>i</sub></i> ≃ <i>&eta;<sub>i</sub></i> and the limit of the expression above is identical to the limit of Cauchy sums of the fujnction<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">  <msqrt>    <msup>      <mi>x</mi>      <mo data-mjx-alternate="1">&#x2032;</mo>    </msup>    <mo stretchy="false">(</mo>
+    <mi>t</mi>     <msup>      <mo stretchy="false">)</mo>      <mn>2</mn>    </msup>    <mo>+</mo>    <msup>      <mi>y</mi>      <mo data-mjx-alternate="1">&#x2032;</mo>    </msup>    <mo stretchy="false">(</mo>    <mi>t</mi>    <msup>      <mo stretchy="false">)</mo>      <mn>2</mn>    </msup>  </msqrt></math>. The length of the curve is hence equal to the integral</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>L</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ L = \int_a^b \sqrt{x'(t)^2 + y'(t)^2} \, \text{d}t$$ -->
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

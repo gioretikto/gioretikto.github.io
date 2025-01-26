@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Differentiation under the Integral Sign"/>
+	<title>Differentiation under the Integral Sign</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>Differentiation under the Integral Sign</h1>
+
+<p>Suppose <i>f</i>(<i>x,y</i>) is a function of two variables and <i>a,b</i> are constants. We may then define the function of one variable</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>I</mi>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$I(y) = \int_a^b f(x,y)\,\text{d}x $$ -->
+
+<p>If the function <i>f</i> is differentiable, the derivative <i>I'</i>(<i>y</i>) exists and is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>I</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<p>To summarise:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msubsup>
+      <mo data-mjx-texclass="OP">&#x222B;</mo>
+      <mi>a</mi>
+      <mi>b</mi>
+    </msubsup>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo>,</mo>
+    <mi>y</mi>
+    <mo stretchy="false">)</mo>
+    <mstyle scriptlevel="0">
+      <mspace width="0.167em"></mspace>
+    </mstyle>
+    <mtext>d</mtext>
+    <mi>x</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+	<mtext>&emsp;A.2.1</mtext>
+</math>
+
+<!-- $$ \frac{d}{dy} \left( \int_a^b f(x,y) \, \text{d}x \right) = \int_a^b \frac{\partial} {\partial y} f(x,y) \,\text{d}x $$ -->
+
+<p>Without going into a detailed rigorous proof, we can see how it arises as an extension of the fact that the derivative of a sum is the sum of the derivatives. We denote ∂<i>f</i>(<i>x,y</i>)/∂<i>y</i> by <i>f</i><sub>1</sub>(<i>x,y</i>). Let <i>n</i> be a large positive integer. Suppose we split the interval [<i>a,b</i>] into <i>n</i> subintervals of equal lenght, say [<i>x</i><sub>0</sub>,<i>x</i><sub>1</sub>], [<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>], ..., [<i>x</i><sub><i>n</i> − 1</sub>,<i>x<sub>n</sub></i>] where <i>x</i><sub>0</sub> = <i>a</i> and <i>x<sub>n</sub></i> = <i>b</i>. Then <i>I</i>(<i>y</i>) is approximately equal to</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>,</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\frac{b-a}{n} \sum_{i=1}^n f(x_i,y) $$ -->
+
+<p>and the right-hand side of A.2.1 is approximately equal to</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>f</mi>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>,</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\frac{b-a}{n} \sum_{i=1}^n f_1(x_i,y) $$ -->
+
+<p>The last sum is the derivative with respect to <i>y</i> of the previous; the limiting case of this result as <i>n</i> ⟶ &infin; is A.2.1.</p>
+
+<h2>The General Case</h2>
+
+<p>The general case can be formulated for the case in whihcc the limits of intergration depend on <i>x</i>, as follows: let <i>f</i>(<i>x,t</i>), <i>u</i>(<i>x</i>), and <i>v</i>(<i>x</i>), be given functions, and defined the function <i>F</i> by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>F</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>u</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>v</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$F(x) = \int_{u(x)}^{v(x)} f(x,t) \, \text{d}t $$ -->
+
+<p>As <i>x</i> changes, the limits of integrations <i>v</i>(<i>x</i>) and <i>u</i>(<i>x</i>) both change and in additio the integrand f(x,t) changes with <i>t</i>. We want to calculate F'(x).</p>
+
+<p><b>Theorem</b> Given</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>F</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>u</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>v</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ F(x) = \int_{u(x)}^{v(x)} f(x,t) \, \text{d}t $$  -->
+
+<p>Suppose that <i>f</i>(<i>x,t</i>) and <i>f'<sub>x</sub></i>(<i>x,t</i>) are continuous over the rectangle determined by <i>a</i> &le; <i>x</i> &le; <i>b</i>, <i>c</i> &le; <i>t</i> &le; <i>d</i>. Suppose too that <i>u</i>(<i>x</i>) and <i>v</i>(<i>x</i>) are C<sup>1</sup> functions over [<i>a,b</i>], and that the ranges of <i>u</i> and <i>v</i> are contained in [<i>c,d</i>]. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>F</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>v</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mi>v</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>u</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mi>u</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>u</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>v</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+<mtext>&emsp;A.2.2</mtext>
+</math>
+
+<!-- $$ F'(x) = f(x,v(x))v'(x) - f(x,u(x))u'(x) + \int_{u(x)}^{v(x)} \frac{\partial f(x,t)}{\partial x} \, \text{d}t $$  -->
+
+<p><b>Proof</b>. Let <i>H</i> be the following function of three variables:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>H</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>u</mi>
+  <mo>,</mo>
+  <mi>v</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>u</mi>
+    <mi>v</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ H(x,u,v) = \int_u^v f(x,t) \, \text{d}t $$  -->
+
+<p>Then <i>F</i>(<i>x</i>) = <i>H</i>(<i>x</i>, <i>u</i>(<i>x</i>), <i>v</i>(<i>x</i>)) and, according to the chain rule,</p>
+
+<div class="eq">
+<p><i>F'</i>(<i>x</i>) = <i>H'<sub>x</sub></i> + <i>H'<sub>u</sub>u'</i>(<i>x</i>) + <i>H'<sub>v</sub>v'</i>(<i>x</i>) &emsp;*</p>
+</div>
+
+<p>where <i>H'<sub>x</sub></i> is the partial derivative of <i>H</i> with respect to <i>x</i> with <i>u</i>th and <i>v</i> as constants. Because of A.2.1 <i>H'<sub>x</sub></i> = ∫<sup><sup><i>v</i></sup></sup><sub><sub><i>u</i></sub></sub> <i>f'</i>(<i>x,t</i>) d<i>t</i>. Moreover, according to <a href="fundamental_calculus.html#733">7.3.3</a>, <i>H'<sub>v</sub></i> = <i>f</i>(<i>x,v</i>) and by the relations <i>H'<sub>u</sub></i> = − <i>f</i>(<i>x,u</i>). Inserting these results into * yields A.2.2. &emsp;□</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

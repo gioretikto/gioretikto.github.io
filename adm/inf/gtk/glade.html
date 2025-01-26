@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Glade"/>
+    <title>Glade</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Glade</h1>
+
+<ol>
+	<li><p>Nella sezione <code>Toplevel</code> selezionare <code>GtkWindow</code>.</p></li>
+	<li><p>Assegnare un ID nel menu General a destra, the suggeste name is <code>window_main</code>.</p></li>
+	<li><p>Connect a Callback Function to the destroy Signal: When the window that is currently being designed in Glade is displayed by the C program, it will emit a destroy signal when the window is closed. A callback function needs to be connected to the destroy signal that will run when the window is closed. To add a callback function, click the <b>Signals</b> tab in the Window Properties pane of Glade. Click the arrow next to <b>GtkWidget</b> to expand the list and then scroll down to <b>destroy</b>. Click the text that says <b>Type here</b> twice under the <b>Handler</b> heading. Text can now be typed into this field. Start by typing on — Glade will now suggest a name for the callback function that can be selected by pressing the keyboard down arrow and then the Enter key twice. The suggested name is <code>on_window_main_destroy</code> as shown in the image below.</p></li>
+	<li><p>Change the Window Title: To change the title that will appear at the top of the window, click the <b>General</b> tab in the <b>Window Properties</b> pane and scroll down to find the box labelled Title under <b>Appearance</b>. The suggeste name is <code>Template Window</code>.</p></li>
+	<li><p>Save the Glade File: After making changes to the Glade file, save it by clicking the Save icon or File and then Save from the top menu. Save the file as window_main.glade which gives the file name the same name as the window ID.</p></li>
+</ol>
+
+<p>A questo punto cliccare Save, questo sarà un file XML. Compliare con</p>
+
+<pre>#include &lt;gtk/gtk.h&gt;
+
+int main(int argc, char *argv[])
+{
+    GtkBuilder *builder; 
+    GtkWidget  *window;
+
+    gtk_init(&argc, &argv);
+
+    builder = gtk_builder_new();
+    gtk_builder_add_from_file (builder, "window_main.glade", NULL);
+
+    window = GTK_WIDGET(gtk_builder_get_object(builder, "window_main"));
+    gtk_builder_connect_signals(builder, NULL);
+
+    g_object_unref(builder);
+
+    gtk_widget_show(window);                
+    gtk_main();
+
+    return 0;
+}
+
+/* called when window is closed */
+void on_window_main_destroy()
+{
+    gtk_main_quit();
+}
+</pre>
+
+<pre>gcc part1.c -o part1 -Wall `pkg-config --libs --cflags gtk+-3.0` -export-dynamic</pre>
+
+<h2>Example 2: window, labels, and button</h2>
+
+<p>All'esempio precedente si aggiunga una griglia. Nella sezione <code>Container</code>, selezionare <code>GtkFixed</code>, in modo tale da poter aggiungere altri oggetti.</p>
+
+<p><b>Place Text Labels</b>: This project uses two text labels — one to display the hello world text and a second label to display the number of times the button is clicked.</p>
+
+<p>Click the <b>Label</b> item in the left pane of Glade under the <b>Control and Display</b> section. Click the main window on the grid to place the label. Use the drag / resize tool to move the label to the desired position.</p>
+
+<p>In the right pane, with the label selected, click the General tab. Change the ID of the label to <code>lbl_hello</code> in the ID box and the text of the label to … in the Label box.</p>
+
+<p><b>Add a Second Label</b>: Create a second label with the same height and text as the first label, but give it an ID of <code>lbl_count</code> and place it under the first label.</p>
+
+<p><b>Placing and Editing a Button</b>: In the left pane of Glade, click the Button icon under the <b>Control and Display section</b>. Click on the main window grid to place the button. Change the height of the button to 30 in the same place that the height of the text was changed (right pane, Common tab, Height request field). In the right pane under the General tab, change the button ID to <code>btn_hello</code> and the text of the button to Hello under the Button Content section near the bottom of the right pane. Place the button under the second label. Placing a Glade Button</p>
+
+<p><b>Button Callback Function Signal</b>: When the button is clicked, it will emit a signal. We need to attach a function to the signal so that the function will be called when the button is clicked. Click the button in Glade to select it and then click the Signals tab in the right pane of the Glade editor. Click the text under the Handler heading next to clicked to select it and then a second time to start editing it. Type on and then a name suggested by Glade will pop up (on_btn_hello_clicked). Press the down arrow key to select it and then press the Enter key twice to make the change.</p>
+
+<p>Save the Glade file, we will now edit the C source code.</p>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+GtkWidget *g_lbl_hello;
+GtkWidget *g_lbl_count;
+
+int main(int argc, char *argv[])
+{
+    GtkBuilder *builder; 
+    GtkWidget  *window;
+
+    gtk_init(&argc, &argv);
+
+    builder = gtk_builder_new();
+    gtk_builder_add_from_file (builder, "window_main.glade", NULL);
+
+    window = GTK_WIDGET(gtk_builder_get_object(builder, "window_main"));
+    gtk_builder_connect_signals(builder, NULL);
+    
+    /* get pointers to the two labels */
+    g_lbl_hello = GTK_WIDGET(gtk_builder_get_object(builder, "lbl_hello"));
+    g_lbl_count = GTK_WIDGET(gtk_builder_get_object(builder, "lbl_count"));
+
+    gtk_widget_show(window);
+    g_object_unref(builder);
+   
+    gtk_main();
+
+    return 0;
+}
+
+/* called when button is clicked */
+void on_btn_hello_clicked()
+{
+    static unsigned int count = 0;
+    char str_count[30] = {0};
+    
+    gtk_label_set_text(GTK_LABEL(g_lbl_hello), "Hello, world!");
+    count++;
+    sprintf(str_count, "%d", count);
+    gtk_label_set_text(GTK_LABEL(g_lbl_count), str_count);
+}
+
+/* called when window is closed */
+void on_window_main_destroy()
+{
+    gtk_main_quit();
+}
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

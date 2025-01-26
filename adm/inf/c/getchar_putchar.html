@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="getchar() e putchar()"/>
+    <title>getchar() e putchar()</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>getchar() e putchar()</h1>
+
+<p>The <code>getchar()</code> function is another part of the old C library. The <code>getchar()</code> function takes no arguments, and it returns the next character from input as <code>int</code>. To use <code>getchar()</code>, your program must <code>#include &lt;stdio.h&gt;</code>.</p>
+
+<pre>int getchar(void)</pre>
+
+<p>The function returns an int, being the ASCII code of the relevant character, but you can assign the result to a <code>char</code> variable if you want. </p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main(void) {
+
+	int c;
+	
+	while( (c = getchar()) != EOF) {
+		putchar(c);		
+	}
+	
+	printf("Good Bye\n");
+	
+	return 0;
+}
+</pre>
+
+<p>When there is no more input, the user might type <code>control-D</code> (or on windows control-Z) to signify End Of File EOF, or the user might have redirected the program's input channel so that it is receiving from a file, and that file could just end.</p>
+
+<p>Here's a simple example: The "press ENTER to continue" operation that is used when a program produces a lot of output, and the reader needs to be given a chance to read it. The function should print "press ENTER to continue", then wait until ENTER actually is pressed, ignoring all other keypresses. Very simple.</p>
+
+<pre>
+void PressEnterToContinue(void) {
+	printf("Press ENTER to continue: ");
+    char c = getchar();
+    while (c != '\n')
+	    c = getchar();
+}
+</pre>
+
+<h2>putchar()</h2>
+
+<p>The <code>putchar()</code> function prints its argument. For example, the next statement prints as a character the value previously assigned to <code>ch</code>: putchar(ch); This statement has the same effect as the following: <code>printf("%c", ch);</code> Because these functions deal only with characters, they are faster and more compact than the more general scanf() and printf() functions. Also, note that they don’t need format specifiers; that’s because they work with characters only. Both functions are typically defined in the stdio.h file. (Also, typically, they are preprocessor macros rather than true functions; we’ll talk about function-like macros in Chapter 16 , “The C Preprocessor and the C Library.”) Let’s see how these functions work by writing a program that repeats an input line but replaces each non-space character with the character that follows it in the ASCII code sequence. Spaces will be reproduced as spaces. You can state the desired response as, “If the character is a space, print it; otherwise, print the next character in the ASCII sequence.”</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#define SPACE ' '
+// that's quote-space-quote
+int main(void)
+{
+	char ch;
+	ch = getchar();
+	while (ch != '\n')
+	{
+		if (ch == SPACE)
+		putchar(ch);
+		else
+		putchar(ch + 1);
+		ch = getchar();
+	}
+	putchar(ch);
+	// leave the space
+	// character unchanged
+	// change other characters
+	// get next character
+	// print the newline
+	return 0;
+}
+</pre>
+
+<h2>Avoid reading '\n'</h2>
+
+<p>Everytime you input a character and hit ENTER, you input newline character too. Newline is a perfectly normal character as far as <code>getchar()</code> is concerned; indeed, there are no abnormal characters. getchar() can return any 8-bit value that fits in char, Trivially, you can fix it using another <code>getchar()</code> to consume the newline:</p>
+
+<pre>
+c = getchar();
+putchar(c);
+</pre>
+
+<p>The “\n” character goes remains there in buffer and read as next input. You can consume it with another <code>getchar()</code> call:</p>
+
+<pre>
+input1=getchar();
+getchar();
+input2=getchar();
+getchar();
+</pre>
+
+<P>Or you can input two characters at a time.</P>
+
+<h2>A word about EOF</h2>
+
+<p>Il motivo per cui <code>getchar()</code> restituisce il tipo int è che questo è abbastanza grande per contenere il valore EOF.</p>
+
+<p>The value of EOF is always defined to be -1. That works well because all ASCII codes are positive, so it can't possibly clash with any real character's representation. Unfortunately, C and C++ have a very strange feature that can cause trouble. It is not defined what the range of possible values for a char variable must be. On some systems it is -128 to +127, which is fine; but on other systems it is 0 to +255, which is fine for normal ASCII values, but not so hot for EOF's -1. </p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

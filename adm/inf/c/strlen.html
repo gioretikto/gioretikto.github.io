@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="strlen()">
+	<title>strlen()</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<div class="content">
+
+<h1>strlen()</h1>
+
+<p>The <code>strlen()</code> function calculates the length of a given string. The strlen() function takes a string as an argument and returns its length. The returned value is of type size_t (an unsigned integer type).</p>
+
+<p>It is defined in the <code>&lt;string.h&gt;</code> header file.</p>
+
+<h2>Example: C strlen() function</h2>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main()
+{
+    char a[20]="Program";
+    char b[20]={'P','r','o','g','r','a','m','\0'};
+
+    // using the %zu format specifier to print size_t
+    printf("Length of string a = %zu \n",strlen(a));
+    printf("Length of string b = %zu \n",strlen(b));
+
+    return 0;
+}
+</pre>
+
+<h4>Output</h4>
+
+<pre>
+Length of string a = 7
+Length of string b = 7
+</pre>
+
+<p>Note that the <i>strlen()</i> function doesn't count the null character \0 while calculating the length.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

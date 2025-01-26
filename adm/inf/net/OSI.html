@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The OSI and TCP/IP Models"/>
+	<title>The OSI and TCP/IP Models</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The OSI and TCP/IP Models</h1>
+
+<p>To enable data transfer within a network, and especially in heterogeneous systems or networks, standards are of major importance. The OSI model development began in the 1970s by the International Organization for Standardization (ISO), with the goal of providing a standardsbased suite of protocols that would allow communication among all computer systems. Although the U.S. government required the use of OSI products in the 1980s and 1990s, the Defense Advanced Research Projects Agency (DARPA) under the Department of Defense— and with the help of researchers at various universities—had designed the competing TCP/IP model. For various reasons, including the popularity of TCP/IP, by 1983, the ARPANET had chosen TCP/IP as its principal protocol suit. By 1994, all U.S. government agencies were required to switch over from OSI protocols to TCP/IP.</p>
+
+<p>Questo modello comprende 7 strati funzionali, che insieme prendono il nome di <b>stack</b> (pila), ciascuno responsabile di una particolare fase della comunicazione tra computers su una rete.</p>
+
+<p>A livello implementativo lo standard <i>de facto</i> affermatosi per architetture di rete a livelli è il <b>TCP/IP</b> che riprende in parte il modello OSI. The TCP/IP has 5 layers.</p>
+
+<table>
+<tr> <th>Layer</th> <th>OSI model</th> <th>TCP/IP (4 layer model)</th> <th>TCP/IP Protocol Suite</th> </tr>
+<tr> <td>Layer 7</td> <td>Application Layer</td> <td rowspan="3">Application Layer</td> <td  rowspan="3">DNS, SNMP, POP3, IMPA, DHCP, HTTP, TELNET, FTP, SMTP, DNS, SNMP, NTP</td></tr>
+<tr> <td>Layer 6</td> <td>Presentation Layer</td> </tr>
+<tr> <td>Layer 5</td> <td>Session Layer</td> </tr>
+<tr> <td>Layer 4 </td> <td>Transport Layer</td> <td>Transport Layer</td> <td>TCP, UDP</td></tr> 
+<tr> <td>Layer 3</td> <td>Network Layer</td> <td>Internet Layer</td> <td>IP, ARP, IGMP, ICMP</td></tr>
+<tr> <td>Layer 2</td> <td>Data Link Layer</td> <td rowspan="2">Network Access</td> <td rowspan="2">Ethernet, Frame Relay</td> </tr> </tr>
+<tr> <td>Layer 1</td> <td>Physical Layer</td> </tr>
+</table>
+
+<h3>OSI Layers</h3>
+
+<table>
+<caption>OSI Model Layers and Functions.</caption>
+
+<tr><th>Layer</th> <th>Functional Description</th> </tr>
+ 
+<tr><th>Application (7)</th> <td>Refers to interfaces between network and application software. Also includes authentication services.</td></tr>
+
+<tr><th>Presentation (6)</th> <td>Defines the format and organization of data. Includes encryption.</td></tr>
+
+<tr><th>Session (5)</th> <td>Establishes and maintains end-to-end bidirectional flows between endpoints. Includes managing transaction flows.</tr>
+
+<tr><th>Transport (4)</th> <td>Responsible for end-to-end data delivery: Provides a variety of services between two host computers, including connection establishment and termination, flow control, error recovery, and segmentation of large data blocks into smaller parts for transmission.</td></tr>
+
+<tr><th>Network (3)</th> <td>Refers to logical addressing, routing, and path determination.</td></tr>
+
+<tr><th>Data link (2)</th> <td>Formats data into frames appropriate for transmission onto some physical medium. Defines rules for when the medium can be used. Defines means by which to recognize transmission errors.</td></tr>
+
+<tr><th>Physical (1)</th> <td>Defines the electrical, optical, cabling, connectors, and procedural details required for transmitting bits, represented as some form of energy passing over a physical medium.</td></tr>
+
+</table>
+
+<h2>The application layer</h2>
+
+<p>The application layer of the TCP/IP model provides an interface between software, like a web browser, and the network itself. Also includes authentication services. The process of requesting and receiving a web page works like this:</p>
+
+<ol>
+	<li><p>HTTP request sent, including an istructio to "get" a file − which is often a website's home page.</p></li>
+	<li><p>HTTP response sent from the web server with a code in the header − usually either 200 (request succeeded and information is returned in response) or 404 (page not found).</p></li>
+</ol>
+
+<p>Other examples are.</p>
+
+<ul>
+	<li><p><b>NTP</b> (Network Time Protocol) is an application-layer protocol that controls the synchronization of various devices over the internet to within a few milliseconds of Coordinated Universal Time (UTC). </p></li>
+
+	<li><p><b>Internet Relay Chat (IRC)</b> is an application layer protocol that facilitates communication in the form of text. The chat process works on a client/server networking model. IRC clients are computer programs that users can install on their systems.</p></li>
+
+</ul>
+
+<h2>Presentation layer</h2>
+
+<p>Translates data to a standard format; manages encryption and data compression.</p>
+
+<h2>Session layer</h2>
+
+<p>Establishes sessions between communicating applications on the communicating computers.</p>
+
+<h2>Network layer</h2>
+
+<p>Supports logical addressing and <a href="routers.html">routing</a>.</p>
+
+<h2>Data Link layer</h2>
+
+<p>Provides an interface with the network adapter; maintains logical links for the subnet.</p>
+
+<h2>Physical Layer</h2>
+
+<p>Converts the data into the stream of electric or analog pulses that will actually cross the transmission medium and oversees the transmission of the data. Ha a che fare con le procedure meccaniche ed elettroniche necessarie a stabilire, mantenere e disattivare un collegamento fisico. <br> Semplicemente: si occupa di controllare la rete, gli hardware che la compongono e i dispositivi che permettono la connessione.</p>
+
+<p>In questo livello si decidono:</p>
+
+<ul>
+	<li><p>Le tensioni scelte per rappresentare i valori logici dei bit trasmessi;</p></li>
+	<li><p>La durata in microsecondi del segnale che identifica un bit;</p></li>
+	<li><p>La modulazione e la codifica utilizzata;</p></li>
+	<li><p>L'eventuale trasmissione simultanea in due direzioni (Half-Duplex o Full-Duplex)</p>;</li>
+	<li><p>La forma e la meccanica dei connettori usati per collegare l'hardware al mezzo trasmissivo.</p></li>
+</ul>
+
+<h2 id="TCP">The TCP/IP Transport Layer</h2>
+
+<p>Supports communication between diverse devices across diverse networks. There are two trasport layer protocols supported by the TCP/IP protocol suite. <b>Transmission Control Protocol (TCP)</b> and the <b>User Datagram Protocol (UDP)</b>.</p>
+
+<h2>The TCP/IP Internet Layer</h2>
+
+<p>The Internet layer of the TCP/IP model and its Internet Protocol (IP) define addresses so that each host computer can have a different IP address. In addition, the Internet layer defines the process of routing so that routers can determine the best path to send packets to the destination. Continuing with the web page example, IP addresses the data as it passes from the transport layer to the Internet layer; IP encapsulates the transports segment into a packet, adding source and destination IP addresses.</p>
+
+<h2>The TCP/IP Network Access Layer</h2>
+
+<p>Therefore, the network access layer defines the protocols and hardware required to deliver data across some physical network by specifying exactly how to physically connect a networked device to the physical media over which data can be transmitted.</p>
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth </a>
+<a href="index.html">Index of Physics</a>
+<a href="data_packages.html">Data Packages &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GtkSourceStyleSchemeManager"/>
+    <title>GtkSourceStyleSchemeManager</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>GtkSourceStyleSchemeManager</h1>
+
+<p>GtkSourceStyleSchemeManager — Provides access to GtkSourceStyleSchemes.</p>
+
+<h2>Includes</h2>
+
+<pre>#include &lt;gtksourceview/gtksource.h&gt;</pre>
+
+<h2>Functions</h2>
+
+<h2>gtk_source_style_scheme_manager_get_default ()</h2>
+
+<pre>
+GtkSourceStyleSchemeManager *
+gtk_source_style_scheme_manager_get_default
+                               (void);
+</pre>
+
+<p>Returns the default GtkSourceStyleSchemeManager instance. Return value is owned by GtkSourceView library and must not be unref'ed.</p>
+
+<h2>gtk_source_style_scheme_manager_get_scheme_ids ()</h2>
+
+<pre>
+const gchar * const *
+gtk_source_style_scheme_manager_get_scheme_ids
+                               (GtkSourceStyleSchemeManager *manager);
+</pre>
+
+<p>Returns the ids of the available style schemes. Parameters: manager, a GtkSourceStyleSchemeManager. Returns: a NULL-terminated array of strings containing the ids of the available style schemes or NULL if no style scheme is available. The array is sorted alphabetically according to the scheme name. The array is owned by the manager and must not be modified. </p>
+
+<h2>gtk_source_style_scheme_manager_get_scheme ()</h2>
+
+<pre>
+GtkSourceStyleScheme *
+gtk_source_style_scheme_manager_get_scheme
+                               (GtkSourceStyleSchemeManager *manager,
+                                const gchar *scheme_id);
+</pre>
+
+<p>Looks up style scheme by id. Parameters:</p>
+
+<ul>
+	<li><p>manager, a GtkSourceStyleSchemeManager</p></li>
+	<li><p>scheme_id, style scheme id to find.</p></li>
+</ul>
+
+<p>Returns: a GtkSourceStyleScheme object. Returned value is owned by manager and must not be unref'ed. </p>
+
+
+<h2>Examples</h2>
+
+<p>In this example we are going to apply the theme "Solarized Dark".</p>
+
+<pre>
+#include &lt;gtk/gtk.hgt;
+#include &lt;gtksourceview/gtksource.hgt;
+#include &lt;glib.h&gt;
+
+void find (GtkTextView *text_view, const gchar *text, GtkTextIter *iter)
+{
+	GtkTextIter mstart, mend;
+	GtkTextBuffer *buffer;
+	gboolean found;
+
+	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (text_view));
+	found = gtk_text_iter_forward_search (iter, text, 0, &mstart, &mend, NULL);
+
+  if (found)
+ {
+	gtk_text_buffer_select_range (buffer, &mstart, &mend);
+	gtk_text_buffer_create_mark (buffer, "last_pos", &mend, FALSE);
+ }
+}
+
+typedef struct App 
+{
+	GtkWidget *source_view;
+	GtkWidget *search_entry;
+} App;
+
+/* Called when main window is destroyed. */
+void
+win_destroy (void)
+{
+	gtk_main_quit();
+}
+
+void
+next_button_clicked (GtkWidget *next_button, App *app)
+{
+	const gchar *text;
+	GtkTextBuffer *buffer;
+	GtkTextMark *last_pos;
+	GtkTextIter iter;
+
+	text = gtk_entry_get_text (GTK_ENTRY (app->search_entry));
+  
+	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (app->source_view));
+
+	last_pos = gtk_text_buffer_get_mark (buffer, "last_pos");
+	if (last_pos == NULL)
+		return;
+
+	gtk_text_buffer_get_iter_at_mark (buffer, &iter, last_pos);
+	find (GTK_TEXT_VIEW (app->source_view), text, &iter);
+}
+
+/* Called when search button is clicked. */
+void
+search_button_clicked (GtkWidget *search_button, App *app)
+{
+	const gchar *text;
+	GtkTextBuffer *buffer;
+	GtkTextIter iter;
+
+	text = gtk_entry_get_text (GTK_ENTRY (app->search_entry));
+
+	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (app->source_view));
+	gtk_text_buffer_get_start_iter (buffer, &iter);
+  
+	find (GTK_TEXT_VIEW (app->source_view), text, &iter);
+}
+
+
+int 
+main (int argc, char *argv[])
+{
+	GtkWidget *win;
+	GtkWidget *vbox;
+	GtkWidget *hbox;
+	GtkWidget *search_button;
+	GtkWidget *next_button;
+	GtkWidget *swindow;
+  
+	App app;
+
+	gtk_init (&argc, &argv);
+
+	/* Create a window with a search entry, search button and a text
+	area. */
+	win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+	g_signal_connect (G_OBJECT (win), "destroy", win_destroy, NULL);
+
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL,0);
+	gtk_container_add (GTK_CONTAINER (win), vbox);
+
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL,0);
+  
+	gtk_container_add(GTK_CONTAINER (vbox), hbox);
+  
+	app.search_entry = gtk_entry_new ();
+  
+	search_button = gtk_button_new_with_label ("Search");
+	next_button = gtk_button_new_with_label ("Next");
+  
+	gtk_container_add(GTK_CONTAINER (hbox), app.search_entry);
+	gtk_container_add(GTK_CONTAINER (hbox), search_button);
+	gtk_container_add(GTK_CONTAINER (hbox), next_button);
+
+	g_signal_connect (G_OBJECT (search_button), "clicked", 
+	G_CALLBACK (search_button_clicked), &app);
+	g_signal_connect (G_OBJECT (next_button), "clicked",
+	G_CALLBACK (next_button_clicked), &app);
+  
+	/* A scrolled window which automatically displays horizontal and
+  vertical scrollbars when the text exceeds the text view's size. */
+	swindow = gtk_scrolled_window_new (NULL, NULL);
+  
+	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (swindow),
+	GTK_POLICY_AUTOMATIC,
+	GTK_POLICY_AUTOMATIC);
+
+	gtk_widget_set_vexpand (swindow, TRUE);
+  
+	gtk_container_add(GTK_CONTAINER (vbox), swindow);
+
+	GtkSourceStyleSchemeManager *manager;
+	GtkSourceBuffer *buffer;
+	manager = gtk_source_style_scheme_manager_get_default ();
+	
+	gchar* ids = g_strjoinv(",", gtk_source_style_scheme_manager_get_scheme_ids (manager)); /* We retrive the themes available like classic,cobalt,kate,oblivion,solarized-dark,solarized-light,tango */
+	
+	g_print("%s",ids);
+	
+    buffer = gtk_source_buffer_new (NULL);
+	gtk_source_buffer_set_style_scheme (buffer,
+	gtk_source_style_scheme_manager_get_scheme (
+	gtk_source_style_scheme_manager_get_default (), "solarized-dark"));
+	
+	app.source_view = gtk_source_view_new_with_buffer (buffer);
+	
+    gtk_container_add (GTK_CONTAINER (swindow), app.source_view);
+  
+    gtk_source_view_set_show_line_numbers (GTK_SOURCE_VIEW((app.source_view)), TRUE);
+
+    gtk_widget_show_all (win);
+
+    gtk_main();
+}
+</pre>
+
+<p><codw>gtk_source_style_scheme_manager_get_scheme_ids</code> does return a `const gchar * const *`, which is "a NULL-terminated array of strings containing the ids of the available style schemes or NULL if no style scheme is available". We need to use <code>g_strjoinv()</code> to get the string array transformed in a regular string:</p>
+
+<pre>
+#include &lt;glib.h&gt;
+gchar *             g_strjoinv                          (const gchar *separator,
+                                                         gchar **str_array);</pre>
+                                                         
+<p>which <code>g_print</code> knows how to handle. Also, the first argument of <code>g_print()</code> is a format string, where you need to use "%s" here (but really this is in the documentation of the function).</p>
+
+<section aria-label="End">
+<a href="alkynes.html.html">&#171;Alkynes: general properties</a>
+<a href="index.html">Index</a>
+<a href="acidity_amino_acids.html">Acid-Base Properties of Amino Acids&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

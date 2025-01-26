@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Arrays"/>
+    <title>Arrays</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Arrays</h1>
+
+<p>An array is a <i>contiguous</i> group of memory locations that all have the <i>same type</i>. To refer to a particular location or element in the array, we specify the name of the array and the <b>position number</b>.</p>
+
+<h2>Declaring arrays</h2>
+
+<p>Arrays occupy space in memory. To specify the type of the elements and the number of elements required by an array use a declaration of the form:</p>
+
+<pre>
+array&lt; type , arraySize &gt; arrayName;
+</pre>
+
+<p>The notation &lt; type , arraySize &gt; indicates that array is a class template. The compiler reserves the appropriate amount of memory based on the type of the elements and the array-Size. (Recall that a declaration which reserves memory is more properly known as a definition.) The arraySize must be an unsigned integer. To tell the compiler to reserve 12 elements for integer array c, use the declaration</p>
+
+<pre>array &lt int, 12 &gt; c; // c is an array of 12 int values</pre>
+
+<p>arrays can be declared to contain values of most data types.</p>
+
+<p>We can also define a vector of a given size without specifying the element values. In that case, we use the (n) notation where n is the number of elements, and the elements are given a default value according to the element type. For example:</p>
+
+<pre>
+vector &lt;int&gt; vi(6); // vector of 6 ints initialized to 0
+vector &lt;string&gt; vs(4);// vector of 4 strings initialized to “”
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Passing a Structure as an Argument"/>
+    <title>Passing a Structure as an Argument</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Passing a Structure as an Argument</h1>
+
+<p>For compilers that permit passing structures as arguments, the method is the following</p>
+
+<pre>
+/* funds.c -- passing a structure */
+#include &lt;stdio.h&gt;
+#define FUNDLEN <span class="number">50</span>
+
+<span class="keyword">struct</span> funds {
+    char  bank[FUNDLEN];
+    double bankfund;
+    char  save[FUNDLEN];
+    double savefund;
+};
+double <span class="function">sum</span>(struct funds moolah);  /* argument is a structure */
+int main(void)
+{
+    struct funds stan = {
+    <span class="string">"Garlic-Melon Bank"</span>,
+    <span class="number">4032.27</span>,
+    <span class="string">"Lucky's Savings and Loan"</span>,
+    <span class="number">8543.94</span>
+    };
+
+    <span class="function">printf</span>(<span class="string">"Stan has a total of $%.2f.\n"</span>, sum(stan));
+    return 0;
+}
+    
+double <span class="function">sum</span>(struct funds moolah)
+{
+    <span class="keyword">return</span>(moolah.bankfund + moolah.savefund);
+}
+</pre>
+
+<h2>Passing pointers to structure as argument</h2>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+struct student
+{
+	char *name;
+	int age;
+};
+
+/* function prototype*/
+void display(struct student *s);
+
+int main()
+{
+	struct student s1;
+	s1.name = "George";
+	s1.age = 36;
+	display(&s1);   /* passing struct as an argument*/
+
+	return 0;
+}
+
+void display(struct student *s) 
+{
+  printf("Displaying information\n");
+  printf("Name: %s\n", s->name);
+  printf("Age: %d\n", s->age);
+}
+</pre>
+
+<p>Produrrà come output</p>
+
+<pre>
+Displaying information
+Name: George
+Age: 36
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

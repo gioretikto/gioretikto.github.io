@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Dynamic Allocation Functions"/>
+    <title>Dynamic Allocation Functions</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Dynamic Allocation Functions</h1>
+
+<p>The <b>allocation</b> of memory at the <b>run time</b> (i.e. as the program executes) is known as <b>dynamic memory allocation</b>. The allocation of memory at the compile time is called <b>static memory allocation</b>.</p>
+
+<table>
+<thead>
+<th>Static memory allocation</th> <th>Dynamic memory allocation</th>
+</thead>
+
+<thbody>
+<tr><td>Static memory is allocated automatically by the compiler when the definition statements are encountered.</p></td>
+
+<td>Dynamic memory is allocated only when there is an explicit call to malloc, calloc, or realloc functions.</p></td></tr>
+
+<tr><td>To make static memory allocation, the amount of the memory space to be reserved should be known at the compile time.</p></td>
+<td>In dynamic memory allocation, the amount of the memory space to be reserved can be given at the run time.</p></td></tr>
+
+<tr><td><p>Since the amount of memory to be allocated is determined in advance at the compile time, this type of memory sometimes lead to memory wastage especially in the case of arrays.</p></td>
+
+<td><p>Since the amount of memory to be allocated can be given at the run time, the memory is allocated as per the requirements, and memory wastage can be avoided.</p></td></tr>
+
+<tr><td><p>Memory allocated at the compile time has static or autocamic lifetime.</p></td>
+
+<td><p>Memory allocated at the run time has allocated lifetime.</p></td></tr>
+
+<tr><td><p>This allocation is done either from a data segment or a stack.</p></td>
+
+<td><p>This allocation is done from the heap.</p></td></tr>
+
+<tr><td><p>Static memory allocation is faster as compared to dynamic allocation</p></td>
+
+<td>Dyanamic memory allocation is slower as compared to static memory allocation</p></td></tr>
+
+</thbody>
+</table>
+
+<p>C provides two functions defined in &lt;stdlib.h&gt; for dynamic alloctation of memory during runtime of a program. The two functions are:</p>
+
+<ul>
+<li><p><code>malloc()</code>: allocates the specified number of bytes</p></li>
+<li><p><code>calloc()</code>: allocates the specified number of bytes and initializes them to zero</p></li>
+<li><p><code>realloc()</code>: increases or decreases the size of the specified block of memory, moving it if necessary.</p></Li>
+<li><p><code>free()</code>: releases the specified block of memory back to the system</p></li>
+</ul>
+
+<p>The prototype of malloc is as follows</p>
+
+<pre>void * malloc(size_t size)</pre>
+
+<p>The <code>malloc()</code> function reserves a block of memory of the specified number of bytes. And, it returns a pointer of type void which can be casted into pointer of any form. If there is not enough memory to be allocated, then the function returns <i>NULL</i>. If the space is allocated successfully, then a pointer to that raw memory space is returned. <i>malloc</i> returns a void pointer (void *), which indicates that it is a pointer to a region of unknown data type and so it can be converted to the type of data that will be stored in the memory location returned. The memory space that is returned in not initialized.</p>
+
+<h3>Syntax of malloc()</h3>
+
+<pre>
+ptr = (cast-type*) malloc(byte-size)
+</pre>
+
+<h2>Using malloc to Create a One-Dimensional Array</h2>
+
+<p>Let’s apply <code>malloc()</code> to the task of creating an array. You can use malloc() to request a block
+of storage as the program is running. You also need a pointer to keep track of where the block
+is in memory. For example, consider this code:</p>
+
+<pre>
+double * ptd;
+ptd = (double *) malloc(30 * sizeof(double));
+</pre>
+
+<p>This code requests space for 30 type double values and sets ptd to point to the location. Note
+that ptd is declared as a pointer to a single double and not to a block of 30 double values.
+Remember that the name of an array is the address of its first element. Therefore, if you make
+ptd point to the first element of the block, you can use it just like an array name. That is, you
+can use the expression ptd[0] to access the first element of the block, ptd[1] to access the
+second element, and so on. As you’ve learned earlier, you can use pointer notation with array
+names, and you can use array notation with pointers.</p>
+
+<h2>Free</h2>
+
+<p>Memory allocated via <code>malloc</code> is persistent: it will continue to exist, even after the program leaves the scope which called the allocation, until the program terminates or the memory is explicitly deallocated by the programmer. Normally, you should balance each use of malloc() with a use of <code>free()</code>. The free() function takes as its argument an address returned earlier by malloc() and frees up the memory that had been allocated. Thus, the duration of allocated memory is from when malloc() is called to allocate the memory until free() is called to free up the memory so that it can be reused. Think of malloc() and free() as managing a pool of memory. Each call to malloc() allocates memory for program use, and each call to free() restores memory to the pool so it</p>
+
+<pre>
+void free(void *pointer);
+</pre>
+
+<p>which releases the block of memory pointed to by pointer. pointer must have been previously returned by malloc, calloc, or realloc and pointer must not be used after it has been passed to free. In particular memory allocated via new or new[] should not be passed to free, and pointers which did not come from a malloc (e.g. stack variables) or which have already been freed must not be sent to free. It is safe to call free on a NULL pointer, which has no effect.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

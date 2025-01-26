@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="OpenGL">
+	<title>OpenGL</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>OpenGL</h1>
+
+<p>OpenGL is not simply a library; it is a <b>specification</b> for an API to interact with your graphics hardware. The implementation of this specification is shared between your graphics hardware, the drivers for that hardware, and the OpenGL software library you choose to use. </p>
+
+<p>La specifica definisce le funzioni, ma non il loro codice, ossia solo quali parametri deve prendere e quali valori ritornare. Quindi OpenGL non è una libreria, non essendoci nessun codice per OpenGL. Quindi, OpenGL non si scarica da nessuna parte, ma viene implementato direttamente nelle schede grafiche dalle case produttrici di schede grafiche. Le funzioni OpenGL sono quindi implementate nella scheda grafica (GPU driver) e ciascuna casa produttrice avrà la propria implementazione di OpenGL che non è generalmente open source.</p>
+
+<h2>API</h2>
+
+<p>This book is about OpenGL. OpenGL is an interface that your application can use to access and control the graphics subsystem of the device upon which it runs. This could be anything from a high-end graphics workstation to a commodity desktop computer, a video game console, or even a mobile phone. Standardizing the interface to a subsystem increases portability and allows software developers to concentrate on creating quality products, on producing interesting content, and on the overall performance of their applications, rather than worrying about the specifics of the platforms they want them to run on. These standard interfaces are called Application Programming Interfaces (or APIs), of which OpenGL is one. This chapter introduces OpenGL, describes how it relates to the underlying graphics subsystem, and provides some history on the origin and evolution of OpenGL.</p>
+
+<p>The goal of OpenGL is to provide an abstraction layer between your application and the underlying graphics subsystem, which is often a hardware accelerator made up of one or more custom, high performance processors with dedicated memory, display outputs, and so on. This abstraction layer allows your application to not need to know who made the graphics processor (or GPU — graphics processing unit), how it works, or how well it performs. Certainly it is possible to determine this information, but the point is that applications don’t need to.</p>
+
+<p>Hardware vendors, the people who make GPUs, are responsible for writing implementations of the OpenGL rendering system. Their implementations, commonly called "drivers", translate OpenGL API commands into GPU commands.</p>
+
+<p>The key advantage that OpenGL has over other graphics APIs is that it runs on many different platforms. OpenGL can run on Windows, Linux, Mac OSX, and
+portable devices such as the open Pandora project. Its cut down sibling OpenGL ES runs on many portable devices.</p>
+
+<p>OpenGL is used in many kinds of applications, from CAD programs to games such as Doom 3, and from scientific simulations to 3D modeling applications.</p>
+
+<blockquote>OpenGL stands for Open Graphics Library. Open’ is used because OpenGL is an open standard, meaning that many companies are able to contribute to the development. It does not mean that OpenGL is open source.</blockquote>
+
+<p>OpenGl doesn't actually draw to a computer screen. OpenGL does not define a windowing layer, because it tries to be platform-neutral and leaves this functionality to the operating system. Rather, it renders to a <i>frame buffer</i>, and it is the job of the individual machine to then draw the contents of the frame buffer onto a window on the screen. There are various libraries that support doing this. One of the most popular option is <b>GLFW</b>, which has built-in support for Windows, Mac, Linux and other systems.</p>
+
+<p>GLFW is just optimized for when you just want a window that you can draw to with OpenGL and nothing else. GLFW just creates a window and handles user input for you. OpenGL does not know anything about those, it just draws triangles.</p>
+
+<p>Another concept that is essential to using OpenGL is <b>shaders</b>, which are special functions that the graphics hardware executes. The best way to
+think of shaders is as little programs that are specifically compiled for your graphics processing unit---commonly called a graphics processing unit (GPU). OpenGL includes all the compiler tools internally to take the source code of your shader and create the code that the GPU needs to execute. In
+OpenGL, there are four shader stages that you can use. The most common are vertex shaders, which process vertex data, and fragment shaders, which
+operate on the fragments generated by the rasterizer. Both vertex and fragment shaders are required in every OpenGL program. The final generated image consists of pixels drawn on the screen; a pixel is the smallest visible element on your display. The pixels in your system are stored in a framebuffer, which is a chunk of memory that the graphics hardware manages, and feeds to your display device.</p>
+
+<h2>Where can I download OpenGL?</h2>
+
+<p>Just like the "Open Source?" section explains, OpenGL is not a software product. It is a specification. On Mac OS X, Apple's OpenGL implementation is included in the OS. On Windows, hardware vendors (such as NVIDIA or AMD/ATI) use the spec to write their own implementation, so OpenGL is included in the drivers that they supply. For laptop owners, however, you'll need to visit the manufacturer of your laptop and download the drivers from them.</p>
+
+<p>Updating your graphics drivers is usually enough to get the latest OpenGL implementation for your graphics hardware. This is sufficient for those who want to use applications that require OpenGL. For programmers, installing drivers is generally insufficient. You will need to load the OpenGL function pointers, either manually or automatically with a library.</p>
+
+<h2>OpenGL extension</h2>
+
+<p>There is a fast pace of innovation and huge competition in the arena of 3D graphics. Hardware and software vendors are constantly evolving their products with cutting-edge features, functionalities, and improved performance. It would not be efficient for you or the users of your programs to wait until the release of a new version of the OpenGL standard to be able to use all new capabilities of your graphics hardware. This is the reason why
+OpenGL allows its API to be extended in the OpenGL implementations provided by vendors. <b>OpenGL extensions</b> helps your program access new functionalities that are not yet available in the OpenGL standard. Vendors provide you the extended functionality of their hardware by extending the OpenGL API with new functions and new options that can be used with existing OpenGL functions. You can use an OpenGL extension function by programmatically seeking the extension name and then obtaining its function pointer from the operating system.</p>
+
+<p>In addition, operating systems like Windows have implementations of old versions of OpenGL. On these systems you need to use OpenGL extensions to access the functionality available in newer versions of the OpenGL standard. Using OpenGL extensions on these systems essentially forces you to dynamically locate the function pointers of the extensions by querying the drivers installed by hardware vendors like NVIDIA or AMD.</p>
+
+<p>The driver provides you a list of the extensions it supports</p>
+
+<h2>GLEW</h2>
+
+<p>OpenGL Extension Wrangler (GLEW) is an open source library that makes it easy and elegant to use OpenGL extensions in your programs. By including its header file and calling its functions, your programs can detect what OpenGL extensions are available on the system and use them directly by calling their functions. The figure below shows how GLEW acts as an interface between your OpenGL program and the OpenGL extensions you wish to use:
+
+<h3>GLAD</h3>
+
+<p>If you want to call functions, you have to get them from somewhere. That is what <b>GLAD</b> does for you. You could also write the code from the GLAD  bpmedley subsection on https://learnopengl.com/getting-started/creating-a-window for every OpenGL function you want to use, but that would be lots of work.
+GLAD is a <b>function loader for OpenGL</b>: in modern opengl you have to get all the gl functions from the driver dll yourself, which is boring and error-prone to do by hand. Functions are implemented in the graphics driver and you can't know which driver others are using. also someone might have multiple graphics drivers.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

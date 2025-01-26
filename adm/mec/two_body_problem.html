@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Two Body problem"/>
+    <title>Two Body problem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="../documentation.html">Documentation</a></li>
+    </ul>         
+</nav>
+      
+<div class="content">
+ 
+<h1>Two Body problem</h1>
+
+<p>Let us consider two objects, with masses <i>m<sub>1</sub></i> and <i>m<sub>2</sub></i>. For the purposes of this chapter, I shall assume the objects are small enough to be considered as point particles, whose positions (relative to the origin 0 of some inertial reference frame) I shall denote by <i><b>r<sub>1</sub></b></i> and <i><b>r<sub>2</sub></i></b>. The only forces are the forces <b>F<sub>12</sub></b> and <b>F<sub>21</sub></b> of their mutual interaction, which I shall assume is conservative and central. Thus the forces can be derived from a potential energy <i>V(<b>r<sub>1</sub></b> &gt; <b>r<sub>2</sub></b>)</i>. In the case of two astronomical bodies (the earth and The sun, for instance) the force is the gravitational force <i>G m<sub>1</sub>m<sub>2</sub>/ |<b>r<sub>2</sub> - r</sub>1</sub></b>|<sup>2</sup></i> corresponding potential energy (as we saw in Chapter 4)</p>
+
+<div class="eq">
+<p><i>V(<b>r<sub>1</sub>,r<sub>2</sub></b>) = - (Gm<sub>1</sub>m<sub>2</sub>)/|<b>r<sub>2</sub></b> - <b>r<sub>1</sub></b>|</i>
+<span>(8.1)</span></p>
+</div>
+
+<p>For the electron and proton in a hydrogen atom, the potential energy is the Coulomb PE of the two charges (<i>e</i> for the proton and <i>-e</i> for the electron</p>
+
+<div class="eq">
+<p><i>V(<b>r<sub>1</sub>,r<sub>2</sub></b>) = - (ke<sup>2</sup>)/|<b>r<sub>2</sub></b> - <b>r<sub>1</sub></b>|</i>
+<span>(8.2)</span></p>
+</div>
+
+<p>where <i>k</i> denotes the Coulomb force constant, <i>k = 1/4n&epsilon;<sub>0</sub></i>. In both of these examples, V depends only on the difference (<i><b>r<sub>1</sub></b> - <b>r<sub>2</sub></b></i>), not on <i><b>r</b><sub>1</sub></i> and <i><b>r</b><sub>2</sub></i> separately. As we saw in Section 4.9, this is no accident: Any isolated system is translationally invariant, and if <i>V(<b>r<sub>1</sub></b>, <b>r<sub>2</sub></b>)</i> is translationally invariant it can only depend on (<b>r<sub>1</sub></b> - <b>r<sub>2</sub></b>). In the present case there is a further simplification: As we saw in Section 4.8, if a conservative force is central, then V is independent of the direction of (<b>r<sub>1</sub></b> - <b>r<sub>2</sub></b>). That is, it only depends on the <i>magnitude</i> |<b>r<sub>2</sub> - r<sub>1</sub></b>|, and we can write</p>
+
+<div class="eq">
+<p><i>V(<b>r<sub>1</sub>,r<sub>2</sub></b>) = V (|<b>r<sub>2</sub></b> - <b>r<sub>1</sub></b>|)</i></p>
+</div>
+
+<p>as is the case in the examples (8.1) and (8.2).</p>
+
+<p>To take advantage of the property (8.3), it is convenient to introduce the new variable</p>
+
+<div class="eq">
+<p><i><b>r</b> = <b>r<sub>2</sub></b> - <b>r<sub>1</sub></b></i></p>
+</div>
+
+<p>this is just the position of body 1 relative to body 2, and I shall refer to <i><b>r</b></i> as the relative position. The result of the previous paragraph can be rephrased to say that the potential energy <i>V</i> depends only on the magnitude <i><b>r</b></i> of the relative position <i><b>r</b></i>.</p>
+
+<p>We can now state the mathematical problem that we have to solve: We want to find the possible motions of two bodies (the moon and the earth, or an electron and a proton), whose Lagrangian is</p>
+
+<div class="eq">
+<p><i>L = (m<sub>1</sub> <b>ṙ</b><sub>1</sub><sup>2</sup>)/2 + (m<sub>2</sub> <b>ṙ</b><sub>2</sub><sup>2</sup>)/2 - V(<b>r</b>)</i></p>
+</div>
+
+<p>Of course, I could equally have stated the problem in Newtonian terms, and I shall in fact feel free to move back and forth between the Lagrangian and Newtonian formalisms according to which seems the more convenient. For the present, the Lagrangian formalism is the more transparent.</p>
+
+<p>To express the kinetic energy in these terms, we need to write the old variables <i><b>r<sub>1</sub></b></i> and <i><b>r<sub>2</sub></i></b> in terms of the new <i><b>R</b></i> and <i><b>r</b></i>. It is a straightforward exercise to show that</p>
+
+<div class="eq">
+<p><i><b>r<sub>1</sub></b> = <b>R</b> + <b>r</b> m<sub>2</sub>/M &emsp; and &emsp; <b>r<sub>1</sub></b> = <b>R</b> - <b>r</b> m<sub>1</sub>/M</i>
+<span>(8.9)</span></p>
+</div>
+
+<img src="img/two_body.png" alt="two body problem"/>
+
+<p>Questo risultato si semplifica ulteriormente se poniamo</p>
+
+<div class="eq">
+<p><i>&mu; = (m<sub>1</sub>m<sub>2</sub>)/M = m<sub>1</sub>m<sub>2</sub>/m<sub>1</sub>+m<sub>2</sub></i></p>
+</div>
+
+<p>which has the dimensions of mass and is called the reduced mass. You can easily check that &mu; is always less than both <i>m<sub>1</sub></i> and <i>m<sub>2</sub></i> (hence the name). If <i>m<sub>1</sub> « m<sub>2</sub></i>, then &mu; is very close to <i>m<sub>1</sub></i>. Thus the reduced mass for the earth-sun system is almost exactly the mass of the earth; the reduced mass of the electron and proton in hydrogen is almost exactly the mass of the electron. On the other hand, if <i>m<sub>1</sub>= m<sub>2</sub></i>, then obviously <i>&mu; = 1/2 m<sub>1</sub></i>.</p>
+
+<p>Such a system has six independent generalized coordinates. We choose these to be the three components of the radius vector to the center of msas, <b>R</b>, plus the three components of the difference vector <b>r</b>.</p>
+
+<p>We can rewrite the kinetic energy in terms of &mu; as</p>
+
+<div class="eq">
+<p><i>T = 1/2 M<b>Ṙ</b><sup>2</sup> + (1/2 &mu;<b>ṙ</b><sup>2</sup> - V(<b>r</b>)) = L<sub>cm</sub> + L<sub>rel</sub></i></p>
+</div>
+
+<p>We see that by using the CM and relative positions as our generalized coordinates, we have split the Lagrangian into two separate pieces, one of which involves only the CM coordinate <b>R</b> and the other only the relative coordinate <i><b>r</b></i>. This will mean that we can solve for the motions of <i><b>R</b></i> and <i><b>r</b></i> as two separate problems, which will greatly simplify matters.</p>
+
+<h2>The equation of motion</h2>
+
+<p>The equation of motion for <i><b>R</b></i> is trivial if there are no external forces:</p>
+
+<div class="eq">
+<p><i><b>R̈</b> = 0</i></p>
+</div>
+
+<p>which has the simple solution</p>
+
+<div class="eq">
+<i><b>R</b> = <b>R</b><sub>0</sub> + Vt</i>.</p>
+</div>
+
+<p>The constant vectors <b>R</b><sub>0</sub> and V depend on the choice of coordinate system and the initial conditions. If we are clever enough to take the origin at the center of mass, <i><b>R</b><sub>0</sub> = 0</i>, and if the center of mass is stationary, V = 0.</p>
+
+<p>The Lagrange equation for the relative coordinate <i><b>r</b></i> is a little less simple but equally beautiful: <i>L<sub>rel</sub></i>, the only part of <i>L</i> that involves <i><b>r</b></i>, is mathematically indistinguishable from the Lagrangian for a single particle of mass &mu; and position <i><b>r</b></i>, with potential energy <i>V(<b>r</b></i>). Thus the Lagrange equation corresponding to <i><b>r</b></i> is just (check it and see!)</p>
+
+<div class="eq">
+<p><i>&mu; <b>r̈</b> = -∇V(<b>r</b>)</i></p>
+</div>
+
+<h2>The CM Reference Frame</h2>
+
+<p>Our problem becomes even easier to think about if we make a clever choice of reference frame. Specifically, because <i><b>Ṙ</b> = const</i>, we can choose an inertial reference frame, the so-called CM frame, in which the CM is at rest and the total momentum is zero. In this frame, <i><b>Ṙ</b> = 0</i>
+and the CM part of the Lagrangian is zero (<i>L<sub>cm</sub> = 0</i>) Thus in the CM frame</p>
+
+<div class="eq">
+<p><i>L = L<sub>rel</sub> = 1/2 &mu; <b>ṙ</b><sup>2</sup> - V(<b>r</b>)</i></p>
+</div>
+
+<p>and the problem really is reduced to a one-body problem. This dramatic simplifica­tion illustrates the curious terminology of the "ignorable coordinate." Recall that a coordinate <i>q<sub>i</sub></i> is said to be ignorable if <i>∂L /∂q<sub>i</sub> = 0</i>. We see that, in the present case at least, the motion associated with the ignorable coordinate <i><b>R</b></i> really is something that we can ignore. It is worth taking a moment to consider what the motion looks like in the CM frame, as shown in Figure 8.3. The CM is stationary, and we naturally take it to be the origin. Both particles are moving, but with equal and opposite momenta. If <i>m<sub>2</sub></i> is much greater than <i>m<sub>1</sub></i> (as is often the case), the CM is close to <i>m<sub>2</sub></i> and particle 2 has a small velocity. (In the figure, <i>m<sub>2</sub> = 3m<sub>1</sub></i> and hence <i>v<sub>2</sub> = 1/3 v<sub>1</sub></i>.) It is important to note that the relative position <i><b>r</b></i> is the position of particle 1 relative to particle 2, and is not the actual position of either particle. As shown in the picture, the position of particle 1 is actually <i><b>r</b><sub>1</sub> = (m<sub>2</sub>/M)<b>r</b></i>. However, if <i>m<sub>2</sub> » m<sub>1</sub></i> then the CM is very close to particle 2, which is almost stationary, and <i><b>r</b><sub>1</sub> ≈ <b>r</b></i>; that is, <i><b>r</b></i> is very nearly the same thing as <i><b>r</b><sub>1</sub></i>. The equation of motion in the CM frame is derived from the Lagrangian <i>L<sub>rel</sub></i> of (8.1 6) and is just Equation (8.15). This is precisely the same as the equation for a single particle of mass equal to the reduced mass &mu;, in the fixed central force field of the potential energy <i>V(<b>r</b>)</i>. In the equations of this chapter, the repeated appearance of the mass &mu; will serve to remind you that the equations apply to the relative motion of two bodies. However, you may find it easier to visualize a single body (of mass &mu;) orbiting about a fixed force center. In particular, if <i>m<sub>2</sub> » m<sub>1</sub></i> these two problems are for practical purposes exactly the same. Moreover, if your interest actually is in a single body, of mass <i>m</i> say, orbiting a fixed force center, then you can use all of the same equations, simply replacing &mu; with <i>m</i>. In any event, any solution for the relative coordinate <i><b>r</b>(t)</i> always gives us the motion of particle 1 relative to particle 2. Equivalently, using the relations of Figure 8.3 , knowledge of <i><b>r</b>(t)</i> tells us the motion of particle 1 (or particle 2) relative to the CM.</p>
+
+<h2>Conservation of Angular momentum</h2>
+
+<p>We already know that the total angular momentum of our two particles is conserved. Like so many other things, this condition takes an especially simple form in the CM frame. In any frame, the total angular momentum is</p>
+
+<div class="eq">
+<p><i><b>L</b> = <b>r</b><sub>1</sub> x <b>p</b><sub>1</sub> + <b>r</b><sub>2</sub> x <b>p</b><sub>2</sub> </p> <p>= m<sub>1</sub> <b>r</b><sub>1</sub> x <b>ṙ</b><sub>1</sub> + m<sub>2</sub><b>r</b><sub>2</sub> x <b>ṙ</b><sub>2</sub></i>
+<span>8.17</span></p>
+</div>
+
+<p>In the CM frame, we see from (8.9) (with <b>R = 0</b>) that</p>
+
+<div class="eq">
+<p><i><b>r</b><sub>1</sub> = (m<sub>2</sub> <b>r</b>)/M &emsp; and &emsp; <b>r</b><sub>2</sub> = -(m<sub>1</sub> <b>r</b>)/M</i>
+<span>(8.18)</span></p>
+</div>
+
+<p>Substituting into (8.17), we see that the angular momentum in the CM frame is</p>
+
+<div class="eq">
+<p><i><b>L</b> = (m<sub>1</sub>m<sub>2</sub>/M<sup>2</sup>) (m<sub>2</sub><b>r</b> x <b>ṙ</b> + m<sub>1</sub> <b>r</b> x <b>ṙ</b>) = <b>ṙ</b> x &mu;<b>ṙ</b></i></p>
+</div>
+
+<p>where I have replaced <i>m<sub>1</sub>m<sub>2</sub>/M</i> by the reduced mass &mu;.</p>
+
+<p>The most remarkable thing about this result is that the total angular momentum in the CM frame is exactly the same as the angular momentum of a single particle with mass &mu;, and position <i><b>r</b></i>. For our present purposes the important point is that, because angular momentum is conserved, we see that the vector <i><b>r</b> x <b>ṙ</b></i> is constant. In particular, the direction of <i><b>r</b> x <b>ṙ</b></i> is constant, which implies that the two vectors <b>r</b> and <b>ṙ</b> remain in a fixed plane. That is, in the CM frame, the whole motion remains in a fixed plane, which we can take to be the xy plane. In other words, in the CM frame, the two-body problem with central conservative forces is reduced to a two-dimensional problem.</p>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Physics</a>
+<a href="applications_euler_lagr.html">Applications Euler-Lagrange equation &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

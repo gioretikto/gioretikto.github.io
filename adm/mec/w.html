@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Angular velocity">
+	<title>Angular velocity</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Angular velocity</h1>
+
+<p>Purely <i>translational motion</i> occurs if every particle of the body has the same instantaneous velocity as every other particle. Purely rotational motion occurs if every particle in the body moves in a circle about a single line called axis of rotation. <br> The motion of an object moving around an axis, circular motion, is described in terms of the angular displacement, with angles measured in <a href="../mat/euclidean/angle.html">radians</a>. In general, the angle <i>&theta;</i> subtended by an arclength <i>s</i> along a circle of radius <i>R</i>, measured in radians counterclockwise from the positive <i>x</i>-axis, is</p>
+
+<div class="eq">
+<p><i>&theta;</i> = <i>s</i>/<i>R</i></p>
+</div>
+
+<p>Having defined angular displacements, it’s natural to define an angular velocity:</p>
+
+<div class="eq">
+<p><b><i>&omega;</i></b> = <i>&omega;<b>k</b></i></p>
+</div>
+
+<p>with <i><b>k</b></i> unit vector along the axis of rotation and <i>&omega;</i> the angular speed defined as</p>
+
+<div class="eq">
+<p><i>&omega;</i> = |d<i>&theta;</i>/d<i>t</i>|</p>
+</div>
+
+<p>The right-hand grip rule that determines the direction of the angular velocity vector: if the fingers of the right hand curl around the axis in the direction of rotation of the body, the extended thumb points along the direction of the angular velocity vector. This means that for a body rotating around the <i>z</i> axis, <b><i>&omega;</i></b> is positive for an anticlockwise direction and negative for a clockwise rotation.</p>
+
+<h2>Angular acceleration</h2>
+
+<p>To obtain the angular acceleration vector, we apply the time derivative on both sides of <i><b>&omega;</b></i> = <i>&omega;<b>k</b></i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mpadded width="0">
+      <mi>&#x3B1;</mi>
+    </mpadded>
+  </mrow>
+  <mspace width="1px"></mspace>
+  <mrow data-mjx-texclass="ORD">
+    <mi>&#x3B1;</mi>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mtext>d</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3C9;</mi>
+  <mi mathvariant="bold">k</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \pmb{\alpha} = \frac{\text{d}}{\text{d}t} (\omega \mathbf{k}) $$ -->
+
+<p>Hence</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mtext>d</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3C9;</mi>
+  <mi mathvariant="bold">k</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>&#x3C9;</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mi mathvariant="bold">k</mi>
+  <mo>+</mo>
+  <mi>&#x3C9;</mi>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi mathvariant="bold">k</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+</math>
+<!-- $$ \frac{\text{d}}{\text{d}t} (\omega \mathbf{k}) = \frac{\text{d}\omega}{\text{d}t} \mathbf{k} + \omega \frac{\text{d}\mathbf{k}}{\text{d}t} $$ -->
+
+<p>However <i><b>k</b></i> is a unit vector with constant orientation, and therefore d<i><b>k</b></i>/d<i>t</i> = 0. Thus the previous equation reduces to</p>
+
+<div class="eq">
+<p><i><b>&alpha;</b></i> = <i>&alpha;<b>k</b></i></p>
+</div>
+
+<h2>Relation between angular and linear velocity</h2>
+
+<p>We may use these rules to derive vector relations between linear and angular variables for a body moving in a circle of radius <i>R</i>. The velocity, <b><i>v</i></b> has only one component tangential to the circle whose magnitude is</p>
+
+<div class="eq">
+<p><i>v</i> = d<i>s</i>/d<i>t</i></p>
+</div>
+
+<p>so <i>v</i> is positive when <i>s</i> increases with time (anticlockwise direction) and negative when <i>s</i> decreases with respect to <i>t</i> (clockwise rotation). Further since, <i>s</i> = <i>R&theta;</i>, we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>v</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>s</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mo stretchy="false">(</mo>
+      <mi>R</mi>
+      <mi>&#x3B8;</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>R</mi>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>&#x3B8;</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$v = \frac{\text{d}s}{\text{d}t} = \frac{\text{d}(R\theta)}{\text{d}t} = R \frac{\text{d}\theta}{\text{d}t} $$ -->
+
+<p>that is</p>
+
+<div class="eq">
+<p><i>v</i> = <i>R&omega;</i></p>
+</div>
+
+<p>If <i><b>R</b></i> and <i><b>v</b></i> are in the plane of the page, while <b>&Omega;</b> points out of the page, we must have <i><b>v</b></i> = <b>&omega;</b> x <b>R</b>.</p>
+
+<img src="img/angular_velocity.png" alt="angular velocity"/>
+
+<p>The procedure that we used to develop the kinematic equations for linear motion under constant acceleration can be used to derive a similar set of equations for rotational motion under constant angular acceleration. The resulting equations of rotational kinematics, along with the corresponding equations for linear motion, are as follows:</p>
+
+<table>
+<tr><th>Translational Motion (1 dimention)</th> <th>Rotation About a Fixed Axis</th></tr>
+<tr><td><i>x</i> = <i>x</i><sub>0</sub> + <i>v<sub>x</sub>t</i><br>Constant linear velocity</td> <td><i>&theta;</i> = <i>&theta;</i><sub>0</sub> + <i>&omega;</i>t</i><br>Constant angular velocity</td></tr>
+
+<tr><td><i>v<sub>x</sub></i> = <i>v</i><sub>x0</sub> + <i>a<sub>x</sub>t</i><br>Constant linear acceleration</td> <td><i>&omega;<sub>z</sub></i> = <i>&omega;</i><sub>z0</sub> + <i>&alpha;<sub>z</sub></i>t</i><br>Constant angular acceleration</td></tr>
+
+<tr><td><i>x</i> = <i>x<sub>0</sub> + <i>v<sub>x0</sub>t</i> + ½ <i>a<sub>x</sub>t</i></td> <td><i>&theta;</i> = <i>&theta;</i><sub>0</sub> + <i>&omega;</i><sub>z0</sub>t + ½ <i>&alpha;<sub>z</sub></i>t</i></td></tr>
+
+<tr><td><i>v<sub>x</sub></i><sup>2</sup> = <i>v</i><sub>x0</sub><i>t</i> + ½<i>a<sub>x</sub>t</i><sup>2</sup></td> <td><i>&omega;<sub>z</sub></i><sup>2</sup> = <i>&omega;</i><sub>z0</sub><sup>2</sup> + 2<i>&alpha;<sub>z</sub></i>(<i>&theta;</i> − <i>&theta;</i><sub>0</sub>)</td></tr>
+
+</table>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

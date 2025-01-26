@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Adding users with useradd">
+	<title>Adding users with useradd</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Adding users with useradd</h1>
+
+<p>Sometimes, a Linux system doesn't have a desktop tool or web UI available for adding users. Other times, you might find it more convenient to add lots of users at once with a shell script or change user account features that are not available from Cockpit. For those cases, commands are available to enable you to add and modify user accounts from the command line.</p>
+
+<p>The most straightforward method for creating a new user from the shell is the <b>useradd</b> command. After opening a Terminal window with root permission, you simply invoke useradd at the command prompt, with details of the new account as parameters. <br> The only required parameter is the login name of the user, but you probably want to include some additional information ahead of it. Each item of account information is preceded by a single-letter option code with a dash in front of it.</p>
+
+<p>Let's create an account for a new user. The user's full name is "Mario Rossi", with a login name of <i>mario</i>. To begin, become roots user and type the following command</p>
+
+<pre>useradd -mc "Mario Rossi" mario</pre>
+
+<p>Next, set the initial password for <i>mario</i> using the <i>passwd</i> command. You're prompted type the password twice:</p>
+
+<pre>passwd mario</pre>
+
+<p>To create the homedir for the user</p>
+
+<p>The following options are available with <i>useradd</i>:</p>
+
+<ul style="list-style-type: '-'">
+	<li><p><b>c "comment"</b>: Provide a description of the new user account. Typically, this is the person's full name. Replace comment with the name of the user account (-c Jake). Use quotes to enter multiple words (for example,-c "Jake Jackson”).</p></li>
+
+	<li><p><b>d home_dir</b>: Set the home directory to use for the account. The default is to name it the same as the login name and to place it in /home. Replace home_dir with the
+directory name to use (for example, -d /mnt/homes/jake).</p></li>
+
+	<li><p><b>D</b>: Rather than create a new account, save the supplied information as the new default settings for any new accounts that are created.</p></li>
+
+	<li><p><b>e</b> expire date: Assign the expiration date for the account in YYYY-MM-DD format. Replace expire_date with a date that you want to use. (For example, to expire an account on May 5, 2022, use -e 2022-05-05.)</p></li>
+
+	<li><p><b>f -1</b>: Set the number of days after a password expires until the account is permanently disabled. The default, -1, disables the option. Setting this to 0 disables the account immediately after the password has expired. Replace -1 (that's minus one) with the number to use.</p></li>
+
+	<li><p><b>g</b> group: Set the primary group (it must already exist in the /etc/group file) the new user will be in. Replace group with the group name (for example, -g wheel). Without this option, a new group is created that is the same as the username and is used as that user's primary group.</p></li>
+
+	<li><p><b>G</b> grouplist: Add the new user to the supplied comma-separated list of supplementary groups (for example, -G wheel,sales,tech, lunch). (If you use -G later with usermod, be sure to use -aG and not just -G. If you don't, existing supplementary groups are removed and the groups you provide here are the only ones assigned.)</p></li>
+
+	<li><p><b>k</b> skel_dir: Set the skeleton directory containing initial configuration files and login scripts that should be copied to a new user's home directory. This parameter can be used only in conjunction with the -m option. Replace skel_dir with the directory name to use. (Without this option, the /etc/skel directory is used.)</p></li>
+
+	<li><p><b>m</b>: Automatically create the user's home directory and copy the files in the skeleton directory (/etc/skel) to it. (This is the default action for Fedora and RHEL, so it's not required. It is not the default for Ubuntu.)</p></li>
+
+	<li><p><b>M</b>: Do not create the new user's home directory, even if the default behavior is set to create it.</p></li>
+
+	<li><p><b>n</b>: Turn off the default behavior of creating a new group that matches the name and user ID of the new user. This option is available with Fedora and RHEL systems. Other Linux systems often assign a new user to the group named users instead.</p></li>
+
+	<li><p><b>o</b>: Use with -u uid to create a user account that has the same UID as another user- name. (This effectively lets you have two different usernames with authority over the same set of files and directories.)</p></li>
+
+	<li><p><b>p</b> passwd: Enter a password for the account you are adding. This must be an encrypted password. Instead of adding an encrypted password here, you can simply use the passwd user command later to add a password for user. (To generate an encrypted MD5 password, type openssl passwd.)</p></li>
+
+	<li><p><b>s</b> shell: Specify the command shell to use for this account. Replace she11 with the command shell (for example, -s /bin/csh).</p></li>
+
+	<li><p><b>u</b> <i>user_id:</i> Specify the user ID number for the account (for example, -u 1793). Without the -u option, the default behavior is to assign the next available number automatically. Replace <i>user_id</i> with the ID number. User IDs that are automatically assigned to regular users begin at 1000, so you should use IDs for regular users that are above that number in a way that doesn't collide with the automatic assignments.</p></li>
+
+</ul>
+
+<pre>cadmio@mywifi:~$ sudo mkdir /home/bini</pre>
+
+<pre>cadmio@mywifi:~$ sudo chown bini: /home/bini</pre>
+
+<p>You can list users with</p>
+
+<pre>cat /etc/passwd</pre>
+
+<h2 id="remove">Remove user</h2>
+
+<p>To remove a user</p>
+
+<pre>sudo userdel -r username</pre>
+
+<p>The command removes as well the user home directory.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

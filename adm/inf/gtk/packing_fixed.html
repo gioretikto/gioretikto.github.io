@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Packing GtkFixed"/>
+    <title>Packing GtkFixed</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Packing GtkFixed</h1>
+
+<p>In this chapter we show how to lay out our widgets in windows or dialogs.</p>
+
+<p>When we design the UI of our application, we decide what widgets we will use and how we will organise those widgets. To organise our widgets, we use specialised non-visible widgets called layout containers. In this chapter, we will mention GtkAlignment, GtkFixed, GtkVBox, and GtkTable. </p>
+
+<p>The <b>GtkFixed</b> container places child widgets at fixed positions and with fixed sizes. This container performs no automatic layout management. Therefore, it does not work with translations, font changes, or themes. In most applications, we do not use the GtkFixed container. There might be some specialised areas where the container can be used (for instance, positioning charts or images). <&o>
+
+<pre>
+#include &lt;gtk/gtk.h&gt;
+
+int main(int argc, char *argv[]) {
+    
+  GtkWidget *window;
+  GtkWidget *fixed;
+
+  GtkWidget *button;
+
+  gtk_init(&argc, &argv);
+
+  window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title(GTK_WINDOW(window), "GtkFixed");
+  gtk_window_set_default_size(GTK_WINDOW(window), 300, 200);
+  gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+
+  fixed = gtk_fixed_new();
+  gtk_container_add(GTK_CONTAINER(window), fixed);
+
+  button = gtk_button_new_with_label("HIT");
+  gtk_fixed_put(GTK_FIXED(fixed), button, 300, 650);
+  gtk_widget_set_size_request(button, 80, 30);
+
+  button = gtk_button_new_with_label("STAND");
+  gtk_fixed_put(GTK_FIXED(fixed), button, 500, 650 );
+  gtk_widget_set_size_request(button, 80, 30);
+
+  button = gtk_button_new_with_label("QUIT");
+  gtk_fixed_put(GTK_FIXED(fixed), button, 700, 650);
+  gtk_widget_set_size_request(button, 80, 30);
+
+  g_signal_connect(G_OBJECT(window), "destroy", 
+      G_CALLBACK(gtk_main_quit), NULL);
+
+  gtk_widget_show_all(window);
+
+  gtk_main();
+
+  return 0;
+}
+</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

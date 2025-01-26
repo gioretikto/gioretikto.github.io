@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="TikZ"/>
+	<title>TikZ</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>TikZ</h1>
+
+<h2>Drawing straight lines</h2>
+
+<p>Straight lines are given by coordinates separated by a double minus,</p>
+
+<pre>
+\draw (1,0) -- (0,0) -- (0,1);
+</pre>
+	
+<p>To draw a line you do something like</p>
+
+<pre>
+\begin{tikzpicture}
+\draw (0,0) --(1,2);
+\end{tikzpicture}
+</pre>
+
+<h3>Changing the thickness of lines</h3>
+
+<p>Other decorations include changing the thickness:</p>
+
+<pre>
+\begin{tikzpicture}
+\draw [ultra thick] (0,1) -- (2,1);
+\draw [thick] (0,0.5) -- (2,0.5);
+\draw [thin] (0,0) -- (2,0);
+\end{tikzpicture}
+</pre>
+
+<p>The result is a L shape graphic.</p>
+
+<p>A connected path can be closed using the "--cycle" operation: </p>
+
+<pre>\draw (1,0) -- (0,0) -- (0,1) -- cycle;</pre>
+
+<p>disegnerà un triangolo rettangolo.</p>
+
+<h2>Graph of a function</h2>
+
+<pre>
+\documentclass[preview, convert={size=598x414,outext=.png}]{standalone}
+\usepackage{pgfplots,tikz}
+\pgfplotsset{ticks=none}
+\begin{document}
+            \begin{tikzpicture}
+            \begin{axis} [xlabel = x, ylabel = y, axis lines=center]
+                \addplot [domain=-3:3, smooth] {x^3} node[pos=.9,left] {$y=x^3$};
+            \end{axis}
+        \end{tikzpicture}
+\end{document}
+</pre>
+
+<p>and compile with <code>pdflatex --shell-escape plot.tex</code>.</p>
+
+<img src="../../mat/analysis/img/x^3.png" alt="x^3 function"/>
+
+<h2>Trigonometric Functions</h2>
+
+<pre>\documentclass[preview, convert={size=598x414,outext=.png}]{standalone}
+\usepackage{pgfplots,tikz}
+\begin{document}
+            \begin{tikzpicture}
+            \begin{axis} [xlabel = x, ylabel = y, xmax=3.1, ymax=1.6, ymin = -1.6, axis lines=center]
+                \addplot [domain=-3:3, smooth] {1-0.5*x^2} node[pos=.9,left] {$y=1 - x^2/2$};
+				\addplot [domain=-3:3, smooth] {cos(deg(x))};
+				\addplot [domain=-3:3, smooth] {1};
+            \end{axis}
+        \end{tikzpicture}
+\end{document}
+</pre>
+
+<img src="../../mat/analysis/img/cos_quadratic_approx.png" alt="cos quadratic approximation"/>
+
+<h2>2D Regions</h2>
+
+<p>To represent a region of the plane parametrised by functions, keep in mind that a function 2x −x<sup>3</sup> as to be entered as 2*x−x<sup>3</sup>.</p>
+
+<p>There are different methods to place axis descriptions. One of them is to provide coordinates relativeto the axis’ rectangle such that(0,0) is the lower left corner and(1,1)is the upper right corner – this isvery useful for figure titles or legends. Coordinates of this type, <i>i.e.</i> without unit like (0,0) or (1.03,1), are called <code>axis description cs</code> (the <b>cs</b> stands for “coordinate system”).</p>
+
+<pre>
+\documentclass[preview, convert={size=424x334,outext=.png}]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.17}
+\begin{document}
+        \begin{tikzpicture}
+            \begin{axis}[ 
+                xmax=1.1,
+                axis lines=center,
+                xlabel=$x$,
+                xlabel style={at={(axis description cs:1.01,0.0)},anchor=north},
+                ylabel = $y$
+                ]
+                \addplot [name path=A,domain=0:1, smooth] {2*x-x^3} node[pos=.7,left] {$f$};
+                \addplot [name path=B,domain=0:1, smooth] {x-x^2} node[pos=.9,left] {$g$};
+                \draw [thick] (1,0) -- (1,1);
+                \addplot[gray!30] fill between[of=A and B];
+            \end{axis}
+        \end{tikzpicture}
+\end{document}
+</pre>
+
+<img src="../../mat/multivariable_calculus/img/ysimple_example.png" alt="y simple not x simple"/>
+
+<h2>Plot parametric equations</h2>
+
+<p>The parameter must be expressed in deg and not radians.</p>
+
+<pre>
+\documentclass[preview, convert={size=424x334,outext=.png}]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.17}
+\begin{document}
+
+\begin{tikzpicture}
+            \begin{axis} [xlabel = x, ylabel = y, xmax=3.1, xmin = -3, ymax=5, ymin = -1.6, axis lines=center]
+	\addplot [domain=0:pi,smooth, samples=300, line width=0.7pt]({2*cos(deg(x))}, {3*sin(deg(x))});
+\end{axis}
+\end{tikzpicture}
+\end{document}
+</pre>
+
+<img src="../../mat/multi_calculus/img/ellipse_parametrized.png" alt="parametrized curve"/>
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Mathematics</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Resource and glib-compile-resources"/>
+    <title>Resource and glib-compile-resources</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Resource and glib-compile-resources</h1>
+
+<p>Resource bundles are created by the glib-compile-resources program which takes an xml file that describes the bundle, and a set of files that the xml references. These are combined into a binary resource bundle. </p>
+
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;gresources>
+  &lt;gresource prefix="/cards">
+    &lt;file>1.png&lt;/file&gt;
+	&lt;file>2.png&lt;/file&gt;
+	&lt;file>3.png&lt;/file&gt;
+	&lt;file>4.png&lt;/file&gt;
+	&lt;file>style.css&lt;/file&gt;
+  &lt;/gresource&gt;
+&lt;/gresources&gt;
+</pre>
+
+<p>You can then use glib-compile-resources to compile the xml to a binary bundle that you can load with Gio::Resource::create_from_file(). However, it's more common to use the --generate-source argument to create a C source file to link directly into your application. E.g.</p>
+
+<pre>glib-compile-resources --target=resources.c --sourcedir=cards --generate-source resource.xml</pre>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="hello_world.html">Hello World &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
