@@ -21,11 +21,38 @@
 
 <h1>Angular momentum</h1>
 
-<p>Recall that the concept of linear momentum <b><i>p</i></b> and the principle of conservation of linear momentum are extremely powerful tools. They allow us to predict the outcome of, say, a collision of two cars without knowing the details of the collision. Here we begin a discussion of the angular counterpart of <b><i>p</i></b>, winding up in Module 11-8 with the angular counterpart of the conservation principle, which can lead to beautiful (almost magical) feats in ballet, fancy diving, ice skating, and many other activities. <br> The angular momentum <b><i>L</i></b> of a ­particle with respect to the origin <i>O</i> is a vector quantity defined as</p>
+<p>Abbiamo discusso nel paragrafo precedente il concetto di <a href="momento.html">momento di un vettore rispetto ad un punto</a>. Vediamone le due applicazioni più comuni in meccanica, riferite alla quantità di moto e alla forza.  <br>  Si definisce <b>momento angolare</b> il momento del vettore quantità di moto rispetto l'origine <i>O</i></p>
 
 <div class="eq">
-<p><b><i>L</i></b> = <b><i>r</i></b> x <b><i>p</i></b></p>
+<p><b>L</b> = <b>r</b> x <b>p</b> = <b>r</b> x <i>m</i><b>v</b></p>
 </div>
+
+<p>il punto <i>O</i> è il <b>polo</b> rispetto a cui è calcolato <b>L</b>; sappiamo dal par. precedente che se si cambia polo vale la realzione</p>
+
+<div class="eq">
+<p><b>L</b><sub><i>O'</i></sub> = <b>L</b><sub><i>O</i></sub> + <b>O'O</b> x <i>m</i><b>v</b></p>
+</div>
+
+<p>in generale il momento angolare è una funzione del tempo, <b>L</b>(<i>t</i>). <br>Il <b>momento della forza</b> è definito come</p>
+
+<div class="eq">
+<p><b>&tau;</b> = <b><i>r</i></b> x <b>F</b></p>
+</div>
+
+<p>Se si cambia polo</p>
+
+<div class="eq">
+<p><b>&tau;</b><sub><i>O'</i></sub> = <b>&tau;</b><sub><i>O</i></sub> + <b>O'O</b> x <b>F</b></p>
+</div>
+
+<p>Quando ad un punto sono applicate più forze con risultante <b>R</b> = &Sigma;<sub><i>i</i></sub><b>F</b><sub>i</sub> si ha</p>
+
+<div class="eq">
+<p><b>&tau;</b> = <b><i>r</i></b> x <b>F</b><sub>1</sub> + ... + <b><i>r</i></b> x <b>F</b><sub><i>n</i></sub> = <b>r</b> x (<b>F</b><sub>1</sub> + ... + <b>F</b><sub><i>n</i></sub>) = <b>r</b> x <b>R</b></p>
+</div>
+
+<p>il momento complessivo è uguale al momento della forza risultante.<br> Pertanto un sistema di forze applicate nello stesso punto può sempre essere sostituito, nel calcolo dell'accelerazione, del lavoro e del momento complessivi, dalla forza risultante. Tale proprietà non può evidentemente essere utilizzata se le forze sono applicate in punti diversi.</p>
+
 
 <p>where <i><b>r</b></i> is the position  vector of the particle with respect to <i>O</i> and <i><b>p</b></i> its linear momentum. By the right-hand rule, the angular momentum vector is perpendicular to both <b><i>r</i></b> and <b><i>p</i></b>. The magnitude of <i><b>L</b></i> can be written as</p>
 
@@ -65,7 +92,7 @@
 <p><i><b>L</b></i> = <i>L<sub>z</sub><b>k</b></i> = <i>mR</i><sup>2</sup><i>&omega;<sub>z</sub><b>k</b></i>
 </div>
 
-<h2>Conservation of L</h2>
+<h2>Teorema del momento angolare. Conservazione di L</h2>
 
 <p>So far we have discussed two powerful conservation laws, the conservation of energy and the conservation of linear momentum. Now we meet a third law of this type, involving the conservation of angular momentum. The time derivative of the angular momentum is equal to</p>
 
@@ -143,40 +170,175 @@
 <p>Because d<b><i>r</i></b>/d<i>t</i> = <b>v</b> which is parallel to <b><i>p</i></b> the cross product vanishes. By Netwon's 2nd law, <i><b>F</b></i> = d<i><b>p</b></i>/d<i>t</i>, where <i><b>F</b></i> is the net force acting on the particle.</p>
 
 <div class="eq">
-<p>d<b><i>L</i></b>/d<i>t</i> = <i><b>r</b></i> x <i><b>F</b></i></p>
+<p>d<b>L</b>/d<i>t</i> = <b>r</b> x <b>F</b> = <b>&tau;</b> &emsp;(4.14)</p>
 </div>
 
 <p>The vector product <i><b>r</b></i> x <i><b>F</b></i> is called the <i>torque</i> (relative to a given point <i>O</i>) and will be denoted by <i><b>tau</b></i>. We arrive to the following result</p>
 
 <blockquote>Angular momentum is conserved when net external torque is zero, just as linear momentum is conserved when the net external force is zero. </blockquote>
 
-<p>This implies that all internal torques within the body must cancel one another.</p>
-
-<p>Suppose that the initially rigid body somehow redistributes its mass relative to that rotation axis, changing its rotational inertia about that axis, like in the case of spinning person on a stool in Fig.1. No net external torque acts on the system consisting of the student, stool, and dumbbells. Thus, the angular momentum of that system about the rotation axis must remain constant, no matter how the student maneuvers the dumbbells, by <a href="L.html#LIw">Eq 13.1.1</a>, we can express <i>L</i> as</p>
+<p>Il momento della forza può essere nullo sia perché la forza è nulla sia quando <b>r</b> e <b>F</b> sono paralleli; in tal caso (4.14) dà</p>
 
 <div class="eq">
-<p><i>I&omega;<sub>i</sub></i> = <i>I&omega;<sub>f</sub></i></p>
+<p>d<b>L</b>/d<i>t</i> = 0 &emsp; e quindi &emsp; <b>L</b> = costante</p>
 </div>
 
-<p>When student pulls in his arms; this action ­reduces his rotational inertia from its initial value <i>I<sub>i</sub></i> to a smaller value <i>I<sub>f</sub></i> ­because he moves mass closer to the rotation axis. His rate of rotation ­increases markedly, from <i>&omega;<sub>i</sub></i> to <i>&omega;<sub>f</sub></i>. The student can then slow down by extending his arms once more, moving the dumbbells outward.</p>
+<p>Il momento angolare di un punto materiale rimane costante nel tempo, si conserva, se il momento delle forze è nullo. <br>Da (4.14) si ha <b>&tau;</b> d<i>t</i> = d<b>L</b> e integrando tra l'istante iniziale e l'istante <i>t</i> (finale)</p>
 
-<figure>
-<img src="img/spinning_volunteer.png" alt="spinning volunteer">
-<figcaption><b>Fig.1</b>. <br>a) The student has a relatively large rotational inertia about the rotation axis and a relatively small angular speed. (b) By decreasing his rotational inertia, the student automatically increases his angular speed. The angular momentum <b><i>L</i></b> of the­ rotating system remains unchanged.</figcaption>
-</figure>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mi>t</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>&#x3C4;</mi>
+      <mo stretchy="false">&#x2192;</mo>
+    </mover>
+  </mrow>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mi mathvariant="bold">L</mi>
+  <mo>=</mo>
+  <msub>
+    <mi mathvariant="bold">L</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mtext mathvariant="bold">fin</mtext>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi mathvariant="bold">L</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="bold">in</mi>
+    </mrow>
+  </msub>
+<mtext>&emsp;(4.15)</mtext>
+</math>
 
-<h3>The springboard diver</h3>
+<!-- $$\int_0^t \vec{\tau} \text{d}t = \Delta \mathbf{L} = \mathbf{L_{\text{fin}}} - \mathbf{L_{in}} $$ -->
 
-<p>Figure 2 shows a diver doing a forward one-and-a-half-somersault dive. As you should expect, her center of mass follows a para­bolic path. She leaves the springboard with a definite angular momentum <b><i>L</i></b> about an axis through her center of mass, represented by a vector pointing into the plane of Fig. 2 perpendicular to the page. When she is in the air, no net external torque acts on her about her center of mass, so her angular momentum about her center of mass cannot change:The effect of a uniform gravitational field cancels out over the whole body, and angular momentum is still conserved.</p>
+<p>Per produrre una variazione finita del momento angolare di un punto materiale occorre l'azione, per un certo tempo, del momento di una forza. Tale proprietà è analoga al teorema dell'impulso (3.3), con analoghe considerazioni per quanto riguards il calcolo effettivo dell'integrale. <br> Se la forza viene applicata al punto per un tempo molto breve <b>r</b> è praticamente costante e (4.15) diventa</p>
 
-<figure>
-<img src="img/diver.png" alt="diver"/>
-<figcaption><b>Fig.2</b> The diver’s angular momentum <b><i>L</i></b> is constant throughout the dive, being ­represented by the tail ⊗ of an arrow that is perpendicular to the plane of the figure. Note also that her center of mass (see the dots) follows a parabolic path.</figcaption>
-</figure>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mi>t</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>&#x3C4;</mi>
+      <mo stretchy="false">&#x2192;</mo>
+    </mover>
+  </mrow>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mi>t</mi>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">r</mi>
+  <mo>&#xD7;</mo>
+  <mi mathvariant="bold">F</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mo>=</mo>
+  <mi mathvariant="bold">r</mi>
+  <mo>&#xD7;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mi>t</mi>
+  </msubsup>
+  <mi mathvariant="bold">F</mi>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mo>=</mo>
+  <mi mathvariant="bold">r</mi>
+  <mo>&#xD7;</mo>
+  <mi mathvariant="bold">J</mi>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mi mathvariant="bold">L</mi>
+</math>
 
-<p>By pulling her arms and legs into the closed tuck position, she can considerably reduce her rotational inertia about the same axis and thus, according to Eq. 13.1.1, considerably increase her angular
-speed. Pulling out of the tuck position (into the open layout position) at the end of the dive increases her rotational inertia and thus slows her rotation rate so she can enter the water with little splash. Even in a more complicated dive involving both twisting and somersaulting, the angular momentum of the diver must be conserved, in both magnitude and direction, throughout the dive.</p>
+<!-- $$\int_0^t \vec{\tau} \text{d}t = \int_0^t (\mathbf{r}\times \mathbf{F}) \text{d}t = \mathbf{r} \times \int_0^t \mathbf{F} \text{d}t = \mathbf{r} \times \mathbf{J} = \Delta \mathbf{L}$$ -->
 
+<p>detto <b>teorema del momento dell'impulso</b>:</p>
+
+<blockquote>la variazione di momento angolare è uguale al momento dell'impulso applicato al punto.</blockquote>
+
+<p>Osserviamo infine, con riferimento al moto circolare, che anche il lavoro può essere espresso tramite il modulo del momento della forza. Infatti</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>W</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <msub>
+    <mi>F</mi>
+    <mi>T</mi>
+  </msub>
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B8;</mi>
+        <mi>A</mi>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B8;</mi>
+        <mi>B</mi>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mi>r</mi>
+  <msub>
+    <mi>F</mi>
+    <mi>T</mi>
+  </msub>
+  <mtext>d</mtext>
+  <mi>&#x3B8;</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B8;</mi>
+        <mi>A</mi>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B8;</mi>
+        <mi>B</mi>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mi>&#x3C4;</mi>
+  <mtext>d</mtext>
+  <mi>&#x3B8;</mi>
+</math>
+
+<!-- $$W = \int_A^B F_T\text{d}s = \int_{\theta_A}^{\theta_B} r F_T \text{d}\theta = \int_{\theta_A}^{\theta_B} \tau \text{d} \theta$$ -->
+
+<p>avendo tenuto conto che d<i>s</i> = <i>r</i>d<i>&theta;</i> e che la componente normale della forza ha momento nullo rispetto al centro della circonferenza. Vedremo che (4.17) è di grande utilità nello studio del moto di rotazione di un corpo rigido (cap.7). <br>Il teorema del momento angolare è una diretta conseguenza della legge di Newton e l'utilizzazione del momento angolare e del momento dellaforza e delle loro proprietà, anche se rilevante in alcuni casi specifici, non fornisce nessuna informazione che non sia già ricavabile direttamente con la legge di Newton. Nei problemi di dinamica del punto l'unica legge fondamentale è la seconda legge (3.1). La situazione è diversa, come vedremo, per la dinamica dei sistemi di punti in cui è necessario servirsi, oltre che di forza e accelerazione, anche del momento della forza e del momento angolare. Ci sarà allora di aiuto il formalismo adesso sviluppato per un punto.</p>
 
 <section aria-label="End">
 <a href="epoxides.html">«Epoxides</a>

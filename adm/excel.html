@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Excel">
+	<title>Excel</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Excel</h1>
+
+<h2>Sintassi - Punto e virgola “;” e due punti “:”</h2>
+
+<p>Separando i nomi di due celle con il punto e virgola <b>;</b>, si intendono le due singole celle. Per es., se scrivo A1;B5 intendo la cella A1 e la cella B5. In Excel posso verificare quanto affermato scrivendo proprio A1;B5 nella Casella Nome (ovvero quello spazio in alto a sinistra che normalmente mostra il nome della cella selezionata) e premendo il tasto Invio. Il risultato sarà proprio quello che ci si aspetta: Excel selezionerà sia la cella A1 sia la cella B5 ovvero un totale di due celle.</p>
+
+<p>Se invece nella Casella Nome scriviamo A2:A6, ((cioè separando i nomi delle due celle con i <b>due punti</b> :) Excel selezionerà tutte le celle comprese fra la cella A2 e la cella A6. <br> Un altro esempio è A1:B5, Excel selezionerà tutte le celle comprese fra la cella A1 e la cella B5 includendo queste due, ovvero un totale di dieci celle.</p>
+
+
+<p>Vediamo un’applicazione pratica: utilizzando queste sintassi in una banale funzione di SOMMA, i risultati sono ovviamente molto diversi:</p>
+
+<ul>
+	<li><p>=SOMMA(A1;A5) darà come risultato 4 in quanto sommerà solo le celle A1 e A5</p></li>
+	<li><p>=SOMMA(A1:A5) darà come risultato 10 in quanto sommerà le celle A1, A2, A3, A4, A5.</p></li>
+</ul>
+
+<h3>Righe e colonne intere</h3>
+
+<p>Esiste anche una sintassi particolare (che funziona in MS Excel ma piano piano anche in Libre Office e Fogli Google) e che serve per far riferimento a intere colonne o a intere righe.<br> Scrivendo =SOMMA(A:A) si sommeranno tutte le celle della colonna A. Con =SOMMA(1:1) si sommeranno tutte le celle della riga 1 e così via. <br> È anche possibile contemplare più colonne o righe. Per esempio scrivendo =SOMMA(A:B) si sommeranno tutte le celle della colonna A e della colonna B.</p>
+
+
+<h2>Combinare dati con il simbolo di e commerciale (&)</h2>
+
+<ul>
+	<li><p>Selezionare la cella in cui si vogliono inserire i dati combinati;</p></li>
+	<li><p>Digitare = e quindi selezionare la prima cella da combinare;</p></li>
+	<li><p>Digitare&e racchiudere uno spazio tra virgolette;</p></li>
+	<li><p>Digitare di nuovo&, selezionare la cella successiva da combinare e premere INVIO. Una formula d'esempio può essere =A2&" "&B2.</p></li>
+</ul>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Angular velocity">
-	<title>Angular velocity</title>
+	<meta name="description" content="Lavoro. Potenza. Energia Cinetica">
+	<title>Lavoro. Potenza. Energia Cinetica</title>
 	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -19,186 +19,285 @@
 
 <article>
 
-<h1>Angular velocity</h1>
+<h1>Lavoro. Potenza. Energia Cinetica</h1>
 
-<p>Purely <i>translational motion</i> occurs if every particle of the body has the same instantaneous velocity as every other particle. Purely rotational motion occurs if every particle in the body moves in a circle about a single line called axis of rotation. <br> The motion of an object moving around an axis, circular motion, is described in terms of the angular displacement, with angles measured in <a href="../mat/euclidean/angle.html">radians</a>. In general, the angle <i>&theta;</i> subtended by an arclength <i>s</i> along a circle of radius <i>R</i>, measured in radians counterclockwise from the positive <i>x</i>-axis, is</p>
-
-<div class="eq">
-<p><i>&theta;</i> = <i>s</i>/<i>R</i></p>
-</div>
-
-<p>Having defined angular displacements, it’s natural to define an angular velocity:</p>
+<p>Abbiamo visto come la legge di Newton (3.1) si esprime in termini integrali attraverso il teorema dell'impulso (3.3), rilevando che si arriva a determinare la variazione finita di quantità di moto solo se si può calcolare esplicitamente l'integrale ∫<sup><sup><i>t</i></sup></sup><sub><sub>0</sub></sub> <b>F</b>(<i>t</i>) d<i>t</i>. Affrontiamo adesso il problema dell'integrazione della legge di Newton quando si considera la forza come funzione della posizione occupata dal punto, ampliando il ragionamento già fatto nel par. 1.8 a proposito di <i>a</i>(<i>x</i>) e <i>a</i>(<i>t</i>) nel moto rettilineo. <br> Consideriamo, fig. 4.1, un punto materiale <i>P</i> soggetto ad una forza <b>F</b> che subisca, per azione di questa forza, uno spostamento &Delta;<b>s</b>. Il lavoro <i>W</i> compiuto dalla forza per lo spostamento &Delta;<b>s</b> è definito come il prodotto scalare della forza per lo spostamento:</p>
 
 <div class="eq">
-<p><b><i>&omega;</i></b> = <i>&omega;<b>k</b></i></p>
+<p><i>W</i> = <b>F</b> ⋅ &Delta;<b>s</b> = <i>F</i>&Delta;<i>s</i> cos <i>&theta;</i> = <i>F<sub>T</sub></i>&Delta;<i>s</i> (4.1)</p>
 </div>
 
-<p>with <i><b>k</b></i> unit vector along the axis of rotation and <i>&omega;</i> the angular speed defined as</p>
+<p>dove <i>&theta;</i> è l'angolo tra <b>F</b> e &Delta;<b>s</b> e <i>F<sub>T</sub></i> cos &theta; è la proiezione della forza lungo la direzione dello spostamento. <br>La (4.1) mostra che il lavoro dipende oltre che dal modulo della forza e dello spostamento, anche dall'angolo <i>&theta;</i>, che determina il valore di <i>F<sub>T</sub></i>: è questa, in ultima analisi, che contribuisce al calcolo del lavoro.<br> Si possono presentare tre casi</p>
 
-<div class="eq">
-<p><i>&omega;</i> = |d<i>&theta;</i>/d<i>t</i>|</p>
-</div>
+<ul>
+	<li><p><b>F</b> forma con &Delta;<b>s</b> un angolo minore di &pi;/2, per cui l'accelerazione tangente è concorde con la velocità e la fa aumentare: <i>W</i> risulta positivo e viene chiamato <b>lavoro motore</b>;</p></li>
+	<li><p><b>F</b> forma con &Delta;<b>s</b> un angolo maggiore di &pi;/2, per cui il punto viene frenato e <i>W</i> risulta negativo, <b>lavoro resistente</b>;</p></li>
+	<li><p>Infine se <b>F</b> è ortogonale alla traiettoria, <i>&theta;</i> = &pi;/2 e il <b>lavoro è nullo</b>: in questo caso <b>F</b> ha <b>azione</b> puramente <b>centripeta</b> e non fa variare il modulo della velocità.</p></li>
+</ul>
 
-<p>The right-hand grip rule that determines the direction of the angular velocity vector: if the fingers of the right hand curl around the axis in the direction of rotation of the body, the extended thumb points along the direction of the angular velocity vector. This means that for a body rotating around the <i>z</i> axis, <b><i>&omega;</i></b> is positive for an anticlockwise direction and negative for a clockwise rotation.</p>
-
-<h2>Angular acceleration</h2>
-
-<p>To obtain the angular acceleration vector, we apply the time derivative on both sides of <i><b>&omega;</b></i> = <i>&omega;<b>k</b></i></p>
+<p>Per uno spostamento finito dalla posizione <i>A</i> alla posizione <i>B</i> lungo un percorso <i>C</i> il lavoro si ottiene suddividendo il percorso in una serie di <i>n</i> segmenti &Delta;<b>s</b>, fig. 4.2a, calcolando per ognuno di essi il lavoro <i>W<sub>i</sub></i> = <b>F</b> ⋅ &Delta;<b>s</b> e sommando su tutti i contributi <i>W</i> = &Sigma;<sub>i</sub> <i>W<sub>i</sub></i>. Il lavoro così ottenuto rappresenta un <i>valore approssimato</i> calcolato di segmenti, <i>n</i> considerato. Passando al limite per <i>n</i> → &infin;, ciascun segmento &Delta;<b>s</b>, si confonde con lo spostamento infinitesimo d<b>s</b>, tangente in ogni punto a <i>C</i>, fig. 4.2b, e la sommatoria diventa:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="ORD">
-    <mpadded width="0">
-      <mi>&#x3B1;</mi>
-    </mpadded>
-  </mrow>
-  <mspace width="1px"></mspace>
-  <mrow data-mjx-texclass="ORD">
-    <mi>&#x3B1;</mi>
-  </mrow>
+  <mi>W</mi>
   <mo>=</mo>
-  <mfrac>
-    <mtext>d</mtext>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>t</mi>
-    </mrow>
-  </mfrac>
-  <mo stretchy="false">(</mo>
-  <mi>&#x3C9;</mi>
-  <mi mathvariant="bold">k</mi>
-  <mo stretchy="false">)</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <mi mathvariant="bold">F</mi>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi mathvariant="bold">s</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <msub>
+    <mi>F</mi>
+    <mi>T</mi>
+  </msub>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <msub>
+    <mi>F</mi>
+    <mi>T</mi>
+  </msub>
+  <mtext>d</mtext>
+  <mi>s</mi>
 </math>
 
-<!-- $$ \pmb{\alpha} = \frac{\text{d}}{\text{d}t} (\omega \mathbf{k}) $$ -->
+<!-- $$W = \int_A^B \mathbf{F} \cdot \text{d}\mathbf{s} = \int_A^B F_T \cos \theta \cdot \text{d}s = \int_A^B F_T \text{d}s $$ -->
 
-<p>Hence</p>
+<p>in cui l'integrale è l'<i>integrale di linea</i> della forza <b>F</b> lungo <i>C</i>. <br>Dunque</p>
+
+<blockquote>il lavoro è l'integrale di linea della forza lungo la traiettoria.</blockquote>
+
+<p>Naturalmente lungo la traiettoria <i>&theta;</i> in generale varia, per cui si possono alternare tratti in cui <i>&theta;</i> &gt; &pi;/2, nei quali il punto materiale viene accelerato, a tratti in cui <i>&theta;</i> &lt; &pi;/2, nei quali viene decelerato. Quando <i>&theta;</i> = &pi;/2 il punto materiale non viene accelerato, per cui la sua velocità rimane costante. Si tratta ovviamente di accelerazioni tangenziali. <br>Quando <b>F</b> è effettivamente la somma di <i>n</i> forze <b>F</b><sub>1</sub>, <b>F</b><sub>2</sub>, ..., <b>F</b><sub><i>n</i></sub>, per ciascuna si può calcolare il corrispondente lavoro e risulta:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <mtext>d</mtext>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>t</mi>
-    </mrow>
-  </mfrac>
-  <mo stretchy="false">(</mo>
-  <mi>&#x3C9;</mi>
-  <mi mathvariant="bold">k</mi>
-  <mo stretchy="false">)</mo>
+  <mi>W</mi>
   <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>&#x3C9;</mi>
-    </mrow>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>t</mi>
-    </mrow>
-  </mfrac>
-  <mi mathvariant="bold">k</mi>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <mi mathvariant="bold">F</mi>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi mathvariant="bold">s</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">F</mi>
+    <mn mathvariant="bold">1</mn>
+  </msub>
   <mo>+</mo>
-  <mi>&#x3C9;</mi>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msub>
+    <mi mathvariant="bold">F</mi>
+    <mi mathvariant="bold">n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi mathvariant="bold">s</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <msub>
+    <mi mathvariant="bold">F</mi>
+    <mn mathvariant="bold">1</mn>
+  </msub>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi mathvariant="bold">s</mi>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <msub>
+    <mi mathvariant="bold">F</mi>
+    <mi mathvariant="bold">n</mi>
+  </msub>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi mathvariant="bold">s</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>W</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>W</mi>
+    <mi>n</mi>
+  </msub>
+</math>
+
+<!-- $$W = \int_A^B \mathbf{F} \cdot \text{d}\mathbf{s} = \int_A^B (\mathbf{F_1} + \ldots + \mathbf{F_n}) \cdot \text{d}\mathbf{s} =  \int_A^B \mathbf{F_1} \cdot \text{d}\mathbf{s} + \ldots +  \int_A^B \mathbf{F_n} \cdot \text{d}\mathbf{s} = W_1 + \ldots + W_n  $$ -->
+
+<p>Il lavoro è pari alla somma dei lavori delle singole forze agenti, ciacuno dei quali può essere positivo, negativo o nullo <br> Secondo quanto detto sopra il lavoro totale può essere nullo in quanto somma di lavoro motore lungo un arco di traiettoria e di lavoro resistente lungo un successivo arco. Certamente però possiamo affermare che <i>W</i> = 0 quando non agisce nessuna forza oppure agiscono forze la cui risultante o è nulla o è sempre ortogonale alla traiettoria (condizioni di equilibrio dinamico, par. 3.12). Un esempio di moto traiettoria (condizioni di equilibrio dinamico, par. 3.12). Un esempio di moto con risultante nulla delle forze è il moto rettilineo uniforme in presenza di attrito radente: occorre applicare una forza uguale e contraria alla forza di attrito e quindi fornire un lavoro motore uguale ed opposto al lavoro resistente dell'attrito. Invece un moto con risultante delle forze smpre ortogonale alla traiettoria è il moto curvilineo uniforme; se poi c'è attrito, oltre alla forza normale deve essere presente una forza tangente, che svolge un lavoro motore, per bilanciare l'effetto dell'attrito.</p>
+
+<h2>Potenza</h2>
+
+<p>La <b>potenza</b> corrisponde al <i>lavoro per unità di tempo</i>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>W</mi>
+  <mo>=</mo>
   <mfrac>
     <mrow>
       <mtext>d</mtext>
-      <mi mathvariant="bold">k</mi>
+      <mi>W</mi>
     </mrow>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>t</mi>
-    </mrow>
+    <mtext>t</mtext>
   </mfrac>
+  <mo>=</mo>
+  <mi mathvariant="bold">F</mi>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi mathvariant="bold">s</mi>
+  <mo>=</mo>
+  <mi mathvariant="bold">F</mi>
+  <mo>&#x22C5;</mo>
+  <mtext>d</mtext>
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>F</mi>
+    <mi>T</mi>
+  </msub>
+  <mi>v</mi>
 </math>
-<!-- $$ \frac{\text{d}}{\text{d}t} (\omega \mathbf{k}) = \frac{\text{d}\omega}{\text{d}t} \mathbf{k} + \omega \frac{\text{d}\mathbf{k}}{\text{d}t} $$ -->
 
-<p>However <i><b>k</b></i> is a unit vector with constant orientation, and therefore d<i><b>k</b></i>/d<i>t</i> = 0. Thus the previous equation reduces to</p>
+<!-- $$ W = \frac{\text{d}W}{\text{t}} = \mathbf{F} \cdot \text{d}\mathbf{s} = \mathbf{F} \cdot \text{d}\mathbf{v} = F_Tv $$ -->
 
-<div class="eq">
-<p><i><b>&alpha;</b></i> = <i>&alpha;<b>k</b></i></p>
-</div>
+<p>Questa è la <b>potenza istantanea</b>, in generale variabile durante il moto, e caratterizza la rapidità di erogazione del lavoro. <br> La <b>potenza media</b> è il rapporto <i>W</i>/<i>t</i>, cioè il lavoro totale diviso per il tempo durante cui il lavoro è stato svolto. Tale grandezza risulta particolarmente importante per qualificare le prestazioni di un dispositivo o macchina che fornisce lavoro. A parità di lavoro totale svolto, ha maggiore potenza quella macchina che lo eroga in minore tempo.</p>
 
-<h2>Relation between angular and linear velocity</h2>
+<h2>Energia cinetica</h2>
 
-<p>We may use these rules to derive vector relations between linear and angular variables for a body moving in a circle of radius <i>R</i>. The velocity, <b><i>v</i></b> has only one component tangential to the circle whose magnitude is</p>
+<p>Riprendiamo la relazione relativa al lavoro infinitesimo associato ad uno spostamento d<i>s</i>:</p>
 
 <div class="eq">
-<p><i>v</i> = d<i>s</i>/d<i>t</i></p>
+<p>d<i>W</i> = <i>F<sub>T</sub></i> d<i>s</i> = <i>ma<sub>T</sub></i> d<i>s</i> = <i>m</i>(d<i>v</i>/d<i>t</i>)d<i>s</i> = <i>m</i>(d<i>s</i>/d<i>t</i>)d<i>v</i> = <i>mv</i>d<i>v</i></p>
 </div>
 
-<p>so <i>v</i> is positive when <i>s</i> increases with time (anticlockwise direction) and negative when <i>s</i> decreases with respect to <i>t</i> (clockwise rotation). Further since, <i>s</i> = <i>R&theta;</i>, we have</p>
+<p>Abbiamo trovato così il legame esplicito tra il lavoro infinitesimo e la variazione infinitesima del modulo della velocità rendendo quantitativa la discussione fatta in precedenza. Per un percorso finito della posizione <i>A</i> a quella <i>B</i> abbiamo</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>W</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>A</mi>
+    <mi>B</mi>
+  </msubsup>
+  <mi>m</mi>
+  <mi>v</mi>
+  <mtext>d</mtext>
   <mi>v</mi>
   <mo>=</mo>
   <mfrac>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>t</mi>
-    </mrow>
+    <mn>1</mn>
+    <mn>2</mn>
   </mfrac>
-  <mo>=</mo>
+  <msubsup>
+    <mi>v</mi>
+    <mi>B</mi>
+    <mn>2</mn>
+  </msubsup>
+  <mo>&#x2212;</mo>
   <mfrac>
-    <mrow>
-      <mtext>d</mtext>
-      <mo stretchy="false">(</mo>
-      <mi>R</mi>
-      <mi>&#x3B8;</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>t</mi>
-    </mrow>
+    <mn>1</mn>
+    <mn>2</mn>
   </mfrac>
+  <msubsup>
+    <mi>v</mi>
+    <mi>A</mi>
+    <mn>2</mn>
+  </msubsup>
   <mo>=</mo>
-  <mi>R</mi>
-  <mfrac>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>&#x3B8;</mi>
+  <msub>
+    <mi>E</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>B</mi>
     </mrow>
-    <mrow>
-      <mtext>d</mtext>
-      <mi>t</mi>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>E</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>A</mi>
     </mrow>
-  </mfrac>
+  </msub>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x394;</mi>
+  <msub>
+    <mi>E</mi>
+    <mi>k</mi>
+  </msub>
+<mtext>&emsp;(4.3)</mtext>
 </math>
 
-<!-- $$v = \frac{\text{d}s}{\text{d}t} = \frac{\text{d}(R\theta)}{\text{d}t} = R \frac{\text{d}\theta}{\text{d}t} $$ -->
+<!-- $$W = \int_A^B mv\text{d}v = \frac{1}{2} v_B^2 - \frac{1}{2} v_A^2 = E_{k,B} - E_{k,A} = \Delta E_k $$ -->
 
-<p>that is</p>
+<p>dove la quantità <i>E<sub>k</sub></i> = ½ <i>mv</i><sup>2</sup> prende il nome di <b>energia cinetica</b> del punto. Pertanto la (4.3), nome come <b>teorema dell'energia cinetica</b>, afferma che</p>
+
+<blockquote>qualunque sia la forza che agisce nello spostamento di un punto materiale dalla posizione <i>A</i> alla posizione <i>B</i> il lavoro fatto dalla forza è uguale alla variazione dell'energia cinetica del punto materiale stesso.</blockquote>
+
+<p>Il teorema dell'energia cinetica è una diretta conseguenza della seconda legge di Newtown. <br>Se <i>W</i> &gt; 0, l'energia cinetica finale è maggiore di quella iniziale mentre se <i>W</i> &lt; 0 l'energia cinetica finale è minore di quella iniziale. Questo è il aso del lavoro delle forze di attrito e pertanto, se agiscono solo tali forze, la velocità diminuisce. Infinite, se <i>W</i> = 0, l'energia cinetica resta costante; ciò si verifica, per es., nel cmoto circolare uniforme: il lavoro della forza centripeta, unica forza agente, è nullo e quindi la velocità rimane costante in modulo. <br>Sottolineamo che <i>W</i> rappresenta il lavoro totale. Se è noto come varia la forza lungo la traiettoria, possiamo calcolare il lavoro e quindi il modulo della velocità in ciascun punto (Se conosciamo quella iniziale). Viceversa, se misuriamo le velocità iniziale e finale, possiamo tramite (4.3) dedurre il lavoro compiuto dalle forze agenti. <br>Si faccia attenzione al fatto che la nozione di lavoro, e quindi di variazione di energia cinetica, è necessariamente legate a quella di spostamento, secondo la definizione (4.1). Se non c'è spostamento non può esserci lavoro, qualunque sia la forza applicata (mentre può esserci spostamento senza lavoro). Quando si spinge un corpo e questo non si sposta perché è presente un attrito statico, non c'è lavoro né motore né resistente, così come non si compie lavoro quando si spinge con una mano contro un muro. In questi casi la sensazione di fatica è legata allo stato di tensione dei muscoli che richiede un consumo di energia, ma, ripetiamo, il lavoro meccanico è nullo.</p>
+
+<p>Se riprendiamo le definizioni di energia cinetica e di quantità di moto,</p>
 
 <div class="eq">
-<p><i>v</i> = <i>R&omega;</i></p>
+<p><i>E<sub>k</sub></i> = ½ <i>mv</i><sup>2</sup>, &emsp; <b>p</b> = <i>m</i><b>v</b></p>
 </div>
 
-<p>If <i><b>R</b></i> and <i><b>v</b></i> are in the plane of the page, while <b>&Omega;</b> points out of the page, we must have <i><b>v</b></i> = <b>&omega;</b> x <b>R</b>.</p>
+<p>vediamo che tra energia cinetica e modulo della quantità di moto sussistono le relazioni</p>
 
-<img src="img/angular_velocity.png" alt="angular velocity"/>
+<div class="eq">
+<p><i>E<sub>k</sub></i> = <i>p</i><sup>2</sup>/2<i>m</i>, &emsp; <i>p</i> = sqrt(2<i>mE<sub>k</sub></i>)</p>
+</div>
 
-<p>The procedure that we used to develop the kinematic equations for linear motion under constant acceleration can be used to derive a similar set of equations for rotational motion under constant angular acceleration. The resulting equations of rotational kinematics, along with the corresponding equations for linear motion, are as follows:</p>
-
-<table>
-<tr><th>Translational Motion (1 dimention)</th> <th>Rotation About a Fixed Axis</th></tr>
-<tr><td><i>x</i> = <i>x</i><sub>0</sub> + <i>v<sub>x</sub>t</i><br>Constant linear velocity</td> <td><i>&theta;</i> = <i>&theta;</i><sub>0</sub> + <i>&omega;</i>t</i><br>Constant angular velocity</td></tr>
-
-<tr><td><i>v<sub>x</sub></i> = <i>v</i><sub>x0</sub> + <i>a<sub>x</sub>t</i><br>Constant linear acceleration</td> <td><i>&omega;<sub>z</sub></i> = <i>&omega;</i><sub>z0</sub> + <i>&alpha;<sub>z</sub></i>t</i><br>Constant angular acceleration</td></tr>
-
-<tr><td><i>x</i> = <i>x<sub>0</sub> + <i>v<sub>x0</sub>t</i> + ½ <i>a<sub>x</sub>t</i></td> <td><i>&theta;</i> = <i>&theta;</i><sub>0</sub> + <i>&omega;</i><sub>z0</sub>t + ½ <i>&alpha;<sub>z</sub></i>t</i></td></tr>
-
-<tr><td><i>v<sub>x</sub></i><sup>2</sup> = <i>v</i><sub>x0</sub><i>t</i> + ½<i>a<sub>x</sub>t</i><sup>2</sup></td> <td><i>&omega;<sub>z</sub></i><sup>2</sup> = <i>&omega;</i><sub>z0</sub><sup>2</sup> + 2<i>&alpha;<sub>z</sub></i>(<i>&theta;</i> − <i>&theta;</i><sub>0</sub>)</td></tr>
-
-</table>
+<p>In questo paragrafo abbiamo introdotto per la prima volta il concetto di energia, nel caso particolare quella cinetica; in seguito troveremo altre forme di energia (potenziale legata ai vari tipi di forze). Tutte le leggi con cui vengono definite le varie forme di energia contengono sempre la <i>variazione di energia</i> e pertanto tali quantità possono essere definite a meno di una costante. Per es., l'energia cinetica di un punto potrebbe essere scritta come  ½ <i>mv</i><sup>2</sup> + costante, senza modificare la (4.3) in quanto nella differenza la costante scompare. Però si avrebbe che questa forma di energia, legata al movimento, sarebbe non nulla anche se <i>v</i> = 0, il che non ha molto senso. Poniamo dunque, in questo caso, la costante uguale a zero. <br>Il lavoro è la manifestazione dell'azione di una forza ed è quindi conseguenza dell'interazione con l'ambiente circostante. Si parla pertanto di <b>lavoro  scambiato</b> e non si dice mai che un sistema possiede lavoro. <br> Si parla invece di <b>energia possedura</b> dal sistema, che viene modificata dall'interazione con l'ambiente esterno. Un effetto misurabile dell'interazione è la variazione di energia.</p>
 
 <section aria-label="End">
-<a href="epoxides.html">«Epoxides</a>
+<a href="fourth.html">&#171;Forze centripete</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides»</a>
+<a href="lavoro_mg.html">Lavoro della forza peso &#187;</a>
 </section>
 
 </article>
