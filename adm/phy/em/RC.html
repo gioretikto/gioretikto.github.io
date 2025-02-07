@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="RC Circuits">
+	<title>RC Circuits</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>RC Circuits</h1>
+
+<p>An RC circuit is a circuit with both a resistor (R) and a capacitor (C). RC circuits are frequent element in electronic devices. They also play an important role in the transmission of electrical signals in nerve cells. <br> A capacitor can store energy and a resistor placed in series with it will control the rate at which it charges or discharges. This produces a characteristic time dependence that turns out to be exponential.</p>
+
+<img src="img/RC.png" alt="RC circuit"/>
+
+<p>If connection (a) is made, and the capacitor had no charge before closing the switch at <i>t</i> = 0, the initial potential difference across the capacitor is zero. For <i>t</i> &gt; 0, the battery of emf <span style="font-family: 'OpenSymbol', sans-serif;">ℰ</span> charges the capacitor <i>C</i> by supplying a current <i>I</i> that passes through the resistor <i>R</i> and the entire battery voltage appears across the resistor, <i>I</i> = <span style="font-family: 'OpenSymbol', sans-serif;">ℰ</span>/<i>R</i>. <br> As the charge accumulates, the capacitory begins to resist the flow of additional charge. Thus, over time, voltage builds up across the capacitory, while current through the resistor declines. This will continue until the accumulated charge creates a potential difference (<i>V<sub>c</sub></i>) between the two plates that is numerically equal to the electromotive force, and the capacitor is charged to its maximum equilibrium value, <i>Q</i> = C<span style="font-family: 'OpenSymbol', sans-serif;">ℰ</span>. At this point current flow through the connecting wires will cease (i.e., <i>I</i> = 0). <br> Because of the presence of a resistance (<i>R</i>) in the circuit, current flow through the circuit is slowed. As a result, changing the amount of charge stored on the plates of the capacitor requires time. The charging of the capacitor is described by an exponential equation,</p>
+
+<div class="eq">
+<p><i>q</i>(<i>t</i>) = <i>Q</i>(1 – <i>e</i><sup>−<i>t</i>/<i>RC</i></sup>) &emsp;&emsp; 3.4.1</p>
+</div>
+
+<p>where <i>Q</i> is the total amount of charge stored by the capacitor, <i>C</i> is the capacitance of the capacitor. Note that <i>Q</i> = 0 when the capacitor is discharged. The term RC that appears in Equation 3.4.1 is called the <b>time constant</b></p>
+
+<div class="eq">
+<p><i>&tau;</i> = <i>RC</i></p>
+</div>
+
+<p>Note that 1 – e<sup>−1</sup> = 0.632; so by substituting <i>t</i> = <i>&tau;</i> = <i>RC</i> into eq. 3.4.1. we see that the <i>&tau;</i> constant represents the time required for the charge to increase from zero to 63.2% of its maximum equilibrium value, <i>Q</i>.</p>
+
+<p>When the switch is toggled to its alternate position, (b) the emf is bypassed, the two plates of the capacitor are connected, and the charges stored on the capacitor will tend to pass through the connecting wire to the opposite plate. In other words, if the capacitor is fully charged, <i>Q</i> = <i>C</i><span style="font-family: 'OpenSymbol', sans-serif;">ℰ</span>, it will discharge. It can be shown that the charge <i>q</i> on the capacitor varies with time according to the equation</p>
+
+<div class="eq">
+<p><i>q</i>(<i>t</i>) = <i>Q</i><i>e</i><sup>−<i>t</i>/<i>RC</i></sup> &emsp;&emsp; 3.4.1</p>
+</div>
+
+<p>The charge decreases exponentially with time, as shown in Figure 18.18b. In the interval <i>t</i> = &tau; = <i>RC</i>, the charge decreases from its initial value <i>Q</i> to 0.368<i>Q</i>. In other words, in a time equal to one time constant, the capacitor loses 63.2% of its initial charge. Because &Delta;<i>V</i> = <i>q</i>/<i>C</i>, the voltage across the capacitor also decreases exponentially with time according to the equation &Delta;<i>V</i> = <span style="font-family: 'OpenSymbol', sans-serif;">ℰ</span>e<sup>−<i>t</i>/<i>RC</i></sup>, where <span style="font-family: 'OpenSymbol', sans-serif;">ℰ</span> (which equals <i>Q</i> /<i>C</i>) is the initial voltage across the fully charged capacitor.</p>
+
+<h3>Derivation of the current transient though a RC circuit</h3>
+
+<p>At time <i>t</i> = 0, the switch is toggled and the potential provided by the battery is</p>
+
+<div class="eq">
+<p><i>V</i><sub>0</sub> = <i>V<sub>R</sub></i> + <i>V<sub>C</sub></i></p>
+</div>
+
+<p>where <i>V<sub>R</sub></i> = <i>IR</i> and <i>V<sub>C</sub></i> = <i>Q</i>/<i>C</i>.</p>
+
+<p>The battery potential is constant i.e. d<i>V</i><sub>0</sub>/d<i>t</i> = 0. Differentiating <i>V</i><sub>0</sub> = <i>V<sub>R</sub></i> + <i>V<sub>C</sub></i> and setting it equal to zero, we see that the current through the circuit obeys the differential equation:</p>
+
+<div class="eq">
+<p>d<i>I</i>/d<i>t</i> = −<i>I</i>/<i>RC</i></p>
+</div>
+
+<p>The solution to this equation is a decaying exponential, with initial amplitude <i>I</i><sub>0</sub> = <i>V</i><sub>0</sub> /<i>R</i>
+and a time constant <i>&tau;</i> = <i>RC</i>:</p>
+
+<div class="eq">
+<p><i>I</i> = <i>I</i><sub>0</sub> <i>e</i><sup>−<i>t</i>/<i>&tau;</i></sup></p>
+</div>
+
+<p>The voltage across the resistor follows the current, and therefore also decays expoentially</p>
+
+<div class="eq">
+<p><i>V<sub>R</sub></i> = <i>IR</i> = <i>V</i><sub>0</sub> <i>e</i><sup>−<i>t</i>/<i>&tau;</i></sup></p>
+</div>
+
+<p>while the voltage across the capacitory increases following an inverse exponential decay:</p>
+
+<div class="eq">
+<p><i>V<sub>C</sub></i> = <i>V</i><sub>0</sub> − <i>V<sub>R</sub></i> = <i>V</i><sub>0</sub> (1 – <i>e</i><sup>−<i>t</i>/<i>&tau;</i></sup>)</p>
+</div>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

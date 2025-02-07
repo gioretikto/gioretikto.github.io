@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Inductors">
+	<title>Inductors</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Inductors</h1>
+
+<p>When a current is passed through a coil of wire, a magnetic field is generated. An <b>inductor</b> is a circuit component that is made of a conducting wire wrapped around a core in the form of a coil. 
+There are different types of inductors that can be categorized base on the material composition of their core, which can be made of iron or ferrite, air, or any nonmagnetic material. <br> The current <i>I</i> in the circuit rises continuously from zero to its final value. This changing magnetic field acts just like a magnet being moved around near the coil − it induces another current in the coil. While the current is rising, an induced emf ℰ<sub>L</sub> = d<i>&Phi;<sub>B</sub></i>/d<i>t</i> = −<i>L</i>(Δ<i>I</i>/Δ<i>t</i>) appears across the inductor. This effect, in which a coil induces current <i>in itself</i>, is called <b>self induction</b>. The presence of an inductor impeeds the current to change instantaneously.  </p>
+
+<p>The inductor can store energy associated with the magnetic field it produces when a current is passing through the coils. To calculate the energy storage capacity of an inductor we look at a simple <i>LR</i> circuit, as shown in Fig.1, where a battery provides and emf of ℰ<sub>0</sub>.</p>
+
+<figure>
+<img src="img/RL.png" alt="RL circuit"/>
+<figcaption>Simple RL circuit with a battery</figcaption>
+</figure>
+
+<p>By Ohm's law we must have</p>
+
+<div class="eq">
+<p>ℰ<sub>0</sub> + ℰ<sub>L</sub> = <i>Ri</i></p>
+</div>
+
+<h2 id="energy">Magnetic energy</h2>
+
+<p>The power employed by the generator when the current has the value <i>i</i>, is</p>
+
+<div class="eq">
+<p>ℰ<sub>0</sub><i>i</i> + <i>Li</i> d<i>i</i>/d<i>t</i> = <i>Ri</i><sup>2</sup></p>
+</div>
+
+<p>The work done by multiplying the previous equation by d<i>t</i></p>
+
+<div class="eq">
+<p>ℰ<sub>0</sub><i>i</i>d<i>t</i> + <i>Li</i> d<i>i</i> = <i>Ri</i><sup>2</sup>d<i>t</i></p>
+</div>
+
+<p>This equation represents the <b>energy balance</b> of the circuit. In the time interval when the current builds from 0 to the value <i>i</i>, the generator in addition to the work done correspondent to the Joule's effect, must do a work against ℰ<sub>L</sub> equal to</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>W</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mi>i</mi>
+  </msubsup>
+  <mi>L</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>i</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>i</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mi>L</mi>
+  <msup>
+    <mi>i</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$W = \int_0^i L \, i\, \text{d}i = \frac{1}{2} Li^2 $$ -->
+
+<p>which does not depend on how the variation of current occurs, but only by its initial and final value. In this expression <i>W</i> represents the work done by the generator to increase the current in the
+inductor by an amount <i>i</i>. This work is stored as energy in the inductor, so that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>U</mi>
+    <mi>L</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mi>L</mi>
+  <msup>
+    <mi>i</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$U_L = \frac{1}{2} Li^2 $$ -->
+
+<p>To prove that this energy is distributed in the space with a density depending on the local value of the magnetic field, we consider a long solenoid whose self-inductance is <i>L</i> = <i>μ</i><sub>0</sub> n<sup>2</sup><i>Aℓ</i>, where <i>n</i> is the number of turns per unit length, <i>A</i> is the cross-sectional area, and ℓ is the length of the solenoid. As a result, the energy stored in a long solenoid is</p>
+
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>U</mi>
+    <mi>L</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mi>L</mi>
+  <msup>
+    <mi>i</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3BC;</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mi>n</mi>
+    <mn>2</mn>
+  </msup>
+  <mi>A</mi>
+  <mi>&#x2113;</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mi>i</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <msup>
+      <mi>B</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mn>2</mn>
+      <msub>
+        <mi>&#x3BC;</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mi>A</mi>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$U_L = \frac{1}{2} Li^2  =  \frac{1}{2} (\mu_0 n^2A\ell) i^2 = \frac{B^2}{2\mu_0} A \ell$$ -->
+
+<p>The term <i>Aℓ</i> is the volume inside the solenoid where the magnetic field exists, and we used the fact that <i>B</i> = <i>&mu;</i><sub>0</sub><i>ni</i> so the energy per unit volume, or <b>energy density</b>, is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>u</mi>
+    <mi>m</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <msup>
+      <mi>B</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mn>2</mn>
+      <msub>
+        <mi>&#x3BC;</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$u_m = \frac{B^2}{2\mu_0} $$ -->
+
+<p>Although this result was obtained for the special case of a long solenoid, it is quite general and is valid for any point where a magnetic field exists in air or vacuum or in a nonmagnetic material.
+Thus, energy can be stored in a magnetic field, just as it can in an electric field. </p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

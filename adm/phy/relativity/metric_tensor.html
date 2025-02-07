@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Metric tensor">
+	<title>Metric tensor</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Metric tensor</h1>
+
+<h2>Non-orthogonal axes</h2>
+
+<p>Rather than choosing basis vector for a Cartesian coordinate system that are mutually perpendicular (i.e., orthogonal), we can have coordinate basis vectors not mutually perpendicular which may have different length: <i><b>e</b><sub>i</sub></i> · <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i> &ne; <i>δ<sub>ij</sub></i>. We can no longer use the standard formula for <a href="../../mat/lalg/dot_product.html">dot product</a>, in this system. Consider a basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>} such that <i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub> &ne; 0, then the dot product between <i><b>u</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) and <i><b>v</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) is</p>
+
+<div class="eq">
+<p><i><b>u</b></i> ⋅ <i><b>v</b></i> = (<i>a</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>a</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) ⋅ (<i>b</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>b</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) = (<i>a</i><sub>1</sub><i>b</i><sub>1</sub> + <i>a</i><sub>2</sub><i>b</i><sub>2</sub>) + (<i>a</i><sub>1</sub><i>b</i><sub>2</sub> + <i>b</i><sub>1</sub><i>a</i><sub>2</sub>) (<i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub>)</p>
+</div>
+
+<p>We can represent the collection of scalar products of the basis vectors as a symmetric matrix, called the <i>metric</i> or the <i>metric tensor</i>:</p>
+
+<div class="eq">
+<p><i><b>e</b><sub>i</sub></i> ⋅ <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i></p>
+</div>
+
+<p>We can display the metric of a 4D space as a 4 × 4 matrix whose elements are the dot products of the basis vectors:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">[</mo>
+  <mi>g</mi>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>00</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>01</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>10</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ [g] = \left( \begin{array}{ccc} g_{00} & g_{01} & \ldots \\ g_{10} & g_{11} & \ldots \\ \vdots & \vdots & \end{array} \right) = \left( \begin{array}{ccc} \mathbf{e}_{0} \cdot \mathbf{e}_{0} & \mathbf{e}_{0} \cdot \mathbf{e}_{1} & \ldots \\ \mathbf{e}_{1} \cdot \mathbf{e}_{0} & \mathbf{e}_{1} \cdot \mathbf{e}_{1} & \ldots \\ \vdots & \vdots & \end{array} \right) $$ -->
+
+<p>Thus the diagonal elements are the (squared) magnitudes of the basis vectors, |<b><i>e</i></b><sub>0</sub>|<sup>2</sup>, |<b><i>e</i></b><sub>1</sub>|<sup>2</sup>, etc., while the off-diagonal elements represent their deviations from orthogonality. Any set of mutually perpendicular bases would be represented by a diagonal metric matrix.</p>
+
+<p>Then the dot product could be expressed in the form</p>
+
+<div class="eq">
+<p><i><b>u</b></i> ⋅ <i><b>v</b></i> = <i>g<sub>ij</sub></i> <i>u</i><sub>i</sub><i>v</i><sub>j</sub></p>
+</div>
+
+<p>where we employed Einstein summation convention.</p>
+
+
+<p>Once the inner products have been introduced, we can define the length in abstract vector spaces in a manner that is completely analogous to the distance for geometric vectors in ℝ<sup><i>n</i></sup>. Indeed the the scalar product/dot product is the Euclidean norm on ℝ<sup><i>n</i></sup>,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi mathvariant="bold">v</mi>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mi mathvariant="bold">v</mi>
+    <mo>&#x22C5;</mo>
+    <mi mathvariant="bold">v</mi>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <msubsup>
+      <mi>v</mi>
+      <mn>1</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <msubsup>
+      <mi>v</mi>
+      <mn>2</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <mo>&#x2026;</mo>
+    <mo>+</mo>
+    <msubsup>
+      <mi>v</mi>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msubsup>
+  </msqrt>
+</math>
+
+<!-- $$ \|\mathbf{v}\| = \sqrt{\mathbf{v} \cdot \mathbf{v} } = \sqrt{v_1^2 + v_2^2 + \ldots + v_n^2} $$ -->
+
+<p>The Euclidean norm ‖⋅‖ is a function mapping vectors to nonnegative real numbers, build on the inner product. <br> Consider the two-dimensional vector <i><b>v</b></i> = [2, −1]. Its lenght is just sqrt{2<sup>2</sup> + (−1)<sup>2</sup>} = sqrt(5).</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
+

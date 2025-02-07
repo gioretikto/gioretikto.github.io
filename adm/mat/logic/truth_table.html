@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Truth Tables">
+	<title>Truth Table</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Truth Tables</h1>
+
+<p>Recall from section 1.1 that a statement or proposition is a declarative sentence that is either true or false, but not both true and false.</p>
+
+<p><b>Definition 1.3.1</b>. (<b>Truth Value and Truth Table</b>) The truth value of a statement is true (denoted by T) if the statement is true and is false (denoted by F) if the statement is false.&emsp;□</p>
+
+<p>A truth table is a table which shows the truth values of a statement for all possible combinations of truth values of its simple statement components. The German mathematician and philosopher Friedrich Ludwig Gottlob Frege (1848-1925) is considered to be one of the founders of modern symbolic logic. Frege believed that mathematics was reducible to logic. In 1879, he published his ﬁrst major work <i>Begriﬀsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens</i> (Conceptual notation, a formal language modeled on that of arithmetic, for pure thought). In this work, Frege introduced a logical system with negation, implication, universal quantiﬁers, and the idea of a truth table, although it was not presented in our current notational form. Later in 1893, Frege published <i>Die Grundgesetze der Arithmetik</i>, I. (The Basic Laws of Arithmetic, I.). Here, he introduced the terms “True” and “False” and described the truth value of the statement “P implies Q” for each of the four possible combinations of truth values of P, Q. That is, he verbally described the truth table for P implies Q (which we will study in the next section); but he did not display an actual truth table. Let P represent a statement. P may have the truth value T or the truth value F. By deﬁnition, the negation of P, ¬ P, is false when P is true and true when P is false. Consequently, the truth table for ¬ P is as follows:</p>
+
+<table>
+<tr><th>P</th> <th>¬ P</th></tr>
+
+<tr><td>T</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>T</td></tr>
+
+</table>
+
+<p>Since this truth table explains completely the result of negating the statement P, it may be taken as the deﬁnition of ¬P, the negation of P. The negation symbol “¬” is a <b>unary logical operator</b>. The term “unary” means the operator acts on a single statement.</p>
+
+<p>Given a collection of propositional components, say P, Q, and R, we can assign truth values to these components. Truth talbe (1) has four rows (not including the header). The columns beneath P and Q list all the possible pairs of truth values that can be assigned to the components P and Q. For each such pair, the corresponding truth value for P ∧ Q appears to the right. </p>
+
+<section>
+
+<table>
+<caption>Conjuction</caption>
+<tr><th>P</th> <th>Q</th> <th>P ∧ Q</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>F</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td> </tr>
+
+<tr><td>F</td> <td>F</td> <td>F</td> </tr>
+
+</table>
+
+
+<table>
+<caption>Disjuction</caption>
+
+<tr><th>P</th> <th>Q</th> <th>P ∨ Q</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>F</td> <td>F</td> <td>F</td> </tr>
+
+</table>
+
+</section>
+
+<p>Now that we know how to build tables for the sentences P ∧ Q, P ∨ Q and ¬P, we will discuss how to build truth tables for more complicated propositional sentences. Given a compound sentence, we identify the "outside" connective to be the "last connective that one needs to evaluate". Once the outside connective has been identified, one can break up the sentence into its "parts". For example, in the compound sentence ¬P ∨ (Q ∧ P) we see that ∨ is the outside connective with two parts ¬P and Q ∧ P.</p>
+
+<table>
+
+<tr><th>P</th> <th>Q</th> <th>¬P</th> <th>Q ∧ P</th> <th>¬P ∨ (Q ∧ P)</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td> </tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> <td>F</td> <td>T</td></tr>
+
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td> </tr>
+
+<tr> <td>1</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <th>STEP #</th></tr>
+
+</table>
+
+<p>In the construction of the above truth table, observe that whenever we broke up a sentence into parts, the columns for the parts appear to the left of the columns for the sentence.</p>
+
+<p>We now describe in steps how we obtained the truth values in the above table. STEP 1: Specify all of the possible truth values that can be assigned to the components. STEP 2: IN each row, use the truth value assigned to the component P to obtain the corresponding truth value for ¬P. STEP 3: In each row, use that truth values assigned to Q and P, to determine the corresponding truth value in the column under Q ∧ P. STEP 4: IN each row, use the truth values in the columns under ¬P and Q ∧ P to obtain the matching truth value for the final column under th sentence ¬P ∨ (Q ∧ P).</p>
+
+<p>We will do it this agains in our next example.</p>
+
+<p><b>Example</b>. Construct a truth table that can be used to evaluate the truth value of the sentence P ∧ (Q ∨ ¬R) as function of the truth of the components P,Q, R.</p>
+
+<p><b>Solution</b>. We know that the components P,Q and R will each need a column in our truth table. Since</p>
+
+<table>
+
+<tr><th>P</th> <th>Q</th> <th>R</th> <th>¬R</th> <th>Q ∨ ¬R</th> <th>¬P ∨ (Q ∨ ¬R)</th> </tr>
+
+<tr><td>T</td> <td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td> </tr>
+
+<tr><td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td></tr>
+
+<tr><td>F</td> <td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td></tr>
+
+<tr><td>F</td> <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>F</td></tr>
+
+<tr> <td>1</td> <td>1</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <th>STEP #</th</tr>
+
+</table>
+
+<section aria-label="End">
+<a href="statements.html">«Statements, Negation, and Compound Statements</a>
+<a href="index.html">Index</a>
+<a href="tautologies.html">Tautologies and contradictions»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Legendre transformation"/>
+	<title>Legendre transformation</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<article>
+
+<h1>Legendre transformation</h1>
+
+<p>A <b>Legendre transform</b> converts from a function of one set of variables to another function of a conjugate set of variables. Both functions will have the same units.</p>
+
+<ol>
+	<li><p>Convert from the Lagrangian <i>L</i>(<i>x, ẋ</i>) to the Hamiltonian <i>H</i>(<i>x, p</i>). Here the velocity <i>ẋ</i> and the linear momentum p are conjugate variables, and both <i>L</i> and <i>H</i> have units of energy.</p></li>
+
+	<li><p>Convert between the internal energy <i>U</i>, enthalpy <i>H</i>, Helmholtz free energy <i>A</i>, and Gibbs free energy <i>G</i>. The two conjugate pairs of variables are pressure <i>p</i> and volume <i>V</i>, and temperature T and entropy S. (Optionally, the chemical potential μ and number of particles <i>N</i> can be added in as another conjugate pair.) All of these thermodynamic potentials have units of energy.</p></li>
+
+<p>Suppose that <i>f</i>(<i>x</i>) is a twice-differentiable function that is strictly convex <i>f'</i>' &gt; 0, one some interval.  Then f' is a monotonic function. The equation <i>m</i> = <i>f</i>'(<i>x</i>) has a unique solution x = <i>f</i>'<sup>−1</sup> (<i>m</i>) for any given values of <i>m</i>. We define <i>g</i>(<i>m</i>) = <i>xm</i> - <i>f</i>(<i>x</i>(<i>m</i>)) as the LT of <i>f</i>.</p>
+
+<p>We consider the intersection of the tangeto to <i>f</i> at the point (<i>x</i><sub>0</sub>, <i>f</i>(<i>x</i><sub>0</sub>)) with the <i>y</i>-axis. The tangent has the following equation:</p>
+
+<div class="eq">
+<p>T(<i>x</i>) = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i><sub>0</sub>)(<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>The intersection with the <i>y</i>-axis <i>g</i> = <i>T</i>(0) therefore is</p>
+
+<div class="eq">
+<p><i>g</i>(<i>x</i><sub>0</sub>) = -<i>x</i><sub>0</sub> <i>f'</i>(<i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>and depends, of course on the point <i>x</i><sub>0</sub> under consideration. One calls the function <i>g</i>(<i>x</i>) for an arbitrary point <i>x</i> the <i>Legendre transform</i> of <i>f</i><(<i>x</i>); it is</p>
+
+<div class="eq">
+<p><i>g</i> = <i>f</i> − <i>xp</i> with <i>p</i> = f'</p>
+</div>
+
+<p>In other words, <i>g</i>(<i>x</i>) is the corresponding value of the intersection of the tangent to <i>f</i> at point (<i>x</i>, <i>f</i>(<i>x</i>) with the <i>y</i>-axis.</p>
+
+<h2>Thermodynamic Potentials</h2>
+
+<p>Total differentials of the different thermodynamics functions can be related to each other through the Legendre transformations:<p>
+
+<div class="eq">
+<p>d<i>f</i> = <i>f</i><sub>1</sub>d<i>x</i><sub>1</sub> + <i>f</i><sub>2</sub>d<i>x</i><sub>2</sub> + ... + <i>f<sub>n</sub></i>d<i>x<sub>n</sub></i></p>
+</div>
+
+<p>wherer <i>f</i> is the dependent variable <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i> are the independent variables, and <i>f</i><sub>1</sub> = (∂<i>f</i>/∂<i>x</i><sub>1</sub>)<sub><i>x</i><sub>1</sub>, ... <i>x<sub>n</sub></i></sub>. Consider the new function</p>
+
+<div class="eq">
+<p><i>g</i> = <i>f</i> − <i>f</i><sub>1</sub><i>x</i><sub>1</sub></p>
+</div>
+
+<p>one gets on differentiation:</p>
+
+<div class="eq">
+<p>d<i>g</i> = d<i>f</i> − <i>f</i><sub>1</sub>d<i>x</i><sub>1</sub> -<i>x</i><sub>1</sub> d<i>f</i><sub>1</sub></p>
+</div>
+
+<p>or substituting the top equation:</p>
+
+<div class="eq">
+<p>d<i>g</i> = <i>x</i><sub>1</sub>d<i>f</i><sub>1</sub> + <i>f</i><sub>2</sub> + ... + <i>f<sub>n</sub></i>d<i>x<sub>n</sub></i></p>
+</div>
+
+<p>i.e., the independent variable <i>x</i><sub>1</sub> has changed to <i>f</i><sub>1</sub> and the dependent one from <i>f</i> to <i>g</i>.</p>
+
+<p>Applied to d<i>U</i> = −<i>p</i>d<i>V</i> + <i>T</i>d<i>S</i> the Legendre transformation leads to:</p>
+
+<div class="eq">
+<p><i>H</i> = <i>U</i> − (∂<i>U</i>/∂<i>V</i>)<sub><i>S</i></sub> <i>V</i> = <i>U</i> + <i>pV</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p>d<i>H</i> = <i>V</i> d<i>p</i> + <i>T</i>d<i>S</i></p>
+</div>
+
+<p>Similarly, since <i>T</i> = (∂<i>U</i>/∂<i>S</i>)<sub><i>V</i></sub> and also <i>T</i> = (∂<i>H</i>/∂<i>S</i>)<sub><i>p</i></sub>, one can write:</p>
+
+<div class="eq">
+<p><i>F</i> = <i>U</i> − (∂<i>U</i>/∂<i>S</i>)<sub><i>V</i></sub><i>S</i><br>
+<i>G</i> = <i>H</i> − (∂<i>H</i>/∂<i>S</i>)<sub><i>p</i></sub><i>S</i></p>
+</div>
+
+<p>This leads to the total differentials:</p>
+
+<div class="eq">
+<p>d<i>F</i> = d<i>U</i> - Td<i>S</i> − <i>S</i>d<i>T</i> = −<i>p</i>d<i>V</i> − <i>S</i>d<i>T</i><br>
+d<i>G</i> = d<i>H</i> − <i>T</i>d<i>S</i> − <i>S</i>d<i>T</i> = <i>V</i>d<i>P</i> − <i>S</i>d<i>T</i></p>
+</div>
+
+<p>Mathematically <i>H, F</i> and <i>G</i> are thus Legendre transformations of the basi function of state <i>U</i>(<i>S,V</i>).</p>
+
+<h2>Legendre transform from the Lagrangian L to the Hamiltonian H</h2>
+
+<p>Suppose we have a mechanical system with a single generalized coordinate q and corresponding velocity !q . Then the Lagrangian is defined as the difference between the kinetic and potential energies, <i>L</i>(<i>q, q̇</i>) = <i>K</i> - <i>U</i>. We wish to transform to a new function <i>H</i> (<i>q, p</i>) where <i>p</i> is the momentum. </p>
+
+<!-- $$\left(\frac{\partial L}{\partial \qdot{q}}\right)_q = -->
+
+<p>The Legendre transformation is</p>
+
+<div class="eq">
+<p><i>H</i> = <i>L</i> − <i>pq̇</i></p>
+</div>
+
+<section aria-label="End">
+<a href="dlconfiguration.html">&#171;D- and L- configuration</a>
+<a href="index.html">Index</a>
+<a href="I.html">Iodine&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

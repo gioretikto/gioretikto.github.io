@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Rings">
+	<title>Rings</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Rings</h1>
+
+<p>Different sets are naturally endowed with two binary operations: addition and multiplication. Examples that quickly come to mind are the integers, the integers modulo <i>n</i>, the real numbers, matrices, and polynomials. The <i>notion</i> of Rings describing this kind of sets was originated in the mid-19th century by Richard Dedekind.</p>
+ 
+<p><b>6.1.1 Definition</b> A ring (<i>R</i>, +, ⋅) is a set <i>R</i> equipped with <i>two binary operations</i>, <b>addition</b> and <b>multiplication</b> indicated by + and ·,</p>
+
+<div class="eq">
+<p><i>R</i> x <i>R</i> ⟶ <i>R</i> &emsp;&emsp; <i>R</i> x <i>R</i> ⟶ <i>R</i></p>
+<p>(<i>a, b</i>) ⟼ <i>a</i> + <i>b</i> &emsp;&emsp; (<i>a, b</i>) ⟼ <i>a</i> ⋅ <i>b</i></p>
+</div>
+
+<p>satisfying the following three sets of axioms, called the ring axioms</p>
+
+<p><b>Axioms for addition</b></p>
+<ul>
+
+	<li><p>A1: <i>closure under addition</i>. To any pair of elements <i>a</i> and <i>b</i> of <i>R</i> (in the given order) there is associated an element <i>a</i> + <i>b</i> in <i>R</i>. This elements <i>a</i> + <i>b</i> is called the <b>sum</b> of <i>a</i> + <i>b</i>;</p></li>
+	<li><p>A2: <i>commutative law for addition</i>: We have <i>a</i> + <i>b</i> = <i>b</i> + <i>a</i> &forall;<i>a, b</i> &in; <i>R</i></p></li>
+	<li><p>A3: <i>associative law for addition</i>: (<i>a</i> + <i>b</i>) + <i>c</i> = <i>a</i> + (<i>b</i> + <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
+	<li><p>A4: <i>identity for addition</i>: There is an element 0 &in; <i>R</i> such that <i>a</i> + 0 = <i>a</i> &forall;<i>a</i> &in; <i>R</i> (that is, 0 is the additive identity).</p></li>
+	<li><p>A5: <i>inverse for addition</i>: &forall;<i>a</i> &in; <i>R</i> there exists −<i>a</i> &in; <i>R</i> such that <i>a</i> + (−<i>a</i>) = 0 (that is, −<i>a</i> is the additive inverse of <i>a</i>).</p></li>
+</ol></li>
+
+</ul>
+
+<p><b>Axioms for multiplication</b></p>
+
+<ul>
+	<li><p>M1: <i>closure under mutliplication</i>. If <i>a</i> &in; <i>R</i> and <i>b</i> &in; <i>R</i>, then their product <i>ab</i> is in <i>R</i>. This element <i>ab</i> is called the <b>product</b> of <i>a</i> and <i>b</i>;</p></li>
+
+	<li><p>M2: <i>associative law for multiplication</i>: (<i>a</i> · <i>b</i>) · <i>c</i> = <i>a</i> · (<i>b</i> · <i>c</i>) &forall;<i>a, b, c</i> &in; <i>R</i></p></li>
+</ul>
+
+<p id="distributive_law">Axioms relating addition and multiplication</i></p>
+
+<ul>
+	<li><p><b>D</b>: Multiplication is distributive with respect to addition, meaning that:</p>
+
+	<div class="eq">
+	<p><i>a</i> · (<i>b</i> + <i>c</i>) = <i>a</i> · <i>b</i> + <i>a</i> · <i>c</i>, &emsp; (<i>a</i> + <i>b</i>) · <i>c</i> = <i>a</i> · <i>c</i> + <i>b</i> · <i>c</i> &emsp; &forall;<i>a, b, c</i> &in; <i>R</i></p>
+	</div>
+</li>
+
+</ul>
+
+<p>From now on we'll write <i>ab</i> instead of <i>a</i> · <i>b</i>. A set satisfying A1 to A4 is called <a href="groups.html">group</a>: hence (<i>R</i>, +) is a group. If A5 is also satisfied we have a <i>commutative group</i> or <i>abelian group</i>. (<i>R</i>, +) is oftentimes referred to as additive group of the ring.</p>
+
+<p>These axioms are the bare minimum needed for a system to resemble ℤ and ℤ<sub><i>n</i></sub>. But ℤ and ℤ<sub><i>n</i></sub> have several additional properties that are worth special mention:</p>
+
+<p id="comm"><b>Definition 6.1.2</b>. A commutative ring is a ring <i>R</i> that satisfies this axiom:</p>
+
+<div class="eq">
+<p><b>M3</b>: <i>multiplication is commutative</i>, for every <i>a</i> and <i>b</i> in <i>R</i>, <i>ab</i> = <i>ba</i>.&emsp;□</p>
+</div>
+
+<p><b>Definition 6.1.3</b>. A ring with identity is a ring <i>R</i> that contains an element 1<sub><i>R</i></sub> such that</p>
+
+<div class="eq">
+<p><b>M4</b>: 1<sub><i>R</i></sub> <i>x</i> = <i>x</i> for every <i>x</i> &in; <i>R</i>.&emsp;□</p>
+</div> 
+
+<p><b>6.1.4</b>. <b>Examples of non-rings and rings</b></p>
+
+<ul>
+	<li><p>The set of natural numbers ℕ with the usual operations is not a ring, since (ℕ, +) is not even a group (the elements are not all invertible with respect to addition, e.g. there is no natural number which can be added to 2 to get 0 as a result);</p></li>
+	<li><p>The set of odd integers with the usual addition and multiplication is not a ring. Among other things, Axiom 1 fails: The sum of two odd integers is not odd.</p></li>
+
+</ul>
+
+<p>Examples of rings</p>
+
+<ul>
+
+	<li><p>Let <i>E</i> be the set of even integers with the usual addition and multiplication. Since the sum or product of two even integers is also even, the closure axiom hold. Since 0 is an even integer, <i>E</i> has an additive identity element. If <i>a</i> is even, then − <i>a</i> is also even, and so Axiom A5 holds. The remaining axioms hold for all integers and, therefore, are true whenever <i>a, b, c</i>, are even. Consequently, <i>E</i> is a commutative ring. <i>E</i> does <i>not</i> have an identity, however, because no <i>even</i> integer <i>e</i> has the property that <i>ae</i> = <i>a</i> = <i>ea</i> for every even integer <i>a</i>.</p></li>
+
+	<li><p>ℤ, ℚ, ℝ, ℂ, with respect to addition and multiplication.</p></li>
+	
+	<li><p>𝕂[<i>x</i>], 𝕂[<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>] with respect to addition and multiplication defined for this rings.</p></li>
+	
+	<li><p>The set ℤ<sub><i>n</i></sub> of congruence class modulo <i>n</i> with the addition and the multiplication defined by [<i>a</i>] + [<i>b</i>] = [<i>a</i> + <i>b</i>] and [<i>a</i>] [<i>b</i>] = [<i>ab</i>]. Note that [0] is the 0 required by our axioms for a ring, and [1] is the unit element of <i>R</i>.</p></li>
+	
+	<li><p>The set <i>M<sub>n</sub></i>(𝕂) of square matrices <i>n</i> x <i>n</i>, over a field 𝕂, along with the standard matrix addition and multiplication.</p></li>
+	
+	<li><p>The power set of a set is a commutative ring under the natural operations of union and intersection</p>
+	
+		<div class="eq">
+		<p><i>A</i> + <i>B</i> := (<i>A</i> ∪ <i>B</i>) ∩ 𝐶(<i>A</i> ∩ <i>B</i>), &emsp; <i>A</i> · <i>B</i> := <i>A</i> ∩ <i>B</i></p>
+		</div>
+		
+		<p>it is easy to notice that it is an Abelian group with respect to the first operation (the neuter element is ∅ and the inverse of an <i>A</i> &in; 𝓟(<i>X</i>) is <i>A</i> itself. The second operation as well is associative and the distributive properties are satisfied, hence the ring is commutative. In this ring every element is <i>idempotent i.e.</i> <i>A</i><sup>2</sup> = <i>A</i> · <i>A</i> = <i>A</i>, &forall; <i>A</i> &in; 𝓟(<i>X</i>).</p></li>
+		
+		<li><p>The set of continuous functions, in one variable <i>x</i> &in; <i>X</i></p>
+		
+		<div class="eq">
+		<p><i>R<sup>X</sup></i> := {<i>f</i>: <i>X</i> ⟶ <i>R</i>}</p>
+		</div>
+		
+		<p>with the addition and multiplication defined by</p>
+		
+		<div class="eq">
+		<p>(<i>f</i>+<i>g</i>)(<i>x</i>) := <i>f</i>(<i>x</i>) + <i>g</i>(<i>x</i>), &emsp; (<i>fg</i>)(<i>x</i>) := <i>f</i>(<i>x</i>)<i>g</i>(<i>x</i>) &emsp; &forall;<i>f,g</i> &in; <i>R<sup>X</sup></i>, &forall;<i>x</i> &in; <i>X</i></p>
+		</div>
+		
+		<p>(<i>R<sup>X</sup></i>, +, ·) is a ring: it is a commutative ring only if <i>R</i> is commutative; it is unitary only if <i>R</i> is unitary as well. The unit function is that mapping every element of <i>X</i> to the unit of <i>R</i>.</p>
+		</li>
+		
+		<div id="direct_sum">
+		
+		<li><p>Let <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, ..., <i>R<sub>n</sub></i> be rings. We can use these to construct a new ring by Cartesian product</p>
+		
+		<div class="eq">
+		<p><i>R</i><sub>1</sub> x <i>R</i><sub>2</sub> x <i>R<sub>n</sub></i></p>
+		</div>
+		
+		<p>and perform component addition and multiplication, defined as</p>
+		
+		<div class="eq">
+		<p>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) + (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>n</sub></i>) = (<i>a</i><sub>1</sub> + <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub> + <i>b</i><sub>2</sub>, ..., <i>a<sub>n</sub></i> + <i>b<sub>n</sub></i>)</p>
+		</div>
+		
+		<p>and</p>
+		
+		<div class="eq">
+		<p>(<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ..., <i>a<sub>n</sub></i>) (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>n</sub></i>) = (<i>a</i><sub>1</sub> <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub><i>b</i><sub>2</sub>, ..., <i>a<sub>n</sub>b<sub>n</sub></i>)</p>
+		</div>
+		
+		<p>This ring is called the <i>direct sum</i> of <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, ..., <i>R<sub>n</sub></i> and usually indicated as</p>
+		</li>
+		
+		<div class="eq">
+		<p><i>R</i><sub>1</sub> ⊕ <i>R</i><sub>2</sub> ⊕ ... ⊕ <i>R<sub>n</sub></i></p>
+		</div>
+		</div>
+	</ul>
+
+<p>The following properties follow from ring axioms, we do not prove them since we've already proved it in the case of <a href="Z.html">integers</a> (without making it specific for integers alone).</p>
+
+<ol type="i">
+	<li><p><i>a</i> ⋅ 0 = 0 ⋅ <i>a</i> = 0;</p></li>
+	<li><p>(−<i>a</i>) ⋅ <i>b</i> = −(<i>a</i> ⋅ <i>b</i>);</i></p></li>
+</ol>
+
+<p id="ex_axioms"><b>Proposition 6.1.5</b> The axioms for addition imply the following statements.</p>
+
+<ol type="a">
+	<li><p>If <i>x</i> + <i>y</i> = <i>x</i> + <i>z</i> then <i>y</i> = <i>z</i>;</p></li>
+	<li><p>If <i>x</i> + <i>y</i> = <i>x</i> then <i>y</i> = 0;</p></li>
+	<li><p>If <i>x</i> + <i>y</i> = 0 then <i>y</i> = −<i>x</i>.</p></li>
+	<li><p>−(−<i>x</i>) = <i>x</i>.</p></li>
+</ol>
+
+<p>Statement (a) is a cancellation law. Note that (b) asserts the uniqueness of the element whose existence is assumed in (A4), and that (c) does the same for (A5).</p>
+
+<p><b>Proof</b>. If <i>x</i> + <i>y</i> = <i>x</i> + <i>z</i>, the axioms (A) give</p>
+
+<div class="eq">
+<p><i>y</i> = 0 + <i>y</i> = (−<i>x</i> + <i>x</i>) + <i>y</i> = −<i>x</i> + (<i>x</i> + <i>y</i>)<br>
+= −<i>x</i> + (<i>x</i> + <i>z</i>) = (−<i>x</i> + <i>x</i>) + <i>z</i> = 0 + <i>z</i> = <i>z</i>.</p>
+</div>
+
+<p>This proves (a). Take <i>z</i> = 0 in (a) to obtain (b). Take <i>z</i> = −<i>x</i> in (a) to obtain (c).<br>Since − <i>x</i> + <i>x</i> = 0, (c) (with −<i>x</i> in place of <i>x</i>) gives (d).&emsp;□</p>
+
+<section aria-label="End">
+<a href="symmetric_polynomials.html">&#171;Symmetric Polynomials</a>
+<a href="index.html">Index</a>
+<a href="isomorphisms.html">Isomorphisms &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

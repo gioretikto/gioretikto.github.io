@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Bounded and unbounded sets: superemum, infimum">
+	<title>Bounded and unbounded sets: superemum, infimum</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Bounded and unbounded sets: superemum, infimum</h1>
+
+<p><b>Definition 1.5.1</b> Suppose <i>S</i> is an ordered set, and <i>E</i> ⊂ <i>S</i>. If there exists a <i>&beta;</i> &in; <i>S</i> such that <i>x</i> &le; <i>&beta;</i> for every <i>x</i> &in; <i>E</i>, we say that <i>E</i> is bounded above, and call <i>&beta;</i> an <b>upper bound</b> of <i>E</i>. Lower bounds are defined in the same way (with &ge; in place of &le;).&emsp;□</p>
+
+<p><b>Definition 1.5.2</b>. Suppose <i>S</i> is an ordered set, <i>E</i> ⊂ <i>S</i>, and <i>E</i> is bounded above.<br>Suppose there exists an <i>&alpha;</i> &in; <i>S</i> with the following properties:</p>
+
+<ol type="i">
+	<li><p><i>&alpha;</i> is an upper bound of <i>E</i>;</p></li>
+	<li><p>if <i>&gamma;</i> &lt; <i>&alpha;</i> then <i>&gamma;</i> is not an upper bound of <i>E</i>.</p></li>
+</ol>
+
+<p>Then <i>&alpha;</i> is called <b>least upper bound</b> of <i>E</i> [that there is at most one such <i>&alpha;</i> is clear from (ii)] or the <b>supremum</b> of <i>E</i>, and we write</p>
+
+<div class="eq">
+<p><i>&alpha;</i> = sup <i>E</i></p>
+</div>
+
+<p>The <b>greatest lower bound</b>, or <b>infimum</b>, of a set <i>E</i> wich is bounded below is defined in the same manner: The statement</p>
+
+<div class="eq">
+<p><i>&alpha;</i> = inf <i>E</i></p>
+</div>
+
+<p>means that <i>&alpha;</i> is a lower bound of <i>E</i> and that no <i>&beta;</i> with <i>&beta;</i> &gt; <i>&alpha;</i> is a lower bound of <i>E</i>.&emsp;□</p>
+
+<p><b>Definition 1.5.3</b>. An ordered set <i>S</i> is said to have the <i>least-upper-bound property</i> if the following is true:</p>
+
+<div class="eq">
+<p>If <i>E</i> ⊂ <i>S</i>, <i>E</i> is not empty, and <i>E</i> is bounded above, then sup <i>E</i> exists in <i>S</i>.&emsp;□</p>
+</div>
+
+<p><b>Theorem 1.5.4</b>. Suppose <i>S</i> is an ordered set with the least-upper-bound property, <i>B</i> ⊂ <i>S</i>, <i>B</i> is not empty, and <i>B</i> is bounded below. Let <i>L</i> be the set of all lower
+bounds of <i>B</i>. Then</p>
+
+<div class="eq">
+<p><i>&alpha;</i> = sup L</p>
+</div>
+
+<p>exists in <i>S</i>, and <i>&alpha;</i> = inf B.<br> In particular, inf <i>B</i> exists in <i>S</i>.</p>
+
+<p><b>Proof</b>. Since <i>B</i> is bounded below, <i>L</i> is not empty. Since <i>L</i> consists of exactly those <i>y</i> &in; <i>S</i> which satisfy the inequality <i>y</i> &le; <i>x</i> for every <i>x</i> &in; <i>B</i>, we see that every <i>x</i> &in; <i>B</i> is an upper bound of <i>L</i>. Thus <i>L</i> is bounded above. Our hypothesis about <i>S</i> implies therefore that L has a supremum in <i>S</i>; call it <i>&alpha;</i>. <br> If &gamma; &lt; <i>&alpha;</i> then (see Definition 1.5.2) <i>&gamma;</i> is not an upper bound of <i>L</i>, hence <i>&gamma;</i> &notin; <i>B</i>. It follows that <i>&alpha;</i> &le; <i>x</i> for every <i>x</i> &in; <i>B</i>. Thus <i>&alpha;</i> &in; <i>L</i>. <br> If <i>&alpha;</i> < &beta; then <i>&beta;</i> &notin; <i>L</i>, since <i>&alpha;</i> is an upper bound of <i>L</i>. <br> We have shown that <i>&alpha;</i> &in; <i>L</i> but <i>&beta;</i> &notin; <i>L</i> if <i>&beta;</i> &gt; <i>&alpha;</i>. In other words, <i>&alpha;</i> is a lower bound of <i>B</i>, but <i>&beta;</i> is not if <i>&beta;</i> &gt; <i>&alpha;</i>. This means that <i>&alpha;</i> = inf <i>B</i>. &emsp;□</p>
+
+<p>Even when the set is unbounded we cal talk about upper and lower bounds by setting:</p>
+
+<div class="eq">
+<p>sup <i>A</i> = +∞</p>
+<p>inf <i>A</i> = −∞</p>
+</div>
+
+<p id="max">If the least upper bound of a set <i>A</i> does belong to <i>A</i>, then it is called the <i>maximum</i> of <i>A</i>. </p>
+
+<p><b>Theorem 1.1.12</b> The set of natural numbers ℕ is not upper bounded.</p>
+
+<p><b>Proof</b>. If ℕ was upper bounded, then there would exist <i>M</i> = sup ℕ. This would imply that:</p>
+
+<div class="eq">
+<p><i>M</i> − 1 &lt; <i>n</i> &le; <i>M</i>, &emsp; &forall;<i>n</i> &in; ℕ</p>
+</div>
+
+<p>from which follows that <i>n</i> + 1 &gt; <i>M</i> contradicting the hyphotesis <i>M</i> = sup ℕ.</p>
+
+<p><b>Theorem 1.1.13</b> For any real-values sets <i>A</i> and <i>B</i> with <i>A</i> &subseteq; <i>B</i>, sup <i>a</i> &le; sup <i>B</i> and inf <i>A</i> &ge; inf <i>B</i>.</p>
+
+<p><b>Proof</b>. We prove the first proposition; the second is proved similarly. Since sup <i>B</i> is an upper bound for <i>B</i> and since <i>A</i> &subseteq; <i>B</i>, sup <i>B</i> must also be an upper bound for <i>A</i>. As for any upper bound for <i>A</i>, <i>sup B</i> either equals <i>sup A</i>, or the second part of definition 1.5 implies it is greater than <i>sup A</i>. In any case, <i>sup <i>a</i> &le; sup B</i>. □</p>
+
+<section aria-label="End">
+<a href="relations.html">«Relations</a>
+<a href="index.html">Index</a>
+<a href="functions.html">Functions»</a>
+</section>
+
+</article>
+
+</body>
+</html>

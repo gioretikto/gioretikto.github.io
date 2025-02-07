@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Variabili cinematiche">
+	<title>Variabili cinematiche</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Variabili cinematiche</h1>
+
+<p>La <b>traiettoria</b> di un punto <i>P</i>, mostrata in Fig. 1 è in generale una <i>linea curva</i>. È evidente che per descrivere come avviene lo spostamento di <i>P</i> a un certo istante, non basta specificare il valore numerico della distanza percorsa, ma occorre precisare in quale direzione sta avvenendo il moto e non quale verso; e in generale questa direzione istantanea cambia continuamente lungo la traiettoria. <br>Grandezze con caratteristiche direzionali oltre che numeriche si chiamano <a href="../../mat/lalg/vettori.html">vettori</a>;</p>
+
+<h2>Posizione</h2>
+
+<p>Dato un sistema di riferimento cartesiano con origine <i>O</i> e assi <i>x,yz</i>, la <b>posizione</b> del punto può essere individuata attraverso il <b>raggio vettore r</b> che congiunge l'origine <i>O</i> del sistema di riferimento scelto con il punto <i>P</i>, rappresentato in Fig.1. Durante il moto la posizione del punto cambia nel tempo e di conseguenza il raggio vettore è funzione del tempo: <b>r</b> = <b>r</b>(<i>t</i>). Si può esprimere <b>r</b> in forma cartesiana attraverso le sue componenti <i>x,y,z</i> (dette coordinate del punto) e i versori <b>u</b><sub>x</sub>, <b>u</b><sub>y</sub>, <b>u</b><sub>z</sub> degli assi cartesiani, che si considerano fissi nel tempo:</p>
+
+<div class="eq">
+<p><b>r</b>(<i>t</i>) = <b>OP</b> = <i>x</i> <b>u</b><sub>x</sub> + <i>y</i> <b>u</b><sub>y</sub> + <i>z</i> <b>u</b><sub>z</sub></p>
+</div>
+
+<p>Se è nota la dipendenza dal tempo di <b>r</b>, cioè la funzione <b>r</b>(<i>t</i>), è individuato il moto del punto <i>P</i>: conoscere <b>r</b>(<i>t</i>) significa conoscere <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>), <i>z</i>(<i>t</i>)
+; ed è vero il viceversa. La <b>r</b>(<i>t</i>, o in modo equivalente le <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>), <i>z</i>(<i>t</i>), si chiamano <b>leggi orarie o equazioni del moto</b>. <br>Casi particolari si hanno quando il punto è vincolato a muoversi su un piano o su una retta. <br>Nel caso di moto piano scegliendo due assi, per es. gli assi <i>x</i> e <i>y</i>, nel piano in cui si svolge il movimento il raggio vettore avrà solo le componenti <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>). Nel moto rettilineo scegliendo un asse, per esempio l'asse <i>x</i>, lungo la retta su cui si svolge il movimento il raggio vettore avrà solo la componente <i>x</i>(<i>t</i>). <br>Quindi, a seconda che il moto sia tridimensionale, bidimensionale (piano), o unidimensionale (rettilineo) il numero di variabili scalari necessario a descriverlo. Si dice che il punto ha 3,2,1 gradi di libertà rispettivamente. Il moto <i>rettilineo</i> verrà trattato esaustivamente nel par. 1.3</p>
+
+<h2>Velocità</h2>
+
+<p>Consideriamo due posizioni occupate dal punto <i>P</i> al tempo <i>t</i> e al tempo <i>t</i> + &Delta;<i>t</i>: esse sono individuate dai vettori <b>r</b>(<i>t</i>) e <b>r</b>(<i>t</i> + &Delta;<i>t</i>) = <b>r</b>(<i>t</i>) + &Delta;<b>r</b>. Il vettore:</p>
+
+<div class="eq">
+<p>&Delta;<b>r</b> = <b>r</b>(<i>t</i> + &Delta;<i>t</i>) &minus; <b>r</b>(<i>t</i>)</p>
+</div>
+
+<p>si chiama <b>vettore spostamento</b>, Fig.1, e si definisce <b>velocità media</b> del punto materiale durante l'invervallo di tempo &Delta;<i>t</i> il vettore rapporto tra lo spostamento &Delta;<b>r</b> e l'intervallo di tempo necessario per percorrerlo:</p>
+
+<div class="eq">
+<p<b>v</b><sub><i>m</i></sub> = &Delta;<b>r</b>/&Delta;<i>t</i></p>
+</div>
+
+<section>
+<img src="../../mat/calc2/img/vector_derivative.png" alt="vector valued function derivative"/>
+<img src="../../mat/calc2/img/dr.png" alt="derivative direction"/>
+<figcaption><b>Fig.1.2</b>: Spostamento finito e infinitestimo di un punto.</figcaption>
+</section>
+
+<p>La velocità media è un vettore parallelo allo spostamento (in quanto rapporto tra il vettore spostamento e uno scalare), ed esprime la rapidità con cui avvien lo spostamento nel tmepo. Essa dà un'informazione complessiva senza fornire nessuna indicazione di come avviene il moto nell'intervallo di tempo considerato. <br>Per ovviare a questa indeterminazione si può pensare di ridurre l'intervallo &Delta;<i>t</i>: anche il vettore spostamento cambierà e la corrispondente velocità media, diversa dalla precedente, rifletterà l'andamento dle moto solo nel nuovo, e ridotto, periodo temporale. <br>Il processo di suddivisione in intervalli temporali sempre più piccoli può essere continuato e sperimentalmente il limite a tele procedura è posto dalla capacità di apprezzare piccolo intervalli da parte degli strumenti utilizzati per la misura degli intervalli di spazio e di tempo (&Delta;<i>x</i>, &Delta;<i>y</i>, &Delta;<i>z</i>. In ogni caso se &Delta;<b>r</b> risulta suddiviso in un numero elevatissimo di spostamenti infinitesimi d<b>r</b>, ciascuno percorso nel tempo d<i>t</i>, si può definire la velocità istantanea, a un istante <i>t</i>, del punto punto in movimento come il rapporto <b>r</b> = d<b>r</b>/d<i>t</i>, calcolato in quel determinato istante. <br>Il metodo che abbiamo descritto in modo fisico consiste matematicamente nel calcolare il limite per &Delta;<i>t</i> → 0 del rapporto incrementale &Delta;<b>r</b>/&Delta;<i>t</i>, ossia della velocità media. Pertanto la <b>velocità istantanea</b> (o semplicemente <b>velocità</b>) di un punto è data dalla derivata della posizione rispetto al tempo</p>
+
+<div class="eq">
+<p><b>v</b> = d<b>v</b>d;<i>t</i></p>
+</div>
+
+<p>Essendo la derivata del raggio vettore rispetto al tempo, la velocità è anch'essa un vettore e rappresenta la rapidità di variazione temporale della posizione nell'istante <i>t</i> considerato. <br>Osserviamo, in Fig. 1b, che al limite l'incremento d<b>r</b> infinitesimo (ovviamente non rappresentato in scala in figura) del raggio vettore risulta in <i>direzione tangente alla traiettoria nel punto P</i>; il vettore velocità di un punto, essendo parallelo il modulo della velocità e <b>u</b><sub>T</Sub> è il versore della tangente alla curva, variabile nel tempo man mano che il punto avanza lungo la traiettoria. <br>Vogliamo ora sottolineare una proprietà fondamentale delle relazioni vettoriali come (1.1) con l'aiuto anche della Fig. 1. La traiettoria del moto e il fatto che la velocità si scrive <i>v</i><b>u</b><sub>T</sub> sono <i>caratteristiche intrinseche</i>, che cioè non dipendono dalla scelta del sistema di riferimento. Si può spostare l'origine <i>O</i> in un'altra posiizone, si possono ruotare gli assi, ma la curva (non la sua espressione analitica), la direzione, il verso, il modulo della vleocità restano gli stessi. In Fig. 1.2 per es. se si sposta l'origine cambia certamente <b>r</b>, ma non &Delta;<b>r</b> e quindi d<b>r</b>. Si parla di <i>invarianza delle relazioni vettoriali rispetto alla scelta del sistema di riferimento</i>. <br> D'altra parte un vettore si scrive esplicitamente attraverso le sue componenti e queste sì dipendono dal sistema di riferimento. Calcoliamo le componenti cartesiane della velocità.</p>
+
+<h2>Componenti cartesiane della velocità</h2>
+
+<p>Poiché <b>r</b> = <i>x</i> <b>u</b><sub>x</sub> + <i>y</i> <b>u</b><sub>y</sub> + <i>z</i> <b>u</b><sub>z</sub>,</p>
+
+<div class="eq">
+<p><b>v</b> = d<b>r</b>/d<i>t</i> = (d<i>x</i>/d<i>t</i>) <b>u</b><sub>x</sub> + (d<i>y</i>/d<i>t</i>) <b>u</b><sub>y</sub> + (d<i>z</i>/d<i>t</i>) <b>u</b><sub>z</sub> = <i>v<sub>x</sub></i> <b>u</b><sub>x</sub> + <i>v<sub>y</sub></i> <b>u</b><sub>y</sub> + <i>v<sub>z</sub></i> <b>u</b><sub>z</sub> &emsp; (1.2)</p>
+</div>
+
+<p>La (1.2) mostra che la velocità è un vettore con componenti <i>v<sub>x</sub></i> = d<i>x</i>/d<i>t</i>, <i>v<sub>y</sub></i> = d<i>y</i>/d<i>t</i>, <i>v<sub>z</sub></i> = d<i>z</i>/d<i>t</i>. Di conseguenza la velocità è determinata se sono note le derivate delle tre coordinates <i>v<sub>x</sub></i>, <i>v<sub>y</sub></i> (e <i>v<sub>z</sub></i>, non rappresentata) dei moti rettilinei descritti dai punti proiezione di <i>P</i> sugli assi cartesiani. <br>Come per ogni vettore, la conoscenza del vettore <b>v</b> in modulo, direzione e verso consente di calcolarne le componenti e viceversa. Introducendo infatti gli angoli <i>&phi;<sub>x</sub>, &phi;<sub>y</sub>, &phi;<sub>z</sub></i> che <b>v</b> forma con gli assi cartesiani,</p>
+
+<div class="eq">
+<p><i>v<sub>x</sub></i> = <i>v</i> cos <i>&phi;<sub>x</sub></i>, <i>v<sub>y</sub></i> = <i>v</i> cos <i>&phi;<sub>y</sub></i>, <i>v<sub>z</sub></i> = <i>v</i> cos <i>&phi;<sub>y</sub></i></p>
+</div>
+
+<p>Al contrario, note le componenti <i>v</i> = sqrt(<i>v<sub>x</sub></i><sup>2</sup> + <i>v<sub>y</sub></i><sup>2</sup> + <i>v<sub>z</sub></i><sup>2</sup>) e ovviamente cos <i>&phi;<sub>y</sub></i> = <i>v<sub>x</sub></i>/<i>v</i> etc.<br> Nel caso bidimensionalie è necessario un solo angolo, per es. l'angolo <i>&phi;<sub>x</sub></i> tra il vettore <b>v</b> e l'asse <i>x</i>: cos <i>&phi;</i> = <i>v<sub>x</sub></i>/<i>v</i> o in modo equivalente tg <i>&phi;</i> = <i>v<sub>y</sub></i>/<i>v<sub>x</sub></i>. Si osservi che se ruotiamo gli assi cambiano i valori delle componenti. <br> Le (1.1) e (1.2) mostrano che se è nota la posizione in funzione del tmepo è possibile calcolare la velocità del punto inf funzione del tmepo. <br> Possiamo d'altra parte risolvere il problem inverso, cioè ricavare la funzione <b>r</b>(<i>t</i>) se è nota la dipendenza dal tempo della velocità istantanea, <b>v</b>(<i>t</i>). Supponiamo che il punto materiale si trovi nella posizione <b>r</b> al tmepo <i>t</i> e nella posizione <b>r</b> + d<b>r</b> al tempo <i>t</i> + d<i>t</i>; dalla (1.1) vediamo che lo spostamento infinitesimo d<b>r</b> è uguale al prodotto del tempo d<i>t</i> impiegato a percorrerlo per il valore della velocità al tempo <i>t</i>:</p>
+
+<div class="eq">
+<p>d<b>r</b> = <b>v</b>(<i>t</i>)d<i>t</i></p>
+</div>
+
+<p>qualunque sia la dipendenza della velocità dal tmepo. Lo spostamento complessivo in un intervallo finito di tempo &Delta;<i>t</i> = <i>t</i> &minus; <i>t</i><sub>0</sub>, è dato dalla somma vettiraile di tutti i successivi spostamenti infinitesimi d<b>r</b>. Per fare il calcolo utilizziamo l'operazione di integrzione ∫<sup><sup><b>r</b></sup></sup><sub><sub><b>r</b><sub>0</sub></sub></sub> d<b>r</b> = ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <b>v</b>(<i>t</i>) d<i>t</i>. Il primo integrale è immediato e vale <b>r</b> &minus; <b>r</b><sub>0</sub>, con <b>r</b><sub>0</sub> = <b>r</b>(<i>t</i><sub>0</sub>); pertanto</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">r</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi mathvariant="bold">r</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mi>t</mi>
+  </msubsup>
+  <mi mathvariant="bold">v</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+<mtext>&emsp;(1.3)</mtext>
+
+<!-- $$\mathbf{r}(t) = \mathbf{r}(t_0) + \int_{t_0}^t \mathbf{v}(t) \, \text{d}t $$ -->
+
+<p>Questa è la relazione vettoriale generale che permette il calcolo della posizione conoscendo la velocità in funzione del tempo. qualunque sia il tipo di moto. Il termine <b>r</b>(<i>t</i><sub>0</sub>) (o <b>r</b><sub>0</sub>) rappresenta la <b>posizione iniziale</b> del punto, occupata nell'istante iniziale <i>t</i><sub>0</sub>. Pertanto per calcolare <b>r</b>(<i>t</i>), nota <b>v</b>(<i>t</i>), è necessario conoscere la condizione iniziale del moto. Matematicamente la presenza della costante <b>r</b>(<i>t</i><sub>0</sub>) è la conseguenza del fatto che abbiamo risolto un'equazione differenziale del primo ordine, quale è la (1.1); L'integrazione esplicita può essere effettuata ricorrendo alle componenti, secondo le (1.8) riportante più sotto; calcolate <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>) e <i>z</i>(<i>t</i>) abbiamo <b>r</b>(<i>t</i>). Resta essenziale la conoscenza delle condizioni iniziali. <br> Dalla definizione di velocità media, <b>v</sub><sub>m</sub></b> = (<b>r</b> - <b>r</b><sub>0</sub>)/(<i>t</i> &minus; <i>t</i><sub>0</sub>), e da (1.3) ricaviamo la relazione tra velocità media e velocità istantanea:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi mathvariant="bold">m</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>t</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>t</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mi>t</mi>
+  </msubsup>
+  <mi mathvariant="bold">v</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+<mtext>&emsp;(1.4)</mtext>
+</math>
+
+<!-- $$\mathbf{v_m} = \frac{1}{t-t_0}\int_{t_0}^t \mathbf{v}(t) \, \text{d}t $$ -->
+
+<p>Confrontiamo la (1.4) con la definizione matematica di <b>valor medio di una funzione in un dato invervallo</b> si deve che <b>la velocità media</b>, pari al rapporto tra lo spostamento e il tempo impiegato a effettuarlo, è uguale al <i>valor medio della velocità istantanea</i> nell'intervallo di tempo considerato. Nel caso di un punto che parte da una certa posizione e vi ritorna dopo un certo tempo, la velocità media è nulla mentre la velocità istantanea non lo è, e anzi deve sicuramente cambiare direzione durante il moto.</p>
+
+<h2>Accelerazione</h2>
+
+<p>Quando la velocità del punto varia nel tmepo il <b>moto</b> si dice <b>accelerato</b>. Analogamente a quanto fatto quando abbiamo introdotto la velocità media, si definisce <b>accelerazione media</b> del punto il rapporto tra la variazione di velocità &Delta;<b>v</b> e l'intervallo di tempo &Delta;<i>t</i> in cui avviene tale variazione:</p>
+
+<div class="eq">
+<p><b>a</b><sub>m</sub> = &Delta;<b>v</b>/&Delta;<i>t</i></p>
+</div>
+
+<p>Anche in questo caso l'accelerazione media fornisce un'indicazione globale ma non chiarisce come è avvenuta la variazione di velocità nell'intervallo di tempo &Delta;<i>t</i>, ed è logico quindi passare la limite per &Delta;<i>t</i> → 0 definendo l'<b>accelerazione istantanea</b> (o semplicemente <b>accelerazione</b>), cioè la <i>rapidità di variazione temporale della velocità</i>, come</p>
+
+<div class="eq">
+<p><b>a</b> = d<b>v</b>/d<i>t</i> = d<sup>2</sup><b>r</b>/d<i>t</i><sup>2</sup></p>
+</div>
+
+<p>dove nell'ultimo passaggio abbiamo usato (1.1). <br>L'accelerazione è dunque la derivata del vettore velocità rispetto al tempo, ovvero la derivata seconda del vettore posizione rispetto al tempo. <br> Se <b>a</b> = 0 la velocità è costante in modulo, direzione e verso: il punto si muove su una retta con modulo della velocità costante (moto rettilineo uniforme, par. 1.3). <br>Va notato che, a differenza della velocità, l'accelerazione non è in generale tangente alla traiettoria. Chiariremo questo aspetto nel par. 1.7.</p>
+
+<h2>Moto reale e moti proiettati</h2>
+
+<p>Nella descrizione del moto abbiamo già fatto uso esplicitamente della nozione di moto proiettato, che vogliamo ora precisare. <br> Consideriamo un sistema di riferimento cartesiano, come in Figura 1.3. Il moto effettivo è quello lungo Ta traiettoria fisica del punto <i>P</i> che rappresenta un corpo reale; il moto di <i>P</i> genera automaticamente il moto dei due punti <i>P<sub>x</sub></i> e <i>P<sub>y</sub></i> (e <i>P<sub>z</sub></i> nel
+caso tridimensionale) proiezioni di <i>P</i> sugli assi cartesiani, punti che hanno solo un significato geometrico.<br> Matematicamente, questo si riflette nel fatto che un qualsiasi vettore può essere espresso tramite le sue componenti, ossia tramite 3 grandezze scalari. Di conseguenza ogni equazione vettoriale può essere sostituita da 3 equazioni scalari, ottenute proiettando l'equazione vettoriale sui 3 assi cartesiani. Le (1.1), (1.3), (1.5),
+(1.7) sono equivalenti ciascuna a 3 equazioni scalari, secondo lo schema seguente:</p>
+
+<div class="eq">
+<p><b>v</b> = d<b>r</b>/d<i>t</i> &emsp;⇔ &emsp; <i>v<sub>x</sub></i> = d<i>x</i>/d<i>t</i>; &emsp; <i>v<sub>y</sub></i> = d<i>y</i>/d<i>t</i>; &emsp; <i>v<sub>z</sub></i> = d<i>z</i>/d<i>t</i><br>
+<b>r</b> = <b>r</b>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <b>v</b>(<i>t</i>) d<i>t</i> &emsp;⇔ &emsp; <i>x</i> = <i>x</i>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <i>v<sub>x</sub></i>(<i>t</i>) d<i>t</i>; &emsp; <i>y</i> = <i>y</i>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <i>v<sub>y</sub></i>(<i>t</i>) d<i>t</i>; &emsp; <i>z</i> = <i>z</i>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <i>v<sub>z</sub></i>(<i>t</i>) d<i>t</i><br>
+<b>a</b> = d<b>v</b>/d<i>t</i> &emsp;⇔ &emsp; <i>a<sub>x</sub></i>\ = d<i>v<sub>x</sub></i>/d<i>t</i>; &emsp; <i>a<sub>y</sub></i> = d<i>v<sub>y</sub></i>/d<i>t</i>; &emsp; <i>a<sub>z</sub></i> = d<i>v<sub>z</sub></i>/d<i>t</i><br>
+<b>a</b> = <b>v</b>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <b>a</b>(<i>t</i>) d<i>t</i> &emsp;⇔ &emsp; <i>v<sub>x</sub></i> = <i>v<sub>x</sub></i>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <i>a<sub>x</sub></i>(<i>t</i>) d<i>t</i>; &emsp; <i>y</i> = <i>v<sub>y</sub></i>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <i>a<sub>y</sub></i>(<i>t</i>) d<i>t</i>; &emsp; <i>z</i> = <i>v<sub>z</sub></i>(<i>t</i><sub>0</sub>) + ∫<sup><sup><i>t</i></sup></sup><sub><sub><i>t</i><sub>0</sub></sub></sub> <i>a<sub>z</sub></i>(<i>t</i>) d<i>t</i>&emsp; (1.8)</p>
+</div>
+
+<p>ovviamente più semplici da trattare, anche se in numero maggiore. <br>Pertanto, anche se non ci sono oggetti fisici che si muovo lungo gli assi, la nozione di moto proiettato è utile nei calcoli, percé stabilisce un legame tra il moto curvilineo reale e tre moti rettilinei, che sono più semplici da trattare analiticamente. </p>
+
+<h2 id="polari">Coordinate polari</h2>
+
+<p>In <a href="../../mat/calc2/polar.html#polar">polar coordinates</a>, the position of a particle <i>A</i>, is determined by the value of the radial distance to the origin, <i>r</i>, and the angle that the radial line makes with an arbitrary fixed line, such as the <i>x</i> axis. Thus, the trajectory of a particle will be determined if we know <i>r</i> and <i>θ</i> as a function of <i>t</i>, i.e. <i>r</i>(<i>t</i>), <i>θ</i>(<i>t</i>). The directions of increasing <i>r</i> and <i>θ</i> are defined by the orthogonal unit vectors <b>e<sub>r</sub></b> and <b>e<sub>θ</sub></b>, come in fig. 4;</p>
+
+<figure>
+<img src="../../mat/calc2/img/velocità_polari.png" alt="componenti polari velocità"/>
+<figure><b>Fig.4</b>. The velocity components in a polar coordinate system</figcaption>
+</figure>
+
+<p>Il raggio vettore <b>r</b> può essere espresso come <i>r</i><b>u<sub>r</sub></b> e pertanto:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi mathvariant="bold">r</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>r</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mi mathvariant="bold">u</mi>
+    <mi mathvariant="bold">r</mi>
+  </msub>
+  <mo>+</mo>
+  <mi>r</mi>
+  <mfrac>
+    <msub>
+      <mi mathvariant="bold">u</mi>
+      <mi mathvariant="bold">r</mi>
+    </msub>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mo stretchy="false">&#x27F9;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>r</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mi mathvariant="bold">u</mi>
+    <mi mathvariant="bold">r</mi>
+  </msub>
+  <mo>+</mo>
+  <mi>r</mi>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>&#x3B8;</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mi mathvariant="bold">u</mi>
+    <mi>&#x3B8;</mi>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi mathvariant="bold">r</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>&#x3B8;</mi>
+  </msub>
+</math>
+
+<!-- $$\mathbf{v} = \frac{\text{d}\mathbf{r}}{\text{d}t} = \frac{\text{d}r}{\text{d}t} \mathbf{u_r} + r \frac{\mathbf{u_r}}{\text{d}t} \implies \mathbf{v} = \frac{\text{d}r}{\text{d}t} \mathbf{u_r} + r \frac{\text{d}\theta}{\text{d}t}\mathbf{u_\theta} = \mathbf{v_r} + \mathbf{v_\theta} $$ -->
+
+
+<p>La velocità che, si ricordi, è sempre tangente alla traiettoria si scompone in due componenti: la <b>velocità radiale v</b><sub>r</sub>, diretta lungo <b>r</b> e di modulo d<i>r</i>/d<i>t</i> e la <b>velocità trasversa v<sub>&theta;</sub></b>, ortogonale a <b>r</b> e di modulo <i>r</i>d<i>&theta;</i>/d<i>t</i>; <b>v<sub>r</sub></b> dipende dalle variazioni del modulo del raggio vettore, <i><b>v<sub>&theta;</sub></b></i> è collegata alle variazioni di direzione dello stesso. Il risultato della scomposizione si può anche ottenere considerando che lo spostamento infinitesimo d<b>r</b> ha componenti d<i>r</i> e <i>r</i>d<i>&theta;</i> (a meno di infinitesi di ordine superiore): dividendo per d<i>t</i> si hanno le componenti della velocità. <br>Il modulo della velocità è, con queste componenti,</p>
+
+<div class="eq">
+<p><i>v</i> = d<i>s</i>/d<i>t</i> = [(d<i>r</i>/d<i>t</i>)<sup>2</sup> + <i>r</i><sup>2</sup> (d<i>&theta;</i>/d<i>t</i>)<sup>2</sup>]<sup>1/2</sup></p>
+</div>
+
+<section aria-label="End">
+<a href="mec.html">«Introduzione alla meccanica</a>
+<a href="index.html">Index</a>
+<a href="rettilineo.html">1.3 Moto rettilineo»</a>
+</section>
+
+</article>
+
+</body>
+</html>

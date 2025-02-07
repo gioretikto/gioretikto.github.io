@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Energy">
+	<title>Energy</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Energy</h1>
+
+<p>During the motion of a mechanical system, the 2<i>s</i> quantities <i>q<sub>i</sub></i> and <i>q̇</i> (<i>i</i> = 1,2,...,<i>s</i>) which specify the state of the system vary with time. There exist, however, functions of these quantities whose values remain constant during the motion, and depend only on the initial conditions. Such functions are called <i><b>integrals of the motion</b></i>. <br> The number of independent integrals of the motion for a closed mechanical system whith <i>s</i> degrees of freedom is 2<i>s</i> − 1. This is evident from the following simple arguments. The general solution of the equations of motion contains 2<i>s</i> arbitrary constants. Since the equations of motion for a closed system do not involve the time explicitly, the choice of the origin of time is entirely arbitrary, and one of the arbitrary constants in the solution of the equations can always be taken as an additive constant <i>t</i><sub>0</sub> in the time. Eliminating <i>t</i> + <i>t</i><sub>0</sub> from the 2<i>s</i> functions <i>q<sub>i</sub></i> = <i>q<sub>i</sub></i>(<i>t</i> + <i>t</i><sub>0</sub>, <i>C</i><sub>1</sub>, <i>C</i><sub>2</sub>, <i>C</i><sub>2<i>s</i>−1</sub>), <i>q̇</i> = <i>q̇</i>(<i>t</i> + <i>t</i><sub>0</sub>, <i>C</i><sub>1</sub>, <i>C</i><sub>2</sub>, ..., <i>C</i><sub>2<i>s</i>−1</sub>), we can express the 2<i>s</i> − 1 arbitrary contants C<sub>1</sub>, C<sub>2</sub>, ..., C<sub>2s−1</sub> as functions of <i>q</i> and <i>q̇<sub>i</sub></i>, and these functions will be integrals of the motion. <br> Not all integrals of the motion, however, are of equal importance in mechanics. There are some whose constancy is of profound significance, deriving from the fundamental homogeneity and isotropy of space and time. The quantitites represented by such integrals of the motion are said to be <i>conserved</i>, and have an important common property of being additive: their values for a system composed of several parts whose interaction is negligible are equal to the sums of their values for the individual parts. <br> It is to this additivity that the quantitites concerned owe their special importance in mechanics. Let us suppose, for example, that two bodies interact during a certain interval of time. Since each of the additive intergrals of the whole system is, both before and after the itneraction, equal to the sum of its values for the two bodies separately, the conservation laws for these quantitites immediately make possibile vairous conlusions regarding the state of the bodies adter the interaction, if their states before the interaction are known. <br> Let us consider first the conservation law resulting from the <i>homogeneity of time</i>. By virtue of this homogeneity, the Lagrangian of a closed system does not depend explicitly on time. Therefore, instead of <i>L</i>(<i>q,q̇,t</i>) and <i>L'</i>(<i>q,q̇</i>) and consequently &delta;<i>L</i>/&delta;<i>t</i> = 0. If <i>L</i> does nto depend explicitly on <i>t</i>, it could have an implicit time dependence if <i>q</i> or <i>q̇</i> depend on time, that is the total time derivative of the Lagrangian can therefore be written</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>L</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>L</mi>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <msub>
+          <mi>q</mi>
+          <mi>i</mi>
+        </msub>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#x2D9;</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msub>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>L</mi>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>q</mi>
+              <mo>&#x2D9;</mo>
+            </mover>
+          </mrow>
+          <mi>i</mi>
+        </msub>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#xA8;</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<!-- $$\frac{\text{d}L}{\text{d}t} = \sum_i \frac{\partial{L}} {\partial{q_i}} \dot q_i + \frac{\partial{L}} {\partial{\dot q_i}} \ddot q_i $$ -->
+
+<p>If <i>L</i> depended explicitly on time, a term &delta;<i>L</i>/&delta;<i>t</i> would have to be added on ther right-hand side. Replacing &delta;<i>L</i>/&delta;<i>q<sub>i</sub></i>, in accordance with Lagrange's equations, by (d/d<i>t</i>) &delta;<i>L</i>/&delta;<i>q̇</i>, we obtain</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>L</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#x2D9;</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msub>
+  <mfrac>
+    <mtext>d</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>L</mi>
+        </mrow>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mrow data-mjx-texclass="ORD">
+              <mover>
+                <mi>q</mi>
+                <mo>&#x2D9;</mo>
+              </mover>
+            </mrow>
+            <mi>i</mi>
+          </msub>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>L</mi>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>q</mi>
+              <mo>&#x2D9;</mo>
+            </mover>
+          </mrow>
+          <mi>i</mi>
+        </msub>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#xA8;</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <mfrac>
+    <mtext>d</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>q</mi>
+          <mo>&#x2D9;</mo>
+        </mover>
+      </mrow>
+      <mi>i</mi>
+    </msub>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>L</mi>
+        </mrow>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mrow data-mjx-texclass="ORD">
+              <mover>
+                <mi>q</mi>
+                <mo>&#x2D9;</mo>
+              </mover>
+            </mrow>
+            <mi>i</mi>
+          </msub>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$\frac{\text{d}L}{\text{d}t} = \sum_i \dot q_i \frac{\text{d}}{\text{d}t} \left(\frac{\partial{L}} {\partial{\dot q_i}} \right) + \frac{\partial{L}} {\partial{\dot q_i}} \ddot q_i  = \sum_i \frac{\text{d}}{\text{d}t} \left(\dot q_i \frac{\partial{L}} {\partial{\dot q_i}} \right)$$ -->
+
+<p>or</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>L</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munder>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mi>i</mi>
+    </munder>
+    <msub>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>q</mi>
+          <mo>&#x2D9;</mo>
+        </mover>
+      </mrow>
+      <mi>i</mi>
+    </msub>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>L</mi>
+        </mrow>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mrow data-mjx-texclass="ORD">
+              <mover>
+                <mi>q</mi>
+                <mo>&#x2D9;</mo>
+              </mover>
+            </mrow>
+            <mi>i</mi>
+          </msub>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mi>L</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\frac{\text{d}L}{\text{d}t} \left(\sum_i \dot q_i \frac{\partial{L}} {\partial{\dot q_i}} - L \right)  = 0 $$ -->
+
+<p>Hence we see that the quantity</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>E</mi>
+  <mo>&#x2261;</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#x2D9;</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>L</mi>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <msub>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>q</mi>
+              <mo>&#x2D9;</mo>
+            </mover>
+          </mrow>
+          <mi>i</mi>
+        </msub>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mi>L</mi>
+	<mtext>&emsp;(<b>2.1.1</b>)</mtext>
+</math>
+
+<!-- $$ E \equiv \sum_i \dot q_i \frac{\partial{L}} {\partial{\dot q_i}} - L $$ -->
+
+<p>remains cosntant during the motion of a closed system, i.e., it is an integral of the motion; it is caleld the <i>energy</i> of the system. The additivity of the energy follows immediately from that of the Lagrangian, since (2.1.1) shows that is a linear function of the latter. <br> The law of conservation of energy is valid not only for closed systems, but also for those in a constant external field (i.e. one independent of time): the only property of the Lagrangian used in the above derivation, namely that it does not involve the time explicitly, is still valid. Mechanical systems whose energy is conserved are sometimes called <i>conservative</i> systems. <br> As we have seen in, the Lagrangian of a closed system (or one in a constant field) is of the form <i>L</i> = <i>T</i> (<i>q,q̇</i>) − <i>U</i>(<i>q</i>), where <i>T</i> is a quadratic function of the velocities. Using Euler's theorem on homogeneous functions, we have</p>
+
+<div class="eq">
+<p><i>L</i> = <i>T</i>(<i>q,q̇</i>) − <i>U</i>(<i>q</i>)</p>
+</div>
+
+<p>where <i>T</i> is a quadratic function of the velocities. Using <a href="homogeneous.html">Euler's theorem</a> on homogeneous functions, we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#x2D9;</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>L</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mrow data-mjx-texclass="ORD">
+          <mover>
+            <mi>q</mi>
+            <mo>&#x2D9;</mo>
+          </mover>
+        </mrow>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mi>i</mi>
+  </munder>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#x2D9;</mo>
+      </mover>
+    </mrow>
+    <mi>i</mi>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>T</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mrow data-mjx-texclass="ORD">
+          <mover>
+            <mi>q</mi>
+            <mo>&#x2D9;</mo>
+          </mover>
+        </mrow>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>T</mi>
+</math>
+
+<!-- $$\sum_i \dot q_i \frac{\partial L}{\partial \dot q_i} = \sum_i \dot q_i \frac{\partial T}{\partial \dot q_i} = 2T $$ -->
+
+<p>Substituting this in eq. (2.1.1) gives</p>
+
+<div class="eq">
+<p><i>E</i> = <i>T</i>(<i>q,q̇</i>) + <i>U</i>(<i>q</i>)</p>
+</div>
+
+<p>in Cartesian co-ordinates,</p>
+
+<div class="eq">
+<p><i>E</i> = &Sigma;<sub><i>a</i></sub> ½ <i>m<sub>a</sub>v<sub>a</sub></i><sup>2</sup> + <i>U</i>(<i><b>r</b></i><sub>1</sub>,<i><b>r</b></i><sub>2</sub>, ...)</p>
+</div>
+
+<p>Thus the energy of the system can be written as the sum of two quite different terms: the kinetic energy, which depends on the velocities, and the potential energy, which depends only on the coordinates of the particles.</p>
+
+<section aria-label="End">
+<a href="L_system.html">«The Lagrangian for a system of particle</a>
+<a href="index.html">Index</a>
+<a href="P.html">Momentum conservation»</a>
+</section>
+
+</article>
+
+</body>
+</html>

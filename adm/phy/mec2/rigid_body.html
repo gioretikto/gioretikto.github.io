@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Eulerian angles">
+	<title>Eulerian angles</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Eulerian angles</h1>
+
+<p>Let us imagine a rigid body consisting of <i>N</i> discrete particles. Altogether this gives us 3<i>N</i> coordinates. The requirement that the body is rigid, ie all the internal distances are fixed, imposes constraints on these coordinates. We denote the distance between particles <i>i</i> and <i>j</i> by <i>r<sub>ij</sub></i>. We can work out how many constraints and hence degrees of freedom we have:</p>
+
+<ul>
+	<li><p><i>N</i> = 2 Here we have a single constraint <i>r</i><sub>12</sub> = <i>r</i>, and hence we have a total of 3 · 2 − 1 = 5 degrees of freedom;</p></li>
+	<li><p><i>N</i> = 3. Suppose that three particles are connected by rigid rods to form a triangular body with the particles at its corners. The configuration of the system is specified by giving the locations of the three particles. Having 3 internal distances to be fixed: <i>r</i><sub>12</sub>, <i>r</i><sub>13</sub> and <i>r</i><sub>23</sub>, the constraints imposed upon these 3 points, yield 3 equations</p>
+
+<div class="eq">
+<p>(<i>x</i><sub>2</sub> − <i>x</i><sub>1</sub>)<sup>2</sup> + (<i>y</i><sub>2</sub> − <i>y</i><sub>1</sub>)<sup>2</sup> + (<i>z</i><sub>2</sub> − <i>z</i><sub>1</sub>)<sup>2</sup> = constant;<br>
+(<i>x</i><sub>2</sub> − <i>x</i><sub>3</sub>)<sup>2</sup> + (<i>y</i><sub>2</sub> − <i>y</i><sub>3</sub>)<sup>2</sup> + (<i>z</i><sub>2</sub> − <i>z</i><sub>3</sub>)<sup>2</sup> = constant;<br>
+(<i>x</i><sub>1</sub> − <i>x</i><sub>3</sub>)<sup>2</sup> + (<i>y</i><sub>1</sub> − <i>y</i><sub>3</sub>)<sup>2</sup> + (<i>z</i><sub>1</sub> − <i>z</i><sub>3</sub>)<sup>2</sup> = constant;</p>
+</div>
+
+<p>So 3<i>N</i> − <i>k</i> = 9 − 3 = 6, and the system has six degrees of freedom (or independent coordinates);</p></li>
+
+	<li><p><i>N</i> = 4 Here there are 6 internal distances to be fixed, so we have 3 · 4 − 6 = 6 degrees of freedom. Strictly speaking, there are 2 different configurations which both satisfy these 6 constraints, corresponding to rigid bodies that are mirror images of each other. This ambiguity does not correspond to any physical degree of freedom, however;</p></li>
+	<li><p><i>N</i> = 5 Now it appears there would be 10 constraints, corresponding to the 10 pairs of particles we have. However, if you construct a 5-particle body from a 4-particle one, you will see that once the fifth particle has been positioned relative to 3 of the others, the position relative to the fourth one is also given. (You may try this
+for yourself!) We therefore only have 9 constraints, and 3 · 5 − 9 = 6 degrees of freedom.</p></li>
+</ul>
+	<li><p><i>N</i> ≥ 6 As was the case for N = 5, we will need to specify 3 relative distances to position the 6th particle relative to the other 5, 3 more for the 7th particle, etc. This cancels out the 3 coordinates that each new particle comes with, so we end up with 6 degrees of freedom in every case.</p></li>
+</ul>
+
+<p>In summary, we find that a rigid body has 6 degrees of freedom, except for <i>N</i> = 2, which is a special case, and has only 5 degrees of freedom. A more careful analysis will reveal that there are only 5 degrees of freedom whenever the rigid body is 1-dimensional (all the constituent particles are located on a single line), and 6 otherwise.</p>
+
+<p>The triangular body (case <i>N</i> = 3) is an example of a rigid body, and has the same number of degrees of freedom as a general rigid body. One can see this by noting that the triangle can be imagined to be embedded in any given rigid body. In this case, each possible configuration of the triangle determines the configuration of the rigid body, and vice versa. A rigid body in space thus needs six independent generalized coordinates.</p>
+
+<figure>
+<img src="img/degreed_freedom.png" alt="degrees of freedom"/>
+<figcaption>P<sub>1</sub>(<i>x</i><sub>1</sub>, y<sub>1</sub>,z<sub>1</sub>); P<sub>2</sub>(<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>, <i>z</i><sub>2</sub>); P<sub>3</sub>(x<sub>3</sub>, <i>y</i><sub>3</sub>, <i>z</i><sub>3</sub>)</figcapiton>
+</figure>
+
+<p>It is important to realize that the number of degrees of freedom is a characteristic of the system itself, and does not depend upon the particular set of coordinates used in its description; e.g., the configuration of the previoud triangular body might be specified by giving the three Cartesian coordinates of an arbitrary point in the body and also a set of three Eulerian angles describing its orientation. In this case, there are six coordinates and no constrains, again yielding six degrees of freedom.</p>
+
+
+<p>Un metodo classico per introdurre tre parametri liberi e indipendenti che permettano di individuare la posizione della terna mobile rispetto a quella fissa è data dai cd. <i>angoli di Eulero</i>. In tutti quei casi in cui <i><b>i</b></i><sub>3</sub> ∧ <i><b>e</b></i><sub>3</sub> &ne; 0 è possibile definire il versore</p>
+
+<p>A <b>rigid body</b> is defined as a body (or collection of particles) where all mass points stay at the same relative distances at all times, i.e. |<i><b>r</b><sub>i</sub></i> − <i><b>r</b><sub>j</sub></i>| is constant and it does not undergo any deformation under the action of applied forces. This can be a continuous body, or a collection of discrete particles: the same equations of motion hold for both cases. The notion of a rigid body is an idealisation, since no real completely rigid bodies exist in the real world. Firstly, real bodies consist of atoms and molecules which always undergo vibrations (and electrons, as quantum particles, are never at rest). These complications can be ignored for macroscopic bodies.</p>
+
+<p>We have seen, a total of <a href="gen_coord.html">six independent coordinates</a> are needed to describe the motion of a rigid body. Normally, however, one does not choose for this purpose the coordinates of three arbitrarly selected points of the body, but prefres to describe the movement as a whole in space:</p>
+
+<ol>
+	<li><p>By the <b>translation</b> of a special point <i>S</i> which is very often, but not necessarily always, the center of gravity of the body. 
+	<li><p>By the <b>rotation</b> around an axis through the point <i>S</i>. The axis does not need to be body- or space-fixed, it must only go through the point <i>S</i>. That yields three more degrees of freedom due to the rotation, namely two specfications of angles for </p>
+</ol>
+
+<p>How shall these six coordinates be assigned? First, we select a set of Cartesian axes <i>x,y,z</i> that has its origin at a fixed point within the rigid body and that we shall call the body axes. The problem is solved when these bodyt coordinates are related to an external inertial reference frame, which is also Cartesian (<i>X',Y',Z</i>'). Three of the six generalized coordinates serve to locate the origin of the bodyt axes with respectr to the origin of the external axes. The second set of three generalized coordinates gives the orientation of <i>x,y,z</i> relative to the external axes (or relative to three fixed axes <i>x',y',z'</i> that have the same origin as the body axes but that are parallel to the external axes <i>X',Y',Z</i>' as shown in Fig.1. <br> To relate the body axes <i>x,y,z</i> to the fixed axes <i>x',y',z'</i> (external axes), we employ three angles. A number of sets of angles have been described in the literature, but the most common and useful are the Eulerian angles. The definition of Eulerian angles varies little from one text to another. We adopt Goldstein's (1980) definition, i.e., the Eulerian angles are generated in the following three successive angles of rotation:</p>
+
+
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

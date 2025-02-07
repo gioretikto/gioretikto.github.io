@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Euclidean algorithm"/>
+	<title>Euclidean algorithm</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Euclidean algorithm</h1>
+
+<p>There is a useful algorithm for computing the GCD, of two integers <i>a</i> and <i>b</i>, (which we know to exists) called the <i>Euclidean algorithm</i> (also Euclid's algorithm). The Euclidean algorithm uses the <a href="gcd.html#division">division algorithm</a> for integers repeatedly, and allow us to determine a Bézout identity as well. We want to calculate the gcd(<i>a,b</i>), we can without doubt let <i>a</i> &ge; <i>b</i> &gt; 0.</p>
+
+<p><b>2.4.1 Euclidean Algorithm</b>. We write in bold the elements that are going to be divided in the next division. Let <b>a, b</b> &in; ℤ and let <i><b>a</b></i> &ge; <i><b>b</b></i> &gt; 0. We perform the following divisions:</p>
+
+<div class="eq">
+<p><i>a</i> = <b><i>b</i></b><i>q</i><sub>1</sub> + <b><i>r</i></b><sub>1</sub> &emsp; 0 &lt;<i>r</i><sub>1</sub> &lt; <i>b</i></p>
+<p><i>b</i> = <b><i>r</i></b><sub>1</sub><i>q</i><sub>1</sub> + <b><i>r</i></b><sub>2</sub> &emsp; 0 &lt; <i>r</i><sub>2</sub> &lt;<i>r</i><sub>1</sub></p>
+<p><i>r</i><sub>1</sub> = <i><b>r</b></i><sub>2</sub><i>q</i><sub>1</sub> + <b><i>r</i></b><sub>3</sub> &emsp; 0 &lt; <i>r</i><sub>3</sub> &lt; <i>r</i><sub>2</sub></p>
+<p><i>...</i></p>
+<p><i>r</i><sub>n−2</sub> = <b><i>r</i></b><sub><i>n</i>−1</sub><i>q<sub>n</sub></i> + <span style="padding:2px; border-style: solid; border-width:1px;"><b>r</b><sub>n</sub></i></span> &emsp; 0 &lt; <i>r<sub>n</sub></i> &lt; <i>r</i><sub><i>n</i>−1</sub></p>
+<p><i>r</i><sub><i>n</i>−1</sub> = <i><b>r</b><sub>n</sub>q</i><sub><i>n</i>+1</sub> + 0</p>
+</div>
+
+<p>We must come to an halt for sure (in less of <i>b</i> steps), since <i>b</i> &gt;<i>r</i><sub>1</sub> &gt; <i>r</i><sub>2</sub> &gt; ... is a strictly decreasing sequence of positive integers.</p>
+
+<p>Euclid's algorithm seems mysterious at first. The reason it works − the crux of the prood that the method yield gcd(<i>a,b</i>) − lies in the <a href="Z_divisibility.html#lemma_225">Lemma 2.2.5</a> that we rephrase as follows.</p>
+
+<p><b>2.4.2 Lemma (Common gcd in stages of Euclid's Algorithm)</b>. If <i>n</i> = <i>qd</i> + <i>r</i>, then gcd (<i>n,d</i>) = gcd (<i>d,r</i>).</p>
+
+<p><b>Proof</b>. Suppose that <i>n</i> = <i>qd</i> + <i>r</i>. We shall prove that every common divisor of <i>n</i> and <i>d</i> is a common divisor of <i>d</i> and <i>r</i> and viceversa. <br>(⟶)
+Let <i>c</i> be a common divisor of <i>n</i> and <i>d</i> then <i>c</i> | (<i>n</i> − <i>qd</i>), i.e., <i>c</i> | <i>r</i>. <br>(⟵) Conversely, suppose <i>c</i> is a common divisor of <i>d</i> and <i>r</i>, then <i>c</i> | (<i>qd</i> + <i>r</i>), i.e. <i>c</i> | <i>n</i>. So <i>c</i> is a common divisor of <i>d</i> and <i>n</i>. Since their sets of common divisors are the same, gcd (<i>n,d</i>) = gcd (<i>d,r</i>). &emsp;□</p>
+
+<h3>Geometrical Representation of the Euclidean Algorithm</h3>
+
+<p>From a rectangle of side-lenghts <i>a</i> and <i>b</i> (<i>a</i> &ge; <i>b</i>) squares of side-lenght <i>b</i> are cut off, so long as it is possible. Then a remainder rectangle is left over, from which agains squares are cut off, and so on. The procedure continues, so long as the subdivision into squares is possible, that is, until no rectangle remains left over. The side-lenght of the smallest square is then the gcd of <i>a</i> and <i>b</i>.  For the example <i>a</i> = 42, <i>b</i> = 15. Since the side-length of the smallest square is a common measure (indeed, the greatest common measure) of the original rectangle's side-lenghts <i>a</i> and <i>b</i>, the entire rectangle can be broken up into squares of this side-length. </p>
+
+<figure>
+<img src="img/Euclidean_geometrical.png" alt="Geometrical Representation of the Euclidean Algorithm"/>
+<figcaption>Geometrical Representation of the Euclidean Algorithm for <i>a</i> = 42 and <i>b</i> = 15.</figcaption>
+</figure>
+
+<figure>
+<img src="img/Euclidean_squares.png" alt="Euclidean Algorithm subdivision into squares"/>
+<figcaption>Subdivision into squares</figcaption>
+</figure>
+
+<p>The procedure for determining a possible unit common to two <i>magnitudes</i>, as line segments, angles, areas, can be regarded as the geometric equivalent of <i>Euclid's algorithm</i>. In the case of two line segments <i>a, b</i>, we consider the shortest one <i>b</i> and we cover <i>a</i> with copies of <i>b</i>. If we succeed in covering <i>a</i> perfectly, <i>b</i> is a common unit as <i>a</i> is a multiple of <i>b</i>. Otherwise, we consider the part <i>c</i> which remaind from <i>a</i> after covering it with copies of <i>b</i>, and restart the process uing <i>c</i> as the shortest segment between, this time, <i>a</i> and <i>b</i>. For the Pythagoreans this process would always stop after a finite number of steps, which is equivalent ot <i>commensurability</i>. However, the procedure will never stop in the case of the diagonal ad the side of a square. </p> 
+
+<p>The Pythagoreans of ancient Greece (500 B.C.) believed "all is number" and sought to explain the world in terms of ratios of whole numbers. They discovered that the ration of the diagonal to the side of a square is not a ratio of whole numbers, i.e. √2 is irrational: a real number which cannot be written as a quotient of two integers. If <i>a</i> and <i>b</i> are the lenghts of two line segments, <i>a</i> and <i>b</i> are commensurable if there are natural numbers <i>k</i> and <i>h</i> so that <i>ka</i> = <i>hb</i>: that is, placing <i>k</i> copies of the line segment of length <i>a</i> end-to-.end and <i>h</i> copies of the line segment of length <i>b</i> end-to-end give line segments of the same length. It was of interese to the Greeks to know when two line segments. The irrationality of the diagonal of the square of side 1 means that the side and the diagonal of a square are incommensurable. More generally, a line segment whose length is irrational is incommensurable with the line segment of unit lenght. For otherwise, there would be natural numbers, <i>h, k</i> so that <i>k ⋅ a</i> = <i>h ⋅ 1</i>, that is, <i>a</i> = <i>h</i>/<i>k</i> is rational. <br> The great Greek mathematician Eudoxus (ca. 360 B.C.) formulated a criterion for the commensurability of two constructible numbers <i>a</i>, and <i>b</i>, namely</p>
+
+<p><b>Eudoxus's Criterion</b>. The line segments <i>a</i> and <i>b</i> are commensurable, iff Euclid's algorithm applied to <i>a</i> and <i>b</i> stops.</p>
+
+<h3>Proof of the Euclid's algorithm</h3>
+
+<p>Note first that <i>b</i> > <i>r</i><sub>1</sub> > <i>r</i><sub>2</sub> > ··· &gt; <i>r<sub>n</sub></i> &gt; <i>r</i><sub><i>n</i> − 1</sub> = 0 is a sequence of decreasing positive integers which cannot be continued indefinitely. Therefore the algorithm stops after no more than <i>b</i> divisions. From the divisions above we have that gcd(<i>r</i><sub><i>n</i></sub>, <i>r</i><sub><i>n</i> − 1</sub>) = <i>r<sub>n</sub></i> and by applying the previous lemma repeatedly, we find that gcd(<i>a,b</i>) = gcd(<i>r</i><sub>1</sub>,<i>b</i>) = gcd(<i>r</i><sub>2</sub>,<i>r</i><sub>1</sub>) = ... = gcd(<i>r</i><sub><i>n</i> − 1</sub>, <i>r</i><sub><i>n</i> − 2</sub>) = gcd(<i>r</i><sub><i>n</i></sub>, <i>r</i><sub><i>n</i> − 1</sub>) = <i>r<sub>n</sub></i>. &emsp;□</p>
+
+<p><b>Example 2.4.3</b>. Let <i>a</i> = 15 and <i>b</i> = 6.</p>
+
+<pre>
+15 = 6 ⋅ 2 + 3		gcd(15,6) = gcd (6,3)	By Lemma 2.4.2
+6 = 3 ⋅ 2 + 0		gcd(6,3) = 3</pre>
+
+<p>Let's calculate gcd(34, 19) with the Euclidean algorithm.</p>
+
+<pre>
+34 = 19 ⋅ 1 + 15
+19 = 15 ⋅ 1 + 4
+15 = 4 ⋅ 3 + 3
+4 = 3 ⋅ 1 + <span style="padding:2px; border-style: solid; border-width:1px;">1</span>
+3 = 1 ⋅3 + 0
+</pre>
+
+<p>Thus, gcd(34, 19) = 1.</p>
+
+<p>Further, these relations offer us a way to write gcd(<i>a,b</i>) as Bézout's identity in the form <i>d</i> = gcd(<i>a,b</i>) = <i>sa</i> + <i>tb</i>. To find a Bézout's identity for per gcd(34, 19) = 1 = <i>d</i>, we proceed backward.</p> 
+
+<pre>1 = 4 − 1 ⋅ 3
+= 4 − 1(15 - 4⋅3) = 4 ⋅ 4 − 1⋅15
+= 4(19 − 15⋅1) − 1⋅15) = 4⋅19 − 5⋅15
+= 4⋅19 − 5(34 − 19⋅1) = 9⋅19 − 5⋅34
+</pre>
+
+<p>Thus Bézout's identity for <i>a</i> = 34 and <i>b</i> = 19 is 1 = 34(−5) + 19 ⋅ 9</p>
+
+<section aria-label="End">
+<a href="gcd.html">&#171;gcd: The greatest common divisor</a>
+<a href="index.html">Index</a>
+<a href="diophantine.html">Linear Diophantine equations &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

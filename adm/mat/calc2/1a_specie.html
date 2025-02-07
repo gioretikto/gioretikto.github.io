@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Integrali di linea di prima specie"/>
+	<title>Integrali di linea di prima specie</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Integrali di linea di prima specie</h1>
+
+<p><b>Definizione 4.5</b> - Sia <b>r</b>: [<i>a,b</i>] → ℝ<sup><i>m</i></sup> una curva regolare di sostegno <i>&Gamma;</i> = <b>r</b>([<i>a,b</i>]), e sia <i>f</i> : <i>A</i> &subseteq; ℝ<sup><i>m</i></sup> → ℝ una funzione a valori reali definita e continua almeno su <i>&Gamma;</i>, ossia <i>&Gamma;</i> &subseteq; <i>A</i>. Si dice integrale di linea di prima specie di <i>f</i> lungo <i>&Gamma;</i>, l'integrale:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi mathvariant="normal">&#x393;</mi>
+  </msub>
+  <mi>f</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>&#x2261;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">r</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <msup>
+    <mi mathvariant="bold">r</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$\int_\Gamma f \,\text{d}s \equiv \int_a^b f(\mathbf{r}(t)) \|\mathbf{r'}(t) \| \text{d}t$$ -->
+
+<h2>Interpretazine geometrica</h2>
+
+<p>Si può pensare all'integrale curvilineo di prima specie come all'area della porzione di superficie, costituita dalle rette parallele all'asse <i>z</i> e passnti per i punti di <i>&Gamma;</i>, compresa fra il piano <i>xy</i> su cui giace <i>&Gamma;</i> e la superficie di equazione <i>z</i> = <i>f</i>(<i>x,y</i>).</p>
+
+<img src="img/prima_specie.png" alt="integrale curvilineo prima specie"/>
+
+<p>Una volta introdotto l’integrale curvilineo, risulta chiaro che la formula per il calcolo della lunghezza di una curva è solo un suo caso particolare, quando la funzione integranda vale identicamente 1:</p>
+
+<div class="eq">
+<p><i>Lunghezza(&gamma;) = &int;<sub>&gamma;</sub></i>  d<i>s</i></p>
+</div>
+
+<p><b>Esempio</b>. Calcoliamo l’integrale ∫<sub><i>&Gamma;</i></sub> <i>f</i> d<i>s</i> dove <i>&Gamma;</i> è la semicirconferenza, sostegno della curva di equazione <b>r</b>(<i>t</i>) = (cos<i>t</i>, sin <i>t</i>), <i>t</i> ∈ [π, 2π] ed <i>f</i> (<i>x, y</i>) = −<i>y</i>. Tale integrale rappresenta geometricamente l’area del pezzo di superficie cilindrica <i>S</i>, indicata in Figura 2. Si ha:</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>area</mtext>
+  <mo stretchy="false">(</mo>
+  <mi>S</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi mathvariant="normal">&#x393;</mi>
+  </msub>
+  <mi>f</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>&#x3C0;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mi>&#x3C0;</mi>
+    </mrow>
+  </msubsup>
+  <mo>&#x2212;</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>t</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mo>=</mo>
+  <mn>2</mn>
+</math>
+
+<!-- $$\text{area}(S) = \int_\Gamma f\, \text{d}s = \int_\pi^{2\pi} -\sin t \, \text{d}t = 2$$ -->
+
+<h2>Intepretazione fisica</h2>
+
+<p>Supponiamo di avere un filo in ℝ<sup>3</sup> di densità variabile <i>ρ</i>, cioè <i>ρ</i> è una funzione di tre variabili che al punto (<i>x, y, z</i>) associa la densità (che potrebbe non essere omogenea) del filo. Per semplicità
+possiamo definire <i>ρ</i> : ℝ<sup>3</sup> → ℝ dicendo che <i>ρ</i>(<i>x, y, z</i>) = 0 se il punto (<i>x, y, z</i>) non appartiene al filo. Parametrizzando il filo con una curva <b>γ</b> : [<i>a, b</i>] → ℝ<sup>3</sup> possiamo esprimere la massa del filo come</p>
+
+<div class="eq">
+<p><i>m</i> := &int;<sub>&Gamma;</sub> <i>&rho;</i> d<i>s</i></p>
+</div>
+
+<p>Si osservi che se la massa del filo è costante (sul filo), cioè se il filo è omogeneo, questo integrale curvilineo altro non è che la lunghezza della curva γ, cioè del filo, moltiplicato per <i>ρ</i> che sarà la costante che
+descrive la densità di massa. <br> Le coordinate (<i>x̄, ȳ, z̄</i>) del baricentro sono allora date da</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>x</mi>
+      <mo stretchy="false">&#xAF;</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi mathvariant="normal">&#x393;</mi>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mi>&#x3B4;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>&#x3B4;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>y</mi>
+      <mo stretchy="false">&#xAF;</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi mathvariant="normal">&#x393;</mi>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>y</mi>
+      <mi>&#x3B4;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>&#x3B4;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>z</mi>
+      <mo stretchy="false">&#xAF;</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi mathvariant="normal">&#x393;</mi>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>z</mi>
+      <mi>&#x3B4;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>&#x3B4;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\bar{x} = \int_\Gamma \frac{x\delta(x,y,z)}{\delta(x,y,z)}, \quad \bar{y} = \int_\Gamma \frac{y\delta(x,y,z)}{\delta(x,y,z)}, \quad\bar{z} = \int_\Gamma \frac{z\delta(x,y,z)}{\delta(x,y,z)}$$ -->
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Mathematics</a>
+<a href="piano_tangente.html">Piano Tangente &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+

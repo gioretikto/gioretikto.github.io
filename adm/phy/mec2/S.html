@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The principle of least action"/>
+	<title>The principle of least action</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The principle of least action</h1>
+
+<p>The most general formulation of the law governing the motion of mechanical systems is the <b>principle of least action</b> or <i>Hamilton's principle</i>, according to which every mechanical system is characterised by a definite function called the <i>Lagrangian</i> of the system concerned</p>
+
+<div class="eq">
+<p><i>L</i>(<i>q</i><sub>1</sub>, <i>q</i><sub>2</sub>, ..., <i>q<sub>s</sub></i>, <i>q̇</i><sub>1</sub>, <i>q̇</i><sub>2</sub>, ..., <i>q̇<sub>s</sub></i>, <i>t</i>)</p>
+</div>
+
+<p>or briefly, considering a single degree of freedom <i>L</i>(<i>q, q̇, t</i>) and the motion of the system is such that a certain condition is satisfied. <br> Let the system occupy, at the instants <i>t</i><sub>1</sub> and <i>t</i><sub>2</sub>, positions defined by two sets of values of the coordinates, <i>q</i><sub>1</sub> = <i>q</i>(<i>t</i><sub>1</sub>) and <i>q</i><sub>2</sub> = <i>q</i>(<i>t</i><sub>1</sub>).</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo stretchy="false">[</mo>
+  <mi>q</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <mi>q</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>q</mi>
+      <mo>&#x2D9;</mo>
+    </mover>
+  </mrow>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ S[q(t)] = \int_{t_{1}}^{t_{2}}L(q(t),\dot{q}(t),t)\,\text{d}t $$ -->
+
+<p>The action is a functional, i.e. a function of the time-dependent function <i>q</i>(<i>t</i>), which assigns the real number ∫<sup><sup><i>t<sub>1</sub></i></sup></sup><sub><sub><i>t<sub>2</sub></i></sub></sub> <i>L</i> d<i>t</i> to each path <i>q<sub>i</sub></i>(<i>t</i>) in the configuration space. Hamilton's principle, states that among all possible trajectories between the instants <i>t</i><sub>1</sub> and <i>t</i><sub>2</sub>, with <i>q</i>(<i>t</i><sub>1</sub>) and <i>q</i>(<i>t</i><sub>2</sub>) fixed, the actual trajectory of the particle will be the function <i>q</i>(<i>t</i>) which is a stationary point of the action <i>S</i>[<i>q</i>(<i>t</i>)]. Mathematically, a stationary point of S[q(t)] functional, is a function <i>q</i>(<i>t</i>) where the functional differential of <i>S</i>[<i>q</i>(<i>t</i>)] is zero, i.e. &delta;<i>S</i> = 0. The symbol &delta; standing for the variations of the trajecotry; i.e., the functional derivative of the action with respect to the path satisfies:</p>
+
+<div class="eq">
+<p>&delta;<i>S</i>[<i>q</i>(<i>t</i>)]/&delta;<i>q</i>(<i>t</i>) = 0</p>
+</div>
+
+<p>This principle is often called the principle of least action (or Hamilton’s Principle). This name is somewhat misleading, since the extremum of the action can be also a maximum or a saddle-point. <br> The trial function <i>q</i>(<i>t</i>) gives a value for the action <i>S</i>. What distinguishes the physical path from all others is that the true path minimizes the action.  The fact that the Lagrangian contains only <i>q</i> and <i>q̇</i>, but not the higher derivatives <i>q̈</i>, etc., expresses the result already mentioned, that the mechanical state of the system is completely defined when the coordinates and velocities are given. <br> In other words the actual motion realized in nature is that particular motion for which this action assumes its smallest value.</p>
+
+<p>Let <i>q</i>(<i>t</i>) be the function for which <i>S</i> is a minimum. This means that <i>S</i> is increased when <i>q</i>(<i>t</i>) is replaced by any function of the form, constructing a trial path<p>
+
+<div class="eq">
+<p><i>q</i><sub>trial</sub>(<i>t</i>) = <i>q</i>(<i>t</i>) + &delta;<i>q</i>(<i>t</i>) &emsp; (1.1)</p>
+</div>
+
+<p>where &delta;<i>q</i>(<i>t</i>) is a function which is small everywhere in the interval of time from <i>t</i><sub>1</sub> to <i>t</i><sub>2</sub>; &delta;<i>q</i>(<i>t</i>) is called a <i>variation</i> of the function <i>q</i>(<i>t</i>). Since, for <i>t</i> = <i>t</i><sub>1</sub> and for <i>t</i> = <i>t</i><sub>2</sub>, all the trial functions must take the same extreme values so it follows that</p>
+
+<div class="eq">
+<p>&delta;<i>q</i>(<i>t</i><sub>1</sub>) = &delta;<i>q</i>(<i>t</i><sub>2</sub>) = 0.</p>
+</div>
+
+<p>To first order in the perturbation &delta;(<i>t</i>), the change in the action functional δ<i>S</i> would be</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3B4;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">S</mi>
+  </mrow>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mi>L</mi>
+    <mo stretchy="false">(</mo>
+    <mi>q</mi>
+    <mo>+</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B4;</mi>
+      <mi>q</mi>
+    </mrow>
+    <mo>,</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>q</mi>
+          <mo>&#x2D9;</mo>
+        </mover>
+      </mrow>
+    </mrow>
+    <mo>+</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B4;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>q</mi>
+          <mo>&#x2D9;</mo>
+        </mover>
+      </mrow>
+    </mrow>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <mi>L</mi>
+    <mo stretchy="false">(</mo>
+    <mi>q</mi>
+    <mo>,</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>q</mi>
+          <mo>&#x2D9;</mo>
+        </mover>
+      </mrow>
+    </mrow>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mo stretchy="false">)</mo>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mi>d</mi>
+  <mi>t</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>L</mi>
+        </mrow>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>q</mi>
+      </mrow>
+    </mfrac>
+    <mi>&#x3B4;</mi>
+    <mi>q</mi>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>L</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mover>
+            <mi>q</mi>
+            <mo>&#x2D9;</mo>
+          </mover>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mi>&#x3B4;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>q</mi>
+        <mo>&#x2D9;</mo>
+      </mover>
+    </mrow>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ \delta {\mathcal {S}}=\int _{t_{1}}^{t_{2}}\;\left[L(q +{\delta q},{\dot {q}}+{\delta \dot {q}},t)-L(q ,{\dot {q}},t)\right]dt = \int_{t_{1}}^{t_{2}} \left ( \frac{\partial{L}}{\partial q} \delta q + \frac{\partial L} {\partial \dot{q}} \delta \dot{q} \right) \text{d}t $$ -->
+
+<p>and integration by parts of the last term yields</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3B4;</mi>
+  <mi>S</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">[</mo>
+      <mi>&#x3B4;</mi>
+      <mi>q</mi>
+      <mo>&#x22C5;</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>L</mi>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mover>
+              <mi>q</mi>
+              <mo>&#x2D9;</mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">]</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mo>+</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>L</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>q</mi>
+      </mrow>
+    </mfrac>
+    <mi>&#x3B4;</mi>
+    <mi>q</mi>
+    <mo>&#x2212;</mo>
+    <mi>&#x3B4;</mi>
+    <mi>q</mi>
+    <mfrac>
+      <mtext>d</mtext>
+      <mrow>
+        <mi>d</mi>
+        <mi>t</mi>
+      </mrow>
+    </mfrac>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>L</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mover>
+            <mi>q</mi>
+            <mo>&#x2D9;</mo>
+          </mover>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ \delta S = \left[\delta q \cdot \frac{\partial L} {\partial \dot{q}}\right]_{t_1}^{t_2} + \int_{t_1}^{t_2} \left (\frac{\partial L} {\partial q} \delta q - \delta q \frac{\text{d}} {dt} \frac{\partial L} {\partial \dot{q}} \right) \text{d}t $$ -->
+
+<p>The boundary conditions &delta;<i>q</i>(<i>t</i><sub>1</sub>) = &delta;<i>q</i>(<i>t</i><sub>2</sub>) = 0, causes the first term to vanish</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3B4;</mi>
+  <mi>S</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mi>&#x3B4;</mi>
+  <mi>q</mi>
+  <mo>&#x22C5;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>L</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>q</mi>
+      </mrow>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mtext>d</mtext>
+      <mrow>
+        <mi>d</mi>
+        <mi>t</mi>
+      </mrow>
+    </mfrac>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>L</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mover>
+            <mi>q</mi>
+            <mo>&#x2D9;</mo>
+          </mover>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ \delta S = \int_{t_1}^{t_2} \delta q \cdot  \left (\frac{\partial L} {\partial q} - \frac{\text{d}} {dt} \frac{\partial L} {\partial \dot{q}} \right) \text{d}t $$ -->
+
+<p id="L">Hamilton's principle requires that this first-order change δ<i>S</i> is zero for all possible perturbations &delta;<i>q</i>(<i>t</i>), i.e., the true path is a stationary point of the action functional <i>S</i> (either a minimum, maximum or saddle point). This requirement can be satisfied if and only if</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>L</mi>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>q</mi>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mtext>d</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>L</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>q</mi>
+          <mo>&#x2D9;</mo>
+        </mover>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \frac{\partial{L}} {\partial q} + \frac{\text{d}}{\text{d}t} \frac{\partial L} {\partial \dot{q}} = 0 $$ -->
+
+<p>This is the required differential equation, called <b><i>Lagrange's equation</i></b>. When the system has more than one degree of freedom, the <i>s</i> different functions <i>q<sub>i</sub></i>(<i>t</i>), must be varied independently in the principle of least action. We then obtain <i>s</i> equations of the form</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mtext>d</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>L</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <msub>
+            <mi>q</mi>
+            <mi>i</mi>
+          </msub>
+          <mo>&#x2D9;</mo>
+        </mover>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>L</mi>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mi>q</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mi>i</mi>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mn>2</mn>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+  <mo>,</mo>
+  <mi>s</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\frac{\text{d}}{\text{d}t} \frac{\partial L} {\partial \dot{q_i}} + \frac{\partial{L}} {\partial q_i} = 0  \quad (i = 1,2, \ldots, s)$$ -->
+
+<p>If the Lagrangian of a given mechanical system is kwown, the <i>Lagrange's equation</i> give the relations between accelerations, velocities and coordinates, i.e. they are the equations of motion of the system. <br>Mathematically, these equations constitute a set of <i>s</i> 2nd order equations for <i>s</i> unknown functions <i>q<sub>i</sub></i>(<i>t</i>). The general solution contains 2<i>s</i> arbitrary constants. To determine these constants and therby to define uniquely the motion of the system, it is necessary to know the initial conditions which specify the state of the system at some given instant, for example the initial values of all the coordinates and velocities.</p>
+
+<p>Let a mechanical system consist of two parts <i>A</i> and <i>B</i> which would, if closed, have Lagrangians <i>L<sub>A</sub></i> and <i>L<sub>B</sub></i> respectively. Then, in the limit where the distance between the parts becomes so large that the interaction between them may be neglected, the Lagrangian of the whole system tends to the value</p>
+
+<div class="eq">
+<p>lim <i>L</i> = <i>L<sub>A</sub></i> + <i>L<sub>B</sub></i></p>
+</div>
+
+<p>This additivity of the Lagrangian expresses the fact that the equations of motion of either of the two non-interacting parts cannot involve quantities pertaining to the other part.</p>
+
+<h3 id="non">Nonuniqueness of the Lagrangian</h3>
+
+<p>It is evident that the multiplication of the Lagrangian of a mechanical system by an arbitrary constant has no effect on the equations of motion. From this, it might seem, the following important property of arbitrariness can be deduced: the Lagrangians of different isolated mechanical systems may be multiplied by different arbitrary constants. The additive property, however, removes this indefiniteness, since it admits only the simultaneous multiplication of the Lagrangians of all the systems by the same constant. This corresponds to the natural arbitrariness in the choice of the unit of measurement of the Lagrangian, a matter to which we shall return in. <br> Adding a total time derivative, <i>L</i> ⟶ <i>L'</i> = <i>L</i> + d<i>f</i>(<i>q,t</i>)/d<i>t</i>, does not change the resulting Lagrange equations, <i>L</i>'(<i>q,q̇,t</i>) and <i>L</i>(<i>q,q̇,t</i>), differing by the total derivative with respect to time of some function <i>f</i>(<i>q,t</i>) of coordinates and time.</p>
+
+<div class="eq">
+<p><i>L</i>'(<i>q,q̇,t</i>) = <i>L</i>(<i>q,q̇,t</i>) + d/d<i>t</i> <i>f</i>(<i>q,t</i>)</p>
+</div>
+
+<p>The action calculated from these two functions are such that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>S</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <mi>S</mi>
+  <mo>+</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>S</mi>
+  <mo>+</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>q</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <msub>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>q</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <msub>
+    <mi>t</mi>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ S' = S + \int_{t_1}^{t_2} \text{d}t \frac{\text{d}f}{\text{d}t} = S + f(q(t_2),t_2) - f(q(t_1),t_1) $$ -->
+
+<p>since the last two terms vanish varying the action with the restriction of fixed endpoints i.e. they differ by a quantity which gives zero on variation, so that the conditions &delta;<i>S</i>' and &delta;<i>S</i> = 0 are equivalent, and the form of the equations of motion is unchanged. Thus the Lagrangian is defined only to within an additive total time derivative of any function of coordinates and time.</p>
+
+<section aria-label="End">
+<a href="q.html">&#171;Generalised coordinates</a>
+<a href="index.html">Index</a>
+<a href="Galilei.html">Galileo's relativity principle &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Modello classico della conduzione elettrica"/>
+    <title>Modello classico della conduzione elettrica</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+            
+<div class="content">
+
+<h1>Modello classico della conduzione elettrica</h1>
+
+<p>Un modello classico della conduzione elettrica nei materiali, fu proposto nel 1900 da Paul Drude e successivamente sviluppato da Hendrik Antoon Lorentz (and hence is also known as the Drude–Lorentz model) in 1906. Drude constructed his model of electrical and thermal conduction by applying the highly successful kinetic theory of gases, i.e. Boltzmann theory, to a metal, which he considered as the host of an ideal gas of electrons. In questo modello si suppone che gli ioni del reticolo cristallino siano fissi e che gli elettroni si muovano attraverso il reticolo in modo completamente disordinato. Nel loro moto gli elettroni subiscono continue <i>interazioni</i> con gli ioni, che chiamiamo <i>urti</i>: tra un urto e il successivo il moto è libero e la traiettoria rettilinea, cosicchè la traiettoria di ciascun elettrone è costituita da una sucessione si segmenti rettilinei, con direzione e lunghezza variabili. L'insieme delle traiettorie è completemente casuale e non si ha un flusso netto di carica, cioè una corrente, in nessuna direzione. Si possono definire un <i>tempo medio</i> &tau; e un <i>cammino libero medio l</i> tra due uti successivi, legati dalla relazione</p>
+
+<div class="eq">
+<p><i>&tau; = l / v</i></p>
+</div>
+
+<p>essendo <i>v</i> la vecloità degli elettroni nel metallo. In the framework of the pre-quantum mechanical Drude model, the kinetic energy of the electrons is obtained from the theorem of equipartition of energy resulting, for three degrees of freedom, in</p>
+
+<div class="eq">
+<p><i>1/2 m<sub>e</sub>v<sub>th</sub><sup>2</sup> = 3/2 k<sub>b</sub>T</i></p>
+</div>
+
+<p>Here, <i>k<sub>B</sub></i> is the Boltzmann constant, m<sub>e</sub> is the mass of the electron, and v<sub>th</sub> is the absolute value of the average thermal vecloity at temperature <i>T</i>. In the frame of this model, the electrons in a metal are therefore moving rapidly in all directions with speed v<sub>th</sub> (e.g. v<sub>th</sub> &approx; at <i>T = 300 K</i>). The thermal motion of an electron may be thought of as piecewise straight and interrupted by a succession of random scattering from collisions with the ions cores, impurity atoms and other scattering centers. Importantly, in teh absence of an electric field, the random motion leads to a zero net displacement of an electron over a sufficiently long period of time. Thus the drift velocity averages to zero <b>v</b><sub>d</sub> = 0, and there is not net electric currente density.</p>
+
+<figure>
+<img src="img/drude.png" alt="drude's model"/>
+<figcaption><b>Fig 1</b> - Schematic illustration of the random scattering path of an electron in a conductor. (a) Random thermal motion at electric field <b>E</b> = 0 V/m. (b) Random motion combined with the motion due to an externally applied electric field <b>E</b> &ne; V/m.</figcaption>
+</figure>
+
+<p>In the presence of an electric field <b>E</b> however, there will be a mean electron velocity. It is directed opposite to the electric field, since the electron charge is negative.</p>
+
+<p>Quando si applica un campo elettrico <b>E</b> ciascun elettrone acquista un'accelerazione <i><b>a</b> = <b>F</b>/m = -e<b>E</b>/m</i>, opposta al campo elettrico, e i tratti rettilinei tra due urti diventano archi di parabola. Alla distribuzione casuale e isotropa delle velocità si sovrappone una <i>velocità</i> <b>v</b><sub>d</sub> <i>di deriva</i>; essendo questa velocità piccola rispetto a quella propria degli elettroni, il tempo medio &tau; tra due urti consecutivi non cambia. Se indichiamo <b>v</b><sub>i</sub> la velocità di un elettrone <i>subito dopo un urto</i> e <b>v</b><sub>i+1</sub> la velocità subito <i>prima dell'urto successivo</i>, abbiamo</p>
+
+<div class="eq">
+<p><i><b>v</b><sub>i+1</sub> = <b>v</b><sub>i</sub> - e&tau;<b>E</b>/m </i></p>
+</div>
+
+<p>Facciamo la media su un gran numero <i>N</i> di urti e definiamo la <b>velocità di deriva</b> come</p>
+
+<div class="eq">
+<p><i><b>v</b><sub>d</sub> = 1 / N  &Sum;<sub>i</sub> <b>v</b><sub>i+1</sub> = 1/N &Sum;<sub>i</sub> <b>v</b><sub>i</sub> - e&tau;<b>E</b>/m</i></p>
+</div>
+
+<p>La media non cambia il termine contenente il campo elettrico che è uguale per tutti gli elettroni; inoltre &Sum;<sub>i</sub> <b>v</b><sub>i</sub> = 0 in quanto <i>dopo ogni urto la distribuzione delle velocità rimane casuale</i>. Pertanto</p>
+
+<div class="eq">
+<p><i><b>v</b><sub>d</sub> = - e&tau;<b>E</b>/m </i> &emsp; (5.22)</p>
+</div>
+
+<p>per l'effetto del campo elettrico <b>E</b> ciascun elettrone nel metallo acquista una velocità <b>v</b><sub>d</sub> nella direzione del campo elettrico</b>, che è <b>proporzionale al campo elettrico stesso.</b>.</p>
+
+<p>When calculating <b>v</b><sub>d</sub> for a current of 1A, one obtains velocities of the order of 10<sup>-14</sup> m/s thus only 0.1 mm/s!. The reason for the huge difference between drift and thermal velocieties is that electrons travel at fast thermal velocities for a short, average time &tau;, and then "scatter" because of collisions with atoms, grain boundaries, impurities, or material surfaces. The drift velocity is also not how fast "elecricity travels", for electric fields travel essentially at the speed of light. To reconcile this discrepancy, think of electrons in a wire as pipe full of water; when a little water enters on end of the pipe, almost immediately some water flows out at the other end.</p>
+
+<p>The very small drit velocity caused by the electric field has essentially no effect on the very large mean speed of the electrons: in other words, v<sub>th</sub> does not depend on <b>E</b>. Drude assumeed that all of the electron's forward velociry is reduces to zero after each collision and must then be accelerated again by the electrical field.</p>
+
+<p>In sostanza si ammette che in media l'urto cancelli la direzione preferenziale del moto dovuta all'azione del campo elettrico e che questa venga ristabilita durante il tempo &tau;. la 5.22 si può scrivere anche <i>m <b>v</b><sub>d</sub> = - e&tau;<b>E</b> &tau;</i> dicendo che l'elettrone acquista nel tempo &tau; la quantità di moto <i>m <b>v</b><sub>d</sub></i> pari all'impulso della forza, quantità di moto che viene ceduta allo ione del reticolo cristallino nell'urto successivo e riacquista dopo un altro intervallo di tempo &tau;. La densità di corrente che consegue a questo moto ordinato è</p>
+
+<div class="eq">
+<p><i><b>j</b> = -n e <b>v</b><sub>d</sub> = <b>E</b>ne<sup>2</sup>&tau;/m </i> &emsp; (5.23)</p></p>
+</div>
+
+<p>Indicando con</p>
+
+<div class="eq">
+<p><i>&sigma; = ne<sup>2</sup>&tau;/m</i></p>
+</div>
+
+<p>una grandezza caratteristica detta <b>conduttività</b>. La 5.23 si riscrive come</p>
+
+<div class="eq">
+<p><i><b>j</b> = &sigma; <b>E</b> </i> &emsp; (5.24)</p></p>
+</div>
+
+<p>Malgrado il modello classico sia servito a giustificare la legge di Ohm, verificata sperimentalmente esso non è adeguato a descrivere correttamente tutte le proprietà dei conduttori. Per esempio, il calcolo della velocità quadratica media degli elettroni. Per esempio, il calcolo della velocità quadratica media degli elettroni, eseguito tramite la teoria cinetica dei gas ideali, dà valori inferiori di un ordine di grandezza rispetto a quelli quantistici. Anche la dipendenza della resistività dalla temperatura risulta errata. Questa situazione insoddisfacente in cui alcune proprietà vengono spiegate e altre non corrispondono alle previsioni è titpica dei modelli che cercano di applicare concetti classici per spiegare fenomeni microscopici, regolari invece da leggi quantistiche.</p>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Physics</a>
+<a href="drude.html">Modello classico della conduzione elettrica &#187;</a>
+</section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Curves"/>
+	<title>Curves</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Curves</h1>
+
+<p>Consideriamo un punto materiale che si muove nello spazio tridimensionale lungo una certa traiettoria. Le sue coordinate (<i>x,y,z</i>) saranno funzione del tempo <i>t</i>, perciò la sua posizione è specificata da una <a href="f_vettoriali.html">fuzione vettoriale</a> del tipo:</p>
+
+<p><b>Definizione 2.2.1</b>. Una funzione continua <b>r</b>: <i>I</i> &subseteq; ℝ ⟶ ℝ<sup><i>m</i></sup> dicesi <b>curva</b>. L'immagine <i>&Gamma;</i> = <b>r</b>(<i>I</i>) &subseteq; ℝ<sup><i>m</i></sup> viene detta <b>sostegno</b> della curva.&emsp;□</p>
+
+<p>Se il sostegno della curva giace su un piano (<i>m</i> = 2), diremo che la <b>curva</b> è <b>piana</b>, se invece <i>m</i> = 3, si ha una curva nello spazio. Le equazioni</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>x</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>y</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <mi>t</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">[</mo>
+          <msub>
+            <mi>t</mi>
+            <mn>1</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>t</mi>
+            <mn>2</mn>
+          </msub>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>z</mi>
+          <mo>=</mo>
+          <mi>z</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{cases}
+x= x(t)\\
+y= y(t) & t \in [t_1,t_2]\\
+z= z(t)
+\end{cases}
+$$ -->
+
+<p>che esprimono le componenti di <b>r</b> sono dette <i>equazioni parametriche</i> della curva di parametro <i>t</i>. <br>Si può usare anche la notazione vettoriale:</p>
+
+<div class="eq">
+<p><b>r</b>(<i>t</i>) = <i>x</i>(<i>t</i>) <b>i</b> + <i>y</i>(<i>t</i>) <b>j</b> + <i>z</i>(<i>t</i>) <b>k</b></p>
+</div>
+
+<p>Sottolineamo la differenza tra una curva, che è una funzione di variabile reale, ed il sostegno di una curva, che è un insieme nello spazio euclideo ℝ<sup><i>m</i></sup>. Una curva definisce un modo di parametrizzare il suo sostegno associando ad ogni valore del parametro <i>i</i> &in; <i>I</i> uno e un solo punto del sostegno. Tuttavia l'insieme <i>&Gamma;</i> può essere il sostegno di curve diverse, ovvero può essere parametrizzato in modi diversi. Ad es., la curva piana <b>r</b>(<i>t</i>) = (<i>t,t</i>) con <i>t</i> &in; [0,1] ha come sostegno il segmento di estremi <i>A</i> = (0,0) e <i>B</i> = (1,1). Tale segmento è anche il sostegno della curva <b>r'</b>(<i>t</i>), <i>t</i> &in; [0,1]; le curve <b>r</b> e <b>r'</b> costituiscono due paramettrizzazioni del segmento <i>AB</i>. Il punto medio di <i>AB</i>, ad es., è individuato dal parametro <i>t</i> = ½ e <i>t</i>. = √2/2 nel secondo. Dal sostegno in nessun modo si può risalire alla funzione <b>r</b>. </p>
+
+<p>La funzione <b>r</b>: <i>I</i> ⟶ ℝ<sup>3</sup> che ad ogni <i>t</i> nell'intervallo dato associa il punto <b>r</b>(<i>t</i>) di coordinate (<i>x</i>(<i>t</i>),<i>y</i>(<i>t</i>), <i>z</i>(<i>t</i>)) è detta <i>curva oraria</i> (o <i>legge oraria</i>) del moto considerato. Il codomio <b>r</b>(<i>I</i>) è detto <b>sostegno</b> della curva; esso è un sottoinsieme dello spazio e non va confusa con la curva, che è invece un'applicazione.</p>
+
+<p id="semplice">La curva <b>r</b> si dice <b>semplice</b> se <b>r</b> è un'applicazione iniettiva, ossia a valori diversi del parametro individuano punti diversi del sostegno. <br> Se l'intervallo <i>I</i> = [<i>a,b</i>] è chiuso e limitato, come negli esempi precedenti, la curva <b>r</b> è anche detta <b>arco di cruva</b>. Chiameremo <b>estremi</b> dell'arco i punti <i>P</i><sub>0</sub> = <b>r</b>(<i>a</i>) e <i>P</i><sub>1</sub> = <b>r</b>(<i>b</i>); precisamente, diremo che <i>P</i><sub>0</sub> è il <b>punto iniziale</b> e <i>P</i><sub>1</sub> il <b>punto finale</b> dell'arco, oppure che <b>r congiunge</b> <i>P</i><sub>0</sub> a <i>P</i><sub>1</sub>. Un <b>arco</b> si dice <b>chiuso</b> se i suoi estremi coincidono, ossia se <b>r</b>(<i>a</i>) = <b>r</b>(<i>b</i>); ovviamente un arco chiuso non è una curva semplice. Tuttavia, si parla di <b>arco chiuso e semplice</b> (o <b>arco di Jordan) se il punto <b>r</b>(<i>a</i>) = <b>r</b>(<i>b</i>) è l'unico punto del sostegno ad essere immagine di due valori diversi dal parametro.</p>
+
+<figure>
+<img src="img/sostegni.png" alt="sostegni"/>
+<figcaption><b>Fig. 1</b>. Data la curva <b>&gamma;</b>, sono date le rappresentazione grafiche del sostegno <i>&Gamma;</i> = <i>&gamma;</i>([<i>a,b</i>]) di un arco semplice (in alto a sinistra), un arco non semplice (in alto a destra), un arco chiudo e semplice o di Jordan (in basso a sinistra) e un arco chiuso non semplice (in basso a destra).</figcaption>
+</figure>
+
+<p>La Fig. 1 illustra diversi esempi di archi; in particolare, il sostegno dell'arco di Jordan (in basso a sinistra) evidenzia una proprietà notevole di tali archi, nota come Teorema di Jordan.</p>
+
+<p><b>Teorema 2.2.2</b>. Se <i>&Gamma;</i> è il sostegno di un arco piano di Jordan, esso divide il piano in cui giace in due componenti connesse <i>&Sigma;<sub>i</sub></i> e <i>&Sigma;<sub>e</sub></i>, ove <i>&Sigma;<sub>i</sub></i> è limitata e viene detta l'<b>interno</b> di <i>&Gamma;</i>, mentre <i>&Sigma;<sub>e</sub></i> è illimitata e viene detta l'<b>esterno</b> dell'arco; inoltre <i>&Gamma;</i> è la frontiera comune di <i>&Sigma;<sub>i</sub></i> e <i>&Sigma;<sub>e</sub></i>. &emsp;□</p>
+
+<p>Come per le curve, vi è differenza concettuale tra un arco e il suo sostegno. Va tuttavia detto che frequentemente si indica con il termine 'arco' un sottoinsieme dello spazio euclideo ℝ<sup><i>m</i></sup> (ad es. si parla comunemente di 'arco di circonferenza'); in tal caso viene sottintesa una parametrizzazione dell'oggetto geometrico, solitamente semplice e definita nel modo più naturale.</p>
+
+<figure>
+<img src="img/curve.png" alt="curve"/>
+<figcaption>The curve formed by the "tips" of the vectors with components <i>x</i> = <i>f</i>(<i>t</i>), <i>y</i> = <i>g</i>(<i>t</i>), <i>z</i> = <i>h</i>(<i>t</i>), called <b>parametric equations</b>, is known as a <b>space curve</b> and <i>t</i> is called a <b>parameter</b>. We can think of <i>C</i> as being traced out by moving particle whose position at any time (<i>f</i>(<i>t</i>, <i>g</i>(<i>t</i>), <i>h</i>(<i>t</i>)).</figcatpion>
+</figure>
+
+<p>o anche</p>
+
+<div class="eq">
+<p><b>r</b>(<i>t</i>) = (<i>x</i>(<i>t</i>),<i>y</i>(<i>t</i>),<i>z</i>(<i>t</i>))</p>
+</div>
+
+<p>Se il punto si muovesse nel piano, per rappresentare il moto basterebbe una funzione</p>
+
+<div class="eq">
+<p><b>r</b>: ℝ ⟶ ℝ<sup>2</sup></p>
+</div>
+
+<p>con <b>r</b> = (<i>x,y</i>) e</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>x</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>y</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>t</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">[</mo>
+  <msub>
+    <mi>t</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msub>
+  <mo stretchy="false">]</mo>
+</math>
+
+<!-- $$ \begin{cases} x = x(t) \\ y= y(t) \end{cases} \; \qquad t \in [t_1,t_2] $$ -->
+
+<p>Se rappresentiamo nello spazio la linea percorsa dal punto in tutto l'intervallo di tempo [<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>], abbiamo una rappresentazione parziale di questa funzione: infatti, questa linea ci dice in quali punti passa l'oggetto, ma non in quale istante si trova in ciascun punto. Questo perché la traiettoria non è il <i>grafico</i> della funzione (ossia l'insieme {<i>t</i>, <b>r</b>(<i>t</i>)} che dovrebbe essere un oggetto nel spaizo ℝ<sup>4</sup> ma l'<i>immagine</i> della funzione (cioè l'insieme dei suoi valori), ossia il suo <b>sostegno</b>, <i>&Gamma;</i>. Spesso si prescinde dall'interpretazione cinematica, e si usano espressioni come "la circonferenza, l'ellisse, ecc." per indicare le funzioni, e non solo le loro immagini. </p>
+
+<p><b>Esempio 2.2.2</b>. La funzione <b>r</b>: ℝ ⟶ ℝ<sup>2</sup></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mn>2</mn>
+                <mi>&#x3C0;</mi>
+                <mi>t</mi>
+              </mrow>
+              <mi>T</mi>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mrow>
+                <mn>2</mn>
+                <mi>&#x3C0;</mi>
+                <mi>t</mi>
+              </mrow>
+              <mi>T</mi>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>t</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">[</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mi>T</mi>
+  <mo stretchy="false">]</mo>
+</math>
+
+<!-- $$ \begin{cases} x = \cos \left(\frac{2\pi t}{T} \right) \\ y= \sin \left(\frac{2\pi t}{T} \right) \end{cases} \; \qquad t \in [0,T] $$ -->
+
+<p>rappresenta un punto che si muove di moto circolare uniforme, sulla circonferenza unitaria di centro l'origine, nel piano, compiendo nell'intervallo di tempo [0, <i>T</i>] un giro completo. Si osservi che la funzione non si limita a descrivere la circonferenza, ma specifica il modo in cui il punto mobile la percorre. ■</p>
+
+<p><b>Example 2.2.3. (of Curves)</b> Curves in the plane can be described in at least three different ways:</p>
+
+<ul>
+	<li><p>as the graph of a function <i>y</i> = <i>g</i>(<i>x</i>); e.g. a straight line is represented as <i>y</i> = <i>mx</i> + <i>q</i> or <i>x</i> = <i>my</i> + <i>q</i>;</p></li>
+	<li><p>as the vanishing locus of a two variable function, <i>f</i>(<i>x,y</i>) = 0; for a line the first degree polynomial <i>ax</i> + <i>by</i> + <i>c</i> = 0;</p></li>
+	<li><p>in parametric form as the image of a map <i>f</i>: ℝ → ℝ<sup>2</sup> having the form <i>f</i>(<i>t</i>) = (<i>αt</i> + <i>β, γt</i> + <i>δ</i>).&emsp;■</p></li>
+</ul>
+
+<p><b>Example 2.1.3</b> La funzione <i>y</i> = (1 − <i>x</i><sup>2</sup>)<sup>1/2</sup> per <i>x</i> &in; [−1,1] rappresenta una semicirconferenza, come grafico di funzione. La stessa semicirconferenza, in forma parametrica, avrebbe equazioni:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>t</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <msqrt>
+            <mn>1</mn>
+            <mo>&#x2212;</mo>
+            <msup>
+              <mi>t</mi>
+              <mn>2</mn>
+            </msup>
+          </msqrt>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>t</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">[</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mn>1</mn>
+  <mo stretchy="false">]</mo>
+</math>
+
+<!-- $$ \begin{cases} x = t \\ y= \sqrt{1-t^2} \end{cases} \; \qquad t \in [-1,1] $$ -->
+
+<p>o anche</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>&#x3B8;</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">[</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mi>&#x3C0;</mi>
+  <mo stretchy="false">]</mo>
+</math>
+
+<!-- $$ \begin{cases} x = \cos \theta \\ y = \sin \theta \end{cases} \; \qquad \theta \in [0,\pi] $$ -->
+
+<p>(Si noti che la curva è specificata quanto è assegnata la funzione e l'<i>intervallo in cui varia il parametro</i>). Si osservi che l'intere circonferenza avrebbe potuto essere rappresentanta in forma parametrica, facendo variare <i>&theta;</i> &in; [0,2&pi;], o in forma cartesiana, mediante l'equazione <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> = 1, ma <i>non</i> come grafico di funzione.&emsp;■</p>
+
+<p id="el"><b>Example 2.2.6</b>. Un esempio di curva in ℝ<sup>3</sup> è invece il seguente:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>a</mi>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>t</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>a</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>t</mi>
+          <mstyle scriptlevel="0">
+            <mspace width="0.278em"></mspace>
+          </mstyle>
+          <mstyle scriptlevel="0">
+            <mspace width="2em"></mspace>
+          </mstyle>
+          <mi>t</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mi>T</mi>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>z</mi>
+          <mo>=</mo>
+          <mi>b</mi>
+          <mi>t</mi>
+        </mtd>Example 3.2.4.. The equations
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ \begin{cases} x = a\cos t \\ y = a \sin t \; \qquad t \in [0,T] \\ z = bt \end{cases} $$ -->
+
+<figure>
+<img src="img/elica_cilindrica.png" alt="elica cilindrica"/>
+<figcaption>L'elica cilindrica è una curva sghemba trascendente descritta su una superficie cilindrica da un punto <i>P</i> soggetto simultaneamente a un moto rotatorio con velocità angolare uniforme intorno all'asse del cilindro e un moto traslatorio rettilineo uniforme lungo una generatrice del cilindro. </figcaption>
+</figure>
+
+<p>con <i>a,b,T</i> positivi fissati, rappresenta un <i>arco di elica cilindrica</i>. Si osserva che al crescere di <i>t</i>, il punto si muove lungo il cilindro di raggio <i>a</i> che ha per asse l'asse <i>z</i>, lungo una curva (elica), che ad ogni giro invece di chiudersi su se stessa procede di un passo 2&pi;<i>b</i>.&emsp;■</p>
+
+<section aria-label="End">
+<a href="f_vettoriali.html">&#171;Funzioni vettoriali</a>
+<a href="index.html">Index</a>
+<a href="curves_limits.html">Limits and continuity of Vector-Valued Functions&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

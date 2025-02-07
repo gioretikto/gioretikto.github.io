@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Angular Momentum"/>
+    <title>Angular Momentum</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Quantum mechanics</a></li>
+        <li><a class="navbar" href="../index.html">Physics</a></li>
+    </ul>         
+</nav>
+      
+<div class="content">
+ 
+<h1>Angular Momentum</h1>
+
+<p>Hamiltonian, which in classical mechanics is defined as the energy of the system expressed in terms of canonically conjugated coordinate and momentum, in quantum mechanics becomes, in a single particle case, an operator of the form</p>
+
+<div class="eq">
+<p><i>Ĥ = <b>p̂<sup>2</sup></b>/2m + U</i>(<i><b>r̂</b></i>)</p>
+</div>
+
+<p>Since position and momentum operators do not commute, the eigenvectors of the Hamiltonian are usually different from the eigenvectors of both position and momentum operators. Eigenvalues of Hamiltoniam can belong to discrete, continuous, or mixed spectrum and determine the values of energy, which the system can have in the given environment. This is the most important operator in all of the quantum physics: just like classical Hamiltoniam, its quantum counterpart controls the dynamics of the quantum objects.</p>
+
+<p>Angular momentum is a very special kind of an observable. Classical angular momentum is a vector defined as a cross product of the position and momenumt operators <i><b>L</b> = <b>r</b> x <b>p</b></i>. The quantization rule requires that the quantum mechanical angular momentum operator is constructed by promoting position momentum vectors to the correspondin operators:</p>
+
+<div class="eq">
+<p><i><b>L̂</b> = <b>r̂</b> x <b>p̂</b></i></p>
+</div>
+
+<p>However, since this expression involves the product of the potentially non-commuting operators, one has to be careful with the order of the multiplication. One also needs to make sure that the resulting operator is Hermitian. To address both these concerns, I will expands the angular momentum vector in its Cartesian components:</p>
+
+<div class="eq">
+<p><i>L̂<sub>x</sub> = ŷp̂<sub>z</sub> − ẑp<sub>z</sub></i></p>
+<p><i>L̂<sub>y</sub> = ẑp̂<sub>x</sub> − x̂p<sub>z</sub></i></p>
+<p><i>L̂<sub>z</sub> = x̂p̂<sub>y</sub> − ŷ<sub>z</sub></i></p>
+</div>
+
+<p>We need to verify that each of the components of the angular momentum operator is a Hermitian operator. Hermitian conjugation, e.g. on <i>x</i>-component yields</p>
+
+<div class="eq">
+<p>L̂<sub>x</sub><sup>⊹</sup> = (ŷp̂)<sup>⊹</sup> − (ẑp̂<sub>y</sub>)<sup>⊹</sup> = p̂<sub>z</sub> ŷ − p̂<sub>y</sub>ẑ = L<sub>x</sub></p>
+</div>
+
+<p>proving hermiticity of this operator. Similarly, you can demostrate the Hermitian nature of two other components. The most unusual property of the angular momentum, however, is that different components of the angular momentum do not commune. To illustrate this point, compute commutator [<i>L̂<sub>x</sub>, L̂<sub>y</sub></i>]:</p>
+
+<p>These results indicate that the vector of the angular momentum in quantum theory is quite different from regular classical vectors as well as from vector operators of position and momentum: different components of this vector do not belong to the same group of mutually commuting operators and do not represent mutually consisten obervables, meaning that this vector is not really well-defined. More specifically, if a quantum system is in a state in which one of the Cartesian components of the angular momentun is known with certainty, measurementes of two other components will produce statistically uncertain results. This conclesion, in addition to making the direction of the am vector uncertain, also raises a question about its magnitude. Indeed, the magnitude of a generic classical 3d vector is defined as |<b>A</b>| = (A<sub>x</sub><sup>2</sup> + A<sub>y</sub><sup>2</sup> + A<sub>z</sub><sup>2</sup>)<sup>1/2</sup>. Formal quantization of this expression is not possible because the square root of an operator is not well-defined object.</p>
+
+<p>This problem is circumvented by chosing the operator of the square of angular momentum defined as</p>
+
+<div class="eq">
+<p>L̂<sup>2</sup> = L̂<sub>x</sub><sup>2</sup> + L̂<sub>y</sub><sup>2</sup> + L̂<sub>z</sub><sup>2</sup></p>
+</div>
+
+<p>to represent its magnitude. Computing [<i>L̂<sup>2</sup>, L<sub>x,y,z</sub></i>] you will find that all thre commutators vanish. This means that operators of the square of the angular momentum and one (any) component of the angular momentum are compatible observables, so that a quantum system can be created in a state in which one of the components and the magnitude of the angular momentum are kwnow with certainty. Obviously such a state would be a common eigenvector of <i>L̂<sup>2</sup></i> and <i>L̂<sub>z</sub></i>.</p>
+
+<section>
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Physics</a>
+<a href="peculiarities4.html">Peculiarities of the 4th declension &#187;</a>
+</section>
+
+</body>
+</html>

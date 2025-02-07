@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The Schrodinger Equation for Free Particles"/>
+	<title>The Schrodinger Equation for Free Particles</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Quantum mechanics</a></li>
+        <li><a class="navbar" href="../index.html">Physics</a></li>
+    </ul>
+</nav>
+
+<article>
+
+<h1>The Schrodinger Equation for Free Particles</h1>
+
+<p>The equation of motion for <i>&psi;</i>(<i><b>x</b>,t</i>) should satisfy the following basic demands:</p>
+
+<ol type="i">
+	<li><p>It should be a first order differential equation in time so that <i>&psi;</i>(<i><b>x</b>,t</i>) will be determined by the initial distribution <i>&psi;</i>(<i><b>x</b></i>,0).</p></li>
+	<li><p>It must be linear in 1jJ in order for the principle of superposition to hold, i.e., linear combinations of solutions are again solutions, and thus interference
+effects such as those of optics occur. (These follow in the same way from the linearity of the Maxwell equations.) For the same reason, the constants in the equation may not contain any quantities that depend on the particular state of the particle such as its energy or momentum.</p></li>
+	<li><p>It should be homogeneous, so that</p>
+
+		<div class="eq">
+		<p>&int; d<sup>3</sup> |<i>&psi;</i>(<i><b>x</b>,t</i>)|<sup>2</sup> = 1</p>
+		</div>
+</li>
+
+<p>is satisfied at all times, because the total probability of finding the particle somewhere in space is 1 (normalization).</p></li>
+
+<li><p>Finally, plane waves</p>
+
+		<div class="eq">
+		<p><i>&psi;</i>(<i><b>x</b>,t</i>) = C exp{i(<i><b>p</b></i> ⋅ <i><b>x</b></i> &minus; <i>p</i><sup>2</sup><i>t</i>/2<i>m</i>)/ℏ}</p>
+		</div>
+
+<p>should be solutions of the equations. For plane waves,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mi>&#x3C8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mi>i</mi>
+    <mi data-mjx-alternate="1">&#x210F;</mi>
+  </mfrac>
+  <mfrac>
+    <msup>
+      <mi>p</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mi>&#x3C8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mi>i</mi>
+    <mi data-mjx-alternate="1">&#x210F;</mi>
+  </mfrac>
+  <mfrac>
+    <msup>
+      <mi data-mjx-alternate="1">&#x210F;</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi mathvariant="normal">&#x2207;</mi>
+    <mn>2</mn>
+  </msup>
+  <mi>&#x3C8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\frac{\partial}{\partial t} \psi(\mathbf{x}, t) = - \frac{i}{\hbar} \frac{p^2}{2m} \psi(\mathbf{x}, t) = \frac{i}{\hbar} \frac{\hbar^2}{2m} \mathbf{\nabla}^2 \psi(\mathbf{x}, t) $$ -->
+
+<p>From postulates (i-iv) we thus obtain</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>i</mi>
+  <mi data-mjx-alternate="1">&#x210F;</mi>
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mi>&#x3C8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msup>
+      <mi data-mjx-alternate="1">&#x210F;</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi mathvariant="normal">&#x2207;</mi>
+    <mn>2</mn>
+  </msup>
+  <mi>&#x3C8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$i\hbar \frac{\partial}{\partial t} \psi(\mathbf{x}, t) = -\frac{\hbar^2}{2m} \mathbf{\nabla}^2 \psi(\mathbf{x}, t) $$ -->
+
+<p>This is the time dependent Schrödinger equation for free particles. The Schrödinger equation plays a role logically analogous to Newton's second law: Given suitable initial conditions (typically, <i>&psi;</i>(<i><b>r</b></i>, 0), it determines <i>&psi;</i>(<i><b>r</b>,t</i>) for all future time. just as, in classical mechanics, Newton's law determines <i>x</i>(<i>t</i>) for all future time.</p>
+
+<section aria-label="End">
+<a href="fourth.html">&#171;The fourth Declension</a>
+<a href="index.html">Index of Physics</a>
+<a href="Born.html">Born's statistical interpretation &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

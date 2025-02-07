@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Dot product"/>
+	<title>Dot product</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Dot product</h1>
+
+<p>Introduciamo ora il concetto di prodotto scalare di due vettori (si tratta di un particolare prodotto di due vettori il cui risultato è uno scalare). Vedremo poi come questo prodotto permetta di definire la lunghezza di un vettore e l’angolo compreso tra due vettori. Queste nozioni ci permetteranno poi, a loro volta, di calcolare aree, volumi, ecc.</p>
+
+<p>In analytic plane geometry, the basic tasks are measuring lenghts and angles; everything else depends on them. The basic tools for these tasks is the <b>dot product</b>.</p>
+
+<p><b>Definition 2.1.1</b>.  Il prodotto scalare canonico ⟨⋅,⋅ ⟩: ℝ<sup><i>n</i></sup> x ℝ<sup><i>n</i></sup> ⟶ ℝ su ℝ<sup><i>n</i></sup> è la funzione defined as</p>
+
+<div class="eq">
+<p>⟨<i><b>v, w</b></i>⟩ = <i><b>v</b></i> ⋅ <i><b>w</b></i> =  <i><b>w</b><sup>T</sup></i> ⋅ <i><b>v</b></i> = ∑<sup><i>n</i></sup><sub><sub><i>i</i>=1</sub></sub> <i>v<sub>i</sub>w<sub>i</sub></i>= <i>v</i><sub>1</sub><i>w</i><sub>1</sub> + ... + <i>v<sub>n</sub>w<sub>n</sub></i></p>
+</div>
+
+<p>per ogni <i>v</i> = (<i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i>), <i>w</i> = (<i>w</i><sub>1</sub>, ..., <i>w<sub>n</sub></i>) &in; ℝ<sup><i>n</i></sup>, dove il prodotto all'ultimo membro è il solito prodotto righe per colonne.&emsp;□</p>
+
+<p>Per indicare il prodotto scalare ⟨<i>v,w</i>⟩ si usa anche la notazione <i>v</i> ⋅ <i>w</i>.</p>
+
+<p>This can be written very succinctly using Einstein summation notation as</p>
+
+<div class="eq">
+<p><i><b>x</b> ⋅ <b>y</b></i> = <i>x<sub>i</sub> y<sub>i</sub></i>.</p>
+</div>
+
+<p>For example, if <b><i>u</i></b> = (1, −2, 4) and <i><b>v</b></i> = (3, 0, 2), their dot product is</p>
+
+<div class="eq">
+<p><i><b>u</b></i> ⋅ <i><b>v</b></i> = (1 ⋅ 3) + (−2 ⋅ 0) + (4 ⋅ 2) = 3 + 0 + 8 = 11</p>
+</div>
+
+<p><b>Properties of the Dot Product</b></p>
+
+<p>Let <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, and <i><b>w</b></i> &in; ℝ<sup><i>n</i></sup> and let <i>&lambda;</i> &in;  ℝ. Then</p>
+
+<ol type="a">
+	<li><p><b>additività rispetto alla prima variabile</b>: ⟨<i>v</i><sub>1</sub> + <i>v</i><sub>2</sub>, <i>w</i>⟩  =  ⟨<i>v</i><sub>1</sub>, <i>w</i>⟩ + ⟨<i>v</i><sub>2</sub>, <i>w</i>⟩;</p></li>
+	<li><p><b>omogeneità rispetto alla prima variabile</b>: ⟨<i>&lambda;v, w</i>⟩ = <i>&lambda;</i>⟨<i>v, w</i>⟩ ;</p></li>
+	<li><p><b>additività rispetto alla seconda variabile</b>: ⟨<i>v</i> , <i>w</i><sub>1</sub>+ <i>v</i><sub>2</sub>⟩  =  ⟨<i>v</i><sub>1</sub>, <i>w</i><sub>1</sub>⟩ + ⟨<i>v</i>, <i>w</i><sub>2</sub>⟩;</p></li>
+
+	<li><p><b>omogeneità rispetto alla seconda variabile</b>: ⟨<i>v, &lambda;w</i>⟩ = <i>&lambda;</i>⟨<i>v, w</i>⟩ .</p></li>
+
+	<li><p><b>simmetria</b>: ⟨<i>v</i>, <i>w</i>⟩ = ⟨<i>w</i>, <i>v</i>⟩</p></li>
+	<li><p><b>il prodotto scalare è non degenere</b>: ⟨<i>v</i>, <i>w</i>⟩ = 0 per ogni <i>w</i> &in; ℝ<sup><i>n</i></sup> se e solo se <i>v</i> = 0;</p></li>
+	<li><p><b>il prodotto scalare è definito positivo</b>: per tutti i <i>v</i> &in; ℝ<sup><i>n</i></sup> con <i>v</i> &ne; 0 si ha ⟨<i>v</i>, <i>w</i>⟩ &gt; 0.</p></li>
+</ol>
+
+<p>Le proprietà (a)-(b) si riassumono dicendo che il prodotto scalare canonico è <i>lineare rispetto alla prima variabile</i>; le (c),(d) dicendo che è <i>lineare rispetto alla seconda variabile</i>; tutte e quatto dicendo che è <a href="bilinear_forms.html">bilineare</a>. So the dot product is a bi-linear, symmetric, and positive map.</p>
+
+<p>Il prodotto scalare canonico è uno dei prodotti scalari definibili su ℝ<sup><i>n</i></sup> ma non l'unico. Si consideri il seguente.</p>
+
+<p><b>Example 2.1.2</b>.  Il prodotto scalare ⟨⋅,⋅ ⟩: ℝ<sup>3</sup> x ℝ<sup>3</sup> ⟶ ℝ, definito come</p>
+
+<div class="eq">
+<p>⟨<i>v, w</i>⟩ = 2<i>v</i><sub>1</sub><i>w</i><sub>1</sub> + <i>v</i><sub>1</sub><i>w</i><sub>2</sub> + <i>v</i><sub>2</sub><i>w</i><sub>1</sub> + <i>v</i><sub>2</sub><i>w</i><sub>3</sub></p>
+</div>
+
+<p>È facile verificare che si tratta di un prodotto scalare su ℝ<sup>3</sup>:  infatti, se fissimao <i>v</i> (consideriamo le sue coordinate come parametri), quello che resta è un polinomio di primo grado senza termin noti nelle coordinate di <i>w</i> e viceversa se fissando <i>w</i>, quello che resta risulta essere lineare in <i>v</i>. Anche la simmetria è immediata: infatti, ogni volta che è presente un termine del tipo <i>v<sub>i</sub>w<sub>j</sub></i> è presente anche un termine del tipo <i>v<sub>j</sub>w<sub>i</sub></i>, ed esattamente con lo stesso coefficiente.<br>Si può esprimere tale prodotto scalare come</p>
+
+<div class="eq">
+<p>⟨<i>v, w</i>⟩ = <i>w<sup>T</sup>Sv</i></p>
+</div>
+
+<p>dove <i>S</i> è la matrice simemtrica (cioè tale che <i>S<sup>T</sup></i> = <i>S</i>)</p>
+
+<!-- $$S = \left(\begin{array}{ccc}
+2 & 1 & 0\\
+1 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)$$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>Infine questo prodotto scalare è definito positivo: infatti</p>
+
+<div class="eq">
+<p>⟨<i>v</i>, <i>w</i>⟩  = <i>v</i><sub>1</sub><sup>2</sup> + (<i>v</i><sub>1</sub> + <i>v</i><sub>2</sub>)<sup>2</sup> + <i>v</i><sub>3</sub><sup>2</sup>&ge; 0</p>
+</div>
+
+<p>e inoltre ⟨<i>v</i>, <i>w</i>⟩ = 0 se e sole se <i>v</i><sub>1</sub> = <i>v</i><sub>1</sub> + <i>v</i><sub>2</sub> = <i>v</i><sub>3</sub> = 0, cioè se e solo se <i>v</i> = 0.</p>
+
+<p>La definizione di prodotto scalare non è limiata al solo ℝ<sup><i>n</i></sup> ma si può estendere ad altri spazi vettoriali.</p>
+
+<p><b>Example 2.1.3</b>. We get an inner product on 𝐶[<i>a,</i>b] (= vector space of continuous functions on the interval [<i>a, b</i>]) by defining, for <i>f, g</i> ∈ 𝐶[a,b]. The function ⟨·,⋅⟩ : 𝐶[<i>a, b</i>] × 𝐶[<i>a, b</i>] → ℝ defined by</p>
+
+<!-- $$ \left\langle f,g\right\rangle =\int _{a}^{b}f(x)g(x)\,dx $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">&#x27E8;</mo>
+    <mi>f</mi>
+    <mo>,</mo>
+    <mi>g</mi>
+    <mo data-mjx-texclass="CLOSE">&#x27E9;</mo>
+  </mrow>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>a</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+    </mrow>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>d</mi>
+  <mi>x</mi>
+</math>
+
+<p>is an inner product on 𝐶[<i>a, b</i>].</p>
+
+<p>We must check that the three properties described by Definition 7.4.1 hold. All of these properties follow naturally from the corresponding properties of definite integrals:</p>
+
+<ol type="a">
+	<li><p>We simply use commutativity of real number multiplication:</p>
+
+	<div class="eq">
+	<p>⟨<i>f,g</i>⟩ = ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>) <i>g</i>(<i>x</i>)d<i>x</i> = ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>) <i>g</i>(<i>x</i>)d<i>x</i> = ⟨<i>g,f</i>⟩</p>
+	</div>
+
+	</li>
+
+	<li><p>This follows from linearity of integrals:</p>
+
+	<div class="eq">
+	<p>⟨<i>f,g</i>+<i>ch</i>⟩ = ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>) (<i>g</i>(<i>x</i>) + <i>ch</i>(<i>x</i>)) d<i>x</i><br>
+ = ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>) <i>g</i>(<i>x</i>)d<i>x</i> + <i>c</i>∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>) <i>h</i>(<i>x</i>)d<i>x</i><br>
+= ⟨<i>f,g</i>⟩ + <i>c</i>⟨<i>f,h</i>⟩</p>
+	</div>
+
+	</li>
+
+	<li><p>We just recall that the integral of a positive function is positive:</p>
+
+	<div class="eq">
+	<p>⟨<i>f,f</i>⟩ = ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>)<sup>2</sup> d<i>x</i> &ge; 0</p>
+	</div>
+
+	<p>with equality if and only if <i>f</i>(<i>x</i>) = 0 for all <i>x</i> ∈ [<i>a, b</i>] (i.e., <i>f</i> is the zero function)&emsp;■.</p></li>
+</ol>
+
+<p><b>Example 2.1.4</b>. ((Scalar product on M<sub>n,n</sub> (ℝ). We know that the <i>n</i> × <i>n</i> matrices M<sub>n,n</sub> (ℝ) with real entries form a vector space under matrix addition and multiplication of matrices with scalars. On this vector space, we can introduce a real scalar product by using the trace. Specifically, for two matrices <i>A, B</i> ∈ M<sub>n,n</sub> (ℝ) we can define</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <mi>A</mi>
+  <mo>,</mo>
+  <mi>B</mi>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>:=</mo>
+  <mi>t</mi>
+  <mi>r</mi>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>A</mi>
+    <mi>T</mi>
+  </msup>
+  <mi>B</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>B</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+</math>
+
+$$\langle A, B \rangle := tr (A^TB) = \sum_{i,j=1}^n A_{ij}B_{ij} $$
+
+<p>Bi-linearity and symmetry follows easily from the properties of the trace and positivity is explicit from the above expressions. In fact, this scalar product is identical to the dot product (2.1.1), but with the sum running over two indices rather than one.<br> For complex matrices in M<sub>n,n</sub> (ℂ) we can also define a Hermitian scalar product by changing the transposition in the previous Eq. to a Hermitian conjugation, in complete analogy with the standard scalar product on  ℂ<sup><i>n</i></sup>. &emsp;■</p>
+
+<section aria-label="End">
+<a href="basis.html">&#171;Basis</a>
+<a href="index.html">Index</a>
+<a href="norm.html">Norm: The definition of length&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

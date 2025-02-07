@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Inductive Reactance">
+	<title>Inductive Reactance</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Inductive Reactance</h1>
+
+<p>Let the inductor have no resistance. Thus, any voltage that appears across the terminals of the inductor must be due to the self-induced voltage in the coil by a changing current through it (self-inductance). <br> The changing current output of the generator produces a back emf that impedes the current in the circuit. The magnitude of this back emf is</p>
+
+<figure>
+<img src="img/AC_L.png" alt="inductance AC"/>
+<figcaption>A series circuit consisting of an inductor <i>L</i> connected to an AC generator.</figcaption>
+</figure>
+
+<p>At any instant, <i>v</i> = v<sub>L</sub> by <a href="Kirchhoff.html">Kirchhoff's voltage law</a>, so</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>v</mi>
+    <mi>L</mi>
+  </msub>
+  <mo>=</mo>
+  <mi>L</mi>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>I</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <msub>
+    <mi>V</mi>
+    <mn>0</mn>
+  </msub>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi>&#x3C9;</mi>
+    <mi>t</mi>
+  </mrow>
+</math>
+
+<!-- $$ v_L = L \frac{\text{d} I}{\text{d} t} = V_0 \sin {\omega t} $$ -->
+
+<div class="eq">
+<p>d<i>i</i>/d<i>t</i> = (<i>V</i><sub>0</sub>/<i>L</i>) sin(<i>&omega;t</i>)<br>
+<i>i</i> = (<i>V</i><sub>0</sub>/<i>L</i>) ∫ sin(<i>&omega;t</i>) d<i>t</i></p>
+</div>
+
+<p>Integrating the previous equation we get the current</p>
+
+<div class="eq">
+<p><i>i</i> = (−<i>V</i><sub>0</sub>/<i>&omega;L</i>) cos(<i>&omega;t</i>)<br>
+= (<i>V</i><sub>0</sub>/<i>&omega;L</i>) sin(<i>&omega;t</i> − &pi;/2)</p>
+</div>
+
+<p>Now, <i>i</i> will be a maximum <i>I</i><sub>0</sub> when sin(<i>&omega;t</i> − &pi;/2) = 1.</p>
+
+<div class="eq">
+<p><i>I<sub>rms</sub></i> = <i>I</i><sub>0</sub>/√2 = <i>V</i><sub>0</sub>/<i>X<sub>L</sub></i>√2 = <i>V</i><sub>rms</sub>/<i>X<sub>L</sub></i></p>
+</div>
+
+<p>The effective resistance of the coil in an AC circuit is measured by a quantity called the inductive reactance, <i>X<sub>L</sub></i>:</p>
+
+<div class="eq">
+<p><i>X<sub>L</sub></i> ≡ 2<i>&pi;fL</i></p>
+</div>
+
+<p>The current reaches its maximum <i>after</i> the voltage does, and it is said that <b>the current in an inductor lags behind the voltage by a phase of 90°</b>. <br> In an inductor the 90° phase difference between current and voltage leads to the same reult for averge power that it does in a capacitor. An inductor alternately absorbs and releases energy for equal periods in time.</p>
+
+<figure>
+<img src="img/AC_inductor.png" alt="AC inductor"/>
+<figcaption>The current <i>lags behind</i> the voltage by one-quarter of a cycle or by a phase angle of 90°.</figcaption>
+</figure>
+
+<p>When <i>f</i> is in hertz and L is in henries, the unit of <i>X<sub>L</sub></i> is the ohm. The inductive reactance increases with increasing frequency and increasing inductance. Contrast this with capacitors, where increasing frequency or capacitance <i>decreases</i> the capacitive reactance.</p>
+
+<section aria-label="End">
+<a href="capacitive_Reactance.html">«Capacitive Reactance</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

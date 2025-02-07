@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Particle in One-dimensional Box (Infinite Square Well)"/>
+	<title>Particle in One-dimensional Box (Infinite Square Well)</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Particle in One-dimensional Box (Infinite Square Well)</h1>
+
+<p>Let us consider a particle of mass <i>m</i> confined to a one-dimensional rigid box of length <i>a</i>. Let the particle be restricted by an infinite from escaping to move along the <i>x</i>-axis between <i>x</i> = 0 and <i>x</i> = <i>a</i> by infinitely hard walls of the box. The non-penetration of walls implies that the potential energy <i>V</i>(<i>x</i>) can be taken infinite outside the box. Thus</p>
+
+<div class="eq">
+<p><i>V</i> = &infin; for <i>x</i> &le; 0 and <i>x</i> &ge;<i>a</i></p>
+</div>
+
+<p>Assuming that the particle is completely free inside the box, we have</p>
+
+<div class="eq">
+<p><i>V</i> = 0 for <i>x</i> &gt; 0 and <i>x</i> &lt; <i>a</i></p>
+</div>
+
+<p><i>Outside</i> the well, &psi;(<i>x</i>) = 0 (the probability of finding the particle there is zero). Inside the well, where V = 0, the time-independent Schrödinger equation reads</p>
+
+<div class="eq">
+<p><i>Ĥ&psi;</i>(<i>x</i>) = <i>E&psi;</i>(<i>x</i>)</p>
+</div>
+
+<p>or</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>&#x3C8;</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>k</mi>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>where</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>k</mi>
+  <mo>&#x2261;</mo>
+  <mfrac>
+    <msqrt>
+      <mn>2</mn>
+      <mi>m</mi>
+      <mi>E</mi>
+    </msqrt>
+    <mi data-mjx-alternate="1">&#x210F;</mi>
+  </mfrac>
+</math>
+
+<!-- $$\frac{\text{d}\psi} {\text{d}x^2} = -kx^2, \quad \text{where} \quad k\equiv \frac{\sqrt{2mE}} {\hbar} $$ -->
+
+<p>(By writing it in this way, I have tacitly assumed that E ≥ 0; we know from Problem 2.2 that E < 0 won’t work.) Equation 2.24 is the classical simple harmonic oscillator equation; the
+general solution is</p>
+
+<div class="eq">
+<p><i>&psi;</i>(<i>x</i>) = <i>A</i> sin <i>kx</i> + <i>B</i> cos <i>kx</i>,</p>
+</div>
+
+<p>where <i>A</i> and <i>B</i> are arbitrary constants. Typically, these constants are fixed by the <b>boundary conditions</b> of the problem. What are the appropriate boundary conditions for <i>ψ</i>(<i>x</i>)? Ordinarily, both <i>ψ</i> and d<i>ψ</i>/d<i>x</i> are continuous,11 but where the potential goes to infinity only the first of these applies. (I’ll justify these boundary conditions, and account for the exception when <i>V</i> = ∞, in Section 2.5; for now I hope you will trust me.) <br>Continuity of ψ(x) requires that</p>
+
+<div class="eq">
+<p>ψ(0) = ψ(<i>a</i>) = 0</p>
+</div>
+
+<p>so as to join onto the solution outside the well. What does this tell us about <i>A</i> and <i>B</i>? Well,</p>
+
+<div class="eq">
+<p><i>ψ</i>(0) = <i>A</i> sin 0 + <i>B</i> cos 0 = <i>B</i>,</p>
+</div>
+
+<p>so <i>B</i> = 0, and hence</p>
+
+<div class="eq">
+<p><i>ψ</i>(<i>x</i>) = <i>A</i> sin <i>kx</i>.</p>
+</div>
+
+<p>Then <i>ψ</i>(<i>a</i>) = <i>A</i> sin <i>ka</i>, so either A = 0 (in which case we’re left with the trivial—non-normalizable—solution <i>ψ</i>(<i>x</i>) = 0), or else sin <i>ka</i> = 0, which means that</p>
+
+<div class="eq">
+<p><i>ka</i> = 0, ±π, ±2π, ±3π, . . . .</p>
+</div>
+
+<p>But <i>k</i> = 0 is no good (again, that would imply <i>ψ</i>(<i>x</i>) = 0), and the negative solutions give nothing new, since sin(−θ ) = − sin(θ) and we can absorb the minus sign into <i>A</i>. So the
+<i>distinct</i> solutions are</p>
+
+<div class="eq">
+<p><i>k<sub>n</sub></i> = <i>n</i>&pi;/<i>a</i>, &emsp;<i>n</i> = 1,2,3,...</p>
+</div>
+
+<p>hence the possible values of <i>E</i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>E</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi data-mjx-alternate="1">&#x210F;</mi>
+        <mn>2</mn>
+      </msup>
+      <msubsup>
+        <mi>k</mi>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msubsup>
+    </mrow>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi>&#x3C0;</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi data-mjx-alternate="1">&#x210F;</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$E_n = \frac{\hbar^2k_n^2}{2m} = \frac{n^2\pi^2\hbar^2}{2ma^2} $$ -->
+
+<p>In radical contrast to the classical case, a quantum particle in the infinite square well cannot have just any old energy—it has to be one of these special (“allowed”) values. To find <i>A</i>, we
+normalize ψ:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mi>a</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>A</mi>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mi>sin</mi>
+    <mn>2</mn>
+  </msup>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>A</mi>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mfrac>
+    <mi>a</mi>
+    <mn>2</mn>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>so</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>A</mi>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>2</mn>
+    <mi>a</mi>
+  </mfrac>
+</math>
+
+<!-- $$\int_0^a |A|^2 \sin^2(kx) \text{d}x = |A|^2 \frac{a}{2} = 1, \quad \text{so} \quad |A|^2 = \frac{2}{a} $$ -->
+
+<p>This only determines the <i>magnitude</i> of <i>A</i>, but it is simplest to pick the positive real root: <i>A</i> = (2/<i>a</i>)<sup>1/2</sup> (the phase of <i>A</i> carries no physical significance anyway). Inside the well, then, the solutions are</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3C8;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mfrac>
+      <mn>2</mn>
+      <mi>a</mi>
+    </mfrac>
+  </msqrt>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+        <mi>&#x3C0;</mi>
+      </mrow>
+      <mi>a</mi>
+    </mfrac>
+    <mi>x</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$\psi_n(x) = \sqrt{ \frac{2}{a}} \, \sin \left(\frac{n\pi}{a}x \right) $$ -->
+
+<figure>
+<img src="img/particle_box_psi.png" alt="psi particle  box">
+<figcaption>The first three stationary states of the infinite square well.</figcaption>
+</figure>
+
+<p>As promised, the time-independent Schrödinger equation has delivered an infinite set of solutions (one for each positive integer <i>n</i>). The first few of these are plotted in Figure 2.2. They look just like the standing waves on a string of length <i>a</i>;  <i>ψ</i><sub>1</sub>, which carries the lowest energy, is called the ground state, the others, whose energies increase in proportion to <i>n</i><sup>2</sup>, are called excited states. As a collection, the functions <i>ψ<sub>n</sub></i>(<i>x</i>) have some interesting and important properties:</p>
+
+<ol>
+	<li><p>They are alternately even and odd, with respect to the center of the well: <i>ψ</i><sub>1</sub> is even, <i>ψ</i><sub>2</sub> is odd, <i>ψ</i><sub>3</sub> is even, and so on.</p></li>
+
+	<li><p> As you go up in energy, each successive state has one more node (zero-crossing): <i>ψ</i><sub>1</sub> has none (the end points don’t count), <i>ψ</i><sub>2</sub> has one, <i>ψ</i><sub>3</sub> has two, and so on.</p></li>
+
+	<li><p>They are mutually orthogonal, in the sense that</p>
+
+<div class="eq">
+<p>&int; <i>&psi;<sub>m</sub></i>(<i>x</i>)<sup>*</sup><i>&psi;<sub>n</sub>(</i><i>x</i>) = 0, &emsp;(<i>m</i> &ne; <i>n</i>)</p>
+</div>
+
+<p>Note that this argument does not work if <i>m</i> = <i>n</i>. (Can you spot the point at which it fails?) In that case normalization tells us that the integral is 1. In fact, we can combine orthogonality and normalization into a single statement:</p>
+
+<div class="eq">
+<p>&int; <i>&psi;<sub>m</sub></i>(<i>x</i>)<sup>*</sup><i>&psi;<sub>n</sub></i>(<i>x</i>) = <i>&delta;<sub>mn</sub></i></p>
+</div>
+
+<p>where <i>δ<sub>mn</sub></i> (the so-called <b>Kronecker delta</b>). We say that the ψs are <b>orthonormal</b>.</p></li>
+
+<li><p>They are <b>complete</b>, in the sense that any other function, <i>f</i> (<i>x</i>), can be expressed as a linear combination of them:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>n</mi>
+  </msub>
+  <msub>
+    <mi>&#x3C8;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <msqrt>
+    <mfrac>
+      <mn>2</mn>
+      <mi>a</mi>
+    </mfrac>
+  </msqrt>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>n</mi>
+  </msub>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+        <mi>&#x3C0;</mi>
+      </mrow>
+      <mi>a</mi>
+    </mfrac>
+    <mi>x</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$f(x) = \sum_{n=1}^\infty c_n \psi_n = \sqrt{\frac{2}{a}} \sum_{n=1}^\infty c_n \sin \left( \frac{n\pi}{a} x \right) $$ -->
+
+<p>I’m not about to prove the completeness of the functions (2/<i>a</i>)<sup>1/2</sup> sin(nπ x/a), but if you’ve studied advanced calculus you will recognize that Equation 2.35 is nothing but the <b>Fourier series</b> for <i>f</i>(<i>x</i>), and the fact that “any” function can be expanded in this way is sometimes called Dirichlet’s theorem.<br> The coefficients c<sub>n</sub> can be evaluated—for a given <i>f</i>(<i>x</i>)—by a method I call Fourier’s trick, which beautifully exploits the orthonormality of {<i>ψ<sub>n</sub></i>}: Multiply both sides of Equation 2.35 by <i>ψ<sub>m</sub></i>(<i>x</i>)<sup>∗</sup>, and integrate.</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="eigenvalue.html">&#171;Eigenvalue equations</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

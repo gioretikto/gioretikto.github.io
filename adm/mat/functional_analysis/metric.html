@@ -1,0 +1,101 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Spazio metrico"/>
+    <title>Spazio metrico</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Spazio metrico</h1>
+
+<p>Ogni spazio normato è anche uno <i>spazio metrico</i>, dove la metrica è definita da una funzione <i>distanza</i> tra coppie di elementi</p>
+
+<p align="center">d(<b>x</b>, <b>y</b>) := ||<b>x</b> - <b>y</b> ||</p>
+
+<p>Per spazio metrico si intende una coppia <i>(M, d)</i> dove <i>M</i> è un insieme (non necessariamente uno spazio vettoriale!) e <i>d</i> una distanza in <i>M</i> , ossia una funzione </p>
+
+<p align ="center"><i>d : M × M → ℝ</i></p>
+
+<div class="def">
+<p><b>Definizione P.6</b> - Sia <i>M</i> un insieme (non vuoto); una funzione <i>d: M x M → ℝ</i> si dice una distanza (o metrica) in <i>M</i> se</p>
+
+<ul>
+    <li><p>d(x,y) &ge; 0, d(x, y) = 0</p></li>
+    <li><p>d(x, y) = d(y, x)</p></li>
+    <li><p>d(x, y) &le; d(x, z) + d(z, y), &forall; x, y, z  &in; M</p></li>
+</ul>
+
+</div>
+
+<p>Norme diverse inducono distanze diverse.</p>
+
+<img src="img/metriche.png" alt="metriche"/>
+
+<p>dove <b>x</b> = (x<sub>1</sub>, x<sub>2</sub>, ...., x<sub>n</sub>). e <b>y</b> = (y<sub>1</sub>, y<sub>2</sub>, ...., y<sub>n</sub>).</p>
+
+
+<div class="def">
+
+<p><b>Definizione P.7</b> Si definisce palla di centro <i><b>x</b> &in; V</i> e raggio <i>r &gt; 0</i></p>
+
+<p>B<sub>r</sub>(<b>x</b>) := {<b>y</b> &in; V |  || <b>x - y</b>|| &lt; r}</p>
+
+</div>
+
+<p>e conseguentemente si definisce <i>aperto</i> un insieme <i>A</i> tale che per ogni centro <b>x</b> ∈ <i>A</i>
+esiste la palla interamente contenuta in <i>A</i>: B<sub>r</sub> (<b>x</b>) ⊂ A. Un insieme E si dice <i>limitato</i> se esiste una sfera B<sub>r</sub> (0) che lo contiene, ossia se esiste <i>r</i> tale che ||x|| &le; r per ogni <i>x ∈ E</i>. Mentre si dice chiuso un insieme del tipo</p>
+
+<p align="center">B*<sub>r</sub>(<b>x</b>) := {<b>y</b> &in; V |  || <b>x - y</b>|| &le; r}</p>
+
+<figure>
+<img src="img/aperto.png" alt="insieme aperto"/>
+<figcaption>Example: The blue circle represents the set of points (x, y) satisfying x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup>. The red disk represents the set of points (x, y) satisfying x<sup>2</sup> + y<sup>2</sup> &lt; r<sup>2</sup>. The red set is an open set, the blue set is its boundary set, and the union of the red and blue sets is a closed set.</p>
+</figcaption>
+</figure>
+
+<h2>Spazio Topologico</h2>
+
+<p>La presenza di una distanza permette a sua volta di introdurre in <i>X</i> una struttura topologica (o in breve, una topologia) che rende X uno <i>spazio topologico</i>.</p>
+
+<p>In generale, uno <i>spazio topologico</i> è costituito da una coppia <i>(T, A)</i> dove <i>T</i> è un insieme ed A è una famiglia di sottoinsiemi di T, ai quali si conferisce lo status di <i>aperti</i>, con le seguenti proprietà.</p>
+
+<ol>
+    <li><p>E e ∅ (l’insieme vuoto) appartengono ad A.</p></li>
+    <li><p>Una qualunque unione di elementi di A appartiene ad A.</p></li>
+    <li><p>L’intersezione di un numero <b>finito</b> di elementi di A appartiene ad A.</p></li>
+</ol>
+
+<p>Si possono ora definire tutti gli altri concetti topologici come si fa in ℝ<sup>n</sup>. Per esempio, un insieme E ⊂ T si dice chiuso se il suo complementare è aperto. Un intorno di un punto x ∈ T è definito come un aperto che contiene x.</p>
+
+<p>Rispetto a un insieme E ⊂ T , un punto x si dice:</p>
+
+<ul>
+    <li><p>di accumulazione per E se <b>ogni</b> intorno di x contiene infiniti punti di E;</p></li>
+    <li><p>interno ad E, se <b>esiste</b> un intorno di x contenuto in E;</p></li>
+    <li><p>di frontiera per E, se <b>ogni</b> <i>intorno</i> di <i>x</i> contiene sia punti di E sia punti del complementare. L’insieme dei punti di frontiera è indicato con ∂E.</p></li>
+</ul>
+
+<p>Si dimostra facilmente che un insieme è chiuso se e solo se contiene tutti i suoi punti di accumulazione ed anche se e solo se contiene tutti i suoi punti di frontiera. L’insieme &Emacr; = E ∪ ∂E si chiama chiusura di E. Se U ⊂ E, diciamo che U è denso in E se &Umacr; = &Emacr;. Vi sono altre possibilità per introdurre una topologia. Per esempio, si può introdurre la famiglia dei chiusi anziché degli aperti (quali proprietà dovrebbe avere tale famiglia?).</p>
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

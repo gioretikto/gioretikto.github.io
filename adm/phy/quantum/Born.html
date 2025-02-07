@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The statistical interpretation"/>
+	<title>The statistical interpretation</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Quantum mechanics</a></li>
+		<li><a class="navbar" href="../index.html">Physics</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The statistical interpretation</h1>
+
+<p>Born's <b>statistical interpretation</b> of the wave function, says that |<i>&Psi;</i>(<i>x,t</i>)|<sup>2</sup> gives the <i>probability</i> of finding the particle at a point <i><b>r</b></i>, at time <i>t</i> - or more precisely,</p>
+
+<div class="eq">
+<p>∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> |<i>&Psi;</i>(<i>x</i>)|<sup>2</sup> d<i>x</i> = probability of finding the particle between <i>a</i> and <i>b</i>, at time <i>t</i>.</p>
+</div>
+
+<p>The wave function itself is complex, but |<i>&Psi;</i>(<i>x</i>)|<sup>2</sup> = <i>&Psi;</i><sup>*</sup>(<i>x</i>)<i>&Psi;</i>(<i>x</i>) is real and nonnegative - as a probability, of course, <i>must</i> be.</p>
+
+<p>Probability is the <i>area</i> under the graph of |<i>&Psi;</i>(<i>x</i>)|<sup>2</sup>. For the wave function in Fig.1, you would be quite likely to find the particle in the vicinity of point <i>A</i>, where |<i>&Psi;</i>|<sup>2</sup> is large, and relatively <i>un</i>likely to find it near point <i>B</i>.</p>
+
+<figure>
+<img src="img/Born.png" alt="Probability distribution"/>
+<figcaption><b>Fig.1</b>. The shaded area represents the probability of finding the particle between <i>a</i> and <i>b</i>. The particle would be relatively likely to be found near <i>A</i>, and unlikely to be found near <i>B</i>.</figcaption>
+</figure>
+
+<p>The statistical interpretation introduces a king of <b>indeterminacy</b> into quantum mechanics, for even if you know everything the theory has to tell you about the particle (to wit: its wave function), still you cannot predict with certainty the outcome of a simple experiment to measure it position - all quantum mechanics has to offer is <i>statistical</i> information about the <i>possible</i> results. A particle simply does nto <i>have</i> a precise position prior to mearurement. Space localization ca be achieved by measuring position with infinite precision so that the indeterminacy &Delta;<i>x</i> vanishes. What if I meade a <i>second</i> measurement, <i>immediately</i> after the first? A repeated measurement (on the same particle) must return the same value. Indeed, it would be tough to prove that the particle was really found at <i>C</i> in the first instance, if this coul not be confirmed by immediate repetition of the measurement. Evidently the first measurement radically alters the wave function, so that is is now sharply peaked about <i>C</i> (Fig.2). We say that the wave function <b>collapses</b>, upon measurement, to spike at the point <i>C</i> (it soon spreads out again, in accordance with the Schrödinger equation, so the second measurement must be made quickly).</p>
+
+<figure>
+<img src="img/Born2.png" alt="Probability distribution"/>
+<figcaption><b>Fig.2</b>. Collapse of the wave function: graph of |<i>&Psi;</i>|<sup>2</sup> immediately <i>after</i> a measurement has found the particle at point <i>C</i>.</figcaption>
+</figure>
+
+<h2>Normalization</h2>
+
+<p>Because the particle must be found somewhere between <i>x</i> = -&infin; and <i>x</i> = + &infin;, the wave function must obey the normalization condition.</p>
+
+<div class="eq">
+<p>∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> |<i>&Psi;</i>(<i>x</i>)|<sup>2</sup> d<i>x</i> = 1&emsp;(1.6.1)</p>
+</div>
+
+<p>Without this, the statistical interpretation would be nonsense. However, this requirement should disturb you: After all, the wave function is supposed to be determined by the Schrödinger equation - we can't go imposing an extraneous condition on <i>&Psi;</i> without checking that the two are consistent. Well, a glance at Schrödinger equation reveals that if <i>&Psi;</i>(<i>x,t</i>) is a solution, so too is <i>A&Psi;</i>(<i>x,t</i>), where <i>A</i> is any (complex) constant. What we must do then, is pick this undetermined multiplicative factor so as to ensure that 1.6.1 is satisfied. This process is called <b>normalizing</b> the wave function. For some solutions to the Schrödinger equation the integral is <i>infinite</i>; in that case <i>no</i> multiplicative factor is going to make it 1. The same goes for the trivial solution <i>&Psi;</i> = 0. Such <b>non-normalizable</b> solutions cannot represent particles, and must be rejected. Physically realizable states correspond to the <b>square-integrable</b> solutions to Schrödinger equation. </p>
+
+<p>We shall show now that if the wave function is normalized at time <i>t</i> = 0, it will <i>stay</i> normalized as time goes on. The Schrödinger equation automatically preserves the normalization of the wave function - without this crucial feature the Schrödinger equation would be incompatible with the statistical interpretation and the whole theory would crumble. To prove it, begin with</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="normal">&#x3A8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msubsup>
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="normal">&#x3A8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mtext>d</mtext>
+  <mi>x</mi>
+<mtext>(1.6.2)</mtext>
+</math>
+
+<!-- $$ \frac{d}{dt} \int_{-\infty}^{+\infty} |\Psi(x,t)|^2 \text{d}x = \int_{-\infty}^{+\infty} \frac{\partial}{\partial t} |\Psi(x,t)|^2 \text{d}x $$ -->
+
+<p>Note that the <i>integral</i> is a function only of <i>t</i>, so the <i>total</i> derivative (d/d<i>t</i>) in the first expression was used, but the <i>integrand</i> is a function of <i>x</i> as well as <i>t</i>, so it's a <i>partial</i> derivative (∂/∂<i>t</i>) in the second one. By the product rule,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="normal">&#x3A8;</mi>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi mathvariant="normal">&#x3A8;</mi>
+    <mo>&#x2217;</mo>
+  </msup>
+  <mi mathvariant="normal">&#x3A8;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msup>
+    <mi mathvariant="normal">&#x3A8;</mi>
+    <mo>&#x2217;</mo>
+  </msup>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi mathvariant="normal">&#x3A8;</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msup>
+        <mi mathvariant="normal">&#x3A8;</mi>
+        <mo>&#x2217;</mo>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mi mathvariant="normal">&#x3A8;</mi>
+</math>
+
+<!-- $$ \frac{\partial}{\partial t} |\Psi|^2 = \frac{\partial}{\partial t} (\Psi^* \Psi) = \Psi^* \frac{\partial \Psi}{\partial t} + \frac{\partial \Psi^*}{\partial t} \Psi $$ -->
+
+<p>Now the Schrödinger equation says,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi mathvariant="normal">&#x3A8;</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>i</mi>
+      <mi data-mjx-alternate="1">&#x210F;</mi>
+    </mrow>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>&#x2202;</mi>
+        <mn>2</mn>
+      </msup>
+      <mi mathvariant="normal">&#x3A8;</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mi>i</mi>
+    <mi data-mjx-alternate="1">&#x210F;</mi>
+  </mfrac>
+  <mi>V</mi>
+  <mi mathvariant="normal">&#x3A8;</mi>
+</math>
+
+<!-- $$\frac{\partial \Psi}{\partial t} = \frac{i\hbar}{2m} \frac{\partial^2 \Psi}{\partial x^2} - \frac{i}{\hbar}V\Psi $$ -->
+
+<p>and hence also (taking the comple conjugate)</p>
+
+<!-- $$\frac{\partial \Psi^*}{\partial t} = -\frac{i\hbar}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} + \frac{i}{\hbar}V\Psi^* $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msup>
+        <mi mathvariant="normal">&#x3A8;</mi>
+        <mo>&#x2217;</mo>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <mi>i</mi>
+      <mi data-mjx-alternate="1">&#x210F;</mi>
+    </mrow>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>&#x2202;</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi mathvariant="normal">&#x3A8;</mi>
+        <mo>&#x2217;</mo>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mi>i</mi>
+    <mi data-mjx-alternate="1">&#x210F;</mi>
+  </mfrac>
+  <mi>V</mi>
+  <msup>
+    <mi mathvariant="normal">&#x3A8;</mi>
+    <mo>&#x2217;</mo>
+  </msup>
+</math>
+
+<p>so</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="normal">&#x3A8;</mi>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>i</mi>
+      <mi data-mjx-alternate="1">&#x210F;</mi>
+    </mrow>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msup>
+      <mi mathvariant="normal">&#x3A8;</mi>
+      <mo>&#x2217;</mo>
+    </msup>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>&#x2202;</mi>
+          <mn>2</mn>
+        </msup>
+        <mi mathvariant="normal">&#x3A8;</mi>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>&#x2202;</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mi mathvariant="normal">&#x3A8;</mi>
+          <mo>&#x2217;</mo>
+        </msup>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="normal">&#x3A8;</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mi>&#x2202;</mi>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mrow>
+        <mi>i</mi>
+        <mi data-mjx-alternate="1">&#x210F;</mi>
+      </mrow>
+      <mrow>
+        <mn>2</mn>
+        <mi>m</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <msup>
+        <mi mathvariant="normal">&#x3A8;</mi>
+        <mo>&#x2217;</mo>
+      </msup>
+      <mi>&#x2202;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi mathvariant="normal">&#x3A8;</mi>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mi>&#x2202;</mi>
+        <mi>x</mi>
+      </mrow>
+      <mo>&#x2212;</mo>
+      <mfrac>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <msup>
+            <mi mathvariant="normal">&#x3A8;</mi>
+            <mo>&#x2217;</mo>
+          </msup>
+        </mrow>
+        <mrow>
+          <mi>&#x2202;</mi>
+          <mi>x</mi>
+        </mrow>
+      </mfrac>
+      <mi mathvariant="normal">&#x3A8;</mi>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$\frac{\partial} {\partial t} |\Psi|^2 = \frac{i\hbar}{2m} \left(\Psi^* \frac{\partial^2 \Psi}{\partial x^2} - \frac{\partial^2 \Psi^*}{\partial x^2} \Psi \right) = \frac{\partial} {\partial x} \left[ \frac{i\hbar}{2m} \left( \Psi^* \partial{\Psi}{\partial x} - \frac{\partial \Psi^*}{\partial x} \Psi \right) \right] $$ -->
+
+<p>The integral in Equation 1.6.2 can now be evaluated explicitly:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="normal">&#x3A8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>i</mi>
+      <mi data-mjx-alternate="1">&#x210F;</mi>
+    </mrow>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msup>
+      <mi mathvariant="normal">&#x3A8;</mi>
+      <mo>&#x2217;</mo>
+    </msup>
+    <mi>&#x2202;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x3A8;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x2202;</mi>
+      <mi>x</mi>
+    </mrow>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <msup>
+          <mi mathvariant="normal">&#x3A8;</mi>
+          <mo>&#x2217;</mo>
+        </msup>
+      </mrow>
+      <mrow>
+        <mi>&#x2202;</mi>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="normal">&#x3A8;</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <msubsup>
+    <mrow data-mjx-texclass="ORD">
+      <mo minsize="2.047em" maxsize="2.047em">|</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msubsup>
+</math>
+
+<!-- $$ \frac{d}{dt} \int_{-\infty}^{+\infty} |\Psi(x,t)|^2 \text{d}x = \frac{i\hbar}{2m} \left(\Psi^* \partial{\Psi}{\partial x} - \frac{\partial \Psi^*}{\partial x} \Psi \right) \bigg|_{-\infty}^{+\infty} $$ -->
+
+<p>But <i>&Psi;</i>(<i>x,t</i>) must go to zero as <i>x</i> goes to (&pm;) infinity - otherwise the wave function would not be normalizable. It follows that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="normal">&#x3A8;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \frac{d}{dt} \int_{-\infty}^{+\infty} |\Psi(x,t)|^2 \text{d}x = 0 $$ -->
+
+<p>and hence that the integral is <i>constant</i> (independent of time); if <i>&Psi;</i> is normalized at <i>t</i> = 0, it <i>stays</i> normalized for all future time.</p>
+
+<section aria-label="End">
+<a href="schrtime.html">&#171;The Schrödinger equation</a>
+<a href="index.html">Index</a>
+<a href="stationary.html">Time independent Schrödinger equation &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

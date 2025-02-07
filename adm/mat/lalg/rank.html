@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Rank of a matrix"/>
+	<title>Rank of a matrix</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Rank of a matrix</h1>
+
+<p><b>Definition 5.1.1</b> (Rank). The rank of any matrix <i>A</i>, written as r(<i>A</i>) is the order of the largest non-vanishing minor (determinant of the square submatrix) in <i>A</i>. &emsp;□</p>
+
+<p><b>Example 5.1.2</b>. Let</p>
+
+<!-- $$A = \begin{pmatrix} 0 & 8 & 1 & -1 \\ 2 & -2 & -1 & 1 \\ 1 & 3 & 0 & 0 \end{pmatrix} $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>8</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>First of all we notice that <i>A</i> can have at most rank 3, as the square submatrices that can be extracted from <i>A</i> can have at most order three. All the possible submtraices of order three of <i>A</i> are</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>B</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>8</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mstyle scriptlevel="0">
+          <mspace width="2em"></mspace>
+        </mstyle>
+        <msub>
+          <mi>B</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>8</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>B</mi>
+          <mn>3</mn>
+        </msub>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mstyle scriptlevel="0">
+          <mspace width="2em"></mspace>
+        </mstyle>
+        <msub>
+          <mi>B</mi>
+          <mn>4</mn>
+        </msub>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mn>8</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>2</mn>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mtd>
+              <mtd>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>3</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+              <mtd>
+                <mn>0</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{aligned} B_1 = \begin{pmatrix} 0 & 8 & 1 \\ 2 & -2 & -1 \\ 1 & 3 & 0 \end{pmatrix} \qquad B_2 = \begin{pmatrix} 0 & 8 & 1 \\ 2 & -2 & 1 \\ 1 & 3 & 0 \end{pmatrix} \\
+B_3 = \begin{pmatrix} 0 & 1 & -1 \\ 2 & -1 & -1 \\ 1 & 0 & 0 \end{pmatrix} \qquad B_4 = \begin{pmatrix} 8 & 1 & -1 \\ -2 & -1 & 1 \\ 3 & 0 & 0 \end{pmatrix} \end{aligned} $$ -->
+
+<p>and it can be readily verified that det <i>B</i><sub>1</sub> = det <i>B</i><sub>2</sub> = det <i>B</i><sub>3</sub> = det <i>B</i><sub>4</sub> = 0. Thus <i>A</i> has not non-null minors of order 3, and its rank must be equal or less than 2. Since there exists in <i>A</i> e.g. det (2 -2; 1 3) = 8 then r(<i>A</i>) = 2.&emsp;■ </p>
+
+<p>The notion of rank of a matrix is strictly connected to the linear indpendence of its rows (columns). The following results holds</p>
+
+<p><b>Theorem 5.1.2</b>. Let <i>S</i> = {<b><i>v</i></b><sub>1</sub>,<b><i>v</i></b><sub>2</sub>,...,<i><b>v</b><sub>n</sub></i>} be a set of <i>n</i>-dimensional vectors, then the set <i>S</i> is linearly independent if and only if the determinant of the matrix having the vectors as rows, (columns) is non-zero.</p>
+
+<p><b>Proof</b>. The vectors <b><i>v</i></b><sub>1</sub>,<b><i>v</i></b><sub>2</sub>,...,<i><b>v</b><sub>n</sub></i> are linearly independent if and only if the vector equation <i>b</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + <i>b</i><sub>2</sub><b><i>v</i></b><sub>2</sub> + ... + <i>b<sub>n</sub><b>v</b><sub>n</sub></i> = <b>0</b> has only the trivial solution <i>b</i><sub>1</sub> = <i>b</i><sub>2</sub> = <i>b<sub>n</sub></i> = 0. This vector equation is equivalent to a homogenous system of equations, <i>A<b>b</b></i> = <b>0</b>, and by Cramer's theorem, the trivial solution is the only one iff det <i>A</i> &ne; 0.</p>
+
+<p>For the converse suppose that det <i>A</i> &ne; 0. Then the system <i>A<b>b</b></i> = <b>0</b>, by Cramer's theorem has only the trivial solution <b><i>b</i></b> = 0. &emsp;□</p>
+
+<p><b>Example</b>. Consider the three vectors that follow.</p>
+
+<div class="eq">
+<p><i>v</i><sub>1</sub> = (1,0,2)<br>
+<i>v</i><sub>2</sub> = (3,4,−1)<br>
+<i>v</i><sub>3</sub> = (4,4,1).</p>
+</div>
+
+<p>Taking the components of the three vectors to be rows of a matrix we obtain the following matrix, </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>-1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$A = \begin{pmatrix} 1 & 0 & 2 \\ 3 & 4 & -1 \\ 4 & 4 & 1 \end{pmatrix} $$ -->
+
+<p>We now calculate the determinant of <i>A</i></p>
+
+<div class="eq">
+<p>det(<i>A</i>) = 1 ⋅ (4 + 4) −0 ⋅(3 + 4) + 2 ⋅ (12 − 16) = 8 − 0 + (−8) = 0</p>
+</div>
+
+<p>Since det <i>A</i> = 0 we conclude that the three given vectors are linearly dependent. This can also be seen very easily as follows,</p>
+
+<div class="eq">
+<p>(4,4,1) = (1,0,2) + (3,4,1)<br>
+<i>v</i><sub>3</sub> = <i>v</i><sub>1</sub> + <i>v</i><sub>2</sub><br>
+⇒ <i>v</i><i>1</i> + <i>v</i><sub>2</sub> − <i>v</i><sub>3</sub> = 0&emsp;■</p>
+</div>
+
+<p id="rank"><b>Definition 5.1.2</b> (Rank). The maximum number of linearly independent vectors (those forming either the rows or the columns) is callde the <i>rank</i> of the matrix. We use the notation</p>
+
+<div class="eq">
+<p>rank(<i>A</i>)</p>
+</div>
+
+<p>to denote the rank of the matrix <i>A</i>.&emsp;□</p>
+
+<p>Because multiplication by a nonzero scalar does not change the linear independence of vectors, for the scalar <i>a</i> &ne; 0, we have</p>
+
+<div class="eq">
+<p>rank(<i>aA</i>) = rank(<i>A</i>)</p>
+</div>
+
+<section aria-label="End">
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="seriepositive.html">Funzioni monòtone a termini positivi &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
