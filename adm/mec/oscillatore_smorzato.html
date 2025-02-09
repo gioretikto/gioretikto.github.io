@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Oscillatore armonico smorzato da una forza viscosa"/>
+	<title>Oscillatore armonico smorzato da una forza viscosa</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>2.14 Oscillatore armonico smorzato da una forza viscosa</h1>
+
+<p>In una situazione realistica l'oscillatore armonico viene frenato da forze di attrito, l'ampiezza dell’oscillazione diminuisce e alla fine non c'é più moto. Se la forza è quella di attrito radente si trova che Vampiezza delle oscillazioni diminuisce linearmente nel tempo e che il tempo per compiere un’oscillazione è sempre lo stesso (viene chiamato pseudoperiodo in quanto un’oscillazione non è eguale alla successiva, Il moto non è periodico). Il punto non si ferma nel centro di oscillazione, ma a una certa distanza da questo: infatti succede che a un certo istante, quando il punto si è fermato a un estremo dell’<i>n</i>-esima oscillazione, la forza elastica è minore della forza di attrito statico. Non trattiamo questo caso, però mostriamo l’andamento dell’oscillazione nella Figura 2.39. Essa è riferita a un oscillatore orizzontale di massa <i>m</i> e costante elastica <i>k</i>, che viene lasciato libero con velocità iniziale nulla a distanza <i>x</i>, dal centro di oscillazione e risente di una forza di attrito radente di modulo <i>&mu;mg</i>; lo pseudoperiodo vale <i>T</i> = 2&pi; sqrt(<i>m</i>/<i>k</i>), indipendente da <i>&mu;</i>; in un tempo
+pari a <i>T</i> l'ampiezza diminuisce di 4 <i>&mu;mg</i>/<i>k</i>.<br> Più interessante è il caso in cui l’oscillatore armonico venga frenato da una forza di attrito viscoso, cioé proporzionale ec opposta alla velocità, -<i>b</i><b>v</b>, e che non agiscano forze di attrito costanti. La legge del moto si scrive</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>m</mi>
+  <mi>a</mi>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>k</mi>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mi>b</mi>
+  <mi>v</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mo stretchy="false">&#x27F9;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mtext>d</mtext>
+        <mn>2</mn>
+      </msup>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mi>b</mi>
+    <mi>m</mi>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mi>k</mi>
+    <mi>m</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ ma = -kx -bv \implies \frac{\text{d}^2x}{\text{d}t^2} + \frac{b}{m} \frac{\text{d}x}{\text{d}t} + \frac{k}{m} = 0 $$ -->
+
+<p>Chiamiamo <b>coefficiente di smorzamento</b>  e <b>pulsazione propria</b> rispettivamente</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3B3;</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mi>b</mi>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+    </mrow>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>&#x3C9;</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>=</mo>
+  <msqrt>
+    <mfrac>
+      <mi>k</mi>
+      <mi>m</mi>
+    </mfrac>
+  </msqrt>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mn>2.13</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \gamma = \frac{b}{2m}, \quad \omega_0 = \sqrt{\frac{k}{m}} \quad (2.13)$$ -->
+
+<p>e riscriviamo così l'equazione del moto:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <msup>
+        <mtext>d</mtext>
+        <mn>2</mn>
+      </msup>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mn>2</mn>
+  <mi>&#x3B3;</mi>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <msubsup>
+    <mi>&#x3C9;</mi>
+    <mn>0</mn>
+    <mn>2</mn>
+  </msubsup>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mn>2.14</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \frac{\text{d}^2x}{\text{d}t^2} + 2\gamma \frac{\text{d}x}{\text{d}t} + \omega_0^2 x = 0 \quad (2.14)$$ -->
+
+<p>La (2.14) si chiama <b>equazione differenziale dell'oscillatore armonico smorzato</b>; essa è l'esempio più completo di equazione differenziale lineare del secondo ordine, a coefficienti costanti, omogenea. <br> Abbiamo già visto che l'attrito viscoso porta a uno smorzamento esponenziale (par 2.11), per cui cerchiamo se esiste per (2.14) una soluzione <i>x</i>(<i>t</i>) proporzionale a <i>e<sup>at</sup></i>. Deve essere:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mtext>d</mtext>
+              <mn>2</mn>
+            </msup>
+            <mi>x</mi>
+          </mrow>
+          <mrow>
+            <mtext>d</mtext>
+            <msup>
+              <mi>t</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>&#x3B3;</mi>
+        <mfrac>
+          <mrow>
+            <mtext>d</mtext>
+            <mi>x</mi>
+          </mrow>
+          <mrow>
+            <mtext>d</mtext>
+            <mi>t</mi>
+          </mrow>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <msubsup>
+          <mi>&#x3C9;</mi>
+          <mn>0</mn>
+          <mn>2</mn>
+        </msubsup>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>&#x3B3;</mi>
+        <mi>a</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msubsup>
+          <mi>&#x3C9;</mi>
+          <mn>0</mn>
+          <mn>2</mn>
+        </msubsup>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>&#x3B3;</mi>
+        <mi>a</mi>
+        <mo>+</mo>
+        <msubsup>
+          <mi>&#x3C9;</mi>
+          <mn>0</mn>
+          <mn>2</mn>
+        </msubsup>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{align}\frac{\text{d}^2x}{\text{d}t^2}(e^{at})+ 2\gamma \frac{\text{d}x}{\text{d}t} (e^{at}) + \omega_0^2 e^{at} = 0  \\ 
+a^2 e^{at} + 2\gamma a e^{at} + \omega_0^2 e^{at} = e^{at} (a^2 + \gamma a + \omega_0^2) = 0 \end{align}$$ -->
+
+<p>Si deduce che e<sup>&alpha;t</sup> è soluzione di (2.14) solo se <i>&alpha;</i> soddisfa l'<b>equazione caratteristica</b> di secondo grado</p>
+
+<div class="eq">
+<p><i>&alpha;</i><sup>2</sup> + 2<i>&gamma;&alpha;</i> + <i>&omega;</i><sub>0</sub><sup>2</sup> = 0</p>
+</div>
+
+<p>ovvero se</p>
+
+<div class="eq">
+<p><i>&alpha;</i> = -<i>&gamma;</i> &pm; sqrt(&gamma;<sup>2</sup> - <i>&omega;</i><sup>2</sup><sub>0</sub>)</p>
+</div>
+
+<p>Vediamo che ci sono tre casi possibili:</p>
+
+<div class="eq">
+<p><i>&gamma;</i><sup>2</sup> &gt; <i>&omega;</i><sup>2</sup><sub>0</sub>, &emsp; <i>&gamma;</i><sup>2</sup> = <i>&omega;</i><sup>2</sup><sub>0</sub>, &emsp; <i>&gamma;</i><sup>2</sup> &lt; <i>&omega;</i><sup>2</sup><sub>0</sub></p>
+</div>
+
+<p>Il tipo di soluzione dipende dalla relazione tra i parametri fisici dell'ossillatore.</p>
+
+<h2>Primo caso: smorzamento forte</h2>
+
+<div class="eq">
+<p><i>&gamma;</i><sup>2</sup> &gt; <i>&omega;</i><sup>2</sup><sub>0</sub> &emsp; ovvero in base a (2.13) &emsp; <i>b</i><sup>2</sup> &gt; 4<i>mk</i></p>
+</div>
+
+<p><i>&alpha;</i> assume i due valori distinti</p>
+
+<div class="eq">
+<p><i>&alpha;</i><sub>1</sub> = &minus;<i>&gamma;</i> + sqrt(<i>&gamma;</i><sup>2</sup> - <i>&omega;</i><sub>0</sub><sup>2</sup>), &emsp; <i>&alpha;</i><sub>2</sub> = &minus;<i>&gamma;</i> - sqrt(<i>&gamma;</i><sup>2</sup> - <i>&omega;</i><sub>0</sub><sup>2</sup>)</p>
+</div>
+
+<p>entrambi negativi, e la soluzione più generale è</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>x</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>A</mi>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B1;</mi>
+        <mn>1</mn>
+      </msub>
+      <mi>t</mi>
+    </mrow>
+  </msup>
+  <mo>+</mo>
+  <mi>B</mi>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B1;</mi>
+        <mn>2</mn>
+      </msub>
+      <mi>t</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B3;</mi>
+        <mn>1</mn>
+      </msub>
+      <mi>t</mi>
+    </mrow>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>A</mi>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>t</mi>
+      <msqrt>
+        <msub>
+          <mi>&#x3B3;</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>&#x2212;</mo>
+        <msubsup>
+          <mi>&#x3C9;</mi>
+          <mn>0</mn>
+          <mn>2</mn>
+        </msubsup>
+      </msqrt>
+    </mrow>
+  </msup>
+  <mo>+</mo>
+  <mi>B</mi>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>t</mi>
+      <msqrt>
+        <msub>
+          <mi>&#x3B3;</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>&#x2212;</mo>
+        <msubsup>
+          <mi>&#x3C9;</mi>
+          <mn>0</mn>
+          <mn>2</mn>
+        </msubsup>
+      </msqrt>
+    </mrow>
+  </msup>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$x(t) = A e^{\alpha_1 t} + B e^{\alpha_2 t} = e^{\gamma_1 t} (A e^{t \sqrt{\gamma_2 - \omega_0^2}} + B e^{-t \sqrt{\gamma_2 - \omega_0^2}}) $$ -->
+
+<p>con andamento esponenziale decrescente; <i>A</i> e <i>B</i> dipendono dalle condizioni iniziali.</p>
+
+<h2>Secondo caso: smorzamento critico</h2>
+
+<div class="eq">
+<p><i>&gamma;</i><sup>2</sup> = <i>&omega;</i><sup>2</sup><sub>0</sub> &emsp; ovvero &emsp; <i>b</i><sup>2</sup> = 4<i>mk</i></p>
+</div>
+
+<p>Le due soluzioni di (2.15) sono coincidenti: <i>&alpha;</i><sub>1</sub> = <i>&alpha;</i><sub>2</sub> = -<i>&gamma;</i>. Si dimostra che in tal caso la soluzione più generale di (2.14) è</p>
+
+<div class="eq">
+<p><i>x</i>(<i>t</i>) = e<sup>-<i>&gamma;t</i></sup>(<i>At</i> + <i>B</i>)</p>
+</div>
+
+<p>ancora con andamento esponenziale decrescente. <br> Nella fig. 2.40 sono mostrati vari casi possibili; in ascissa il tempo è misurato in unità <i>T</i><sub>0</sub> = 2&pi;/<i>&omega;</i><sub>0</sub>, periodo dell'oscillatore non smorzato. Passando dalla curva 1 alla curva 3 diminisce il rapporto <i>&gamma;</i>/<i>&omega;</i><sub>0</sub>, cioè diminuisce lo smorzamento, fino a che <i>&gamma;</i> = <i>&omega;</i><sub>0</sub> per la curva 4, corrispondente allo <b>smorzamento critico</b>. Questo è il caso in cui il punto tende più rapidamente alla posizione di equilibrio <i>x</i> = 0. Nelle condizioni di smorzamento forte o critico non c'è mai oscillazione.</p>
+
+<h2>Terzo caso: smorzamento debole</h2>
+
+<div class="eq">
+<p><i>&gamma;</i><sup>2</sup> &lt; <i>&omega;</i><sup>2</sup><sub>0</sub> &emsp; ovvero &emsp; <i>b</i><sup>2</sup> = 4<i>mk</i></p>
+</div>
+
+<p>Le soluzioni (2.16) dell'equazione caratteristica (2.15) sono complesse coniugate</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B3;</mi>
+  <mo>+</mo>
+  <mi>i</mi>
+  <msqrt>
+    <msubsup>
+      <mi>w</mi>
+      <mn>0</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>&#x2212;</mo>
+    <msup>
+      <mi>&#x3B3;</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B3;</mi>
+  <mo>+</mo>
+  <mi>i</mi>
+  <mi>&#x3C9;</mi>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>&#x3B1;</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B3;</mi>
+  <mo>+</mo>
+  <mi>i</mi>
+  <msqrt>
+    <msubsup>
+      <mi>w</mi>
+      <mn>0</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>&#x2212;</mo>
+    <msup>
+      <mi>&#x3B3;</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B3;</mi>
+  <mo>+</mo>
+  <mi>i</mi>
+  <mi>&#x3C9;</mi>
+</math>
+
+<!-- $$\alpha_1 = -\gamma + i \sqrt{w_0^2 - \gamma^2} = -\gamma + i\omega, \quad \alpha_2 = -\gamma + i \sqrt{w_0^2 - \gamma^2} = -\gamma + i\omega $$ -->
+
+<p>e la soluzione più generale è</p>
+
+<div class="eq">
+<p>e<sup>&pm;i&omega;t</sup> = cos &omega;t &pm; isen &omnega;t</p>
+</div>
+
+<p>si ottiene</p>
+
+<div class="eq">
+<p><i>x</i>(<i>t</i>) = e<sup>−&gamma;t</sup>[(<i>A</i> + <i>B</i>) cos &omega;t + (<i>A</i> − <i>B</i>)<i>i</i> sen &omega;t]</p>
+</div>
+
+<p>Il risultato deve essere reale e inoltre <i>A</i> e <i>B</i> devono essere diverse; ciò comporta che anche <i>A</i> e <i>B</i> siano complessi coniugati:</p>
+
+<div class="eq">
+<p><i>A</i> = <i>a</i> + <i>iB</i>, &emsp; <i>B</i> = <i>a</i> − <i>ib</i> ⇒ <i>A</i> + <i>B</i> = 2<i>a</i>, &emsp; <i>A</i> − <i>B</i> = 2<i>b</i></p>
+</div>
+
+<p>effettuando queste sostituzioni l'espressioni di <i>x</i>(<i>t</i>) diviene</p>
+
+<div class="eq">
+<p><i>x</i>(<i>t</i>) = e<sup>−<i>&gamma;t</i></sup> (2<i>a</i> cos <i>&omoega;t</i> − 2<i>b</i> sen <i>&omega;t</i></p>
+</div>
+
+<p>che può essere scritta</p>
+
+<div class="eq">
+<p><i>x</i>(<i>t</i>) = A<sub>0</sub>e<sup>−<i>&gamma;t</i></sup> (sen <i>&omega;t</i> + <i>&phi;</i>)</p>
+</div>
+
+<p>dove A<sub>0</sub> e <i>&phi;</i> determinate in base alle condizioni iniziali. <br> Il punto, in condizioni di smorzamneto debole, compie oscillazioni di pulsazione</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C9;</mi>
+  <mo>=</mo>
+  <msqrt>
+    <msubsup>
+      <mi>w</mi>
+      <mn>0</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>&#x2212;</mo>
+    <msup>
+      <mi>&#x3B3;</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>&lt;</mo>
+  <msub>
+    <mi>&#x3C9;</mi>
+    <mn>0</mn>
+  </msub>
+</math>
+
+<!-- $$\omega = \sqrt{w_0^2 - \gamma^2} \lt \omega_0 $$ -->
+
+<p>e <b>pseudoperiodo</b> <i>T</i> = 2&pi;/<i>&omega;</i>. L'ampiezza è smorzata esponenzialmente. Il moto si inverte a intervalli regolari, pari a <i>T</i>/2, ma non è periodico perché il punto non ripassa nelle stesse posizioni. Si ha che <i>x</i> (<i>t</i> + <i>T</i>)/<i>x</i>(<i>t</i>) = <i>e</i><sup>−&gamma;T</sup>, cioè in uno pseudoperiodo l'ampiezza si riduce di un fattore <i>e</i><sup>−&gamma;T</sup>. Il punto si ferma in <i>x</i> = 0.</p>
+
+<section aria-label="End">
+<a href="elastica.html">«2.13 Forza elastica. Oscillatore armonico semplice</a>
+<a href="index.html">Index</a>
+<a href="oscillatore_forzato.html">Oscillatore armonico forzato &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

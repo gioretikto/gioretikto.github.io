@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Calcolo dei limiti in due variabili: analisi delle forme di indeterminazione">
+	<title>Calcolo dei limiti in due variabili: analisi delle forme di indeterminazione</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Calcolo dei limiti in due variabili: analisi delle forme di indeterminazione</h1>
+
+<p>Vogliamo qui presentare, attraverso esempi, le due idee fondamentali per l'analisi delle forme di indeterminazione. Premettiamo un'osservazione sulla definizione di limite. L'essenza della definizione sta nel fatto che se</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>y</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$\lim_{(x,y) \to (x_0,y_0)} f(x,y) = \ell $$ -->
+
+<p>allora <i>f</i>(<i>x,y</i>) si avvicina indefinitamentℓe a <i>ℓ</i> quando la <i>distanza</i> tra (<i>x,y</i>) e (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) tende a zero, indipendentemente dalla direzione con cui (<i>x,y</i>) si avvicina a (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>). Da ciò discendono le tecniche illustrate nei due esempi seguenti. Nel primo si vuol mostrare che il limite per (<i>x,y</i>) ⟶ (0,0) di una certa funzione <i>f</i>(<i>x,y</i>) <i>non esiste</i>: è allora sufficiente determinare due curve che terminano in (0,0), lungo le quali la funzione tende a due limiti diversi. <br> A questo proposito, premettiamo  la seguente definizione. Se <i>f</i>(<i>x,y</i>) è una funzione reale di 2 variabili, e <b>r</b>(<i>t</i>) = (<i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>)) è un arco di curva piana, la funzione composta</p>
+
+<div class="eq">
+<p><i>g</i>(<i>t</i>) = <i>f</i>(<b>r</b>(<i>t</i>)) = <i>f</i>(<i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>))</p>
+</div>
+
+<p>si dice <i>restrizione di f alla curva</i> r, ed è, ovviamente, una funzione reale di variabile reale. Il termine restrizione, che denota questo tipo di composizione, deriva dalla seguente idea geometrica: invece di far variare (<i>x,y</i>) in ogni modo nel dominio bidimensionale in cui è definita <i>f</i>, ci restringiamo ai punti del piano che stanno sull'arco di curva (<i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>)). È chiaro che se l'arco di curva è continuo e <i>f</i> è continua, anche la sua restrizione all'arco di curva sarà continuo (continuità della funzione composta). Attraverso le restrizioni di <i>f</i> a curve diverse si può avere un'idea del comportamento di <i>f</i>: le restrizioni sono più facili da studiare perché sono funzioni reali di variabili reale.</p>
+
+<p>Esempio <b>2.3.1</b>. Calcolare</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo>,</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mi>y</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{(x,y) \to (0,0)} \frac{xy}{x^2+y^2}$$ -->
+
+<p>il limite non esiste. Infatti: la restrizione di <i>f</i>(<i>x,y</i>) alla retta <i>y</i> = <i>x</i> è <i>f</i>(<i>x,y</i>) = <i>x</i><sup>2</sup>/2<i>x</i><sup>2</sup> = 1/2, perciò la funzione composta tende a 1/2. Invence, la restrizione <i>f</i>(<i>x,y</i>) alla retta <i>y</i> = −<i>x</i> è <i>f</i>(<i>x,y</i>) = −<i>x</i><sup>2</sup>/2<i>x</i><sup>2</sup> = −1/2, perciò, la funzione composta tende a −1/2. Essendo i due limiti diversi, il limite di <i>f</i> non esiste.&emsp;■</p>
+
+<p><b>Idea generale</b>. Se la restrizione di <i>f</i>(<i>x,y</i>) a due diverse curve che tendono a (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) tende a due limiti diversi, lim<sub>(<i>x,y</i>) ⟶  (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>)</sub> <i>f</i>(<i>x,y</i>) non esiste. La stessa conclusione vale se la restrizione <i>f</i>(<i>x,y</i>) a <i>una</i> particolare curva non ammette limite. <br> Questè è il metodo comunemente seguito per dimostrare che una funzione non ammette limite. Si badi che, per questa via, non si può invece dimostrare l'esistenza deli limite. Ad es., questa non è garantita dal fatto che lungo qualsiasi retta uscente dall'origine <i>f</i> abbia lo stesso limite, come  mostreremo gli esercizi.<br> Nel prossimo esempio, invece, il passaggio alle coordinate polari mette in evidenza la dipendenza di <i>f</i>(<i>x,y</i>) dalla distanza tra (<i>x,y</i>) e (0,0) attraverso sqrt(<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>).</p>
+
+<p>Esempio <b>2.3.2</b>. Calcolare</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo>,</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>y</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{(x,y) \to (0,0)} \frac{2x^2y}{x^2+y^2} $$ -->
+
+<p>Affermiamo che questo limite esiste e vale 0. Per dimostrarlo, riscriviamo la funzione di coordinate polari,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>y</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <msup>
+        <mi>&#x3C1;</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi>cos</mi>
+        <mn>2</mn>
+      </msup>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>&#x3B8;</mi>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>&#x3B8;</mi>
+    </mrow>
+    <msup>
+      <mi>&#x3C1;</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>&#x3C1;</mi>
+  <msup>
+    <mi>cos</mi>
+    <mn>2</mn>
+  </msup>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+</math>
+
+<!-- $$ \frac{2x^2y}{x^2+y^2} = \frac{2\rho^2 \cos^2 \theta \sin \theta}{\rho^2} = 2\rho \cos^2 \theta \sin \theta $$ -->
+
+<p>si può allora scrivere la maggiorazione:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mrow>
+        <mn>2</mn>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mi>y</mi>
+      </mrow>
+      <mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mn>2</mn>
+  <msup>
+    <mi>&#x3C1;</mi>
+    <mn>2</mn>
+  </msup>(<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>)
+  <msup>
+    <mi>cos</mi>
+    <mn>2</mn>
+  </msup>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>&#x3C1;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msup>
+    <mi>cos</mi>
+    <mn>2</mn>
+  </msup>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&#x2264;</mo>
+  <mn>2</mn>
+  <mi>&#x3C1;</mi>
+</math>
+
+<!-- $$ \left | \frac{2x^2y}{x^2+y^2} \right| = 2\rho^2 \cos^2 \theta \sin \theta = 2\rho |\cos^2 \theta \sin \theta| \le 2\rho $$ -->
+
+<p>Perchè |<i>f</i>(<i>x,y</i>)| è compreso tra 0 e 2<i>&rho;</i>, la funzione è arbitrariamente vicina a zero quando <i>&rho;</i>, cioè la distanza tra (<i>x,y</i>) e (0,0), è sufficientemente piccolo. Ne segue che il limite di <i>f</i> è 0, proprio per definizione di limite.&emsp;■</p>
+
+<p>Questo esempio contiene l'idea di un <i>criterio valido in generale per provare l'esistenza di un limite</i>:</p>
+
+<p>Per dimostrare che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x,y</i>) ⟶ ℓ &emsp; per &emsp; (<i>x,y</i>) ⟶ (0,0)</p>
+</div>
+
+<p>è sufficiente riuscire a scrivere una maggiorazione del tipo</p>
+
+<div class="eq">
+<p>|<i>f</i>(<i>&rho;,&theta;</i>) − ℓ| &emsp; dove &emsp; <i>g</i>(<i>&rho;</i>) ⟶ (0)&emsp; per &emsp; &rho; ⟶ 0</p>
+</div>
+
+<p>L'essenziale è che la funzione <i>g</i> non dipendea da <i>&theta;</i>. Più in genrale, se il punto (<i>x,y</i>) tende a (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>), si applica lo stesso criterio con <i>&rho;</i> = sqrt[(<i>x</i> − <i>x</i><sub>0</sub>)<sup>2</sup> + (<i>y</i> − <i>y</i><sub>0</sub>)<sup>2</sup>], cioè si pone</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+          <mo>+</mo>
+          <mi>&#x3C1;</mi>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>0</mn>
+          </msub>
+          <mo>+</mo>
+          <mi>&#x3C1;</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{cases}
+x = x_0 + \rho \cos \theta \\
+y = y_0 + \rho \sin \theta
+\end{cases} $$ -->
+
+<p>Naturalmente, non riuscire a dimostrare una maggiorazione del genere non dimostra che il limite non esiste!</p>
+
+<section aria-label="End">
+<a href="limiti.html">«Limiti e continuità per funzioni di più variabili</a>
+<a href="index.html">Index</a>
+<a href="topologia.html">Topologia, funzioni continue, insieme di definizione e segno»</a>
+</section>
+
+</article>
+
+</body>
+</html>

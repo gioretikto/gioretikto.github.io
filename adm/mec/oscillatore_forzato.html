@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Oscillatore armonico forzato">
+	<title>Oscillatore armonico forzato</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>2.15 Oscillatore armonico forzato</h1>
+
+<p>Riassumiamo i fenomeni di oscillazione visti finore. Quando si sposta il punto dalla posizione di equilibrio esso tende a ritornarci sotto l'azione della forza elastica. Se non c'è attrito si ha un'oscillazione armonica; se c'è attrito, costante o viscoso, si ha un'oscillazione smorzata che si esaurisce in un certo tempo (fenomeno transitorio). Siccome c'è sempre attrito, l'<i>oscillazione libera è sempre smorzata</i>. <br> Vogliamo ora studiare come si può rendere l'oscillazione <i>persistente</i>, cioè come si può realizzare un sistema fisico reale che oscilli con frequ4enza definita e ampliezza costante, anche in presenza di attrito viscoso. Applichiamo all'oscillatore una forza sinusoidale <i>F</i> = <i>F</i><sub>0</sub> sen <i>&omega;t</i> cos' che l'equazione del moto sia</p>
+
+<div class="eq">
+<p><i>ma</i> = −<i>kx</i> − <i>bv</i> + <i>F</i><sub>0</sub> sen <i>&omega;t</i></p>
+</div>
+
+<p>ovvero, utilizzando i parametri dalla (2.13),</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <msup>
+        <mtext>d</mtext>
+        <mn>2</mn>
+      </msup>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mn>2</mn>
+  <mi>&#x3B3;</mi>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <msubsup>
+    <mi>&#x3C9;</mi>
+    <mn>0</mn>
+    <mn>2</mn>
+  </msubsup>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mfrac>
+    <msub>
+      <mi>F</mi>
+      <mn>0</mn>
+    </msub>
+    <mi>m</mi>
+  </mfrac>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3C9;</mi>
+  <mi>t</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mn>2.17</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \frac{\text{d}^2x}{\text{d}t^2} + 2\gamma \frac{\text{d}x}{\text{d}t} + \omega_0^2 x = \frac{F_0}{m} \sin \omega t \quad (2.17)$$ -->
+
+<p>L'equazione, rispetto a (2.14), non è più omogenea. Si osservi anche che la forza impressa ha una pulsazione <i>&omega;</i> che è in generale diversa da quella propria <i>&omega;</i><sub>0</sub> dell'oscillatore. Vogliamo verificare se (2.17) ammette una soluzione particolare oscillatoria non smorza del tipo <i>x</i> = <i>A</i> sen (<i>&omega;t</i> + <i>&phi;</i>), cioè con la stessa pulsazione della forza impressa. Se la risposta fosse positiva, la soluzione più generale sarebbe</p>
+
+<div class="eq">
+<p><i>x</i>(<i>t</i>) = <i>A</i> sen (<i>&omega;t</i> + <i>&phi;</i>) + <i>a</i> e<sup>&alpha;<sub>1</sub>t</sup> + <i>be</i><sup>&alpha;<sub>2</sub>t</sup></p>
+</div>
+
+<p>e, smorzatosi il fenomeno transitorio in un tempo che è caratterizzato dal coefficiente di smorzameneto <i>&gamma;</i>, resterebbe l'oscillazione permanente <i>x</i> = <i>A</i> sen (<i>&omega;t</i> + <i>&phi;</i>) dovuta alla forza impressa. <br> Inseriamo pertanto <i>x</i> = <i>A</i> sen (<i>&omega;t</i> + <i>&phi;</i>) nella (10.17) ottenendo:</p>
+
+<div class="eq">
+<p>−<i>&omega;</i><sup>2</sup> <i>A</i>sen (<i>&omega;t</i> + <i>&phi;</i>) + 2<i>&gamma;A</i>cos (<i>&omega;t</i> + <i>&phi;</i>) + <i>&omega;</i><sub>0</sub><sup>2</sup> <i>A</i> sen (<i>&omega;t</i> + <i>&phi;</i>) = <i>F</i><sub>0</sub>/<i>m</i> sen (<i>&omega;t</i> + <i>&phi;</i>)</p>
+</div>
+
+<p>Di qui, sviluppando sen (<i>&omega;t</i> + <i>&phi;</i>) e cos (<i>&omega;t</i> + <i>&phi;</i>), abbiamo:</p>
+
+<div class="eq">
+<p>[(<i>&omega;</i><sub>0</sub><sup>2</sup> − <i>&omega;</i><sup>2</sup>)<i>A</i>cos <i>&phi;</i> − 2<i>&gamma;&omega;A</i> sen <i>&omega;t</i> + [(<i>&omega;</i><sub>0</sub><sup>2</sup> − <i>&omega;</i><sup>2</sup>) <i>A</i> sen <i>&phi;</i> + 2<i>&gamma;&omega;A</i>] cos <i>&phi;t</i> = <i>F</i><sub>0</sub>/<i>m</i> sen <i>&omega;t</i></p>
+</div>
+
+<p>L'uguaglianza deve valere per qualunque valore di <i>t</i> e così deve essere:</p>
+
+<div class="eq">
+<p>[(<i>&omega;</i><sub>0</sub><sup>2</sup> − <i>&omega;</i><sup>2</sup>)<i>A</i>cos <i>&phi;</i> − 2<i>&gamma;&omega;A</i> = <i>F</i><sub>0</sub>/<i>m</i>, &emsp; (<i>&omega;</i><sub>0</sub><sup>2</sup> − <i>&omega;</i><sup>2</sup>)<i>A</i>sen <i>&phi;</i> + 2 <i>&gamma;&omega;A</i> cos <i>&phi;</i> = 0</p>
+</div>
+
+<p>da cui finalmente si ricava</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mfrac>
+    <msub>
+      <mi>F</mi>
+      <mn>0</mn>
+    </msub>
+    <mi>m</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msqrt>
+      <mo stretchy="false">(</mo>
+      <msubsup>
+        <mi>&#x3C9;</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>&#x3C9;</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>4</mn>
+      <msup>
+        <mi>&#x3B3;</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi>&#x3C9;</mi>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>tan</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3D5;</mi>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>&#x3B3;</mi>
+      <mi>&#x3C9;</mi>
+    </mrow>
+    <mrow>
+      <msubsup>
+        <mi>&#x3C9;</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>&#x3C9;</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mn>2.18</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ A = \frac{F_0}{m} = \frac{1}{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\gamma^2\omega^2}}, \quad \tan \phi = - \frac{2\gamma\omega}{\omega_0^2 - \omega^2} \quad (2.18)$$ -->
+
+<p>Riassumendo le conclusioni contenute nelle (2.18):</p>
+
+<ul>
+	<li><p>a una sollecitazione sinusoidale l'oscillatore armonico risponde con uno spostamento sinusoidale: la pulsazione non è quella propria <i>&omega;</i><sub>0</sub>, bensì è uguale a quelal voluta <i>&omega;</i>, impressa dall'esterno;</p></li>
+	<li><p>lo spostamento è sfasato rispetto alla forza;</p></li>
+	<li><p>la risposta dell'oscillatore non è la stessa qualunque sia <i>&omega;</i>: ampiezza e fase dipendono dal valore di <i>&omega;</i>;</p></li>
+	<li><p><i>A</i> e <i>&phi;</i> non dipendono dalle condizioni iniziali, da cui dipendono solo le costanti <i>a</i> e <i>b</i> della parte transitoria.</p></li>
+</ul>
+
+<h2>Studio della risposta in funzione di <i>&omega;</i></h2>
+
+<table class="noborder">
+<tr><th rowspan="2">1)</th> <td><i>&omega;</i> « <i>&omega;</i><sub>0</sub></td> <td><i>A</i> ≈ <i>F</i><sub>0</sub>/<i>k</i></td> <td><i>&phi;</i> ≈ 0</td>
+<tr><td></td> <td><i>x</i> ≈ (<i>F</i><sub>0</sub>/<i>k</i>) sen <i>&omega;t</i></td> <td>in fase con la forza</td> </tr>
+<tr> <td></td> <td></td> <td colspan="2">il parametro dominante è <i>k</i>, costante elastica dell'oscillatore;</td></tr>
+<tr><th rowspan="2">2)</th> <td><i>&omega;</i> » <i>&omega;</i><sub>0</sub></td> <td><i>A</i> ≈ <i>F</i><sub>0</sub>/<i>k</i></td> <td><i>&phi;</i> ≈ 0</td></tr>
+<tr><td></td> <td><i>x</i> ≈ −(<i>F</i><sub>0</sub>/<i>m&omega;</i><sup>2</sup>) sen <i>&omega;t</i></td> <td>in opposizione di fase con la forza</td> </tr>
+<tr> <td></td> <td></td> <td colspan="2">il parametro dominante è <i>km</i>, massa dell'oscillatore;</td></tr>
+
+<tr><th rowspan="2">3)</th> <td><i>&omega;</i> = <i>&omega;</i><sub>0</sub></td> <td><i>A</i> = <i>F</i><sub>0</sub>/2<i>m&gamma;&omega;</i><sub>0</sub></td> <td><i>&phi;</i> = &pi;/2</td></tr>
+<tr><td></td> <td><i>x</i> ≈ −(<i>F</i><sub>0</sub>/2<i>m&omega;</i><sup>2</sup>) cos <i>&omega;t</i></td> <td>in quadratura di fase con la forza</td></tr>
+<tr><tr> <td></td> <td></td> <td colspan="2">il parametro dominante è <i>&gamma;</i>, <b>coefficiente di smorzamento</b>. Si parla in questo caso di <b>risonanza</b>.</td> </tr>
+</table>
+
+<p>Per trovare quando è massima la risposta, cioè quando è massiam l'ampiezza del moto <i>A</i>(<i>&omega;</i>), basta annullare d<i>A</i>/d<i>&omega;</i> e si trova che ciò avviene alla pulsazione</p>
+
+<div class="eq">
+<p><i>&omega;</i> = <i>&omega;<sub>M</sub></i> = sqrt (<i>&omega;<sub>0</sub><sup>2</sup> − 2<i>&gamma;</i><sup>2</sup>) &lt; <i>&omega;</i><sub>0</sub></p>
+</div>
+
+<p>Il massimo però esiste solo se <i>&omega;<sub>0</sub><sup>2</sup> &gt; 2<i>&gamma;</i><sup>2</sup>, cioè per smorzamenti deboli, altrimenti <i>A</i>(<i>&omega;</i> ha un andamento monotono decrescente (prime due curve in basso nella Fig. 2.42). Il valore di <i>A</i> nel massimo è</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>A</mi>
+    <mi>M</mi>
+  </msub>
+  <mo>=</mo>
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3C9;</mi>
+    <mi>M</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <msub>
+      <mi>F</mi>
+      <mn>0</mn>
+    </msub>
+    <mrow>
+      <mn>2</mn>
+      <mi>m</mi>
+      <mi>&#x3C9;</mi>
+      <msqrt>
+        <msubsup>
+          <mi>&#x3C9;</mi>
+          <mn>0</mn>
+          <mn>2</mn>
+        </msubsup>
+        <mo>&#x2212;</mo>
+        <mi>&#x3B3;</mi>
+      </msqrt>
+    </mrow>
+  </mfrac>
+  <mo>&gt;</mo>
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>&#x3C9;</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ A_M = A(\omega_M) = \frac{F_0}{2m\omega \sqrt{\omega_0^2 -\gamma}} \gt A(\omega_0) $$ -->
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

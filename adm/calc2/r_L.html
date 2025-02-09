@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Lunghezza di un arco di curva">
+	<title>Lunghezza di un arco di curva</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Lunghezza di un arco di curva</h1>
+
+<p>Un problema molto naturale di calcolo infinitesimale è quello di definire cosa si intenda per lunghezza di un arco di curva, e calcolaral. Un modo altrettanto naturale di impostare il problema è quello di considerare una spezzata inscritta sull'arco di curva e calcolarne la lunghezza. Approsimando sempre meglio, la curva con spezzate via via più fini (cioè con un numero crescente di segmenti, di lunghezza sempre più piccola), si dovrebbe ottenere, come limtie, la lunghezza della curva stessa. <br> Consideriamo per semplicità un arco di curva piana e regolare <b>r</b>: [<i>a,b</i>] ⟶ ℝ<sup>2</sup>. Per mettere in pratica questa idea, suddividiamo l'intervallo [<i>a,b</i>] in <i>n</i> intervalli uguali mediante punti <i>t</i><sub>0</sub> = <I>a</i>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t<sub>n</sub></i> = <i>b</i> e consideriamo i punti corrispondenti sulla curva:</p>
+
+<div class="eq">
+<p>(<i>x</i>(<i>t<sub>i</sub></i>), <i>y</i>(<i>t<sub>i</sub></i>)), <i>i</i> = 0,1,2,..,<i>n</i></p>
+</div>
+
+<p>La lunghezza della spezzata che unisce questi punti è</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <mi>x</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">)</mo><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>=</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <mi>y</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <mi>y</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ \sum_{i=1}^n \sqrt{(x(t_i) - x(t_{i-1}))^2  + (y(t_i) - y(t_{i-1)})^2} $$ -->
+
+<p>Applicando alle funzioni <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>) il teorema di Lagrange su ognuno degli intervallini [<i>t</i><sub><i>i</i> − 1</sub>, <i>t<sub>i</sub></i>], si trova che esistono punti <i>&xi;<sub>i</sub>, &eta;<sub>i</sub></i> &in; [<i>t</i><sub><i>i</i> − 1</sub>, <i>t<sub>i</sub></i>] tali che l'espressione appena scritta è uguale a</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msqrt>
+    <mo stretchy="false">[</mo>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3BE;</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">]</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">[</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3B7;</mi>
+      <mi>i</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">]</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>t</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3BE;</mi>
+      <mi>i</mi>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>&#x3B7;</mi>
+      <mi>i</mi>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ \sum_{i=1}^n \sqrt{[x'(\xi_i)(t_i - t_{i-1})]^2  + [y'(\eta_i)(t_i - t_{i-1})]^2}  = \sum_{i=1}^n (t_i - t_{i-1}) \sqrt{x'(\xi_i)^2 + y'(\eta_i)^2} $$ -->
+
+<p>Poiché per <i>n</i> ⟶ &infin; l'ampiezza degli intervallini tende a zero, sarà <i>&xi;<sub>i</sub></i> ≃ <i>&eta;<sub>i</sub></i> e il limite dell'espressione appena scritta coincide col limite delle somme di Cauchy della funzione <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">  <msqrt>    <msup>      <mi>x</mi>      <mo data-mjx-alternate="1">&#x2032;</mo>    </msup>    <mo stretchy="false">(</mo>
+    <mi>t</mi>     <msup>      <mo stretchy="false">)</mo>      <mn>2</mn>    </msup>    <mo>+</mo>    <msup>      <mi>y</mi>      <mo data-mjx-alternate="1">&#x2032;</mo>    </msup>    <mo stretchy="false">(</mo>    <mi>t</mi>    <msup>      <mo stretchy="false">)</mo>      <mn>2</mn>    </msup>  </msqrt></math>. La lunghezza della curva sarà dunque uguale all'integrale</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>L</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ L = \int_a^b \sqrt{x'(t)^2 + y'(t)^2} \, \text{d}t$$ -->
+
+<p>Si pone anche</p>
+
+<!-- $$\text{d}s = \sqrt{x'(t)^2 + y'(t)^2}\text{d}t $$ -->
+
+<p>che si chiama <i>lunghezza d'arco elementare</i>. Il suo significato intuitivo è quello di spazio percorso dal punto mobile nell'intervallo di tempo "infinitesimo" d<i>t</i>. Si può anche vedere d<i>s</i> al modo seguente: nell'intervallo di tempo [<i>t, t</i> + d<i>t</i>] il punto si sposta di un incremento (d<i>x</i>,d<i>y</i>) dato approsimativamente da d<i>x</i> = <i>x</i>'(<i>t</i>) d<i>t</i>, d<i>y</i> = <i>y</i>'(<i>t</i>)d<i>t</i> (abbiamo approssimato l'incremento della funzione con il suo differenziale, come è lecito fare, a meno di infinitesimiu di ordine superiore). Lo spazio percorso è quindi in prima approssimazione</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mi>d</mi>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <mi>d</mi>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">)</mo>Rcos &theta;
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ \sqrt{(dx)^2 + (dx)^2} = \sqrt{(x'(t))^2 + (y'(t))^2}  \text{d}t $$  -->
+
+<p>cioè, d<i>s</i>. (Abbiamo applicato una versione infinitesimale del Teorema di Pitagora, analogamente a quanto già visto a proposito del calcolo della lunghezza del grafico di una funzione). <br> Si noti che la quantità sqrt[<i>x</i>'(<i>t</i>) + <i>y</i>'(<i>t</i>)] non è altro che il <i>modulo del vettore velocità</i>. Si può anche scrivere, quindi, per una generica curva regonale in ℝ<sup><i>m</i></sup>,</p>
+
+<div class="eq">
+<p>d<i>s</i> = |<b>r</b>'(<i>t</i>)| d<i>t</i> &emsp; ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>) d<i>t</i> </p>
+</div>
+
+<p>La formula della lunghezza è quindi una riformulazione integrale della relazione "spazio = velocità x tempo".</p>
+
+<p><b>Esempio 2.5.1</b>. Per un arco di circonferenza</p>
+
+<table class="noborder centertable">
+<tr><td><i>x</i> = <i>R</i>cos &theta;</td> <td rowspan="2"><i>&theta;</i> &in; [<i>&theta;</i><sub>1</sub>, <i>&theta;</i><sub>2</sub>]</td> </tr>
+<tr><td><i>y</i> = <i>R</i>sin &theta;</td> </tr>
+</table>
+
+<p>è <b>r'</b>(<i>&theta;</i>) = (−<i>R</i> sin <i>&theta;</i>, <i>R</i> cos &theta;), |<b>r'</b>(<i>&theta;</i>)| = <i>R</i>, e d<i>s</i> = Rd<i>&theta;</i>; <i>L</i> = (<i>&theta;</i><sub>2</sub> − <i>&theta;</i><sub>1</sub>)&emsp;■</p>
+
+<p><b>Esempio 2.5.3</b>. Per l'arco di elica cilindrica</p>
+
+<table class="noborder centertable">
+<tr><td><i>x</i> = <i>R</i> cos t</td> <td rowspan="3"><i>t</i> &in; [0,2&pi;]</td> </tr>
+<tr><td><i>y</i> = <i>R</i> sin t</td> </tr>
+<tr><td><i>z</i> = <i>pt</i></td></tr>
+</table>
+
+<p>si ha:</p>
+
+<div class="eq">
+<p><b>r'</b>(<i>t</i>) = (<i>R</i> sin <i>t</i>, <i>R</i> cos <i>t</i>, <i>p</i>)</p>
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>=</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>z</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>t</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mo>=</mo>
+  <msqrt>
+    <msup>
+      <mi>R</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>p</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>L</mi>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mi>&#x3C0;</mi>
+    </mrow>
+  </msubsup>
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>&#x3C0;</mi>
+  <msqrt>
+    <msup>
+      <mi>R</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>p</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ \text{d}s = \sqrt{x'(t)^2 + y'(t)^2 + z'(t)^2} \, \text{d}t = \sqrt{R^2 + p^2} \,\text{d}t \quad L = \int_0^{2\pi} \text{d}s = 2\pi \sqrt{R^2 + p^2} $$ -->
+
+<p><b>Esempio 2.5.4</b>. Per una curva piana in forma polare</p>
+
+<div class="eq">
+<p><i>&rho;</i> = <i>f</i> (<i>&theta;</i>)</p>
+</div>
+
+<p>ovvero <b>r</b>(<i>&theta;</i>) = (<i>f</i>(<i>&theta;</i>) cos <i>&theta;</i>, <i>f</i> (<i>&theta;</i>) sin <i>&theta;</i>) si ha</p>
+
+<div class="eq">
+<p><i>f'</i> (<i>&theta;</i>) cos <i>&theta;</i> − <i>f</i> (<i>&theta;</i>) sin <i>&theta;</i>, <i>f'</i> (<i>&theta;</i>) sin <i>&theta;</i> + <i>f</i> (<i>&theta;</i>) cos <i>&theta;</i>)</p>
+</div>
+
+<p>dunque</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>d</mtext>
+  <mi>s</mi>
+  <mo>=</mo>
+  <msqrt>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi>&#x3B8;</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>f</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>&#x3B8;</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>&#x3B8;</mi>
+</math>
+
+<!-- $$ \text{d}s = \sqrt{f(\theta)^2 + f'(\theta)^2} \,\text{d}\theta $$-->
+
+<p>Ad es. la lunghezza dell'arco di spirale di Archimede <i>&rho;</i> = <i>&theta;</i> per <i>&theta;</i> &in; [0, 2&pi;] è</p>
+
+$$ \begin{align} L &= \int_0^{2\pi} \sqrt{1+ \theta^2}\, \text{d}\theta = [\theta = \Sh t; \text{d}\tehta = Ch t \text{d}t]\\
+&= \int_0^{SettSh2\pi} (Ch t)^2 \text{d}t = \frac{1}{2} [\Sh t \Ch t + t}_0^{SettSh2\pi} =
+\\ &= \frac{1}{2} ( 2\pi \sqrt{1+4\pi^2} + \log (2\pi + \sqrt{1+4\pi^2]) \end{align}$$
+
+<h2>Parametro arco</h2>
+
+<p>La lunghezza dell'arco <b>r</b>(<i>&tau;</i>) per <i>&tau;</i> da <i>t</i><sub>0</sub> a <i>t</i> è una funzione di <I>t</i>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>s</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mi>t</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msup>
+    <mi mathvariant="bold">r</mi>
+    <mo data-mjx-alternate="$$ \begin{align} L &= \int_0^{2\pi} \sqrt{1+ \theta^2}\, \text{d}\theta = [\theta = \Sh t; \text{d}\tehta = Ch t \text{d}t]\\
+&= \int_0^{SettSh2\pi} (Ch t)^2 \text{d}t = \frac{1}{2} [\Sh t \Ch t + t}_0^{SettSh2\pi} =
+\\ &= \frac{1}{2} ( 2\pi \sqrt{1+4\pi^2} + \log (2\pi + \sqrt{1+4\pi^2]) \end{align}$$1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3C4;</mi>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mtext>d</mtext>
+  <mi>&#x3C4;</mi>
+</math>
+
+<!-- $$s(t) = \int_{t_0}^t |\mathbf{r'}(\tau)|\text{d}\tau $$ -->
+
+<p>Se si è in grtado di calcolare esplicitamente tale funzione, e poi di invertirla, esprimendo <i>t</i> come funzione di <i>s</i>, è possiible riparametrizzare la curva in funzione del parametro arco <i>s</i>.<br> Ad es., per l'elica cilindrica dell'esempio precedente è</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>s</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>t</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mi>t</mi>
+  </msubsup>
+  <msqrt>
+    <msup>
+      <mi>R</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>p</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mtext>d</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>&#x3C4;</mi>
+  <mo>=</mo>
+  <mi>t</mi>
+  <msqrt>
+    <msup>
+      <mi>R</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>p</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$s(t) = \int_{t_0}^t \sqrt{R^2 + p^2} \text{d}\, \tau = t \sqrt{R^2 + p^2} $$ -->
+
+<p>da cui <i>t</i> = <i>s</i>/sqrt(R<sup>2</sup> + p<sup>2</sup>). Si può allora riparamettrizzare la curva come</p>
+
+$$ x = R \cos \frac{s}{\sqrt{R^2 + p^2}}\\ y = R \cos \frac{s}{\sqrt{R^2 + p^2}} $$ -->
+
+<p>ed <i>s</i> viene allora detto <i>parametro arco</i>. Ciò che ha di speciale questa parametrizzazione è che il parametro <i>s</i> è esattamente lo spazio percorso da 
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
