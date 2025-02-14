@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cauchy sequence"/>
+    <title>Cauchy sequence</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<article>
+
+<h1>Cauchy sequence</h1>
+
+<p>The definifiont of convergence of a sequence of real numbers requires knowledge of the limit in order to check whether the sequence converges. One can guess at the limit (if any) and then checl the candidate against the definition. One of the many contributions of the great French analyst Augustin Cauchy (1789-1857) is a criterion of convergence that applies to all sequences in ℝ and that can be checked by looking only at the sequence itself, not a proposed limit. Cauchy presented the criterion in his <i>Cours d'analyse</i> 1821.</p>
+      
+<p><b>Definition 2.4.1</b> A sequence {<i>a<sub>n</sub></i>} in a metric space <i>X</i> is a said to be a <i>Cauchy sequence</i> (or <i>fundamental sequence</i>) if &forall;<i>&epsilon;</i> &gt;0, ∃<i>N</i> &in; ℕ  (dependente on <i>&epsilon;</i>) such that</p>
+
+<div class="eq">
+<p><i>n,m</i> &ge; <i>N</i> &emsp;⇒ &emsp; |<i>a<sub>n</sub></i> − <i>a<sub>m</sub></i>| &lt; <i>&epsilon;</i></p>
+</div>
+
+<p>Intuitively, the terms of a Cauchy sequence squeeze together as the index increases. &emsp;■</p>
+
+<p>We have seen that the converse of <a href="subsequences.html">Theorem 2.3.2</a> is not generally true. However for a Cauchy sequence it is as the following shows.</p>
+
+<p><b>Theorem 2.4.2</b>. If a Cauchy sequence {<i>a<sub>n</sub></i>} has a subsequence {<i>a<sub>n<sub>k</sub></sub></i>} which converges to <i>L</i>, then {<i>a<sub>n</sub></i>} itself converges to <i>L</i>.
+
+<p><b>Proof</b>. Let {<i>a<sub>n</sub></i>} be a Cauchy sequence. Then by definition</p>
+
+<div class="eq">
+<p><i>n,m</i> &ge; <i>n</i><sub>0</sub> &emsp;⇒ &emsp; |<i>a<sub>n</sub></i> − <i>a<sub>m</sub></i>| &lt; <i>&epsilon;</i>/2</p>
+</div>
+
+<p>and ∃<i>k</i><sub>0</sub> &in; ℕ such that</p>
+
+<div class="eq">
+<p><i>k</i> &ge; <i>k</i><sub>0</sub> &emsp;⇒ &emsp; |<i>a<sub>n<sub>k</sub></sub></i> − <i>L</i>| &lt; <i>&epsilon;</i>/2</p>
+</div>
+
+<p>Now for any <i>n</i> &ge; <i>n</i><sub>0</sub>, choose a <i>k'</i> greater than both <i>n</i><sub>0</sub> and <i>k</i><sub>0</sub>. Then <i>n<sub>k'</sub></i> &ge; <i>k'</i> &ge; <i>n</i><sub>0</sub> and we find</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − <i>L</i>| = |<i>a<sub>n</sub></i> − <i>a<sub>n<sub>k'</sub></sub></i> + <i>a<sub>n<sub>k'</sub></sub></i> − <i>L</i>| &le; |<i>a<sub>n</sub></i> − <i>a<sub>n<sub>k'</sub></sub></i>| + |<i>a<sub>n<sub>k'</sub></sub></i> − <i>L</i>| &lt; <i>&epsilon;</i>/2 + <i>&epsilon;</i>/2 = <i>&epsilon;</i></p>
+</div>
+
+<p>Hence the result.&emsp;□</p>
+
+<p><b>Theorem 2.4.3</b> (<i>Cauchy criterion</i>). Let {<i>a<sub>n</sub></i>} be a sequence of real numbers. The sequence is Cauchy if and only if it converges to some limit. (i.e. Every convergent sequence is a Cauchy sequence)</p>
+
+<p><b>Proof</b>. (Proof of ⇒: Every convergent sequence is Cauchy) Suppose that <i>L</i> is the limit of {<i>a<sub>n</sub></i>} and let <i>&epsilon;</i> &gt;. Then ∃<i>N</i> &in; ℕ such that</p>
+
+<div class="eq">
+<p><i>n</i> &ge; <i>N</i> &emsp;⇒ &emsp; |<i>a<sub>n</sub></i> − <i>L</i>| &lt; <i>&epsilon;</i>/2</p>
+</div>
+
+<p>Thus,</p>
+
+<div class="eq">
+<p><i>n,m</i> &ge; <i>N</i> &emsp;⇒ &emsp; |<i>a<sub>n</sub></i> − <i>a<sub>m</sub></i>| &le; |<i>a<sub>n</sub></i> − <i>L</i>| + |<i>a<sub>m</sub></i> − <i>L</i>| &lt; <i>&epsilon;</i>/2 + <i>&epsilon;</i>/2 = <i>&epsilon;</i></p>
+</div>
+
+<p>thus {<i>a<sub>n</sub></i>} is a Cauchy sequence.</p>
+
+<p><b>Proof of ⇐</b>. Let {<i>a<sub>n</sub></i>} be a Cauchy sequence. Then, {<i>a<sub>n</sub></i>} is bounded and by the <a href="subsequences.html">Bolzano–Weierstrass theorem</a>, it contains a convergent subsequence {<i>a<sub>n<sub>k</sub></sub></i>}. Denote its limit by <i>L</i>. Then, it follows from Theorem 2.4.2, that {<i>a<sub>n</sub></i>} converges to <i>L</i>, as needed. This completes the proof.&emsp;□</p>
+
+<p>The converse of Theorem 2.4.3, namely, “every Cauchy sequence converges,” is not always true; We saw earlier that there are Cauchy sequences of rational numbers (like the divide
+and average rule’s output) that do not converge to rational numbers. Such a Cauchy sequence “would” converge if the presumed limit existed in the set of interest. In the set of all rational numbers ℚ, any sequence that converges to an irrational number ends up in a hole, or gap, in ℚ.</p>
+
+<section aria-label="End">
+<a href="subsequences.html">&#171;Subsequences: The Bolzano–Weierstrass theorem</a>
+<a href="index.html">Index</a>
+<a href="seriesegnovar.html">Serie a termini di segno variabile&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

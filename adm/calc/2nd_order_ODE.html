@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Second order linear differential equations">
+	<title>Second order linear differential equations</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Second order linear differential equations</h1>
+
+<p>A second order differential equation is said linear if it is of the form</p>
+
+<div class="eq">
+<p><i>a</i><sub>2</sub>(<i>t</i>)<i>y</i>′′ + <i>a</i><sub>1</sub>(<i>t</i>)<i>y</i>′ + <i>a</i><sub>0</sub>(<i>t</i>)<i>y</i> = <i>g</i>(<i>t</i>) &emsp;11.5.1</p>
+</div>
+
+<p>where the coefficients <i>a<sub>i</sub></i> and <i>g</i>(<i>t</i>) are functions defined and continous in an interval <i>I</i>. If <i>g</i> is null, the equation is said homogeneous, otherwise non-homogeneous. If the functions <i>a<sub>i</sub></i> are constants, the euqation with constant coefficients (<i>g</i> can instead depend on <i>t</i>), otherwise it is said equation with variable coefficients.<br> The reason why the equation is said linear is the following. If we defnote by <i>Ly</i>(<i>t</i>) the left hand side of equation 11.5.1, we note that the operator</p>
+
+<div class="eq">
+<p><i>L</i>: C<sup>2</sup>(<i>I</i>) ⟶ C<sup>0</sup>(<i>I</i>)<br>
+<i>L</i>: <i>y</i>(<i>t</i>) ⟼ <i>Ly</i>(<i>t</i>)</p>
+</div>
+
+<p>is a linear operator between these space of functions. Indeed, in the hypothesis of continuity of the coefficients, if <i>u</i> &in; C<sup>2</sup>(<i>I</i>)  we have that <i>Lu</i> &in; C<sup>0</sup>(<i>I</i>) ; moreover, if <i>y</i><sub>1</sub>,<i>y</i><sub>2</sub> &in; C<sup>2</sup>(<i>I</i>)  and <i>&lambda;</i><sub>1</sub>, &lambda;<sub>2</sub> &in; ℝ, then</p>
+
+<div class="eq">
+<p><i>L</i>(&lambda;<sub>1</sub><i>y</i><sub>1</sub> + &lambda;<sub>2</sub><i>y</i><sub>2</sub>) = &lambda;<sub>1</sub> <i>Ly</i><sub>1</sub> + <i>&lambda;</i><sub>2</sub><i>L</i><i>y</i><sub>2</sub></p>
+</div>
+
+<p>We shall study the importance of the linearity of <i>L</i>, when determining the structure of the <a href="general_integral.html">general integral</a> of the equation 11.5.1</p>
+
+<p>Consider <i>f</i>(<i>x</i>) = |<i>x</i>|<sup>3</sup> in ℝ. Then <i>f</i>'(x) = 3<i>x</i>|<i>x</i>| and <i>f</i>''(<i>x</i>) = 6|<i>x</i>|. Clearly, <i>f</i>''(<i>x</i>) = 6|<i>x</i>| isn't differentiable (at 0).</p>
+
+<p><b>Example 1</b>.</p>
+
+<div class="eq">
+<p><i>y''</i> + 5<i>y</i> = <i>x</i></p>
+</div>
+
+<p>is second order, linear, non homogeneous and with constant coefficients.</p>
+
+<div class="eq">
+<p><i>y</i>' + <i>x</i><sup>2</sup> <i>y</i> = <i>e<sup>x</sup></i></p>
+</div>
+
+<p>is first order, linear, non homogeneous.</p>
+
+<div class="eq">
+<p><i>yy''</i> + <i>y'</i> = 0</p>
+</div>
+
+<p>is non linear, second order, homogeneous.</p>
+
+<p><b>Example 2</b>. The simple second order equation is</p>
+
+<div class="eq">
+<p><i>y''</i>(<i>t</i>) = 0</p>
+</div>
+
+<p>It is equivalent to <i>y'</i>(<i>t</i>) = <i>c</i><sub>1</sub> and thus <i>y</i>(<i>t</i>) = <i>c</i><sub>1</sub><i>t</i> + <i>c</i><sub>2</sub> with <i>c</i><sub>1</sub> and <i>c</i><sub>2</sub> arbitraty constant. So the only solutions of this equation are all the first degree polynomials .&emsp;■</p>
+
+<p>We shall see that the general integral of a second order linear differential equation depends on two arbitrary parameters. To select a particular solutions we must assign <i>two</i> condition of the type:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>t</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>0</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>y</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>t</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+<mtext>&emsp;11.5.2</mtext>
+</math>
+
+<!-- $$\begin{cases}
+y(t_0) = y_0\\
+y'(t_0) = y_1
+\end{cases} $$ -->
+
+<p>These two conditions along with equation 11.5.1 represent the Cauchy problem.</p>
+
+<p><b>Example 3 (A mass on a spring)</b>. Consider a mass <i>m</i> attached to the end of a spring, lying on a horizontal surface. Let <i>y</i>(<i>t</i>) be the position of the point on the horizontal surface with respect to the equilibrium position.  Then <i>y</i> satisfies Hooke's Law</p>
+
+<div class="eq">
+<p><i>my''</i> = −<i>ky</i></p>
+</div>
+
+<p>with <i>k</i> &ge; 0, the spring constant. The equation can be rewritten in the form</p>
+
+<div class="eq">
+<p><i>y''</i> + <i>&omega;</i><sup>2</sup><i>y</i> = 0</p>
+</div>
+
+<p>with <i>&omega;</i><sup>2</sup> = <i>k</i>/<i>m</i>, and it is known as <i>harmonic oscillator</i> equation. It is a linear second order equations with consant coefficients. <br> If on the point mass an external force would act (dependent only on time), the equation would be rewritten as</p>
+
+<div class="eq">
+<p><i>y''</i> +<i>&omega;</i><sup>2</sup><i>y</i> = <i>f</i>(<i>t</i>)</p>
+</div>
+
+<p>(where <i>f</i> represents the force by mass unit), that is it wouldn't be homogeneous anymore. <br> In the presence of friction proportional to speed, the equation would be</p>
+
+<div class="eq">
+<p><i>y''</i> +<i>hy'</i> + <i>&omega;</i><sup>2</sup><i>y</i> = 0</p>
+</div>
+
+<p>with <i>h</i> positive constant. All these examples are particular cases of equation 11.5.1.  A particular solution is obtained by assigning the initial speed and position of the point mass at an instant <i>t</i><sub>0</sub>.  For this reason we often refer to conditions 11.5.2 as <b>initial conditions</b>.&emsp;■</p>
+
+<p>If the coefficient <i>a</i><sub>2</sub>(<i>t</i>) in equation 11.5.1 is never zero, we can divide both sides of the equation by this term, obtaining the canonical (or normal, or standard) form, that has the coefficient of the leading derivative equal to 1</p>
+
+<div class="eq">
+<p><i>y''</i> + <i>a</i>(<i>t</i>) <i>y'</i> + <i>b</i>(<i>t</i><i>y</i> = <i>f</i>(<i>t</i>)</p>
+</div>
+
+<p>The following result holds for second order linear differential equations:</p>
+
+<p id="uniqueness"><b>Theorem 11.5.3</b>. If <i>a,b,f</i> are continuous functions in the interval [<i>&alpha;&beta;</i>], <i>t</i><sub>0</sub> &in;  [<i>&alpha;&beta;</i>], <i>y</i><sub>0</sub>,<i>y</i><sub>1</sub> &in; ℝ, the Cauchy problem</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>y</mi>
+            <mo data-mjx-alternate="1">&#x2033;</mo>
+          </msup>
+          <mo>+</mo>
+          <mi>a</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <msup>
+            <mi>y</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+          <mo>+</mo>
+          <mi>b</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>t</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>0</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>y</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>t</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{cases}
+y'' + a(t) y' + b(t) y = f(t)\\
+y(t_0) = y_0\\
+y'(t_0) = y_1
+\end{cases} $$ -->
+
+<p>has a unique solution <i>y</i>(<i>t</i>) &in; C<sup>2</sup>([<i>&alpha;, &beta;</i>].</p>
+
+<p>As usual this solution would be found by imposting the initial conditions to the expression of the general integral. We next investigate how to write the general integral.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="general_integral.html">The general integral of the differential equation»</a>
+</section>
+
+</article>
+
+</body>
+</html>

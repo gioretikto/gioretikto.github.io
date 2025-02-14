@@ -21,243 +21,93 @@
 
 <h1>Lunghezza di un arco di curva</h1>
 
-<p>Un problema molto naturale di calcolo infinitesimale è quello di definire cosa si intenda per lunghezza di un arco di curva, e calcolaral. Un modo altrettanto naturale di impostare il problema è quello di considerare una spezzata inscritta sull'arco di curva e calcolarne la lunghezza. Approsimando sempre meglio, la curva con spezzate via via più fini (cioè con un numero crescente di segmenti, di lunghezza sempre più piccola), si dovrebbe ottenere, come limtie, la lunghezza della curva stessa. <br> Consideriamo per semplicità un arco di curva piana e regolare <b>r</b>: [<i>a,b</i>] ⟶ ℝ<sup>2</sup>. Per mettere in pratica questa idea, suddividiamo l'intervallo [<i>a,b</i>] in <i>n</i> intervalli uguali mediante punti <i>t</i><sub>0</sub> = <I>a</i>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t<sub>n</sub></i> = <i>b</i> e consideriamo i punti corrispondenti sulla curva:</p>
+<p>Un problema molto naturale di calcolo infinitesimale è quello di definire cosa si intenda per <i>lunghezza di un arco di curva</i>, e calcolarla. Abbiamo già incontrato un caso particolare di questo problema, nello studio delle funzioni reali di variabile reale, quando abbiamo definito la <a href="../calc/int_L.html">lunghezza del grafico di una funzione</a> <i>f</i>: [<i>a,b</i>] ⟶ ℝ. Ora affronteremo il problema analogo per curve in ℝ<sup><i>m</i></sup>. Il contesto più generale suggerisce di usare un approccio un po' diverso. <br> Un modo altrettanto naturale di impostare il problema è quello di considerare una spezzata inscritta sull'arco di curva e calcolarne la lunghezza. Approsimando sempre meglio, la curva con spezzate via via più fini (cioè con un numero crescente di segmenti, di lunghezza sempre più piccola), si dovrebbe ottenere, come limtie, la lunghezza della curva stessa. <br> Consideriamo per semplicità un arco di curva piana e regolare <b>r</b>: [<i>a,b</i>] ⟶ ℝ<sup>2</sup>. Per mettere in pratica questa idea, suddividiamo l'intervallo [<i>a,b</i>] in <i>n</i> intervalli, ossia consideriamo la <i>partizione</i></p>
 
 <div class="eq">
-<p>(<i>x</i>(<i>t<sub>i</sub></i>), <i>y</i>(<i>t<sub>i</sub></i>)), <i>i</i> = 0,1,2,..,<i>n</i></p>
+<p><i>𝓟</i> = {<i>t</i><sub>0</sub> = <i>a</i>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t</i><sub><i>n</i>-1</sub>, <i>t<sub>n</sub></i> = <i>b</i>}</p>
 </div>
 
-<p>La lunghezza della spezzata che unisce questi punti è</p>
+<p>dell'intervallo [<i>a,b</i>]. Questo significa che <i>t</i><sub>0</sub> &lt; <i>t</i><sub>1</sub> &lt; <i>t</i><sub>2</sub> &lt; <i>t<sub>n</sub></i>, ma i punti non sono necessariamente equispaziati. A <i>𝓟</i> risulta associata la poligonale "inscritta" in <i>&Gamma;</i> costituita dagli <i>n</i> segmenti di estremi <b>r</b>(<i>t</i><sub>j-1</sub>), <b>r</b>(<i>t<sub>j</sub></i>), <i>j</i> = 1,...,<i>n</i>. Indichiamo con <i>L</i>(<i>P</i>) la lunghezza di questa poligonale, evidentemente, si ha</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munderover>
-    <mo data-mjx-texclass="OP">&#x2211;</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>=</mo>
-      <mn>1</mn>
-    </mrow>
-    <mi>n</mi>
-  </munderover>
-  <msqrt>
-    <mo stretchy="false">(</mo>
-    <mi>x</mi>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>t</mi>
-      <mi>i</mi>
-    </msub>
-    <mo stretchy="false">)</mo>
-    <mo>&#x2212;</mo>
-    <mi>x</mi>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>t</mi>
-      <mrow data-mjx-texclass="ORD">
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </msub>
-    <mo stretchy="false">)</mo>
-    <msup>
-      <mo stretchy="false">)</mo><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mtext>d</mtext>
-  <mi>s</mi>
-  <mo>=</mo>
-  <msqrt>
-    <msup>
-      <mi>x</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <mi>t</mi>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <msup>
-      <mi>y</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <mi>t</mi>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-  </msqrt>
-  <mtext>d</mtext>
-  <mi>t</mi>
-</math>
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <mo stretchy="false">(</mo>
-    <mi>y</mi>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>t</mi>
-      <mi>i</mi>
-    </msub>
-    <mo stretchy="false">)</mo>
-    <mo>&#x2212;</mo>
-    <mi>y</mi>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>t</mi>
-      <mrow data-mjx-texclass="ORD">
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo stretchy="false">)</mo>
-      </mrow>
-    </msub>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-  </msqrt>
-</math>
-
-<!-- $$ \sum_{i=1}^n \sqrt{(x(t_i) - x(t_{i-1}))^2  + (y(t_i) - y(t_{i-1)})^2} $$ -->
-
-<p>Applicando alle funzioni <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>) il teorema di Lagrange su ognuno degli intervallini [<i>t</i><sub><i>i</i> − 1</sub>, <i>t<sub>i</sub></i>], si trova che esistono punti <i>&xi;<sub>i</sub>, &eta;<sub>i</sub></i> &in; [<i>t</i><sub><i>i</i> − 1</sub>, <i>t<sub>i</sub></i>] tali che l'espressione appena scritta è uguale a</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munderover>
-    <mo data-mjx-texclass="OP">&#x2211;</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>=</mo>
-      <mn>1</mn>
-    </mrow>
-    <mi>n</mi>
-  </munderover>
-  <msqrt>
-    <mo stretchy="false">[</mo>
-    <msup>
-      <mi>x</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>&#x3BE;</mi>
-      <mi>i</mi>
-    </msub>
-    <mo stretchy="false">)</mo>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>t</mi>
-      <mi>i</mi>
-    </msub>
-    <mo>&#x2212;</mo>
-    <msub>
-      <mi>t</mi>
-      <mrow data-mjx-texclass="ORD">
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </msub>
-    <mo stretchy="false">)</mo>
-    <msup>
-      <mo stretchy="false">]</mo>
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <mo stretchy="false">[</mo>
-    <msup>
-      <mi>y</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>&#x3B7;</mi>
-      <mi>i</mi>
-    </msub>
-    <mo stretchy="false">)</mo>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>t</mi>
-      <mi>i</mi>
-    </msub>
-    <mo>&#x2212;</mo>
-    <msub>
-      <mi>t</mi>
-      <mrow data-mjx-texclass="ORD">
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </msub>
-    <mo stretchy="false">)</mo>
-    <msup>
-      <mo stretchy="false">]</mo>
-      <mn>2</mn>
-    </msup>
-  </msqrt>
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">P</mi>
+  <mo stretchy="false">)</mo>
   <mo>=</mo>
   <munderover>
     <mo data-mjx-texclass="OP">&#x2211;</mo>
     <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
+      <mi>j</mi>
       <mo>=</mo>
       <mn>1</mn>
     </mrow>
     <mi>n</mi>
   </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="bold">r</mi>
   <mo stretchy="false">(</mo>
   <msub>
     <mi>t</mi>
-    <mi>i</mi>
+    <mi>j</mi>
   </msub>
+  <mo stretchy="false">)</mo>
   <mo>&#x2212;</mo>
+  <mi mathvariant="bold">r</mi>
+  <mo stretchy="false">(</mo>
   <msub>
     <mi>t</mi>
     <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
+      <mi>j</mi>
       <mo>&#x2212;</mo>
       <mn>1</mn>
     </mrow>
   </msub>
   <mo stretchy="false">)</mo>
-  <msqrt>
-    <msup>
-      <mi>x</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>&#x3BE;</mi>
-      <mi>i</mi>
-    </msub>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <msup>
-      <mi>y</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <msub>
-      <mi>&#x3B7;</mi>
-      <mi>i</mi>
-    </msub>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-  </msqrt>
+  <mo stretchy="false">|</mo>
 </math>
 
-<!-- $$ \sum_{i=1}^n \sqrt{[x'(\xi_i)(t_i - t_{i-1})]^2  + [y'(\eta_i)(t_i - t_{i-1})]^2}  = \sum_{i=1}^n (t_i - t_{i-1}) \sqrt{x'(\xi_i)^2 + y'(\eta_i)^2} $$ -->
+<!-- $$L(\mathcal{P}) = \sum_{j=1}^n |\mathbf{r}(t_j) - \mathbf{r}(t_{j-1})| $$ -->
 
-<p>Poiché per <i>n</i> ⟶ &infin; l'ampiezza degli intervallini tende a zero, sarà <i>&xi;<sub>i</sub></i> ≃ <i>&eta;<sub>i</sub></i> e il limite dell'espressione appena scritta coincide col limite delle somme di Cauchy della funzione <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">  <msqrt>    <msup>      <mi>x</mi>      <mo data-mjx-alternate="1">&#x2032;</mo>    </msup>    <mo stretchy="false">(</mo>
-    <mi>t</mi>     <msup>      <mo stretchy="false">)</mo>      <mn>2</mn>    </msup>    <mo>+</mo>    <msup>      <mi>y</mi>      <mo data-mjx-alternate="1">&#x2032;</mo>    </msup>    <mo stretchy="false">(</mo>    <mi>t</mi>    <msup>      <mo stretchy="false">)</mo>      <mn>2</mn>    </msup>  </msqrt></math>. La lunghezza della curva sarà dunque uguale all'integrale</p>
+<img src="img/L.png" alt="L"/>
+
+<p>e l'idea è che <i>L</i>(<i>𝓟</i>) approssimi <i>per difetto</i> la lunghezza di <i>&Gamma;</i>. Infatti, anche se non abbiamo ancora dato una definizione rigorosa di lunghezza, vogliamo che questa definizione rispetti la nostra idea intuitiva che <i>il segmento è la più breve linea che congiunge due punti</i>. Alla definizione di lunghzza di <i>&Gamma;</i> si perviene dunque facendo variare in tutti i modi possibili la partizione <i>𝓟</i> e considerando il "più grande" dei numeri <i>L</i>(<i>𝓟</i>) così ottenuti. Naturalmente non è affatto detto che qusto numero "più grande" esista. <br>Precisamente abbiamo:</p>
+
+<p><b>Definizione 2.5.1</b>. Si dice che <i>&Gamma;</i> è <i>rettificabile</i> se</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">P</mi>
+    </mrow>
+  </munder>
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">P</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x393;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&lt;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\sup_{\mathcal{P}} L (\mathcal{P}) = L(\Gamma) \lt \infty $$ -->
+
+<p>dove l'estremo superiore è calcolato al variare di tutte le possibili partizioni <i>𝓟</i> di [<i>a,b</i>]. In tal caso <i>L</i>(<i>&Gamma;</i>) assegna, per definizione, la lunghezza di <i>&Gamma;</i>. &emsp;□</p>
+
+<p>Vorremmo ora poter calcolare effettivamente tale lunghezza, almeno per le curve regolari, con gli strumenti del calcolo integrale e differenziale, come già visto nel caso dei grafici di funzioni. Per arrivare a capire quale formula ci dobbiamo aspettare, ragionimao "cinemanticamente". Sappiamo che <b>r'</b> rappresenta il vettore velocità lungo la curva e che quindi <i>v</i>(<i>t</i>) = |<b>r'</b>(<i>t</i>)| è la velocità scalare. D'altra parte, la lunghezza di una curva rappresenta lo spazio percorso nell'intervallo di tempo [<i>a,b</i>]. Ricordando la relazione</p>
+
+<div class="eq">
+<p>"spazio = velocità x tempo".</p>
+</div>
+
+<p>siamo condotti alla formula:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>L</mi>
@@ -267,20 +117,123 @@
     <mi>a</mi>
     <mi>b</mi>
   </msubsup>
+  <mi>v</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>t</mi>
+</math>
+
+<!-- $$ L = \int_a^b v(t) \,\text{d}t $$ -->
+
+<p>Questa è proprio la formula che assegna la lunghezza di una curva regonale, come afferma il seguente teorema.</p>
+
+<p><b>Teorema 2.5.2</b>. Sia <b>r</b>: [<i>a,b</i>] → ℝ<sup><i>m</i></sup> una curva regolare. Allora <b>r</b> è rettificabile e risulta</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x393;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msup>
+    <mi mathvariant="bold">r</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mtext>d</mtext>
+  <mi>t</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mn>2.5</mn>
+  <mn>.3</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$L(\Gamma) = \int_a^b |\mathbf{r'}(t)|\text{d}t  \quad (2.5.3)$$ -->
+
+<h2>Lunghezza di un grafico</h2>
+
+<p>Osserviamo che nel caso particolare di una curva piana regolare che sia grafico di una funzione, ossia parametrizzata da:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>t</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>t</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">[</mo>
+  <mi>a</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mo stretchy="false">]</mo>
+</math>
+
+<!-- $$ \begin{cases} x = t \\ y=f(t) \end{cases} \; \qquad t \in [a,b] $$ -->
+
+<p>la formula (2.5.3) dà:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x393;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
   <msqrt>
-    <msup>
-      <mi>x</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <mi>t</mi>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
+    <mn>1</mn>
     <mo>+</mo>
     <msup>
-      <mi>y</mi>
+      <mi>f</mi>
       <mo data-mjx-alternate="1">&#x2032;</mo>
     </msup>
     <mo stretchy="false">(</mo>
@@ -297,75 +250,17 @@
   <mi>t</mi>
 </math>
 
-<!-- $$ L = \int_a^b \sqrt{x'(t)^2 + y'(t)^2} \, \text{d}t$$ -->
+<!-- $$L(\Gamma) = \int_a^b \sqrt{1 + f'(t)^2}\,\text{d} t $$ -->
 
-<p>Si pone anche</p>
+<p>come già noto dal calcolo differenziale in una variabile.</p>
 
-<!-- $$\text{d}s = \sqrt{x'(t)^2 + y'(t)^2}\text{d}t $$ -->
+<p>Il prossimo risultato è intuitivo e utile. Lo enunciamo senza dimostrazione.</p>
 
-<p>che si chiama <i>lunghezza d'arco elementare</i>. Il suo significato intuitivo è quello di spazio percorso dal punto mobile nell'intervallo di tempo "infinitesimo" d<i>t</i>. Si può anche vedere d<i>s</i> al modo seguente: nell'intervallo di tempo [<i>t, t</i> + d<i>t</i>] il punto si sposta di un incremento (d<i>x</i>,d<i>y</i>) dato approsimativamente da d<i>x</i> = <i>x</i>'(<i>t</i>) d<i>t</i>, d<i>y</i> = <i>y</i>'(<i>t</i>)d<i>t</i> (abbiamo approssimato l'incremento della funzione con il suo differenziale, come è lecito fare, a meno di infinitesimiu di ordine superiore). Lo spazio percorso è quindi in prima approssimazione</p>
+<p><b>Teorema 2.5.4</b>. Se una curva <b>r</b> è unione di due curve rettificabili <b>r</b><sub>1</sub> e <b>r</b><sub>2</sub>, allora <b>r</b> è rettificabile e <i>L</i>(<i>&Gamma;</i>) = <i>L</i>(<i>&Gamma;</i><sub>1</sub>) + <i>L</i>(<i>&Gamma;</i><sub>2</sub>). <br>La stessa proprietà si estende all'unione di un numero finito qualsiasi di curve rettificabili. In particolare: se una curva <b>r</b> è regolare a tratti, allora è rettificabile, e la sua lunghezza si calcola ancora mediante la (2.5.3) (dove ora la funzione integranda sarà continua a tratti).</p>
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msqrt>
-    <mo stretchy="false">(</mo>
-    <mi>d</mi>
-    <mi>x</mi>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <mo stretchy="false">(</mo>
-    <mi>d</mi>
-    <mi>x</mi>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-  </msqrt>
-  <mo>=</mo>
-  <msqrt>
-    <mo stretchy="false">(</mo>
-    <msup>
-      <mi>x</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <mi>t</mi>
-    <mo stretchy="false">)</mo>
-    <msup>
-      <mo stretchy="false">)</mo>Rcos &theta;
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <mo stretchy="false">(</mo>
-    <msup>
-      <mi>y</mi>
-      <mo data-mjx-alternate="1">&#x2032;</mo>
-    </msup>
-    <mo stretchy="false">(</mo>
-    <mi>t</mi>
-    <mo stretchy="false">)</mo>
-    <msup>
-      <mo stretchy="false">)</mo>
-      <mn>2</mn>
-    </msup>
-  </msqrt>
-  <mtext>d</mtext>
-  <mi>t</mi>
-</math>
+<p>Vediamo ora qualche esempio di calcolo di lunghezza per curve regolari nel piano o nello spazio.</p>
 
-<!-- $$ \sqrt{(dx)^2 + (dx)^2} = \sqrt{(x'(t))^2 + (y'(t))^2}  \text{d}t $$  -->
-
-<p>cioè, d<i>s</i>. (Abbiamo applicato una versione infinitesimale del Teorema di Pitagora, analogamente a quanto già visto a proposito del calcolo della lunghezza del grafico di una funzione). <br> Si noti che la quantità sqrt[<i>x</i>'(<i>t</i>) + <i>y</i>'(<i>t</i>)] non è altro che il <i>modulo del vettore velocità</i>. Si può anche scrivere, quindi, per una generica curva regonale in ℝ<sup><i>m</i></sup>,</p>
-
-<div class="eq">
-<p>d<i>s</i> = |<b>r</b>'(<i>t</i>)| d<i>t</i> &emsp; ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub></sub> <i>f</i>(<i>x</i>) d<i>t</i> </p>
-</div>
-
-<p>La formula della lunghezza è quindi una riformulazione integrale della relazione "spazio = velocità x tempo".</p>
-
-<p><b>Esempio 2.5.1</b>. Per un arco di circonferenza</p>
+<p><b>Esempio 2.5.5</b>. Per un arco di circonferenza</p>
 
 <table class="noborder centertable">
 <tr><td><i>x</i> = <i>R</i>cos &theta;</td> <td rowspan="2"><i>&theta;</i> &in; [<i>&theta;</i><sub>1</sub>, <i>&theta;</i><sub>2</sub>]</td> </tr>
@@ -374,7 +269,7 @@
 
 <p>è <b>r'</b>(<i>&theta;</i>) = (−<i>R</i> sin <i>&theta;</i>, <i>R</i> cos &theta;), |<b>r'</b>(<i>&theta;</i>)| = <i>R</i>, e d<i>s</i> = Rd<i>&theta;</i>; <i>L</i> = (<i>&theta;</i><sub>2</sub> − <i>&theta;</i><sub>1</sub>)&emsp;■</p>
 
-<p><b>Esempio 2.5.3</b>. Per l'arco di elica cilindrica</p>
+<p><b>Esempio 2.5.6</b>. Per l'arco di elica cilindrica</p>
 
 <table class="noborder centertable">
 <tr><td><i>x</i> = <i>R</i> cos t</td> <td rowspan="3"><i>t</i> &in; [0,2&pi;]</td> </tr>
@@ -481,7 +376,7 @@
 
 <!-- $$ \text{d}s = \sqrt{x'(t)^2 + y'(t)^2 + z'(t)^2} \, \text{d}t = \sqrt{R^2 + p^2} \,\text{d}t \quad L = \int_0^{2\pi} \text{d}s = 2\pi \sqrt{R^2 + p^2} $$ -->
 
-<p><b>Esempio 2.5.4</b>. Per una curva piana in forma polare</p>
+<p><b>Esempio 2.5.7</b>. Per una curva piana in forma polare</p>
 
 <div class="eq">
 <p><i>&rho;</i> = <i>f</i> (<i>&theta;</i>)</p>
@@ -528,114 +423,507 @@
 
 <!-- $$ \text{d}s = \sqrt{f(\theta)^2 + f'(\theta)^2} \,\text{d}\theta $$-->
 
-<p>Ad es. la lunghezza dell'arco di spirale di Archimede <i>&rho;</i> = <i>&theta;</i> per <i>&theta;</i> &in; [0, 2&pi;] è</p>
-
-$$ \begin{align} L &= \int_0^{2\pi} \sqrt{1+ \theta^2}\, \text{d}\theta = [\theta = \Sh t; \text{d}\tehta = Ch t \text{d}t]\\
-&= \int_0^{SettSh2\pi} (Ch t)^2 \text{d}t = \frac{1}{2} [\Sh t \Ch t + t}_0^{SettSh2\pi} =
-\\ &= \frac{1}{2} ( 2\pi \sqrt{1+4\pi^2} + \log (2\pi + \sqrt{1+4\pi^2]) \end{align}$$
-
-<h2>Parametro arco</h2>
-
-<p>La lunghezza dell'arco <b>r</b>(<i>&tau;</i>) per <i>&tau;</i> da <i>t</i><sub>0</sub> a <i>t</i> è una funzione di <I>t</i>:</p>
+<p>Ad es. la lunghezza dell'arco di spirale di Archimede con <i>A</i> = 1 e <i>&rho;</i> = <i>&theta;</i> per <i>&theta;</i> &in; [0, 2&pi;] è</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>s</mi>
-  <mo stretchy="false">(</mo>
-  <mi>t</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <msubsup>
-    <mo data-mjx-texclass="OP">&#x222B;</mo>
-    <mrow data-mjx-texclass="ORD">
-      <msub>
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mi>L</mi>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mn>0</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <msqrt>
+          <mn>1</mn>
+          <mo>+</mo>
+          <msup>
+            <mi>&#x3B8;</mi>
+            <mn>2</mn>
+          </msup>
+        </msqrt>
+        <mstyle scriptlevel="0">
+          <mspace width="0.167em"></mspace>
+        </mstyle>
+        <mtext>d</mtext>
+        <mi>&#x3B8;</mi>
+        <mo>=</mo>
+        <mo stretchy="false">[</mo>
+        <mi>&#x3B8;</mi>
+        <mo>=</mo>
+        <mtext>Sh</mtext>
         <mi>t</mi>
-        <mn>0</mn>
-      </msub>
-    </mrow>
-    <mi>t</mi>
-  </msubsup>
-  <mrow data-mjx-texclass="ORD">
-    <mo stretchy="false">|</mo>
-  </mrow>
-  <msup>
-    <mi mathvariant="bold">r</mi>
-    <mo data-mjx-alternate="$$ \begin{align} L &= \int_0^{2\pi} \sqrt{1+ \theta^2}\, \text{d}\theta = [\theta = \Sh t; \text{d}\tehta = Ch t \text{d}t]\\
-&= \int_0^{SettSh2\pi} (Ch t)^2 \text{d}t = \frac{1}{2} [\Sh t \Ch t + t}_0^{SettSh2\pi} =
-\\ &= \frac{1}{2} ( 2\pi \sqrt{1+4\pi^2} + \log (2\pi + \sqrt{1+4\pi^2]) \end{align}$$1">&#x2032;</mo>
-  </msup>
-  <mo stretchy="false">(</mo>
-  <mi>&#x3C4;</mi>
-  <mo stretchy="false">)</mo>
-  <mrow data-mjx-texclass="ORD">
-    <mo stretchy="false">|</mo>
-  </mrow>
-  <mtext>d</mtext>
-  <mi>&#x3C4;</mi>
+        <mo>;</mo>
+        <mtext>d</mtext>
+        <mi>&#x3B8;</mi>
+        <mo>=</mo>
+        <mtext>Ch</mtext>
+        <mi>t</mi>
+        <mstyle scriptlevel="0">
+          <mspace width="0.167em"></mspace>
+        </mstyle>
+        <mtext>d</mtext>
+        <mi>t</mi>
+        <mo stretchy="false">]</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msubsup>
+          <mo data-mjx-texclass="OP">&#x222B;</mo>
+          <mn>0</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>SettSh</mtext>
+            <mn>2</mn>
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <mo stretchy="false">(</mo>
+        <mtext>Ch</mtext>
+        <mi>t</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+        <mtext>d</mtext>
+        <mi>t</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">[</mo>
+        <mtext>Sh</mtext>
+        <mi>t</mi>
+        <mtext>Ch</mtext>
+        <mi>t</mi>
+        <mo>+</mo>
+        <mi>t</mi>
+        <msubsup>
+          <mo stretchy="false">]</mo>
+          <mn>0</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>SettSh</mtext>
+            <mn>2</mn>
+            <mi>&#x3C0;</mi>
+          </mrow>
+        </msubsup>
+        <mo>=</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <mi>&#x3C0;</mi>
+        <msqrt>
+          <mn>1</mn>
+          <mo>+</mo>
+          <mn>4</mn>
+          <msup>
+            <mi>&#x3C0;</mi>
+            <mn>2</mn>
+          </msup>
+        </msqrt>
+        <mo>+</mo>
+        <mi>log</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mn>2</mn>
+          <mi>&#x3C0;</mi>
+          <mo>+</mo>
+          <msqrt>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mn>4</mn>
+            <msup>
+              <mi>&#x3C0;</mi>
+              <mn>2</mn>
+            </msup>
+            <mo stretchy="false">]</mo>
+            <mo stretchy="false">)</mo>
+          </msqrt>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
 </math>
 
-<!-- $$s(t) = \int_{t_0}^t |\mathbf{r'}(\tau)|\text{d}\tau $$ -->
+<!-- $$ \begin{align} L &= \int_0^{2\pi} \sqrt{1+ \theta^2}\, \text{d}\theta = [\theta = \text{Sh} t; \text{d}\theta = \text{Ch} t \, \text{d}t]\\
+&= \int_0^{\text{SettSh}2\pi} (\text{Ch} t)^2 \text{d}t = \frac{1}{2} [\text{Sh} t \text{Ch} t + t]_0^{\text{SettSh}2\pi} =
+\\ &= \frac{1}{2} (2\pi \sqrt{1+4\pi^2} + \log {(2\pi + \sqrt{1+4\pi^2])}} \end{align}$$ -->
 
-<p>Se si è in grtado di calcolare esplicitamente tale funzione, e poi di invertirla, esprimendo <i>t</i> come funzione di <i>s</i>, è possiible riparametrizzare la curva in funzione del parametro arco <i>s</i>.<br> Ad es., per l'elica cilindrica dell'esempio precedente è</p>
+<p><b>Esempio 2.5.8</b>. La curva piana che è grafico della funzione</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>s</mi>
+  <mi>f</mi>
   <mo stretchy="false">(</mo>
   <mi>t</mi>
   <mo stretchy="false">)</mo>
   <mo>=</mo>
-  <msubsup>
-    <mo data-mjx-texclass="OP">&#x222B;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>t</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>t</mi>
+          </mfrac>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>t</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">(</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mfrac>
+            <mn>2</mn>
+            <mi>&#x3C0;</mi>
+          </mfrac>
+          <mo stretchy="false">]</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>t</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$f(t) = \begin{cases}
+t\sin (\frac{1}{t}) & \text{per } t \in (0,\frac{2}{\pi}]\\
+0 & \text{per } t =0\\
+\end{cases}$$ -->
+
+<p>non è rettificabile. Lo dimostriamo provando che l'estremo superiore delle lunghezze delle poligonali inscritte nella curva è infinito.<br>Consideriamo la seguente partizione di [0, 2/&pi;]:</è>
+
+<div class="eq">
+<p><i>𝓟</i> = {<i>t</i><sub>0</sub>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t</i><sub><i>n</i>-1</sub>, <i>t<sub>n</sub></i>}</p>
+</div>
+
+<p>con</p>
+
+<div class="eq">
+<p><i>t<sub>k</sub></i> = 1/(&pi;/2 + <i>k&pi;</i>) &emsp; per <i>k</i> = 0,1,2,..., <i>n</i> &minus; 1; <i>t<sub>n</sub></i> = 0</p>
+</div>
+
+<p>La corrispondente poligonale ha lunghezza:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">P</mi>
+    <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
     <mrow data-mjx-texclass="ORD">
-      <msub>
-        <mi>t</mi>
-        <mn>0</mn>
-      </msub>
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
     </mrow>
-    <mi>t</mi>
-  </msubsup>
+    <mi>n</mi>
+  </munderover>
   <msqrt>
-    <msup>
-      <mi>R</mi>
-      <mn>2</mn>
-    </msup>
+    <mn>1</mn>
     <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mi>k</mi>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo stretchy="false">)</mo>
     <msup>
-      <mi>p</mi>
+      <mo stretchy="false">)</mo>
       <mn>2</mn>
     </msup>
   </msqrt>
-  <mtext>d</mtext>
+  <mo>&#x2265;</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mfrac>
+          <mi>&#x3C0;</mi>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mi>k</mi>
+        <mi>&#x3C0;</mi>
+      </mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mfrac>
+          <mi>&#x3C0;</mi>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>k</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3C0;</mi>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
   <mstyle scriptlevel="0">
-    <mspace width="0.167em"></mspace>
+    <mspace width="1em"></mspace>
   </mstyle>
-  <mi>&#x3C4;</mi>
-  <mo>=</mo>
-  <mi>t</mi>
-  <msqrt>
-    <msup>
-      <mi>R</mi>
-      <mn>2</mn>
-    </msup>
-    <mo>+</mo>
-    <msup>
-      <mi>p</mi>
-      <mn>2</mn>
-    </msup>
-  </msqrt>
+  <mo stretchy="false">(</mo>
+  <mn>2.5</mn>
+  <mn>.9</mn>
+  <mo stretchy="false">)</mo>
 </math>
 
-<!-- $$s(t) = \int_{t_0}^t \sqrt{R^2 + p^2} \text{d}\, \tau = t \sqrt{R^2 + p^2} $$ -->
+<!-- $$L(\mathcal{P_n}) = \sum_{k=1}^n \sqrt{1 + (f(t_k) - f(t_{k-1}))^2} \ge \sum_{k=1}^{n-1} |f(t_k) - f(t_{k-1})| = \sum_{k=1}^{n-1} \left[\frac{1}{\frac{\pi}{2} + k\pi} + \frac{1}{\frac{\pi}{2} + (k+1)\pi} \right] \quad (2.5.9) $$ -->
 
-<p>da cui <i>t</i> = <i>s</i>/sqrt(R<sup>2</sup> + p<sup>2</sup>). Si può allora riparamettrizzare la curva come</p>
+<p>D'altro canto, la stima asintotica</p>
 
-$$ x = R \cos \frac{s}{\sqrt{R^2 + p^2}}\\ y = R \cos \frac{s}{\sqrt{R^2 + p^2}} $$ -->
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mfrac>
+          <mi>&#x3C0;</mi>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mi>k</mi>
+        <mi>&#x3C0;</mi>
+      </mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mfrac>
+          <mi>&#x3C0;</mi>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>k</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3C0;</mi>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>&#x223C;</mo>
+  <mfrac>
+    <mn>2</mn>
+    <mrow>
+      <mi>&#x3C0;</mi>
+      <mi>k</mi>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>per</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>k</mi>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
 
-<p>ed <i>s</i> viene allora detto <i>parametro arco</i>. Ciò che ha di speciale questa parametrizzazione è che il parametro <i>s</i> è esattamente lo spazio percorso da 
+<!-- $$\left[\frac{1}{\frac{\pi}{2} + k\pi} + \frac{1}{\frac{\pi}{2} + (k+1)\pi} \right] \sim \frac{2}{\pi k} \quad\text{per}\quad k \to \infty $$ -->
+
+<p>implica che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mfrac>
+          <mi>&#x3C0;</mi>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mi>k</mi>
+        <mi>&#x3C0;</mi>
+      </mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mfrac>
+          <mi>&#x3C0;</mi>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>k</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3C0;</mi>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$ \sum_{k=1}^{n-1} \left[\frac{1}{\frac{\pi}{2} + k\pi} + \frac{1}{\frac{\pi}{2} + (k+1)\pi} \right] \to \infty $$ -->
+
+<p>perché la serie armonica ∑<sup>&infin;</sup><sub><sub><i>k</i>=1</sub></sub> 2/<i>&pi;k</i> è divergente. Dalla (2.5.9) deduciamo allora che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mi>n</mi>
+  </munder>
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">P</mi>
+    <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$ \sup_n L(\mathcal{P_n}) = \infty $$ -->
 
 <section aria-label="End">
-<a href="epoxides.html">«Epoxides</a>
+<a href="r_L.html">«Lunghezza di un arco di curva</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides»</a>
+<a href="parametro_arco.html">Parametro arco o ascissa curvilinea»</a>
 </section>
 
 </article>

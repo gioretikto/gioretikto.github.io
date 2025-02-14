@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exercises on R and C fields">
+	<title>Exercises on R and C fields</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Exercises on R and C fields</h1>
+
+<ol>
+	<li><p>If <i>r</i> is rational (<i>r</i> &ne; 0) and <i>x</i> is irrational, prove that <i>r</i> + <i>x</i> and <i>rx</i> are irrational.</p></li>
+	<li><p>Prove that there is no rational number whose square is 12.</p></li>
+	<li><p>Let <i>E</i> be a nonempty subset of an ordered set; suppose <i>&alpha;</i> is a lower bound of <i>E</i> and  <i>&beta;</i> is an upper bound of <i>E</i>. Prove that <i>&alpha;</i> &le; <i>&beta;</i>.</p></li>
+
+	<li><p>Let <i>A</i> be a nonempty set of real numbers which is bounded below. Let −<i>A</i> be the set of all numbers −<i>x</i> &in; <i>A</i>. Prove that</p>
+
+	<div class="eq">
+	<p>inf <i>A</i> = −sup (−<i>A</i>)</p>
+	</div>
+
+	</li>
+
+	<li><p>Fix <i>b</i> &gt; 1.</p>
+
+
+<ol type="a">
+	<li><p>If <i>m,n,p,q</i> are integers, <i>n</i> &gt; 0, <i>q</i> &gt; 0, and <i>r</i> = <i>m</i>/<i>n</i> = <i>p</i>/<i>q</i>, prove that</p>
+
+<div class="eq">
+<p>(<i>b<sup>m</sup></i>)<sup>1/<i>n</i></sup> = (<i>b<sup>p</sup></i>)<sup>1/<i>q</i></sup></p>
+</div>
+
+<p>Hence it makes sense to define <i>b<sup>r</sup></i> = (<i>b<sup>m</sup></i>)<sup>1/<i>n</i></sup>.</p></li>
+
+<li><p>Prove that <i>b</i><sup>r + s</sup> = <i>b<sup>r</sup>b<sup>s</sup></i> if <i>r</i> and <i>s</i> are rational.</p></li>
+
+<li><p>If <i>x</i> is real, define <i>B</i>(<i>x</i>) to be the set of all numbers b<sup>t</sup>, where <i>t</i> is rational <i>t</i> &le;<i>x</i>. Prove that</p>
+
+<div class="eq">
+<p><i>b<sup>r</sup></i> = sup <i>B</i>(<i>r</i>)</p>
+</div>
+
+<p>where <i>r</i> is rational. Hence it makes sene to define</p>
+
+<div class="eq">
+<p><i>b<sup>x</sup></i> = sup <i>B</i>(<i>x/i>)</p>
+</div>
+
+<p>for every real <i>x</i>.</p></li>
+
+<li><p>Prove that  <i>b</i><sup><i>x</i> + <i>y</i></sup> = <i>b<sup>x</sup>b<sup>y</sup></i></p></li>
+</ol>
+</li>
+
+</ol>
+
+
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>Given that <i>r</i> is rational, we can write <i>r</i> = <i>a</i>/<i>b</i> for some integers <i>a</i> and <i>b</i>. We are also given that <i>x</i> is irrational. From here, we proceed with a proof by contradiction. We first assume that <i>r</i> + <i>x</i> is rational, and then we use this fact in some way to show that <i>x</i> is rational, contradicting one of the facts we were given. This will prove that <i>r</i> + <i>x</i> is instead irrational.<br> So if <i>r</i> + <i>x</i> is rational, we can write <i>r</i> + <i>x</i> = <i>c</i>/<i>d</i> for some relatively prime integers <i>c</i> and <i>d</i>. But then</p>
+
+<div class="eq">
+<p><i>x</i> = <i>c</i>/<i>d</i> − <i>r</i> = <i>c</i>/<i>d</i> − <i>a</i>/<i>b</i> = (<i>bc</i> − <i>ad</i>)/<i>bd</i></p>
+</div>
+
+<p>and thus <i>x</i>is rational, which is a contradiction. Therefore, <i>r</i> + <i>x</i> is irrational.<br> Next, we prove that <i>rx</i> is irrational using a similar contradiction proof. Assume that <i>rx</i> is rational. Then wer can write <i>rx</i> = <i>c</i>/<i>d</i> for some integers <i>c</i> and <i>d</i>. But then</p>
+
+<div class="eq">
+<p><i>x</i> = <i>c</i>/<i>rd</i> = <i>c</i>/<i>ad</i>/<i>b</i> = <i>bc</i>/<i>ad</i></p>
+</div>
+
+<p>and this <i>x</i> is rational, which is a contradiction. Therefore, <i>rx</i> is irrational.&emsp;■</p></li>
+
+<li><p>Let <i>x</i> be a rational number such that <i>x</i><sup>2</sup> = 12. Then we can write <i>x</i> = <i>a</i>/<i>b</i>, and furthermore, assume <i>a</i> and <i>b</i> to be relatively prime (which means there is no prime number dividing both <i>a</i> and <i>b</i>), so that the fraction <i>a</i>/<i>b</i> is written in lowest terms. With a little algebraic manipulation</p>
+
+<div class="eq">
+<p>12 = <i>x</i><sup>2</sup> = <i>a</i><sup>2</sup>/<i>b</i><sup>2</sup> &emsp;⇒&emsp; 12<i>b</i><sup>2</sup> = <i>a</i><sup>2</sup></p>
+</div>
+
+<p>Now, the prime factorization of 12 is 2<sup>2</sup> · 3. We’ll concentrate on 3 and see how it divides both sides of the equation 12<i>b</i><sup>2</sup> = <i>a</i><sup>2</sup>. Notice that 3 divides the left side since it has a factor of 12. Therefore, 3 must divide the right side of the equation, <i>a</i><sup>2</sup>. From here, the crucial step is realizing that if 3 divides <i>a</i><sup>2</sup>, then it must also divide <i>a</i>. This is because if we factor <i>a</i><sup>2</sup> into its prime factors, saying that 3 divides <i>a</i><sup>2</sup> is equivalent to saying that 3 is one of those prime factors, but a square of an integer must have an even number of each factor (it can’t have just 1), so that means 3<sup>2</sup> must divide <i>a</i><sup>2</sup>, and 3 must divide <i>a</i>. <br> Since we have shown that 3<sup>2</sup> divides the right side, 3<sup>2</sup> must divide the left side, but there is only one factor of 3 in 12, so that means 3 divides <i>b</i><sup>2</sup>. Using the same logic as before, this means that 3 must divide <i>b</i>. Therefore, we have shown that 3 divides both <i>a</i> and <i>b</i>, but this contradicts the fact that we already chose <i>a</i> and <i>b</i> to be relatively prime (so that <i>a</i>/<i>b</i> would be expressed in lowest
+terms). Since our initial assumption leads to a contradiction, we have instead that there is no rational number whose square is 12.&emsp;■</p></li>
+
+<li><p>Since <i>E</i> is nonempty, there exists <i>e</i> &in; <i>E</i>. Then by defiition of lower and upper bounds we have <i>&alpha;</i> &le; <i>e</i> &le; <i>&beta;</i>, and hence by property ii) in the definition of an ordering, we have <i>&alpha;</i> &lt; <i>&beta;</i> unless <i>&alpha;</i> = <i>e</i>= <i>&beta;</i>.&emsp;□</p></li>
+
+<p>We need to prove that −sup (−<i>A</i>) is the greatest lower bound of <i>A</i>. Fro brevity let <i>&alpha;</i> = −sup (−<i>A</i>). We need to show that <i>&alpha;</i> &le; <i>a</i> for all <i>a</i> &in; <i>A</i> and <i>&alpha;</i> &ge; <i>&beta;</i> if <i>&beta;</i> is any lower bound of <i>A</i>.<br> Now let <i>&beta;</i> any lower bound of <i>A</i>. This means <i>&beta;</i> &le; <i>a</i> for all <i>a</i> &in; <i>A</i>. Hence −<i>a</i> &le; <i>&beta;</i> for all <i>a</i> &in; <i>A</i>, which says <i>y</i> &le; <i>&beta;</i> for <i>y</i> &in; −<i>A</i>. This means −<i>&beta;</i> is an upper bound of −<i>A</i>. Hence −<i>&beta;</i> &ge; sup (−<i>A</i>) by definition of sup, i.e., <i>&beta;</i> &le; −sup(−<i>A</i>), and so  −sup(−<i>A</i>) is the greatest lowe bound of <i>A</i>.</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="R.html">«the real field</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

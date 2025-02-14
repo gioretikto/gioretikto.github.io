@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Equazioni differenziali ordinarie"/>
+	<title>Equazioni differenziali ordinarie</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Equazioni differenziali ordinarie</h1>
+
+<p>An <b>ordinary differential equation (ODE)</b> is an equation that relates a function <i>y</i>(<i>x</i>) to some of its derivatives <i>y</i>(<sup><i>n</i></sup>) (<i>x</i>) = d<sup>n</sup> <i>y</i>/d<i>x</i><sup>n</sup> . It is usual to call <i>x</i> the i<b>ndependent variable</b> and y the <b>dependent variable</b>, and to write the most general ordinary differential equation as</p>
+
+<div class="eq">
+<p><i>F</i>(<i>x,y,y',y'',..., y<sup>(n)</sup></i>) = 0 &emsp;(11.1.1)</p>
+</div>
+
+<p>The number <i>n</i> in (11.1.1) is called the <b>order</b> of the ordinary differential equation, and it is the order of the highest derivative of <i>y</i> that occurs in the equation. For example</p>
+
+<div class="eq">
+<p><i>y</i>′(<i>x</i>) = <i>f</i> (<i>x</i>)&emsp;(11.1.2)
+</div>
+
+<p>with <i>f</i> a known function. Equation (11.1.2) is called <b>homogeneous</b> if <i>f</i> (<i>x</i>) ≡ 0 otherwise <b>nonhomogeneous</b>. For example, the harmonic equation <i>mẍ</i> + <i>kẋ</i> = 0 is inhomogeneous, but <i>mẍ</i> + <i>kx</i> = sin(<i>&omega;t</i>) is inhomogeneous.</p></p>
+
+<p>The fact that there is only one independent variable means that we are dealing with <b>ordinary</b> (as opposed to partial) <b>differential equations</b>. We further assume that the coeffiencts (<i>a,b,c</i>) are independent of time, although <i>d</i> is either zero or time-dependent. <br> If each derivative occurs linearly, (i.e. term like <i>ÿ</i><sup>2</sup> or <i>ÿ</i><sup>3</sup>) then the DE is said to be <b>linear</b> otherwise is <i>nonlinear</i>.  <br> A <b>solution</b> of an ordinary differential equation is a function <i>y</i> = <i>f</i>(<i>x</i>) that, when substituted into the equation, makes it identically zero over the interval on which the equation is defined. A solution of an <i>n</i>th order equation that contains <i>n</i> arbitrary constants is called the <b>general solution</b> of the equation. If the arbitrarygeneral and particular solutions, and integral curves constants in the general solution are assigned specific values, the result is called a <b>particular solution</b> of the equation.</p>
+
+<p>A <b>solution</b> of the equation 11.1.1, in the interval <i>I</i> &subset; ℝ, a real valued function <i>y</i>(<i>t</i>), defined at least in an interval <i>I</i>
+
+<div class="eq">
+<p><i>F</i>(<i>t,y</i>(<i>t</i>),<i>y</i>(<i>t</i>)', <i>y</i>(<i>t</i>)'', ..., <i>y</i><sup>(<i>n</i>)</sup>(<i>t</i>) = 0 &emsp; &forall;<i>t</i> &in; <i>I</i> &emsp;(11.1.3)</p>
+</div>
+
+<p>Infine, si dirà <i>integrale generale</i> dell'equazione 11.1 una formula che rappresenti la famiglia di tutte le soluzioni dell'equazione 11.1, eventualmente al variare di uno o più parametri in essa contenuti. Mostriamo un primp esempio elementare, ma storicamente significativo, di modello differenziale.</p>
+
+<p><b>Example 1</b>. Modello di Malthus per la dinamica delle popolazioni, 1798</b>. Si considera una popolazione che evolve isolata e i cui unici fattori di evoluzioni sono fertilità e mortalità. Indicheremo con <i>N</i>(<i>t</i>) il numero di individui presenti al tempo <i>t</i>, con &lambda; (rispettivamente, &mu;) il numero di nuovi nati (morti) per individuo nell'unità di tempo, cosicché in un tempo di durata <i>h</i> il numero di nuovi nati e di morti sarà rispettivamente <i>&lambda;hN</i>(<i>t</i>) and <i>&mu;hN</i>(<i>t</i>). Perciò, la variazione del numero di individui in un tempo <i>h</i> sarà:</p>
+
+<div class="eq">
+<p><i>N</i>(<i>t</i> + <i>h</i>) − <i>N</i>(<i>t</i>) = <i>&lambda;hN</i>(<i>t</i>) − <i>&mu;hN</i>(<i>t</i>)&emsp;(11.1.4)</p>
+</div>
+
+<p>Dividing both sides of the previous equation by <i>h</i>, yields:</p>
+
+<div class="eq">
+<p>[<i>N</i>(<i>t</i>+<i>h</i>) − <i>N</i>(<i>t</i>)] / <i>h</i> = (<i>&lambda;</i> − <i>&mu;</i>) <i>N</i>(<i>t</i>)&emsp;(11.1.5)</p>
+</div>
+
+<p>Assuming 11.1.5 valid for any time interval <i>h</i>; taking the limit of both sides for <i>h</i> → 0 (considering the function <i>N</i>(<i>t</i>) differentiable</p>
+
+<div class="eq" id="Malthus">
+<p><i>Ṅ</i>(<i>t</i>) = (<i>&lambda;</i> − <i>&mu;</i>) <i>N</i>(<i>t</i>)&emsp; 11.1.6</p>
+</div>
+
+<p>This is a first order linear differential equation; the quantity <i>&epsilon;</i> = <i>&lambda;</i> − <i>&mu;</i> si chiama <i>potenziale biologico</i>. Writing 11.5 in the form <i>N</i>'/<i>N</i> = <i>&epsilon;</i>, we observe that the increase (or decrease) ration of <i>N</i> is constant. The previous 11.5 equation does not admit a single solution but infinite. As we shall see soon, they are all of the form</p>
+
+<div class="eq">
+<p><i>N</i>(<i>t</i>) = <i>N</i><sub>0</sub><i>e</i><sup><i>&epsilon;t</i><sup>&emsp; 11.1.7</p>
+</div>
+
+<p>where <i>c</i> is an arbitrary real constant. The fact that 11.1.7 is a solution of 11.1.6 means that if we replace back  11.1.7 into  11.1.6 we obtain an identity.</p>
+
+<p>Spesso è possibile esprimere mediante la (11.1) la derivata di ordine massimo <i>y<sup>(n)</sup></i> in funzione di <i>t</i> e delle derivate di ordine inferiore (in diverse applicazioni, questo è anzi il modo con cui si scrive originariamente l’equazione differenziale). In generale, il <a href="dini.html">Teorema della funzione implicita</a> assicura che è possibile esplicitare <i>y<sup>(n)</sup></i> quando la derivata parziale di <i>F</i> rispetto all’ultima variabile non si annulla. In tal caso, possiamo scrivere la (11.1) nella forma</p>
+
+<div class="eq">
+<p><i>y</i><sup>(<i>n</i>)</sup> (<i>x</i>) = <i>f</i>(<i>x,y</i>(<i>x</i>),<i>y</i>'(<i>x</i>), ..., <i>y</i><sup>(<i>n</i>−1)</sup>(<i>x</i>)) &emsp; 11.2</p>
+</div>
+
+<p>dove <i>f</i> è una funzione reale di <i>n</i> + 1 variabili reali: <i>f</i>: ℝ<sup><i>n</i>+1</sup>  &subseteq; <i>D</i> → ℝ. Diremo allora che l’equazione differenziale è in forma normale. La definizione di soluzione si modifica in modo ovvio nel caso in cui l’equazione sia in forma normale.</p>
+
+<p>Noi tratteremo il caso particolarmente importante e, come vedremo subito, sufficientemente generale, dei sistemi di <i>n</i> equazioni del 1° ordine in forma normale, in <i>n</i> funzioni incognite; un gerico sistema di questo tipo si può scrivere nel modo seguente:</p>
+
+<p>dove le funzioni <i>f<sub>j</sub></i>, <i>j</i> = 1, ...., <i>n</i> sono definite in una stessa regione <i>D</i> di ℝ<sup><i>n</i>+1</sup> ed <i>y</i><sub>1</sub>(<i>t</i>), ...., y<sub>n</sub> = y<sub>n</sub>(t) sono le funzioni incognite. Introducendo i vettori <b>y</b>(<i>t</i>) = (<i>y</i><sub>1</sub>(<i>t</i>), ..., <i>y<sub>n</sub></i>(<i>t</i>)) e <b><i>f</i></b> = (<i>f</i><sub>1</sub>,<i>f</i><sub>2</sub>, ..., <i>f<sub>n</sub></i>), il sistema può essere scritto più concisamente come un'unica equazione vettoriale:</p>
+
+<p>Se ogni componente di <b>f</b> è lineare in <b>y</b> si dice che il sistema è <i>lineare</i>. Se <b><i>f</i></b> non dipende esplicitamente da <i>t</i> ossia <b>y'</b> = <b>f</b>(<b>y</b>), si dice che il sistema è <i>autonomo</i>.</p>
+
+<section aria-label="End">
+<a href="ourier_series.html">&#171;Fourier series</a>
+<a href="index.html">Index</a>
+<a href="Cauchy_problem.html">Cauchy problem &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

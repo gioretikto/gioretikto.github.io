@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Fermat's Two-Square Theorem"/>
+	<title>Fermat's Two-Square Theorem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Fermat's Two-Square Theorem</h1>
+
+<p>In a letter from Fermat to Mersenne on Christmas Day 1640, e annunciò la dimostrazione di un risultato che, da allora, viene appunto chiamato teorema di Natale. Ma prima di enunciarlo dobbiamo fare un passo indietro, e meditare sui possibili «modi di essere» dei numeri primi. A parte il 2, di cui non ci interesseremo, si inizia notando che alcuni primi hanno l’interessante proprietà di essere uguali alla somma di due quadrati: per esempio, 5 è 1 più 4, 13 è 4 più 9, 17 è 1 più 16, eccetera. E altri invece no: per esempio, il 3, il 7 e l’11. Nella ricerca di una regolarità, si continua osservando che i primi di un tipo si alternano, fra i numeri dispari, ai primi dell’altro tipo: detto altrimenti, i primi uguali alla somma di due quadrati sono tutti della forma 4n + 1, e gli altri della forma 4n + 3. Nel 1632 Albert Girard congetturò che la cosa valesse in generale: cioè, che i numeri primi dispari uguali alla somma di due quadrati fossero esattamente quelli del tipo 4n + 1. Una direzione era ovvia, perché ogni quadrato è del tipo 4n (se pari) o 4n + 1 (se dispari): dunque, ogni somma di quadrati è del tipo 4<i>n</i>, 4<i>n</i> + 1 or 4<i>n</i> + 2, e se è dispari l’unica possibilità è che sia del tipo 4n + 1. Nella sua lettera natalizia Fermat affermò di aver dimostrato anche l’altra direzione: cioè, che ogni numero primo del tipo 4n + 1 è uguale alla somma di due quadrati. Ma la sua dimostrazione non si trovò da nessuna parte, e il primo ad averne scritta una fu Eulero nel 1749, in una lettera a Goldbach. In seguito se ne sono trovate molte altre, ma nessuna così elementare da stare in questa pagina. La proprietà che divide i due tipi di numeri primi si ispira ovviamente al teorema di Pitagora, perché la radice √<i>p</i> di un numero <i>p</i> uguale alla somma di due quadrati <i>m<sup>2</sup></i> e <i>n<sup>2</sup></i> è ovviamente la lunghezza dell’ipotenusa di un triangolo rettangolo, che ha cateti di lunghezza <i>m</i> e <i>n</i>. In questo caso lo stesso numero <i>p</i> è la lunghezza dell’ipotenusa di un triangolo rettangolo, che ha cateti di lunghezza <i>m</i><sup>2</sup> – n<sup>2</sup> e 2<i>mn</i>. Per esempio, nel caso di 5, il primo triangolo ha cateti 1 e 2 e ipotenusa √5, e il secondo cateti 3 e 4 e ipotenusa 5. Per questo motivo Diofanto chiamava «pitagorici» i primi uguali alla somma di due quadrati, che il teorema di Natale caratterizza come i primi della forma 4<i>n </i> + 1. Nelle <i>Disquisitiones Arithmeticae</i> del 1801 Gauss andò oltre, dimostrando che i primi pitagorici sono l’ipotenusa di un solo triangolo rettangolo a lati interi: per esempio, 3 e 4 nel caso di 5. Ma i loro quadrati lo sono in due modi: per esempio, 7 e 24, o 15 e 20, nel caso di 25. I loro cubi, in tre modi, e così via. La dicotomia fra primi pitagorici e non pitagorici si è in seguito rivelata fondamentale in teoria dei numeri, attraverso la connessione con i numeri interi complessi, della forma <i>m ± n</i>. Le somme di quadrati sono infatti le norme di tali numeri, e un primo della forma m<sup>2</sup> + n<sup>2</sup> si può in realtà scomporre nel prodotto dei due interi complessi <i>m + in</i> e <i>m – in</i>. Cioè, i primi pitagorici sembrano primi se li si guarda dal ristretto punto di vista dei numeri interi reali, ma si rivelano non esserlo quando li si osserva dal più ampio punto di vista dei numeri interi complessi. Che i primi pitagorici siano in realtà «falsi primi» lo dimostra anche il fatto che è complicato dimostrare che ce ne sono infiniti: non si può adattare la famosa dimostrazione di Euclide dell’esistenza di infiniti numeri primi, che invece si adatta senza difficoltà ai primi non pitagorici. Supponiamo infatti che ci sia solo un numero finito di primi del tipo 4<i>n</i> + 3, e consideriamo il numero <i>N</i> pari a 4 volte il loro prodotto, meno 1. Questo numero è del tipo 4<i>n</i> + 3, ma ogni suo fattore primo è del tipo 4<i>n</i> + 1: infatti, i primi del tipo 4<i>n</i> + 3 dividono tutti N + 1, e dunque nessuno divide N. La contraddizione si ottiene notando che il prodotto di numeri del tipo 4n + 1 è ancora dello stesso tipo. Il che equivale, per il teorema di Natale, al fatto che il prodotto di somme di quadrati sia ancora una somma di quadrati: una proprietà scoperta da Diofanto, ma ovvia quando si ricordi il legame fra le somme di quadrati e le norme dei numeri complessi.</p>
+
+<p>The next section is devoted to proving the claim that whenever p is a prime with <i>p</i> ≡ 1 mod 4, it  follows  that <i>p</i> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> for  some  integers <i>a</i> and <i>b</i>. Before  we  dive  into  the  technical details of the proof, let us briefly discuss why it is interesting to consider <i>a</i><sup>2</sup> + b<sup>2</sup></i> in modular arithmetic, in particular modulo 4.</p>
+
+<p>An integer <i>n</i> is a <b>perfect square</b> if and only if it can be expressed as the square of some other integer i.e. there exists some integer a such that <i>n</i> = <i>a</i><sup>2</sup>. Before we consider <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup>, just consider squares <i>a<sup>2</sup></i>.  Can we know whether some numbern is a perfect square by knowing its remainder mod <i>k</i>?</p>
+
+<p><b>4.13.1 Proposition </b> If <i>n</i> is a perfect square, then either <i>n</i> ≡ 1 (mod 4), or <i>n</i> ≡ 0 mod 4.</p>
+
+<p><b>Proof</b>. Suppose <i>a</i> is even so <i>a = 2k</i>, for some integer <i>k</i>, and <i>n</i> = <i>a</i><sup>2</sup> = 4<i>k</i><sup>2</sup> ≡ 0 (mod 4). Otherwise, <i>a</i> is odd, and <i>a = 2k</i>+1. Then <i>n = a<sup>2</sup></i> = (2<i>k</i> + 1)<sup>2</sup>= 4<i>k</i><sup>2</sup> + 4<i>k</i> + 1 = 4(<i>k<sup>2</sup> + k</i>) + 1 ≡ 1 (mod 4).□</p>
+
+<p>So the sum of two squares can be either</p>
+
+<div class="eq">
+<p><i>a<sup>2</sup> + b<sup>2</sup></i> ≡ 0 (mod 4) &emsp; when a,b are even</p>
+<p><i>a<sup>2</sup> + b<sup>2</sup></i> ≡ 1 (mod 4) &emsp; when a,b the opposite parity</p>
+<p><i>a<sup>2</sup> + b<sup>2</sup></i> ≡ 2 (mod 4) &emsp; when a,b are both odd.</p>
+</div>
+
+<p><b>4.13.2 Fermat's Two-Square Theorem</b>. An odd prime number, <i>p</i> can be expressed as sum of two squares if and only if <i>p = 4k</i> +1.</p>
+
+<p><b>Proof</b>. First of all, notice that every integer <i>a</i> is congruent either to 0, 1, 2 or 3  mod 4, and <i>a</i><sup>2</sup> ≡ 0,1 mod 4 since 0², 1², 2², 3² are equal to 0,1,0,1 mod 4. Hence it follows</p>
+
+<div class="eq">
+<p><i>a<sup>2</sup> + b<sup>2</sup></i> ≡ 0, 1, 2 (mod 4)</p>
+</div>
+
+<p>as shown in the previous proposition.</p>
+
+<p>No prime number can be 0 modulo 4 because it would be divisible by 4. Also, every <i>n</i> ≡ 2 (mod 4) is an even number so the only prime <i>p</i> ≡ 2  mod 4 is <i>p</i> = 2. Thus, every odd prime <i>p</i> is congruent to 1 or 3 mod 4, that is</p>
+
+<div class="eq">
+<p><i>p</i> ≡ 1 (mod 4), &emsp; <i>p</i> ≡ 3 (mod 4)</p>
+</div>
+
+<p>So if <i>p</i> ≡ 3 (mod 4) the equation <i>p = a<sup>2</sup> + b<sup>2</sup></i> is impossible. We thus proved that if <i>p</i> is an odd prime then it is a sum of two squares then necessarily <i>p</i> ≡ 1 mod 4.</p>
+
+<p>We now prove the converse, if <i>p</i> is an odd prime such that <i>p</i> ≡ 1 (mod 4), then it is the sum of two squares: <i>p</i> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> for some <i>a,b</i> &in; ℤ.</p>
+
+<p>We want to show that <i>p</i> divides 1 + <i>x</i><sup>2</sup>; This impolies that</p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> ≡ −1 (mod <i>p</i>)</p>
+</div>
+
+<p>has solutions. We'll show that <i>x</i> = [(<i>p</i> − 1)/2]! is a solution.</p>
+
+<p>Let <i>p</i> be a prime number of the form 4<i>k</i> + 1. Since (<i>p</i> − 1)/2 = 2<i>k</i> is an even number, also the factors are of</p>
+
+<div class="eq">
+<p><i>x</i> = [(<i>p</i> − 1)/2]!</p>
+</div>
+
+<p>are <i>even</i>, hence <i>x</i> can be written as</p>
+
+<div class="eq">
+<p><i>x</i> = (−1) (−2) (−3) ⋅⋅⋅ −(<i>p</i> − 1)/2</p>
+</div>
+
+<p>from which</p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> = 1 ⋅ 2 ⋅ 3 ⋅⋅⋅ (<i>p</i> − 1)/2 ⋅ (−1) (−2) ⋅⋅⋅ −(<i>p</i> − 1)/2</p>
+</div>
+
+<p>Since <i>p</i> − <i>h</i> ≡ −<i>h</i> (mod <i>p</i>) &emsp; <b>4.13.1</b></p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> = 1 ⋅ 2 ⋅ 3 ⋅⋅⋅ (<i>p</i> − 1)/2 ⋅ (<i>p</i> − 1) (<i>p</i> − 2) ⋅⋅⋅ (<i>p</i> − 1)/2</p>
+</div>
+
+<p>through the congruence with add <i>p</i> to each of the negative numbers.</p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> = 1 ⋅ 2 ⋅ 3 ⋅⋅⋅ (<i>p</i> − 1)/2 ⋅ (<i>p</i> − 1)/2  (<i>p</i> − 1) =  (<i>p</i> − 1)! ≡ − 1 (mod <i>p</i>).</p>
+</div>
+
+<p>Where the last congruence was obtained by Wilson's theorem.</p>
+
+<p>We proved that there exists a solution to <i>x</i><sup>2</sup> ≡ −1 (mod <i>p</i>), which means that <i>p</i> divides 1 + <i>x</i><sup>2</sup>, where <i>x</i> = [(<i>p</i> − 1)/2]!. If we think to 1 + <i>x</i><sup>2</sup> as an element of ℤ[<i>i</i>], we have 1 + <i>x</i><sup>2</sup> = (1 + <i>ix</i>)(1 −<i>ix</i>), then</p>
+
+<div class="eq">
+<p> <i>p</i> | (1 +<i>ix</i>) (1 −<i>ix</i>) &emsp; in ℤ[<i>i</i>]</p>
+</div>
+
+<p>hence <i>p</i> divides (1 +<i>ix</i>) (1 −<i>ix</i>), but it does not divide neither of the two factors. Indeed if <i>p</i> | 1 + i [(p-1)/2]!, </p>
+
+<div class="eq">
+<p>[(<i>p</i> − 1)/2]! = <i>p</i>(<i>a + ib</i>)</p>
+</div>
+
+<p>for some <i>a,b</i> &in; ℤ, we would have <i>pa</i> = 1 which is impossible. Thus <i>p</i> is not prime in ℤ[<i>i</i>], hence not <i>ierreducible</i>. It follows that for some <i>&alpha;&beta;&gamma;,&delta;</i> &in; ℤ we must have</p>
+
+<div class="eq">
+<p><i>p</i> = (<i>&alpha; +i&beta;</i>)(<i>&gamma; + i&delta;</i>)</p>
+</div>
+
+<p>which by taking the norms</p>
+
+<div class="eq">
+<p><i>p</i><sup>2</sup> = (<i>&alpha;</i><sup>2</sup> + <i>&beta;</i><sup>2</sup>)(<i>&gamma;</i><sup>2</sup> + <i>&delta;</i><sup>2</sup>)</p>
+</div>
+
+<p>which is a factorization in ℕ, from which follows that <i>p</i> = (<i>&alpha;<sup>2</sup> + &beta;<sup>2</sup></i>).□</p>
+
+<p><b>4.13.3 Proposition</b>. The product of the sums of two squares is still a sum of two squares.</p>
+
+<p><b>Proof</b>. We have</p>
+
+<div class="eq">
+<p>(<i>a<sup>2</sup> + b<sup>2</sup></i>)(<i>c<sup>2</sup> + d<sup>2</sup></i>) = <i>N</i>(<i>a</i> + <i>ib</i>) <i>N</i>(<i>c + id</i>) = <i>N</i>((<i>a</i> + <i>ib</i>) (<i>c</i> +<i>id</i>) = <i>N</i>(<i>ac</i> − <i>bd</i> + <i>i</i>(<i>ad</i> + <i>bc</i>)) = (<i>ac</i> − <i>bd</i>)<sup>2</sup> + (<i>ad</i> + <i>bc</i>)<sup>2</sup>.□</p>
+</div>
+
+<p>For example</p>
+
+<p>85 = 5 ⋅ 17 = (2<sup>2</sup> + 1<sup>2</sup>)(4<sup>2</sup> + 1<sup>2</sup>) = (2 ⋅ 4 - 1 ⋅ 1)<sup>2</sup> + (2 ⋅ 1 + 1 ⋅ 4)<sup>2</sup> = 7<sup>2</sup> + 6<sup>2</sup>.</p>
+
+<p><b>4.13.4 Theorem</b>. A positive integer <i>n</i> can be written as a sum of two squares if and only if each prime of the form 4<i>n</i> + 3 appearing in the canonical factorization of <i>n</i> is raised to an even power.</p>
+
+<p><b>Proof.</b> Let</p>
+
+<div class="eq">
+<p><i>n = 2<sup>k</sup> p<sub>1</sub><sup>h<sub>1</sub></sup> ⋅ p<sub>2</sub><sup>h<sub>2</sub></sup> ⋅⋅⋅  p<sub>r</sub><sup>h<sub>r</sub></sup> &emsp; q<sub>1</sub><sup>2t<sub>1</sub></sup> ⋅ q<sub>2</sub><sup>2t<sub>2</sub></sup> ⋅  q<sub>s</sub><sup>2t<sub>s</sub></sup></i> <br>
+&emsp;&emsp; <i>p<sub>i</sub></i> primes in the form 4<i>k</i> + 1 &emsp;&emsp; <i>q<sub>i</sub></i> primes in the form 4<i>k</i> + 3</p>
+</div>
+
+<p>the factorization of <i>n</i> in irreducible factors. To prove that <i>n</i> is the sum of two squares, owing to proposition 4.13.3, it sufficies to prove that the three factors: 2<sup>k</sup>, one factor among (4<i>k</i> + 3) and one among (4<i>k</i> + 1), are sum of two squares. Concerning 2<sup><i>k</i></sup> we know that 2 can be expressed as a power of two squares, and so its powers. Every prime of the form 4<i>k</i> + 1 can be expressed as sum of two squares by Fermat's theorem and also they products are. By Fermat's theorem we know that prime of the form 4<i>k</i> + 3 cannot be expressed as the sum of two squares, but since their exponent is even and the square of a number is clearly a trivial sum of two squares, also this factor is expressible by sum of two squares, proving the theorem.□</p>
+
+<p>The converse of this theorem holds true as well.</p>
+
+<p><b>4.13.5 Examples</b>. 168 = 2<sup>3</sup> ⋅ 3 ⋅ 7<sup>2</sup> is not expressible as sum of two squares since there a factor of the form 4<i>k</i> + 3 namely 3, which has not even exponent.</p>
+
+<p>187 = 11 ⋅ 17 also is not a sum of two squares.
+
+<p>392 = 2<sup>3</sup> ⋅ 7<sup>2</sup> can be written as 7<sup>2</sup> ⋅ 2<sup>2</sup> ⋅ 2  = (7<sup>2</sup> + 0<sup>2</sup>) ⋅ (2<sup>2</sup> + 2<sup>2</sup>) = 14<sup>2</sup> + 14<sup>2</sup>.</p>
+
+<p>377 = 13 ⋅ 29 = (3<sup>2</sup> + 2<sup>2</sup>)(5<sup>2</sup> + 2<sup>2</sup>) = <i>N</i>(3 + 2<i>i</i>) <i>N</i>(5 + 2<i>i</i>) = <i>N</i>[(3 + 2<i>i</i>)⋅(5 + 2<i>i</i>)] = <i>N</i>(11 + 16<i>i</i>) = 11<sup>2</sup> + 16<sup>2</sup>.</p>
+
+<p>The norm of the conjugates is the same, so we can find another expression: <i>N</i>[(3 - 2<i>i</i>)⋅(5 + 2<i>i</i>) = <i>N</i>(19 - 4<i>i</i>) = 19<sup>2</sup> + 4<sup>2</sup> = 377.</p>
+
+<p>The previuos proposition and theorems are useful for example to determine whether a positive integer <i>n</i>, is suitable to represent the norm of a Gaussian integer.</p>
+
+<section aria-label="End">
+<a href="euclidean_domain.html">&#171;Euclidean Domain</a>
+<a href="index.html">Index</a>
+<a href="quadratic_extension_Z.html"> Quadratic estension of ℤ: ℤ[√<i>d</i>] &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
