@@ -21,6 +21,48 @@
 
 <h1>Fundamental theorems on sequences</h1>
 
+<p>Trattereo ora i teoremi basilari sul calcolo dei limiti. Le dimostrazioni si basano sulla deifnizione di limite, sull'uso di <i>disuguaglianze</i>, e sull'uso di proprietà <i>definitivamente vere</i>. In particolare, questi toeremi illustrano la relazione tra l'operazione di limite e le strutture algebriche e d'ordine presenti in ℝ. <br> Cominciamo ad esaminare le proprietà dell'operazione di limite rispetto alle <i>operazioni algebriche</i>. Quando il limite esiste finito, si dimostra un risultato semplice e naturale: l'operazione di limite commuta con queste operazioni, cioè:</p>
+
+<p><b>Teorema 3.4.1</b> (Algebra dei limiti) Se <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>b<sub>n</sub></i> &rarr; <i>b</i> allora</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &pm; <i>b<sub>n</sub></i> &rarr; <i>a</i> &pm; <i>b</i><br>
+<i>a<sub>n</sub>b<sub>n</sub></i> &rarr; <i>ab</i><br>
+<i>a<sub>n</sub></i>/<i>b<sub>n</sub></i> &rarr; <i>a</i>/<i>b</i>&emsp;(<i>b<sub>n</sub>,b</i>&ne; 0)<br>
+<i>a<sub>n</sub><sup>b<sub>n</sub></i></sup> &rarr; a<sup>b</sup></p>
+</div>
+
+<p><b>Dim</b>. Proviamo ad es. che:</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &rarr; <i>a</i>, <i>b<sub>n</sub></i> &rarr; <i>b</i> ⇒ <i>a<sub>n</sub></i> + <i>b<sub>n</sub></i> &rarr; <i>a</i> + <i>b</i></p>
+</div>
+
+<p>Fissiamo <i>&epsilon;</i> &gt; 0 e consideriamo:</p>
+
+<div class="eq">
+<p>|(<i>a<sub>n</sub></i> + <i>b<sub>n</sub></i>)| − (<i>a</i> + <i>b</i>)| = |(<i>a<sub>n</sub></i> − <i>a</i>) + (<i>b<sub>n</sub></i> + <i>b</i>)| &le; ||(<i>a<sub>n</sub></i> − <i>a</i>)| + ||(<i>b<sub>n</sub></i> − <i>b</i>)|</p>
+</div>
+
+<p>(per la disuguaglianza triangolare). Poiché per ipotesi <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>b<sub>n</sub></i> &rarr; <i>b</i>, si ha che</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − <i>a</i>| &lt; <i>&epsilon;</i> e |<i>b<sub>n</sub></i> − <i>b</i>| &lt; <i>&epsilon;</i> definitivamente</p>
+</div>
+
+<p>perciò concludiamo che</p>
+
+<div class="eq">
+<p>|(<i>a<sub>n</sub></i> + <i>b<sub>n</sub></i>)| − (<i>a</i> + <i>b</i>| &lt; 2 <i>&epsilon;</i> definitivamente,</p>
+</div>
+
+<p>quindi <i>a<sub>n</sub></i> + <i>b<sub>n</sub></i> &rarr; <i>a</i> + <i>b</i>.<br> Proviamo ora il punto 2. Fissiamo <i>&epsilon;</i> &gt;0. Usando ancora la disuguaglanza triangolare si ha:</p>
+
+
+<div class="eq">
+<p>|a<sub>n</sub>b<sub>n</sub>| = |a<sub>n</sub>(b<sub>n</sub> − b) + <i>b</i> (a<sub>n</sub> − <i>a</i>| &le; |a<sub>n</sub> (b<sub>n</sub> − b)| + |<i>b<sub>n</sub></i>(<i>a<sub>n</sub></i> − <i>a</i>)| = |a<sub>n</sub>| |<i>b<sub>n</sub></i> − <i>b</i>| + |b||a<sub>n</sub> − <i>a</i>| &le; |a<sub>n</sub>| |b<sub>n</sub> − b| + |b||a<sub>n</sub> − a|</p>
+</div>
+
 <p><b>Theorem 2.2.1</b> (<i>Uniqueness of the limit</i>). If {<i>a<sub>n</sub></i>} is a convergent sequence with limit ℓ, there are no other limits.</p>
 
 <p><b>Proof</b>. Suppose there exist two limits ℓ<sub>1</sub> and ℓ<sub>2</sub> for the same sequence. By using triangular inequality:</p>

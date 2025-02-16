@@ -135,7 +135,7 @@
       <mn>1</mn>
     </mrow>
     <mi mathvariant="normal">&#x221E;</mi>
-  </munderover>
+  </munderover><i>℘</i>(<i>A</i>)
   <msub>
     <mi>A</mi>
     <mi>h</mi>
@@ -205,10 +205,6 @@
 
 <p>Abbiamo incontrato sin qui solo <i>due</i> livelli gerarchici di infinito: la potenza del numerabile e quella del continuo. Non si deve credere che esistano solo queste due : ad es., l'insieme di tutti i sottoinsiemi di ℝ è ancora più numeroso di ℝ; anzi con questo procedimento si può sempre costruire un insieme più numeroso di un insieme dato:</p>
 
-<p><b>1.8.9 Definizione</b>. Sia <i>A</i> un insieme qualsiasi (finito o infinito!) e <i>℘</i>(<i>A</i>) il suo insieme delle parti. Allora la cardinalità <i>℘</i>(<i>A</i>) è sempre maggiore della cardinalità di <i>A</i>.</p>
-
-<p><b>Dim.</b> 
-
 <p><b>1.8.10 Definizione</b>. Si dice che un insieme <i>A</i> ha <i>cardinalità inferiore</i> o <i>uguale</i> a quella di un insieme <i>B</i> se esiste un'applicazione iniettiva <i>f</i>: <i>A</i> → <i>B</i>. Si scrive allora</p>
 
 <div class="eq">
@@ -225,11 +221,9 @@
 
 <h3>Cantor's Theorem</h3>
 
-<p>By using the the idea of "power set" we are able to rate bigger infinities. For example if we take the set {1,2,3} (with cardinality 3) its power set contains the empty set, {1}, {2}, {3}, {1,2}, {1,3}, {2,3} and {1,2,3} and so has cardinality 8. The formula is that, if the original set has cardinality <i>n</i>, then its power set has size 2<sup><i>n</i></sup>. Amazingly, the same conclusion is true for infinite sets: the power set of an infinite set creates a new set of a bigger infinity.</p>
+<p>By using the the idea of "power set" we are able to rate bigger infinities. For example if we take the set {1,2,3} (with cardinality 3) its power set contains the empty set, {1}, {2}, {3}, {1,2}, {1,3}, {2,3} and {1,2,3} and so has cardinality 8. The formula is that, if the original set has cardinality <i>n</i>, then its power set has size 2<sup><i>n</i></sup>. Amazingly, the same conclusion is true for infinite sets: the power set of an infinite set creates a new set of a bigger infinity. <br> Cantor's Theorem states that the cardinality of a set is strictly less than the cardinality of its power set.</p>
 
-<p>Cantor's Theorem states that the cardinality of a set is strictly less than the cardinality of its power set.</p>
-
-<p><b>1.8.9 (Cantor's Theorem [1883])</b> For any set <i>A</i>, the power set of <i>A</i> has a strictly greater cardinality than <i>A</i> itself</p>
+<p><b>1.8.11 (Cantor's Theorem [1883])</b> For any set <i>A</i>, the power set of <i>A</i> has a strictly greater cardinality than <i>A</i> itself</p>
 
 <div class="eq">
 <p>|<i>A</i>| &lt; |<i>℘</i>(<i>A</i>)|</p>
@@ -243,7 +237,7 @@
 
 <p>But the theorem applies to both finite and infinite sets.</p>
 
-<p><b>Dim.</b> We assume, by contradiction, that <i>A</i> and <i>℘</i>(<i>A</i>) do have the same cardinality, and so there is a bijection <i>f</i>: <i>A</i> &rarr; <i>℘</i>(<i>A</i>). We define the following subset of <i>A</i>:</p>
+<p><b>Dim.</b> Suppose for sake of contradiction that the sets <i>A</i> and <i>℘</i>(<i>A</i>) have the same cardinality. Then there exists a bijections <i>f</i>: <i>A</i> &rarr; <i>℘</i>(<i>A</i>). We define the following subset of <i>A</i>:</p>
 
 <div class="eq">
 <p><i>M</i> = {<i>a</i> &in; <i>A</i>: <i>a</i> &notin; <i>f</i>(<i>a</i>)} &subset; <i>A</i></p>
@@ -255,31 +249,7 @@
 <p>1 → ∅, &emsp; 2 → {1,3}, &emsp; 3 → {2}</p>
 </div>
 
-<p><i>M</i> è un sottoinsieme di <i>A</i>. Essendo <i>f</i> biunivoca, deve esistere un elemento <i>x</i> &in; <i>A</i> che è in corrispondenza biunivoca con <i>M</i>. Ma per costruzione otteniamo la seguente contraddizione</p>
-
-<div class="eq">
-<p><i>x</i> &in; <i>M</i> ⇔  <i>x</i> &notin; <i>f</i>(<i>x</i>) ⇔ <i>x</i> &notin;</p>
-</div>
-
-<p>assurdo. Quindi <i>f</i> non piò essere una funzione biunivoca tra <i>A</i> e <i>℘</i>(<i>A</i>) &emsp;□</p>
-
-<p>The set <i>M</i> is a subset of <i>A</i>, so <i>M</i> &in; <i>℘</i>(<i>A</i>), (Notice that if <i>M</i> is empty the proof is still valid). Sia ora <i>x</i> &in; <i>A</i> l'elemento che corrisponde a <i>M</i>, ossia <i>f</i>(<i>x</i>) = <i>M</i>. Allora si ha: 
-
-<p><b>1<sup><i>a</i></sup> Proof</b>. The application <i>h</i>: <i>A</i> → <i>P</i>(<i>A</i>) defined as <i>h</i>(<i>x</i>) = {<i>x</i>} &forall;<i>x</i> &in; <i>A</i> is an injective mapping from <i>A</i> to <i>P</i>(<i>A</i>), thus Card(<i>A</i>) &le; Card(<i>P</i>(<i>A</i>)). Since (see <a href="functions.html#characteristi_function">Theorem 1.4.19</a>: there a bijection between <i>P</i>(<i>A</i>) with the function from <i>A</i> to {0,1})</p>
-
-<div class="eq">
-<p><i>P</i>(<i>A</i>) ~ <b>2</b><sup><i>A</i></sup> = {<i>f</i>: <i>A</i> → {0,1}}</p>
-</div>
-
-<p>To prove the theorem we must show that <i>f</i> is not surjective. It suffices to find an element in <i>P</i>(<i>A</i>) which is not in the image of <i>f</i>. Such an element is:</p>
-
-<div class="eq">
-<p><i>B</i> = {<i>x</i> &in; <i>A</i>: <i>x</i> ∉ <i>f</i>(<i>x</i>)} &in; <i>P</i(<i>A</i>)</p>
-</div>
-
-
-
-<p>Suppose now that <i>f</i> is surjective. Then there exists <i>ξ</i> ∈ <i>A</i> such that <i>f</i>(<i>ξ</i>) = <i>B</i>. By construction, <i>ξ</i> ∈ <i>B</i> ⟺ <i>ξ</i> ∉ <i>f</i>(<i>ξ</i>) = <i>B</i>. Which is a contradiction. Then, <i>f</i> cannot be surjective. Since, <i>h</i>: <i>A</i> → <i>P</i>(<i>A</i>) defined by <i>x</i> ↦ {<i>x</i>} in an injective function. Consequently, we have Card(<i>A</i>) &lt; Card (<i>P</i>(<i>A</i>)). □</p>
+<p>Note that <i>M</i> is well-defined since <i>f</i>(<i>x</i>) is an element of <i>℘</i>(<i>A</i>) and is hence a subset of <i>A</i>. Clearly <i>M</i> is a subset of <i>A</i>, hence is an element of <i>℘</i>(<i>A</i>). Since <i>f</i> is a bijection, there must therefore exist <i>x</i> &in; <i>A</i> such that <i>f</i>(<i>x</i>) = <i>M</i>. There are now two cases, depending on whether <i>x</i> &in; <i>M</i> or <i>x</i> &notin; <i>M</i>. If <i>x</i> &in; <i>M</i>, then by definition of <i>M</i> we have <i>x</i> &notin; <i>f</i>(<i>x</i>), hence <i>x</i> &notin; <i>M</i>, a contradiction. But if <i>x</i> &notin; <i>M</i>, then <i>x</i> &notin; <i>f</i>(<i>x</i>), hence by definition of <i>M</i> we have <i>x</i> &in; <i>M</i>, a contradiction. Thus in either case we have a contradiction. &emsp;□</p>
 
 <p><i>2nd Proof</i>. To prove there is no bijection between <b>2</b><sup>A</sup> and <i>A</i>, it sufficies to prove that which is not possible arrange in a numerable sequence <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, <i>A</i><sub>3</sub>, ..., the set <b>2</b><sup>A</sup> of the sequences of 0s and 1s. By way of contradiction assume there exists such a correspondence between <b>2</b><sup>A</sup> and ℕ. This means that every sequence of symbols 0s and 1 we can map an index <i>k</i> &in; ℕ, that is</p>
 

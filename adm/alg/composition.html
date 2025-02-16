@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Composition of Functions"/>
-    <title>Composition of Functions</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Composition of Functions"/>
+	<title>Composition of Functions</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 	<ul>
 		<li><a class="navbar" href="../../index.html">Home</a></li>
 		<li><a class="navbar" href="index.html">Index</a></li>
-		<li><a class="navbar" href="../analysis/index.html">Mathematical Analysis</a></li>
+		<li><a class="navbar" href="../calc/index.html">Mathematical Analysis</a></li>
 	</ul>
 </nav>
 
@@ -32,7 +32,21 @@
 
 <p><i>g</i> ◦ <i>f</i> reads as <i>g</i> composed with <i>f</i>, or as <i>f</i> followed by <i>g</i>.</p>
 
-<p><b>Example 1.4.2</b>. Consider the functions <i>f</i> : ℤ ⟶ ℤ and <i>g</i>:  ℚ ⟶ ℚ, given by <i>f</i>(<i>x</i>) = 2<i>x</i>/3  &forall; <i>x</i> &in; ℤ and <i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> &forall; <i>x</i> &in; ℚ. Observe that <i>g</i> ∘ <i>f</i> : ℤ ⟶ ℚ is given by (<i>g</i> ∘ <i>f</i>) (<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>)) = <i>g</i>(2<i>x</i>/3)  = 4<i>x</i><sup>2</sup>/9 &forall; <i>x</i> &in; ℤ. But <i>f</i> ∘ <i>g</i> is not defined as for example 1/4 &in; ℚ, <i>g</i>(1/4) = 1/16 &notin; ℤ and hence <i>f</i>(1/16) makes no sense. The reason for this is that Im(<i>g</i>) ⊈ D(<i>f</i>).&emsp;■</p>
+<p>Può accadere che risultino ben definite sia la composizione <i>g</i> ∘ <i>f</i> che <i>f</i> ∘ <i>g</i>; ma in generale sarà</p>
+
+<div class="eq">
+<p><i>f</i> ∘ <i>g</i> &ne; <i>g</i> ∘ <i>f</i></p>
+</div>
+
+<p>ossia il prodotto di composizione non è commutativo! come mostra il seguente esempio</p>
+
+<p><b>Esempio 1.4.2</b>. La funzione <i>x</i> &mapsto; |<i>f</i>(<i>x</i>)| è in realtà "composta" di due funzioni: dato <i>x</i>, si calcola <i>f</i>(<i>x</i>); calcolato <i>f</i>(<i>x</i>), si calcola |<i>f</i>(<i>x</i>)|. <br> Si tratta di operare in serie con due scatole nere, la prima corrispondente a <i>f</i>, la seconda al suo valore assoluto, secondo il seguente schema</p>
+
+<div class="eq">
+<p><i>x</i> &mapsto; <i>f</i> &mapsto; <i>f</i>(<i>x</i>) &mapsto; | ⋅ | &mapsto; |<i>f</i>(<i>x</i>)|&emsp;■</p>
+</div>
+
+<p><b>Esempio 1.4.3</b>. Consider the functions <i>f</i>: ℤ ⟶ ℤ and <i>g</i>: ℚ ⟶ ℚ, given by <i>f</i>(<i>x</i>) = 2<i>x</i>/3  &forall;<i>x</i> &in; ℤ and <i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> &forall;<i>x</i> &in; ℚ. Observe that <i>g</i> ∘ <i>f</i>: ℤ ⟶ ℚ is given by (<i>g</i> ∘ <i>f</i>) (<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>)) = <i>g</i>(2<i>x</i>/3)  = 4<i>x</i><sup>2</sup>/9 &forall;<i>x</i> &in; ℤ. But <i>f</i> ∘ <i>g</i> is not defined as for example 1/4 &in; ℚ, <i>g</i>(1/4) = 1/16 &notin; ℤ and hence <i>f</i>(1/16) makes no sense. The reason for this is that Im(<i>g</i>) ⊈ D(<i>f</i>).&emsp;■</p>
 
 <p><b>Example 1.4.3</b>. Consider the functions <i>f</i> : ℤ ⟶ ℤ and <i>g</i>:  ℤ ⟶ ℤ, defined by <i>f</i>(<i>n</i>) = (−1)<sup><i>n</i></sup>, <i>n</i> &in; ℤ and <i>g</i>(<i>n</i>) = 2<i>n</i>, <i>n</i> &in; ℤ. Then <i>g</i> ∘ <i>f</i>: ℤ ⟶ ℤ is given by (<i>g</i> ∘ <i>f</i>)(<i>n</i>) = <i>g</i>(<i>f</i>(<i>n</i>)) = <i>g</i>((−1)<sup><i>n</i></sup>) = 2(−1)<sup><i>n</i></sup>, <i>n</i> &in; ℤ, i.e. (<i>g</i> ∘ <i>f</i>)(<i>n</i>) = 2 or −2, according as <i>n</i> is even or odd. Observe that, here one may define as well (<i>f</i> ∘ <i>g</i>)(<i>n</i>)  = <i>f</i>(<i>g</i>(<i>n</i>)) = <i>f</i>(2<i>n</i>) = (−1)<sup>2<i>n</i></sup>, <i>n</i> &in; ℤ, i.e. (<i>f</i> ∘ <i>g</i>)(<i>n</i>)  = 1,  &forall;<i>n</i> &in; ℤ. This example shows that <i>g</i> ∘ <i>f</i> &ne; <i>f</i> ∘ <i>g</i> in general, even when both are defined, i.e. <b>composition of functions is noncommutative</b>. &emsp;■</p>
 
