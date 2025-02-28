@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exercises on Sequences"/>
+	<title>Exercises on Sequences</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Exercises on Sequences</h1>
+
+<ol>
+	<li><p>Dare esempi di "infiniti" di ordine superiore a {log <i>n</i>} e di ordine superiore a {2<sup><i>n</i></sup>}.</p></li>
+	<li><p>Provare che log(<i>n</i> + 1) ~ log <i>n</i>.</p></li>
+	<li><p>Calcolare</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <msub>
+      <mi>a</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <msub>
+      <mi>a</mi>
+      <mi>n</mi>
+    </msub>
+  </mfrac>
+</math>
+
+	<!-- $$\lim_{n\to \infty}\frac{a_{n+1}}{a_n} $$-->
+
+<p>per le seguenti successioni:</p>
+
+<div class="eq">
+	<p><i>a<sub>n</sub></i> = <i>n<sup>n</sup></i>, &emsp;<i>a<sub>n</sub></i> = <i>n</i>!, &emsp;<i>a<sub>n</sub></i> = 2<sup><i>n</i></sup>, &emsp;<i>a<sub>n</sub></i> = <i>n</i><sup>2</sup></p>
+</div>
+
+</li>
+
+	<li><p>Dare una stima asintotica delle seguenti successioni, mediante una successione "più semplice", e calcolare quindi il limite:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>n</mi>
+        <mn>3</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>2</mn>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>n</mi>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>n</mi>
+    </mrow>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mi>n</mi>
+    </mrow>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mn>3</mn>
+      <mi>n</mi>
+    </mrow>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+      <mo>&#x2212;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\frac{n^3+2n^2 + \sin n}{n + \log n} \quad \frac{n^2+ \log n + n}{\log 3n} \quad \frac{n! - (n-1)!}{n+(n-2)!} $$ -->
+
+</li>
+	<li><p>Calcolare i limiti, per <i>n</i> &rarr; &infin; delle seguenti successioni:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+    <mtr>
+      <mtd>
+        <msqrt>
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </msqrt>
+        <mo>&#x2212;</mo>
+        <msqrt>
+          <mi>n</mi>
+        </msqrt>
+        <mo>,</mo>
+      </mtd>
+      <mtd>
+        <msqrt>
+          <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mi>n</mi>
+        </msqrt>
+        <mo>&#x2212;</mo>
+        <mi>n</mi>
+        <mo>,</mo>
+      </mtd>
+      <mtd>
+        <mo stretchy="false">(</mo>
+        <msqrt>
+          <msup>
+            <mi>n</mi>
+            <mn>4</mn>
+          </msup>
+          <mo>+</mo>
+          <mn>1</mn>
+        </msqrt>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi>log</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;</mo>
+        <mi>log</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+      </mtd>
+      <mtd>
+        <msup>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mfrac>
+              <mi>n</mi>
+              <mrow>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mi>n</mi>
+        </msup>
+        <mo>,</mo>
+      </mtd>
+      <mtd>
+        <msup>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mfrac>
+              <mn>1</mn>
+              <msup>
+                <mi>n</mi>
+                <mn>2</mn>
+              </msup>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mi>n</mi>
+        </msup>
+        <mo>,</mo>
+      </mtd>
+      <mtd>
+        <msup>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mfrac>
+              <mn>1</mn>
+              <msup>
+                <mi>n</mi>
+                <mn>7</mn>
+              </msup>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <msup>
+              <mi>n</mi>
+              <mn>9</mn>
+            </msup>
+          </mrow>
+        </msup>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{array}{ccc}\sqrt{n+1} - \sqrt{n},& \sqrt{n^2+n} -n, & (\sqrt{n^4+1} - n^2)n\\
+\log(n+1) - \log(n), & \left(\frac{n}{n+1}\right)^n, & \left(1+\frac{1}{n^2}\right)^n, & \left(1 +\frac{1}{n^7}\right)^{n^9}\end{array}$$ -->
+
+</li>
+	<li><p>Let <i>A</i> &gt; 0. The sequence defined by</p>
+
+	<div class="eq">
+	<p><i>a</i><sub><i>n</i>+1</sub> = (1/2)(<i>a<sub>n</sub></i> + <i>A</i>/<i>a<sub>n</sub></i>) &emsp;(<b>E.1</b>)</p>
+	</div>
+
+<p>with <i>a</i><sub>1</sub> &ge; 0. This sequence is used to calculate approximations to √<i>A</i>, and it also known as the Babylonian Algorithm for computing square roots. Determine whether the sequences converges and eventualy its limit</p></li>
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>log<sub><i>a</i></sub> <i>n</i> ≺ <i>n<sup>&alpha;</sup></i> ≺ <i>b<sup>n</sup></i> ≺ <i>n</i>! ≺ <i>n<sup>n</sup></i>, &emsp;&forall;<i>a,b</i> &gt; 1, <i>&alpha;</i> &gt; 0</p>
+	<p>2<sup><i>n</i></sup> ≺ <i>n</i>! ≺ 2<sup>(2<sup>n</sup>)</sup> + <i>c</i>.</p></li>
+	<li><p>Se due successioni sono asintotiche, convergono allo stesso limite, o divergono entrambe a ±∞, o entrambe non hanno limite; tanto log(<i>n</i> + 1) che log <i>n</i> divergono a infinito;</p></li>
+	<li><p>Abbiamo</p>
+
+		<ol>
+			<li><p>(n+1)<sup>(n+1)</sup> = (n+1)<sup>n</sup> ⋅ (<i>n</i> + 1) and ((<i>n</i>+1)/<i>n</i>)<sup><i>n</i></sup> ⋅ (n+1) = (1 + 1/<i>n</i>)<sup><i>n</i></sup> * (<i>n</i> + 1) = <i>e</i> ⋅ &infin; = &infin;</p></li>
+			<li><p>(n+1)!/n! = (n+1) = &infin;</p></li>
+			<li><p>2<sup><i>n</i></sup> ⋅ 2/2<sup><i>n</i></sup> = 2;</p></li>
+			<li><p>(<i>n</i> + 1)<sup>2</sup>/<i>n</i><sup>2</sup> = <i>n</i><sup>2</sup> + 1 + 2<i>n</i>/<i>n</i><sup>2</sup> = 1 + 1/<i>n</i> + 2/<i>n</i>.</p></li>
+		</ol>
+	</li>
+
+		<li>
+			<ol>
+				<li><p>for the denominator wer have <i>n</i> + log <i>n</i> ~ <i>n</i> so the whole sequence ~ <i>n</i><sup>2</sup>;</p></li>
+				<li><p>~ n<sup>2</sup>/log (<i>n</i>);</p></li>
+				<li><p>(n-2)! + n ~ (n-2)! so n! / (n-2)! = n(n-1) ~ <i>n</i>² and <i>n</i>! / ((<i>n</i>-2)! + n) ~ n², (n-1)! / ((n-2)! + n) ~ n but n² + n ~ n².</p></li>
+			</ol>
+		</li>
+
+	<li>
+		<ol>
+			<li><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <mi>n</mi>
+    <mo>+</mo>
+    <mn>1</mn>
+  </msqrt>
+  <mo>&#x2212;<!-- − --></mo>
+  <msqrt>
+    <mi>n</mi>
+  </msqrt>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msqrt>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </msqrt>
+      <mo>&#x2212;<!-- − --></mo>
+      <msqrt>
+        <mi>n</mi>
+      </msqrt>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <msqrt>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </msqrt>
+      <mo>+</mo>
+      <msqrt>
+        <mi>n</mi>
+      </msqrt>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msqrt>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </msqrt>
+      <mo>+</mo>
+      <msqrt>
+        <mi>n</mi>
+      </msqrt>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <msqrt>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </msqrt>
+      <mo>+</mo>
+      <msqrt>
+        <mi>n</mi>
+      </msqrt>
+    </mrow>
+  </mfrac>
+  <mo>&lt;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>2</mn>
+      <msqrt>
+        <mi>n</mi>
+      </msqrt>
+    </mrow>
+  </mfrac>
+</math>
+
+<p>where we used (<i>a</i><sup>2</sup> &minus; <i>b</i><sup>2</sup>) = (<i>a</i> + <i>b</i>) (<i>a</i> &minus; <i>b</i>); Thus the limit is zero.</p></li>
+
+<li>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <msup>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mi>n</mi>
+  </msqrt>
+  <mo>&#x2212;</mo>
+  <mi>n</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msqrt>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>n</mi>
+      </msqrt>
+      <mo>&#x2212;</mo>
+      <mi>n</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <msqrt>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>n</mi>
+      </msqrt>
+      <mo>+</mo>
+      <mi>n</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msqrt>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>n</mi>
+      </msqrt>
+      <mo>+</mo>
+      <mi>n</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mrow>
+      <msqrt>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>n</mi>
+      </msqrt>
+      <mo>+</mo>
+      <mi>n</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mi>n</mi>
+    <mrow>
+      <msqrt>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>n</mi>
+      </msqrt>
+      <mo>+</mo>
+      <mi>n</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <msqrt>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mi>n</mi>
+        </mfrac>
+      </msqrt>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\sqrt{n^2+n}-n=\frac{(\sqrt{n^2+n}-n)(\sqrt{n^2+n}+n)}{\sqrt{n^2+n}+n} =\frac{n^2+n-n^2}{\sqrt{n^2+n}+n}=\frac{n}{\sqrt{n^2+n}+n}=
+\frac{1}{\sqrt{1+\frac{1}{n}}+1} $$ -->
+
+<p>Thus the limit is 1/2.</p></li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>n</mi>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+  </msqrt>
+  <msup>
+    <mi>n</mi>
+    <mn>4</mn>
+  </msup>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>n</mi>
+    <mn>3</mn>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <msqrt>
+        <mo stretchy="false">(</mo>
+      </msqrt>
+      <msup>
+        <mi>n</mi>
+        <mn>4</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <msup>
+        <mi>n</mi>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <msqrt>
+        <mo stretchy="false">(</mo>
+      </msqrt>
+      <msup>
+        <mi>n</mi>
+        <mn>4</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <msup>
+        <mi>n</mi>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <msup>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mi>n</mi>
+      <msqrt>
+        <mo stretchy="false">(</mo>
+      </msqrt>
+      <msup>
+        <mi>n</mi>
+        <mn>4</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <msup>
+        <mi>n</mi>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>&#x223C;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>2</mn>
+      <mi>n</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ n \sqrt(n^4 + 1) - n^3 \frac{n \sqrt(n^4 + 1)+ n^3}{n \sqrt(n^4 + 1)+ n^3} = \frac{n^2}{n \sqrt(n^4 + 1)+ n^3} \sim \frac{1}{2n}$$ -->
+
+<p>so the limit is zero. </p></li>
+
+<li><p>Rewrite as log (<i>n</i> + 1)/<i>n</i> = log (1 + 1/<i>n</i>); The limit is then 0.</p></li>
+
+<li><p>moltiplicando e dividendo per 1/<i>n</i> abbiamo (1/(1 + 1/<i>n</i>))<sup><i>n</i></sup> che al limite dà 1/<i>e</i>.</p></li>
+
+<li><p>Abbiamo che,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mfrac>
+        <mn>1</mn>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <msup>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mn>1</mn>
+          <mo>+</mo>
+          <mfrac>
+            <mn>1</mn>
+            <msup>
+              <mi>n</mi>
+              <mn>2</mn>
+            </msup>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+      </msup>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mi>n</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mi>n</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$ \lim_{n\to \infty} \left(1+\frac{1}{n^2} \right)^{n}=\lim_{n\to \infty} \left(\left(1+\frac{1}{n^2}\right)^{n^2}\right)^{1/n} = \lim_{n\to \infty} e^{1/n} = 1$$ -->
+
+<p>
+
+</ol>
+
+	<li><p>Recalling the <a href="../algebra/useful_formulas.html#means">inequality</a> relating geometric and arithmetic mean of two numbers <i>a,b</i> &gt; 0</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msqrt>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mrow>
+      <mi>a</mi>
+      <mo>+</mo>
+      <mi>b</mi>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \sqrt{ab} \le \frac {a+b}{2} $$ -->
+
+<p>In this inequality, put <i>a</i> = <i>a<sub>n</sub></i> and <i>b</i> = <i>A</i>/<i>a<sub>n</sub></i> to deduce</p>
+
+<div class="eq">
+<p>√<i>A</i> &le; (1/2) (<i>a<sub>n</sub></i> + <i>A</i>/<i>a<sub>n</sub></i>) = <i>a</i><sub><i>n</i> + 1</sub></p>
+</div>
+
+<p>So the sequence is bounded below by √<i>A</i> at least starting from <i>n</i> = 2. To prove the convergence it remains to show it is decreasing, which is the same as showing that <i>a</i><sub><i>n</i>+1</sub> − <i>a<sub>n</sub></i> &lt; 0. In fact, for <i>n</i> &ge; 2 we have <i>a<sub>n</sub></i><sup>2</sup> &gt; <i>A</i>, so that</p>
+
+<div class="eq">
+<p><i>a</i><sub><i>n</i>+1</sub> = (1/2) (<i>a<sub>n</sub></i> + <i>A</i>/<i>a<sub>n</sub></i>) &le; (<i>a<sub>n</sub></i> + <i>a<sub>n</sub></i>)/2 = <i>a<sub>n</sub></i></p>
+</div>
+
+<p>Hence by theorem <a href="sequences_limit.html">Monotone Sequence Theorem 2.2.5.</a>, the sequence <i>a<sub>n</sub></i> converges to some number <i>L</i> &ge; √<i>A</i>. Taking the limit on both sides of E.1, we deduce that <i>L</i> satisfies <i>L</i> = (1/2)(<i>L</i> + <i>A</i>/<i>L</i>) and so <i>L</i> = √<i>A</i>. &emsp;■</p></li>
+
+<p>It is of considerable practical importance to have sequences of approximations that converge very rapidly. The sequence has this property. For example let us use the sequence to approximate &sqrt;36. We start with <i>a</i><sub>1</sub> = 7, and then find that</p>
+
+<div class="eq">
+<p><i>a</i><sub>1</sub> = 7<br>
+<i>a</i><sub>2</sub> = 6.071428571428571429<br>
+<i>a</i><sub>3</sub> = 6.000420168067226891<br>
+<i>a</i><sub>4</sub> = 6.000000014710736896<br>
+<i>a</i><sub>5</sub> = 6.000000000000000018</p>
+</div>
+
+</ol>
+
+<section aria-label="End">
+<a href="an_stime.html">&#171;Confronti e stime asintotiche</a>
+<a href="index.html">Index</a>
+<a href="series.html">Series&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
