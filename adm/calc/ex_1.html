@@ -22,6 +22,7 @@
 <h1>Exercises on R and C fields</h1>
 
 <ol>
+	<li><p>Prove that |𝑥−𝑎| < 𝜖 is is equivalent to <i>a</i> − <i>𝜖</i> &lt; <i>x</i> &lt; 𝜖 + <i>a</i>;</p></li>
 	<li><p>If <i>r</i> is rational (<i>r</i> &ne; 0) and <i>x</i> is irrational, prove that <i>r</i> + <i>x</i> and <i>rx</i> are irrational.</p></li>
 	<li><p>Prove that there is no rational number whose square is 12.</p></li>
 	<li><p>Let <i>E</i> be a nonempty subset of an ordered set; suppose <i>&alpha;</i> is a lower bound of <i>E</i> and  <i>&beta;</i> is an upper bound of <i>E</i>. Prove that <i>&alpha;</i> &le; <i>&beta;</i>.</p></li>
@@ -48,7 +49,7 @@
 
 <li><p>Prove that <i>b</i><sup>r + s</sup> = <i>b<sup>r</sup>b<sup>s</sup></i> if <i>r</i> and <i>s</i> are rational.</p></li>
 
-<li><p>If <i>x</i> is real, define <i>B</i>(<i>x</i>) to be the set of all numbers b<sup>t</sup>, where <i>t</i> is rational <i>t</i> &le;<i>x</i>. Prove that</p>
+<li><p>If <i>x</i> is real, define <i>B</i>(<i>x</i>) to be the set of all numbers <i>b<sup>t</sup></i>, where <i>t</i> is rational <i>t</i> &le;<i>x</i>. Prove that</p>
 
 <div class="eq">
 <p><i>b<sup>r</sup></i> = sup <i>B</i>(<i>r</i>)</p>
@@ -57,7 +58,7 @@
 <p>where <i>r</i> is rational. Hence it makes sene to define</p>
 
 <div class="eq">
-<p><i>b<sup>x</sup></i> = sup <i>B</i>(<i>x/i>)</p>
+<p><i>b<sup>x</sup></i> = sup <i>B</i>(<i>x</i>)</p>
 </div>
 
 <p>for every real <i>x</i>.</p></li>
@@ -68,11 +69,78 @@
 
 </ol>
 
-
-
 <h2>Solutions</h2>
 
 <ol>
+	<li><p>From the definition of abs. value we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mi>a</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>&#x2212;</mo>
+          <mi>a</mi>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2212;</mo>
+          <mi>a</mi>
+          <mo>&#x2265;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>&#x2212;</mo>
+          <mi>a</mi>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2212;</mo>
+          <mi>a</mi>
+          <mo>&lt;</mo>
+          <mn>0</mn>
+          <mstyle scriptlevel="0">
+            <mspace width="0.278em"></mspace>
+          </mstyle>
+          <mo>.</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$|x-a|=\begin{cases}x-a,&\text{if }x-a\ge 0\\-(x-a),&\text{if }x-a<0\;.\end{cases}$$ -->
+
+<p>If 𝑥−𝑎 ≥ 0, we have 𝑥−𝑎 < 𝜖. If 𝑥−𝑎<0, then −(𝑥−𝑎)<𝜖, which after multiplication by −1 becomes 𝑥−𝑎 > −𝜖. Thus, in both cases we have</p>
+
+<div class="eq">
+<p> −𝜖 &lt; 𝑥−𝑎  &lt; 𝜖<br>
+<i>a</i> − <i>𝜖</i> &lt; <i>x</i> &lt; 𝜖 + <i>a</i> &emsp; (having added <i>a</i>)</p>
+</div>
+
+</li>
+
 	<li><p>Given that <i>r</i> is rational, we can write <i>r</i> = <i>a</i>/<i>b</i> for some integers <i>a</i> and <i>b</i>. We are also given that <i>x</i> is irrational. From here, we proceed with a proof by contradiction. We first assume that <i>r</i> + <i>x</i> is rational, and then we use this fact in some way to show that <i>x</i> is rational, contradicting one of the facts we were given. This will prove that <i>r</i> + <i>x</i> is instead irrational.<br> So if <i>r</i> + <i>x</i> is rational, we can write <i>r</i> + <i>x</i> = <i>c</i>/<i>d</i> for some relatively prime integers <i>c</i> and <i>d</i>. But then</p>
 
 <div class="eq">
