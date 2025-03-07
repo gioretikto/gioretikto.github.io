@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Intermediate Zero Theorem"/>
+    <title>The Intermediate Zero Theorem</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+        <li><a class="navbar" href="../multivariable_calculus/index.html">Multivariable Calculus</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>The Intermediate Value Theorem</h1>
+
+<p><b>Theorem 5.4.1</b>. (The Intermediate Value Theorem) If the <i>f</i> is continuous on a closed interval [<i>a,b</i>] and if <i>f</i>(<i>a</i>) and <i>f</i>(<i>b</i>) have opposite signs, then there exists a number <i>x</i><sub>0</sub> between <i>a</i> and <i>b</i> such that <i>f</i>(<i>x</i><sub>0</sub>) = 0.</p>
+
+<p><b>Proof</b>: Assume (with no loss of generality) that <i>f</i>(<i>a</i>) &lt; 0 &lt; <i>f</i>(<i>b</i>)</i>. Let</p>
+
+<div class="eq">
+<p><i>S</i> = {<i>x</i> &in; [<i>a,b</i>]: <i>f</i>(<i>x</i>) &lt; 0}</p>
+</div>
+
+<p><i>S</i> &ne; ∅, since <i>a</i> &in; <i>S</i>, and is bounded above by <i>b</i>, therefore by the <a href="topology.html">completeness property</a> of ℝ, it has a least upper bound, <i>x</i><sub>0</sub> = sup <i>S</i>. Since <i>a</i> &in; <i>S</i>, then <i>a</i> &le; <i>x</i><sub>0</sub> and since <i>b</i> is an upper bound of <i>S</i>, by definition of supremum <i>x</i><sub>0</sub> &le; <i>b</i> then <i>x</i><sub>0</sub> &in; [<I>a,b</i>]. Being <i>f</i> continuous at <i>x</i><sub>0</sub>, if <i>x</i><sub>0</sub> = sup <i>S</i>, in any neighborhood of the point <i>x</i><sub>0</sub> the function outputs <i>f</i>(<i>x</i>) must contain both positive and negative values at the same time, which implies <i>f</i>(<i>x</i><sub>0</sub>) = 0). &emsp;□</p>
+
+<p>It's clear that if <i>f</i> is also monotonous, the zero is unique. The theorem can be reformulated in the following form.</p>
+
+<p><b>Theorem 5.4.2</b>. Let <i>f</i> be a continuous function whose domain contains the interval [<i>a,b</i>]. Let <i>y</i> be a number that lies between <i>f</i>(<sub>a</sub>) and <i>f</i>(<i>b</i>). Then there is a number <i>x</i><sub>0</sub> between <i>a</i> and <i>b</i> such that <i>f</i>(<i>x</i><sub>0</sub>) = <i>y</i>.</p>
+
+<p><b>Proof</b>. Suppose that <i>f</i>(<sub>a</sub>) &lt; <i>f</i>(<i>b</i>) and let <i>y</i> such that <i>f</i>(<sub>a</sub>) &lt; <i>y</i> &lt; <i>f</i>(<i>b</i>). The function <i>F</i>(<i>x</i>) = <i>y</i> − <i>f</i>(<i>x</i>) results continuous in [<i>a,b</i>] and such that <i>F</i>(<i>a</i>) = <i>y</i> − <i>f</i>(<i>a</i>) &gt; 0 and <i>F</i>(<i>b</i>) = <i>y</i> − <i>f</i>(<i>b</i>) &lt; 0. Then by the Intermediate Value Theorem there exists a <i>x</i><sub>0</sub> &in; [<i>a,b</i>] such that <i>F</i>(<i>x</i><sub>0</sub>) = <i>y</i> − <i>f</i>(<i>x</i><sub>0</sub>) = 0. &emsp;□</p>
+
+<p>As a consequence of the previous two theorem we have the following corollaries,</p>
+
+<p><b>Corollary 5.4.3</b>. If <i>f</i> is a real continuous function in the interval <i>I</i> = [<i>a,b</i>], then <i>f</i>(<i>I</i>) is also an interval with extremes <i>m</i> = min<sub><i>I</i></sub> <i>f</i> and <i>M</i> = max<sub><i>I</i></sub> <i>f</i>.</p>
+
+<p>The following example indicates that if we restrict the domains of our functions to the rational numbers, then important theorems like the Intermediate Value Theorem no longer hold.</p>
+
+<p><b>Example 5.4.3</b>. Let <i>f</i>: ℚ ⟶ ℚ defined as <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup>. Then for <i>f</i> the intermediate value property <i>does not</i> hold. Indeed, we have for example <i>f</i>(1) = 1, <i>f</i>(2) = 4, but <i>f</i> does not assume all the values betwenn 1 and 4 as for example 2. Without completeness, many of the fundamental theorems in calculus would not hold. For this reason in calculus, we deal often with functions whose domains are the entire real numnbers. &emsp;■ </p>
+
+<section aria-label="End">
+<a href="Weierstrass.html">&#171;The extreme value theorem</a>
+<a href="index.html">Index</a>
+<a href="Rolle.html">Rolle's Theorem &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
