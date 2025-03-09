@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Limits and Continuity of Functions"/>
-	<title>Limits and Continuity of Functions</title>
+	<meta name="description" content="Il concetto di limite"/>
+	<title>Il concetto di limite</title>
 	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -19,11 +19,60 @@
 
 <article>
 
-<h1>Limits and Continuity of Functions</h1>
+<h1>Il concetto di limite</h1>
 
-<p>L'operazione di limite si può estendere dalle successioni alle funzioni. potremo così precisare il comportamento di una funzione quando la variabile indipendente si muove vicino a un determinato punto oppure diventa molto grande (in valore assoluto). <br> In questo paragrago introdurremo i concetti fondamentali riguardanti i limiti e la continuità di funzioni.</p>
+<p>L'operazione di limite si può estendere dalle successioni alle funzioni. potremo così precisare il comportamento di una funzione quando la variabile indipendente si muove vicino a un determinato punto oppure diventa molto grande (in valore assoluto). <br> Deve essere possibile trovare punti nel dominio della funzione che siano arbitrariamente vicini al target <i>x</i><sub>0</sub>. Se <i>x</i><sub>0</sub> è un punto di accumulazione del dominio, allora ci saranno infiniti altri punti del dominio nelle sue vicinanze.</p>
 
-<p>Consideriamo come caso tipico un intervallo <i>I</i>, un punto <i>c</i> &in; <i>I</i> e una funzione <i>f</i> a valori reali, definita in <i>I</i>, salvo al più nel punto <i>c</i>. L'intervallo <i>I</i> può essere limitato o illimitato, chiuso o aperto; il punto <i>c</i> può essere interno all'intervallo oppure uno dei suoi estremi (eventualmente +&infin; o &minus;&infin;).<br> Prendiamo ora una qualunque successioni di punti <i>x<sub>n</sub></i>, nell'intervallo <i>I</i> e diversi da <i>c</i>, che tenda a <i>c</i>, per <i>n</i> &rarr; +&infin;.<br> In corrispondenza alla successione di ingressi <i>x<sub>n</sub></i>, consideriamo la successione delle uscite <i>f</i>(<i>x<sub>n</sub></i>). <br> Se, qualunque sia la successione scelta, si ha che <i>f</i>(<i>x<sub>n</sub></i>) tende al limite ℓ (finito o infinito) si dice che il <i>limite di f(<i>x</i>) per x che tende a c è ℓ</i> e si scrive</p>
+<p><b>Definizione 4.1 (Punto di accumulazione)</b>. Sia <i>A</i> &subseteq; ℝ. Diremo che <i>x</i><sub>0</sub> &in; ℝ è un <i>punto di accumulazione</i> di <i>A</i> se <b>ogni</b> <a href="I.html#intorno">intorno</a> di <i>x</i><sub>0</sub> contiene punti di <i>A</i> distinti da <i>x</i><sub>0</sub> stesso, cioè &forall;<i>&delta;</i> &gt; 0 si ha [(<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> + &delta;) \ {<i>x</i><sub>0</sub>}] ∩ <i>A</i> &ne; 0.&emsp;□</p>
+
+<p><b>Esempio 4.2</b> Consideriamo l'insieme</p>
+
+<div class="eq">
+<p><i>A</i> = {1/<i>n</i> : <i>n</i> &in; ℕ, <i>n</i> &ge; 1}</p>
+</div>
+
+<p>Allora 0 è un punto di accumulazione di <i>A</i> pur non essendo un punto di <i>A</i>, in quanto a un suo qualsiasi intorno I<sub>r</sub>(0) = (−<i>r,r</i>) appartengono tutti gli infiniti elementi 1/<i>n</i> dell'insieme <i>A</i> per cui è 1/<i>n</i> &lt; <i>r</i>. Ogni altro punto <i>x</i> &ne; 0 (v. fig. per es., <i>x</i> = 1/3) non è di accumulazione, dato che si può sempre determinare un suo intorno che non contenga (altri) punti di <i>A</i> &emsp;■</p>
+
+<p>Come altro esempio, se <i>A</i> = (<i>a,b</i>) \ <i>x</i><sub>0</sub> con <i>x</i><sub>0</sub> &in; [<i>a,b</i>], allora tutti i punti dell'intervallo chiuso [<i>a,b</i>] sono di accumulazione per <i>A</i>; in particolare <i>x</i><sub>0</sub>, pur non appartenendo ad <i>A</i>, è di accumulazione per <i>A</i>.</p>
+
+<img src="img/accumulazione.png" alt="punto di accumulazione"/>
+
+<p><b>Definizione 4.3 − Limite</b> Sia data <i>f</i>: <i>A</i> &subseteq; ℝ ⟶ ℝ e sia <i>x</i><sub>0</sub> &in; ℝ un punto di accumulazione di <i>A</i>. Diremo che il numero reale ℓ è il limite di <i>f</i> per <i>x</i> che tende a <i>x</i><sub>0</sub>, e scriveremo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$ \lim_{x \to x_0} f(x) = \ell $$ -->
+
+<p>se <b>per ogni</b> <i>&epsilon;</i> &gt; 0 <b>esiste</b> un numero <i>&delta;</i> &gt; 0 (dipendente da <i>&epsilon;</i>) tale che</p>
+
+<div class="eq">
+<p>|<i>f</i>(<i>x</i>) − ℓ| &lt; <i>&epsilon;</i>, &emsp; &forall;<i>x</i> &in; [(<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> + &delta;) \ {<i>x</i><sub>0</sub>}] ∩ <i>A</i>&emsp;■</p>
+</div>
+
+<p>La funzione <i>f</i> può anche non essere definita nel punto <i>x</i><sub>0</sub> e anche se lo fosse, il valore <i>f</i>(<i>x</i><sub>0</sub>) non gioca alcun ruolo nella definizione di limite. Inoltre, essendo <i>x</i><sub>0</sub> di accumulazione di <i>A</i>, l'insieme [(<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> + &delta;) \ {<i>x</i><sub>0</sub>}] ∩ <i>A</i> che compare nella Definizione è non vuoto per ogni <i>&delta;</i> &gt; 0. <br> 
+Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub> quando, comunque scelto un intorno <i>V</i> = (ℓ − <i>&epsilon;</i>, ℓ + <i>&epsilon;</i>) di ℓ, esiste un intorno <i>U</i> = (<i>x</i><sub>0</sub> − <i>&delta;</i>, <i>x</i><sub>0</sub> + <i>&delta;</i>) di <i>x</i><sub>0</sub> tale che ogni punto <i>x</i> &in; <i>U</i> \ {<i>x</i><sub>0</sub>} viene mandato in un punto <i>f</i>(<i>x</i>) &in; <i>V</i> (v. Figura).</p>
+
+<img src="img/lim.png" alt="limite definizione"/>
+
+<p>Consideriamo come caso tipico un intervallo <i>I</i>, un punto <i>c</i> &in; <i>I</i> e una funzione <i>f</i> a valori reali, definita in <i>I</i>, salvo al più nel punto <i>c</i>. L'intervallo <i>I</i> può essere limitato o illimitato, chiuso o aperto; il punto <i>c</i> può essere interno all'intervallo oppure uno dei suoi estremi (eventualmente +&infin; o &minus;&infin;).<br> Prendiamo ora una qualunque successioni di punti <i>x<sub>n</sub></i>, nell'intervallo <i>I</i> e diversi da <i>c</i>, che tenda a <i>c</i>, per <i>n</i> &rarr; +&infin;.<br> In corrispondenza alla successione di ingressi <i>x<sub>n</sub></i>, consideriamo la successione delle uscite <i>f</i>(<i>x<sub>n</sub></i>). <br> Se, qualunque sia la successione scelta, si ha che <i>f</i>(<i>x<sub>n</sub></i>) tende al limite ℓ (finito o infinito) si dice che il <i>limite di <i>f</i>(<i>x</i>) per x che tende a c è ℓ</i> e si scrive</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -46,7 +95,7 @@
 
 <p>(che si legge "il limite per <i>x</i> tendente a <i>c</i> di <i>f</i>(<i>x</i>) è uguale a ℓ" oppure "<i>f</i>(<i>x</i>) tende a ℓ per <i>x</i> tendente a <i>c</i>". <br>Sinteticamente</p>
 
-<p><b>Definizione 4.1 (Successione di Limite)</b> Si dice che</p>
+<p><b>Definizione 4.2 (Successione di Limite)</b> Si dice che</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -71,7 +120,7 @@
 
 <p>Una funzione che per <i>x</i> &rarr; <i>x</i> tende a 0 si dice <i>infinitesima</i> per <i>x</i> &rarr; <i>c</i>, analogamente una funzione che tende a &pm; &infinf; si dice <i>infinita</i>- <br> La definizione appena data di <i>limite di funzione</i> di dice definizione <i>successionale</i> di limite, in quanto riconduce il concetto di limite di funzione a quello di limite di successione. Non è l'unica definizione possibile, come vedremo, e a prima vista può sembrare una definizione poco operativa. Tuttavia, come dimostranno sia il successivo sviluppo della teoria, sia gli esemi che faremo di calcolo di limiti, il fatto di avera già sviluppato le basi del calcolo dei limiti per le successioni, renderà molto vantaggiosa questa definizione, proprio dal punto di vista operativo. Ad es., possiamo subito affermare che vale il:</p>
 
-<p><b>Teorema 4.2 (Di unicità del Limite)</b> Se esiste lim<sub><i>c</i> &rarr; <i>c</i></sub> = ℓ, tale limite ℓ è unico.</p>
+<p><b>Teorema 4.3 (Di unicità del Limite)</b> Se esiste lim<sub><i>c</i> &rarr; <i>c</i></sub> = ℓ, tale limite ℓ è unico.</p>
 
 <p>Infatti, se esistessero due limiti ℓ<sub>1</sub>, ℓ<sub>2</sub> diversi tra loro, presa una qualsiasi successione <i>x<sub>n</sub></i> &rarr; <i>c</i> si avrebbe</p>
 
@@ -90,7 +139,7 @@
 
 <p>La Definizione 4.1, come già visto per le <a href="an.html#div">successioni</a>, si estende ai casi ℓ = &pm;&infin; e <i>x</i><sub>0</sub> = &pm;&infin;.</p>
 
-<p><b>Esempio 4.3 (Limite finito all'infinito)</b>. Dimostriamo che:</p>
+<p><b>Esempio 4.4 (Limite finito all'infinito)</b>. Dimostriamo che:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -182,13 +231,13 @@
 
 <!-- $$\lim_{x \to \pm\infty} f(x) = \ell $$ -->
 
-<p>Ogni situazione di limite finito all'infinito, quindi, corrisponde gragicamente alla presenza di un asintoto orizzontale, ossia di una retta orizzontale a cui il grafico della funzione si avvicina sempre più (come nell'esempio precedente).</p>
+<p>Ogni situazione di limite finito all'infinito, quindi, corrisponde graficamente alla presenza di un asintoto orizzontale, ossia di una retta orizzontale a cui il grafico della funzione si avvicina sempre più (come nell'esempio precedente).</p>
 
 <h3>Limite per eccesso e per difetto</h3>
 
 <p>Come abbiamo visto per le successioni, quando una funzione ha limite finito ℓ, talvolta è possibile precisare se questo limite viene raggiunto <i>per eccesso</i> (ℓ<sup>+</sup>) o <i>per difetto</i> (ℓ<sup>&minus;</sup>). Graficamente, questo significa che il grafico della funzione si avvicina lla quota <i>y</i> = ℓ dall'alto o dal basso. La definizione precisa èla seguente:</p>
 
-<p><b>Definizione 4.4 (Limite per eccesso o per difetto</b>) Se ℓ &in; ℝ e <i>c</i> &in; ℝ<sup>*</sup>, si dice che</p>
+<p><b>Definizione 4.5 (Limite per eccesso o per difetto</b>) Se ℓ &in; ℝ e <i>c</i> &in; ℝ<sup>*</sup>, si dice che</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -254,7 +303,7 @@
 <figcaption><b>Fig.1</b></figcaption>
 </figure>
 
-<p><b>Definizione 4.5 (Limite infinito all'infinito)</b> Sia <i>f</i> una funzione definita in <i>I</i> = (<i>a</i>, +&infin;) (risp. in (&minus;&infin;, <i>a</i>). Si definisce</p>
+<p><b>Definizione 4.6 (Limite infinito all'infinito)</b> Sia <i>f</i> una funzione definita in <i>I</i> = (<i>a</i>, +&infin;) (risp. in (&minus;&infin;, <i>a</i>). Si definisce</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -295,7 +344,7 @@
 <p><i>x</i> > <i>k</i> ⇒ <i>f</i>(<i>x</i>) &lt; &minus;<i>M</i>&emsp;□</p>
 </div>
 
-<p><b>Esempio 4.6</b> (Limite infinito all'infinito</b>) Dimostriamo che</p>
+<p><b>Esempio 4.7</b> (Limite infinito all'infinito</b>) Dimostriamo che</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msub>
@@ -458,11 +507,545 @@
 
 <!-- $$\lim_{x\to -\infty} [f(x) - (2x + 1)] = \lim_{x\to -\infty} e^x = 0 $$ -->
 
-<p>We studied <a href="sequences.html">real sequences</a>, which are real-valued functions defined on the subset ℕ of ℝ. In this chapter we shall consider real-valued functions whose domains are arbitrary subsets of ℝ that is we have <i>D</i> ⊆ ℝ, and the function <i>f</i>: <i>D</i> → ℝ.</p>
+<p>Perciò, per definizione di asintoto obliquo, si riconosce che la retta <i>y</i> = 2<i>x</i> + 1 è asintoto obliquo  per <i>f</i>, per <i>x</i> &rarr; −&infin;.</p>
 
-<p><b>Definition 4.1.1</b>. (<b>Accumulation point</b>). Let <i>D</i> ⊆ ℝ and <i>c</i> ∈ ℝ. Then <i>c</i> is called an accumulation point of <i>D</i> (or <b>limit point</b>) if there is a sequence {<i>x<sub>n</sub></i>} in <i>D</i> \{<i>c</i>} such that <i>x<sub>n</sub></i> ⟶ <i>c</i>. &emsp;□</p>
+<p>In casi meno elementari, anziché dover "indovinare" qual è l'asintoto obliquo è utile avere un criterio operativo per cercarlo. Vale in proposito la seguente:</p>
 
-<p>A sequence {<i>x<sub>n</sub></i>} of the inputs in the interval <i>D</i> \{<i>c</i>} generetas another sequence of the outputs {<i>f</i>(<i>x<sub>n</sub></i>)}</p>
+<p><b>Proposizione </b>. La funzione <i>f</i> ammette asintoto obliquo per <i>x</i> &rarr; +&infin; se e solo valogono le seguenti condizioni:</p>
+
+<ol>
+	<li><p>Esiste finito</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mi>m</mi>
+  <mo>&#x2260;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x\to +\infty} \frac{f(x)}{x} = m \ne 0 $$ -->
+
+</li>
+
+	<li><p>Esiste finito</p>
+
+<div class="eq">
+<p>lim<sub>x &rarr; +&infin;</sub> [<i>f</i>(<i>x</i>) − <i>mx</i>] = <i>q</i></p>
+</div>
+
+<p>dove <i>m</i> è il numero calcolato al punto 1. In tal caso l'asintoto è <i>y</i> = <i>mx</i> + <i>q</i>. Analogo criterio vale per <i>x</i> &rarr; −&infin;.</p>
+
+</li>
+
+</ol>
+
+<p>Studiamo la funzione <i>f</i>(<i>x</i>) = 3<i>x</i> + &rad;<i>x</i> per <i>x</i> &rarr; +&nfin;. Si vede subito che <i>f</i>(<i>x</i>) &rarr; +&infin; per <i>x</i> &rarr; +&infin;. Vediamo se presenta un asintoto obliquo. Calcoliamo perciò (in base alla proposizione precedente):</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mn>3</mn>
+      <mi>x</mi>
+      <msqrt>
+        <mi>x</mi>
+      </msqrt>
+    </mrow>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>3</mn>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msqrt>
+        <mi>x</mi>
+      </msqrt>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mn>3</mn>
+  <mo>&#x2261;</mo>
+  <mi>m</mi>
+</math>
+
+<!-- $$\lim_{x \to +\infty} \frac{3x \sqrt{x}}{x} = \lim_{x \to +\infty} \left(3 + \frac{1}{\sqrt{x}} \right) = 3 \equiv m $$ -->
+
+<p>(come si verifica facilmente applicando la definizione di limite). Calcoliamo ora</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mo stretchy="false">[</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mo stretchy="false">[</mo>
+  <mo stretchy="false">(</mo>
+  <mn>3</mn>
+  <mi>x</mi>
+  <mo>+</mo>
+  <msqrt>
+    <mi>x</mi>
+  </msqrt>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mn>3</mn>
+  <mi>x</mi>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msqrt>
+    <mi>x</mi>
+  </msqrt>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{x \to +\infty} [f(x) - mx] = \lim_{x \to +\infty} [(3x + \sqrt{x}) - 3x] = \lim_{x \to +\infty} \sqrt{x} = +\infty $$ -->
+
+<p>Poiché questo limite è infinito (non esiste <i>q</i>), la funzione <i>non ammette</i> asintoto obliquo. &emsp;■</p>
+
+<h3>Limite infinito al finito</h3>
+
+<p>Dimostriamo che:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{1}{x^2} = +\infty $$ -->
+
+<p>Dobbiamo provare che &forall;{<i>x<sub>n</sub></i>} tale che <i>x<sub>n</sub></i> ⟶ 0 e <i>x<sub>n</sub></i> &ne;0 &forall;<i>n</i> si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <msubsup>
+      <mi>x</mi>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msubsup>
+  </mfrac>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{1}{x_n^2} = +\infty $$ -->
+
+<p>A sua volta, questo significa provare che fissato <i>K</i> &gt; 0, risulti</p>
+
+<div class="eq">
+<p>1/<i>x<sub>n</sub></i><sup>2</sup> &gt; <i>K</i> definitivamente</p>
+</div>
+
+<p>il che equivale a:</p>
+
+<div class="eq">
+<p>|<i>x<sub>n</sub></i>| &lt; 1/&rad;<i>K</i> definitivamente</p>
+</div>
+
+<p>Ma per ipotesi <i>x<sub>n</sub></i> ⟶ 0, quindi fissata la quantità positiva <i>&epsilon;</i> = 1/&rad;<i>K</i>, certamente risulta |<i>x<sub>n</sub></i>| &lt; <i>&epsilon;</i> definitivamente, e l'asserto è dimostrato.&emsp;■</p>
+
+<h3>Limite destro e sinistro</h3>
+
+<p>Talvolta una funzione si comporta diversamente (dal punto di vista del suo limite) a seconda che <i>x</i> si avvicini a <i>x</i><sub>0</sub> da destra o da sinistra. Ad es., per <i>x</i> ⟶ 0 la funzione 1/<i>x</i> diventa sempre più grande in valore assoluto, ma con un segno diverso a seconda che sia <i>x</i> ≷ 0. Per descrivere questo tipo di situazioni, si introduce il concetto di limite destro e sinistro:</p>
+
+<p><b>Definizione (limite destro e sinistro)</b> Se <i>x</i><sub>0</sub> &in; ℝ e <i>ℓ</i> &in; ℝ<sup>*</sup>, si dice che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mtext>rispettivamente&#xA0;</mtext>
+  <mo>,</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>&#x2212;</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{x \to x_0^+} f(x) = \ell \quad (\text{rispettivamente }, \lim_{x \to x_0^-} f(x) = \ell $$ -->
+
+<p>e in tal caso si dice che il limite destro (sinistro) di <i>f</i> per <i>x</i> tendente a <i>x</i><sub>0</sub> è <i>ℓ</i>, se per ogni successione {<i>x<sub>n</sub></i>} di punti di <i>I</i> tali che <i>x<sub>n</sub></i> ⟶ <i>x</i><sub>0</sub><sup>+</sup> (<i>x</i><sub>0</sub><sup>−</sup>) per <i>n</i> ⟶ &infin; e <i>x<sub>n</sub></i> &ne; <i>x</i><sub>0</sub> &forall;<i>n</i>, si ha che <i>f</i>(<i>x<sub>n</sub></i>) ⟶ <i>x</i><sub>0</sub> per <i>n</i> ⟶ &infin;.&emsp;□</p>
+
+<p>Ad es.,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>&#x2212;</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{x \to x_0^+} \frac{1}{x} = +\infty \quad \lim_{x \to x_0^-} \frac{1}{x} = -\infty $$ -->
+
+<p>come si verifiac facilmente. Si noti che, invece,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>non esiste!</mtext>
+</math>
+
+<!-- $$\lim_{x \to x_0} \frac{1}{x} \quad \text{non esiste!} $$ -->
+
+<p>Più in generale:</p>
+
+<blockquote>il limite lim<sub><i>x</i>&rarr;<i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>) = <i>ℓ</i>, esiste se e solo se esistono, e sono entrambi uguali a <i>ℓ</i>, i limiti destro e sinistro; tuttavia, può accadere che i limiti destro e sinistrono esistano ma siano diversi tra loro, oppure uno solo dei due esista: in questi casi lim<sub><i>x</i>&rarr;<i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>) non esiste.</blockquote>
+
+<p>Se <i>f</i> è definita in (<i>a,b</i>), il limite per <i>x</i> &rarr; <i>a</i> (rispettivamente <i>x</i> &rarr; <i>b</i>) è automaticamente un limite destro (rispettivamente sinistro).</p>
+
+<h3>Asintoto verticale</h3>
+
+<p>Si dice che <i>f</i> ha un <i>asintoto verticale</i> di equazione <i>x</i> = <i>x</i><sub>0</sub> (<i>x</i><sub>0</sub> &in; ℝ) per <i>x</i> ⟶ <i>x</i><sub>0</sub> (oppure per <i>x</i> ⟶ <i>x</i><sub>0</sub><sup>+</sup> o <i>x</i> ⟶ <i>x</i><sub>0</sub><sup>−</sup>) se</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#xB1;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{x \to x_0} f(x) = \pm \infty $$ -->
+
+<p>(oppure questo accade per <i>x</i> ⟶ <i>x</i><sub>0</sub><sup>+</sup> o <i>x</i> ⟶ <i>x</i><sub>0</sub><sup>−</sup>) se lim<sub><i>x</i></sub> ⟶ <i>x</i><sub>0</sub><sup>+</sup></sub> <i>f</i>(<i>x</i>) = +&infin; o −&infin; (oppure questo accade per <i>x</i> ⟶ <i>x</i><sub>0</sub><sup>+</sup> o <i>x</i> ⟶ <i>x</i><sub>0</sub><sup>−</sup>, rispettivamente). <br> Ogni situazione di limite infinito al finito, quindi, corrisponde graficamente alla presenza di un asintoto verticale, ossia di una retta verticale a cui il grafico della funzione si avvicina sempre più. Ad es, diciamo che</p>
+
+<ul>
+	<li><p><i>x</i> = 0 è asintoto verticale per 1/<i>x</i><sup>2</sup> (per <i>x</i> ⟶ 0);</p></li>
+	<li><p><i>x</i> = 0 è asintoto verticale per 1/<i>x</i> (per <i>x</i> ⟶ 0<sup>+</sup> e per <i>x</i> ⟶ 0<sup>−</sup>);</p></li>
+	<li><p><i>x</i> = 0 è asintoto verticale per log <i>x</i> (per <i>x</i> ⟶ 0<sup>+</sup>);</p></li>
+</ul>
+
+<h3>Limite finito al finito</h3>
+
+<p>Questo è, in un certo senso, il caso meno intuitivo dei quattro finora trattati; vediamo perché. </p>
+
+<p><b>Esempio xx</b></p>
+
+<p>Chiediamoci quanto vale:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+</math>
+
+<!-- $$\lim_{x \to 0} \sin x $$ -->
+
+<p>Chiunque, probabilmente, risponderebbe: zero. Dopotutto, sin 0 = 0. Occorre rendersi conto, però, che anche se il risultato è proprio questo, la <i>motivazione</i> è errata. Infatti, la definizione di limite richiede che:</p>
+
+<div class="eq">
+<p>&forall; {<i>x<sub>n</sub></i>} : <i>x<sub>n</sub></i> &ne; 0 &forall;<i>n</i> e <i>x<sub>n</sub></i> ⟶ 0 per <i>n</i> ⟶ &infin;, si abbia sin <i>x<sub>n</sub></i> ⟶ 0 per <i>n</i> ⟶ &infin;</p>
+</div>
+
+<p>Quindi, per mostrare che lim<sub><i>x</i> ⟶ 0</sub> sin <i>x</i> = 0 non si deve calcolare sin 0! Si può procedere così: dalla disuguaglianza elementare:</p>
+
+<div class="eq">
+<p>|sin <i>x</i>| &le; |<i>x</i>|, valida &forall;<i>x</i> &in; ℝ</p>
+</div>
+
+(si ragioni sulla circonferenza trigonometrica per rendersene conto), leggiamo che |sin <i>x<sub>n</sub></i>| &le; <i>x<sub>n</sub></i> e quindi, per il teorema del confronto, se <i>x<sub>n</sub></i> ⟶ 0 anche sin <i>x<sub>n</sub></i> ⟶ 0. Pertanto</p>
+
+<div class="eq">
+<p>lim<sub>x ⟶ 0</Sub> sin <i>x</i> = 0</p>
+</div>
+
+<p><b>Esempio xx</b>. Sia</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2260;</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$
+f(x) =
+\begin{cases}
+1 & \text{if } x \ne 0,\\
+0 & \text{if } x =0\\
+\end{cases}
+$$ -->
+
+<p>e si voglia calcolare</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{x\to 0} f(x) $$ -->
+
+<p>Applicando la definizione di limite si vede subito che il limite vale 1. Infatti, se <i>x<sub>n</sub></i> ⟶ 0 per <i>n</i> ⟶ &infin; ma <i>x<sub>n</sub></i> &ne; 0 &forall;<i>n</i>, risulta f(<i>x<sub>n</sub></i>) = 1 &forall;<i>n</i>, e qundi f(<i>x<sub>n</sub></i>) ⟶ 1 per <i>n</i> &rarr; &infin;. In questo caso, dunque (a differenza dell'esempio precedente), si ha:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2260;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mn>0</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{x\to 0} f(x) \ne f(0) $$ -->
+
+<p>We studied <a href="sequences.html">real sequences</a>, which are real-valued functions defined on the subset ℕ of ℝ. In this chapter we shall consider real-valued functions whose domains are arbitrary subsets of ℝ that is we have <i>D</i> ⊆ ℝ, and the function <i>f</i>: <i>D</i> → ℝ. <br> A sequence {<i>x<sub>n</sub></i>} of the inputs in the interval <i>D</i> \{<i>c</i>} generetas another sequence of the outputs {<i>f</i>(<i>x<sub>n</sub></i>)}</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i><sub>1</sub>), <i>f</i>(<i>x</i><sub>2</sub>), <i>f</i>(<i>x</i><sub>3</sub>), ..., <i>f</i>(<i>x<sub>n</sub></i>), ...</p>
