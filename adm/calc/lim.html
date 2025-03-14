@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,9 @@
 
 <img src="img/accumulazione.png" alt="punto di accumulazione"/>
 
-<p><b>Definizione 4.3 − Limite</b> Sia data <i>f</i>: <i>A</i> &subseteq; ℝ ⟶ ℝ e sia <i>x</i><sub>0</sub> &in; ℝ un punto di accumulazione di <i>A</i>. Diremo che il numero reale ℓ è il limite di <i>f</i> per <i>x</i> che tende a <i>x</i><sub>0</sub>, e scriveremo</p>
+<h2>Definizione topologica di limite</h2>
+
+<p><b>Definizione 4.3 − Limite (definizione ε-δ o di Cauchy</b>) Sia data <i>f</i>: <i>A</i> &subseteq; ℝ ⟶ ℝ e sia <i>x</i><sub>0</sub> &in; ℝ un punto di accumulazione di <i>A</i>. Diremo che il numero reale ℓ è il limite di <i>f</i> per <i>x</i> che tende a <i>x</i><sub>0</sub>, e scriveremo</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -72,7 +74,13 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
 
 <img src="img/lim.png" alt="limite definizione"/>
 
-<p>Consideriamo come caso tipico un intervallo <i>I</i>, un punto <i>c</i> &in; <i>I</i> e una funzione <i>f</i> a valori reali, definita in <i>I</i>, salvo al più nel punto <i>c</i>. L'intervallo <i>I</i> può essere limitato o illimitato, chiuso o aperto; il punto <i>c</i> può essere interno all'intervallo oppure uno dei suoi estremi (eventualmente +&infin; o &minus;&infin;).<br> Prendiamo ora una qualunque successioni di punti <i>x<sub>n</sub></i>, nell'intervallo <i>I</i> e diversi da <i>c</i>, che tenda a <i>c</i>, per <i>n</i> &rarr; +&infin;.<br> In corrispondenza alla successione di ingressi <i>x<sub>n</sub></i>, consideriamo la successione delle uscite <i>f</i>(<i>x<sub>n</sub></i>). <br> Se, qualunque sia la successione scelta, si ha che <i>f</i>(<i>x<sub>n</sub></i>) tende al limite ℓ (finito o infinito) si dice che il <i>limite di <i>f</i>(<i>x</i>) per x che tende a c è ℓ</i> e si scrive</p>
+<p id="def"><b>Definizione</b> (Definitivamente) Diremo che una funzione <i>f</i> ha una certa proprietà <i>definitivamente</i> per <i>x</i> &rarr; <i>x</i><sub>0</sub> se esiste un intorno <i>I</i> di <i>x</i><sub>0</sub> tale che la proprietà vale per <i>f</i>(<i>x</i>) &forall;<i>x</i> &in; <i>I</i>, <i>x</i> &ne; <i>x</i><sub>0</sub>. &emsp;□</p>
+
+<h2>Definizione successionale di limite (o di Heine)</h2>
+
+<p id="Heine">The following is the definition of limit of a function due to Heinrich Eduard Heine (1821-1881) – German mathematician.</p>
+
+<p><b>Definition 4.1.2</b>. (<b>Limit of a function; Heine's Definition</b>) Let <i>D</i> ⊆ ℝ and <i>x</i><sub>0</sub> ∈ ℝ be an accumulation point of <i>D</i>. Also, let <i>f</i>: <i>D</i> → ℝ be a function. Let {<i>x<sub>n</sub></i>} be any sequence that converges to the point <i>x</i><sub>0</sub>. Now consider the sequence {<i>f</i>(<i>x<sub>n</sub></i>)}. If {<i>f</i>(<i>x<sub>n</sub></i>)} converges to a real number <i>ℓ</i>, for every sequence {<i>x<sub>n</sub></i>} that converges to <i>x</i><sub>0</sub>, we say that the function <i>f</i> has a limit <i>ℓ</i>. This is written as</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -80,7 +88,10 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi>c</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
     </mrow>
   </munder>
   <mi>f</mi>
@@ -91,11 +102,11 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
   <mi>&#x2113;</mi>
 </math>
 
-<!-- $$ \lim_{x \to c} f(x) = \ell $$ -->
+<!-- $$ \lim_{x \to x_0} f(x) = \ell $$ -->
 
-<p>(che si legge "il limite per <i>x</i> tendente a <i>c</i> di <i>f</i>(<i>x</i>) è uguale a ℓ" oppure "<i>f</i>(<i>x</i>) tende a ℓ per <i>x</i> tendente a <i>c</i>". <br>Sinteticamente</p>
+<p>The great advantage of the previous definition is that the theory of limits of sequences carries over easily to limtis of functions. In particular the limit of is unique because is unique that for <a href="sequences_theorems.html">sequences</a>.</p>
 
-<p><b>Definizione 4.2 (Successione di Limite)</b> Si dice che</p>
+<p><b>Heine's definition of a limit function</b> defined in a certan domain <i>D</i> &subset; ℝ<sup><i>n</i></sup> at a given  point <i>x</i><sub>0</sub> &in; ℝ<sup><i>n</i></sup> that is the cluster point for <i>D</i>, has then the following form</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -103,7 +114,10 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi>c</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
     </mrow>
   </munder>
   <mi>f</mi>
@@ -112,15 +126,93 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
   <mo stretchy="false">)</mo>
   <mo>=</mo>
   <mi>&#x2113;</mi>
+  <mo stretchy="false">&#x27FA;</mo>
+  <mo stretchy="false">[</mo>
+  <msub>
+    <mi mathvariant="normal">&#x2200;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo fence="false" stretchy="false">{</mo>
+      <msub>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msub>
+      <mo fence="false" stretchy="false">}</mo>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>&#x2208;</mo>
+  <mi>D</mi>
+  <mo>&#x2227;</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>&#x2260;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <mi>n</mi>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mn>2</mn>
+  <mo>,</mo>
+  <mn>3.</mn>
+  <mo>.</mo>
+  <mo>.</mo>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2227;</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">&#x21D2;</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+  <mo stretchy="false">]</mo>
 </math>
 
-<!-- $$ \lim_{x \to c} f(x) = \ell $$ -->
+<!--$$ \lim_{x \to x_0} f(x) = \ell \Longleftrightarrow [\forall_{\{x_n\}} (x_n \in D \wedge x_n \ne x_0, n=1,2,3...) \wedge \lim_{n \to \infty} x_n = x_0 \Rightarrow \lim_{n \to \infty} f(x_n) = \ell] $$ -->
 
-(dove <i>c, ℓ</i> &in; ℝ<sup>*</sup>) se per ogni successione {<i>x<sub>n</sub></i>} di punti di <i>I</i> diversi da <i>c</i>, tale che <i>x<sub>n</sub></i> &rarr; <i>c</i>, si ha che <i>f</i>(<i>x<sub>n</sub></i>) &rarr; <i>c</i> per <i>n</i> &rarr; &infin;. &emsp;□</p>
+<p><b>Note</b>. The definition of the limit after Heine is conveniently applied when we have to prove that a function <i>f</i> has no limit. For it is sufficient to show that there are two sequences {<i>x<sub>n</sub></i>} and {<i>x'<sub>n</sub></i>} such that lim<sub>n ⟶ &infin;</sub> <i>x<sub>n</sub></i> = lim<sub><i>n</i> ⟶ &infin;</sub> <i>x'<sub>n</sub></i> = <i>A</i> but the corresponding sequences {<i>f</i>(<i>x<sub>n</sub></i>)} and {<i>f</i>(<i>x'<sub>n</sub></i>)} do not have identical limits. &emsp;■</p>
 
-<p>Una funzione che per <i>x</i> &rarr; <i>x</i> tende a 0 si dice <i>infinitesima</i> per <i>x</i> &rarr; <i>c</i>, analogamente una funzione che tende a &pm; &infinf; si dice <i>infinita</i>- <br> La definizione appena data di <i>limite di funzione</i> di dice definizione <i>successionale</i> di limite, in quanto riconduce il concetto di limite di funzione a quello di limite di successione. Non è l'unica definizione possibile, come vedremo, e a prima vista può sembrare una definizione poco operativa. Tuttavia, come dimostranno sia il successivo sviluppo della teoria, sia gli esemi che faremo di calcolo di limiti, il fatto di avera già sviluppato le basi del calcolo dei limiti per le successioni, renderà molto vantaggiosa questa definizione, proprio dal punto di vista operativo. Ad es., possiamo subito affermare che vale il:</p>
+<p>Una funzione che per <i>x</i> &rarr; <i>x</i> tende a 0 si dice <i>infinitesima</i> per <i>x</i> &rarr; <i>x</i><sub>0</sub>, analogamente una funzione che tende a &pm; &infinf; si dice <i>infinita</i>- <br> La definizione appena data di <i>limite di funzione</i> di dice definizione <i>successionale</i> di limite, in quanto riconduce il concetto di limite di funzione a quello di limite di successione. Non è l'unica definizione possibile, come vedremo, e a prima vista può sembrare una definizione poco operativa. Tuttavia, come dimostranno sia il successivo sviluppo della teoria, sia gli esemi che faremo di calcolo di limiti, il fatto di avera già sviluppato le basi del calcolo dei limiti per le successioni, renderà molto vantaggiosa questa definizione, proprio dal punto di vista operativo. Ad es., possiamo subito affermare che vale il:</p>
 
-<p><b>Teorema 4.3 (Di unicità del Limite)</b> Se esiste lim<sub><i>c</i> &rarr; <i>c</i></sub> = ℓ, tale limite ℓ è unico.</p>
+<p><b>Teorema 4.3 (Di unicità del Limite)</b> Se esiste lim<sub><i>c</i> &rarr; <i>x</i><sub>0</sub></sub> = ℓ, tale limite ℓ è unico.</p>
 
 <p>Infatti, se esistessero due limiti ℓ<sub>1</sub>, ℓ<sub>2</sub> diversi tra loro, presa una qualsiasi successione <i>x<sub>n</sub></i> &rarr; <i>c</i> si avrebbe</p>
 
@@ -134,7 +226,7 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
 
 <ul>
 	<li><p>limite finito se ℓ &in; ℝ, e di limite infinito se ℓ = &pm;&infin;;</p></li>
-	<li><p>limite al finito se <i>c</i> &in; ℝ, e all'infinito se <i>c</i> = &pm;&infin;.</p></li>
+	<li><p>limite al finito se <i>x</i><sub>0</sub> &in; ℝ, e all'infinito se <i>x</i><sub>0</sub> = &pm;&infin;.</p></li>
 </ul>
 
 <p>La Definizione 4.1, come già visto per le <a href="an.html#div">successioni</a>, si estende ai casi ℓ = &pm;&infin; e <i>x</i><sub>0</sub> = &pm;&infin;.</p>
@@ -557,7 +649,7 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
 
 </ol>
 
-<p>Studiamo la funzione <i>f</i>(<i>x</i>) = 3<i>x</i> + &rad;<i>x</i> per <i>x</i> &rarr; +&nfin;. Si vede subito che <i>f</i>(<i>x</i>) &rarr; +&infin; per <i>x</i> &rarr; +&infin;. Vediamo se presenta un asintoto obliquo. Calcoliamo perciò (in base alla proposizione precedente):</p>
+<p>Studiamo la funzione <i>f</i>(<i>x</i>) = 3<i>x</i> + &radic;<i>x</i> per <i>x</i> &rarr; +&nfin;. Si vede subito che <i>f</i>(<i>x</i>) &rarr; +&infin; per <i>x</i> &rarr; +&infin;. Vediamo se presenta un asintoto obliquo. Calcoliamo perciò (in base alla proposizione precedente):</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -917,7 +1009,7 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
 
 <p>Questo è, in un certo senso, il caso meno intuitivo dei quattro finora trattati; vediamo perché. </p>
 
-<p><b>Esempio xx</b></p>
+<p id="sin"-><b>Esempio xx</b></p>
 
 <p>Chiediamoci quanto vale:</p>
 
@@ -949,7 +1041,7 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
 <p>|sin <i>x</i>| &le; |<i>x</i>|, valida &forall;<i>x</i> &in; ℝ</p>
 </div>
 
-(si ragioni sulla circonferenza trigonometrica per rendersene conto), leggiamo che |sin <i>x<sub>n</sub></i>| &le; <i>x<sub>n</sub></i> e quindi, per il teorema del confronto, se <i>x<sub>n</sub></i> ⟶ 0 anche sin <i>x<sub>n</sub></i> ⟶ 0. Pertanto</p>
+<p>(si ragioni sulla circonferenza trigonometrica per rendersene conto), leggiamo che |sin <i>x<sub>n</sub></i>| &le; <i>x<sub>n</sub></i> e quindi, per il teorema del confronto, se <i>x<sub>n</sub></i> ⟶ 0 anche sin <i>x<sub>n</sub></i> ⟶ 0. Pertanto</p>
 
 <div class="eq">
 <p>lim<sub>x ⟶ 0</Sub> sin <i>x</i> = 0</p>
@@ -1051,178 +1143,21 @@ $$ -->
 <p><i>f</i>(<i>x</i><sub>1</sub>), <i>f</i>(<i>x</i><sub>2</sub>), <i>f</i>(<i>x</i><sub>3</sub>), ..., <i>f</i>(<i>x<sub>n</sub></i>), ...</p>
 </div>
 
-<p id="Heine">The following is the definition of limit of a function due to Heinrich Eduard Heine.</p>
+<h2>Non esistenza del limite</h2>
 
-<p><b>Definition 4.1.2</b>. (<b>Limit of a function; Heine's Definition</b>) Let <i>D</i> ⊆ ℝ and <i>c</i> ∈ ℝ be an accumulation point of <i>D</i>. Also, let <i>f</i>: <i>D</i> → ℝ be a function. Let {<i>x<sub>n</sub></i>} be any sequence that converges to the point <i>c</i>. Now consider the sequence {<i>f</i>(<i>x<sub>n</sub></i>)}. If {<i>f</i>(<i>x<sub>n</sub></i>)} converges to a real number <i>ℓ</i>, for every sequence {<i>x<sub>n</sub></i>} that converges to <i>c</i>, we say that the function <i>f</i> has a limit <i>ℓ</i>. This is written as</p>
+<p>Il limite di una funzione può anche non esistere.</p>
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi>c</mi>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$ \lim_{x \to c} f(x) = \ell $$ -->
-
-<p>The great advantage of the previous definition is that the theory of limits of sequences carries over easily to limtis of functions. In particular the limit of is unique because is unique that for <a href="sequences_theorems.html">sequences</a>.</p>
-
-<p>One of the most important applications of the limit concept is that of <i>continuity</i>. At a point <i>c</i>, the function <i>f</i> can be befined or undefined. If it is defined and if we find that the limit at this point is equal to the defined value, that is, if</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>c</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi>c</mi>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-</math>
-
-<!-- $$f(c) = \lim_{x \to c} f(x)$$ -->
-
-<p>thne we say that the function <i>f</i> is <i>continuos</i> at <i>c</i>. We say that <i>f</i> is continuous if an open interval (<i>a,b</i>) is it is continuous at each point of the interval.</p>
-
-<p><b>Heine's definition of a limit function</b> defined in a certan domain <i>D</i> &subset; ℝ<sup><i>n</i></sup> at a given  point <i>x</i><sub>0</sub> &in; ℝ<sup><i>n</i></sup> that is the cluster point for <i>D</i>, has then the following form</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>A</mi>
-  <mo stretchy="false">&#x27FA;</mo>
-  <mo stretchy="false">[</mo>
-  <msub>
-    <mi mathvariant="normal">&#x2200;</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo fence="false" stretchy="false">{</mo>
-      <msub>
-        <mi>x</mi>
-        <mi>n</mi>
-      </msub>
-      <mo fence="false" stretchy="false">}</mo>
-    </mrow>
-  </msub>
-  <mo stretchy="false">(</mo>
-  <msub>
-    <mi>x</mi>
-    <mi>n</mi>
-  </msub>
-  <mo>&#x2208;</mo>
-  <mi>D</mi>
-  <mo>&#x2227;</mo>
-  <msub>
-    <mi>x</mi>
-    <mi>n</mi>
-  </msub>
-  <mo>&#x2260;</mo>
-  <msub>
-    <mi>x</mi>
-    <mn>0</mn>
-  </msub>
-  <mo>,</mo>
-  <mi>n</mi>
-  <mo>=</mo>
-  <mn>1</mn>
-  <mo>,</mo>
-  <mn>2</mn>
-  <mo>,</mo>
-  <mn>3.</mn>
-  <mo>.</mo>
-  <mo>.</mo>
-  <mo stretchy="false">)</mo>
-  <mo>&#x2227;</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <msub>
-    <mi>x</mi>
-    <mi>n</mi>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mi>x</mi>
-    <mn>0</mn>
-  </msub>
-  <mo stretchy="false">&#x21D2;</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <msub>
-    <mi>x</mi>
-    <mi>n</mi>
-  </msub>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>A</mi>
-  <mo stretchy="false">]</mo>
-</math>
-
-<!--$$ \lim_{x \to x_0} f(x) = A \Longleftrightarrow [\forall_{\{x_n\}} (x_n \in D \wedge x_n \ne x_0, n=1,2,3...) \wedge \lim_{n \to \infty} x_n = x_0 \Rightarrow \lim_{n \to \infty} f(x_n) = A] $$ -->
-
-<p><b>Note</b>. The definition of the limit after Heine is conveniently applied when we have to prove that a function <i>f</i> has no limit. For it is sufficient to hsow that there are two sequences {<i>x<sub>n</sub></i>} and {<i>x'<sub>n</sub></i>} such that lim<sub>n ⟶ &infin;</sub> <i>x<sub>n</sub></i> = lim<sub>n ⟶ &infin;</sub> <i>x'<sub>n</sub></i> = <i>A</i> but the corresponding sequences {<i>f</i>(<i>x<sub>n</sub></i>)} and {<i>f</i>(<i>x'<sub>n</sub></i>)} do not have identical limits. &emsp;■</p>
-
-<p><b>Definition 4.1.3</b> (<b>Continuity of Functions</b>). Let <i>D</i> ⊆ ℝ and consider the function <i>f</i>: <i>D</i> → ℝ and a point <i>c</i> &in; <i>D</i>. We say that <i>f</i> is <b>continuous</b> at <i>c</i> if</p>
+<p><b>Esempio</b>.</p>
 
 <div class="eq">
-<p>for any sequence {<i>x<sub>n</sub></i>} in <i>D</i> such that <i>x<sub>n</sub></i> → <i>c</i> &emsp;⇒ &emsp; <i>f</i>(<i>x<sub>n</sub></i>) → <i>f</i>(<i>c</i>).</p>
+<p>lim<sub>x &rarr; &infin;</sub> sin <i>x</i> non esiste</p>
 </div>
 
-<p>If <i>f</i> is not continuous at <i>x</i><sub>0</sub>, we say that <i>f</i> is <b>discontinuous</b> at <i>x</i><sub>0</sub>. In case <i>f</i> is continuous at every <i>x</i><sub>0</sub> ∈ <i>D</i>, we say that <i>f</i> is continuous on <i>D</i>. &emsp;□</p>
+<p>Per dimostrarlo è sufficiente trovare due successioni {<i>x<sub>n</sub></i>} e {<i>y<sub>n</sub></i>} divergenti a +&infin; tali che sin <i>x<sub>n</sub></i> e sin <i>y<sub>n</sub></i> tendano a due limiti diversi. Si può scegliere <i>x<sub>n</sub></i> = <i>n</i>&pi; e <i>y<sub>n</sub></i> = &pi;/2 + 2<i>n</i>&pi;; in corrispondenza di tali successioni si ha sin <i>x<sub>n</sub></i> = 0 e sin <i>y<sub>n</sub></i> = 1, quindi la definizione di limite non è soddisfatta.</p>
 
-<p>Thus, we consider a sequence {<i>x<sub>n</sub></i>} from the domain of <i>f</i>, which tends to <i>c</i> but does not take the value <i>c</i>. The corresponding sequence {<i>f</i>(<i>x<sub>n</sub></i>)} may or may not have a limit as <i>n</i> ⟶ &infin;. If not, we say that <i>f</i> is <i>discontinuous</i> at <i>c</i>.</p>
+<p>Si rifletta sul fatto che, in base alla definizione successionale di limite, dimostrare rigorosamente che una funzione non ha limite è molto più facile che dimostrare che una <i>successione</i> non ha limite. Ad es. non è così banale dimostrare che non esiste lim<sub><i>n</i> &rarr; &infin;</sub> sin <i>n</i>. Analogamente</p>
 
-<p><b>Example 4.1.4</b> The following limit</p>
-
-<!-- $$\lim_{x \to \infty} \sin x $$ -->
-
-<p>Does not exist. Indeed we can consider two sequences {<i>x<sub>n</sub></i>} and {<i>y<sub>n</sub></i>} converging to 0. Let <i>x<sub>n</sub></i> = <i>&pi;n</i> and <i>y<sub>n</sub></i> = &pi;/2 + 2<i>n&pi;</i>. We have <i>f</i>(<i>x<sub>n</sub></i>) = sin <i>x<sub>n</sub></i> = 0 for each <i>n</i>, hence the limit of the sequence of functions is 0. However <i>f</i>(<i>y<sub>n</sub></i>) = sin <i>y<sub>n</sub></i> = 1 for each <i>n</i> and this time the limit is one. Hence, two sequences that both tend to zero are mapped by the function into sequences that converge to different limits. Then the limit does not exits. </p>
-
-<p>Analogously, for</p>
+<p><b>Example 4.1.4</b></p> 
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -1243,7 +1178,7 @@ $$ -->
 
 <!-- $$\lim_{x \to 0} \sin \frac{1}{x} $$ -->
 
-<p> Indeed we can consider two sequences {<i>x<sub>n</sub></i>} and {<i>y<sub>n</sub></i>} converging to 0. Let <i>x<sub>n</sub></i> = 1/(2<i>&pi;n</i>) and <i>y<sub>n</sub></i> = 1/(<i>&pi;</i>/2 + 2<i>n&pi;</i>). We have <i>f</i>(<i>x<sub>n</sub></i>) = 0 for each <i>n</i>, hence the limit of the sequence of functions is 0. However <i>f</i>(<i>y<sub>n</sub></i>) = 1 for each <i>n</i> and this time the limit is one. Hence, two sequences that both tend to zero are mapped by the function into sequences that converge to different limits. Then the limit does not exits. </p>
+<p>non esiste. Indeed we can consider two sequences {<i>x<sub>n</sub></i>} and {<i>y<sub>n</sub></i>} converging to 0. Let <i>x<sub>n</sub></i> = 1/(2<i>&pi;n</i>) and <i>y<sub>n</sub></i> = 1/(<i>&pi;</i>/2 + 2<i>n&pi;</i>). We have <i>f</i>(<i>x<sub>n</sub></i>) = 0 for each <i>n</i>, hence the limit of the sequence of functions is 0. However <i>f</i>(<i>y<sub>n</sub></i>) = 1 for each <i>n</i> and this time the limit is one. Hence, two sequences that both tend to zero are mapped by the function into sequences that converge to different limits. Then the limit does not exits. </p>
 
 <figure>
 <img src="img/sin_1_over_x.png" alt="1/sinx">
@@ -1253,84 +1188,6 @@ $$ -->
 <p>&emsp;■</p>
 
 <p>The definition of limit given requires to verify that for <i>every</i> sequence tending to <i>x</i><sub>0</sub>. Cauchy gave a criterion for the continuity of a function at a point that does not involve convergence of sequences.</p>
-
-<p id="Cauchy"><b>Proposition 4.1.5</b>. (Cauchy's definition of limit) Let <i>D</i> ⊆ ℝ and let <i>f</i>: <i>D</i> → ℝ be a function. A number <i>ℓ</i> is the <i>limit</i> of a function <i>f</i> as <i>x</i> tends to <i>x</i><sub>0</sub> if and only if for any <i>&epsilon;</i> &gt; 0 there is a <i>&delta;</i> &gt; 0 (dependent on <i>&epsilon;</i>) such that</p>
-
-<div class="eq">
-<p><i>x</i> &in; <i>D</i> and |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i> &emsp;⇒&emsp; |<i>f</i>(<i>x</i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i> &emsp;(4.1.6)</p>
-</div>
-
-<p><b>Proof</b>. Let <i>&epsilon;</i> &gt; 0 and assume there exists &delta; &gt; 0 such that the implication 4.1.6 holds. Let <i>x<sub>n</sub></i> ⟶ <i>x</i><sub>0</sub> and <i>x<sub>n</sub></i> &ne; <i>x</i><sub>0</sub>, then there exists <i>N</i> &in; ℕ such that 0 &lt; |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i>, and consequently |<i>f</i>(<i>x<sub>n</sub></i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i>, for <i>n</i> &gt; <i>N</i>. This prove <i>f</i>(<i>x<sub>n</sub></i>) ⟶ <i>ℓ</i> and hence lim<sub><i>x</i> ⟶ <i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>) = <i>ℓ</i>.<br> Conversely assume <i>f</i> has limit <i>ℓ</i> but that it not true that for every <i>&epsilon;</i> &gt; 0 there exists &delta; &gt; 0, there is is <i>x</i> ∈ <i>D</i> satisfying 4.1.6. Then there is a sequence {<i>x<sub>n</sub></i>} in <i>D</i> such that |<i>x<sub>n</sub></i> − <i>x</i><sub>0</sub>| &lt; 1/<i>n</i>, but |<i>f</i>(<i>x<sub>n</sub></i>) − <i>f</i>(<i>x</i><sub>0</sub>)| &ge; <i>&epsilon;</i> for all <i>N</i> &in; ℕ. But then <i>x<sub>n</sub></i> ⟶ <i>x</i><sub>0</sub> and <i>f</i>(<i>x<sub>n</sub></i>) ↛ <i>f</i>(<i>x</i><sub>0</sub>). This contradicts the continuity of <i>f</i> at <i>x</i><sub>0</sub>. &emsp;□</p>
-
-<p>To have a limit, the function has to be defined on both sides of <i>x</i><sub>0</sub>, but it doesn't matter what the function is at <i>x</i> = <i>x</i><sub>0</sub> itself; it need not even be defined there. For instance even though the function <i>f</i>(<i>x</i>) = sin <i>x</i>/<i>x</i> is not defined at <i>x</i> = 0, its limit as <i>x</i> ⟶ 0 exists and equals 1.</p>
-
-<img src="img/limit.png" alt="limit of a function"/>
-
-<p>In the definition of the limit of a function <i>f</i> as <i>x</i> approaches <i>x</i><sub>0</sub> whether from right or from left, we have considered the values of <i>f</i> in the deleted neighbourhood <i>x</i><sub>0</sub>. If we consider the behaviour of <i>f</i> for those values of <i>x</i> greater than <i>x</i><sub>0</sub>, we say, that <i>x</i> approaches <i>x</i><sub>0</sub> from the right or from above. We can give the following definition for this concept.</p>
-
-<p><b>Definition 4.1.6</b>. (<b>Right hand limit (RHL)</b>) We say that a function <i>f</i> tends to <i>ℓ</i> as <i>x</i> tends to <i>x</i><sub>0</sub> from the right if for each <i>&epsilon;</i> &gt; 0, there exists a <i>&delta;</i> &gt; 0 such that</p>
-
-<div class="eq">
-<p>|<i>f</i>(<i>x</i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i> &emsp; when &emsp; <i>x</i><sub>0</sub> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub> + <i>&delta;</i></p>
-</div>
-
-<p>In symbol,</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$ \lim_{x \to x_0^+} f(x) = \ell$$ -->
-
-<p><b>Definition 4.1.7</b>. (<b>Left hand limit (LHL)</b>) We say that a function <i>f</i> tends to <i>ℓ</i> as <i>x</i> tends to <i>x</i><sub>0</sub> from the left if for each <i>&epsilon;</i> &gt; 0, there exists a <i>&delta;</i> &gt; 0 such that</p>
-
-<div class="eq">
-<p>|<i>f</i>(<i>x</i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i> &emsp; when &emsp; <i>x</i><sub>0</sub> − <i>&delta;</i> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub></p>
-</div>
-
-<p>In symbol,</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>−</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$ \lim_{x \to x_0^-} f(x) = \ell$$ -->
-
-<p>Clearly the limit of <i>f</i> exists, then both the left hand and right hand limits exist and each is equal to <i>ℓ</i>.</p>
 
 <p><b>Theorem 4.1.8</b>. The limit of <i>f</i> exists if and only if both the limits, the left hand and the right hand, exist and are equal.</p>
 
@@ -1347,9 +1204,7 @@ $$ -->
 |<i>f</i>(<i>x</i>) − <i>ℓ</i> | &lt; <i>&epsilon;</i>, when <i>x</i><sub>0</sub> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub> + <i>&delta;</i> &emsp;(4.1.10)</p>
 </div>
 
-<p>From equation (4.1.9) and (4.1.10) we get that the RHS and LHL both exist and are equal to <i>ℓ</i>.</p>
-
-<p>To prove the converse let RHS = LHL = <i>ℓ</i>. Then for any <i>&epsilon;</i> &gt; 0, there exists some <i>&delta;</i><sub>1</sub> &gt; 0 and <i>&delta;</i><sub>2</sub> &gt; 0 such that</p>
+<p>From equation (4.1.9) and (4.1.10) we get that the RHS and LHL both exist and are equal to <i>ℓ</i>. <br> To prove the converse let RHS = LHL = <i>ℓ</i>. Then for any <i>&epsilon;</i> &gt; 0, there exists some <i>&delta;</i><sub>1</sub> &gt; 0 and <i>&delta;</i><sub>2</sub> &gt; 0 such that</p>
 
 <div class="eq">
 <p>|<i>f</i>(<i>x</i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i> &emsp; when &emsp; <i>x</i><sub>0</sub> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub> + <i>&delta;</i><sub>1</sub> &emsp;(4.1.11)<br>
@@ -1395,7 +1250,7 @@ $$ -->
 
 <p><b>Example 4.1.14</b>. The function sign of <i>x</i></p>
 
-<img src="img/funzioni/sgnx.png" alt="sign of x" />
+<img src="img/sgnx.png" alt="sign of x" />
 
 <p>defined as</p>
 
@@ -1864,52 +1719,10 @@ $$ -->
 
 <p>for |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i>. The other statement can be proved in a similar manner. &emsp;□</p>
 
-<h2>Infinite Limits</h2>
-
-<p><b>Definition 4.1.18</b>. We say that <i>f</i> approaces infinity as <i>x</i> tends to <i>x</i><sub>0</sub> and write</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi mathvariant="normal">&#x221E;</mi>
-</math>
-
-<!-- $$ \lim_{x \to x_0} f(x) = \infty $$ -->
-
-<p>if for every positive real number <i>M</i> there exists a corresponding <i>&delta;</i> &gt; 0 such that for all <i>x</i></p>
-
-<div class="eq">
-<p>0 &lt; |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i> &emsp;⇒&emsp; <i>f</i>(<i>x</i>) &gt; <i>M</i>.&emsp;□</p>
-</div>
-
-<p><b>Definition 4.1.19</b>. We say that <i>f</i> approaces minus infinity as <i>x</i> tends to <i>x</i><sub>0</sub> and write</p>
-
-<!-- $$ \lim_{x \to x_0} f(x) = -\infty $$ -->
-
-<p>if for every negative real number <i>L</i> there exists a corresponding &delta; &gt; 0 such that for all <i>x</i></p>
-
-<div class="eq">
-<p>0 &lt; |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i> &emsp;⇒&emsp; <i>f</i>(<i>x</i>) &lt; <i>L</i>.&emsp;□</p>
-</div>
-
 <section aria-label="End">
 <a href="e.html">&#171;The e number</a>
 <a href="index.html">Index</a>
-<a href="exercises_series.html">Exercises on series&#187;</a>
+<a href="lim2.html">Continuità&#187;</a>
 </section>
 
 </article>

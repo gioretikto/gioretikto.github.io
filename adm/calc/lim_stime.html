@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Confronti e stime asintotiche">
+	<title>Confronti e stime asintotiche</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Confronti e stime asintotiche</h1>
+
+<p>I limiti notevoli visti nel precedente paragrafo sono espressi in modo forse più significativo usando il simbolo di equivalenza asintotica ~, già introdotto per le <a href="an_stime.html">successioni</a>.</p>
+
+<p><b>Definizione 4.5.1</b> Si dice che due funzioni <i>f,g</i> sono <i>asintotiche</i> per <i>x</i> &rarr; <i>c</i> se</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi>c</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$ \lim_{x\to c} \frac{f(x)}{g(x)} = 1 $$ -->
+
+<p>e si scrive <i>f</i> ~ <i>g</i> per <i>x</i> &rarr; <i>c</i>.</p>
+
+<p>Il simbolo di asintotico gode di tutte le proprietà giò enunciate per le successioni. I limiti notevoli precedenti si possono allora riscrivere come segue:</p>
+
+<div class="eq">
+<p>sin <i>x</i> ~ <i>x</i>, &emsp; 1 &minus; cos <i>x</i> ~ <i>x</i><sup>2</sup>/2, &emsp; <i>e<sup>x</sup></i> &minus; 1 ~ <i>x</i><br>
+log (1 + <i>x</i>) ~ <i>x</i>, &emsp; (1 + <i>x</i>)<sup><i>&alpha;</i></sup> &minus; 1 ~ <i>&alpha;x</i><br>
+per <i>x</i> &rarr; 0</p>
+</div>
+
+<p>tali relazioni si possono esprimere dicendo ad es. che sin <i>x</i>, log (1 + <i>x</i>) e <i>e<sup>x</sup></i> &minus; 1, <i>in prima approssimazione</i> o <i>al primo ordine</i>, si comportano come <i>x</i>, per <i>x</i> &rarr; 0. <br> Tali relazioni possono essere generalizzate: Se <i>&epsilon;</i>(<i>x</i>) + una funzione che tende a zero (cioè un <i>infinitesimo</i>), si può scrivere</p>
+
+<div class="eq">
+<p>sin <i>&epsilon;</i>(<i>x</i>) ~ <i>&epsilon;</i>(<i>x</i>),<br>
+1 &minus; cos <i>x</i> ~ <i>&epsilon;</i>(<i>x</i>)<sup>2</sup>/2<br>
+<i>e</i><sup><i>&epsilon;</i>(<i>x</i>)</sup> &minus; <i>&epsilon;</i>(<i>x</i>)<br>
+log (1 + <i>&epsilon;</i>(<i>x</i>)) ~ <i>&epsilon;</i>(<i>x</i>)<br>
+(1 + <i>&epsilon;</i>(<i>x</i>))<sup><i>&alpha;</i></sup> &minus; 1 ~ <i>&alpha;</i><i>&epsilon;</i>(<i>x</i>)</p>
+</div>
+
+<p><b>Esempio 4.5.2</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mn>2</mn>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mn>3</mn>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>2</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{\log(1+2x)}{\sin 3x} = \frac{2}{3} $$ -->
+
+<p>Il limite dà una forma di indeterminazione [0/0]. Tuttavia, per <i>x</i> &rarr; 0, log (1 + 2<i>x</i>) ~ 2<i>x</i>, sin 3<i>x</i> ~ 3<i>x</i>, quindi</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mn>2</mn>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mn>3</mn>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x223C;</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>2</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{\log(1+2x)}{\sin 3x} \sim \frac{2x}{3x} = \frac{2}{3} $$ -->
+
+<p><b>Esempio 4.5.3</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>3</mn>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x\to 1} \frac{(x -1)^2}{e^{3(x-1)^2 -1}} = \frac{1}{3} $$ -->
+
+<p>Il limite dà una forma di indeterminaizone [0/0]. Tuttavia, e<sup>3(<i>x</i> &minus; 1)<sup>2</sup></sup> &minus; 1 ~ 3(<i>x</i> &minus; 1)<sup>2</sup> per <i>x</i> &rarr; 1 (la funzione <i>&epsilon;</i>(<i>x</i>) = 3(<i>x</i> &minus; 1)<sup>2</sup> è infinitesima per <i>x</i> &rarr; 1), perciò</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>3</mn>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </msup>
+  </mfrac>
+  <mo>&#x223C;</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{(x -1)^2}{e^{3(x-1)^2 -1}} \sim \frac{(x -1)^2}{3(x-1)^2} = \frac{1}{3} $$ -->
+
+<p><b>Esempio 4.5.4</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mroot>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>2</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mn>3</mn>
+  </mroot>
+  <mo>=</mo>
+  <mfrac>
+    <mn>2</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to \infty} \sqrt[3]{x^3 +2x^2 +1 - x} = \frac{2}{3} $$ -->
+
+<p>È è una forma di indeterminazione del tipo [+&infin; &minus; &infin;]. Tuttavia:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mroot>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>2</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mn>3</mn>
+  </mroot>
+  <mo>=</mo>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mroot>
+      <mrow>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mn>2</mn>
+            <mi>x</mi>
+          </mfrac>
+          <mo>+</mo>
+          <mfrac>
+            <mn>1</mn>
+            <msup>
+              <mi>x</mi>
+              <mn>3</mn>
+            </msup>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mn>3</mn>
+    </mroot>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x223C;</mo>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mn>2</mn>
+        <mi>x</mi>
+      </mfrac>
+      <mo>+</mo>
+      <mfrac>
+        <mn>1</mn>
+        <msup>
+          <mi>x</mi>
+          <mn>3</mn>
+        </msup>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mfrac>
+    <mn>2</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \sqrt[3]{x^3 +2x^2 +1 - x} = x \left (\sqrt[3]{1 + \left(\frac{2}{x} + \frac{1}{x^3} \right) -1} \right) \sim x \left[\frac{1}{3} \left (\frac{2}{x} + \frac{1}{x^3} \right) \right] \to \frac{2}{3} $$ -->
+
+<p>Abbiamo usato la stima</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mroot>
+    <mrow>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mi>&#x3F5;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mn>3</mn>
+  </mroot>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>&#x223C;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>3</mn>
+  </mfrac>
+  <mi>&#x3F5;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>con&#xA0;</mtext>
+  <mi>&#x3F5;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>2</mn>
+      <mi>x</mi>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ \sqrt[3]{1 + \epsilon(x)} - 1 \sim \frac{1}{3} \epsilon(x) \quad \text{con } \epsilon(x) = \left(\frac{2}{x} + \frac{1}{x^3} \right)$$ -->
+
+<h2>Stime asintotiche e grafici</h2>
+
+<p>Le stime astintotiche non servono solo per calcolare limiti, ma anche per tracciare il grafico qualitativo di una funzione nell'intorno di un certo punto, oppure nell'interno di &pm;&infin;.</p>
+
+<p><b>Esempio 4.5.5</b>. Sia</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mroot>
+    <mi>x</mi>
+    <mn>3</mn>
+  </mroot>
+  <mo>+</mo>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$f(x) = \sqrt[3]{x} + x^2 $$ -->
+
+<p>Altri importanti limiti riguardano il comportamento all'infinito di potenze, esponenziali e logaritmi, analoghi a quelli validi per le successioni:</p>
+
+<p><b>Teorema 4.5.6. (Gerarchia degli infiniti)</b> Consideriamo le tre famiglie di funzioni:</p>
+
+<div class="eq">
+<p>(log<sub><i>a</i></sub> <i>x</i>)<sup>&alpha;</sup> &emsp; <i>x<sup>&beta;</sub></i>, &emsp; <i>b<sup>x</sup></i> &emsp; con <i>&alpha;&beta;</i> &gt; 0, <i>a,b</i> &gt; 1</p>
+</div>
+
+<p>Allora, per <i>x</i> &rarr; +&infin;, ognuna è un infinito di ordine inferiore rispetto a quella che le sta a destra. Esplicitamente:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>log</mi>
+        <mi>a</mi>
+      </msub>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3B1;</mi>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mi>&#x3B2;</mi>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mi>&#x3B2;</mi>
+    </msup>
+    <msup>
+      <mi>b</mi>
+      <mi>x</mi>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x\to +\infty}\frac{(\log_a x)^\alpha}{x^\beta} = 0, \quad \lim_{x\to +\infty} \frac {x^\beta} {b^x} = 0 $$ -->
+
+<p>il che si può esprimere a parole dicendo che qualunque potenza (positiva) di <i>x</i> prevale su qualunque potenza di log <i>x</i>, e qualunque esponenziale (base &gt; 1) di <i>x</i> prevale su qualunque potenza di <i>x</i>.</p>
+
+<p>La dimostrazione del teorema sarà data più avanti con gli strumenti del calcolo differenziale.</p>
+
+<p>Inoltre ponendo <i>y</i> = 1/<i>x</i> nel primo limite si trova</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <msup>
+    <mi>y</mi>
+    <mi>&#x3B2;</mi>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>y</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>&#x3B1;</mi>
+  </msup>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B2;</mi>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mi mathvariant="normal">&#x2200;</mi>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{y \to 0^+} y^\beta (-\log y)^\alpha = 0 \quad (\beta \gt 0, \forall a)$$ -->
+
+<p><b>Esempio 4.5.7.</b> </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mi mathvariant="normal">&#x221E;</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <msup>
+            <mi>x</mi>
+            <mn>3</mn>
+          </msup>
+          <msup>
+            <mn>2</mn>
+            <mi>x</mi>
+          </msup>
+        </mfrac>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mi mathvariant="normal">&#x221E;</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mo stretchy="false">(</mo>
+            <mi>log</mi>
+            <mo data-mjx-texclass="NONE">&#x2061;</mo>
+            <mi>x</mi>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+          <msqrt>
+            <mi>x</mi>
+          </msqrt>
+        </mfrac>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <msup>
+              <mn>0</mn>
+              <mo>+</mo>
+            </msup>
+          </mrow>
+        </munder>
+        <msqrt>
+          <mi>x</mi>
+        </msqrt>
+        <mi>log</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>x</mi>
+        <mo>=</mo>
+        <msup>
+          <mn>0</mn>
+          <mo>&#x2212;</mo>
+        </msup>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <msup>
+              <mn>0</mn>
+              <mo>+</mo>
+            </msup>
+          </mrow>
+        </munder>
+        <msup>
+          <mi>x</mi>
+          <mi>x</mi>
+        </msup>
+        <mo>=</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <msup>
+              <mn>0</mn>
+              <mo>+</mo>
+            </msup>
+          </mrow>
+        </munder>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mi>log</mi>
+            <mo data-mjx-texclass="NONE">&#x2061;</mo>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <msup>
+              <mn>0</mn>
+              <mo>&#x2212;</mo>
+            </msup>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+        </msup>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <msup>
+              <mn>0</mn>
+              <mo>+</mo>
+            </msup>
+          </mrow>
+        </munder>
+        <mi>x</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+            <mrow data-mjx-texclass="ORD">
+              <mo>/</mo>
+            </mrow>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>t</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+        <mo>=</mo>
+        <munder>
+          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>t</mi>
+            <mo accent="false" stretchy="false">&#x2192;</mo>
+            <mo>+</mo>
+            <mi mathvariant="normal">&#x221E;</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <msup>
+            <mi>e</mi>
+            <mi>t</mi>
+          </msup>
+          <mi>t</mi>
+        </mfrac>
+        <mo>=</mo>
+        <mo>+</mo>
+        <mi mathvariant="normal">&#x221E;</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{align}
+\lim_{x \to \infty} \frac{x^3}{2^x} = 0 \\
+\lim_{x \to \infty} \frac{(\log x)^2}{\sqrt{x}} = 0 \\
+\lim_{x \to 0^+} \sqrt{x} \log x = 0^- \\
+\lim_{x \to 0^+} x^x = \lim_{x \to 0^+} e^{x \log x} = e^{0^-} = 1^- \\
+\lim_{x \to 0^+} xe^{1/x} = \left[x = \frac{1}{t}\right] = \lim_{t \to + \infty} \frac{e^t}{t} = +\infty \end{align} $$ -->
+
+<section aria-label="End">
+<a href="lim.html">«Il concetto di limite</a>
+<a href="index.html">Index</a>
+<a href="lim_stime_graf.html">Stime asintotiche e grafici»</a>
+</section>
+
+</article>
+
+</body>
+</html>
