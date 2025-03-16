@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="iten">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Peano axioms"/>
+	<title>Peano axioms</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">  
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The principle of mathematical induction</h2>
+
+<p>The third Peano axiom ℙ<sub>3</sub> is the assertion on which the principle of mathematical induction is based. It basically says that every subset <i>U</i> of ℕ which contains 0 and contains the successor of each of its elements contains all the natural numbers. <br> If we accept this axiom (We do not prove that mathematical induction is valid, but instead choose to accept the principles because is rooted in our intuitive understanding of the integers) we obtain a method for proving that a proposition <i>P</i>(<i>n</i>) concerning natural numbers <i>n</i> is valid for all natural numbers. Questo metodo dimostrativo, detto <i>dimostrazione per induzione</i> si può applicare a teoremi che abbiano la struttura seguente:</p>
+
+<div class="eq">
+<p>"Per ogni <i>n</i> &in; ℕ, <i>n</i> &ge; <i>n</i><sub>0</sub>, vale la proprietà <i>O</i>(<i>n</i>)</p>
+</div>
+
+<p>Il numero <i>n</i><sub>0</sub> è il più piccolo intero per cui si vuole che la proprietà sia vera; se <i>n</i><sub>0</sub> = 0 il teorema afferma semplicemente che la proprietà è vera per ogni <i>n</i> &in, ℕ. <br>La dimostrazione per induzione consiste nei due passi seguenti:</p>
+
+<ol>
+	<li><p>Si dimostra che <i>P</i>(<i>n</i>) è vero per <i>n</i> = <i>n</i><sub>0</sub>  (primo passo dell'induzione);</p></li>
+	<li><p>Si dimostra che, se <i>n</i> è un generico numero naturale &ge; <i>n</i><sub>0</sub>, dal fatto che <i>P</i>(<i>n</i>) sia vero segue che <i>P</i>(<i>n</i> + 1) è vero.</p></li>
+</ol>
+
+<p>Let's see its application. Suppose that for every integer <i>n</i> &ge; 0 we can formula a proposition P(<i>n</i>), which depends on <i>n</i>, for example: "If a finite set <i>S</i> has <i>n</i> elements, then the power set of <i>S</i> has 2<sup><i>n</i></sup> elements". Suppose we want to prove that the proposition <i>P</i>(<i>n</i>) is true for every <i>n</i>: we should prove infinite propositions! With the mathematical induction we can prove a proposition sin just two steps. We proceed as follows:</p>
+
+<ol>
+	<li><p>Basis step: prove that <i>P</i>(0) is true;</p></li>
+	<li><p>Induction step: Prove that for every <i>k</i>, from <i>P</i>(<i>k</i>) being true, follows that <i>P</i>(<i>k</i> + 1) is true, that is P(<i>k</i>) ⇒ P(<i>k</i>+1).</p></li>
+</ol>
+
+<p>Then we can conclude to have proved that <i>P</i>(<i>n</i>) is true for every <i>n</i>. Indeed by letting <i>U</i> = {<i>n</i> &in; ℕ | <i>P</i>(<i>n</i>) is true}, it results 0 &in; <i>U</i> because it has been proved that <i>P</i>(0) is true. Further, <i>k</i> &in; <i>U</i>, that is if <i>P</i>(<i>k</i>) is true, then <i>P</i>(<i>k</i>+1)</i> is true, (inductive step) and thus <i>k</i> + 1 &in; <i>U</i>, from which follows, by ℙ<sub>3</sub>, <i>U</i> = ℕ, that is <i>P</i>(<i>n</i>) is true for every <i>n</i>.</p>
+
+<blockquote><p>La validità di questo metodo dimostrativo, intuitivamente, si basa su questo fatto:</p>
+<ol>
+	<li><p>Per il punto 1, sapaimo che <i>P</i>(n<sub>0</sub>) è vera. Supponiamo ad es., <i>n</i><sub>0</subn> = 1: sappiamo quindi che <i>P</i>(1) è vera (questo va dimostrato esplicitamente);</p></li>
+	<li><p>Per il punto 2, poiché è vera <i>P</i>(1), sarà vera <i>P</i>(2): infatti abbiamo dimostrato che qualunque sia <i>n</i>, se è vera <i>P</i>(<i>n</i>) è vera anche <i>P</i>(<i>n</i> + 1). Ma allora, poiché è vera <i>P</i>(2) è vera anche <i>P</i>(3); ma allora è veras <i>P</i>(4), ... e così via, dunque è vera <i>P</i>(<i>n</i>) per ogni <i>n</i> &ge; 1.</p></li>
+</ol>
+</blockquote>
+
+<p>Notice that if we want to prove a proposition <i>P</i>(<i>n</i>) not for all <i>n</i>, but only for those <i>n</i> &ge; <i>n</i><sub>0</sub>, it suffices to prove as basis step the proposition <i>P</i>(<i>n</i><sub>0</sub>) instead of <i>P</i>(0).</p>
+
+<p><b>Esempio 1.6.1</b>. Provare che per ongi intero positivo <i>n</i> la somma dei cubi dei primi <i>n</i> numeri pari è data da</p>
+
+<div class="eq">
+<p>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup> (<i>n</i>+1)<sup>2</sup> &emsp; (1.6.2)</p>
+</div>
+
+<p><b>Dim</b>. Dovremo provare:</p>
+
+<ol>
+	<li><p><i>Base dell'induzione</i>: <i>P</i>(1) is true for <i>n</i> = 1 both members reduce to 2<sup>3</sup>;</p></li>
+	<li><p><i>Passo induttivo</i>: Supposta vera <i>P</i>(<i>n</i> − 1), dimostriamo <i>P</i>(<i>n</i>). La <i>P</i>(<i>n</i> − 1) (which we are supposing true) is:</p>
+
+	<div class="eq">
+	<p>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i>−1)<sup>2</sup><i>n</i><sup>2</sup></p>
+	</div>
+
+	<p>Aggiungendo ad ambo i membri della (1.6.2) il termine (2<i>n</i>)<sup>3</sup> si ha</p>
+
+	<div class="eq">
+	<p>2<sup>3</sup> + 4<sup>3</sup> + 6<sup>3</sup> + ... + (2<i>n</i> − 1)<sup>3</sup> = 2<i>n</i>(<i>n</i> − 1)<sup>2</sup><i>n</i><sup>2</sup> + (2<i>n</i>)<sup>3</sup> = 2<i>n</i><sup>2</sup>[(<i>n</i> − 1)<sup>2</sup> + 4<i>n</i>] = 2<i>n</i><sup>2</sup> (<i>n</i> + 1)<sup>2</sup></p>
+	</div>
+
+	<p>che è esattamente <i>P</i>(<i>n</i>).□</p>
+</ol>	
+
+<p>We now give two <i>equivalent</i> alternative formulations 𝕊 and 𝕄, of the principle of mathematical induction ℙ<sub>3</sub> because in certain cases these formulation can be more useful.</p>
+
+<p id="strong"><b>1.6.2 𝕊: (<i>Second Principle of Mathematical Induction: strong induction</i></b>). Every subset <i>A</i> of ℕ such that</p>
+
+<ol type="a">
+	<li><p>0 &in; <i>A</i>;</p></li>
+	<li><p>if <i>k</i> &in; <i>A</i> for each <i>k</i> such that 0 &le; <i>k</i> &lt; <i>n</i>, then <i>n</i> &in; <i>A</i> as well.</p></li>
+</ol>
+
+<p>then <i>A</i> coincides with ℕ.</p>
+
+<p>So to prove that a seuence of statements P(1), P(2), ..., P(<i>n</i>) is true, it suffices to prove two steps:</p>
+
+<ul>
+	<li><p><b>Step 1</b> (Basis step). Prove that P(1) is true;</p></li>
+	<li><p><b>Step 2</b> (Inductive step). Assuming that P(<i>k</i>) is true for a fixed integer <i>k</i> &ge; 1, prove that P(<i>k</i> + 1) is true.</p></li>
+</ul>
+
+<p>Then P(<i>n</i>) is true for every positive integer <i>n</i>. In formulas</p>
+
+<ul>
+	<li><p>P(1) and</p></p></li>
+	<li><p>&forall;<i>k</i> &in; ℕ, (P(1) ∧ P(2) ∧ ... ∧ P(<i>k</i>)) ⇒ P(<i>k</i> + 1).</p></li>
+</ul>
+
+<p>both hold, then P(<i>n</i>) is true for every prositive integer <i>n</i>.</p>
+
+<p>The method of strong induction (or complete induction) assumes in step 2 that all P(1), P(2), ..., P(<i>k</i>) are true and we prove that P(<i>k</i> + 1) is true. <br> The difference between regular induction and the stron induction is in the inductive step. While regular induction only assumes the current step to be true, the strong induction assumes that all steps from the beginning to the current step to be true.</p>
+
+<p><b>Example 1.6.3</b> For all <i>n</i> &ge; 1 we have 1 + 2 + ... + <i>n</i> = <i>n</i>(<i>n</i> + 1)/2.</p>
+
+<p><b>Proof</b>. We call P(<i>n</i>) the statement to be proved. For <i>n</i> = 1 the statemented becomes 1 = 1(1+1)/2, which is true. <br> Assume that for every <i>k</i> &gt; 1, P(<i>k</i>) is true, i.e, 1 + ... + <i>k</i> = <i>k</i>(<i>k</i> + 1)/2. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>1</mn>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <mi>k</mi>
+  <mo>+</mo>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>k</mi>
+      <mo stretchy="false">(</mo>
+      <mi>k</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mfrac>
+    <mi>k</mi>
+    <mn>2</mn>
+  </mfrac>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mfrac>
+    <mrow>
+      <mi>k</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+</math>
+
+<!-- $$ 1 + \ldots + k + (k+1) = \frac{k(k+1)}{2} + (k + 1) = (k+1)( 1 + \frac{k}{2}) = (k+1) \frac{k+2}{2} $$ -->
+
+<p>hence P(<i>k</i> + 1) is also true. &emsp;□</p>
+
+<p id="well"><b>1.6.4 𝕄: (<i>The Well-Ordering principle</i>)</b> Every nonempty set <i>T</i> of ℕ contains a least element. That is, there is an element <i>t</i> &in; <i>T</i> such that <i>t</i> &le; <i>x</i> &forall;<i>x</i> &in; <i>T</i>.</p>
+
+<p>A <a href="relations.html#order">partially ordered set</a> <i>X</i> is said <i>Well-Ordered</i> if every non-empty subset of <i>X</i> has a minimum element.</p>
+
+<p><b>Proposition 1.6.5</b>. The three principles ℙ<sub>3</sub>, 𝕊 and 𝕄 are equivalent.</p>
+
+<p><b>Proof</b>. We assume true the strong mathematical principle and prove well-ordering. Suppose that <i>S</i> is a non-empty set of ℕ. Let <i>T</i> = ℕ \ <i>S</i>. Suppose by contradiction that <i>S</i> does not possess a minimum element. Then 1 &ne; <i>S</i>, otherwise it would be the minimum element of <i>S</i> since it is the minimum element of ℕ. Then 1 &in; <i>T</i>. Suppose that for a <i>k</i>, we have 1 &le; <i>i</i> &le; <i>k, i</i> &in; <i>T</i>. Consider <i>k</i> + 1. If <i>k</i>+1 were in <i>S</i>, it would be the minimum element in <i>S</i> because no <i>i</i> between 1 and <i>k</i> can be found in <i>S</i>. Since we are assuming that <i>S</i> has no minimum element, we must have <i>k</i> + 1 &in; <i>T</i>. For the strong induction principle, <i>T</i> must contain all natural numbers, thus be equivalent to ℕ. It follows that <i>S</i> = ∅, a contradiction. We thus conclude that <i>S</i> has a minimum element.</p>
+
+<p>We now assume true well-ordering and prove the strong mathematical induction. Let <i>U</i> a subset ℕ verifying the properties of 𝕊 and suppose by way of contradiction that <i>U</i> &ne; ℕ. Then given <i>V</i> = <i>N</i> \ <i>U</i>, it results <i>V</i> &ne; ∅. By 𝕄 there exists a least element <i>m</i> &in; <i>V</i>, greater than zero, because 0 &in; <i>U</i>. Since <i>m</i> is the least in <i>V</i>, every <i>k</i> such that 0 &le; <i>k</i> &lt; <i>m</i> is in <i>U</i>. But then by property (b) of 𝕊, <i>m</i> &in; <i>U</i>, which is absurd.&emsp;□</p>
+
+<p>A practical example of these two proof methods can be given to prove the following proposition regarding division in ℕ.</p>
+
+<p><b>1.6.6 Proposition</b>. Let <i>a,b</i> &in; ℕ, <i>b</i> &ne; 0</i>. Then there exist two natural numbers <i>q,r</i>, such that</p>
+<div class="eq">
+<p><i>a</i> = <i>bq</i> + <i>r</i>, &ensp; 0 &le; <i>r</i> &lt; <i>b</i></p>
+</div>
+
+<p><b>Proof</b>. We use the Well-Ordering principle: let <i>q</i> + 1</i> the least integer <i>b</i>(<i>q</i>+1) &gt; <i>a</i> (such a minimum integer exists for sure considering the non-empty set <i>T</i> = {<i>x</i> &in; ℕ | <i>bx</i> &gt; <i>a</i>})</p>
+
+<p>We thus have</p>
+
+<div class="eq">
+<p><i>bq</i> &le; <i>a</i> &lt; <i>b</i>(<i>q</i> + 1)</p>
+</div>
+
+<p>from which follows</p>
+
+<div class="eq">
+<p>0 &le; <i>a</i> − <i>bq</i> &lt; <i>b</i></p>
+</div>
+
+<p>Let <i>r</i> = <i>a</i> − <i>bq</i>, we have <i>a</i> = <i>bq</i> + <i>r</i>, 0 &le; <i>r</i> &lt; <i>b</i>. □</p>
+
+<p>These principles of induction are often described using the image of a line of dominoes falling down. For weak induction, we prove that P(0) is true and that P(<i>n</i>) implies P(<i>n</i> + 1) for all <i>n</i> ≥ <i>a</i>. In the domino setting, this corresponds to knowing both that the first domino has fallen down and that when any domino falls down, the next domino in line must also fall down. These two observations about a line of dominoes leads to the conclusion that every domino in the line has fallen down. The principle of strong induction is similar except that we need to know that the first few dominos have fallen down, and that all the dominoes have fallen down up to some point in the line implies the next domino in line must also fall down. In some mathematical settings, the claim that a statement is true for a particular integer depends on knowing the statement is true for every preceding integer (rather than just the immediate predecessor).</p>
+
+<section aria-label="End">
+<a href="Peano.html.html">&#171; Assiomi di Peano</a>
+<a href="index.html">Index</a>
+<a href="cardinality.html">Cardinalità di insiemi &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

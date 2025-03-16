@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Congruence modulo n">
+	<title>Congruence modulo n</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Congruence modulo <i>n</i></h1>
+
+<p>We focus in this paragraph on an important relation in ℤ, <i>the congruence relation modulo a positive integer n</i>.</p>
+
+<p><b>Definition 4.1.1</b>. Let <i>n</i> be a given natural number. The <i>Congruence modulo relation</i> is defined thus:</p>
+
+<div class="eq">
+<p><i>a</i> ≡ <i>b</i> (modulo <i>n</i>)&emsp; ⇔ &emsp; <i>n</i>| <i>a</i> − <i>b</i> &emsp; ⇔ &emsp; <i>a</i> − <i>b</i> = <i>nk</i> &emsp; for some <i>k</i> &in; ℤ</p>
+</div>
+
+<p>To say that <i>n</i> divides <i>a</i> − <i>b</i> is to say that <i>a</i> − <i>b</i> = <i>nk</i> for some integer <i>k</i>.</p>
+
+<p>For example, we can write 38 ≡ 14 &emsp; (mod 12), because 38 − 14 = 24, which is a multiple of 12.</p>
+
+<p>It easy to verify that this is an equivalence relation. So we may consider the <a href="relations.html#equivalence_class">equivalence classes</a>, called  <i>congruence classes modulo n</i> or <i>residue classes modulo n</i>, defined by this relation in a way to “lump together” into a single set integers which are congruent modulo <i>r</i> and then treat that set as a single mathematical object.</p>
+
+<p><b>Definition 4.1.2</b>. Given an integer <i>a</i>, we shall denote by [<i>a</i>]<sub><i>n</i></sub>, or, if no confusion may possibly arise, by [<i>a</i>], or by <i>ā</i>, the congruence class of <i>a</i> modulo <i>n</i>, is</p>
+
+<div class="eq">
+<p>[<i>a</i>]<sub><i>n</i></sub> = {<i>b</i> ∈ ℤ | <i>b</i> ≡<sub><i>n</i></sub> <i>a</i>} = {<i>a</i> + <i>hn</i> | <i>h</i> ∈ ℤ} = {..., <i>a</i> −2<i>n</i>, <i>a</i> − <i>n</i>, <i>a</i>, <i>a</i> + <i>n</i>, <i>a</i> + 2<i>n</i>, ...}.</p>
+</div>
+
+<p>i.e.: "congruent integers to <i>a</i> modulo <i>n</i>" are those that may written in the form <i>a</i> + <i>nh</i> for a particular <i>h</i> ∈ ℤ. Indeed, if <i>b</i> ≡<sub><i>n</i></sub> <i>a</i> thus <i>b</i> − <i>a</i> is a multiple of <i>n</i>, so <i>b</i> − <i>a</i> = <i>nh</i> for a particular <i>h</i> ∈ ℤ, i.e.: <i>b</i> = <i>a</i> + <i>nh</i>. This is the reason why equivalence classes modulo <i>n</i> are also called <b>residue classes</b> modulo <i>n</i>.</p>
+
+<p><b>Theorem 4.1.3</b>. <i>a</i> ≡ <i>c</i> (mod <i>n</i>) if and only if [<i>a</i>] = [<i>c</i>].</p>
+
+<p><b>Proof</b>. We must prove two things to meet the condition "if and only if"</p>
+
+<ol>
+	<li><p>If <i>a</i> ≡ <i>c</i> (mod <i>n</i>), then [<i>a</i>] = [<i>c</i>].</p></li>
+	<li><p>If [<i>a</i>] = [<i>c</i>], the [<i>a</i>] = [<i>c</i>].</p></li>
+</ol>
+
+<p>We won't use the definition of congruence. Instead we use the fact that congruence is an equivalence relation hence reflexive, symmetric and transitive.</p>
+
+<p>Assume first that <i>a</i> ≡ <i>c</i> (mod <i>n</i>). To prove that [<i>a</i>] = [<i>c</i>], we first show that [<i>a</i>] ⊆ [<i>c</i>]. To do this, let <i>b</b></i> &in; [<i>a</i>]. Then by definition <i>b</i> ≡ <i>a</i> (mod <i>n</i>). Since <i>a</i> ≡ <i>c</i> (mod <i>n</i>), we have <i>b</i> ≡ <i>c</i> (mod <i>n</i>) by transitivity. Therefore, <i>b</i> &in; [<i>c</i>] and [<i>a</i>] ⊆ [<i>c</i>]. Reversing the roles of <i>a</i> and <i>c</i> in this argument and using symmetry that is <i>c</i> ≡ <i>a</i> (mod <i>n</i>) is shown that [<i>c</i>] ⊆ [<i>a</i>]. Therefore, [<i>a</i>] = [<i>c</i>].</p>
+
+<p>Conversely, assume that [<i>a</i>] = [<i>c</i>]. Since <i>a</i> ≡ <i>a</i> (mod <i>n</i>) by reflexivity, we have <i>a</i> &in; [<i>a</i>] and, hence, <i>a</i> &in; [<i>c</i>]. By definition of [<i>c</i>], we see that <i>a</i> ≡ <i>c</i> (mod <i>n</i>).□</p>
+
+<p><b>Proposition 4.1.4</b>. <i>a</i> ≡ <i>b</i> (mod <i>n</i>) if and only if <i>a</i> and <i>b</i> leave the same remainder when divided by <i>n</i>. Conversely if <i>a</i> and <i>b</i> leave the same remainder when divided by <i>n</i>, then <i>a ≡ b</i> mod <i>n</i>.</p>
+
+<p><b>Proof</b>. By definition of congruence <i>a</i> = <i>b</i> + <i>hn</i> for some integer <i>h</i>. By the division algorithm, <i>b</i> = <i>nq</i> + <i>r</i> where 0 &le; <i>r</i> &lt; <i>n</i>. Then <i>a</i> = <i>b</i> + <i>hn</i> = (<i>nq</i> + <i>r</i>) + <i>hn</i> = <i>n</i>(<i>q</i> + <i>h</i>) + <i>r</i>; therefore, by the division algorithm, <i>a</i> leaves the same remainder <i>r</i> when divided by <i>n</i>. <br>Conversely, suppose both <i>a</i> and <i>b</i> leave the same remainder <i>r</i> when divided by <i>n</i>. Then, again by the division algorithm, <i>a</i> = <i>nq</i> + <i>r</i> and <i>b</i> = <i>nq'</i> + <i>r</i>, where 0 &le; <i>r</i> &lt; <i>n</i>. Then <i>a</i> − <i>b</i> = (<i>nq</i> + <i>r</i>) − (<i>nq'</i> + <i>r</i>) = <i>n</i>(<i>q</i> − <i>q</i>')</i>, so <i>a</i> ≡ <i>b</i> (mod <i>n</i>). □</p>
+
+<p>For example 6 and 8 are congruent mod 2 because they have the same remainder <i>r</i> = 2 on division by 2.</p>
+
+<p>If <i>A</i> and <i>B</i> are two sets, there are usually three possibilities: Either <i>A</i> and <i>B</i> are disjoint, or <i>A</i> = <i>B</i>, or <i>A</i> ∩ <i>B</i> is nonempty but <i>A</i> &ne; <i>B</i>. With congruence classes, however, there are only two possibilities:</p>
+
+<p><b>Proposition 4.1.5</b>. Two congruence classes modulo <i>n</i> are either disjoint or identical.</p>
+
+<p><b>Proof.</b> If [<i>a</i>] and [<i>c</i>] are disjoint, we are done. Suppose they are not, so [<i>a</i>] ∩ [<i>c</i>] is nonempty. Then there is an integer <i>b</i> with <i>b</i> &in; [<i>a</i>] and <i>b</i> &in; [<i>c</i>]. By definition of congruence class,  <i>b</i> ≡ <i>a</i> (mod <i>n</i>) and  <i>b</i> ≡ <i>c</i> (mod <i>n</i>). Therefore, by symmetry and transitivity, <i>a</i> ≡ <i>c</i> (mod <i>n</i>). Hence [<i>a</i>] = [<i>c</i>], by theorem 4.2.1, so if they are not disjoint they are identical.□</p>
+
+<p><b>Corollary 4.1.6</b>. Let <i>n</i> &gt; 1 be an integer and consider congruence modulo <i>n</i></p>
+
+<ol>
+	<li><p>If <i>a</i> is any integer and <i>r</i> is the remainder when <i>a</i> is divided by <i>n</i>, then [<i>a</i>] = [<i>r</i>].</p></li>
+
+	<li><p>There are exactly <i>n</i> distinct congruence classes, namely [0], [1], [<i>n</i> − 1].</p></li>
+</ol>
+
+<p><b>Proof.</b> Let <i>a</i> &in;ℤ by the division algorithm dividing by <i>n</i>, <i>a</i> = <i>nq</i> + <i>r</i>, with 0 ≤ <i>r</i> &lt; <i>n</i>. Thus <i>a</i> − <i>r</i> = <i>qn</i> so that <i>a</i> ≡ <i>r</i> (mod <i>n</i>). By theorem 4.2.1 [<i>a</i>] = [<i>r</i>]. The possible remainders are 0, 1, 2, ..., <i>n</i> − 1, that is there will be exactly <i>n</i> equivalence classes.</p>
+
+<p>To complete the proof, we must show that these <i>n</i> classes are all distinct. To do this, we first show that no two of 0, 1, 2, ... , <i>n</i> − 1 are congruent modulo <i>n</i>. Suppose that <i>s</i> and <i>t</i> are distinct integers in the list 0, 1 , 2, ..., <i>n</i> − 1. Then one is larger than the other, say <i>r</i>, so that 0 &le; <i>s</i> &lt; <i>t</i> &lt; <i>n</i>. Consequently, <i>t</i> − <i>s</i> is a positive integer that is less than n. Hence, <i>n</i> does not divide <i>t</i> − <i>s</i>, which means that <i>t</i> &ne; <i>s</i>. Thus, no two of 0, 1, 2, ... , <i>n</i> − 1 are congruent modulo n. Therefore, by Theorem 4.2.1, the classes [0], [1], [2], ... , [<i>n</i> − 1] are all distinct.□</p>
+
+<p><b>Corollary 4.1.7</b>. Every integer is congruent (mod <i>n</i>) to exactly one of the numbers in the list:</p>
+
+<div class="eq">
+<p>0, 1, 2, ...., (<i>n</i> − 1).</p>
+</div>
+
+<p>this number is indicated as</p>
+
+<div class="eq">
+<p><i>a</i> mod <i>n</i></p>
+</div>
+
+<p><b>Proof</b>. As we may always divide an integer <i>a</i> by <i>n</i> (see <a href="gcd.html#divisionZ">proposition 2.3</a>), if we denote by <i>r</i> the remainder of the division every integer <i>a</i> is congruent modulo <i>n</i> to an integer <i>r</i> such that 0 &le; <i>r</i> &lt; <i>n</i>, in fact <i>a</i> = <i>r</i> + <i>nh</i> ⇒ <i>a</i> − <i>r</i> = <i>nh</i>.□</p>
+
+<p>We indicate the set of all congruence classes of integers modulo <i>n</i> with ℤ<sub><i>n</i></sub> or ℤ/<i>n</i>ℤ</p>
+
+<div class="eq">
+<p>ℤ<sub><i>n</i></sub> = {[<i>a</i>]<sub><i>n</i></sub>: 0 &le; <i>a</i> &le; <i>n</i> − 1} = {[0]<sub><i>n</i></sub>, [1]<sub><i>n</i></sub>, [2]<sub><i>n</i></sub>, ..., [<i>n</i> − 1]<sub><i>n</i></sub>}</p>
+</div>
+
+<p>Be careful to note that we are considering here a set of sets: Each element of the finite set ℤ<sub><i>n</i></sub> is in fact an infinite set of the form [<i>k</i>].</p>
+
+<p>These <i>n</i> residue classes then <b>partition</b> the integers, meaning that each integer belongs to exactly one of these classes, and if distinct classes intersect, they are in fact equal. Alternatively, this means that</p>
+
+<div class="eq">
+<p>ℤ = [0] ∪ [1] ∪ [2] ∪ ··· ∪ [<i>n</i> − 1],</p>
+</div>
+
+<p>and the sets in this union are disjoint from one another pairwise. In particular, we have that</p>
+
+<div class="eq">
+<p>ℤ = [0]<sub>4</sub> ∪ [1]<sub>4</sub> ∪ [2]<sub>4</sub> ∪ [3]<sub>4</sub> = <br>
+{... , −4, 0, 4, 8, ...} ∪ {... , −3, 1, 5, 9, ...} ∪ {... , −2, 2, 6, 10, ...} ∪ {... , −1, 3, 7, 11, ...}.</p>
+</div>
+
+<p>If we consider ℤ<sub><i>9</i></sub>, every element of [<i>k</i>] falls into one of the first nine groups, from [0]<sub>9</sub> to [8]<sub>9</sub> and no number falls into more than one group, because as we have seen</p>
+
+<div class="eq">
+<p><i>a</i> ≡<sub><i>n</i></sub> <i>b</i> &emsp;⇐⇒&emsp; [<i>a</i>]<sub><i>n</i></sub> = [<i>b</i>]<sub><i>n</i></sub></p>
+</div>
+
+<p><p>If <i>n</i> = 2, we only two possible remainder, 0 and 1 and consequently two classes, [0] e [1]: the first contains all integers {<i>2k</i> | <i>k</i> ∈ ℤ} the second all integers <i>2k</i> + 1 | <i>k</i> ∈ ℤ }, i.e. the <a href="relations.html#partition">partition</a> induced on ℤ is that of even and odd numbers.</p>
+
+<p>For example the class [2]<sub>9</sub> is made by integers of the form 2 + 9<i>h</i> for <i>h</i> ∈ ℤ equal to 0, 1, 2, 3, etc. we have thus 2 = 2 + 9 · 0, 11 = 2 + 9 · 1, 20 = 2 + 9 · 2, 29 = 2 + 9 · 3, and so forth, for negative <i>h</i> we obtain −7 = 2 + 9 · (−1), −16 = 2 + 9 · (−2), −25 = 2 + 9 · (−3), and so on. We have thus:</p>
+
+<div class="eq"> 
+<p>[2]<sub>9</sub> = {... , −25, −16, −7, 2, 11, 20, 29, 38, ...};</p>
+</div>
+
+<p>[0]<sub>9</sub> = {..., 0, 9, 18, 27, 36, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 0 (mod 9)}</br>
+[1]<sub>9</sub> = {..., 1, 10, 19, 28, 37, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 1 (mod 9)}</br>
+[2]<sub>9</sub> = {..., 2, 11, 20, 29, 38, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 2 (mod 9)}</br>
+[3]<sub>9</sub> = {..., 3, 12, 21, 30, 39, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 3 (mod 9)}</br>
+[4]<sub>9</sub> = {..., 4, 13, 22, 31, 40, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 4 (mod 9)}</br>
+[5]<sub>9</sub> = {..., 5, 14, 23, 32, 41, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 5 (mod 9)}</br>
+[6]<sub>9</sub> = {..., 6, 15, 24, 33, 42, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 6 (mod 9)}</br>
+[7]<sub>9</sub> = {..., 7, 16, 25, 34, 43, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 7 (mod 9)}</br>
+[8]<sub>9</sub> = {..., 8, 17, 26, 35, 44, ...} = {<i>x</i> &in; ℤ | <i>x</i> ≡ 8 (mod 9)}</br>
+..</br>
+[20]<sub>9</sub> = {..., 20, 29, 38, 46, 55, ... } = {<i>x</i> &in; ℤ | <i>x</i> ≡ 20 (mod 9)</br>
+..</br>
+</p>
+
+<p>Each element of ℤ<sub><i>n</i></sub> can be denoted in many different ways. For example, we know that</p>
+
+<div class="eq">
+<p>2 ≡ 5 (mod 3) &emsp;&emsp; 2 ≡ −1 (mod 3) &emsp;&emsp; 2 ≡ 14 (mod 3)</p>
+</div>
+
+<p>Therefore, by Theorem 4.2.1, [2] = [5] = [−1] = [14] in ℤ<sub>3</sub>.</p>
+
+<p>For every integer <i>a</i> &in; ℤ there is a congruence class [<i>a</i>] &in; ℤ<sub><i>n</i></sub>. Even though each element of ℤ<sub><i>n</i></sub> (that is, each congruence class) <b>has infinitely many different labels</b>, there are only finitely many distinct classes by Corollary 4.0.6, which says in effect that</p>
+
+<div class="eq">
+<p>The set ℤ<sub><i>n</i></sub> has exactly <i>n</i> elements.</p>
+</div>
+
+<p>The set ℤ<sub>3</sub> consists of the three elements [0], [1], [2]. The elements [3], [4], [5], ... are just repetitions of [0], [1], [2], ....</p>
+
+<p>It is easily checked that the map</p>
+
+<div class="eq">
+<p>ℤ/ℤ<sub><i>n</i></sub>  &emsp; → &emsp; ℤ<sub><i>n</i></sub></br>
+<p>[<i>a</i>] &emsp; ↦ &emsp; <i>a</i> mod <i>n</i></p>
+</div>
+
+<p>which assigns to each residue class [<i>a</i>] the least non-negative residue of <i>a</i> modulo <i>n</i>, is a bijection.</p>
+
+<p>Another definition of <i>equivalence class</i> by virtue of Corollary 4.0.4 is the following</p>
+
+<div class="def">
+<p><b>Definition 4.1.8</b>. An <b>equivalence class</b> modulo <i>n</i> is the set of all integers having the same remainder upon division by the modulo <i>n</i>.</p>
+
+<ul>
+	<li><p>[0] = {integers that, divided by <i>n</i>, give a remainder equal to 0} = {<i>kn</i> | <i>k</i> ∈ ℤ} = {multiples of <i>n</i>};</p></li>
+	<li><p>[1] = {integers that, divided by <i>n</i>, give a remainder equal to 1} = {<i>kn</i> + 1 | <i>k</i> ∈ ℤ}</p></li>
+	<li><p>[2] = {integers that, divided by <i>n</i>, give a remainder equal to 1 =  {<i>kn</i> + 2 | <i>k</i> ∈ ℤ}</p></li>
+	<li><p>[<i>n</i> − 1] = {integers that, divided by <i>n</i>, give a remainder equal to <i>n</i> − 1} =  {<i>kn</i> + <i>n</i> − 1 | <i>k</i> ∈ ℤ}.</p></li>
+</ul>
+</div>
+
+<h2>Properties of ≡</h2>
+
+<p>The symbol used to denote congruence looks very much like an equal sign. The symbol ≡ was introduced by Gauss in the <i>Disquisitiones</i>, by virtue of the analogy with the equality relation. This is no accident since the relation of congruence has many of the same properties as the relation of equality. For example, we know that equality is</p>
+
+<p><i>Reflexive</i>: <i>a</i> = <i>a</i> for every integer <i>a</i>;</p>
+<p><i>Symmetric</i>: if <i>a</i> = <i>b</i>, then <i>b</i> = <i>a</i>;</p>
+<p><i>Transitive</i>: if <i>a</i> = <i>b</i> and <i>b</i> = <i>c</i>, then <i>a</i> = <i>c</i>.</p>
+
+<p>We now see that congruence modulo n is also reflexive, symmetric, and transitive that is: an equivalence relation.</p>
+
+<div class="def">
+<p><b>Proposition 4.1.9</b>. For any integer <i>n</i> &gt; 0. The congruent modulo <i>n</i> relation (≡<sub><i>n</i></sub>) on ℤ is an equivalence relation.</p>
+
+<p><b>Proof</b>. To show that congruent modulo <i>n</i> is an equivalent relation, we must prove that ≡<sub><i>n</i></sub> is reflexive, symmetric and transitive.</p>
+
+<p><u>Reflexive</u>. If <i>a</i> &in; ℤ, we need to show that <i>a</i> ≡ <i>a</i>. We must show that there is a <i>h</i> &in; ℤ such that <i>a</i> − <i>a</i> = <i>hn</i>. This is simply <i>k</i> = 0.</p>
+
+<p><u>Symmetric</u>. Let <i>a, b</i> &in; ℤ, assume that <i>a</i> ≡ <i>b</i>. We have to show that <i>b</i> ≡ <i>a</i>. If there exists an integer <i>h</i> &in; ℤ so that <i>a</i> − <i>b</i> = <i>hn</i> then <i>b</i> − <i>a</i> = −<i>hn</i> holds true because (−<i>h</i>) is also an integer, so ≡ is symmetric.</p>
+
+<p><u>Transitive</u>. Let <i>a, b</i> &in; ℤ, assume that <i>a</i> ≡ <i>b</i> and <i>b</i> ≡ <i>c</i>, we have to show that <i>a</i> ≡ <i>c</i>. We know from the definition of ≡ that there are integers <i>h</i><sub>1</sub> and <i>h</i><sub>2</sub> such that</p>
+
+<div class="eq">
+<p><i>a</i> − <i>b</i> = <i>h</i><sub>1</sub><i>n</i> &emsp; and &emsp; <i>b</i> − <i>c</i> = <i>h</i><sub>2</sub><i>n</i></p>
+</div>
+
+<p>Adding these two equations gives <i>a</i> − <i>c</i> = (<i>h</i><sub>1</sub> + <i>h</i><sub>2</sub>)<i>n</i></p>
+
+<p>Since <i>h</i><sub>1</sub> + <i>h</i><sub>2</sub> &in; ℤ; ≡<sub><i>n</i></sub> is transitive.□</p>
+</div>
+
+<p>Notice that an integer is congruent to every other integer modulo 1, that is to say congruence modulo 1 is a trivial equivalence relation; for this reason in what follows we shall in general assume <i>n</i> &gt; 1.</p>
+
+<p>Congruence gets along well with addition and multiplication.</p>
+
+<div class="def">
+<p><b>Proposition 4.1.10</b>. Let <i>a, b, c, d</i> &in; ℤ. For any integer <i>n</i> &gt; 0 the following properties hold</p>
+
+<p><i>a</i> ≡ <i>b</i> (mod <i>n</i>), &emsp; <i>c</i> ≡ <i>d</i> (mod <i>n</i>)</p>
+
+<p>&emsp;⇓</p>
+
+<ul>
+	<li><p><i>a</i> + <i>c</i> ≡ <i>b</i> + <i>d</i> (mod <i>n</i>)</p></li>
+	<li><p><i>ac</i> ≡ <i>bd</i> (mod <i>n</i>)</p></li>
+</ul>
+
+<p><b>Proof</b>.</p>
+
+<div class="eq">
+<p><i>a</i> ≡ <i>b</i> (mod <i>n</i>) ⇔ <i>a</i> − <i>b</i> = <i>hn</i></p>
+<p><i>c</i> ≡ <i>d</i> (mod <i>n</i>) ⇔ <i>c</i> − <i>d</i> = <i>kn</i></p>
+</div>
+
+<p>by adding up the two relations: <i>a</i> + <i>c</i> − (<i>b</i> + <i>d</i>) = (<i>h</i> + <i>k</i>)<i>n</i> i.e. <i>a</i> + <i>c</i> ≡ <i>b</i> + <i>d</i> (mod <i>n</i>). Analogously <i>ac</i> − <i>bd</i> = <i>ac</i> − <i>ad</i> + <i>ad</i> − <i>bd</i> = <i>a</i>(<i>c</i> − <i>d</i>) + (<i>a</i> − <i>b</i>) = <i>akn</i> + <i>hnd</i> = (<i>ak</i> + <i>hd</i>)<i>n</i> thus <i>ac</i> ≡ <i>bd</i> (mod <i>n</i>).&emsp;□</p>
+
+</div>
+
+<div class="def">
+<p><b>Example 4.1.11</b>. What time will be 314 hours from now?</p>
+
+<p><b>Solution</b>. 314 divided by 24 yields 13 and a 2 as remainder 314 = 13 ⋅ 24 + 2. So 13 days and 2 hours. So it is enough to add 2 hours to the current time. We have 314 − 2 = 13 ⋅ 24, so that we can write 314 ≡ 2 mod 24.</p>
+
+<p><b>Example 4.1.12</b>. If the time is 15.00 hours and 20 hours pass by, what time will be? if 83 hours elapse?</p>
+
+<p><b>Solution</b>. 15 + 20 ≡ 11 mod 24, then it is 11 hours. 15 + 83 ≡ 2 mod 24. It is 2 o'clock in the morning. </p>
+</div>
+
+<section aria-label="End">
+<a href="fibonacci.html">&#171; Fibonacci Sequence</a>
+<a href="index.html">Index</a>
+<a href="modular_arithmetic.html">Modular Arithmetic: Operations on ℤ<sub>n</sub> &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
