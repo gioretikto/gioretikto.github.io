@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Teorema di Weierstrass">
+	<title>Teorema di Weierstrass</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Teorema di Weierstrass</h1>
+
+<p>Una seconda importante proprietà delle funzioni continue è espressa dal seguente:</p>
+
+<p><b>Teorema 4.7.1.</b>. Sia <i>f</i> : [<i>a,b</i>] &rarr; ℝ una funzione continua. Allora <i>f</i> assume massimo e minimo in [<i>a,b</i>], ossia: &Exists; <i>x<sub>m</sub>,x<sub>M</sub></i> &in; [<i>a,b</i>] | <i>f</i>(<i>x<sub>m</sub></i>) &le; <i>f</i>(<i>x<sub>M</sub></i>) &forall;<i>x</i> &in; [<i>a,b</i>].</p>
+
+<p>Si dice che <i>x<sub>m</sub></i> è <i>punto di minimo</i> per <i>f</i>, e <i>m</i> = <i>f</i>(<i>x<sub>m</sub></i>) è il <i>minimo</i> di <i>f</i>; analogamente, <i>x<sub>M</sub></i> è <i>punto di massimo</i>, e <i>M</i> = <i>f</i>(<i>x<sub>M</sub></i>) è il <i>massimo</i> di <i>f</i>.</p>
+
+<p><b>Dim.</b> Proveremo che <i>f</i> ammette massimo in [<i>a,b</i>]. Analogamente si prova che ha minimo. <br> Cominciamo con la seguente osservazione sul concetto di estremo superiore: se <i>E</i><sub>1</sub>, <i>E</i><sub>2</sub> sono due sottoinsiemi non vuoti di ℝ,</p>
+
+<div class="eq">
+<p>sup (<i>E</i><sub>1</sub> ∪ <i>E</i><sub>2</sub>) = max(sup <i>E</i><sub>1</sub>, sup <i>E</i><sub>2</sub>)</p>
+</div>
+
+<p>Questa proprietà è vera per insiemi sia limitati che illimitati (se <i>E<sub>i</sub></i> è superiormente illimitato si pone sup <i>E<sub>i</sub></i> = +&infin;; si intende che max (<i>a</i>, + &infin;) = +&infin;). Sia ora</p>
+
+<div class="eq">
+<p><i>f</i> : <i>I</i> &rarr; ℝ con <i>I</i> = <i>I</i><sub>1</sub> ∪ <i>I</i><sub>2</sub></p>
+</div>
+
+<p>(<i>I</i>, <i>I</i><sub>1</sub>, <i>I</i><sub>2</sub> intervalli). Applicando l'osservazione precedente agli insiemi <i>E<sub>i</sub></i> = {<i>f</i>(<i>x</i>): <i>x</i> &in; <i>I<sub>i</sub></i>}, si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mi>I</mi>
+  </munder>
+  <mi>f</mi>
+  <mo>=</mo>
+  <mo data-mjx-texclass="OP" movablelimits="true">max</mo>
+  <mo stretchy="false">(</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>I</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo>,</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>I</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\sup_I f = \max (\sup_{I_1} f, \sup_{I_2} f) $$ -->
+
+<p>In particolare quindi, è vera almeno una delle due relazioni:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mi>I</mi>
+  </munder>
+  <mi>f</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>I</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo>;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>I</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+</math>
+
+<!-- $$\sup_I f = \sup_{I_1} f; \quad \sup_{I_2} f $$ -->
+
+<p>Veniamo alla dimostrazione del teorema. Useremo una costruzione iterativa simile a quella vista nella dimostrazione del teorema degli zero. Consideriamo la funzione <i>f</i>: [<i>a,b</i>] &rarr; ℝ e poniamo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">[</mo>
+      <mi>a</mi>
+      <mo>,</mo>
+      <mi>b</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+</math>
+
+<!-- $$ \Lambda = \sup_{[a,b]} f $$ -->
+
+<p>(con &Lambda; eventualmente uguale a +&infin;). Suddividiamo [<i>a,b</i>] in due intervalli uguali; per quanto osservato sopra, per uno di essi, che chiamiamo [<i>a</i><sub>1</sub>, <i>b</i><sub>1</sub>], sarà vero che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">[</mo>
+      <msub>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msub>
+      <mo stretchy="false">]</mo>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+</math>
+
+<!-- $$ \Lambda = \sup_{[a_2,b_2]} f $$ -->
+
+<p>Procedendo per dicotomia, così facendo costruiamo una succession di intervalli [<i>a<sub>n</sub>, b<sub>n</sub></i>], ciascuno contenuto nei precedenti, con le proprietà:</p>
+
+<ol>
+	<li><p><i>a<sub>n</sub></i> monotona crescente e limitata; <i>b<sub>n</sub></i>  monotona decrescente e limitata;</p></li>
+	<li><p><i>b<sub>n</sub></i> &minus; <i>a<sub>n</sub></i> = (<i>b</i> &minus; <i>a</i>)/2<sup><i>n</i></sup> &rarr; 0;</p></li>
+	<li><p>&Lambda; = sup<sub>[<i>a<sub>n</sub>, b<sub>n</sub></i>] <i>f</i></p></li>
+</ol>
+
+<p>Per lo stesso ragionamento fatto nella dimostrazione del T. degli zeri (che utilizza il teorema di monotonia per le successioni), dai punti 1) e 2) segue che le successioni <i>a<sub>n</sub></i> e <i>b<sub>n</sub></i> convergono ad uno stesso limite <i>x</i><sub>0</sub> &in; [<i>a,b</i>]. Distinguiamo ora due casi: &Lambda; &lt; +&infin;, &Lambda; = +&infin; (proveremo che questo secondo caso in realtà non può verificarsi). Se &Lambda; &lt; +&infin;, &forall;<i>n</i>, esiste un punto <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>, b<sub>n</sub></i>] tale che</p>
+
+<div class="eq">
+<p>&Lambda; &minus; 1/<i>n</i> &lt; <i>f</i>(<i>t<sub>n</sub></i>) &le; &Lambda; &emsp;(4.7.2)</p>
+</div>
+
+<p>Infatti: poiché &Lambda; &minus; 1/<i>n</i> è minore di &Lambda; che è il minimo dei maggioranti dei valori di <i>f</i>(<i>x</i>) in [<i>a<sub>n</sub>, b<sub>n</sub></i>], &Lambda; &minus; 1/<i>n</i> non è un maggiorante, quindi esiste <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>, b<sub>n</sub></i>] con la proprietà 4.7.2. <br> Poiché <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>, b<sub>n</sub></i>], <i>a<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub> e <i>b<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub>, per il T. del confronto anche <i>t<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub>. <br>Ancora per il T. del confronto, la (4.7.2) dà allora</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>t</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x39B;</mi>
+</math>
+
+<!-- $$\lim_{n\to\infty} f(t_n) = \Lambda $$ -->
+
+<p>D'altro canto, poiché <i>f</i> è continua e <i>t<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub>, si ha che lim<sub><i>n</i> &rarr; &infin;</sub> <i>f</i>(<i>t<sub>n</sub></i>) = <i>f</i>(<i>x</i><sub>0</sub>), perciò <i>f</i>(<i>x</i><sub>0</sub>) = &Lambda;. Allora, poiché &Lambda; è il sup dei valori di <i>f</i> in [<i>a,b</i>], &Lambda; è il <i>massimo</i> di <i>f</i> in [<i>a,b</i>], ed è assunto nel punto <i>x</i><sub>0</sub>. In questo caso perciò il teorema è dimostrato. <br>Supponiamo ora che sia &Lambda; = +&infin;. Allora &forall;<i>n</i> esiste un punto <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>,b<sub>n</sub></i>] tale che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>t<sub>n</sub></i>) &ge; <i>n</i> &emsp;(4.7.3)</p>
+</div>
+
+<p>Ragionando come sopra si prova che <i>t<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub> per un certo <i>x</i><sub>0</sub> &in; [<i>a,b</i>]. Poiché <i>f</i> è continua in <i>x</i><sub>0</sub>,</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> &rarr; &infin;</sub> <i>f</i>(<i>t<sub>n</sub></i>) = <i>f</i>(<i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>ma per la (4.7.3) <p>lim<sub><i>n</i> &rarr; &infin;</sub> <i>f</i>(<i>t<sub>n</sub></i>) = +&infin;, assurdo perché in <i>x</i><sub>0</sub> la funzione deve avere un valore finito.&emsp;□</p>
+
+
+<section aria-label="End">
+<a href="zeri.html">&#171;Teorema degli zeri</a>
+<a href="index.html">Index</a>
+<a href="an_stime.html">Confronti e stime asintotiche&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

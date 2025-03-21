@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Proprietà globali delle funzioni continue o monotone su un intervallo">
+	<title>Proprietà globali delle funzioni continue o monotone su un intervallo</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Proprietà globali delle funzioni continue o monotone su un intervallo</h1>
+
+<h3>Funzioni continue su un intervallo</h3>
+
+<p>Le proprietà delle funzioni continue incontrate sinora si basano sostanzialmente sul concetto di continuità <i>in un punto</i>. Come vedremo, ora, invece, è soprattutto il fatto che una funzione sia continua su <i>un intervallo</i> ad avere delle conseguenze interessanti. La proprietà di continuità su un intervallo ha una semplice interpretazione geometrica: il grafico della funzione, su quell'intervallo, si può tracciare "senza staccare la penna dal foglio". Il concetto di funzione continua si presta quindi a tradurre in maniera rigorosa l'idea goemetrica di <i>linea continua</i>, e quella fisica di <i>grandezza che varia con continuità</i>. Questo è vero, però, pur di utilizzare funzioni definite su un <i>intervallo di</i> ℝ. Come vedremo, infatti, le proprietà notevoli delle funzioni continue su un intervallo dipendono in maniera cruciale dall'assioma di continuità di ℝ, e non varrebbero, ad es., se l'ambiente di lavoro fosse il campo ℚ dei razionali. <br>La prima proprietà di cui ci occupiamo, che chiameremo <i>teorema degli zeri</i>, riguarda la risoluzione di un'equazione del tipo</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = 0 &emsp;(4.7.1)</p>
+</div>
+
+<p>Quando <i>f</i> è un polinomio di grado &le; 4 esistono formule che forniscono le soluzioni della (4.7.1) mediante radicali. Se però <i>f</i> è un polinomio di grado &gt; 4 o una funzione più complicata, salvo casi particolarmente fortunati, non esistono formule per le soluzioni. Geometricamente, risolvere la (4.7.1) significa determinare le ascisse dei punti di intersezione tra il grafico di <i>y</i> = <i>f</i>(<i>x</i>) e l'asse delle ascisse. Naturalmente possono esserci infinite soluzioni, un numero finito di soluzioni, nessuna soluzione. Ogni soluzione si chiama <i>zero</i> di <i>f</i>.</p>
+
+<p>Il teorema degli zeri dà alcune semplici condizioni sotto le quali esiste uno zero di <i>f</i> e anche un modo per calcolarlo.</p>
+
+<p><b>Teorema 4.7.2 (Degli zeri)</b> Sia</p>
+
+<ol type="i">
+	<li><p><i>f</i> continua in [<i>a,b</i>];</p></li>
+	<li><p><i>f</i>(<i>a</i>) ⋅ <i>f</i>(<i>b</i>) &lt; 0.</p></li>
+</ol>
+
+<p>Allora esiste <i>c</i> &in; (<i>a,b</i>) tale che <i>f</i>(<i>c</i>) = 0.<br> Se <i>f</i> è anche strettamente monotona, lo zero è unico.</p>
+
+<p><b>Dim.</b> Costruiamo una successione che tende a uno zero di <i>f</i>. Poniamo <i>c</i><sub>1</sub> = (<i>a</i>+<i>b</i>)/2, punto medio dell'intervallo [<i>a,b</i>].<br> Se <i>f</i>(<i>c</i><sub>1</sub>) = 0 siamo fortunati e il teorema è dimostrato. <br> Se <i>f</i>(<i>c</i><sub>1</sub>) &ne; 0 guardiamo il segno di <i>f</i>(<i>a</i>) ⋅ <i>f</i>(<i>b</i>) e procediamo come segue:</p>
+
+<table class="noborder centertable">
+<tr><td><i>f</i>(<i>a</i>) ⋅ <i>f</i>(<i>c</i><sub>1</sub>) &lt; 0<br> ↘</td> <td></td> <td>dove <i>a</i><sub>2</sub> = <i>a</i><sub>1</sub>, <i>b</i><sub>2</sub> = <i>c</i><sub>2</sub></td></tr>
+<tr> <td></td> <td> consideriamo l'intervallo [<i>a</i><sub>1</sub>, <i>b</i><sub>1</sub>]</td>
+<tr><td>↗<br><i>f</i>(<i>a</i>) ⋅ <i>f</i>(<i>c</i><sub>1</sub>) &gt; 0</td> <td></td> <td>dove <i>a</i><sub>2</sub> = <i>c</i><sub>2</sub>, <i>b</i><sub>2</sub> = <i>b</i><sub>1</sub></td></tr>
+</table>
+
+<p>Continuando in questo modo troviamo una sequenza di intervalli [<i>a<sub>n</sub>, b<sub>n</sub></i>] con le seguenti proprietà:</p>
+
+<ol>
+	<li><p><i>a<sub>n</sub></i> &le; <i>a</i><sub><i>n</i>+1</sub> e <i>b<sub>n</sub></i> &ge; <i>b</i><sub><i>n</i>+1</sub> &emsp; ({<i>a<sub>n</sub></i>} cresce {<i>b<sub>n</sub></i>} decresce)</p></li>
+	<li><p><i>a<sub>n</sub></i> &minus; <i>b<sub>n</sub></i> = (<i>b</i> &minus; <i>a</i>)/2<sup><i>n</i></sup> (ciascun intervallo è lungo la metà del precedente)</p></li>
+	<li><p><i>f</i>(<i>a<sub>n</sub></i>) ⋅ <i>f</i>(<i>b<sub>n</sub></i>) &lt; 0 (per come sono stati scelti <i>a<sub>n</sub></i> e <i>b<sub>n</sub></i> a ogni passo).</p></li>
+</ol>
+
+<p>Per la 1), possiamo allora dedurre che le successioni {<i>a<sub>n</sub></i>} e {<i>b<sub>n</sub></i>} hanno limite finito, in base al T. di esistenza del limite delle succesioni monotone; cioè:</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &rarr; ℓ<sub>1</sub> &emsp; e <i>b<sub>n</sub></i> &rarr; ℓ<sub>2</sub>, &emsp;<i>n</i> &rarr; +&infin;</p>
+</div>
+
+<p>(Si noti che le successioni sono anche limitate perché contenute in [<i>a,b</i>].) <br>Dalla 2) deduciamo che <i>b<sub>n</sub></i> &minus; <i>a<sub>n</sub></i> = (<i>b</i> &minus; <i>a</i>)/2<sup><i>n</i></sup> &rarr; 0 se <i>n</i> &rarr; +&infin; e perciò ℓ<sub>1</sub> = ℓ<sub>2</sub> = ℓ. <br> Per la continuità di <i>f</i>, abbiamo allora che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>a<sub>n</sub></i>) ⋅ <i>f</i>(<i>b<sub>n</sub></i>) &rarr; <i>f</i>(ℓ)<sup>2</sup></p>
+</div>
+
+<p>mentre dalla 3) e dal T. della permanenza del segno deduciamo <i>f</i>(ℓ)<sup>2</sup> &le; 0. Deve perciò essere <i>f</i>(ℓ) = 0 e così ℓ è lo zero cercato.</p>
+
+<p>Arrestando il procedimento indicato nella dimostrazione dopo <i>n</i> passi, si può assumere <i>a<sub>n</sub></i> o <i>b<sub>n</sub></i> come valore approssimato dello zero ℓ di <i>f</i>, rispettivamente, per difetto o per eccesso. L'errore commesso è non superiore a (<i>b</i> &minus; <i>a</i>)/2<sup><i>n</i></sup>.<br> Si osservi che, se in [<i>a,b</i>] vi sono più zeri della funzione <i>f</i>, il procedimento illustrato non indica quale di essi venga determinato.</p>
+
+<section aria-label="End">
+<a href="lim_stime_graf.html">&#171;Stime asintotiche e grafici</a>
+<a href="index.html">Index</a>
+<a href="W.html">Teorema di Weierstrass&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
