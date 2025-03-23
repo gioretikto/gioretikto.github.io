@@ -27,7 +27,31 @@
 
 <p>Si dice che <i>x<sub>m</sub></i> è <i>punto di minimo</i> per <i>f</i>, e <i>m</i> = <i>f</i>(<i>x<sub>m</sub></i>) è il <i>minimo</i> di <i>f</i>; analogamente, <i>x<sub>M</sub></i> è <i>punto di massimo</i>, e <i>M</i> = <i>f</i>(<i>x<sub>M</sub></i>) è il <i>massimo</i> di <i>f</i>.</p>
 
-<p><b>Dim.</b> Proveremo che <i>f</i> ammette massimo in [<i>a,b</i>]. Analogamente si prova che ha minimo. <br> Cominciamo con la seguente osservazione sul concetto di estremo superiore: se <i>E</i><sub>1</sub>, <i>E</i><sub>2</sub> sono due sottoinsiemi non vuoti di ℝ,</p>
+<p><b>Dim.</b> La dimostrazione risiede sull'assioma di completezza di ℝ, quindi il primo passo è provare che l'immagine di <i>f</i> sull'intervallo è limitata.</p>
+
+<div class="eq">
+<p><i>A</i> = {<i>f</i>(<i>x</i>) : <i>x</i> &in; [<i>a,b</i>]</p>
+</div>
+
+<p>Se <i>A</i> non fosse limitato esisterebbe una successione {<i>a<sub>n</sub></i>} &in; [<i>a,b</i>] tale che |<i>f</i>(<i>a<sub>n</sub></i>)| ⟶ &infin;. Dato che {<i>a<sub>n</sub></i>} è limitata, per il teorema di Bolzano-Weierstrass è dotata di una sottosuccessione {<i>a<sub>n<sub>k</sub></sub></i>} convergente in un punto <i>x</i> &in; [<i>a,b</i>]. Deve essere anche |<i>f</i>(<i>a<sub>n<sub>k</sub></sub></i>)| ⟶ &infin;. Dato che <i>f</i> è continua <i>f</i>(<i>a<sub>n<sub>k</sub></sub></i>) = <i>f</i>(<i>x</i>). Ma questa è una contraddizione se <i>f</i> non è limitata. Quindi <i>f</i> è limitata. <br> Quindi <i>A</i> è lmitato è non-vuoto. Dall'assioma di completezza ha il supremum <i>s</i> = sup <i>A</i>. Sia <i>y<sub>n</sub></i> &in; [<i>a,b</i>] tale che</p>
+
+<div class="eq">
+<p><i>s</i> − 1/<i>n<sub>k</sub></i> &lt; <i>f</i>(<i>y<sub>n</sub></i>) &le; <i>s</i></p>
+</div>
+
+<p>Come prima, {<i>y<sub>n</sub></i>} ha una sottosuccessione convergente; sia <i>y<sub>n<sub>k</sub></sub></i> ⟶ <i>y</i> &in; [<i>a,b</i>]. Allora</p>
+
+<table class="noborder centertable">
+<tr><td><i>s</i> − 1/<i>n<sub>k</sub></i></td> <td>&lt;</td> <td><i>f</i>(<i>y<sub>n</sub></i>)</td> <td>&le;</td> <td><i>s</i></td></tr>
+<tr><td>↓</td> <td></td> <td>↓</td> <td></td> </tr>
+<tr><td><i>s</i></td> <td></td> <td><i>f</i>(<i>y</i>)</td> <td></td> <td>&le;</td> <td><i>s</i></td></tr>
+</table>
+
+<p>Quindi, <i>f</i>(<i>y</i>) = <i>s</i> &in; [<i>a,b</i>] è il massimo. <br> Analogmente si dimostra l'esistenza del minimo. &emsp;□</p>
+
+ sull'intervallo è limitato. Procediamo per contraddizione. Se f
+
+ Proveremo che <i>f</i> ammette massimo in [<i>a,b</i>]. Analogamente si prova che ha minimo. <br> Cominciamo con la seguente osservazione sul concetto di estremo superiore: se <i>E</i><sub>1</sub>, <i>E</i><sub>2</sub> sono due sottoinsiemi non vuoti di ℝ,</p>
 
 <div class="eq">
 <p>sup (<i>E</i><sub>1</sub> ∪ <i>E</i><sub>2</sub>) = max(sup <i>E</i><sub>1</sub>, sup <i>E</i><sub>2</sub>)</p>

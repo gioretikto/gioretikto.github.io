@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Subsequence"/>
-    <title>Subsequence</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Sottosucessioni"/>
+	<title>Sottosucessioni</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href="index.html">Index</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
-<div class="content">
+<article>
 
-<h1>Subsequence</h1>
+<h1>Sottosucessioni</h1>
 
-<p><b>Definition 2.3.1</b>. (Subsequence) Suppone that {<i>a<sub>n</sub></i>} is any sequence and let</p>
+<p><b>Teorema 3.6.1 Limitatezza delle successioni convergenti</b> Se {<i>a<sub>n</sub></i>} è una successione convergente, allora {<i>a<sub>n</sub></i>} è limitata, cioè esiste <i>M</i> &ge; 0 tale che |<i>a<sub>n</sub></i>| &le; <i>M</i> per ogni <i>n</i> &in; ℕ.</p>
+
+<p><b>Dim.</b> Sia ℓ = lim<sub>n ⟶ &infin;</sub> <i>a<sub>n</sub></i>. Per definizione di limite, fissato <i>&epsilon;</i> = 1 esiste un indice <i>N</i> &in; ℕ tale che |<i>a<sub>n</sub></i> − ℓ| &lt; 1, &forall;<i>n</i> &in; ℕ. In particolare si avrà che</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i>| &le; |<i>a<sub>n</sub></i> − ℓ| + |ℓ| &lt; 1 + |ℓ|&emsp; &forall;<i>n</i> &ge; <i>N</i></p>
+</div>
+
+<p>dunque tutti i termini della coda della successione (dall'indice <i>N</i> in poi) sono minori di 1 + |ℓ|. A questo punto rimane solo un numero finito di termini da controllare; basterà quindi scegliere</p>
+
+<div class="eq">
+<p><i>M</i> = max {|<i>a</i><sub>0</sub>|, |<i>a</i><sub>1</sub>|, ..., |<i>a</i><sub><i>N</i> − 1</sub>|, 1 + |ℓ|}</p>
+</div>
+
+<p>per fare in modo che |<i>a<sub>n</sub></i>| &le; <i>M</i> &forall; <i>n</i> &in; ℕ.&emsp;□</p>
+
+<p>Non possiamo aspettarci, in generale, che il viceversa sia vero, cioè che una successione limitata sia anche convergente: la successione <i>a<sub>n</sub></i> = (−1)<sup><i>n</i></sup> è limitata ma non è convergente. Tuttavia in questo caso è evidente che se selezioniamo solo i termini della successione corrispondenti a indici pari, otteniamo una nuova successione con tutti temrini uguali a 1, quindi sicuramente convergente. <br> Mostriamo che una proprietà di questo tipo è sempre valida per le successioni limitate: se {<i>a<sub>n</sub></i>} è  limitata, è possibile selezionare, in maniera ordinata, un numero infinito di elemnti in modo tale che essi formino una nuova successione convergente. Questa nuova successione sarà detta <b>sottosuccessione</b> della successione di partenza.</p>
+
+<p id="sub"><b>Definizione 3.6.2 (Sottosucessione)</b> Data la successione {<i>a<sub>n</sub></i>}, la successione {<i>a<sub>n<sub>k</sub></sub></i>} si dice sottosuccessione estratta della successione {<i>a<sub>n</sub></i>}, dove {<i>n<sub>k</sub></sub></i>} è una successione strettamente crescente di numeri naturali, i.e. una funzione <i>k</i>: ℕ ⟶ ℕ. &emsp;□</p>
+
+<p>La più elementare estrazine di elementi da una successione è quella che considera i soli indici o di posto pari o di posto dispari. Ad es., se <i>a<sub>n</sub></i> = (−1)<sup><i>n</i></sup> abbiamo la sottosuccessione pari <i>a</i><sub>2<i>n</i></sub> = (−1)<sup>2n</sup> = 1 e quella dispari 
 
 <div class="eq">
 <p><i>n</i><sub>1</sub> &lt; <i>n</i><sub>2</sub> &lt; <i>n</i><sub>3</sub> &lt; ... &lt; <i>n<sub>k</sub></i> &lt; ...</p>
@@ -185,7 +205,7 @@
 <a href="Cauchy.html">Cauchy sequences&#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>
