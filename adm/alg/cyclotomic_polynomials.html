@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Cyclotomic polynomials">
+	<title>Cyclotomic polynomials</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Cyclotomic polynomials</h1>
+
+<p>We now want to discuss a special class of polynomials in ℤ[<i>x</i>]. These polynomials occur in the factorizations of the simple polynomial <i>x<sup>n</sup></i> − 1. Although these polynomials are constructed easily, they have a tendency to appear in many different applications, and hence are very useful. These are thr polynomials that have as roots the primitive n-th roots of unity. Because of their relation with the division of the circle, these polynomials are called <b>cyclotomic polynomials</b>.</p>
+
+<!--
+<p>Recall that the <a href="complex_numbers.html#roots_unity">roots of unity</a> for some integer <i>n</i> (i.e.the solutions of <i>x<sup>n</sup></i> − 1 = 0) are the <i>n</i> complex numbers <i>&zeta;</i><sub><i>n</i>,0</sub>, <i>&zeta;</i><sub><i>n</i>,1</sub>, ..., <i>&zeta;</i><sub><i>n,n</i> − 1</sub>, where</p>
+
+<div class="eq">
+<p><i>&zeta;<sub>n,k</sub></i> = cos 2<i>&pi;k</i>/<i>n</i> + i sin2<i>&pi;k</i>/<i>n</i>, &emsp; 0 &le; <i>k</i> &lt; <i>n</i></p>
+</div>
+
+<p><b>Definition 7.5.1</b>. We define the <i>order</i> of the <i>n</i>-th roots of unity, &zeta;, the smallest integer <i>m</i> such that <i>&zeta;<sup>m</sup></i> = 1 and &zeta;<sup>h</sup> &ne; 1 &forall; <i>h</i> = 1,...,<i>m</i> − 1.&emsp;□ </p>
+
+<p><b>Lemma 7.5.2</b>. Let &zeta; a root of unity such that for some <i>t</i> &gt; 0, <i>t</i> &in; ℕ, <i>&zeta;<sup>t</sup></i> = 1. Then the order <i>m</i> of <i>&zeta;</i> is a divisor of <i>t</i>.</p>
+
+<p><b>Proof</b>. If <i>m</i> divides <i>t</i>, then <i>t</i> = <i>mc</i> for some integer <i>c</i>, and since <i>&zeta;<sup>m</sup></i> = 1 by the definition of order, it readily follows from <i>&zeta;<sup>t</sup></i> = (<i>&zeta;<sup>m</sup></i>)<sup><i>c</i></sup> = 1.&emsp;□</p>
+
+<p><b>Definition 7.5.3</b>. A <i>n</i>-th <b>primitive root</b> of unity is an <i>n</i>-th root of unity of order <i>n</i>.&emsp;□</p>
+
+<p>So a complex <i>n</i>th root of unity is said to be primitive if it is a root of the polynomial <i>x</i><sup>n</sup> − 1, but is not a root of <i>x<sup>m</sup></i> = 1 for any positive integer <i>m</i> &lt; <i>n</i>.</p>
+
+<p>We'll indicate by <i>&zeta;<sub>n</sub></i> the <i>n</i>-root of unity corresponding to <i>k</i> = 1, <i>i.e. &zeta;<sub>n</sub></i> = <i>&zeta;</i><sub><i>n</i>,1</sub> = cos (2&pi;/<i>n</i>) + i sin(2&pi;/<i>n</i>). It is a root of unity because for (<i>h</i> = 1, ..., <i>n</i> −1) by <a href="complex_numbers.html#De_Moivre">De Moivre’s formula</a></p>
+
+<div class="eq">
+<p><i>&zeta;<sub>n</sub><sup>h</sup></i> = cos (2<i>h&pi;</i>/<i>n</i>) + i sin(2<i>h&pi;</i>/<i>n</i>) = <i>&zeta;<sub>n,h</sub></i></p>
+</div>
+
+<p>which is different from 1. Raising <i>&zeta;<sub>n</sub></i> to the power of <i>h</i> leads to all the other roots of unity.</p>
+
+<p><b>Proposition 7.5.4</b>. If <i>&zeta;</i> is a <i>n</i>-root of unity different from 1.</p>
+
+<div class="eq">
+<p>1 + &zeta; + &zeta;<sup>2</sup> + ... + &zeta;<sup><i>n</i> − 1</sup> = 0</p>
+</div>
+
+<p><b>Proof.</b> We have</p>
+
+<div class="eq">
+<p>(<i>x<sup>n</sup></i> − 1) = (<i>x</i> − 1) (<i>x</i><sup><i>n</i>−1</sup> + <i>x</i><sup><i>n</i>−2</sup> + ... + <i>x</i> + 1)</p>
+</div>
+
+<p>letting <i>x</i> = &zeta; &ne; 1, yields to</p>
+
+<div class="eq">
+<p><i>&zeta;</i><sup><i>n</i>−1</sup> + <i>&zeta;</i><sup><i>n</i>−2</sup> + ... + <i>&zeta;</i> + 1 = 0.&emsp;□</p>
+</div>
+
+<p>We've found a single <i>n</i>-th primitive root of unit, and now we want to determine them all. For this task we calculate the order of all <i>n</i>-th roots and isolate the ones which have <i>n</i> as order. We start by an arbitrary <i>n</i>-th primitive root of unit and we'll calculate the order of all its powers.</p>
+
+<p><b>Proposition 7.5.5</b>. Let <i>ζ</i> be a primitive <i>n</i>-th root of unity and let <i>k</i> be an integer, then <i>ζ<sup>k</sup></i> has order <i>n</i>/gcd(<i>n,k</i>).</p>
+
+<p><b>Proof.</b> Let <i>&delta;</i> = gcd(<i>n,k</i>); and let <i>k</i> = <i>&delta;k</i><sub>1</sub> and <i>n</i> = <i>&delta;n</i><sub>1</sub>, then (<i>n</i><sub>1</sub>, <i>k</i><sub>1</sub>) = 1. We want to determine the order <i>m</i> = <i>m</i>(<i>k</i>) of <i>ζ<sup>k</sup></i>. We have</p>
+
+<div class="eq">
+<p>(<i>ζ<sup>k</sup></i>)<sup><i>m</i></sup> = (<i>ζ<sup>k</sup></i>)<sup><i>n</i><sub>1</sub></sup> = (<i>ζ<sup><i>k</i><sub>1</sub>&delta;</sup></i>)<sup><i>n</i>/<i>&delta;</i></sup> = (<i>ζ<sup>n</sup></i>)<sup><i>k</i><sub>1</sub></sup> = 1</p>
+</div>
+
+<p>Since &zeta;<sup>k</sup> to the power <i>n</i><sub>1</sub> is 1 and <i>m</i> is by definition the smallest exponent for which this happens, hence <i>n</i><sub>1</sub> is a multiple of <i>m</i>:</p>
+
+<div class="eq">
+<p><i>m</i> | <i>n</i><sub>1</sub> &emsp; (<b>7.5.1</b>)</p>
+</div>
+
+<p>We have also</p>
+
+<div class="eq">
+<p><i>&zeta;<sup>km</sup></i> = (<i>&zeta;<sup>k</sup></i>)<sup><i>m</i></sup> = 1</p>
+</div>
+
+<p>being <i>ζ</i> a primitive <i>n</i>-th root of unity and hence of period <i>n</i> it follows that <i>n</i> | <i>km</i> ⇒ <i>n</i><sub>1</sub>&delta; | <i>n</i><sub>1</sub>&delta;<i>m</i>, which yields to <i>n</i><sub>1</sub>| <i>k</i><sub>1</sub><i>m</i>. Since (<i>n,k</i><sub>1</sub>) = 1</p>
+
+<div class="eq">
+<p><i>n</i><sub>1</sub> | <i>m</i> &emsp; (<b>7.5.2</b>)</p>
+</div>
+
+<p>Equations (7.5.1) and (7.5.2) imply that <i>m</i> = <i>n</i><sub>1</sub> = <i>n</i>/<i>&delta;</i>.&emsp; □</p>
+
+<p>As corollary if gcd(n,k) = 1 we've that the order of <i>&zeta;<sup>k</sup></i> is <i>n</i>, hence a primitive root of unity.</p>
+
+<p><b>Corollary 7.5.6</b>. All and the only primitive <i>n</i>th roots of unity are</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3B6;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>k</mi>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <mo>+</mo>
+  <mi>i</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>k</mi>
+      <mi>&#x3C0;</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <mo>=</mo>
+  <msubsup>
+    <mi>&#x3B6;</mi>
+    <mi>n</mi>
+    <mi>k</mi>
+  </msubsup>
+</math>
+
+<!-- $$\zeta_{n,k} = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n} = \zeta_n^k $$ -->
+
+<!--
+<p>where 1 &le; <i>k</i> &lt; <i>n</i> and (<i>n,k</i>) = 1 and hence they are <i>&phi;</i>(<i>n</i>), with <i>&phi;</i> Euler's totient function.</p>
+
+<p><b>Proof.</b> Let <i>ζ</i> be a primitive <i>n</i>th root of unity. If <i>ζ<sup>k</sup></i> is primitive then (<i>ζ<sup>k</sup></i>)<sup><i>n</i></sup> = 1. This implies that from</p>
+
+<div class="eq">
+<p>(<i>ζ<sup>k</sup></i>)<sup><i>n</i>/<i>&delta;</i> = 1</sup></p>
+</div>
+
+<p><i>ζ<sup>k</sup></i> is primitive if and only if <i>&delta;</i> = 1. Further, if <i>k</i> &ge; <i>n</i>, <i>&zeta;<sub>n,k</sub></i> would be one of the roots with index less than <i>k</i> given the periodicity of sin and cos.□</p>
+
+<p><b>Remark 7.5.7</b>. We've seen that the powers of <i>ζ</i><sub><i>n</i>,1</sub> are all the primitive <i>n</i>-th roots of the unit. This is true for any primitive <i>n</i>-th root of the unit, which can be used to generate all <i>n</i>-th roots of the unit. &emsp;□</p>
+
+<p><b>Definition 7.5.8</b>. The <i>n</i>th <b>cyclotomic polynomial</b> <i>&Phi;<sub>n</sub></i>(<i>x</i>)  is the unique monic polynomial whose roots are the primiteve <i>n</i>th roots of unity in ℂ. </p>
+
+<div class="eq">
+<p><i>&Phi;<sub>n</sub></i>(<i>x</i>) = (<i>x</i> − <i>&zeta;</i><sub>1</sub>) (<i>x</i> − <i>&zeta;</i><sub>2</sub>) ⋅⋅⋅  (<i>x</i> − <i>&zeta;<sub>&phi;</i><sub>(<i>n</i>)</sub>)</p>
+</div>
+
+<p>It is evident that the degree of <i>&phi;<sub>n</sub></i> is <i>&phi;</i>(<i>n</i>). Any of the φ(<i>n</i>) primitive nth roots of unity generate all <i>n</i>th roots of unity (primtive or not) so the <i>&zeta;<sub>i</sub></i> that appear in the cyclotomic polynomial can be expressed as <i>&zeta;<sup>i</sup></i> for <i>i</i> such that 1 &le; <i>i</i> &lt; <i>n</i>.</p>
+--> 
+
+<p>From our knowledge of cyclic groups, we know (<a href="cyclic_groups.html#primitive">Lemma 7.3.10</a>) that (<i>&zeta;<sub>n</sub><sup>k</sup></i>) is a primitive <i>n</i>th root of 1 if and only if <i>k</i> is relatively prime to <i>n</i>. In particular, there are <i>&phi;</i>(<i>n</i>) primitive roots of 1, where <i>&phi;</i> is Euler's totient function. Thus,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>:=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B6;</mi>
+      <mtext>&#xA0;primitive root of 1</mtext>
+    </mrow>
+  </munder>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B6;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>&#x2264;</mo>
+      <mi>k</mi>
+      <mo>&#x2264;</mo>
+      <mi>n</mi>
+      <mo>,</mo>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </munder>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msubsup>
+    <mi>&#x3B6;</mi>
+    <mi>n</mi>
+    <mi>k</mi>
+  </msubsup>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \Phi_n(x) := \prod_{\zeta \text{ primitive root of 1}} (x - \zeta) = \prod_{1\le k \le n, (n,k)=1} (x-\zeta_n^k) $$ -->
+
+<p><b>Lemma 7.5.9</b> For all positive integers <i>n</i>,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>d</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi>n</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>d</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+<mtext>&emsp;&emsp;(<b>7.5.3</b>)</mtext>
+</math>
+
+<p><b>Proof</b>. If <i>n</i> = <i>de</i>, then every <i>d</i>th root <i>&zeta;</i> of 1 is an <i>n</i>th root of 1, because <i>&zeta;<sup>n</sup></i> = <i>&zeta;<sup>de</sup></i> = (<i>&zeta;<sup>d</sup></i>)<sup><i>e</i></sup> = 1. In particular, every <i>primite</i> <i>d</i>th root <i>&zeta;</i> of 1 is an <i>n</i>th root of 1.&emsp;□</p>
+
+<p>From the last relation we can find that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>n</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>d</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi>n</mi>
+    </mrow>
+  </munder>
+  <mi>&#x3D5;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>d</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ n = \sum_{d|n}\phi(d)$$ -->
+
+<p>which is a property of Euler's function which can be obtained wihtout resorting to cyclotomic polynomials.</p>
+
+<p><b>Example 7.5.10</b>. Consider <i>x</i><sup>4</sup> − 1. There are four roots {1,−1,<i>i</i>,−<i>i</i>}; 1 and −1 are not primitive roots of the unity, because by definition of order even if 1<sup>4</sup> = 1 or −1<sup>4</sup> = 1 we have 1<sup>2</sup> = 1 and −1<sup>2</sup> = 1. Only <i>i</i> and −<i>i</i> are primitive because no power smaller than 4 gives <i>i<sup>m</sup></i> = 1, or (−<i>i</i>)<i><sup>m</sup></i> = 1. So that</p>
+
+<div class="eq">
+<p>&Phi;<sub>4</sub> (<i>x</i>) = (<i>x</i> − <i>i</i>) (<i>x</i> + <i>i</i>) = <i>x</i><sup>2</sup> + 1</p>
+</div>
+
+<p><b>Example 7.5.11</b>. When <i>n</i> = 2, the only primitive square root of unit is −1 (note that 1 has order 1, i.e. not primitive), so that &Phi;<sub>2</sub>(<i>x</i>) = <i>x</i> + 1. When <i>n</i> = 4, the primitive fourth roots of unity are <i>i</i> and −<i>i</i>, so that</p>
+
+<div class="eq">
+<p>&Phi;<sub>4</sub> = (<i>x</i> − <i>i</i>) (<i>x</i> + <i>i</i>) = <i>x</i><sup>2</sup> + 1</p>
+</div>
+
+<p>Since &Phi;<sub>1</sub> = <i>x</i> − 1, we get the factorization</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup></i> − 1 = &Phi;<sub>1</sub>(<i>x</i>) &Phi;<sub>2</sub>(<i>x</i>) &Phi;<sub>4</sub>(<i>x</i>) = (<i>x</i> − 1) (<i>x</i> +1) (<i>x</i><sup>2</sup> + 1)&emsp;■</p>
+</div>
+
+<p>Equation 7.5.3 can be written as well as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x3A6;</mo>
+    </mrow>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mtable data-mjx-smallmatrix="true" columnspacing="0em" rowspacing="0.1em">
+        <mtr>
+          <mtd>
+            <mi>d</mi>
+            <mo>&#x2223;</mo>
+            <mi>n</mi>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mi>d</mi>
+            <mo>&#x2260;</mo>
+            <mn>1</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mi>d</mi>
+            <mo>&#x2260;</mo>
+            <mi>n</mi>
+          </mtd>
+        </mtr>
+      </mtable>
+    </mrow>
+  </munder>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x3A6;</mo>
+    </mrow>
+    <mi>d</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x3A6;</mo>
+    </mrow>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ x^n-1 = Φ_1(x) \prod_{\substack{d \mid n\\d ≠ 1\\d ≠n}} Φ_d(x)Φ_n(x) $$ -->
+
+<p>With this inductive method we can calculate the first cyclotomic polynomials, since</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x3A6;</mo>
+    </mrow>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <munder>
+        <mo data-mjx-texclass="OP">&#x220F;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mtable data-mjx-smallmatrix="true" columnspacing="0em" rowspacing="0.1em">
+            <mtr>
+              <mtd>
+                <mi>d</mi>
+                <mo>&#x2223;</mo>
+                <mi>n</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>d</mi>
+                <mo>&#x2260;</mo>
+                <mi>n</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </munder>
+      <msub>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x3A6;</mo>
+        </mrow>
+        <mi>d</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$Φ_n = \frac{x^n -1}{\prod_{\substack{d \mid n\\ d≠n}} Φ_d} $$ -->
+
+<p><b>7.5.12</b>. Evaluation of the first nine cyclotomic polynomials</p>
+
+<div class="eq">
+<p>&Phi;<sub>1</sub>(<i>x</i>) = <i>x</i> − 1</p>
+<p>&Phi;<sub>2</sub>(<i>x</i>) = <i>x</i><sup>2</sup> − 1/&Phi;<sub>1</sub>(<i>x</i>) = <i>x</i> + 1</p>
+<p>&Phi;<sub>3</sub>(<i>x</i>) = <i>x</i><sup>3</sup> − 1/&Phi;<sub>1</sub>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1</p>
+<p>&Phi;<sub>4</sub>(<i>x</i>) = <i>x</i><sup>4</sup> − 1/&Phi;<sub>1</sub>(<i>x</i>)&Phi;<sub>2</sub>(<i>x</i>) = <i>x<sup>4</sup></i> − 1 /(<i>x−1</i>)(<i>x</i>+1) = <i>x</i><sup>2</sup> +1</p>
+<p>&Phi;<sub>5</sub>(<i>x</i>) = <i>x</i><sup>5</sup> − 1/&Phi;<sub>1</sub>(<i>x</i>) = <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</p>
+<p>&Phi;<sub>6</sub>(<i>x</i>) = <i>x<sup>6</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>)&Phi;<sub>2</sub>(<i>x</i>)&Phi;<sub>3</sub>(<i>x</i>) = (<i>x</i><sup>6</sup> − 1)/(<i>x</i> − 1)(<i>x</i> + 1)(<i>x</i><sup>2</sup> + <i>x</i> +1) = <i>x</i><sup>2</sup> −<i>x</i> +1</p>
+<p>&Phi;<sub>7</sub>(<i>x</i>) = <i>x</i><sup>7</sup> − 1/&Phi;<sub>1</sub>(<i>x</i>) = <i>x</i><sup>6</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</p>
+<p>&Phi;<sub>8</sub>(<i>x</i>) = <i>x</i><sup>8</sup> − 1/&Phi;<sub>1</sub>(<i>x</i>)&Phi;<sub>2</sub>(<i>x</i>)&Phi;<sub>4</sub>(<i>x</i>) = <i>x</i><sup>8</sup> −1/(<i>x</i> − 1)(<i>x</i> + 1)(<i>x</i><sup>2</sup>+1) = <i>x</i><sup>4</sup> + 1</p>
+<p>&Phi;<sub>9</sub>(<i>x</i>) = <i>x<sup>9</sup> − 1</i>/&Phi;<sub>1</sub>(<i>x</i>) &Phi;<sub>3</sub>(<i>x</i>) = <i>x</i><sup>6</sup> + <i>x</i><sup>3</sup> + 1</p>
+</div>
+
+<p>In general, if <i>p</i> is prime</p>
+
+<div class="eq">
+<p><i>x</i><sup><i>p</i>−1</sup> = <i>&Phi;</i><sub>1</sub>(<i>x</i>)<i>&Phi;<sub>p</sub></i>(<i>x</i>).</p>
+<p>&Phi;<sub><i>p</i></sub> (<i>x</i>) = 1 + <i>x</i> + <i>x</i><sup>2</sup> + ... + <i>x</i><sup><i>p</i>−2</sup> + <i>x</i><sup><i>p</i>−1</sup></p>
+</div>
+
+<p>Moreover, for <i>n</i> = <i>p<sup>h</sup></i></p>
+
+<div class="eq">
+<p><i>&Phi;<sub>p<sup>h</sup></sub></i>(<i>x</i>) = 1 + <i>x</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> + (<i>x</i><sup><i>h</i>−1</sup>)<sup><i>p</i>−1</sup></p>
+</div>
+
+<p>Indeed</p>
+
+<div class="eq">
+<p><i>x<sup>p<sup>h</sup></sup></i> − 1 = &Phi;<sub>1</sub> &Phi;<sub><i>p</i></sub> &Phi;<sub><i>p</i><sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub><i>p</i><sup><i>h</i> −1</sup></sub>&Phi;<sub><i>p</i><sup><i>h</i></sup></sub></p>
+</div>
+
+<p>which yields to</p>
+
+<div class="eq">
+<p><i>&Phi;<sub>p<sup>h</sup></sub></i> = <i>x<sup>p<sup>h</sup></sup></i> − 1 / <i>&Phi;</i><sub>1</sub> &Phi;<sub>p</sub> &Phi;<sub>p<sup>2</sup></sub> ⋅⋅⋅ &Phi;<sub><i>p</i><sup><i>h</i> −1</sup></sub> = <i>x<sup>p<sup>h</sup></sup></i> − 1 / <i>x</i><sup>p<sup><i>h</i> − 1</sup></sup> − 1 = 1 + <i>x</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> + ...(<i>x</i><sup><i>p</i><sup><i>h</i> − 1</sup>)<sup><i>p</i>−1</sup></p>
+</div>
+
+<p><b>Example 7.5.12</b>. Cyclotomic polynomials have the following properties:</p>
+
+<ol type="a">
+	<li><p>every <i>&Phi;<sub>n</sub></i>(<i>x</i>) is monic with integers coefficients;</p></li>
+	<li><p>the degree <i>&Phi;<sub>n</sub></i>(<i>x</i>) is &Phi;(<i>n</i>);</p></li>
+	<li><p>every <i>&Phi;<sub>n</sub></i>(<i>x</i>) is irreducile over ℚ.</p></li>
+</ol>
+
+<p><b>Proof</b>. a) We proceed by induction over <i>n</i>. for <i>n</i> = 1, &Phi;<sub>1</sub>(<i>x</i>) = <i>x</i> − 1 which is monic and with integers coefficients. We suppose the same to hold true for <i>&Phi;<sub>m</sub></i>(<i>x</i>) with <i>m</i> &lt; <i>n</i> and we prove it for &Phi;<sub>n</sub>(<i>x</i>). We have</p>
+
+<div class="eq">
+<p><i>&Phi;<sub>n</sub></i>(<i>x</i>) = <i>x<sup>n</sup></i> − 1 / ∏<sub><sub><i>d</i>|<i>n</i>,<i>d</i> &ne; <i>n</i></sub></sub> <i>&Phi;<sub>d</sub></i>(<i>x</i>)</p>
+</div>
+
+<p>Dividing <i>x<sup>n</sup></i> − 1 by ∏<sub><sub><i>d</i>|<i>n</i>,<i>d</i> &ne; <i>n</i></sub></sub> &Phi;<sub>d</sub>(<i>x</i>), we obtain a <i>monic</i> polynomial with integer coefficients.</p>
+
+<p>b) It follows from the construction of &Phi;<i><sub>n</sub></i>(<i>x</i>).</p>
+
+<p>c) We'll prove this property only for <i>n</i> = <i>p<sup>h</sup></i>, with <i>p</i> prime number. As we have already seen</p>
+
+<div class="eq">
+<p>&Phi;<i><sub>p<sup>h</sup></sub></i>(<i>x</i>) = 1 + <i>x</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> + (<i>x</i><sup><i>h</i>−1</sup>)<sup><i>p</i>−1</sup> = <i>x<sup>p<sup>h</sup></sup></i> − 1 / <i>x</i><sup><i>p</i><sup><i>h</i> − 1</sup></sup> − 1</p>
+</div>
+
+<p>To prove the irreducibility of &Phi;<i><sub>p<sup>h</sup></sub></i>(<i>x</i>) we cannot apply directly <a href="pol_irr_Q.html#Eisenstein">Eisenstein criterion</a>. We employ <a href="Eisenstein.html#homo">Lemma 5.7.3</a> and make the substitution <i>x</i> = <i>y</i> + 1 which yields to a new polynomial in <i>y</i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mi mathvariant="normal">&#x3A8;</mi>
+        <mo stretchy="false">(</mo>
+        <mi>y</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msub>
+          <mi mathvariant="normal">&#x3A6;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <msup>
+              <mi>p</mi>
+              <mi>h</mi>
+            </msup>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>y</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>y</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <msup>
+              <mi>p</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>h</mi>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mo>&#x22EF;</mo>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mo stretchy="false">(</mo>
+        <mi>y</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <msup>
+              <mi>p</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>h</mi>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </msup>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>p</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mo stretchy="false">(</mo>
+            <mi>y</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mrow data-mjx-texclass="ORD">
+                <msup>
+                  <mi>p</mi>
+                  <mi>h</mi>
+                </msup>
+              </mrow>
+            </msup>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow>
+            <mo stretchy="false">(</mo>
+            <mi>y</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mrow data-mjx-texclass="ORD">
+                <msup>
+                  <mi>p</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>h</mi>
+                    <mo>&#x2212;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+              </mrow>
+            </msup>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>y</mi>
+              <mrow data-mjx-texclass="ORD">
+                <msup>
+                  <mi>p</mi>
+                  <mi>h</mi>
+                </msup>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mi>p</mi>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>y</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <msup>
+              <mi>y</mi>
+              <mrow data-mjx-texclass="ORD">
+                <msup>
+                  <mi>p</mi>
+                  <mrow data-mjx-texclass="ORD">
+                    <mi>h</mi>
+                    <mo>&#x2212;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mi>p</mi>
+            <mi>g</mi>
+            <mo stretchy="false">(</mo>
+            <mi>y</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </mfrac>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<p>We employed Newton binomial formula and grouping the addends which are multiple of <i>p</i> in <i>pf</i>(<i>y</i>) and <i>pg</i>(<i>y</i>). We have then</p>
+
+<div class="eq">
+<p>[1 + (<i>y</i> + 1)<sup><i>p</i><sup><i>h</i>−1</sup></sup> + ... + ((<i>y</i> + 1)<sup><i>p</i><sup><i>h</i>−1</sup></sup>)<sup><i>p</i>−1</sup>][<i>y</i><sup><i>p</i></sup><sup><i>h</i>−1</sup> + <i>pg</i>(<i>y</i>)] = <i>y<sup>p<sup>h</sup></sup></i> + <i>pf</i>(<i>y</i>)</p>
+</div>
+
+<p>by grouping the highest degree terms in each polynomial, we obtain</p>
+
+<div class="eq">
+<p>[(<i>y</i> + 1)<sup><i>p</i><sup><i>h</i> − 1</sup></sup> + ∑ <i>&alpha;<sub>i</sub> y<sup>i</sup></i>] [<i>y</i><sup><i>p</i></sup><sup><i>h</i>−1</sup> + <i>pg</i>(<i>y</i>)] = <i>y<sup>p<sup>h</sup></sup></i> + <i>pf</i>(<i>y</i>)</p>
+</div>
+
+<p>doing the calculations and grouping the terms which are multiple of <i>p</i> yields</p>
+
+<div class="eq">
+<p><i>y</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> ∑ <i>&alpha;<sub>i</sub> y<sup>i</sup></i> + <i>y</i><sup><i>p</i><sup><i>h</i>−1(<i>p</i>−1)</sup></sup> ⋅ <i>y</i><sup><i>p</i><sup><i>h</i>−1</sup></sup> = <i>y<sup>p<sup>h</sup></sup></i> + <i>pf̄</i>(<i>y</i>)</p>
+</div>
+
+<p>in this form we are sure that all coefficients <i>&alpha;<sub>i</sub></i> different from the leading coefficients (which is 1) of &Psi;(<i>y</i>) are multiples of <i>p</i>. To apply Eisenstein criterion we only need to prove that <i>p</i><sup>2</sup> does not divide the constant term. This is true since theconstant term of &Psi;(<i>y</i>) is obtained by putting <i>y</i> = 0, and hence it is equal to <i>p</i> times 1 i.e. <i>p</i>. We have proved trhat &Psi;(<i>y</i>) is irreducible and thus &Psi;<sub><i>h</i></sub>(<i>y</i>) as well.</p>
+
+<p>This result tells us that cyclotomic polynomials are irreducible over ℚ, and we can use them to find the factorization of <i>x<sup>n</sup></i> &minus; 1. We have</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup></i> − 1 = ∏<sub><sub><i>d</i>|<i>n</i></sub></sub> &Phi;<sub><i>d</i></sub>(<i>x</i>) &emsp; (<b>7.5.3</b>)</p>
+</div>
+
+<p>From the cyclotomic polynomials we've written above it may seem that their coefficient are all either 0 ri &pm;1. This is not true as it can be shown that for polynomials with higher <i>n</i> (about 100) other coefficients start to appear.</p> 
+
+<section aria-label="End">
+<a href="polynomials.html">&#171;Polynomials: general properties</a>
+<a href="index.html">Index</a>
+<a href="pol_gcd.html">gcd of polynomials &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

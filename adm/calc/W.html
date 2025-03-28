@@ -23,17 +23,17 @@
 
 <p>Una seconda importante proprietà delle funzioni continue è espressa dal seguente:</p>
 
-<p><b>Teorema 4.7.1.</b>. Sia <i>f</i> : [<i>a,b</i>] &rarr; ℝ una funzione continua. Allora <i>f</i> assume massimo e minimo in [<i>a,b</i>], ossia: &Exists; <i>x<sub>m</sub>,x<sub>M</sub></i> &in; [<i>a,b</i>] | <i>f</i>(<i>x<sub>m</sub></i>) &le; <i>f</i>(<i>x<sub>M</sub></i>) &forall;<i>x</i> &in; [<i>a,b</i>].</p>
+<p><b>Teorema 4.8.1.</b>. Sia <i>f</i> : [<i>a,b</i>] &rarr; ℝ una funzione continua. Allora <i>f</i> assume massimo e minimo in [<i>a,b</i>], ossia: &Exists; <i>x<sub>m</sub>,x<sub>M</sub></i> &in; [<i>a,b</i>] | <i>f</i>(<i>x<sub>m</sub></i>) &le; <i>f</i>(<i>x<sub>M</sub></i>) &forall;<i>x</i> &in; [<i>a,b</i>].</p>
 
 <p>Si dice che <i>x<sub>m</sub></i> è <i>punto di minimo</i> per <i>f</i>, e <i>m</i> = <i>f</i>(<i>x<sub>m</sub></i>) è il <i>minimo</i> di <i>f</i>; analogamente, <i>x<sub>M</sub></i> è <i>punto di massimo</i>, e <i>M</i> = <i>f</i>(<i>x<sub>M</sub></i>) è il <i>massimo</i> di <i>f</i>.</p>
 
 <p><b>Dim.</b> La dimostrazione risiede sull'assioma di completezza di ℝ, quindi il primo passo è provare che l'immagine di <i>f</i> sull'intervallo è limitata.</p>
 
 <div class="eq">
-<p><i>A</i> = {<i>f</i>(<i>x</i>) : <i>x</i> &in; [<i>a,b</i>]</p>
+<p><i>A</i> = {<i>f</i>(<i>x</i>) : <i>x</i> &in; [<i>a,b</i>]}</p>
 </div>
 
-<p>Se <i>A</i> non fosse limitato esisterebbe una successione {<i>a<sub>n</sub></i>} &in; [<i>a,b</i>] tale che |<i>f</i>(<i>a<sub>n</sub></i>)| ⟶ &infin;. Dato che {<i>a<sub>n</sub></i>} è limitata, per il teorema di Bolzano-Weierstrass è dotata di una sottosuccessione {<i>a<sub>n<sub>k</sub></sub></i>} convergente in un punto <i>x</i> &in; [<i>a,b</i>]. Deve essere anche |<i>f</i>(<i>a<sub>n<sub>k</sub></sub></i>)| ⟶ &infin;. Dato che <i>f</i> è continua <i>f</i>(<i>a<sub>n<sub>k</sub></sub></i>) = <i>f</i>(<i>x</i>). Ma questa è una contraddizione se <i>f</i> non è limitata. Quindi <i>f</i> è limitata. <br> Quindi <i>A</i> è lmitato è non-vuoto. Dall'assioma di completezza ha il supremum <i>s</i> = sup <i>A</i>. Sia <i>y<sub>n</sub></i> &in; [<i>a,b</i>] tale che</p>
+<p>Se <i>A</i> non fosse limitato esisterebbe una successione {<i>a<sub>n</sub></i>} &in; [<i>a,b</i>] tale che |<i>f</i>(<i>a<sub>n</sub></i>)| ⟶ &infin;. Dato che {<i>a<sub>n</sub></i>} è limitata, per il <a href="ank.html#BW">teorema di Bolzano-Weierstrass</a> è dotata di una sottosuccessione {<i>a<sub>n<sub>k</sub></sub></i>} convergente in un punto <i>x</i> &in; [<i>a,b</i>]. Deve essere anche |<i>f</i>(<i>a<sub>n<sub>k</sub></sub></i>)| ⟶ &infin;. Dato che <i>f</i> è continua lim<sub><i>k</i></sub> <i>f</i>(<i>a<sub>n<sub>k</sub></sub></i>) = <i>f</i>(<i>x</i>). Ma questa è una contraddizione se <i>f</i> non è limitata. Quindi <i>f</i> è limitata. <br> Quindi <i>A</i> è lmitato è non vuoto e dall'assioma di completezza ha esiste <i>s</i> = sup <i>A</i>. Sia <i>y<sub>n</sub></i> &in; [<i>a,b</i>] tale che</p>
 
 <div class="eq">
 <p><i>s</i> − 1/<i>n<sub>k</sub></i> &lt; <i>f</i>(<i>y<sub>n</sub></i>) &le; <i>s</i></p>
@@ -47,199 +47,99 @@
 <tr><td><i>s</i></td> <td></td> <td><i>f</i>(<i>y</i>)</td> <td></td> <td>&le;</td> <td><i>s</i></td></tr>
 </table>
 
-<p>Quindi, <i>f</i>(<i>y</i>) = <i>s</i> &in; [<i>a,b</i>] è il massimo. <br> Analogmente si dimostra l'esistenza del minimo. &emsp;□</p>
+<p>Quindi, <i>f</i>(<i>y</i>) = <i>s</i> &in; [<i>a,b</i>] è il massimo assoluto di <i>f</i> in [<i>a,b</i>]. <br> Analogmente si dimostra l'esistenza del minimo. &emsp;□</p>
 
- sull'intervallo è limitato. Procediamo per contraddizione. Se f
+<p><b>Esempio 4.8.2.</b></p>
 
- Proveremo che <i>f</i> ammette massimo in [<i>a,b</i>]. Analogamente si prova che ha minimo. <br> Cominciamo con la seguente osservazione sul concetto di estremo superiore: se <i>E</i><sub>1</sub>, <i>E</i><sub>2</sub> sono due sottoinsiemi non vuoti di ℝ,</p>
-
-<div class="eq">
-<p>sup (<i>E</i><sub>1</sub> ∪ <i>E</i><sub>2</sub>) = max(sup <i>E</i><sub>1</sub>, sup <i>E</i><sub>2</sub>)</p>
-</div>
-
-<p>Questa proprietà è vera per insiemi sia limitati che illimitati (se <i>E<sub>i</sub></i> è superiormente illimitato si pone sup <i>E<sub>i</sub></i> = +&infin;; si intende che max (<i>a</i>, + &infin;) = +&infin;). Sia ora</p>
-
-<div class="eq">
-<p><i>f</i> : <i>I</i> &rarr; ℝ con <i>I</i> = <i>I</i><sub>1</sub> ∪ <i>I</i><sub>2</sub></p>
-</div>
-
-<p>(<i>I</i>, <i>I</i><sub>1</sub>, <i>I</i><sub>2</sub> intervalli). Applicando l'osservazione precedente agli insiemi <i>E<sub>i</sub></i> = {<i>f</i>(<i>x</i>): <i>x</i> &in; <i>I<sub>i</sub></i>}, si ha</p>
+<ul>
+	<li><p><i>f</i>(<i>x</i>) = <i>x</i> in (0,1). La funzione è continua su un intervallo limitato, ma non chiuso. La funzione non ha né massimo né minimo (sup <i>f</i> = 1 e inf <i>f</i> = 0, non sono assunti).</p></li>
+	<li><p><i>f</i>(<i>x</i>) = <i>x</i> in ℝ. La funzione è continua su un intervallo non limitato. La funzione non ha né massimo né minimo (non è nemmeno limitata).</p></li>
+	<li>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mi>I</mi>
-  </munder>
-  <mi>f</mi>
-  <mo>=</mo>
-  <mo data-mjx-texclass="OP" movablelimits="true">max</mo>
-  <mo stretchy="false">(</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mrow data-mjx-texclass="ORD">
-      <msub>
-        <mi>I</mi>
-        <mn>1</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo>,</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mrow data-mjx-texclass="ORD">
-      <msub>
-        <mi>I</mi>
-        <mn>2</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">)</mo>
-</math>
-
-<!-- $$\sup_I f = \max (\sup_{I_1} f, \sup_{I_2} f) $$ -->
-
-<p>In particolare quindi, è vera almeno una delle due relazioni:</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mi>I</mi>
-  </munder>
-  <mi>f</mi>
-  <mo>=</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mrow data-mjx-texclass="ORD">
-      <msub>
-        <mi>I</mi>
-        <mn>1</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo>;</mo>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mrow data-mjx-texclass="ORD">
-      <msub>
-        <mi>I</mi>
-        <mn>2</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-</math>
-
-<!-- $$\sup_I f = \sup_{I_1} f; \quad \sup_{I_2} f $$ -->
-
-<p>Veniamo alla dimostrazione del teorema. Useremo una costruzione iterativa simile a quella vista nella dimostrazione del teorema degli zero. Consideriamo la funzione <i>f</i>: [<i>a,b</i>] &rarr; ℝ e poniamo</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi mathvariant="normal">&#x39B;</mi>
-  <mo>=</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mo stretchy="false">[</mo>
-      <mi>a</mi>
-      <mo>,</mo>
-      <mi>b</mi>
-      <mo stretchy="false">]</mo>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-</math>
-
-<!-- $$ \Lambda = \sup_{[a,b]} f $$ -->
-
-<p>(con &Lambda; eventualmente uguale a +&infin;). Suddividiamo [<i>a,b</i>] in due intervalli uguali; per quanto osservato sopra, per uno di essi, che chiamiamo [<i>a</i><sub>1</sub>, <i>b</i><sub>1</sub>], sarà vero che</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi mathvariant="normal">&#x39B;</mi>
-  <mo>=</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mo stretchy="false">[</mo>
-      <msub>
-        <mi>a</mi>
-        <mn>2</mn>
-      </msub>
-      <mo>,</mo>
-      <msub>
-        <mi>b</mi>
-        <mn>2</mn>
-      </msub>
-      <mo stretchy="false">]</mo>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-</math>
-
-<!-- $$ \Lambda = \sup_{[a_2,b_2]} f $$ -->
-
-<p>Procedendo per dicotomia, così facendo costruiamo una succession di intervalli [<i>a<sub>n</sub>, b<sub>n</sub></i>], ciascuno contenuto nei precedenti, con le proprietà:</p>
-
-<ol>
-	<li><p><i>a<sub>n</sub></i> monotona crescente e limitata; <i>b<sub>n</sub></i>  monotona decrescente e limitata;</p></li>
-	<li><p><i>b<sub>n</sub></i> &minus; <i>a<sub>n</sub></i> = (<i>b</i> &minus; <i>a</i>)/2<sup><i>n</i></sup> &rarr; 0;</p></li>
-	<li><p>&Lambda; = sup<sub>[<i>a<sub>n</sub>, b<sub>n</sub></i>] <i>f</i></p></li>
-</ol>
-
-<p>Per lo stesso ragionamento fatto nella dimostrazione del T. degli zeri (che utilizza il teorema di monotonia per le successioni), dai punti 1) e 2) segue che le successioni <i>a<sub>n</sub></i> e <i>b<sub>n</sub></i> convergono ad uno stesso limite <i>x</i><sub>0</sub> &in; [<i>a,b</i>]. Distinguiamo ora due casi: &Lambda; &lt; +&infin;, &Lambda; = +&infin; (proveremo che questo secondo caso in realtà non può verificarsi). Se &Lambda; &lt; +&infin;, &forall;<i>n</i>, esiste un punto <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>, b<sub>n</sub></i>] tale che</p>
-
-<div class="eq">
-<p>&Lambda; &minus; 1/<i>n</i> &lt; <i>f</i>(<i>t<sub>n</sub></i>) &le; &Lambda; &emsp;(4.7.2)</p>
-</div>
-
-<p>Infatti: poiché &Lambda; &minus; 1/<i>n</i> è minore di &Lambda; che è il minimo dei maggioranti dei valori di <i>f</i>(<i>x</i>) in [<i>a<sub>n</sub>, b<sub>n</sub></i>], &Lambda; &minus; 1/<i>n</i> non è un maggiorante, quindi esiste <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>, b<sub>n</sub></i>] con la proprietà 4.7.2. <br> Poiché <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>, b<sub>n</sub></i>], <i>a<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub> e <i>b<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub>, per il T. del confronto anche <i>t<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub>. <br>Ancora per il T. del confronto, la (4.7.2) dà allora</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
   <mi>f</mi>
   <mo stretchy="false">(</mo>
-  <msub>
-    <mi>t</mi>
-    <mi>n</mi>
-  </msub>
+  <mi>x</mi>
   <mo stretchy="false">)</mo>
   <mo>=</mo>
-  <mi mathvariant="normal">&#x39B;</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">(</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
 </math>
 
-<!-- $$\lim_{n\to\infty} f(t_n) = \Lambda $$ -->
+<!-- $$ f(x) = \begin{cases} x &\text{per } x\in (0,1)\\
+\frac{1}{2} &\text{per } x = 0, x =1
+\end{cases} $$ -->
 
-<p>D'altro canto, poiché <i>f</i> è continua e <i>t<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub>, si ha che lim<sub><i>n</i> &rarr; &infin;</sub> <i>f</i>(<i>t<sub>n</sub></i>) = <i>f</i>(<i>x</i><sub>0</sub>), perciò <i>f</i>(<i>x</i><sub>0</sub>) = &Lambda;. Allora, poiché &Lambda; è il sup dei valori di <i>f</i> in [<i>a,b</i>], &Lambda; è il <i>massimo</i> di <i>f</i> in [<i>a,b</i>], ed è assunto nel punto <i>x</i><sub>0</sub>. In questo caso perciò il teorema è dimostrato. <br>Supponiamo ora che sia &Lambda; = +&infin;. Allora &forall;<i>n</i> esiste un punto <i>t<sub>n</sub></i> &in; [<i>a<sub>n</sub>,b<sub>n</sub></i>] tale che</p>
+<p>La funzione è definita su un intervallo chiuso e limitato [0,1], ma non è continua. La funzione non ha né massimo né minimo (il suo estremo superiore, 1, e il suo estremo inferiore 0, non sono assunti).&emsp;■</p></li>
 
-<div class="eq">
-<p><i>f</i>(<i>t<sub>n</sub></i>) &ge; <i>n</i> &emsp;(4.7.3)</p>
-</div>
+</ul>
 
-<p>Ragionando come sopra si prova che <i>t<sub>n</sub></i> &rarr; <i>x</i><sub>0</sub> per un certo <i>x</i><sub>0</sub> &in; [<i>a,b</i>]. Poiché <i>f</i> è continua in <i>x</i><sub>0</sub>,</p>
+<p id="IVT"><b>Teorema 4.8.3. (Dei Valori intermedi)</b> Se <i>f</i> è continua su [<i>a,b</i>], allora per ogni valore &lambda; compreso tra <i>m</i> e <i>M</i> (minimo e massimo di <i>f</i> in [<i>a,b</i>]), esiste un ingresso <i>x</i> in [<i>a,b</i>] che ha il valore &lambda; come uscita (proprietà dei valori intermedi).</p>
 
-<div class="eq">
-<p>lim<sub><i>n</i> &rarr; &infin;</sub> <i>f</i>(<i>t<sub>n</sub></i>) = <i>f</i>(<i>x</i><sub>0</sub>)</p>
-</div>
+<p><b>Dim</b>. Quest'ultimo teorema è una semplice conseguenza del T. di Weierstrass e del <a href="zeri.html">T. degli zeri</a>: sia <i>m</i> &lt; <i>&lambda;</i> &lt; <i>M</i>, <i>f</i>(<i>x</i><sub>1</sub>) = <i>m</i> e <i>f</i>(<i>x</i><sub>2</sub>) = <i>M</i>. Allora la funzione <i>g</i>(<i>x</i>) = <i>f</i> &minus; &lambda; è continua in [<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>] (supponendo <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub>) e <i>g</i>(<i>x</i><sub>1</sub>) &minus; &lambda; = <i>M</i> &minus; <i>&lambda;</i> &gt; 0, <i>g</i>(<i>x</i><sub>1</sub>) = <i>f</i>(<i>x</i><sub>1</sub>) &minus; <i>&lambda;</i> = <i>m</i> &minus; <i>&lambda;</i> &lt; 0. Dal T. degli zeri, esiste ℓ tale che <i>g</i>(<i>ℓ</i>) = ℓ, cioè <i>f</i>(<i>ℓ</i>) = <i>&lambda;</i>. &emsp;□</p>
 
-<p>ma per la (4.7.3) <p>lim<sub><i>n</i> &rarr; &infin;</sub> <i>f</i>(<i>t<sub>n</sub></i>) = +&infin;, assurdo perché in <i>x</i><sub>0</sub> la funzione deve avere un valore finito.&emsp;□</p>
+<p>Le proprietà dei due teoremi precedenti si possono sintetizzare nell'unico enunciato seguente:</p>
 
+<p><b>Teorema 4.8.4.</b> Se <i>f</i> : [<i>a,b</i>] &rarr; ℝ è continua, allora <i>f</i>([<i>a,b</i>]) = [<i>m,M</i>]; cioè l'immagine di un intervallo [<i>a,b</i>] è l'intervallo di estremi <i>m</i> = min<sub>[<i>a,b</i>]</sub> <i>f</i> e <i>M</i> = max<sub>[<i>a,b</i>]</sub> <i>f</i></p>
+
+<p>Riguardo al teorema dei valori intermedi, si consideri il prossimo esempio.</p>
+
+<p><b>Esempio 4.8.5.</b> Sia <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> e consideriamo <i>f</i> come funzione definita dall'insieme ℚ dei razionali a ℚ stesso (questo è lecito perché il quadrato di un razionale è un razionale). Allora <i>f non ha la proprietà dei valori intermedi</i>. Infatti, ad es., <i>f</i>(1) = 1, <i>f</i>(2) = 4, ma <i>f</i> non assume tutti i valori razionali compresi tra 1 e 4: per es. non assume mai il valore 2, o 3. In altre parole, la proprietà dei valori intermedi è vera per le funzioni continue <i>grazie alle proprietà dell'insieme dei numeri reali</i>. Questi, anzi, sono i motivi più interessanti per l'Analisi per cui è utile avere come ambiente di lavoro l'insieme dei reali e non l'insieme dei razionali.&emsp;■</p>
+
+<p>Mostriamo come il T. degli zeri permetta di dimostrare direttamente il T. sull'esistenza della radice <i>n</i>-esima.</p>
+
+<p id="rad"><b>Teorema 4.8.6.</b> Per ogni <i>y</i> &in; ℝ, <i>y</i> &gt; 0 e <i>n</i> &in; ℕ, <i>n</i> &ge; 1, esiste uno e un solo <i>x</i> &in; ℝ, <i>x</i> &gt; 0 tale che <i>x<sup>n</sup></i> = <i>y</i> (Questo numero <i>x</i> si definisce radice <i>n</i>-esima di <i>y</i>).</p>
+
+<p><b>Dim.</b> Consideriamo la funzione <i>f</i>(<i>x</i>) = <i>x<sup>n</sup></i>. Questa funzione è continua su tutto ℝ, ad es. perché il prodotto di <i>n</i> funzioni continue <i>g</i>(<i>x</i>) = <i>x</i>. Mostriamo che esistono <i>x</i><sub>2</sub> &gt; <i>x</i><sub>1</sub> &gt; 0 tali che <br><i>x</i><sub>1</sub><sup><i>n</i></sup> &lt; <i>y</i> &lt; <i>x</i><sub>2</sub><sup><i>n</i></sup>. Infatti:</p>
+
+<ul>
+	<li><p>se <i>y</i> &ge; 1 basta scegliere <i>x</i><sub>1</sub> = 1, <i>x</i><sub>2</sub> = <i>y</i> e si ha <i>x</i><sub>1</sub><sup><i>n</i></sup> &le; <i>y</i> &lt; <i>x</i><sub>2</sub><sup><i>n</i></sup> (1 &le; <i>y</i> &lt; <i>y<sup>n</sup></i>);</p></li>
+		<li><p>se <i>y</i> &lt; 1 basta scegliere <i>x</i><sub>1</sub> = <i>y</i>, <i>x</i><sub>2</sub> = 1 e si ha <i>x</i><sub>1</sub><sup><i>n</i></sup> &lt; <i>y</i> &lt; <i>x</i><sub>2</sub><sup><i>n</i></sup> (<i>y<sup>n</sup></i> &lt; <i>y</i> &lt; 1).</p></li>
+</ul>
+
+<p>Allora possiamo applicarei il T. dei valori intermedi alla funzione continua <i>f</i>(<i>x</i>) = <i>x<sup>n</sup></i> sull'intervallo [<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>]: poiché <i>f</i> è strettamente crescente, il suo minimo è <i>x</i><sub>1</sub><sup><i>n</i></sup> e il suo massimo è <i>x</i><sub>2</sub><sup><i>n</i></sup>; poiché <i>x</i><sub>1</sub><sup><i>n</i></sup> &lt; <i>y</i> &lt; <i>x</i><sub>2</sub><sup><i>n</i></sup>, esiste <i>x</i><sub>0</sub> &in; [<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>] tale che <i>x</i><sub>0</sub><sup><i>n</i></sup> = <i>y</i>. &emsp;□</p>
 
 <section aria-label="End">
 <a href="zeri.html">&#171;Teorema degli zeri</a>
 <a href="index.html">Index</a>
-<a href="an_stime.html">Confronti e stime asintotiche&#187;</a>
+<a href="f_monotone.html">Funzioni monotone su un intervallo&#187;</a>
 </section>
 
 </article>
