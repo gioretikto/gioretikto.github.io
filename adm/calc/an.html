@@ -53,14 +53,60 @@
 <ul>
 	<li><p><i>limitata inferiormente</i>: ∃<i>m</i> &in; ℝ: <i>a<sub>n</sub></i> &ge; <i>m</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
 	<li><p><i>Bounded above</i>: ∃<i>M</i> : <i>a<sub>n</sub></i> &le; <i>M</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
-	<li><p><i>limitata</i>: ∃ <i>m</i>, <i>M</i> | <i>m</i> &le; <i>a<sub>n</sub></i> &le; <i>M</i> &forall; <i>n</i> &in; ℕ;</p></li>
+	<li><p><i>limitata</i>: ∃<i>m</i>, <i>M</i> | <i>m</i> &le; <i>a<sub>n</sub></i> &le; <i>M</i> &forall; <i>n</i> &in; ℕ;</p></li>
 </ul>
 
 <p>For example {(−1)<sup><i>n</i></sup>)} is bounded by the two numbers {−1, 1}; {1/<i>n</i>} is bounded: 1 is the upper limit and 0 is a lower bound; {<i>n</i><sup>2</sup>} is bounded below; {(−2)<sup>n</sup>)} is not bounded.</p>
 
 <p>L'operazione che vogliamo definire (il <i>limite</i>) consente di rispondere in forma rigorosa alla domanda: <i>come si comportano i numeri {<i>a<sub>n</sub></i>} quando n diventa sempre più grande</i>?</p>
 
-<p><b>Definizione 3.1.2</b>. Diciamo che una successione {<i>a<sub>n</sub></i>} possiede (o acquista) <i>definitivamente</i> una certa proprietà se esiste un <i>N</i> &in; ℕ : <i>a<sub>n</sub></i> soddisfa quella proprietà per ogni interno <i>n</i> &ge; <i>N</i>. &emsp;□</p>
+<p id="def"><b>Definizione 3.1.2</b>. Diciamo che una successione {<i>a<sub>n</sub></i>} possiede (o acquista) <b>definitivamente</b> una certa proprietà P(<i>n</i>) se
+
+<div class="eq">
+<p>∃<i>n</i><sub>0</sub> &in; ℕ : &forall;<i>n</i> &ge; <i>n</i><sub>0</sub> P(<i>n</i>) è vera. &emsp;□</p>
+</div>
+
+<p>Per esempio la proprietà:</p>
+
+<div class="eq">
+<p>P(<i>n</i>) = <i>n</i><sup>2</sup> − 10<i>n</i> + 1 ≥ 0</p>
+</div>
+
+<p>vale definitivamente in quanto</p>
+
+<div class="eq">
+<p>n<sup>2</sup> − 10n + 1 ≥ 0 ⇔ n ≥ 5 + √24 ⇔ n ≥ 10</p>
+</div>
+
+<p>Notiamo per esempio che la proprietà</p>
+
+<div class="eq">
+<p>Q(<i>n</i>) = "(−1)<sup><i>n</i></sup> &gt; 0</p>
+</div>
+
+<p>pur essendo vera per infiniti <i>n</i> (cioè per tutti gli <i>n</i> pari), non è definitivamente vera, in quanto è falso per tutti gli interi dispari.</p>
+
+<p><b>Definizione 3.1.3</b>. Una proprietà P(<i>n</i>) definita per <i>n</i> intero è detta valere <b>frequentemente</b>, o <b>per infiniti</b> <i>n</i>, se</p>
+
+<div class="eq">
+<p>∀n<sub>0</sub> ∃<i>n</i> ≥ <i>n</i><sub>0</sub> : P(<i>n</i>) è vera.</p>
+</div>
+
+<p>Quindi, come già detto, (−1)<sup><i>n</i></sup> è frequentemente &gt; 0 (dato che comunque fissato <i>n</i><sub>0</sub> in ℕ c'è un <i>n</i> pari con <i>n</i> &ge; <i>n</i><sub>0</sub>, e quindi (−1)<sup><i>n</i></sup> &gt; 0. Peraltro è anche vero che (−1)<sup><i>n</i></sup> è frequentemente &lt; 0.</p>
+
+<p>Notiamo che</p>
+
+<div class="eq">
+<p><sup>¬</sup>(P(<i>n</i>) vale definitivamente) ⇔ <sup>¬</sup>(∃<i>n</i><sub>0</sub>: &forall;<i>n</i> &ge; <i>n</i><sub>0</sub> P(<i>n</i>)) ⇔ &forall;<i>n</i><sub>0</sub> ∃<i>n</i> &ge; <i>n</i><sub>0</sub> : <sup>¬</sup>P(<i>n</i>) ⇔ <sup>¬</sup>P(<i>n</i>) vale frequentemente</p>
+</div>
+
+<p>(o anche P(<i>n</i>) è frequentemente falsa). Analogamente:</p>
+
+<div class="eq">
+<p><sup>¬</sup>(P(<i>n</i>) vale frequentemente) ↔ <sup>¬</sup>P(<i>n</i>) vale definitivamente</p>
+</div>
+
+<p>(o anche P(<i>n</i>) è definitivamente falsa).</p>
 
 <h2 id="lim">Successioni convergenti</h2>
 

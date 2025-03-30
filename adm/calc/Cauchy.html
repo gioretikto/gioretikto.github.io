@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cauchy sequence"/>
-    <title>Cauchy sequence</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Cauchy sequence"/>
+	<title>Cauchy sequence</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
 <body>
 
 <nav>
-    <ul>
-        <li><a class="navbar" href="../../index.html">Home</a></li>
-        <li><a class="navbar" href="index.html">Index</a></li>
-    </ul>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
 </nav>
 
 <article>
 
-<h1>Cauchy sequence</h1>
+<h1>Successione di Cauchy</h1>
 
-<p>The definifiont of convergence of a sequence of real numbers requires knowledge of the limit in order to check whether the sequence converges. One can guess at the limit (if any) and then checl the candidate against the definition. One of the many contributions of the great French analyst Augustin Cauchy (1789-1857) is a criterion of convergence that applies to all sequences in ℝ and that can be checked by looking only at the sequence itself, not a proposed limit. Cauchy presented the criterion in his <i>Cours d'analyse</i> 1821.</p>
+<p>Siamo ora interessati a capire sotto quali condizioni sia garantita la convergenza di una successione (e non solo quella di una sua estratta). Dimostreremo che la condizione giusta è la cd. <i>condizione di Cauchy</i>.</p>
       
-<p><b>Definition 2.4.1</b> A sequence {<i>a<sub>n</sub></i>} in a metric space <i>X</i> is a said to be a <i>Cauchy sequence</i> (or <i>fundamental sequence</i>) if &forall;<i>&epsilon;</i> &gt;0, ∃<i>N</i> &in; ℕ  (dependente on <i>&epsilon;</i>) such that</p>
+<p><b>Definizione 3.8.1</b> Una successione {<i>a<sub>n</sub></i>} si dice di <i>Cauchy</i> (o <i>fundamentale</i>) if &forall;<i>&epsilon;</i> &gt;0, ∃<i>N</i> &in; ℕ (dependente da <i>&epsilon;</i>) tale che</p>
 
 <div class="eq">
 <p><i>n,m</i> &ge; <i>N</i> &emsp;⇒ &emsp; |<i>a<sub>n</sub></i> − <i>a<sub>m</sub></i>| &lt; <i>&epsilon;</i></p>
@@ -31,7 +31,49 @@
 
 <p>Intuitively, the terms of a Cauchy sequence squeeze together as the index increases. &emsp;■</p>
 
-<p>We have seen that the converse of <a href="subsequences.html">Theorem 2.3.2</a> is not generally true. However for a Cauchy sequence it is as the following shows.</p>
+<p>We have seen that the converse of <a href="ank.html">Theorem 2.3.2</a> is not generally true.</p>
+
+<p>Faremo vedere che, per successioni a valori reali, la nozione di successione di Cauchy equivale a quella di successione convergente, vale a dire, una successione è di Cauchy se e solo se è convergente. Il vantaggio di utilizzare la condizione di Cauchy risiede nel fatto che essa permette di stabilire la convergenza della successione senza fare esplicito riferimento al valore del limite. Cominciamo col dimostrare un risultato preliminare.</p>
+
+<p><b>Lemma 3.8.2 Limitatezza delle successioni di Cauchy</b> Ogni successione di Cauchy è limitata.</p>
+
+<p><b>Dim.</b>. Sia {<i>a<sub>n</sub></i>} una successione di Cauchy. In corrispondenza di <i>&epsilon;</i> = 1, esiste un indice <i>n</i><sub>0</sub> &in; ℕ tale che |<i>a<sub>n</sub></i> − <i>a<sub>m</sub></i>| &lt; 1 per ogni <i>n,m</i> &ge; <i>n</i><sub>0</sub>. Di conseguenza, se scegliamo</p>
+
+<div class="eq">
+<p><i>M</i> = max {|<i>a</i><sub>0</sub>|, |<i>a</i><sub>1</sub>|, ..., |<i>a</i><sub><i>n</i><sub>0</sub> − 1</sub>|, |<i>a</i><sub>n<sub>0</sub></sub>| + 1}</p>
+</div>
+
+<p>avremo banalmente che |<i>a<sub>n</sub></i>| &le; <i>M</i> per ogni <i>n</i> &lt; <i>n</i><sub>0</sub>, mentre per gli indici <i>n</i> &ge; <i>n</i><sub>0</sub> si avrà</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i>| &le; |<i>a<sub>n</sub></i> − <i>a</i><sub>n<sub>0</sub></sub>| + |<i>a</i><sub>n<sub>0</sub></sub>| &lt; 1 + |<i>a</i><sub>n<sub>0</sub></sub>| &le; <i>M</i>&emsp;□</p>
+</div>
+
+<p><b>Teorema 3.8.3 Criterio di convergenza di Cauchy</b> Una successione {<i>a<sub>n</sub></i>} è convergente se e solo se è di Cauchy.</p>
+
+<p><b>Dim.</b> Cominciamo a dimostrare l'implicazione più semplice, cioè che ogni successione convergente è di Cauchy. Sia dunque {<i>a<sub>n</sub></i>} una successione convergente a un certo limite ℓ &in; ℝ. Fissato <i>&epsilon;</i> &gt; 0, per definizione di limite esiste un indice <i>n</i><sub>0</sub> &n; ℕ tale che |<i>a<sub>n</sub></i> − ℓ| &lt; <i>&epsilon;</i>/2 per ogni <i>n</i> &ge; <i>n</i><sub>0</sub>. Di conseguenza si avrà</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − <i>a<sub>m</sub></i>| &lt; |<i>a<sub>n</sub></i> − ℓ| + |<i>a<sub>m</sub></i> − ℓ| &lt; <i>&epsilon;</i>/2 + <i>&epsilon;</i>/2 = <i>&epsilon;</i> &forall;<i>n,m</i></p>
+</div>
+
+<p>quindi {<i>a<sub>n</sub></i>} è di Cauchy. <br> Passiamo ora a dimostrare l'implicazione inversa, cioè che ogni successione di Cauchy è convergente. Sia dunque {<i>a<sub>n</sub></i>} una successione di Cauchy. Per il Lemma 3.8.2 tale successione è limitata quindi, per il <a href="ank.html#BW">Teorema di Bolzano-Weierstrass</a>, essa ammetterà una sottosuccessione {<i>a<sub>n<sub>k</sub></sub></i>} convergente a un limite ℓ &in; ℝ. <br>Facciamo ora vedere che tutta la successione {<i>a<sub>n</sub></i>} convergente a questo limite ℓ. Fissiamo <i>&epsilon;</i> &gt; 0. Poiché {<i>a<sub>n</sub></i>} è di Cauchy, esiste <i>n</i><sub>0</sub> &in; ℕ tale che |<i>a<sub>n</sub></i> − <i>a<sub>m</sub></i>| &lt; <i>&epsilon;</i>/2 per ogni <i>k</i> &ge; <i>k'</i>. Osserviamo che, poiché {<i>n<sub>k</sub></i>} è una successione strettamente crescente di numeri naturali, si deve necessariamente avere <i>n<sub>k</sub></i> &ge; <i>k</i> &forall;<i>k</i> &in; ℕ. In particolare, <i>n<sub>k</sub></i> &ge; <i>n</i>, quindi se <i>n</i> &ge; <i>n</i><sub>0</sub> si avrà</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − <i>a<sub>n<sub>n</sub></sub></i>| &lt; <i>&epsilon;</i>/2 &emsp;&forall;<i>n</i> &ge; <i>n</i><sub>0</sub></p>
+</div>
+
+<p>Se scegliamo <i>N</i> = max {<i>n</i><sub>0</sub>, <i>k</i>'} si avrà</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − ℓ| &le; |<i>a<sub>n</sub></i> − <i>a<sub>n<sub>n</sub></sub></i>| + |<i>a<sub>n<sub>n</sub></sub></i> − ℓ|  &lt; <i>&epsilon;</i>/2 + <i>&epsilon;</i>/2</p>
+</div>
+ 
+<p>concludiamo che {<i>a<sub>n</sub></i>} converge a ℓ. &emsp;□</p>
+
+<p>Concludiamo il paragrafo col seguente teorema che fornisce un legame fra i limiti di funzioni di variabile reale e i limiti delle successioni; per tale motivo è spesso conosciuto come <i>teorema ponte</i>.</p>
+
+<p><b>Teorema 3.8.4. Caratterizzazione sequenziale dei limiti</b>. Sia <i>f</i>: <i>A</i> &rarr; ℝ, e sia <i>x</i><sub>0</sub> &in; 
 
 <p><b>Theorem 2.4.2</b>. If a Cauchy sequence {<i>a<sub>n</sub></i>} has a subsequence {<i>a<sub>n<sub>k</sub></sub></i>} which converges to <i>L</i>, then {<i>a<sub>n</sub></i>} itself converges to <i>L</i>.
 
