@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Continuità">
+	<title>Continuità</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Continuità</h1>
+
+<p>Si rifletta sull'<a href="lim.html#dis">esempio</a> xx e seguente del paragrafo precedente. In entrambi i casi il limite al finito di una certa funzione esiste ed è finito. Nel primo caso, tale limite coincide col valore della funzione nel punto considerato, nel secondo caso no. Il buon senso suggerisce che la prima situazione è quella "normale", mentre la seconda è un po' "patologica". Questa idea è chiarita dalla prossima definizione, che introduce un nuovo concetto fondamentale.</p>
+
+<p><b>Definizione 4.2.1 (Continuità)</b>  Se <i>f</i>: <i>I</i> ⟶ ℝ (<i>I</i> intervallo) e <i>x</i><sub>0</sub> &in; <i>I</i>, si dice che <i>f</i> è <i>continua</i> in <i>x</i><sub>0</sub> se esiste</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{x \to x_0} f(x) = f(x_0) $$ -->
+
+<p>Si dice che <i>f</i> è continua in <i>I</i> se è continua in ciascun punto di <i>I</i>. Una funzione <i>non continua</i> in un punto <i>x</i><sub>0</sub> si dice <i>discontinua</i> in <i>x</i><sub>0</sub>.&emsp;□</p>
+
+<p>Gli esempi precedenti si possono leggere dicendo che la funzioen sin <i>x</i> è continua in <i>x</i> = 0, mentre la funzione <i>f</i>(<i>x</i>) dell'esempio successivo è discontinua in <i>x</i> = 0. Si consideri anche il prossimo.</p>
+
+<p><b>Esempio 4.2.1</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mi>x</mi>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi>x</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mo>&#xB1;</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\lim_{x \to 0^+} \frac{x}{|x|} = \pm 1 $$ -->
+
+<p>Questo esempio è interessante per due motivi. Anzitutto, in questo caso non sarebbe neppure possibile calcolare <i>f</i>(0), quindi è chiaro a priori che il limite non si potrà calcolare semplicemente valutando la fuzione nel punto 0. Inoltre, in questo caso i limiti destro e sinistro esistono finiti e sono diversi tra loro. Questo fatto merita una definizione:</p>
+
+<p><b>Definizione 4.2.2</b> Si dice che <i>x</i><sub>0</sub> è un <i>punto di discontinuità a salto</i> per <i>f</i>(<i>x</i>) quando i <i>limiti destro</i> e <i>sinistro</i> in <i>x</i><sub>0</sub> esistono finiti, ma diversi tra loro. Il salto è costituito dalla differenza dei limiti e precisamente:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>salto in&#xA0;</mtext>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>&#x2212;</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\text{salto in }x_0 = \lim_{x\to x_0^+} f(x) - \lim_{x\to x_0^-} f(x) $$ -->
+
+<p>Se uno dei due limiti destro o sinistro per <i>x</i> ⟶ <i>x</i><sub>0</sub> coincide con <i>f</i>(<i>x</i><sub>0</sub>), si dice che <i>f</i> è <i>continua da destra</i> o da <i>sinistra</i>, rispettivamente.&emsp;□</p>
+
+<p>Nell'esempio precedente, la funzione <i>x</i>/|<i>x</i>| ha un punto di discontinuità a salto in <i>x</i> = 0, con salto 2. <br>Le funzioni che presentano discontinuità a salto si prestano bene a modellizzare fenomeni che registrano bruschi cambiamenti. <br> Le funzioni continue, d'atro canto, devono la loro importanza al fatto che lim<sub><i>x</i> ⟶ <i>x</i><sub>0</sub></sub> f(<i>x</i>) = f(<i>x</i><sub>0</sub>) può essere interpretato dicendo che "se <i>x</i> è vicino a <i>x</i><sub>0</sub>" allora "<i>f</i>(<i>x</i>) è vicino a <i>f</i>(<i>x</i><sub>0</sub>)", ossia</p>
+
+<div class="eq">
+<p>piccole variazioni di x ⟼ <i>f</i> ⟶ piccole variazione di <i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>Per coglierne la rilevanza, pensiamo al seguente problema: noto <i>x</i><sub>0</sub> e nota <i>f</i>, mediante una calcolatrice tascabile, calcolare <i>f</i>(<i>x</i><sub>0</sub>). <br> Se <i>x</i><sub>0</sub> è un numero irrazionale, la calcolatrice approssima <i>x</i><sub>0</sub> con <i>x</i><sub>0</sub> + &Delta;<i>x</i> (&Delta;<i>x</i> è l'errore commesso nell'approssimazione) e calcola di conseguenza <i>f</i>(<i>x</i><sub>0</sub> + &Delta;<i>x</i>), approssimando ulteriormente il risultato finale. <br> Se <i>f</i> è continua in <i>x</i><sub>0</sub>  e |&Delta;<i>x</i>| « 1 (cioè l'errore assoluto |&Delta;<i>x</i>| è molto piccolo) è ragionevole considerare il risultato ottenuto come una buona approssimazione del risultato finale. Ma se <i>f</i> è discontinua, in corrispondenza di uno spostamento, anche piccolissimo, a destra o a sinistra di <i>x</i><sub>0</sub>, si trova un valore <i>f</i>(<i>x</i><sub>0</sub> + &Delta;<i>x</i>) molto diverso da <i>f</i>(<i>x</i><sub>0</sub>).</p>
+
+<section aria-label="End">
+<a href="lim.html">«Il concetto di limite</a>
+<a href="index.html">Index</a>
+<a href="lim_T.html">Tereomi sui limiti»</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Sottosucessioni"/>
+	<title>Sottosucessioni</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Sottosucessioni</h1>
+
+<p><b>Teorema 3.6.1 Limitatezza delle successioni convergenti</b> Se {<i>a<sub>n</sub></i>} è una successione convergente, allora {<i>a<sub>n</sub></i>} è limitata, cioè esiste <i>M</i> &ge; 0 tale che |<i>a<sub>n</sub></i>| &le; <i>M</i> per ogni <i>n</i> &in; ℕ.</p>
+
+<p><b>Dim.</b> Sia ℓ = lim<sub><i>n</i> ⟶ &infin;</sub> <i>a<sub>n</sub></i>. Per definizione di limite, fissato <i>&epsilon;</i> = 1 esiste un indice <i>N</i> &in; ℕ tale che |<i>a<sub>n</sub></i> − ℓ| &lt; 1, &forall;<i>n</i> &in; ℕ. In particolare si avrà che</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i>| &le; |<i>a<sub>n</sub></i> − ℓ| + |ℓ| &lt; 1 + |ℓ|&emsp; &forall;<i>n</i> &ge; <i>N</i></p>
+</div>
+
+<p>dunque tutti i termini della coda della successione (dall'indice <i>N</i> in poi) sono minori di 1 + |ℓ|. A questo punto rimane solo un numero finito di termini da controllare; basterà quindi scegliere</p>
+
+<div class="eq">
+<p><i>M</i> = max {|<i>a</i><sub>0</sub>|, |<i>a</i><sub>1</sub>|, ..., |<i>a</i><sub><i>N</i> − 1</sub>|, 1 + |ℓ|}</p>
+</div>
+
+<p>per fare in modo che |<i>a<sub>n</sub></i>| &le; <i>M</i> &forall; <i>n</i> &in; ℕ.&emsp;□</p>
+
+<p>Non possiamo aspettarci, in generale, che il viceversa sia vero, cioè che una successione limitata sia anche convergente: la successione <i>a<sub>n</sub></i> = (−1)<sup><i>n</i></sup> è limitata ma non è convergente. Tuttavia in questo caso è evidente che se selezioniamo solo i termini della successione corrispondenti a indici pari, otteniamo una nuova successione con tutti temrini uguali a 1, quindi sicuramente convergente. <br> Mostriamo che una proprietà di questo tipo è sempre valida per le successioni limitate: se {<i>a<sub>n</sub></i>} è  limitata, è possibile selezionare, in maniera ordinata, un numero infinito di elemnti in modo tale che essi formino una nuova successione convergente. Questa nuova successione sarà detta <b>sottosuccessione</b> della successione di partenza.</p>
+
+<p id="sub"><b>Definizione 3.6.2 (Sottosucessione)</b> Data la successione {<i>a<sub>n</sub></i>}, la successione {<i>a<sub>n<sub>k</sub></sub></i>} si dice sottosuccessione estratta della successione {<i>a<sub>n</sub></i>}, dove {<i>n<sub>k</sub></sub></i>} è una successione strettamente crescente di numeri naturali, i.e. una funzione <i>k</i>: ℕ ⟶ ℕ. &emsp;□</p>
+
+<p>La più elementare estrazine di elementi da una successione è quella che considera i soli indici o di posto pari o di posto dispari. Ad es., se <i>a<sub>n</sub></i> = (−1)<sup><i>n</i></sup> abbiamo la sottosuccessione pari <i>a</i><sub>2<i>n</i></sub> = (−1)<sup>2n</sup> = 1 e quella dispari. 
+
+<p>For example consider the sequence {1/<i>n</i>}. Then, the sequence {1/2, 1/4,1/6, ..., 1/2<i>n</i>, ...} is the subsequence of even-indexed terms of {1/<i>n</i>}.</p>
+
+<p id="BW"><b>Teorema 3.6.3 (di Bolzano-Weierstrass)</b> Ogni successione limitata di numeri reali ammette una sottosuccessione convergente.</p>
+
+<p><b>Dim</b>. Sia {<i>x<sub>n</sub></i>} una successione limitata. Quindi avrà maggiorante e minorante <i>a</i> ≤ <i>x<sub>n</sub></i> ≤ <i>b</i>, ∀<i>n</i> ∈ ℕ. A questo punto si utilizza il metodo di dicotomia. Sia <i>c</i> = (<i>a</i> + <i>b</i>)/2 il punto medio dell'intervallo [<i>a,b</i>]. Poiché [<i>a,b</i>] contiene tutti gli elementi della successione, almeno uno dei due sottointervalli [<i>a,c</i>], [<i>c,b</i>] conterrà un numero infinito di termini della successione, per infiniti indici <i>n</i>. In altri termini, almeno uno dei due insiemi</p>
+
+<div class="eq">
+<p><i>I</i><sub>1</sub> = {<i>n</i> ∈ ℕ: <i>a</i> ≤ <i>x<sub>n</sub></i> ≤ <i>b</i>}, &emsp; <i>I</i><sub>2</sub> = {<i>n</i> ∈ ℕ: <i>c</i> ≤ <i>x<sub>n</sub></i> ≤ <i>b</i>}</p>
+</div>
+
+<p>contiene infiniti numeri naturali. Può naturalmente succedere che tutti e due gli intervalli siano di questo tipo, ma non può accadere, siccome i numeri naturali sono infiniti, che entrambi contengano solo un numero finito di termini della successione; si osservi inoltre che questo vale anche se la successione dovesse essere costante da un certo indice in poi. Se <i>I</i><sub>1</sub> contiene infiniti indici naturali, poniamo <i>a</i><sub>1</sub> = <i>a</i>, <i>b</i><sub>1</sub> = <i>c</i>; viceversa se è <i>I</i><sub>2</sub> ha contenere infiniti indici naturali, poniamo <i>a</i><sub>1</sub> = <i>c</i>, <i>b</i><sub>1</sub> = <i>b</i>. In questo modo abbiamo ottenuto un nuovo intervallo [<i>a</i><sub>1</sub>, <i>b</i><sub>1</sub>], tale che <i>x<sub>n</sub></i> &in; [<i>a</i><sub>1</sub>,  <i>b</i><sub>1</sub>] per infiniti indici naturali <i>n</i>, e la cui lunghezza è la metà di quella dell'intervallo [<i>a,b</i>]. Ripetiamo ora il procedimento. Sia <i>c</i> = (<i>a</i><sub>1</sub> + <i>b</i><sub>1</sub>)/2 il punto medio dell'intervallo [<i>a</i><sub>1</sub>,  <i>b</i><sub>1</sub>]. Come prima almento uno dei due sottointervalli [<i>a</i><sub>1</sub>, <i>c</i>], [<i>c</i>, <i>b</i><sub>1</sub>], conterrà termini <i>x<sub>n</sub></i> per infiniti indici <i>n</i>, ed arriviamo a costruire un nuovo intervallo [<i>a</i><sub>2</sub>, <i>b</i><sub>2</sub>], contenente termini <i>x<sub>n</sub></i> per infiniti indici <i>n</i>, e la cui lunghezza è un quarto della lunghezza dell'intevallo iniziale [<i>a,b</i>]. Procedendo per induzione, siamo quindi in grado di costruire una successione di intervalli</p>
+
+<div class="eq">
+<p>[<i>a,b</i>], [<i>a</i><sub>1</sub>,  <i>b</i><sub>1</sub>], ...., [<i>a<sub>k</sub>, b<sub>k</sub></i>]</p>
+</div>
+
+<p>con le seguenti proprietà:</p>
+
+<ol type="a">
+	<li><p><i>a</i> &le; <i>a<sub>k</sub></i> &le; <i>a</i><sub><i>k</i>+1</sub> &lt; <i>b</i><sub><i>k</i>+1</sub> &le; <i>b<sub>k</sub></i> &le; <i>b</i>, &forall;<i>k</i> &in; ℕ;</p></li>
+	<li><p><i>b<sub>k</sub></i> &minus; <i>a<sub>k</sub></i> = (<i>b</i> &minus; <i>a</i>)/2<sup><i>k</i></sup>, &forall;<i>k</i> &in; ℕ;</p></li>
+	<li><p>&forall;<i>k</i> &in; ℕ;, l'intervallo [<i>a<sub>k</sub>, b<sub>k</sub></i>] contiene termini <i>x<sub>n</sub></i> per infiniti indici <i>n</i> &in; ℕ.</p></li>
+</ol>
+
+<p>Osserviamo dalla proprietà (a), la successione {<i>a<sub>n<sub>k</sub></sub></i>} è monotona crescente e limitata (superiormente da <i>b</i> e inferiormente da <i>a</i>), allora esiste finito il lim<sub><i>k</i> &rarr; &infin;</sub> <i>a<sub>k</sub></i> = ℓ. Mentre {<i>b<sub>n<sub>k</sub></sub></i>} è monotona decrescente è limitata, quindi anche per essa, lim<sub><i>k</i> &rarr; &infin;</sub> <i>b<sub>k</sub></i> = ℓ'. Inoltre dalla proprietà (b), si ha che lim<sub><i>k</i> &rarr; &infin;</sub> (<i>b<sub>k</sub></i> &minus; <i>a<sub>k</sub></i>) = 0, quindi le due successioni ammettono lo stesso limite ℓ. Osserviamo infinite che <i>a<sub>k</sub></i> &le; <i>x<sub>n</sub></i> &le; <i>b<sub>k</sub></i>, &forall;<i>k</i> &in; ℕ, quindi dal teorema del confronto segue che anche <i>x<sub>n</sub></i> è convergente allo stesso limite ℓ. &emsp;□</p>
+
+<section aria-label="End">
+<a href="sequences_theorems.html">&#171;Fundamental theorems on sequences</a>
+<a href="index.html">Index</a>
+<a href="Cauchy.html">Cauchy sequences&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legge"/>
+    <title>Legge</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Cauchy’s Form of the Mean Value Theorem</h1>
+
+<p>If we apply the Mean value theorem to each of two functions <i>f</i> and <i>g</i> continuous on [<i>a,b</i>] and differentiable on (<i>a, b</i>), we can conclude that there are <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub> &in; (<i>a, b</i>) such that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>c</mi>
+    <mn>1</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>and</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>c</mi>
+    <mn>2</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>a</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ f'(c_1) = \frac{f(b) - f(a)} {b -a} \quad \text{and} \quad  g'(c_2) = \frac{g(b) - g(a)} {b -a} $$ -->
+
+<p>This gives</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>c</i><sub>1</sub>) [<i>g</i>(<i>b</i>) − <i>g</i>(<i>a</i>)] = <i>g</i>'(<i>c</i><sub>2</sub>) [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]</p>
+</div>
+
+<p>However it happens to exist one <i>c</i> &in; (<i>a,b</i>) wich works for both function, as the next theorem precises.</p>
+
+<p><b>Theorem 5.6.1</b> (<i>Cauchy's Mean Value Theorem</i>) Let <i>f</i> and <i>g</i> continuous on [<i>a,b</i>] and differentiable on (<i>a, b</i>). Then there exists <i>c</i> &in; (<i>a,b</i>) such that</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>c</i>) [<i>g</i>(<i>b</i>) − <i>g</i>(<i>a</i>)] = <i>g</i>'(<i>c</i>) [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]</p>
+</div>
+
+<p><b>Proof</b>. If <i>g</i>(<i>a</i>) = <i>g</i>(<i>b</i>) then the result holds by Rolle's Theorem applied to <i>g</i>. So we assume that <i>g</i>(<i>a</i>) &ne; <i>g</i>(<i>b</i>). In the proof of Lagrange's Mean value theorem we used the auxiliary function</p>
+
+<div class="eq">
+<p><i>&omega;</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>x</i> ⋅ [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>)</p>
+</div>
+
+<p>We replace the function <i>x</i> (identity function) with <i>g</i>; We have</p>
+
+<div class="eq">
+<p><i>&omega;</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>) ⋅ [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>)</p>
+</div>
+
+<p>Then <i>&omega;</i> is continous on [<i>a,b</i>] and differentiable on (<i>a,b</i>). One can easily verify that <i>&omega;</i>(<i>a</i>) = <i>&omega;</i> (<i>b</i>), so by Rolle's Theorem there is a <i>c</i> &in; (<i>a,b</i>) such that <i>&omega;</i>'(<i>c</i>) = 0. Finally <i>&omega;</i>'(<i>c</i>) = 0 gives</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>c</i>)[<i>g</i>(<i>b</i> − <i>g</i>(<i>a</i>)] = <i>g'</i>(<i>c</i>) [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]</p>
+</div>
+
+<p>as desired. &emsp;□</p>
+
+<section aria-label="End">
+<a href="Lagrange.html">&#171;Lagrance MVT</a>
+<a href="index.html">Index</a>
+<a href="Hopital.html">Hôpital's Rule&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>
