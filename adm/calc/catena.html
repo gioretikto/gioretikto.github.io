@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Chain Rule">
+	<meta name="description" content="Derivata di una funzione composta">
 	<title>Chain Rule</title>
 	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
@@ -19,15 +19,15 @@
 
 <article>
 
-<h1>The derivative of a composite function: The Chain Rule</h1>
+<h1>Derivata di una funzione composta</h1>
 
-<p><b>Proposition 6.4.1</b> (<b>Chain Rule</b>) Let <i>D,E</i> &subseteq; ℝ and <i>f</i>: <i>D</i> ⟶ ℝ, <i>g</i>: <i>E</i> ⟶ ℝ be functions such that <i>f</i>(<i>D</i>) &subseteq; <i>E</i>. Suppose <i>x</i> is an interior point of <i>E</i>. If <i>f</i> is differentiable at <i>x</i> and <i>g</i> is differentible at <i>f</i>(<i>c</i>), then <i>g</i> ∘ <i>f</i> is differentiable at <i>x</i> and</p>
+<p><b>Teorema 5.6.1</b> (<b>Regola della catena</b>) Let <i>D,E</i> &subseteq; ℝ and <i>f</i>: <i>D</i> ⟶ ℝ, <i>g</i>: <i>E</i> ⟶ ℝ be functions such that <i>f</i>(<i>D</i>) &subseteq; <i>E</i>. Suppose <i>x</i> is an interior point of <i>E</i>. If <i>f</i> is differentiable at <i>x</i> and <i>g</i> is differentible at <i>f</i>(<i>c</i>), then <i>g</i> ∘ <i>f</i> is differentiable at <i>x</i> and</p>
 
 <div class="eq">
-<p>(<i>g</i> ∘ <i>f</i>)'(<i>x</i>) = <i>g'</i>(<i>f</i>(<i>x</i>))<i>f'</i>(<i>x</i>)</p>
+<p>(<i>g</i> ∘ <i>f</i>)'(<i>x</i>) = <i>g'</i>(<i>f</i>(<i>x</i>))<i>f'</i>(<i>x</i>)&emsp; (5.6.2)</p>
 </div>
 
-<p><b>Proof</b>. We have</p>
+<p><b>Dim</b>. Si ha</p>
 
 <div class="eq">
 <p>(<i>g</i> ∘ <i>f</i>)(<i>x</i> + <i>h</i>) &minus; (<i>g</i> ∘ <i>f</i>)(<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i> + <i>h</i>)) &minus; <i>g</i>(<i>f</i>(<i>x</i>))</p>
@@ -131,62 +131,65 @@
 
 <p>dividing by <i>h</i> and observing that <i>k</i>/<i>h</i> → <i>f</i>'(<i>x</i>), we have proved the claim.&emsp; □</p>
 
-<p>The Chain Rule has a particularly simple expression if we use the Leibniz notation for the derivative. Recall <i>f</i> ∘ <i>g</i> is defined as <i>f</i>(<i>g</i>(<i>x</i>)). The quantity <i>f′</i>(<i>g</i>(<i>x</i>)) is the derivative of <i>f</i> with <i>x</i> replaced by <i>g</i>; this can be written df/dg. As usual, <i>g′</i>(<i>x</i>) = d<i>g</i>/d<i>x</i>. Then the Chain Rule becomes</p>
+<p>La (5.6.2) si chiama <i>regola della catena</i>; usando le notazioni (di Leibniz) d<i>f</i>/d<i>x</i> e d<i>g</i>/d<i>x</i> per le derivate di <i>f</i> e <i>g</i> e posto <i>w</i> = <i>g</i>(<i>y</i>), la (5.6.1) acquista una forma più signifiativa:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow class="MJX-TeXAtom-ORD">
-    <mfrac>
-      <mrow>
-        <mi>d</mi>
-        <mi>w</mi>
-      </mrow>
-      <mrow>
-        <mi>d</mi>
-        <mi>x</mi>
-      </mrow>
-    </mfrac>
-  </mrow>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>w</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
   <mo>=</mo>
-  <mrow class="MJX-TeXAtom-ORD">
-    <mfrac>
-      <mrow>
-        <mi>d</mi>
-        <mi>w</mi>
-      </mrow>
-      <mrow>
-        <mi>d</mi>
-        <mi>y</mi>
-      </mrow>
-    </mfrac>
-  </mrow>
-  <mrow class="MJX-TeXAtom-ORD">
-    <mfrac>
-      <mrow>
-        <mi>d</mi>
-        <mi>y</mi>
-      </mrow>
-      <mrow>
-        <mi>d</mi>
-        <mi>x</mi>
-      </mrow>
-    </mfrac>
-  </mrow>
-  <mtext>.</mtext>
+  <mfrac>
+    <mtext>dw</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
 </math>
 
-<p><b>Examples 6.4.2</b>. Suppose we want to differentiate</p>
+<!-- $$ \frac{\text{d}w}{\text{d}y} = \frac{\text{dw}}{\text{d}y} ⋅ \frac{\text{d}y}{\text{d}x} $$ -->
+
+<p>Infatti si ricordi che <i>f</i> ∘ <i>g</i> è definita come <i>f</i>(<i>g</i>(<i>x</i>)). La quantità <i>f′</i>(<i>g</i>(<i>x</i>)) è la derivata di <i>f</i> con <I>g</i> al posto di <i>x</i>, che si può scrivere come d<i>f</i>/d<i>g</i>. As usual, <i>g′</i>(<i>x</i>) = d<i>g</i>/d<i>x</i>. Then the formula above.</p>
+
+<p>Come suggerisce il nome di "regola della catena", questa può essere generalizzata alla composizione di un numero qualsiasi di funzioni, composte una con l'altra. Ad es., per tre funzioni si ha</p>
+
+<div class="eq">
+<p>[<i>f</i>(<i>g</i>(<i>h</i>(<i>x</i>)))]' = <i>f'</i>(<i>g</i>(<i>h</i>(<i>x</i>))) ⋅ <i>g'</i>(<i>h</i>(<i>x</i>)) ⋅ <i>h'</i>(<i>x</i>)</p>
+</div>
+
+<p>Per usare questa regola, assieme alle altre dell'algebra delle derivate, occorre imparare a <i>vedere</i> una funzione composta come composizione succesiva di funzioni più semplici. Per individuare le componenti può essere utile immaginare come si calcola la funzione composta mediante una calcolatrice tascabile.</p>
+
+<p><b>Esempio 5.6.3</b>. Si voglia derivare</p>
 
 <div class="eq">
 <p><i>w</i>(<i>x</i>) = (sen <i>x</i>)<sup>3</sup></p>
 </div>
 
-<p>Let <i>f</i>(<i>x</i>) = sin <i>x</i> and <i>g</i>(<i>y</i>) = <i>y</i><sup>3</sup>. We then have</p>
+<p>Per calcolarla, occorre inserire il vlaore di <i>x</i>, calcolare sin <i>x</i> e poi elevare tutto al cubo. Posto <i>f</i>(<i>x</i>) = sin <i>x</i> e <i>g</i>(<i>y</i>) = <i>y</i><sup>3</sup>. We then have</p>
 
 <div class="eq">
 <p><i>w</i> '(<i>x</i>) = 3 (sen <i>x</i>)<sup>2</sup> ⋅ cos <i>x</i>&emsp;■</p>
 </div>
 
-<p><b>Examples 6.4.3</b>. If <i>w</i>(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> then <i>w</i> '(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> ⋅ (&minus;2<i>x</i>).&emsp;■</p>
+<p><b>Examples 5.6.3</b>. If <i>w</i>(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> then <i>w</i> '(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> ⋅ (&minus;2<i>x</i>).&emsp;■</p>
 
 <h2>Derivative of a periodic function</h2>
 
