@@ -714,14 +714,64 @@
 
 <p><b>Definizione (limite destro e sinistro)</b> Sia <i>f</i> : <i>A</i> &subset; ℝ ⟶ ℝ e sia <i>x</i><sub>0</sub> un punto di accumulazione di <i>A</i> ∩ (<i>x</i><sub>0</sub>, +&infin;) (risp. <i>A</i> ∩ (<i>x</i><sub>0</sub>, −&infin;). Diremo che il numero reale <i>ℓ</i> è il limite destro (risp. sinistro) di <i>f</i> per <i>x</i> che tende a <i>x</i><sub>0</sub>, e scriveremo</p>
 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
 <!-- $$\lim_{x \to x_0^+} f(x) = \ell $$ -->
 
 <p>se per ogni <i>&epsilon;</i> &gt; 0 esiste un numero <i>&delta;</i> &gt; 0 tale che</p>
 
 <div class="eq">
-<p>|<i>f</i>(<i>x</i>) − ℓ| &lt; <i>&epsilon;</i>, &emsp; &forall;<i>x</i> &in; [(<i>x</i><sub>0</sub>, <i>x</i><sub>0</sub> + &delta;) \ {<i>x</i><sub>0</sub>}] ∩ <i>A</i>&emsp;(4.1.2)■</p>
+<p>|<i>f</i>(<i>x</i>) − ℓ| &lt; <i>&epsilon;</i>, &emsp; &forall;<i>x</i> &in; [(<i>x</i><sub>0</sub>, <i>x</i><sub>0</sub> + &delta;) \ {<i>x</i><sub>0</sub>}] ∩ <i>A</i></p>
 </div>
 
+<p>Diciamo che <i>f</i> ha limite sinistro, <i>ℓ</i> <i>x</i> che tende a <i>x</i><sub>0</sub>, e scriviamo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>&#x2212;</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$\lim_{x \to x_0^-} f(x) = \ell $$ -->
+
+<p>se &forall;<i>&epsilon;</i> &gt;, ∃δ &gt;: &forall; <i>x</i></p>
+
+<div class="eq">
+<p><i>x</i> &minus; <i>&delta;</i> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub></p>
+</div>
 
 <p>Talvolta una funzione si comporta diversamente (dal punto di vista del suo limite) a seconda che <i>x</i> si avvicini a <i>x</i><sub>0</sub> da destra o da sinistra. Ad es., per <i>x</i> ⟶ 0 la funzione 1/<i>x</i> diventa sempre più grande in valore assoluto, ma con un segno diverso a seconda che sia <i>x</i> ≷ 0. Per descrivere questo tipo di situazioni, si introduce il concetto di limite destro e sinistro:</p>
 
@@ -1248,7 +1298,7 @@ $$ -->
 
 <!-- $$ \lim_{x \to x_0} f(x) = \ell$$ -->
 
-<p><b>Example 4.1.14</b>. The function sign of <i>x</i></p>
+<p id="sgn"><b>Example 4.1.14</b>. The function sign of <i>x</i></p>
 
 <img src="img/sgnx.png" alt="sign of x" />
 

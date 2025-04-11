@@ -23,18 +23,149 @@
     
 <p>Nelle applicazioni della matematica sono importanti certe combinazioni delle funzioni <i>e<sup>x</sup></i> e <i>e<sup>-x</sup></i> che ora definiamo:</p>
 
-<p>Sh: seno iperbolico Sh <i>x</i> :=  (<i>e<sup>x</sup></i> &minus; <i>e<sup>-x</sup></i>)/2</p>
+<p><b>Hyperbolic sine</b></p>
 
-<p>Ch: coseno iperbolico Ch <i>x</i> := (<i>e<sup>x</sup></i> + <i>e<sup>-x</sup></i>)/2</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>sinh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+</math>
 
-<p>Th: tangente iperbolico Th <i>x</i> := Sh <i>x</i>/Ch <i>x</i> = (<i>e<sup>x</sup></i> &minus; <i>e<sup>-x</sup></i>)/ (<i>e<sup>x</sup></i> + <i>e<sup>-x</sup></i>)</p>
+<!-- $$ \sinh x = \frac{e^x - e^x}{2} $$ -->
 
-<p>Esse sono evidentemente definite su tutto ℝ. Le seguenti proprietà discendono immediatamente dalla definizione:</p>
+<p><b>Hyperbolic cosine</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>cosh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \cosh x = \frac{e^x - e^x}{2} $$ -->
+
+<p><b>Hyperbolic tangent</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>tanh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>sinh</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mi>cosh</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x2212;</mo>
+          <mi>x</mi>
+        </mrow>
+      </msup>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x2212;</mo>
+          <mi>x</mi>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \tanh x = \frac{\sinh x} { \cosh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}} $$ -->
+
+<p id="coth"><b>Hyperbolic cotangent</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>coth</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>cosh</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mi>sinh</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \coth x = \frac {\cosh x} {\sinh x} $$ -->
+
+<p>La ragione per cui sono chiamate funzioni iperboliche è che</p>
+
+<div class="eq">
+<p>cosh<sup>2</sup> <i>t</i> &minus; sinh<sup>2</sup> <i>t</i> = 1</p>
+</div>
+
+<p>quindi il punto (cosh <i>t</i>, sinh<i>t</i>) è un punto dell'iperbola di equazione <i>x</i><sup>2</sup> &minus; <i>y</i><sup>2</sup> = 1.</p>
+
+
+
+<p>Note that sinh has domain ℝ and range ℝ, while <i>cosh</i> has domain ℝ and range [1, &infin;]. From the definitions the following properties follow:</p>
 
 <ul>
-	<li><p>Sh(&minus;<i>x</i>) = &minus; Sh<i>x</i> (funzione dispari);</p></li>
-	<li><p>Ch(&minus;<i>x</i>) = Ch<i>x</i> (funzione pari);</p></li>
-	<li><p>Th(&minus;<i>x</i>) = &minus; Th<i>x</i> (funzione dispari);</p></li>
+	<li><p>Sh (−<i>x</i>) = − Sh (<i>x</i>) (odd function);</p></li>
+	<li><p>Ch (−<i>x</i>) = Ch (−<i>x</i>) (even function);</p></li>
+	<li><p>Th (−<i>x</i>) = −Th (<i>x</i>) (odd function);</p></li>
 </ul>
 
 <p>Sh(0) = 0, Ch(0) = 0, Th(0) = 0</p>
@@ -58,7 +189,44 @@
 <figcaption>Grafici di Sh <i>x</i>, Ch <i>x</i> e Th <i>x</i></figcaption>
 </figure>
 
+<p>The reason for the names of these functions is that they are related to the hyperbola in much the same way that trigonometric functions are related to the circle; A point on the circle <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> = <i>a</i><sup>2</sup> may be expressed parametrically as <i>x</i> = <i>a</i> cos &theta;, <i>y</i> = <i>a</i> sin &theta;, whereas a point on one branch of the rectangular hyperbola <i>x</i><sup>2</sup> − <i>y</i><sup>2</sup> = <i>a</i><sup>2</sup> may be represented by <i>x</i> = <i>a</i> cosh &phi;, <i>y</i> = <i>a</i> sinh &phi;, satisfying the equation <i>x</i><sup>2</sup> − <i>y</i><sup>2</sup> = <i>a</i><sup>2</sup>.</p>
+
+<figure>
+<img src="img/hyperbolic_functions.png" alt="hyperbolic functions"/>
+<figcaption>A ray through the unit hyperbola x<sup>2</sup> - y<sup>2</sup> = 1 in the point (cosh a, sinh a), where a is twice the area between the ray, the hyperbola, and the x-axis. For points on the hyperbola below the x-axis, the area is considered negative (see animated version with comparison with the trigonometric (circular) functions).</figcaption>
+</figure>
+
 <p>La funzione Ch <i>x</i> compare nella soluzione di un semplice problema fisico: trovare la sagoma lungo la quale si dispone un filo pesante, omogeneo, fissato per le due estremità. In queste ipotesi il filo descriverà, in un piano verticale, il grafico della funzione <i>f</i>(<i>x</i>) = Ch <i>x</i> (a patto di scegliere opportunamente il sistema di riferimento e le unità di misura sui due assi). Per questo motivo la curva grafico di Ch <i>x</i> è anche detta <i>catenaria</i>.</p>
+
+<img src="img/catenary.png" alt="catenary"/>
+
+<p>It takes the shape of a curve with equation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>y</mi>
+  <mo>=</mo>
+  <mi>h</mi>
+  <mo>+</mo>
+  <mi>a</mi>
+  <mo>&#x22C5;</mo>
+  <mi>cosh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mi>a</mi>
+  </mfrac>
+</math>
+
+<!-- $$ y = h + a \cdot \cosh \frac{x - x_0} {a} $$ -->
+
+<p>called a <b>catenary</b>. (The Latin word <i>catena</i> means “chain.”). In which <i>x</i><sub>0</sub> represent the value for which the catenary has either a minimum or maximum, <i>h</i> is the value of the catenary at <i>x</i><sub>0</sub>; The paramter <i>a</i> also characterizes the form of the catenary: for <i>a</i> &gt; 0 it is a sagging chain, for <i>a</i> &lt; 0 it is an arch. The actual value for <i>a</i> depends on the tension in the cable and the density of the cable.</p>
 
 <section aria-label="End">
 <a href="periodiche.html">&#171;Funzioni periodiche</a>

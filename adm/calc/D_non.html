@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Punti di non derivabilità: angolosi, cuspidi, flessi a tangente verticale"/>
+	<title>Punti di non derivabilità: angolosi, cuspidi, flessi a tangente verticale</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Punti di non derivabilità: angolosi, cuspidi, flessi a tangente verticale</h1>
+
+<p>Se una funzione <i>f</i> è derivabile in un punto <i>x</i><sub>0</sub>, nel punto di coordinate (<i>x</i><sub>0</sub>, <i>f</i>(<i>x</i><sub>0</sub>)) il grafico ha una retta tangente ben definita. Esaminiamo ora, con alcuni esempi, cosa succede quando <i>f</i> non è derivabile in un punto. </p>
+
+<h2 id="ang">Punti angolosi</h2>
+
+<p>Sia <i>f</i>(<i>x</i>) = |<i>x</i>|. Essendo <i>f</i>(<i>x</i>) = <i>x</i> per <i>x</i> &gt; 0 e <i>f</i>(<i>x</i>) = &minus;<i>x</i> per <i>x</i> &lt; 0, si ha <i>f'</i>(<i>x</i>) = +1 se <i>x</i> &gt; 0 e <i>f'</i>(<i>x</i>) = &minus;1 per 
+<i>x</i> &lt; 0, avendo <i>f'</i> il significato di coefficiente angolare. <br>Nell'origine <i>x</i> = 0, occorre usare la definizione. Ora</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi>h</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+</math>
+
+<!-- $$\frac{f(h) - f(0)}{h} = \frac{|h|}{h} $$ -->
+
+<p>e quindi, se <i>h</i><sup>+</sup>, |<i>h</i>| = <i>h</i> e il limite del rapporto incrementale è 1, mentre se <i>h</i> &rarr; 0<sup>&minus;1</sup>, |<i>h</i>| = &minus;<i>h</i> e il limite è &minus;1.<br> Si conclude che, non esistendo il limite del rapporto incrementale, <i>f non è derivabile in x</i> = 0. D'altra parte, ricordando il grafico di <i>f</i>(<i>x</i>) = |<i>x</i>| si vede che la tangente nell'origine non è ben definita.</p>
+
+<figure>
+<img src="img/abs.png" alt="absolute value"/>
+<figcaption>La funzione |<i>x</i>| <i>non</i> è derivabile in <i>x</i> = 0.</figcaption>
+</figure>
+
+<p>Tuttavia i limiti destro e sinistro del rapporto incrementale di |<i>x</i>| esistono finiti e in (0,0) il grafico presenta "un angolo".</p>
+
+<p>It is possible to consider right-hand and left-hand limits in (2); this leads to the definition of right-hand and left-hand derivatives. In particular, at the endpoints <i>a</i> and <i>b</i>, the derivative, if it exists, is a right-hand or left-hand derivative, respectively. We </p>
+
+<p>We know from theorem <a href="continuity.html">Theorem 4.1.8</a> that a limit exists, if and only if both the limits, the left hand and the right hand, exist and are equal. Then as in the case of one-sided continuity, the right derivative of <i>f</i> at <i>x</i> and the left-derivative at <i>x</i>, are defined to be the limits</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>+</mo>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>and</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msubsup>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>&#x2212;</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+</math>
+
+<p>provided that these limit exist, and are equal, the function <i>f</i> is differentiable at <i>x</i>. </p>
+
+<p>Nel caso in cui <i>f</i> sia continua e derivabile <i>da destra e da sinistra</i> (ma non derivabile) in <i>x</i><sub>0</sub> si dice che <i>f</i> ha un <i>punto angoloso in x</i> = <i>x</i><sub>0</sub>. Dunque |<i>x</i>| ha un punto angoloso in <i>x</i> = 0. <br> Vale la pena ricordare la formula che esprime sinteticamente la derivata della funzione valore assoluto (fuori dall'origine):</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>x</mi>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <mtext>sgn</mtext>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+            <mstyle scriptlevel="0">
+              <mspace width="1em"></mspace>
+            </mstyle>
+          </mrow>
+          <mi>x</mi>
+          <mo>&lt;</mo>
+          <mn>0.</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$|x|' = \text{sgn}(x) = \begin{cases} 1, \quad &{\text{if }\quad}x\gt 0\\-1,&{\text{if }\quad} x<0.\end{cases} $$ -->
+
+<h2>Punti a tangente verticale. Cuspidi</h2>
+
+<p>Se <i>f</i> è continua in un punti <i>x</i><sub>0</sub> e</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mo>&#xB1;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{h\to 0} \frac{f(x_0+h) -f(x_0)}{h} = \pm \infty$$ -->
+
+<p><i>f</i> non è derivabile in <i>x</i><sub>0</sub> ma, geometricamente, il grafico di <i>f</i> ha una retta tangente ben definita e parallela all'asse delle ordinate. Ammetteremo in tal caso la scrittura <i>f'</i>(<i>x</i><sub>0</sub>) = &pm;&infin; e parleremo di <b>flesso a tangente verticale</b>. Il concetto di flesso sarà definito più in generale in seguito.</p>
+
+<img src="img/vertical_tangents.png" alt="veritcal tangents"/>
+
+<p>Ad es., la funzione <i>f</i>(<i>x</i>) = ∛|<i>x</i>|, il cui grafico è riportato in fig.1. In questo caso si ha <i>f'</i><sub>+</sub>(0) = +&infin;, <i>f'</i><sub>&minus;</sub>(0) = &minus;&infin; e si dice che in <i>x</i> = 0, <i>f</i> ha una 
+<b>cuspide</b>.</p>
+
+<p><b>Definizione 5.3.1</b> Se <i>f</i> è continua in <i>x</i><sub>0</sub> e <i>f'</i><sub>+</sub>(<i>x</i><sub>0</sub>) = &pm;&infin;, <i>f'</i><sub>+</sub>(<i>x</i><sub>0</sub>) = &mp;&infin;, si dice che <i>f</i> ha in <i>x</i><sub>0</sub> una <b>cuspide</b>. &emsp;□</p>
+
+<p>Nel caso misto in cui una delle due derivate è finita e l'altra infinita (con <i>f</i> continua) si parla ancora di punto angoloso. <br>Infine, se la funzione è definita solo per <i>x</i> &ge; <i>x</i><sub>0</sub> e in tal punto ha derivata (destra) infinita, diremo semplicemente che in tal punto <i>ha tangente verticale</i>, senza parlare né di cuspide né di flesso. Ad es. la funzione √<i>x</i> ha un punto a tangente verticale in <i>x</i> = 0.</p>
+
+<h2>Continuità e derivabilità</h2>
+
+<p>Vale il seguente semplice ma importante.</p>
+
+<p><b>Definizione 5.3.2</b> Se <i>f</i> è derivabile in un punto <i>x</i><sub>0</sub> allora <i>f</i> è continua in <i>x</i><sub>0</sub>.</p>
+
+<p><b>Dim.</b>. Scriviamo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>h</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mi>h</mi>
+  <mo>&#x223C;</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mi>h</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>h</mi>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$f(x_0 + h) - f(x_0) = \frac{f(x_0 + h) - f(x_0)}{h} \cdot h \sim f'(x_0) h \quad h \to 0 $$ -->
+
+<p>Perciò lim<sub><i>h</i> &rarr; 0</sub> [<i>f</i>(<i>x</i><sub>0</sub> &minus; <i>f</i>(<i>x</i><sub>0</sub>)] = 0 da cui lim<sub><i>h</i> &rarr; 0</sub> <i>f</i>(<i>x</i><sub>0</sub> + <i>h</i>) = <i>f</i>(<i>x</i><sub>0</sub>), che è la continuità di <i>f</i> in <i>x</i><sub>0</sub>. &emsp;□</p>
+
+<p>Come conseguenza, se una funzione è <i>discontinua</i> in <i>x</i><sub>0</sub>, <i>non può</i> essere derivabile in <i>x</i><sub>0/sub>. <br> Viceversa, se <i>f</i> è continua in <i>x</i><sub>0</sub> come mostra 
+<p>Come conseguenza, se una funzione è <i>discontinua</i> in <i>x</i><sub>0</sub>, <i>non può</i> essere derivabile in <i>x</i><sub>0/sub>. <br> Viceversa, se <i>f</i> è continua in <i>x</i><sub>0</sub>, non necessariamente <i>f</i> è derivabile in <i>x</i><sub>0</sub> come mostra <i>f</i>(<i>x</i>) = |<i>x</i>| che è continua in <i>x</i> = 0 ma non ivi derivabile.</p>
+
+<h3 id="onda">Onda quadra</h3>
+
+<p>Consideriamo la funzione <i>f</i> periodica di periodo <i>T</i> che coincide con 2<i>A</i>|<i>x</i>|/<i>T</i> nell'intervallo [&minus;<i>T</i>/2, <i>T</i>/2]</p>
+
+<img src="img/onda_quadra.png" alt="onda quadra"/>
+
+<p>Una funzione di questo genere modelliza <i>un'onda o segnale triangolare</i> di ampiezza <i>A</i>. Questa funzione presenta punti angolosi in <i>x</i> = &pm; <i>T</i>/2, &pm;<i>T</i>, &pm;3<i>T</i>/2 ecc.<br> La sua derivata non è definita in questi punti ed è <i>costante a tratti</i>; precisamente, vale  2<i>A</i>/<i>T</i> per 0 &lt; <i>x</i> &lt; <i>T</i>/2, vale &minus;2<i>A</i>/<i>T</i> per <i>T</i>/2 &lt; <i>x</i> &lt; <i>T</i> e si ripete con periodicità <i>T</i>, con un grafico illustrato nella fig. sottostante.</p>
+
+<img src="img/D_onda_quadra.png" alt="derivata onda quadra"/>
+
+<p>La derivata del segnale triangolare di ampiezza 2<i>A</i>/<i>T</i> rapprsenta quella che si chiama <b>onda quadra</b>.</p>
+
+<section aria-label="End">
+<a href="D.html">&#171;Definizione di derivata</a>
+<a href="index.html">Index</a>
+<a href="derivatives_algebra.html">Regole di calcolo delle derivate &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
