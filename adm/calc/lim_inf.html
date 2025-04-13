@@ -45,7 +45,7 @@
 
 <p>La Definizione 4.1, come già visto per le <a href="an.html#div">successioni</a>, si estende ai casi ℓ = &pm;&infin; e <i>x</i><sub>0</sub> = &pm;&infin;.</p>
 
-<p><b>Definzione 4.2.1</b>. Limiti all'infinito</b>. Sia <i>f</i>: (<i>a</i>, +&infin;) &rarr; ℝ. Diremo che il numero reale ℓ è il limite di <i>f</i> per <i>x</i> che tende a +&infin;, e scriveremo</p>
+<p><b>Definzione 4.3.1</b>. Limiti all'infinito</b>. Sia <i>f</i>: (<i>a</i>, +&infin;) &rarr; ℝ. Diremo che il numero reale ℓ è il limite di <i>f</i> per <i>x</i> che tende a +&infin;, e scriveremo</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -101,9 +101,9 @@
 <p>|<i>f</i>(<i>x</i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i>, &emsp; &forall;<i>x</i> &lt;<i>K</i>. &emsp;□</p>
 </div>
 
-<p><b>Esempio 4.2.2</b>. Riprendiamo la funzione <i>f</i>(<i>x</i>) = 1/<i>x</i>, <i>x</i> &gt; 0, e mostriamo che lim<sub><i>x</i> &rarr; +&infin;</sub> f(<i>x</i>) = 0. Fissato <i>&epsilon;</i> &gt; 0, la disequazione |<i>f</i>(<i>x</i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i>, con (<i>ℓ</i> = 0) è soddisfatta per quei valori positivi di <i>x</i> tali che 1/<i>x</i> &lt; &epsilon;, cioè tali che <i>x</i> &gt; 1/<i>&epsilon;</i>. Basterà quindi scegliere <i>K</i>(<i>&epsilon;</i>) = 1/<i>&epsilon;</i>. &emsp;■</p>
+<p><b>Esempio 4.3.2</b>. Riprendiamo la funzione <i>f</i>(<i>x</i>) = 1/<i>x</i>, <i>x</i> &gt; 0, e mostriamo che lim<sub><i>x</i> &rarr; +&infin;</sub> f(<i>x</i>) = 0. Fissato <i>&epsilon;</i> &gt; 0, la disequazione |<i>f</i>(<i>x</i>) − <i>ℓ</i>| &lt; <i>&epsilon;</i>, con (<i>ℓ</i> = 0) è soddisfatta per quei valori positivi di <i>x</i> tali che 1/<i>x</i> &lt; &epsilon;, cioè tali che <i>x</i> &gt; 1/<i>&epsilon;</i>. Basterà quindi scegliere <i>K</i>(<i>&epsilon;</i>) = 1/<i>&epsilon;</i>. &emsp;■</p>
 
-<p><b>Esempio 4.2.3</b>. Dimostriamo che:</p>
+<p><b>Esempio 4.3.3</b>. Dimostriamo che:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -170,6 +170,80 @@
 </div>
 
 <p>Se <i>&epsilon;</i> è un numero piccolo (&lt; 1), log <i>&epsilon;</i> sarà un numero negativo (grande in valore assoluto); poniamo <i>K</i> = &minus;log <i>&epsilon;</i> &gt; 0. Dobbiamo provare che, fissato questo numero <i>K</i> &gt; 0, risulta <i>x<sub>n</sub></i> &lt; &minus;<i>K</i> definitivamente; ma questo è proprio ciò che vale per ipotesi, perché <i>x<sub>n</sub></i> &rarr; &minus; &infin;. Questo conclude la dimostrazione. &emsp;□</p>
+
+<p><b>Esempio 4.3.5</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mo>&#x2212;</mo>
+      </msubsup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{x \to x_0^+} \frac{1}{x} = +\infty \quad \lim_{x \to x_0^-} \frac{1}{x} = -\infty $$ -->
+
+<p>come si verifiac facilmente. Si noti che, invece,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>non esiste!</mtext>
+</math>
+
+<!-- $$\lim_{x \to x_0} \frac{1}{x} \quad \text{non esiste!} $$ -->
 
 <h3>Asintoto orizzontale</h3>
 
@@ -707,205 +781,6 @@
 </div>
 
 <p>Ma per ipotesi <i>x<sub>n</sub></i> ⟶ 0, quindi fissata la quantità positiva <i>&epsilon;</i> = 1/&radic;<i>K</i>, certamente risulta |<i>x<sub>n</sub></i>| &lt; <i>&epsilon;</i> definitivamente, e l'asserto è dimostrato.&emsp;■</p>
-
-<h3 id="dx">Limite destro e sinistro</h3>
-
-<p>Nell'<a href="lim.html#no">esempio 4.1.5</a> abbiamo mostrato che la funzione <i>f</i>(<i>x</i>) = |<i>x</i>|/<i>x</i>, <i>x</i> &ne; 0, <i>x</i> &ne; 0, non ammette limite per <i>x</i> che tende a 0. Tuttavia è chiaro che, se <i>x</i> si avvicina a zero da destra (ossia per valori di <i>x</i> positivi), la funzione tende a 1 (è costantemente uguale a 1 per <i>x</i> &gt; 0), mentre se <i>x</i> si avvicina a zero da sinistra la funzione tende a −1. È evidente che questo tipo di informazione è più precisa della smeplice non esistenza del limite. Questa osservazione motiva l'introduzione dei concetti di limite destro e sinistro.</p>
-
-<p><b>Definizione (limite destro e sinistro)</b> Sia <i>f</i> : <i>A</i> &subset; ℝ ⟶ ℝ e sia <i>x</i><sub>0</sub> un punto di accumulazione di <i>A</i> ∩ (<i>x</i><sub>0</sub>, +&infin;) (risp. <i>A</i> ∩ (<i>x</i><sub>0</sub>, −&infin;). Diremo che il numero reale <i>ℓ</i> è il limite destro (risp. sinistro) di <i>f</i> per <i>x</i> che tende a <i>x</i><sub>0</sub>, e scriveremo</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-<!-- $$\lim_{x \to x_0^+} f(x) = \ell $$ -->
-
-<p>se per ogni <i>&epsilon;</i> &gt; 0 esiste un numero <i>&delta;</i> &gt; 0 tale che</p>
-
-<div class="eq">
-<p>|<i>f</i>(<i>x</i>) − ℓ| &lt; <i>&epsilon;</i>, &emsp; &forall;<i>x</i> &in; [(<i>x</i><sub>0</sub>, <i>x</i><sub>0</sub> + &delta;) \ {<i>x</i><sub>0</sub>}] ∩ <i>A</i></p>
-</div>
-
-<p>Diciamo che <i>f</i> ha limite sinistro, <i>ℓ</i> <i>x</i> che tende a <i>x</i><sub>0</sub>, e scriviamo</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>&#x2212;</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$\lim_{x \to x_0^-} f(x) = \ell $$ -->
-
-<p>se &forall;<i>&epsilon;</i> &gt;, ∃δ &gt;: &forall; <i>x</i></p>
-
-<div class="eq">
-<p><i>x</i> &minus; <i>&delta;</i> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub></p>
-</div>
-
-<p>Talvolta una funzione si comporta diversamente (dal punto di vista del suo limite) a seconda che <i>x</i> si avvicini a <i>x</i><sub>0</sub> da destra o da sinistra. Ad es., per <i>x</i> ⟶ 0 la funzione 1/<i>x</i> diventa sempre più grande in valore assoluto, ma con un segno diverso a seconda che sia <i>x</i> ≷ 0. Per descrivere questo tipo di situazioni, si introduce il concetto di limite destro e sinistro:</p>
-
-<p><b>Definizione (successionale di limite destro e sinistro)</b> Se <i>x</i><sub>0</sub> &in; ℝ e <i>ℓ</i> &in; ℝ<sup>*</sup>, si dice che</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <mo stretchy="false">(</mo>
-  <mtext>rispettivamente&#xA0;</mtext>
-  <mo>,</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>&#x2212;</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mi>f</mi>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-  <mo stretchy="false">)</mo>
-</math>
-
-<!-- $$\lim_{x \to x_0^+} f(x) = \ell \quad (\text{rispettivamente }, \lim_{x \to x_0^-} f(x) = \ell $$ -->
-
-<p>e in tal caso si dice che il limite destro (sinistro) di <i>f</i> per <i>x</i> tendente a <i>x</i><sub>0</sub> è <i>ℓ</i>, se per ogni successione {<i>x<sub>n</sub></i>} di punti di <i>I</i> tali che <i>x<sub>n</sub></i> ⟶ <i>x</i><sub>0</sub><sup>+</sup> (<i>x</i><sub>0</sub><sup>−</sup>) per <i>n</i> ⟶ &infin; e <i>x<sub>n</sub></i> &ne; <i>x</i><sub>0</sub> &forall;<i>n</i>, si ha che <i>f</i>(<i>x<sub>n</sub></i>) ⟶ <i>x</i><sub>0</sub> per <i>n</i> ⟶ &infin;.&emsp;□</p>
-
-<p>Ad es.,</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mn>1</mn>
-    <mi>x</mi>
-  </mfrac>
-  <mo>=</mo>
-  <mo>+</mo>
-  <mi mathvariant="normal">&#x221E;</mi>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
-        <mi>x</mi>
-        <mn>0</mn>
-        <mo>&#x2212;</mo>
-      </msubsup>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mn>1</mn>
-    <mi>x</mi>
-  </mfrac>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <mi mathvariant="normal">&#x221E;</mi>
-</math>
-
-<!-- $$\lim_{x \to x_0^+} \frac{1}{x} = +\infty \quad \lim_{x \to x_0^-} \frac{1}{x} = -\infty $$ -->
-
-<p>come si verifiac facilmente. Si noti che, invece,</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mn>1</mn>
-    <mi>x</mi>
-  </mfrac>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <mtext>non esiste!</mtext>
-</math>
-
-<!-- $$\lim_{x \to x_0} \frac{1}{x} \quad \text{non esiste!} $$ -->
-
-<p>Più in generale:</p>
-
-<blockquote>il limite lim<sub><i>x</i>&rarr;<i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>) = <i>ℓ</i>, esiste se e solo se esistono, e sono entrambi uguali a <i>ℓ</i>, i limiti destro e sinistro; tuttavia, può accadere che i limiti destro e sinistrono esistano ma siano diversi tra loro, oppure uno solo dei due esista: in questi casi lim<sub><i>x</i>&rarr;<i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>) non esiste.</blockquote>
-
-<p>Se <i>f</i> è definita in (<i>a,b</i>), il limite per <i>x</i> &rarr; <i>a</i> (rispettivamente <i>x</i> &rarr; <i>b</i>) è automaticamente un limite destro (rispettivamente sinistro).</p>
 
 <h3>Asintoto verticale</h3>
 
@@ -1770,7 +1645,7 @@ $$ -->
 <p>for |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>&delta;</i>. The other statement can be proved in a similar manner. &emsp;□</p>
 
 <section aria-label="End">
-<a href="lim.html">&#171;The definition of limit</a>
+<a href="lim_dx.html">&#171;Limiti destro e sinistro</a>
 <a href="index.html">Index</a>
 <a href="cont.html">Continuità&#187;</a>
 </section>
