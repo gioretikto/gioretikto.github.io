@@ -131,22 +131,22 @@
 
 <p>dividing by <i>h</i> and observing that <i>k</i>/<i>h</i> → <i>f</i>'(<i>x</i>), we have proved the claim.&emsp; □</p>
 
-<p>La (5.6.2) si chiama <i>regola della catena</i>; usando le notazioni (di Leibniz) d<i>f</i>/d<i>x</i> e d<i>g</i>/d<i>x</i> per le derivate di <i>f</i> e <i>g</i> e posto <i>w</i> = <i>g</i>(<i>y</i>), la (5.6.2) acquista una forma più signifiativa:</p>
+<p>La (5.6.2) si chiama <i>regola della catena</i>; usando le notazioni (di Leibniz) d<i>f</i>/d<i>x</i> e d<i>g</i>/d<i>x</i> per le derivate di <i>f</i> e <i>g</i> e posto <i>z</i> = <i>g</i>(<i>y</i>), la (5.6.2) acquista una forma più significativa:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
     <mrow>
       <mtext>d</mtext>
-      <mi>w</mi>
+      <mi>z</mi>
     </mrow>
     <mrow>
       <mtext>d</mtext>
-      <mi>y</mi>
+      <mi>x</mi>
     </mrow>
   </mfrac>
   <mo>=</mo>
   <mfrac>
-    <mtext>dw</mtext>
+    <mtext>dz</mtext>
     <mrow>
       <mtext>d</mtext>
       <mi>y</mi>
@@ -163,12 +163,11 @@
       <mi>x</mi>
     </mrow>
   </mfrac>
-  <mtext>&emsp;(5.6.3)</mtext>
 </math>
 
-<!-- $$ \frac{\text{d}w}{\text{d}y} = \frac{\text{dw}}{\text{d}y} ⋅ \frac{\text{d}y}{\text{d}x} $$ -->
+<!-- $$ \frac{\text{d}z}{\text{d}x} = \frac{\text{dz}}{\text{d}y} ⋅ \frac{\text{d}y}{\text{d}x} $$ -->
 
-<p>(come se d<i>y</i> si semplificasse). Infatti si ricordi che <i>f</i> ∘ <i>g</i> è definita come <i>f</i>(<i>g</i>(<i>x</i>)). La quantità <i>f′</i>(<i>g</i>(<i>x</i>)) è la derivata di <i>f</i> con <i>g</i> al posto di <i>x</i>, che si può scrivere come d<i>f</i>/d<i>g</i>. As usual, <i>g′</i>(<i>x</i>) = d<i>g</i>/d<i>x</i>. Then the formula above.</p>
+<p>(come se d<i>y</i> si semplificasse). Se una variabile <i>z</i> depende dalla variabile <i>y</i>, la quale essa stessa dipende dalla vaiabile x (i.e. <i>y</i> e <i>z</i> sono variabili dipendenti), allora <i>z</i> dipende anch'essa da <i>x</i>, via the intermediate variable y. In this case, the chain rule is expressed as d z d x = d z d y ⋅ d y d x , {\displaystyle {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}},}. Infatti si ricordi che <i>f</i> ∘ <i>g</i> è definita come <i>f</i>(<i>g</i>(<i>x</i>)). La quantità <i>f′</i>(<i>g</i>(<i>x</i>)) è la derivata di <i>f</i> con <i>g</i> al posto di <i>x</i>, che si può scrivere come d<i>f</i>/d<i>g</i>. As usual, <i>g′</i>(<i>x</i>) = d<i>g</i>/d<i>x</i>. Then the formula above.</p>
 
 <p>Come suggerisce il nome di "regola della catena", questa può essere generalizzata alla composizione di un numero qualsiasi di funzioni, composte una con l'altra. Ad es., per tre funzioni si ha</p>
 
@@ -184,7 +183,7 @@
 <p><i>w</i>(<i>x</i>) = (sen <i>x</i>)<sup>3</sup></p>
 </div>
 
-<p>Per calcolarla, occorre inserire il vlaore di <i>x</i>, calcolare sin <i>x</i> e poi elevare tutto al cubo. Posto <i>f</i>(<i>x</i>) = sin <i>x</i> e <i>g</i>(<i>y</i>) = <i>y</i><sup>3</sup>. Si ha alloraq <i>w</i>(<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>)). Pertanto:</p>
+<p>Per calcolarla, occorre inserire il vlaore di <i>x</i>, calcolare sin <i>x</i> e poi elevare tutto al cubo. Posto <i>f</i>(<i>x</i>) = sin <i>x</i> e <i>g</i>(<i>y</i>) = <i>y</i><sup>3</sup>. Si ha allora <i>w</i>(<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>)). Pertanto:</p>
 
 <div class="eq">
 <p><i>w</i> '(<i>x</i>) = 3 (sen <i>x</i>)<sup>2</sup> ⋅ cos <i>x</i>&emsp;■</p>
@@ -262,7 +261,7 @@
 <p><b>Esempio 5.6.6</b>. Possiamo ora completare la dimostrazione delle formule contenute nella tabella delle derivate di funzioni elementari.</p>
 
 <div class="eq">
-<p>(<i>a<sup>x</sup></i>)' = (e<sup>xlog<i>a</i>)' = usando le formule per la derivata di <i>e<sup>t</sup></i> e la r. della catena = e<sup><i>x</i> log <i>a</i></sup> ⋅ log <i>a</i> = <i>a<sup>x</sup></i> log <i>a</i>.</p>
+<p>(<i>a<sup>x</sup></i>)' = (e<sup>xlog<i>a</i></sup>)' = usando le formule per la derivata di <i>e<sup>t</sup></i> e la r. della catena = e<sup><i>x</i> log <i>a</i></sup> ⋅ log <i>a</i> = <i>a<sup>x</sup></i> log <i>a</i>.</p>
 </div>
 
 <p>Effettuando il cambiamento di base del logaritmo</p>
