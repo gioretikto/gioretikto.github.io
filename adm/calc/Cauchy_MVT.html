@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Legge"/>
-    <title>Legge</title>
+    <meta name="description" content="Teorema di Cauchy"/>
+    <title>Teorema di Cauchy</title>
     <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -17,11 +17,11 @@
     </ul>
 </nav>
 
-<div class="content">
+<article>
 
-<h1>Cauchy’s Form of the Mean Value Theorem</h1>
+<h1>Teorema di Cauchy</h1>
 
-<p>If we apply the Mean value theorem to each of two functions <i>f</i> and <i>g</i> continuous on [<i>a,b</i>] and differentiable on (<i>a, b</i>), we can conclude that there are <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub> &in; (<i>a, b</i>) such that</p>
+<p>Passiamo ora ad un altro importante teorema del calcolo differenziale, che generalizza il <a href="Lagrange.html">Teorema di Lagrange</a>. <br> If we apply the Mean value theorem to each of two functions <i>f</i> and <i>g</i> continuous on [<i>a,b</i>] and differentiable on (<i>a, b</i>), we can conclude that there are <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub> &in; (<i>a, b</i>) such that</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msup>
@@ -101,39 +101,87 @@
 
 <p>However it happens to exist one <i>c</i> &in; (<i>a,b</i>) wich works for both function, as the next theorem precises.</p>
 
-<p><b>Theorem 5.6.1</b> (<i>Cauchy's Mean Value Theorem</i>) Let <i>f</i> and <i>g</i> continuous on [<i>a,b</i>] and differentiable on (<i>a, b</i>). Then there exists <i>c</i> &in; (<i>a,b</i>) such that</p>
+<p><b>Theorem 5.12.1</b> (<i>Cauchy's Mean Value Theorem</i>) Siano <i>f,g</i> : [<i>a,b</i>] &rarr; ℝ due funzioni continue nell'intervallo chiuso [<i>a,b</i> e derivabili in (<i>a, b</i>), con <i>g'</i>(<i>x</i>) &ne; 0, &forall; <i>x</i> &in; (<i>a,b</i>). Allora <i>g</i>(<i>a</i>) &ne; <i>g</i>(<i>b</i>) ed esiste un punto <i>c</i> &in; (<i>a,b</i>) tale che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>a</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mtext>&emsp;(5.12.2)</mtext>
+</math>
+
+<!-- $$\frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(c)} {g'(c)} $$ -->
+
+<p><b>Proof</b>. Se <i>g</i>(<i>a</i>) = <i>g</i>(<i>b</i>) il risultato seguirebbe applicando il <a href="Rolle.html">T. di Rolle's</a> a <i>g</i>. Assumiamo quindi <i>g</i>(<i>a</i>) &ne; <i>g</i>(<i>b</i>). Utilizziamo la stessa funzione ausiliaria usata nella dimostrazione del T. di Lagrange</p>
 
 <div class="eq">
-<p><i>f'</i>(<i>c</i>) [<i>g</i>(<i>b</i>) − <i>g</i>(<i>a</i>)] = <i>g</i>'(<i>c</i>) [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]</p>
+<p><i>h</i>(<i>x</i>) = [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]<i>g</i>(<i>x</i>) &minus; [<i>g</i>(<i>b</i> − <i>g</i>(<i>a</i>)]<i>f</i>(<i>x</i>)</p>
 </div>
 
-<p><b>Proof</b>. If <i>g</i>(<i>a</i>) = <i>g</i>(<i>b</i>) then the result holds by Rolle's Theorem applied to <i>g</i>. So we assume that <i>g</i>(<i>a</i>) &ne; <i>g</i>(<i>b</i>). In the proof of Lagrange's Mean value theorem we used the auxiliary function</p>
+<p>Osserviamo che <i>h</i> è continua in [<i>a,b</i>] ed è derivabile in (<i>a,b</i>), in quanto differenza di funzioni che hanno queste prorpeità. Inoltre</p>
 
 <div class="eq">
-<p><i>&omega;</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>x</i> ⋅ [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>)</p>
+<p><i>h</i>(<i>a</i>) = [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]<i>g</i>(<i>a</i>) &minus; [<i>g</i>(<i>b</i> − <i>g</i>(<i>a</i>)]<i>f</i>(<i>a</i>) = <i>f</i>(<i>b</i>)<i>g</i>(<i>a</i>) &minus; <i>g</i>(<i>b</i>)<i>f</i>(<i>a</i>)<br>
+<p><i>h</i>(<i>b</i>) = [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]<i>g</i>(<i>b</i>) &minus; [<i>g</i>(<i>b</i> − <i>g</i>(<i>a</i>)]<i>f</i>(<i>b</i>) = &minus;<i>f</i>(<i>a</i>)<i>g</i>(<i>b</i>) &minus; <i>g</i>(<i>a</i>)<i>f</i>(<i>b</i>)</p>
 </div>
 
-<p>We replace the function <i>x</i> (identity function) with <i>g</i>; We have</p>
+<p>quindi <i>h</i>(<i>a</i>) = <i>h</i>(<i>b</i>). Possiamo dunque applicare il T. di Rolle alla funzione <i>h</i> ottenendo che esiste un punto <i>c</i> &in; (<i>a,b</i>) tale che <i>h'</i>(<i>c</i>) = 0. Ma</p>
 
 <div class="eq">
-<p><i>&omega;</i>(<i>x</i>) = <i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>) ⋅ [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]/(<i>b</i> − <i>a</i>)</p>
+<p><i>h'</i>(<i>c</i>) = [<i>f</i>(<i>b</i>) − <i>f</i>(<i>a</i>)]<i>g'</i>(<i>c</i>) &minus; [<i>g</i>(<i>b</i> − <i>g</i>(<i>a</i>)]<i>f'</i>(<i>c</i>)</p> 
 </div>
 
-<p>Then <i>&omega;</i> is continous on [<i>a,b</i>] and differentiable on (<i>a,b</i>). One can easily verify that <i>&omega;</i>(<i>a</i>) = <i>&omega;</i> (<i>b</i>), so by Rolle's Theorem there is a <i>c</i> &in; (<i>a,b</i>) such that <i>&omega;</i>'(<i>c</i>) = 0. Finally <i>&omega;</i>'(<i>c</i>) = 0 gives</p>
-
-<div class="eq">
-<p><i>f'</i>(<i>c</i>)[<i>g</i>(<i>b</i> − <i>g</i>(<i>a</i>)] = <i>g'</i>(<i>c</i>) [<i>f</i>(<i>b</i> − <i>f</i>(<i>a</i>)]</p>
-</div>
-
-<p>as desired. &emsp;□</p>
+<p>che equivale alla (5.12.2). &emsp;□</p>
 
 <section aria-label="End">
-<a href="Lagrange.html">&#171;Lagrance MVT</a>
+<a href="Lagrange.html">&#171;il T. di Lagrange</a>
 <a href="index.html">Index</a>
-<a href="Hopital.html">Hôpital's Rule&#187;</a>
+<a href="Hopital.html">Il T. di de l'Hôpital&#187;</a>
 </section>
 
-</div>
+</article>
 
 </body>
 </html>

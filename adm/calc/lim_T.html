@@ -23,14 +23,33 @@
 
 <p>Esaminiamo ora le proprietà dei limiti e i principali metodi per il loro calcolo effettivo. <br>Anzitutto possiamo enunciare i teoremi sui limiti di funzioni che discendono immediatamente dai corrispondenti teoremi sui limiti di successioni. <br>Utilizzeremo qui la nozione di "proprietà vera <a href="lim.html#def">definitivamente</a> per <i>x</i> &rarr; <i>x</i><sub>0</sub>". Nei prossimi enunciati <i>x</i><sub>0</sub> e ℓ saranno punti di ℝ<sup>*</sup>, salvo avviso contrario.</p>
 
-<p><b>Teorema 4.3.1 (Del confronto)</b> Se:</p>
+<p><b>Teorema 4.3.1 (Del confronto)</b> Siano date tre funzioni <i>f,g,h</i>: <i>A</i> &rarr; ℝ e sia <i>x</i><sub>0</sub> un punto di accumulazioen di <i>A</i>. Supponiamo che esista &delta;<sub>0</sub> &gt; 0 tale che</p>
 
-<ol>
-	<li><p>Per <i>x</i> &rarr; <i>x</i><sub>0</sub>, <i>f</i>(<i>x</i>) &rarr; ℓ e <i>g</i>(<i>x</i>) &rarr; ℓ;</p>
-	<li><p><i>f</i>(<i>x</i>) &le; <i>h</i>(<i>x</i>) &le; <i>g</i>(<i>x</i>) definitivamente per <i>x</i> &rarr; <i>x</i><sub>0</sub>.</p></li>
-</ol>
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &le; <i>h</i>(<i>x</i>) &le; <i>g</i>(<i>x</i>)&emsp;&emsp; ∀<i>x</i> ∈ [(<i>x</i><sub>0</sub> − &delta;<sub>0</sub>, <i>x</i><sub>0</sub> +&delta;<sub>0</sub>)] ∩ <i>A</i>, <i>x</i> &ne; <i>x</i><sub>0</sub></p>
+</div>
 
-<p>allora anche <i>h</i>(<i>x</i>) &rarr; ℓ per <i>x</i> &rarr; <i>x</i><sub>0</sub>.</p>
+<p>(ossia si ha <i>f</i>(<i>x</i>) &le; <i>h</i>(<i>x</i>) &le; <i>g</i>(<i>x</i>) definitivamente per <i>x</i> → <i>x</i><sub>0</sub>). <br> Per <i>x</i> &rarr; <i>x</i><sub>0</sub>, <i>f</i>(<i>x</i>) &rarr; ℓ e <i>g</i>(<i>x</i>) &rarr; ℓ. Allora anche <i>h</i>(<i>x</i>) &rarr; ℓ per <i>x</i> &rarr; <i>x</i><sub>0</sub>.</p>
+
+<p><b>Dim.</b> Sia <i>&epsilon;</i> &gt; 0. Poiché lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>) = ℓ, per definizione di limite esiste un numero &delta;<sub>1</sub> = &delta;<sub>1</sub>(<i>&epsilon;</i>) &gt; 0 tale che</p>
+
+<div class="eq">
+<p>ℓ &minus;  <i>&epsilon;</i> &lt; <i>f</i>(<i>x</i>) &lt; ℓ + <i>&epsilon;</i>&emsp;&emsp; ∀<i>x</i> ∈ [(<i>x</i><sub>0</sub> − &delta;<sub>1</sub>, <i>x</i><sub>0</sub> +&delta;<sub>1</sub>)] ∩ <i>A</i>, <i>x</i> &ne; <i>x</i><sub>0</sub></p>
+</div>
+
+<p>Analogamente, poiché lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>h</i>(<i>x</i>) = ℓ, esiste un numero &delta;<sub>2</sub> = &delta;<sub>1</sub>(<i>&epsilon;</i>) &gt; 0 tale che</p>
+
+<div class="eq">
+<p>ℓ &minus;  <i>&epsilon;</i> &lt; <i>h</i>(<i>x</i>) &lt; ℓ + <i>&epsilon;</i>&emsp;&emsp; ∀<i>x</i> ∈ [(<i>x</i><sub>0</sub> − &delta;<sub>2</sub>, <i>x</i><sub>0</sub> +&delta;<sub>2</sub>)] ∩ <i>A</i>, <i>x</i> &ne; <i>x</i><sub>0</sub></p>
+</div>
+
+<p>Preso quindi &delta; = &delta;(<i>&epsilon;</i>) il più piccolo fra &delta;,&delta;<sub>1</sub>,&delta;<sub>2</sub>, si avrà che</p>
+
+<div class="eq">
+<p>ℓ &minus;  <i>&epsilon;</i> &lt; <i>f</i>(<i>x</i>) &le; <i>g</i>(<i>x</i>) &le; <i>h</i>(<i>x</i>) &lt; ℓ + <i>&epsilon;</i>&emsp;&emsp; ∀<i>x</i> ∈ [(<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> +&delta;)] ∩ <i>A</i>, <i>x</i> &ne; <i>x</i><sub>0</sub></p>
+</div>
+
+<p>Dall'arbitrarietà di <i>&epsilon;</i> segue la tesi. &emsp;□</p>
 
 <p><b>Teorema 4.3.2 Corollario</b> Se:</p>
 
@@ -49,7 +68,7 @@
 
 <p><b>Teorema 4.3.6 (Di permanenza del segno per funzioni continue</b>) Se per <i>f</i> è continua in <i>x</i><sub>0</sub> e <i>f</i>(<i>x</i><sub>0</sub>) &gt; 0 definitivamente per <i>x</i> &rarr; <i>x</i><sub>0</sub>.</p>
 
-<p><b>Teorema 4.3.7 (Algebra dei limiti, caso dei limiti finiti</b>) Se per <i>x</i> &rarr; <i>x</i><sub>0</sub>, <i>f</i>(<i>x</i>) &rarr; ℓ<sub>1</sub> e <i>g</i>(<i>x</i>) &rarr; ℓ<sub>2</sub> (ℓ<sub>1</sub>, ℓ<sub>2</sub> &in; ℝ), allora per <i>x</i> &rarr; <i>x</i><sub>0</sub> si ha:</p>
+<p id="alg"><b>Teorema 4.3.7 (Algebra dei limiti, caso dei limiti finiti</b>) Se per <i>x</i> &rarr; <i>x</i><sub>0</sub>, <i>f</i>(<i>x</i>) &rarr; ℓ<sub>1</sub> e <i>g</i>(<i>x</i>) &rarr; ℓ<sub>2</sub> (ℓ<sub>1</sub>, ℓ<sub>2</sub> &in; ℝ), allora per <i>x</i> &rarr; <i>x</i><sub>0</sub> si ha:</p>
 
 <ol>
 	<li><p><i>f</i>(<i>x</i>) &pm; <i>g</i>(<i>x</i>) &rarr; ℓ<sub>1</sub> &pm; ℓ<sub>2</sub>;</p></li>

@@ -234,15 +234,32 @@ Geometricamente <i>f</i>(<i>x</i>) ⟶ ℓ per <i>x</i> ⟶ <i>x</i><sub>0</sub>
 
 <p>Una funzione che per <i>x</i> &rarr; <i>x</i> tende a 0 si dice <i>infinitesima</i> per <i>x</i> &rarr; <i>x</i><sub>0</sub>, analogamente una funzione che tende a &pm; &infinf; si dice <i>infinita</i>- <br> La definizione appena data di <i>limite di funzione</i> di dice definizione <i>successionale</i> di limite, in quanto riconduce il concetto di limite di funzione a quello di limite di successione. Non è l'unica definizione possibile, come vedremo, e a prima vista può sembrare una definizione poco operativa. Tuttavia, come dimostranno sia il successivo sviluppo della teoria, sia gli esemi che faremo di calcolo di limiti, il fatto di avera già sviluppato le basi del calcolo dei limiti per le successioni, renderà molto vantaggiosa questa definizione, proprio dal punto di vista operativo. Ad es., possiamo subito affermare che vale il:</p>
 
-<p><b>Teorema 4.3 (Di unicità del Limite)</b> Se esiste lim<sub><i>c</i> &rarr; <i>x</i><sub>0</sub></sub> = ℓ, tale limite ℓ è unico.</p>
+<p><b>Teorema 4.3 (Di unicità del Limite)</b> Se esiste lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> = ℓ, tale limite ℓ è unico.</p>
 
-<p>Infatti, se esistessero due limiti ℓ<sub>1</sub>, ℓ<sub>2</sub> diversi tra loro, presa una qualsiasi successione <i>x<sub>n</sub></i> &rarr; <i>c</i> si avrebbe</p>
+<p><b>Dim1. (usando la def. successionale)</b> Infatti, se esistessero due limiti ℓ<sub>1</sub>, ℓ<sub>2</sub> diversi tra loro, presa una qualsiasi successione <i>x<sub>n</sub></i> &rarr; <i>c</i> si avrebbe</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x<sub>n</sub></i>) &rarr; ℓ<sub>1</sub> e <i>f</i>(<i>x<sub>n</sub></i>) &rarr; ℓ<sub>2</sub></p>
 </div>
 
-<p>dunque la <i>successione</i> <i>f</i>(<i>x<sub>n</sub></i>) avrebbe due limiti distinti, assurdo. <br> Osserviamo ora un poì più da vicino le varie situazioni che si possono verificare nella definizione di limite di funzione. È subito chirao che la casistica sarà più ricca e completa rispetto al caso delle successioni, perché mentre per una successione <i>a<sub>n</sub></i> il limite si calcola necessariamente per <i>n</i> &rarr; +&infin;, per una funzione <i>f</i>(<i>x</i>) il limite si può calcolare per <i>x</i> &rarr; <i>c</i> dove <i>c</i> può essere qualsiasi elemento di ℝ<sup>*</sup>.</p>
+<p>dunque la <i>successione</i> <i>f</i>(<i>x<sub>n</sub></i>) avrebbe due limiti distinti, assurdo.&emsp;□</p>
+
+<p><b>Dim2. usando la def. &delta;-&epsilon)</b> Supponaimo per assurdo che si abbia ℓ<sub>1</sub> &ne; ℓ<sub>2</sub>. Scegliamo la quantità positiva <i>&epsilon;</i> = |ℓ<sub>1</sub> &minus; ℓ<sub>2</sub>|/2 in maniera tale che gli intorni (ℓ<sub>1</sub> &minus; <i>&epsilon;</i>, ℓ<sub>1</sub> + <i>&epsilon;</i>) ed (ℓ<sub>2</sub> &minus; <i>&epsilon;</i>, ℓ<sub>2</sub> + <i>&epsilon;</i>) siano disgiunti. Poiché lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> = ℓ<sub>1</sub>, per definizione di limite deve esistere un numero &delta;<sub>1</sub> &gt; 0 tale che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &in; (ℓ<sub>1</sub> &minus; <i>&epsilon;</i>, ℓ<sub>1</sub> + <i>&epsilon;</i>) &emsp;&emsp; ∀<i>x</i> ∈ [(<i>x</i><sub>0</sub> − &delta;<sub>1</sub>, <i>x</i><sub>0</sub> +&delta;<sub>1</sub>)] ∩ <i>A</i>, <i>x</i> &ne; <i>x</i><sub>0</sub></p>
+</div>
+
+<p>Analogamente, poiché lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> = ℓ<sub>2</sub>, deve esistere un numero &delta;<sub>2</sub> &gt; 0 tale che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &in; (ℓ<sub>2</sub> &minus; <i>&epsilon;</i>, ℓ<sub>2</sub> + <i>&epsilon;</i>) &emsp;&emsp; ∀<i>x</i> ∈ [(<i>x</i><sub>0</sub> − &delta;<sub>2</sub>, <i>x</i><sub>0</sub> +&delta;<sub>2</sub>)] ∩ <i>A</i>, <i>x</i> &ne; <i>x</i><sub>0</sub></p>
+</div>
+
+<p>Preso quindi &delta; il più piccolo fra &delta;<sub>1</sub> e &delta;<sub>2</Sub>, si deve avere contemporaneamente che <i>f</i>(<i>x</i>) &in; (ℓ<sub>1</sub> &minus; <i>&epsilon;</i>, ℓ<sub>1</sub> + <i>&epsilon;</i>) e 
+<i>f</i>(<i>x</i>) &in; (ℓ<sub>2</sub> &minus; <i>&epsilon;</i>, ℓ<sub>2</sub> + <i>&epsilon;</i>) per ogni <i>x</i> &in; (<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> +&delta;) ∩ <i>A</i>, <i>x</i> &ne; <i>x</i><sub>0</sub>. Questo è chiaramente impossibile in quanto gli intorni (ℓ<sub>1</sub> &minus; <i>&epsilon;</i>, ℓ<sub>1</sub> + <i>&epsilon;</i>) ed (ℓ<sub>2</sub> &minus; <i>&epsilon;</i>, ℓ<sub>2</sub> + <i>&epsilon;</i>) sono disgiunti. &emsp;□</p>
+
+<p>Osserviamo ora un po' più da vicino le varie situazioni che si possono verificare nella definizione di limite di funzione. È subito chirao che la casistica sarà più ricca e completa rispetto al caso delle successioni, perché mentre per una successione <i>a<sub>n</sub></i> il limite si calcola necessariamente per <i>n</i> &rarr; +&infin;, per una funzione <i>f</i>(<i>x</i>) il limite si può calcolare per <i>x</i> &rarr; <i>c</i> dove <i>c</i> può essere qualsiasi elemento di ℝ<sup>*</sup>.</p>
 
 <p>Parleremo di</p>
 
