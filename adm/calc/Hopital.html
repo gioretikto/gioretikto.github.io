@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hôpital's Rule"/>
-    <title>Hôpital's Rule</title>
+    <meta name="description" content="Il teorema di de l'Hôpital"/>
+    <title>Il teorema di de l'Hôpital</title>
     <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -19,138 +19,25 @@
 
 <article>
 
-<h1>Hôpital's Rule</h1>
+<h1>Il teorema di de l'Hôpital</h1>
 
-<p>Differential calculus offers a way to calculate limits in the case of indeterminate forms of the type 0/0 and &infin;/&infin;. <br> L'Hospital's Rule is named after a French nobleman, the Marquis de l'Hospital (1661–1704) a student of Johann Bernoulli, a marquis for whom the latter wrote the first textbook of analysis in the years 1691-1692. The portion of this textbook devoted to differential calculus was published in slightly altered form by l'Hopital under his own name in the "Analyse des infiniments petits" in 1696, the first text on differential calculus. Thus "l'Hopital's rule" is really due to Johann Bernoulli. L'Hôpital actually considered only the following special case in which two functions <i>f</i>, <i>g</i> are coninuos on [<i>a,b</i>], differentiable on (<i>a,b</i>) and both infinitesimal for <i>x</i> ⟶ <i>a</i> and showed that</p>
+<p>Una notevole applicazione del calcolo differenziale si ha nel calcolo dei limiti che si presentano nelle forme di indecisione 0/0 and &infin;/&infin;. <br> L'Hospital's Rule is named after a French nobleman, the Marquis de l'Hospital (1661–1704) a student of Johann Bernoulli, a marquis for whom the latter wrote the first textbook of analysis in the years 1691-1692. The portion of this textbook devoted to differential calculus was published in slightly altered form by l'Hôpital under his own name in the "Analyse des infiniments petits" in 1696, the first text on differential calculus. Thus "l'Hôpital's rule" is really due to Johann Bernoulli. L'Hôpital actually considered only the following special case in which two functions <i>f</i>, <i>g</i> are coninuos on [<i>a,b</i>], differentiable on (<i>a,b</i>) and both infinitesimal for <i>x</i> ⟶ <i>a</i> and showed that</p>
 
-<div class="eq">
-<p>lim<sub><i>x</i> ⟶ <i>a</i></sub> <i>f</i>(<i>x</i>)/<i>g</i>(<i>x</i>) = <i>f'</i>(<i>a</i>)/<i>g'</i>(<i>a</i>)</p>
-</div>
+<p><b>Teorema 5.12.1 (Di de l'Hôpital)</b> Siano <i>f,g</i>: (<i>a,b</i>) \ {<i>x</i><sub>0</sub>} &rarr; ℝ dove <i>x</i><sub>0</sub> &in; (<i>a,b</i>). Supponiamo che</p>
 
-<p>where <i>a</i> is finite, and both <i>f'</i>(<i>a</i>) and <i>g'</i>(<i>a</i>) exist, finite, and are not zero. Indeed, using the definition of derivative</p>
+<ol type="a">
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>a</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>a</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <munder>
-        <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-        <mrow data-mjx-texclass="ORD">
-          <mi>h</mi>
-          <mo accent="false" stretchy="false">&#x2192;</mo>
-          <mn>0</mn>
-        </mrow>
-      </munder>
-      <mfrac>
-        <mrow>
-          <mi>f</mi>
-          <mo stretchy="false">(</mo>
-          <mi>a</mi>
-          <mo>+</mo>
-          <mi>h</mi>
-          <mo stretchy="false">)</mo>
-          <mo>&#x2212;</mo>
-          <mi>f</mi>
-          <mo stretchy="false">(</mo>
-          <mi>a</mi>
-          <mo stretchy="false">)</mo>
-        </mrow>
-        <mi>h</mi>
-      </mfrac>
-    </mrow>
-    <mrow>
-      <munder>
-        <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-        <mrow data-mjx-texclass="ORD">
-          <mi>h</mi>
-          <mo accent="false" stretchy="false">&#x2192;</mo>
-          <mn>0</mn>
-        </mrow>
-      </munder>
-      <mfrac>
-        <mrow>
-          <mi>g</mi>
-          <mo stretchy="false">(</mo>
-          <mi>a</mi>
-          <mo>+</mo>
-          <mi>h</mi>
-          <mo stretchy="false">)</mo>
-          <mo>&#x2212;</mo>
-          <mi>g</mi>
-          <mo stretchy="false">(</mo>
-          <mi>a</mi>
-          <mo stretchy="false">)</mo>
-        </mrow>
-        <mi>h</mi>
-      </mfrac>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>h</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mn>0</mn>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>a</mi>
-      <mo>+</mo>
-      <mi>h</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>a</mi>
-      <mo>+</mo>
-      <mi>h</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-</math>
-
-<!-- $$ \frac{f'(a)}{g'(a)} = \frac{\lim_{h \to 0} \frac{f(a+h) - f(a)}{h}} {\lim_{h \to 0} \frac{g(a+h) - g(a)}{h}} = \lim_{h \to 0} \frac{f(a+h)}{g(a+h)} $$ -->
-
-<p>since <i>f</i>(<i>a</i>) = <i>g</i>(<i>a</i>) = 0 from the continuity of <i>f,g</i> at <i>a</i>. But this last condition is too <b>restrictive</b>. Indeed we have the following more general theorem.</p>
-
-<p><b>Theorem 5.7.1</b> (L'Hôpital's Rule</i>: 0/0 case). Let <i>f</i> and <i>g</i> be defined and differentiable on (<i>x</i><sub>0</sub>,<i>b</i>), such that <i>g'</i>(<i>x</i>) &ne; 0 &forall;<i>x</i> &in; (<i>x</i><sub>0</sub>,<i>b</i>). Suppose that</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<li>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <munder>
     <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
+      <msub>
         <mi>x</mi>
         <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
+      </msub>
     </mrow>
   </munder>
   <mi>f</mi>
@@ -158,16 +45,17 @@
   <mi>x</mi>
   <mo stretchy="false">)</mo>
   <mo>=</mo>
+  <mn>0</mn>
+  <mo>,</mo>
   <munder>
     <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
+      <msub>
         <mi>x</mi>
         <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
+      </msub>
     </mrow>
   </munder>
   <mi>g</mi>
@@ -178,21 +66,22 @@
   <mn>0</mn>
 </math>
 
-<!-- $$ \lim_{x \to x_0^+} f(x) = \lim_{x \to x_0^+} g(x) = 0 $$ -->
+<!--$$\lim_{x \to x_0} f(x) = 0, \lim_{x \to x_0} g(x) = 0 $$ --></li>
 
-<p>Then</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+	<li><p><i>f</i> e <i>g</i> siano derivabili &forall;<i>x</i> &in; (<i>a,b</i>), <i>x</i> &ne; <i>x</i><sub>0</sub>.</p></li>
+	
+	<li><p><i>g'</i>(<i>x</i>) &ne; 0 &forall;<i>x</i> &in; (<i>a,b</i>), <i>x</i> &ne; <i>x</i><sub>0</sub>;</p></li>
+	
+	<li><p>esista, finito o &pm;&infin;, <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <munder>
     <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
+      <msub>
         <mi>x</mi>
         <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
+      </msub>
     </mrow>
   </munder>
   <mfrac>
@@ -217,25 +106,171 @@
   </mfrac>
   <mo>=</mo>
   <mi>&#x2113;</mi>
+</math>
+</li>
+
+</ol>
+
+<p>Allora esiste anche il limite <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+ed è uguale a ℓ.</p>
+
+<p>La medesima conclusione vale anche se l'ipotesi (a) è sostituita da</p>
+
+<p>(a') lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub> <i>g</i>(<i>x</i>) = &pm;&infin;.</p>
+
+<p><b>Dim.</b>. Grazie all'ipotesi (a) le funzioni <i>f</i> e <i>g</i> possono essere estese con continuità anche nel punto <i>x</i><sub>0</sub> ponendo</p> 
+
+<div class="eq">
+<p><i>f</i>(<i>x</i><sub>0</sub>) = 0, <i>g</i>(<i>x</i><sub>0</sub>) = 0</p>
+</div>
+
+<p>Supponiamo inizialmente che il limite in d) sia finito, cioè ℓ &in; ℝ. Da d) e dalla definizione di limite si ha che, preso ad arbitrio <i>&epsilon;</i>, esiste un numero <i>&delta;</i> &gt; 0 tale che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mi>&#x2113;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mi>&#x3F5;</mi>
+  <mo>,</mo>
   <mstyle scriptlevel="0">
     <mspace width="1em"></mspace>
   </mstyle>
-  <mo stretchy="false">&#x21D2;</mo>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
+  <mi mathvariant="normal">&#x2200;</mi>
+  <mi>t</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B4;</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>&#x3B4;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mi>t</mi>
+  <mo>&#x2260;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mtext>&emsp;(5.12.2)</mtext>
+</math>
+
+<!-- $$|\frac{f'(t)} {g'(t)} -\ell | \lt \epsilon, \quad \forall t \in (x_0 - \delta, x_0 + \delta), t \ne x_0$$ -->
+
+<p>Sia ora <i>x</i> &in; (<i>x</i><sub>0</sub> &minus; &delta;, <i>x</i><sub>0</sub> + &delta;), <i>x</i> &ne; <i>x</i><sub>0</sub>. Assumiamo ad es. che <i>x</i><sub>0</sub> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub> + &delta; (il caso <i>x</i><sub>0</sub> &minus; &delta; &lt; <i>x</i> &/lt; <i>x</i><sub>0</sub> si tratta in maniera analoga). Applichiamo il T. di Cauchy alle funzioni <i>f</i> e <i>g</i> nell'intervallo [<i>x</i><sub>0</sub>, <i>x</i>]: esiste <i>c</i> &in; (<i>x</i><sub>0</sub>, <i>x</i>) tale che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
       <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msubsup>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
         <mi>x</mi>
         <mn>0</mn>
-        <mo>+</mo>
-      </msubsup>
+      </msub>
+      <mo stretchy="false">)</mo>
     </mrow>
-  </munder>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
   <mfrac>
     <mrow>
       <mi>f</mi>
@@ -250,13 +285,71 @@
       <mo stretchy="false">)</mo>
     </mrow>
   </mfrac>
-  <mo>=</mo>
+</math>
+
+<!-- $$ \frac{f'(c)} {g'(c)} = \frac{f(x) - f(x_0)} {g(x) - g(x_0)} = \frac{f(x)} {g(x)} $$ -->
+
+<p>Nell'ultimo passaggio abbiamo usato il fatto che <i>f</i>(<i>x</i><sub>0</sub>) = <i>g</i>(<i>x</i><sub>0</sub>) = 0; si osservi inoltre che come conseguenza del T. di Cauchy, sia che <i>g</i>(<i>x</i>) &ne; <i>x</i><sub>0</sub> quando <i>x</i> &ne; <i>x</i><sub>0</sub>. Poiché <i>c</i> &in; (<i>x</i><sub>0</sub>, <i>x</i>) &subset; (<i>x</i><sub>0</sub>, <i>x</i><sub>0</sub> + &delta;), da (5.12.2) con <i>t</i> = <i>x</i> otteniamo che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
   <mi>&#x2113;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mi>&#x2113;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mi>&#x3F5;</mi>
 </math>
 
-<!-- $$ \lim_{x \to x_0^+} \frac{f'(x)}{g'(x)} = \ell \quad \Rightarrow \quad \lim_{x \to x_0^+} \frac{f(x)}{g(x)} = \ell $$ -->
+<!-- $$|\frac{f(x)} {g(x)} -\ell | = |\frac{f'(c)} {g'(c)} -\ell | \lt \epsilon$$ -->
 
-<p><b>Proof</b>. Without loss of generality, it can be assumed that <i>f</i>(x<sub>0</sub>) = <i>g</i>(<i>x</i><sub>0</sub>) = 0, because redefining the function at <i>x</i><sub>0</sub> does not change the limits at <i>x</i><sub>0</sub> of <i>f, g, f', g'</i> or their ratios (see example 5.7.2 for which changing the value of <i>f</i>(<i>x</i>) for <i>x</i> &notin; (<i>a,b</i>) won't change the limit). For <i>x</i> &ne; <i>x</i><sub>0</sub>, we may write</p>
+<p>Poiché questa relazione vale &forall;<i>x</i> &in; (<i>x</i><sub>0</sub> &minus; &delta;, <i>x</i><sub>0</sub> + &delta;), <i>x</i> &ne; <i>x</i><sub>0</sub>, dall'arbitrarietà di <i>&epsilon;</i> segue la tesi.</p>
+
+<p>ii) Consideriamo ora il caso di ℓ = +&infin; (il caso ℓ = &minus; &infin; si tratta in maniera analoga). Da d) e dalla definzione di limite si ha che, fissato ad arbitrio <i>M</i> &gt; 0 esiste un numero <i>&delta;</i> &gt; 0 tale che</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
@@ -270,89 +363,6 @@
       <mi>g</mi>
       <mo stretchy="false">(</mo>
       <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-</math>
-
-<!-- $$ \frac{f(x)}{g(x)} = \frac{f(x) - f(x_0)}{g(x) - g(x_0)} $$ -->
-
-<p>By <a href="Cauchy_MVT.html">Cauchy's Mean Value Theorem</a> there is <i>c</i> between <i>x</i> and <i>x</i><sub>0</sub> such that</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
       <mo stretchy="false">)</mo>
     </mrow>
   </mfrac>
@@ -377,129 +387,20 @@
       <mo stretchy="false">)</mo>
     </mrow>
   </mfrac>
+  <mo>&gt;</mo>
+  <mi>M</mi>
 </math>
 
-<!-- $$ \frac{f(x)}{g(x)} = \frac{f(x) - f(x_0)}{g(x) - g(x_0)} = \frac{f'(c)}{g'(c)} $$ -->
+<!-- $$ \frac{f(x)} {g(x)} = \frac{f'(c)} {g'(c)} \gt M $$ -->
 
-<p>Now as <i>x</i> ⟶ <i>x</i><sub>0</sub>, we must have also <i>c</i> ⟶ <i>x</i><sub>0</sub> because <i>c</i> is between <i>x</i> and <i>x</i><sub>0</sub>. So if</p>
+<p>La medesima disuguaglianza si ha anche quando <i>x</i> &in; (<i>x</i><sub>0</sub> &minus; &delta;, <i>x</i><sub>0</sub>), quindi per l'arbitrarietà di <i>M</i> possiamo concludere che lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>)/<i>g</i>(<i>x</i>) = +&infin;. &emsp;□</p>
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
+<p>Facciamo qualche osservazione</p>
 
-<!-- $$ \lim_{x \to x_0} \frac{f'(x)}{g'(x)} = \ell $$ -->
-
-<p>then</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>c</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>c</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$ \lim_{x \to x_0} \frac{f'(c)}{g'(c)} = \ell $$ -->
-
-<p>Thefore</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msub>
-        <mi>x</mi>
-        <mn>0</mn>
-      </msub>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$ \lim_{x \to x_0} \frac{f(x)}{g(x)} = \ell $$ -->
-
-<p>as desired. &emsp;□</p>
-
-<p>Note that there is nothing in this proof that requires ℓ to be finite. It works as well for the one-sided left-hand limits.</p>
-
-<p><b>Example 5.7.2</b> Evaluate lim<sub><i>x</i> ⟶ 0<sup>+</sup></sub> <i>f</i>(<i>x</i>), where <i>f</i> is</p>
+<ol>
+	<li><p>Il T. rimane valido anche se <i>f</i> e <i>g</i> sono definite su (<i>x</i><sub>0</sub>, <i>b</i>) e i limiti sono sostituiti dal limite destro in <i>x</i><sub>0</sub>, oppure se <i>f</i> e <i>g</i> sono definite su (<i>a</i>, <i>x</i><sub>0</sub>) e i limiti sono sostituiti dal limite sinistro in <i>x</i><sub>0</sub>;</p>
+	
+	<p><b>Esempio 5.12.3</b> Calcoliamo lim<sub><i>x</i> ⟶ 0<sup>+</sup></sub> <i>f</i>(<i>x</i>), con <i>f</i> is</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>f</mi>
@@ -578,19 +479,114 @@
 
 <!-- $$ f = \begin{cases} \frac{\cos {2x} - \cos x} {x^2}, \quad &{\text{if }\quad} x \in (0,\infty) \\-2,&{\text{if }\quad} x \notin (0,\infty).\end{cases} $$ -->
 
-<p>Applying the de L’Hôpital’s Rule we have</p>
+<p>Applicando il T. di de L’Hôpital</p>
 
 <div class="eq">
 <p>lim<sub><i>x</i> ⟶ 0<sup>+</sup></sub> <i>f</i>(<i>x</i>) = lim<sub><i>x</i> ⟶ 0<sup>+</sup></sub>(−2sen 2<i>x</i> + sen <i>x</i>)/(2<i>x</i>)</p>
 </div>
 
-<p>Applying a second time de L’Hôpital’s Rule</p>
+<p>Applicando, una seconda volta il T. di de L’Hôpital</p>
 
 <div class="eq">
 <p>lim<sub><i>x</i> ⟶ 0<sup>+</sup></sub> f(<i>x</i>) = lim<sub><i>x</i> ⟶ 0<sup>+</sup></sub>(−4cos 2<i>x</i> + cos <i>x</i>)/(2) = −3/2.&emsp;■</p>
-</div>
+</div>	
 
-<p><b>Theorem 5.7.3</b> (L’Hôpital’s Rule for ∞/∞ Indeterminate Forms). Let <i>f</i>(<i>x</i>),<i>g</i>(<i>x</i>) two functions defined on a open interval <i>I</i> = (<i>a,b</i>) with <i>a</i> ∈ ℝ; Suppose that <i>g</i> is divergent to +&infin; (−&infin;) for <i>x</i> ⟶ <i>a</i><sup>−</sup> and that both <i>f,g</i> are differentiable on <i>I</i>. Suppose also that <i>g'</i>(<i>x</i>) &lt; 0 (<i>g'</i>(<i>x</i>) &gt; 0) for all <i>x</i> &in; <i>I</i>. Then if exists</p>
+	</li>
+	
+	<li><p>il T. rimane valido anche per limiti all'infinito, cioè se si considerano limiti per <i>x</i> &rarr; &pm; &infin; anziché per <i>x</i> &rarr; <i>x</i><sub>0</sub>;</p></li>
+		<li><p>Il T. fornisce solo una condizione <b>sufficiente</b> per l'esistenza del limite lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>)/<i>g</i>(<i>x</i>). In altri termini, quest'ultimo limite può esiste anche se non esiste il limite lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>f'</i>(<i>x</i>)/<i>g'</i>(<i>x</i>). Si considerino ad es. le funzioni <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup>, <i>g</i>(<i>x</i>) = <i>x</i>, con <i>x</i><sub>0</sub> = 0. Allora</p>
+		
+		<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mi>x</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+		
+		<!-- $$ \lim_{x \to 0} \frac{f(x)} {g(x)} = \lim_{x \to 0} x \sin \frac{1}{x} = 0 $$ -->
+		
+	<p>D'altra parte, se <i>x</i> &ne; 0,</p>
+		
+		<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>x</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+</math>
+		
+	<!-- $$ \frac{f'(x)} {g'(x)} = 2x \sin \frac{1}{x} - \cos \frac{1}{x} $$ -->
+
+<p> e questa funzione non ammette limite per <i>x</i> &rarr; 0 (il primo termine tende a zero, mentre non esiste il limite del secondo).</p></li>
+
+<li><p>Il T. si usa per quozienti, <i>non per prodotti</i>!. Tuttaiva può essere usato anche per trattare forme di indeterminazione del tipo 0 ⋅ &infin;. Si voglia dimostrare, ad es., che</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -599,481 +595,28 @@
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
       <msup>
-        <mi>a</mi>
+        <mn>0</mn>
         <mo>+</mo>
       </msup>
     </mrow>
   </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
+  <mi>x</mi>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
   <mo>=</mo>
-  <mi>&#x2113;</mi>
+  <mn>0</mn>
 </math>
 
-<!-- $$\lim_{x \to a^+} \frac{f'(x)}{g'(x)} = \ell $$ -->
+<!-- $$\lim_{x \to 0^+}x \log x = 0 $$ -->
 
-<p>It holds also that</p>
+<p>Qui si presenta una forma di indeterminazione del tipo 0 ⋅ (&minus;&infin;). Tuttavia, se questo limite viene riscritto come</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
     <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <msup>
-        <mi>a</mi>
-        <mo>+</mo>
-      </msup>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$\lim_{x \to a^+} \frac{f(x)}{g(x)} = \ell $$ -->
-
-<p><b>Proof</b>. We must show that for every decreasing sequence {<i>a<sub>n</sub></i>} of (<i>a,b</i>) such that lim<sub><i>n</i> ⟶ &infin;</sub> <i>x<sub>n</sub></i> = <i>a</i>, results</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$\lim_{n\to\infty} \frac{f(x_n)}{g(x_n)} = \ell $$ -->
-
-<p>Suppose that <i>g</i>'(<i>x</i>) &gt; 0 &forall;<i>x</i> &in; <i>I</i>: this implies that <i>g</i>(<i>x</i>) is an increasing function and consequenlty by <a href="Lagrange.html">Lemma 5.6.2</a> that {<i>g</i>(<i>x<sub>n</sub></i>)} is decreasing (if <i>g</i>'(<i>x</i>) &lt; 0 it suffices to replace <i>g</i> and <i>f</i> by −<i>g</i> and −<i>f</i> and follow with the proof). By the <a href="Stolz–Cesàro.html">Stolz–Cesàro theorem</a> we have that the previous is verified if it results</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mrow data-mjx-texclass="ORD">
-          <mi>n</mi>
-          <mo>+</mo>
-          <mn>1</mn>
-        </mrow>
-      </msub>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mrow data-mjx-texclass="ORD">
-          <mi>n</mi>
-          <mo>+</mo>
-          <mn>1</mn>
-        </mrow>
-      </msub>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$ \lim_{n \to \infty} \frac{f(x_{n+1}) - f(x_n) } {g(x_{n+1}) - g(x_n)} = \ell $$ -->
-
-<p>From the differentiability of <i>f,g</i> &in; <i>I</i>, we have that for every <i>n</i> &in; ℕ there exits &xi;<sub>n</sub> &in; (<i>x<sub>n</sub></i>, <i>x</i><sub><i>n</i>+1</sub>) and by the Cauchy Mean Value theorem we have</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mrow data-mjx-texclass="ORD">
-          <mi>n</mi>
-          <mo>+</mo>
-          <mn>1</mn>
-        </mrow>
-      </msub>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mrow data-mjx-texclass="ORD">
-          <mi>n</mi>
-          <mo>+</mo>
-          <mn>1</mn>
-        </mrow>
-      </msub>
-      <mo stretchy="false">)</mo>
-      <mo>&#x2212;</mo>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>x</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>&#x3BE;</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>&#x3BE;</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-</math>
-
-<p>Since the sequence {<i>&xi;<sub>n</sub></i>} converges as {<i>x<sub>n</sub></i>} to <i>a</i><sup>+</sup> we can deduce that being lim<sub><i>x</i> ⟶ <i>a</i><sup>+</sup></sub> <i>f'</i>(<i>x</i>)/<i>g'</i>(<i>x</i>) = ℓ, that</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>&#x3BE;</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <msub>
-        <mi>&#x3BE;</mi>
-        <mi>n</mi>
-      </msub>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$\lim_{n\to \infty} \frac{f'(\xi_n)}{g'(\xi_n)} = \ell $$ -->
-
-<p>which completes the proof. &emsp;□</p>
-
-<p><b>Theorem 5.7.4</b> Let <i>f</i>(<i>x</i>) and <i>g</i>(<i>x</i>) two function defined on the same interval <i>I</i> = (<i>a</i>, +&infin;); Suppose <i>f,g</i> to be both infinitesimal for <i>x</i> ⟶ +&infin; and differentiable on (<i>a</i>, +&infin;). Suppose also that <i>g'</i>(<i>x</i>) &gt; 0 (<i>g'</i>(<i>x</i>) &lt; 0) for all <i>x</i> &in; <i>I</i>. Then if exists</p> 
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$\lim_{x \to \infty} \frac{f'(x)}{g'(x)} = \ell $$ -->
-
-<p>Then it holds also that</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <mi>g</mi>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
-</math>
-
-<!-- $$\lim_{x \to \infty} \frac{f(x)}{g(x)} = \ell $$ -->
-
-<p><b>Proof</b>. Suppose withouth loss of generality that <i>a</i> &gt; 0 and let <i>x</i> = 1/<i>z</i>, <i>F</i>(<i>z</i>) = <i>f</i>(1/<i>z</i>), <i>G</i>(<i>z</i>) = <i>g</i>(1/<i>z</i>). The functions <i>F</i>(<i>z</i>), <i>G</i>(<i>z</i>) are defined on the interval <i>I'</i> = (<i>a</i>,1/<i>a</i>) and infinitesimal for <i>z</i> ⟶ 0<sup>+</sup>. By the Chain Rule, the functions <i>F,G</i> are both differentiable &forall;<i>z</i> &in; (0,1/<i>a</i>), and we have</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>F</mi>
-    <mo data-mjx-alternate="1">&#x2032;</mo>
-  </msup>
-  <mo stretchy="false">(</mo>
-  <mi>z</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mo>&#x2212;</mo>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mfrac>
-        <mn>1</mn>
-        <mi>z</mi>
-      </mfrac>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <msup>
-      <mi>z</mi>
-      <mn>2</mn>
-    </msup>
-  </mfrac>
-  <mo>,</mo>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <msup>
-    <mi>G</mi>
-    <mo data-mjx-alternate="1">&#x2032;</mo>
-  </msup>
-  <mo stretchy="false">(</mo>
-  <mi>z</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mo>&#x2212;</mo>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mfrac>
-        <mn>1</mn>
-        <mi>z</mi>
-      </mfrac>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <msup>
-      <mi>z</mi>
-      <mn>2</mn>
-    </msup>
-  </mfrac>
-  <mo>,</mo>
-  <mstyle scriptlevel="0">
-    <mspace width="1em"></mspace>
-  </mstyle>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>F</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>z</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>G</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>z</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mfrac>
-        <mn>1</mn>
-        <mi>z</mi>
-      </mfrac>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mfrac>
-        <mn>1</mn>
-        <mi>z</mi>
-      </mfrac>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-</math>
-
-<!-- $$ F'(z) = \frac{-f'(\frac{1}{z})}{z^2}, \quad G'(z) = \frac{-g'(\frac{1}{z})}{z^2}, \quad \frac{F'(z)}{G'(z)} = \frac{f'(\frac{1}{z})} {g'(\frac{1}{z})} $$ -->
-
-<p>from which it results <i>G'</i>(<i>z</i>) &ne; 0 if <i>z</i> &in; (0,1/<i>a</i>) and it exists:</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>z</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
       <msup>
         <mn>0</mn>
@@ -1083,66 +626,31 @@
   </munder>
   <mfrac>
     <mrow>
-      <msup>
-        <mi>F</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>z</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>G</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>z</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
       <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>f</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
-      <mo stretchy="false">(</mo>
-      <mi>z</mi>
-      <mo stretchy="false">)</mo>
     </mrow>
     <mrow>
-      <msup>
-        <mi>g</mi>
-        <mo data-mjx-alternate="1">&#x2032;</mo>
-      </msup>
       <mo stretchy="false">(</mo>
-      <mi>z</mi>
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mi>x</mi>
       <mo stretchy="false">)</mo>
     </mrow>
   </mfrac>
-  <mo>=</mo>
-  <mi>&#x2113;</mi>
 </math>
 
-<!-- $$ \lim_{z \to 0^+} \frac{F'(z)}{G'(z)} = \lim_{x \to \infty} \frac{f'(z)}{g'(z)}  = \ell $$ -->
+<!-- $$\lim_{x \to 0^+} \frac{\log x}{(1/x)} $$ -->
 
-<p>We can thus apply Theorem 5.7.1 to functions <i>F</i>(<i>z</i>) and <i>G</i>(<i>z</i>) and deduce the existence of the limit</p>
+<p>adesso la forma di indeterminazione è del tipo &infin;/&infin;. È facile verificare che le ipotesi a'), b), c) sono verificate nella semiretta (0,+&infin;) con <i>x</i><sub>0</sub> = 0. Rimande da vedere se è valida anche l'ipotesi d), cioè se esiste il limite del rapporto delle derivate delle funzioni log <i>x</i> e 1/<i>x</i>:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
     <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
     <mrow data-mjx-texclass="ORD">
-      <mi>z</mi>
+      <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
       <msup>
         <mn>0</mn>
@@ -1152,15 +660,23 @@
   </munder>
   <mfrac>
     <mrow>
-      <mi>F</mi>
-      <mo stretchy="false">(</mo>
-      <mi>z</mi>
-      <mo stretchy="false">)</mo>
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mi>x</mi>
     </mrow>
     <mrow>
-      <mi>G</mi>
       <mo stretchy="false">(</mo>
-      <mi>z</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
       <mo stretchy="false">)</mo>
     </mrow>
   </mfrac>
@@ -1170,32 +686,335 @@
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x \to 0^+} \frac{1/x}{(-1/x^2)}  = \lim_{x \to 0^+} (-x) = 0 $$ -->
+
+<p>Poiché questo limite esiste e vale 0, possiamo concludere che anche il limite iniziale esisa e valga 0.</p></li>
+
+<li><p>Possono essere trattae anche altre forme di indeterminazione. Ad es., si voglia dimostrare che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <msup>
+    <mi>x</mi>
+    <mi>x</mi>
+  </msup>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\lim_{x \to 0^+} x^x = 1 $$ -->
+
+<p>In questo caso, la forma di indetermianzione è del tipo 0<sup>0</sup>. Tuttavia, passando in forma esponenziale e utilizzando il limite già calcolato nel passaggio precedente, si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <msup>
+    <mi>x</mi>
+    <mi>x</mi>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mi>e</mi>
+    <mn>0</mn>
+  </msup>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\lim_{x \to 0^+} x^x = e^{x\log x} = e^0 = 1 $$ -->
+
+</li>
+
+<li><p>Il T. si usa per quozienti che siano effettive <i>forme di indeterminazione</i>!. Un errore assai frequente consiste nell'utilizzare il T. quando non si è in presenza di una forma di indeterminazione come ad es.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mi>x</mi>
+    <mrow>
+      <mn>2</mn>
+      <mo>+</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{x}{2 + \sin x} = 0 $$ -->
+
+<p>in quanto il numeratore tende a 0 mentre il denominatore tende a 2; tuttavia, se si applica il T. di de l'Hôpital, il limite del rapporto delle derivate vale</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{1}{\cos x} = 1 $$ -->
+
+<p>che non coincide col limite precedente!</p></li>
+
+<li><p>Non è detto che utilizzsare il T. di de l'Hôpital sia il mezzo più veloce per calcolare un limite. Si consideri ad es. il limite</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
     </mrow>
   </munder>
   <mfrac>
     <mrow>
-      <mi>f</mi>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msup>
+            <mi>x</mi>
+            <mn>7</mn>
+          </msup>
+        </mrow>
+      </msup>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
       <mo stretchy="false">(</mo>
-      <mi>z</mi>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mi>x</mi>
       <mo stretchy="false">)</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
     </mrow>
     <mrow>
-      <mi>g</mi>
+      <mi>x</mi>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
       <mo stretchy="false">(</mo>
-      <mi>z</mi>
+      <mi>e</mi>
+      <mo>+</mo>
+      <msqrt>
+        <mn>3</mn>
+        <mi>x</mi>
+      </msqrt>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{e^{x^7} \cos (x^2 - 2x) \sin x}{x \log (e + \sqrt{3x} \cos x} $$ -->
+
+<p>Si può verificare facilmente che questo limite si presenta in forma indeterminata del tipo 0/0. È però evidente che cercare di calcolare il limite delle derivate (o anche solo <i>calcolare</i> le derivate) è un'operazione molto laboriosa. D'altra parte questo limite si calcola facilmente osservando che, quan do <i>x</i> &rarr; 0.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msup>
+        <mi>x</mi>
+        <mn>7</mn>
+      </msup>
+    </mrow>
+  </msup>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>2</mn>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mi>x</mi>
+  </mfrac>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>e</mi>
+  <mo>+</mo>
+  <msqrt>
+    <mn>3</mn>
+    <mi>x</mi>
+  </msqrt>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>e</mi>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$ e^{x^7} \to 1,\, \cos (x^2 - 2x)  \to 1, \,\frac{\sin x}{x} \to 1, \,\log(e + \sqrt{3x} \cos x) \to \log e = 1$$ -->
+
+<p>Quindi per il <a href="lim_T.html#alg">T. 4.3.7</a> si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msup>
+            <mi>x</mi>
+            <mn>7</mn>
+          </msup>
+        </mrow>
+      </msup>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mi>x</mi>
       <mo stretchy="false">)</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mi>x</mi>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>e</mi>
+      <mo>+</mo>
+      <msqrt>
+        <mn>3</mn>
+        <mi>x</mi>
+      </msqrt>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
     </mrow>
   </mfrac>
   <mo>=</mo>
-  <mi>&#x2113;</mi>
+  <mn>1</mn>
 </math>
 
-<!-- $$ \lim_{z \to 0^+} \frac{F(z)}{G(z)} = \lim_{x \to \infty} \frac{f(z)}{g(z)}  = \ell $$ -->
+<!-- $$\lim_{x \to 0} \frac{e^{x^7} \cos (x^2 - 2x) \sin x}{x \log (e + \sqrt{3x} \cos x}  = 1 $$ -->
+</li>
 
-<p>which proves the theorem. &emsp;□</p>
+</ol>
 
-<p><b>Example 5.7.5</b>. Evaluate the limit</p>
+<p>Come prima applicazione del T. di de L'Hôpital, dimostriamo il T. xx, relativo alla "gerarchia degli infiniti" nel calcolo dei limti.<br>Sia da calcolare</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -1207,105 +1026,643 @@
       <mi mathvariant="normal">&#x221E;</mi>
     </mrow>
   </munder>
-  <mi>x</mi>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+    <msup>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>&#x3B2;</mi>
+        <mi>x</mi>
+      </mrow>
+    </msup>
+  </mfrac>
+  <mi>&#x3B1;</mi>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mi>&#x3B2;</mi>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x\to +\infty} \frac {x^\alpha}{e^{\beta x}} \alpha \gt 0, \beta \gt 0 $$ -->
+
+<p>Posto <i>f</i>(<i>x</i>) = <i>x</i> e <i>g</i>(<i>x</i>) = e<sup>&gamma;x</sup> (<i>&gamma;</i> &gt; 0) si ha <i>f'</i>(<i>x</i>) = 1, <i>g'</i>(<i>x</i>) = &gamma;e<sup>&gamma;x</sup> e poiché</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
   <mfrac>
     <mrow>
-      <mi>ln</mi>
-      <mo data-mjx-texclass="NONE">&#x2061;</mo>
-      <mrow data-mjx-texclass="ORD">
-        <mi>x</mi>
-        <mo>+</mo>
-        <mn>1</mn>
-      </mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
     </mrow>
     <mrow>
-      <mi>ln</mi>
-      <mo data-mjx-texclass="NONE">&#x2061;</mo>
-      <mrow data-mjx-texclass="ORD">
-        <mi>x</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
+      <msup>
+        <mi>g</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
     </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>&#x3B3;</mi>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>&#x3B3;</mi>
+          <mi>x</mi>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x\to +\infty} \frac {f'(x)}{g'(x)} = \lim_{x\to +\infty} \frac{1}{\gamma e^{\gamma x}} = 0 $$ -->
+
+<p>si ha che lim<sub><i>x</i> &rarr; +&infin;</sub> <i>x</i>/e<sup>&gamma;z</sup> = 0. Osservando ora che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+    <msup>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>&#x3B2;</mi>
+        <mi>x</mi>
+      </mrow>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mi>x</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">(</mo>
+            <mi>&#x3B2;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo>/</mo>
+            </mrow>
+            <mi>&#x3B1;</mi>
+            <mo stretchy="false">)</mo>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>&#x3B1;</mi>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mi>x</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B3;</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>&#x3B1;</mi>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>con&#xA0;</mtext>
+  <mi>&#x3B3;</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mi>&#x3B2;</mi>
+    <mi>&#x3B1;</mi>
   </mfrac>
 </math>
 
-<!-- $$ \lim_{x \to +\infty} x \frac{\ln {x+1}}{\ln{x-1}} $$ -->
+<!-- $$ \frac{x^\alpha}{e^{\beta x}} = \left (\frac{x}{e^{(\beta/\alpha) x}} \right)^\alpha = \left(\frac{x}{e^{\gamma x}} \right)^\alpha \quad \text{con } \gamma = \frac{\beta}{\alpha} $$ -->
 
-<p>We write</p>
+<p>si ha</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>x</mi>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+    <msup>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>&#x3B2;</mi>
+        <mi>x</mi>
+      </mrow>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <munder>
+        <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>x</mi>
+          <mo accent="false" stretchy="false">&#x2192;</mo>
+          <mo>+</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+        </mrow>
+      </munder>
+      <mfrac>
+        <mi>x</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B3;</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>&#x3B1;</mi>
+  </msup>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x \to +\infty} \frac{x^\alpha}{e^{\beta x}} = \left(\lim_{x \to +\infty} \frac{x}{e^{\gamma x}} \right)^\alpha  = 0$$ -->
+
+<p>Per provare ora che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
   <mfrac>
     <mrow>
-      <mi>ln</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>log</mi>
+        <mi>a</mi>
+      </msub>
       <mo data-mjx-texclass="NONE">&#x2061;</mo>
-      <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3B1;</mi>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mi>&#x3B2;</mi>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\lim_{x \to +\infty} \frac{(\log_a x)^\alpha}{x^\beta} = 0 $$ -->
+
+<p>è sufficiente eseguire il cambio di variabile <i>t</i> = log<sub>a</sub> <i>x</i>, <i>x</i> = <i>a<sup>t</sup></i>, e ricondursi al limite appena dimostrato. <br> Un'altra applicazione tipica del T. di de L'Hopital è il calcolo di limiti che coinvolgono formule di indeterminazione non risuolubili mediante i limiti notevoli (ossia, al primo ordine).</p>
+
+<p><b>Esempio 5.12.3</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mn>0</mn>
+      <mn>0</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{x - \sin x}{x^3} = \left[\frac{0}{0} \right] $$ -->
+
+<p>La stima al prim'ordine sin <i>x</i> ~ <i>x</i> non è sufficiente a risolvere tale forma di indeterminazione, in quanto porta a</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
         <mi>x</mi>
-        <mo>+</mo>
-        <mn>1</mn>
       </mrow>
+      <mi>x</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mo>?</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+  <mo>&#x22C5;</mo>
+  <mn>0</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \frac{x -\sin x} {x^3}= \frac{1}{x^2} \left( 1 - \frac{\sin x}{x} \right) \to ? \quad (\infty \cdot 0) $$ -->
+
+<p>(infatti la quantità tra parentesi tende a zero, per la stima astintotica). <br> Il teo rema di de L'Hospital dà:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
     </mrow>
     <mrow>
-      <mi>ln</mi>
-      <mo data-mjx-texclass="NONE">&#x2061;</mo>
-      <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">(</mo>
+      <msup>
         <mi>x</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
+        <mn>3</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
     </mrow>
   </mfrac>
   <mo>=</mo>
   <mfrac>
-    <mrow>
-      <mi>ln</mi>
-      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+    <mn>1</mn>
+    <mn>6</mn>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x\to 0} \frac{(x-\sin x)'} {(x^3)'} = \lim_{x \to 0} \frac{ 1 - \cos x} {3x^2} = \frac{1}{6} $$ -->
+
+<p>■</p>
+
+<p><b>Esempio 5.12.4</b>. </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>l</mi>
+  <mi>i</mi>
+  <msub>
+    <mi>m</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </msub>
+  <mfrac>
+    <msup>
+      <mi>e</mi>
       <mrow data-mjx-texclass="ORD">
-        <mfrac>
-          <mrow>
-            <mi>x</mi>
-            <mo>+</mo>
-            <mn>1</mn>
-          </mrow>
-          <mrow>
-            <mi>x</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-          </mrow>
-        </mfrac>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <mrow data-mjx-texclass="ORD">
+          <mo>/</mo>
+        </mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
       </mrow>
+    </msup>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mn>0</mn>
+      <mn>0</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$lim_{x\to 0} \frac{e^{-1/x^2}}{x} = \left[\frac{0}{0} \right] $$ -->
+
+<p>Se applichiamo direttamente il T. di de L'Hospital, l'espressione si complica (provare!). <br>Invce, col cambio di variabile <i>x</i><sup>2</sup> = 1/<i>t</i> ci si riconduce a</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>l</mi>
+  <mi>i</mi>
+  <msub>
+    <mi>m</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>t</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msub>
+  <mfrac>
+    <msqrt>
+      <mi>t</mi>
+    </msqrt>
+    <msup>
+      <mi>e</mi>
+      <mi>t</mi>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$lim_{t\to \infty} \frac{\sqrt{t}}{e^t} $$ -->
+
+<p>■</p>
+
+<p><b>Esempio 5.12.4</b> Si voglia calcolare</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mrow>
+        <mo>+</mo>
+        <mi mathvariant="normal">&#x221E;</mi>
+      </mrow>
+      <mrow>
+        <mo>+</mo>
+        <mi mathvariant="normal">&#x221E;</mi>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$\lim_{x \to \infty} \frac{x - \sin x}{x + \sin x} = \left[ \frac{+\infty}{+\infty} \right] $$ -->
+
+<p>Il valore del limite si può stabilire immediatamente:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x223C;</mo>
+  <mfrac>
+    <mi>x</mi>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$ \frac{x - \sin x}{x + \sin x} \sim \frac{x}{x}  = 1 $$ -->
+
+<p>Supponiamo di volerlo calcolare col teorema di de L'Hospital:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
     </mrow>
     <mrow>
       <mn>1</mn>
-      <mrow data-mjx-texclass="ORD">
-        <mo>/</mo>
-      </mrow>
+      <mo>+</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
       <mi>x</mi>
     </mrow>
   </mfrac>
 </math>
 
-<!-- $$ x \frac{\ln {x+1}}{\ln{x-1}} = \frac{\ln{\frac{x+1}{x-1}}} {1/x}$$  -->
+ <!-- $$ \lim_{x \to +\infty} \frac{(x - \sin x)'}{(x + \sin x)'} = \lim_{x \to +\infty} = \frac{1 - \cos x}{1 + \cos x}$$ -->
 
-<p>the right-hand side can also be written as</p>
-
-<div class="eq">
-<p>[ln(<i>x</i> + 1) − ln(<i>x</i> − 1)]/1/<i>x</i></p>
-</div>
-
-<p>taking the derivative yields to</p>
-
-<div class="eq">
-<p>−[1/(<i>x</i> + 1) − 1/(<i>x</i> − 1)]/<i>x</i><sup>2</sup> = 2<i>x</i><sup>2</sup>/(<i>x</i><sup>2</sup> − 1). </p>
-</div>
-
-<p>and lim<sub><i>x</i> ⟶ +&infin;</sub> 2<i>x</i><sup>2</sup>/(<i>x</i><sup>2</sup> − 1) = 2. &emsp;■</p>
+<p>che non esiste. Se concludessimo che il limite di partenza non esiste, diremmo il falso (quel limite vale 1). Il punto è che se lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> non esiste (né finito né infinito), cade una delle ipotesi del teorema, e in base ad esso non si può semplicemente concludere nulla. ■</p>
 
 <section aria-label="End">
 <a href="Lagrange.html">&#171;The Mean Value Theorem</a>
 <a href="index.html">Index</a>
-<a href="maxmin.html">Maxima and minima of a function&#187;</a>
+<a href="D_lim.html">Limite della derivata e derivabilità&#187;</a></li>
 </section>
 
 </article>
