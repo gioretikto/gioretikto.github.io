@@ -220,7 +220,7 @@
 
 <!-- $$\lim_{x \to \infty} \frac{x^x}{2^{x^2}} $$ -->
 
-<p>Esprimiamo <i>x</i><sup>x</sup> = 2<sup>(x ⋅ log<sub>2</sub>(x))</sup>. La frazione è dunque  2<sup>(x ⋅ log<sub>2</sub>(<i>x</i>) − x<sup>2</sup>)</sup>, il cui limite è 0.</p></li>
+<p>Esprimiamo <i>x</i><sup>x</sup> = 2<sup>(<i>x</i> ⋅ log<sub>2</sub>(x))</sup>. La frazione è dunque  2<sup>(x ⋅ log<sub>2</sub>(<i>x</i>) − x<sup>2</sup>)</sup>, il cui limite è 0.</p></li>
 
 <li>
 
@@ -253,7 +253,7 @@
 
 <!-- $$\lim_{x \to 0} \frac{e^x - x -1}{x^2} $$ -->
 
-<p>Applicando l'Hopital due vole: e<sup>x</sup>/2, quindi il limite è 1/2. &emsp;■</p></li>
+<p>Applicando l'Hopital due vole: <i>e<sup>x</sup></i>/2, quindi il limite è 1/2. &emsp;■</p></li>
 
 <li>
 
@@ -289,19 +289,89 @@
 
 <!-- $$\lim_{x \to 2^+} \frac{\sqrt{x^2 - 4}} {\sin (x-2)} $$ -->
 
-$$ \lim_{x \to 2^+} \frac{\sqrt{(x-2) (x+2)}} {\sin(x-2)} = \lim_{x \to 2^+} \frac{\sqrt{x+2}} {\frac{\sin (x-2)} {\sqrt{(x-2)}}} = +\infty$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>2</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <msqrt>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+    </msqrt>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>2</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msqrt>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+      </msqrt>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+      <msqrt>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <mn>2</mn>
+      </msqrt>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
 
-<p>avendo diviso numeratore e denominatore per 1/√(<i>x</i> - 2). 
+<!-- $$ \lim_{x \to 2^+} \frac{\sqrt{(x-2) (x+2)}} {\sin(x-2)} = \lim_{x \to 2^+} \frac{\sqrt{x+2} (x-2)} {\sin (x-2) \sqrt{x-2}} = +\infty$$ -->
 
-lim_{x -> 2+} only. sqrt(x^2 - 4)/sin(x - 2) = sqrt(x + 2) [(x - 2)/sin(x - 2)] (1/sqrt(x - 2)) 
-
-sqrt(x^2 - 4) = sqrt(x + 2) sqrt(x - 2) and then I changed sqrt(x - 2)  into  (x - 2)/sqrt(x - 2)
-
-sqrt(y) = y/sqrt(y)   for any y >= 0
-
-
-<p>usando l'Hospital: Derivata del numeratore: x/[sqrt(x<sup>2</sup> - 4)]<br>
-Derivata del denominatore: \cos(x - 2). Quindi il limite risulta essere infinito. &emsp;■</p></li>
+<p>avendo moltiplicato numeratore e denominatore per √(<i>x</i> - 2), si osserva che √(<i>x</i>+2) tende a 4,(x-2)/(sin (x-2)) tende a 1 mentre 1/√(<i>x</i>-2) a infinito. &emsp;■</p></li>
 
 <li>
 
@@ -328,7 +398,66 @@ Derivata del denominatore: \cos(x - 2). Quindi il limite risulta essere infinito
 
 <!-- $$\lim_{x \to \infty} x^{1/x} $$ -->
 
-<p>Riscriviamo x<sup>1/x</sup> come e<sup>(ln x)/<i>x</i></sup>. ln <i>x</i> è un infinito di ordine inferiore a <i>x</i>, quindi l'esponente tende a 0 e e<sup>0</sup> = 1. &emsp;■</p></li>
+<p>Riscriviamo <i>x</i><sup>1/<i>x</i></sup> come e<sup>(ln x)/<i>x</i></sup>. ln <i>x</i> è un infinito di ordine inferiore a <i>x</i>, quindi l'esponente tende a 0 e e<sup>0</sup> = 1. &emsp;■</p></li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+      </msup>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi>sin</mi>
+        <mn>2</mn>
+      </msup>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{x^2 \cos(x) + 1 - e^{x^2}}{x^2 \sin^2(x)} $$  -->
+
+(x^2 cos x + 1 - e^{x^2})/(x^2 sin^2 x) for x->0
+
+</li>
+
 
 <li>
 
@@ -367,6 +496,118 @@ Derivata del denominatore: \cos(x - 2). Quindi il limite risulta essere infinito
 
 <!-- $$\lim_{x \to 2} \frac{x^2 - 4} {\sqrt{\sin (x-2)^2}} $$ -->
 
+<p>we set <i>t</i> = <i>x</i> − 2 and write</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>t</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>t</mi>
+      <mo stretchy="false">(</mo>
+      <mn>4</mn>
+      <mo>+</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <msqrt>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>t</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mn>4</mn>
+      <mo>+</mo>
+      <mi>t</mi>
+      <mo stretchy="false">)</mo>
+      <mi>t</mi>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi>t</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <msqrt>
+    <mfrac>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+      <mrow>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <msup>
+          <mi>t</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+  </msqrt>
+</math>
+
+<!-- $$\lim_{t \to 0} \frac{t(4+t)} {\sqrt{\sin t^2}} = \lim_{t \to 0} \, \frac{(4+t)t}{|t|}\, \sqrt{\frac{t^2}{\sin t^2}} $$  -->
+
+<p>when you bring <i>t</i> under the square root you have to discuss its sign. I mean: t = sqrt(t<sup>2</sup>) if t > 0 and x = -sqtr(t<sup>2</sup>) otherwise. So the right limit is 4 and the left limit is −4.</p></li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 1} \frac{x\log x}{x^2 -1} $$ -->
+
 </ul>
 
 <li><p>Let <i>f</i> a continuous real function and let <i>a</i> the value of <i>f</i> at <i>x</i> = 0. Calcualte <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -404,9 +645,6 @@ Derivata del denominatore: \cos(x - 2). Quindi il limite risulta essere infinito
 <!-- $$ \lim_{x \to 0} \frac{\int_0^x f(t) \text{d}t}{xe^x} $$ -->
 </li>
 
-
-
-	
 </ol>
 
 <h2>Soluzioni</h2>
