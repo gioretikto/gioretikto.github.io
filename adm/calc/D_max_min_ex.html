@@ -198,38 +198,6 @@
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <msup>
-      <mi>x</mi>
-      <mi>x</mi>
-    </msup>
-    <msup>
-      <mn>2</mn>
-      <mrow data-mjx-texclass="ORD">
-        <msup>
-          <mi>x</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-    </msup>
-  </mfrac>
-</math>
-
-<!-- $$\lim_{x \to \infty} \frac{x^x}{2^{x^2}} $$ -->
-
-<p>Esprimiamo <i>x</i><sup>x</sup> = 2<sup>(<i>x</i> ⋅ log<sub>2</sub>(x))</sup>. La frazione è dunque  2<sup>(x ⋅ log<sub>2</sub>(<i>x</i>) − x<sup>2</sup>)</sup>, il cui limite è 0.</p></li>
-
-<li>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
       <mn>0</mn>
     </mrow>
   </munder>
@@ -254,6 +222,467 @@
 <!-- $$\lim_{x \to 0} \frac{e^x - x -1}{x^2} $$ -->
 
 <p>Applicando l'Hopital due vole: <i>e<sup>x</sup></i>/2, quindi il limite è 1/2. &emsp;■</p></li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msup>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mi>x</mi>
+    </mrow>
+  </msup>
+</math>
+
+<!-- $$\lim_{x \to \infty} x^{1/x} $$ -->
+
+<p>Riscriviamo <i>x</i><sup>1/<i>x</i></sup> come e<sup>(ln x)/<i>x</i></sup>. ln <i>x</i> è un infinito di ordine inferiore a <i>x</i>, quindi l'esponente tende a 0 e e<sup>0</sup> = 1. &emsp;■</p></li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+      </msup>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi>sin</mi>
+        <mn>2</mn>
+      </msup>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{x^2 \cos(x) + 1 - e^{x^2}}{x^2 \sin^2(x)} $$  -->
+
+<p>Si può riscivere l'espressione come</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>4</mn>
+    </msup>
+  </mfrac>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mi>x</mi>
+        <mrow>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>x</mi>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$\lim_{x\to 0} \frac{x^2 \cos(x) + 1 - e^{x^2}}{x^4} \left(\frac{x}{\sin x} \right)^2$$ -->
+
+<p>Sfruttando il limite notevole (<i>x</i>/sin <i>x</i>) = 1, l'ultimo termine va via e ciò che rimane nell'espressione è (<i>x</i><sup>2</sup> cos(<i>x</i>) + 1 - e<sup><i>x</i><sup>2</sup></sup>)/<i>x</i><sup>4</sup>. Utilizzando De L'Hopital la potenza di <i>x</i> nel denominatore si riduce di 1 ad ogni passaggio sinché si ottiene 24), e alla fine il limite risulterà -1:</p>
+
+<ol>
+	<li><p>Passaggio: Numeratore, N'(<i>x</i>) = 2<i>x</i> cos(<i>x</i>) - <i>x</i><sup>2</sup> sin(<i>x</i>) - 2<i>x</i> e<sup><i>x</i><sup>2</sup></sup><br> Denominatore, D'(<i>x</i>) = 4<i>x</i><sup>3</sup>;</p></li>
+	<li><p>Passaggio: N''(<i>x</i>) = 2cos(<i>x</i>) - 2<i>x</i> sin(<i>x</i>) - 2<i>x</i> sin(<i>x</i>) - <i>x</i><sup>2</sup> cos(<i>x</i>) - 2 e<sup><i>x</i><sup>2</sup></sup> - 4<i>x</i><sup>2</sup> e<sup><i>x</i><sup>2</sup></sup><br> Denominatore: D''(<i>x</i>) = 12<i>x</i><sup>2</sup>;</p></li>
+	<li><p>Passaggio: N'''(<i>x</i>) = -2sin(<i>x</i>) - 4sin(<i>x</i>) - 4<i>x</i> cos(<i>x</i>) - 2<i>x</i> cos(<i>x</i>) + <i>x</i><sup>2</sup> sin<i>x</i> - 4<i>x</i>e<sup><i>x</i><sup>2</sup></sup> - 8<i>x</i> e<sup><i>x</i><sup>2</sup></sup> - 8<i>x</i><sup>3</sup> e<sup><i>x</i><sup>2</sup></sup><br> Denominatore: D'''(<i>x</i>) = 24<i>x</i>;</p></li>
+	<li><p>Passaggio: N<sup>IV</sup>(<i>x</i>) = -6 cos(<i>x</i>) -6 cos(<i>x</i>) +6<i>x</i> sin(<i>x</i>) +2<i>x</i> sin(x) +<i>x</i>² cos(<i>x</i>) -12 e<sup>x²</sup> -24<i>x</i>² e<sup>(x²)</sup> -24x² e<sup>(x²)</sup> -16x<sup>4</sup> e<sup>(x²)</sup><br>Denominatore,, D<sup>IV</sup>(<i>x</i>) = 24.</p></li>
+</ol>
+
+<p>Valutando il limite lim<sub><i>x</i> &rarr; 0</sub> N<sup>IV</sup>(0)/D<sup>IV</sup>(0) = (&minus;24/24) = -1.&emsp;■</p>
+
+</li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mn>2</mn>
+      <mi>x</mi>
+      <mo>+</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{x\sin x + \log(1-x^2)} {x^2 (2x + x^2)^2} $$ -->
+
+<ol>
+	<li><p>Passaggio, Numeratore, <i>N'</i>(<i>x</i>) = &minus;2<i>x</i>/(1-<i>x</i><sup>2</sup>) + sin <i>x</i> + <i>x</i> cos<i>x</i><br>Denominatore, D'(<i>x</i>) = 2<i>x</i><sup>3</sup>(3<i>x</i><sup>2</sup> + 10 <i>x</i> + 8);</p></li>	
+	<li><p>Numeratore, N''(<i>x</i>) = 2(<i>x</i><sup>2</sup> + 1)/(1 - <i>x</i><sup>2</sup>)<sup>2</sup> - <i>x</i> sin <i>x</i> + 2cos <i>x</i><br>Denominatore, D''(<i>x</i>) = 2<i>x</i><sup>3</sup>(15<i>x</i><sup>2</sup> + 40 <i>x</i> + 24);</p></li>	
+	<li><p>Numeratore, N'''(<i>x</i>) = 4<i>x</i>(<i>x</i><sup>2</sup> + 3)/(<i>x</i><sup>2</sup> - 1)<sup>2</sup> - 3<i>x</i> sin <i>x</i> - x cos <i>x</i><br>Denominatore, D'''(<i>x</i>) = 24<i>x</i>(5<i>x</i><sup>2</sup> + 10 <i>x</i> + 4);</p></li>	
+	<li><p>Numeratore, N<sup>IV</sup>(<i>x</i>) = -12(<i>x</i><sup>4</sup> + 6<i>x</i><sup>2</sup> + 1)/(1 - x<sup>2</sup>)<sup>4</sup> + <i>x</i> sin <i>x</i>  - 4cos <i>x</i> <br>Denominatore, D<sup>IV</sup>(<i>x</i>) = 24(15<i>x</i><sup>2</sup> + 20 <i>x</i> + 4);</p></li>
+
+</ol>
+
+<p>Abbiamo che N<sup>IV</sup>(0) = -16 e D<sup>IV</sup>(<i>x</i>) = 96. Quindi il limite è -16/96 = -1/6. &emsp; ■</p></li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mi>arctan</mi>
+    <mo data-mjx-texclass="NONE">&#x2061;</mo>
+    <mi>x</mi>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x3C0;</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+      </mrow>
+      <mrow>
+        <mn>2</mn>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$\lim_{x \to \infty} x \left(\arctan x - \frac{\pi x + 2}{2x + 1} \right) $$ -->
+
+<p>Ponendo <i>y</i> = 1/<i>x</i>, possiamo riscrivere come:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>y</mi>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mi>arctan</mi>
+    <mo data-mjx-texclass="NONE">&#x2061;</mo>
+    <mo stretchy="false">(</mo>
+    <mn>1</mn>
+    <mrow data-mjx-texclass="ORD">
+      <mo>/</mo>
+    </mrow>
+    <mi>y</mi>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mi>&#x3C0;</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>y</mi>
+      </mrow>
+      <mrow>
+        <mn>2</mn>
+        <mo>+</mo>
+        <mi>y</mi>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$\lim_{y \to 0^+} \frac{1}{y} \left( \arctan (1/y) - \frac{\pi + 2y}{2 + y} \right) $$ -->
+
+<p>Applicando L'Hopital una volta</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mfrac>
+        <mi>d</mi>
+        <mrow>
+          <mi>d</mi>
+          <mi>y</mi>
+        </mrow>
+      </mfrac>
+      <mrow data-mjx-texclass="INNER">
+        <mo data-mjx-texclass="OPEN">(</mo>
+        <mi>arctan</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>y</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mrow>
+            <mi>&#x3C0;</mi>
+            <mo>+</mo>
+            <mn>2</mn>
+            <mi>y</mi>
+          </mrow>
+          <mrow>
+            <mn>2</mn>
+            <mo>+</mo>
+            <mi>y</mi>
+          </mrow>
+        </mfrac>
+        <mo data-mjx-texclass="CLOSE">)</mo>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mfrac>
+        <mi>d</mi>
+        <mrow>
+          <mi>d</mi>
+          <mi>y</mi>
+        </mrow>
+      </mfrac>
+      <mrow data-mjx-texclass="INNER">
+        <mo data-mjx-texclass="OPEN">(</mo>
+        <mi>y</mi>
+        <mo data-mjx-texclass="CLOSE">)</mo>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <msup>
+          <mi>y</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mn>4</mn>
+        <mo>&#x2212;</mo>
+        <mi>&#x3C0;</mi>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <mo>+</mo>
+        <mi>y</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mn>2</mn>
+  <mo>+</mo>
+  <mfrac>
+    <mi>&#x3C0;</mi>
+    <mn>4</mn>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{y \to 0^+} \frac{\frac{d}{dy} \left( \arctan \left( \frac{1}{y} \right) - \frac{\pi + 2y}{2 + y} \right)}{\frac{d}{dy} \left( y \right)} = \lim_{y \to 0^+} \left( -\frac{1}{y^2 + 1} - \frac{4 - \pi}{(2 + y)^2} \right) = -2 + \frac{\pi}{4}$$ -->
+
+</li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mi>x</mi>
+    </msup>
+    <msup>
+      <mn>2</mn>
+      <mrow data-mjx-texclass="ORD">
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to \infty} \frac{x^x}{2^{x^2}} $$ -->
+
+<p>Esprimiamo <i>x</i><sup>x</sup> = 2<sup>(<i>x</i> ⋅ log<sub>2</sub>(<i>x</i>))</sup>. La frazione è dunque  2<sup>(<i>x</i> ⋅ log<sub>2</sub>(<i>x</i>) − x<sup>2</sup>)</sup>, il cui limite è 0.&emsp; ■</p></li>
 
 <li>
 
@@ -381,92 +810,6 @@
     <mrow data-mjx-texclass="ORD">
       <mi>x</mi>
       <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <msup>
-    <mi>x</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mn>1</mn>
-      <mrow data-mjx-texclass="ORD">
-        <mo>/</mo>
-      </mrow>
-      <mi>x</mi>
-    </mrow>
-  </msup>
-</math>
-
-<!-- $$\lim_{x \to \infty} x^{1/x} $$ -->
-
-<p>Riscriviamo <i>x</i><sup>1/<i>x</i></sup> come e<sup>(ln x)/<i>x</i></sup>. ln <i>x</i> è un infinito di ordine inferiore a <i>x</i>, quindi l'esponente tende a 0 e e<sup>0</sup> = 1. &emsp;■</p></li>
-
-<li>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mn>0</mn>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mi>x</mi>
-        <mn>2</mn>
-      </msup>
-      <mi>cos</mi>
-      <mo data-mjx-texclass="NONE">&#x2061;</mo>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-      <mo>+</mo>
-      <mn>1</mn>
-      <mo>&#x2212;</mo>
-      <msup>
-        <mi>e</mi>
-        <mrow data-mjx-texclass="ORD">
-          <msup>
-            <mi>x</mi>
-            <mn>2</mn>
-          </msup>
-        </mrow>
-      </msup>
-    </mrow>
-    <mrow>
-      <msup>
-        <mi>x</mi>
-        <mn>2</mn>
-      </msup>
-      <msup>
-        <mi>sin</mi>
-        <mn>2</mn>
-      </msup>
-      <mo data-mjx-texclass="NONE">&#x2061;</mo>
-      <mo stretchy="false">(</mo>
-      <mi>x</mi>
-      <mo stretchy="false">)</mo>
-    </mrow>
-  </mfrac>
-</math>
-
-<!-- $$\lim_{x \to 0} \frac{x^2 \cos(x) + 1 - e^{x^2}}{x^2 \sin^2(x)} $$  -->
-
-(x^2 cos x + 1 - e^{x^2})/(x^2 sin^2 x) for x->0
-
-</li>
-
-
-<li>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>x</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
       <mn>2</mn>
     </mrow>
   </munder>
@@ -496,7 +839,7 @@
 
 <!-- $$\lim_{x \to 2} \frac{x^2 - 4} {\sqrt{\sin (x-2)^2}} $$ -->
 
-<p>we set <i>t</i> = <i>x</i> − 2 and write</p>
+<p>Poniamo <i>t</i> = <i>x</i> − 2 e scriviamo</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -575,7 +918,113 @@
 
 <!-- $$\lim_{t \to 0} \frac{t(4+t)} {\sqrt{\sin t^2}} = \lim_{t \to 0} \, \frac{(4+t)t}{|t|}\, \sqrt{\frac{t^2}{\sin t^2}} $$  -->
 
-<p>when you bring <i>t</i> under the square root you have to discuss its sign. I mean: t = sqrt(t<sup>2</sup>) if t > 0 and x = -sqtr(t<sup>2</sup>) otherwise. So the right limit is 4 and the left limit is −4.</p></li>
+<p>when you bring <i>t</i> under the square root you have to discuss its sign. I mean: <i>t</i> = √(<i>t</i><sup>2</sup>) if <i>t</i> > 0 and <i>x</i> = -√(<i>t</i><sup>2</sup>) otherwise. So the right limit is 4 and the left limit is −4.&emsp;■</p></li>
+
+<li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 0} \frac{x - \sin x}{x^2 \sin x} $$ -->
+
+
+
+    Identify the numerator and denominator:
+        $f(x) = x - \sin x$
+        $g(x) = x^2 \sin x$
+
+    Find the derivative of the numerator, $f'(x)$:
+        The derivative of $x$ is 1.
+        The derivative of $\sin x$ is $\cos x$.
+        So, $f'(x) = 1 - \cos x$.
+
+    Find the derivative of the denominator, $g'(x)$:
+    This requires the product rule because $g(x)$ is a product of two functions, $x^2$ and $\sin x$. The product rule states that the derivative of $u(x)v(x)$ is $u'(x)v(x) + u(x)v'(x)$.
+        Let $u(x) = x^2$, so $u'(x) = 2x$.
+        Let $v(x) = \sin x$, so $v'(x) = \cos x$.
+        Applying the product rule: $g'(x) = (2x)(\sin x) + (x^2)(\cos x) = 2x \sin x + x^2 \cos x$.
+
+    Apply L'Hôpital's Rule:
+    Now, our limit problem becomes:
+    $\lim_{x \to 0} \frac{1 - \cos x}{2x \sin x + x^2 \cos x}$
+
+    Check for indeterminate form again:
+    Let's plug in $x=0$ into the new expression:
+        Numerator: $1 - \cos(0) = 1 - 1 = 0$
+        Denominator: $2(0) \sin(0) + 0^2 \cos(0) = 0 \times 0 + 0 \times 1 = 0$
+
+    We still have the indeterminate form $\frac{0}{0}$! This means we need to apply L'Hôpital's Rule again.
+
+    Apply L'Hôpital's Rule a second time:
+        New numerator: $f_2(x) = 1 - \cos x$
+            $f_2'(x) = 0 - (-\sin x) = \sin x$
+        New denominator: $g_2(x) = 2x \sin x + x^2 \cos x$
+            We need to use the product rule again for both terms in the denominator.
+            Derivative of $2x \sin x$: $(2)(\sin x) + (2x)(\cos x) = 2 \sin x + 2x \cos x$
+            Derivative of $x^2 \cos x$: $(2x)(\cos x) + (x^2)(-\sin x) = 2x \cos x - x^2 \sin x$
+            So, $g_2'(x) = (2 \sin x + 2x \cos x) + (2x \cos x - x^2 \sin x) = 2 \sin x + 4x \cos x - x^2 \sin x$
+
+    Now, our limit problem is:
+    $\lim_{x \to 0} \frac{\sin x}{2 \sin x + 4x \cos x - x^2 \sin x}$
+
+    Check for indeterminate form again:
+    Let's plug in $x=0$:
+        Numerator: $\sin(0) = 0$
+        Denominator: $2 \sin(0) + 4(0) \cos(0) - 0^2 \sin(0) = 2(0) + 0(1) - 0(0) = 0$
+
+    Still $\frac{0}{0}$! We need to apply L'Hôpital's Rule a third time.
+
+    Apply L'Hôpital's Rule a third time:
+        New numerator: $f_3(x) = \sin x$
+            $f_3'(x) = \cos x$
+        New denominator: $g_3(x) = 2 \sin x + 4x \cos x - x^2 \sin x$
+            Derivative of $2 \sin x$: $2 \cos x$
+            Derivative of $4x \cos x$: $(4)(\cos x) + (4x)(-\sin x) = 4 \cos x - 4x \sin x$
+            Derivative of $-x^2 \sin x$: $(-2x)(\sin x) + (-x^2)(\cos x) = -2x \sin x - x^2 \cos x$
+            So, $g_3'(x) = (2 \cos x) + (4 \cos x - 4x \sin x) + (-2x \sin x - x^2 \cos x) = 6 \cos x - 6x \sin x - x^2 \cos x$
+
+    Now, our limit problem is:
+    $\lim_{x \to 0} \frac{\cos x}{6 \cos x - 6x \sin x - x^2 \cos x}$
+
+    Check for indeterminate form (hopefully for the last time!):
+    Let's plug in $x=0$:
+        Numerator: $\cos(0) = 1$
+        Denominator: $6 \cos(0) - 6(0) \sin(0) - 0^2 \cos(0) = 6(1) - 0(0) - 0(1) = 6 - 0 - 0 = 6$
+
+    We have $\frac{1}{6}$. This is a finite number, so the limit exists and is equal to this value!
+
+The Solution:
+
+$\lim_{x \to 0} \frac{x - \sin x}{x^2 \sin x} = \frac{1}{6}$
+
+
+</li>
 
 <li>
 
@@ -606,11 +1055,13 @@
   </mfrac>
 </math>
 
-<!-- $$\lim_{x \to 1} \frac{x\log x}{x^2 -1} $$ -->
+<!-- $$\lim_{x \to 1} \frac{x\log x}{x^2 -1} $$ --></li>
 
 </ul>
 
-<li><p>Let <i>f</i> a continuous real function and let <i>a</i> the value of <i>f</i> at <i>x</i> = 0. Calcualte <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<li><p>Let <i>f</i> a continuous real function and let <i>a</i> the value of <i>f</i> at <i>x</i> = 0. Calcualte</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
     <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
     <mrow data-mjx-texclass="ORD">
