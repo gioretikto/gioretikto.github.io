@@ -682,7 +682,7 @@
 
 <!-- $$\lim_{x \to \infty} \frac{x^x}{2^{x^2}} $$ -->
 
-<p>Esprimiamo <i>x</i><sup>x</sup> = 2<sup>(<i>x</i> ⋅ log<sub>2</sub>(<i>x</i>))</sup>. La frazione è dunque  2<sup>(<i>x</i> ⋅ log<sub>2</sub>(<i>x</i>) − x<sup>2</sup>)</sup>, il cui limite è 0.&emsp; ■</p></li>
+<p>Esprimiamo <i>x</i><sup>x</sup> = 2<sup>(<i>x</i> ⋅ log<sub>2</sub>(<i>x</i>))</sup>. La frazione è dunque 2<sup>(<i>x</i> ⋅ log<sub>2</sub>(<i>x</i>) − x<sup>2</sup>)</sup>, il cui limite è 0.&emsp; ■</p></li>
 
 <li>
 
@@ -953,76 +953,22 @@
 
 <!-- $$\lim_{x \to 0} \frac{x - \sin x}{x^2 \sin x} $$ -->
 
+<p>Applichiamo de L'Hopital, tre volte</p>
 
+<ol>
+	<li><p><i>N</i>'(<i>x</i>) =  1 - cos <i>x</i>.<br> D'(<i>x</i>) = 2<i>x</i> sin <i>x</i> + x<sup>2</sup> cos <i>x</i>;</p></li>
+	<li><p><i>N</i>''(<i>x</i>) =  sin <i>x</i>.<br> D''(<i>x</i>) = (2 sin <i>x</i> + 2<i>x</i> cos <i>x</i>) + (2<i>x</i> cos <i>x</i> - <i>x</i><sup>2</sup> sin <i>x</i>) = 2 sin <i>x</i> + 4<i>x</i> cos <i>x</i> - <i>x</i><sup>2</sup> sin <i>x</i>;</p></li>
+	<li><p><i>N</i>'''(<i>x</i>) =  cos <i>x</i>.<br> D'''(<i>x</i>) = (2 cos <i>x</i>) + (4 cos <i>x</i> - 4<i>x</i> sin <i>x</i>) + (-2<i>x</i> sin <i>x</i> - x<sup>2</sup> cos <i>x</i>) = 6 cos <i>x</i> - 6<i>x</i> sin <i>x</i> - x<sup>2</sup> cos <i>x</i>.</p></li>
+</ol>
 
-    Identify the numerator and denominator:
-        $f(x) = x - \sin x$
-        $g(x) = x^2 \sin x$
+<p>Let's plug in <i>x</i>=0:</p>
 
-    Find the derivative of the numerator, $f'(x)$:
-        The derivative of $x$ is 1.
-        The derivative of $\sin x$ is $\cos x$.
-        So, $f'(x) = 1 - \cos x$.
+<ul>
+	<li><p>Numerator: cos(0) = 1$
+	<li><p>Denominator: 6cos(0) - 6(0) \sin(0) - 0^2 \cos(0) = 6(1) - 0(0) - 0(1) = 6 - 0 - 0 = 6.</p></li>
+</ul>
 
-    Find the derivative of the denominator, $g'(x)$:
-    This requires the product rule because $g(x)$ is a product of two functions, $x^2$ and $\sin x$. The product rule states that the derivative of $u(x)v(x)$ is $u'(x)v(x) + u(x)v'(x)$.
-        Let $u(x) = x^2$, so $u'(x) = 2x$.
-        Let $v(x) = \sin x$, so $v'(x) = \cos x$.
-        Applying the product rule: $g'(x) = (2x)(\sin x) + (x^2)(\cos x) = 2x \sin x + x^2 \cos x$.
-
-    Apply L'Hôpital's Rule:
-    Now, our limit problem becomes:
-    $\lim_{x \to 0} \frac{1 - \cos x}{2x \sin x + x^2 \cos x}$
-
-    Check for indeterminate form again:
-    Let's plug in $x=0$ into the new expression:
-        Numerator: $1 - \cos(0) = 1 - 1 = 0$
-        Denominator: $2(0) \sin(0) + 0^2 \cos(0) = 0 \times 0 + 0 \times 1 = 0$
-
-    We still have the indeterminate form $\frac{0}{0}$! This means we need to apply L'Hôpital's Rule again.
-
-    Apply L'Hôpital's Rule a second time:
-        New numerator: $f_2(x) = 1 - \cos x$
-            $f_2'(x) = 0 - (-\sin x) = \sin x$
-        New denominator: $g_2(x) = 2x \sin x + x^2 \cos x$
-            We need to use the product rule again for both terms in the denominator.
-            Derivative of $2x \sin x$: $(2)(\sin x) + (2x)(\cos x) = 2 \sin x + 2x \cos x$
-            Derivative of $x^2 \cos x$: $(2x)(\cos x) + (x^2)(-\sin x) = 2x \cos x - x^2 \sin x$
-            So, $g_2'(x) = (2 \sin x + 2x \cos x) + (2x \cos x - x^2 \sin x) = 2 \sin x + 4x \cos x - x^2 \sin x$
-
-    Now, our limit problem is:
-    $\lim_{x \to 0} \frac{\sin x}{2 \sin x + 4x \cos x - x^2 \sin x}$
-
-    Check for indeterminate form again:
-    Let's plug in $x=0$:
-        Numerator: $\sin(0) = 0$
-        Denominator: $2 \sin(0) + 4(0) \cos(0) - 0^2 \sin(0) = 2(0) + 0(1) - 0(0) = 0$
-
-    Still $\frac{0}{0}$! We need to apply L'Hôpital's Rule a third time.
-
-    Apply L'Hôpital's Rule a third time:
-        New numerator: $f_3(x) = \sin x$
-            $f_3'(x) = \cos x$
-        New denominator: $g_3(x) = 2 \sin x + 4x \cos x - x^2 \sin x$
-            Derivative of $2 \sin x$: $2 \cos x$
-            Derivative of $4x \cos x$: $(4)(\cos x) + (4x)(-\sin x) = 4 \cos x - 4x \sin x$
-            Derivative of $-x^2 \sin x$: $(-2x)(\sin x) + (-x^2)(\cos x) = -2x \sin x - x^2 \cos x$
-            So, $g_3'(x) = (2 \cos x) + (4 \cos x - 4x \sin x) + (-2x \sin x - x^2 \cos x) = 6 \cos x - 6x \sin x - x^2 \cos x$
-
-    Now, our limit problem is:
-    $\lim_{x \to 0} \frac{\cos x}{6 \cos x - 6x \sin x - x^2 \cos x}$
-
-    Check for indeterminate form (hopefully for the last time!):
-    Let's plug in $x=0$:
-        Numerator: $\cos(0) = 1$
-        Denominator: $6 \cos(0) - 6(0) \sin(0) - 0^2 \cos(0) = 6(1) - 0(0) - 0(1) = 6 - 0 - 0 = 6$
-
-    We have $\frac{1}{6}$. This is a finite number, so the limit exists and is equal to this value!
-
-The Solution:
-
-$\lim_{x \to 0} \frac{x - \sin x}{x^2 \sin x} = \frac{1}{6}$
-
+<p>We have 1/6. &emsp;■</p>
 
 </li>
 
@@ -1055,7 +1001,52 @@ $\lim_{x \to 0} \frac{x - \sin x}{x^2 \sin x} = \frac{1}{6}$
   </mfrac>
 </math>
 
-<!-- $$\lim_{x \to 1} \frac{x\log x}{x^2 -1} $$ --></li>
+<!-- $$\lim_{x \to 1} \frac{x\log x}{x^2 -1} $$ -->
+
+<p>Applichiamo de L'Hopital. La derivata del numeratore è N'(<i>x</i>) = 1 + log <i>x</i>, mentre quella del denominatore D'(<i>x</i>) = 2<i>x</i>. Il limite è pertanto 1/2. &emsp;■</p>
+
+</li>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>3</mn>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mn>3</mn>
+    </mrow>
+    <mrow>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mfrac>
+          <mrow>
+            <mi>&#x3C0;</mi>
+            <mi>x</mi>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+      </mrow>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to 1} \frac{x^2 -3x + 3}{\cos{\frac{\pi x}{2}}} $$ -->
+
+<p>È un limite immediato. Il limite destro dà &minus;&infin;, mentre quello sinistro +&infin;. &emsp;■</p></li>
 
 </ul>
 
@@ -1096,7 +1087,270 @@ $\lim_{x \to 0} \frac{x - \sin x}{x^2 \sin x} = \frac{1}{6}$
 <!-- $$ \lim_{x \to 0} \frac{\int_0^x f(t) \text{d}t}{xe^x} $$ -->
 </li>
 
-</ol>
+<li><p>Sia <i>f</i> = sin(<i>x</i>)/<i>x</i>. Dopo aver prolungato per continuità <i>f</i> in <i>x</i> = 0, calcolare <i>f'</i> (0) e <i>f''</i>(0). (<i>Suggerimento</i>: Nei due limiti che si chiede di calcolare, è utile il T. di de L'Hopital).</p>
+
+<p>f'(0) = lim<sub>h &rarr; 0</sub> [sin(0+h)/(0+h) - sin(0)/0]/h = (sin h/h &minus;1)/<i>h</i>. Il numeratore può essere riorganizzato come:</p>
+
+<div class="eq">
+<p>(sin h)/<i>h</i> &minus; 1 = (sin <i>h</i> &minus; <i>h</i>)/<i>h</i></p>
+</div>
+
+<p>Ottenendo il limite</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>h</mi>
+      <mo>&#x2212;</mo>
+      <mi>h</mi>
+    </mrow>
+    <msup>
+      <mi>h</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{h \to 0} \frac{\sin h - h}{h^2} $$ -->
+
+<p>è una forma indeterminata 0/0. quindi applichiamo la regola di de L'Hopital:</p>
+
+<ul>
+	<li><p>Derivata numeratore: cos <i>h</i> &minus;1;</p></li>
+	<li><p>derivata denominatore: 2<i>h</i>.</p></li>
+</ul>
+
+<p>Quindi si ha ulteriormente una forma indeterminata dato che N'(0)/D'(0) = 0/0. Applichiamo nuovamente de L'Hopital:</p>
+
+<ul>
+	<li><p>Derivata numeratore_ &minus;sin <i>h</i>;</p></li>
+	<li><p>Derivata denominatore: 2.</p></li>
+</ul>
+
+<p>Il limite questa volta è 0. <br> Per calcolare f''(0) applicando la definizione di derivata abbiamo questa volta</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>h</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>h</mi>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{h \to 0} \frac{f'(x + h) - f'(0)}{h} = \lim_{h \to 0} \frac{f'(h) - 0}{h} = \lim_{h \to 0} \frac{f'(h)}{h} $$ -->
+
+<p>Ora utilizziamo l'espressione della derivata prima di <i>f'</i>(<i>x</i>) = (<i>x</i> cos <i>x</i> &minus; sin <i>x</i>)/<i>x</i><sup>2</sup> e sostituendo <i>x</i> = <i>h</i>:</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>h</i>) = (<i>h</i> cos <i>h</i> &minus; sin <i>h</i>)/<i>h</i><sup>2</sup></p>
+</div>
+
+<p>Ora calcoliamo il limite</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mfrac>
+      <mrow>
+        <mi>h</mi>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>h</mi>
+        <mo>&#x2212;</mo>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>h</mi>
+      </mrow>
+      <msup>
+        <mi>h</mi>
+        <mn>2</mn>
+      </msup>
+    </mfrac>
+    <mi>h</mi>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>h</mi>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>h</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>h</mi>
+    </mrow>
+    <msup>
+      <mi>h</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$ \lim_{h \to 0} \frac{\frac{h \cos h - \sin h}{h^2}}{h} = \lim_{h \to 0} \frac{h \cos h - \sin h}{h^3} $$ -->
+
+<p>Essendo una forma indeterminata, applichiamo de L'Hopital</p>
+
+<ul>
+	<li><p>Derivata del numeratore: cos ℎ − ℎ sin ⁡ℎ − cos ⁡ℎ = − ℎ sin ⁡ℎ;</p></li>
+	<li><p>Derivata del denominatore: 3ℎ<sup>2</sup>;</p></li>
+</ul>
+
+<p>Ora calcoliamo il limite:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <mi>h</mi>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>h</mi>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <msup>
+        <mi>h</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>h</mi>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <mi>h</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{h \to 0} \frac{-h \sin h}{3h^2} = \lim_{h \to 0} \frac{-\sin h}{3h}$$ -->
+
+<p>Di nuovo una forma indeterminata. Applichiamo nuovamente de L'Hopital:</p>
+
+<ul>
+	<li><p>Derivata del numeratore: cos ℎ;</p></li>
+	<li><p>Derivata del denominatore: 3ℎ.</p></li>
+</ul>
+
+
+<p>Questa volta il limite è 1/3. </p></li>
 
 <h2>Soluzioni</h2>
 
