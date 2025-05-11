@@ -21,6 +21,8 @@
 
 <h1>Limite della derivata e derivabilità</h1>
 
+<p>Scopo di questo paragrafo è fornire un utile strumento che permette di ottenere la derivata destra (sinistra) di una funzione, senza doverla calcolare direttamente dalla definizione. Ciò è utile per studiare la derivabilità di una fuzione in un punto, soprattutto per funzioni definite a tratti.</p>
+
 <p><b>Esempio 5.13.1</b> Supponiamo di voler studiare la derivabilità o meno di una funzione del tipo:</p>
 
 <div class="eq">
@@ -307,7 +309,7 @@
 
 <!-- $$f'_+(1) =  \lim_{h \to 0^+} \frac{f(1+h) - f(1)}{h}$$  -->
 
-<p>che però è molto più scomodo da calcolare, in pratica, rispetto al limite della derivata. Il T. di Lagrange permette di rispondere affermativamente a questa domanda:</p>
+<p>che però è molto più scomodo da calcolare, in pratica, rispetto al limite della derivata. Il <a href="Lagrange.html">T. di Lagrange</a> permette di rispondere affermativamente a questa domanda:</p>
 
 <p id="T"><b>Teorema 5.13.2</b>. Sia <i>f</i> : [<i>a,b</i>) &rarr; ℝ, continua in <i>a</i>, derivabile in (<i>a,b</i>), ed esista (finito o infinito)</p>
 
@@ -639,7 +641,10 @@
 <p>La funzione non è definita in <i>x</i> = 0, ma si può prolungare per continuità ponendo <i>f</i>(0) (infatti, <i>f</i>(<i>x</i>) &rarr; 0 per <i>x</i> &rarr; 0). Dunque ora <i>f</i> è continua in 0; per <i>x</i> &ne; 0, inoltre, <i>f</i> è certamente derivabile e si ha:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>f</mi>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
   <mo stretchy="false">(</mo>
   <mi>x</mi>
   <mo stretchy="false">)</mo>
@@ -712,7 +717,7 @@
   </mrow>
 </math>
 
-<!-- $$f(x) = 2x \sin x \left(\frac{1}{x} \right) + x^2 \cos \left(\frac{1}{x} \right) \cdot \left(-\frac{1}{x^2} \right) = 2x \sin x \left(\frac{1}{x} \right) -\cos \left(\frac{1}{x} \right) $$ -->
+<!-- $$f'(x) = 2x \sin x \left(\frac{1}{x} \right) + x^2 \cos \left(\frac{1}{x} \right) \cdot \left(-\frac{1}{x^2} \right) = 2x \sin x \left(\frac{1}{x} \right) -\cos \left(\frac{1}{x} \right) $$ -->
 
 <p>Osserviamo ora che lim<sub><i>x</i> &rarr; 0</sub> <i>f'</i>(<i>x</i>) non esiste, né finito né infinito. Possiamo concludere che non esiste <i>f'</i>(0)? No! Si noti che il teorema non permette questa conclusione, ed in effetti, in questo caso, calcolando <i>f'</i>(0) mediante la definizione si ha:</p>
 
@@ -753,13 +758,14 @@
       <mn>0</mn>
     </mrow>
   </munder>
+  <mi>h</mi>
   <mi>sin</mi>
   <mo data-mjx-texclass="NONE">&#x2061;</mo>
   <mrow data-mjx-texclass="INNER">
     <mo data-mjx-texclass="OPEN">(</mo>
     <mfrac>
       <mn>1</mn>
-      <mi>x</mi>
+      <mi>h</mi>
     </mfrac>
     <mo data-mjx-texclass="CLOSE">)</mo>
   </mrow>
@@ -767,7 +773,7 @@
   <mn>0</mn>
 </math>
 
-<!-- $$ f'(0) = \lim_{h \to 0} \frac{f(h) - 0}{h} = \lim_{h \to 0} \sin \left(\frac{1}{x} \right) = 0 $$  -->
+<!-- $$ f'(0) = \lim_{h \to 0} \frac{f(h) - 0}{h} = \lim_{h \to 0} h \sin \left(\frac{1}{h} \right) = 0 $$  -->
 
 <p>perciò in realtà <i>f</i> è derivabile e <i>f'</i>(0) = 0. Quando il limite della derivata non esiste (né finito, né infinito), il teorema non applicabile; in particolare non è detto che non esista la derivata nel punto considerato: occorre calcolarla dalla definizione. &emsp;■</p>
 

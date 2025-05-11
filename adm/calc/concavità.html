@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Derivata seconda, concavità e convessità">
+	<title>Derivata seconda, concavità e convessità</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Derivata seconda, concavità e convessità</h1>
+
+<p>Abbiamo visto che il significato geometrico della <a href="D2.html">derivata seconda</a> è legato al concetto di <i>curvatura</i> della curva grafico della funzione. Vedremo ora come rendere più preciso, qualitativamente e quantitativamente, quest idea di curvatura del grafico attraverso il concetto di <i>convessità</i>. Si tratta di una nozione che in matematica ha una portata molto vasta, di cui qui potremo solo toccare i primi aspetti.</p>
+
+<h2>Convessità e corde</h2>
+
+<p>Cominciamo col ricordare che, in geometrica, si dice che una <i>figura F</i> (pensiamo ad es. a un sottoinsieme del piano) è <i>convessa</i> se, per ogni coppia di punti <i>P</i><sub>1</sub>, <i>P</i><sub>2</sub> &in; <i>F</i> avviene che il segmento che congiunge <i>P</i><sub>1</sub> a <i>P</i><sub>2</sub> è interamente contenuto in <i>F</i>:</p>
+
+<figure>
+<img src="img/insieme_convesso.png" alt="insieme convesso"/>
+<figcaption><b>Fig.1</b> a) un insieme convesso; b) un insieme convesso.</figcaption>
+</figure>
+
+<p>Coerentemente a questa idea, diamo allora la seguente</p>
+
+<p><b>Definizione 5.15.2</b> Consideriamo una funzione <i>f</i>: <i>I</i> ⟶ ℝ (dove <i>I</i> è un intervallo), Si chiama <i>epigrafico</i> (o soprafrafico) di <i>f</i> l'insieme</p>
+
+<div class="eq">
+<p>epi <i>f</i> = {(<i>x,y</i>) &in; ℝ<sup>2</sup> : <i>x</i> &in; <i>I</i> e <i>y</i> &ge; <i>f</i>(<i>x</i>)}</p>
+</div>
+
+<p>Si dice allora che <i>f</i> è convessa in <i>I</i> se il suo epigrafico è un insieme convesso. Si dice che <i>f</i> è concava in <i>I</i> se −<i>f</i> è convessa in <i>I</i>. &emsp;□</p>
+
+<figure>
+<img src="img/epi.png" alt="epigrafico"/>
+<figcaption><b>Fig.2</b>. a) epigrafico; b) funzione convessa; c) funzione concava.</figcaption>
+</figure>
+
+<p>Segnaliamo subito che esiste una seconda terminologia, alternativa, che si usa talvolta per esprimere questi concetti: anziché <i>f</i> convessa in (<i>a,b</i>) si può dire <i>f concava verso l'altro</i> in (<i>a,b</i>), e invece di concava in (<i>a,b</i>) si può dire <i>concava verso il basso</i> in (<i>a,b</i>). Per non creare confusione, in questo paragrafo non useremo mai questa seconda terminologia. <br> Si dimostra facilmente che la definizione precedente è equivalente alla prossima, che fa riferimento al grafico anziché all'epigrafico della funzione:</p>
+
+<p><b>Definizione 5.15.3</b> Sia <i>f</i>: <i>I</i> ⟶ ℝ (dove <i>I</i> è un intervallo), si dice che <i>f</i> è convessa (concava) in <i>I</i> se per ogni coppia di punti <i>x</i><sub>1</sub>,<i>x</i><sub>2</sub> &in; <i>I</i> si ha che il segmento ("corda") di estremi ((<i>x</i><sub>1</sub>, <i>f</i>(<i>x</i><sub>1</sub>), (<i>x</i><sub>2</sub>, <i>f</i>(<i>x</i><sub>2</sub>)) non ha punti sotto (sopra) il grafico di <i>f</i>. &emsp;□</p>
+
+<p>Questa definizione può essere riformulata anche mediante una disuguaglianza analitica. Con riferimento alla figura 2, esprimiamo iil generico punti (<i>z<sub>t</sub>, f<sub>t</sub></i>) del segmento congiungente i punti ((<i>x</i><sub>1</sub>, <i>f</i>(<i>x</i><sub>1</sub>), (<i>x</i><sub>2</sub>, <i>f</i>(<i>x</i><sub>2</sub>)) come <i>combinazione lineare convessa</i> dei suoi estremi:</p>
+
+<div class="eq">
+<p><i>z</i> = (1 − <i>t</i>)<i>x</i><sub>1</sub> + <i>tx</i><sub>2</sub>; <i>f<sub>t</sub></i> = (1 − <i>t</i>) <i>f</i>(<i>x</i><sub>1</sub>) + <i>tf</i>(<i>x</i><sub>2</sub>), <i>t</i> &in; [0,1]</p></p>
+</div>
+
+<p>Si osservi che al variare di <i>t</i> &in; [0,1] il punto <i>z</i><sub>1</sub> percorre il segmento [<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>] sull'asse <i>x</i>, e il punto del piano (<i>z<sub>t</sub>, f<sub>t</sub></i>) percorre il segmento di estremi ((<i>x</i><sub>1</sub>, <i>f</i>(<i>x</i><sub>1</sub>), (<i>x</i><sub>2</sub>, <i>f</i>(<i>x</i><sub>2</sub>)).</p>
+
+<figure>
+<img src="img/convessa.png" alt="convessità per corde"/>
+<figcaption><b>Fig.3</b>.</figcaption>
+</figure>
+
+<p>La seconda definizione di convessità che abbiamo dato si esprime dunque così:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>z<sub>t</sub></i>) &le; <i>f<sub>t</sub></i> &forall;<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub> &in; <i>I</i>, &forall;<i>t</i> &in; [0,1]</p>
+</div>
+
+<p>o, più esplicitamente</p>
+
+<div class="eq">
+<p><i>f</i>((1 − <i>t</i>) <i>x</i><sub>1</sub> + <i>tx</i><sub>2</sub>) &le; (1 − <i>t</i>) <i>f</i>(<i>x</i><sub>1</sub>) + <i>tf</i>(<i>x</i><sub>2</sub>) &emsp;&emsp; &forall;<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub> &in; <i>I</i>, &forall;<i>t</i> &in; [0,1]</p>
+</div>
+
+<p>Questa disuguaglianza esprime il modo in cui viene spesso sfruttata l'informazione che una funzione è convessa. Se nella precedente disuguaglianza vale sempre il &lt; la fuznione si dice <i>strettamente convessa</i>. Per le funzioni concave (o strettamente concave) varrà un'analoga disuguaglianza col segno &ge; (o &gt;).</p>
+
+<p>Si notiche che la definizione di funzione convessa non richiede a priori che <i>f</i> sia una funzione continua o derivabile, quindi è molto generale:</p>
+
+<figure>
+<img src="img/convessità_continuità.png" alt="convessità e continuità"/>
+<figcaption><b>Fig.4</b>. a) funzione convessa con due punti angolosi; b) funzione convessa con due discontinuità agli estremi di un intervallo.</figcaption>
+</figure>
+
+<p>Si può dimostrare che le situazioni esemplificate dalla figura precedente sono effettivamente "le peggiori possibili", nel senso che:</p>
+
+<p><b>Definizione 5.15.4</b> Una funzione convessa (o concava) su un intervallo <i>I</i> è continua in <i>I</i>, salvo al più negli estremi dell'intervallo. Inoltre possiede derivata destra e sinistra in ogni punto interno dell'intervallo.&emsp;□</p>
+
+<p>Dunque, punti angoloso all'interno e punti di discontinuità agli estremi sono i soli comportamenti irregolari permessi ad una funzione convessa o concava.</p>
+
+<h3 id="mon">Convessità e monotonia della derivata prima</h3>
+
+<p>Il test di monotonia, come abbiamo visto, permette di determinare le zone in ui <i>f</i> cresce o decresce mediante il segno della derivata prima. Se applichiamo il test alla funzione <i>f</i>'(<i>x</i>), potremo studiare la monotonia di <i>f</i>'(<i>x</i>) mediante il segno della derivata seconda. Se dunque <i>f</i> è una funzione derivabile due volte in (<i>a,b</i>), avremo:</p>
+
+<ol type="a">
+	<li><p><i>f''</i> &ge; (<i>a,b</i>) ⇔ <i>f'</i> crescente in (<i>a,b</i>);</p></li>
+	<li><p><i>f''</i> &le; (<i>a,b</i>) ⇔ <i>f'</i> decrescente in (<i>a,b</i>);</p></li>
+</ol>
+
+<p>Si dice che <i>f</i> è convessa in (<i>a,b</i>) se soddisfa la a);Si dice che <i>f</i> è concava in (<i>a,b</i>) se soddisfa la b).</p>
+
+<p>Il significato geometrico della convessità o concavità di una funzione può essere illustrato in diversi modi. Cominciamo ad osservare che se <i>f</i> è convessa, ossia <i>f'</i> è crescente, al cresce di <i>x</i> il coefficien angolare <i>m</i> della retta tangente al grafico di <i>f</i> cresce: se <i>m</i> è positivo, ciò significa che la tangente diventa sempre più ripida, come nella fig. 5.</p>
+
+<figure>
+<img src="img/derivate/convessa.png" alt="funzione convessa" />
+<figcaption><b>Fig.5</b> <b>Convex function</b> the slope of the tanget line goes from negative to positive values, hence increases.</figcaption>
+</figure>
+
+<p>Analogamente per la concavità.</p>
+
+<img src="img/concavity_test.png" alt="convessity second derivative test"/>
+
+<p><b>Esempio 5.15.5</b> Le funzioni esponenzili <i>f</i>(<i>x</i>) = <i>a<sup>x</sup></i> sono convesse in ℝ, per qualunqu base <i>a</i> ≷ 1. Infatti</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) = <i>a<sup>x</sup></i> log <i>a</i>; <i>f''</i>(<i>x</i>) = <i>a<sup>x</sup></i> (log <i>a</i>)<sup>2</sup> &gt; 0 &emsp; &forall;<i>x</i> &in; ℝ, &forall; <i>a</i> &gt; 0, <i>a</i> &ne; 1.&emsp;■</p>
+</div>
+
+<p><b>Esempio 5.15.5</b> Le funzioni logaritmiche <i>f</i>(<i>x</i>) = log<sub>a</sub><i>x</i> sono concave in (0,&infin;),se <i>a</i> &gt; 1, convesse in (0,&infin;) se 0 &lt; <i>a</i> &lt; 1. Infatti:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>x</mi>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>a</mi>
+    </mrow>
+  </mfrac>
+  <mo>;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2033;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>a</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mo>&lt;</mo>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mi mathvariant="normal">&#x2200;</mi>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+        </mtd>
+        <mtd>
+          <mi>a</mi>
+          <mo>&gt;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mi mathvariant="normal">&#x2200;</mi>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+          <mo>&lt;</mo>
+          <mi>a</mi>
+          <mo>&lt;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$f'(x) = \frac{1}{x\log a}; \quad f''(x) = - \frac{1}{\log a} = \begin{cases} \lt 0 & \forall x \gt 0, & \text{se }& a \gt 1 \\
+\gt 0 & \forall x \gt 0, & \text{se }& 0 \lt a \lt 1 \end{cases} $$ -->
+
+<p><b>Esempio 5.15.6</b> Le funzioni potenza a esponente reale <i>&alpha;</i>, <i>f</i>(<i>x</i>) = <i>x<sup>&alpha;</sup></i> sono convesse in (0.,&infin;) se <i>&alpha;</i> &gt; 1 oppure <i>&alpha;</i> &lt; 0, sono concave in (0,&infin;) se 0 &lt; <i>&alpha;</i> &lt; 1. Infatti:</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) = <i>&alpha;x<sup>&alpha; − 1</sup></i>; &emsp; <i>f''</i>(<i>x</i>) = <i>&alpha;</i>(<i>&lpha;</i> − 1)<i>x</i><sup>&alpha; − 2</sup></p>
+</div>
+
+<p>che ha, per ogni <i>x</i> &gt; 0, il segno di <i>&alpha;</i>(<i>&lpha;</i> − 1). &emsp;■</p>
+
+<p>Ci si renda conto del significato geometrico di queste affermazioni osservando i grafici delle funzioni ora citate.</p>
+
+<h2>Convessità e rette tangenti</h2>
+
+<p>Un'utile caratterizzazione geometrica della convessità, su cui ritornernemo in seguito, coinvolge le <i>retta tangenti</i> al grafico della funzione.</p>
+
+<p><b>Teorema 5.15.7</b> Una funzione <i>f</i>: (<i>a,b</i>) ⟶ ℝ, derivabile in (<i>a,b</i>), è convessa (concava) in (<i>a,b</i>) se e solo se comunque si scelga un punto <i>x</i><sub>0</sub> &in; (<i>a,b</i>) si ha che il grafico di <i>f</i> si mantiene in tutto (<i>a,b</i>) sopra (sotto) il grafico della sua retta tangente in (<i>x</i><sub>0</sub>,<i>f</i>(<i>x</i><sub>0</sub>).</p>
+
+<p><b>Esempio 5.15.8</b> Sappiamo che <i>f</i>(<i>x</i>) = e<sup>x</sup> è convessa in tutto ℝ. Ne segue che se, ad es., costruiamo la retta tangente al grafico di <i>f</i> in <i>x</i> = 0, ossia <i>y</i> = <i>x</i> + 1, risulta <i>e<sup>x</sup></i> &ge; 1 + <i>x</i> &forall;<i>x</i> &in; ℝ. La retta tangente al grafico di <i>f</i> in <i>x</i> = 1, invece è <i>y</i> = <i>ex</i>. Di conseguenza risulta anche <i>e<sup>x</sup></i> &ge; <i>ex</i> &forall;<i>x</i> &in; ℝ, e così via. &emsp;■</p>
+
+<p>È utile talvolta sapere che una funzione (derivabile) convessa sta <i>sopra</i> le proprie rette tangenti e <i>contemporaneamente</i> sta <i>sotto</i> le proprie corde (definizione di convessità). Questo permette di concludere che, presi due punti qualsiasi sul grafico di una funzione convessar, il grafico tra quei due punti cade tutto nel triangolo che ha per lati la corda che li unisce e le rette tangenti al grafico nei due punti.</p>
+
+<figure>
+<img src="img/convessità_corde.png" alt="convessità"/>
+<figcaption><b>Fig.6</b> </figcaption>
+</figure>
+
+<p>Questa limitazione può essere utile, ad es., quando si cerca di localizzare l'intersezione tra due curve.</p>
+
+<h2 id="flesso">Punti di flesso</h2>
+
+<p>Ovviamente, il <i>verso della concavità</i> di una funzione (ossia il fatto che sia convessa o concava) può cambiare, nel suo insieme di definizione; questo ci conduce al concetto di <a href="D_non.html#flesso">punto di flesso</a>.</p>
+
+<p><b>Definizione 5.15.9</b> Sia <i>f</i>: (<i>a,b</i>) ⟶ ℝ una funzione e <i>x</i><sub>0</sub> &in; (<i>a,b</i>) sia un punto di derivabilità per <i>f</i>, oppure sia <i>f'</i>(<i>x</i><sub>0</sub>) = &pm;&infin;. Il punto <i>x</i><sub>0</sub> si dice di <i>flesso</i> per <i>f</i> se esiste un intorno destro (<i>x</i><sub>0</sub>, <i>x</i><sub>0</sub> + <i>h</i>), <i>h</i> &gt; 0, in cui <i>f</i> è convessa (concava), e un intorno sinistro (<i>x</i><sub>0</sub> − <i>h</i>, <i>x</i><sub>0</sub>) in cui <i>f</i> è concava.&emsp;□</p>
+
+<p>Attraversando un punto di flesso, la derivata seconda di <i>f</i> (se esiste) cambia segno. Ci aspettiamo allora che in questo punto <i>f''</i> si annulli. Si può infatti dimostrare che:</p>
+
+<p><b>Teorema 5.15.10</b> Sia <i>x</i><sub>0</sub> un punto di flesso per <i>f</i>; se esiste <i>f''</i>(<i>x</i><sub>0</sub>), allora <i>f</i>''(<i>x</i><sub>0</sub>) = 0.</p>
+
+<p>Notiamo che, se sapessimo che <i>f''</i> esiste in un intorno di <i>x</i><sub>0</sub> ed è continua in <i>x</i><sub>0</sub>, allora la tesi del teorema seguirebbe dal T. dei valori intermedi per le funzioni continue (applicato ad <i>f''</i>). Ad ogni mnodo, si può dimostrare il teorema appena enunciato anche senza queste ipotesi ulteriori. <br> L'iplicazione opposta a quella enunciata dal teorema non è vera, come mostra l'esempio xx: un punto in cui la derivata seconda si annulla può non essere di flesso. <br> Il significato geometrico dei punti di flesso è ulteriormente chiarito dal prossimo:</p>
+
+<p><b>Teorema 5.15.11</b> Se <i>f</i>: (<i>a,b</i>) ⟶ ℝ è derivabile in (<i>a,b</i>) e <i>x</i><sub>0</sub> &in; (<i>a,b</i>) è un puntp di flesso, allora il grafico di <i>f</i>(<i>x</i>) attraversa la propria retta tangente in (<i>x</i><sub>0</sub>, <i>f</i>(<i>x</i><sub>0</sub>)) (v. figura 7).</p>
+
+<figure>
+<img src="img/flesso.png" alt="flesso"/>
+<figcaption><b>Fig.7</b></figcaption>
+</figure>
+
+<p><b>Dim.</b> Tracciamo la retta tangente al grafico di <i>f</i>(<i>x</i>) nel punto di ascissa <i>x</i><sub>0</sub>. Se <i>f</i> è (ad es.) concava in (<i>a,x</i><sub>0</sub>), poiché <i>f</i> è derivabile, il grafico di <i>f</i> sta sotto la retta in (<i>a,x</i><sub>0</sub>) (v. T. su convessità e rette tangenti); d'altra parte <i>f</i> è convessa in (<i>x</i><sub>0</sub>, <i>b</i>), perciò il suo grafico sta sopra la retta in (<i>x</i><sub>0</sub>, <i>b</i>). Di conseguenza in <i>x</i><sub>0</sub> il grafico attraversa la retta tangente. &emsp;□</p>
+
+<p><b>Esempio 5.15.12</b>. Sia <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup>. Poichè <i>f'</i>(<i>x</i>) = 3<i>x</i><sup>2</sup> &ge; 0, la funzione è crescente su tutto ℝ. Ha un punto stazionario per <i>x</i> = 0, che non sarà però punto di massimo o minimo, perché la funzione è crescente. <i>f''</i>(<i>x</i>) = 6<i>x</i> &ge; 0 per <i>x</i> &ge; 0. Dunque la funzione è convessa per <i>x</i> &gt; 0, concava per <i>x</i> &lt; 0 e ha un punto di flesso in <i>x</i> = 0, a tangente orrizzontale. &emsp;■</p>
+
+<img src="img/x^3.png" alt="cubic function"/>
+
+<p><b>Esempio 5.15.13</b>. Sia <i>f</i>(<i>x</i>) = e<sup>−<i>x</i><sup>2</sup></sup>. Poiché <i>f</i>(<i>x</i>) = −2<i>xe</i><sup>−<i>x</i><sup>x<sup>2</sup></sup> &ge; 0 per <i>x</i> &le; 0, la funzione crece per <i>x</i> &lt; 0, decresce per <i>x</i> &gt; 0 perciò ha un punto di massimo relativo in <i>x</i> = 0. <br> <i>f''</i>(<i>x</i>) = e<sup>−<i>x</i><sup>x<sup>2</sup></sup>(4<i>x</i><sup>2</sup> −2) &ge; 0 per <i>x</i><sup>2</sup> &ge; 1/2; <i>x</i> &ge; 1/&radic;2; <i>x</i> &le; −1/&radic;2. La funzione è convessa per questi valori, concava per −1/&radic;2 &le; <i>x</i> &le; 1/&radic;2, ha punti di flesso in <i>x</i> = &pm;1/&radic;2, con retta tangente di pendenza <i>f'</i>(<i>x</i>) (&pm;1/&radic;2) = &mp; &radic;(2/e).</p>
+
+<figure>
+<img src="img/exp_minu_x2.png" alt="e^(-x^2)"/>
+<figcaption><i>f</i>(<i>x</i>) = e<sup>−<i>x</i><sup>2</sup></sup></figcaption>
+</figure>
+
+<p><b>Esempio 5.15.13</b>. Sia <i>f</i>(<i>x</i>) = <i>x</i><sup>4</sup>. Poiché <i>f'</i>(<i>x</i>) = 4<i>x</i><sup>3</sup> &ge; 0 per <i>x</i> &gt; 0, la funzione è crescente per <i>x</i> &gt; 0, decrescente per <i>x</i> &lt; 0 e ha un punto di minimo in <i>x</i> = 0. <i>f''</i>(<i>x</i>) = 12<i>x</i><sup>2</sup> &ge; 0 per ogni <i>x</i>, quindi la funzione è convessa in tutto ℝ. Perciò il punto <i>x</i> = 0, in cui <i>f''</i> si annulla, <i>non</i> è un punto di flesso. &emsp;■</p>
+
+<p><b>Esempio 5.15.14</b>. Sia <i>f</i>(<i>x</i>) = ∛<i>x</i>. Per <i>x</i> &gt; 0 la funzione è concava, per <i>x</i> &lt; 0 è convessa (come si duduce dal segno di f''); in <i>x</i> = 0 è <i>f'</i>(0) = +&infin;. In base alla nostra definizione, <i>x</i> − 0 è un punto di flesso (a tangente verticale). Questo è anche coerente alla terminologia che abbiamo introdotto discutendo i punti di non deribabilità. Si vede che anche in questo caso il grafico attraversa la tangente nel punto di flesso; si noti che <i>f''</i>(0) non esiste.</p>
+
+<figure>
+<img src="img/cbrt_x.png" alt="∛x"/>
+<figcaption><i>f</i>(<i>x</i>) = ∛<i>x</i></figcaption>
+</figure>
+
+<p><b>Esempio 5.15.15</b>. Sia <i>f</i>(<i>x</i>) = <i>x</i> |<i>x</i>. Per <i>x</i> &gt; 0 è <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup>, convessa; per <i>x</i> &lt; 0 è <i>f</i>(<i>x</i>) = −<i>x</i><sup>2</sup>, concava; si noti che esiste <i>f'</i>(0) = 0; dunque <i>x</i> = 0 è un punto di flesso. Tuttavia, <i>f''</i>(0) non esiste.&emsp;■</p>
+
+<section aria-label="End">
+<a href="D_lim.html">«Limite della derivata e derivabilità</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

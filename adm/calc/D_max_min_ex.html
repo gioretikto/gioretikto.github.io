@@ -33,7 +33,7 @@
 	<li><p>√<i>x</i>log<i>x</i>;</p></li>
 	<li><p>(<i>x</i>+2)/(<i>x</i>+1).</p></li>
 
-        <p>(v. <a href="grafici.html">grafici</a>).</p>
+        <p>(v. <a href="graf.html">grafici</a>).</p>
 	
 	<p>Impostare e risolvere i seguenti problemi di massimo o minimo, cercando di imitare le tecniche illustrate negli esmpi del <a href="D_probl.html">par. 5.11</a> In particolare, impostare il problem in modo da ridurlo ad un problema di massimizzazione o minimizzazione di una funzione di una variabile.</p>
 	
@@ -49,7 +49,7 @@ d<i>S</i>/d<i>r</i> = 0 4&pi;<i>r</i> &minus; 660/<i>r</i><sup>2</sup> = 0<br>
 <i>r</i> = (165/2&pi;)<sup>1/3</sup> ≈ 3.84 cm</p>
 </div>
 
-<p>L'altezza è quindi <i>h</i> = 330/&pi;<i>r</i><sup>2</sup> ≈ 7.68 cm.&emsp;□ ■</p></li>
+<p>L'altezza è quindi <i>h</i> = 330/&pi;<i>r</i><sup>2</sup> ≈ 7.68 cm.&emsp;■</p></li>
 	
 	<li><p>Un uomo deve raggiungere un punto che si trova sull'altra sponda di un fiume, 100 metri più a valle; il fiume è rettilineo e largo 10 metri; l'uomo può correre sulla sponda del fiume con velocità <i>v</i>, quindi tuffarsi e attraversare a nuotor il fiume, con velocità inferiore, pari <i>&delta;v</i> (0 &lt; <i>&delta;</i> &lt; 1). <br> Determinare dopo quanti metri di corsa l'uomo si deve tuffare, affiché sia minimo il tempo impiegato a raggiungere la meta. <br>Se l'uomo è un nuotatore provetto, &delta; sarà quasi uguale a 1: determinare il valore esatto di &delta; per il quale all'uomo conviene tuffarsi immediatamente, senza percorrere neanche un metro sulla terraferma.</p>
 	
@@ -2618,7 +2618,8 @@ e^{\frac{1}{x}} & \text{per } x \lt 0 \end{cases}$$ -->
 
 </ol>
 
-<p>Abbiamo che <i>f</i><sub>1</sub>(0) = 0. Per valutare la continuità dobbiamo calcolare il limite destro e sinistro della funzione in <i>x</i> = 0:</p>
+<ol>
+	<li><p>Abbiamo che <i>f</i><sub>1</sub>(0) = 0. Per valutare la continuità dobbiamo calcolare il limite destro e sinistro della funzione in <i>x</i> = 0:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -2779,12 +2780,205 @@ e^{\frac{1}{x}} & \text{per } x \lt 0 \end{cases}$$ -->
 
 <!-- $$\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x^2 \log x = -x^2 \log{\frac{1}{x}} = \lim_{x \to 0^+} -\frac{\log{\frac{1}{x}}} {\left(\frac{1}{x}\right)^2} = \lim_{x \to 0^+} \frac{-\log{y}}{y^2} = 0 $$ -->
 
-<p>Quindi <i>f</i><sub>1</sub> è continua in <i>x</i> = 0.</p>
+<p>Quindi <i>f</i><sub>1</sub> è continua in <i>x</i> = 0. La derivata è</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>f</mi>
+    <mn>1</mn>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+          <mi>log</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>e</mi>
+            <mi>x</mi>
+          </msup>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2264;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$f'_1(x) = \begin{cases} x^2\log x + x & \text{per } x \gt 0 \\
+e^x  & \text{per } x \le 0 \\
+\end{cases}$$ -->
+
+<p>Il limite destro</p>
+
+<div class="eq">
+<p>lim<sub>0<sup>+</sup></sub> <i>f</i>'(<i>x</i>) = 0<br>
+lim<sub>0<sup>−</sup></sub> <i>f</i>'(<i>x</i>) = 1</p>
+</div>
+
+<p>Quindi <i>f</i><sub>1</sub> presenta un punto angoloso in <i>x</i> = 0.&emsp;■</p></li>
+
+<li><p><i>f</i><sub>2</sub>(<i>0</i>) = <i>0</i> |<i>0</i>| = 0, ed è una funzione continua in <i>x</i> = 0. La si può esprimere come:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>f</mi>
+    <mn>2</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2264;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2265;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$f_2(x) = \begin{cases} -2x^2 & \text{per } x \le 0 \\
+x^2  & \text{per } x \ge 0 \\
+\end{cases}$$ -->
+
+<p>Calcoliamone la derivata</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>f</mi>
+    <mn>2</mn>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>4</mn>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2264;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2265;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$f'_2(x) = \begin{cases} -4x & \text{per } x \le 0 \\
+2x  & \text{per } x \ge 0 \\
+\end{cases}$$ -->
+
+<p>Applicando il Teorema 5.13.2, abbiamo che sia la derivata destra che sinistra sono nulle in <i>x</i> = 0; 
+</p>
+
+<div class="eq">
+<p>lim<sub><i>x</i> → 0<sup>+</sup></sub> <i>f'</i><sub>2</sub>(<i>x</i>) = 0<br>
+lim<sub><i>x</i> → 0<sup>−</sup></sub> <i>f'</i><sub>2</sub>(<i>x</i>) = 0</p>
+</div>
+
+<p>Concludiamo che <i>f</i><sub>2</sub> è derivabile in <i>x</i> = 0. &emsp;■</p>
+
+</li>
+
+<li><p>Analizziamo l'andamento dei vari pezzi al tendere di <i>x</i> a 0:</p>
+
+<div class="eq">
+<p>lim<sub><i>x</i> ⟶ 0<sup>+</sup></sub> <i>x</i><sup>2</sup> sin(1/<i>x</i>) = 0;<br> lim<sub><i>x</i> ⟶ 0<sup>−</sup></sub> e<sup>(1/x)</sup> = 0</p>
+</div>
+
+<p>e dato che f<sub>3</sub>(0) = 0 abbiamo che la funzione è continua in <i>x</i> = 0.</p></li>
+
+
+<!-- $$f'_3(x) = \begin{cases} 2x\sin \frac{1}{x} - cos \frac{1}{x} & \text{per } x \gt 0 \\
+0  & \text{per } x = 0 \\
+e^{\frac{1}{x}} \frac{-1}{x^2} & \text{per } x \lt 0 \end{cases}$$ -->
+
+</ol>
 
 <section aria-label="End">
 <a href="Lagrange.html">&#171;The Mean Value Theorem</a>
 <a href="index.html">Index</a>
-<a href="maxmin.html">Maxima and minima of a function&#187;</a>
+<a href="D2.html">Derivata seconda&#187;</a>
 </section>
 
 </article>
