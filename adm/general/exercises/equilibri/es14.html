@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Calcolo frazioni molari acido solforico, cloridrico, acqua"/>
+
+    <title>Calcolo frazioni molari acido solforico, cloridrico, acqua</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../style.css" media="screen">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li> <a class="navbar" href="../../index.php">Home</a></li>
+            <li> <a class="navbar" href="../../documentation.html">Documentation</a></li>
+        </ul>
+    </nav>
+      
+    <div class="content">
+    
+<h2>Calcolo frazioni molari acido solforico, cloridrico, acqua</h2>   
+
+<p>50 mL di H<sub>2</sub>SO<sub>4</sub> al 59.22% (&rho; = 1.495 g/mL) vengono mescolati con 35 mL di HCl al 19.06 % (&rho; = 1.095 g/mL) . Calcolre le frazioni molari dei due acidi e dell'acqua.</p>
+
+<button onclick="myFunction()">Mostra la soluzione</button>
+
+<br>
+<br>
+
+<div id="soluzione" style="display:none">
+<p>Per calcolare le frazioni molari occorre calcolcare le moli dei due acidi e dell'acqua nella soluzione finale. Iniziamo col calcolare le masse che saranno poi trasformate in moli.</p>
+
+<p>I grammi di H<sub>2</sub>SO<sub>4</sub> contenuti nella soluzione concentrata sono:</p>
+
+<p>50 mL * (59.22/100) * (1.495 g/mL)  = 44.27 g H<sub>2</sub>SO<sub>4</sub></p>
+
+<p>Le moli di acido solforico, sono dunque:</p>
+
+<p>44.27 g / 98.078 g/mol = 0.45 mol</p>
+
+<p>Se il 59.22% è la percentuale p/V di acido solforico, allora quella di acqua sarà (100-59.22)% = 40.78%. La massa di acqua nei 50 mL mescolati sarà:</p>
+
+<p>50 mL * 40.78/100* 1.495 g/mL  = 30.48 g H<sub>2</sub>O</p>
+
+<p>Le moli di acqua contenute nei 50 mL di acido solforico concentrato sono dunque:</p>
+
+<p>30.48 g / 18 g/mol = 1.69 mol H<sub>2</sub>O</p>
+
+<p>Ripetiamo i calcoli per la soluzione concentrata di acido cloridrico:</p>
+
+<p>(1.495 g/mL) * (59.22/100) = 0.821 g/mL HCl</p>
+
+<p>0.21 g/mL * 35 mL = 7.35 g HCl </p>
+
+<p>7.35 / 36.46 g/mol = 0.2 mol</p>
+
+<p>Se il 19.06 % è la percentuale p/V di acido cloridrico, allora quella di acqua sarà (100-19.06)% = 80.94%. La massa di acqua nei 35 mL mescolati sarà:</p>
+
+<p>35 mL * 1.095 g/mL * 80.94/100 = 31.02 g H<sub>2</sub>O</p>
+
+<p>Che trasformata in moli:</p>
+
+<p>31.02 / 18 g/mol = 1.72 mol</p>
+
+<p>Le moli di acqua complessive nel volume di 85 mL, sono 1.69 mol + 1.72 mol = 3.41 mol H<sub>2</sub>O.</p>
+
+<p>Possiamo adesso esprimere le frazioni molari:</p>
+
+<p>&Chi;H<sub>2</sub>SO<sub>4</sub> = 0.45 / (3.41+0.45+0.2) = 0.11</p>
+
+<p>&Chi;HCl  = 0.2 / (3.41+0.45+0.2) = 0.049</p>
+
+<p>&Chi;HCl  = 3.41 / (3.41+0.45+0.2) = 0.049 = 0.83</p>
+
+</div>
+
+<p class="index"><a href="index.html">Indice degli esercizi</a></p> 
+    
+    <script>
+function myFunction() {
+    var x = document.getElementById("soluzione");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

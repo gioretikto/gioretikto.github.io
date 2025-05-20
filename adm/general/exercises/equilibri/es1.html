@@ -1,0 +1,102 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="pH soluzione acetato di sodio - acido cloridrico"/>
+
+    <title>pH soluzione acetato di sodio - acido cloridrico</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../style.css" media="screen">
+</head>
+
+<body>
+
+    <nav>
+    <ul>
+        <li> <a class="navbar" href="../../../../index.php">Home</a></li>
+        <li> <a class="navbar" href="../../../../documentation.html">Documentation</a></li>
+    </ul>
+    </nav>
+      
+    <div class="content">
+
+    <h1>pH soluzione acetato di sodio - acido cloridrico</h1>
+     
+<p>Calcolare la variazione di pH di una soluzione 0.010 M di acetato di sodio a seguito dell'aggiunta, a 500 mL di tale soluzione, di 50.0 ml di HCl (aq) 0.05 M. Calcolare la stessa variazione di pH se 50.0 mL di HCl (aq) 0.05 M. Calcolare la stessa variazione di pH se 50.0 mL di HCl (aq) 0.05M, vengono aggiunti a 500 mL di una soluzione 0.010 M di cloruro di sodio (K<sub>a</sub> = 1.8 · 10<sup>-5</sup>).</p>
+
+
+<button onclick="myFunction()">Mostra la soluzione</button>
+
+<br>
+<br>
+
+
+<div id="soluzione" style="display:none">
+<p><b>Soluzione</b>. Calcoliamo il pH prima dell'aggiunta dell'acido. L'acetato di sodio CH<sub>3</sub>COONa, si dissocia completamente in soluzione instaurando il seguente equilibrio</p>
+
+<table>
+<tr>
+<td></td>
+<td>CH<sub>3</sub>COO<sup>-</sup></td> <td>+</td> <td>H<sub>2</sub>O</td> <td>&harr;</td> <td>CH<sub>3</sub>COOH</td> <td>+</td> <td>OH<sup>-</sup></td>
+</tr>
+<tr>
+<td>Stato iniziale</td>  <td>0.01</td> <td></td> <td></td> <td></td> <td></td>  <td></td> <td></td>
+</tr>
+
+<tr>
+<td>Variazione</td> <td>-x</td> <td></td> <td></td> <td></td>  <td>+x</td> <td></td><td> +x</td>
+</tr>
+
+<tr>
+<td>All'equilibrio</td> <td>0.01 - x</td> <td></td> <td></td> <td></td> <td>+x</td> <td></td><td>+x</td></tr>
+
+</table>
+
+<img src="../../img/Kbacetato.png" alt="costante basica acetato equilibrio"/>
+
+<p>Ponendo x = [OH<sup>-</sup>], si ottiene l'equazione di secondo grado:</p>
+
+<img src="../../img/sali0.png" alt="pH acetato sodio"/>
+
+<p>Risolvendo rispetto a <i>x</i> e trascurando <i>x</i> dal denominatore; Infatti K<sub>b</sub> è molto piccola, e la conc. di [OH<sup>–</sup>] prodotta dalla reazione di idrolisi è trascurabile, otteniamo:</p>
+
+<img src="../../img/sali1.png" alt="pH acetato sodio"/>
+
+<p>quindi pOH=5.6 e pH=8.4.</p>
+
+<p>Aggiungendo i 50 mL di HCl si aggiungono un numero di moli di acido pari a:</p>
+
+<p>n<sub>HCl</sub> = 0.05 L · 0.05 M = 0.0025 mol</p>
+
+<p>L'acido cloridrico viene parzialmente neutralizzato dall'OH<sup>-</sup> presente in soluzione:</p>
+
+<p>n<sub>OH<sup>-</sup></sub>  = 0.5 ·2.3 · 10<sup>-6</sup> = 1.15 · 10<sup>-6</sup> mol </p>
+
+<p>ma essendo questa quantità trascurabile, possiamo calcolare il pH, come:</p>
+
+<p>pH = -log [HCl] = - log (0.0025 / 0.55) = 2.34 </p>
+
+<p>Quindi pH = 2.34. La variazione di pH è duqnue:</p>
+
+<p>&Delta;pH = 8.4 - 2.34 = 6.06.</p>
+
+<p>Nel caso della soluzione di NaCl questto dissociandosi genea una soluzione neutra, quindi pH = 7.</p>
+
+<p>&Delta;pH = 7 - 2.34 = 4.66</p>
+
+<p class="index"><a href="index.html">Indice degli esercizi</a></p>
+
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("soluzione");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

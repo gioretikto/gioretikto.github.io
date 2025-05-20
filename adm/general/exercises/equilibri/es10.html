@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Preparazione soluzione titolo noto"/>
+
+    <title>Preparazione soluzione titolo noto</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../style.css" media="screen">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li> <a class="navbar" href="../../../../index.php">Home</a></li>
+            <li> <a class="navbar" href="../../../../documentation.html">Documentation</a></li>
+        </ul>
+    </nav>
+      
+    <div class="content">
+
+    <h1>Preparazione soluzione titolo noto</h1>
+      
+<p>Un chimico dispone di una soluzione al 20% p/v in acqua. Calcolare i mL di soluzione necessari per preparare 1 litro di soluzione al 15% p/V.</p>
+
+<button onclick="myFunction()">Mostra la soluzione</button>
+
+<br>
+<br>
+
+<div id="soluzione" style="display:none">
+<p><b>Soluzione</b>. I grammi di soluto da prelevare per preparare la soluzione devono essere pari a:</p>
+
+<p>15 g / 100 mL = x g / 1000 mL </p>
+
+<p>x = 150 g</p>
+
+<p>Per ottenere 150 g di soluto occorre prelevare dalla soluzione al 20% p/V, un volume pari a:</p>
+
+<p>20 g / 100 mL = 150 / x </p>
+
+<p>x = 750 mL</p>
+
+<p>Tale volume viene poi diluito con acqua distillata sino ad arrivare al volume totale di 1L.</p>
+
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("soluzione");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

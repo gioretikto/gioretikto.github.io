@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="tricloruro di ferro pH"/>
+
+    <title>tricloruro di ferro pH</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../style.css" media="screen">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li> <a class="navbar" href="../../../../index.php">Home</a></li>
+            <li> <a class="navbar" href="../../../../documentation.html">Documentation</a></li>
+        </ul>
+    </nav>
+      
+    <div class="content">
+    
+<p>A 25 mL di una soluzione di HCl 0,011 M sono aggiunti 15 mL di una soluzione di
+NaOH 0,110M.</p>
+<ol>
+<li>Determinare il pH della soluzione finale.</li>
+<li>Calcolare il pH che si ottiene aggiungendo alla soluzione di cui sopra 20,8 mg
+di FeCl<sub>3</sub>.</li>
+<li>Calcolare la concentrazione finale del ferro in soluzione</li>
+</ol>
+
+<p>K<sub>ps</sub> Fe(OH)<sub>3</sub> = 6,3*10<sup>-38</sup>
+<p>PM FeCl<sub>3</sub> = 162,2 g/mol</p>
+
+
+<button onclick="myFunction()">Mostra la soluzione</button>
+
+<br>
+<br>
+
+<div id="soluzione" style="display:none">
+
+<p>1) Calcoliamo innanzitutto le moli di acido e di base, coinvolte:</p>
+<p>0.025 L * 0.011 M = 0.000275 mol HCl</p>
+<p>0.015 L * 0.11 M = 0.00165 mol NaOH</p>
+
+<p>Siamo in presenza di un eccesso di base, Sia una reazione di neutralizzazione e le moli residue si base saranno:</p>
+
+<p>0.00165 - 0.000275 = 0.001375 mol NaOH</p>
+
+<p>Il pOH sarà pertanto dato da:</p>
+
+<p>pOH = -log([OH]) = - log(0.00137/0.040) L = 1.46</p>
+
+<p>Di conseguenza il pH:</p>
+
+<p>pH = 14 - pOH = 12.53</p>
+
+<p>2) Il tricloruro di ferro è un sale molto solubile, che si dissocia secondo:</p>
+
+<p>FeCl<sub>3</sub> ↔ Fe<sup>3+</sup> + 3Cl<sup>-</sup></p>
+
+<p>Il Fe<sup>3+</sup> reagisce con OH<sup>-</sup> per dare l'idrossido poco solubile Fe(OH)<sub>3</sub>:</p>
+
+<p>Fe<sup>3+</sup> + 3 OH<sup>-</sup> ↔ Fe(OH)<sub>3</sub></p>
+
+<p>L'effetto di Fe<sup>3+</sup> è quello di rendere leggermente più acida la soluzione, andando a ridurre la concentrazione di ioni [OH<sup>-</sup>]; per ogni ione Fe<sup>3+</sup> ne vengono sottratti 3 OH<sup>-</sup> alla soluzione. Le moli di Fe<sup>3+</sup> aggiunte sono:</p>
+
+<p>0.0208 g / 162.2 g/mol = 0.00013 mol</p>
+
+<p>0.00137 mol NaOH - 3 * 0.00013 mol Fe<sup>3+ = 0.0001 moli NaOH</p>
+
+<p>[OH<sup>-</sup>]= 0.0001 mol / 0.040 L = 0.0245 M</p>
+
+<p>pOH = -log[0.0245] = 1.61 </p>
+
+<p>pH = 14 -1.61 = 12.39</p>
+
+<p>Quindi lo ione ferrico provoca un leggero abbassamento del pH.</p>
+
+<p>c) Dal prodotto di solubilità si può calcolare la concentrazione di Fe<sup>3+</sup> in soluzione:</p>
+
+<p>K<sub>ps</sub> = [Fe<sup>3+</sup>] [OH<sup>-</sup>]<sup>3</sup></p>
+
+<p>conoscendo la concentrazione ossidrilica, sia ha quindi:</p>
+
+<p>[Fe<sup>3+</sup>] = K<sub>ps</sub> / [OH<sup>-</sup>]<sup>3</sup> = 4.28 * 10<sup>-33</sup></p>
+</div>
+
+<p class="index"><a href="index.html">Indice degli esercizi</a></p> 
+
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("soluzione");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

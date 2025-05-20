@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Lavoro"/>
+
+    <title>Lavoro</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/theme-base.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/theme-medium.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/home.css" media="screen">
+
+</head>
+
+<body class="home ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+
+  <div class="navbar-inner clearfix">
+    <ul class="nav">
+      <li><a href="../../index.php" class="brand">Home</a></li>
+      <li class=""><a href="../../documentation.php">Documentation</a></li>
+      <li class=""><a href="../../annunci/index.php">Questions</a></li>
+    </ul>
+    
+  
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
+    
+     <div style="float:right; margin-right:50px;"> <a href="login/" class="button">Log In</a></div>    
+  </div>
+  
+  
+  <div id="flash-message"></div>
+</nav>
+
+
+
+<div id="intro" class="clearfix">
+  <div class="container">
+      <div class="row clearfix">
+      
+    <div class="blurb">
+    <br>
+    <br>
+    </div>
+    
+<div class="download">
+      
+    </div>
+  </div>  </div>
+</div>
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+<div class='home-content'>
+
+<article class="newsentry">
+  <header class="title">
+    
+    <h2 class="newstitle">Lavoro reversibile</h2>
+    
+  </header>
+  
+  <div class="newscontent">
+      <div>
+
+<p>Il più comune tipo di lavoro consiste in un cambiamento di volume del sistema, parliamo dunque di lavoro di tipo espansivo o lavoro P-V. Consideriamo un sistema costiuito da un gas contenuto all'interno di un cilindro dotato di pistone:</p>
+
+<img src="img/cilindro.png" alt="cilindo pistone"/>
+
+<p>sia <i>P</i> la pressione del gas, <i>x</i> la posizione del pistone. Quando la pressione esterna P<sub>ext</sub>, è uguale a quella interna P del gas, il sistema è all'equilibrio. Quando invece la P<sub>ext</sub> è maggiore di P, il pistone si sposterà di una distanza <i>x</i>, in modo da diminuire il volume del sistema, e incrementare <i>P</i> sinchè non sarà uguale a P<sub>ext</sub>.</p> 
+
+<p>Immaginiamo che la pressione esterna sia di un infinitesimo maggiore di quella interna:</p>
+
+<img src="img/PintPext.png" alt="gradiente di pressione"/>
+
+
+<p>In questo caso ci sarà uno spostamento infinitesimo <i>dx</i> del pistone tale da comprimere il gas, sinchè il gradiente di pressione non sarà svanito. . Il lavoro è definito come forza per spostamento, abbiamo quindi </p>
+
+<img src="img/dw.png" alt="lavoro infinitesimo"/>
+
+<p>essendo la pressione definita come:</p>
+
+
+<img src="img/P.png" alt="pressione"/>
+
+<p>con <i>A</i> la sezione trasversale del cilindro.</p>
+
+<img src="img/dwP.png" alt="lavoro infinitesimo"/>
+
+<p>Possiamo fare un'approssimazione e dire che P<sub>ext</sub> &#x224A; P, si ha allora un lavoro pari a:</p>
+
+<div class="index_eq">
+<img src="img/dwrev.png" alt="lavoro reversibile"/>
+<p>3.8</p>
+</div>
+
+
+
+<p>quando si compie lavoro sul sistema, avviene una compressione, quindi <i>dV</i> è negativo e il lavoro risulta positivo. Contrariamente quando è il sistema a compiere lavoro, si ha un'espansione, <i>dV</i> è positivo e il lavoro è negativo.</p>
+
+<p>Per il momento abbiamo considerato una singola trasformazione infinitesima. Supponiamo di eseguire un numero infinito di trasfromazioni infinitesime tramite variazioni infinitesime della pressione esterna. Immaginiamo che il pistone comprima il gas in maniera <b>quasi-statica</b>, ossia talmente lentamente da permettere al sistema di rimare all'equilibrio per tutta la trasformazione, quindi P<sub>ext</sub> &#x224A; P. Il lavoro complessivo eseguito durante la trasformazione, è la somma del lavoro effettuato a ciascun passaggio. A ciascun passaggio il volume cambia di un dV e il lavoro effettuato è -PdV, con P il valore corrente di pressione del sistema. Il lavoro complessi si ottiene integrando la (3.8): </p>
+
+<img src="img/wrev.png" alt="lavoro reversibile"/>
+
+<p>L'area ombreggiata nella figura sottostante rappresenta il lavoro reversibile, effettuato comprimendo il gas.</p>
+
+<img src="img/PVcompressione.png" alt="lavoro reversibile"/>
+
+<p>Un <b>processo reversibile</b> è un processo in cui il sistema è sempre infinitesimamente vicino all'equilibrio ed una trasformazione infinitesima è in grado di riportare sia il sistema che l'ambiente alle condizioni iniziali.</p>
+
+<h3>Lavoro irreversibile: espansione contro una pressione costante</h3>
+
+<p>Adesso supponiamo che la pressione esterna, rimanga costante durarante tutta la trasformazione. Dalla (3.9) possiamo portare la pressione fuori dal segno di integrale poichè rappresenta una costante, ed ottenere:</p>
+
+<img src="img/wirr.png" alt="lavoro irreversibile"/>
+
+<img src="img/PVirr.png" alt="lavoro irreversibile"/>
+
+<p>il lavoro risulta uguale all'area marcata in grigio. Tale processo risulta irreversibile, non è dunque possibile invertire il processo e tornare allo stato iniziale.</p>
+
+
+<h3>Espansione libera</h3>
+
+<p>Per espansione libera intendiamo un'espansione contro una forza opponente nulla, quindi P<sub>ext</sub>=0. Di conseguenza w=0.</p>
+
+<h3>Lavoro reversibile e irreversibile a confronto</h3>
+
+<p>Mettiamo a confronto i due tipi di trasformazione reversibile ed irreversibile, considerando la trasformazione che coinvolge un gas ideale. Calcoliamo il w<sub>rev</sub> compiuto da un gas ideale quando questo si espande da un volume V<sub>1</sub> ad un volume V<sub>2</sub> a temperatura costante. Supponiamo che in tale passaggio la pressione passi da un valore P<sub>1</sub> ad uno P<sub>2</sub>. Se nella (3.8) sostituiamo la pressione data dall'equazione di stato dei gas idali</p>
+
+<img src="img/Pideale.png" alt="pressione gas ideale"/>
+
+
+<p>si ottiene</p>
+
+
+<img src="img/wrevid.png" alt="lavoro isotermico gas ideale"/>
+
+<p>quindi:</p>
+
+<img src="img/wrevideale.png" alt="lavoro isotermico gas ideale"/>
+
+<p>consideriamo adesso un'espansione isoterma irreversibile dallo stato iniziale V<sub>1</sub> e P<sub>1</sub> a quello finale V<sub>2</sub> e P<sub>2</sub>.
+Attuiamo la trasformazione diminuendo repentinamente la pressione da  P<sub>1</sub>  a  P<sub>2</sub>  senza che ci sia un'apprezzabile variazione di volume e poi facciamo espandere il gas contro la pressione  P<sub>2</sub>. Il lavor compiuto sarà</p>
+
+<img src="img/wirrconfronto.png" alt="lavoro irreversibile"/>
+
+<p>Confrontando il lavoro nei due tipi di trasformazione si ha che</p>
+
+<img src="img/wrevwirr.png" alt="lavoro reversibile e irreversibile"/>
+
+<p>come illustrato dalla figura sottontante:</p>
+
+<img src="img/PVrevirr.png" alt="lavoro irreversibile"/>
+
+<p>Questo risultato sta a significare che l'energia che è possibile estrarre da un sistema attraverso una trasformazione reversibile è maggiore di quello che si può ottenere tramite una trasformazione irreversibile. Anche se avessimo utilizzato un altro tra i processi irreversibili possibili per portare il sistema tra gli stati iniziali e finali il risultato sarebbe stato identico.</p>
+
+<p>In generale, tra tutte le possibili trasformazioni che un sistema può compiere per passare attraverso due stati, quello reversibile comporta il massimo lavoro possibile.</p>
+
+</article>
+
+
+<p class="before"><a href="avogadro.html">Principio di Avogadro</a></p>
+<p class="after"><a href="mole.html">La mole</a></p>
+<p class="index"><a href="index.php">Indice di Chimica Generale</a></p>
+</div>
+
+</section>
+
+<aside class="tips">
+    <div class="inner">
+
+
+<div class="panel">  
+</div>
+</div>
+</aside>     
+
+</body>
+</html>
