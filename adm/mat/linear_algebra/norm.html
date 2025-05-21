@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Norms">
+	<title>Norms</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Norms</h1>
+
+<p><b>Definition 2.2.1</b> For a vector space <i>V</i> over <i>F</i> = ℝ or <i>F</i> =  ℂ, a length (norm) is a map | · | : <i>V</i> → ℝ<sup>+</sup> which has the following properties for all <b>v, w </b>∈ <i>V</i> and all <i>&lambda;</i> ∈ <i>F</i>.</p>
+
+<ol type="a">
+	<li><p><b>positivity</b>: |<i><b>v</b></i>| &gt; 0;</p></li>
+	<li><p><b>scaling</b>: |&lambda;<b><i>v</i></b>| = |&lambda;||<i><b>v</b></i>|;</p></li>
+	<li><p><b>triangle inequality</b>  |<i><b>v</b></i> + <i><b>w</b></i>| &le;  |<i><b>v</b></i>|  +  |<i><b>w</b></i>| .</p></li>
+</ol>
+
+<p>A vector space with a norm is also called a <b>normed vector space</b>.&emsp;□</p>
+
+<p>La <i>norma</i> associata al prodotto scalare canonico è la funzione</p>
+
+<div class="eq">
+<p>‖ · ‖ : ℝ<sup><i>n</i></sup> → ℝ<sup>+</sup><br>
+</div>
+
+<p>definita da</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi mathvariant="bold">v</mi>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">&#x27E8;</mo>
+      <mi>v</mi>
+      <mo>,</mo>
+      <mi>v</mi>
+      <mo data-mjx-texclass="CLOSE">&#x27E9;</mo>
+    </mrow>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <msubsup>
+      <mi>v</mi>
+      <mn>1</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <mo>&#x2026;</mo>
+    <mo>+</mo>
+    <msubsup>
+      <mi>v</mi>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msubsup>
+  </msqrt>
+</math>
+
+<!-- $$ \|\mathbf{v}\| = \sqrt{\left\langle v,v\right\rangle} = \sqrt{v_1^2 + \ldots + v_n^2}$$ -->
+
+<p>Usando le proprietà del prodotto scalare è possibile dimostrare che la distanza fra due punti definida da ||<i><b>v</b></i> −<i><b>w</b></i>|| e l'angolo fra due vettori godono di tutte le proprietà usuali, per cui è possibile ricostruire la geometria euclidea.</p>
+
+<p>The norm of a vector <i><b>v</b></i> = (<i>v</i><sub>1</sub> , ..., <i>v<sub>n</sub></i>) in ℝ<sup><i>n</i></sup> is the familiar Euclidean length of the arrow that represents the vector, i.e. the square root of the sum of the squares of the Cartesian components of the vectors; So the lenght of (2, √5) is √(2<sup>2</sup> + 5) = 3 and the lenght of (1 0) is 1.</p>
+
+<h2>The Cauchy–Schwarz inequality</h2>
+
+<p>The remaining geometrical notion we still need to define is the angle between two vectors. To this end, we need to prove an important and famous inequality which relates the dot product and the length.</p>
+
+<p><b>Theorem 1.9.2</b> (<i>Cauchy–Schwarz inequality</i>) For any two vectors <b><i>v, w</i></b> ∈ ℝ<sup><i>n</i></sup> we have</p>
+
+<div class="eq">
+<p>|<b><i>v</i></b> ⋅ <b><i>w</i></b>| &le; |<b><i>v</i></b>| |<b><i>w</i></b>|</p>
+</div>
+
+<p><b>Proof</b>. If either <b><i>v</i></b> = <b>0</b> or <b><i>w</i></b> = <b>0</b>, we know that both |⟨<b><i>v, w</i></b>⟩| and |<b><i>v</b></i>| |<i><b>w</i></b>| will equal zero. The conclusion follows in this case. <br> Let us now consider the case where <b><i>v</i></b> ≠ 0 and <b><i>w</i></b> ≠ 0. Then |<b><i>v</i></b>| ≠ 0 and |<b><i>w</i></b>| ≠ 0, so we can use 1/|<b><i>v</i></b>| and 1/|<b><i>w</i></b>| as scalars in the linear combination</p>
+
+<div class="eq">
+<p>1/|<b><i>v</i></b>| + 1/|<b><i>w</i></b>|</p>
+</div>
+
+<p>By the definition of dot product of any vector with itself is nonnegative. So we have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">&#x27E8;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">v</mi>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">w</mi>
+    <mo>,</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">v</mi>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">w</mi>
+    <mo data-mjx-texclass="CLOSE">&#x27E9;</mo>
+  </mrow>
+  <mo>&#x2265;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\left \langle \frac{1}{|\mathbf{v}|} \mathbf{v}+  \frac{1}{|\mathbf{w}|} \mathbf{w}, \frac{1}{|\mathbf{v}|} \mathbf{v}+  \frac{1}{|\mathbf{w}|} \mathbf{w} \right \rangle \ge 0 $$ -->
+
+<p>We expand this dot product, recognizing that ⟨<b><i>v,v</i></b>⟩ = |<b><i>v</i></b>|<sup>2</sup> and ⟨<b><i>w,w</i></b>⟩ = |<b><i>w</i></b>|<sup>2</sup>, to derive the following inequalities:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mo stretchy="false">|</mo>
+            <mi mathvariant="bold">v</mi>
+            <msup>
+              <mo stretchy="false">|</mo>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+        <mo fence="false" stretchy="false">&#x27E8;</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo>,</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo fence="false" stretchy="false">&#x27E9;</mo>
+        <mo>+</mo>
+        <mfrac>
+          <mn>2</mn>
+          <mrow>
+            <mo stretchy="false">|</mo>
+            <mi mathvariant="bold">v</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi mathvariant="bold">w</mi>
+            <mo stretchy="false">|</mo>
+          </mrow>
+        </mfrac>
+        <mo fence="false" stretchy="false">&#x27E8;</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo>,</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo fence="false" stretchy="false">&#x27E9;</mo>
+        <mo>+</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mo stretchy="false">|</mo>
+            <mi mathvariant="bold">w</mi>
+            <msup>
+              <mo stretchy="false">|</mo>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+        <mo fence="false" stretchy="false">&#x27E8;</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo>,</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo fence="false" stretchy="false">&#x27E9;</mo>
+        <mo>&#x2265;</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mfrac>
+          <mn>2</mn>
+          <mrow>
+            <mo stretchy="false">|</mo>
+            <mi mathvariant="bold">v</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi mathvariant="bold">w</mi>
+            <mo stretchy="false">|</mo>
+          </mrow>
+        </mfrac>
+        <mo fence="false" stretchy="false">&#x27E8;</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo>,</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo fence="false" stretchy="false">&#x27E9;</mo>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo>&#x2265;</mo>
+        <mn>0</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>2</mn>
+        <mo>&#x2265;</mo>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mn>2</mn>
+          <mrow>
+            <mo stretchy="false">|</mo>
+            <mi mathvariant="bold">v</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi mathvariant="bold">w</mi>
+            <mo stretchy="false">|</mo>
+          </mrow>
+        </mfrac>
+        <mo fence="false" stretchy="false">&#x27E8;</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo>,</mo>
+        <mi mathvariant="bold">w</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mo>&#x2212;</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi mathvariant="bold">v</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi mathvariant="bold">w</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2264;</mo>
+        <mo fence="false" stretchy="false">&#x27E8;</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo>,</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo fence="false" stretchy="false">&#x27E9;</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{align}
+\frac{1}{| \mathbf{v}|^2} \langle \mathbf{v}, \mathbf{v} \rangle + \frac{2}{| \mathbf{v}|| \mathbf{w}|} \langle \mathbf{v}, \mathbf{w} \rangle + \frac{1}{| \mathbf{w}|^2} \langle \mathbf{w}, \mathbf{w} \rangle \ge 0\\
+1 + \frac{2}{| \mathbf{v}|| \mathbf{w}|} \langle \mathbf{v}, \mathbf{w} \rangle + 1 \ge 0  \\
+2 \ge -\frac{2}{| \mathbf{v}|| \mathbf{w}|} \langle \mathbf{v}, \mathbf{w} \\
+-| \mathbf{v}|| \mathbf{w}| \le \langle \mathbf{v}, \mathbf{w} \rangle
+\end{align}$$ -->
+
+<p>By a similar derivation, we can start with</p>
+
+<!-- $$ \left \langle \frac{1}{|\mathbf{v}|} \mathbf{v} - \frac{1}{|\mathbf{w}|} \mathbf{w}, \frac{1}{|\mathbf{v}|} \mathbf{v} - \frac{1}{|\mathbf{w}|} \mathbf{w}  \right \rangle \ge 0 $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">&#x27E8;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">v</mi>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">w</mi>
+    <mo>,</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">v</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">v</mi>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false">|</mo>
+        <mi mathvariant="bold">w</mi>
+        <mo stretchy="false">|</mo>
+      </mrow>
+    </mfrac>
+    <mi mathvariant="bold">w</mi>
+    <mo data-mjx-texclass="CLOSE">&#x27E9;</mo>
+  </mrow>
+  <mo>&#x2265;</mo>
+  <mn>0</mn>
+</math>
+
+<p>to conclude</p>
+
+<div class="eq">
+<p>⟨<i><b>v,w</b></i>⟩ &le; |<i><b>v</b></i>||<i><b>w</b></i>|</p>
+</div>
+
+<p>We can express these two inequalities using the <a href="../algebra/Z.html#abs">absolute value</a> of ⟨<b><i>v, w</i></b>⟩, as,</p>
+
+<div class="eq">
+<p>|⟨<i><b>v,w</b></i>⟩| &le; |<i><b>v</b></i>||<i><b>w</b></i>| &emsp;□</p>
+</div>
+
+<h2>Properties of the length</h2>
+
+<p id="triangle">The Cauchy–Schwarz inequality implies another important property for the norm (lenght), the <i>triangle inequality</i> |<i><b>v</b></i> + <i><b>w</b></i>| ≤ |<i><b>v</b></i>| + |<b><i>w</i></b>|</p>
+
+<div class="eq">
+<p>|<i><b>v</b></i> + <i><b>w</b></i>|<sup>2</sup> = |⟨<i><b>v</b></i> + <i><b>w</b></i>, <i><b>v</b></i> + <i><b>w</b></i>⟩|<br>
+= |<b><i>v</i></b>|<sup>2</sup> + 2⟨<i><b>v,w</b></i>⟩ + |<b><i>w</i></b>|<sup>2</sup> <br>
+&le; |<b><i>v</i></b>|<sup>2</sup> + 2|<i><b>v</b></i>||<b><i>w</i></b>| + |<b><i>w</i></b>|<sup>2</sup> <br>
+= (|<b><i>v</i></b>| + |<b><i>w</i></b>|)<sup>2</sup></p>
+</div>
+
+<p>Since |<b><i>v</i></b> + <b><i>w</i></b>| and |<i><b>v</b></i>| + |<b><i>w</i></b>| are both nonnegative, we can take the square root of the first and last expression to obtain</p>
+
+<div class="eq">
+<p>|<b><i>v</i></b> + <b><i>w</i></b>| &le; |<i><b>v</b></i>| + |<b><i>w</i></b>|&emsp;□</p>
+</div>
+
+<h3>Geometric Interpretation of triangle inequality</h3>
+
+<p>The Triangle Inequality, has the geometric interpretation that the length of each side of a triangle is less than the sum of the lengths of the other two sides. Note that the Triangle Inequality implies that the shortest path between two points is a line segment.</p>
+
+<figure>
+<img src="img/triangle_inequality.png" alt="triangle inequality"/>
+<figcaption>The shortest distance between two points is a straight line</figcaption>
+</figure>
+
+<p><b>Proposition 1.9.3</b> The Euclidean length (norm) | · | : ℝ<sup><i>n</i></sup> → ℝ ≥ 0 defined in Eq. 1.9.2 has the following properties, for all <b><i>v, w</i></b> ∈ ℝ<sup><i>n</i></sup> and all <i>α</i> ∈ ℝ.</p>
+
+<ul>
+	<li><p>(N1) |<b><i>v</i></b>| &gt; 0 for <b><i>v</i></b> &ne; 0 &emsp; (positivity)</p></li>
+	<li><p>(N2) |<i>α<b>v</b></i>| = |<i>α</i>| |<b><i>v</i></b>| &emsp; (scaling)</p></li>
+	<li><p>(N3) |<b><i>v</i></b> + <b><i>w</i></b>| ≤ |<b><i>v</i></b>| + |<b><i>w</i></b>| &emsp; (triangle inequality)</p></li>
+</ul>
+
+<p>Proof (N1) is immediately evident from the definition (1.9.2). For (N2) we've to check what happens to the length under scalar multiplication of a vector:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>&#x3B1;</mi>
+  <mi mathvariant="bold">v</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mi>&#x3B1;</mi>
+    <mi mathvariant="bold">v</mi>
+    <mo stretchy="false">)</mo>
+    <mo>&#x22C5;</mo>
+    <mo stretchy="false">(</mo>
+    <mi>&#x3B1;</mi>
+    <mi mathvariant="bold">v</mi>
+    <mo stretchy="false">)</mo>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <msup>
+      <mi>&#x3B1;</mi>
+      <mn>2</mn>
+    </msup>
+    <mi mathvariant="bold">v</mi>
+    <mo>&#x22C5;</mo>
+    <mi mathvariant="bold">v</mi>
+  </msqrt>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>&#x3B1;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="bold">v</mi>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$ |\alpha\mathbf{v}| = \sqrt{ (\alpha \mathbf{v}) \cdot (\alpha \mathbf{v})} = \sqrt{\alpha^2 \mathbf{v} \cdot \mathbf{v}} = |\alpha| |\mathbf{v}| $$ -->
+
+<p>(N3) is the triangle inequality already proved above. &emsp;□</p>
+
+<h2>The angle between vectors</h2>
+
+<p>The Cauchy–Schwarz inequality implies for any two non-zero vectors <b><i>v, w</i></b> ∈ ℝ<sup><i>n</i></sup> that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mrow>
+      <mi mathvariant="bold">v</mi>
+      <mo>&#x22C5;</mo>
+      <mi mathvariant="bold">w</mi>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi mathvariant="bold">v</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi mathvariant="bold">w</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+  </mfrac>
+  <mo>&#x2264;</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$-1 \le \frac{\mathbf{v} \cdot \mathbf{w}} {|\mathbf{v}| |\mathbf{w}|} \le 1 $$ -->
+
+<p>This means it is the cosine of some angle and since the cosine is an injective function in the interval <i>θ</i> ∈ [0, <i>π</i>], the angle between <i><b>v</b></i> and <i><b>v</b></i> is defined uniquely. </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B8;</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi mathvariant="bold">v</mi>
+      <mo>&#x22C5;</mo>
+      <mi mathvariant="bold">w</mi>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi mathvariant="bold">v</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi mathvariant="bold">w</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \cos \theta = \frac{\mathbf{v} \cdot \mathbf{w}} {|\mathbf{v}| |\mathbf{w}|} $$ -->
+
+<p>This quantity <i>θ</i> is called the angle between the two vectors <i><b>v</b></i> and <i><b>w</b></i>. By rearranging the previous equation, we can write the dot product as</p>
+
+<div class="eq">
+<p><i><b>v</b></i> ⋅ <i><b>w</b></i> = |<i><b>v</b></i>||<i><b>w</b></i>| cos <i>&theta;</i> &emsp;1.9.3</p> 
+</div>
+
+<h3 id="proj">Projections of a Vector</h3>
+
+<p>One important use of dot products is in projetions. The previous equation suggests the geometrical interpretation of the dot product. The scalar projection of <i>w</i> onto <i>v</i> is the <i>length</i> of the segment |<i><b>w</b></i>| cos &theta; as shown in the figure below. </p>
+
+<div class="eq">
+<p>scalar projection of <i>w</i> on <i>v</i> = <i><b>v</b> ⋅ <b>w</b></i>/|<i><b>v</b></i>|</p>
+</div>
+
+<p>Whereas the <i>vector projection</i> of <i>w</i> onto <i>v</i> is the <i>vector</i> with this length that begins at the point <i>O</i> points in the same direction (or opposite direction if the scalar projection is negative) as <i>v</i>. </p>
+
+<div class="eq">
+<p>vector projection of <i>w</i> on <i>v</i> = (<i><b>w</b> ⋅ <b>v</b></i>) <i><b>v</b></i></p>
+</div>
+
+<figure>
+<img src="img/projection_dot_product.png" alt="projection dot product">
+<figcaption>Geometrical interpretation of the dot product which is obtained by multiplying |<i><b>v</b></i>| with |<i><b>w</b></i>| cos(<i>θ</i>), the length of the projection of <b>w</b> into the direction of <i><b>v</b></i>.</figcaption>
+</figure>
+
+<p>Thus the scalar projection of <i>b</i> on <i>a</i> is the magnitude of the vector projection of <i>w</i> onto <i>v</i>.</p>
+
+<p>In order to understand why the algebraic dot product between two vector yields the trigonometric cosine value, one can use the cosine law from Euclidean geometry. Consider the triangle created by the origin, <i><b>x</b></i> and <i><b>y</b></i>. We want to find the angle <i>&theta;</i> between <i><b>x</b></i> and <i><b>y</b></i>. The Euclidean side lenghts of this triangle are <i>a</i> = |<i>x</i>|, <i>b</i> = |<i>y</i>|, and <i>c</i> = |<i><b>x</b></i> − <i><b>y</b></i>|. The <a href="../euclidean/cosine_law.html">cosine law</a> provides a formula for the angle <i>&theta;</i> in terms of side lenghts as follows</p>
+
+<div class="eq">
+<p>cos <i>&theta;</i> = |<i><b>x</b></i>|<sup>2</sup> + |<i><b>y</b></i>|<sup>2</sup> − |<i>x</i> − <i>y</i>|<sup>2</sup>/2|<i>x</i>||<i>y</i>| =  <i><b>x</b></i> ⋅ <i><b>y</b></i> / √<i><b>x</b></i> ⋅ <i><b>x</b></i> √<i><b>y</b></i> ⋅ <i><b>y</b></i>&emsp;1.9.2</p> 
+</div>
+
+<p>where <i>&theta;</i> is the angle between the vectors and |<i>x</i>| is the norm.  </p>
+
+<h3>Dot product on ℂ<sup><i>n</i></sup></h3>
+
+<p>The dot product on ℂ<sup><i>n</i></sup> is defined by</p>
+
+<div class="eq">
+<p><i><b>v̄</b></i> · <i><b>w</b></i> = <i>v̄</i><sub>1</sub> <i>w</i><sub>1</sub> + ··· + <i>v̄<sub>n</sub>w<sub>n</sub></i></p>
+</div>
+
+<h2>Properties of the dot product</h2>
+
+<p><b>Theorem 1.9.4 (dot properties)</b>. For all vectors <b>u, v</b> and <b>w</b> in ℝ<sup><i>n</i></sup>, and for all scalars <i>a</i>, the following properties hold:</p>
+
+<ol type="a">
+	<li><p><b><i>u</i></b> · <b><i>v</i></b> = <b><i>v</i></b> · <b><i>u</i></b> (commutative law);</p></li>
+	<li><p><b><i>u</i></b> · <b>0</b> = <b>0</b> · <b>u</b> = 0;</p></li>
+	<li><p><i>a</i>(<b><i>u</i></b> · <b><i>v</i></b>) = (<i><b>au</b></i>) · <b><i>v</i></b> = <b><i>u</i></b> · (<i>a</i><b>v</b>);</p></li>
+	<li><p>(<b><i>u</i></b> + <b><i>v</i></b>) · <b>w</b> = <b>u</b> · <b><i>w</i></b> + <b>v</b> · <b>w</b> (distributive law);</p></li>
+	<li><p><b><i>u</i></b> · <b><i>u</i></b> ≥ 0, and moreover, <b>u</b> · <b>u</b> = 0 if and only if <b><i>u</i></b> = <b>0</b>.</p></li>
+</ol>
+
+<p><b>Proof</b>.</p>
+
+<ol type="a">
+	<li><p>To prove commutative law consider:</p>
+
+<div class="eq">
+<p><b><i>u</i></b> · <b><i>v</i></b> = <i>u</i><sub>1</sub><i>v</i><sub>1</sub> + <i>u</i><sub>2</sub><i>v</i><sub>2</sub> + ... + <i>u<sub>n</sub>v<sub>n</sub></i><br>
+using commutativity of scalars<br>
+= <i>v</i><sub>1</sub><i>u</i><sub>1</sub> + <i>v</i><sub>2</sub><i>u</i><sub>2</sub> + ... + <i>v<sub>n</sub>u<sub>n</sub></i> = <i><b>v</b></i> ⋅ <i><b>u</b></i></p>
+</div>
+
+</li>
+
+<li><p><b><i>u</i></b> ⋅ <b>0</b> = <i>u</i><sub>1</sub>0 + <i>u</i><sub>2</sub>0 + ... + <i>u<sub>n</sub></i>0 = 0</p></li>
+
+<li><p><i>a</i> (<b><i>u</i></b> · <b><i>v</i></b>) = <i>au</i><sub>1</sub>v<sub>1</sub> + <i>au</i><sub>2</sub><i>v</i><sub>2</sub> + ... + <i>au<sub>n</sub>v<sub>n</sub></i>) = (<i>a<b>u</b></i>) ⋅ <i><b>v</b></i> = <i><b>u</b></i> ⋅ (<i>a<b>v</b></i>)</p></li>
+
+<li><p>See linearity of next proposition.</p></li>
+
+<li><p><b><i>u</i></b> · <b><i>u</i></b> = <i>u</i><sub>1</sub><i>u</i><sub>1</sub> + <i>u</i><sub>2</sub><i>u</i><sub>2</sub> + ··· + <i>u<sub>n</sub>u<sub>n</sub></i> = <i>u</i><sub>1</sub><sup>2</sup>  + <i>u</i><sub>2</sub><sup>2</sup> + ... + <i>u<sub>n</sub></i><sup>2</sup><br>
+&ge; 0 + 0 + ... + 0 (as each scalar term is ≥ 0)<br>
+= 0.</p></li>
+</ol>
+
+<p>The following proposition shows that the dot product satisfies the properties of linearity, symmetry, and positivity.</p>
+
+<p id="properties"><b>Proposition 1.9.5</b> The dot product on ℝ<sup><i>n</i></sup> satisfies the following properties for all <i><b>v, w, u</b></i> ∈ ℝ<sup><i>n</i></sup> and all <i>α</i> ∈ ℝ.</p>
+
+<ol type="i">
+	<li><p><b><i>v</i></b> · (<b><i>w</i></b> + <b><i>u</i></b>) = <b><i>v</i></b> · <b><i>w</i></b> + <b><i>v</i></b> · <b><i>u</i></b> and <b><i>v</i></b> · (<i>α<b>w</b></i>) = <i>α</i>(<i><b>v</b></i> · <b><i>w</i></b>) &emsp; (linearity)</p></li>
+	<li><p><b><i>v</i></b> · <b><i>w</i></b> = <b><i>w</i></b> · <b><i>v</i></b> &emsp; (symmetry)</p></li>
+	<li><p><b><i>v</i></b> · <b><i>v</i></b> &gt; 0 for all <b><i>v</i></b> &ne; 0 &emsp;(positivity)</p></li>
+</ol>
+
+<p><b>Proof</b>. Using the Einstein summation convention</p>
+
+<ol type="i">
+	<li><p><b><i>v</i></b> · (<b><i>w</i></b> + <b><i>u</i></b>) = <i><b>v</i></b><sub>i</sub></i> (<i><b>w</b></i> + <i><b>u</b></i>)<sub>i</sub> = <i>v<sub>i</sub></i>(<i>w<sub>i</sub></i> + <i>u<sub>i</sub></i>) = <i>v<sub>i</sub> w<sub>i</sub></i> + <i>v<sub>i</sub> u<sub>i </sub></i> = <i><b>v</b></i> · <i><b>w</b></i> + <i><b>v</b></i> · <i><b>u</b></i></p></li>
+
+	<li><p><i><b>v</b></i> · (<i>α<b>w</b></i>) = <i>v<sub>i</sub></i> (<i>α<b>w</b></i>)<sub>i</sub> = <i>αv<sub>i</sub>w<sub>i</sub></i> = <i>α</i>(<i><b>v</b></i> · <i><b>w</b></i>)</p></li>
+
+	<li><p><i><b>v</b></i> · <i><b>w</b></i> = <i>v<sub>i</sub> w<sub>i</sub></i> = <i>w<sub>i</sub> v<sub>i</sub></i> = <b><i>w</i></b> · <b><i>v</i></b></p></li>
+
+	<li><p>(<i><b>v, v</b></i>) = &Sigma;<sub>i</sub> <i>v<sub>i</sub></i><sup>2</sup> &gt; 0 for <b><i>v</i></b> &ne; 0.</p></li>
+</ol>
+
+<h2>Non-orthogonal Axes</h2>
+
+<p>Rather than choosing basis vector for a Cartesian coordinate system that are mutually perpendicular (i.e., orthogonal), we can have coordinate basis vectors not mutually perpendicular which may have different length: <i><b>e</b><sub>i</sub></i> · <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i> &ne; <i>δ<sub>ij</sub></i>. We can no longer use the standard formula for dot product Eq. 1.9.2, in this system. Consider a basis {<i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sub>2</sub>} such that <i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub> &ne; 0, then the dot product between <i><b>u</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) and <i><b>v</b></i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>) is</p>
+
+<div class="eq">
+<p><i><b>u</b></i> ⋅ <i><b>v</b></i> = (<i>a</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>a</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) ⋅ (<i>b</i><sub>1</sub><i><b>e</b></i><sub>1</sub> + <i>b</i><sub>2</sub><i><b>e</b></i><sub>2</sub>) = (<i>a</i><sub>1</sub><i>b</i><sub>1</sub> + <i>a</i><sub>2</sub><i>b</i><sub>2</sub>) + (<i>a</i><sub>1</sub><i>b</i><sub>2</sub> + <i>b</i><sub>1</sub><i>a</i><sub>2</sub>) (<i><b>e</b></i><sub>1</sub> ⋅ <i><b>e</b></i><sub>2</sub>)</p>
+</div>
+
+<p>We can represent the collection of scalar products of the basis vectors as a symmetric matrix, called the <i>metric</i> or the <i>metric tensor</i>:</p>
+
+<div class="eq">
+<p><i><b>e</b><sub>i</sub></i> ⋅ <i><b>e</b><sub>j</sub></i> ≡ <i>g<sub>ij</sub></i></p>
+</div>
+
+<p>We can display the metric of a 4D space as a 4 × 4 matrix whose elements are the dot products of the basis vectors:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">[</mo>
+  <mi>g</mi>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>00</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>01</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>10</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>&#x22C5;</mo>
+          <msub>
+            <mi mathvariant="bold">e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2026;</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ [g] = \left( \begin{array}{ccc} g_{00} & g_{01} & \ldots \\ g_{10} & g_{11} & \ldots \\ \vdots & \vdots & \end{array} \right) = \left( \begin{array}{ccc} \mathbf{e}_{0} \cdot \mathbf{e}_{0} & \mathbf{e}_{0} \cdot \mathbf{e}_{1} & \ldots \\ \mathbf{e}_{1} \cdot \mathbf{e}_{0} & \mathbf{e}_{1} \cdot \mathbf{e}_{1} & \ldots \\ \vdots & \vdots & \end{array} \right) $$ -->
+
+<p>Thus the diagonal elements are the (squared) magnitudes of the basis vectors, |<b><i>e</i></b><sub>0</sub>|<sup>2</sup>, |<b><i>e</i></b><sub>1</sub>|<sup>2</sup>, etc., while the off-diagonal elements represent their deviations from orthogonality. Any set of mutually perpendicular bases would be represented by a diagonal metric matrix.</p>
+
+<p>Then the dot product could be expressed in the form</p>
+
+<div class="eq">
+<p><i><b>u</b></i> ⋅ <i><b>v</b></i> = <i>g<sub>ij</sub></i> <i>u</i><sub>i</sub><i>v</i><sub>j</sub></p>
+</div>
+
+<p>where we employed Einstein summation convention.</p>
+
+
+<p>Once the inner products have been introduced, we can define the length in abstract vector spaces in a manner that is completely analogous to the distance for geometric vectors in ℝ<sup><i>n</i></sup>. Indeed the the scalar product/dot product is the Euclidean norm on ℝ<sup><i>n</i></sup>,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi mathvariant="bold">v</mi>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mi mathvariant="bold">v</mi>
+    <mo>&#x22C5;</mo>
+    <mi mathvariant="bold">v</mi>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <msubsup>
+      <mi>v</mi>
+      <mn>1</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <msubsup>
+      <mi>v</mi>
+      <mn>2</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <mo>&#x2026;</mo>
+    <mo>+</mo>
+    <msubsup>
+      <mi>v</mi>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msubsup>
+  </msqrt>
+</math>
+
+<!-- $$ \|\mathbf{v}\| = \sqrt{\mathbf{v} \cdot \mathbf{v} } = \sqrt{v_1^2 + v_2^2 + \ldots + v_n^2} $$ -->
+
+<p>The Euclidean norm ‖⋅‖ is a function mapping vectors to nonnegative real numbers, build on the inner product. <br> Consider the two-dimensional vector <i><b>v</b></i> = [2, −1]. Its lenght is just sqrt{2<sup>2</sup> + (−1)<sup>2</sup>} = sqrt(5).</p>
+
+<p>Slightly more generally, we saw in the last section, we can use the norm induced by the inner product to measure length in any inner product space.</p>
+
+<p><b>Definition 7.4.3</b>. (Norm Induced by the Inner Product) Suppose that <i>V</i> is an inner product space. Then the <b>norm induced by the inner product</b> is the function ‖·‖ : <i>V</i> → ℝ defined by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi mathvariant="bold">v</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mo fence="false" stretchy="false">&#x27E8;</mo>
+    <mi>v</mi>
+    <mo>,</mo>
+    <mi>v</mi>
+    <mo fence="false" stretchy="false">&#x27E9;</mo>
+  </msqrt>
+</math>
+
+<!-- $$|\mathbf{v}| = \sqrt{\langle v,v\rangle} $$ -->
+
+<p>When <i>V</i> = ℝ<sup><i>n</i></sup> or <i>V</i> = ℂ<sup><i>n</i></sup> and the inner product is just the usual dot product.</p>
+
+<p>The norm on 𝐶[<i>a, b</i>] induced by the inner product of Example 7.4.2 has the form</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi>f</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mtext>&#xA0;</mtext>
+  <mo>=</mo>
+  <msqrt>
+    <msubsup>
+      <mo data-mjx-texclass="OP">&#x222B;</mo>
+      <mi>a</mi>
+      <mi>b</mi>
+    </msubsup>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mtext>d</mtext>
+    <mi>x</mi>
+  </msqrt>
+</math>
+
+<!-- $$\|f|\ = \sqrt{\int_a^bf(x)^2\text{d}x} $$ -->
+
+<p id="Frobenius">The norm induced by the standard (Frobenius) inner product on <i>M<sub>m,n</sub></i> from Example 7.4.4 is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi>A</mi>
+  <msub>
+    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+    <mi>F</mi>
+  </msub>
+  <mo>=</mo>
+  <msqrt>
+    <mtext>tr</mtext>
+    <mo stretchy="false">(</mo>
+    <msup>
+      <mi>A</mi>
+      <mo>&#x2217;</mo>
+    </msup>
+    <mi>A</mi>
+    <mo stretchy="false">)</mo>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>m</mi>
+    </munderover>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msub>
+      <mi>a</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <msup>
+      <mo stretchy="false">|</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$\|A\|_F = \sqrt{\text{tr}(A^*A)} = \sqrt{\sum_{i=1}^m \sum_{j=1}^n |a_{i,j}|^2} $$ -->
+
+<p>This norm on matrices is often called the <b>Frobenius norm</b>, and it is usually written as ‖<i>A</i>‖<sub><i>F</i></sub> rather than just |<i>A</i>| to avoid confusion with another matrix norm.</p>
+
+<p>However, it is sometimes preferable to use a measure of size that <b>does not rely</b> on us first defining an underlying <b>inner product</b>. We refer to such functions as <b>norms</b>, and we simply define them to be the functions that satisfy the usual properties that the length on ℝ<sup><i>n</i></sup> or the norm induced by an inner product satisfy</p>
+
+<p><b>Definition</b> (Norm of a vector) Suppose that F = ℝ or F = ℂ and that <i>V</i> is a vector space over F. Then a <b>norm</b> on <i>V</i> is a function ‖·‖ : <i>V</i> → ℝ such that the following three properties hold for all <i>c</i> ∈ <i>F</i> and all <i><b>v, w</b></i> ∈ <i>V</i>:</p>
+
+<ol type="a">
+	<li><p>‖<i>c<b>v</b></i>‖ = |<i>c</i>| ‖<i><b>v</b></i>‖ &emsp;(absolute homogeneity)</p></li>
+	<li><p>‖<i><b>v</b></i> + <i><b>v</b></i>‖ = |<i>c</i>| ‖<i><b>v</b></i>‖ &emsp;(triangle inequality)</p></li>
+	<li><p>‖<i><b>v</b></i>‖ &ge; 0, with equality iff <i><b>b</b></i> = <b>0</b>  (positive definiteness)</p></li>
+</ol>
+
+<p>The motivation for why each of the above defining properties should hold for any reasonable measure of “length” or “size” is hopefully somewhat clear— (a) if we multiply a vector by a scalar then its length scaled by the same amount, (b) the shortest path between two points is the straight line connecting them, and (c) we do not want lengths to be negative. Every norm induced by an inner product is indeed a norm, as was estab- lished by Theorems 1.3.7 (which established properties (a) and (c)) and 1.3.9 (which established property (b)). However, there are also many different norms out there that are not induced by any inner product, both on ℝ<sup><i>n</i></sup> and on other vector spaces. We now present several examples.</p>
+
+<p  id="taxicab"><b>Example 1.D.1 (The 1-Norm (or “Taxicab” Norm)</b> The 1-norm on ℂ<sup><i>n</i></sup> is the function defined by</p>
+
+<div class="eq">
+<p>‖<i><b>v</b></i>‖<sub>1</sub> := |<i>v</i><sub>1</sub>| + |<i>v</i><sub>2</sub>| + ... + |<i>v<sub>n</sub></i>|&emsp; for all <b><i>v</b></i> &in; ℂ<sup><i>n</i></sup></p>
+</div>
+
+<p>We show that the 1-norm is indeed a norm. We have to check the three defining properties of norms</p>
+
+<ol type="a">
+	<li><p>‖<i>c<b>v</b></i>‖<sub>1</sub> = |<i>cv</i><sub>1</sub>| + ... + |<i>cv<sub>n</sub></i>| = |<i>c</i>| (|<i>v</i><sub>1</sub>| + ... + |<i>v<sub>n</sub></i>|) = |<i>c</i>| ‖<i><b>v</b></i>‖<sub>1</sub>;</p>
+	<li><p>First, we note that |<i>v</i> + <i>w</i>| ≤ |<i>v</i>| + |<i>w</i>| for all <i>v, w</i> ∈ ℂ (this statement is equivalent to the usual triangle inequality on ℝ<sup>2</sup>). We then have</p>
+	
+<div class="eq">
+<p>‖<i><b>v</b></i> + <i><b>w</b></i>‖<sub>1</sub> = |<i>v</i><sub>1</sub> + <i>w</i><sub>1</sub>| + · · · + |<i>v<sub>n</sub></i> + <i>w<sub>n</sub></i>|<br>
+≤ (|<i>v</i><sub>1</sub>| + |<i>w</i><sub>1</sub>|) + ··· + (|<i>v<sub>n</sub></i>| + |<i>w<sub>n</sub></i>|)<br>
+= (|<i>v</i><sub>1</sub>| + ··· + |<i>v<sub>n</sub></i>|) + (|<i>w</i><sub>1</sub>| + ··· + |<i>w<sub>n</sub></i>|)
+=  ‖<i><b>v</b></i>‖<sub>1</sub> + ‖<i><b>w</b></i>‖<sub>1</sub></p>
+</div>
+
+<li><p>The fact that  ‖<i><b>v</b></i>‖<sub>1</sub> = |<i>v</i><sub>1</sub>| + ·⋅· +|<i>v<sub>n</sub></i>| ≥ 0 is clear. To see that  ‖<i><b>v</b></i>‖<sub>1</sub> = 0 if and only if <i><b>v</b></i> = <b>0</b>, we similarly just notice that |<i>v</i><sub>1</sub>| + ··· + |<i>v<sub>n</sub></i>| = 0 if and only if <i>v</i><sub>1</sub> = ··· = <i>v<sub>n</sub></i> = 0 (indeed, if any <i>v<sub>j</sub></i> were non-zero then |<i>v<sub>j</sub></i>| > 0, so |<i>v</i><sub>1</sub>| + ··· + |<i>v<sub>n</sub></i>| > 0 too).</p></li>
+</ol>
+
+<p>It is worth observing that the 1-norm measures the amount of distance that must be traveled to go from a vector’s tail to its head when moving in the direction of the standard basis vectors. For this reason, it is sometimes called the <b>taxicab norm</b>: we imagine a square grid on ℝ<sup>2</sup> as the streets along which a taxi can travel to get from the tail to the head of a vector <b><i>v</i></b>, and this norm measures how far the taxi must drive, as illustrated below for the vector <i><b>v</b></i> = (4, 3):</p>
+
+<p>In analogy with the 1-norm from the above example, we refer to the usual vector length on ℂ<sup><i>n</i></sup>, defined by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi mathvariant="bold">v</mi>
+  <msub>
+    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+    <mn>2</mn>
+  </msub>
+  <mo>:=</mo>
+  <msqrt>
+    <mo stretchy="false">|</mo>
+    <msub>
+      <mi>v</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msub>
+      <mi>v</mi>
+      <mn>2</mn>
+    </msub>
+    <msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo>&#x2026;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msub>
+      <mi>v</mi>
+      <mi>n</mi>
+    </msub>
+    <msup>
+      <mo stretchy="false">|</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$\| \mathbf{v} \|_2 := \sqrt{|v_1|^2 + |v_2|^2 + \ldots |v_n|^2} $$ -->
+
+<p>The <b>∞-norm</b> (or <b>max norm</b>) on ℂ<sup><i>n</i></sup> for a vector <b>x</b> = (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, … , <i>x<sub>n</sub></i>) in finite dimensional coordinate space, it takes the form:</p>
+
+<div class="eq">
+<p>‖<b><i>x</i></b>‖<sub>∞</sub> := max (|<i>x</i><sub>1</sub>|, … ,|<i>x<sub>n</sub></i>|)</p>
+</div>
+
+<h3>Orthogonal Vectors</h3>
+
+<p>Let <i>V</i> be an inner product space. As in ℝ<sup><i>n</i></sup>, two nonzero vectors in <i>V</i> are said to be orthogonal if the dot product is zero. Thus two nonzero vectors <b><i>u</i></b> and <b><i>v</i></b> in <i>V</i> are orthogonal if</p>
+
+<div class="eq">
+<p>⟨<b><i>u, v</i></b>⟩ = 0</p>
+</div>
+
+<h3>Distance</h3>
+
+<p>Our final task is to extend the Euclidean concept of distance to general vector spaces. As for norm, the concept of distance that we shall introduce, has not in general direct geometrical interpretation. It can however be useful to be able to discuss how far apart various functions are.</p>
+
+<p><b>Definition</b>. Let <i>V</i> be an inner product space with vector norm |·| : <i>V</i> → ℝ. The distance between two vectors (points) <b><i>u</i></b> and <b><i>v</i></b> is denoted <i>d</i>(<b><i>u,v</i></b>) and is defined by</p>
+
+<div class="eq">
+<p><i>d</i>(<b><i>u,v</i></b>) = |<b><i>u</i></b> − <b><i>v</i></b>|</p>
+</div>
+
+<section aria-label="End">
+<a href="inner_product.html">«Inner product</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

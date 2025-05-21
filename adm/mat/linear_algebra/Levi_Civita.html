@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The Levi-Civita symbol"/>
+	<title>The Levi-Civita symbol</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The Levi-Civita symbol</h1>
+
+<p>While Eq. (10.6) is convenient for working out the cross product of explicit numerical vectors, as in the previous problem, it becomes quite cumbersome when the vectors contain symbolic entries and when multiple products are involved. A more efficient way of writing the cross product is facilitated by the Levi-Cicita symbol <i>&epsilon;<sub>ijk</sub></i> in three dimensions</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3B5;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+      <mi>k</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mo stretchy="false">(</mo>
+          <mi>i</mi>
+          <mo>,</mo>
+          <mi>j</mi>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo>,</mo>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mo stretchy="false">(</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if&#xA0;</mtext>
+          </mrow>
+          <mo stretchy="false">(</mo>
+          <mi>i</mi>
+          <mo>,</mo>
+          <mi>j</mi>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mo stretchy="false">(</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mo stretchy="false">(</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mstyle scriptlevel="0">
+            <mspace width="0.278em"></mspace>
+          </mstyle>
+          <mstyle scriptlevel="0">
+            <mspace width="0.278em"></mspace>
+          </mstyle>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>otherwise</mtext>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+<mtext>&emsp;(1.12.1)</mtext>
+</math>
+
+<!-- $$ \varepsilon_{ijk}= \begin{cases}+1&{\text{if }}(i,j,k,) = (1,2,3),(2,3,1),(3,1,2)\\-1&{\text{if }}(i,j,k) = (2,1,3), (3,2,1), (1,3,2)\\\;\;\,0&{\text{otherwise}}\end{cases} $$ -->
+
+<p>Here <i>&epsilon;<sub>ijk</sub></i> = +1 for even permutations of 123, and <i>&epsilon;<sub>ijk</sub></i> = −1 for odd permutations of 123; so an even exchanges of the indices such as <i>&epsilon;</i><sub>231</sub> = <i>&epsilon;</i><sub>312</sub> = 1, while <i>&epsilon;</i><sub>213</sub> = <i>&epsilon;</i><sub>132</sub> = −1. A few familiar examples of its use are listed below</p>
+
+<ul>
+	<li><p>The determinanta of a 3 x 3 matrix may be defined using the Levi-Civita symbol <i>&epsilon;<sub>ijk</sub></i> as the product,</p>
+
+<div class="eq">
+<p><i>&epsilon;<sub>ijk</sub></i> det <i>A</i> = <i>&epsilon;<sub>abc</sub> A<sub>ai</sub>A<sub>bj</sub>A<sub>ck</sub></i></p>
+</div>
+
+</li>
+
+<li><p>Using this symbol, the cross product can be written, using Einstein summation convention as</p>
+
+<div class="eq">
+<p>(<b><i>v</i></b> × <b><i>w</i></b>)<sub><i>i</i></sub> = <i>&epsilon;<sub>ijk</sub> v<sub>j</sub> w<sub>k</sub></i> &emsp;(<b>1.12.2</b>)</p>
+</div>
+
+<p>Thus we have the familiar component expression of the cross-product</p>
+
+<div class="eq">
+<p>(<b><i>v</i></b> × <b><i>w</i></b>)<sub>1</sub> = <i>&epsilon;</i><sub>1jk</sub> <i>v<sub>j</sub>w<sub>k</sub></i> = <i>v</i><sub>2</sub><i>w</i><sub>3</sub> − <i>v</i><sub>3</sub><i>w</i><sub>2</sub><br>
+(<b><i>v</i></b> × <b><i>w</i></b>)<sub>2</sub> = <i>&epsilon;</i><sub>2jk</sub> <i>v<sub>j</sub>w<sub>k</sub></i> = <i>v</i><sub>3</sub><i>w</i><sub>1</sub> − <i>v</i><sub>1</sub><i>w</i><sub>3</sub><br>
+(<b><i>v</i></b> × <b><i>w</i></b>)<sub>3</sub> = <i>&epsilon;</i><sub>3jk</sub> <i>v<sub>j</sub>w<sub>k</sub></i> = <i>v</i><sub>1</sub><i>w</i><sub>2</sub> − <i>v</i><sub>2</sub><i>w</i><sub>1</sub></p>
+</div>
+
+<p>Example: The cross product of <b>a</b> = (2,3,4) and <b>b</b> = (5,6,7)</p>
+
+<ul>
+    <li><p>c<sub>1</sub> = a<sub>2</sub>b<sub>3</sub> − a<sub>3</sub>b<sub>2</sub> = 3×7 − 4×6 = −3.</p></li>
+    <li><p>c<sub>2</sub> = a<sub>3</sub>b<sub>1</sub> − a<sub>1</sub>b<sub>3</sub> = 4×5 − 2×7 = 6.</p></li>
+    <li><p>c<sub>3</sub> = a<sub>1</sub>b<sub>2</sub> − a<sub>2</sub>b<sub>1</sub> = 2×6 − 3×5 = −3.</p></li>
+</ul>
+
+</li>
+
+<li><p>The Levi-Civita symbol <i>&epsilon;<sub>ijk</sub></i> is related to the Kronecker delta <i>&delta;<sub>i</sub><sup>j</sup></i> by the identities,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="0.9em 0.3em">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>&#x3B5;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>&#x3B5;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>l</mi>
+            <mi>m</mi>
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">|</mo>
+            <mtable columnalign="center" columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>i</mi>
+                      <mi>l</mi>
+                    </mrow>
+                  </msub>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>i</mi>
+                      <mi>m</mi>
+                    </mrow>
+                  </msub>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>i</mi>
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>j</mi>
+                      <mi>l</mi>
+                    </mrow>
+                  </msub>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>j</mi>
+                      <mi>m</mi>
+                    </mrow>
+                  </msub>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>j</mi>
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>k</mi>
+                      <mi>l</mi>
+                    </mrow>
+                  </msub>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>k</mi>
+                      <mi>m</mi>
+                    </mrow>
+                  </msub>
+                  <msub>
+                    <mi>&#x3B4;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>k</mi>
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">|</mo>
+          </mrow>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mo>=</mo>
+        <msub>
+          <mi>&#x3B4;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mi>l</mi>
+          </mrow>
+        </msub>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mi>m</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mo>&#x2212;</mo>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mi>m</mi>
+            </mrow>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>&#x3B4;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mi>m</mi>
+          </mrow>
+        </msub>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mi>l</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mo>&#x2212;</mo>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mi>l</mi>
+            </mrow>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>+</mo>
+        <msub>
+          <mi>&#x3B4;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>i</mi>
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mi>l</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mi>m</mi>
+            </mrow>
+          </msub>
+          <mo>&#x2212;</mo>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>j</mi>
+              <mi>m</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>&#x3B4;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mi>l</mi>
+            </mrow>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>.</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!--$$\begin{aligned}\varepsilon_{ijk}\varepsilon_{lmn}={\begin{vmatrix}\delta_{il}\delta_{im}\delta_{in}\\ \delta_{jl}\delta_{jm}\delta_{jn}\\\delta_{kl}\delta_{km}\delta_{kn}\\\end{vmatrix}}\\[6pt]=\delta_{il}\left(\delta_{jm}\delta_{kn}-\delta_{jn}\delta_{km}\right)-\delta_{im}\left(\delta_{jl}\delta_{kn}-\delta_{jn}\delta_{kl}\right)+\delta_{in}\left(\delta_{jl}\delta_{km}-\delta_{jm}\delta_{kl}\right).\end{aligned} $$ -->
+
+<p>A special case of this result is</p>
+
+<div class="eq">
+<p><i>&epsilon;<sub>ijk</sub>&epsilon;<sub>imn</sub></i> = <i>&delta;<sub>jm</sub> &delta;<sub>kn</sub></i> − <i>&delta;<sub>jn</sub> &delta;<sub>km</sub></i> &emsp;(1.12.3)</p>
+</div>
+
+<p>Note the use of Einstein's summation convention,</p>
+
+<!-- $$ \sum_{i=1}^{3}\varepsilon_{ijk}\varepsilon_{imn}=\delta_{jm}\delta_{kn}-\delta_{jn}\delta_{km} $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>3</mn>
+    </mrow>
+  </munderover>
+  <msub>
+    <mi>&#x3B5;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+      <mi>k</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>&#x3B5;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>&#x3B4;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mi>m</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>&#x3B4;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>&#x3B4;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>&#x3B4;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mi>m</mi>
+    </mrow>
+  </msub>
+</math>
+
+<p id="bac-cab">The Kronecker and Levi-Cività symbols simplify the proof of vector identities. An example is the following known as <i>bac-cab</i> rule.</p>
+
+<div class="eq">
+<p><b><i>a</i></b> × (<b><i>b</i></b> × <b><i>c</i></b>) = <b><i>b</i></b>(<b><i>a</i></b> · <b><i>c</i></b>) − <b><i>c</i></b>(<b><i>a</i></b> · <b><i>b</i></b>)&emsp;(1.12.4)</p>
+</div>
+
+<p>Using eq (1.12.2), the <i>i</i>th component of <b><i>a</i></b> × (<b><i>b</i></b> × <b><i>c</i></b>) is</p>
+
+<div class="eq">
+<p>[<b><i>a</i></b> × (<b><i>b</i></b> × <b><i>c</i></b>)]<sub><i>i</i></sub> = <i>&epsilon;<sub>ijk</sub> a<sub>j</sub></i> × (<b><i>b</i></b> × <b><i>c</i></b>)<sub><i>k</i></sub> = <i>&epsilon;<sub>ijk</sub> a<sub>j</sub> &epsilon;<sub>klm</sub> b<sub>l</sub>c<sub>m</sub></i></p>
+</div>
+
+<p>The definition (1.12.1) tells us that <i>&epsilon;<sub>ijk</sub></i> = <i>&epsilon;<sub>klm</sub></i>. Therefore, the identity (1.12.3) gives</p>
+
+<div class="eq">
+<p>[<b><i>a</i></b> × (<b><i>b</i></b> × <b><i>c</i></b>)]<sub><i>i</i></sub> = <i>&epsilon;<sub>ijk</sub> a<sub>j</sub></i> × (<b><i>b</i></b> × <b><i>c</i></b>)<sub><i>k</i></sub> = (<i>&delta;<sub>il</sub></i> − <i>&epsilon;<sub>jm</sub></i> − <i>&delta;<sub>im</sub></i> − <i>&epsilon;<sub>jl</sub></i>) <i>a<sub>j</sub>b<sub>l</sub>c<sub>m</sub></i> = <i>a<sub>j</sub>b<sub>i</sub>c<sub>j</sub></i> − <i>a<sub>j</sub>b<sub>j</sub>c<sub>i</sub></i></p>
+</div>
+
+<p>The final result, <i>b<sub>i</sub></i>(<i><b>a</b></i> ⋅ <i><b>c</b></i>) − <i>c<sub>i</sub></i>(<i><b>a</b></i> ⋅ <i><b>b</b></i>), is indeed the <i>i</i>th component of the right side of (1.12.4). </p>
+
+<p><b>Example 1</b>. Prove that ∇ · (∇ × <b><i>g</i></b>) = 0.</p>
+
+<p><b>Solution</b>: Begin with ∇ · (∇ × <b><i>g</i></b>) = ∂<sub>i</sub> <i>&epsilon;<sub>ijk</sub></i> ∂<sub>j</sub> g<sub>k</sub></i> = ½ ∂<sub>i</sub>∂<sub>j</sub><i>g<sub>k</sub>&epsilon;<sub>ijk</sub></i> + ½ ∂<sub>i</sub>∂<sub>j</sub><i>g<sub>k</sub>&epsilon;<sub>ijk</sub></i>.</p>
+
+<p>Which is equal to</p>
+
+<div class="eq">
+<p>∇ · (∇ × <b><i>g</i></b>) = ½Σᵢⱼₖ∂ⱼ∂ᵢgₖϵᵢⱼₖ + ½Σᵢⱼₖ∂ⱼ∂ᵢgₖϵᵢⱼₖ</p>
+</div>
+
+<p>Exchanging the dummy indices <i>i</i> and <i>j</i> in the last term, does not change the sum; An it gives</p>
+
+<div class="eq">
+<p>∇ · (∇ × <b><i>g</i></b>) = ½Σᵢⱼₖ∂ⱼ∂ᵢgₖϵᵢⱼₖ + ½Σⱼᵢₖ∂ᵢ∂ⱼgₖϵⱼᵢₖ</p>
+</div>
+
+<div class="eq">
+<p>∇ · ∇ × <b><i>g</i></b> = ½ ∂<sub>i</sub>∂<sub>j</sub><i>g<sub>k</sub>&epsilon;<sub>ijk</sub></i> + ½ ∂<sub>j</sub>∂<sub>i</sub><i>g<sub>k</sub>&epsilon;<sub>jik</sub></i>
+ = ½ {<i>&epsilon;<sub>ijk</sub></i> + <i>&epsilon;<sub>jik</sub></i>} ∂<sub>i</sub>∂<sub>j</sub><i>g<sub>k</sub></i> = 0</p>
+</div>
+
+<p>The final zero comes from <i>&epsilon;<sub>ijk</sub></i> = −<i>&epsilon;<sub>jik</sub></i>, which is a consequence of (1.12.1). &emsp;□</p>
+
+<section aria-label="End">
+<a href="cross_product.html">&#171;Cross Product</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content=">Exercises on the fundamental morphism theorems"/>
+ <title>Exercises on the fundamental morphism theorems</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+
+<div class="content">
+
+<h1>Exercises on the fundamental morphism theorems</h1>
+
+<p><b>Exercise 1</b>. Let <i>r</i> and <i>s</i> positive integers such that (<i>r,s</i>)=1.</p>
+
+<ol type="i">
+	<li><p>Consider the ring ℤ<sub><i>r</i></sub> x ℤ<sub><i>s</i></sub> (with respect to ordinary multiplication and addition, component by component), prove that the application <i>f: ℤ ⟶  ℤ<sub>r</sub> x ℤ<sub>s</sub></i> given by <i>a</i> ⟶ (<i>ā<sub>r</sub>, ā<sub>s</sub></i>) is an epimorphism of rings.</p></li>
+	
+	<li><p>Prove (using the fundamental theorem of isomorphism for rings) that <i>ℤ<sub>rs</sub></i> and  <i>ℤ<sub>r</sub> x ℤ<sub>s</sub></i> are isomorphic.</p>
+</ol>
+
+<p><b>Exercise 2</b>. Let <i>I<sub>1</sub></i> and <i>I<sub>2</sub></i> two ideals of a ring <i>R</i> such that <i>I<sub>1</sub> + I<sub>2</sub> = R</i>. Prove that</p>
+
+<div class="eq">
+<p><i>R</i>/(<i>I<sub>1</sub> ∩ I<sub>2</sub></i>) ≃ <i>R/I<sub>1</sub> ⊕  R/I<sub>2</sub></i></p>
+</div>
+
+<p><b>Exercise 3</b>. Using the first isomorphism theorem determine the isomorphism in case that <i>R</i> = ℤ, <i>I</i> = 4ℤ, <i>A</i> = 6ℤ.</p>
+
+<p><b>Exercise 4</b>. Using the second isomorphism theorem determine the isomorphism for the case <i>R</i> = ℤ, <i>I</i> = 10ℤ, <i>J</i> = 6ℤ.</p>
+
+<p><b>Exercise 5</b>. Determine all the ideals of ℤ<sub>24</sub> by using the correspondence theorem.</p>
+
+<h2>Solutions</h2>
+
+<ol>
+
+	<li>
+	<ol type="i">
+		<li><p>(<i>a+b</i>) maps to ([<i>a+b</i>]<sub>r</sub>, [<i>a+b</i>]<sub>s</sub>), which is ([<i>a</i>]<sub>r</sub> + [<i>b</i>]<sub>r</sub>) + ([<i>a</i>]<sub>s</sub> + [<i>b</i>]<sub>s</sub>). </p>
+		
+		<p>(<i>ab</i>) maps to ([<i>ab</i>]<sub>r</sub>, [<i>ab</i>]<sub>s</sub>), which is ([<i>a</i>]<sub>r</sub> [<i>b</i>]<sub>r</sub>) ([<i>a</i>]<sub>s</sub> [<i>b</i>]<sub>s</sub>). So it's a homomorphism.</p>
+		
+		<p>To prove surjectivity we must show that for (<i>x,y</i>) in ℤ<sub><i>r</i></sub> x ℤ<sub><i>s</i></sub> there's an <i>a</i> &in; ℤ. Think about what the surjectivity requirement for the function means algebraically: it means for any <i>x,y</i>, the equations [<i>a</i>]<sub>r</sub> = <i>x</i>, and [<i>a</i>]<sub>s</sub> = <i>y</i> are simultaneously solvable. </p>
+		
+		<p><i>a ≡ x</i> mod <i>r</i>  ⇐⇒  [<i>a</i>]<sub>r</sub> = <i>x</i>, &emsp; <i>a ≡ y</i> mod <i>s</i> ⇐⇒  [<i>a</i>]<sub>r</sub> = <i>y</i>.</p>
+		
+		<li>
+		
+			<p>We proved that <i>f: ℤ ⟶  ℤ<sub>r</sub> x ℤ<sub>s</sub></i> is a ring homomorphism, by the fundamental theorem o of ring homomorphism we know there exists a unique isomorphism <i>f*: ℤ<sub>rs</sub> ⟶  ℤ<sub>r</sub> x ℤ<sub>s</sub></i> if ker <i>f</i> = <i>rs</i>ℤ. We have that ℤ/ℤ<sub>rs</sub> = <i>rs</i>ℤ. We have that the kernel of <i>φ</i>: ℤ → ℤ/nℤ sending <i>a</i> to [<i>a</i>] is {<i>kn</i>| <i>k</i> &in; ℤ} Thus ℤ<sub>rs</sub> ≃ ℤ<sub>r</sub> x ℤ<sub>s</sub></i></p>
+		
+		
+		<p><b>Alternative proof.</b> The map <i>f</i>: Z<sub>rs</sub> ⟶  ℤ<sub><i>r</i></sub> x ℤ<sub><i>s</i></sub>, defined by <i>f</i>([<i>x</i>]<sub>rs</sub>) = ([<i>x</i>]<sub>r</sub>, [<i>x</i>]<sub>s</sub>), is a ring isomorphism. By the Chinese remainder theorem the system of congruences</p>
+		
+		<div class="eq">
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+    <mtr>
+      <mtd>
+        <mi>x</mi>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>a</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mspace width="1em" />
+          <mo stretchy="false">(</mo>
+          <mi>mod</mi>
+          <mspace width="0.333em" />
+          <mi>r</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi>x</mi>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>b</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mspace width="1em" />
+          <mo stretchy="false">(</mo>
+          <mi>mod</mi>
+          <mspace width="0.333em" />
+          <mi>s</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>,</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+</div>		
+		<p>admits exactly one solution modulo <i>rs</i>. This implies the surjectivity and the injectivity of the map.</p>
+
+		</li>
+	</ol>
+	
+	</li>
+	
+	<li><p>It's sufficient to find an epimorphism from <i>R</i> to <i>R/I<sub>1</sub> ⊕  R/I<sub>2</sub></i> with kernel <i>I<sub>1</sub> ∩ I<sub>2</sub></i>. We define <i>&phi;: R ⟶  R/I<sub>1</sub> ⊕  R/I<sub>2</sub></i> by letting <i>&phi;</i>(<i>x</i>) = (<i>x +I<sub>1</sub>, x + I<sub>2</sub></i>). </p>
+	
+	<p><i>R/I1 ⊕ R/I2</i> is the cartesian product of those rings so made of the ordered pairs (<i>x+I<sub>1</sub>, x+I<sub>2</sub></i>). <i>x</i> &in; ker(<i>φ</i>) would satisfy, by definition, that <i>x+I<sub>1</sub> = I<sub>1</sub></i> and <i>x+I<sub>2</sub> = I<sub>2</sub></i>, hence that <i>x</i> is an element of both <i>I<sub>1</sub></i> and <i>I<sub>2</sub></i>, hence an element of the intersection of these ideals: ker <i>&phi; = I<sub>2</sub></i> ∩ <i>I<sub>1</sub></i>.</p>
+	
+	<p>To prove surjectivity we must show that given a (<i>r + I<sub>1</sub>, s + I<sub>2</sub></i>) &in; <i>R/I<sub>1</sub> ⊕  R/I<sub>2</sub></i> there exists a <i>x &in; R</i>, such that <i>&phi;</i>(<i>x</i>) = (<i>r +I<sub>1</sub>, s + I<sub>2</sub></i>). Since <i>R = I<sub>1</sub> + I<sub>2</sub>, r = a<sub>1</sub> + a<sub>2</sub>, s = b<sub>1</sub> + b<sub>2</sub></i> for given <i>a<sub>i</sub>,b<sub>i</sub> &in; I<sub>i</sub></i> (<i>i = 1,2</i>). The element <i>x = a<sub>2</sub> + b<sub>1</sub></i> is such that</p>
+	
+	<div class="eq">
+	<p><i>x ≡ a<sub>2</sub> ≡ r</i> (mod <i>I<sub>1</sub></i>), &emsp; <i>x ≡ b<sub>1</sub> ≡ r</i> (mod <i>I<sub>2</sub></i>)</p>
+	</div>
+
+<p>hence <i>&phi;</i>(<i>x</i>) = (<i>r +I<sub>1</sub>, s + I<sub>2</sub></i>).</p></li>
+
+<li><p>We want to show that</p>
+
+<div class="eq">
+<p><i>A</i>/(<i>A ∩ I</i>) ≃ (<i>A + I</i>)/<i>I</i></p>
+</div>
+
+<p>4ℤ ∩ 6ℤ = 12ℤ, since an integer is divisible by both 4 and 6 if and only if it is divisible by 12. An we have 4ℤ + 6ℤ = {<i>4x + 6y: x,y</i> &in;ℤ } = 2ℤ, hence</p>
+
+<div class="eq">
+<p>6ℤ/12ℤ ≃ 2ℤ/4ℤ</p>
+</div>
+
+<p>If <i>&pi;: R ⟶ R/I</i>, let <i>&pi;<sub>|A</sub></i> the restriction of &pi; to <i>A</i> that is</p>
+	
+	<div class="eq">
+	<p><i>&pi;<sub>|A</sub>: A</i> ⟶ (<i>A+I</i>)/<i>I</i></p>
+	</div>
+	<p>It is a ring homomorpshim whose kernel is <i>A ∩ I</i>. By using the fundamental homomrphsim we have the following isomorphism</p>
+	
+	<div class="eq">
+	<p><i>f</i>: <i>A</i>/(<i>A ∩ I</i>)  ⟶ (<i>A+I</i>)/<i>I</i></p>
+	</div>
+</li>
+
+<li>
+	<p>ℤ/<i>I</i> = ℤ/10ℤ, ℤ/<i>J</i> = ℤ/2ℤ, <i>J/I</i> = 2ℤ/10ℤ ≃ [2]<sub>10</sub>ℤ<sub>10</sub>.</p>
+	
+	<p>Using the second isomorphism theorem, we have the isomorphism <i>f: ℤ/J</i> ⟶ (<i>ℤ/I</i>)/(<i>J/I</i>)</i> is defined as follows <i>f</i>(<i>r+J</i>) := (<i>r + I</i>) + <i>J/I</i></p>
+	
+	<div class="eq">
+<p><i>f</i>(0) ⟼ 0 + 10ℤ + 2ℤ/10ℤ = [0]<sub>10</sub> + [2]<sub>10</sub>ℤ<sub>10</sub> = {[2]<sub>10</sub>, [4]<sub>10</sub>, [6]<sub>10</sub>, [8]<sub>10</sub>}</p>
+<p><i>f</i>(1) ⟼ 1 + 10ℤ + 2ℤ/10ℤ = [1]<sub>10</sub> + [2]<sub>10</sub>ℤ<sub>10</sub> = {[3]<sub>10</sub>, [5]<sub>10</sub>, [7]<sub>10</sub>, [9]<sub>10</sub>}</p>
+<p><i>f</i>(2) ⟼ 2 + 10ℤ + 2ℤ/10ℤ = [2]<sub>10</sub> + [2]<sub>10</sub>ℤ<sub>10</sub> = {[4]<sub>10</sub>, [6]<sub>10</sub>, [8]<sub>10</sub>, [10]<sub>10</sub>}</p>
+</div>
+	
+	</li>
+
+<li><p>The ideals of ℤ containing 24ℤ are: ℤ, 2ℤ, 3ℤ,4ℤ,6ℤ,8ℤ,12ℤ, 24ℤ, thus the ideals of ℤ<sub>24</sub> are  ℤ/ℤ<sub>24</sub> = ℤ<sub>24</sub>, 2ℤ/24ℤ, etc.</p></li> 
+</ol>
+
+<section aria-label="End">
+<a href="fund_theorem_homomorphism.html">&#171;Fundamental theorem of ring homorpshims and isomorphism</a>
+<a href="index.html">Index</a>
+<a href="homomorphism.html">Ring homomorphisms &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

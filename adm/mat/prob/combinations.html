@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Combinations"/>
+	<title>Combinations</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Combinations</h1>
+
+<p>We define as <b>binomial coefficient</b>, the rational positive number</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>:=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo>.</mo>
+  <mi>k</mi>
+  <mo>&#x2208;</mo>
+  <mi mathvariant="double-struck">N</mi>
+  <mo>,</mo>
+  <mi>n</mi>
+  <mo>&#x2265;</mo>
+  <mi>k</mi>
+</math>
+
+<!-- $$ \binom{n}{k} := \frac{n!}{k!(n-k)!} \qquad n.k \in \mathbb{N}, n \ge k $$ -->
+
+<p>For 0 &le; 0 &le; <i>n</i> it results <i>n</i>! = <i>n</i> (<i>n</i> − 1) (<i>n</i>−<i>k</i> + 1)(<i>n</i> − <i>k</i>) ⋅⋅⋅ 1 = <i>n</i> (<i>n</i> − 1) (<i>n</i>−<i>k</i> + 1)(<i>n</i> − <i>k</i>)!. So we can express the definition as well as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>&#x22EF;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo>.</mo>
+  <mi>k</mi>
+  <mo>&#x2208;</mo>
+  <mi mathvariant="double-struck">N</mi>
+  <mo>,</mo>
+  <mi>n</mi>
+  <mo>&#x2265;</mo>
+  <mi>k</mi>
+</math>
+
+<!-- $$ \binom{n}{k} = \frac{n(n-1) \cdots (n-k+1)}{k!} \qquad n.k \in \mathbb{N}, n \ge k $$ -->
+
+<p>From definition, it follows directly that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mn>0</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>n</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mn>1</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mrow>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mi>n</mi>
+</math>
+
+<!-- $$ \binom{n} {0} = \binom{n}{n} = 1, \quad  \binom{n} {1} =  \binom{n} {n-1} = n$$ -->
+
+<p>Further, it is easy to prove that for any <i>n</i> &ge; 1 and any <i>k</i> such that 0 &lt; <i>k</i> &lt; <i>n</i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mrow>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow>
+        <mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>+</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mrow>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+<mtext>&emsp;1.4.1</mtext>
+</math>
+
+<!-- $$ \binom{n} {k} = \binom{n-1}{k-1} + \binom{n-1}{k} $$ -->
+
+<p>which provides a convenient means for computing binomial coefficients <i>recursively</i> the coefficients relative to <i>n</i> objects are easily determined once those involving <i>n</i> — 1 objects are computed. The same formula suggests to write down binomial coefficients in a triangular pattern, known as <i>Pascal's triangle</i>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable columnspacing="1em" rowspacing="4pt">
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>2</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>3</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>3</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>4</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn style="color:blue;">6</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn style="color:blue;">4</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>5</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>10</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn style="color:blue;">10</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>5</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>6</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>15</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>20</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>15</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>6</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mn>1</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>7</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>21</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>35</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>35</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>21</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>7</mn>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mn>1</mn>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$ \begin{array}{c}1\\1\quad 1\\1\quad 2\quad 1\\1\quad 3\quad 3\quad 1\\1\quad 4\quad 6\quad 4\quad 1\\1\quad 5\quad 10\quad 10\quad 5\quad 1\\1\quad 6\quad 15\quad 20\quad 15\quad 6\quad 1\\1\quad 7\quad 21\quad 35\quad 35\quad 21\quad 7\quad 1\\\end{array} $$ -->
+
+<p>each coefficient of a given row, except for the 1's on the boundary, is the sum of the two numbers that lie above it in the preceding row, precisely as 1.4.1 prescribes. The construction of Tartaglia's triangle (or Pascal's triangle) shows that the binomial coefficients are natural numbers. Note also from the triangle that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mrow>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mi>k</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+</math>
+
+<!-- $$ \binom{n}{k} = \binom{n}{n-k} $$ -->
+
+<p>Suppose you’re considering a set of 5 elements, such as {<i>a, b, c, d, e</i>}, and you want to know how many different subsets of 2 elements it has. There are 10, namely {a, b}, {a, c}, {a, d}, {a, e}
+{b, c}, {b, d}, {b, e}, {c, d}, {c, e}, {d, e}. We say, there are 10 combinations of 5 things taken 2 at a time.</p>
+
+<p><b>Example</b>. Given <i>n</i> balls of different colours. How many different sets of <i>k</i> &le; <i>n</i> balls can we form?</p>
+
+<p><b>Solution</b>. Extracting one ball at a time for <i>k</i> times, we already know that there are <i>n</i>(<i>n</i> — 1) ... (<i>n</i> — <i>k</i> + 1) outcomes. On the other hand the same <i>k</i> balls, extracted in a different order, will yield the same set. Since the possible orderings of <i>k</i> elements are <i>k</i>!, we see that the number of distinct sets of <i>k</i> balls chosen from <i>n</i> is C<sub>n,k</sub>. This coefficient represents the number of combinations of n objects taken k at a time. Equivalently, the number of subsets of k elements of a set of cardinality n.&emsp;■</p>
+
+<p>To see how <i>C<sub>n,k</sub></i> corresponds to the <i>binomial coefficient</i>, we remmber that when we studied the <a href="disposizioni.html">dispositions without repetition</a> we've seen that the arrangements of <i>k</i> objects from a set of <i>n</i> are <i>D<sub>n,k</sub></i> = <i>n</i> ⋅ (<i>n</i> &minus;1) ⋅ ... ⋅ (<i>n</i> &minus; <i>k</i> + 1) = <i>n</i>!/(<i>n</i> &minus; <i>k</i>)!. These are subsets of <i>k</i> elements from the <i>n</i> elements of the set which differ by order and composition. When dealing with combination, <i>C<sub>n,k</sub></i> the order does not matter. If we pick a subset of <i>k</i> elements from the set of <i>n</i> elements and denote it with <i>C<sub>n,k</sub></i>, each subset can be arranged in <i>k</i>! ways. Therefore <i>D<sub>n,k</sub></i> = <i>C<sub>n,k</sub></i> ⋅ <i>k</i>!. which leads to</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <mrow>
+              	<mo>C<sub>n,k</sub> = </mo>
+              	<mfrac linethickness="1">
+                  <mi>D<sub>n,k</sub></mi>
+                  <mi>k!</sub></mi>
+                </mfrac>
+				<mo>=</mo>
+				<mfrac linethickness="1">
+                  <mi>n!</mi>
+                  <mi>(n - k)! k!</mi>
+                </mfrac>
+  				<mo>=</mo>
+				<mrow>
+                <mo>(</mo>
+                <mfrac linethickness="0">
+                  <mi>n</mi>
+                  <mi>k</mi>
+                </mfrac>
+                <mo>)</mo>
+</math>
+
+<p><b>Remark</b>. The formula just obtained coincides with the number of <a href="permutations.html#repetition">repeated permutations</a>, of <i>n</i> elements of which <i>k</i> and <i>n</i> − <i>k</i> are repeated:</p>
+
+<div class="eq">
+<p><i>P<sub>n,k</sub></i><sup>(<i>k,n</i> − <i>k</i>)</sup> = <i>n</i>!/<i>k</i>! ⋅ (<i>n</i> &minus; <i>k</i>)!</p>
+</div>
+
+<p><b>1.4.1 Example</b> We must choose three candidates among 6 available. In how many different ways we can select the three ca?</p>
+
+<div class="eq">
+<p><i>C</i><sub>6,3</sub> = 6 ⋅ 5 ⋅ 4/ 3 ⋅ 2 ⋅ 1 = 20</p>
+</div>
+
+<p>One important identity of the many important identities that hold for binomial coefficients is the following:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mrow>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mi>k</mi>
+      </mrow>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+</math>
+
+<p>This relation appears obvious if you consider that for every subset of <i>k</i> elements out of the <i>n</i> element, there will another subset of <i>n &minus; k</i> elements.</p>
+
+<p>The last relation comes handy in the computations for cases with <i>k</i> &ne; <i>n</i>/2. For example we can write: <i>C</i><sub>10,8</sub> = <i>C</i><sub>10,2</sub> = 10 ⋅ 9/2 = 45 istead of writing <i>C</i><sub>10,8</sub> =  10 ⋅ 9 ⋅ 8 ⋅ ... ⋅ 3/8 ⋅ ... ⋅ 3 ⋅ 2 ⋅ 1.</p>
+
+<p><b>1.4.2 Example</b> How many triangles can we build connecting the points of the plane <i>A, B, C, D, E</i>?</p>
+
+<img src="img/triangoli.png" alt="combinazioni semplici triangoli" />
+
+<p><b>Solution</b>. We count all the groups of theree letters which differ at least for one element; This number is <i>C</i><sub>5,3</sub> = (5⋅4⋅3)/(3⋅2) = 10. We can represent these combination in the following diagram:</p>
+
+<table class="centertable">
+<tr><th>A</th> <th>B</th> <th>C</th> <th>D</th> <th>E</th></tr>
+
+<tr><td>■</td> <td>■</td><td>■</td><td>□</td> <td>□</td> </tr>
+
+<tr><td>■</td> <td>■</td> <td>□</td> <td>■</td> <td>□</td> </tr>
+
+<tr><td>■</td> <td>■</td> <td>□</td> <td>□</td> <td>■</td> </tr>
+
+<tr><td>■</td> <td>□</td> <td>■</td> <td>□</td> <td>■</td> </tr>
+
+<tr><td>■</td> <td>□</td> <td>■</td> <td>■</td> <td>□</td> </tr>
+
+<tr><td>■</td> <td>□</td> <td>□</td> <td>■</td> <td>■</td> </tr>
+
+<tr><td>□</td> <td>■</td> <td>□</td> <td>■</td> <td>■</td> </tr>
+
+<tr><td>□</td> <td>■</td> <td>■</td> <td>■</td> <td>□</td> </tr>
+
+<tr><td>□</td> <td>■</td> <td>■</td> <td>□</td> <td>■</td> </tr>
+
+<tr><td>□</td> <td>□</td> <td>■</td> <td>■</td> <td>■</td> </tr>
+</table>
+
+<p>The subsets of three points that make the triangle are represented by black boxes. We see then that the number of <i>simple combination</i> coincides with the number of permutations of 5 elements in which two and three elements are repeated:</p>
+
+<div class="eq">
+<p><i>P</i><sup>(2,3)</sup><sub>5</sub> = 5! /(2! ⋅ 3!) = 10</p>
+</div>
+
+<p>In general it is true that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>P</mi>
+    <mi>n</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+  </msubsup>
+  <mo>=</mo>
+  <msub>
+    <mi>C</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+</math>
+
+<p><b>1.4.4 Example</b>. You have a bunch of kids, nine of them, and you want to divide them into a group of four, and a group of five, each group, being assigned some task. In how many ways can we do this division?</p>
+
+<p><b>Solution</b>. <i>C</i>(9,4) ⋅ <i>C</i>(5,5) = 126.</p>
+
+<p><b>1.4.3 Example</b> A group of 20 people shake hands with each other. How many handshakes take place?</p>
+
+<p><b>Solution</b>. It is the number of subsets of two elements we can form out of the set of 20 people.</p>
+
+<div class="eq">
+<p><i>C</i><sub>20,2</sub> = (20 x 19)/2 = 190.&emsp;■</p>
+</div>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="multinomial_coefficients.html">Multinomial coefficients&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

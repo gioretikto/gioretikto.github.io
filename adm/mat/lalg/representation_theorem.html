@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Matrix Representation Theorem"/>
+	<title>Matrix Representation Theorem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Matrix Representation of Linear Transformations</h1>
+
+<p>We noted that multiplication by an <i>m</i> x <i>n</i> matrix defines a <b>transformation</b> from 𝔽<sup><i>n</i></sup> into 𝔽<sup><i>m</i></sup>. Matrix transformations are linear transformations since the properties in <a href="linear_transformations.html">Definition 2.1.1</a> are simply restatement of the linearity properties for matrix multiplication. The <b>matrix representation theorem</b> says that every linear transformation from 𝔽<sup><i>n</i></sup> into 𝔽<sup><i>m</i></sup> is a matrix transformation. <br> Just like every vector in a finite-dimensional vector space can be associated with a vector in 𝔽<sup><i>n</i></sup>, every linear transformation between vector spaces can be associated with a matrix in <i>M<sub>m,n</sub></i>(𝔽):</p>
+
+<div class="eq">
+<p><i>T</i>: 𝔽<sup><i>n</i></sup> ⟶ 𝔽<sup><i>m</i></sup><br> <i>T</i>: <i><b>x</b></i> ⟼ <i>A<b>x</b></i></p>
+</div>
+
+<p id="matrix"><b>Theorem 3.3.1</b>. (Matrix Representation Theorem) Let <i>V</i> be an <i>n</i>-dimensional vector space over 𝔽 and <i>W</i> be <i>m</i>-dimensional vector space over 𝔽. Let <i>B</i> = {<b><i>u</i></b><sub>1</sub>, <b><i>u</i></b><sub>2</sub>, ..., <b><i>u</b><sub>n</sub></i>} and <i>B'</i> = {<b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <b><i>v</b><sub>m</sub></i>} be ordered bases for <i>V<sub>n</sub></i> and <i>V<sub>m</sub></i> respectively. Let <i>T</i>: <i>V<sub>n</sub></i> ⟶ <i>V<sub>m</sub></i> be any linear transformation. Then there is a unique matrix <i>A</i> such that <i>T</i>(<i><b>x</b></i>) = <i>A<b>x</b></i> for all <i><b>b</b></i> &in; <i>V<sub>n</sub></i>. Then there exists a natural isomorpshim <i>J</i>: <i>L</i>(<i>V<sub>n</sub>,V<sub>m</sub></i>) ⟶ <i>M<sub>m,n</sub></i>(𝔽) given by <i>J</i>(<i>T</i>) = <i>A</i>.</p>
+
+<p><b>Proof</b>. We have that <i>T</i>(<i><b>u</b></i><sub>1</sub>) &in; <i>V<sub>m</sub></i>, so we can write</p>
+
+<div class="eq">
+<p><i>T</i>(<i><b>u</b></i><sub>1</sub>) = <i>a</i><sub>11</sub> <i><b>w</b></i><sub>1</sub> + <i>a</i><sub>21</sub> <i><b>w</b></i><sub>2</sub> + ... + a<sub>m1</sub> <i><b>w</b><sub>m</sub></i><br>
+<i>T</i>(<i><b>u</b></i><sub>2</sub>) = <i>a</i><sub>12</sub> <i><b>w</b></i><sub>1</sub> + <i>a</i><sub>22</sub> <i><b>w</b></i><sub>2</sub> + ... + <i>a</i><sub><i>m</i>2</sub> <i><b>w</b><sub>m</sub></i><br>
+...<br>
+<i>T</i>(<i><b>u</b><sub>n</sub></i>) = <i>a</i><sub>1<i>n</i></sub> <i><b>w</b></i><sub>1</sub> + <i>a</i><sub>2<i>n</i></sub> <i><b>w</b></i><sub>2</sub> + ... + <i>a<sub>mn</sub> <b>w</b><sub>m</sub></i></p>
+</div>
+
+
+<p>Let  the components of a matrix <i>A</i> = (<i>a<sub>ij</sub></i>) the <i>m</i> x <i>n</i> matrix, such that <i>i</i> = 1, 2, ..., <i>m</i> &emsp; <i>j</i> = 1,2,.., <i>n</i>, with <i>a<sub>ij</sub></i> &in; 𝔽<sup><i>n</i></sup>. We see that the columns of <i>A</i> represent the scalar components of <i>T</i>(<i><b>u<sub>i</sub></b></i>), with repsect to the basis <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <b><i>v</b><sub>m</sub></i> of <i>V<sub>m</sub></i>.</p>
+
+<p>If <i><b>x</b></i> = <i>x</i><sub>1</sub> <i><b>u</b></i><sub>1</sub> + <i>x</i><sub>2</sub> <i><b>u</b></i><sub>2</sub> + <i>x<sub>n</sub> <b>u</b><sub>n</sub></i>. <br> We have by linearity of <i>T</i> and the previous equations</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>T</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>T</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <msub>
+      <mi>x</mi>
+      <mi>j</mi>
+    </msub>
+    <msub>
+      <mi mathvariant="bold">u</mi>
+      <mi>j</mi>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msub>
+  <mi>T</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">u</mi>
+    <mi>j</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msub>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <msub>
+      <mi>a</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <msub>
+      <mi>x</mi>
+      <mi>j</mi>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <msub>
+    <mi mathvariant="bold">v</mi>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<!-- $$T(\mathbf{x}) = T \left(\sum_{j=1}^n x_j\mathbf{u}_j \right) = \sum_{j=1}^n x_j T(\mathbf{u}_j) = \sum_{j=1}^nx_j \sum_{j=1}^m a_{ij}\mathbf{v}_i = \sum_{j=1}^n \sum_{i=1}^m a_{ij} x_j\mathbf{v}_i = \sum_{i=1}^m \left( \sum_{j=1}^n a_{ij}x_j \right) \mathbf{v}_i $$ -->
+
+<p>We see that the scalar components of <i>T</i>(<i><b>x</b></i>) with respect to the basis <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <b><i>v</b><sub>m</sub></i> are given by the relation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>i</mi>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mn>2</mn>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+  <mo>,</mo>
+  <mi>m</mi>
+</math>
+
+<!-- $$y_i = \sum_{j=1}^n a_{ij}x_j \quad i=1,2, \ldots, m $$ -->
+
+<p>which in matrix form, reads</p>
+
+<div class="eq">
+<p><i><b>y</b></i> = <i>A<b>x</b></i></p>
+</div>
+
+<p>The matrix <i>A</i>, represents <i>T</i> and it is unique as consequence of the fact that <i>T</i>(<b>u</b><sub>i</sub></i>), <i>i</i> = 1,2,..., <i>n</i> can be expressed in a unique way as linear combination of the vectors <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, ..., <b><i>v</b><sub>m</sub></i>. &emsp;□</p>
+
+<p><b>Example 3.3.2</b>. Consider the linear transformation <i>T</i>: ℝ<sup>3</sup> ⟶ ℝ<sup>2</sup> given by</p>
+
+<div class="eq">
+<p><i>T</i>(<i>x,y,z</i>) = (<i>x</i> + <i>y</i> + <i>z</i>, <i>x</i> − <i>y</i>)</p>
+</div>
+
+<p>Consider <i>B</i> = {(1,0,0),(0,1,0),(0,0,1)} and <i>B'</i> = {(1,0), (0,1)} be standard basis of ℝ<sup>3</sup> and ℝ<sup>2</sup> respectively. Then</p>
+
+<div class="eq">
+<p><i>T</i> (1,0,0) = (1,0) = 1 (1,0) + 0(0,1)<br>
+<i>T</i> (0,1,0) = (1,−1) = 1 (1,0) − 1(0,1)<br>
+<i>T</i> (0,0,0) = (1,0) = 1 (1,0) − 0(0,1)</p>
+</div>
+
+<p>Hence [<i>T</i>(1,0,0)]<sub><i>B</i></sub> = (1 0)<sup><i>T</i></sup>, &emsp; [<i>T</i>(0,1,0)]<sub><i>B</i></sub> = (1 −1)<sup><i>T</i></sup>, &emsp; [<i>T</i>(0,0,1)]<sub><i>B</i></sub> = (1 0)<sup><i>T</i></sup>. Thus the matrix <i>T</i> relative to <i>B</i> and <i>B'</i> is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">[</mo>
+  <mi>T</mi>
+  <msub>
+    <mo stretchy="false">]</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>B</mi>
+      <mo>,</mo>
+      <msup>
+        <mi>B</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+<mtext>&emsp;■</mtext>
+</math>
+
+<!-- $$[T]_{B,B'} = \left(\begin{array}{ccc}
+1 & 1 & 1 \\
+0 & -1 & 0
+\end{array}\right)$$ -->
+
+<section aria-label="End">
+<a href="isomorphisms.html">&#171;Isomorpshims</a>
+<a href="index.html">Index</a>
+<a href="invertible_linear_transformations.html">Invertible linear transformations &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

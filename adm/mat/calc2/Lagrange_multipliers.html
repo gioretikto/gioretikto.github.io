@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Optimization problems with constraints - Lagrange multipliers"/>
+    <title>Optimization problems with constraints - Lagrange multipliers</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Optimization problems with constraints - Lagrange multipliers</h1>
+
+<p>We investigate now optimization problems with constraints in the form of inequalities and equalities. Lagrangian optimization introduced in 1797 by Lagrange, computes the maximum of minimum of a function <i>f</i> of several variables subject to one or more constraint functions denoted <i>g</i><sub>i</sub>. </p>
+
+<figure>
+<img src="img/lagrangemulti.png" alt="estremi vincolati"/>
+</figure>
+
+<p>Consider the fundamental problem of maximising a function of two variables subject to a single constraint:</p>
+
+<blockquote>Find (<i>x*,y*</i>) yielding max <i>f</i> from among the points (<i>x,y</i>) on the curve <i>g</i>(<i>x,y</i>) = <i>k</i></blockquote>
+
+<p>where <i>g</i>(<i>x,y</i>) = <i>k</i> is the implicit equation of a given curve. Suppose that the parametric equations describing the <i>g</i> = <i>k</i> curve are known, <i><b>r</b></i>(<i>t</i>) = (<i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>)), such that</p>
+
+<div class="eq">
+<p><i>g</i>(<i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>)) = <i>k</i>, &emsp; &forall;<i>t</i></p>
+</div>
+
+<p>Differentiating this equation using the chain rule yields</p>
+
+<div class="eq">
+<p>0 = d/d<i>t</i> [<i>g</i>(<i><b>r</b></i>(<i>t</i>)] = ∇<i>g</i> ⋅ d<i><b>r</b></i>/d<i>t</i> = 0</p>
+</div>
+
+<p>If the parameter <i>t</i> si taken to represent time, the geomtric interpretation of this equation is that the "velocity" vector d<i><b>r</b></i>/d<i>t</i> (which is tangent to the curve <i><b>r</b></i>(<i>t</i>)) is perpendicular to the level-curve <i>g</i> = <i>k</i> since the gradient ∇<i>g</i> is orhogonal to contours of constant function-value. Substituting <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>) into <i>f</i>(<i>x,y</i>) yields a function of a single variable</p>
+
+<div class="eq">
+<p><i>F</i>(<i>t</i>) = <i>f</i>(<i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>))</p>
+</div>
+
+<p>that is parametrised along the curve <i>g</i> = <i>k</i>. Finding the critical ponints of <i>F</i>(<i>t</i>) with respect to <i>t</i> gives the critical points of <i>f</i> on <i>g</i>,</p>
+
+<div class="eq">
+<p>d<i>F</i>/d<i>t</i> = 0  &emsp; ⟶ &emsp;  d<i>F</i>/d<i>t</i> = ∇<i>f</i> ⋅ d<i><b>r</b></i>/d<i>t</i> = 0</p>
+</div>
+
+<p>Hence, the chanin rule show that at a critical point, ∇<i>f</i> is also orthogonal to the velocity vector. In two dimension, this forces the two gradients to be a scalr multiple of each other and then we obtain</p>
+
+<div class="eq">
+<p>∇<i>f</i> = &lambda; ∇<i>g</i></p>
+</div>
+
+<p>where &lambda; (called the <i>Lagrange multiplier</i>) is another unknown that needs to be determined. In component form, the resulting set of equations of three variables in the three unknowns is</p>
+
+<div class="eq">
+<p><i>f<sub>x</sub></i>(<i>x*</i>, <i>y*</i>) − &lambda;<i>g<sub>x</sub></i>(<i>x*</i>, <i>y*</i>) = 0<br>
+<i>f<sub>y</sub></i>(<i>x*</i>, <i>y*</i>) − &lambda;<i>g<sub>y</sub></i>(<i>x*</i>, <i>y*</i>) = 0<br>
+<i>g</i>(<i>x*</i>, <i>y*</i>) = <i>k</i></p>
+</div>
+
+<p>A typical solution strategy for solving the equations is to first solve the ∇<i>f</i> = &lambda; ∇<i>g</i> equations to obtain <i>x</i>(&lambda;), <i>y</i>(&lambda;), and then substitute these into <i>g</i>(<i>x</i>(&lambda;), <i>y</i>(&lambda;)) = <i>k</i> to obtain a final equation for the values of &lambda;.</p>
+
+
+<p>We begin by representing the objective function <i>f</i> by a contour map, wich might look something like this</p>
+
+<img src="img/Lagrange1.png" alt="Lagrange"/>
+
+<p>Remember how this two-dimensional map displays a function of two variables. All point on the lower-left hand curve, <i>f</i>(<i>x,y</i>) = 10. All points on the next curve over have <i>f</i>(<i>x,y</i>) = 6, and so on. You might reasonably conclude that if our goal is to maximixe this function, we should move down and left; if our goal is to minimize the function, we should move up and right.<br> Remember also that the gradient ∇<i>f</i> points perpendicular to these contour lines at all points. When we move perpendicular to the gradient the directional derivative is zero, which means the function doesn't change, which defines a contour line. Now we add the constraing <i>g</i>(<i>x,y</i>) = <i>k</i> to our drawing. This constraint is a single curve that represents one contour line of the function <i>g</i>(<i>x,y</i>). The goal is to follow along the curve <i>g</i> = <i>k</i> until we reach the highest possible value of <i>f</i>.</p>
+
+<img src="img/Lagrange2.png" alt="Lagrange multipliers"/>
+
+<p>The key insight is that, at that point, the two contour lines will be parallel. If they are not parallel, you are still cutting through contour line of <i>f</i>, moving up to higher values. Because the two curve are parallel at this point, their gradient vectors are also parallel. This is captured in the Lagrange multiplier relation:</p>
+
+<div class="eq">
+<p>∇<i>f</i>(<i>x*,y*</i>) = <i>&lambda;*</i>∇<i>g</i>(<i>x*,y*</i>), &emsp; <i>&lambda;*</i> &in; ℝ</p>
+</div>
+
+<p>where &lambda; is a scalar.</p>
+
+<p>Supponiamo che il nostro punto di estremo <i>(x<sup>*</sup>, y<sup>*</sup>)</i> sia <i>regolare</i> per il vincolo <i>g(x, y) = c</i> cioè:</p>
+
+<div class="eq">
+<p>∇<i>g</i>(<i>x*,y*</i>) &ne; (0,0)</p>
+</div>
+
+<p>In tal caso, per il <a href="dini.html">Teorema di Dini</a>, l'equazione di vincolo definisce implicitamente un arco di curva regolare, passante per <i>(x<sup>*</sup>, y<sup>*</sup>)</i>. La condizione necessaria affinché questo punto sia di estremo per la <i>f</i> vincolata, analoga al teorema di Ferma, è dunque che sia nulla la <i>derivata direazionale</i> di <i>f</i> nella direzione tangente alla curva descritta dal vincolo:</p>
+
+<div class="eq">
+<p><i>D<sub><b>t</b></sub> f(x<sup>*</sup>, y<sup>*</sup>) = 0</i></p>
+</div>
+
+<p>con <b>t</b>, versore tangente al vincolo. Questa infatti è l'unica direazione ammissibile. Per la formula del gradiente ciò significa</p>
+
+<div class="eq">
+<p>∇<i>f</i>(<i>x*,y*</i>) ⋅ <i><b>t</b></i> = 0 &emsp; (6.0)</p>
+</div>
+
+<p>ossia l'ortogonalità tra <i>∇f (x*, y*)</i> e <b>t</b>. Ricoridano che anche il vettore <i>∇g (x<sup>*</sup>, y<sup>*</sup>)</i> è ortogonale all'insieme <i>g</i>(<i>x,y</i>) = <i>k</i>, perciò i due vettori <i>∇f (x*, y*)</i> e <i>∇g (x<sup>*</sup>, y<sup>*</sup>)</i> sono paralleli. La conclusione è espressa dal seguente</p>
+
+<div class="def">
+
+<p><b>Teorema 6.1</b>- Se <i>(x<sup>*</sup>, y<sup>*</sup>)</i> è un punto di estremo vincolato per <i>f</i> sotto il vincolo <i>g(x, y) = c</i> e <i>∇g(x<sup>*</sup>, y<sup>*</sup>) &ne; 0</i>, allora esiste &lambda;<sup>*</sup> tale che</p>
+
+<div class="eq">
+<p>∇<i>f</i>(<i>x*,y*</i>) = <i>&lambda;*</i>∇<i>g</i>(<i>x*,y*</i>), &emsp; <i>&lambda;*</i> &in; ℝ</p>
+</div>
+
+<p>the nuber <i>&lambda;<sup>*</sup></i> is called Lagrange multipliers.</p>
+</div>
+
+<p>Se scriviamo l’equazione vettoriale ∇<i>f</i> = <i>λ</i>∇<i>g</i> in termini delle sue componenti e insieme l’equazione <i>g = k</i> di appartenenza al vincolo, troviamo il sistema</p>
+
+
+<p>In altre parole, i punti di massimo (e di minimo) della funzione <i>f(x, y)</i> con il vincolo <i>g(x, y) = k</i>, sono punti critici per la funzione di tre variabili</p>
+
+<div class="eq">
+<p><i>L</i>(<i>x,y,&lambda;</i>) = <i>f</i>(<i>x,y</i>) −&lambda;[<i>g</i>(<i>x,y</i>) − <i>c</i>]</p>
+</div>
+
+<p>indeed</p>
+
+<div class="eq">
+<p><i>∂<sub>x</sub>L = ∂<sub>x</sub> f − λ∂<sub>x</sub>g</i></p>
+<p><i>∂<sub>y</sub>L = ∂<sub>y</sub> f − λ∂<sub>y</sub>g</i></p>
+<p><i>∂<sub>&lambda;</sub>L = -(g -c)</i></p>
+</div>
+
+<p>La variabile <i>λ</i> prende il nome di moltiplicatore di Lagrange, così come si chiama metodo dei moltiplicatori di Lagrange la ricerca degli estremi di <i>f</i> con il vincolo <i>g</i> = <i>k</i> attraverso la risoluzione del sistema.</p>
+ 
+<p>Alla luce delle considerazioni fatte finora, si può indicare il seguente processo di ricerca degli estremi vincolati, noto come <i>metodo dei moltiplicatori di Lagrange</i>.</p>
+
+<ol>
+	<li><p>Si isolano gli eventuali punti non regolari dell'insieme <i>g</i>(<i>x,y</i>) = <i>c</i>, che si esaminano a parte.</p></li>
+	<li><p>Si cercano i punti critici liberi della lagrangiana, cioè le soluzioni del sistema 6.1.</p></li>
+	<li><p>Si determina la natura dei punti critici.</p></li>
+</ol>
+
+<p>Vediamo un esempio:</p>
+
+<div class="def">
+<p><b>Esempio 1.</b> Supponiamo di voler massimizzare la funzione <i>f(x,y) = x+y</i>, soggetta al vincolo <i>x<sup>2</sup>+y<sup>2</sup> = 1</i>.</p>
+
+<figure>
+<img src="img/Lagrgrafico.png" alt="estremi vincolati Lagrange"/>
+<figcaption><b>Fig.2</b> Illustrazione del problema di ricerca degli estremi vincolati</figcaption>
+</figure>
+
+<p>Il vincolo è dato dalla circonferenza di raggio unitario centrata nell'origine, rappresentato dalla funzione</p>
+
+<div class="eq">
+<p><i>g</i>(<i>x,y</i>) = <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> − 1</p>
+</div>
+
+<p>da cui la Lagrangiana:</p>
+
+<div class="eq">
+<p><i>L</i>(<i>x,y,&lambda;</i>) = <i>f</i>(<i>x,y</i>) − &lambda; ⋅ <i>g</i>(<i>x,y</i>) = <i>x</i> + <i>y</i> + &lambda;(<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> − 1)</p>
+</div>
+
+<p>il cui gradiente è:</p>
+
+<div class="eq">
+<p>∇<i>L</i>(<i>x,y,&lambda;</i>) = (1 − 2&lambda;<i>x</i>, 1 − 2&lambda;<i>y</i>, <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> − 1)</p>
+</div>
+
+<p>si ha dunque il seguente sistema, ∇<i>L</i>(<i>x,y,&lambda;</i>) = 0:</p>
+
+<div class="eq">
+<p>1 − 2&lambda;<i>x</i> = 0<br>
+1 − 2&lambda;<i>y</i> = 0<br>
+<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> − 1 = 0</p>
+</div>
+
+<p>Dalle prime due equazioni si ottiengono le soluzioni:</p>
+
+<div class="eq">
+<p><i>x</i> = <i>y</i> = 1/2<i>&lambda;</i>, &emsp; &lambda; &ne; 0</p>
+</div>
+
+<p>che sostituite nell'ultima equazione:</p>
+
+<div class="eq">
+<p>1/4<i>&lambda;</i> + 1/4<i>&lambda;</i> −1 = 0</p>
+</div>
+
+<p>thus</p>
+
+<div class="eq">
+<p><i>&lambda;</i> = &pm; 1/2<i>&lambda;</i></p>
+</div>
+
+<p>i punti stazionari della Lagrangiana sono dunque</p>
+
+<div class="eq">
+<p>(√2/2, √2/2, −1/√2), &emsp; (−√2/2, −√2/2, 1/√2)</p>
+</div>
+
+<p>che valutati nella <i>f</i>:</p>
+
+<div class="eq">
+<p><i>f</i>(√2/2, √2/2) = √2, &emsp; <i>f</i>(−√2/2, −√2/2) = −√2)</p>
+</div>
+
+<p>ora essendo l'insieme:</p>
+
+<div class="eq">
+<p><i>E</i><sub>0</sub> = {(<i>x,y</i>) &in; ℝ<sup>2</sup> : <i>g</i>(<i>x,y</i>) = 0}</p>
+</div>
+
+<p>un insieme chiuso e limitato ed <i>f</i> continua, il Teorema di Weierstrass assicura l'esistenza di un punto di massimo e uno di minimo, in questo esempio rispettivamente &radic;2 e &radic;-2.</p>
+</div>
+
+<h2>Significato dei moltiplicatori di Lagrange</h2>
+
+<p>Il moltiplicatore di Lagrange &lambda;*, non è un semplice elemento accessorio, ma ha un significato notevole, che segnaliamo in modo un po' informale. Un'informazione importante in un problema di ottimizzazione vincolata è la misura della sensibilità del valore estremo della funzione obiettivo (massimo o minimo) quando si varia la costante <i>b</i> che appare nell'equazione del vincolo. Pensa, ad esempio al caso della produzione ottima, <i>b</i> rappresenta il limite di budget ed è di indubbio interesse stabilire di quanto varia la produzione massima variando tale limite. Supponiamo, che per ogni <i>b</i> in un intervallo, <i>I<sub>b</sub> = (b<sub>1</sub>, b<sub>2</sub>)</i> si trovi un valore ottimo, ad esempio di massimo, per la funzione <i>f</i>, sotto la condizione <i>g(x,y)=b</i>. Per sottolineare la dipendenza da <i>b</i>, scriviamo</p>
+
+<div class="eq">
+<p><i>x*=x(b) &emsp; y*=y*(b)</i> &emsp; per il punto di massimo</p>
+<p><i>&lambda;* = &lambda;*(b)</i> &emsp; per il moltiplicatore associato</p>
+<p><i>M(b) = f(x*(b), y*(b))</i> &emsp; per il massimo vincolato di <i>f</i></p>
+</p>
+</div>
+
+<p>Valgono quindi le condizioni del primo ordine:</p>
+
+<div class="eq">
+<p><i>f<sub>x</sub>(x*(b), y*(b)) = &lambda;* (b) g<sub>x</sub>(x*(b), y*(b))</i>
+<span>(8.4)</span></p>
+</div>
+
+<div class="eq">
+<p><i>f<sub>y</sub>(x*(b), y*(b)) = &lambda;* (b) g<sub>y</sub>(x*(b), y*(b))</i>
+<span>(8.5)</span>
+</p>
+</div>
+
+<div class="eq">
+<p><i>g(x*(b), y*(b))=b</i></p>
+</div>
+
+<p>per ogni <i>b</i> nell'intervallo <i>I<sub>b</sub></i>.</p>
+
+<p>Derivando l'equazione del vincolo si ha</p>
+
+<div class="eq">
+<p><i>g<sub>x</sub>(x*(b), y*(b)) dx*/db + g<sub>y</sub>(x*(b), y*(b)) dy*/db = 1</i></p>
+</div>
+
+<p>Moltiplicando <i>&lambda;*(b)</i> entrambi i membri di questa equazione e, usando (8.4) e (8.5) otteniamo</p>
+
+<div class="eq">
+<p><i>f<sub>x</sub>(x*(b), y*(b)) dx*/db + f<sub>y</sub>(x*(b), y*(b)) dy*/db = &lambda;*(b)</i>
+<span>(8.7)</span></p>
+</div>
+
+<p>D'altra parte abbiamo anche:</p>
+
+<div class="eq">
+<p><i>M'(b) = f<sub>x</sub>(x*(b), y*(b)) dx*/db + f<sub>y</sub>(x*(b), y*(b)) dy*/db</i></p>
+</div>
+
+<p>per cui della (8.7) si deduce la formula</p>
+
+<div class="eq">
+<p><i>M'(b) = &lambda;*(b)</i></p>
+</div>
+
+<p>Il moltiplicatore &lambda;*(b) rappresenta dunque la velocità di variazione del valore ottimo rispetto a <i>b</i>. In termini economici questo indica di quando a umenta la produzione ottima in conseguenza di un aumento unitario di budget: <i>&Delta;M &approx; &Delta;b</i>.</p>
+
+<section aria-label="End">
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="consonants.html">The consonants&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

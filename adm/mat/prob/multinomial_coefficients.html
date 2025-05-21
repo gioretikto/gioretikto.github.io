@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legge"/>
+    <title>Legge</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Multinomial coefficients</h1>
+
+<p>The binomial coefficient <i>C<sub>nk</sub></i> tells you how many ways you can partition a set of <i>n</i> elements into two subsets, one with <i>k</i> elements and the complement with <i>n − k</i> elements. Multinomial coefficients tell you how many ways you can partition a set of <i>n</i> elements into any number of subsets (not just two) with given cardinalities. For example, suppose that you’ve got a set of 15 elements and you want to know how many ways you can partition it into a first set of 5 elements, a second set of 3 elements, a third set of 5 elements, and a fourth set of 2 elements. We can figure that out with binomial ways, then choose coefficients. First choose 5 of the 15 elements in <i>C</i><sub>15, 5</sub> ways, then choose 3 of the remaining 10 elements in <i>C</i><sub>10,3</sub>, then choose 5 of the remaining 7 elements in <i>C</i><sub>7,5</sub> ways, and the last 2 elements are left for the fourth set. So the answer is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mn>15</mn>
+      <mn>5</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mn>10</mn>
+      <mn>3</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mn>7</mn>
+      <mn>5</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>15</mn>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mn>5</mn>
+      <mo>!</mo>
+      <mn>10</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <mn>10</mn>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <mo>!</mo>
+      <mn>7</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <mn>7</mn>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mn>5</mn>
+      <mo>!</mo>
+      <mn>2</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>15</mn>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mn>5</mn>
+      <mo>!</mo>
+      <mn>3</mn>
+      <mo>!</mo>
+      <mn>5</mn>
+      <mo>!</mo>
+      <mn>2</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<p>Note that the numerator is the factorial of the cardinality of the original set, and the denominator is the product of the factorials of cardinalities of the subsets.</p>
+
+<p>In general the number of ways that you can partition a set of <i>n</i> elements into <i>r</i> subsets of cardinalities <i>n<sub>1</sub>, n<sub>2</sub>, ..., n<sub>r</sub></i> that sum to <i>n</i> is the <i>multinomial coefficient</i>.</p>
+
+<p>This result is important in statistical thermodynamics when considering the number of ways of distributing molecules amongst the available energy states. It gives rise to the classical or Boltzmann statistics that describes the behaviour of many thermodynamic systems.</p>
+
+<h2>Multiplicative fomula</h2>
+
+<p>A more efficient method to compute individual binomial coefficients is given by the formula</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mrow class="MJX-TeXAtom-OPEN">
+      <mo maxsize="2.047em" minsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mrow>
+        <mi>m</mi>
+        <msup>
+          <mi>p</mi>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+    </mfrac>
+    <mrow class="MJX-TeXAtom-CLOSE">
+      <mo maxsize="2.047em" minsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>!</mo>
+      <mo stretchy="false">(</mo>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mspace linebreak="newline" />
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>&#x22EF;<!-- ⋯ --></mo>
+      <mo stretchy="false">(</mo>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>&#x22EF;<!-- ⋯ --></mo>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mspace linebreak="newline" />
+  <mo>=</mo>
+  <munderover>
+    <mo>&#x220F;<!-- ∏ --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mi>m</mi>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mi>i</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;<!-- − --></mo>
+      <mi>i</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<h2>Combinations with repetition</h2>
+
+<p>Le combinazioni con ripetizione, <i>C<sub>n,k</sub>'</i>, di <i>n</i> elementi distinti di classe <i>k</i> (con <i>k &ge; n</i> o <i>k &le; n</i>), sono tutti i possibili raggruppamenti di tali elementi ottenuti in modo tale che ogni elemento possa essere ripetuto fino a <i>k</i> volte. Le combinazioni con ripetizione differiscono tra loro almeno per un elemento, oppure a parità degli elementi per il numero di ripetizioni di un dato elemento. Non interessa l'ordine.</p>
+
+<p>Ad esempio, se <i>X</i> = {<i>a, b, c</i>} (cioè <i>n</i> = 3) e <i>k</i>= 2, abbiamo le seguenti possibilità:</p>
+
+<div class="eq">
+<p><i>aa, bb, cc, ab, ac, bc</i></p>
+</div>
+
+<p>Notiamo che dare una di queste combinazioni significa semplicemente dire il numero di volte che si ripete <i>a</i>, il numero di volte che si ripete <i>b</i> e il numero di volte che si ripete
+<i>c</i>, con la condizione che la somma di questi tre numeri deve essere 2, perché in tutto si devono avere 2 elementi (questi numeri possono essere anche 0, ad esempio in (<i>aa</i>), <i>a</i> si ripete 2 volte, <i>b</i> zero volte e <i>c</i> zero volte; in <i>bc</i>, <i>a</i> si ripete 0 volte, <i>b</i> una volta e <i>c</i> una volta). Per calcolare il numero di combinazione con ripetizione esiste una dimostrazione pratica dovuta a W. Feller.</p>
+
+<p>Rappresentiamo le combinazioni servendoci di barrette e asterischi ad esempio:</p>
+
+<div class="eq">
+<p><i>aa</i>: &emsp; **|&nbsp;| &emsp; 2 elementi <i>a</i>, 0 <i>b</i>, 0 c</p>
+<p><i>cb</i>: &emsp; |*|* &emsp; 0 elementi <i>a</i>, 1 <i>b</i>, 1 c</p>
+</div>
+
+<p>Per formare gruppi di <i>k</i> elementi, con <i>n</i> elementi, occorrono <i>n</i> &minus; 1 barre. In ciascuna rappresentazione abbiamo una sequenza di <i>n + k</i> –1 simboli. Quindi, per calcolare il numero di <i>combinazioni con ripetizione</i>, si tratta di trovare tutte le possibili permutazioni di <i>n + k</i> – 1 simboli, considerando che <i>k</i> sono uguali tra loro (gli asterischi) e lo stesso vale per le <i>n</i> – 1 barre verticali. Occorre quindi dividere (<i>n</i> − 1 + <i>k</i>)! permutazioni dei bastoncini e delle palline per il numero delle permutazioni delle barre (<i>n</i> &minus; 1)! e degli asterischi, avendo che il numero di combinazioni con ripetizione è dato da</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <mrow>
+                <mi><i>C'<sub>n,k</sub></i></mi>
+                <mo>=</mo>
+                <mi><i>C<sub>n + k &minus;1,k</sub></i></mi>
+                <mo>= </mo>
+                <mo>(</mo>
+                <mfrac linethickness="0">
+                  <mi><i>n + k</i> &minus; 1</mi>
+                  <mi><i>k</i></mi>
+                </mfrac>
+                <mo>)</mo>
+                <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mi>(<i>n + k</i> &minus; 1)!</mi>
+        </mrow>
+        <mrow>
+        <mi>k!</mi>
+        <mo>⋅</mo>
+          <mi>(<i>n</i> &minus; 1)!</mi>
+        </mrow>
+      </mfrac>
+</math>
+
+<p>Per l'esempio dato abbiamo che le combinazioni con ripetizione di 3 oggetti a gruppi di 2: <i>C</i>'<sub>3,2</sub> = <i>C</i><sub>3 + 2 &minus; 1,2</sub> = <i>C</i><sub>4,2</sub> = 6.</p>
+
+<p>This general results holds</p>
+
+<div class="def">
+<p>The number of combination with repetition of <i>n</i> elements of class <i>k</i> is equal to the number of <i>simple combinations</i> of <i>n + k</i> + 1 objects of the same class <i>k</i>, <i>i.e.</i></p>
+
+<div class="eq">
+<p><i>C<sub>n,k</sub> = C<sub>n + k &minus; 1, k</sub></i></p>
+</div>
+
+</div>
+
+<p>From the treatement above, it is clear that we case use <i>combinations with repetition</i> in all combinatorics problems in which we gorup indistinguashable objects.</p>
+
+<p>We sum up the results just found in the following table.</p>
+
+<table>
+<thead>
+<tr><th></th> <th>Order Yes</th> <th>Orer No</th></tr>
+</thead>
+
+<tbody>
+<tr><td>Ripetizione NO</td> <td>D<sub>n,k</sub></td> <td>C<sub>n,k</sub></td></tr>
+<tr><td>Ripetizione SI</td> <td>D<sub>n,k</sub>'</td> <td><i>C<sub>n,k</sub>'</i></td></tr>
+</tbody>
+</table>
+
+<p><b>1.4.4 Example</b>. Lanciamo successivamente una moneta e segniamo la successione di uscita: testa, (T) o croce, (C). Non ci interessa l'ordine di uscita ma solo la composizione di ogni possible gruppo. I possibili esiti sono le <i>combinazioni con ripetizione</i>. :</p>
+
+<p>Se i lanci sono due:</p>
+
+<div class="eq">
+<p>TT, TC, CC</p>
+</div>
+
+<p>I possibili esiti sono tre: <i>C'</i><sub>2,2</sub>' = <i>C'</i><sub>2+2-1,2</sub> = 3</p>
+
+<p>Se i lanci sono tre:</p>
+
+<div class="eq">
+<p>TTT, TTC, TCC, CCC</p>
+</div>
+
+<p>I possibili esiti sono quattro: <i>C'</i><sub>3,2</sub>' = <i>C'</i><sub>3 + 2 -1,3</sub> = 4</p>
+
+<p><b>1.4.5 Example</b>. You want to distribute 7 indistinguishable candies to 4 kids. If every kid must receive at least one candy, in how many ways can you do this?</p>
+
+<p><i>Solution</i>- You first give one candy to each of the 4 kids to comply with the requirement that every kid must receive at least one candy. Then you are left with 3 candies to distribute to the 4 kids, which is equivalent to a problem of placing <i>k=3</i> indistinguishable balls into <i>n=4</i> labeled urns, which is known as balls and urns or stars and bars. Thus, our answer is:</p>
+
+     <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <mrow>
+                <mo>(</mo>
+                <mfrac linethickness="0">
+                  <mi><i>n + k</i> &minus; 1</mi>
+                  <mi><i>k</i></mi>
+                </mfrac>
+                <mo>)</mo>
+                <mo>=</mo>
+    <mo>(</mo>
+      <mfrac linethickness="0">
+        <mrow>
+          <mi><i>n + k</i> &minus; 1</mi>
+        </mrow>
+        <mrow>
+          <mi>n - 1</mi>
+        </mrow>
+      </mfrac>
+    <mo>)</mo>
+    <mo>=</mo>
+    <mo>(</mo>
+      <mfrac linethickness="0">
+        <mrow>
+          <mi>3 + 4 -1</mi>
+        </mrow>
+        <mrow>
+          <mi>3</mi>
+        </mrow>
+      </mfrac>
+    <mo>)</mo>
+    <mo>= 20</mo>
+    </mrow>
+</math>
+</math>
+
+<p><b>1.4.5 Example</b>. Calculate the number of positive integer solutions of the equation <i>n<sub>1</sub> + n<sub>2</sub> + n<sub>3</sub> + n<sub>4</sub></i> = 12. To solve the problem, notice that to each solution is possible to associate a combination with repetition of four elements of class 12. For example to the solution (2,1,4,5) we can asociate the combination (<i>a<sub>1</sub>, a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, a<sub>3</sub>, a<sub>3</sub>, a<sub>3</sub>, a<sub>4</sub>, a<sub>4</sub>, a<sub>4</sub>, a<sub>4</sub>, a<sub>4</sub></i>). The number of solutions is thus</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>C</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>4</mn>
+      <mo>,</mo>
+      <mn>12</mn>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mn>15</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>15</mn>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mn>12</mn>
+      <mo>!</mo>
+      <mn>3</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>455</mn>
+</math>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

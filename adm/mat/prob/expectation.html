@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Expectation">
+	<title>Expectation</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Expectation</h1>
+
+<p>Consider some experiment, such as the tossing of a coin or the rolling of a die, that has <i>n</i> possible outcomes, each with probability <i>p<sub>j</sub></i>, where <i>j</i> = 1, 2, ... , <i>n</i>. If the
+experiment is repeated indefinitely, we can use the <a href="probability.html#fr">relative-frequency definition of probability</a></p>
+
+<div class="eq">
+<p><i>p<sub>j</sub></i> = lim<sub><i>n</i> ⟶&infin; &emsp;<i>n<sub>j</sub></i>/<i>n</i>&emsp;<i>j</i> = 1,2,...,<i>n</i></p>
+</div>
+
+<p>where <i>n</i>, is the number of times that the event <i>j</i> occurs and <i>n</i> is the total number of repetitions of the experiment.</p>
+
+<p><b>Definition</b>. Let <i>X</i> be a <a href="random_variables.html">random variable</a> which takes on values in the finite set  {<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>}, with probabilities <i>p<sub>j</sub></i> for each <i>j</i> = 1, 2,.., <i>n</i>. Then the <b>expectation</b> (or <b>expected value</b> or mean) of <i>X</i>,  denoted by ⟨<i>X</i>⟩ is defined by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <mi>X</mi>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msub>
+  <msub>
+    <mi>p</mi>
+    <mi>j</mi>
+  </msub>
+</math>
+
+<!-- $$\langle X \rangle = \sum_{j=1}^n x_j p_j $$  -->
+
+<p>We have "weighted" each possible value <i>x<sub>j</sub></i> of the random variable by the probability <i>p<sub>j</sub></i> that this value is taken on. These weighted values are then added to provide a <i>weighted sum</i></p>
+
+<p><b>Example 1</b>. Suppose we are given the following data:</p>
+
+<table>
+<tr><th>x</th> <th>p<sub>x</sub></th></tr>
+<tr><td>5</td> <td>0.20</td></tr>
+<tr><td>7</td> <td>0.25</td></tr>
+<tr><td>9</td> <td>0.55</td></tr>
+</table>
+
+<p>Calculate the average value of <i>x</i>.</p>
+
+<p><b>Solution</b>. </p>
+
+<div class="eq">
+<p>⟨<i>x</i>⟩ = 5 ⋅ 0.2 +7 ⋅ 0.25 + 9 ⋅ 0.55&emsp;■</p>
+</div>
+
+<p>The definitions of variance and standard deviation of a random variable is correspondent to that of <a href="variance.html">variance</a> of a sample of measurements</a>,  with mathematical expectation substituting the average. Thus</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x3C3;</mi>
+    <mi>x</mi>
+  </msub>
+  <mo>=</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <mi>x</mi>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <mi>x</mi>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <msub>
+    <mi>p</mi>
+    <mi>j</mi>
+  </msub>
+</math>
+
+<!-- $$\sigma_x = \langle (x - \langle x \rangle)^2 = \sum_{j=1}^n (x_j - \langle x \rangle))^2 p_j $$ -->
+
+<p>We denote the square root of the variance by <i>&sigma;<sub>x</sub></i>, which is called the <i>standard deviation</i>.</p>
+
+<p>Similarly, for continuous random variable, the expected value is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <mi>x</mi>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msubsup>
+  <mi>x</mi>
+  <mi>p</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\langle x \rangle = \int_{-\infty}^{\infty} x p(x) \text{d}x $$ -->
+
+<p>where <i>p</i>(<i>x</i>) is the probability distrubution function. And</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>&#x3C3;</mi>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msubsup>
+  <mo>=</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <mi>x</mi>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <mi>p</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\sigma_x^2 = \int_{-\infty}^{\infty} (x - \langle x \rangle)^2 p(x) \text{d}x $$ -->
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

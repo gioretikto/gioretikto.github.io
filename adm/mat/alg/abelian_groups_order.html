@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Order in Abelian Groups">
+	<title>Order in Abelian Groups</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Order in Abelian Groups</h1>
+
+<p>The first issue we shall address is the order of a product of two elements of finite order. Suppose <i>G</i> is a group and <i>a,b</i> ∈ <i>G</i> have orders <i>m</i>= |<i>a</i>| and <i>n</i>= |<i>b</i>|.  What can be said about|<i>ab</i>|?  Let’s consider the abelian case first.</p>
+
+<p><b>Lemma 7.4.1</b>. Let <i>G</i> be an abelian group and <i>a,b</i> ∈ <i>G</i>. Then for any <i>n</i> ∈ ℤ, (<i>ab</i>)<sup>n</sup> = <i>a<sup>n</sup>b<sup>n</sup></i>.</p>
+
+<p><b>Proof</b>. If <i>ab</i> != <i>ba</i> for some specific <i>a</i> and <i>b</i>, then (<i>ab</i>)<sup>2</sup> = <i>abab</i>, can't = a<sup>2</sup> b<sup>2</sup> = <i>aabb</i> since then you multiply on left by <i>a</i><sup>−1</sup> and on right by <i>b</i><sup>−1</sup> to get <i>ba</i> = <i>ab</i>. &emsp;□</p>
+
+<p><b>Lemma 7.4.2</b>. Let <i>G</i> be an abelian group with the identity element 1. Let <i>a,b</i> be elements of <i>G</i> with order m and n, respectively. If m and n are relatively prime, then the order of the element ab is mn.</p>
+
+<p><b>Proof</b>. Let <i>r</i> be the order of the element <i>ab</i>. Since we have</p>
+
+<div class="eq">
+<p>(<i>ab</i>)<sup><i>mn</i></sup> = <i>a<sup>mn</sup> b<sup>mn</sup></i> &emsp;(since <i>G</i> is an abelian group) = <br>
+(<i>a<sup>m</sup></i>)<sup><i>n</i></sup>(<i>b<sup>n</sup></i>)<sup><i>m</i></sup> = 1. &emsp;□</p>
+</div>
+
+<p>This implies that the order <i>r</i> of <i>ab</i> divides <i>mn</i>, that is, we have</p>
+
+<div class="eq">
+<p><i>r</i> | <i>mn</i></p>
+</div>
+
+<p>Now, sice <i>r</i> is the order of <i>ab</i> we have</p>
+
+<div class="eq">
+<p>1 = (<i>ab</i>)<sup>r</sup> = a<sup>r</sup>b<sup>r</sup></p>
+</div>
+
+<p>Then we have</p>
+
+<div class="eq">
+<p>1 = 1<sup><i>n</i></sup> = <i>a<sup>rn</sup>b<sup>rn</sup></i> = <i>a<sup>rn</sup></i></p>
+</div>
+
+<p>since <i>b<sub>n</sub></i> = 1. This yields that the order <i>m</i> of the element <i>a</i> divides <i>rn</i>.</p>
+
+<p>Since <i>m</i> and <i>n</i> are relatively prime, this implies that we have</p>
+
+<div class="eq">
+<p><i>m</i> | <i>r</i></p>
+</div>
+
+<p>Similarly (switch the role of <i>n</i> and <i>m</i>), we obtain</p>
+
+<div class="eq">
+<p><i>n</i> | <i>r</i></p>
+</div>
+
+<p>Thus we have</p>
+
+<div class="eq">
+<p><i>mn</i> | <i>r</i></p>
+</div>
+
+<p>since <i>m</i> and <i>n</i> are relatively prime. From <i>r</i> | <i>mn</i> and <i>mn</i> | <i>r</i> we have <i>r</i> = <i>mn</i>, and hence the order of the element <i>ab</i> is <i>mn</i>. &emsp;□</p>
+
+<p><b>Lemma 7.4.3</b>. Let <i>G</i> be an abelian group. Let <i>a</i> and <i>b</i> be elements in <i>G</i> of order <i>m</i> and <i>n</i>, respectively. Prove that there exists an element <i>c</i> in <i>G</i> such that the order of <i>c</i> is the least common multiple of <i>m</i> and <i>n</i>.</p>
+
+<p><b>Proof</b>. First, consider the case when <i>m</i> and <i>n</i> are relatively prime.</p>
+
+<p><b>(When <i>m</i> and <i>n</i> are relatively prime)</b> From lemma 7.4.2, the order of the product <i>ab</i> is <i>mn</i>. So if <i>m,n</i> are relatively prime, then we can take <i>c</i> = <i>ab</i> ∈ <i>G</i> and <i>c</i> has order <i>mn</i>, which is the least common multiple.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>m</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mi>p</mi>
+    <mi>i</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B1;</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>&#xA0;and&#xA0;</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mi>p</mi>
+    <mi>i</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B2;</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </msubsup>
+</math>
+
+<!-- $$m=\prod_{i}p_i^{\alpha_i} \quad \text{ and } \quad n=\prod_{i} p_i^{\beta_i}$$ -->
+
+<p>Now we consider the general case. Let <i>p<sub>i</sub></i> be the prime factors of either <i>m</i> or <i>n</i> (we take the union of prime factors). Then write prime factorizations of <i>m</i> and <i>n</i> as</p>
+
+<p>Here <i>α<sub>i</sub></i> and <i>β<sub>i</sub></i> are nonzero integers (could be zero). Define</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>m</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>:</mo>
+      <msub>
+        <mi>&#x3B1;</mi>
+        <mi>i</mi>
+      </msub>
+      <mo>&#x2265;</mo>
+      <msub>
+        <mi>&#x3B2;</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mi>p</mi>
+    <mi>i</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B1;</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </msubsup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>&#xA0;and&#xA0;</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>n</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>:</mo>
+      <msub>
+        <mi>&#x3B2;</mi>
+        <mi>i</mi>
+      </msub>
+      <mo>&gt;</mo>
+      <msub>
+        <mi>&#x3B1;</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mi>p</mi>
+    <mi>i</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3B2;</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </msubsup>
+</math>
+
+<!-- $$ m’=\prod_{i: \alpha_i \geq \beta_i}p_i^{\alpha_i} \quad \text{ and } \quad n’=\prod_{i: \beta_i> \alpha_i} p_i^{\beta_i}$$ -->
+
+<p>For example if <i>m</i> = 2<sup>3</sup>⋅3<sup>2</sup>⋅5 and <i>n</i> = 3<sup>2</sup>⋅7 then m′=2<sup>3</sup>⋅3<sup>2</sup>⋅5 and <i>n′</i> = 7, p<sub>i</sub> = {2, 3, 5, 7}, a<sub>i</sub> = (3 2 1 0), (<i>b<sub>i</sub></i>) = (2 0 0 1). Note that <i>m′</i>∣<i>m</i> and <i>n′</i>∣<i>n</i>, and also <i>m′</i> and <i>n′</i> are relatively prime. The least common multiple l of m and n is given by</p>
+
+<div class="eq">
+<p><i>l</i> = <i>m′ n</i></p>
+</div>
+
+<p>Consider the element a′:= <i>a<sup>m/m′</sup></i> We claim that the order of a′ is m′. Let <i>k</i> be the order of the element <i>a'</i>. Then we have</p>
+
+<div class="eq">
+<p>1 = <i>a'<sup>k</sup></i> = (<i>a</i><sup><i>m</i>/<i>m′</i></sup>)<sup><i>k</i></sup> = <i>a</i><sup><i>mk</i>/<i>m′</i></sup></p>
+</div>
+
+<p>where 1 is the identity element in the group G.  This yields that m divides <i>mk</i>/<i>m′</i> since <i>m</i> is the order of a. It follows that m′ divides k. On the other hand, we have</p>
+
+<div class="eq">
+<p>(<i>a<sup>m/m′</sup></i>)<sup>m'</sup> = a<sup>m</sup> = 1</p>
+</div>
+
+<p>and hence <i>k</i> divides <i>m′</i> since <i>k</i> is the order of the element a<sup>m/m′</sup>. As a result, we have <i>k</i> = <i>m′</i>. So the order of <i>a′</i> is <i>m′</i>. Similarly, the order of <i>b′</i>:= <i>b<sup>n/n′</sup></i> is <i>n′</i>. The orders of elements a′ and b are m′ and n′, and they are relatively prime. Hence we can apply the first case and we conclude that the element <i>a′b</i>′ has order</p>
+
+<div class="eq">
+<p><i>m′n′</i> = <i>l</i></p>
+</div>
+
+<p>Thus, we can take <i>c</i> = <i>a′b′</i>. &emsp;□</p>
+
+<p><b>Remark 7.4.4</b> For nonabelian groups, basically nothing can be said about how to relate |<i>ab</i>| to |<i>a</i>| and |<i>b</i>|. For example, consider the symmetric group S<sub>3</sub> with three letters. Let
+
+<div class="eq">
+<p><i>a</i> = (123) &emsp;and&emsp; <i>b</i> = (12).</p>
+</div>
+
+<p>Then the order of <i>a</i> is 3 and the order of <i>b</i> is 2. The least common multiple of 2 and 3 is 6. However, the symmetric group S<sub>3</sub> has no elements of order 6. Hence the statement of the problem does not hold for non-abelian groups.&emsp;■</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

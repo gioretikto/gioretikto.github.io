@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Vector Space"/>
+    <title>Vector Space</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Vector Space</h1>
+
+<p>Diamo la definizione di <i>spazio vettoriale</i> o <i>spazio lineare</i>.</p>
+
+<div class="def">
+
+<p><b>Definition F.1</b> Sia <i>V</i> un insieme (non vuoto) e 𝕂 un <a href="campo.html">campo</a>. Siano definite le seguenti operazioni:</p>
+
+<ol type="a">
+
+<li><p>un'addizione in <i>V</i>, cioè una corrispondenza che ad ogni coppia (<b>x,y</b>) di elementi di <i>V</i> associa un elemento di <i>V</i> stesso, detto <i>somma</i> di <b>x</b> e <b>y</b> e indicato con <b>x+y</b>.</p></li>
+
+<li><p>Una moltiplicazione degli elmenti di 𝕂 per gli elementi di <i>V</i>, cioè una corrispondenza che ad ogni coppia (a<b>x</b>) con <i>a &in; 𝕂</i>, <b>x</b> &in; <i>V</i> associa un elemento di <i>V</i> detto <i>prodotto</i> di <i>a</i> per <b>x</b> e indicato <i>a<b>x</b></i>.</p></li>
+
+<p>Le operazioni a) e b) godono delle seguenti proprietà:</p>
+
+<ol type="none">
+<li><p>a.1) (<i>commutativa</i>) <b>x + y = y + x</b></p></li>
+<li><p>a.2) (<i>associativa</i>) <b>x + (y + z) = ( x + y) + z</b></p></li>
+<li><p>a.3) esiste un elemento di <i>V</i>, indicato <b>0</b> (zero), tale che <b>x + 0 = x</b> per ogni <b>x</b>.</p>
+<li><p>a.4) (<i>esistenza dell'opposto</i>) per ogni <b>x</b> &in; <i>V</i> esiste un elemento <b>y</b> &in; <i>V</i> tale che <b>x + y = 0</b></p></li>
+
+<li><p>b.1) <i>(distributiva della moltiplicazione) </i> a(<b>x</b> + <b>y </b>) = a<b>x</b> + a<b>y</b></p></li>
+
+<li><p>b.2) <i>(distributiva della moltiplicazione rispetto all'addizione tra scalari) </i> (a + b) <b>x</b> = a<b>x</b> + a<b>y</b></p></li>
+
+<li><p>b.3) a(b<b>x</b>) = (ab)<b>x</b></p></li>
+<li><p>b.4) (esistenza dell'elemente neutro della moltiplicazione) 1<b>x</b> = <b>x</b></p></li>
+</ol>
+
+</div>
+
+<p>Se 𝕂 = ℝ, si dice che <i>V</i> è uno spazio vettoriale reale; Se 𝕂 = ℂ, si dice che <i>V</i> è uno spazio vettoriale complesso.</p>
+
+<p>Non è difficile dimostrare che l'elemento neutro dell'addizione è unico, così come è unico, per ogni <b>x</b>, l'opposto di <b>x</b> stesso: tale elemento verrà indicato col simbolo <b>-x</b>. </p>
+
+<h2>Esempi</h2>
+
+<p>Esempi di spazi lineari sono</p>
+
+<ul>
+<li><p><b>Real line ℝ</b>- The set of all real numbers for which the ordinary additions and multiplications are taken as linear operations, is a real linear space ℝ.</p>
+
+<li><p><b>The Euclidean space ℝ<sup>n</sup>, unitary space ℂ<sup>n</sup>, and complex plane ℂ</b> - Let <i>X</i> be the set of all ordered n-tuples of real numbers. If <i>x = (ξ<sub>1</sub> , ξ<sub>2</sub> , . . . , ξ<sub>n</sub> )</i> and <i>y = (η<sub>1</sub> , η<sub>2</sub> , ... , η<sub>n</sub> )</i>, we define the operations of addition and scalar multiplication as <i>x + y = (ξ<sub>1</sub> + η<sub>1</sub> , ξ<sub>2</sub> + η<sub>2</sub> , . . . , ξ<sub>n</sub> + η<sub>n</sub> )</i> and <i>λx = (λξ<sub>1</sub>, λξ<sub>2</sub>, ..., λξ<sub>n</sub>)</i>. In the above equations, λ is real scalar.  The above linear space is called the real <i>n</i>-dimensional space and denoted by ℝ<sup>n</sup>. The set of all ordered n-tuples of complex numbers, ℂ<sup>n</sup>, is a linear space with the operations of additions and scalar multiplication defined as above. The complex plane ℂ is a linear space with addition and multiplication of complex numbers taken as the linear operations over ℝ (or ℂ).</p></li>
+
+<li><p><b>Space of m × n matrices, ℝ<sup>m×n</sup></b> - ℝ<sup>m×n</sup> is the set of
+of all matrices with real elements. Then ℝ<sup>m×n</sup> is a <i>real linear space</i> with addition and scalar multiplication defined as follows:</p>
+
+<p>Let A = {a<sub>ij</sub>} and B = {b<sub>ij</sub>} be two <i>m × n</i> matrices. Then A + B = {a<sub>ij</sub>} + {b<sub>ij</sub>}. αA = {&alpha;a<sub>ij</sub>}, where α is a scalar. In this space −A = {-a<sub>ij</sub>} and the matrix  with all its elements as zeroes is the zero element of the of the space ℝ<sup>m×n</sup>.</p>
+</li>
+
+<li><p><b>Sequence space l<sub>∞</sub></b> Let <i>X</i> be the set of all bounded sequences of complex numbers, i.e., every element of <i>X</i> is a complex sequence x = {ξ<sub>i</sub>} such that |ξ<sub>i</sub>| &le; C<sub>i</sub>, where C<sub>i</sub> is a real number for each <i>i</i>. If y = {η<sub>i</sub>} then we define <i>x + y = {ξ<sub>i</sub> + η<sub>i</sub>}</i> and <i>λx = {λξ<sub>i</sub>}</i>. Thus, l<sub>∞</sub> is a linear space, and is called a <i>sequence space</i>.</p></li>
+
+<li><p><b>C([a, b])</b> Let <i>X</i> be the set of all real-valued continuous functions <i>x, y</i>, etc, which are functions of an independent variable t defined on a given closed interval <i>J = [a, b</i>]. Then <i>X</i> is closed with respect to additions of two continuous functions and multiplication of a continuous function by a scalar, i.e., (x + y)(t) = x(t) + y(t), αx(t) = (αx(t)) where α is a scalar.</p></li>
+
+
+
+
+
+
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="consonants.html">The consonants&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

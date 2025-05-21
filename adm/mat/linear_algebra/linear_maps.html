@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Linear Transformations"/>
+	<title>Linear Transformations</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Linear Transformations</h1>
+
+<p><b>Definition 5.1.1</b>. Let <i>f</i> : <i>X</i> → <i>Y</i> be a function of a set <i>X</i> into a set <i>Y</i>. The set <i>X</i> is called the <b>domain</b> of <i>f</i> and <i>Y</i> is the <b>codomain</b>. For an element <i>x</i> ∈ <i>X</i> the element <i>f</i>(<i>x</i>) of <i>Y</i> is referred to as the <b>image</b> of <i>x</i>. The range of <i>f</i>, denoted by <i>Range</i>(<i>f</i>), is the set of all images, <i>Range</i>(<i>f</i>) := {<i>f</i>(<i>x</i>)| <i>x</i> ∈ <i>X</i>}. This is also referred to as the <b>image of</b> <i>f</i>. &emsp;□</p>
+
+<p>Linear functions are the simplest functions defined on vector spaces. We start our investigations with the definition of linear maps between vector spaces.</p>
+
+<p><b>Definition 5.1.2</b>. Let <i>V</i> and <i>W</i> be vector spaces over the field 𝕂. A linear transformation <i>T</i>: <i>V</i> → <i>W</i> is a function (map, transformation), which satisfies the following two conditions:</p>
+
+<ol type="i">
+	<li><p><i>T</i>(<i><b>v</b></i><sub>1</sub> + <b><i>v</i></b><sub>2</sub>) = <i>T</i>(<b><i>v</i></b><sub>1</sub>) + <i>T</i>(<i><b>v</b></i><sub>2</sub>), &emsp;for every <i><b>v</b></i><sub>1</sub>, <b><i>v</i></b><sub>2</sub> ∈ <i>V</i></p></li>
+
+	<li><p><i>T</i>(<i>&lambda;<b>v</b></i>) = <i>&lambda;T</i>(<i><b>v</b></i>), &emsp; for every <i><b>v</b></i> ∈ <i>V</i> and scalar <i>&lambda;</i> ∈ 𝕂.</p></li>
+</ol>
+
+<p>We will denote the collection of all linear maps from <i>V</i> to <i>W</i> by ℱ(<i>V, W</i>).&emsp;□</p>
+
+<p>The physical meaning of a linear transformation is that doubling a cause doubles the effect, and the effect of a sum of two causes is the sum of the effects of each of the separate causes.</p>
+
+<p><b>Example 5.1.3</b>. The <b>trace</b> is the function tr: <i>M<sub>n</sub></i>(<i>F</i>) → <i>F</i> that adds up the diagonal entries of a matrix:</p>
+
+<div class="eq">
+<p>tr(<i>A</i>) := <i>a</i><sub>1,1</sub> + <i>a</i><sub>2,2</sub> + ··· + <i>a<sub>n,n</sub></i> &emsp; &forall;<i>A</i> ∈ <i>M<sub>n</sub></i> (<i>F</i>).</p>
+</div>
+
+<p>Show that the trace is a linear transformation.</p>
+
+<p><b>Solution</b>. We need to show that the two properties of Definition 2.1.1 hold:</p>
+
+<ol>
+	<li><p>Tr(<i>A</i> + <i>B</i>) = <i>a</i><sub>1,1</sub> + <i>b</i><sub>1,1</sub> + <i>a</i><sub>2,2</sub> + ··· + <i>a<sub>n,n</sub></i> + <i>b<sub>n,n</sub></i> = tr(<i>A</i>) + tr(<i>B</i>);</p></li>
+
+	<li><p>tr(<i>cA</i>) = <i>ca</i><sub>1,1</sub> + ··· + <i>ca<sub>n,n</sub></i> = <i>c</i>tr(<i>A</i>).</p></li>
+</ol>
+
+<p>It follows that the trace is a linear transformation.&emsp;■</p>
+
+<p>A linear map <i>f</i> : <i>V</i> → <i>W</i> is also called a <i>linear transformation</i> or (vector space) <i>homomorphism</i>.  A bijective linear map is called an isomorphism. If there exists an
+isomorphism between V and W, then the spaces <i>V</i> and <i>W</i> are called <i>isomorphic</i>, which we denote by</p>
+
+<div class="eq">
+<p><i>V</i> ≅ <i>W</i>.</p>
+</div>
+
+<p>A map <i>f</i> ∈ <i>L</i>(<i>V, V</i>) is called an <i>endomorphism</i>, and a bijective endomorphism is called an <i>automorphism</i>.</p>
+
+<p><b>Example 5.1.4</b>. Define <i>T</i> : <i>M<sub>n,n</sub></i> ⟶ <i>M<sub>n,n</sub></i> by <i>T</i>(<i>A</i>) = <i>A<sup>T</sup></i>. Show that <i>T</i> is a linear transformation.</p>
+
+<p><b>Solution</b>. We check that, for <i>A</i> and <i>B</i> in <i>M<sub>nn</sub></i> and scalars <i>c</i>,</p>
+
+<div class="eq">
+<p><i>T</i>(<i>A</i> + <i>B</i>) = (<i>A</i> + <i>B</i>)<sup><i>T</i></sup> = <i>A</i><sup><i>T</i></sup> + <i>B</i><sup><i>T</i></sup> = <i>T</i>(<i>A</i>) + <i>T</i>(<i>B</i>)</p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>T</i>(<i>cA</i>) = (<i>cA</i>)<sup><i>T</i></sup> = <i>cA<sup>T</sup></i> = <i>cT</i>(<i>A</i>)</p>
+</div>
+
+<p>Therefore, <i>T</i> is a linear transformation.&emsp;■</p>
+
+<p id="derivative"><b>Example 2.1.4</b> The derivative is a linear transformation, that is, the function <i>D</i>: <i>D</i> → <i>F</i> defined by <i>D</i>(<i>f</i>) = <i>f'</i> is a linear transformation.</p>
+
+<p>We need to show that the two properties of Definition 2.1.1 hold. That is, we need to show that (<i>f</i> + <i>g</i>)' = <i>f'</i> + <i>g'</i> and (<i>cf</i>)' = <i>cf'</i> for all <i>f, g</i> ∈ <i>D</i> and <i>c</i> ∈ ℝ. We have already proved these properties studying the <a href="../analysis/derivatives_algebra.html">algebra of derivatives</a>, so we do not prove them again here. &emsp;■</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="isomorpshims.html">Isomorpshims&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

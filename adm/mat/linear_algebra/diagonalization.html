@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Diagonalization">
+	<title>Diagonalization</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Diagonalization</h1>
+
+<p>Linear transformations from ℝ<sup><i>n</i></sup> to ℝ<sup><i>n</i></sup> are represented by <i>n</i> x <i>n</i> matrices. Given such a transformation, the use of all different bases of ℝ<sup><i>n</i></sup> give a <b>class of similarity of matrices</b>. Structurally the simplest <i>n</i> x <i>n</i> matrix has the form</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>c</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>c</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>c</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$ A = \begin{bmatrix}c_{1}&0&\cdots &0\\0&c_{2}&\cdots &0\\\vdots &\vdots &\ddots &\vdots \\0&0&\cdots &c_{n}\end{bmatrix} $$ -->
+
+<p>known as <b>diagonal matrix</b>. This means that the transformation <i>L</i>: ℝ<sup>3</sup> ⟶ ℝ<sup>3</sup> can be written as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>y</mi>
+            <mn>1</mn>
+          </msub>
+          <mo>=</mo>
+          <msub>
+            <mi>c</mi>
+            <mn>1</mn>
+          </msub>
+          <msub>
+            <mi>x</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>y</mi>
+            <mn>2</mn>
+          </msub>
+          <mo>=</mo>
+          <msub>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msub>
+          <msub>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>y</mi>
+            <mn>3</mn>
+          </msub>
+          <mo>=</mo>
+          <msub>
+            <mi>c</mi>
+            <mn>3</mn>
+          </msub>
+          <msub>
+            <mi>x</mi>
+            <mn>3</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{cases} y_1 = c_1x_1 \\  y_2 = c_2x_2 \\  y_3 = c_3x_3 \end{cases} $$ -->
+
+<p>which is extremely simple, as every variable <i>y<sub>i</sub></i> depends only on a variable <i>x<sub>i</sub></i> rather than all three variables. We say that in this case the transformation as <i>diagonal form</i>. </p>
+
+<p>We want to examine how the representation of <i>L</i> changes when the basis of ℝ<sup><i>n</i></sup> is changed. <br>Let <i><b>e</b></i><sub>1</sub>, <i><b>e</b></i><sup>2</sup>, ..., <i><b>e</b><sup>n</sup></i> the canonical basis of ℝ<sup><i>n</i></sup>. If we take another basis of ℝ<sup><i>n</i></sup>, <i><b>ẽ</b></i><sub>1</sub>, <i><b>ẽ</b></i><sup>2</sup>, ..., <i><b>ẽ</b><sup>n</sup></i>, the matrix</p>
+
+<div class="eq">
+<p><i>S</i> = (<i><b>ẽ</b></i><sub>1</sub>|<i><b>ẽ</b></i><sub>2</sub>|...|<i><b>ẽ</b><sub>n</sub></i>)</p>
+</div>
+
+<p>is made by the columns vectors <i><b>ẽ</b></i><sub>1</sub>, <i><b>ẽ</b></i><sup>2</sup>, ..., <i><b>ẽ</b><sup>n</sup></i> and represent in the canonical basis the transformation between the two bases. Indeed as it can be readily seen</p>
+
+<div class="eq">
+<p><i>S</i> <b>e<sup>i</sup></b></i> = <i><b>ẽ</b></i> &emsp; <i>i</i> = 1, 2, ..., <i>n</i></p>
+</div>
+
+<p>Since the vectors <i><b>ẽ</b></i> are independent, det <i>S</i> &ne; 0, hence <i>S</i> is invertible, e we can also write</p>
+
+<div class="eq">
+<p><i><b>e<sup>i</sup></b></i> = <i>S</i><sup>−1</sup> <o><b>ẽ</b></i> &emsp; <i>i</i> = 1, 2, ..., <i>n</i></p>
+</div>
+
+<p>Thus if a vector of ℝ<sup><i>n</i></sup> has with respect to the canonic basis, the coordinated <i><b>x</b></i> = (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>), with respect to the other basis has coordinates <i><b>x̃</b></i> = (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>) given by</p>
+
+<div class="eq">
+<p><i><b>x̃</b></i> = <i>S</i><sup>−1</sup><i><b>x</b></i></p>
+</div>
+
+<p>Thenf if <b>y</b> = <i>A<b>x</b></i> in the canonical basis, it results</p>
+
+<div class="eq">
+<p><i><b>ỹ</b></i> = <i>S</i><sup>−1</sup><i><b>y</b></i> = <i>S</i><sup>−1</sup><i>A<b>x</b></i> = <i>S</i><sup>−1</sup><i>AS<b>x̃</b></i></p>
+</div>
+
+<p>Thus the transformation <i>L</i> in the new basis is represented by the matrix</p>
+
+<div class="eq">
+<p><i>Ã</i> = <i>S</i><sup>−1</sup><i>AS</i></p>
+</div>
+
+<p>where <i>A,Ã</i> are said equivalent, or similar.</p>
+
+<p id="similar"><b>Definition</b>. If a square matrix <i>A</i> is similar to a diagonal matrix <i>&Lambda;</i> we say that <i>A</i> is <b>diagonazible</b>, i.e. if</p>
+
+<div class="eq">
+<p><i>A</i> = <i>S</i><sup>−1</sup><i>&Lambda;S</i></p>
+</div>
+
+<p>for an invertible matrix <i>S</i>. Where <i>A,&Lambda;S</i> are matrices with elements if a field <i>K</i> &emsp;□</p>
+
+<p>In the case of a diagonazible matrix, there exists a basis in <i>K<sup>n</sup></i> in which the transformation with respect to the canonical basis represented by the matrix <i>A</i>, can be represented with a diagonal matrix <i>&Lambda;</i>; hence the transformation is more simple being represented by a diagonal matrix. We want to understand under which conditions given a square matrix <i>A</i>, there here exist an invertible matrix <i>S</i> such that <i>S</i><sup>−1</sup><i>&Lambda;S is diagonal? This problem is connected with another problem which is the computation of eigenvalues and eigenvectors.</p>
+
+<p>Notice that rela numbers are a subfield of complex number, and a matrix with real coefficeints can be seen as a matrix with complex coefficents hence related to a transformation from  ℂ<sup><i>n</i></sup> to itself. However it can happen that a matrix is diagonazible over ℂ but not over ℝ.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="eigenvectros.html">Eigenvalues and Eigenvectors»</a>
+</section>
+
+</article>
+
+</body>
+</html>

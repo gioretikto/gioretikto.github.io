@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Transpose of a Matrix"/>
+	<title>Transpose of a Matrix</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Transpose of a Matrix</h1>
+
+<p><b>Definition 2.3.1</b>. (Transpose of a matrix). Let <i>A</i> = (<i>a<sub>ij</sub></i>) ∈ <i>M<sub>m,n</sub></i> (&Kopf;). The Transpose of a matrix <i>A</i> is the matrix <i>A<sup>T</sup></i> ∈ <i>M<sub>m,n</sub></i> (&Kopf;) whose (<i>i, j</i>)-entry is <i>a<sub>ji</sub></i>. That is, <i>A<sup>T</sup></i> is obtained from <i>A</i> by reflecting its entries across its main diagonal.</p>
+
+<p>For example</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>A</mi>
+    <mi>T</mi>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<p>It results then (<i>A<sup>T</sup></i>)<sup><i>T</i></sup> = <i>A</i>. </p>
+
+<p><b>Definition 2.3.2</b> (Matrix of cofactors). If we replace every element in a matrix by its corresponding cofactor then we get the matrix of cofactors usually denoted by <i>C</i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">C</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">[</mo>
+      <mtable columnspacing="1em" rowspacing="4pt">
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>11</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>12</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mo>&#x22EF;</mo>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>1</mn>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>21</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>22</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mo>&#x22EF;</mo>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mn>2</mn>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x22EE;</mo>
+            </mrow>
+          </mtd>
+          <mtd>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x22EE;</mo>
+            </mrow>
+          </mtd>
+          <mtd>
+            <mo>&#x22F1;</mo>
+          </mtd>
+          <mtd>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x22EE;</mo>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mn>2</mn>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mo>&#x22EF;</mo>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>A</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo data-mjx-texclass="CLOSE">]</mo>
+    </mrow>
+  </mrow>
+</math>
+
+<!-- $$\mathbf {C} ={\begin{bmatrix}A_{11}&A_{12}&\cdots &A_{1n}\\A_{21}&A_{22}&\cdots &A_{2n}\\\vdots &\vdots &\ddots &\vdots \\A_{n1}&A_{n2}&\cdots &A_{nn}\end{bmatrix}} $$-->
+
+<p id="adjoint"><b>Definition 2.3.3</b>. The <b>adjoint</b> (<b>"Hermitian transpose"</b> or <b>"Hermitian conjugate"</b>) of a complex matrix is its conjugate transpose <i>Ā<sup>T</sup></i> and is denoted <i><b>A</b></i><sup>†</sup> (or <i><b>A</b><sup>H</sup></i> or <i><b>A</b></i><sup>*</sup>). A matrix is called <b>self-adjoint</b> or <b>Hermitian</b> if <i><b>A</b></i><sup>†</sup>, that is, if <i>ā<sub>ij</sub></i> = <i>a<sub>ji</sub></i>.</p>
+
+<p>To calculate the <b>adjoint</b> of a matrix we transpose the matrix, and take the complex conjugate of the entries. For example, if</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+          <mo>&#x2212;</mo>
+          <mi>i</mi>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+          <mo>+</mo>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>i</mi>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>then</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>A</mi>
+    <mo>&#x2020;</mo>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <mo>&#x2212;</mo>
+          <mn>3</mn>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+          <mi>i</mi>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ A = \begin{pmatrix}
+1 & 3 -i & 2i \\
+2+3 & -i & 0 \\
+\end{pmatrix}
+
+\quad \text{then} \quad
+
+A^\dagger = \begin{pmatrix}
+1 & 2-3i \\
+3+1 & i \\
+-2i & 0
+\end{pmatrix}$$ -->
+
+<p>We see that <i><b>A</b></i> is not Hermitian. For a vector</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">A</mi>
+  <mo>&#x2261;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>A</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>A</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <msup>
+    <mi mathvariant="bold">A</mi>
+    <mo>&#x2020;</mo>
+  </msup>
+  <mo>&#x2261;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msubsup>
+      <mi>A</mi>
+      <mn>1</mn>
+      <mo>&#x2217;</mo>
+    </msubsup>
+    <mstyle scriptlevel="0">
+      <mspace width="0.167em"></mspace>
+    </mstyle>
+    <msubsup>
+      <mi>A</mi>
+      <mn>2</mn>
+      <mo>&#x2217;</mo>
+    </msubsup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$\mathbf{A} \equiv \left(\begin{array}{c} A_1 \\ A_2 \end{array} \right) \qquad \mathbf{A^\dagger} \equiv \left(A_1^* \, A_2^* \right) $$ -->
+
+<p>An example of Hermitian matrix is the following:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>B</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>i</mi>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>then</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>B</mi>
+    <mo>&#x2020;</mo>
+  </msup>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mi>i</mi>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ B = \begin{pmatrix}
+2 & i\\
+-i & 3
+\end{pmatrix}
+
+\quad \text{then} \quad
+
+B^\dagger = \begin{pmatrix}
+2 & i \\
+-i & 3
+\end{pmatrix}$$ -->
+
+<p>Note that if <i><b>A</b></i> is a real-valued matrix, then its adjoint is just its transposition because the complex conjugate operation does not change real entries. It is clear that if <i>A</i> is a matrix of order <i>n</i> x <i>m</i> then <i>A</i><sup>†</sup> is a matrix of order <i>m</i> x <i>n</i>.</p>
+
+<p id="symmetric"><b>Definition</b>. We say that a matrix <i>A</i> ∈ <i>M<sub>n</sub></i> is <b>symmetric</b> if it is equal to its transpose, <i>A<sup>T</sup></i> = <i>A</i>. It is said <b>antisymmetric</b>, if <i>A</i> = &minus; <i>A<sup>T</sup></i>.</p>
+
+<p>The following is Hermitian (but not symmetric),</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>B</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+          <mo>+</mo>
+          <mn>3</mn>
+          <mi>i</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mn>3</mn>
+          <mi>i</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>4</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ B = \begin{pmatrix}
+2 & 1 + 3i \\
+1-3i & -4
+\end{pmatrix} $$-->
+
+<p>We see that the adjoint of a real square matrix is equal to the transpose of the matrix, <i>A</i>* = <i>A<sup>T</sup></i>.</p>
+
+<section aria-label="End">
+<a href="matrix_multiplication.html">&#171;Matrix Multiplication</a>
+<a href="index.html">Index</a>
+<a href="inverse.html">Inverse Matrix &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

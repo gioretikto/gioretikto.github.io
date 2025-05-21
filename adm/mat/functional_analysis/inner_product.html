@@ -1,0 +1,209 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Inner Product"/>
+    <title>Inner Product</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.php">Home</a></li>
+        <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+    </ul>
+</nav>
+      
+<div class="content">
+
+<h1>Inner Product</h1>
+
+<div class="def">
+
+<p><b>Definition P.1</b> Let <i>V</i> be a vector space over the field of real or complex numbers. An <i>inner product</i> on <i>V</i> is a mapping <i>(·,·) : V × V → ℂ</i> into the underlying field (complex in general); that is, with every pair of elements <i><b>x</b></i> and <i>y</i> there is associated a scalar which is written <i>( <b>x, y</b> )</i> and is called <b>inner product</b> (or scalar product) of <i><b>x</b></i> and <i>y</i>, such that for all elements <i><b>x, y</b></i> and <i><b>z</b></i> &in; V</i> and a scalar <i>&alpha; &in; ℂ</i> we have :</p>
+
+<ol>
+
+<li><p>Linearity:</p>
+
+<p><i>(&alpha;<b>x</b> , <b>y,</b> )  = &alpha; (<b>x</b> , <b>y</b> )</p>
+
+<p><i>( <b>x + y, z</b> ) = (<b>x</b> , <b>z</b> ) + ( <b>y, z</b> )</i></p>
+
+</li>
+
+<li><p>Conjugate symmetry: <i>(<b>x, y</b>) = (<b>y, x</b>)*</i></p></li>
+
+<li><p>Positive-definite: (<b>x, x</b>) &gt; 0</i>, e (<b>x,x</b>) se e solo se <b>x</b> = 0</i></p>
+
+</li>
+
+</ol>
+
+</div>
+
+<p>Dove nella (2) il simbolo * indica il complesso coniugato. Sempre dalla (2) risulta che il prodotto interno è <i>non</i> commutativo, so we must be careful to specify which vector goes into the first slot and which goes into the second. The Dirac bra-ket notation always keeps this clear: the vector in the bra &lt;v| goes into the first slot and the vector in the ket |v&gt; into the second.</p>
+
+<p>Conjugate symmetry and linearity in the first variable gives</p>
+
+<img src="img/sesquilinear.svg" alt="sesquilinear form"/>
+
+<p>so an inner product is a sesquilinear form, in the sense that the second argument is conjugate linear. The term <i>sesqui</i> comes form the Latin for <i>one and a half</i>.</p>
+
+<p>La (1) significa che, per ogni <b>y</b> in V fissato, la funzione (<b>x,y</b>) è lineare.</p>
+
+<p>La (2) si esprime dicendo che la funzione ( , ) è <i>hermitiana</i>.</p>
+
+<p>Vector spaces endowed with an inner product are called <b>inner product spaces</b> o <b>spazio pre-Hilbertiano</b>, in cui si distinguono gli <i>spazi euclidei</i>, reali. In uno spazio vettoriale dotato di prodotto interno due vettori si dicono ortogonali se</p>
+
+<p><i>(<b>x, y</b>) = 0</i></p>
+
+<h2>Esempi</h2>
+
+<ol>
+
+<li><p><b>Real numbers</b>- A simple example is the real numbers with the standard multiplication as the inner product </p>
+<p><i>(x, y) := xy</i></p></li>
+
+<li><p><b>Euclidean space</b> - More generally, the real n-space ℝ<sup>n</sup> with the dot product is an inner product space, an example of a Euclidean n-space. </p>
+
+<img src="img/inner_product_Rn.svg" alt="prodotto interno Rn"/>
+
+<p>where <i>x<sup>T</sup></i> is the transpose of <i>x</i>.</p></li>
+
+<li><p>Nello s.v. ℂ<sup>n</sup> possiamo introdurre il prodotto scalare:</p>
+
+<img src="img/inner_Cn.png" alt="prodotto interno campo complesso"/>
+
+<p>dove il contrassegno indica il complesso coniugato. Dove si intende <b>x</b> = (x<sub>1</sub>, x<sub>2</sub>, ... x<sub>n</sub>), <b>y</b> = (y<sub>1</sub>, y<sub>2</sub>, ... y<sub>n</sub>)</p></li>
+
+</ol>
+
+<h2>Norma Indotta</h2>
+
+<p>In ogni spazio vettoriale prehilbertiano è definita in modo naturale una <a href="norma.html">norma</a>, <i>indotta</i> o <i>generata</i> dal prodotto scalare stesso espressa da</p>
+
+<div class="eq">
+<p>
+<img class="inline" src="img/normaindotta.png" alt="norma indotta dal prodotto scalare"/>
+<span>(1.7)</span></p>
+</div>
+
+<p>ben definita grazie alla proprietà (3) del prodotto scalare. Le norme indotte da un prodotto scalare vengonoe dette anche <i>norme hilbertiante</i>, da David Hilbert (1870 - 1943).</p>
+
+<div class="def">
+
+<p><b>Teorema 1</b> (Cauchy–Schwarz inequality) Per ogni coppia di vettori <i><b>x,y</b> &in; V</i> si ha</p>
+
+<p align="center">|(x, y)| ≤ ||x|| ||y||</p>
+
+<p>The equality occurs if and only if <i>(x, y)</i> is a linearly dependent set.</p>
+
+<p><b>Dimostrazione 1</b>- Se <b>y = 0</b>, la relazione è banalmente dimostrata dato che (<b>x</b>,<b>0</b>) = 0. Sia <b>y &ne;0</b>  , utilizzando le proprietà del prodotto interno ponento <i>t &in; ℝ</i>, ed ogni <i>x, y &in; X</i></p>
+
+<p>0 &le; (tx + y, tx + y) = t<sup>2</sup> ||x||<sup>2</sup> + 2t (x, y) + ||y||<sup>2</sup> &equiv; P(t).</p>
+
+<p>Questa è un'equazione di secondo grado in <i>t</i>, sempre positiva. Pertanto deve avere discriminante non positivio ossia</p>
+
+<p align="center">(x,y)<sup>2</sup> - ||x|<sup>2</sup> ||y|<sup>2</sup> &le; 0</p>
+
+<p>Che equivale alla disuguaglianza di Schwarz. L'uguaglianza si ha solo se <i>tx + y = 0</i> ossia se <i>x</i> e <i>y</i> sono dipendenti.</p>
+
+<p><b>Dimostrazione 2</b> - Supponendo che <b>x</b> e <b>y</b> non siano nulli si ha per ogni &alpha; &in; ℂ.</p>
+
+<img src="img/schwarz_dim2.png" alt="Dimostrazione di Schwarz"/>
+
+<p>Scegliamo &alpha; in modo da annullare la somma dei primi due addenti nell'ultima equazione</p>
+
+<img src="img/schwarz_dim_cost.png" alt="costanti dimostrazioni Schwarz"/>
+
+<p>Sostituendo nell'ultima espressione, si ha</p>
+
+<img src="img/schwarz_dimostrata.png" alt="dimostrazione Schwarz"/>
+
+<p>da cui la tesi, estraendo le radici quadrate. □</p>
+
+</div>
+
+<div class="def">
+
+<p><b>Dimostrazione della disuguaglianza triangolare</b> - Vale la seguente</p> 
+
+<img src="img/triangolare.svg" alt="Disuguaglianza triangolare"/>
+
+<!--  \begin{equation*}
+ \begin{aligned}
+        \MoveEqLeft
+||\mathbf{x} + \mathbf{y}||^2 =  (\mathbf{x} + \mathbf{y} | \mathbf{x}  + \mathbf{y})  = \\ & = ||\mathbf{x} ||^2 + (\mathbf{x}| \mathbf{y} ) + (\mathbf{y}| \mathbf{x} ) + ||\mathbf{y}||^2 =  \\ & = ||\mathbf{x}||^2  + 2\, \text{Re} [(\mathbf{x}| \mathbf{y})] + ||\mathbf{y}||^2
+    \end{aligned}
+\end{equation*}  -->
+
+<p>elevando entrambi i membri al quadrato, occore verificare che</p>
+
+<img src="img/triangolaresquare.png" alt="dimostrazione disuguaglianza triangolare"/>
+
+<p>Dato che</p>
+
+<img src="img/triangolaredim.png" alt="dimostrazione disuguaglianza triangolare"/>
+
+<p>si è sfruttato il fatto che la somma di un numero complesso e il suo coiugato è uguale a due volte la parte reale dello stesso numero. Per ogni numero complesso si ha in aggiunta</p>
+
+<p align="center"> Re <i>z</i> &le; |Re <i>z</i>| &le; |<i>z</i>|</p>
+
+<p>Possiamo quindi scrivere</p>
+
+<img src="img/triangolaredim2.png" alt="dimostrazione disuguaglianza triangolare"/>
+
+<!--  \begin{equation*}
+ \begin{aligned}
+        \MoveEqLeft
+||\mathbf{x} + \mathbf{y}||^2 \le  + 2\, \text{Re} [(\mathbf{x}| \mathbf{y})] + ||\mathbf{y}||^2 \le \\ & \le ||\mathbf{x}||^2  + 2\, (\mathbf{x}| \mathbf{y}) + ||\mathbf{y}||^2 \le \\ & \le ||\mathbf{x}||^2 + 2 ||\mathbf{x}|| \, ||\mathbf{y}|| + ||\mathbf{y}||^2 = \\ & = (||\mathbf{x}|| + ||\mathbf{y}||)^2
+    \end{aligned}
+\end{equation*} -->
+
+<p>dove nel penultimo passaggio si è sfruttata la disuguaglianza di Schwarz.</p>
+
+</div>
+
+<p>ed è così dimostrato che la funzione in (1.7) è una norma.</p>
+
+<p>Per le norme indotte da un prodotto scalare vale un'ulteriore identità nota come <i>identità del parallelogramma</i></p>
+
+<div class="def">
+
+<p><b>Teorema 3</b> (Identità del Parallelogramma) Per ogni coppia di vettori <i><b>x,y</b> &in; V</i> si ha</p>
+
+<img src="img/parallelogramma.png" alt="identià del parallelogramma"/>
+
+<p><b>Dimostrazione</b>. Notanto che <p>||<b>x</b> + <b>y</b>||<sup>2</sup> = ||<b>x</b>||<sup>2</sup> + 2(<b>x</b>,<b>y</b>) + ||<b>y</b>||<sup>2</sup></p>
+<p>e che</p>
+<p>||<b>x</b> - <b>y</b>||<sup>2</sup> = ||<b>x</b>||<sup>2</sup> - 2(<b>x</b>,<b>y</b>) + ||<b>y</b>||<sup>2</sup></p>
+
+<p>Sommando queste due identità si ha la tesi.□</p>
+
+</div>
+
+<p>Se si interpreta ||<b>x</b>|| come la lunghezza del vettore <b>x</b>, la legge del parallelogramma generalizza un risultato della geometria Euclidea elementare, conseguenza del teorema di Pitagora: <i>la somma dei quadrati delle lunghezze delle diagonali di un parallelogramma uguaglia la somma dei quadrati della lunghezza dei suoi lati</i>.</p>
+
+<img src="img/parallelogram.png" alt="parallelogram"/>
+
+<p>Gli s.v. con prodotto scalare avente dimensione finita, vengono chiamati <i>spazi euclidei</i>.</p>
+
+<div class="def">
+
+<p><b>Definizione P.2</b> - Uno spazio <i>prehilbertiano</i> completo rispetto alla norma indotta dal prodotto scalare si dice <B>spazio di Hilbert</b>.</p>
+
+</div>
+
+<section>
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="consonants.html">The consonants&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

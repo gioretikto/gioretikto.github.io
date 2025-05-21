@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Euler's theorem on Homogeneous Functions and Total Derivative">
+	<title>Euler's theorem on Homogeneous Functions and Total Derivative</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Euler's theorem on Homogeneous Functions and Total Derivative</h1>
+
+<p>A function is which every term is of the same degree is known as a <b>homogeneous function</b> of that degree. <br> For instance, let</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x,y</i>) = a<sub>0</sub><i>x<sup>n</sup></i> + <i>a</i><sub>1</sub><i>x</i><sup><i>n</i>−1</sup><i>y</i> + <i>a</i><sub>2</sub><i>x</i><sup><i>n</i>−2</sup><i>y</i><sup>2</sup> + ... + <i>a</i><sub><i>n</i>−1</sub> <i>xy</i><sup><i>n</i> − 1</sup> + <i>a<sub>n</sub>y<sup>n</sup></i></p>
+</div>
+
+<p>be a function of <i>x</i> and <i>y</i>. We see that every term of this function has the same degree; i.e. <i>n</i>. Hence, it is a homogeneous function of <i>x</i> and <i>y</i> of degree <i>n</i>. We can rewrite it as</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x,y</i>) = <i>x<sup>n</sup></i>[<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> (<i>y</i>/<i>x</i>) + <i>a</i><sub>2</sub>(<i>y</i>/<i>x</i>)<sup>2</sup> + ... + <i>a</i><sub><i>n</i>−1</sub> (<i>y</i>/<i>x</i>)<sup><i>n</i> − 1</sup> + <i>a<sub>n</sub>y<sup>n</sup></i> + <i>a<sub>n</sub></i>(<i>y</i>/<i>x</i>)<sup>n</sup>] = <i>x<sup>n</sup>F</i>(<i>y</i>/<i>x</i>)</p>
+</div>
+
+<p>Thus, every homogeneous function of <i>x</i> and <i>y</i> of degree <i>n</i> can be expressed in the form</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup>F</i>(<i>y</i>/<i>x</i>)</p>
+</div>
+
+<p>whther <i>F</i> may have any vlaue, e.g. <i>x</i><sup>5</sup> sin <i>y</i>/<i>x</i>, x<sup>4</sup> tan<sup>−1</sup> y/x; x<sup>3</sup> log <i>x</i>/; are homogeneous functions of degree 5,4,3 respectively.</p>
+
+<h3>A test for Homogeneity of a function of <i>x</i> and <i>y</i></h3>
+
+<p>Let <i>f</i>(<i>x,y</i>) be any function of x and y. Then f(<i>x,y</i>) is said to be a homogeneous function of <i>x</i> and <i>y</i> of degree <i>n</i>, if</p>
+
+<div class="eq">
+<p><i>f</i>(<i>tx,ty</i>) = <i>t<sup>n</sup>f</i>(<i>x,y</i>)</p>
+</div>
+
+<p><b>Example</b>. The function</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x,y</i>) = <i>xye<sup>x/y</sup></i></p>
+</div>
+
+<p>is a homogenous function of degree 2, since</p>
+
+<div class="eq">
+<p><i>f</i>(<i>t ⋅ x, t ⋅ y</i>) = (<i>tx</i>) (<i>ty</i>) <i>e<sup>tx/ty</sup></i> = <i>t</i><sup>2</sup><i>xy</i>e<sup><i>y</i>/<i>x</i></sup> = <i>t</i><sup>2</sup> ⋅ <i>f</i>(<i>x,y</i>)</p>
+</div>
+
+<h2>Euler's theorem on homogeneous functions</h2>
+
+<p><b>Statement</b>: If <i>u</i> is a homogeneous function of <i>x</i> and <i>y</i> of degree <i>n</i>, then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>x</mi>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>u</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mi>y</mi>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>u</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>n</mi>
+  <mi>u</mi>
+<mtext>&emsp;(1)</mtext>
+</math>
+
+<!-- $$ x \frac{\partial u}{\partial x} + y \frac{\partial u}{\partial y} = nu $$ -->
+
+<p><b>Proof</b>. Since <i>u</i> is homogeneous function <i>x</i> and <i>y</i> of degree <i>n</i>, hence we can write</p>
+
+<div class="eq">
+<p><i>u</i> = <i>x<sup>n</sup>F</i> (<i>y</i>/<i>x</i>)</p>
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mfrac>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>u</mi>
+          </mrow>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>x</mi>
+          </mrow>
+        </mfrac>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mi>n</mi>
+        <msup>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mi>F</mi>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mi>y</mi>
+            <mi>x</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>+</mo>
+        <msup>
+          <mi>x</mi>
+          <mi>n</mi>
+        </msup>
+        <msup>
+          <mi>F</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mi>y</mi>
+            <mi>x</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mrow>
+              <mo>&#x2212;</mo>
+              <mi>y</mi>
+            </mrow>
+            <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+            </msup>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi>x</mi>
+        <mfrac>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>u</mi>
+          </mrow>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>x</mi>
+          </mrow>
+        </mfrac>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mi>n</mi>
+        <msup>
+          <mi>x</mi>
+          <mi>n</mi>
+        </msup>
+        <mi>F</mi>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mi>y</mi>
+            <mi>x</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mi>y</mi>
+        <msup>
+          <mi>F</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mi>y</mi>
+            <mi>x</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi>x</mi>
+        <mfrac>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>u</mi>
+          </mrow>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>x</mi>
+          </mrow>
+        </mfrac>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mi>n</mi>
+        <mi>u</mi>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mi>y</mi>
+        <msup>
+          <mi>F</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mi>y</mi>
+            <mi>x</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mstyle scriptlevel="0">
+          <mspace width="2em"></mspace>
+        </mstyle>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <mo stretchy="false">)</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mfrac>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>u</mi>
+          </mrow>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>y</mi>
+          </mrow>
+        </mfrac>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mi>n</mi>
+        <mi>u</mi>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mi>y</mi>
+        <msup>
+          <mi>F</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mi>y</mi>
+            <mi>x</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>&#x22C5;</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mi>x</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi>y</mi>
+        <mfrac>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>u</mi>
+          </mrow>
+          <mrow>
+            <mi>&#x2202;</mi>
+            <mi>y</mi>
+          </mrow>
+        </mfrac>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msup>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mi>y</mi>
+        <msup>
+          <mi>F</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <mfrac>
+            <mi>y</mi>
+            <mi>x</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mstyle scriptlevel="0">
+          <mspace width="2em"></mspace>
+        </mstyle>
+        <mo stretchy="false">(</mo>
+        <mn>3</mn>
+        <mo stretchy="false">)</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+
+<!-- $$ \begin{align} \frac{\partial u}{\partial x} = nx^{n-1} F \left(\frac{y}{x} \right) + x^n F' \left(\frac{y}{x} \right) \left(\frac{-y}{x^2} \right) \\
+x \frac{\partial u}{\partial x} = nx^n F \left(\frac{y}{x} \right) - x^{n-1} y F' \left(\frac{y}{x} \right) \\
+x \frac{\partial u}{\partial x} = nu - x^{n-1} y F' \left(\frac{y}{x} \right) \qquad(2) \\
+\frac{\partial u}{\partial y} = nu - x^{n-1} y F' \left(\frac{y}{x} \right) \cdot \frac{1}{x} \\
+y \frac{\partial u}{\partial y} = x^{n-1} y F' \left(\frac{y}{x} \right) \qquad (3) \end{align} $$ -->
+
+<p>Adding (2) and (3) we obtain (1). &emsp;□</p>
+
+<p><b>Note</b>: Euler's theorem can be extended to a homogeneous function of any number of variables. Thus, if <i>f</i>(<i>x</i><sub>1</sub>, ..., <i>x<sub>n</sub></i>) is a homogeneous function of <i>n</i> variables, then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>x</mi>
+    <mn>1</mn>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>n</mi>
+  <mi>f</mi>
+</math>
+
+<!-- $$ x_1 \frac{\partial f} {\partial x_1} + x_2 \frac{\partial f}{\partial x_2} + \ldots + x_n \frac{\partial f}{\partial x_n} = nf $$ -->
+
+<p>It is of interest to see the connection between homogenous functions and <a href="../../ch/thermo/partial_molar.html#Euler">extensive thermodynamic properties</a>.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

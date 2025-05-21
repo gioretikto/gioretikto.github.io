@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Multilinear Transformations"/>
+	<title>Multilinear Transformations</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Multilinear Transformations</h1>
+
+<p>We introduce now <i>multilinear transformations</i>, which are functions that act on multiple vectors, each in a linear way. Recall from Section 1.2.3 that a <a href="linear_transformations.html">linear transformation</a> is a function that sends vectors from one vector space to another in a linear way, and that a <a href="bilinear_forms.html">multilinear form</a> is a function that sends a collection of vectors to a scalar in a manner that treats each input vector linearly. Multilinear transformations provide the natural generalization of both of these concepts—they can be thought of as the sweet spot in between linear transformations and multilinear forms where we have lots of input spaces and potentially have a non-trivial output space as well. <br> Multilinear transformations provide the natural generalization of both of these concepts.</p>
+
+<p><b>Definition 7.4.1</b> (<i>Multilinear Transformations</i>) Suppose <i>V</i><sub>1</sub>, <i>V</i><sub>2</sub> , ..., <i>V</i><sub>p</sub> and <i>W</i> are vector spaces over the same field. A multilinear transformation is a function <i>T</i> : <i>V</i><sub>1</sub> × <i>V</i><sub>2</sub> × ··· × <i>V<sub>p</sub></i> → <i>W</i> with the property that, if we fix 1 ≤ <i>j</i> ≤ <i>p</i> and any <i>p</i> − 1 vectors <i>v<sub>i</sub></i> ∈ <i>V<sub>i</sub></i> (1 ≤ <i>i</i> &ne; <i>j</i> ≤ <i>p</i>), then the function <i>S</i> : <i>V <sub>j</sub></i> → <i>W</i> defined by</p>
+
+<div class="eq">
+<p><i>S</i>(<b><i>v</i></b>) = <i>T</i> (<b>v</b><sub>1</sub> , ... ,<b><i>v</i></b><sub><i>j</i>−1</sub>, <i><b>v</b></i>, <b><i>v</i></b><sub><i>j</i>+1</sub>, ..., <b><i>v</i></b><sub>p</sub>) for all <b><i>v</i></b> ∈ <i>V<sub>j</sub></i></p>
+</div>
+
+<p>is a linear transformation.&emsp;□</p>
+
+<p>The idea is simply that a multilinear transformation is a function that looks like a linear transformation on each of its inputs individually. When there are just <i>p</i> = 2 input spaces we refer to these functions as bilinear transformations, and we note that
+bilinear forms, are the special case that arises when the output space is <i>W</i> = 𝔽. Similarly, we sometimes call a multilinear
+transformation with <i>p</i> input spaces a <i>p</i>-linear transformation (much like we sometimes called multilinear forms <i>p</i>-linear forms).</p>
+
+<p>In other words a map <i>f</i>: <i>V</i> x <i>W</i> ⟶ <i>U</i> is said to be a <b>bilinear map</b> from <i>V</i> and <i>W</i> to <i>W</i> if for all <i><b>v</b></i><sub>1</sub>,<b><i>v</i></b><sub>2</sub> &in; <i>V</i> and <i>w</i><sub>1</sub>, <i>w</i><sub>2</sub> in <i>W</i> we have</p>
+
+<ol type="a">
+	<li><p>It is linear in its first argument:</p>
+
+	<ol type="i">
+		<li><p><i>f</i>(<b><i>v</i></b><sub>1</sub> + <b><i>v</i></b><sub>2</sub>, <b><i>w</i></b>) = <i>f</i> (<b><i>v</i></b><sub>1</sub>, <b>w</b>) + <i>f</i>(<b><i>v</i></b><sub>2</sub>, <b><i>w</i></b>) and</p></li>
+		<li><p><i>f</i> (<i>c<b>v</b></i><sub>1</sub>, <b><i>w</i></b>) = <i>cf</i> (<b><i>v</i></b><sub>1</sub>, <b><i>w</i></b>) for all <i>c</i> ∈ 𝕂, <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub> ∈ <i>V</i>, and <i>w</i> ∈ <i>W</i>.</p></li>
+	</ol>
+		<li><p>It is linear in its second argument:</p>
+			<ol type="i">
+				<li><p><i>f</i> (<i><b>v</b>, <b>w</b></i><sub>1</sub> + <b><i>w</i></b><sub>2</sub>) = <i>f</i> (<b><i>v</i></b>, <b><i>w</i></b><sub>1</sub>) + <i>f</i>(<i><b>v</b>, <b>w</b></i><sub>2</sub>) and</p></li>
+				<li><p><i>f</i> (<i><b>v</b>, c<b>w</b></i><sub>1</sub>) = <i>cf</i>(<b>v</b>, <b><i>w</i></b><sub>1</sub>) for all <i>c</i> ∈ 𝕂, <b><i>v</i></b> ∈ <i>V</i>, and <b><i>w</i></b><sub>1</sub>, <b><i>w</i></b><sub>2</sub> ∈ <i>W</i>.&emsp;□</p></li>
+			</ol>
+</ol>
+
+<h2>Definition of cross product in ℝ<sup>3</sup></h2>
+
+<p>In physics you may have encountered laws such as <b><i>F</i></b> = <i>m<b>v</b></i> x <b><i>B</i></b>, that is a bilinear map which assigns to two vectors a third which is orthogonal to either. This map × : ℝ<sup>3</sup> × ℝ<sup>3</sup> → ℝ<sup>3</sup> is called the <b>cross product</b> or <b>vector product</b> and is written as (<i><b>v, w</b></i>) ⟼ <b><i>v</i></b> × <b><i>w</i></b>. Apart from linearity in each of its two arguments we would like the cross product to be anti-symmetric, that is, <b>v</b> × <b>w</b> = −<b>w</b> × <b>v</b>, so that the orthogonal vector points into the opposite direction when the order of the arguments is changed. Finally, given that the standard unit vectors are mutually orthogonal it makes sense to demand that the cross product of two standard unit vectors gives the third. Altogether this motivates the following definition.</p>
+
+<p id="cross"><b>Definition 7.4.2</b> (<i>Cross product</i>) A map × : ℝ<sup>2</sup> × ℝ<sup>3</sup> → ℝ<sup>3</sup> is called a cross product if is satisfied the following conditions for all vectors <i><b>v, w, u</b></i> ∈ ℝ<sup>3</sup> and all scalars <i>α, β</i> ∈ ℝ.</p>
+
+<ol type="i">
+	<li><p><b><i>v</i></b> × <b><i>w</i></b> = −<b><i>w</i></b> × <b><i>v</i></b> &emsp; (anti-symmetry)</p></li>
+	<li><p><b><i>v</i></b> × (<b><i>w</i></b> + <b><i>u</i></b>) = <b><i>v</i></b> × <b><i>w</i></b> + <b><i>v</i></b> × <b><i>u</i></b> &emsp; (linearity in the 2nd argument)</p></li>
+	<li><p><b><i>v</i></b> × (<i>α<b>w</b></i>) = <i>α</i>(<b><i>v</i></b> × <b><i>w</i></b>)</p></li>
+
+	<li><p><b><i>e</i></b><sub>1</sub> × <b><i>e</i></b><sub>2</sub> = <b><i>e</i></b><sub>3</sub>, <b><i>e</i></b><sub>2</sub> × <b><i>e</i></b><sub>3</sub> = <b><i>e</i></b><sub>1</sub>, <b><i>e</i></b><sub>3</sub> × <b><i>e</i></b><sub>1</sub> = <b><i>e</i></b><sub>2</sub> &emsp; (orthogonality)</p></li>
+</ol>
+
+<p>While (ii) demands linearity in the second argument it is clear, by combining (ii) with (i), that the cross product is also linear in the first argument and, hence, that it is bi-linear. This means that ℝ<sup>3</sup> with the cross product forms an <b>algebra</b>, in the sense of Def. 7.4.3. Anti-symmetry implies that <b><i>v</i></b> × <b><i>v</i></b> = −<b><i>v</i></b> × <b><i>v</i></b>, so the cross product of any vector with itself vanishes, that is,</p>
+
+<div class="eq">
+<p><b><i>v</i></b> × <b><i>v</i></b> = <b>0</b> for all <b><i>v</i></b> ∈ ℝ<sup>3</sup>.</p>
+</div>
+
+<p><b>Problem</b> (Cross product) Work out the cross product of the vectors <b><i>v</i></b> = (1, 3, 4) and <b><i>w</i></b> = (2, 7, −5). Solution: The cross product is</p>
+
+<div class="eq">
+<p><b><i>v</i></b> x <b><i>w</i></b> = −43 <b><i>e</i></b><sub>1</sub> + 13 <b><i>e</i></b><sub>2</sub> + <b><i>e</i></b><sub>3</sub>.</p>
+</div>
+
+<p>The cross-product can also be evaluated using the <a href="Levi_Civita.html">Levi-Civita symbol</a>.</p>
+
+<p><b>Definition 7.4.3</b> An algebra (<i>V</i>, 𝔽, +, ·, ∗) is a vector space (<i>V</i>, 𝔽, +, ·) with a multiplication ∗ : <i>V</i> × <i>V</i> → <i>V</i> which satisfies the following properties, for all <b><i>v</i></b><sub>1</sub>, <b><i>v</i></b><sub>2</sub>, <b><i>w</i></b> ∈ <i>V</i> and all <i>α</i><sub>1</sub>, <i>α</i><sub>2</sub> ∈ 𝔽.</p>
+
+<ol type="i">
+	<li><p>(<i>α</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + <i>α</i><sub>2</sub> <b><i>v</i></b><sub>2</sub>) ∗ <b><i>w</i></b> = <i>α</i><sub>1</sub> (<b>v</b><sub>1</sub> ∗ <b><i>w</i></b>) + <i>α</i><sub>2</sub> (<b><i>v</i></b><sub>2</sub> ∗ <b><i>w</i></b>) &emsp; (linear in first argument)</p></li>
+	<li><p><b><i>w</i></b> ∗ (<i>α</i><sub>1</sub> <b><i>v</i></b><sub>1</sub> + <i>α</i><sub>2</sub> <b><i>v</i></b><sub>2</sub>) = <i>α</i><sub>1</sub> (<b><i>w</i></b> ∗ <b><i>v</i></b><sub>1</sub>) + <i>α</i><sub>2</sub> (<b><i>w</i></b> ∗ <b><i>v</i></b><sub>2</sub>) &emsp; (linear in second argument)</p></li>
+</ol>
+
+<p>If there is a <b><i>e</i></b> ∈ <i>V</i> with <b><i>e</i></b> ∗ <b><i>v</i></b> = <b><i>v</i></b> ∗ <b><i>e</i></b> = <b><i>v</i></b> for all <b><i>v</i></b> ∈ <i>V</i> the algebra is called an algebra with unit. If the product ∗ is associative, the algebra is called an associative algebra. In short, an algebra is a vector space with a multiplication which is bi-linear. We will not investigate algebras systematically but, occasionally, it will be useful to point to the above definition when we come across examples of algebras. One simple such example is the vector space ℝ<sup>3</sup> with the cross product as multiplication;</p>
+
+<p><b>Example 7.4.4</b> Matrix multiplication is a bilinear transformation. That is, if we define the function <i>T</i> : <i>M<sub>m,n</sub></i> × <i>M<sub>n,p</sub></i> → <i>M<sub>m,p</sub></i> that multiplies two matrices together via</p>
+
+<div class="eq">
+<p><i>T</i>(<i>A, B</i>) = <i>AB</i> for all <i>A</i> ∈ <i>M<sub>m,n</sub></i>, <i>B</i> ∈ <i>M<sub>n,p</sub></i>,</p>
+</div>
+
+<p>then T<sub>×</sub> is bilinear. To verify this claim, we just have to recall that matrix multiplication is both left- and right-distributive, so for any matrices <i>A, B</i>, and <i>C</i> of appropriate size and any scalar <i>c</i>, we have</p>
+
+<ul>
+	<li><p>T (<i>A</i> + <i>cB,C</i>) = (<i>A</i> + <i>cB</i>)<i>C</i> = <i>AC</i> + <i>cBC</i> = <i>T</i> (<i>A,C</i>) + <i>cT</i> (<i>B,C</i>) &emsp; (linear in 1st argument)</p></li>
+	<li><p><i>T</i>(<i>A, B</i> + <i>cC</i>) = <i>A</i>(<i>B</i> + <i>cC</i>) = <i>AB</i> + <i>cAC</i> = <i>T</i> (<i>A, B</i>) + <i>cT</i> (<i>A,C</i>) &emsp; (linear in 2nd argument)</p></li>
+</ul>
+
+<p>Matrix multiplication also become multilinear transformations if we extend them to three or more inputs in the natural way. For example, the function <i>T</i> defined on triples of matrices via <i>T</i> (<i>A,B,C</i>) = <i>ABC</i> is a multilinear (trilinear) transformation.&emsp;■</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Equazione del piano"/>
+
+    <title>Equazione del piano</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/theme-base.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/theme-medium.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/home.css" media="screen">
+
+</head>
+
+<body class="home ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+
+  <div class="navbar-inner clearfix">
+    
+  <ul class="nav">
+    <li><a href="../../index.php" class="brand">Home</a></li>
+      <li class=""><a href="../../documentation.php">Documentation</a></li>
+      <li class=""><a href="../../annunci/index.php">Questions</a></li>
+    </ul>
+    
+  
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
+    
+     <div style="float:right; margin-right:50px;"> <a href="login/" class="button">Log In</a></div>    
+  </div>
+  
+  
+  <div id="flash-message"></div>
+</nav>
+
+
+<div id="intro" class="clearfix">
+  <div class="container">
+      <div class="row clearfix">
+      
+    <div class="blurb">
+    <br>
+    <br>
+    </div>
+    
+<div class="download">
+      
+    </div>
+  </div>  </div>
+</div>
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+<div class='home-content'>
+
+<article class="newsentry">
+  
+  <div class="newscontent">
+      <div>
+
+  <header class="title">
+    
+    <h2 class="newstitle">Equazione del piano</h2>
+    
+  </header>
+
+ <div class="newscontent">
+      <div>        
+
+<p>Un piano è individuato da:</p>
+
+<ol>
+<li><p>Un punto e un vettore ortogonale al piano</p></li>
+<li><p>Tre punti</p></li>
+<li><p>Due rette incidenti</p></li>
+</ol>
+
+<p>Cominciamo con il caso 1). Un punto P<sub>0</sub> = <i>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>)</i> ed un vettore <b>n</b>= <i>(a, b, c)</i> non nullo. Vogliamo determinare l'equazione del piano passante per P<sub>0</sub> e ortogonale a <b>n</b>.</p>
+
+<img src="img/piano.png" alt="equazione del piano"/>
+
+<p>dalla figura si evince che dato il generico punto P = <i>(x, y, z)</i>, allora il vettore <img src="img/P0P.png" alt="vettore parallelo piano" class="inline"/> è parallelo al piano, quindi perpendicolarea <b>n</b>:</p>
+
+<img src="img/piano1.png" alt="equazione del piano"/>
+
+<p>L'equazione cartesiana del piano si ottiene passando dai vettori alle coordinate:</p>
+
+<img src="img/eqpiano.png" alt="equazione del piano"/>
+
+<p>oppure</p>
+
+<img src="img/eqpiano2.png" alt="equazione del piano"/>
+
+<p>dove </p>
+
+<img src="img/d.png" alt="coefficiente piano"/>
+
+<p>Facciamo alcune osservazioni:</p>
+
+<ul>
+<li><p> Se <i>d=0</i>, il piano passa per l'origine (0, 0, 0).</p></li>
+<li><p>Se uno dei coefficienti a,b, c è nullo il piano è parallelo ad uno deglli assi cartesiani.</p></li>
+</ul>
+
+
+<p>Nel caso 2) si vuole ottenere l'equazione del piano passante per 3 punti:</p>
+
+<img src="img/3punti.png" alt="3 punti"/>
+
+<p>Consideriamo i vettori <img src="img/P0P1.png" alt="vettore piano" class="inline"> e  <img src="img/P0P2.png" alt="vettore piano componenti" class="inline">, paralleli al piano. Volendo trovare un vettore ortogonale al piano basta effettuare il loro prodotto vettoriale:</p>
+
+
+<img src="img/vw.png" alt="prodotto vettoriale"/>
+
+<p>in questo modo ci si può ricondurre al caso 1), scegliendo ad esempio <i>P<sub>0</sub></i>:</p>
+
+
+<img src="img/piano1.png" alt="equazione del piano"/>
+
+
+<p>Nel caso 3) per ottenere l'equazione del piano partendo da due rette incidenti in P<sub>0</sub>, iniziamo con lo scrivere le rette in forma vettoriale: </p>
+
+<img src="img/retteincidenti.png" alt="equazioni rette vettoriali"/>
+
+<p>ripetendo il ragionamento fatto nel caso 2), si ottiene l'equazione:</p>
+
+<img src="img/derivpiano.png" alt="equazione del piano rette incidenti"/>
+
+
+</article>
+
+
+<p class="before"><a href="avogadro.html">Principio di Avogadro</a></p>
+<p class="after"><a href="mole.html">La mole</a></p>
+<p class="index"><a href="index.html">Indice di Algebra Lineare</a></p>
+</div>
+
+</section>
+
+<aside class="tips">
+    <div class="inner">
+
+
+<div class="panel">  
+</div>
+</div>
+</aside>     
+
+</body>
+</html>

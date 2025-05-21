@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exercises on splitting fields">
+	<title>Exercises on splitting fields</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Exercises on splitting fields</h1>
+
+<ol>
+	<li><p>Consider <i>p</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 2 over ℤ<sub>3</sub>. Let <i>b</i> one of its roots. Prove that ℤ<sub>3</sub>(<i>b</i>) is a splitting field for <i>p</i>(<i>x</i>).</p></li>
+
+	<li><p>Find all irreducible polynomials <i>p</i>(<i>x</i>) of second degree in ℤ<sub>2</sub>[<i>x</i>]. For each one of these polynomial compute the field ℤ<sub>2</sub>/(<i>p</i>(<i>x</i>)).</p></li>
+
+	<li><p>Prove that the polynomial <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + 1 is irreducible over ℤ<sub>2</sub>. Let <i>a</i> one of its root (which of course does not belong to ℤ<sub>2</sub>, but to ℤ<sub>2</sub>(<i>a</i>)), prove that ℤ<sub>2</sub>(<i>a</i>) is the splitting field of <i>f</i>(<i>x</i>).</p></li>
+
+	<li><p>Let <i>&alpha;</i> a root of the polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 &in; ℤ<sub>5</sub>[<i>x</i>], irreducible over ℤ<sub>5</sub>. Calculate the extension ℤ<sub>5</sub>(&alpha;).</p></li>
+
+	<li><p>Check whether <i>x</i><sup>2</sup> + 1 is reducible or irreducible over ℤ<sub>3</sub>. List the elements of ℤ<sub>3</sub>(&alpha;), with &alpha; a root of <i>x</i><sup>2</sup> + 1 and write the multiplicative talbe of ℤ<sub>3</sub>(&alpha;).</p></li>
+
+	<li><p>Calculate the inverse of the element 3 + &alpha; in ℤ<sub>5</sub>(&alpha;), with &alpha; is a root of the polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 &in; ℤ<sub>5</sub>[<i>x</i>].</p></li>
+
+	<li><p>Calculate the splitting field over ℚ of the following polynomials in ℚ[<i>x</i>].</p>
+
+	<ol type="a">
+		<li><p><i>x</i><sup>3</sup> + 2x<sup>2</sup> + 5<i>x</i> + 10</p></li>
+
+		<li><p><i>x</i><sup>4</sup> −7<i>x</i><sup>2</sup> + 10</p></li>
+
+		<li><p><i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6 <i>x</i> + 12</p></li>
+
+		<li><p><i>x</i><sup>3</sup> − 1</p></li>
+
+		<li><p><i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> −4<i>x</i><sup>2</sup> − 4</p></li>
+
+		<li><p><i>x</i><sup>4</sup> −4<i>x</i><sup>2</sup> + 2</p></li>
+	</ol>
+</li>
+
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+
+	<li><p>Z<sub>3</sub>[<i>x</i>]/(x<sup>2</sup> + <i>x</i> + 2) ≃ ℤ<sub>3</sub>(<i>b</i>) = {0, 1, 2, b, 2<i>b</i>, <i>b</i> + 1, 2<i>b</i> + 1, <i>b</i> + 2, 2<i>b</i> + 2}. Performing long division x<sup>2</sup> + <i>x</i> + 2 : (<i>x</i> − <i>b</i>)</p>
+
+<img src="img/poly_division_remainder.png" alt="long division polynomial"/>
+
+<p>Note how the remainder of the division  <i>b</i><sup>2</sup> + <i>b</i> + 2 = 0, in ℤ<sub>3</sub>(<i>b</i>). So, <i>x</i><sup>2</sup> + <i>x</i> + 2 = (<i>x</i> − <i>b</i>)(<i>x</i> + <i>b</i> + 1).&emsp;■</p></li>
+
+	<li><p>The only polynomial irreducible of 2nd degree in ℤ<sub>2</sub>[<i>x</i>] is <i>x</i><sup>2</sup> + <i>x</i> + 1. This polynomial has no roots in ℤ<sub>2</sub> so it is irreducible. We have already calculated the field in <a href="splitting_field.html#example">Example 8.2.5.</a>. &emsp;■</p></li>
+
+	<li><p>It is a 3rd degree polynomial without roots in ℤ<sub>2</sub>, thus it is irreducible. We calculate ℤ<sup>2</sup>[<i>x</i>]/(<i>p</i>(<i>x</i>)) as in the previous exercise.</p>
+
+<div class="eq">
+<p>ℤ<sub>2</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) = {0, 1, <i>x</i>, <i>x</i> + 1, <i>x</i><sup>2</sup>, <i>x</i><sup>2</sup> + x, <i>x</i><sup>2</sup> + 1, <i>x</i><sup>2</sup> + <i>x</i> + 1}</p>
+</div>
+
+<p>by theorem <a href="field_extension.html">8.1.16 Theorem (c)</a> we know ℤ<sub>2</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) ≃ ℤ<sub>2</sub>(&alpha;) = {0, 1, &alpha;, 1 + &alpha;, &alpha;<sup>2</sup>, 1 + &alpha;<sup>2</sup>, &alpha; + &alpha;<sup>2</sup>, 1 + &alpha; + &alpha;<sup>2</sup>| &alpha;<sup>3</sup> + &alpha;<sup>2</sup> + 1 = 0}.</p>
+
+<p>We try to check whether the other elements of the field can be roots of <i>p</i>(<i>x</i>). First note that</p>
+
+<div class="eq">
+<p>(α<sup>3</sup> + α<sup>2</sup> + 1)<sup>2</sup> = 0<br>
+[(α<sup>2</sup> + 1) + α<sup>3</sup>]<sup>2</sup> = 0<br>
+α<sup>4</sup> + 1 + α<sup>6</sup> = 0</p>
+</div>
+
+<p>If we replace α<sup>2</sup> in <i>p</i>(<i>x</i>) we get:</p>
+
+<div class="eq">
+<p>(α<sup>2</sup>)<sup>3</sup> + (α<sup>2</sup>)<sup>2</sup> = α<sup>6</sup> + α<sup>4</sup> + 1 = 0 (is = 0 from the relation above).</p>
+</div>
+
+<p>Let's check the remaining elements, say 1 + α + α<sup>2</sup>. We must compute (1 + α + α<sup>2</sup>)<sup>3</sup> + (1 + α + α<sup>2</sup>)<sup>2</sup> + 1:</p>
+
+<div class="eq">
+<p>(1 + α + α<sup>2</sup>)<sup>3</sup> = [(1 + α) + α<sup>2</sup>]<sup>3</sup> = (1 + α)<sup>3</sup> + α<sup>6</sup> + 3(1 + <i>α</i>)<sup>2</sup> α<sup>2</sup> + 3(1 + α)α<sup>4</sup><br>
+= (1 + α)<sup>3</sup> + α<sup>6</sup> + α<sup>2</sup>(1 + α)<sup>2</sup> + (1 + <i>α</i>)<i>α</i><sup>4</sup> = 1 + <i>α</i><sup>3</sup> + 3α<sup>2</sup> + 3α + α<sup>6</sup> + α<sup>2</sup> + α<sup>4</sup> + α<sup>4</sup> + α<sup>5</sup><br>
+= 1 + α<sup>3</sup> + α + α<sup>6</sup> + α<sup>5</sup> = 1 + α + (α<sup>3</sup> + α<sup>5</sup> + α<sup>6</sup>) = 1 + &alpha; + α<sup>3</sup>(1 + α<sup>2</sup> + α<sup>3</sup>) = 1 + α </p>
+</div>
+
+<div class="eq">
+<p>(1 + α + α<sup>2</sup>)<sup>2</sup> = [(1 + <i>α</i>)<sup>2</sup> + <i>α</i><sup>2</sup>]<sup>2</sup> = 1 + <i>α</i><sup>2</sup> + <i>α</i><sup>4</sup></p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p>(1 + α + α<sup>2</sup>)<sup>3</sup> + (1 + α + α<sup>2</sup>)<sup>2</sup> + 1 = 1 + α + α<sup>2</sup> + α<sup>4</sup> + 1 + 1  = 1 + α + α<sup>4</sup> + α<sup>2</sup> = 1 + α + (α<sup>4</sup> + α<sup>2</sup>) = 1 + α + α<sup>2</sup>(α<sup>2</sup> + 1) = 1 + α + α<sup>2</sup>(α + 1)<sup>2</sup><br>
+1 + α + α<sup>2</sup>(α + 1)<sup>2</sup> = (1 + α)[1 + α<sup>2</sup>(1 + α)] = (1 + α)[1 + α<sup>2</sup> + α<sup>3</sup>] = (1 + <i>α</i>) ⋅ 0 = 0</p>
+</div>
+
+</li>
+
+<li><p>The elements of ℤ<sub>5</sub>[<i>x</i>]/((<i>p</i>(<i>x</i>)) ≃ ℤ<sub>5</sub>(<i>&alpha;</i>) = {<i>k</i> + <i>m</i>&alpha;: &alpha;<sup>2</sup> + &alpha; +1 =0, <i>k,m</i> &in; ℤ<sub>5</sub>} are residue classes <i>i.e.</i> polynomials <i>r</i>(<i>x</i>) such that deg(<i>r</i>(<i>x</i>)) &lt; deg(<i>x</i><sup>2</sup> + <i>x</i> + 1), are the following 25 elements</p>
+
+<p>0, <i>x</i>, <i>x</i> + 1, 2<i>x</i> + 1, 3<i>x</i> + 1, 4<i>x</i> +1<br>
+1, 2<i>x</i>, <i>x</i> + 2, 2<i>x</i>+ 2, 3<i>x</i> + 2, 4<i>x</i> + 1<br>
+2, 3<i>x</i>, <i>x</i> + 3, 2<i>x</i> + 3, 3<i>x</i> + 3, 4<i>x</i> + 3<br>
+3, 4<i>x</i>, <i>x</i> + 4, 2<i>x</i> + 4, 3<i>x</i> + 4, 4<i>x</i> + 4<br>
+4</p>
+
+<p>By long division (<i>x</i><sup>2</sup> + <i>x</i> + 1): (<i>x</i> − &alpha;) = [<i>x</i> + (1 + &alpha;)], we find the 2nd root −(1 + &alpha;). Since an element of ℤ<sub>5</sub>(<i>&alpha;</i>) can be represented as <i>k</i> + <i>ma</i>, −(1 + &alpha;) corresponds to, by setting</p>
+
+<div class="eq">
+<p><i>k</i> = −1 mod 5<br>
+<i>m</i> = −1 mod 5</p>
+</div>
+
+<p>to 4<i>a</i> + 4. Which Indeed by replacing <i>p</i>(4&alpha; + 4) = (4&alpha; + 4)<sup>2</sup> + 4&alpha; + 4 +1 = 16&alpha;<sup>2</sup> + 16 + 32&alpha; = 0  since 16&alpha;<sup>2</sup> + 16 + 32&alpha;  = &alpha;<sup>2</sup><i>x</i> + <i>x</i> + 1 mod(5).&emsp;■</p></li>
+
+<li><p>It is irreducible over ℤ<sub>3</sub> because it is a 2nd degree polynomial without roots in ℤ<sub>3</sub>. It results</p>
+
+<div class="eq">
+<p>ℤ<sub>3</sub>(&alpha;) = {0, 1, 2, &alpha;, 2&alpha;, 1 + &alpha;, 1 + 2&alpha;, 2 + &alpha;, 2 + 2&alpha;}</p>
+</div>
+
+<p>To build the multiplicative table we must take into account that <i>&alpha;</i><sup>2</sup> = −1 <i>e.g</i>: (&alpha; + 1)<sup>2</sup> = &alpha;<sup>2</sup> + 2&alpha; + 1 = −1 + 2&alpha; + 1 = 2&alpha;.</p>
+
+<table>
+
+<tr><th>⋅</th> <th>0</th> <th>1</th> <th>2</th> <th>&alpha;</th> <th>2&alpha;</th> <th>1 + &alpha;</th> <th>1 + 2&alpha;</th> <th>2 + &alpha;</th> <th>2 + 2&alpha;</th></tr>
+
+<tr><th>0</th> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td></tr>
+
+<tr><th>1</th> <td>0</td> <td>1</td> <td>2</td> <td>&alpha;</td> <td>2&alpha;</td> <td>1 + &alpha;</td> <td>1 + 2&alpha;</td> <td>2 + &alpha;</td> <td>2 + 2&alpha;</td></tr>
+
+<tr><th>2</th> <td>0</td> <td>2</td> <td>1</td> <td>2&alpha;</td> <td>&alpha;</td> <td>2 + 2&alpha;</td> <td>2 + &alpha;</td> <td>1 + 2&alpha;</td> <td>1 + &alpha;</td></tr>
+
+<tr><th>&alpha;</th> <td>0</td> <td>&alpha;</td> <td>2&alpha;</td> <td>2</td> <td>1</td> <td>&alpha; + 2</td> <td>&alpha; + 1</td> <td>2&alpha; + 2</td> <td>2&alpha; + 1</td></tr>
+
+<tr><th>2&alpha;</th> <td>0</td> <td>2&alpha;</td> <td>&alpha;</td> <td>1</td> <td>2</td> <td>2&alpha; + 1</td> <td>2&alpha; + 2</td> <td>&alpha; + 1</td> <td>&alpha; + 2</td> </tr>
+
+<tr><th>1 + &alpha;</th> <td>0</td> <td>1 + &alpha;</td> <td>2 + 2&alpha;</td> <td>&alpha; + 2</td> <td>2&alpha; + 1</td> <td>2&alpha;</td> <td>2</td> <td>1</td> <td>&alpha;</td></tr>
+
+<tr><th>1 + 2&alpha;</th> <td>0</td> <td>1 + 2&alpha;</td> <td>2 + &alpha;</td> <td>&alpha; + 1</td> <td>2&alpha; + 2</td> <td>2</td> <td>&alpha;</td> <td>2&alpha;</td> <td>1</td></tr>
+
+<tr> <th>2 + &alpha;</td> <td>0</td> <td>2 + &alpha;</td> <td>1 + 2&alpha;</td> <td>2&alpha; + 2</td> <td>&alpha; + 1</td> <td>1</td> <td>2&alpha;</td> <td>&alpha;</td> <td>2</td></tr>
+
+<tr> <th>2 + 2&alpha;</th> <td>0</td> <td>2 + 2&alpha;</td> <td>1 + &alpha;</td> <td>2&alpha; + 1</td> <td>&alpha; + 2</td> <td>&alpha;</td> <td>1</td> <td>2</td> <td>2&alpha;</td></tr>
+
+</table>
+
+</li>
+
+<li><p>We are dealing with the field ℤ<sub>5</sub>(<i>&alpha;</i>) = {<i>k</i> + <i>m</i>&alpha;: &alpha;<sup>2</sup> + &alpha; +1 = 0, <i>k,m</i> &in; ℤ<sub>5</sub>}, so</p>
+
+<div class="eq">
+<p>(3 + &alpha;) (<i>k</i> + <i>m</i>&alpha;) = 1<br>
+3<i>k</i> + 3<i>m</i>&alpha; + &alpha;<i>k</i> + <i>m</i>&alpha;<sup>2</sup> = 1</p>
+</div>
+
+<p>we can substitute the &alpa;<sup>2</sup> term with 4&alpha; + 4 since &alpha;<sup>2</sup> + &alpha; + 1 = 0. Then</p>
+
+<div class="eq">
+<p>2<i>m</i>&alpha; + 3<i>k</i> + &alpha;<i>k</i> + 4<i>m</i> = 1</p>
+</div>
+
+<p>We group the terms in &alpha; and the constants</p>
+
+<div class="eq">
+<p>&alpha;(2<i>m</i> + <i>k</i>) + 3<i>k</i> + 4<i>m</i> = 1</p>
+</div>
+
+<p>Since the right-hand side of the equation does not contain terms in &alpha; we must have &alpha;(2<i>m</i> + <i>k</i>) = 0 ⟼  2<i>m</i> + <i>k</i> = 0.<br> On the other hand the constant terms must be equal to 1 that is 3<i>k</i> + 4<i>m</i> = 1. By replacing <i>k</i> = −2<i>m</i> in this latter we get <i>m</i> = 2 and <i>k</i> = 1 which means the inverse element is 2&alpha; + 1. &emsp;■</p></li>
+
+<li>
+
+<ol type="a">
+	<li><p>For a 3rd degree polynomial to be reducible it must possess at least a root. By the <a href="pol_irr_Q.html#rational_root_theorem">Rational root theorem</a>, a possible root of the polynomial must be in the set {±1,±2,±5,±10}. It's easily verified −2 is a root, so we can divide the original poly by (<i>x</i> − (−2)) and get <i>x</i><sup>2</sup> + 5. So the possible roots are ±sqrt(5)<i>i</i> and the splitting field is ℚ(sqrt(5)<i>i</i>). &emsp;■</p></li>
+
+	<li><p>The polynomial could split in <i>f</i>(<i>x</i>) = <i>g</i>(<i>x</i>) ⋅ <i>h</i>(<i>x</i>) where deg(g(<i>x</i>)) = deg(h(<i>x</i>)) = 2 or could have a linear factor. In the latter case the polynomial must have a root. By the Rational root theorem the possible roots are {±1,±2,±5,±10}. Since none of those is a root we examine the first case. By the replacement <i>x</i><sup>2</sup> = <i>y</i> we have the polynomial</p>
+
+	<div class="eq">
+	<p><i>y</i><sup>2</sup> −7<i>y</i> + 10</p>
+	</div>
+
+	<p>again the possible roots are {±1,±2,±5,±10}, and we notice that both 5 and 2 are roots then <i>y</i><sup>2</sup> −7<i>y</i> + 10 = (<i>y</i> − 5) (<i>y</i> − 2). Replacing back <i>x</i><sup>2</sup> we have <i>x</i><sup>4</sup> −7<i>y</i><sup>2</sup> + 10 = (<i>x</i><sup>2</sup> − 5) (<i>x</i><sup>2</sup> − 2). Thus the polynomial splits into first-degree factors in ℚ(√5,√2). &emsp;■</p></li>
+
+	<li><p>By the Rational root theorem the possible roots are {±1,±2,±3,±4,±6,±12} and −2 is one of them. By peforming (<i>x</i><sup>5</sup> + 2<i>x</i><sup>4</sup> − 5<i>x</i><sup>3</sup> − 10<i>x</i><sup>2</sup> + 6 <i>x</i> + 12):(<i>x</i> +2) we obtain <i>x</i><sup>4</sup>−5<i>x</i><sup>2</sup> + 6. The possible roots of <i>x</i><sup>4</sup>−5<i>x</i><sup>2</sup> + 6 are {±1,±2,±3,±6} and none of them is a root. By replacing <i>x</i><sup>2</sup> = <i>y</i> we obtain the polynomial <i>y</i><sup>2</sup> −5<i>y</i> + 6 having roots 3 and 2, thus <i>y</i><sup>2</sup> −5<i>y</i> + 6 = (<i>y</i> − 2) (<i>y</i> − 3) = (<i>x</i><sup>2</sup> −2) (<i>x</i><sup>2</sup> − 3). Thus the splitting field is ℚ(√3, √2). &emsp;■ </p></li>
+
+	<li><p>The polynomial splits over ℚ as <i>x</i><sup>3</sup> −1 = (<i>x</i> − 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1). The complex roots of <i>x</i><sup>2</sup> + <i>x</i> + 1 are</p>
+
+	<div class="eq">
+	<p><i>x</i> = [−1 &pm; sqrt(1 − 4)]/2 = −1/2 &pm; √3<i>i</i>/2</p>
+	</div>
+
+	<p>So the splitting field could be written as ℚ(1, −1/2 − √3<i>i</i>/2 , −1/2 + √3<i>i</i>/2). Let <i>&omega;</i> = −1/2 + √3<i>i</i>/2, notice that
+
+<div class="eq">
+<p><i>&omega;</i>̅ =<i>&omega;</i><sup>2</sup> = −1/2 − √3<i>i</i>/2</p>
+</div>
+
+<p>so ℚ(1, −1/2 − √3<i>i</i>/2 , −1/2 + √3<i>i</i>/2) = ℚ(1,<i>&omega;</i>, <i>&omega;</i><sup>2</sup>), or more simply ℚ(<i>&omega;</i>). We now describe the splitting field as vector space over ℚ: We employ <a href="simple_extensions.html#minimal">Theorem 8.2.13</a> and use the fact that <i>F</i>(<i>&omega;</i>) ≃ <i>F</i>[<i>x</i>]/⟨<i>p</i>(<i>x</i>)⟩, where <i>p</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>x</i> + 1, which is the irreducible polynomial in ℚ, with root <i>&omega;</i>. Since deg(<i>p</i>(<i>x</i>) = 2, then {1, <i>&omega;</i>} is a basis for ℚ(<i>&omega;</i>) over ℚ, which can be written as</p>
+
+<div class="eq">
+<p>ℚ(<i>&omega;</i>) = {<i>a</i> + <i>b&omega;</i> | <i>a,b</i> &in; ℚ}&emsp;■</p>
+</div>
+
+</li>
+
+	<li><p>By the rational root theorem the possible roots are {±1,±2,±4}. The fact that none of them is a root implies that the polynomial does not split in linear factors over ℚ. By using the substitution <i>y</i> = <i>x</i><sup>2</sup>, we obtain the polynomial <i>y</i><sup>3</sup> + <i>y</i><sup>2</sup> − 4<i>y</i> − 4, whose roots are −1, and ±2</p>
+
+	<div class="eq">
+	<p><i>y</i><sup>3</sup> + <i>y</i><sup>2</sup> − 4<i>y</i> − 4 = (<i>y</i> − 2) (<i>y</i> + 2) (<i>y</i> + 1).</p>
+	</div>
+
+	<p>Replacing back <i>x</i> we have <i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> −4<i>x</i><sup>2</sup> − 4 = (<i>x</i><sup>2</sup> − 2) (<i>x</i><sup>2</sup> + 2) (<i>x</i><sup>2</sup> + 1). So the splitting field is ℚ(√2, <i>i</i>).&emsp;■</p></li>
+
+	<li><p>Make the substitution <i>y</i> = <i>x</i><sup>2</sup> which yields to <i>y</i><sup>2</sup> − 4<i>y</i> + 2, and solve this quadratic to get <i>y</i> = [4 &pm; √8]/2 = 2 &pm;√2. So</p>
+	
+	<div class="eq">
+	<p><i>y</i><sup>2</sup> − 4<i>y</i> + 2 = (<i>y</i> + 2 &pm;√2) (<i>y</i> − 2 &pm;√2)</p>
+	</div>
+
+	<p>Replacing back <i>x</i> we have as roots the square roots of each of the two values found <i>i.e.</i> &pm;√(2 &pm;√2). We can express the splitting field as ℚ(√(2 + √2)) since ℚ(√(2  +√2)) = {<i>q</i><sub>0</sub> + <i>q</i><sub>1</sub>√(2 + √2) + <i>q</i><sub>2</sub> (2 + √2) + <i>q</i><sub>3</sub> (√(2  +√2))<sup>3</sup>}, and we have that 2 + √2 (and thus √2) is in ℚ(√(2 + √2)). But then </p>
+
+	<div class="eq">
+	<p>√2/√(2+√2) = √(2−√2) &in; ℚ(√(2 + √2)).&emsp;■</p>
+	</div>
+	</li>
+
+</li>
+
+</ol>
+
+</ol>
+
+<section aria-label="End">
+<a href="splitting_field.html">&#171;Splitting Field</a>
+<a href="index.html">Index</a>
+<a href="finite_fields.html">Finite Fields&#187;</a>
+</section>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Limits"/>
+	<title>Limits</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Limits</h1>
+
+<p>Anche per le funzioni reali di più variabili si tratta ora di defnire e studiare la nozione di limite, su cui si baseranno tutti i successivi concetti del calcolo infini. Sia dunque <i>f</i>: ℝ<sup><i>n</i></sup> → ℝ definita almeno in un intorno di <b>x</b><sub>0</sub> &in; ℝ<sup><i>n</i></sup>, e sia <i>ℓ</i> &in; ℝ*. <br> Cominciamo col dire cosa significa che una successione {<b>x</b><sub>k</sub>} di punti di ℝ<sup><i>n</i></sup> tende a <b>x</b><sub>0</sub>. Per quanto visto nel cap. 10, questo significa, per definizione, che |<b>x</b><sub>k</sub>} − <b>x</b><sub>0</sub>| ⟶ 0 per <i>k</i> ⟶ &infin;. Diremo allora che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="bold">x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msub>
+        <mi mathvariant="bold">x</mi>
+        <mn mathvariant="bold">0</mn>
+      </msub>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$\lim_{\mathbf{x} \to \mathbf{x_0}} f(\mathbf{x}) = \ell $$ -->
+
+<p>se per ogni successione {<b>x<sub>k</sub></b>} di punti di ℝ<sup><i>n</i></sup> tale che <b>x<sub>k</sub></b> ⟶ <b>x</b><sub>0</sub> per <i>k</i> ⟶ &infin; (con <b>x<sub>k</sub></b> &ne; <b>x</b><sub>0</sub>, &forall;<i>k</i>), si ha che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">x</mi>
+    <mi mathvariant="bold">k</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>Calcolo dei limiti in due variabili: analisi delle forme di indeterminazione
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$\lim_{k \to \infty} f(\mathbf{x_k}) = \ell $$ -->
+
+<p>Geometricamente, la definizione significa che il valore di <i>f</i>(<b>x</b>) si avvicina tanto quanto vogliamo al valore <i>L</i>, purché la distanza del punto <b>x</b> dal punto <b>x</b><sub>0</sub> sia piccola quanto occorre.  <br> Detto in altro modo: &forall;<i>&epsilon;</i> &gt; 0, ∃ <i>&delta;</i> &gt; 0: 0 &lt; |<b>x</b> − <b>x</b><sub>0</sub>| &lt; <i>&delta;</i> ⇒ |<i>f</i>(<i>x</i>) − ℓ| &lt; <i>&epsilon;</i>. <br> Si rifeltta su un'importante differenza che esiste tra funzioni <b>f</b>: ℝ ⟶ ℝ<sup><i>m</i></sup> e funzioni <i>f</i>: ℝ<sup>n</sup> ⟶ ℝ. Abbiamo visto che assegnare una funzione <b>f</b>: ℝ ⟶ ℝ<sup><i>m</i></sup> è equivalente ad assegnare <i>m</i> funzioni <i>f<sub>i</sub></i>: ℝ ⟶ ℝ; questo fatto sta alla base della possibilitò di calcolare i limiti delel funzioni a valori vettoriali "componente per componente". Invece, una generica funzione <i>f</i>: ℝ<sup>n</sup> ⟶ ℝ non è "scomponibile" in alcun modo in <i>n</i> funzioni reali di variabile reale; di conseguenza anche il calcolo dei limiti per funzioni di più variabili non si riduce in modo naturale al calcolo unidimensionale. Nel prossimo paragrafo vedremo più da vicino le diffoltèà e situazioni nuove che si possono creare. <br> Dal punto di vista formale, comunque, la definizione di limite per funzioni di più variabili è simile a quella data per fuzini reali di variabile reale. In particolare, molte definizione e proprietà riguardanti i limiti di funzioni di piùà variabili si possono enunciare e dimostrare in modo perfettamente analogo in caso unidimensionale, ad es.:</p>
+
+<ul>
+	<li><p>il teorema di unicità del limite;</p></li>
+	<li><p>il teorema sul limite della somma, del prodotto per una costante, del prodotto e del quoziente di due fuzioni;</p></li>
+	<li><p>la definizione fi dunzione continua, in un punto o in un insieme è analoga al caso unidimensionale: si dice che <i>f</i>: ℝ<sup><i>n</i></sup> ⟶ ℝ è continua in <b>x</b><sub>0</sub> se lim<sub><b>x</b> ⟶ <b>x</b><sub>0</sub></sub> <i>f</i>(<b>x</b>) = <i>f</i>(<b>x</b><sub>0</sub>).</p></li>
+</ul>
+
+<p>Come conseguenza dei teoremi sui limit, valgono i teoremi sulla <i>continuità della somma, del prodotto e del quoziente di funzioni cotninue</i> (quando hanno senso e il denominatore non si annulla), e della <i>composizione di funzioni continue</i>) (quando ha senso). <br> Se <i>f</i> è una fuznion ereale di variabile reale, continua, risulta continua anche se la consideriamo come fuznione di più variabili. <br> Quest'ultima affermazione significa ad es., che le funzioni "di due variabili"</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x,y</i>) = sin <i>x</i>&emsp; <i>g</i>(<i>x,y</i>) = sin <i>y</i></p>
+</div>
+
+<p>sono continue come funzioni di due variabili, perché <i>t</i> ⟶ sin <i>t</i> è una funzione continua di una variabile. <br> Le proprietà ora enunciate si possono combinare tra loro, permettendo di mostrare la continuità di un gran numero di funzioni, senza dover ricorrere alla definizione di continuità, cioè al calcolo dei limiti.</p>
+
+<p><b>Esempio 2.4.1</b> La funzione</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x,y</i>) = sin <i>y</i>/(1 + <i>x</i><sup>2</sup>)</p>
+</div>
+
+<p>è continua in tutto ℝ<sup>2</sup>. Infatti: numeratore e denominatore sono funzioni continue di una variabile, quindi anche di due; il denominatore non si annulla masi; quindi il quoziente è continuo. &emsp;■</p>
+
+<p>Nel seguito, naturalmente, non espliciteremo ogni volta questi ragionameti. <br> Quando, applicando i teoremi sopra enunciati, possiamo esserre certi che una fuznione è continua, per calcolare lim<sub><b>x</b> ⟶ <b>x</b><sub>0</sub></sub> <i>f</i>(<b>x</b>) = <i>f</i>(<b>x</b><sub>0</sub>) sarà sufficiente valutare <i>f</i>(<b>x</b><sub>0</sub>). COme nel caso unidimensionale, sarà solo nel caso di "forme di indeterminazione", che occorrerà ragionare sul limite in base alla definizione. Per il tipo di applicazioni a cui ques
+
+<section aria-label="End">
+<a href="f.html">&#171;Funzioni reali di più variabili</a>
+<a href="index.html">Index</a>
+<a href="limiti_indeterminazione.html">Calcolo dei limiti in due variabili: analisi delle forme di indeterminazione &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

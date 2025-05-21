@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Divisibility Criteria">
+	<title>Divisibility Criteria</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+        	<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Divisibility Criteria</h1>
+
+<h2>Casting out nines</h2>
+
+<p><p>We study now some useful applications that make use of the congruence. <b>Casting out of nines</b> is a necessary condition to check the exactness of a multiplication. We try first to understand what's behind this method and what the number 9 has to do with it. Let <i>a</i> be an integer, and let <i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, ..., <i>a<sub>n</sub></i> be its decimal digits. In other words,</p>
+
+<div class="eq">
+<p><i>a</i> = <i>a<sub>n</sub></i> 10<sup><i>n</i></sup> + <i>a</i><sub><i>n</i>−1</sub>10<sup><i>n</i>−1</sup> + ... + <i>a</i><sub>1</sub> 10 + <i>a</i><sub>0</sub> &emsp; (<b>4.3</b>)</p>
+</div>
+
+<p>where 0 &le; <i>a<sub>i</sub></i> &le; 9 for <i>i</i> = 0,...,<i>n</i>.</p>
+
+<p>A number as 2134 corresponds to</p>
+
+<div class="eq">
+<p>2⋅10<sup>3</sup> + 1⋅10<sup>2</sup> + 3⋅10<sup>1</sup> + 4⋅10<sup>0</sup></p>
+</div>
+
+<p>Whatever <i>n</i> &gt; 0</p>
+
+<div class="eq">
+<p>10<sup><i>n</i></sup> − 1 = 999...9 = 9 ⋅ 111 ... 1 </br>
+&emsp;&emsp; &emsp;&emsp;&emsp; <i>n</i> times &emsp; &emsp; <i>n</i> times</p>					
+</div>
+
+<div class="eq">
+<p>i.e. 10<sup><i>n</i></sup> ≡ 1 (mod 9)</p>
+</div>
+
+<p>by using the properties of congruences,</p>
+
+<div class="eq">
+<p>2134 = 2⋅10<sup>3</sup> + 1⋅10<sup>2</sup> + 3⋅10<sup>1</sup> + 4⋅10<sup>0</sup> ≡ 2 + 1 + 3 + 4 &emsp; (mod 9)</p>
+</div>
+
+<p>thus any integer number, written in decimal notation is congruent modulo 9 to the sum of its digits.</p>
+ 
+<p>Suppose we want to multiply two integers: 3455 ⋅ 2134, obtaining as result 7282970. We want to check the exactness of the result. We proceed as follows: write the sum of the digits of each number:</p> 
+
+<div class="eq">
+<p>3455 → 3 + 4 + 5 + 5 = 17 → 1 + 7 = 8;</p>
+<p>2134 → 2 + 1 + 3 + 4 = 10 → 1 + 0 = 1;</p>
+<p>7282970 → 7 + 2 + 8 + 2 + 9 + 7 + 0 = 35 → 3 + 5 = 8;</p>
+</div>
+
+<p>and them multiply the sums obtained by each other 8 ⋅ 1: if the result is correct this number is equal to the the sum of the digits in the result 35 = 3 + 5 = 8.</p>
+
+<p>Indeed we know from the discussion above that 3455 ≡<sub>9</sub> 8, 2134 ≡<sub>9</sub> 1 e 7282970 ≡<sub>9</sub> 8. Thus 3455 ⋅ 2134 ≡<sub>9</sub> 8 ⋅ 1 = 8.</p>
+
+<p>If instead of 8 we would have obtained a different number that would have signified with certainty that the result of the multiplation was incorrect. However, having obtained 8, <i>does not</i> guarentee the corecteness of the result.</p>
+
+<h2>Divisibility criteria</h2>
+
+<p>Per studiare la divisibilità di un numero per <i>n</i> sfruttiano le seguenti relazioni.</p>
+
+<p>z = z<sub>1</sub> (mod n) &emsp;⇒&emsp; z− z<sub>1</sub> =  nh &emsp;⇒&emsp; z = z<sub>1</sub> + nh</p>
+
+<p>Dato che la somma di due numeri divisibili per <i>n</i> (cioè z<sub>1</sub> e <i>n</i>) è ancora un numero divisibile per n, allora <i>z</i> sarà divisibile per <i>n</i> se lo è anche <i>z</i><sub>1</sub>.</p>
+
+<p><b>Proposition 4.11</b>. A number is dibisible by 3 (by 9), only if the sum of its digits is divisible by 3 (by 9).</p>
+
+<p><b>Proof.</b> The reason this divisibility test works is easy to detect. If we write an integer <i>z</i> as</p>
+
+<div class="eq">
+<p><i>z</i> = <i>a<sub>n</sub></i> 10<sup><i>n</i></sup> + <i>a</i><sub><i>n</i>−1</sub>10<sup><i>n</i>−1</sup> + ... + <i>a</i><sub>1</sub> 10 + <i>a</i><sub>0</sub></p>
+</div>
+
+<p>in terms of its digits <i>a<sub>n</sub>, a</i><sub><i>n</i>−1</sub>, <i>a</i><sub>1</sub>, <i>a</i><sub>0</sub>, then the sum <i>S</i> of its digits is</p>
+
+<div class="eq">
+<p><i>S</i> = <i>a<sub>n</sub></i> + <i>a</i><sub><i>n</i>−1</sub> + ... + <i>a</i><sub>1</sub> + <i>a</i><sub>0</sub></p>
+</div>
+
+<p>So, the difference between <i>z</i> and the sum <i>S</i> of its digits is</p>
+
+<div class="eq">
+<p><i>z</i> − <i>S</i> = <i>a</i><sub>1</sub> · 9 + <i>a</i><sub>2</sub> · 99 + ··· + <i>a<sub>n</sub></i> · 999...9,</p>
+</div>
+
+<p>which is divisible by 3. Thus,</p>
+
+<div class="eq">
+<p><i>z</i> ≡ <i>S</i> (mod 3).</p>
+</div>
+
+<p>Hence <i>z</i> is divisible by 3 (by 9) if and only if the sum <i>S</i> of its digits is divisible by 3 (by 9).&emsp;□</p>
+
+<p><b>Proposition 4.12</b>. An integer number is divisible by 2 or by 5 if and only if its rightmost digit, is divisible by 2 or by 5;</p>
+
+<p><b>Proof</b>. For each <i>n</i> &gt; 0, 10<sup><i>n</i></sup> ≡ 0 both mod 2 and mod 5. So, <i>z</i> ≡ <i>a</i><sub>0</sub> both mod 2 and mod 5, and this proves the corresponding divisibility tests. □</p>
+
+<p><b>Proposition 4.13</b>. An integer number is divisible by 4 (or by 25, respectively) if and only if the number (<i>a</i><sub>1</sub><i>a</i><sub>0</sub>) formed by its last two digits <i>a</i><sub>1</sub><i>a</i><sub>0</sub> is divisible by 4 (or by 25, respectively);</p>
+
+<p><b>Proof</b>. 100 = 2<sup>2</sup> 5<sup>2</sup> ≡ 0 both modulo 4 and modulo 25, and so every integer is congruent modulo 4 and modulo 25 to the integer formed by its rightmost two digits.□</p>
+
+<p><b>Proposition 4.14</b>. An integer <i>z</i> = (<i>a<sub>n</sub></i> + <i>a</i><sub>n−1</sub> + ... + <i>a</i><sub>1</sub> + <i>a</i><sub>0</sub>)<sub>10</sub> is divisible by 2<sup><i>k</i></sup> if and only if 2<sup><i>k</i></sup> divides the number (<i>a</i><sub><i>k</i>−1</sub> <i>a</i><sub><i>k</i>−2</sub>, ..., <i>a</i><sub>1</sub><i>a</i><sub>0</sub>)<sub>10</sub> formed by the last <i>k</i> digits of <i>z</i>.</p>
+
+<p><b>Proof</b>. 10<sup><i>n</i></sup> = 2<sup><i>n</i></sup> 5<sup>n</sup> ≡ 0 (mod 2<sup><i>k</i></sup>) for all <i>n</i> ≥ <i>k</i>, proving the divisibility test for 2<sup><i>k</i></sup>. In particular, an integer is divisible by 8 if and only if (a<sub>2</sub> a<sub>1</sub> a<sub>0</sub>)<sub>10</sub> is divisible by 8.&emsp;□</p>
+
+<p><b>Divisibility by 6</b>. If the given number is divisible by both 2 and 3. The number 619230 has 0 as last digit, so it is divisible by 2, and the sum of its digits is 21 which is divisible by 3.</p>
+
+<p><b>Proposition 4.15</b> (<i>Divisibility by 7</i>). To determine whether <i>n</i> is divisible by 7, we take the last digit, double it and subtract it from the first part of the number. If you get an answer divisible by 7, then the original number is divisible by 7. You may have to apply the rule repeatedly. The result of the divisibility test for 7 will not only determine divisibility, but also the remainder upon dividing by 7.</p>
+
+<p><b>Example 4.16</b>. Take 8631. Split into 863 and 1. Subtract 1x2 = 2 from 863 to get 861. Now split 861 into 86 and 1. Subtract 2 from 86. Maybe you recognize 84 as a multiple of 7. If not, double 4 and subtract from 8 to get 0, which is divisible by 7.</p>
+
+<p>Take 522. Split into 52 and 2. Subtract 4 from 52 to get 50. Since 50 isn’t divisible by 7, neither is 522.</p>
+
+<p><b>Proof</b>. Let <i>n</i> consist of two parts: <i>A</i>, which contains all digits aside from the units digit, and <i>B</i>, the units digit, so that the numerical value of <i>N</i> is 10<i>A</i> + <i>b</i>. We want to show that, iff <i>A</i> − 2<i>B</i> is a multiple of 7, then so is <i>n</i>. Setting <i>A</i> − 2<i>B</i> = 7<i>k</i> for some positive integer <i>k</i>, we multiply both sides by 10 to obtain <i>10A − 20B = 70k</i>. Adding 21<i>B</i> to both sides yields <i>10A + B = 70k</i> + 21 = 7(10<i>k</i> + 3), as desired.</p>
+
+<p>Next we prove the contrary. If we suppose 10<i>A</i> + <i>B</i> = 7<i>k</i> for some positive integer <i>k</i>, then 10<i>A</i> − 20<i>B</i> = 7<i>k</i> − 21<i>B</i> (after subtraction of 21<i>B</i> from both sides) and 10(<i>A − 2B</i>) = 7(<i>k</i> − 3<i>B</i>). This implies that <i>A</i> − 2<i>B</i>, is a multiple of 7. This completes the proof. &emsp;□</p>
+
+<p><b>Proposition 4.17</b>. An integer is divisible by 11 if and only if the sum of its digits taken with alternating signs</p>
+
+<div class="eq">
+<p>(−1)<sup><i>n</i></sup><i>a<sub>n</sub></i> + ... − <i>a</i><sub>1</sub> + <i>a</i><sub>0</sub></p>
+</div>
+
+<p>is divisible by 11.</p>
+
+<p><b>Proof</b>. Notice that 10 ≡ −1 (mod 11), we can write</p>
+
+<div class="eq">
+<p><i>z</i> = <i>a</i><sub>0</sub> · 1 + <i>a</i><sub>1</sub> · 10 + <i>a</i><sub>2</sub> · 10<sup>2</sup> + ··· + <i>a<sub>n</sub></i> · 10<sup><i>n</i></sup>
+≡ <i>a</i><sub>0</sub> · 1 + <i>a</i><sub>1</sub> · (−1) + a<sub>2</sub> · (−1)<sup>2</sup> + · · · + <i>a<sub>n</sub></i> · (−1)<sup><i>n</i></sup> (mod 11)</p>
+</div>
+
+<p>and <i>z</i> is congruent to the alternating sum of its digits.&emsp;□</p>
+ 
+<section aria-label="End">
+<a href="modulo.html">&#171; Congruenza modulare</a>
+<a href="index.html">Index</a>
+<a href="linear_congruences.html">Linear Congruences &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

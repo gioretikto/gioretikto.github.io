@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Bernoulli trials"/>
+	<title>Bernoulli trials</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Bernoulli trials</h1>
+
+<p>Many statistical tests involve the concept of <b>Bernoulli trials</b>: Repeated random experiments that are independent and have two possible outcomes with constant probabilities 
+such as the tossing of a coin that results in two possible mutually exclusive outcomes.</p>
+
+<p>Suppose now that <i>n</i> independent trials, each of which results in a “success” with probability <i>p</i> and in a “failure” with probability 1 − <i>p</i>, are to be performed (these are known as "Bernoulli trials" (or binomial trials). The probability of any particular sequence of the <i>n</i> outcomes containing <i>k</i> successes and <i>n</i> − i failures is, by the assumed independence of trials, <i>p<sup>k</sup></i> (1 − <i>p</i>)<sup><i>n</i> &minus; <i>k</i></sup>. Repeated independent tosses of the same coin are typical Bernoulli trials. </p>
+
+<p>For example, in calculating the probability of tossing "heads" once followed by three tails (which we will denote HTTT), we obtain P(HTTT), which by the independence of trials, we obtain</p>
+
+<div class="eq">
+<p>P(HTTT) = 1/2 ⋅ 1/2 ⋅ 1/2 ⋅ 1/2 = (1/2)<sup>4</sup> = 1/16.</p>
+</div>
+
+<p>If we are interested in the overall probability of seeing "heads" once if we toss a coin four time (rather than the probability of a specific sequence of tosses like HTTT), we note that there are four ways of this happening, HTTT, THTT, TTHT, and TTTH. Therefore, the overall probability of getting "heads" onece in four coin tosses is 4/16. Similarly, we can calculate the probabilities of getting <i>k</i> "heads" in <i>n</i> coin tosses. <br>The <a href="combinations.html">binomial coefficient</a> provides a general way of calculating the number of ways <i>k</i> objects can be chosen from a set of <i>n</i> objects,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <mo>:=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo>.</mo>
+  <mi>k</mi>
+  <mo>&#x2208;</mo>
+  <mi mathvariant="double-struck">N</mi>
+  <mo>,</mo>
+  <mi>n</mi>
+  <mo>&#x2265;</mo>
+  <mi>k</mi>
+</math>
+
+<!-- $$ \binom{n}{k} := \frac{n!}{k!(n-k)!} \qquad n.k \in \mathbb{N}, n \ge k $$ -->
+
+<p>different combinations of <i>k</i> "heads", and <i>n</i> − <i>k</i> "tails". To obtain the probability of any one particular order of trials with <i>k</i> successes and <i>n</i> − <i>k</i> failures, we multiply the probabilities of the individual trials to obtain <i>p<sup>k</sup></i>(1 − <i>p</i>)<sup><i>n</i> − <i>k</i></sup>. In order to find the total probability of obtaining <i>k</i> successes, we simply multiply the probability of obtaining <i>k</i> success and <i>n</i> − <i>k</i> failures by the number of possible combinations that there can be containg <i>k</i> success and <i>n</i> − <i>k</i> failures given by the binomial coefficient:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo>,</mo>
+  <mi>n</mi>
+  <mo>,</mo>
+  <mi>p</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+  <msup>
+    <mi>p</mi>
+    <mi>k</mi>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mi>p</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+    </mrow>
+  </msup>
+</math>
+
+<!-- $$ P(k,n,p) = \binom{n}{k} p^k (1-p)^{n-k} $$ -->
+
+<p>This is known as the binomial probability mass function, and describes the probability of <i>k</i> times of success out of <i>n</i> trials, given the probability <i>p</i> os success for each trial.</p>
+
+<p><b>Example 2</b>. Consider rolling a die five times, and take success to be the event that you roll a 6. Then <i>p</i>: 1/6 and 1 − <i>p</i>: 5/6. The probability to get a success for the first roll and then four failure is</p>
+
+<div class="eq">
+<p><i>p<sup>k</sup></i>(1 − <i>p</i>)<sup><i>n</i> − <i>k</i></sup> = 1/6 ⋅ 5/6 ⋅ 5/6 ⋅ 5/6 ⋅ 5/6 = (1/6) ⋅ (5/6)<sup>4</sup> = 5<sup>4</sup>/6<sup>5</sup></p>
+</div>
+
+<p>If we do not require that 6 is necessarily rolled the first time, we find five different possibilities each with the same probability of happening, obtained by the number of combinations, calculate from the binomial coefficient, C(5,1) = 5/1, these are</p>
+
+<div class="eq">
+<p>(s, f, f, f, f), (f,s,f,f,f)<br>
+(f,f,s,f,f), (f,f,f,s,f)<br>
+(f,f,f,f,s)</p>
+</div>
+
+<p>We have thus</p>
+
+<div class="eq">
+<p><i>P</i> = C(5,1) ⋅ <i>p<sup>k</sup></i>(1 − <i>p</i>)<sup><i>n</i> − <i>k</i></sup> = 5 ⋅ 5<sup>4</sup>/6<sup>5</sup> = 5<sup>5</sup>/6<sup>5</sup></p>
+</div>
+
+<p>If we are intereseted in the event 6 is rolled two times, the number of distinct possible outcome is C(5,2) = 5⋅4/2 = 10, that is</p>
+
+<div class="eq">
+<p>(s, s, f , f , f) (f , s, s, f , f)<br>
+(s, f , s, f , f) (f , s, f , s, f )<br>
+(s, f , f , s, f) (f , s, f , f , s)<br>
+(s, f , f , f , s) (f , f , s, s, f )<br>
+(f , f , s, f , s)<br>
+(f , f , f , s, s)</p>
+</div>
+
+<p>So the probability of rolling only two six is</p>
+
+<div class="eq">
+<p><i>p</i> = C(5,2) ⋅ <i>p<sup>k</sup></i>(1 − <i>p</i>)<sup><i>n</i> − <i>k</i></sup> = 10 ⋅  1/6 ⋅ 1/6 ⋅ 5/6 ⋅ 5/6 ⋅ 5/6 = 5 ⋅ (1/6) ⋅ (5/6)<sup>4</sup> = 5 ⋅ 5<sup>3</sup>/6<sup>5</sup> &emsp;■</p>
+</div>
+
+<p><b>Example 2</b>. We want to calculate the probability of getting exactly <i>k</i> heads in <i>n</i> tosses of a coin. This probability can be found using the binomial distribution</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>P</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mi>n</mi>
+  </msup>
+</math>
+
+<!-- $$ P_n(k) = \frac{n!}{k! (n-k)!} \left (\frac{1}{2} \right)^n $$ -->
+
+<p>For instance there are exactly six ways of obtaining two heads in four tosses of a coin. The is denoted C(4,2) the binomial coefficient, expressing the number of combinations leading to the desired result. These are</p>
+
+<div class="eq">
+<p>{TTHH}, {THTH}, {HTTH}, {THHT}, {HTHT}, {HHTT}</p>
+</div>
+
+<p>Eeach contains <i>k</i> = 2 heads in <i>n</i> = 4 tosses. It is rather easy to show that the probabilities of each of these sequences are equal and are given by <i>&pi;</i><sup>2</sup> (1 −<i>&pi;</i>)<sup>2</sup>. Take the first sequence as example; the independence of trials allows us to rewrite this as</p>
+
+<div class="eq">
+<p>p(TTHH) = p(T) ⋅ p(T) ⋅ p(H) ⋅ p(H) = (1/2)<sup>4</sup></p>
+</div>
+
+<p>We thus have</p>
+
+<div class="eq">
+<p>P<sub>4</sub>(2) = C(4,2) ⋅ (1/2)<sup>4</sup> = 6/16 = 3/8.&emsp;■</p>
+</div>
+
+<section aria-label="End">
+<a href="independent_events.html">&#171;Independent events</a>
+<a href="index.html">Index</a>
+<a href="consonants.html">The consonants&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

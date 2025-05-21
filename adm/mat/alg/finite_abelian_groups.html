@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Classification of finite abelian groups"/>
+	<title>Classification of finite abelian groups</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Classification of finite abelian groups</h1>
+
+<p>With our present knwoledge we shall introduce briefly the <i>fundamental theorem of finite abelian groups</i>, which allows us to determine for each positive integer <i>n</i>, the number of abelian groups and whether two abelian groups with same order are isomorphic or not.</p>
+
+<p>This powerful theorem provides an easy-to-understand recipe by which all such groups can be constructed, using the two familiar notions of <i>cyclic group</i> and <i>direct product</i>. The theorem is relatively difficult to prove, and so we will not prove it here.</p>
+
+<p>We recall that a <i>p</i>-group is a group with cardinality a power of <i>p</i>, and each of its elements has order <i>p</i> (this latter statement can be take as definition of <i>p</i>-group). For example every cyclic group with order of prime order <i>p</i> is a <i>p</i>-group.</p>
+
+<p><b>5.20.1 Theorem</b>. Let <i>G</i> an abelian finite group. For every prime <i>p</i> such that <i>p</i> | |<i>G</i>| let</p>
+
+<div class="eq">
+<p><i>&Sigma;<sub>p</sub></i> := {<i>x</i> &in; <i>G</i> | <i>x<sup>p<sup>s</sup></sup></i> = <i>e</i> for some <i>s</i>}</p>
+</div>
+
+<p>Then</p>
+
+<ol type="a">
+	<li><p>every <i>&Sigma;<sub>p</sub></i> is a subgroup of <i>G</i> (which is a <i>p</i>-subgroup of <i>G</i>);</p></li>
+	<li><p><i>G</i> is a direct product of all <i>&Sigma;<sub>p</sub></i>, with varying <i>p</i> among all prime divisors of <i>p</i>.</p></li>
+</ol>
+
+<p><b>Proof</b>. It results</p>
+
+<div class="eq">
+<p><i>&Sigma;<sub>p</sub></i> := {<i>x</i> &in; <i>G</i> | <i>x<sup>p<sup>s</sup></sup></i> = <i>e</i> for some <i>s</i>}</p>
+</div>
+
+<p>a) Since the group is abelian, by multiplying the element <i>x<sup>p</sup>, s</i> times we get <i>x<sup>p</sup><sup>s</sup></i>.</p>
+
+<p>b) Let <i>x</i> an arbitrary element of <i>G</i>. Then <i>x</i> has a certain order <i>n</i>, with <i>n</i> | <i>G</i>. Let <i>n</i> = <i>p</i><sub>1</sub><sup>&alpha;<sub>1</sub></sup> <i>p</i><sub>2</sub><sup>&alpha;<sub>2</sub></sup> ⋅⋅⋅ <i>p</i><sub><i>r</i></sub><sup>&alpha;<sub><i>r</i></sub></sup>, <i>p<sub>i</sub></i> distinct primes and <i>&alpha;<sub>i</sub></i> &ge; 1, for every <i>i</i> = 1, ..., <i>r</i>. By letting <i>q<sub>i</sub></i> = <i>n</i>/(<i>p</i><sub>1</sub><sup>&alpha;<sub><i>i</i></sub></sup>), it results (<i>q</i><sub>1</sub>, q<sub>2</sub>, ..., <i>q<sub>r</sub></i>) = 1; there exists thus the integers <i>k<sub>i</sub></i> such that </p>
+
+<div class="eq">
+<p>1 = <i>k</i><sub>1</sub>q<sub>1</sub> + <i>k</i><sub>2</sub> + ⋅⋅⋅ + <i>k<sub>r</sub>q<sub>r</sub></i></p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p><i>x</i> = <i>x</i><sup>1</sup> = <i>x</i><sup><i>k</i><sub>1</sub><i>q</i><sub>1</sub> + <i>k</i><sub>2</sub><i>q</i><sub>2</sub> + ... + <i>k<sub>r</sub>q<sub>r</sub></i></sup> = <i>x</i><sup><i>k</i><sub>1</sub><i>q</i><sub>1</sub></sup> <i>x</i><sup><i>k</i><sub>2</sub><i>q</i><sub>2</sub></sup> ⋅⋅⋅ <i>x<sup>k<sub>r</sub>q<sub>r</sub></i></sup></p>
+</div>
+
+<p>Now</p>
+
+<div class="eq">
+<p>(<i>x<sup>q<sub>i</sub></sup></i>)<sup>p<sub>i</sub><sup>&alpha;<sub>i</sub></sup></sup></sup> = <i>x<sup>n</sup></i> = 1 &emsp; &forall;<i>i</i> = 1, ..., <i>r</i></p>
+</div>
+
+<p>Thus <i>x<sup>q<sub>i</sub></i></sup> &in; &Sigma;<sub>p<sub>i</sub></sub>. But then also <i>x<sup>k<sub>i</sub>q<sub>i</sub></sup> &in; &Sigma;<sub><i>p</i><sub><i>i</i></sub></sub>. We thus proved that every <i>x</i> in <i>G</i> can be written as product of elements of &Sigma;<sub><i>p</i><sub><i>i</i></sub></sub>, that is</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub><i>p</i><sub>1</sub></sub> &Sigma;<sub><i>p</i><sub>2</sub></sub> ⋅⋅⋅ &Sigma;<sub><i>p</i><sub><i>k</i></sub></p>
+</div>
+
+<p>To prove that <i>G</i> = &Sigma;<sub><i>p</i><sub>1</sub></sub> x &Sigma;<sub><i>p</i><sub>2</sub></sub> x ⋅⋅⋅ x &Sigma;<sub><i>p</i><sub><i>k</i></sub></sub>, it sufficies to prove (see <a href="direct_products.html">Theorem 7.17.16</a>) that</p> 
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="normal">&#x3A3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>p</mi>
+        <mi>i</mi>
+      </msub>
+    </mrow>
+  </msub>
+  <mo>&#x2229;</mo>
+  <msub>
+    <mi mathvariant="normal">&#x3A3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>p</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+  </msub>
+  <msub>
+    <mi mathvariant="normal">&#x3A3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>p</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </msub>
+  <mo>&#x22EF;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <msub>
+        <mi mathvariant="normal">&#x3A3;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>p</mi>
+            <mi>i</mi>
+          </msub>
+        </mrow>
+      </msub>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+  <mo>&#x22EF;</mo>
+  <msub>
+    <mi mathvariant="normal">&#x3A3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>p</mi>
+        <mi>k</mi>
+      </msub>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mo fence="false" stretchy="false">{</mo>
+  <mi>e</mi>
+  <mo fence="false" stretchy="false">}</mo>
+</math>
+
+<p>which is obvious because there cannot be an element both in <i>&Sigma;<sub><i>p</i><sub><i>i</i></sub></sub></i> and in <i>&Sigma;</i><sub><i>p</i><sub>1</sub></sub> <i>&Sigma;</i><sub><i>p</i><sub>2</sub></sub> ⋅⋅⋅ <i>̂̂&#x3A3;</i><sub><i>p</i><sub><i>i</i></sub></sub> ⋅⋅⋅ <i>&Sigma;<sub>p<sub>k</sub></sub></i>, 
+having a period both a power of <i>p<sub>i</sub></i> and a number cooprime with <i>p<sub>i</sub></i>. &emsp;□</p>
+
+<p>We thus proved that every finite abelian group <i>G</i> is isomorphic to <i>&Sigma;</i><sub>p<sub>1</sub></sub> x &Sigma;<sub>p<sub>2</sub></sub> x ... x &Sigma;<sub><i>p</i><sub><i>k</i></sub></sub>, where</p>
+
+<div class="eq">
+<p><i>&Sigma;<sub>p<sub>i</sub></sub></i> := {<i>x</i> &in; <i>G</i> | <i>x<sup>p<sub>i</sub><sup><sup>s<sub>i</sub></sup></sup></sup></i> = <i>e</i> for some <i>s<sub>i</sub></i>}</p>
+</div>
+
+<p><b>5.20.2 Theorem</b>. Let <i>&Sigma;<sub>p</sub></i> a finite and abelian <i>p</i>-group. Then <i>&Sigma;<sub>p</sub></i> is a direct product of cyclic groups (with order a power of <i>p</i>).</p>
+
+<p><b>Proof</b>. Let <i>s</i> an element of <i>&Sigma;<sub>p</sub></i> of maximum order <i>p<sup>&alpha;</sup></i>, an let <i>T</i> a maximal subgroup with respect to the condition of having trivial intersection with the subgroup ⟨<i>s</i>⟩ generated by <i>s</i>, <i>i.e.</i></p>
+
+<div class="eq">
+<p>⟨<i>s</i>⟩ &cap; <i>T</i> = {<i>e</i>}
+</div>
+
+<p>It can be proved (we omit the proof) that</p>
+
+<div class="eq">
+<p>⟨<i>s</i>⟩<i>T</i> = <i>&Sigma;<sub>p</sub></i></p>
+</div>
+
+<p>This assures us that</p>
+
+<div class="eq">
+<p><i>&Sigma;<sub>p</sub></i> = ⟨<i>s</i>⟩ x <i>T</i></p>
+</div>
+
+<p>The proof of the theorem continues now by induction. We chose an element <i>s</i>' in <i>T</i> with maximum order. Let <i>T</i>' a subgroup of <i>T</i> maximial with respect to the condition</p>
+
+<div class="eq">
+<p><i>T</i> ' &cap; ⟨<i>s</i>'⟩ = {<i>e</i>}
+</div>
+
+<p>by repeating this reasoning we arrive to the conclusion that</p>
+
+<div class="eq">
+<p><i>&Sigma;<sub>p</sub></i> ≃ ⟨<i>s</i><sub>1</sub>⟩ x ⟨<i>s</i><sub>2</sub>⟩ x ... x ⟨<i>s</i><sub><i>l</i></sub>⟩</p>
+</div>
+
+<p>thus <i>&Sigma;<sub>p</sub></i> is the direct product of cyclic groups.&emsp;□</p>
+
+<p>We just proved the following theorem.</p>
+
+<p><b>5.20.3 Theorem</b>. Every finite abelian group <i>G</i> is the direct product of cyclic groups whose orders are powers involved in the factorization of <ii>n</i> = |<i>G</i>|. If <i>n</i> = <i>p</i><sub>1</sub><sup>&alpha;<sub>1</sub></sup> <i>p</i><sub>2</sub><sup>&alpha;<sub>2</sub></sup> ⋅⋅⋅ <i>p</i><sub><i>k</i></sub><sup>&alpha;<sub><i>k</i></sub></sup>, then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>G</mi>
+  <mo>=</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <msub>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msup>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                  </msub>
+                </mrow>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>a</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                      <mo>,</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </msup>
+            </mrow>
+          </msub>
+          <mo>&#xD7;</mo>
+          <msub>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msup>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>p</mi>
+                    <mn>2</mn>
+                  </msub>
+                </mrow>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>a</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                      <mo>,</mo>
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </msup>
+            </mrow>
+          </msub>
+          <mo>&#xD7;</mo>
+          <mo>&#x2026;</mo>
+          <msub>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msup>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>p</mi>
+                    <mn>2</mn>
+                  </msub>
+                </mrow>
+                <mrow data-mjx-texclass="ORD">
+                  <msub>
+                    <mi>a</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                      <mo>,</mo>
+                      <mi>s</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </msup>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi mathvariant="normal">&#x3A3;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>p</mi>
+            <mn>1</mn>
+          </msub>
+        </mrow>
+      </msub>
+    </mrow>
+  </munder>
+  <mo>&#xD7;</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <msubsup>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>a</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msub>
+            </mrow>
+          </msubsup>
+          <mo>&#xD7;</mo>
+          <msubsup>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>a</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mn>2</mn>
+                </mrow>
+              </msub>
+            </mrow>
+          </msubsup>
+          <mo>&#xD7;</mo>
+          <mo>&#x2026;</mo>
+          <msubsup>
+            <mi mathvariant="double-struck">Z</mi>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <msub>
+                <mi>a</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                </mrow>
+              </msub>
+            </mrow>
+          </msubsup>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi mathvariant="normal">&#x3A3;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>p</mi>
+            <mn>2</mn>
+          </msub>
+        </mrow>
+      </msub>
+    </mrow>
+  </munder>
+  <mo>&#xD7;</mo>
+  <mo>&#x2026;</mo>
+  <mo>&#xD7;</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mo>&#x2026;</mo>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi mathvariant="normal">&#x3A3;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <msub>
+            <mi>p</mi>
+            <mi>k</mi>
+          </msub>
+        </mrow>
+      </msub>
+    </mrow>
+  </munder>
+</math>
+
+<p>where for every <i>i</i> = 1, ..., <i>k</i> the integers <i>b<sub>i,j</sub></i> are such that &Sigma;<sub>j</sub> <i>b<sub>i,j</sub></i> = <i>&alpha;<sub>i</sub></i>, and are ordered in such a way that <i>b<sub>i,j(i)</sub></i> &ge; ... &ge; <i>b<sub>i,2</sub></i> &ge; <i>b<sub>i,1</sub></i> &lt; 0.</p>
+
+<p>We proved an existence theorem for such a composition.</p>
+
+<p><b>5.20.4 Definition</b>. The integers <i>p<sub>i</sub><sup>b<sub>i,h</sub></sup></i> in the decomposition are called <i>elementary divisors</i> of <i>G</i>. For every fixed primary component &Sigma;<sub>p</sub>, <i>i</i> = 1, ..., <i>k</i>, the exponents <i>b<sub>i,j(i)</sub></i> are known as the <i>invariants</i> of &Sigma;<sub>p</sub>.</p>
+
+<p>Such integers are determined uniquely by the group <i>G</i> and characterize it uniquely, in the sense that abelian groups having the same order are isomorphic if and only if have the same elementary divisors and the same invariants.</p>
+
+<p><b>5.20.5 Theorem</b>. (<i>Fundamental Theorem of Finite Abelian Groups</i>) Let <i>G</i> a finite abelian group of order  <i>n</i> = <i>p</i><sub>1</sub><sup>&alpha;<sub>1</sub></sup> <i>p</i><sub>2</sub><sup>&alpha;<sub>2</sub></sup> ⋅⋅⋅ <i>p</i><sub><i>r</i></sub><sup>&alpha;<sub><i>k</i></sub></sup>. Then</p>
+
+<ol type="a">
+	<li><p><i>G</i> is isomorphic to a direct product of cyclic groups with order power of primes which appear in the factorization of <i>G</i>:</p>
+
+	<p>where for every <i>i</i> = 1, ..., <i>k</i> the integers <i>b<sub>i,j</sub></i> are such that &Sigma;<sub>j</sub> <i>b<sub>i,j</sub></i> = <i>&alpha;<sub>i</sub></i> and are ordered as <i>b<sub>i,j(i)</sub></i> &ge; ... &ge; <i>b<sub>i,2</sub></i> &ge; <i>b<sub>i,1</sub></i> &lt; 0.</p>
+
+	</li>
+
+	<li><p>Such a factorization in unique, so that if two finite abelian groups are isomorphic then they have the same <i>p<sub>i</sub><sup>b<sub>i,j</sub></sup></i> factors (elementary divisors of <i>G</i>).</p></li> 
+
+</ol>
+
+<p>With the previous theorem we can know the structure of every finite abelian group. As a consequence of the Fundamental Theorem of Finite Abelian Groups, we have the following corollary, which shows that the converse of <a href="lagrange.html">Lagrange’s Theorem</a> is true for finite Abelian groups.</p>
+
+<p><b>5.20.6 Corollary</b>. If <i>m</i> divides the order of a finite Abelian group <i>G</i>, then <i>G</i> has a subgroup of order <i>m</i>.</p>
+
+<p>Given an integer <i>N</i> to count the number of finite abelian groups with <i>N</i> has order, we must analyze in how many ways every &Sigma;<sub>p</sub> can be factorized as product of cyclic groups (with orders powers of <i>p</i>). That is one's has to count the different number of ways the following relation can be written</p>
+
+<div class="eq">
+<p>&Sigma;<sub><i>p</i></sub> = ℤ<sub><i>p</i><sup><i>n</i><sub>1</sub></sup></sub> x ℤ<sub><i>p</i><sup><i>n</i><sub>2</sub></sup></sub> x ... x ℤ<sub><i>p</i><sup><i>n</i><sub><i>s</i></sub></sup></sub></p>
+</div>
+
+<p>It must hold that</p>
+
+<div class="eq">
+<p>|&Sigma;<sub><i>p</i></sub>| = <i>p<sup>n</sup></i> = <i>p</i><sup><i>n</i><sub>1</sub></sup> <i>p</i><sup><i>n</i><sub>2</sub></sup> <i>p<sup>n<sub>s</sub></sup></i> = <i>p</i><sup><i>n</i><sub>1</sub> + <i>n</i><sub>2</sub> + ... + <i>n<sub>s</sub></sup></i></p>
+</div>
+
+<p>We must count in how many different ways <i>n</i> can be writte as sum of <i>n</i><sub>1</sub> + <i>n</i><sub>2</sub> + ... + <i>n<sub>s</sub></i> with <i>n</i><sub>1</sub> &ge; <i>n</i><sub>2</sub> &ge; ... &ge; <i>n<sub>s</sub></i>. This number is exaclty the number of partitions <i>p</i>(<i>n</i>) of <i>n</i>. Thus every &Sigma;<sub>p</sub> with |&Sigma;<sub><i>p</i></sub>| = <i>p<sup>n</sup></i> can be written in <i>p</i>(<i>n</i>) ways as product of cyclic groups of order the different powers of <i>p</i>. Thus is order to determine the number of groups not isomorphic having the same order <i>N</i> we hat to:</p>
+
+<ol>
+	<li><p>Factorize <i>N</i> as product of powers of distinct primes.</p></li>
+
+	<div class="eq">
+	<p><i>N</i> = <i>p</i><sub>1</sub><sup>&alpha;<sub>1</sub></sup> <i>p</i><sub>2</sub><sup>&alpha;<sub>2</sub></sup> ⋅⋅⋅ <i>p<sub>k</sub><sup>&alpha;<sub>k</sub></i></sup>
+	</div>
+
+	</li>
+
+	<li><p>It results:</p>
+
+	<div class="eq">
+	<p><i>p</i><sub>1</sub><sup>&alpha;<sub>1</sub></sup> = |&Sigma;<sub><i>p</i><sub>1</sub></sub>|, &emsp;  <i>p</i><sub>2</sub><sup>&alpha;<sub>2</sub></sup> = |&Sigma;<sub><i>p</i><sub>2</sub></sub>|, &emsp; <i>p<sub>k</sub><sup>&alpha;<sub>k</sub></i></sup> = |&Sigma;<sub><i>p</i><sub><i>k</i></sub></sub>|</p>
+	</div>
+
+	</li>
+
+	<li><p>Count the different invariants for every &Sigma;<sub>p<sub><i>i</i></sub></sub>, which is equivalent to count the number of partitions of <i>p</i>(&alpha;<sub>i</sub>) for every <i>&alpha;<sub>i</sub></i>.</p></li>
+
+	<li><p>The total number of non isomorphic groups with order <i>N</i> = <i>p</i><sub>1</sub><sup>&alpha;<sub>1</sub></sup> <i>p</i><sub>2</sub><sup>&alpha;<sub>2</sub></sup> ⋅⋅⋅ <i>p<sub>k</sub><sup>&alpha;<sub>k</sub></i> is given by</p>
+
+	<div class="eq">
+	<p><i>p</i><sub>1</sub><sup>&alpha;<sub>1</sub></sup> <i>p</i><sub>2</sub><sup>&alpha;<sub>2</sub></sup> ⋅⋅⋅ <i>p</i><sub>1</sub><sup>&alpha;<sub><i>k</i></sub></sup></p>
+	</div>	
+</ol>
+
+<p><b>5.20.6 Example</b>. How many Ablian groups are there of order 144? We have <i>N</i> = 144 = 2<sup>4</sup> ⋅ 3<sup>2</sup> and there are five ways of partitioning 4 (namely 4, 3 + 1, 2 + 2, 2 + 1 + 1, 1 + 1 + 1 + 1) and two ways of partitioning 2 (namely, 2 and 1 + 1),</p>
+
+<p>Every <i>G</i> with 144 elements is decomposed in the direct product</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub>2</sub> x &Sigma;<sub>3</sub></p>
+</div>
+
+<p>where</p>
+
+<div class="eq">
+<p>|&Sigma;<sub>2</sub>| = 2<sup>4</sup> &emsp; |&Sigma;<sub>3</sub>| = 3<sup>2</sup></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>p</i>(</i>&alpha;<sub>1</sub>) = <i>p</i>(4) = 5, &emsp; <i>p</i>(&alpha;<sub>2</sub>) = <i>p</i>(2) = 2</p>
+</div>
+
+<p>Thus the total number of abelian groups with order <i>N</i> = 144 is given by <i>p</i>(4)<i>p</i>(2) = 10.</p>
+
+<p>The different partitions of |&Sigma;<sub>2</sub>| are</p>
+
+<div class="eq">
+<p>ℤ<sub>2<sup>4</sup></sub> &emsp; ℤ<sub>2<sup>3</sup></sub> x ℤ<sub>2</sub> &emsp; ℤ<sub>2</sub> x ℤ<sub>2</sub> &emsp; ℤ<sub>2<sup>2</sup></sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> &emsp; ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></p>
+</div>
+
+<p>Those of &Sigma;<sub>3</sub> are</p>
+
+<div class="eq">
+<p>ℤ<sub>3<sup>2</sup></sub> &emsp; ℤ<sub>3</sub> x ℤ<sub>3</sub></p>
+</div>
+
+<p>Every abelian group with order 144 must be thus isomorphic to one of the following</p>
+
+<table>
+<thead>
+<tr><th>&Sigma;<sub>2</sub></th> <th>x</th> <th>&Sigma;<sub>3</sub></th></tr>
+</thead>
+
+<tbody>
+
+<tr><td>ℤ<sub>2<sup>4</sup></sub></td> <td>x</td> <td>ℤ<sub>3<sup>2</sup></sub></td></tr>
+
+<tr><td>ℤ<sub>2<sup>4</sup></sub></td> <td>x</td> <td>ℤ<sub>3</sub> x ℤ<sub>3</sub></td></tr>
+
+<tr><td>ℤ<sub>2<sup>3</sup></sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3<sup>2</sup></sub></td></tr>
+
+<tr><td>ℤ<sub>2<sup>3</sup></sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3</sub> x ℤ<sub>3</sub></td></tr>
+
+<tr><td>ℤ<sub>2</sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3<sup>2</sup></sub></td></tr>
+
+<tr><td>ℤ<sub>2</sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3</sub> x ℤ<sub>3</sub></td></tr>
+
+<tr><td>ℤ<sub>2<sup>2</sup></sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3<sup>2</sup></sub></td></tr>
+
+<tr><td>ℤ<sub>2<sup>2</sup></sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3</sub> x ℤ<sub>3</sub></td></tr>
+
+<tr><td>ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3<sup>2</sup></sub></td></tr>
+
+<tr><td>ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub></td> <td>x</td> <td>ℤ<sub>3</sub> x ℤ<sub>3</sub></td></tr>
+
+</tobdy>
+</table>
+
+<p><b>5.20.7 Example</b>. Classify all abelian groups with order <i>N</i> = 105.</p>
+
+<p>It results 105 = 3 ⋅ 5 ⋅ 7. <i>G</i> can be thus factorized in terms of primary components</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub>3</sub> x &Sigma;<sub>5</sub> x &Sigma;<sub>7</sub></p>
+</div>
+
+<p>with</p>
+
+<div class="eq">
+<p>|&Sigma;<sub>3</sub>| = 3, &emsp; |&Sigma;<sub>5</sub>| = 5, &emsp; |&Sigma;<sub>7</sub>| = 7</p>
+</div>
+
+<p><i>G</i> can only be the following group</p>
+
+<div class="eq">
+<p><i>G</i> = ℤ<sub>3</sub> x ℤ<sub>5</sub> x ℤ<sub>7</sub></p>
+</div>
+
+<p><i>G</i> is thus the cyclic group of order 105. &emsp;■</p>
+
+<p>The result obtained in the last example is a general one; for <i>N</i> = <i>p</i><sub>1</sub><i>p</i><sub>2</sub> ⋅⋅⋅ <i>p<sub>k</sub></i> with <i>p<sub>i</sub></i> distinct primes, there exists only one group of order <i>N</i> which is a cylic one.</p>
+
+<p><b>5.20.7 Remark</b>. For what we have seen the <i>number</i> of mutually non isomorphic abelian <i>p</i>-groups of order p<sup>m</sup> equals the number <i>p</i>(<i>m</i>) of partitions of <i>m</i>. In particular, this number does not depend on the prime <i>p</i>, but only on the exponent <i>m</i>. Thus, for example, there are five non isomorphic abelian groups of order 16 = 2<sup>4</sup> because there are five partitions of the number 4: to the partition 4 = 4 there corresponds the cyclic group ℤ<sub>16</sub>, to the 4 = 1 + 1 + 2 the group ℤ<sub>2</sub> × ℤ<sub>2</sub> × ℤ<sub>4</sub>, etc. For the same reason, there are five abelian groups of order 3<sup>4</sup>, 5<sup>4</sup>, 19<sup>4</sup>, etc.</p>
+
+<p>However even if the number is the same the nature is clearly different depending on the prime <i>p</i>, <i>e.g</i> take 3<sup>4</sup> and 7<sup>4</sup>.</p>
+
+<p>In the first case the groups are</p>
+
+<div class="eq">
+<p>ℤ<sub>3<sup>4</sup></sub>, &emsp; ℤ<sub>3<sup>3</sup></sub> x ℤ<sub>3</sub>, ...</p>
+</div>
+
+<p>In the second case</p>
+
+<div class="eq">
+<p>ℤ<sub>7<sup>4</sup></sub>, &emsp; ℤ<sub>7<sup>3</sup></sub> x ℤ<sub>7</sub>, ...&emsp;■</p>
+</div>
+
+<h2>Exercises</h2>
+
+<ol>
+	<li><p>Find all abelian groups with the following orders</p>
+
+	<div class="eq">
+	<p>56, &emsp; 2100 &emsp; 800, &emsp; 45, &emsp; 27</p>
+	</div>
+
+	<p>and for each group calculate the maximum order associated to their elements.</p>
+</li>
+
+	<li><p>Let <i>U</i>(ℤ<sub>30</sub>) the group of the invertible elements of ℤ<sub>30</sub>. Calculate the decomposition of <i>U</i>(ℤ<sub>30</sub>) in terms of cyclic groups, and check wheter it is a cyclic group.</p></li>
+
+	<li><p>Given an abelian group <i>G</i> with order 72, which has an element of order 36 and no subgroups isomorphic to ℤ<sub>8</sub>, is it possible to find the group isomorphic to <i>G</i>?</p></li>
+
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+
+<li>
+<ul>
+	<li><p>56 = 2<sup>3</sup> ⋅ 7, <i>G</i> can be thus factorized in terms of primary components</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub>2</sub> x &Sigma;<sub>7</sub></p>
+</div>
+
+<p>with</p>
+
+<div class="eq">
+<p>|&Sigma;<sub>2</sub>| = 3, &emsp; |&Sigma;<sub>7</sub>| = 7</p>
+</div>
+
+<div class="eq">
+<p><i>p</i>(&alpha;<sub>1</sub>) = <i>p</i>(3) = 3. &emsp; 3, 1+1+1, 2+1, </p>
+</div>
+
+<p>Thus the total number of abelian groups with order 56 is 3. These groups are</p>
+
+<div class="eq">
+<p>ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub>x ℤ<sub>7</sub> (cyclic see <a href="direct_products.html">Corollary 7.17.15</a>)<br>
+ℤ<sub>8</sub> x ℤ<sub>7</sub><br>
+ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>7</sub><br>
+ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>7</sub></p>
+</div>
+
+<p>The maximum order of an element of ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>7</sub> is lcm(2,2,2,7) = |2*2*2*7|/gcd(2,2,2,7) = 56, and similarly for the other groups.</p>
+</li>
+
+<li><p>2100 = 2<sup>2</sup> ⋅ 3 ⋅ 5<sup>2</sup> ⋅ 7, <i>G</i> can be thus factorized in terms of primary components</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub>2</sub> x &Sigma;<sub>3</sub> x &Sigma;<sub>5</sub> x &Sigma;<sub>7</sub></p>
+</div>
+
+<div class="eq">
+<p><i>p</i>(&alpha;<sub>1</sub>) = <i>p</i>(&alpha;<sub>3</sub>) = <i>p</i>(2) = 2. &emsp; 2, 1+1, <br>
+</div>
+
+<p>Thus the total number of abelian groups with order 2100 is <i>p</i>(&alpha;<sub>1</sub>) ⋅ <i>p</i>(&alpha;<sub>3</sub>) = 4. These groups are</p>
+
+<div class="eq">
+<p>ℤ<sub>4</sub> x ℤ<sub>3</sub> x ℤ<sub>25</sub> x ℤ<sub>7</sub><br>
+ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>3</sub> x ℤ<sub>25</sub> x ℤ<sub>7</sub><br>
+ℤ<sub>4</sub> x ℤ<sub>3</sub> x ℤ<sub>5</sub> x ℤ<sub>5</sub> x ℤ<sub>7</sub><br>
+ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>3</sub> x ℤ<sub>5</sub> x ℤ<sub>5</sub> x ℤ<sub>7</sub></p>
+</div>
+
+<p>The maximum order of an element of ℤ<sub>4</sub> x ℤ<sub>3</sub> x ℤ<sub>25</sub> x ℤ<sub>7</sub> is lcm(4,3,25,7) = |4*3*25*7|/gcd(4,3,25,7) = 2100; Proceed similarly for the other groups.</p>
+
+</li>
+
+<li><p>180 = 2<sup>2</sup> ⋅ 3<sup>2</sup> ⋅ 5, <i>G</i> can be thus factorized in terms of primary components</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub>2</sub> x &Sigma;<sub>3</sub> x &Sigma;<sub>5</sub></p>
+</div>
+
+<div class="eq">
+<p><i>p</i>(&alpha;<sub>1</sub>) = <i>p</i>(&alpha;<sub>2</sub>) = p(2) = 2, &emsp; 2, 1+1</p>
+</div>
+
+<p>There are thus <i>p</i>(&alpha;<sub>1</sub>) = <i>p</i>(&alpha;<sub>2</sub>) = 4 groups of order 180, which are</p>
+
+<div class="eq">
+<p>ℤ<sub>4</sub> x ℤ<sub>9</sub> x ℤ<sub>5</sub> ≃ ℤ<sub>180</sub><br>
+ℤ<sub>4</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub> x ℤ<sub>5</sub> ≃ Z<sub>60</sub> x ℤ<sub>3</sub> <br>
+ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>9</sub> x ℤ<sub>5</sub> ≃ Z<sub>90</sub> x ℤ<sub>2</sub> <br>
+ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub> x ℤ<sub>5</sub> ≃ Z<sub>30</sub> x ℤ<sub>6</sub> </p>
+</div>
+
+<p>The maximum order of an element of ℤ<sub>4</sub> x ℤ<sub>9</sub> x ℤ<sub>5</sub> is lcm(4,9,5) = |4*9*5|/gcd(5,9,5) = 180; Proceed  similarly for the other groups.</p>
+</li>
+
+</li>
+
+<li><p>27 = 3<sup>3</sup>. </p>
+
+<div class="eq">
+<p><i>p</i>(&alpha;<sub>1</sub>) = <i>p</i>(3) = 3, &emsp; 3, 2 + 1, 1 + 1 + 1</p>
+</div>
+
+<p>There are thus <i>p</i>(&alpha;<sub>1</sub>) = 3 groups of order 27, which are</p>
+
+<div class="eq">
+<p>ℤ<sub>27</sub> &emsp; ℤ<sub>9</sub> x ℤ<sub>3</sub> &emsp; ℤ<sub>3</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub></p>
+</div>
+
+<p>The maximum order of an element of ℤ<sub>27</sub> -> 27, ℤ<sub>9</sub> x ℤ<sub>3</sub> is 9 and ℤ<sub>3</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub> is 3. </p>
+
+</li>
+</ul>
+</li>
+
+<li><p><i>U</i>(ℤ<sub>30</sub>) = {[1]<sub>30</sub>, [7]<sub>30</sub>, [11]<sub>30</sub>, [13]<sub>30</sub>, [17]<sub>30</sub>, [19]<sub>30</sub>, [23]<sub>30</sub>, [29]<sub>30</sub>}. In the group (<i>U</i>(ℤ<sub>30</sub>), ⋅), [7]<sub>30</sub>, [13]<sub>30</sub>, [17]<sub>30</sub> and [23]<sub>30</sub> have order 4.</p>
+
+<div class="eq">
+<p>[7]<sub>30</sub> ⋅ [7]<sub>30</sub> ⋅ [7]<sub>30</sub> ⋅ [7]<sub>30</sub> = [2401] ≡ [1] (mod 8)</p>
+</div>
+
+<p>The other elements have order 2 (except [1]<sub>30</sub>). Finite <i>G</i> is cyclic iff it has at most one subgroup of each possible order (possible orders are the divisors of |<i>G</i>|). The <i>G</i> here has order 8, thus <i>U</i>(ℤ<sub>30</sub>) is not cyclic.</p>
+
+<p>8 = 2<sup>3</sup>. We resort to the fundamental theorem on finite abelian groups</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub>2</sub></p>
+</div>
+
+<p>since</p>
+
+<div class="eq">
+<p><i>p</i>(&alpha;<sub>1</sub>) = <i>p</i>(3) = 3, &emsp; 3, 2 + 1, 1 + 1 + 1</p>
+</div>
+
+<p>The possible abelian groups of order 8 are ℤ<sub>8</sub>, ℤ<sub>4</sub> x ℤ<sub>2</sub> and ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub>. Since ℤ<sub>8</sub> is cyclic we can exclude it. ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> = ( (0,0,0), (0,0,1), (0,1,1), (1,1,1), ..} it has no elements of order 4 but only of order 1 and 2. Then <i>U</i>(ℤ<sub>30</sub>) = ℤ<sub>4</sub> x  ℤ<sub>2</sub>. &emsp;■</p></li>
+
+<li><p>72 = 2<sup>3</sup> ⋅ 3<sup>2</sup>. Using the fundamental theorem on finite abelian groups</p>
+
+<div class="eq">
+<p><i>G</i> = &Sigma;<sub>2</sub> x &Sigma;<sub>3</sub></p>
+</div>
+
+<p>with</p>
+
+<div class="eq">
+<p>|&Sigma;<sub>2</sub>| = 2<sup>3</sup>, &emsp; |&Sigma;<sub>3</sub>| = 3<sup>2</sup>.</p>
+</div>
+
+<p>since</p>
+
+<div class="eq">
+<p><i>p</i>(&alpha;<sub>1</sub>) = <i>p</i>(3) = 3, 2 + 1, 1 + 1 + 1 &emsp; <i>p</i>(&alpha;<sub>2</sub>) = <i>p</i>(2) = 2 &emsp; 2, 1 + 1</p>
+</div>
+
+<p>There are thus <i>p</i>(&alpha;<sub>1</sub>)<i>p</i>(&alpha;<sub>2</sub>) = 6 abelian groups of order 72, which are</p>
+
+<div class="eq">
+<p>ℤ<sub>8</sub> x ℤ<sub>9</sub><br>
+ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>9</sub><br>
+ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>9</sub><br>
+ℤ<sub>8</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub><br>
+ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub><br>
+ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>2</sub> x ℤ<sub>3</sub> x ℤ<sub>3</sub><br>
+</div>
+
+<p>excluding the groups containing ℤ<sub>8</sub> (even if there's ([2]<sub>8</sub>, [1]<sub>9</sub>) an element with order 36; the order of[1]<sub>9</sub> in ℤ<sub>9</sub> is 9, and hat of [2]<sub>8</sub> is 4), the only possibity for a group with an element of order 36 is <i>G</i> ≃ ℤ<sub>4</sub> x ℤ<sub>2</sub> x ℤ<sub>9</sub>. &emsp;■</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="wallpaper_groups.html">&#171;Wallpaper groups</a>
+<a href="index.html">Index</a>
+<a href="field_extensions.html">Field extensions&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

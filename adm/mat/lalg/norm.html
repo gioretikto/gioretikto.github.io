@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Norms">
+	<title>Norms</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Norms</h1>
+
+<p>The size of real or complex numbers is measured by their absolute values. The size of vectors is called the <i>norm</i>. </p>
+
+<p><b>Definition 2.2.1</b> In a vector space <i>V</i> over the field <i>F</i> = ℝ or ℂ, the function</p>
+
+<div class="eq">
+<p>‖ · ‖ : <i>V</i> → ℝ<sub>+</sub></p>
+</div>
+
+<p>is a norm if it satisfies the following properties for all <b>v, w </b>∈ <i>V</i> and all <i>&lambda;</i> ∈ <i>F</i>:</p>
+
+<ol type="a">
+	<li><p><b>positivity</b>: ‖<i><b>v</b></i>‖ &gt; 0;</p></li>
+	<li><p><b>scaling</b> (positive homogeneity): ‖<i>&lambda;<b>v</b></i>‖ = |<i>&lambda;</i>| ‖<i><b>v</b></i>‖;</p></li>
+	<li><p><b>triangle inequality</b>: ‖<i><b>v</b></i> + <i><b>w</b></i>‖ &le; ‖<i><b>v</b></i>‖ + ‖<i><b>w</b></i>‖.</p></li>
+</ol>
+
+<p>A vector space equipped with a <i>norm</i> is called a <b>normed vector space</b>.&emsp;□</p>
+
+<p>We remark that a norm is a function from a vector space to the nonnegative real numbers, regardless of whether the field of scalars of the vector space is ℝ or ℂ. <br> To verify that a function from a vector space <i>V</i> to ℝ<sub>+</sub> is a norm it suffices to check that is satisfies the three properties in the definition. <br> Probably the most common norm is the <i>Euclidean-norm</i>, defined as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi mathvariant="bold">v</mi>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mo>=</mo>
+  <msqrt>
+    <msubsup>
+      <mi>v</mi>
+      <mn>1</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <mo>&#x2026;</mo>
+    <mo>+</mo>
+    <msubsup>
+      <mi>v</mi>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msubsup>
+  </msqrt>
+</math>
+
+<!-- $$ \|\mathbf{v}\| = \sqrt{v_1^2 + \ldots + v_n^2}$$ -->
+
+<p>which we recognize as the Pythagorean theorem, the measure we use in our 3D Euclidean world. The space ℝ<sup><i>n</i></sup> equipped with the Pythagorean norm, is usually called the <b>Euclidean n-space</b> (denoted sometimes 𝔼 or 𝔼<sup><i>n</i></sup>). So the lenght of (2, √5) is √(2<sup>2</sup> + 5) = 3 and the lenght of (1 0) is 1.</p>
+
+<p>For a vector <i><b>v</b></i> &in; 𝔽<sup><i>n</i></sup>, the frequently used norms are listed as follows:</p>
+
+<table class="noborder centertable">
+<tr><td><b>1-norm</b></td> <td>‖<i><b>v</b></i>‖ = &Sigma;<sub>i</sub>|<i>v<sub>i</sub></i>|</td></tr>
+<tr><td><b>2-norm</b><br> (Pythagorean norm)</td> <td>‖<i><b>v</b></i>‖ = (&Sigma;<sub>i</sub>|<i>v<sub>i</sub></i>|)<sup>1/2</sup></td></tr>
+<tr><td><b>Infinity-norm</b></td> <td>‖<i><b>v</b></i>‖<sub>&infin;</sub> = max |<i>v<sub>i</sub></i>|</td></tr>
+</table>
+
+<p>With the norm we can define the distance between two points as</p>
+
+<div class="eq">
+<p>d(<i><b>x,y</b></i>) := |<i><b>x</b></i> &minus; <i><b>y</b></i>|</p>
+</div>
+
+<h3>Geometric Interpretation of triangle inequality</h3>
+
+<p>The Triangle Inequality, has the geometric interpretation that the length of each side of a triangle is less than the sum of the lengths of the other two sides. Note that the Triangle Inequality implies that the shortest path between two points is a line segment.</p>
+
+<figure>
+<img src="img/triangle_inequality.png" alt="triangle inequality"/>
+<figcaption>The shortest distance between two points is a straight line</figcaption>
+</figure>
+
+<p><b>Proposition 1.9.3</b> The Euclidean length (norm) | · | : ℝ<sup><i>n</i></sup> → ℝ ≥ 0 defined in Eq. 1.9.2 has the following properties, for all <b><i>v, w</i></b> ∈ ℝ<sup><i>n</i></sup> and all <i>α</i> ∈ ℝ.</p>
+
+<ul>
+	<li><p>(N1) |<b><i>v</i></b>| &gt; 0 for <b><i>v</i></b> &ne; 0 &emsp; (positivity)</p></li>
+	<li><p>(N2) |<i>α<b>v</b></i>| = |<i>α</i>| |<b><i>v</i></b>| &emsp; (scaling)</p></li>
+	<li><p>(N3) |<b><i>v</i></b> + <b><i>w</i></b>| ≤ |<b><i>v</i></b>| + |<b><i>w</i></b>| &emsp; (triangle inequality)</p></li>
+</ul>
+
+<p>Proof (N1) is immediately evident from the definition (1.9.2). For (N2) we've to check what happens to the length under scalar multiplication of a vector:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>&#x3B1;</mi>
+  <mi mathvariant="bold">v</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mi>&#x3B1;</mi>
+    <mi mathvariant="bold">v</mi>
+    <mo stretchy="false">)</mo>
+    <mo>&#x22C5;</mo>
+    <mo stretchy="false">(</mo>
+    <mi>&#x3B1;</mi>
+    <mi mathvariant="bold">v</mi>
+    <mo stretchy="false">)</mo>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <msup>
+      <mi>&#x3B1;</mi>
+      <mn>2</mn>
+    </msup>
+    <mi mathvariant="bold">v</mi>
+    <mo>&#x22C5;</mo>
+    <mi mathvariant="bold">v</mi>
+  </msqrt>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>&#x3B1;</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="bold">v</mi>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$ |\alpha\mathbf{v}| = \sqrt{ (\alpha \mathbf{v}) \cdot (\alpha \mathbf{v})} = \sqrt{\alpha^2 \mathbf{v} \cdot \mathbf{v}} = |\alpha| |\mathbf{v}| $$ -->
+
+<p>(N3) is the triangle inequality already proved above. &emsp;□</p>
+
+<p>The norm on 𝐶[<i>a, b</i>] induced by the inner product of Example 7.4.2 has the form</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi>f</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mtext>&#xA0;</mtext>
+  <mo>=</mo>
+  <msqrt>
+    <msubsup>
+      <mo data-mjx-texclass="OP">&#x222B;</mo>
+      <mi>a</mi>
+      <mi>b</mi>
+    </msubsup>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mtext>d</mtext>
+    <mi>x</mi>
+  </msqrt>
+</math>
+
+<!-- $$\|f|\ = \sqrt{\int_a^bf(x)^2\text{d}x} $$ -->
+
+<p id="Frobenius">The norm induced by the standard (Frobenius) inner product on <i>M<sub>m,n</sub></i> from Example 7.4.4 is given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi>A</mi>
+  <msub>
+    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+    <mi>F</mi>
+  </msub>
+  <mo>=</mo>
+  <msqrt>
+    <mtext>tr</mtext>
+    <mo stretchy="false">(</mo>
+    <msup>
+      <mi>A</mi>
+      <mo>&#x2217;</mo>
+    </msup>
+    <mi>A</mi>
+    <mo stretchy="false">)</mo>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>m</mi>
+    </munderover>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msub>
+      <mi>a</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <msup>
+      <mo stretchy="false">|</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$\|A\|_F = \sqrt{\text{tr}(A^*A)} = \sqrt{\sum_{i=1}^m \sum_{j=1}^n |a_{i,j}|^2} $$ -->
+
+<p>This norm on matrices is often called the <b>Frobenius norm</b>, and it is usually written as ‖<i>A</i>‖<sub><i>F</i></sub> rather than just |<i>A</i>| to avoid confusion with another matrix norm.</p>
+
+<p  id="taxicab"><b>Example 1.D.1 (The 1-Norm (or “Taxicab” Norm)</b> The 1-norm on ℂ<sup><i>n</i></sup> is the function defined by</p>
+
+<div class="eq">
+<p>‖<i><b>v</b></i>‖<sub>1</sub> := |<i>v</i><sub>1</sub>| + |<i>v</i><sub>2</sub>| + ... + |<i>v<sub>n</sub></i>|&emsp; for all <b><i>v</b></i> &in; ℂ<sup><i>n</i></sup></p>
+</div>
+
+<p>We show that the 1-norm is indeed a norm. We have to check the three defining properties of norms</p>
+
+<ol type="a">
+	<li><p>‖<i>c<b>v</b></i>‖<sub>1</sub> = |<i>cv</i><sub>1</sub>| + ... + |<i>cv<sub>n</sub></i>| = |<i>c</i>| (|<i>v</i><sub>1</sub>| + ... + |<i>v<sub>n</sub></i>|) = |<i>c</i>| ‖<i><b>v</b></i>‖<sub>1</sub>;</p>
+	<li><p>First, we note that |<i>v</i> + <i>w</i>| ≤ |<i>v</i>| + |<i>w</i>| for all <i>v, w</i> ∈ ℂ (this statement is equivalent to the usual triangle inequality on ℝ<sup>2</sup>). We then have</p>
+	
+<div class="eq">
+<p>‖<i><b>v</b></i> + <i><b>w</b></i>‖<sub>1</sub> = |<i>v</i><sub>1</sub> + <i>w</i><sub>1</sub>| + · · · + |<i>v<sub>n</sub></i> + <i>w<sub>n</sub></i>|<br>
+≤ (|<i>v</i><sub>1</sub>| + |<i>w</i><sub>1</sub>|) + ··· + (|<i>v<sub>n</sub></i>| + |<i>w<sub>n</sub></i>|)<br>
+= (|<i>v</i><sub>1</sub>| + ··· + |<i>v<sub>n</sub></i>|) + (|<i>w</i><sub>1</sub>| + ··· + |<i>w<sub>n</sub></i>|)
+=  ‖<i><b>v</b></i>‖<sub>1</sub> + ‖<i><b>w</b></i>‖<sub>1</sub></p>
+</div>
+
+<li><p>The fact that  ‖<i><b>v</b></i>‖<sub>1</sub> = |<i>v</i><sub>1</sub>| + ·⋅· +|<i>v<sub>n</sub></i>| ≥ 0 is clear. To see that  ‖<i><b>v</b></i>‖<sub>1</sub> = 0 if and only if <i><b>v</b></i> = <b>0</b>, we similarly just notice that |<i>v</i><sub>1</sub>| + ··· + |<i>v<sub>n</sub></i>| = 0 if and only if <i>v</i><sub>1</sub> = ··· = <i>v<sub>n</sub></i> = 0 (indeed, if any <i>v<sub>j</sub></i> were non-zero then |<i>v<sub>j</sub></i>| > 0, so |<i>v</i><sub>1</sub>| + ··· + |<i>v<sub>n</sub></i>| > 0 too).</p></li>
+</ol>
+
+<p>It is worth observing that the 1-norm measures the amount of distance that must be traveled to go from a vector’s tail to its head when moving in the direction of the standard basis vectors. For this reason, it is sometimes called the <b>taxicab norm</b>: we imagine a square grid on ℝ<sup>2</sup> as the streets along which a taxi can travel to get from the tail to the head of a vector <b><i>v</i></b>, and this norm measures how far the taxi must drive, as illustrated below for the vector <i><b>v</b></i> = (4, 3):</p>
+
+<p>In analogy with the 1-norm from the above example, we refer to the usual vector length on ℂ<sup><i>n</i></sup>, defined by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+  <mi mathvariant="bold">v</mi>
+  <msub>
+    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">&#x2016;</mo>
+    <mn>2</mn>
+  </msub>
+  <mo>:=</mo>
+  <msqrt>
+    <mo stretchy="false">|</mo>
+    <msub>
+      <mi>v</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msub>
+      <mi>v</mi>
+      <mn>2</mn>
+    </msub>
+    <msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo>&#x2026;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msub>
+      <mi>v</mi>
+      <mi>n</mi>
+    </msub>
+    <msup>
+      <mo stretchy="false">|</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$\| \mathbf{v} \|_2 := \sqrt{|v_1|^2 + |v_2|^2 + \ldots |v_n|^2} $$ -->
+
+<p>The <b>∞-norm</b> (or <b>max norm</b>) on ℂ<sup><i>n</i></sup> for a vector <b>x</b> = (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, … , <i>x<sub>n</sub></i>) in finite dimensional coordinate space, it takes the form:</p>
+
+<div class="eq">
+<p>‖<b><i>x</i></b>‖<sub>∞</sub> := max (|<i>x</i><sub>1</sub>|, … ,|<i>x<sub>n</sub></i>|)</p>
+</div>
+
+<h3>Orthogonal Vectors</h3>
+
+<p>Let <i>V</i> be an inner product space. As in ℝ<sup><i>n</i></sup>, two nonzero vectors in <i>V</i> are said to be orthogonal if the dot product is zero. Thus two nonzero vectors <b><i>u</i></b> and <b><i>v</i></b> in <i>V</i> are orthogonal if</p>
+
+<div class="eq">
+<p>⟨<b><i>u, v</i></b>⟩ = 0</p>
+</div>
+
+<h3>Distance</h3>
+
+<p>Our final task is to extend the Euclidean concept of distance to general vector spaces. As for norm, the concept of distance that we shall introduce, has not in general direct geometrical interpretation. It can however be useful to be able to discuss how far apart various functions are.</p>
+
+<p><b>Definition</b>. Let <i>V</i> be an inner product space with vector norm |·| : <i>V</i> → ℝ. The distance between two vectors (points) <b><i>u</i></b> and <b><i>v</i></b> is denoted <i>d</i>(<b><i>u,v</i></b>) and is defined by</p>
+
+<div class="eq">
+<p><i>d</i>(<b><i>u,v</i></b>) = |<b><i>u</i></b> − <b><i>v</i></b>|</p>
+</div>
+
+<section aria-label="End">
+<a href="inner_product.html">«Inner product</a>
+<a href="index.html">Index</a>
+<a href="dot_product.html">Dot product»</a>
+</section>
+
+</article>
+
+</body>
+</html>

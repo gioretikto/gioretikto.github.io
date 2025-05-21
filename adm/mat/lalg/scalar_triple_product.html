@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Scalar triple product">
+	<title>Scalar triple product</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Scalar triple product (prodotto misto)</h1>
+
+<p><b>Definition 1.12.1. The <i>scalar triple product</i> of three vectors <i><b>a,b</b></i></b> and <i><b>c</b></i> is defined to be <b><i>a</i></b> ⋅ (<i><b>b</b></i> x <i><b>c</b></i>). &emsp;□</p>
+
+<p>In fact the brackets here are unnecessary since (<b><i>a</i></b> ⋅ <i><b>b</b></i>) is a scalar and it cannot be crossed with the vector <i><b>c</b></i>. Therefore the expression <b><i>a</i></b> ⋅ <i><b>b</b></i> x <i><b>c</b></i> is well defined. <br> The formula fro the scalar triple produt in term of the components of the three vectors <i><b>a,b</b></i></b> and <i><b>c</b></i>, can be obtained using the formula for the cross product:</p>
+
+<div class="eq">
+<p><b><i>a</i></b> ⋅ <i><b>b</b></i> x <i><b>c</b></i> = a<sub>1</sub>b<sub>2</sub>c<sub>3</sub> − a<sub>1</sub>b<sub>3</sub>c<sub>2</sub> + a<sub>2</sub>b<sub>3</sub>c<sub>1</sub> − a<sub>1</sub>b<sub>1</sub>c<sub>3</sub> + a<sub>3</sub>b<sub>1</sub>c<sub>2</sub> − a<sub>3</sub>b<sub>2</sub>c<sub>1</sub></p>
+</div>
+
+<p>which can be written in the form of a determinant:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">a</mi>
+  <mo>&#x22C5;</mo>
+  <mi mathvariant="bold">b</mi>
+  <mo>&#xD7;</mo>
+  <mi mathvariant="bold">c</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mtable columnalign="center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mn>3</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>b</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>b</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>b</mi>
+            <mn>3</mn>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>c</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msub>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>c</mi>
+            <mn>3</mn>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+</math>
+
+<!-- $$ \mathbf{a} \cdot \mathbf{b} \times \mathbf{c} = \left|\begin{array}{ccc}
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3
+\end{array} \right|$$ -->
+
+<p>Hence the scalar triple product will have all the properties of a determinant. Since we can permute the rows of the determinant (with a sign change for an odd permutation, and with no sign change for an even permutation), we can permute the vectors <i><b>a,b</b></i></b> and <i><b>c</b></i></p>
+
+<ul>
+	<li><p>The scalar triple product is invariant under any cyclic permutation of <i><b>a,b</b></i></b> and <i><b>c</b></i>:</p>
+
+<div class="eq">
+<p><b><i>a</i></b> ⋅ (<i><b>b</b></i> x <i><b>c</b></i>) = (<i><b>a</b></i> x <b><i>b</i></b>) ⋅ <i><b>c</b></i>) = <i><b>c</b></i> ⋅ (<b><i>a</i></b> x <i><b>b</b></i>)</p>
+</div>
+	</li>
+
+	<li><p>but any anti-cyclic permutation causes it to change sign</p>
+
+<div class="eq">
+<p><b><i>a</i></b> ⋅ (<i><b>b</b></i> x <i><b>c</b></i>) = −<i><b>b</b></i> ⋅ (<b><i>a</i></b> x <i><b>c</b></i>)</p>
+</div>
+</li>
+
+</ul>
+
+<p>If any of the two vectors are equal, the scalar triple product is zero.</p>
+
+<h2>Geometric interpretation</h2>
+
+<p>Geometrically, the magnitude of the scalar triple product is the volume of the parallelepiped with edges formed by the vectors <i><b>a,b</b></i> and <i><b>c</b></i> in ℝ<sup>3</sup>, as illustrated in stereo below.</p>
+
+<img src="img/scalar_triple_product.png" alt="scalar triple product"/>
+
+<p>The height of the parallelepiped is that part of <i><b>a</b></i> in the direction of a normal vector to <i><b>b</b></i> and <i><b>c</b></i>, i.e. the component of <i><b>a</b></i> in the direction <i><b>b</b></i> x <i><b>c</b></i>. We know that <i><b>b</b></i> × <i><b>c</b></i> is orthogonal to both <i><b>b</b></i> and <i><b>c</b></i> (<a href="cross_product.html#theo">Theorem 1.10.4a</a>), so by trigonometry the height must be |<i><b>a</b></i>| cos <i>θ</i> for angle <i>θ</i> between <b><i>a</i></b> and <i><b>b</b></i> × <i><b>c</b></i>, as illustrated above. 
+
+<div class="eq">
+<p><i><b>a</b></i> · (<i><b>b</b></i> × <i><b>c</b></i>) = |<i><b>a</b></i>| |<i><b>b</b></i> × <i><b>c</b></i>| cos <i>&theta;</i><br>
+height = |<b>a</b>| cos <i>&theta;</i> = <i><b>a</b></i> · (<i><b>b</b></i> × <i><b>c</b></i>) /|<i><b>b</b></i> × <i><b>c</b></i>|)</p>
+</div>
+
+<p>The base of the parallelepiped is |<i><b>b</b></i> x <i><b>c</b></i>|, owing to the geometrical interpretation of the cross product. <br>The volume of the parallelepiped is then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>base</mtext>
+  <mo>&#x22C5;</mo>
+  <mtext>height</mtext>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="bold">b</mi>
+  <mo>&#xD7;</mo>
+  <mi mathvariant="bold">c</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi mathvariant="bold">a</mi>
+      <mo>&#x22C5;</mo>
+      <mo stretchy="false">(</mo>
+      <mi mathvariant="bold">a</mi>
+      <mo>&#xD7;</mo>
+      <mi mathvariant="bold">c</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <mi mathvariant="bold">b</mi>
+      <mo>&#xD7;</mo>
+      <mi mathvariant="bold">c</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="bold">a</mi>
+  <mo>&#x22C5;</mo>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">b</mi>
+  <mo>&#xD7;</mo>
+  <mi mathvariant="bold">c</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$\text{base} \cdot \text{height} = |\mathbf{b} \times \mathbf{c}| \frac{|\mathbf{a} \cdot (\mathbf{a} \times \mathbf{c})|} {|\mathbf{b} \times \mathbf{c}|} = |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})|$$ -->
+
+<p>The scalar triple product can be positive, negative, or zero. That's why we need the absolute value for the volume.</p> 
+
+<section aria-label="End">
+<a href="cross_product.html">«Cross Product</a>
+<a href="index.html">Index</a>
+<a href="matrices.html">Matrices»</a>
+</section>
+
+</article>
+
+</body>
+</html>

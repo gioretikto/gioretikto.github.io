@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Formula di Taylor al secondo ordine">
+	<title>Formula di Taylor al secondo ordine</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Formula di Taylor al secondo ordine</h1>
+
+<p>Si è visto come la <a href="differenziabilità.html">differenziabilità</a> di una funzione permetta di approssimare il grafico della funzione con quello del piano tangente, in forma vettoriale</p>
+
+<div class="eq">
+<p><i>f</i>(<i><b>x</b></i>) = <i>f</i>(<i><b>x</b></i><sub>0</sub>) + &nabla;<i>f</i>(<i><b>x</b></i><sub>0</sub>) ⋅ (<i><b>x</b></i> − <i><b>x</b></i><sub>0</sub>) + o(||<i><b>x</b></i> − <i><b>x</b></i><sub>0</sub>||), &emsp; <i><b>x</b></i> ⟶ <i><b>x</b></i><sub>0</sub></p>
+</div>
+
+<p>questo non è altro che uno sviluppo di Taylor al primo ordine, con resto secondo Peano. <br> Se la funzione è di classe <i>C</i><sup>2</sup> è possibile migliorare tale approssimazione con la formula di Taylor al secondo ordine, analogamente a quanto visto per le funzioni ad una variabile.</p>
+
+<p>Sia <i>f</i>: ℝ<sup>2</sup> → ℝ definita in un intorno di <i><b>x</b></i><sub>0</sub> e sia (<i>h, k</i>) un versore; il punto (x<sub>0</sub> + ht, y<sub>0</sub> + kt)</i> appartiene dunque a tale intorno almeno per <i>t</i> abbastanza piccolo. Definiamo ora, la funzione di una variabile <i>g</i> nel seguente modo: </p>
+
+<div class="eq">
+<p><i>g</i>(<i>t</i>) = <i>f</i>(<i>x</i><sub>0</sub> + <i>th</i>, <i>y</i><sub>0</sub>+<i>tk</i>)</p>
+</div>
+
+<p>definita almeno nell'intorno <i>t</i> &in; [0, <i>&epsilon;</i>]. Lo sviluppo di MacLaurin al secondo ordine per la funzione <i>g</i>(<i>t</i>) è</p>
+
+<div class="eq">
+<p><i>g</i>(<i>t</i>) = <i>g</i>(0) + <i>tg'</i>(0) + 1/2 <i>t</i><sup>2</sup><i>g''</i>(0) + o(<i>t</i><sup>2</sup>)&emsp; <i>t</i> ⟶ 0 &emsp;(<b>4.8.1</b>)</p>
+</div>
+
+<p>Derivando tale funzione, applicando la <a href="composite_functions.html">regola della catena</a>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>f</mi>
+    <mi>x</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>h</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <mi>h</mi>
+  <mo>+</mo>
+  <msub>
+    <mi>f</mi>
+    <mi>y</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>h</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <mi>k</mi>
+</math>
+
+<!-- $$ g'(t) = f_x(x_0 + th, y_0 +tk) h + f_y(x_0 + th, y_0 +tk) k $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2033;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mi>x</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>h</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mi>h</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mn>2</mn>
+  <msub>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mi>y</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>h</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <mi>h</mi>
+  <mi>k</mi>
+  <mo>+</mo>
+  <msub>
+    <mi>f</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+      <mi>y</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>h</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mi>k</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$ g''(t) = f_{xx}(x_0 + th, y_0 +tk) h^2 +  2f_{xy}(x_0 + th, y_0 +tk)hk + f_{yy}(x_0 + th, y_0 +tk) k^2 $$ -->
+
+<p>sostituendo nella 4.8.1:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>h</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>f</mi>
+    <mi>x</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mi>t</mi>
+  <mi>h</mi>
+  <mo>+</mo>
+  <msub>
+    <mi>f</mi>
+    <mi>y</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mi>t</mi>
+  <mi>k</mi>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <msub>
+      <mi>f</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>x</mi>
+        <mi>x</mi>
+      </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>0</mn>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mi>t</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>h</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mn>2</mn>
+    <msub>
+      <mi>f</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>x</mi>
+        <mi>y</mi>
+      </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>0</mn>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mi>t</mi>
+      <mn>2</mn>
+    </msup>
+    <mi>h</mi>
+    <mi>k</mi>
+    <mo>+</mo>
+    <msub>
+      <mi>f</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>y</mi>
+        <mi>y</mi>
+      </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>0</mn>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mi>t</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>k</mi>
+      <mn>2</mn>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$f(x_0 + th, y_0 +tk) = f(x_0,y_0) + f_x(x_0,y_0)th + f_y(x_0,y_0)tk + \frac{1}{2} \left[ f_{xx}(x_0,y_0) t^2h^2 + 2f_{xy} (x_0,y_0) t^2hk +  f_{yy}(x_0,y_0) t^2k^2 \right] + o(t^2) $$ -->
+
+<p>per <i>t</i> → 0.</p>
+
+<p>Ponendo (d<i>x</i>, d<i>y</i>)  = (<i>th</i>, <i>tk</i>) abbiamo |(d<i>x</i>, d<i>y</i>)| = <i>t</i>.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <mtext>d</mtext>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <msub>
+    <mi>f</mi>
+    <mi>x</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>+</mo>
+  <msub>
+    <mi>f</mi>
+    <mi>y</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>y</mi>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <msub>
+      <mi>f</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>x</mi>
+        <mi>x</mi>
+      </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>0</mn>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mtext>d</mtext>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mn>2</mn>
+    <msub>
+      <mi>f</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>x</mi>
+        <mi>y</mi>
+      </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>0</mn>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mtext>d</mtext>
+    <mi>x</mi>
+    <mtext>d</mtext>
+    <mi>y</mi>
+    <mo>+</mo>
+    <msub>
+      <mi>f</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>y</mi>
+        <mi>y</mi>
+      </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>0</mn>
+    </msub>
+    <mo stretchy="false">)</mo>
+    <mtext>d</mtext>
+    <msup>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <mtext>d</mtext>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mtext>d</mtext>
+  <msup>
+    <mi>y</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$f(x_0 + \text{d}x, y_0 +\text{d}y) = f(x_0,y_0) + f_x(x_0,y_0)\text{d}x + f_y(x_0,y_0)\text{d}y + \frac{1}{2} \left[ f_{xx}(x_0,y_0) \text{d}x^2 + 2f_{xy} (x_0,y_0) \text{d}x\text{d}y +  f_{yy}(x_0,y_0) \text{d}y^2 \right] + o(\text{d}x^2 + \text{d}y^2) $$ -->
+
+<p>questa è la <i>formula di Taylor al secondo ordine, con resto secondo Peano</i>. Studiamo i termini che compaiono a secondo membro; la prima sommatoria non è altro che il differenziale di <i>f</i>, che equivale al prodotto scalare del gradiente per l'inciremento di <b>x</b>. La seconda sommatoria è rappresentata dal <i>differenziale secondo</i> di <i>f</i> in <b>x<sub>0</sub></b>. </p>
+
+<p><b>Definizone 3.2</b> Se <i>f</i> &in; <i>C</i><sup>2</sup>(<i>A</i>) si dice <i>differenziale secondo</i> di <i>f</i> in <i><b>x</b></i><sub>0</sub> &in; <i>A</i>, la funzione</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mtext>d</mtext>
+    <mn>2</mn>
+  </msup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>&#x2202;</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mi>x</mi>
+        <mi>i</mi>
+      </msub>
+      <mi>&#x2202;</mi>
+      <msub>
+        <mi>x</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msub>
+  <mtext>d</mtext>
+  <msub>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msub>
+</math>
+
+<!-- $$\text{d}^2 f(\mathbf{x}_0) = \sum_{i=1}^n \sum_{j=1}^n \frac{\partial^2 f}{\partial x_i \partial x_j} (\mathbf{x}_0) \text{d}x_j\text{d}x_i $$ -->
+      
+<p>I coefficienti che compiano nel differenziale secondo possono essere disposti in una matrice <i>n</i> &nbsp;x&nbsp; <i>n</i> detta <b>matrice Hessiana</b> di <i>f</i> in <i><b>x<sub>0</sub></b></i>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">H</mi>
+  <mi>f</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="1.346em 1.346em 1.346em 0.4em">
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msubsup>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msubsup>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                  <mstyle scriptlevel="0">
+                    <mspace width="0.167em"></mspace>
+                  </mstyle>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                  <mstyle scriptlevel="0">
+                    <mspace width="0.167em"></mspace>
+                  </mstyle>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                  <mstyle scriptlevel="0">
+                    <mspace width="0.167em"></mspace>
+                  </mstyle>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msubsup>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msubsup>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                  <mstyle scriptlevel="0">
+                    <mspace width="0.167em"></mspace>
+                  </mstyle>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                  <mstyle scriptlevel="0">
+                    <mspace width="0.167em"></mspace>
+                  </mstyle>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                  <mstyle scriptlevel="0">
+                    <mspace width="0.167em"></mspace>
+                  </mstyle>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mi>&#x2202;</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mi>f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msubsup>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>2</mn>
+                    </mrow>
+                  </msubsup>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$  \mathbf {H}f= \begin{bmatrix}{\dfrac {\partial ^{2}f}{\partial x_{1}^{2}}}&{\dfrac {\partial ^{2}f}{\partial x_{1}\,\partial x_{2}}}&\cdots &{\dfrac {\partial ^{2}f}{\partial x_{1}\,\partial x_{n}}}\\[2.2ex]{\dfrac {\partial ^{2}f}{\partial x_{2}\,\partial x_{1}}}&{\dfrac {\partial ^{2}f}{\partial x_{2}^{2}}}&\cdots &{\dfrac {\partial ^{2}f}{\partial x_{2}\,\partial x_{n}}}\\[2.2ex]\vdots &\vdots &\ddots &\vdots \\[2.2ex]{\dfrac {\partial ^{2}f}{\partial x_{n}\,\partial x_{1}}}&{\dfrac {\partial ^{2}f}{\partial x_{n}\,\partial x_{2}}}&\cdots &{\dfrac {\partial ^{2}f}{\partial x_{n}^{2}}}\end{bmatrix} $$ -->
+
+<p>In particolare se <i>f</i> è funzione di due variabili si ha la matrice Hessiana:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">H</mi>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>x</mi>
+              <mi>x</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>x</mi>
+              <mi>y</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>y</mi>
+              <mi>x</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>y</mi>
+              <mi>y</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>x</mi>
+            <mn>0</mn>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>y</mi>
+            <mn>0</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$\mathbf {H}f(\mathbf{x}_0) = \begin{bmatrix} f_{xx}(x_0,y_0) & f_{xy}(x_0,y_0) \\ f_{yx}(x_0,y_0) & f_{yy}(x_0,y_0) \end{bmatrix} $$ -->
+            
+<p>Dal <a href="schwarz.html" alt="teorema di schwarz"/> Teorema di Schwarz</a> sappiamo che se <i>f</i> &in; <i>C</i><sup>2</sup>(<i>A</i>) la matrice hessiana risulta <i>simmetrica</i> in ogni punto di <i>A</i>.</p>
+
+<p>Usando il simbolismo della matrice Hessiana si può esprimere il teorema di Taylor nel seguente modo:</p>
+
+<div class="eq">
+<p><i>f</i>(<i><b>x</b></i><sub>0</sub> + d<i><b>x</b></i>) = <i>f</i>(<i><b>x</b></i><sub>0</sub>) + &nabla;<i>f</i>(<i><b>x</b></i><sub>0</sub>) ⋅ (d<i><b>x</b></i>) + 1/2 ⋅ d<i><b>x</b></i><sup>T</sup> <b>H</b><i>f</i>(<i><b>x</b></i><sub>0</sub>) d<i><b>x</b></i> + o(||d<b><i>x</i></b>||<sup>2</sup>), &emsp; <i><b>x</b></i> ⟶ <i><b>x</b></i><sub>0</sub></p>
+</div>
+
+<p>indicating with d<i><b>x</b></i> a column vector and with d<i><b>x</b></i><sup>T</sup> its transpone a row vector.</p>
+
+<section aria-label="End">
+<a href="Schwarz.html">&#171;Schwarz Theorem</a>
+<a href="index.html">Index</a>
+<a href="Fermat.html">Fermat Theorem &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

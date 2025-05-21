@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Trasformazioni di coordinate">
+	<title>Trasformazioni di coordinate</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Trasformazioni di coordinate</h1>
+
+<p>Un esempio importante di funzione <i><b>f</b></i> : ℝ<sup><i>n</i></sup> → ℝ<sup><i>n</i></sup> (cioè con dominio e codominio della stessa dimensione) è dato dalle trasformazioni di coordinate in ℝ<sup><i>n</i></sup>. Gli esempi tipici in ℝ<sup>2</sup> e ℝ<sup>3</sup>, che saranno utili nel seguito sono i seguenti.</p>
+
+Coordinate Systems
+
+<p>Coordinates are "functions" that specity <b>points</b> of a space. The smallest number of these function necessary to specify a point is called the <b>dimension</b> of that space. For instance, a point of a plane is specified by two numbers, and as the point moves in the plane the two numbers change, i.e., the coordinates are function of the position of the point. If we designate the point as <i>P</i>, we may write the coordinate functions of <i>P</i> as (<i>f</i>(<i>P</i>), <i>g</i>(<i>P</i>)). Think of <i>f</i> (or <i>g</i>) as a rule by which a unique number is assigned to each point <i>P</i>. Each pair of such functions is called a <b>coordinate system</b>.<br> There are two coordinate systems used for a plane, <b>Cartesian</b>, denoted (<i>x</i>(<i>P</i>), <i>y</i>(<i>P</i>)), and <b>polar</b>, denoted (<i>r</i>(<i>P</i>), <i>&theta;</i>(<i>P</i>)). The "function" <i>x</i> is defined as giving the distance from <i>P</i> to the vertical axis, while <i>&theta;</i> is the funciton which gives the angle that the line <i>OP</i> makes with a given fiducial (usually horizontal) line. The origin <i>O</i> and the fiducial line are completely arbitrary. Similarly, the function <i>r</i> and <i>y</i> give distances from the origin and to the horizontal axis, respectively.</p>
+
+<p><b>Notation</b>. In practice, one drops the argument <i>P</i> and writes (<i>x,y</i>) and (<i>r</i>, <i>&theta;</i>).</p>
+
+<p>We can generalize the above concept to three dimensions. There are three coordinate functions now. So for a pont <i>P</i> in space we write</p>
+
+<div class="eq">
+<p>(<i>f</i>(<i>P</i>), <i>g</i>(<i>P</i>), <i>h</i>(<i>P</i>)</p>
+</div>
+
+<p>where <i>f,g</i> and <i>h</i> are functions on the three-dimensional space. In three dimension, there are three widely used coordinate systems,</p>
+
+<ul>
+	<li><p><b>Cartesian</b>, (<i>x</i>(<i>P</i>), <i>y</i>(<i>P</i>),<i>z</i>(<i>P</i>));</p></li>
+	<li><p><b>Cylindrical</b>, (<i>r</i>(<i>P</i>),<i>&theta;</i>(<i>P</i>),<i>z</i>(<i>P</i>));</p></li>
+	<li><p><b>Spherical</b>, (<i>r</i>(<i>P</i>),<i>&theta;</i>(<i>P</i>),<i>&phi;</i>(<i>P</i>)), <i>&phi;</i>(<i>P</i>) is called the <b>azimuth</b> or the <b>azimuthal angle</b> of <i>P</i>, one chooses an arbitrary point as the origin <i>O</i> and an arbitrary line through <i>O</i> called the <b>polar axis</b>. One measures <span class="overline">OP</span> and calle it <i>r</i>(<i>P</i>); &theta;(<i>P</i> is the angle between <span class="overline">OP</span> and the polar axis.</p>
+
+<h2>Vectors in Different coordinate systems</h2>
+
+<p>Many physical situations require the study of vectors in different coordiantes systems, e.g. the study of the solar system is best done in spherical coordinates because of the nature of the gravitational force. Similarly calculation of electromagnetic fields in a cylindrical cavity will be easier if we use cylindrical coordinates. This requires not only writing functions in terms of these coordinates variables, but also expressing vectors in terms of unit vectors suitable for these coordinates systems. It turns out that, for the three coordinates systems described above, the most natural construction of such vectors renders them mutually perpendicular. <br>Any set of three (two) mutually perpendicualr unit vectors in space (in the plane) is called an <b>orthonormal basis</b>. The word "orhogonal" comes from <i>orthogonal</i> meaning "perpendicular", and <i>normal</i> meaning "of unit length". Basis vectors have the property that any vector can be written in terms of them. <br>Let us start with the plane in which the coordinate system could be Cartesian or polar. In general, we construct an orthonormal basis <i>at a point</i> and note that</p>
+
+<p><b>Observation</b>. The orthonormal basis, generally speaking, depends on the point at which it is constructs.</p>
+
+<p>The vectors of a basis are constructed as follows. To find the unit vector corresponding to a coordiante at a point <i>P</i>, hold the other coordinates fixed and <i>increase</i> the coordinate in question. The initial direction of motion of <i>P</i> is the direction of the unit vector sought. Thus, we obtain the Cartesian unit vectors at a point <i>P</i> of Figure 1(a): <b>e<sub>x</sub></b> is obtained by holding <i>y</i> fixed and letting <i>x</i> vary in the increasing direction; and <b>e<sub>y</sub></b> is obtained by holding <i>y</i> fixed and letting <i>x</i> vary in the increasing direction; and <b>e<sub>y</sub></b> is obtained by holding <i>x</i> fixed at <i>P</i> and letting <i>y</i> increase. However, the reader should take not that this is true only for coordinates that are defined in terms of axes whose directions are fixed, such as Cartesian coordinates. <br>If we use polar coordinates for <i>P</i>, then holding <i>&theta;</i> fixed at <i>P</i> gives the direction <b>e<sub>r</sub></b> as shown in Fig.1(b), because for fixed <i>&theta;</i>, that is the direction of increase for <i>r</i>. Similarly, if <i>r</i> is fixed at <i>P</i>, the initial direction of motion of <i>P</i> whrn <i>&theta;</i> is increased is that of <b>e<sub>&theta;</sub></b> shown in the figure. <b>If we choose another point such as <i>Q</i> shown in the figure, then a new set of unit vectors will be obtained which are different from those of <i>P</i></b>. This is because polar coordinates are not defined in terms of any fixed axes.</p>
+
+<figure>
+<img src="img/cartesian_polar.png" alt="coordinate basis"/>
+<figcaption><b>Fig.1</b>. The unit vectors in (a) Cartesian coordinates and (b) polar coordinates. The unit vectors at <i>P</i> and <i>Q</i> are the same for Cartesian coordinates, but diffent in polar coordinates.</figcaption>
+</figure>
+
+<p>Since {<b>e<sub>x</sub></b>, <b>e<sub>y</sub></b>} and {<b>e<sub>r</sub></b>,<b>e<sub>&theta;</sub></b>} form a basis in the plane, any vector <i><b>a</b></i> in the plane can be expressed in terms of either basis as shown in Fig.2. Thus, we can write</p>
+
+<div class="eq">
+<p><i><b>a</b></i> = <i>a<sub>x<sub>P</sub></sub><b>e<sub>x<sub>P</sub></sub></b></i> + <i>a<sub>y<sub>P</sub></sub><b>e<sub>y<sub>P</sub></sub></b></i> = <i>a<sub>r<sub>P</sub></sub><b>e<sub>r<sub>P</sub></sub></b></i> + <i>a<sub>&theta;<sub>P</sub></sub><b>e<sub>&theta;<sub>P</sub></sub></b></i> = <i>a<sub>r<sub>Q</sub></sub><b>e<sub>r<sub>Q</sub></sub></b></i> + <i>a<sub>&theta;<sub>Q</sub></sub><b>e<sub>&theta;<sub>Q</sub></sub></b></i> &emsp;(1)</p>
+</div>
+
+<p>where the coordinates are subscripted to emphasize their dependence on the point at which the unit vectors are erected. In the case of Cartesian coordinates, this, of course, is not necessary because the unit vectors happen to be independent of the point. In the case of polar coordinates, although this dependence exists, we normally do not write the point as subscripts, being aware of this dependence every time we use polar coordinates.</p>
+
+<figure>
+<img src="img/coordinate_basis.png" alt="coordinate basis"/>
+<figcaption><b>Fig.2</b>. The vector <b>a</b> has the same components along unit vectors at <i>P</i> and <i>Q</i> in cartesian coordinates. (b) The vector <b>a</b> has different componts along unit vectors at different points for a polar coordinate system.</figcaption>
+</figure>
+
+<p>Eq. (1) can also be written using brackets, reserving parenteses for <i>coordinates</i> of points in space.</p>
+
+<div class="eq">
+<p><i><b>a</b></i> = ⟨<i>a<sub>x</sub>, a<sub>y</sub></i>⟩<sub>P</sub> = ⟨<i>a<sub>r</sub>, a<sub>&theta;</sub></i>⟩<sub>P</sub> = ⟨<i>a<sub>r</sub>, a<sub>&theta;</sub></i>⟩<sub>Q</sub></p>
+</div>
+
+<p>where again the subscript indicating the point at which the unit vectors are defind is normally deleted. However, we need to keep in mind that although ⟨<i>a<sub>x</sub>, a<sub>y</sub></i>⟩ is independent of the point in question, ⟨<i>a<sub>r</sub>, a<sub>&theta;</sub></i>⟩ is very much point-dependent. Caution should be exercised when using this notation as to the location of the unit vectors. <br>
+
+<h3>Coordinte polari nel piano</h3>
+
+<p>In polar coordinates, the position of a particle <i>A</i>, is determined by the value of the radial distance to the origin, <i>r</i>, and the angle that the radial line makes with an arbitrary fixed line, such as the x axis. Thus, the trajectory of a particle will be determined if we know <i>r</i> and <i>θ</i> as a function of <i>t</i>, i.e. <i>r</i>(<i>t</i>), <i>θ</i>(<i>t</i>). The directions of increasing <i>r</i> and <i>θ</i> are defined by the orthogonal unit vectors <b>e<sub>r</sub></b> and <b>e<sub>θ</sub></b>, come in fig. 4; si noti che questi versori cambiano direzione (ruotano) durante il moto, rimanendo ancorati al punto materiale a differenza dei versori nel sistema di coordinate cartesiane che rimangono fissi nel tempo (Fig.1).</p>
+
+<p>Il punto (<i>x,y</i>) &in; ℝ<sup>2</sup> può esssere individuato anche assegnandone le coordinate polari (<i>r,&theta;</i>), dove</p>
+
+<div class="eq">
+<p><i>r</i> = (<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup>)<sup>1/2</sup></p>
+</div>
+
+<p>rappresenta la distanza (<i>x,y</i>) dall'origine e <i>&theta;</i> è l'angolo formato tra il vettore (<i>x,y</i>) e l'asse <i>x</i>, orientato positivamente. Perciò si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>r</mi>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>r</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.278em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>r</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">[</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mi>&#x3B8;</mi>
+  <mo>;</mo>
+  <mo>&#x2208;</mo>
+  <mi mathvariant="double-struck">R</mi>
+  <mspace linebreak="newline"></mspace>
+</math>
+
+<!-- $$\begin{cases}
+x = r \cos \theta \\
+y = r \sin \theta
+\end{cases}\; \quad r \in [0, \infty), \theta; \in \mathbb{R}\\
+$$ -->
+
+<p>Questa trasformazione di coordinate si può vedere come una funzione <i><b>f</b></i> : ℝ<sup><i>n</i></sup> → ℝ<sup><i>n</i></sup>, (<i>x,y</i>) = <b><i>f</i></b>(<i>r,&theta;</i>). Le coordinate polari sono utili per rappresentare insiemi di funzioni aventi qualche simmetria rispetto all'origine.</p>
+
+<img src="img/polar.png" alt="coordinate polari"/>
+
+<h2 id="cil">Coordinate cilindriche nello spazio (<i>r,&theta;,z</i>)</h2>
+
+<p>Polar coordinates can be extended to three dimensions in a very straightforward manner. We simply add the <i>z</i> coordinate, which is then treated in a cartesian like manner. Every point in space is determined by the <i>r</i> and <i>θ</i> coordinates of its projection in the <i>xy</i> plane, and its <i>z</i> coordinate. The base vectors of the <i>r,&theta;,z</i> coordinate system are unit vectors directed in the radial, tangential and axial directions, as illustrated in Fig.2. They are denoted by <i><b>e<sub>r</sub>, e<sub>&theta;</sub></b>, e<sub>z</sub></b></i>, and they are mutually orhogonal.</p>
+
+<img src="img/cylindric.png" alt="cyclindric coordinates"/>
+
+<figure>
+<img src="img/cylindrical_bases.png" alt="cylindrical coordinates"/>
+<figcaption>Unit vectors of cylindrical coordinates.</figcaption>
+</figure>
+
+<p>In cylindrical coordinates, <b>e<sub>r</sub></b> lines along and point in the direction of increasing <i>r</i> at <i>P</i>; <b>e<sub>&theta;</sub></b> is perpendicular to the plane formed by <i>P</i> and the <i>z</i>-axis and point in the direction of increasing &theta;;; <b>e<sub>z</sub></b> points in the diretion of positive <i>z</i>. We note that only <b>e<sub>z</sub></b> is independent of the point at which the unit vectors are defined because <i>z</i> is a fixed axis in cyclindrical coordinates. Given any vector <b>a</b>, we can write it as</p>
+
+<div class="eq">
+<p><b>a</b> = <i>a<sub>r</sub></i><b>e<sub>r</sub></b> + <i>a<sub>&theta;</sub></i><b>e<sub>&theta;</sub></b> + <i>a<sub>z</sub></i><b>e<sub>z</sub></b>, &emsp;or &emsp; <b>a</b> = ⟨<i>a<sub>r</sub>, a<sub>&theta;</sub>, a<sub>z</sub></i>⟩</p>
+</div>
+
+<p>The coordinates of <i>P</i> are (<i>r,&theta;, z</i>) and vector <b>r</b> pointing at <i>P</i> is</p>
+
+<div class="eq">
+<p><b>r</b> = <i>r</i><b>e<sub>r</sub></b> + <i>z</i><b>e<sub>&theta;</sub></b></p>
+</div>
+
+<p>Per descrivere insiemi o fuzioni ℝ<sup>3</sup> che abbiamo qualche simmetria rispetto all'asse <i>z</i> sono utili le coordinate cilindriche (<i>r,&theta;, t</i>) per le quali si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>r</mi>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>r</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>r</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mo>+</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mi>&#x3B8;</mi>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mi>&#x3C0;</mi>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="0.167em"></mspace>
+          </mstyle>
+          <mi>t</mi>
+          <mo>&#x2208;</mo>
+          <mi mathvariant="double-struck">R</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>z</mi>
+          <mo>=</mo>
+          <mi>t</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{cases}
+x = r \cos \theta \\
+y = r\sin \theta  & r \in [0,+\infty), \theta [0,2\pi), \,t \in  \mathbb{R}\\
+z = t\\
+\end{cases}
+$$-->
+
+<p>Anche queste si possono vedere come una funzione <b><i>f</i></b>: ℝ<sup>3</sup> ⟶ ℝ<sup>3</sup>. Si noti che la funzione <b>g</b>: ℝ<sup>2</sup> ⟶ ℝ<sup>3</sup> che si ottiene da questa fissando il valore della prima variabile <i>r</i> rappresentata la superficie della sfera di raggio <i>r</i>, in forma parametrica</p>
+
+<h2>Coordinate sferiche (<i>r,&theta;,&phi;</i>)</h2>
+
+<p>Per descrivere insiemi o funzioni in ℝ<sup>3</sup> che abbiano qualche simmetria rispetto all'origine, sono utili le coordinate sferiche che utilizzano due angoli ed una distanza (<i>r,&theta;,&phi;</i>), per le quali si ha:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>r</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3D5;</mi>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>y</mi>
+          <mo>=</mo>
+          <mi>r</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3D5;</mi>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3B8;</mi>
+        </mtd>
+        <mtd>
+          <mi>r</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mi>&#x3D5;</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mi>&#x3C0;</mi>
+          <mo stretchy="false">]</mo>
+          <mo>,</mo>
+          <mi>&#x3B8;</mi>
+          <mo>&#x2208;</mo>
+          <mo stretchy="false">[</mo>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mi>&#x3C0;</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>z</mi>
+          <mo>=</mo>
+          <mi>r</mi>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>&#x3D5;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\begin{cases}
+x = r \sin \phi \cos \theta \\
+y = r \sin \phi \sin \theta  & r \gt 0, \phi \in [0,\pi], \theta \in [0,2\pi)\\
+z = r \cos \phi \\
+\end{cases}
+$$-->
+
+<p>Anche queste si possono vedere come una fuznione <b><i>f</i></b>: ℝ<sup>3</sup> ⟶ ℝ<sup>3</sup>. Si noti la funzione <b><i>g</i></b>: ℝ<sup>2</sup> ⟶ ℝ<sup>3</sup> che si ottiene da queesta fissando il vlaore della prima variabile <i>r</i> rappresenta la superficie della sfera di raggio <i>r</i>, in forma parametrica</p>
+
+<figure>
+<img src="img/spherical_coordinates.png" alt="spherical coordinates"/>
+<figcaption>La superficie sferica di raggio <i>R</i> e centro l'origine.</figcaption>
+</figure>
+
+<figure>
+<img src="img/sferiche_versori.png" alt="sferiche versori"/>
+<figcaption>Unit vectors of spherical coordinates. Note that the intersection of the shaded plane with the <i>xy</i>-plane is a line along the cyclindrical coordiante <i>&rho;</i>.</figcaption>
+</figure>
+
+<p><b>Example</b>. A point charge <i>q</i> is situated at the origin. A second charge <i>q'</i> is located at (<i>x,y,z</i>) as shown in Fig.3. We want to express the electric force on <i>q'</i> in Cartesian, spherical, and cylindrical coordinate system.<br>We know that the electric force, as given by <b>Coulomb's law</b>, lies along the line joining the two charges and is either attractive or repulsive according to the sings of <i>q</i> <i>q'</i>. All of this information can be summarized in the formula expressed in spherical coordinates</p>
+
+<div class="eq">
+<p><b>F<sub>q'</sub></b> = (<i>k<sub>e</sub>qq'</i>/<i>r</i><sup>2</sup>)<b>e<sub>r</sub></b></p>
+</div>
+
+<p>where <i>k<sub>e</sub></i> = 1/(4&pi;&epsilon;<sub>0</sub>) ≈ 9 x 10<sup>9</sup> in SI units. Note that if <i>q</i> and <i>q'</i> are unline, <i>qq'</i> &lt; 0 and <b>F<sub><i>q'</i></sub></b> is opposing to <b>e<sub>r</sub></b>, i.e., it is <i>attractive</i>. On the other hand, if <i>q</i> and <i>q'</i> are of the same sign, <i>qq'</i> &gt; 0 and <b>F<sub><i>q'</i></sub></b> is in the same direction as <b>e<sub>r</sub></b>, i.e., <i>repulsive</i>.<br> Thus the components of <b>F<sub><i>q'</i></sub></b> in spherical coordinates are ⟨<i>k<sub>e</sub>qq'</i>/<i>r</i><sup>2</sup>, 0, 0⟩. To get the components in the other coordinate systems, we rewrite the Coulomb's law noting that <b>e<sub>r</sub></b> = <b>r</b>/<i>r</i></p>
+
+<div class="eq">
+<p><b>F<sub>q'</sub></b> = (<i>k<sub>e</sub>qq'</i>/<i>r</i><sup>2</sup>)<b>r</b>/<i>r</i> = <i>k<sub>e</sub>qq'</i>/<i>r</i><sup>3</sup> <b>r</b></p>
+</div>
+
+<p>For Cartesian coordinates knowing that <i>r</i><sup>3</sup> = (<i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> + <i>z</i><sup>2</sup>)<sup>3/2</sup> and substituting in the previous, yields</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="bold">F</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msup>
+        <mi>q</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>k</mi>
+        <mi>e</mi>
+      </msub>
+      <mi>q</mi>
+      <msup>
+        <mi>q</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>z</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>3</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">x</mi>
+  </msub>
+  <mo>+</mo>
+  <mi>y</mi>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">y</mi>
+  </msub>
+  <mo>+</mo>
+  <mi>z</mi>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">z</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \mathbf{F}_{q'} = \frac{k_eqq'}{(x^2 + y^2 + z^2)^{3/2}} (x\hat \mathbf{e_x} + y\hat \mathbf{e_y} + z\hat \mathbf{e_z}) $$ -->
+
+<p>Therefore, the components of <b>F<sub>q'</sub></b> in Cartesian coordinates are</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">&#x27E8;</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>k</mi>
+          <mi>e</mi>
+        </msub>
+        <mi>q</mi>
+        <msup>
+          <mi>q</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mi>x</mi>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>z</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mn>3</mn>
+            <mrow data-mjx-texclass="ORD">
+              <mo>/</mo>
+            </mrow>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>k</mi>
+          <mi>e</mi>
+        </msub>
+        <mi>q</mi>
+        <msup>
+          <mi>q</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mi>y</mi>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>z</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mn>3</mn>
+            <mrow data-mjx-texclass="ORD">
+              <mo>/</mo>
+            </mrow>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>k</mi>
+          <mi>e</mi>
+        </msub>
+        <mi>q</mi>
+        <msup>
+          <mi>q</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mi>z</mi>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>z</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mn>3</mn>
+            <mrow data-mjx-texclass="ORD">
+              <mo>/</mo>
+            </mrow>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">&#x27E9;</mo>
+  </mrow>
+</math>
+
+<!-- $$ \left \langle \frac{k_eqq'x}{(x^2 + y^2 + z^2)^{3/2}}, \frac{k_eqq'y}{(x^2 + y^2 + z^2)^{3/2}}, \frac{k_eqq'z}{(x^2 + y^2 + z^2)^{3/2}} \right \rangle $$ -->
+
+<p>Finally, we obtain the expression in Cylindrical coordinates</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="bold">F</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msup>
+        <mi>q</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>k</mi>
+        <mi>e</mi>
+      </msub>
+      <mi>q</mi>
+      <msup>
+        <mi>q</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>r</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>z</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>3</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>r</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <msub>
+        <mi mathvariant="bold">e</mi>
+        <mi mathvariant="bold">r</mi>
+      </msub>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+  <mo>+</mo>
+  <mi>z</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <msub>
+        <mi mathvariant="bold">e</mi>
+        <mi mathvariant="bold">z</mi>
+      </msub>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+  <mo stretchy="false">)</mo>
+</math>
+<!-- $$ \mathbf{F}_{q'} = \frac{k_eqq'}{(r^2 + z^2)^{3/2}} (r \hat {\mathbf{e_r}} + z  \hat {\mathbf{e_z}}) $$ -->
+
+<p>Thus the components of <b>F<sub>q'</sub></b> along the cylindrical unit vectors constructed at the location of <i>q'</i> are</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">&#x27E8;</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>k</mi>
+          <mi>e</mi>
+        </msub>
+        <mi>q</mi>
+        <msup>
+          <mi>q</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mi>r</mi>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>r</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>z</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mn>3</mn>
+            <mrow data-mjx-texclass="ORD">
+              <mo>/</mo>
+            </mrow>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+    <mn>0</mn>
+    <mo>,</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>k</mi>
+          <mi>e</mi>
+        </msub>
+        <mi>q</mi>
+        <msup>
+          <mi>q</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mi>z</mi>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>r</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>z</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mn>3</mn>
+            <mrow data-mjx-texclass="ORD">
+              <mo>/</mo>
+            </mrow>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">&#x27E9;</mo>
+  </mrow>
+</math>
+
+<!-- $$\left \langle \frac{k_eqq'r}{(r^2 + z^2)^{3/2}}, 0, \frac{k_eqq'z}{(r^2 + z^2)^{3/2}} \right \rangle $$ -->
+
+<section aria-label="End">
+<a href="surfaces.html">«Funzioni di più variabili a valori vettoriali</a>
+<a href="index.html">Index</a>
+<a href="campi_vettoriali.html">Campi vettoriali»</a>
+</section>
+
+</article>
+
+</body>
+</html>

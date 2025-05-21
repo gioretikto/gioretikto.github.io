@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Chinese remainder theorem"/>
+	<title>Chinese remainder theorem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Chinese remainder theorem</h1>
+
+<p>A clever method appearted first in the bookd <i>The Art of War</i>, by Sun Tsu, in the 3rd century AD, allows one to deduce an integer from its approximate size and its least nonnegative remainder modulo <i>m</i>, for a few small <i>m</i>. One early application was to count soldiers. It is sufficient to request the soldiers to line up 5 abreast, then 8, then 19, and to count each time how many soldiers are not lined up: these remainders <i>r<sub>i</sub></i>, for <i>i</i> = 1, 2 and 3, are smaller than 5, 8, and 19, respectively.</p>
+
+<p><b>Theorem 4.23</b> (<i>Chinese remainder theorem</i>). Let <i>r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>n</sub></i> positive integers such that gcd(<i>r<sub>i</sub>, r<sub>j</sub></i>) = 1 for all pairs (<i>i, j</i>) with <i>i &ne; j</i>. Then the systems of congruences</p>
+
+<div class="eq">
+<p><i>x</i> ≡ <i>c<sub>1</sub></i> &emsp;mod <i>r<sub>1</sub></i></p>
+<p>&emsp;&emsp;&emsp;&emsp;<i>x</i> ≡ <i>c<sub>2</sub></i> &emsp; mod <i>r</i><sub>2</sub></i> &emsp; (<b>4.6</b>)</p>
+<p>...</p>
+<p><i>x</i> ≡ <i>c<sub>3</sub></i> &emsp; mod <i>r<sub>s</sub></i></p>
+</div>
+
+<p>admits a unique solution modulo <i>R = r<sub>1</sub> r<sub>2</sub> ··· r<sub>s</sub></i> (any two solutions <i>x</i> and <i>y</i> are congruent modulo <i>R</i>).</p>
+
+<p><b>Proof</b>. Let <i>R<sub>k</sub> = R/r<sub>k</sub></i>; the hyphotesis gcd(<i>r<sub>i</sub>, r<sub>j</sub></i>) = 1 implies that gcd(<i>R<sub>k</sub>, r<sub>k</sub></i>) = 1. So the <i>k</i>-th congruence</p>
+
+<div class="eq">
+<p><i>R<sub>k</sub> x</i> ≡ <i>c<sub>k</sub></i> &emsp; (mod r<sub>k</sub>)</p>
+</div>
+
+<p>admits as unique solution, <i>x̄<sub>k</sub></i>, modulo <i>r<sub>k</sub></i> (as stated in <a href="linear_congruences.html">Proposition 4.18</a>), the number</p>
+
+<div class="eq">
+<p><i>x̄ = R<sub>1</sub> x̄<sub>1</sub> + R<sub>2</sub> x̄<sub>2</sub> + ... + R<sub>s</sub> x̄<sub>s</sub></i></p>
+</div>
+
+<p>indeed as <i>R<sub>i</sub></i> is a multiple of <i>r<sub>k</sub></i> for <i>i &ne; k</i>, we have</p>
+
+<div class="eq">
+<p><i>R<sub>i</sub></i> ≡ 0 (mod <i>r<sub>k</sub></i>) &emsp; for <i>i &ne; k</i></p>
+</div>
+
+<p>and so</p>
+
+<div class="eq">
+<p><i>x̄</i> ≡ <i>R</i><sub>1</sub><i>x̄</i><sub>1</sub> ≡ c<sub>1</sub></i> &emsp;mod r<sub>1</sub></p>
+<p>&emsp;&emsp;&emsp;&emsp;<i>x̄ ≡ R<sub>2</sub>x̄<sub>2</sub> ≡ <i>c</i><sub>2</sub> &emsp; mod <i>r</i><sub>2</sub> &emsp; (<b>4.7</b>)</p>
+<p>...</p>
+<p><i>x̄ ≡ R<sub>3</sub>x̄<sub>3</sub> ≡ c<sub>3</sub></i> &emsp; mod <i>r<sub>s</sub></i></p>
+</div>
+
+<p>thus x̄ is a solution of the system.</p>
+
+<p>As to the unicity modulo <i>R</i>, let <i>ȳ</i> be another solution of the system; in other words, assume that</p>
+
+<div class="eq">
+<p><i>x̄</i> ≡ <i>c<sub>k</sub></i> ≡ <i>ȳ</i> &emsp; (mod <i>r<sub>k</sub></i>),  &emsp; for <i>k</i> = 1, ..., <i>s</i>.</p>
+</div>
+
+<p>so <i>ȳ</i> ≡ <i>x̄</i> (mod <i>r<sub>k</sub></i>) for each <i>k</i>. Thus <i>r<sub>k</sub></i> | (<i>x̄</i> − <i>ȳ</i>) for each <i>k</i>. But
+then, by <a href="diophantine.html">Corollary 2.20</a>, since the <i>r<sub>k</sub></i> are pairwise relatively prime, <i>r<sub>k</sub></i> | (<i>x̄</i> − <i>ȳ</i>), and
+ȳ ≡ x̄ (mod <i>R</i>).□</p>
+
+<p><b>Example 4.24</b>. Solve the problem of counting a few hundred soldiers by linining them up by 7, 10 and 13. For each alignment we have the remainders r<sub>1</sub> = 1, r<sub>2</sub> = 3, and r<sub>3</sub> = 8. Then we can set up the system</p>
+
+<div class="eq">
+<p><i>
+x</i> ≡ 1 (mod 7);<br>
+x</i> ≡ 3 (mod 10);<br>
+x</i> ≡ 8 (mod 13).
+</p>
+</div>
+
+<p>By the Chinese remainder theorem, it admits a unique solution modulo <i>R</i> = 7 ⋅ 10 ⋅ 13 = 910. We have <i>R<sub>1</sub></i> = 10 ⋅ 13 = 130; <i>R<sub>2</sub></i> = 7 ⋅ 13 = 91; <i>R<sub>3</sub></i> = 7 ⋅ 10 = 70. Thus we need to solve the following congruences</p>
+
+<div class="eq">
+130 ⋅ <i>x</i> ≡ 1 (mod 7)</p>
+91 ⋅ <i>x</i> ≡ 3 (mod 10)</p>
+70 ⋅<i>x</i> ≡ 8 (mod 13)</p>
+</div>
+
+<p>The solution of the first congruence x = 2;</p>
+
+<p>For the 2nd congruence first note that 91 ≡ 1 (mod 10), so 1 is the multiplicative inverse then x = 3.</p>
+
+<p>For the 3rd congruence we notice that 5 ⋅ x ≡ 8 (mod 13), we find the multiplicative inverse of 5 mod 13: 5 ⋅ x ≡ 1 mod 13 which is 8 so by multiplying by 8 both sides we get 8 ⋅ 5 ⋅ x ≡ 8 ⋅ 8 (mod 13) since 8 · 5 ≡ 1 (mod 13), x = 8.</p>
+
+<p>x̄ = 2⋅130 + 3⋅91 + 70⋅64 = 5013 ≡ 463 (mod 910)</p>
+
+<p>Since there a few hundred soldiers, there must be exaclty 463 of them, as the next integer solution would be 463 + 910 = 1373.</p>
+
+<p><b>Example 4.25</b> - Suppose, that lining up a group of pupils (&lt; 1000) five abreast, one of them is not lined up, when eight abreast, 2 are not lined up, and when 19 abreast, 3 are not lined up. Then <i>r<sub>1</sub></i> = 1, <i>r<sub>2</sub></i> = 2 and <i>r<sub>3</sub></i> = 3. How many pupils are there?</p>
+
+<p><b>Solution</b>. In this case the number of the students is found by finding the solution, unique modulo <i>R</i> = 5 ⋅ 8 ⋅ 19 = 760, of the system</p> 
+
+<div class="eq">
+<p>x ≡ 1 (mod 5),</p>
+<p>x ≡ 2 (mod 8),</p>
+<p>x ≡ 3 (mod 19).</p>
+</div>
+</p>
+
+<p>We have <i>R<sub>1</sub></i> = 8 · 19 = 152, <i>R<sub>2</sub></i> = 5 · 19 = 95, <i>R<sub>3</sub></i> = 5 · 8 = 40;  We need to find solutions for the system</p>
+
+<div class="eq">
+<p>152 ⋅ x ≡ 1 (mod 5)</p>
+<p>95 ⋅ x ≡ 2 (mod 8)</p>
+<p>40 ⋅ x ≡ 3 (mod 19)</p>
+</div>
+
+<p>The first congruence has x = 3 has solution. The second x = 6, so, the thirs x = 11; thus a solution is 3 · 152 + 6 · 95 + 11 · 40 = 1466 ≡ 706 mod 760. As 706 is the only solution smaller than 1000, this is the result we were looking for.</p>
+
+<p>There is a useful consequence or, can also be seen as a different interpretation of the Chinese remainder theorem. Let ℤ<sub>m</sub>× ℤ<sub>n</sub> be the Cartesian product of ℤ<sub>m</sub> and ℤ<sub>n</sub>. As ℤr and ℤ<sub>n</sub> are rings, the set ℤ<sub>m</sub> × ℤ<sub>n</sub> itself is in a natural way a product ring, in which the operations are defined by definition</p>
+
+<div class="eq">
+<p>(ā<sub>m</sub>, b̄<sub>n</sub>) + ā'<sub>m</sub>, b̄'<sub>n</sub>) := (ā<sub>m</sub> + c̄<sub>m</sub>, b̄<sub>n</sub> + b̄'<sub>n</sub>),</p>
+<p>(ā<sub>m</sub>, b̄<sub>n</sub>) · (ā'<sub>m</sub>, b̄'<sub>n</sub>) := (ā<sub>m</sub>· c̄<sub>m</sub>, b̄<sub>n</sub> · b̄'<sub>n</sub>).</p>
+</div>
+
+<p>The following proposition is an immediate consequence of the Chinese remainder theorem.</p>
+
+<div id="chinese2">
+<p><b>Proposition 4.26</b>. Let <i>m</i> and <i>n</i> be two relatively prime integers greater than 1. The map</p>
+
+<div class="eq">
+<p><i>f: ℤ<sub>mn</sub> → ℤ<sub>m</sub> × ℤ<sub>n</sub>,</i></p>
+</div>
+
+<p>defined by</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x̄</i><sub>mn</sub></i>) = (<i>x̄<sub>m</sub>, ȳ<sub>n</sub></i>),</p>
+</div>
+
+<p>is a bijection and it preserves the operations</p>
+
+<div class="eq">
+<p><i>f</i>(x̄<sub>mn</sub> + ȳ<sub>mn</sub>) = f(x̄<sub>mn</sub>) + f(ȳ<sub>mn</sub>),</p>
+<p><i>f</i>(x̄<sub>mn</sub> · ȳ<sub>mn</sub>) = f(x̄<sub>mn</sub>) · f(ȳ<sub>mn</sub>),</p>
+</div>
+
+<p><b>Proof</b>. We deed to check trhree things: 1) <i>f</i> is <a href="functions.html#welldefined">well-defined</a> 2) <i>f</i> is injective; 3) <i>f</i> is surjective.</
+</p>
+
+<ol>
+	<li><p>We first need to check <i>f</i> is well defined; i.e. <i>a ≡ b</i> mod <i>mn</i>, then f(a mod mn) = f(b mod mn). Indeed, suppose that <i>a ≡ b</i> mod <i>mn</i>. Then mn divides <i>a − b</i>, and therefore <i>m</i> and <i>n</i> are divisors of <i>a - b</i>. This shows that a ≡ b mod m and a ≡ b mod n. hence</p>
+	
+	<div class="eq">
+	<p><i>f</i>(a mod mn) = (a mod m, mod n) = (b mod m, b mod n) = <i>f</i>(b mod mn)</p>
+	</div>
+	</li>
+	
+	<li><p>Now we show that <i>f</i> is injective; i.e., f(a mod mn) = f(b mon mn) implies that <i>a ≡ b</i> mod <i>mn</i>. Indeed, if f(a mon mn) = f(b mod mn), then</p>
+		<div class="eq">
+			<p>(a mod m, mod n) = (b mod m, b mod n)</p>
+		</div>
+		
+		<p>In particular a and b are solutions to the system</p>
+		
+			<div class="eq">
+			<p><i>x ≡ a</i> (mod <i>m</i>),</p>
+			<p><i>x ≡ a</i> (mod <i>n</i>)</p>
+			</div>
+		<p>However since gcd(m,n) = 1, the chinese remainder theorem gurantess that there is a unique solution to this system modulo <i>mn</i>. Hence, we must have <i>a ≡ b</i> mod <i>mn</i> as claimed. This proves <i>f</i> is injective.</p>
+	</li>
+	
+	<li><p>It remains to show the surjectivty of <i>f</i>, i.e., for all (u mod m, v mod n) &in; ℤ<sub>m</sub> × ℤ<sub>n</sub> there is some <i>a</i> mod <i>mn</i>, such that f(a mod mn) = (u mod m, v mod n). In order to show this, let (u mod m, v mod n) be an arbitrary element of the direct product ℤ<sub>m</sub> × ℤ<sub>n</sub>. Since gcd(m,n) = 1, the Chinese remainder theorem implies that the system</p>
+			<div class="eq">
+			<p><i>x</i> ≡ <i>u</i> (mod <i>m</i>),</p>
+			<p><i>x</i> ≡ <i>v</i> (mod <i>n</i>)</p>
+			</div>
+	<p>has a unique solution x<sub>0</sub> mod mn such that x<sub>0</sub> ≡ u mod m and x<sub>0</sub> ≡ v mod n. Hence, </p>
+		<div class="eq">
+			<p><i>f</i>(<i>x</i><sub>0</sub> mod mn) = (<i>x</i><sub>0</sub> mod m, x<sub>0</sub> mod n) = (u mod m, v mod n)</p>
+		</div>
+		<p>and this shows that <i>f</i> is surjective.</p>
+		</li>	
+</ol>
+
+<p>Therefore <i>f</i> is a bijections. This ends the proof of the theorem.□</p>
+
+<section aria-label="End">
+<a href="chinese.html">&#171;Chinese remainder theorem</a>
+<a href="index.html">Index</a>
+<a href="euler.html">Euler function and theorem &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

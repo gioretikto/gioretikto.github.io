@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Metric Spaces"/>
+	<title>Metric Spaces</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Metric Spaces</h1>
+
+<p>It is often useful to consider how far apart two objects are; that is, the “distance” between them. A reasonable distance measure would have to satisfy certain requirements, such as being a nonnegative real number. <br> A metric space is a <a href="topology.html">topological space</a> that includes the notion of a metric or distance between its elements. The notion of metric space was introduced in 1906 by Maurice Fréchet and developed and named by Felix Hausdorff in 1914.</p>
+
+<p><b>Definition 2.1.1</b>. Let <i>X</i> be a non-empty set and <i>d</i> a real-valued function  <i>d</i>: <i>X</i> × <i>X</i> ⟶ ℝ, also called a <b>distance function</b> such that for all <i>a, b, c</i> ∈ <i>X</i>:</p>
+
+<ol type="i">
+	<li><p>POSITIVITY: <i>d</i>(<i>a, b</i>) > 0 and <i>d</i>(<i>a, b</i>) = 0 if and only if <i>a</i> = <i>b</i>;</p></li>
+	<li><p>SYMMETRY: <i>d</i>(<i>a,b</i>) = d(<i>b,a</i>);</p></li>
+	<li><p>TRIANGLE INEQUALITY <i>d</i>(<i>a, c</i>) &le; <i>d</i>(<i>a, b</i>) + <i>d</i>(<i>b, c</i>), for all <i>a, b</i> and <i>c</i> in <i>X</i>.</p>
+</ol>
+
+<p>Then <i>d</i> is said to be a <b>metric</b> on <i>X</i>, (<i>X, d</i>) is called a <b>metric space</b> and <i>d</i>(<i>a, b</i>) is referred to as the <b>distance</b> between <i>a</i> and <i>b</i>. &emsp;□</p>
+
+<p><b>Examples 2.1.2</b>. </p>
+
+<li><p>The function <i>d</i> : ℝ × ℝ → ℝ given by</p>
+
+
+<div class="eq">
+<p><i>d</i>(<i>a, b</i>) = |<i>a</i> − <i>b</i>|, &emsp;<i>a, b</i> ∈ ℝ</p>
+</div>
+
+<p>is a metric on the set ℝ since</p>
+
+<ol type="i">
+	<li><p>|<i>a</i> − <i>b</i>| > 0 , for all <i>a</i> and <i>b</i> in ℝ, and |<i>a</i> − <i>b</i>| = 0 if and only if <i>a</i> = <i>b</i>,</p></li>
+	<li><p>|<i>a</i> − <i>b</i>| = |<i>b</i> − <i>a</i>|</p></li>
+	<li><p>|<i>a</i> − <i>c</i>| &le; |<i>a</i> − <i>b</i>| + |<i>b</i> − <i>c</i>|. (Deduce this from |<i>x</i> + <i>y</i>| &le; |<i>x</i>| + |<i>y</i>|.)</p></li>
+</ol>
+
+<p>We call <i>d</i> the <b>euclidean metric on</b> ℝ. &emsp;□</p></li>
+
+	<li><p>Similarly, if <i>M</i> is any metric space and <i>X</i> is a subset of <i>M</i>, then <i>X</i> inherits a metric simply by restricting the distance function of <i>M</i> to pairs of points in <i>X</i>.</p></li>
+
+<li><p>If <i>X</i> is any set, define a metric on <i>X</i> by setting <i>d</i>(<i>x,y</i>) = 1 unless <i>x</i> = <i>y</i>, in which cases <i>d</i>(<i>x,y</i>) = 0. This is called the <b>discrete metric</b> on <i>X</i>.</p></li>
+
+</ul>
+
+<p>Here are some of the standard definitions used in metric space theory. </p>
+
+<p><b>Definition 2.1.5</b>. Let (<i>M, d</i>) be a metric space. An <b>open ball</b> of center <i>a</i> ∈ <i>M</i> and radius <i>r</i> > 0, denoted by <i>B<sub>r</sub></i>(<i>a</i>), is defined by:</p>
+
+<div class="eq">
+<p><i>B<sub>r</sub></i>(<i>a</i>) = {<i>x</i> ∈ <i>M</i> : d(<i>x, a</i>) &lt; <i>r</i>}.</p>
+</div>
+
+<p>A closed ball of center <i>a</i> ∈ <i>M</i> and radius <i>r</i> > 0, denoted by B<sub>c</sub>(<i>a, r</i>), is defined by:</p>
+
+<div class="eq">
+<p><i>B<sub>c</sub></i>(<i>a</i>) = {<i>x</i> ∈ <i>M</i> : d(<i>x, a</i>) ≤ <i>r</i>}.</p>
+</div>
+
+<p><b>Definition 2.1.6</b>. Let (<i>M, d</i>) be a metric space and let <i>U</i> ⊂ <i>M</i>. Then we say that <i>U</i> is <b>open</b> in (<i>M, d</i>)  (or just in <i>M</i>) if it contains an open ball around each of its point, i.e.:</p>
+
+<div class="eq">
+<p>∀<i>x</i> ∈ <i>U</i>, ∃<i>r</i> > 0 : <i>B<sub>r</sub></i>(<i>x</i>) ⊂ <i>U</i>.</p>
+</div>
+
+<p>A subset <i>V</i> of <i>M</i> is said to be <b>closed</b> if its algebraic complement <i>V<sup>c</sup></i> is <b>open</b>.&emsp;□</p>
+
+<p><b>Example 2.1.7</b>. In ℝ with the euclidean metric B<sub>r</sub> (<i>a</i>) is the open interval (<i>a</i> − <i>r</i>, <i>a</i> + <i>r</i>).&emsp;□</p>
+
+<p><b>Example 2.1.8</b>. In ℝ<sup>2</sup> with the euclidean metric B<sub>r</sub> (<i>a</i>) is the open disc with center <i>a</i> and radius <i>r</i>.&emsp;□</p>
+
+<img src="img/open_ball.png" alt="open ball"/>
+
+<p>The next theorem summarizes the most important properties of open and closed subsets of metric spaces.</p>
+
+<p id="theo"><b>Theorem 2.1.9</b>. Let (<i>M d</i>) a metric space . Then</p>
+
+<ol type="i">
+	<li><p>Both <i>M</i> and ∅ are open;</p></li>
+	<li><p>Any union of arbitrarly many open subsets of <i>M</i> is an open susbet of <i>M</i>.</p></li>
+	<li><p>Any intersection of finitely many open subsets of <i>M</i> is an open subset of <i>M</i>;</p></li>
+	<li><p>given distinct points <i>x,y</i> &in; <i>M</i> there exist open sets <i>U,V</i> such that <i>x</i> &in; <i>U</i>,  <i>y</i> &in; <i>V</i> and <i>U</i> &cup; <i>V</i> = ∅.</p></li>
+</ol>
+
+<p><b>Proof</b>. (i) and (ii) are trivial consequence of the definition of open sets. For (iii) first consider the case of the intersection of two open sets say <i>A</i><sub>1</sub> and <i>A</i><sub>2</sub>. Let <i>x</i> &in; <i>A</i><sub>1</sub> &cup; <i>A</i><sub>2</sub>. Then <i>x</i> &in; <i>A</i><sub>1</sub> and <i>x</i> &in; <i>A</i><sub>2</sub>. Since <i>A</i><sub>1</sub> is open, there exists <i>r</i><sub>1</sub> &gt; 0 such that <i>B</i><sub><i>r</i><sub>1</sub></sub>(<i>x</i>) &subset; <i>A</i><sub>1</sub>. Similarly since <i>A</i><sub>2</sub> is open, there exists <i>r</i><sub>2</sub> &gt; 0 such that <i>B</i><sub><i>r</i><sub>2</sub></sub>(<i>x</i>) &subset; <i>A</i><sub>2</sub>. Now let <i>r</i> = min {<i>r</i><sub>1</sub>, <i>r</i><sub>2</sub>}. Then clearly <i>B<sub>r</sub></i> &subset; <i>B</i><sub><i>r</i><sub>1</sub></sub>(<i>x</i>) &cup; <i>B</i><sub><i>r</i><sub>2</sub></sub>(<i>x</i>) &subset; <i>A</i><sub>1</sub> &cup; <i>A</i><sub>2</sub>. Thus <i>A</i><sub>1</sub> &cup; <i>A</i><sub>2</sub> is open (a set is open in a metric space iff it contains an open ball centered at every point). One can either generalise this argument  or use induction to settle the general case. The exceptional case of the intersection of an empy family of open sets is already covered under (i). <br> For (iv) let <i>x,y</i> &in; <i>X</i> and <i>x</i> &ne; <i>y</i>. Then d(<i>x,y</i>) &gt; 0. Choose <i>r</i> so that 0 &lt; <i>r</i> &lt; <i>d</i>(<i>x,y</i>)/2 and let <i>U</i> = <i>B<sub>r</sub></i>(<i>x</i>), <i>V</i> = <i>B<sub>r</sub></i>(<i>y</i>). Then clearly <i>U,V</i> are open sets containing <i>x,y</i> respectively. Also they are mutually disjoint, for if <i>z</i> &in; <i>U</i> &cup; <i>V</i> then  <i>d</i>(<i>x,z</i>) &lt; <i>r</i> and <i>d</i>(<i>z,y</i>) &lt;  <i>t</i> whence <i>d</i>(<i>x,y</i>) &lt; 2<i>r</i> by triable inequality, a contradiction. &emsp;□</p>
+
+
+<p>A normed vector space is a metric space because the <a href="../linear_algebra/inner_product.html#norm">norm</a> can induce a metric. In the following, we may speak almost interchangeably of an inner product space, a normed space, or a metric space, but we must recognize that none is a special case of another. </p>
+
+<h2>Metrics Induced by Norms</h2>
+
+<p>If subtraction and a norm are defined for the elements of S, the most common way of forming a metric is by using the norm. If ||·|| is a norm, we can verify  that</p>
+
+<div class="eq">
+<p><i>d</i>(<i>x, y</i>) = ||<i>x</i> − <i>y</i>||</p>
+</div>
+
+<p>is a metric by using the properties of a norm to establish the three properties of a metric above. The norm in equation (2.42) may, of course, be induced by an inner product. <br> The general inner products, norms, and metrics defined above are relevant in a wide range of applications. The sets on which they are defined can consist of various types of objects. In the context of real vectors, the most common inner product is the dot product; the most common norm is the Euclidean norm that arises from the dot product; and the most common metric is the one defined by the Euclidean norm, called the Euclidean distance.</p>
+
+<p id="discrete"><b>Example 3.1.3</b>. Let <i>X</i> be a non-empty set and <i>d</i> the function from <i>X</i> × <i>X</i> into ℝ defined by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>d</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if</mtext>
+          </mrow>
+          <mtext>&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>&#x2260;</mo>
+          <mi>y</mi>
+          <mo>,</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>if</mtext>
+          </mrow>
+          <mtext>&#xA0;</mtext>
+          <mi>x</mi>
+          <mo>=</mo>
+          <mi>y</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$ d (x,y)= \begin{cases}1&{\text{if}}\ x\neq y,\\0&{\text{if}}\ x=y\end{cases} $$ -->
+
+<p>Then <i>d</i> is a metric on <i>X</i> and is called the <b>discrete metric</b>.&emsp;■</p>
+
+<p><b>Examples 3.1.4</b>. The function <i>d</i> : ℝ<sup>2</sup> × ℝ<sup>2</sup> → ℝ given by</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>d</mi>
+  <mo stretchy="false">(</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msub>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo>,</mo>
+  <mo fence="false" stretchy="false">&#x27E8;</mo>
+  <msub>
+    <mi>b</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>b</mi>
+    <mn>2</mn>
+  </msub>
+  <mo fence="false" stretchy="false">&#x27E9;</mo>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>a</mi>
+      <mn>1</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>b</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>a</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>b</mi>
+      <mn>2</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$d(\langle a_1,a_2 \rangle, \langle b_1,b_2 \rangle) = \sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2} $$ -->
+
+<p>is a metric on the set ℝ since</p>
+
+<ol type="i">
+	<li><p>|<i>a</i> − <i>b</i>| &ge; 0 , for all a and b in ℝ, and |<i>a</i> − <i>b</i>| = 0 if and only if <i>a</i> = <i>b</i>;</p></li>
+	<li><p>|<i>a</i> − <i>b</i>| = |<i>b</i> − <i>a</i>|;</p></li>
+	<li><p>|<i>a</i> − <i>c</i>| &le; |<i>a</i> − <i>b</i>| + |<i>b</i> − <i>c</i>|. (Deduce this from |<i>x</i> + <i>y</i>| &le; |<i>x</i>| + |<i>y</i>|.)</p></li>
+</ol>
+
+<p>We call <i>d</i> the <b>euclidean metric on</b> ℝ.  Yet another metric on ℝ<sup>2</sup> is given by</p>
+
+<div class="eq">
+<p><i>d</i> (⟨<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>⟩) = |<i>a</i><sub>1</sub> − <i>b</i><sub>1</sub>| + |<i>a</i><sub>2</sub> − <i>b</i><sub>2</sub>|.&emsp;■</p>
+</div>
+
+<p><b>Example 3.1.4</b>. Let <i>C</i>[0, 1] denote the set of continuous functions from [0, 1] into ℝ. A metric is defined on this set by</p>
+
+<div class="eq">
+<p>∫<sup><sup>1</sup></sup><sub><sub>0</sub></sub> |<i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>)| d<i>x</i></p>
+</div>
+
+<p>where <i>f</i> and <i>g</i> are in <i>C</i>[0, 1]. <i>d</i>(<i>f, g</i>) is precisely the area of the region which lies between the graphs of the functions and the lines x = 0 and x = 1, as illustrated below considering the two functions <i>f</i>(<i>x</i>) = 2<i>x</i> − <i>x</i><sup>3</sup> and <i>g</i>(<i>x</i>) = <i>x</i> − <i>x</i><sup>2</sup>.</p>
+
+<figure>
+<img src="../multivariable_calculus/img/ysimple_example.png" alt="y simple not x simple"/>
+<figcaption>Region of the plane between <i>f</i>(<i>x</i>) = 2<i>x</i> − <i>x</i><sup>3</sup> and <i>g</i>(<i>x</i>) = <i>x</i> − <i>x</i><sup>2</sup></figcaption>
+</figure>
+
+<p>Another metric is defined on C [0, 1] as follows:</p>
+
+<div class="eq">
+<p>d<sup>∗</sup> (<i>f, g</i>) = sup{|<i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>)| : <i>x</i> ∈ [0, 1]}</p>
+</div>
+
+<p>If we try to calculate the metrix for this particular example we find that |<i>f</i>(<i>x</i>) − <i>g</i>(<i>x</i>)| = |−<i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> +<i>x</i>|; The maximum value of a differentiable function <i>h</i> on (0,1), is found solving <i>h'</i>(<i>x</i>) = 0 and checking the endpoints 0 and 1. Taking the derivative and equating to zero: −3<i>x</i><sup>2</sup> + 2<i>x</i> + 1 = 0, solving the quadratic equation we find 1 and − 1/3 and considering only the positive solution <i>x</i> = 1; when you put <i>x</i> into |f(x) − g(x)|, it turns out to give 1. &emsp;■</p>
+
+<h2>Open and Closed Sets in ℝ</h2>
+
+<p><b>Proposition 3.17</b>.</p>
+
+<ol>
+	<li><p>The empty set ∅ and the set ℝ are open.</p></li>
+	<li><p>Every open interval in ℝ is an open set.</p></li>
+</ol>
+
+<p><b>Proof</b>.</p>
+
+<ol>
+	<li><p>ℝ is clearly open as for every x ∈ ℝ, for any ε > 0, the open ball B<sub>ε</sub>(<i>x</i>) is in ℝ. We see that the empty set ∅ is open by contradiction: if it were not open, then there would exist an x ∈ ∅ for which there is no such ε, but this is a contradiction since there is no x in ∅; therefore, ∅ must be open.</p></li>
+
+	<li><p>Let <i>I</i> be a nonempty open interval, and let x ∈ I. Then I can be a bounded or an unbounded interval. If it is bounded, then it is of the form I = (a, b), for some <i>a, b</i> ∈ ℝ. In this case we can choose ε to be any positive number less than the distance from x to the endpoints, i.e., ε < min{x − a, b − x}. Then the ball centered at <i>x</i> of radius ε must be in I. If I = (a, ∞), let ε = x − a, and if I = (−∞, b), let ε = b − x. In both cases we have that B(x, ε) ⊆ I. Therefore I is open.&emsp;□</p></li>
+</ol>
+
+<p>However not all open sets are intervals for example, (1,2) u (4,5) is open. In ℝ, {2} is closed and not open; R is both; [1,3) is neither. </p>
+
+<p><b>Examples. 3.1.7</b>. In ℝ, any open interval (<i>a,b</i>) is an open set: Let <i>x</i> &in; (<i>a,b</i>) and let &epsilon; = min {<i>x</i>−<i>a</i>, <i>b</i> − <i>x</i>}. Then <i>B<sub>&epsilon;</sub></i> (<i>x</i>) = (<i>x</i> − &epsilon;, <i>x</i> + <i>&epsilon;</i>; is an open ball with <i>x</i> as center such that <i>B<sub>&epsilon;</sub></i> (<i>x</i>) &subseteq; (<i>a,b</i>). <br> 
+If we add both endpoints to the interval, we have a closed set. Hence the names open and closed interval. <br> The whole line ℝ and any open half-line (<i>a</i>, &infin;) or (−&infin;, <i>a</i>) is an open set. On the other hand, the half-open interval [<i>a,b</i>) is not open, because it contains no neighborhood of the point <i>a</i>.</p>
+<p>In ℝ, {0} is not open. &emsp;■</p>
+
+<p><b>Definition 3.1.8</b>. Let (<i>X, d</i>) be a metric space and let <i>A</i> ⊂ <i>X</i>. We say that A is <b>bounded</b> if it is contained in a ball of a finite radius.&emsp;□</p>
+
+<section aria-label="End">
+<a href="Non_homeomorphic.html">&#171;Non-Homeomorphic Spaces</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

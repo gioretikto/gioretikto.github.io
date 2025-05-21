@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Wedderburn's theorem">
+	<title>Wedderburn's theorem</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Wedderburn's theorem</h1>
+
+<p>A ring <i>R</i> with unit element 1 is called a <b>skew-field</b> or <b>division ring</b> iff, any given nonzero element <i>a</i> is invertible, that is, there exists an element in <i>R</i> denoted by <i>a</i><sup>−1</sup> such that the relation <i>aa</i><sup>−1</sup> = <i>a</i><sup>−1</sup><i>a</i> = 1, holds tue (we do not require multiplication to be commutative). Thus a commutative division ring is a field.</p>
+
+<p>For example, the sets ℚ, ℝ and ℂ are fields, whereas the set ℍ of quaternions (introduce by Hamilton) is only a skew-field:</p>
+
+<div class="eq">
+<p>ℍ = {<i>ai</i> + <i>bj</i> + <i>ck</i> + <i>d</i> where <i>a,b,c,d</i> &in; ℝ, <i>i</i><sup>2</sup> = <i>j</i><sup>2</sup> = <i>k</i><sup>2</sup> = <i>ijk</i> = − 1, <i>ij</i> = −<i>ji</i> = <i>k</i>, <i>jk</i> = −<i>kj</i> = <i>i</i>, <i>ki</i> = −<i>ik</i> = <i>j</i>}</p>
+</div>
+
+<p><b>Lemma 8.6.1</b>. If <i>x</i> is an integer greater than 1, <i>x<sup>m</sup></i> − 1 divides <i>x<sup>n</sup></i> − 1 iff <i>m</i> | <i>n</i>.</p></li>
+
+<p><b>Proof</b>. If we divide <i>x<sup>n</sup></i> − 1 by <i>x<sup>m</sup></i> − 1, we get the following</p> 
+
+<div class="eq">
+<p><i>x<sup>n</sup></i> − 1 = (<i>x<sup>m</sup></i> − 1) (<i>x</i><sup><i>n</i>−<i>m</i></sup> + <i>x</i><sup><i>n</i>−2<i>m</i></sup> + <i>x</i><sup><i>n</i>−3<i>m</i></sup> + ... + <i>x</i><sup><i>n</i>−<i>km</i></sup>) + (<i>x</i><sup><i>n</i>−<i>km</i></sup> − 1)</p>
+</div>
+
+<p>where <i>k</i> is the largest positive integer sucht that <i>n</i> − <i>km</i> &ge; 0. From this we see that <i>x<sup>m</sup></i> − 1 divides <i>x<sup>n</sup></i> − 1 iff <i>n</i> = <i>km</i>. &emsp;□</p>
+
+<p><b>8.6.2 Wedderburn's theorem</b>. A finite skew field is commutative (i.e., a field).</p>
+
+<p><b>Proof</b>. We shall show that the center Z(<i>K</i>) = {<i>k</i> &in; <i>K</i> | <i>kx</i> = <i>xk</i> &forall;<i>x</i> &in; <i>K</i>}  coincides with <i>K</i>. <br> Let |Z(<i>K</i>)| = <i>q</i>. Since Z(<i>K</i>) is a subfield of <i>K</i>, <i>K</i> is a vector space over <i>Z</i>(<i>K</i>), and thereby has <i>q<sup>n</sup></i> elements. We shall thus prove that <i>n</i> = 1. Let <i>a</i> &in; <i>K</i>, and let C(<i>a</i>) its <a href="group_actions.html#centralizer">Centralizer</a>: it is a sub-skew-field of <i>K</i> containing the center, thus its order is <i>m</i> which divides <i>n</i>. Let C(<i>a</i>)* = C(<i>a</i>) \{0} the multiplicative subgroup <i>K*</i>, of <i>K</i>, hence by <a href="Lagrange.html">Lagrange's theorem</a> <i>q<sup>m</sup></i> − 1 is a divisor of <i>q<sup>n</sup></i> −1, thus <i>m</i> | <i>n</i> (Lemma 8.6.1). The <a href="group_actions.html#class_eq">class equation</a> for the group <i>K*</i> can be written as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>q</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <mi>q</mi>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>m</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mo>&#x2260;</mo>
+      <mi>n</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>m</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+<mtext>&emsp;&emsp;8.4.1</mtext>
+</math>
+
+<!-- $$q^n -1 = q -1 + \sum_{m|n, m\ne n} \frac{q^n -1} {q^m -1} $$ -->
+
+<p>which is a relation among integers. The condition <i>m</i> &ne; <i>n</i> is equivalent to <i>a</i> &notin; Z(<i>K*</i>). We shall show that if <i>n</i> &gt; 1, this relation cannot hold. Suppose there exists an integer dividing (<i>q<sup>n</sup></i> − 1)/(<i>q<sup>m</sup></i> −1) in Eq. 8.4.1 then it must divide <i>q</i> − 1 as well. If this does not happen Eq. 8.4.1 could be verified only for <i>n</i> = 1. To determine this integer we resort to the <a href="cyclotomic_polynomials.html"><i>n</i>th cyclotomic polynomial</a>, <i>&Phi;<sub>n</sub></i>(<i>x</i>) a polynomial in ℤ[<i>x</i>]. The relation</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>x</mi>
+    <mi>d</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mtable data-mjx-smallmatrix="true" columnspacing="0em" rowspacing="0.1em">
+        <mtr>
+          <mtd>
+            <mi>k</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi>n</mi>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mi>k</mi>
+            <mo>&#x2224;</mo>
+            <mi>d</mi>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mi>k</mi>
+            <mo>&#x2260;</mo>
+            <mi>n</mi>
+          </mtd>
+        </mtr>
+      </mtable>
+    </mrow>
+  </munder>
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ x^n-1 = \Phi_n(x) (x^d-1) \prod_{\substack{k|n\\ k \nmid d\\k\ne n}} \Phi_k (x) $$ -->
+
+<p>a relation of the form</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup></i> − 1 = <i>&Phi;<sub>n</sub></i>(<i>x</i>)(<i>x<sup>d</sup></i> − 1)<i>f</i>(<i>x</i>),	&emsp;&emsp; <i>f</i>(<i>x</i>) &in; ℤ[<i>x</i>]</p>
+</div>
+
+<p>which holds for every <i>x</i>. In particular if <i>q</i> is an integer</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi mathvariant="normal">&#x3A6;</mi>
+    <mi>n</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>q</mi>
+  <mo stretchy="false">)</mo>
+  <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>q</mi>
+        <mi>m</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi mathvariant="normal">&#x2200;</mi>
+  <mi>m</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>n</mi>
+  <mo>,</mo>
+  <mi>m</mi>
+  <mo>&#x2260;</mo>
+  <mi>n</mi>
+</math>
+
+<!-- $$ \Phi_n(q) \vert \frac{q^n -1} {q^m -1} \quad \forall m|n, m \ne n$$ -->
+
+<p>Since <i>&Phi;<sub>n</sub></i>(<i>q</i>) divides <i>q<sup>n</sup></i> − 1, based on Eq. 8.4.1, it must divide <i>q</i> − 1 as well. We must have |<i>&Phi;<sub>n</sub></i>(<i>q</i>)| &le; <i>q<sup>n</sup></i> − 1. For <i>n</i> &gt; 1 this would be impossible: <i>&Phi;</i>(<i>q</i>) = &Pi;(<i>q</i> − <i>&theta;</i>), with <i>&theta;</i> variable among the <i>n</i>th primitive roots of unity, and |<i>q</i> − &theta;| &gt; |<i>q</i>| − |<i>&theta;</i>| = <i>q</i> − 1, that is |<i>&Phi;<sub>n</sub></i>(<i>q</i>)| &gt; <i>q</i> − 1. &emsp;□</p>
+
+<section aria-label="End">
+<a href="finite_fields.html">&#171;Finite Fields</a>
+<a href="index.html">Index</a>
+<a href="normal_extensions.html">Normal Extensions&#187;</a>
+</section>
+</article>
+
+</body>
+</html>

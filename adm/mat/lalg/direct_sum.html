@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Sums of Subspaces"/>
+	<title>Sums of Subspaces</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Sums of Subspaces</h1>
+
+<p>The union of subspaces is rarely a subspace, which is why we shall define and work with the sum rather than unions.</p>
+
+<p><b>Definition 1.8.1</b>.Se <i>W</i><sub>1</sub> e <i>W</i><sub>2</sub> sono sottospazi vettoriali di <i>V</i>, la loro <i>somma</i> <i>W</i><sub>1</sub> + <i>W</i><sub>2</sub> è il sottospazio vettoriale <i>L</i>(<i>W</i><sub>1</sub> ⋃ <i>W</i><sub>2</sub>) <a href="subspace.html#gen">generato</a> da <i>W</i><sub>1</sub> ⋃ <i>W</i><sub>2</sub>. Tale definizione si generalizza, in modo ovvio, al caso della somma di una famiglia qualsiasi (anche infinita) di sottospazi di <i>V</i>.</p>
+
+<p><b>Theorem 1.8.2</b>. The union of two subspaces of a vector space <i>V</i> is a subspace of <i>V</i> if and only if one of the subspaces is contained in the other.</p>
+
+<p><b>Proof</b>. Suppose <i>W</i><sub>1</sub> and <i>W</i><sub>2</sub> are two subspaces of a vector space <i>V</i> over a field 𝔽.
+
+<ul>
+	<li><p>If <i>W</i><sub>1</sub> &subseteq; <i>W</i><sub>2</sub> then, <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub> = <i>W</i><sub>2</sub> and hence <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub> is a subspace.</p></li>
+
+	<li><p>If <i>W</i><sub>2</sub> &subseteq; <i>W</i><sub>1</sub> then, <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub> = <i>W</i><sub>1</sub> and hence <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub> is a subspace.</p></li>
+</ul>
+
+<p>Conversly, suppose <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub> is a subspace. We shall show that either <i>W</i><sub>1</sub> &subseteq; <i>W</i><sub>2</sub> or <i>W</i><sub>2</sub> &subseteq; <i>W</i><sub>1</sub>. <br> Let us assume that neither <i>W</i><sub>1</sub> is a subset of <i>W</i><sub>2</sub> nor <i>W</i><sub>2</sub> is a subset of <i>W</i><sub>1</sub>. Then</p>
+
+<div class="eq">
+<p><i>W</i><sub>1</sub> not a subset of <i>W</i><sub>2</sub> ⇒ ∃<i>&alpha;</i> &in; <i>W</i><sub>1</sub> &notin; <i>W</i><sub>2</sub> &emsp;(1)<br>
+<i>W</i><sub>2</sub> not a subset of <i>W</i><sub>1</sub> ⇒ ∃<i>&beta;</i> &in; <i>W</i><sub>2</sub> &notin; <i>W</i><sub>1</sub> &emsp;(2)
+</div>
+
+<p>From (1) and (2) we have <i>&alpha;</i> &in; <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub>  and <i>&beta;</i> &in; <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub>. Since by hyphotheis <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub> is a subspace, therefore <i>&alpha;</i> + <i>&beta;</i> &in; <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub>. But <i>&alpha;</i> + <i>&beta;</i> &in; <i>W</i><sub>1</sub> ∪ <i>W</i><sub>2</sub> ⇒ <i>&alpha;</i> + <i>&beta;</i> &in; <i>W</i><sub>1</sub> or <i>&alpha;</i> + <i>&beta;</i> &in; <i>W</i><sub>2</sub>. Suppose <i>&alpha;</i> + <i>&beta;</i> &in; <i>W</i><sub>1</sub>. Since <i>&alpha;</i> &in; <i>W</i><sub>1</sub> and <i>W</i><sub>1</sub> is a subspace, therefore (<i>&alpha;</i> + <i>&beta;</i>) − <i>&alpha;</i> = <i>&beta;</i> is in <i>W</i><sub>1</sub>. But from (2) we have <i>&beta;</i> &notin; <i>W</i><sub>1</sub>, thus we get a contradiction. Supposing that <i>&alpha;</i> + <i>&beta;</i> &in; <i>W</i><sub>2</sub>. Since <i>&beta;</i> &in; <i>W</i><sub>2</sub> and <i>W</i><sub>2</sub> is a subspace, therefore (<i>&alpha;</i> + <i>&beta;</i>) − <i>&beta;</i> = <i>&alpha;</i> is in <i>W</i><sub>2</sub>. But from (1) we have <i>&alpha;</i> &notin; <i>W</i><sub>2</sub>, thus we get again a contradiction. Hence either <i>W</i><sub>1</sub> &subseteq; <i>W</i><sub>2</sub> or <i>W</i><sub>2</sub> &subseteq; <i>W</i><sub>1</sub>. &emsp;□</p>
+
+<p><b>Theorem 1.8.3</b>. (<i>Intersection Theorem</i>) If <i>U</i> and <i>W</i> are subspaces of a vector space <i>V</i>, then so is <i>U</i> ∩ <i>W</i>.</p>
+
+<p><b>Proof</b>. First we observe that since <i>U</i> and <i>W</i> are subspaces, <b>0</b> &in; <i>U</i> ∩ <i>W</i>. Suppose that in addition, <i><b>x,y</b></i> &in; <i>U</i> ∩ <i>W</i>. Then <i><b>x,y</b></i> &in; <i>U</i> and <i><b>x,y</b></i> &in; <i>W</i>. Since 
+<i>U</i> and <i>W</i> are subspaces <i><b>x</b></i> + <i><b>y</b></i> &in; <i>U</i> and <i>&alpha;<b>x</b></i> &in; <i>U</i> for any scalar <i>&alpha;</i>. Similarly <i><b>x</b></i> + <i><b>y</b></i> &in; <i>W</i> and <i>&alpha;<b>x</b></i> &in; <i>W</i>. Hence <i><b>x</b></i> + <i><b>y</b></i> &in; <i>U</i> ∩ <i>W</i> and <i>&alpha;<b>x</b></i> &in; <i>U</i> ∩ <i>W</i> for all scalars <i>&alpha;</i>. &emsp;□</p>
+
+<p><b>Definition 1.8.4</b> (Sum of subsets) Suppose <i>U</i><sub>1</sub>, ..., <i>U<sub>m</sub></i> are subsets of <i>V</i>. The <b>sum</b> of <i>U</i><sub>1</sub>, ..., <i>U<sub>m</sub></i>, denoted <i>U</i><sub>1</sub> + ... + <i>U<sub>m</sub></i>, is the set of all possible sums of elements of <i>U</i><sub>1</sub>, ..., <i>U<sub>m</sub></i> <br> More precisely,</p>
+
+<div class="eq">
+<p><i>U</i><sub>1</sub> + ... + <i>U<sub>m</sub></i> = {<i>u</i><sub>1</sub> + ... + <i>u<sub>m</sub></i>: <i>u</i><sub>1</sub> &in; <i>U</i><sub>1</sub>, ..., <i>u<sub>m</sub></i> &in; <i>U<sub>m</sub></i>}&emsp;□</p>
+</div>
+
+<p>This definition extends to subspaces, for example <i>U</i> and <i>V</i> are subspaces of the vector space <i>W</i>, their sum is</p>
+
+<div class="eq">
+<p><i>U</i> + <i>W</i> ={ <i><b>u</b></i> + <i><b>v</b></i> | <i><b>u</b></i> &in; <i>U</i>, <i><b>w</b></i> &in; <i>W</i>}</p>
+</div>
+
+<p><b>Example 1.8.2</b> Suppose <i>U</i> is the set of all elements of 𝔽<sup>3</sup> whose second and third coordinates equal 0, and <i>W</i> is the set of all elements of 𝔽<sup>3</sup> whose first and third coordinates equal 0:</p>
+
+<div class="eq">
+<p><i>U</i> ={(<i>x</i>, 0, 0) &in; 𝔽<sup>3</sup> : <i>x</i> &in; 𝔽} &emsp;and&emsp; <i>W</i> ={(0, <i>y</i>, 0) &in; 𝔽<sup>3</sup> : <i>y</i> &in; 𝔽}</p>
+</div>
+
+<p>Then</p>
+
+<div class="eq">
+<p><i>U</i> + <i>W</i> ={(<i>x, y</i>, 0): <i>x,y</i> &in; 𝔽}</p>
+</div>
+
+<p>as you should verify.&emsp;■</p>
+
+<h2>Direct Sum</h2>
+
+<p>If two vector subspaces intersect trivially, that is <i>U</i> ∩ <i>V</i> = {<b>0</b>}, then the sum <i>U</i> + <i>W</i> is called a <i>direct sum</i> and is written as <i>U</i> ⊕ <i>V</i>.</p>
+
+<p><b>Definition 1.8.3</b> (Internal Direct Sum). If <i>U</i> and <i>V</i> are subspaces of the vector space <i>W</i> such that</p>
+
+<ol type="a">
+	<li><p>span(<i>U</i> ∪ <i>V</i>) = <i>V</i>, and</p></li>
+	<li><p><i>U</i> ∩ <i>V</i> = {<b>0</b>}.</p></li>
+</ol>
+
+<p>then the subspace <i>U</i> + <i>V</i> is called <i>internal direct sum of subspaces</i>, denoted by <i>U</i> ⊕ <i>V</i>. In this case <i>U</i> and <i>V</i> are called <i>summands</i> of <i>U</i> ⊕ <i>V</i>. &emsp;□</p>
+
+<p>We used the term, "internal" to distinguish it from the <a href="../algebra/direct_products.html">external direct product</a>, introduced when groups were covered: this direct sum is the direct product <i>U</i> x <i>V</i> of two spaces with coordinate-wise arithmetic on elements of the product. <br> It is also worth noting that the defining property (a) of the direct sum is equivalent to saying that every vector <i><b>v</b></i> ∈ <i>V</i> can be written in the form <i><b>w</b></i> = <i><b>u</b></i><sub>1</sub> + <i><b>v</b></i><sub>1</sub> for some <i><b>u</b></i><sub>1</sub> ∈ <i>U</i> and <i><b>v</b></i><sub>1</sub> ∈ <i>V</i>.</p>
+
+<h2>Properties of the Direct Sum</h2>
+
+<p>A direct sum has considerably more interesting propertiese than simply the sum of two vector spaces; One is that dimensions simply add up</p>
+
+<div class="eq">
+<p>dim(<i>U</i> ⊕ <i>V</i>) = dim(<i>U</i>) + dim(<i>V</i>)</p>
+</div>
+
+<section aria-label="End">
+<a href="subspace.html">&#171;Subspace</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

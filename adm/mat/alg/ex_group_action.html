@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Exercises on Group actions"/>
+  <title>Exercises on Group actions</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+
+<div class="content">
+
+<h1>Exercises on Group actions</h1>
+
+<ol>
+	<li><p>Let &sigma;<sup>S<sub>n</sub></sup> and with &sigma;<sup>A<sub>n</sub></sup> the conjugate classes of the permutation <i>&sigma;</i> of <i>A<sub>n</sub></i> respectevely in S<sub>n</sub> and <i>A<sub>n</sub></i>. Prove that &sigma;<sup>S<sub>n</sub></sup> coincides with &sigma;<sup>A<sub>n</sub></sup> if there exists an odd permutation of S<sub>n</sub> commuting with &sigma;, otherwise</p>
+
+		<div class="eq">
+		<p>&sigma;<sup>S<sub>n</sub></sup> = &sigma;<sup>A<sub>n</sub></sup> ∪ {(1,2) &sigma; (1,2)<sup>&minus;1</sup>}<sup>A<sub>n</sub></sup></p>
+		</div>
+		</li>
+
+	<li><p>Determine the number of conjugacy classes of A<sub>5</sub> and the cardinality of each class.</p></li>
+
+	<li><p>For every permutation <i>&sigma;</i> &in; <i>S</i><sub>3</sub> calculate the stabilizer with respect to the conjugacy action of <i>S</i><sub>3</sub> onto itself. Verify that the order of <i>S</i><sub>3</sub> is equal to |St<sub>&sigma;</sub>| ⋅ |<i>O</i>(<i>&sigma;</i>)|. Repeat the exercise with S<sub>n</sub>.</p></li>
+
+	<li><p>Determine the center of the group <i>D</i><sub>4</sub> of square symmetries. Write the class equation for this group.</p></li>
+
+	<li><p>How many words of six letters can be formed by permutation of the letters of the word MATTER? Use the concepts of group action, orbit, stabilizer.</p></li>
+
+	<li><p>How many distinct bracelets can be made with four beads of different colors?</p></li>
+
+	<li><p>Repeat the previous exercies for a bracelet with two green and two yellow beads.</p></li>
+
+	<li><p>A factory makes cups with <i>p</i> vertical stripes with <i>p</i> prime, of <i>r</i> different colors. How many different cups can be produced? (assume equal-size stripes that can each get any color at all, independent of all the other colors chosen.)</p></li>
+
+	<li><p>Use Burnside’s lemma to anwer this question: How many striped flags are there having six stripes (of equal width) each of which can be colored red, white, or blue?</p></li>
+
+	<li><p>Calculate the centralizers of (12) and of (1234) of <i>S</i><sub>4</sub>. Calculate the centralizers of (12) and of (12345) of <i>S</i><sub>5</sub>.</p></li>
+
+	<li><p>Generalizer the previous point by calculating the <i>r</i>-cycles of <i>S<sub>n</sub></i>.</p></li>
+
+</ol>
+
+<h2>Solutions</h2>
+
+<ol>
+	<li><p>We always have &sigma;<sup>A<sub>n</sub></sup> ⊆ &sigma;<sup>S<sub>n</sub></sup> so we only need to show the other inclusion. Let <i>&sigma;</i> &in; A<sub>n</sub>. Suppose that σ commutes with odd permutation &delta; &in; S<sub>n</sub> (so that δσδ<sup>&minus;1</sup> = σδδ<sup>&minus;1</sup> = σ, used later on). Let &tau; &in; &sigma;<sup>S<sub>n</sub></sup>, &tau; = &alpha;&sigma;&alpha;<sup>&minus;1</sup>, for some &alpha; &in; S<sub>n</sub>. If &alpha; &in; A<sub>n</sub>, then &tau; &in; &sigma;<sup>A<sub>n</sub></sup>; if &alpha; is odd then &delta;&alpha; &in; A<sub>n</sub>, and &tau; = &alpha;&sigma;&alpha;<sup>&minus;1</sup> = &alpha;&delta;&sigma;&delta;<sup>&minus;1</sup>&alpha;<sup>&minus;1</sup> = (&alpha;&delta;)&sigma;(&alpha;&delta;)<sup>&minus;1</sup>, from which again &tau; &in; &sigma;<sup>A<sub>n</sub></sup>; Thus &sigma;<sup>S<sub>n</sub></sup> ⊆ &sigma;<sup>A<sub>n</sub></sup> hence &sigma;<sup>S<sub>n</sub></sup> = &sigma;<sup>A<sub>n</sub></sup>.</p>
+
+<p>Suppose now that &sigma; does not commute with any odd permutation. The the centralizer C<sub>S<sub>n</sub></sub>(&sigma;) of &sigma; in <i>S</i><sub>n</sub> coincides with the centralizer C<sub>A<sub>n</sub></sub>(&sigma;) of &sigma; in A<sub>n</sub>. Owing to Corollary 7.15.7 and applying Lagrange Theorem: <i>n = i * m</i> where <i>n</i> = |A<sub>n</sub>| and <i>m</i> = |C<sub>(A<sub>n</sub>)</sub>(&sigma;)|:</p>
+
+<div class="eq">
+<p>|&sigma;<sup>A<sub>n</sub></sup>| = |<i>A</i><sub>n</sub>|/|<i>C</i><sub>A<sub>n</sub></sub>(&sigma;)| = 1/2 ⋅ |S<sub>n</sub>| / |C<sub>A<sub>n</sub></sub>(&sigma;)| = 1/2 ⋅ |S<sub>n</sub>| / |<i>C</i><sub>S<sub>n</sub></sub>(&sigma;)| = 1/2 |&sigma;<sup>S<sub>n</sub></sup>|</p>
+</div>
+
+<p>Notice that any odd permutation has the form (1,2)&tau; for some permutation &tau;. Thus the conjugate class ((1,2)&sigma;(1,2)<sup>&minus;1</sup>)<sup>A<sub>n</sub></sup> of (1,2)&sigma;(1,2)<sup>&minus;1</sup> in <i>A<sub>n</sub></i> coincides with {δσδ<sup>&minus;1</sup> | &delta; odd}. Note in particular that the fact that conjugacy in S<sub>n</sub> is determined by cycle type means that if <i>σ ∈ A<sub>n</sub></i> then all of its conjugates in S<sub>n</sub> also lie in A<sub>n</sub>. Thus</p>
+
+<div class="eq">
+<p>&sigma;<sup>S<sub>n</sub></sup> = {&tau;σ&tau;<sup>&minus;1</sup>, &tau; even} ∪ {&tau;σ&tau;<sup>&minus;1</sup>, &tau; odd} = &sigma;<sup>A<sub>n</sub></sup> ∪ ((1,2)&sigma;(1,2)<sup>&minus;1</sup>)<sup>A<sub>n</sub></sup></p>
+</div>
+
+<p>Note that (1 2) is an odd permutation and (1 2)<sup>&minus;1</sup> = (1 2).&emsp; ■</p>
+</li>
+
+<li><p>In <i>S<sub>n</sub></i>, every permutation is conjugate to every other permutation of the same cycle type. Let's start to count the different cyclic structures of S<sub>5</sub>. The partition of the integer 5 are: 5, 4+1, 3+2, 2+2+1, 2+1+1+1, 1+1+1+1+1, 3+1+1. Note that the partitions 3 + 2 and 2 +3 are considered equal.</p>
+
+<ul>
+	<li><p>2+2+1 represents permutations like (a b)(c d) one element is left fixed, that is an even permutation.</p></li>
+	<li><p>2+1+1+1, corresponds to (a b) an odd permutation.</p></li>
+	<li><p>3+2 represents permutations like (a b c)(d e) nothing is fixed; (a b c) can be decomposed in terms of transpositions (a b c) = (a c) (a b); so we've and odd permutation.</p></li>
+	<li><p>3+1+1, corresponds to (<i>a b c</i>) which can be decompend in terms of transpositions (a b c) = (a c) (a b) so it is even.</p></li>
+	<li><p>4+1 which decomposed in traspositions (a b c d) = (a d) (a c) (a b), so it's odd.</p></li>
+	<li><p>5 corresponds to a 5-cycle which is an even permutation (a b c d e) = (a e) (a d) (a c) (a b).</p></li>
+	<li><p>1+1+1+1+1 is the identity which is even.</p></li>
+</ul>
+
+<p>S<sub>5</sub> has 7 conjugacy classes. There 4 conjugacy classes of even permutations in S<sub>5</sub>. This means that there are not fewer than 4 classes in A<sub>5</sub>. Some of these conjugacy classes can split. In <i>A</i><sub>5</sub>, 5-cycle splits in two conjugacy classes in <i>e.g</i>:</p>
+
+<div>
+<p>(4 5)<sup>&minus;1</sup> (1 2 3 5 4) (4 5) = (1 2 3 4 5) 
+</div>
+
+<p>but (4 5) is odd; We have a total of five conjugacy classes in A<sub>5</sub> namely those having as representatives: id, (123), (12)(34), (12345) and (1345). The cardinalies are calculated as in <a href="conjugacy.html#size_conj_class">section 7.5</a> and are repsectevely: 1, 20, 15, 12, 12. Where for the 5-cycle classes we have splitted as found in the previous exercise</p>
+
+<div class="eq">
+<p>|&sigma;<sup>A<sub>n</sub></sup>| = 1/2 |&sigma;<sup>S<sub>n</sub></sup>|</p>
+</div>
+
+<p>so Binom(5 5) ⋅ 4!/2 = 12. &emsp;■</p></li>
+
+<li><p>We have St<sub>id</sub> = S<sub>3</sub>, St<sub>(12)</sub> = {id, (12)}, St<sub>(13)</sub> = {id, (13)},  St<sub>(23)</sub> = {id, (23)}, St<sub>(123)</sub> = {id, (123), (132)}, St<sub>(132)</sub> = {id, (123), (132)}. |O(&sigma;)| = [<i>g</i>], where [<i>g</i>] is the conjugacy class of g &in; S<sub>3</sub>. The class equation holds <i>e.g.</i> |O(123)| ⋅ |St<sub>(123)</sub>| = |S<sub>3</sub>| = 3 ⋅ 2 = 6.&emsp;■</p></li>
+
+<li><p>The group <i>D</i><sub>4</sub> has order 8 and is generated by the rotation <i>r</i> and reflection <i>&sigma;</i>; <i>D</i><sub>4</sub> = ⟨<i>r,s</i>⟩. The eight symmetries in D<sub>4</sub> can be uniquely written as r<sup>j</sup>s<sup>i</sup> where <i>j</i> = 0, 1, 2, 3 and <i>i</i> = 0, 1. The group is governed by the relations</p>
+
+<div class="eq">
+<p><i>r</i><sup>4</sup> = 1, <i>s</i><sup>2</sup> = 1, <i>rsr = s</i></p>
+</div>
+
+<p>Fist the centre <i>Z</i>(<i>D</i><sub>4</sub>) has to be non-trivial. Otherwise the class equation would say that</p>
+
+<div class="eq">
+<p>8 = 1 + a sum of even integers</p>
+</div>
+
+<p>which cannot be. Consider the reflection <i>sr<sup>j</sup></i> and take the square so that <i>sr<sup>j</sup>sr<sup>j</sup></i> = 1, then multiply by <i>s</i><sup>&minus;1</sup> to get <i>r<sup>j</sup>sr<sup>j</sup> = s</i> for all <i>j</i> (<i>s</i><sup>&minus;1</sup> = <i>s</i>), and then</p>
+
+<div class="eq">
+<p><i>r<sup>j</sup>s = r<sup>&minus;j</sup></i></p>
+</div>
+
+<p>In particular, <i>r<sup>2</sup>s = rs<sup>&minus;2</sup></i>. But <i>r<sup>&minus;2</sup> = r<sup>2</sup></i>, since <i>r</i><sup>4</sup> = 1</sup>. So, <i>r<sup>2</sup>s = sr<sup>2</sup></i> Since <i>r<sup>2</sup></i> with the generators <i>s</i> and <i>s</i> of <i>D</i><sub>4</sub>, it must lie in <i>Z</i>(<i>D</i><sub>4</sub>).</p>
+
+<p>Let's compute the conjugates of <i>r</i>. Since conjugate elements all have the same order and since <i>r, r<sup>3</sup></i> are the only elements in D<sub>4</sub> of order 4, these two rotations form a complete conjugacy class. They are also not in <i>Z</i>(<i>D</i><sub>4</sub>), because central elements only have themselves as conjugates. The group relations yield</p>
+
+<div class="eq">
+<p><i>rsr</i><sup>&minus;1</sup> = <i>r</i><sup>2</sup><i>s</i></p>
+</div>
+
+<p>so the reflections <i>s</i> and <i>r</i><sup>2</sup><i>s</i> are conjugate. This also implies they are not in Z(<i>D</i><sub>4</sub>). </p>
+
+<p>We check now that <i>rs</i> and <i>r</i><sup>3</sup><i>s</i> are conjugates. By the group relations, <i>s</i>(<i>rs</i>)<i>s</i><sup>&minus;1</sup> = <i>rs = r</i><sup>3</sup><i>s</i>. Hence these two elements are conjugate, and from this we see that they are not central either.</p>
+
+<p>To conclude we need to check that <i>s, r</i><sup>2</sup><i>s</i> form a separate conjugacy class from that of <i>rs, r</i><sup>3</sup><i>s</i>. It suffices to check that <i>s</i> and <i>rs</i> are not conjugates. We could conjugate <i>s</i> by all eight elements of <i>D</i><sub>4</sub> and see that we never get <i>rs</i>, more wisely notice that <i>j</i> = 0, 1, 2, 3 and <i>i</i> = 0, 1</p>
+
+<div class="eq">
+<p><i>r<sup>j</sup>s<sup>i</sup> s</i> (<i>r<sup>j</sup>s<sup>i</sup></i>)<sup>&minus;1</sup> = <i>r<sup>j</sup>s<sup>i</sup> s s</i><sup>&minus;i</sup><i>r<sup>&minus;j</sup> = r<sup>j</sup> r<sup>&minus;j</sup> s = r<sup>2j</sup>s</i>.</p>
+</div>
+
+<p>which never equals <i>rs</i>.</p>
+
+<p>We have seens that 1 and <i>r</i><sup>2</sup> make up the center of <i>D</i><sub>4</sub>. And there are three conjugacy classes each of order 2. Namely,</p>
+
+<div class="eq">
+<p>{<i>r</i><sup>2</sup>, <i>r</i><sup>3</sup>}, {<i>s, r</i><sup>2</sup><i>s</i>}, {<i>rs, r</i><sup>3</sup><i>s</i>}</p>
+</div>
+
+<p>The class equation for <i>D</i><sub>4</sub> looks like:</p>
+
+<div class="eq">
+<p>|<i>G</i>| = |<i>Z</i>(<i>G</i>)| + ∑ |<i>G</i>|/|<i>C</i>(<i>x</i>)|<br>
+8 =  2 + 2 + 2 + 2</p>
+</div>
+
+<p><b>Remark</b>. Another way to see that <i>s</i> and <i>rs</i> are not conjugates is to think of the vertices of the square as the letters 1,2,3,4 respectevely. From this point of view, <i>r</i> is the cycle (1,2,3,4) and <i>s</i> the transposition (2,4) and <i>D</i><sub>4</sub> is the subgroup of <i>S</i><sub>4</sub> generated by <i>r</i> and <i>s</i>. Then</p>
+
+<div class="eq">
+<p><i>rs</i> = (1,2,3,4) (2,4) = (1,2)(3,4)</p>
+</div>
+
+<p>Since <i>s</i> and <i>rs</i> have different cyclic structures this cannot be.&emsp;■</p></li>
+
+	<li><p>The group S<sub>6</sub> acts on the set <i>X</i> made by all words with the 6 letters of the word MATTER, by permuting the letters, <i>e.g</i>,</p>
+
+		<div class="eq">
+		<p>(135)(26)MATTER = ERMTTA</p>
+		</div>
+
+	<p>Then |<i>X</i>| = 6! = 720. The anagrams of <i>x</i> = MATTER are ins its orbit <i>O</i>(<i>x</i>). The stabilizer of <i>x</i> is made by all permutations <i>&sigma;</i> &in; S<sub>6</sub> such that</p>
+
+	<div class="eq">
+	<p>&sigma;(MATTER) = MATTER</p>
+	</div>
+
+	<p>it coincides with all permutations that exchange the third and fourth letters. Thus the stabilizer has 2! elements, then,</p>
+
+	<div class="eq">
+	<p>|<i>O</i>(<i>x</i>)| = |<i>S</i><sub>6</sub>|/|St<sub><i>x</i></sub>| = 6!/2 = 360 &emsp;■</p>
+	</div>
+</li>
+
+	<li><p>We must consider the action of the group <i>D</i><sub>4</sub> of the set of possible permutations of five colors say blue, white, pink, and green, which are 4! = 24. We consider D<sub>4</sub> because you can flip the bracelet over obtaining the same one. The symmetries act this way</p>
+
+<img src="img/D4_symmetries.png" alt="symmetries of the square"/>
+
+<p>Using the Burnisde theorem we see that only the identity leaves each configuration fixed, then it results</p>
+
+<table class="noborder">
+<tr><td>s = 1/8 ⋅</td> <td>(24 + 0 + 0 + 0) + </td> <td>(0 + 0 + 0 + 0)</td> <td> = 24/8 = 3</td> <td>&emsp; ■</td></tr>
+<tr><td></td> <td>fixed by rotations</td> <td>fixed by reflections</td></tr>
+</table>
+</li>
+
+<li><p>In this case the possible permutations are 4!/2!*2! = 6. The identity fixes all 6 permutations, the rotation of 180° fixes 2 permutations, the reflections 2 permutations each<p>
+
+<table class="noborder">
+<tr><td>s = 1/8 ⋅</td> <td>(6 + 2 + 0 + 0) + </td> <td>(2 + 2 + 2 + 2)</td> <td> = 16/8 = 3</td> <td>&emsp; ■</td></tr>
+<tr><td></td> <td>fixed by rotations</td> <td>fixed by reflections</td></tr>
+</table>
+</li>
+
+<li><p>Let <i>A</i><sub>4</sub> act on itself by conjugation. We calculate the conjugacy classes of <i>A</i><sub>4</sub> in <a href="conjugacy.html#A_4">Example 7.5.11</a>. The stabilizer is such that</p>
+
+<div class="eq">
+<p>St(<i>x</i>) = {g &in; A<sub>4</sub> : <i>gxg</i><sup>&minus;1</sup> = <i>x</i>}</p>
+</div>
+
+<p>(123) and (132) are in different orbits (they are not conjugate in <i>A</i><sub>4</sub>) but they each have stabilizer {(1),(123),(132)}, The same feature is true ofgand <i>g</i><sup>−1</sup> for every 3-cycle <i>g</i> ∈ <i>A</i><sub>4</sub>. Applying |O(<i>x</i>)|*|St(<i>x</i>)| = |A<sub>4</sub>| to the elements of A<sub>4</sub> we have</p>
+
+<ul>
+	<li><p>|O(123)| * |St(123)| = 4 * 3 = 12. </p>
+	<li><p>|O(id)| * |St(id)| = 12 * 1 = 12.</p>
+	<li><p>|O((12)(34))| * |St(id)| = 3 * 4 = 12.</p>
+</ul>
+
+<p>Where St((12)(34)) = {id, (12)(34), (13)(24), (14)(23)}.</p>
+
+<p><b>Note</b>. If instead of conjugacy we used composition as the group action we'll have |O((123))| = 12 and |St((123))| = 1. &emsp;■ </p></li>
+
+<li><p>We examine first the problem from a combinatorics perspective. Consider the <i>r</i> = 5, <i>p</i> = 5, case where we represent a cup as "12345" each number represents a different color; if you rotate in front of you the cup so to have a different color you obtain "51234", "45123", "34512", "23451", so each configuration, excepts the 5 cups with beads of same color has 5 twins, so </p>
+
+<div class="eq">
+<p>(5<sup>5</sup> &minus; 5)/5 + 5 = 629</p>
+</div>
+
+<p>we subtracted the 5 cups with same color and then added them at the end of the computation.</p>
+
+<p>All "cup rotations" of a given stripe coloring are still the same coloring, so the group doing the acting here is cyclic group Z<sub><i>n</i></sub> = ⟨<i>g</i>⟩. Let <i>X</i> be the set of all possible cups. Clearly |<i>X</i>| = <i>r<sup>p</sup></i>. Let a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub> a cup. Clearly the action of any fixed element <i>a<sup>i</sup></i> &in; <i>G</i> on a given cup yields the same cup. So the number of orbits is the same as the number of different cups. We now compute <i>X<sub>g</sub></i> for each <i>g</i> &in; <i>G</i>. First</p>
+
+<div class="eq">
+<p><i>X<sub>e</sub></i> = {<i>x</i> &in; <i>X</i>| <i>e * x = x</i>} = <i>X</i></p>
+</div>
+
+<p>So |<i>X<sub>e</sub></i>| = <i>r<sup>p</sup></i>. Let <i>g &ne; e</i>. Since <i>G</i> is cyclic of prime order, <i>g</i> generates <i>G</i>. Then</p>
+
+<div class="eq">
+<p><i>X<sub>g</sub></i> = {<i>x</i> &in; <i>X</i>| <i>g * x = x</i>}<br>
+= {<i>x</i> &in; <i>X</i> | <i>g<sup>i</sup> * x</i> = <i>x</i>, &forall;<i>i</i>}<br>
+= {<i>x</i> &in; <i>X</i> | <i>a<sup>i</sup> * x</i> = <i>x</i>, &forall;<i>a</i> &in; <i>G</i>}</p>
+</div>
+
+<p>Therefore, <i>X</i><sub>g</sub> consists of all those cups which are unchanged by any permutation and these are precisely those which are of one color. Hence |<i>X<sub>g</sub></i>| = <i>r</i> &forall;<i>g</i> &in; <i>G</i>, <i>g</i> &ne; <i>e</i>. The Burnside Theorem then gives the number of different necklaces as</p>
+
+<table class="noborder">
+<trd><td>1/<i>p</i></td> <td>[</td> <td><i>r<sup>p</sup></i> +</td> <td><i>r</i> + ... + <i>r</i></td> <td>]</td> <td>=</td> 1/<i>p</i> <td>[</td> <td><i>r<sup>p</sup></i> + <i>r</i>(<i>p</i> &minus;</i> 1)]</td></tr>
+<tr><td></td> <td></td> <td></td> <td colspan="3">(<i>p</i> &minus;</i> 1 times)</td></tr>
+</table>
+
+<p>In particular, since the number is necessarily an integer, we get another proof of <a href="fermat_little.html">Fermat's little theorem</a> that <i>a<sup>p</sup> &minus; a</i> is always a multiple of <i>p</i>.</p>
+
+<p><i>p</i> divides <i>r<sup>p</sup></i> + (<i>p</i> &minus; 1)<i>r</i> thus <i>p</i>|<i>r<sup>p</sup> &minus; r</i>, that is <i>r<sup>p</sup></i> ≡ <i>r</i> (mod <i>p</i>). &emsp; ■</p>
+
+</li>
+
+<li><p>There are 3<sup>6</sup> possible combinations. But the resulting flags are not all indistinguishable. The flags</p>
+
+<div class="eq">
+<p>(b, w, r, b, w, r) &emsp; and &emsp; (r, w, b, r, w, b)</p>
+</div>
+
+<p>are clearly the same just turned over.</p>
+
+<p>Let <i>X</i> be the set of all 6-tuples; if <i>x</i> &in; <i>X</i>, then</p>
+
+<div class="eq">
+<p><i>x</i> = (<i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, <i>c</i><sub>3</sub>, <i>c</i><sub>4</sub>, <i>c</i><sub>5</sub>, <i>c</i><sub>6</sub>)</p>
+</div>
+
+<p>where each <i>c<sub>i</sub></i> denotes either blue, red, or white. Let <i>&tau;</i> be the permutation that reverse all the indices:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>&#x3C4;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mn>16</mn>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mn>25</mn>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mn>34</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<p>(thus, <i>τ</i> “turns over” each 6-tuple <i>x</i> of colored stripes) The cyclic group <i>G</i> = <<i>τ</i>> acts on <i>X</i>; for a reflection <i>τ</i><sup>2</sup> = <i>e</i> so |<i>G</i>| = 2; Flags with 6 stripes are directly cups with <i>p</i> = 2, <i>a</i> = 3<sup>3</sup>, i.e. <i>G = Z</i><sub>2</sub>, as the previous exercise; the orbit of any 6-tuple <i>x</i> consists of either 1 or 2 elements: Either τ fixes <i>x</i> or it does not. Since a flag is unchanged by turning it over, it is reasonable to identify a flag with an orbit of a 6-tuple. For example, the orbit consisting of the 6-tuples</p>
+
+<div class="eq">
+<p>(b, w, r, b, w, r) &emsp; and &emsp; (r, w, b, r, w, b)</p>
+</div>
+
+<p>The number of flags is thus the number N of orbits; by Burnside’s lemma, <i>N</i> = 1/2 [Fix((1)) + Fix(<i>τ</i>)]. The identity permutation (1) fixes every <i>x ∈ X</i>, and so Fix((1)) = 3<sup>6</sup> (there are 3 colors). Now <i>τ</i> fixes a 6-tuple <i>x</i> if it is a “palindrome,” that is, if the colors in x read the same forward as backward. For example,</p>
+
+<div class="eq">
+<p><i>x</i> = (w, w, r, r, w, w)</p>
+</div>
+
+<p>is fixed by <i>&tau;</i>. Conversely, if</p>
+
+<div class="eq">
+<p><i>x</i> = (<i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, <i>c</i><sub>3</sub>, <i>c</i><sub>4</sub>, <i>c</i><sub>5</sub>, <i>c</i><sub>6</sub>)</p>
+</div>
+
+<p>is fixed, by <i>&tau;</i> = (16)(25)(34), then <i>c</i><sub>1</sub> = <i>c</i><sub>6</sub>, <i>c</i><sub>2</sub> = <i>c</i><sub>5</sub>, and <i>c</i><sub>3</sub> = <i>c</i><sub>4</sub>; that is, <i>x</i> is a palindrome. It follows that Fix(&tau;) = 3<sup>3</sup>, for there are 3 choices for each of <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub> and <i>c</i><sub>3</sub>; if you double a 3 string flag you get a 6-stripe e.g rrg + grr = rrggrr. The number of flags are</p>
+
+<div class="eq">
+<p><i>N</i> = 1/2(3<sup>6</sup> + 3<sup>3</sup>) = 378. &emsp;■ </p>
+</div>
+
+</li>
+
+<li><p>The centralizer in S<sub>4</sub> of C(12) = {id, (12), (34), (12)(34)}; C(1234) = {id, (1234), (13)(24), (1432)}.&emsp;■ </p></li>
+
+<li><p>Remember that "cyclic permutations" of the symbols in a single cycle give you gack the same element of <i>S<sub>n</sub></i>: (1 2 3 4) = (2 3 4 1) = (3 4 1 2) = (4 1 2 3).</p>
+
+<p>In <i>S<sub>n</sub></i> C((12)) = {&tau;, (12) &tau; | &tau; permutations that fix 1 and 2}. τ is disjoint from (12) and so τ commutes with (1 2) ⇐⇒ the conjugate (1 2)<sup>&minus;1</sup> τ (1 2) is equal to τ. Generally if s and t are any two elements of <i>S<sub>n</sub></i> where neither one moves any sybmol moved by the other, then st = ts .</p>
+
+<p>C((123 ... n)) = {(123 ... n)<sup>i</sup>, <i>i</i> = 0,..., n &minus; 1} <i>e.g</i> (123)<sup>2</sup> (123) (123)<sup>&minus;2</sup> = (123)<sup>2</sup> (123) (123)<sup>&minus;1</sup> (123)<sup>&minus;1</sup> = (123)<sup>2</sup> id (123)<sup>&minus;1</sup> = (123). &emsp;■ </p></li>
+
+ </ol>
+
+<section aria-label="End">
+<a href="actions_groups.html">&#171;Actions on gorups</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

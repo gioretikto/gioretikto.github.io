@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="description" content="Piano tangente"/>
+<title>Piano tangente</title>
+<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+<ul>
+  <li><a class="navbar" href="../../index.php">Home</a></li>
+  <li><a class="navbar" href="../../documentation.html">Documentation</a></li>
+</ul>
+</nav>
+
+<div class="content">
+
+<h1>Piano tangente</h1>
+
+<p>Nel caso di funzioni ad una variabile l'esistenza della derivata garantisce la continuità della funzione e l'esistenza della retta tangente al suo grafico, anzi rappresenta proprio la definizione di retta tangente. Nel caso di funzioni a più variabili l'esistenza delle derivate parziali non garantisce la continuità, e non è una condizione sufficiente per l'esistenza del piano tangente. Vediamo alcuni esempi.</p>
+
+<div class="def">
+<p><b>Esempio 1</b>. Consideriamo la funzione</p>
+ <img src="img/fxyesempio.png" alt="(xy)/(x^2+y^2)"/>
+
+<figure>
+<img src="img/tangdiffere.png" alt="(xy)/(x^2+y^2)"/>
+<figcaption><b>Fig.1</b> - Grafico della funzoine xy/(x<sup>2</sup>+y<sup>2</sup>)</figacption>
+</figure>
+
+<p><i>f</i>  non è continua in (0,0) anche se per ogni direzione <b>v</b> = ( cos&theta;, sin&theta; ), esiste la <a href="direzionali.html">derivata direazionale</a>:</p> 
+
+<img src="img/Dvtangplane.png" alt="derivata direzionale"/>
+
+<p>Dato che <i>f</i> è nulla in (0,0) il piano tangente in tale punto dovrebbe essere <i>z=0</i>. Osservando il grafico di <i>f</i>, ci si rende conto che un simile piano non può essere considerato come "tangente"; inoltre la funzione non è neanche continua nell'orgine.</p>
+
+</div>
+
+<p>Affinchè esista il piano tangente la funzione deve essere <a href="differenziabilità.html">differenziabile</a>, ossia deve valere la seguente condizione</p>
+
+<img src="img/differenziabilitàmulti.png" alt="differenziabilità"/>
+
+<p>Per ricavare l'equazione del piano tangente al grafico della funzione nel punto <img src="img/punto.png" alt="punto piano" class="inline"/> lasciamoci guidare dall'intuizione geometrica. Sezionando il grafico di <i>z=f(x,y)</i>, con il piano verticale <i>y=y<sub>0</sub></i>, troveremo una curva in questo stesso piano, descritta dall'equazione  <img src="img/zfxy0.png" alt="funzione due dimensioni" class="inline"/>. La retta r<sub>1</sub> tangente a tale curva in x<sub>0</sub> si troverà anche sul piano tangente che cerchiamo. Se sezioniamo il grafico con un piano verticale <i>x=x<sub>0</sub></i>, troveremo una seconda curva descritta dall'equazione <i>z =f(x,y<sub>0</sub>)</i> , con la retta <i>r<sub>2</sub></i> tangente in (<i>x<sub>0</sub>, y<sub> 0</sub>, f(x<sub>0</sub>, y<sub>0</sub>))</i> e appartenente al piano tangente. Dato che due rette individuano un unico piano, questo nel caso in cui <i>f</i> sia differenziabile, sarà il piano tangente.</p> 
+
+<img src="img/tangentepiano.png" alt="piano tangente"/>
+
+<p>L'equazione della retta r<sub>1</sub> nel piano <i>y = y<sub>0</sub></i>, è data dall'equazione:</p>
+
+<img src="img/retta_tang.png" alt="retta tangente"/>
+
+<p>La stessa retta, considerata nello spazio (<i>x,y,z</i>) anziché nel piano <i>y = y<sub>0</sub></i> è individuata dal <i>sistema</i>:</p>
+
+<img src="img/retta_tang_spazio.png" alt="retta tangente"/>
+
+<p>In modo analogo la retta <i>r<sub>2</sub></i>, nello spazio è individuata dal sistema:</p>
+
+<img src="img/retta2_tang_spazio.png" alt="retta tangente"/>
+
+<p>Il piano contenente entrambe le rette è datto dall'equazione</p>   
+
+<div class="eq">
+<p><i>z = f(<b>x<sub>0</sub></b>) + <b>∇</b>f(<b>x<sub>0</sub></b>) ⋅ (<b>x</b> - <b>x<sub>0</sub></b>)</i></p>
+</div>
+
+<p>o più esplicitamente</p>
+
+<img src="img/pianotangente.png" alt="piano tangente"/>
+
+<p>che definisce il piano <b>tangente</b> al grafico di <i>f</i> in <i>P<sub>0</sub> = (x<sub>0</sub>,y<sub>0</sub>, f(x<sub>0</sub>,y<sub>0</sub>))</i>.</p>
+
+<section>
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="flessi.html">Punti di flesso</a>
+</section>
+
+</div>
+
+</body>
+</html>

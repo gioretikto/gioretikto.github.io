@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Exchange Lemma"/>
+	<title>Exchange Lemma</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Spazi vettoriali finitamente generati</h1>
+
+<p>Nella sezione precedente non abbiamo fatto alcuna ipotesi sul numero di generatori di uno spazio vettoriale. Ora ci occuperemo in dettaglio del caso in cui tale numero è finito.</p>
+
+<p><b>Proposizione 1.3.1</b>. Uno spazio vettoriale <i>V</i> è detto <i>finitamente generato</i> se esiste un insieme finito di generatori di <i>V</i>.</p>
+
+<p>Cominciamo col dimostrare che ogni spazio finitamente generato ammette una base. Più precisamente, dimostreremo che da ogni insieme finito di generatori di <i>V</i> si può estrarre una base.</p>
+
+<p><b>Proposizione 1.3.2</b>. Sia <i>S</i> = {<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ... , <i>v<sub>n</sub></i>} un insieme di generatori di <i>V</i>. Allora <i>S</i> contiene dei vettori <i>v</i><sub>i1</sub>, <i>v</i><sub>i2</sub>, ... , <i>v<sub>ir</sub></i>, per qualche <i>r</i> &le; <i>n</i>, che formano una base di <i>V</i>.</p>
+
+<p><b>Proof</b>. Se i vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ... , <i>v<sub>n</sub></i> sono linearmente indipendenti, essi sono una base di <i>V</i> e la dimostrazione è così terminata. Se invece essi sono linearmente dipendenti, uno di essi può essere espresso come combinazione lineare dei rimanenti. A meno di rinominarli, possiamo supporre che questo vettore sia <i>v<sub>n</sub></i>. Possiamo quindi scrivere</p>
+
+<div class="eq">
+<p><i>v<sub>n</sub></i> = <i>&lambda;</i><sub>1</sub> v</i><sub>1</sub> + <i>&lambda;</i><sub>2</sub><i>v</i><sub>2</sub> + ... + <i>&lambda;</i><sub>n - 1</sub> <i>v<sub>n-1</sub></i></p>
+</div>
+
+<p>Da ciò segue che i vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub> , ... , <i>v</i><sub>n - 1</sub> generano lo spazio vettoriale <i>V</i>: infatti ogni vettore che si scrive come combinazione lineare <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub> , ... , <i>v<sub>n</sub></i> si può anche scrivere come combinazione lineare dei soli vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub> , ... , <i>v</i><sub>n - 1</sub>. Ora, se i vettori <i>v</i><sub>1</sub> + <i>v</i><sub>2</sub> , ... , <i>&lambda;</i><sub>n - 1</sub> sono linearmente indipendenti, essi sono una base di <i>V</i> e la dimostrazione è terminata. In caso contrario uno di essi può essere espresso come combinazione lineare dei rimanenti. Anche in questo caso, a meno di riordinare i vettori, possiamo supporre che sia <i>v</i><sub>n - 1</i> a potersi scrivere come combinazione lineare dei vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub> , ... , <i>v</i><sub><i>n</i> - 2</sub>. Ma ciò significa che i vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub> , ... , <i>v</i><sub><i>n</i> - 2</sub> sono un insieme di generatori di <i>V</i>. Ripetendo il ragionamento sopra descritto si arriverà, prima o poi, a un insieme di vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ... , <i>v<sub>r</sub></i>, per qualche <i>r</i> &le; <i>n</i>, che generano tutto lo spazio <i>V</i> e sono linearmente indipendenti. Essi costituiscono quindi una base di <i>V</i>.</p>
+
+<h2 id="ex">Exchange Lemma</h2>
+
+<!-- Algebra I: Textbook for Students of Mathematics By Alexey L. Gorodent
+Francesco Bottaccin Algebra Lineare e Geometria  -->
+
+<p>Il seguente risultato, chiarisce le relazioni che esistono tra insiemi di vettori linearmente indipendenti, basi e insiemi di generatori.</p>
+
+<p><b>Lemma 1.3.2 (Exchange Lemma - Steinitz Lemma)</b>. Assume that the vectors <i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>m</sub></i> generate the vector space <i>V</i> and that the vectors <i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, ... , <i>u<sub>k</sub></i> &in; <i>V</i> are linerarly independent. Then <i>m</i> &ge; <i>k</i>, and after appropriate renumbering of the vectors <i>w<sub>i</sub></i> and replacing the first <i>k</i> of them by <i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, ... , <i>u<sub>n</sub></i>, the resulting collection</p>
+
+<div class="eq">
+<p><i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, ... , <i>u<sub>k</sub></i>, <i>w</i><sub><i>k</i>+1</sub>, <i>w</i><sub><i>k</i>+2</sub>, ... , <i>w<sub>m</sub></i>
+</div>
+
+<p>will generate <i>V</i> as well.</p>
+
+<p><b>Proof</b>. Let <i>u</i><sub>1</sub> = <i>x</i><sub>1</sub> <i>w</i><sub>1</sub> + <i>x</i><sub>2</sub><i>w</i><sub>2</sub> +  ... + <i>x<sub>m</sub>w<sub>n</sub></i>. Since the vectors <i>u<sub>i</sub></i> are linearly independent, we have <i>u<sub>i</sub></i> &ne; 0, and therefore, not all the <i>x<sub>i</sub></i> equal zero. Renumber the <i>w<sub>i</sub></i> &ne;0 in order to have <i>x</i><sub>1</sub> &ne; 0. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>w</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+  </mfrac>
+  <msub>
+    <mi>u</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msub>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+  </mfrac>
+  <msub>
+    <mi>w</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mo>&#x2026;</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msub>
+      <mi>x</mi>
+      <mi>m</mi>
+    </msub>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+  </mfrac>
+  <msub>
+    <mi>w</mi>
+    <mi>m</mi>
+  </msub>
+</math>
+
+<!-- $$w_1 = \frac{1}{x_1} u_1 - \frac{x_2}{x_1} w_2 - \ldots - \frac{x_m}{x_1} w_m $$ -->
+
+<p>Therefore <i>u</i><sub>1</sub>, <i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>, ... , <i>w<sub>m</sub></i> span <i>V</i>. Now proceed by induction. Assume that for some <i>i</i> in the range 1 &le; <i>i</i> &lt; <i>k</i>, the vectors <i>u</i><sub>1</sub>, ..., <i>u<sub>i</sub></i>, <i>w</i><sub><i>i</i>+1</sub>, ... , <i>w<sub>m</sub></i> span <i>V</i>. Then</p>
+
+<div class="eq">
+<p><i>u</i><sub><i>i</i>+1</sub> = <i>y</i><i>u</i><sub>1</sub> + <i>y</i><sub>2</sub> <i>u</i><sub>2</sub> + ... + <i>y<sub>i</sub>u<sub>i</sub></i> + <i>x</i><sub><i>i</i>+1</sub><i>w</i><sub><i>i</i>+1</sub> + <i>x</i><sub><i>i</i>+2</sub><i>w</i><sub><i>i</i>+2</sub> + ... + <i>x<sub>m</sub>w<sub>m</sub></i></p>
+</div>
+
+<p>Since the vectors <i>u<sub>i</sub></i> are linearly indpendent, the vector <i>u</i><sub><i>i</i> + 1</sub> cannot be expressed as a linear combination of just the vectors <i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, ... , <i>u<sub>n</sub></i>, i.e., there is some <i>x</i><sub>i+j</sub> &ne; 0 in the previous eq. Therefore, <i>m</i> &gt; <i>i</i>, and we can renumber the vectors <i>w<sub>j</sub></i> in order to have <i>x</i><sub><i>i</i>+1</sub> &ne; 0. Then <i>w</i><sub><i>i</i>+1</sub> can be expressed as a linear combination of the vectors 
+<i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, ... , <i>u</i><sub><i>i</i> + 1</sub>, <i>w</i><sub><i>i</i> + 2</sub>, <i>w</i><sub><i>i</i> + 3</sub>, ..., <i>w<sub>m</sub></i>. Hence, this set of vectors span <i>V</i>. This completes the inductive step of the proof. </p>
+
+<p><b>Corollario 1.3.3</b>. Sia <i>V</i> uno spazio vettoriale finitamente generato e sia {<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ... , <i>v<sub>n</sub></i>} una base di <i>V</i>. Allora, per ogni insieme di vettori linearmente indipendenti {<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>r</sub></i>}, si ha <i>r</i> &le; <i>n</i> e, per ogni {<i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, ... , <i>u<sub>n</sub></i>} di generatoi di <i>V</i>, si ha <i>s</i> &le; <i>n</i>.</p>
+
+<p><b>Proof</b>. Questo risultato è una conseguenza immediata della proposzione precedente; basta ricordare che i vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ... , <i>v<sub>n</sub></i> sono linearmente indipendenti e sono anche un insieme di generatori di <i>V</i>.</p>
+
+<p><b>Corollario 1.3.4</b>. Due basi qualunque di uno spazio vettoriale <i>V</i> (finitamente geneato) hanno lo stesso numero di elementi.</p>
+
+<p><b>Proof</b>. Siano {<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ... , <i>v<sub>r</sub></i>} e {<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>s</sub></i>} due basi di <i>V</i>. Allora, dato che i vettori <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, ... , <i>v<sub>r</sub></i> sono linearmente indipendenti e i vettori <i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>s</sub></i> sono dei generato di <i>V</i>, si ha <i>r</i> &le; <i>s</i>. Scambiando il ruolo delle due basi, si ottiene anche <i>s</i> &le; <i>r</i>, da cui l'uguaglianza <i>r</i> = <i>s</i>. &ensp;□</p>
+
+<p>Il numero di vettori che compongono una base di uno spazio vettoriale finitamente generato <i>V</i> è dunque indipendente dalla base scelta e dipende quindi solo dallo spazio <i>V</i>. Possiamo pertanto dare la seguente definizione.</p>
+
+<p><b>Definizione 1.3.5</b>. La <i>dimensione</i> di uno spazio vettoriale (finitamente generato) <i>V</i>, indicata con dim <i>V</i>, è il numero di elementi di una base di <i>V</i>.</p>
+
+<p><b>Example 1.3.6</b> Lo spazio vettoriale nullo, <i>V</i> = {<b>0</b>}, ha dimensione pari a zero. Esso infatti contiene un solo vettore <i>v</i> = <b>0</b>, ma tale vettore non forma una base di <i>V</i> dato che esso non è linearmente indipendente! Infatti un insieme costituito da un solo vettore <i>v</i> è un insieme libero (cioè <i>v</i> è linearemente indipendente) se e solo se <i>v</i> &ne; <b>0</b>.&ensp;□</p>
+
+<p><b>Corollario 1.3.7</b>. Sia <i>V</i> uno spazio vettoriale finitamente generato. Allora ogni sottospazio vettoriale <i>W</i> di <i>V</i> è finitamente generato e si ha dim <i>W</i> &le; dim <i>V</i>.</p>
+
+<p><b>Proof</b>. Poniamo <i>n</i> = dim <i>V</i>. Se {<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>r</sub></i>} è un insieme di vettori linearemente indipendenti di <i>W</i>, essi sono anche dei vettori linearemente indipendenti di <i>V</i>; deve essere <i>r</i> &le; <i>n</i>. Se questi vettori non sono un insieme di generatori di <i>W</i>, ciò significa che esiste <i>w</i><sub><i>r</i>+1</sub> &in; <i>W</i> che non può essere espresso come combinazione lineare di <i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>r</sub></i>. Da ciò segue che i vettori <i>w</i><sub>1</sub>, ... , <i>w</i><sub><i>r</i>+1</sub> sono linearmente indipendenti. Se essi non sono ancora un insieme di generatori di <i>W</i>, deve esistere un vettore <i>w</i><sub><i>r</i>+2</sub> &in; <i>W</i> che non può essere espresso come combinazione lineare di <i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>r</sub></i>, <i>w</i><sub><i>r</i>+1</sub>. Ma allora anche i vettori <i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w</i><sub><i>r</i>+1</sub>, <i>w</i><sub><i>r</i>+2</sub> sono linearmente indipendenti. <br>Poiché il numero di vettori linearmente indipendenti non può eccedere <i>n</i>, ripetendo il ragionamento precedete si arriva, dopo un numero finito di passi, a costruire un insieme di vettori linearmente indipendenti {<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ... , <i>w<sub>s</sub></i>}, con <i>s</i> &le; <i>n</i>, i quali generano il sottospazio <i>W</i> e sono quindi una base di <i>W</i>. Cio dimostra che dim <i>W</i> &le; dim <i>V</i>. &ensp;□</p>
+
+<p><b>Corollario 1.3.8 (Extension theorem - Completamento)</b> Sia <i>V</i> uno spazio finitamente generato. Allora ogni insieme di vettori linearmente indipendenti <i>v</i><sub>1</sub>,  ... , <i>v<sub>r</sub></i> può essere completato a una base di <i>V</i>. In altri termini, esistono dei vettori <i>v</i><sub><i>r</i> +1</sub>, ..., <i>v<sub>n</sub></i> tali che l'insieme 
+ {<i>v</i><sub>1</sub>, ... , <i>v<sub>r</sub></i>, <i>v</i><sub><i>r</i>+1</sub>, <i>v<sub>n</sub></i>} si una base di <i>V</i>. Inoltre i vettori <i>v</i><sub><i>r</i>+1</sub>, ..., <i>v<sub>n</sub></i> possono sempre essere scelti tra i vettori di una qualunque base fissata <i>V</i>.</p>
+
+<p><b>Proof</b>. La dimostrazione di questo risultato è essenzialmente analoga a quellal del corollario precedente. Fissiamo una base {<i>u</i><sub>1</sub>, ..., <i>u<sub>n</sub></i>} di <i>V</i> e supponiamo che <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i> &in; <i>V</i> siano dei vettori linearmente indipendenti. Se i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i> sono un insieme di generatori di <i>V</i> allora essi sono già una base di <i>V</i> (e in questo caso è <i>r</i> = <i>n</i>). <br> Supponiamo quindi che <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i> non siano un insieme di generatori di <i>V</i>. Ciò significa che esiste un vettore <i>u<sub>i</sub></i> della base fissata di <i>V</i> che non può essere espresso come combinazione di <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i>. Infatti se, per assurdo, tutti i vettori <i>u</i><sub>1</sub>, ..., <i>u<sub>n</sub></i> si potessero scrivere come combinazione lineare dei vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i>, allora dal fatto che ogni vettore <i>v</i> &in; <i>V</i> si può scrivere come combinazione lineare dei vettori della base <i>u</i><sub>1</sub>, ..., <i>u<sub>n</sub></i> ne seguirebbe che ogni vettore di <i>V</i> si potrebbe anche scrivere come combinazione lineare dei vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i>, i quali sarebbero pertanto un sistema di generatori di <i>V</i>, contro l'ipotesi. <br> Poniamo allora <i>v</i><sub><i>r</i>+1</sub> = <i>u<sub>i</sub></i>. Da quanto appena detto segue che i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i>, <i>v</i><sub><i>r</i>+1</sub> sono linearmente indipendenti. Se essi sono un insieme di generatori di <i>V</i> allora sono una base e abbiamo terminato, altrimenti possiamo ripetere il ragionamento appena fatto. In tal caso deve esistere un vettore <i>u<sub>j</sub></i> della base fissata di <i>V</i> che non può essere espressono come combinazione linerae di <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i>, <i>v</i><sub><i>r</i>+1</sub>. Poniamo quindi <i>u</i><sub><i>r</i> + 2</sub> = <i>u<sub>j</sub></i>. Come in precedenza, si ha che i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i>, <i>v</i><sub><i>r</i>+1</sub>, <i>v</i><sub><i>r</i>+2</sub> sono linearmente indipendenti. Continuando in questo modo, si deve necessariamente ottenere un insieme di vettori linearmente indipendenti {<i>v</i><sub>1</sub>, ..., <i>v<sub>r</sub></i>, <i>v</i><sub><i>r</i>+1</sub>, <i>v<sub>n</sub></i>} che sono anche un insieme di generatori di <i>V</i>, altrimenti si otterrebbe un insieme infinito di vettori linearmente indipendenit, contro l'ipotesi che <i>V</i> sia finitamente generato.&ensp;□</p>
+
+<p>Se la dimension di uno spazio vettoriale <i>V</i> è nota, la verifica che un determinato insieme di vettori <i>V</i> forma una base risulta semplificata. Vale il seguente risultato:</p>
+
+<p><b>Proposizione 1.3.9</b>. Sia <i>V</i> uno spazio vettoriale di dimensione <i>n</i> e siano <i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i> dei vettori di <i>V</i>.</p>
+
+<ol type="i">
+	<li><p>Se i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i> sono linearmente indipendenti, allora essi sono anche un sistema di generatori di <i>V</i>, quindi sono una base di <i>V</i>.</p></li>
+
+	<li><p>Se i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i> sono un sistema di generatori di <i>V</i>, allora essi sono anche linearmente indipendenti, quindi sono una base  di <i>V</i>.</p></li>
+
+</ol>
+
+<p><b>Proof</b>. (i) Supponiamo che i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i> siano linearmente indipendenti. Per il corollario precedente, essi sono contenuti in una base</p>
+
+<div class="eq">
+<p>{<i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i>, <i>v</i><sub><i>n</i> + 1</sub>, ..., <i>v<sub>n + <i>r</i></sub></i>}</p>
+</div>
+
+<p>di <i>V</i>. Ma, poiché <i>V</i> ha dimensione <i>n</i>, ogni base di <i>V</i> deve avere <i>n</i> elementi. Da ciò si deduce che <i>r</i> = 0 e quindi i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i> sono, in effetti, una base di <i>V</i>.<br> (ii) Supponiamo che i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i> siano un insieme di generatori di <i>V</i>. Se, per assurdo, essi fossere linearmente dipendenti, uno di essi sarebbero combinazione lineare dei rimanenti. A meno di riordinare i vettori, non è restrittivo suppporre che <i>v<sunb>n</sub></i> sia combinazione lineare di <i>v</i><sub>1</sub>, ..., <i>v</i><sub><i>n</i>-1</sub>. Ma allora i vettori <i>v</i><sub>1</sub>,..., <i>v</i><sub><i>n</i>-1</sub> sarebbero anch'essi un insieme di generatori di <i>V</i>. Questo però è assurdo; infatti la cardinalità di un insieme di generatori di <i>V</i> deve essere &ge; dim <i>V</i> (v. Corollario 1.3.3). Quindi i vettori <i>v</i><sub>1</sub>, ..., <i>v<sub>n</sub></i> sono linearmente indipendenti, cioè sono una base di <i>V</i>. &ensp;□</p>
+
+<p><b>Corollario 1.3.10</b>. Sia <i>V</i> uno spazio vettoriale finitamente generato e sia <i>W</i> &subset; <i>V</i> un suo sottospazio proprio. Allora dim <i>W</i> &lt; <i>V</i>.</p>
+
+<p><b>Proof</b>. Nel Corollario 1.3.7 abbiamo dimostrato che si ha dim <i>W</i> &le; dim <i>V</i>. Supponiamo, per assurdo, che si abbia dim <i>W</i> = dim <i>V</i> = <i>n</i>. Consideriamo quindi una base <i>w</i><sub>1</sub>, ..., <i>w<sub>n</sub></i> di <i>W</i>. Dato che questi sono <i>n</i> vettori linearmente indipendenti di <i>V</i>, e dato che <i>n</i> è proprio la dimensione di <i>V</i>, per il punto (i) della proposizione precedente essi sono una base di <i>V</i>. Ma da ciò segue che <i>W</i> = <i>V</i>, contro l'ipotesi che <i>W</i> sia un sottospazio proprio di <i>V</i>.&ensp;□</p>
+
+<section aria-label="End">
+<a href="cross_product.html">&#171;Cross Product</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

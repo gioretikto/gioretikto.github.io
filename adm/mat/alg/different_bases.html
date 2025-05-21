@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="Representation of numbers in arbitrary bases"/>
+ <title>Representation of numbers in arbitrary bases</title>
+ <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a class="navbar" href="../../index.html">Home</a></li>
+  <li><a class="navbar" href="index.html">Algebra</a></li>
+ </ul>
+</nav>
+
+<div class="content">
+
+<h1>Representation of numbers in arbitrary bases</h1>
+
+<p>When we write a number in base 10, <i>a<sub>n</sub>a<sub>n−1</sub>a<sub>n−2</sub>⋅⋅⋅a<sub>1</sub>a<sub>0</sub></i>, it must be intended as</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub> 10<sup>n</sup> + a<sub>n−1</sub>10<sup>n−1</sup> + ... + a<sub>1</sub> 10 + a<sub>0</sub></i></p>
+</div>
+
+<p>where <i>a<sub>i</sub></i> are integers such that 0 &le; <i>a<sub>i</sub></i> &lt; 10. For example 2452 is</p>
+
+<div class="eq">
+<p>2452 = 2⋅ 10<sup>3</sup> + 4 ⋅ 10<sup>2</sup> +  5 ⋅ 10 + 2</p>
+</div>
+
+<p>where the <i>a<sub>i</sub></i> are such that 0 &le; <i>a<sub>i</sub></i> &lt; 8.
+
+<p>We can obtain the digits of a number in the following way: if we divide a number by 10 its remainder will be its last digits. </p>
+
+<div class="eq">
+<p>2452 = 245 ⋅ 10 + 2</p>
+</div>
+
+<p>If we continue and divide the quotient and take the remainder of the division, we find the next digit</p>
+
+<div class="eq">
+<p>245 = 24 ⋅ 10 + 5</p>
+</div>
+
+<p>Thus the coefficients <i>a<sub>i</sub></i> of the decimal representation of a number a univocally determined. The role played by the base 10 can be played out by any other integer &ge; 2. For example is the base is 8</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub>a<sub>n−1</sub>a<sub>n−2</sub>⋅⋅⋅a<sub>1</sub>a<sub>0</sub></i> = <i>a<sub>n</sub> 8<sup>n</sup> + a<sub>n−1</sub>8<sup>n−1</sup> + ... + a<sub>1</sub> 8 + a<sub>0</sub></i></p>
+</div>
+
+<p>In general the following proposition holds true</p>
+
+<p><b>Proposition 4.36</b>. Let <i>b</i> &ge; 2 an integer. Any integer <i>a</i> &ge; 0 can be represented univocally using <i>b</i> as a base as</p>
+
+<div class="eq">
+<p><i>a = r<sub>n</sub> b<sup>n</sup> + r<sub>n−1</sub>b<sup>n−1</sup> + ... + r<sub>1</sub> b + r<sub>0</sub></i></p>
+</div>
+
+<p>with the <i>r<sub>i</sub></i> such that 0 &le; <i>a<sub>i</sub> &lt; b</i>.</p>
+
+<p><b>Proof</b>. We use induction. If <i>a</i> = 0 there's nothing to prove. Supposing the proposition true for any integer &lt;<i>a</i> we prove it for <i>a</i>. Dividing <i>a</i> by the <i>b</i> base we have</p>
+
+<div class="eq">
+<p><i>a = b ⋅ q + r<sub>0</sub></i> &emsp; 0 &le; <i>r<sub>0</sub> &lt; b</i></p>
+</div>
+
+<p>The quotient <i>q</i> is less than <i>a</i> thus for the induction hyphotesis is representable univocally as</p>
+
+<div class="eq">
+<p><i>q = r<sub>n</sub> b<sup>n−1</sup> + r<sub>n−1</sub> b<sup>n−2</sup> + ... + r<sub>2</sub> b + r<sub>1</sub></i></p>
+</div>
+
+<p>since the r<sub>i</sub> are univocally determined and such that 0 &le; <i>r<sub>i</sub> &lt; b</i> &forall;<i>i</i>, it follows that</p>
+
+<div class="eq">
+<p><i>a = b ⋅ q + r<sub>0</sub> = b(r<sub>n</sub> b<sup>n−1</sup> + r<sub>n−1</sub> b<sup>n−2</sup> + ... + r<sub>2</sub> b + r<sub>1</sub>) + r<sub>0</sub></i></p>
+</div>
+
+<p>This expression is unique since both quotient <i>q</i> and remainder <i>r<sub>0</sub></i> of the first division are univocally determined; the expression of <i>q</i> is unique for the induction hyphothesis.□</p>
+
+<p>Any number less than <i>b</i> is represented by a unique "symbol" or <i>digit</i>, there are exaclty <i>b</i> such digits. In the binary system <i>b</i> = 2 there are two digits 0 and 1.</p>
+
+<section>
+<a href="euler.html">&#171; Euler's function and theorem</a>
+<a href="index.html">Index</a>
+<a href="complex_numbers.html">Complex Numbers &#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

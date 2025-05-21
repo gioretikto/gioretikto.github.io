@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Jacobian matrix and determinant">
+	<title>Jacobian matrix and determinant</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Jacobian matrix and determinant</h1>
+
+<p>In vector calculus, the <b>Jacobian matrix</b>, is the matrix of all first-order partial derivatives of a vector-valued function. Specifically, suppose <i><b>f</b></i>: ℝ<sup><i>n</i></sup> → ℝ<sup><i>m</i></sup> is a function which takes as input the vector <i><b>x</b></i> &in; ℝ<sup><i>n</i></sup> and produces as output the vector <i><b>f</b></i>(<b><i>x</b></i>) &in; ℝ<sup><i>m</i></sup>. Then the Jacobian matrix of <i><b>f</b></i> denoted by <i><b>J</b></i> whose (i,j)th entry is <i><b>J</b><sub>ij</sub></i> = ∂<i>f<sub>i</sub></i>/∂<i>x<sub>j</sub></i> an <i>m</i> x <i>n</i> matrix, is defined as follows:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">J</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <mi mathvariant="bold">f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <mi mathvariant="bold">f</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi mathvariant="normal">&#x2207;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi data-mjx-auto-op="false" mathvariant="normal">T</mi>
+            </mrow>
+          </msup>
+          <msub>
+            <mi>f</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msup>
+            <mi mathvariant="normal">&#x2207;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi data-mjx-auto-op="false" mathvariant="normal">T</mi>
+            </mrow>
+          </msup>
+          <msub>
+            <mi>f</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+            </mrow>
+          </msub>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>f</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>f</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>f</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>m</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mstyle displaystyle="true" scriptlevel="0">
+              <mfrac>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>f</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>m</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+                <mrow>
+                  <mi>&#x2202;</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow data-mjx-texclass="ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mrow>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$\mathbf {J} =\begin{bmatrix}{\dfrac {\partial \mathbf {f} }{\partial x_{1}}}&\cdots &{\dfrac {\partial \mathbf {f} }{\partial x_{n}}}\end{bmatrix}=\begin{bmatrix}\nabla ^{\mathrm {T} }f_{1}\\\vdots \\\nabla ^{\mathrm {T} }f_{m}\end{bmatrix}=\begin{bmatrix}{\dfrac {\partial f_{1}}{\partial x_{1}}}&\cdots &{\dfrac {\partial f_{1}}{\partial x_{n}}}\\\vdots &\ddots &\vdots \\{\dfrac {\partial f_{m}}{\partial x_{1}}}&\cdots &{\dfrac {\partial f_{m}}{\partial x_{n}}}\end{bmatrix}$$ -->
+
+<p>This matrix, whose entries are functions of <i><b>x</b></i>, is also denoted by D<i><b>f</b></i>, J<sub>f</sub> and ∂(<i>f</i><sub>1</sub>,...,<i>f<sub>m</sub></i>)/∂(<i>x</i><sub>1</sub>,...,<i>x<sub>n</sub></i>).</p>
+
+<p>A transformation from an ℝ<sup><i>n</i></sup> space to a ℝ<sup><i>m</i></sup> is a correlation that maps a point from the first space (original) to a point in the second space (transformed) where each point in the original and transformed spaces is identified by <i>n</i> independent coordinates. The Jacobian represents the coordinate transformation we are looking for. </p>
+
+<p><b>Example (polar-Cartesian transformation)</b> The transformation from polar coordinates (<i>r, φ</i>) to Cartesian coordinates (<i>x, y</i>), is given by the function <i><b>f</b></i>: ℝ<sup>+</sup> × [0, 2π) → ℝ<sup>2</sup> with components:</p>
+
+<div class="eq">
+<p><i>x</i> = <i>r</i> cos <i>&phi;</i><br>
+<i>y</i> = <i>r</i> sin <i>&phi;</i></p>
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true">
+    <mlabeledtr>
+      <mtd id="mjx-eqn:"></mtd>
+      <mtd>
+        <msub>
+          <mi mathvariant="bold">J</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi mathvariant="bold">F</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>r</mi>
+        <mo>,</mo>
+        <mi>&#x3C6;</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mtable columnspacing="1em" rowspacing="0.615em 0.4em">
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mfrac>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>x</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>r</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mfrac>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>x</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>&#x3C6;</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mfrac>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>y</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>r</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow data-mjx-texclass="ORD">
+                  <mfrac>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>y</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>&#x2202;</mi>
+                      <mi>&#x3C6;</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <mtable columnspacing="1em" rowspacing="4pt">
+            <mtr>
+              <mtd>
+                <mi>cos</mi>
+                <mo data-mjx-texclass="NONE">&#x2061;</mo>
+                <mi>&#x3C6;</mi>
+              </mtd>
+              <mtd>
+                <mo>&#x2212;</mo>
+                <mi>r</mi>
+                <mi>sin</mi>
+                <mo data-mjx-texclass="NONE">&#x2061;</mo>
+                <mi>&#x3C6;</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>sin</mi>
+                <mo data-mjx-texclass="NONE">&#x2061;</mo>
+                <mi>&#x3C6;</mi>
+              </mtd>
+              <mtd>
+                <mi>r</mi>
+                <mi>cos</mi>
+                <mo data-mjx-texclass="NONE">&#x2061;</mo>
+                <mi>&#x3C6;</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+        <mo>=</mo>
+        <mi>r</mi>
+        <mstyle scriptlevel="0">
+          <mspace width="0.167em"></mspace>
+        </mstyle>
+        <msup>
+          <mi>cos</mi>
+          <mn>2</mn>
+        </msup>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>&#x3B8;</mi>
+        <mo>+</mo>
+        <mi>r</mi>
+        <mstyle scriptlevel="0">
+          <mspace width="0.167em"></mspace>
+        </mstyle>
+        <msup>
+          <mi>sin</mi>
+          <mn>2</mn>
+        </msup>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>&#x3B8;</mi>
+        <mo>=</mo>
+        <mi>r</mi>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>cos</mi>
+          <mn>2</mn>
+        </msup>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>&#x3B8;</mi>
+        <mo>+</mo>
+        <msup>
+          <mi>sin</mi>
+          <mn>2</mn>
+        </msup>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>&#x3B8;</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>r</mi>
+        <mo>.</mo>
+      </mtd>
+    </mlabeledtr>
+  </mtable>
+</math>
+
+<!-- $$\mathbf {J} _{\mathbf {F} }(r,\varphi )=\begin{bmatrix}{\frac {\partial x}{\partial r}}&{\frac {\partial x}{\partial \varphi }}\\[0.5ex]{\frac {\partial y}{\partial r}}&{\frac {\partial y}{\partial \varphi }}\end{bmatrix}=\begin{bmatrix}\cos \varphi &-r\sin \varphi \\\sin \varphi &r\cos \varphi \end{bmatrix} = r \, \cos^2\theta + r \, \sin^2\theta = r ( \cos^2\theta + \sin^2\theta) = r. \nonumber$$ -->
+
+<p>The Jacobian determinant is equal to <i>r</i>. This can be used to transform integrals between the two coordinate systems. </p>
+
+<h2>Change of Variables in Multiple Integrals (Jacobians)</h2>
+
+<p>In 1D problems we are used to a simple change of variables, with the substitution <i>x</i> = <i>x</i>(<i>u</i>), the Jacobian is d<i>x</i>/d<i>u</i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo data-mjx-texclass="OP">&#x222B;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mo data-mjx-texclass="OP">&#x222B;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">[</mo>
+  <mi>x</mi>
+  <mo stretchy="false">(</mo>
+  <mi>u</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">]</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>u</mi>
+    </mrow>
+  </mfrac>
+  <mtext>d</mtext>
+  <mi>u</mi>
+</math>
+
+<!-- $$\int f(x) \text{d}x = \int f[x(u)]\frac{\text{d}x} {\text{d}u} \text{d}u $$ -->
+
+
+<section aria-label="End">
+<a href="Schwarz.html">&#171;Schwarz Theorem</a>
+<a href="index.html">Index</a>
+<a href="Fermat.html">Fermat Theorem &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

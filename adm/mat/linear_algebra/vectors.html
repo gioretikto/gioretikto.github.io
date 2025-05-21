@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Vectors">
+	<title>Vectors</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Vectors</h1>
+
+<p>The simplest vector quantity is displacement, or change of position. A vector that represents a displacement is called, reasonably, a displacement vector. A vector <b><i>v</i></b> can be interpreted as the <b>displacement</b> from a point <i>P</i><sub>1</sub> of cartesian coordinates <i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>z</i><sub>1</sub> to a specific point <i>P</i><sub>2</sub>, of cartesian coordinates <i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>, <i>z</i><sub>2</sub>.</p>
+
+<figure>
+<img src="img/displacement_vector.png" alt="displacement vector"/>
+<figcaption>The displacement vector</figcaption>
+</figure>
+
+<p>The magnitude |<b><i>v</i></b>| of the vector is given by the Pythagoras' theorem as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi mathvariant="bold">v</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mrow>
+        <msub>
+          <mi>P</mi>
+          <mn>1</mn>
+        </msub>
+        <msub>
+          <mi>P</mi>
+          <mn>2</mn>
+        </msub>
+      </mrow>
+      <mo stretchy="false">&#x2192;</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>z</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>z</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ |\mathbf{v}| = \vec{P_1P_2} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2} $$ -->
+
+<p>Ci troviamo dunque, come ricorre spesso in fisica, di fronte ad un ente (spostamento che porta <i>P</i><sub>1</sub> in <i>P</i><sub>2</sub>) che consta di tre elementi, una <b>grandezza ordinaria</b> (la lunghezza del segmento <span class="overline">P<sub>1</sub>P<sub>2</sub></span>), una <b>direzione</b> (quella della retta <i>P</i><sub>1</sub><i>P</i><sub>2</sub>) ed un <b>verso</b> (quello che va da <i>P</i><sub>1</sub> a <i>P</i><sub>2</sub>).</p>
+
+<p>Occupiamoci anzitutto dei vari modi con cui si puó caratterizzare matematicamente un vettore. Prendiamo perciò un sistema (<i>x, y, z</i>) di assi cartesiani ortogonali per riferimento. <br>Un vettore <i>A</i> è definito dalla sua grandezza e dalla sua orientazione. Per caratterizzarlo daremo, dunque, la sua grandezza |<i>A</i>| ed i coseni di direzione. <b>Direction cosines</b> are the cosines of the angles between a vector and the Cartesian axies, and for unit vectors they are the vector's components.</p>
+
+<div class="eq">
+<p><i>&alpha;</i> = (<i>x</i><sub>2</sub> - <i>x</i><sub>1</sub>)/|<i>A</i>|;  &emsp;<i>&beta;</i> = (<i>y</i><sub>2</sub> - <i>y</i><sub>1</sub>)/|<i>A</i>|; &emsp; <i>&gamma;</i> = (<i>z</i><sub>2</sub> - <i>z</i><sub>1</sub>)/|<i>A</i>|</p>
+</div>
+
+<p>Queste quattro grandezze, che caratterizzano il vettore <i>A</i>, <b>non sono indipendenti</b> tra di loro, poiché tra <i>α, β</i> e <i>γ</i>, passa la nota relazione:</p>
+
+<div class="eq">
+<p><i>α</i> + <i>β</i> + <i>γ</i> = 1 &emsp; (1.3)</p>
+</div>
+
+<figure>
+<img src="img/direction_cosines.png" alt="direction cosines"/>
+<figcaption><b>Coseni direttori</b>: i coseni degli angoli che il vettore forma con i tre assi cartesiani.</figcaption>
+</figure>
+
+<h2>Componenti di un vettore</h2>
+
+<p>Abbiamo visto nel paragrafo precedente, che per caratterizzare analiticamente un vettore <i>A</i>, basta darne la grandezza |<i>A</i>| ed i coseni di direzione, <i>α</i>, <i>β</i> e <i>γ</i>, ed abbiamo anche notato che queste quattro grandezze sono vincolate dalla relazione (1.3). Ora conviene, in molte applicazioni, caratterizzare <i>A</i> mediante tre sole grandezze <b>indipendenti</b> fra di loro. Per ottenere tale caratterizzazione, ci conviene introdurre la nozione importantissima di componente di un vettore <i>A</i> sopra un asse <i>s</i>. Si chiama componente di un vettore <i>A</i> sopra un asse <i>s</i>, e si indica con la scrittura <i>A<sub>s</sub></i>, uno scalare uguale al prodotto della grandezza |<i>A</i>| del vettore, per il coseno dell’angolo formato tra le orientazioni di <i>A</i> e di <i>s</i>. Abbiamo dunque:</p>
+
+<div class="eq">
+<p><i>A<sub>s</sub></i> = |<i>A</i>| cos&theta;&emsp; (1.4)</p>
+</div>
+
+<p><i>A<sub>s</sub></i> è dunque in altre parole la proiezione di <i>A</i> sopra l’asse s. Siccome, poi, |<i>A</i>| è sempre positivo, <i>A<sub>s</sub></i> sarà positivo o negativo, secondo che è acuto od ottuso. Le componenti di A sopra gli assi coordinati sono:</p>
+
+<div class="eq">
+<p><i>A<sub>x</sub></i> = |<i>A</i>|<i>&alpha;</i>,&emsp; <i>A<sub>y</sub></i> = |<i>A</i>|<i>&beta;</i>,&emsp; <i>A<sub>z</sub></i> = |<i>A</i>|<i>&gamma;</i>&emsp; (1.5)</p>
+</div>
+
+<img src="img/vector_components.png" alt="vector components"/>
+
+<p>Possiamo ora, facilmente dimostrare, che <b>quando di un vettore sono date le tre componenti</b> <i>A<sub>x</sub>, A<sub>y</sub>, A<sub>z</sub></i>, <b>sopra gli assi coordinati, il vettore è completamente determinato</b>. Ed infatti, quadrando e sommando le (1.5) e tenendo conto della (1.3) si trova</p>
+
+<div class="eq">
+<p><i>A<sub>x</sub></i><sup>2</sup> + <i>A<sub>y</sub></i><sup>2</sup> + <i>A<sub>z</sub></i><sup>2</sup> = |<i>A</i>|<sup>2</sup>&emsp; (1.6)</p>
+</div>
+
+<p>da cui, siccome |<i>A</i>| &gt; 0, si trova</p>
+
+<div class="eq">
+<p>|<i>A</i>| = sqrt(<i>A<sub>x</sub></i><sup>2</sup> + <i>A<sub>y</sub></i><sup>2</sup> + <i>A<sub>z</sub></i><sup>2</sup>) &emsp; (1.7)</p>
+</div>
+
+<p>Una volta determinato |<i>A</i>|, le (1.5) ci danno:</p>
+
+<div class="eq">
+<p><i>&alpha;</i> = <i>A<sub>x</sub></i>/|<i>A</i>|, &emsp; <i>&beta;</i> = <i>A<sub>y</sub></i>/|<i>A</i>|, &emsp; <i>&gamma;</i> = <i>A<sub>z</sub></i>/|<i>A</i>|</p>
+</div>
+
+<p>Conoscendo quindi le componenti di <i>A</i>, il vettore resta completamente determinato. Dati <i>A<sub>x</sub>, A<sub>y</sub>, A<sub>z</sub></i>, è facile determinare la componente di <i>A</i> sopra una qualsiasi orientazione <i>s</i>; siano infatti <i>&lambda;, &mu;, &nu;</i> i coseni direttori di <i>s</i>. Si avrà:</p>
+
+<div class="eq">
+<p>cos <i>&theta;</i> = <i>&alpha;&lambda;</i> + <i>&beta;&mu;</i> + <i>&gamma;&nu;</i></p>
+</div>
+
+<p>e quindi:</p>
+
+<div class="eq">
+<p><i>A<sub>s</sub></i> = |<i>A</i>| cos <i>&theta;</i> = |<i>A</i>|<i>&alpha;&lambda;</i> + |<i>A</i>|<i>&beta;&mu;</i> + |<i>A</i>|<i>&gamma;&nu;</i></p>
+</div>
+
+<p>The two perpendicular parts or components of a vector are <b>independent of each other</b>. Consider the pull upon Fido as an example (tiro il cane con un guinzaglio). If the horizontal pull upon Fido increases, then Fido would be accelerated at a greater rate to the right; yet this greater horizontal pull would not exert any vertical influence upon Fido. Pulling horizontally with more force does not lift Fido vertically off the ground. A change in the horizontal component does not affect the vertical component. This is what is meant by the phrase "<b>perpendicular components of vectors are independent of each other</b>." A change in one component does not affect the other component. Changing a component will affect the motion in that specific direction. While the change in one of the components will alter the magnitude of the resulting force, it does not alter the magnitude of the other component.</p>
+
+<h2>Equality of Two Vectors</h2>
+
+<p>Two vectors <b>A</b> and <b>B</b> are equal if they have the same magnitude and the same direction. They need not be located at the same point in space. The four vectors in
+Figure 1.11 are all equal to each other. Moving a vector from one point in space to another doesn’t change its magnitude or its direction.</p>
+
+<figure>
+<img src="img/vectors_equality.png" alt="vectors equality"/>
+<figcaption>Fig. 1.3. Vettori uguali con diversa origine</figcaption>
+</figure>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="vector_operations.html">Vector operations»</a>
+</section>
+
+</article>
+
+</body>
+</html>

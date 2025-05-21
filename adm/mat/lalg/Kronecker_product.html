@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The Kronecker Product"/>
+	<title>The Kronecker Product</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>The Kronecker Product</h1>
+
+<p>If <i>A</i> &in; <i>M<sub>m,n</sub></i> matrix and <i>B</i> &in; <i>M<sub>p,q</sub></i> matrix, then the Kronecker product <i>A</i> ⊗ <i>B</i> &in; <i>M<sub>mp,nq</sub></i></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>&#x2297;</mo>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>11</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$ A \otimes B = \begin{bmatrix}a_{11}B &\cdots &a_{1n}B \\\vdots &\ddots &\vdots \\a_{m1}B &\cdots &a_{mn}B \end{bmatrix} $$ -->
+
+<p>In particular, notice that <i>A</i> ⊗ <i>B</i> is defined no matter what the sizes of <i>A</i> and <i>B</i> are (i.e., we do not need to make sure that the sizes of <i>A</i> and <i>B</i> are compatible with each other like we do with standard <a href="matrix_multiplication.html">matrix multiplication</a>). As a result of this, we can also apply the Kronecker product to vectors simply by thinking of them as 1 × <i>n</i> or <i>m</i> × 1 matrices. For this reason, we similarly say that if <b><i>v</i></b> ∈ 𝔽<sup><i>m</i></sup> and <b><i>w</i></b> ∈ 𝔽<sup><i>n</i></sup> then the Kronecker product of <b><i>v</i></b> and <b><i>w</i></b> is</p>
+
+<div class="eq">
+<p><b><i>v</i></b> ⊗ <b><i>w</i></b> = (<i>v</i><sub>1</sub><i><b>w</b></i>, <i>v</i><sub>2</sub><i><b>w</b></i>, ..., <i>v<sub>m</sub><b>w</b></i>)
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>&#x3B1;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>&#x3B2;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>&#x2297;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>&#x3B3;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>&#x3B4;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>&#x3B1;</mi>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">[</mo>
+            <mtable columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mi>&#x3B3;</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>&#x3B4;</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">]</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>&#x3B2;</mi>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">[</mo>
+            <mtable columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mi>&#x3B3;</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>&#x3B4;</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">]</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mi>&#x3B1;</mi>
+          <mi>&#x3B3;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>&#x3B1;</mi>
+          <mi>&#x3B4;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>&#x3B2;</mi>
+          <mi>&#x3B3;</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>&#x3B2;</mi>
+          <mi>&#x3B4;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$ \bm{\alpha \\ \beta} \otimes \bm{\gamma \\ \delta} = \bm{ \alpha \bm{\gamma \\ \delta} \\ \beta \bm{\gamma \\ \delta}} = \bm{ \alpha\gamma \\ \alpha\delta \\ \beta\gamma \\ \beta\delta}  $$ -->
+
+<p><b>Example</b> (Numerical Examples of the Kronecker Product)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>&#x2297;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>7</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">[</mo>
+            <mtable columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>5</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>6</mn>
+                </mtd>
+                <mtd>
+                  <mn>7</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">]</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">[</mo>
+            <mtable columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>5</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>6</mn>
+                </mtd>
+                <mtd>
+                  <mn>7</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">]</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">[</mo>
+            <mtable columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>5</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>6</mn>
+                </mtd>
+                <mtd>
+                  <mn>7</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">]</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">[</mo>
+            <mtable columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>5</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>6</mn>
+                </mtd>
+                <mtd>
+                  <mn>7</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">]</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>&#xD7;</mo>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+          <mo>&#xD7;</mo>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <mo>&#xD7;</mo>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <mo>&#xD7;</mo>
+          <mn>5</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+          <mo>&#xD7;</mo>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+          <mo>&#xD7;</mo>
+          <mn>7</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <mo>&#xD7;</mo>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <mo>&#xD7;</mo>
+          <mn>7</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+          <mo>&#xD7;</mo>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+          <mo>&#xD7;</mo>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+          <mo>&#xD7;</mo>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+          <mo>&#xD7;</mo>
+          <mn>5</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>3</mn>
+          <mo>&#xD7;</mo>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+          <mo>&#xD7;</mo>
+          <mn>7</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+          <mo>&#xD7;</mo>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>4</mn>
+          <mo>&#xD7;</mo>
+          <mn>7</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>5</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>10</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>6</mn>
+        </mtd>
+        <mtd>
+          <mn>7</mn>
+        </mtd>
+        <mtd>
+          <mn>12</mn>
+        </mtd>
+        <mtd>
+          <mn>14</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>15</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>20</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>18</mn>
+        </mtd>
+        <mtd>
+          <mn>21</mn>
+        </mtd>
+        <mtd>
+          <mn>24</mn>
+        </mtd>
+        <mtd>
+          <mn>28</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$ \begin{bmatrix}1&2\\3&4\\\end{bmatrix}\otimes \begin{bmatrix}0&5\\6&7\\\end{bmatrix}=\begin{bmatrix}1\begin{bmatrix}0&5\\6&7\\\end{bmatrix}&2\begin{bmatrix}0&5\\6&7\\\end{bmatrix}\\3\begin{bmatrix}0&5\\6&7\\\end{bmatrix}&4\begin{bmatrix}0&5\\6&7\\\end{bmatrix}\\\end{bmatrix}=\begin{bmatrix}1\times 0&1\times 5&2\times 0&2\times 5\\1\times 6&1\times 7&2\times 6&2\times 7\\3\times 0&3\times 5&4\times 0&4\times 5\\3\times 6&3\times 7&4\times 6&4\times 7\\\end{bmatrix}= \begin{bmatrix}0&5&0&10\\6&7&12&14\\0&15&0&20\\18&21&24&28\end{bmatrix} $$ -->
+
+<p>The above example shows that the Kronecker product is not commutative in general: <i>A</i> ⊗ <i>B</i> might not equal <i>B</i> ⊗ <i>A</i>. However, it does have most of the other “standard” properties that we would expect a matrix product to have, and in particular it interacts with matrix addition and scalar multiplication exactly how we would hope that it does:</p>
+
+<p><b>Theorem 2.6.1</b> (Vector Space Properties of the Kronecker Product) Suppose <i>A, B</i>, and <i>C</i> are matrices with sizes such that the operations below make sense, and let <i>c</i> ∈ 𝔽 be a scalar. Then</p>
+
+<ol type="a">
+	<li><p>(<i>A</i> ⊗ <i>B</i>) ⊗ <i>C</i> = <i>A</i> ⊗ (<i>B</i> ⊗ <i>C</i>) &emsp;(associativity)</p></li>
+	<li><p><i>A</i> ⊗ (<i>B</i> + <i>C</i>) = <i>A</i> ⊗ <i>B</i> + <i>A</i> ⊗ <i>C</i> &emsp; (left distributivity)</p></li>
+	<li><p>(<i>A</i> + <i>B</i>) ⊗ <i>C</i> = <i>A</i> ⊗ <i>C</i> + <i>B</i> ⊗ <i>C</i> &emsp; (right distributivity)</p></li>
+	<li><p>(<i>cA</i>) ⊗ <i>B</i> = <i>A</i> ⊗ (<i>cB</i>) = <i>c</i>(<i>A</i> ⊗ <i>B</i>)</p></li>
+</ol>
+
+<p><b>Proof</b>. We prove only b) the proofs for the other statements are quite similar.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>&#x2297;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>B</mi>
+  <mo>+</mo>
+  <mi>C</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>B</mi>
+          <mo>+</mo>
+          <mi>C</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>B</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>+</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>&#x22F1;</mo>
+        </mtd>
+        <mtd>
+          <mrow data-mjx-texclass="ORD">
+            <mo>&#x22EE;</mo>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+        <mtd>
+          <mo>&#x22EF;</mo>
+        </mtd>
+        <mtd>
+          <msub>
+            <mi>a</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>m</mi>
+              <mo>,</mo>
+              <mi>n</mi>
+            </mrow>
+          </msub>
+          <mi>C</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>A</mi>
+  <mo>&#x2297;</mo>
+  <mi>B</mi>
+  <mo>+</mo>
+  <mi>A</mi>
+  <mo>&#x2297;</mo>
+  <mi>C</mi>
+</math>
+
+
+<!-- $$ A \otimes (B + C) = \begin{bmatrix} a_{1,1}(B+C) & a_{1,2}(B+C) &\cdots &a_{1,n}(B+C) \\
+a_{2,1}(B+C) & a_{2,2}(B+C) &\cdots& a_{2,n}(B+C) \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m,1}(B+C) & a_{m,2}(B+C) &\cdots& a_{m,n}(B+C)\end{bmatrix}
+
+= \begin{bmatrix} a_{1,1}B & a_{1,2}B &\cdots &a_{1,n}B \\
+a_{2,1}B & a_{2,2}B &\cdots& a_{2,n}B \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m,1}B & a_{m,2}B &\cdots &a_{m,n}B \end{bmatrix}
+
++
+
+\begin{bmatrix} a_{1,1}C & a_{1,2}C &\cdots& a_{1,n}C \\
+a_{2,1}C & a_{2,2}C &\cdots& a_{2,n}C \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m,1}C & a_{m,2}C &\cdots& a_{m,n}C \end{bmatrix} = A \otimes B + A \otimes C $$ -->
+
+
+<p>In particular, associativity of the Kronecker product (i.e., property (a) of the above theorem) tells us that we can unambiguously define Kronecker powers of matrices by taking the Kronecker product of a matrix with itself repeatedly, without having to worry about the exact order in which we perform those products. That is, for any integer <i>p</i> ≥ 1 we can define</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2297;</mo>
+      <mspace width="0.083em"></mspace>
+      <mi>p</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <munder>
+    <mrow data-mjx-texclass="OP">
+      <munder>
+        <mrow>
+          <mi>A</mi>
+          <mo>&#x2297;</mo>
+          <mi>A</mi>
+          <mo>&#x2297;</mo>
+          <mo>&#x22EF;</mo>
+          <mo>&#x2297;</mo>
+          <mi>A</mi>
+        </mrow>
+        <mo>&#x23DF;</mo>
+      </munder>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>p</mi>
+      <mstyle scriptlevel="0">
+        <mspace width="0.5em"></mspace>
+      </mstyle>
+      <mtext>times</mtext>
+    </mrow>
+  </munder>
+</math>
+
+<!-- $$ A^{\otimes\mkern1.5mu p}=\underbrace{A\otimes A\otimes \dots\otimes A}_{p\enspace\text{times}} $$ -->
+
+<p>When doing Kronecker powers, increasing the power by 1 multiplies the number of rows and columns in the result by the number of rows and columns in <i>A</i>, respectively, hence sized is increased quickly.</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

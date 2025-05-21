@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Successione di Fibonacci"/>
+	<title>Successione di Fibonacci</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Algebra</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Successione di Fibonacci</h1>
+
+<p>Dedichiamoci allo studio della successione di Fibonacci dato che giocherà un ruolo importante in molti campi appartenemente slegati. La definizione della successione {F<sub>n</sub>] dei <i>numeri di Fibonacci</i> è la seguente</p>
+
+<div class="eq">
+<p><i>F</i><sub>0</sub> = 0, &emsp; <i>F</i><sub>1</sub> = 1, <i>F<sub>n</sub></i> = <i>F</i><sub><i>n</i>−1</sub> + <i>F</i><sub><i>n</i>−2</sub> &emsp; for <i>n</i> &gt; 1</p>
+</div>
+
+<p>Ogni termine della successione è quindi somma dei due termini precedenti. I primi termini della successione sono:</p>
+
+<div class="eq">
+<p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 59, 144, 233, ...</p>
+</div>
+
+<p>I numeri di Fibonacci sorgono in molte situazioni e compaiono spesso in natura (ad es. nei petali di certi fiori o in qualche specie di pigna). Sono stati introdotti da Leonardo Fibonacci come soluzione del problema delle <i>coppie di conigli</i>. Il problema era quello di modellare la crescita di una popolazione di conigli. Più precisamente, supponiamo che ogni coppia di conigli impieghi un mese per diventare adulta e un secondo mese per procreare un'altra coppia. <br> Se al primo mese si ha una sola coppia e si da l'ipotesi ulteriore che nessun animale muoia, allora wuante coppie si avranno dopo <i>n</i> mesi? Indicando con ∘ una coppia non ancora adulta e con • una coppia capace di procreare, e con  <i>a<sub>n</sub></i> il numero di coppie dopo <i>n</i> mesi, la situazione che si presenta è illustrata nella seguente fig.</p>
+
+<figure>
+<img src="img/Fibonacci_conigli.png" alt="conigli Fibonacci"/>
+<figcapgion>Schema di Riproduzione</figcaption>
+</figure>
+
+<p>Dallo schema si deduce quanto segue:</p>
+
+<ol type="a">
+	<li><p>Dopo la prima riproduzione, il ramo destro riproduce lo stesso schema dell'intero albero (il tutto traslato di due mesi), Cioè la situazione in questo ramo all'<i>n</i>-mo mese è quella che si aveva nell'intero albero due mesi prima, cioè <i>a</i><sub><i>n</i></sub>−2</sub>;</p></li>
+	<li><p>Nel ramo sinistro la situazione dell'inero albero si riproduce dopo solo un mese. Quindi all'<i>n</i>-mo mese la situazione è come quella del mese precente. Quindi risulta</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> = <i>a</i><sub><i>n</i></sub>−1</sub> + <i>a</i><sub><i>n</i></sub>−2</sub>, &emsp;<i>a</i><sub>0</sub> = 0, <i>a</i><sub>1</sub> = 1</p>
+</div>
+</li>
+</ol>
+
+<p>Diamo quid di seguito alcune delle proprietà dei numeri di Fibonacci.</p>
+
+</ol>
+
+<p>2.5.1. Proposizione. Se <i>F<sub>n</sub></i> sono i numeri di Fibonacci, per ogni <i>n</i> &gt; 0 vale la seguente identità (di <i>Cassini</i>):</p>
+
+<div class="eq">
+<p><i>F</i><sub><i>n</i>+1</sub> <i>F</i><sub><i>n</i>−1</sub> − <i>F</i><sup>2</sup><sub><i>n</i></sub> = (−1)<sup>2</sup></p>
+</div>
+
+<p>Si noti che tale identità può essere scritta tramite l'identità di Fibonacci come</p>
+
+<div class="eq">
+<p><i>F</i><sup>2</sup><sub><i>n</i>−1</sub> + <i>F</i><sub><i>n</i>−1</sub><i>F<sub>n</sub></i> − <i>F</i><sup>2</sup><sub>n</sub> = (−1)<sup><i>n</i></sup></p>
+</div>
+
+<p><i>Proof</i>. Procederemo per induzione su <i>n</i>. Per <i>n</i> =1 si ha F<sub>2</su>F<sub>0</sub> - F<sub>1</sub><sup>2</sup> = 1 ⋅ 0 -1 = -1, quindi C(1) è vera. Supposta vera C(<i>n-1</i>), ossia </p>
+
+<div class="eq">
+<p><i>F<sub>n</sub> F<sub>n-2</sub> - F<sup>2</sup> <sub>n-1</sub></i> = (-1)<sup>n-1</sup></p>
+</div>
+
+<p>we must prove C(<i>n</i>). Ora, sostituendo nella C(<i>n</i>−1</i>) (which are supposing true) <i>F<sub>n-2</sub> = <i>F<sub>n</sub></i> <i>F</i><sub><i>n</i>−1</sub></i>, si ottiene</p>
+
+<div class="eq">
+<p><i>F<sub>n</sub> (<i>F<sub>n</sub> - F<sub>n-1</sub></i>) - F<sup>2</sup><sub>n-1</sub></i> = (-1)<sup><i>n</i>−1</sup></p>
+</div>
+
+<p>cioè</p>
+
+<div class="eq">
+<p><i>F<sup>2</sup><sub>n</sub> - F<sub>n</sub>F<sub>n-1</sub> - F<sup>2</sup><sub>n-1</sub></i> = (-1)<sup>n-1</sup></p>
+</div>
+
+<p>che coincide con la C(<i>n</i>) cambiata di segno, a seguito della sostituzione <i>F<sub>n+1</sub> = F<sub>n</sub> F<sub>n-1</sub></i>. Quindi C(<i>n</i>) è vera e l'identità di Cassini è stata provata per ogni <i>n</i>. □</p>
+
+<p>Vogliamo ora trovare una "soluzione" della relazione ricorsiva, ossia una "formula chiusa" che ci permetta di determinare il termine <i>n</i>-esimo della successione direttamente come funzione di <i>n</i> e non dei termini precedenti. Prendendo come esempio il caso di una progressione geometrica.</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> = <i>r ⋅ a<sub>n-1</sub></i>, &emsp; <i>a<sub>0</sub> = k</i>.</p>
+</div>
+
+<p>in cui la "soluzione" è</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> = <i>kr<sup>n</sup></i>, &emsp; <i>n &ge; 0</i>.</p>
+</div>
+
+<p>cerchiamo <i>una</i> soluzione della relazione ricorsiva</p>
+
+<div class="eq">
+<p><i>F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub></i>
+<span class="eq">2.5.1</span></p>
+</div>
+
+<p>che non tenga conto per il momento delle condizioni iniziali e che sia della forma</p>
+
+<div class="eq">
+<p><i>F<sub>n</sub></i> = <i>x<sup>n</sup></i></p>
+</div>
+
+<p>per qualche <i>x</i> costante reale, da determinare. Sostituendo allora la soluzione <i>x<sup>n</sup></i> nella (2.5.1) si ottiene</p>
+
+<div class="eq">
+<p><i>x<sup>n</sup></i> − <i>x</i><sup><i>n</i>-1</sup> -  x<sup>n-2</sup> =  x<sup>n-2</sup> (x<sup>2</sup> - x -1) = 0</i></p>
+</div>
+
+<p>tale equazione è soddisfatta banalmente per <i>x</i> = 0, soluzione che scartiamo, oppure per <i>x</i> soluzione dell'equazione:</p>
+
+<div class="eq">
+<p><i>x<sup>2</sup> − <i>x</i> − 1 = 0</i></p>
+</div>
+
+<p>che prende il nome di <i>equazione caratteristica</i> della relazione ricorsiva di Fibonacci. Le radici sono</p>
+
+<div class="eq">
+<p><i>x<sub>1</sub> = (1 + √5)/2, &emsp; x<sub>2</sub> = (1 - √5)/2</i></p>
+</div>
+
+<p>Si osservi che nessuna delle due soluzioni <i>F<sub>n</sub></i> = <i>x</i><sub>1</sub><sup>n</sup></i> o <i>F<sub>n</sub> = x<sub>2</sub><sup>n</sup></i>. soddisfa le condizioni iniziali F<sub>0</sub> = 0, F<sub>1</sub> = 1. Tuttavia è facile vedere (si provi) che se x<sub>1</sub><sup>n</sup></i> e <i> x<sub>2</sub><sup>n</sup></i> sono entrambe soluzioni di (2.5.1) allora anche una qualunque loro combinazione lineare del tipo</p>
+
+<div class="eq">
+<p><i>A</i><sub>1</sub> <i>x</i><sub>1</sub><sup><i>n</i></sup> + A<sub>2</sub> x<sub>2</sub><sup>n</sup></i></p>
+</div>
+
+<p>è soluzioni di (2.5.1).</p>
+
+<p>Cerchiamo quindi soluzioni di tipo</p>
+
+<div class="eq">
+<p><i>F<sub>n</sub></i> = <i>A</i><sub>1</sub> <i>x</i><sub>1</sub><sup>n</sup> + <i>A</i><sub>2</sub> x<sub>2</sub><sup>n</sup></i>
+<span class="eq">2.5.3</span></p>
+</div>
+
+<p>con <i>x<sub>1</sub><sup>n</sup></i> e <i>x<sub>2</sub><sup>n</sup></i> sono le due soluzion di <i>x<sup>2</sup> -x -1=0</i> che soddisfano le condizioni iniziali</p>
+
+<div class="eq">
+<p><i>0 = A<sub>1</sub> x<sub>1</sub><sup>0</sup> + A<sub>2</sub> x<sub>2</sub><sup>0</sup>, &emsp; 1 = A<sub>1</sub> x<sub>1</sub> + A<sub>2</sub> x<sub>2</sub></i></p>
+</div>
+
+<p>si tratta di risolvere il sistema seguente</p>
+
+<div class="eq">
+<p><i>0 = A<sub>1</sub> + A<sub>2</sub></i></p>
+<p><i>1 = A<sub>1</sub> (1+√5)/2 + A<sub>2</sub> (1- √5)/2</i></p>
+</div>
+
+<p>Si trovano le soluzioni <i>x<sub>1</sub> = 1/ √5</i> e <i>x<sub>2</sub> = -x<sub>1</sub> = - 1/√5</i>, che, sostituiti in (2.5.3) danno la forma chiusa dell'<i>n</i>-esimo numero di Fibonacci:</p>
+
+<div class="eq">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>F</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msqrt>
+      <mn>5</mn>
+    </msqrt>
+  </mfrac>
+  <mrow>
+    <mo>[</mo>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mfrac>
+          <mrow>
+            <mn>1</mn>
+            <mo>+</mo>
+            <msqrt>
+              <mn>5</mn>
+            </msqrt>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <mi>n</mi>
+    </msup>
+    <mo>&#x2212;<!-- − --></mo>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mfrac>
+          <mrow>
+            <mn>1</mn>
+            <mo>&#x2212;<!-- − --></mo>
+            <msqrt>
+              <mn>5</mn>
+            </msqrt>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <mi>n</mi>
+    </msup>
+    <mo>]</mo>
+  </mrow>
+</math>
+</div>
+
+<p>2.5.2 - DEFINIZIONE. Il numero</p>
+
+<div class="eq">
+<p><i>(1+√5)/2</i></p>
+</div>
+
+<p>prende il nome di <i>rapporto aureo</i> o <i>proporizione divina</i>.</p>
+
+<p>Il rapporto più armonioso tra due lunghezze <i>a</i> e <i>b</i> era considerato infatti dai Greci quello tale che</p>
+
+<div class="eq">
+<p><i>&phi;</i> = <i>a</i> /<i>b</i> = (<i>a</i>+<i>b</i>) /<i>a</i></p>
+</div>
+
+<p>tanto che la facciata del Partenone è stata inscritta in un rettangolo avente queste proporzioni. La lettera &phi; richiama il nome dell'artista Fidia, che nelle sue sculture utilizzò spesso questo rapporto. Vale la seguente relazione</p>
+
+<div class="eq">
+<p><i>a</i> /<i>b</i> = (<i>a</i>+<i>b</i>) /<i>a</i> = 1 + <i>b</i>/<i>a</i> = 1/<i>a</i>/<i>b</i></p>
+</div>
+
+<p>si può scrivere dunque</p>
+
+<div class="eq">
+<p><i>&phi;</i> = <i>a</i> /<i>b</i> = 1 + 1/<i>&phi;</i></p>
+</div>
+
+<p>da cui discende l'equazione polinomiale a coefficienti interi</p>
+
+<div class="eq">
+<p>&phi;<sup>2</sup> − &phi; -1 = 0</p>
+</div>
+
+<p>La soluzione positiva di tale equazione (univa ammissibile essendo &phi; una quantità positiva per definizione) porta al valore del rapporto aureo.</p>
+
+<div class="eq">
+<p><i>&phi; = a / b = (a+b)/b = (1 + √5)/2 ≈ 1.6160339887</p>
+</div>
+
+<p>La costruzione geometrica che permette, dato un segmento di lunghezza <i>a</i>, di costruire il segmento di lunghezza <i>b</i> tale che <i>a/b</i> sia il rapporto aureo, è illustrata in figura 2.5: si costruisce il quadrato <i>ABCD</i> di lato <i>a</i>, e dal punto medio <i>M</i> del segmento <i>AB</i> si traccia il segmento (di lunghezza √5a/2) <i>MC</i>. Il punti <i>E</i> intersezione della retta per <i>A</i> e <i>B</i> con la circonferenza di centro <i>M</i> e raggio <i><span class="overline">BE</span></i> è la lunghezza <i>b</i> richiesta.</p>
+
+<img src="img/costruzione_aurea.png" alt="costruzione aurea"/>
+
+<p>Anche l'altra radice</p>
+
+<div class="eq">
+<p><i>&phi;* = (1 - √5)/2 = -1/&phi; ≌ -0.61803</i></p>
+</div>
+
+<p>gode di molte delle proprietà di &phi;.</p>
+
+<p>La (2.5.4) dice che, quando <i>n</i> è grande, <i>F<sub>n</sub></i> è molto vicino al numero irrazionale &phi;<sup>n</sup>/√5. Infatti, per <i>n</i> grande, essendo |&phi;*| &lt; 1, &phi;*<sup>n</sup> diventa esponenzialmente piccolo, quindi trascurabile.</p>
+
+<p>2.5.3 PROPOSIZIONE. Dato comunque un <i>n</i> &gt; 0 esistono due interi positivi <i>a</i> e <i>b</i> tali che nel calcolo del MCD(<i>a,b </i>) con l'algoritmo euclideo, il numero delle divisioni necessarie è esattamente <i>n</i>.</p>
+
+<p><i>Dimostrazione</i>. Basta scegliere <i>a</i> = <i>F</i><sub><i>n</i>+2</sub>, <i>b</i> = <i>F</i><sub><i>n</i>+1</sub> rispettivamente l'(<i>n</i>+2)-esimo e l'(<i>n</i>+1)-esimo numero di Fibonacci. Infatti</p>
+
+<img src="img/fibonacci_euclide.png" alt="numero minimo divisioni MCD"/>
+
+<p>sono esattamente <i>n</i> divisioni (F<sub>n-k</sub> è diverso da zero fin quando <i>k</i> = <i>n</i>−1). I passi sono infatti i seguenti</p>
+
+<div class="eq">
+<p>(<i>F</i><sub><i>n</i>+2</sub>, <i>F</i><sub><i>n</i>+1</sub>) → (<i>F</i><sub><i>n</i>+1</sub>, F<sub>n</sub>) → (F<sub>n</sub>, F<sub>n-1</sub>) → ... → (F<sub>3</sub>, F<sub>2</sub>).□</p>
+
+</div>
+
+<p>Questa proposizione ci permette di determinare un limite superiore per il numero di divisioni necessarie per completare l'algoritmo euclideo partendo da due interi arbitrari. Vale la seguente proposizione dovuta a Lamé nel 1844.</p>
+
+<p>2.5.4 PROPOSIZIONE. (Lamé) -  <i>a</i> e <i>b</i>.</p>
+
+<section>
+<a href="defective.html">&#171;Defective Verbs</a>
+<a href="index.html">Index</a>
+<a href="proprietàSuccessione di Fibonacci.html">Proprietà dei Successione di Fibonacci&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

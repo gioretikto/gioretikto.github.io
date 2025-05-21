@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Projection of a vector onto a subspace">
+	<title>Projection of a vector onto a subspace</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Projection of a vector onto a subspace</h1>
+
+<p>In real three-dimensional Euclidean space, one projects a vector on a plane or a line by "dropping a perpendicular" from the tip of the vector; e.g. a computer graphics software that renders 3D objects must project the polygons that make up a 3D object onto a 2D rendering plane. <br> To generalize the conept of projection onto a 2D plane to abstract vector spaces, suppose that <I>V</i><sub>1</sub> is an <i>m</i>-dimensional subspace of an <i>n</i>-dimensional vector space <i>V</i>. We want to determine the vector <i><b>u</b></i> &in; <i>V</i><sub>1</sub> that has the minimum distance to <i><b>v</b></i> &in; <i>V</i>.</p>
+
+<p><b>Theorem</b> (Unique minimum-distance projection) Let <i>V</i> an inner product vector space and <i>V</i><sub>1</sub> an <i>m</i>-dimensional subspace of <i>V</i>. Let <i><b>v</b></i> &in; <i>V</i> such that <i><b>v</b></i> &notin; <i>V</i><sub>1</sub>. Then there exist and are uniquely determined the vectors <i><b>u</b></i>,  <i><b>u</b></i><sup>⊥</sup>, such that</p>
+
+<div class="eq">
+<p><i><b>v</b></i> = <i><b>u</b></i> + <i><b>u</b></i><sup>⊥</sup>, &emsp; <i><b>u</b></i> &in; <i>V</i><sub>1</sub>, <i><b>u</b></i><sup>⊥</sup> &in; <i>V</i><sub>1</sub><sup>⊥</sup> (<a href="orthogonality.html">orthogonal complement</a>)</p>
+</div>
+
+<p>The vector <i><b>u</b></i><sup>⊥</sup> is said orthogonal projection of <i><b>v</b></i> onto <i>V</i><sub>1</sub> and among all vectors of <i>V</i><sub>1</sub> is the minimum-distance vector from <i><b>v</b></i>.</p>
+
+<p><b>Proof</b>. By the <a href="Gram_Schmidt.html#cor">corollary 2.6.2</a> of the Gram-Schmidt orthogonalization theorem, there exists an orthonormal basis <i><b>e</b></i><sub>1</sub>, ... , <i><b>e<sub>n</sub></i></b> &in; <i>V</i>, such that the first <i>m</i> vectors are an orthonormal basis of <i>V</i><sub>1</sub> and the last <i>n</i> − <i>m</i> vectors are an orthonormal basis of <i>V</i><sub>1</sub><sup>⊥</sup>. We write <i><b>u</b></i> as a linear combination of this basis </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">v</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mi>m</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>&#x2261;</mo>
+  <mi mathvariant="bold">u</mi>
+  <mo>+</mo>
+  <msup>
+    <mi mathvariant="bold">u</mi>
+    <mo>&#x22A5;</mo>
+  </msup>
+</math>
+
+
+<!-- $$ \mathbf{v} = \sum_{i=1}^n c_i\mathbf{e_i} = \sum_{i=1}^m c_i\mathbf{e_i} + \sum_{i=m+1}^n c_i\mathbf{e_i} \equiv \mathbf{u} + \mathbf{u}^⊥ $$ -->
+
+<p>By definition of <i><b>u</b></i> &in; <i>V</i><sub>1</sub> and <i><b>u</b></i><sup>⊥</sup> &in; <i>V</i><sub>1</sub><sup>⊥</sup> we show that <i><b>u</b></i> is the unique minimum distance vector of <i>V</i><sub>1</sub> from the given vector <i><b>v</b></i>. Let <i>u</i><sub>1</sub> another vector of <i>V</i><sub>1</sub>. We have that<p>
+
+<div class="eq">
+<p>||<i><b>v</b></i> −<i><b>u</b></i>|| = dist(<i><b>u, v</b></i>)  = ||<i><b>u</b></i><sup>⊥</sup>||<br>
+||<i><b>v</b></i> −<i><b>u</b></i><sub>1</sub>|| = ||<i><b>u</b></i><sup>⊥</sup>|| + ||<i><b>u</b></i> −<i><b>u</b></i><sub>1</sub>||</p>
+</div>
+
+<p>Since <i><b>u</b></i> −<i><b>u</b></i><sub>1</sub> &in; <i>V</i><sub>1</sub> and <i><b>u</b></i><sup>⊥</sup> &in; <i>V</i><sub>1</sub><sup>⊥</sup> by Pythagorean theorem</p>
+
+<div class="eq">
+<p>dist<sup>2</sup>(<i><b>v,u</b></i><sub>1</sub>) = ||<i><b>v</b></i> −<i><b>u</b></i><sub>1</sub>|| <sup>2</sup> = ||<i><b>u</b></i><sup>⊥</sup>||<sup>2</sup> + ||<i><b>u</b></i> −<i><b>u</b></i><sub>1</sub>||<sup>2</sup> &ge; ||<i><b>u</b></i><sup>⊥</sup>||<sup>2</sup> = dist<sup>2</sup>(<i><b>v,u</b></i>)</p>
+</div>
+
+<p>Thus</p>
+
+<div class="eq">
+<p>dist<sup>2</sup>(<i><b>v,u</b></i><sub>1</sub>) &ge; dist<sup>2</sup>(<i><b>v,u</b></i>)&emsp;□</p>
+</div>
+
+<p>Notice how to find the element <i><b>u</b></i> &in; <i>V</i><sub>1</sub>, which best approximates <i><b>v</b></i>, it suffices to know an orthonormal basis of <i>V</i><sub>1</sub>, as it can be read out directly from the proof</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">u</mi>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold">v</mi>
+  <mo>&#x22C5;</mo>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mi mathvariant="bold">e</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+</math>
+
+<!-- $$ \mathbf{u} =  \sum_{i=1}^m c_i \mathbf{e_i}  = \sum_{i=1}^m (\mathbf{v} \cdot \mathbf{e_i}) \mathbf{e_i}$$ -->
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>

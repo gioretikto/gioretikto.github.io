@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Condizioni di diagonalizzabilità"/>
+	<title>Condizioni di diagonalizzabilità</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Condizioni di diagonalizzabilità</h1>
+
+<p>La relazione tra autovalori e diagonalizzabilità di una matrice è espressa dal seguente teorema</p>
+
+<p><b>Teorema D.0</b>. La matrice <b>A</b> è diagonalizzabile su 𝕂 se e solo 𝕂<sup><i>n</i></sup> possiede una base di autovettori di <b><i>A</i></b>. In tal caso detti <b>p</b><sub>1</sub>, <b>p</b><sub>2</sub>,...,<b>p</b><sub>n</sub> gli autovettori di tale base, e <i>&lambda;</i><sub>1</sub>, <i>&lambda;</i><sub>2</sub>,..., <i>&lambda;<sub>n</sub></i> gli autovalori corrispondenti (</i>&lambda;<sub>i</sub></i> &in; 𝕂, non necessariamente distinti), risulta</p>
+
+<div class="eq">
+<p><b><i>A</i></b> = <i><b>S</b>&Lambda;<b>S</b></i><sup>−1</sup></p>
+</div>
+
+<p>dove &Lambda; è la matrice diagonale e <b>S</b> = (<b><i>h</i></b><sub>1</sub>| <b><i>h</i></b><sub>2</sub>|...|<i><b>h</b><sub>n</sub></i>) la matrice non singolare che ha per colonne gli auvettori della base.</p>
+
+<p><b>Proof</b>. Se la matrice <b>A</b> è diagonalizzabile su 𝕂 vale <b><i>A</i></b> = <i><b>S</b>&Lambda;<b>S</b></i><sup>−1</sup> che può riscriversi come </p>
+
+<div class="eq">
+<p><b>AS</b> = <b>S&Lambda;</b></p>
+</div>
+
+<p>Tale relazione può riscriversi come <i><b>Ah</b><sub>i</sub></i> = <i>&lambda;<sub>i</sub><b>h</b><sub>i</sub></i> (i= 1, 2,...n). Questo prova che <i><b>h</b><sub>i</sub></i> sono autovettori e <i>&lambda;<sub>i</sub></i> sono gli autovalori corrispondenti. Poichè <b><i>S</i></b> è una matrice non singolare, i vettori <b>h</b><sub>i</sub> sono indipendenti e quindi sono effettivamente una base di 𝕂<sup>n</sup> di autovettori.</p>
+
+<p>Viceversa supponendo che esista una bas di 𝕂<sup>n</sup> di autovettori allora le relazioni <i><b>Ah</b><sub>i</sub></i> = <i>&lambda;<sub>i</sub><b>h</b><sub>i</sub></i> si riscrivono come <b>AS</b> = <b>S&Lambda;</b> cioè <b>A</b> = <b>S</b>&Lambda;<b>S</b><sup>−1</sup> perciò <b><i>A</i></b> è diagonalizzabile.□</p>
+
+<div class="def">
+<p><b>Example</b>. Trovare la matrice di passaggio <i>S</i> che diagonalizza</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ A = \begin{pmatrix} 0 & 0 & -2 \\ 1 & 2 & 1 \\ 1 & 0 & 3 \end{pmatrix} $$ -->
+
+<p><b>Solution</b>. L'equazione secolare risulta essere</p>
+
+<p align="center">(&lambda; − 1) (&lambda; − 2)<sup>2</sup> = 0</p>
+
+<p>si trovano i seguenti autovettori</p>
+
+<div class="eq">
+<p>&lambda; = 2: <b>p</b><sub>1</sub> =(-1, 0, 1), <b>p</b><sub>2</sub> = (0,1,0);<br>
+&lambda; = 1: <b>p</b><sub>3</sub> =(-2, 1, 1)</p>
+</div>
+
+<p>Ci sono tre vettori nella base quindi la matrice</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ S = \begin{pmatrix} -1 & 0 & -2 \\ 0 & 1 & 1 \\ 1 & 0 & 1 \end{pmatrix} $$ -->
+
+<p>verifichiamo che tale matrice è in grado di diagonalizzare <i>A</i>, ottendo la matrice diagonale seguente</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>S</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mi>A</mi>
+  <mi>S</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ S^{-1}AS = \begin{pmatrix} -1 & 0 & -2 \\ 0 & 1 & 1 \\ 1 & 0 & 1 \end{pmatrix}  \begin{pmatrix} 0 & 0 & -2 \\ 1 & 2 & 1 \\ 1 & 0 & 3 \end{pmatrix}\begin{pmatrix} -1 & 0 & -2 \\ 0 & 1 & 1 \\ 1 & 0 & 1 \end{pmatrix} = \begin{pmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$ -->
+
+<p>non c'è un ordine di preferenza con cui formare le colonne di <i>S</i>.</p>
+</div>
+
+<h2>Matrici reali simmetriche</h2>
+
+<p>Una classe di matrici reali che come vedremo risultano essere sempre diagonalizzabili è quella delle <a href="matrici.html#simmetrica">matrici simmetriche</a>. Per discutere questo risultato è necessario introdurre prima un'altra classe di matrici che giocano un ruolo imprtante in questo problema quella delle <i>matrici ortogonali</i>.</p>
+
+<p><b>Definition</b>. Una matrice <b>A</b> reale di tipo (<i>n,n</i>) si dice ortogonale se</p>
+
+<div class="eq">
+<p><b><i>A</i></b> ⋅ <i><b>A</b><sup>T</sup></i> = <i><b>A</b><sup>T</sup> <b>A</b></i> = <b><i>I</i></b></p>
+</div>
+
+<p>that is if <i>A</i> is a non-singular matrix whose inverse is equal to the transpose matrix. &emsp;□</p>
+
+<p><b>Theorem D.1</b>. Valgono le seguenti proprietà per matrici ortogonali</p>
+
+<ol type="a">
+	<li><p><b>A</b> è una matrice ortogonale di tipo (<i>n,n</i>) se e solo se le sue righe (colonne) sono una base ortonormale di ℝ<sup>n</sup>.</p></li>
+	<li><p>Il determinante di una matrice ortogonale vale 1 o -1</p></li>
+	<li><p>Il prodotto di due matrici ortogonali è ortogonale</p></li>
+	<li><p>La trasformazione lineare rappresentata da una matrice ortogonale conserva il modulo dei vettori: |<b>Ab</b>x| =|<b>x</b>| per ogni <b>x</b> &in; ℝ<sup>n</sup>, e conserva il loro prodotto scalare: <b>Ax</b> ⋅ <b>Ay</b> = <b>x</b> ⋅ <b>y</b></p></li>
+</ol>
+
+<p><b>Proof.</b></p>
+
+<ol type="a">
+
+	<li><p>Ricordiamo che la trasporta <i>A<sup>T</sup></i> è quella che si ottiene scambiando le righe con le colonne. Perciò se <i>A</i> = (<i>a<sub>ij</sub></i>), <i>A<sup>T</sup></i> = (a<sub>ji</sub>). La relazione <b><i>A</i></b> ⋅ <i><b>A</b><sup>T</sup></i> = <i><b>A</b><sup>T</sup>  <b>A</b></i> = <b><i>I</i></b> , implica ragionando sugli elementi</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mo>=</mo>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mi>k</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mi>k</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mi>j</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mtext>if&#xA0;</mtext>
+          <mi>i</mi>
+          <mo>&#x2260;</mo>
+          <mi>j</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+<!-- $$\sum_{k=1}^n = a_{ik}a_{jk} = \begin{cases}1 &\text{if } i =j \\ 0 &\text{if } i \ne j \end{cases} $$ -->
+
+<p>o in forma più compatta</p>
+
+<p align="center"><b>a</b><sub>i</sub>⋅ <b>a</b><sub>j</sub> = &delta;<sub>ij</sub></p>
+
+<p>ciò significa che i vettori riga di <b>A</b> sono ortonormali (quindi una base essendo di numero <i>n</i>). </p></li>
+
+<li><p>Dalla relazione <b>A</b><sup>T</sup> ⋅ <b>A</b> = <b>I</b> per il teorema di Binet</p>
+
+<div class="eq">
+<p>det (A<sup>T</sup>) = det (A) si ha det<sup>2</sup>(A) = 1, det(A) = &pm;1</p>
+</div>
+
+</li>
+
+<li><p>Siano <i>A,B</i> ortogonali</p>
+
+<div class="eq">
+<p>(AB) ⋅ (AB)<sup>T</sup> = (AB)⋅(B<sup>T</sup>A<sup>T</sup>) = A (BB<sup>T</sup>)A<sup>T</sup> =AI<sub>n</sub>A<sup>T</sup> = AA<sup>T</sup> = I<sub>n</sub></p>
+</div>
+
+<p>Analogamente si prova che (AB)<sup>T</sup> ⋅ (AB) = <i>I<sub>n</sub></i>, perciò <i>AB</i> è ortogonale.</p></li>
+
+</ol>
+
+</div>
+
+<p>Se <i>n</i> = 2, 3, la trasformazione lineare rappresentata da una matrice ortogonale è una rotazione (del piano o dello spazio, rispettivamente). Su può ora enunciare l'importante</p>
+
+<div class="def">
+<p><b>Teorema D.2</b> - Sia <b>A</b> una matrice reale e simmetrica. Allora <b>A</b> è diagonalizzabile, con una matrice di passaggio ortogonale, ossia</p>
+
+<div class="eq">
+<p><b>A</b> = <b>M&Delta;M</b><sup>T</sup></p>
+</div>
+
+<p>con &Delta; diagonale e <b>M</b> ortogonale. In particolare, ciò significa che ℝ<sup>n</sup> possiede una base ortonormale di autovettori di <b>A</b>.</p>
+</div>
+
+<p>Vedremo che un'applicazione di questi risultati sta nello studio delle <a href="quadratiche.html">forme quadratiche</a>, argomento importante nei <i>problemi di ottimizzazione in più variabili</i>.</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

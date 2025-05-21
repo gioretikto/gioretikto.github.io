@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="F-automorphisms of an extension">
+	<title>F-automorphisms of an extension</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>F-automorphisms of an extension</h1>
+
+<p>We continue to work as we did in the last section with fields of characteristic zero. </p>
+
+<p><b>9.2.1 Definition</b>. Let <i>K</i> an extension of a field <i>F</i>. A monomorphism of <i>K</i> in ℂ which fixes the elements of <i>F</i> is said <i>F-monomorphism</i> of <i>K</i> over <i>F</i>. &emsp;□</p>
+
+<p><b>Example 9.2.2</b>. Let <i>F</i> = ℚ, <i>K</i> = ℚ(<i>&alpha;</i>), where <i>&alpha;</i> is the third real root of <i>x</i><sup>3</sup> − 3, we have the following <i>F-monomorphism</i> <i>&phi;</i> from <i>K</i> to ℂ which sends <i>&alpha;</i> to <i>&omega;&alpha;</i> (with <i>&omega;</i> primitive third root of unity) and every <i>a</i> &in; <i>F</i> to itself. <br> We indicate with <i>I</i>(<i>K,F</i>) the set of all <i>F-monomorphisms</i>.&emsp;■ </p>
+
+<p><b>9.2.3 Proposition</b>. If <i>F</i> = ℚ, every monomorphism of <i>K</i> is a ℚ-monomorphism.</p>
+
+<p><b>Proof</b>. Let <i>&phi;</i> a monomorphism of <i>K</i>. Then it results</p>
+
+<div class="eq">
+<p><i>&phi;</i>(0), <i>&phi;</i>(1) = 1,<br>
+<i>&phi;</i>(<i>n</i>) = <i>&phi;</i>(1 + 1 + ... + 1) = <i>&phi;</i>(1) + <i>&phi;</i>(1) + ... + <i>&phi;</i>(1) = 1 + 1 + ... + 1 = <i>n</i><br>
+<i>&phi;</i>(<i>m</i>/<i>n</i>) = <i>&phi;</i>(<i>m</i>)<i>&phi;</i>(<i>n</i>)<sup>−1</sup> = <i>mn</i><sup>−1</sup> = <i>m</i>/<i>n</i>. &emsp;□</p>
+</div>
+
+<p>Let <i>K</i> a finite extension of <i>F</i>. We shall find all the <i>F-monomorphism</i> of <i>K</i>. Since <i>K</i> is a finite extension we have <i>K</i> = <i>F</i>(<i>&alpha;</i>) for some <i>&alpha;</i> &in; <i>K</i> (see <a href="separable_extensions.html">Proposition 8.8.2</a>). If [<i>K</i>:<i>F</i>] = <i>n</i>, every element <i>k</i> &in; <i>K</i> can be written in the form</p>
+
+<div class="eq">
+<p><i>k</i> = <i>c</i><sub>0</sub> + <i>c</i><sub>1</sub><i>&alpha;</i> + <i>c</i><sub>2</sub><i>&alpha;</i><sup>2</sup> + ... + <i>c</i><sub><i>n</i> − 1</sub><i>&alpha;</i><sup><i>n</i> −1</sup>, &emsp; <i>c<sub>i</sub></i> &in; <i>F</i></p>
+</div>
+
+<p>Let <i>&phi;</i> a <i>F-monomorphism</i> of <i>K</i>. Then</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>k</i>) = <i>&phi;</i>(<i>c</i><sub>0</sub>) + <i>&phi;</i>(<i>c</i><sub>1</sub><i>&alpha;</i>) + <i>&phi;</i>(<i>c</i><sub>2</sub><i>&alpha;</i><sup>2</sup>) + ... + <i>&phi;</i>(<i>c</i><sub><i>n</i> − 1</sub><i>&alpha;</i><sup><i>n</i> −1</sup>), = <i>c</i><sub>0</sub> + <i>c</i><sub>1</sub> <i>&phi;</i>(<i>&alpha;</i>) + <i>c</i><sub>2</sub><i>&phi;</i>(<i>&alpha;</i><sup>2</sup>) + ... + <i>c</i><sub><i>n</i> − 1</sub><i>&phi;</i>(<i>&alpha;</i><sup><i>n</i> −1</sup>)</p>
+</div>
+
+<p>where <i>&phi;</i> is completely determined once we know <i>&phi;</i>(<i>&alpha;</i>). Further <i>&phi;</i>(<i>&alpha;</i>) is conjugated to <i>&alpha;</i> over <i>F</i> (see <a href="normal_extensions.html">definition 8.7.1</a>. Indeed we have the following proposition</p>
+
+<p><b>9.2.4 Proposition</b>. Let <i>K</i> = <i>F</i>(<i>&alpha;</i>) a finite extension of <i>F</i> and let <i>&phi;</i> a <i>F-monomorphism</i> of <i>K</i>. Then <i>&phi;</i>(<i>&alpha;</i>) is a conjugate of <i>&alpha;</i> over <i>F</i>, that is <i>&phi;</i>(<i>&alpha;</i>) and <i>&alpha;</i> have the same minimal polynomial over <i>F</i>.</p>
+
+<p><b>Proof</b>. Let <i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>x</i> + <i>a</i><sub>2</sub> <i>x</i><sup>2</sup> + ... + <i>a<i>n</i>x<sup>n</sup></i>, (<i>a<sub>i</sub></i> &in; <i>F</i>) the minimal polynomial of <i>&alpha;</i>. We shall prove that <i>&phi;</i>(<i>&alpha;</i>) is also a root of <i>p</i>(<i>x</i>). We have the following equalities:</p>
+
+<div class="eq">
+<p><i>p</i>(<i>&phi;</i>(<i>&alpha;</i>)) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>&phi;</i>(<i>&alpha;</i>) + ... + <i>a<sub>n</sub>&phi;</i>(<i>&alpha;</i>)<sup><i>n</i></sup> <br>
+= <i>&phi;</i>(<i>a</i><sub>0</sub>) + <i>&phi;</i>(<i>a</i><sub>1</sub>) <i>&phi;</i>(<i>&alpha;</i>) + ... + <i>&phi;</i>(<i>a<sub>n</sub></i>)<i>&phi;</i>(<i>&alpha;<sup>n</sup></i>) <br>
+= <i>&phi;</i>(<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>&alpha;</i> + <i>a<sub>n</sub>&alpha;<sup>n</sup></i>) = <i>&phi;</i>(0) = 0. &emsp;□</p>
+</div>
+
+<p>Thus the possible transformed element of a root <i>&alpha;</i> of an irreducible polynomial with coefficients in <i>F</i> can be found among the roots of the polynomial itself. For example consider the extension <i>K</i> = ℚ(√3) of ℚ. If <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> − 3, then the transformed √3 through of <i>K</i> can only be either √3 or −√3. As</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>x</i><sup>2</sup> − 3) = <i>&phi;</i>(0)<br>
+<i>&phi;</i>(<i>x</i><sup>2</sup>) − <i>&phi;</i>(3) = 0<br>
+<i>&phi;</i>(<i>x</i>)<i>&phi;</i>(<i>x</i>) = 3<br>
+<i>&phi;</i>(<i>x</i>) = &pm;3</p>
+</div>
+
+<p>As a consequence of the previous results we have the following theorem.</p>
+
+<p><b>9.2.5 Theorem</b>. Let <i>K</i> a finite extension of <i>F</i>, with degree <i>n</i>. Then there exist at most <i>n</i> <i>F-monomorphism</i> of <i>K</i>. In other words:</p>
+
+<div class="eq">
+<p>|<i>I</i>(<i>K,F</i>)| &le; [<i>K</i>:<i>F</i>]&emsp;□</p>
+</div>
+
+<p>Before proving that there exist exactly <i>n</i> <i>F</i>-monomorphism, we introduce the following lemma.</p>
+
+<p><b>9.2.6 Lemma</b>. Let <i>F</i> a field and let <i>F</i>(<i>&alpha;</i>) an extension of degree <i>n</i>. Let <i>&theta;</i> a monomorphism from <i>F</i> to ℂ, and let <i>p</i>(<i>x</i>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>x</i> + <i>a</i><sub>2</sub><i>x</i><sup>2</sup> + ... + <i>a<sub>n</sub>x<sup>n</sup></i> (<i>a<sub>i</sub></i> &in; <i>F</i>) the minimal polynomial of <i>&alpha;</i>. Let <i>p<sub>&theta;</sub></i> the polynomial with coefficients in ℂ, <i>p<sub>&theta;</sub></i> = <i>&theta;</i>(<i>a</i><sub>0</sub>) + <i>&theta;</i>(<i>a</i><sub>1</sub>)<i>x</i> + ... + <i>&theta;</i>(<i>a<sub>n</sub></i>)<i>x<sup>n</sup></i> with <i>&beta;</i> a root of <i>p<sub>&theta;</sub></i>, there exists a monomorphism, extension of <i>&theta;</i> to <i>F</i>(<i>&alpha;</i>) which sends <i>&alpha;</i> to <i>&beta;</i>.</p>
+
+<p><b>Proof</b>. The proof of this lemma is analogous to that of theorem <a href="splitting_field.html">Theorem 8.2.13</a>, but we repeat it for sake of completeness. Every element <i>s</i> &in; <i>F</i>(<i>&alpha;</i>) can be written univocally as</p>
+
+<div class="eq">
+<p><i>s</i> = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub>&alpha; + <i>a</i><sub>2</sub>&alpha;<sup>2</sup> + ... + <i>a</i><sub><i>n</i> −1</sub>&alpha;<sup><i>n</i> − 1</sup>, &emsp; <i>a<sub>i</sub></i> &in; <i>F</i></p>
+</div>
+
+<p>We define &phi;: <i>F</i>(<i>&alpha;</i>) ⟶ ℂ as</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>s</i>) := &theta;(<i>a</i><sub>0</sub>) + &theta;(<i>a</i><sub>1</sub>) <i>&beta;</i> + ... + <i>a</i><sub><i>n</i> −1</sub><i>&beta;</i><sup><i>n</i> − 1</sup></p>
+</div>
+
+<p>It is obvious that <i>&phi;</i> is an extension of <i>&theta;</i> which sends <i>&alpha;</i> to <i>&beta;</i>, preserving addition. We show that it preserves the product as well. Let <i>t</i> = <i>b</i><sub>0</sub> + <i>b</i><sub>1</sub> <i>&alpha;</i> + ...+ <i>b<sub>n</sub></i><i>&alpha;</i><sup><i>n</i>−1</sup> another element of <i>F</i>(<i>&alpha;</i>). We consider the following polynomial associate respectively to <i>s</i> and <i>t</i>:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) := <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>x</i> + ... + <i>a</i><sub><i>n</i>−1</sub><i>x</i><sup><i>n</i>−1</sup>, &emsp;&emsp;<i>g</i>(<i>x</i>) := <i>b</i><sub>0</sub> + <i>b</i><sub>1</sub><i>x</i> + ... + <i>b</i><sub><i>n</i>−1</sub><i>x</i><sup><i>n</i>−1</sup></p>
+</div>
+
+<p>Dividing <i>f</i> ⋅ <i>g</i> by <i>p</i></p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) <i>g</i>(<i>x</i>) = <i>p</i>(<i>x</i>) ⋅ <i>q</i>(<i>x</i>) + <i>r</i>(<i>x</i>) &emsp;&emsp; <i>r</i>(<i>x</i>) = <i>r</i><sub>0</sub> + <i>r</i><sub>1</sub><i>x</i> + ... + <i>r</i><sub><i>n</i>−1</sub><i>x</i><sup><i>n</i>−1</sup></p>
+</div>
+
+<p>the value in <i>&alpha;</i> of this relation, knowing that <i>p</i>(<i>&alpha;</i>) = 0, is</p>
+
+<div class="eq">
+<p><i>st</i> = <i>f</i>(<i>&alpha;</i>) <i>g</i>(<i>&alpha;</i>) = <i>r</i>(<i>&alpha;</i>)</p>
+</div>
+
+<p>For every polynomial <i>v</i>(<i>x</i>) = ∑<sup><i>m</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>c<sub>i</sub>x<sup>i</sup></i>, we indicate with <i>v<sub>&theta;</sub></i>(<i>x</i>) the polynomial ∑<sup><i>m</i></sup><sub><sub><i>i</i>=0</sub></sub> <i>&theta;</i>(<i>c<sub>i</sub></i>)<i>x<sup>i</sup></i>, we have the following chains of equalities</p>
+
+<div class="eq">
+<p><i>&phi;</i>(<i>st</i>) = <i>&rho;<sub>&theta;</sub></i>(<i>&beta;</i>) <i>q<sub>&theta;</sub></i>(<i>&beta;</i>) + <i>r<sub>&theta;</sub></i>(<i>&beta;</i>)<br>
+=(<i>p</i> ⋅ <i>q</i> + <i>r</i>)<sub>&theta;</sub> (<i>&beta;</i>) = (<i>f</i> ⋅ <i>g</i>)<sub>&theta;</sub>(<i>&beta;</i>) = <i>f<sub>&theta;</sub></i>(<i>&beta;</i>) ⋅ <i>g<sub>&theta;</sub></i>(<i>&beta;</i>) = <i>&phi;</i>(<i>s</i>) ⋅ <i>&phi;</i>(<i>t</i>).</p>
+</div>
+
+<p>Thus <i>&phi;</i> preserves the product as well: it is a homomorphism. Further, since <i>&phi;</i>(1) = 1, <i>&phi;</i> is not the null homomorphism, hence being a non-null homomorphism between <i>fields</i>, it is a monomorphism. &emsp;□</p>
+
+<p>We are now able to prove that there are exactly <i>n F</i>-monomorphisms.</p>
+
+<p><b>9.2.7 Theorem</b>. Let <i>K</i> an extension of <i>F</i>, of degree <i>n</i>, and let <i>&alpha;</i> &in; <i>K</i> such that <i>K</i> = <i>F</i>(<i>&alpha;</i>). Let <i>&alpha;</i><sub>1</sub> = <i>&alpha;</i>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i> the <a href="normal_extensions.html">conjugates elements</a> of <i>&alpha;</i> over <i>F</i>. Then</p>
+
+<ol type="a">
+	<li><p><i>&alpha;</i>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i> are all distinct;</p></li>
+	<li><p>for every <i>j</i> = 1, ..,<i>n</i> there exits a unique <i>F</i>-monomorphism <i>&phi;<sub>j</sub></i> of <i>K</i> in ℂ such that <i>&phi;<sub>j</sub></i>(<i>&alpha;</i>) = <i>&alpha;<sub>j</sub></i>;</p></li>
+	<li><p><i>&phi;<sub>j</sub></i> of the previous points cover all the possible <i>F</i>-monomorphisms from <i>K</i> to ℂ.</p></li>
+</ol>
+
+<p><b>Proof</b>. a) <i>&alpha;</i><sub>1</sub>, <i>&alpha;</i><sub>2</sub>, ..., <i>&alpha;<sub>n</sub></i> are distinct since zeros of an irreducible polynomial with characteristic zero. (see <a href="finite_fields.html#separable_theo">proposition 8.3.6</a>).</p>
+
+<p>b) If in lemma 9.2.5 we consider as <i>&theta;</i> the mapping that fixes all the elements of <i>F</i>, then <i>p<sub>&theta;</sub></i> = <i>p</i>, the lemma says there exists a <i>F</i>-monomorphism <i>&phi;<sub>j</sub></i> which sends <i>&alpha;</i> to <i>&alpha;<sub>j</sub></i> given by</p>
+
+<div class="eq">
+<p><i>&phi;<sub>j</sub></i>(<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>&alpha;</i> + ... + <i>a</i><sub><i>n</i> − 1</sub> <i>&alpha;</i><sup><i>n</i> − 1</sup>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub><i>&alpha;<sub>j</sub></i> + ... + <i>a</i><sub><i>n</i> − 1</sub><i>&alpha;<sub>j</sub></i><sup><i>n</i>−1</sup>.</p>
+</div>
+
+<p>c) We found <i>n</i> distinct <i>F</i>-monomorphisms because the <i>&alpha;<sub>i</sub></i> are all distinct and thus there cannot be any other, owing to theorem 9.2.5. &emsp;□</p>
+
+<p>Among the <i>F</i>-monomorphism, there exists a class of particular importance.</p>
+
+<p><b>9.2.8 Definition</b>. Let <i>K</i> an extension of a field <i>F</i>. A <i>F</i>-automorphism <i>&sigma;</i> of <i>K</i> is a <i>F</i>-monomorphism of <i>K</i> over <i>K</i> itself. We indicate with <i>G</i>(<i>K,F</i>) the set of all <i>F</i>-automorphism of <i>K</i>. &emsp;□</p>
+
+<p>Not every <i>F</i>-monomorphism is a <i>F</i>-automorphism, e.g. in Example 9.2.2 the image through <i>&phi;</i> of <i>&alpha;</i> is not contained in ℚ(<i>&alpha;</i>). (<i>&alpha;</i> is real, while <i>&phi;</i>(<i>&alpha;</i>) = <i>&omega;&alpha;</i> is complex and not real).</p>
+
+<p>The important fact regarding the <i>F</i>-automorphisms is that with respect to the product of functions the set <i>G</i>(<i>K,F</i>) is a group.</p>
+
+<p><b>9.2.9 Proposition</b>. The set <i>G</i>(<i>K,F</i>) of all <i>F</i>-automorphisms of an extension <i>K</i> of <i>F</i> is a subgroup of the group of all automorphisms of <i>K</i>.</p>
+
+<p><b>Proof</b>. By definition of <i>F</i>-automorphism we have</p>
+
+<div class="eq">
+<p><i>G</i>(<i>K,F</i>) := {<i>&sigma;</i>: <i>K</i> ⟶ <i>K</i> | <i>&sigma;</i>(<i>a</i>) = <i>a</i> &forall;<i>a</i> &in; <i>F</i>} &emsp;(<b>9.2.1</b>)</p>
+</div>
+
+<p>Let <i>&sigma;, &tau;</i> &in; <i>G</i>(<i>K,F</i>). Then their product <i>&sigma;</i> ∘ <i>&tau;</i> is an automorphism which fixes <i>F</i>, because</p>
+
+<div class="eq">
+<p>(<i>&sigma;</i> ∘ <i>&tau;</i>)(<i>a</i>) = <i>&sigma;</i>(<i>&tau;</i>(<i>a</i>)) = <i>&sigma;</i>(<i>a</i>) = <i>a</i> &emsp;&forall;<i>a</i> &in; <i>F</i></p>
+</div>
+
+<p>And <i>&sigma;</i><sup>−1</sup> is an automorphism and</p>
+
+<div class="eq">
+<p><i>a</i> = <i>&sigma;</i><sup>−1</sup>(<i>&sigma;</i>(<i>a</i>)) = <i>&sigma;</i><sup>−1</sup>(<i>a</i>)</p>
+</div>
+
+<p>Hence <i>G</i>(<i>K,F</i>) is a subgroup of the group of all automorphisms of <i>K</i>.&emsp;□</p>
+
+<p id="Galois"><b>9.2.10 Definition</b>. The group <i>G</i>(<i>K,F</i>) of all utomorphisms of <i>K</i> which fixes the elements of <i>F</i> is known as <i>Galois group of the extension K</i> over <i>F</i>. &emsp;□</p>
+
+<p><b>9.2.11 Theorem</b>. Let <i>K</i> a finite extension of a field <i>F</i> and let <i>n</i> its degree. Then</p>
+
+<div class="eq">
+<p>|<i>G</i>(<i>K,F</i>)| &le; |<i>K</i>:<i>F</i>|</p>
+</div>
+
+<p><b>Proof</b>. It is an immediate consequence of theorem 9.2.5, observing that <i>G</i>(<i>K,F</i>) &subseteq; <i>I</i>(<i>K,F</i>). &emsp;□ </p>
+
+<p id="fixed"><b>9.2.12 Definition</b>. Let <i>K</i> a field and <i>G</i> a group of automorphisms of <i>K</i>. We define</p>
+
+<div class="eq">
+<p><i>K<sub>G</sub></i> := {<i>k</i> &in; <i>K</i> | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall;<i>&sigma;</i> &in; <i>G</i>}</p>
+</div>
+
+<p>which is known as <i>field fixed by G</i>. &emsp;□</p>
+
+<p>The following proposition show that <i>K<sub>G</sub></i> is indeed a field.</p>
+
+<p><b>9.2.13 Proposition</b>. Let <i>K</i> a field and <i>G</i> a group of automorphisms of <i>K</i>. The set <i>K<sub>G</sub></i> = {<i>k</i> &in; <i>K</i> | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall;<i>&sigma;</i> &in; <i>G</i>} is a subfield of <i>K</i>.</p>
+
+<p><b>Proof</b>. Let <i>k</i><sub>1</sub>,<i>k</i><sub>2</sub> &in; <i>K<sub>G</sub></i>. Then for every <i>&sigma;</i> &in; <i>G</i>.</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>k</i><sub>1</sub> &pm; <i>k</i><sub>2</sub>) = <i>&sigma;</i>(<i>k</i><sub>1</sub>)&pm;<i>&sigma;</i>(<i>k</i><sub>2</sub>) = <i>k</i><sub>1</sub> &pm; <i>k</i><sub>2</sub> &emsp;⇒&emsp; <i>k</i><sub>1</sub> &pm; <i>k</i><sub>2</sub> &in; <i>K<sub>G</sub></i><br>
+<i>&sigma;</i>(<i>k</i><sub>1</sub> <i>k</i><sub>2</sub><sup>−1</sup>) = <i>&sigma;</i>(<i>k</i><sub>1</sub>)<i>&sigma;</i>(<i>k</i><sub>2</sub>)<sup>−1</sup> = <i>k</i><sub>1</sub> <i>k</i><sub>2</sub><sup>−1</sup> &emsp;⇒&emsp; <i>k</i><sub>1</sub> <i>k</i><sub>2</sub><sup>−1</sup> &in; <i>K<sub>G</sub></i>&emsp;□</p>
+</div>
+
+<p>Let now <i>K</i> an extension of a field <i>F</i>. If <i>G</i>(<i>K,F</i>) is the Galois groups of the extension <i>K</i> over <i>F</i>, it results as immediate consequence of the definition of <i>G</i>(<i>K,F</i>), that</p>
+
+<div class="eq">
+<p><i>K</i><sub>G</i>(<i>F,K</i>)</sub> &supseteq; <i>F</i></p>
+</div>
+
+<p id="examples"><b>9.2.14 Example</b>. Let <i>K</i> = ℂ, field of the complex numbers and let <i>F</i> = ℝ. <br> If <i>&sigma;</i> &in; <i>G</i>(ℂ, ℝ), since ℂ = ℝ(<i>i</i>). A field automorphism, is such that <i>&sigma;</i>(<i>x</i>+<i>y</i>) = <i>&sigma;</i>(<i>x</i>) + <i>&sigma;</i>(<i>y</i>), and <i>&sigma;</i>(<i>xy</i>) = <i>&sigma;</i>(<i>x</i>) <i>&sigma;</i>(<i>y</i>), so</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>a</i> + <i>bi</i>) = <i>a</i> + <i>b &sigma;</i> &emsp;<i>a, b</i> &in; ℝ</p>
+</div>
+
+<p><i>&sigma;</i>(−1) = <i>&sigma;</i>(<i>i</i><sup>2</sup>) = <i>&sigma;</i>(i)<i>&sigma;</i>(<i>i</i>). Since <i>&sigma;</i>(−1) = −1, the square of <i>&sigma;</i>(<i>i</i>), must be −1, that is <i>&sigma;</i>(<i>i</i>) must be a root of <i>x</i><sup>2</sup> + 1, i.e. &pm;<i>i</i>. Now that we know that <i>&sigma;</i>(<i>i</i>) = &pm; <i>i</i>, it's clear that can have only two possible mappings</p>
+
+<div class="eq">
+<p><i>&sigma;</i><sub>1</sub> : ℂ ⟶ ℂ<br>
+<i>a</i> + <i>ib</i> ⟶ <i>a</i> + <i>ib</i></p>
+</div>
+
+<p>and</p>
+
+<div class="eq">
+<p><i>&sigma;</i><sub>2</sub> : ℂ ⟶ ℂ<br>
+<i>a</i> + <i>ib</i> ⟶ <i>a</i> − <i>ib</i></p>
+</div>
+
+<p>are respectively the identity automorphism and the automorpism which maps an element to its complex conjugate. Thus</p>
+
+<div class="eq">
+<p><i>G</i>(ℂ, ℝ) = {<i>&sigma;</i><sub>1</sub>, <i>&sigma;</i><sub>2</sub>} ≃ ℤ<sub>2</sub></p>
+</div>
+
+<p>We evaluate now the field fixed by <i>G</i>(ℂ, ℝ), that is</p>
+
+<div class="eq">
+<p>ℂ<sub><i>G</i>(ℂ, ℝ)</sub> = {<i>k</i> &in; ℂ | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall; <i>&sigma;</i> &in; <i>G</i>(ℂ, ℝ)}</p>
+</div>
+
+<p>Since that the identity fixes all the elements in ℂ, it suffices to consider the element <i>k</i> &in; ℂ that are fixed by <i>&sigma;</i><sub>2</sub>. Thus</p>
+
+<div class="eq">
+<p>ℂ<sub><i>G</i>(ℂ, ℝ)</sub> = {<i>k</i> &in; ℂ | <i>&sigma;</i><sub>2</sub>(<i>k</i>) = <i>k</i>} = {<i>a</i> + <i>ib</i> | <i>&sigma;</i><sub>2</sub>(<i>a</i> + <i>ib</i>} = {<i>a</i> + <i>ib</i> | <i>a</i> − <i>ib</i> = <i>a</i> + <i>ib</i>} = ℝ</p>
+</div>
+
+<p>In this case, <i>K</i><sub>G</i>(<i>F,K</i>)</sub>, which as we know must contain <i>F</i>, is equal to <i>F</i>. &emsp;□</p>
+
+<p><b>9.2.15 Example</b>. Let <i>K</i> = ℚ(∛5) and <i>F</i> = ℚ. By Eisenstein and Gauss <i>x</i><sup>3</sup> − 5 is irreducible in ℚ[<i>x</i>], so [ℚ(∛5): ℚ] = 3 and a basis is {1, ∛5, ∛5<sup>2</sup>}. So we can express <i>K</i> as</p>
+
+<div class="eq">
+<p>ℚ(∛5) = {<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> ∛5 + <i>a</i><sub>2</sub> ∛5<sup>2</sup> | <i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub> &in; ℚ}</p>
+</div>
+
+<p>The action of <i>&sigma;</i> on a element of <i>K</i> is such that</p>
+
+<div class="eq">
+<p><i>&sigma;</i>(<i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> ∛5 + <i>a</i><sub>2</sub> ∛5<sup>2</sup>) = <i>&sigma;</i>(<i>a</i><sub>0</sub>) + <i>&sigma;</i>(<i>a</i><sub>1</sub> ∛5) + &sigma;(<i>a</i><sub>2</sub> ∛5<sup>2</sup>) = <i>a</i><sub>0</sub> + <i>a</i><sub>1</sub> <i>&sigma;</i>(∛5) + <i>a</i><sub>2</sub> <i>&sigma;</i>(∛5<sup>2</sup>)</p>
+</div>
+
+<p>So to find all possible automorphisms of ℚ(∛5) (which fix ℚ), by proposition 9.2.4, we only need to find the images <i>&sigma;</i>(∛5). Since the minimal polynomial of <i>&alpha;</i> over ℚ is <i>x</i><sup>3</sup> − 5, <i>&sigma;</i>(<i>&alpha;</i>) must be another root of the same polynomial. Apart from <i>&alpha;</i> the other two roots are complex, hence not in ℚ(∛5) &subset; ℝ. It follows that the only possibility is <i>&sigma;</i>(<i>&alpha;</i>) = <i>&alpha;</i>, that is the unique automoprhism of <i>G</i>(ℚ(∛5), ℚ) is the identity automorphism.</p>
+
+<div class="eq">
+<p><i>G</i>(ℚ(∛5), ℚ) = {id}</p>
+</div>
+
+<p>It is obvious that the field fixed by <i>G</i>(ℚ(∛5), ℚ) is all <i>G</i>(ℚ(∛5)), hence in this case</p>
+
+<div class="eq">
+<p><i>K</i><sub>G</i>(<i>F,K</i>)</sub> = ℚ(∛5)<sub><i>G</i>(ℚ(∛5), ℚ)</sub> = ℚ(∛5) &supseteq; ℚ</p>
+</div>
+
+<p>Notice that in this case, respect to the previous example we have</p>
+
+<div class="eq">
+<p>1 = |<i>G</i>(ℚ(∛5), ℚ)| &lt; |ℚ(∛5) : ℚ| = 3. &emsp;□</p>
+</div>
+
+<p><b>9.2.16 Example</b>. Let <i>K</i> = ℚ(∛5), <i>&omega;</i>), where <i>&omega;</i> is a primitive third root of unity. Let's calculate ℚ(∛5), <i>&omega;</i>) as vector space over ℚ. We start by ℚ(∛5) (already calculated in the previous exercise) and then adjoin <i>&omega;</i>. <i>&omega;</i> is root of the irreducible polynomial <i>x</i><sup>2</sup> + <i>x</i> + 1 over ℚ(∛5) (as over ℚ, see <a href="exercises_splitting_fields.html">exercise 7.d</a>), so</p>
+
+<div class="eq">
+<p>[ℚ(∛5,<i>&omega;</i>) : ℚ] = [ℚ(∛5,<i>&omega;</i>) : ℚ(∛5)] = [ℚ(∛5) : ℚ] = 2 ⋅ 3 = 6.</p>
+</div>
+
+<p>Since a basis of ℚ(∛5,<i>&omega;</i>) over ℚ(∛5) is given by {1, <i>&omega;</i>} and a basis of ℚ(∛5) over ℚ is {1, ∛5, ∛5<sup>2</sup>} we have that a basis of ℚ(∛5,<i>&omega;</i>) over ℚ is given by</p>
+
+<div class="eq">
+<p>1, ∛5, ∛5<sup>2</sup>, <i>&omega;</i>, ∛5<sup>2</sup><i>&omega;</i>, ∛5<sup>2</sup><i>&omega;</i></p>
+</div>
+
+<p>The roots of <i>x</i><sup>3</sup> − 5, are ∛5, ∛5<i>&omega;</i>, ∛5<i>&omega;</i><sup>2</sup>.<br> &omega; is the root of <i>x</i><sup>3</sup> − 1 which is reducible as (<i>x</i> − 1) (<i>x</i><sup>2</sup> + <i>x</i> + 1), only the last is irreducible over ℚ with roots −1/2 ± √3<i>i</i>/2. There are in total six automoprhisms</p>
+
+<table class="noborder">
+<tr><td><i>&sigma;</i><sub>1</sub> = id</td></tr>
+<tr><td><i>&sigma;</i><sub>2</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>2</sub>(∛5) = ∛5</td> </tr>
+<tr><td><i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>2</sub>(<i>&omega;</i>) = <i>&omega;</i></td> <td><i>&sigma;</i><sub>2</sub>(∛5) = <i>&omega;</i> ∛5</td> </tr>
+<tr><td><i>&sigma;</i><sub>4</sub> = <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i><sub>4</sub>(<i>&omega;</i>) = <i>&omega;</i></td> <td><i>&sigma;</i><sub>4</sub>(∛5) = <i>&omega;</i><sup>2</sup> ∛5</td> </tr>
+
+<tr><td><i>&sigma;</i><sub>5</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub>:</td> <td><i>&sigma;</i><sub>5</sub>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>5</sub>(∛5) = <i>&omega;</i><sup>2</sup> ∛5</td></tr>
+
+<tr><td><i>&sigma;</i><sub>6</sub> = <i>&sigma;</i><sub>2</sub> ∘ <i>&sigma;</i><sub>3</sub><sup>2</sup>:</td> <td><i>&sigma;</i>(<i>&omega;</i>) = <i>&omega;</i><sup>2</sup></td> <td><i>&sigma;</i><sub>6</sub>(∛5) = <i>&omega;</i> ∛5</td></tr>
+
+</table>
+
+<p>Notice that in this case</p>
+
+<div class="eq">
+<p>6 = |<i>G</i>(ℚ(∛5,<i>&omega;</i>), ℚ| = |(ℚ(∛5,<i>&omega;</i>)| = 6</p>
+</div>
+
+<p>it results <i>G</i>(<i>K</i>, ℚ) ≃ <i>S</i><sub>3</sub>. &emsp;■</p>
+
+<p><b>9.2.17 Example</b>. Let <i>&zeta;</i> a primitive <i>n</i>th root of unity. We calculate ℚ(<i>&zeta;</i>). We know <i>&zeta;</i> satisfies the <i>n</i>th cyclotomic polynomial <i>&Phi;<sub>n</sub></i>(<i>x</i>) which is irreducible over ℚ, thus the minimal polynomial of <i>&zeta;</i> over ℚ. It follows that</p>
+
+<div class="eq">
+<p>[ℚ(<i>&zeta;</i>) : ℚ] = <i>&phi;</i>(<i>n</i>)</p>
+</div>
+
+<p>Every element of <i>G</i>(ℚ(<i>&zeta;</i>), ℚ), maps <i>&zeta;</i> to another root of <i>&Phi;<sub>n</sub></i>(<i>x</i>), i.e. an element of the form <i>&zeta;<sup>r</sup></i> with 1 &le; <i>r</i> &le; <i>n</i> and (<i>n,r</i>) = 1. Conversely if <i>r</i> is an integer such that 1 &le; <i>r</i> &le; <i>n</i> and (<i>n,r</i>) = 1, the mapping <i>&sigma;<sub>r</sub></i> which maps <i>&zeta;</i> to <i>&zeta;<sup>r</sup></i> is an automorphism of ℚ(<i>&zeta;</i>). This fact suggests the possibility to define the following mapping between the group <i>U</i>(ℤ<sub><i>n</i></sub>) of the <a href="modular_arithmetic.html#U">invertible elements</a> of ℤ<sub><i>n</i></sub> and <i>G</i>(ℚ(<i>&zeta;</i>), ℚ):</p>
+
+<div class="eq">
+<p><i>&Psi;</i> : (<i>U</i>(ℤ<sub><i>n</i></sub>),⋅) ⟶ (<i>G</i>(ℚ(<i>&zeta;</i>), ℚ), ∘)<br>
+<i>k̄</i> ⟶ <i>&sigma;<sub>k</sub></i></p>
+</div>
+
+<p>This is a bijective mapping. We prove it is a group homomorphism. If <i>ī, j̄</i> &in; <i>U</i>(ℤ<sub><i>n</i></sub>), since we are dealing with a multiplicative group we have that <i>ij</i> ≡ <i>k</i> (mod <i>n</i>). <i>G</i>(ℚ(<i>&zeta;</i>), ℚ) is a group under composition of function so we show that <i>&sigma;<sub>i</sub> &sigma;<sub>j</sub></i> = <i>&sigma;<sub>k</sub></i>, indeed:</p>
+
+<div class="eq">
+<p><i>&sigma;<sub>i</sub>&sigma;<sub>i</sub></i>(<i>&zeta;</i>) = <i>&sigma;<sub>i</sub></i>(<i>&zeta;<sup>j</sup></i>) = <i>&zeta;<sup>ij</sup></i> = <i>&zeta;<sup>k</sup></i> = <i>&sigma;<sub>k</sub></i>(<i>&zeta;</i>)</p>
+</div>
+
+<p>We have to confirm that <i>&zeta;<sup>ij</sup></i> = <i>&zeta;<sup>k</sup></i>. Now since <i>ij</i> ≡ <i>k</i> (mod <i>n</i>) means that there exists <i>m</i> such that <i>ij</i> = <i>k</i> + <i>mn</i>, therefore,</p>
+
+<div class="eq">
+<p><i>&zeta;<sup>ij</sup></i> = <i>&zeta;</i><sup><i>k</i> + <i>mn</i></sup> = <i>&zeta;<sup>k</sup> &zeta;<sup>mn</sup></i> = <i>&zeta;<sup>k</sup></i> (<i>&zeta;<sup>n</sup></i>)<sup>m</sup> = <i>&zeta;<sup>k</sup></i> 1<sup><i>m</i></sup> = <i>&zeta;<sup>k</sup></i></p>
+</div>
+ 
+<p>which proves that</p>
+
+<div class="eq">
+<p><i>G</i>(ℚ(<i>&zeta;</i>), ℚ) ≃ <i>U</i>(ℤ<sub><i>n</i></sub>)&emsp;□</p>
+</div>
+
+<p>In the examples above, it results</p>
+
+<div class="eq">
+<p>|<i>G</i>(<i>K,F</i>)| &le; [<i>K</i>:<i>F</i>]&emsp;and&emsp; <i>K</i><sub><i>G</i>(<i>K,F</i>)</sub> &supseteq; <i>F</i></p>
+</div>
+
+<p>In some cases the equality sign holds and as we shall prove soon it happens when <i>K</i> is a <a href="normal_extensions.html">normal extension</a>.</p>
+
+<p>Through definition 9.2.10 it is possible to associate to every <i>extension K</i> of a field <i>F</i> a group, its Galois group <i>G</i>(<i>K,F</i>). We shall now establish a relatin between the set of intermediate fields of an extension <i>K</i> of <i>F</i> and the set of subgroups of <i>G</i>(<i>K,F</i>). <br> Let <i>K</i> an extension of <i>F</i> and let <i>G</i>(<i>K,F</i>) its Galois group. For every intermediate field, <i>T</i> of <i>K</i> containing <i>F</i> we define</p>
+
+<div class="eq">
+<p><i>G</i>(<i>K,T</i>) := {<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) | <i>&sigma;</i>(<i>t</i>) = <i>t</i> &forall;<i>t</i> &in; <i>T</i>} &emsp;(<b>9.2.2</b>)</p>
+</div>
+
+<p>For every subgroup <i>H</i> of <i>G</i>(<i>K,F</i>) we define</p>
+
+<div class="eq">
+<p><i>K<sub>H</sub></i> := {<i>k</i> &in; <i>K</i> | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall;<i>&sigma;</i> &in; <i>H</i>}
+</div>
+
+<p>The following properties hold true.</p>
+
+<p><b>9.2.18 Proposition</b>. Let <i>K</i> an extension of <i>F</i> and let <i>G</i>(<i>K,F</i>) its Galois group. For every subgroup <i>H</i> of <i>G</i>(<i>K,F</i>) and every intermediate subfield <i>T</i> such that <i>F</i> &subseteq; <i>T</i> &subseteq; <i>K</i>, we have</p>
+
+<ol type="a">
+	<li><p><i>G</i>(<i>K,K</i>) = id;</p></li>
+	<li><p>if <i>T</i><sub>1</sub>, <i>T</i><sub>2</sub> are fields such that <i>F</i> &subseteq; <i>T</i><sub>1</sub> &subseteq; <i>T</i><sub>2</sub> &subseteq; <i>K</i>, then</p></li>
+
+<div class="eq">
+<p><i>G</i>(<i>K</i>,<i>T</i><sub>2</sub>) &subseteq; <i>G</i>(<i>K,T</i><sub>1</sub>)</p>
+</div>
+
+</li>
+
+<li><p><i>G</i>(<i>K,T</i>) is a subgroup of <i>G</i>(<i>K,F</i>);</p></li>
+
+<li><p>K<sub>id</sub> = <i>K</i>;</p></li>
+
+<li><p>If <i>H</i><sub>1</sub>, <i>H</i><sub>2</sub> are subgroups of <i>G</i>(<i>K,F</i>) such that <i>H</i><sub>1</sub> &subseteq; <i>H</i><sub>2</sub> &subseteq; <i>G</i>(<i>K,F</i>), then</p>
+
+<div class="eq">
+<p><i>K</i><sub>H<sub>2</sub></sub> &subseteq; <i>K</i><sub><i>H</i><sub>1</sub>;</p>
+</div>
+
+<li><p><i>K<sub>H</sub></i> is an intermediate field: <i>F</i> &subseteq; <i>K<sub>H</sub></i> &subseteq; <i>K</i>;</p></li>
+
+<li><p><i>H</i> &subseteq; <i>G</i>(<i>K,K<sub>H</sub></i>);</p></li>
+
+<li><p><i>T</i> &subseteq; <i>K</i><sub><i>G</i>(<i>K,T</i>)</sub>.</p></li>
+
+</ol>
+
+<p><b>Proof</b>.</p>
+
+<ol type="a">
+	<li><p><i>G</i>(<i>K,K</i>) = {<i>&sigma;</i> &in; <i>G</i>(<i>K,F</i>) | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall;<i>k</i> &in; <i>K</i>}, and this is exactly what <i>σ</i> = id means. </p></li>
+
+	<li><p>Supose that <i>T</i><sub>1</sub> &subseteq; <i>T</i><sub>2</sub> and let <i>&sigma;</i> &in; <i>G</i>(<i>K,T</i><sub>2</sub>). Then <i>&sigma;</i> fixes every element of <i>T</i><sub>2</sub> and so certainly fixes every element of <i>T</i><sub>1</sub>. Hence <i>&sigma;</i> &in; <i>G</i>(<i>K,T</i><sub>1</sub>)</p></li>
+
+	<li><p><i>G</i>(<i>K,T</i>) is made by the automorphisms that fix the elements of <i>T</i>, which contains <i>F</i>, but all the automorphism that fix <i>T</i> must also fix <i>F</i>.</p></li>
+
+	<li><p>K<sub>id</sub> = {<i>k</i> &in; <i>K</i> | <i>&sigma;</i>(<i>k</i>) = <i>k</i> &forall;<i>&sigma;</i> &in; {id}} = <i>K</i>.</p></li>
+
+	<li><p>The elements <i>k</i> &in; <i>K</i> that are fixed by the automorpshims of <i>H</i><sub>2</sub>, must be fixed as well by the automorphisms of <i>H</i><sub>1</sub>, because <i>H</i><sub>1</sub> is a subgroup of <i>H</i><sub>2</sub>. Thus <i>K</i><sub>H<sub>2</sub></sub> &subseteq; <i>K</i><sub><i>H</i><sub>1</sub></p></li>
+
+	<li><p>By definition of <i>K<sub>H</sub></i> is clear that <i>K<sub>H</sub></i> &subseteq; <i>K</i>. The other inclusion <i>F</i> &subseteq; <i>K<sub>H</sub></i> derives from the fact that <i>H</i> is a subgroup of <i>G</i>(<i>K,F</i>) which by definition the group of automorphisms that fix the elements of <i>F</i>. </p></li>
+
+	<li><p><i>H</i> is a subgroup of <i>G</i>(<i>K,F</i>)
+
+	<li><p><i>G</i>(<i>K,K<sub>H</sub></i>) is made of the automorphisms that fix all the elements in <i>K<sub>H</sub></i>, and we proved in f) that it contains <i>F</i>. <i>G</i>(<i>K,K<sub>H</sub></i>) must contain all the automorpshisms of <i>H</i>, because this latter is a subgroup of <i>G</i>(<i>K,F</i>) which fixes only the element of <i>F</i>.</p></li>
+
+	<li><p>The automorphisms in <i>G</i>(<i>K,T</i>) fix all the elements of <i>T</i>, and <i>K</i><sub><i>G</i>(<i>K,T</i>)</sub> contains all the elements of <i>K</i> which are fixed by the elements of <i>G</i>(<i>K,T</i>), thus it contains <i>T</i>.&emsp;□</p></li>
+
+</ol>
+
+<p><b>9.2.19 Proposition</b>. In the field ℝ of all real numbers, the identity mapping of ℝ is the only automorphism.</p>
+
+<p>Before proving it we introduce two lemmas.</p>
+
+<p><b>9.2.20 Lemma</b>. Let <i>ϕ</i>: ℝ → ℝ be an automorphism of the field of real numbers ℝ, then for any positive real number <i>x</i>
+, we have <i>ϕ</i>(<i>x</i>) &gt; 0</p>
+
+<p><b>Proof</b>. <i>ϕ</i>(<i>x</i><sup>2</sup>) = <i>ϕ</i>(<i>x</i>) <i>ϕ</i>(<i>x</i>) &ge; 0. Note that since <i>ϕ</i>(0) = 0 and <i>ϕ</i> is bijective, <i>ϕ</i>(<i>x</i>) ≠ 0 for any <i>x</i> ≠ 0. Thus, it follows that <i>ϕ</i>(<i>x</i>) &gt; 0 for each positive real number <i>x</i>.&emsp;□</p>
+
+<p><b>9.2.21 Lemma</b>. For any <i>x,y</i> ∈ ℝ such that <i>x</i> &gt; <i>y</i>, we have <i>ϕ</i>(<i>x</i>) &gt; <i>ϕ</i>(<i>y</i>). Thus, in any automorphism of the field of real numbers the order of the elements is preserved.</p>
+
+<p><b>Proof</b>. Since <i>x</i> &gt; <i>y</i>, we have <i>x</i>−<i>y</i> &gt; 0 and it follows from the previous lemma that</p>
+
+<div class="eq">
+<p>0 &lt; <i>ϕ</i>(<i>x</i>−<i>y</i>) = <i>ϕ</i>(<i>x</i>) − <i>ϕ</i>(<i>y</i>).</p>
+</div>
+
+<p>Hence, <i>ϕ</i>(<i>x</i>) &gt; <i>ϕ</i>(<i>y</i>).&emsp;□</p>
+
+<p><b>Proof of 9.2.19</b>. Let <i>&sigma;</i> an automorphsim of ℝ, and let <i>a,b</i> &in; ℝ such that <i>a</i> &lt; <i>b</i>. Then by the previous lemma <i>&sigma;</i>(<i>a</i>) &lt; <i>&sigma;</i>(<i>b</i>). Suppose that there exists <i>a</i> &in; ℝ such that <i>&sigma;</i>(<i>a</i>) &gt; <i>a</i>. Let <i>q</i> a rational number, such that <i>&sigma;</i>(<i>a</i>) &gt; <i>q</i> &gt; <i>a</i>, we have <i>&sigma;</i>(<i>q</i>) = <i>q</i>. This leads to a contradiction since <i>q</i> &gt; <i>a</i> but <i>&sigma;</i>(<i>a</i>) &gt; <i>&sigma;</i>(<i>q</i>) = <i>q</i>. &emsp;□</p>
+
+<p><b>Exercise 9.2.22</b>. Determine the Galois group <i>G</i>(ℚ(∛2), ℚ) and its fixed field.</p></li>
+
+<p>All the images of ∛2 are to be searched among the roots of <i>x</i><sup>3</sup> − 2. Since ℚ(∛2) has only one root, the only automorphism is the identity, <i>G</i>(ℚ(∛2), ℚ) = {id}, whereas <i>I</i>(ℚ(∛2), ℚ) has three elements. It is obvious that its fixed field is the entire ℚ(∛2). &emsp;■</p>
+
+<section aria-label="End">
+<a href="constructible_points.html">«Constructible points</a>
+<a href="index.html">Index</a>
+<a href="Galois_extensions.html">Galois Extensions; The Fundamental Theorem of Galois Theory»</a>
+</section>
+
+</article>
+
+</body>
+</html>

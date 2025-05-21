@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Fallacies">
+	<title>Fallacies</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Fallacies</h1>
+
+<p>A <i>fallacy</i> is just an invalid argument. There are two infamous fallacies that one must avoid in mathematics, the <b>converse error</b> and the <b>inverse error</b>, which have the form:</p>
+
+<ul>
+	<li><p>The argument P ⇒ Q, Q .·. P is a invalid argument called the <b>fallacy of the converse</b>.</p></li>
+	<li><p>The argument P ⇒ Q, ¬P .·. ¬Q is a invalid argument called the <b>fallacy of the inverse</b>.</p></li>
+</ul>
+
+<p>Recall that an argument is valid if and only if when the premises are all true, the conclusion must be true. Thus, in order to prove that the fallacy of the converse is an invalid argument, all we need to do is determine truth values for P and Q such that both premises P ⇒ Q and Q have the truth value T and the conclusion P has the truth value F. <br> Consider the following truth table.</p>
+
+<table class="centertable">
+<caption>fallacy of the converse</caption>
+<tr><th>P<br>Conclusion</th> <th>P ⇒ Q<br>Premise 1</th> <th>Q<br>Presmise 2</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> </tr>
+<tr><td>T</td> <td>F</td> <td>F</td> </tr>
+<tr><td>F</td> <td>T</td> <td>T</td> </tr>
+<tr><td>F</td> <td>T</td> <td>F</td> </tr>
+</table>
+
+<p>Is it the  case that whenever all of the premises are true, then the conclusion is true? No! The third row has premises true and conclusion false. Thus the argument is invalid.</p>
+
+<p>Anagously for the fallacy of the inverse, we have the truth table</p>
+
+<table class="centertable">
+<caption>fallacy of the inverse</caption>
+<tr><th>¬Q<br>Conclusion</th> <th>P ⇒ Q<br>Premise 1</th> <th>¬P<br>Presmise 2</th></tr>
+<tr><td>F</td> <td>T</td> <td>F</td> </tr>
+<tr><td>T</td> <td>F</td> <td>F</td> </tr>
+<tr><td>F</td> <td>T</td> <td>T</td> </tr>
+<tr><td>T</td> <td>T</td> <td>T</td> </tr>
+</table>
+
+<p><b>Example</b>. (<b>Determining the Validity of an Argument</b>) Write the following argument in symbolic form. Determine if the argument is valid or invalid and state the name of the argument form.</p>
+
+<div class="eq">
+<p>If I went out to eat dinner, then I ate dessert.<br>
+I ate dessert.<br>
+————————————————————<br>
+Therefore, I went out to eat dinner.</p>
+</div>
+
+<p><b>Solution</b>. Let D denote the statement “I went out to eat dinner.” And let P denote the statement “I ate dessert.” Then the symbolic form of the given argument is</p>
+
+<div class="eq">
+<p>D ⇒ P<br>
+P<br>
+———<br>
+.·. D</p>
+</div>
+
+<p>This argument has the form of the fallacy of the converse and it is an invalid argument.&emsp;■</p>
+
+<p><b>Proposition</b>. (<b>Rule of Transitive Inference or Hypothetical Syllogism</b>) The argument P ⇒ Q, Q ⇒ R .·. P ⇒ R is a valid argument called the <b>rule of transitive inference or hypothetical syllogism</b>.</p>
+
+<p><b>Proof</b>. Let A denote the statement (P ⇒ Q) ∧ (Q ⇒ P) and let B denote the statement [(P ⇒ Q) ∧ (Q ⇒ P)] ⇒ (P ⇒ R).</p>
+
+<table calss="centertable">
+
+<caption>Rule of Transitive Inference</caption>
+<tr><th>P</th> <th>Q</th> <th>R</th> <th>P ⇒ Q<br>Premise 1</th> <th>Q ⇒ R <br>Premise 2</th> <th>A</th> <th>P ⇒ R<br>Conclusion</th> <th>B</th></tr>
+<tr><td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td></tr>
+<tr><td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>T</td> <td>F</td> <td>T</td> <td>F</td> <td>F</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+<tr><td>F</td> <td></td> <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td></tr>
+</table>
+
+<section aria-label="End">
+<a href="logical_arguments.html">«Logical arguments</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
