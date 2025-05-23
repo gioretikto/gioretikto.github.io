@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Funzioni monotone su un intervallo">
+	<title>Funzioni monotone su un intervallo</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Funzioni monotone su un intervallo</h1>
+
+<p>Ci occupiamo ora di funzioni monotone su un intervallo (e non necessariamente continue). Il prossimo teorema si può vedere come una estensione alle funzioni del T. di monotonia per le successioni. Questo teorema condivide con i teoremi sulle funzioni continue su un intervallo, che abbimao discusso nel paragrafo precedente, due caratteristiche importanti:</p>
+
+<ul>
+	<li><p>la sua dimostrazione si basa sull'<i>assioma di continuità</i> di ℝ;</p></li>
+	<li><p>il teorema assume come ipotesi una <i>proprietà globale</i> della funzione (ossia la sua monotonia su un intervallo).</p></li>
+</ul>
+
+<p><b>Teorema 4.9.1 (Di Monotonia)</b>. Sia <i>f</i>: (<i>a,b</i>) &rarr; ℝ una funzione monotona. Allora &forall;<i>c</i> &in; (<i>a,b</i>) esistono finiti i limiti destro e sinistro, per <i>x</i> &rarr; <i>c</i>; ai due estremi <i>a,b</i> esistono i limiti destro (in <i>a</i>) e sinistro (in <i>b</i>), eventualmente infiniti.</p>
+
+<p><b>Dim.</b> Questo teorema non sarà dimostrato utilizzando il T. di monotonia per le successioni, ma piuttosto ripetendo una dimostrazione analoga. <br> Per fissare le idee, supponiamo <i>f crescente</i> in (<i>a,b</i>). Sia <i>c</i> &in; (<i>a,b</i>) e sia</p>
+
+<div class="eq">
+<p><i>s</i> = sup {<i>f</i>(<i>x</i>) : <i>x</i> &in; (<i>a,c</i>)}</p>
+</div>
+
+<p>Notiamo che <i>s</i> esiste finito per la proprietà dell'estremo superiore, in quanto <i>f</i>(<i>c</i>) è un maggiorante dell'insieme {<i>f</i>(<i>x</i>) : <i>x</i> &in; (<i>a,c</i>)}. Proviamo che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mi>c</mi>
+        <mo>&#x2212;</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>s</mi>
+</math>
+
+<!-- $$\lim_{x \to c^-} f(x) = s$$ -->
+
+<p>Sia dunque {<i>x<sub>n</sub></i>} una qualsiasi successione in (<i>a,c</i>) tale che <i>x<sub>n</sub></i> &rarr; <i>c</i>, e proviamo che <i>f</i>(<i>x<sub>n</sub></i>) &rarr; <i>s</i>, ossia per ogni <i>&epsilon;</i> &gt; 0 risulta definitivamente</p>
+
+<div class="eq">
+<p><i>s</i> &minus; <i>&epsilon;</i> &lt; <i>f</i>(<i>x<sub>n</sub></i>) &lt; <i>s</i> + <i>&epsilon;</i></p>
+</div>
+
+<p>La disuguaglianza è ovvia in quanto <i>f</i>(<i>x<sub>n</sub></i>) &lt; <i>s</i> per definizione di <i>s</i>, perché <i>x<sub>n</sub></i> &in; (<i>a,c</i>). Per provare la prima, osserviamo che essendo <i>s</i> &minus; <i>&epsilon;</i> minore di <i>s</i>, cioè del minimo maggiorante di {<i>f</i>(<i>x</i>) : <i>x</i> &in; (<i>a,c</i>)}, non è un maggiorante di tale insieme, perciò esiste un punto <i>x</i><sub>0</sub> &in; (<i>a,c</i>) tale che <i>f</i>(<i>x</i><sub>0</sub>) &ge; <i>s</i> &minus; <i>&epsilon;</i>. Poiché <i>f</i> è crescente, ne segue che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &ge; <i>s</i> &minus; <i>&epsilon;</i> &emsp;<i>x</i> &in; (<i>x</i><sub>0</sub>, <i>c</i>)</p>
+</div>
+
+<p>D'altro canto per ipotesi <i>x</i> &lt; <i>x</i> &forall;<i>n</i> e <i>x<sub>n</sub></i> &rarr; <i>x</i> per <i>n</i> &rarr; &infin;, perciò <i>x<sub>n</sub></i> &in; (<i>x</i><sub>0</sub>, <i>c</i>) definitivamente. <br> Ma allora</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &ge; <i>s</i> &minus; <i>&epsilon;</i> definitivamente,
+</div>
+
+<p>che è quanto occorreva provare. <br>Analogamente si può dimostrare che esiste</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mi>c</mi>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo data-mjx-texclass="OP" movablelimits="true">inf</mo>
+  <mo fence="false" stretchy="false">{</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>:</mo>
+  <mi>x</mi>
+  <mo>&#x2208;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>c</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mo stretchy="false">)</mo>
+  <mo fence="false" stretchy="false">}</mo>
+</math>
+
+<!-- $$\lim_{x \to c^+} f(x) = \inf \{f(x): x \in (c,b)\}$$ -->
+
+<p>Per quanto riguarda i limiti ai due estremi dell'intervallo, se si vuole provare ad es. che esiste</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{x \to b^-} f(x)$$ -->
+
+<p>si definirà ancora</p>
+
+<div class="eq">
+<p><i>s</i> = sup {<i>f</i>(<i>x</i>): <i>x</i> &in; (<i>a,b</i>)}</p>
+</div>
+
+<p>tuttavia in questo caso <i>s</i> potrebbe anche essere +&infin; (non possiamo affermare che <i>f</i>(<i>b</i>) sia un maggiorante dell'insieme, perché in <i>b</i> la funzione non è definita). Nel caso in cui <i>s</i> &lt; &infin; si può ripetere la dimostrazione precedente; se invece <i>s</i> = &infin;, il ragionamento si modifica come segue. Dall'ipotesi</p>
+
+<div class="eq">
+<p>sup {<i>f</i>(<i>x</i>): <i>x</i> &in; (<i>a,b</i>)} = +&infin;</p>
+</div>
+
+<p>segue che per ogni <i>K</i> &gt; 0 esiste <i>x</i><sub>0</sub> &in; (<i>a,b</i>) tale che <i>f</i>(<i>x</i><sub>0</sub>) &gt; <i>K</i>; per la monotonia di <i>f</i>, allora,</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &gt; <i>K</i> &forall;<i>x</i> &in; (<i>x</i><sub>0</sub>, <i>b</i>),</p>
+</div>
+
+<p>allora presa una successione <i>x<sub>n</sub></i> &rarr; <i>b</i>, si ha che <i>x<sub>n</sub></i> &in; (<i>x</i><sub>0</sub>, <i>b</i>) definitivamente, e quindi</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x<sub>n</sub></i>) &gt; <i>K</i> definitivamente,</p>
+</div>
+
+<p>perciò</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+<mtext>&emsp;□</mtext>
+</math>
+
+<!-- $$\lim_{x \to b^-} f(x) = +\infty$$ -->
+
+<p>Una conseguenza del T. di monotonia è che se una funzione è monotona in un intervallo (<i>a,b</i>), i suoi eventuali punti di discontinuità in (<i>a,b</i>) sono necessariamente <i>discontinuità a salto</i>, ad eccezione degli estremi <i>a,b</i>, in cui può aversi anche un asintoto verticale.</p>
+
+<section aria-label="End">
+<a href="W.html">&#171;Teorema di Weierstrass</a>
+<a href="index.html">Index</a>
+<a href="cont_inv.html">Continuità e invertibilità&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

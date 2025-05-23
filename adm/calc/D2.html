@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Derivata seconda"/>
+	<title>Derivata seconda</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+<ul>
+	<li><a class="navbar" href="../../index.html">Home</a></li>
+	<li><a class="navbar" href="index.html">Index</a></li>
+</ul>
+</nav>
+
+<article>
+
+<h1>Derivata seconda</h1>
+
+<p>La derivata seconda di una funzioen ha vari significati geometrici, che ci permetteranno di studiare meglio le proprietà del grafico di una funzione.</p>
+
+<h3>Significato geometrico della derivata seconda</h3>
+
+<p>Se la derivata prima ha come signigicato gemetrico quello di pendenza del grafico, la derivata seconda rappresenta la velocità di variazione di tale pendenza e pertanto costituisce una misura del grado di scostamento del grafico dall'andamento rettilineo. <br> Per precisare meglio il concetto, consideriamo la situazione illustrata in Fig.</p>
+
+<figure>
+<img src="img/osculating_circle.png" alt="osculating circle">
+<figcaption>To define the curvature of an arbitrary curve, &gamma; the idea is to approximate <i>&gamma;</i> by circles with radii varying from point to point. For any point <i>P</i> on <i>&gamma;</i>, there are infinitely many circles which are tangent to <i>&gamma;</i> at <i>P</i>. We shall select on of these − called the osculating circle − which gives the best fit, and define the curvature of <i>&gamma;</i> at the point <i>P</i> to be the reciprocal of the radius of the osculating circle− which gives the best fit, and define the curvature of <i>&gamma;</i> at the point <i>P</i> to be the reciprocal of the radius of the osculating circle. To identify the osculating circle, note that neat the point <i>P</i> the curve divides the plane in two parts. Some of the circles tangent to <i>&gamma;</i> at <i>P</i> lie entirely on one side, and some line entirely on the other. The osculating circle separates these two kinds of circles. In the figure is drawn with a solid line.</figcaption>
+</figure>
+
+<p>La funzione <i>f</i> in figura, soddisfa le condizioni <i>f</i>(0) = <i>f''</i>(0) = 0, <i>f''</i>(0) = 0, <i>f''</i>(0) &ge; 0. <br>  Consideriamo ora la famiglia di semicirconferenze con centro sull'asse <i>y</i> tangente al grafico di <i>f</i> nell'origine. <br>L'equazione della famiglia è</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>y</mi>
+  <mo>=</mo>
+  <mi>R</mi>
+  <mo>&#x2212;</mo>
+  <msqrt>
+    <msup>
+      <mi>R</m(5.14.1) i>
+      <mn>2</mn>
+    </msup>
+    <mo>&#x2212;</mo>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ y = R - \sqrt{R^2 - x^2} $$ -->
+
+<p>come facilmente si verfica, e, per ogni <i>R</i>, si ha <i>y'</i>(0) = <i>y</i>(0) = 0. <br> Tra queste semicirconferenze selezioniamo quella che non soltanto ha la stessa tangente in <i>x</i> = 0 ma anche la stessa velocità di variazione della pendenza in <i>x</i> = 0. <br> In altri termini, scegliamo <i>R</i> in modo che</p>
+
+<div class="eq">
+<p><i>y'</i>(0) = <i>f''</i>(0) = 0 &emsp;(5.14.1)</p>
+</div>
+
+<p>Si ha,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>y</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mi>x</mi>
+    <msqrt>
+      <msup>
+        <mi>R</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>y</mi>
+    <mo data-mjx-alternate="1">&#x2033;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <msup>
+      <mi>R</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>R</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>3</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ y'(x) = \frac{x} {\sqrt{R^2 - x^2}}, \quad y''(x) = \frac{R^2} {(R^2 - x^2)^{3/2}} $$ -->
+
+<p>e quindi <i>y''</i>(0) = 1/<i>R</i>. Se dunque vogliamo che sia soddisfatta la (5.14.1) occorre scegliere <i>R</i> in modo che</p>
+
+<div class="eq">
+<p><i>f''</i>(0) = 1/<i>R</i>&emsp;(5.14.2) </p>
+</div>
+
+<p>La (5.14.2) epsrime il significato geometrico della derivata seconda: nella situazione descritta, f''(0) rappresenta il reciproco del raggio della circonferenza che "meglio approssima" <i>f</i> in <i>x</i> = 0; 1/<i>R</i> prende il nome di <i>curvatura</i> (del grafico) di f in <i>x</i> = 0 e <i>R</i> è il <i>raggio di curvatura</i>. Ripetendo un'analoga costruzione in un punto generico <i>x</i> del grafico di <i>f</i> (senza supporre a priori <i>f</i>(<i>x</i>) = <i>f'</i>(<i>x</i>) = 0) si trova che il cerchio che meglio approssima il grafico nel punto di ascissa <i>x</i> ha raggio <i>R</i>(<i>x</i>) dato da:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>R</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2033;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>3</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\frac{1}{R(x)} = \frac{|f''(x)|}{(1 + f'(x)^2)^{3/2}} $$ -->
+
+<p><b>Esempio 5.14.3</b>. Per una parabola <i>y</i> = <i>ax</i><sup>2</sup>, si ha <i>y'</i>(<i>x</i>) = 2<i>ax</i> and <i>y''</i>(<i>x</i>) = 2<i>a</i> e quindi</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>R</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi>a</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mn>4</mn>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>3</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\frac{1}{R(x)} = \frac{2|a|}{(1 + 4a^2x^2)^{3/2}} $$ -->
+
+<p>Si noti che la curvatuva è massima per <i>x</i> = 0, cioè nel vertice per <i>x</i> ⟶ &infin; è 0, ed infatti entrambe le code della parabola diventano piatte per <i>x</i> tendente a infinito. &emsp;■</p>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="flessi.html">Punti di flesso</a>
+</section>
+
+</article>
+
+</body>
+</html>
+
