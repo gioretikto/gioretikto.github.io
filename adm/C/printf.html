@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="printf()">
+	<title>printf()</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>printf()</h1>
+
+<p>The C library function <code>int printf(const char *format, ...)</code> sends formatted output to stdout.</p>
+
+<h3>Declaration</h3>
+
+<p>Following is the declaration for printf() function.</p>
+
+<pre>int <span class="function">printf</span>(const char *format, ...)</pre>
+
+<h3>Parameters</h3>
+
+<ul>
+	<li><p><b>format</b> − This is the string that contains the text to be written to stdout. It can optionally contain embedded format tags that are replaced by the values specified in subsequent additional arguments and formatted as requested. Format tags prototype is %[flags][width][.precision][length]specifier, which is explained below −</p></li>
+</ul>
+
+<table>
+<thead>
+<tr><th>Specifier</th> <th>Tipo dell'argomento</th> <th>Stampato come</th></tr>
+</thead>
+
+<tbody>
+<tr><td>c</td> <td>Character</td></tr>
+<tr><td>d, i</td> <td>int</td> <td>numero in notazione decimale</td></tr>
+<tr><td>x or X</td> <td>Unsigned int</td> <td>numero in notazione esadecimale (senza 0x o 0X in testa)</td></tr>
+<tr><td>o</td> <td>Unsigned int</td> <td>numero in notazione ottale (senza lo zero in testa)</td></tr>
+<tr><td>f</td> <td>double</td> <td>i.dddddd, dove i è la parte intera, dddddd sono le cifre dopo l punto decimale, in numero dato dal grado di precisione speficiato. (di default 6)</td></tr>
+<tr><td>e, E</td> <td>double</td> <td>[-] i.dddddde &pm; xx o [-] i.ddddddE &pm; xx, dove xx è l'esponente, e il numero di <i>d</i> è dato dal grado di precisione specificato (di default 6)</td></tr>
+<tr><td>g, G</td> <td>double</td> <td>usa %e o %E se l'esponente è minore di -4 o maggiore o uguale al grado di precisione; altrimenti usa %f. Gli zeri in coda, o il punto decimale in coda, non sono stampati.</td></tr>
+<tr><td>s</td> <td>char *</td> <td>display a string using pointer</td></tr>
+<tr><td>u</td> <td>Unsigned int</td> <td>numero in notazione decimale privo di segno</td></tr>
+<tr><td>p</td> <td>void *</td> <td>puntatore (rappresentazione dipendente dall'implementazione)</td></tr>
+<tr><td>n</td> <td>the corresponding argument is a pointer to an integer into which the number of characters written so far is printed; the argument is not converted.</td></tr>
+<tr><td>%</td> <td>non ha luogo nessuna conversione</td> <td>visualizza un %</td></tr>
+</tbody>
+</table>
+
+<br>
+
+<table>
+<thead>
+<tr><th>Flags</th> <th>Description</th></tr>
+</thead>
+
+<tbody>
+<tr><td>-</td> <td>Left-justify within the given field width; Right justification is the default (see width sub-specifier).</td></tr>
+<tr><td>+</td> <td>Forces to precede the result with a plus or minus sign (+ or -) even for positive numbers. By default, only negative numbers are preceded with a -ve sign.
+</td></tr>
+<tr><td>(space)</td> <td>If no sign is going to be written, a blank space is inserted before the value.</td></tr>
+<tr><td>#</td> <td>Used with o, x or X specifiers the value is preceded with 0, 0x or 0X respectively for values different than zero. Used with e, E and f, it forces the written output to contain a decimal point even if no digits would follow. By default, if no digits follow, no decimal point is written. Used with <code>g</code> or <code>G</code> the result is the same as with e or E but trailing zeros are not removed.</td></tr>
+<tr><td>0</td> <td>Left-pads the number with zeroes (0) instead of spaces, where padding is specified (see width sub-specifier).</td></tr>
+</tbody>
+</table>
+
+<tbody>
+</table>
+
+<br>
+
+<table>
+<thead>
+<tr><th>Width</th> <th>Description</th></tr>
+</thead>
+
+<tbody>
+<tr><td>(number)</td> <td>Minimum number of characters to be printed. If the value to be printed is shorter than this number, the result is padded with blank spaces. The value is not truncated even if the result is larger.</td></tr>
+<tr><td><b>*</b></td> <td>The width is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted.</td></tr>
+</tbody>
+</table>
+
+<br>
+
+<table>
+<thead>
+<th>precision</th> <th>Description</th></tr>
+</thead>
+
+<tbody>
+<tr><td><b>.number</b></td> <td>For integer specifiers (d, i, o, u, x, X) − precision specifies the minimum number of digits to be written. If the value to be written is shorter than this number, the result is padded with leading zeros. The value is not truncated even if the result is longer. A precision of 0 means that no character is written for the value 0. For e, E and f specifiers − this is the number of digits to be printed after the decimal point. For g and G specifiers − This is the maximum number of significant digits to be printed. For s − this is the maximum number of characters to be printed. By default all characters are printed until the ending null character is encountered. For c type − it has no effect. When no precision is specified, the default is 1. If the period is specified without an explicit value for precision, 0 is assumed.</td></tr>
+
+<tr><td><b>.*</b></td>  <td>The precision is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted.</td></tr>
+
+</tbody>
+</table>
+
+<br>
+
+<table>
+<thead>
+<th>Length</th> <th>Description</td></tr>
+</thead>
+
+<tbody>
+<tr><td><b>h</b></td> <td>The argument is interpreted as a short int or unsigned short int (only applies to integer specifiers: i, d, o, u, x and X).</td></tr>
+<tr><td><b>l</b></td>  <td>The argument is interpreted as a long int or unsigned long int for integer specifiers (i, d, o, u, x and X), and as a wide character or wide character string for specifiers c and s.</td></tr>
+<tr><td><b>L</b></td> <td>The argument is interpreted as a long double (only applies to floating point specifiers: e, E, f, g and G).</td></tr>
+</tbody>
+</table>
+
+<ul>
+<li><p><b>additional arguments</b> − Depending on the format string, the function may expect a sequence of additional arguments, each containing one value to be inserted instead of each %-tag specified in the format parameter (if any). There should be the same number of these arguments as the number of %-tags that expect a value.</p></li>
+</ul>
+
+<h2>Return Value</h2>
+
+<p>If successful, the total number of characters written is returned. On failure, a negative number is returned.</p>
+
+<h2 id="esc">Escape Sequences</h2>
+
+<p>An escape sequence in C is a combination of characters that represents a special character or action that cannot be easily represente by a single character. Escape sequences begin with the backlash (\) character, followed by a specific letter or combination of characters. These sequences are used to insert special characters into strings and character constants.<br>Here are some common escape sequences in C and their meanings:</p>
+
+<h4>\n - Newline: Inserts a newline character, moving the cursor to the beginning of the next line</h4>
+
+<pre>printf("Hello\nWorld\n");</pre>
+
+<p>Output</p>
+
+<pre>
+Hello
+World
+</pre>
+
+<h4>\t - Tab: Inserts a horizontal tab character, aligning the text ti tge bext tab stop</h4>
+
+<pre>printf("Name\tAge\nJohn\t25\nAlice\t23\n");</pre>
+
+<p>Output</p>
+
+<pre>
+Name	Age
+John	25
+Alice	23
+</pre>
+</pre>
+
+<h4>\\ - Backlash: Inserts a literal backlash character</h4>
+
+<pre>printf("This is a backlash\\ \n");</pre>
+
+<p>Output</p>
+
+<pre>This is a backlash: \</pre>
+
+<h4>\" - Double Quote: Inserts a literal double quote character</h4>
+
+<p>use the '\' character to escape quotes: <code>printf("She said, \"Hello!\"\n");</code>.</p>
+
+<p>Output:</p>
+
+<pre>She said, "Hello!"</pre>
+
+<h4>\b - Backspace: Moves the cursor back one space without erasing any characters</h4>
+
+<code>printf("Hello\bWorld\n");</code>
+
+<p>Output:</p>
+
+<pre>HellWorld</pre>
+
+<h4 id="r">\r - Carriage Return: Moves the cursor to the beginning of the current line, overwriting existing text</h4>
+
+<p>It will reset the position of the cursors to the beginning of the line of text.</p>
+
+<code>printf("Hello\rWorld\n");</code>
+
+<p>Output:</p>
+
+<pre>World</pre>
+
+<p>World overlapped the word Hello.</p>
+
+<h4>\a - Alert (Bell): Produces an audible alert (beep) on the system</h4>
+
+<code>printf("Beep\aBeep\aBeep\n");</code>
+
+<p>Output:</p>
+
+<pre>BeepBeepBeep</pre>
+
+<h4>\0 - Null Character: Represents the null character (ASCII value 0) often used to terminate strings</h4>
+
+<code>char message[] = "Hello \0World";
+printf("Message: %s\n, message");</code>
+
+<p>Output:</p>
+
+<pre>Message: Hello</pre>
+
+<h3>Examples</h3>
+
+<h4 id="pointer">Print a pointer address</h4>
+
+<pre>int number = 10;
+pt_number = &number;;
+printf("ptr = %p\n", (void *)pt_numer);     /*outputs the address of the obhect pointed by pt_number */
+printf("ptr = %p\n", (void *)&pt_numer);  	/*outputs the address of the pointer pt_number */
+</pre>
+
+<p>Remember, a pointer itself has an address, just like any other variable. You use <b>%p</b> as the conversion specifier to display an address, and you use the & (address of) operator to reference the address the <code>pt_number</code> variable occupies. The cast to <i>void*</i> is to prevent a possible warning from the compiler. The <b>%p</b> specification expects the value to be some kind of pointer type, the the type of <code>&pnumber</code> is "pointer to pointer to int".</p>
+
+<p>The following example shows the usage of <i>printf()</i> function.</p>
+
+<p>To print more decimal digits try</p>
+
+<pre>printf("%.20lf\n", a/7);</pre>
+
+<p>where <i>a</i> is a double</p>
+
+<p>by using only "%lf" it would print only  six decimal digits 0.142857.</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main () {
+   int ch;
+
+   <span class="keyword">for</span>( ch = 75 ; ch <= 100; ch++ ) {
+   <span class="function">printf</span>(<span class="string">"ASCII value = %d, Character = %c\n</span>", ch , ch );
+   }
+
+   return0;
+}
+</pre>
+
+<p>Let us compile and run the above program to produce the following result −</p>
+
+<pre>
+ASCII value = 75, Character = K
+ASCII value = 76, Character = L
+ASCII value = 77, Character = M
+ASCII value = 78, Character = N
+ASCII value = 79, Character = O
+ASCII value = 80, Character = P
+ASCII value = 81, Character = Q
+ASCII value = 82, Character = R
+ASCII value = 83, Character = S
+ASCII value = 84, Character = T
+ASCII value = 85, Character = U
+ASCII value = 86, Character = V
+ASCII value = 87, Character = W
+ASCII value = 88, Character = X
+ASCII value = 89, Character = Y
+ASCII value = 90, Character = Z
+ASCII value = 91, Character = [
+ASCII value = 92, Character = \
+ASCII value = 93, Character = ]
+ASCII value = 94, Character = ^
+ASCII value = 95, Character = _
+ASCII value = 96, Character = `
+ASCII value = 97, Character = a
+ASCII value = 98, Character = b
+ASCII value = 99, Character = c
+ASCII value = 100, Character = d
+</pre>
+
+<h2>Scientific notation</h2>
+
+<pre>printf("%.10Le ", x);</pre>
+
+<h2>Displaying Octal and Hexadecimal</h2>
+
+<p>Just as C enables you write a number in any one of three number systems, it also enables you to display a number in any of these three systems. To display an integer in octal notation
+instead of decimal, use %o instead of %d . To display an integer in hexadecimal, use %x . If you want to display the C prefixes, you can use specifiers %#o , %#x , and %#X to generate the 0, 0x ,and 0X prefixes respectively. Listing 3.3 shows a short example. (Recall that you may have to insert a getchar(); statement in the code for some IDEs to keep the program execution window from closing immediately.)</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+int main(void)
+{
+	int x = 100;
+	printf("dec = %d; octal = %o; hex = %x\n", x, x, x);
+	printf("dec = %d; octal = %#o; hex = %#x\n", x, x, x);
+	return 0;
+}
+</pre>
+
+<h3>%n character</h3>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int pr;
+    printf("hello Worlds%n\n", &pr);
+    printf("the word hello was printed as %d bytes\n", pr);
+    return 0;
+}
+</pre>
+
+<section aria-label="End">
+<a href="system.html">&#171;Thermodynamic Systems</a>
+<a href="index.html">Index</a>
+<a href="continuity.html">Definizione limite per funzioni operanti tra spazi metrici o normati &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
