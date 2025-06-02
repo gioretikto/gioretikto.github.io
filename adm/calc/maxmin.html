@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,83 @@
 
 <article>
 
-<h1>Finding the maximum/minimum values of a function</h1>
+<h1>Massimo e minimo di una funzione</h1>
+
+<p>Lo studio della funzione nei punti critici è basato sul teorema seguente.</p>
+
+<p><b>Teorema Teorema 5.10.1 (condizioni sufficienti per l'esistenza di un estremo)</b>. <i>f</i>: [<i>a,b</i>] ⟶ ℝ una funzione continua nell'intervallo [<i>a,b</i>] contentenente il punto critico <i>x</i><sub>0</sub> e derivabile in ogni punto di questo intervallo (tranne, al più, nel punto <i>x</i><sub>0</sub>). Se la derivata cambia il segno da più a meno quando passa da sinitra a destra del punto critico, la funzione ha un massimo per <i>x</i> = <i>x</i><sub>0</sub>. Se invece la derivata cambia il segno da meno a più, quando passa da sinistra a destra del punto <i>x</i><sub>0</sub>, la funzione ha un minimo in questo punto. <br> Così se <b>a)</b></p>
+
+<table class="centertable noborder">
+<tr><td><i>f'</i>(<i>x</i>) &gt; 0</td> <td>per</td> <td><i>x</i> &lt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &lt; 0</td> <td>per</td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+</table>
+
+<p>la funzione ammette un <i>massimo</i> nel punto <i>x</i><sub>1</sub>.</p>
+
+<p>Se <b>b)</b></p>
+
+<table class="centertable noborder">
+<tr><td><i>f'</i>(<i>x</i>) &lt; 0</td> <td>per</td> <td><i>x</i> &lt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &gt; 0</td> <td>per</td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+</table>
+
+<p>la funzione ammette in <i>minimo</i> nel punto <i>x</i><sub>0</sub>. Inoltre, si deve tener presente che le condizioni a) e b) debbono corrispondere a tutti i valori di <i>x</i> sufficientemente vicini a <i>x</i><sub>0</sub>, cioè a tutti i punti di un intorno sufficientemente piccolo del punto critico <i>x</i><sub>0</sub>.</p>
+
+<p><b>Dim.</b> Supponiamo dapprima che la derivata cambi il segno da più a meno, cioè per tutti gli <i>x</i> sufficientemente vicini al punto <i>x</i><sub>0</sub> abbiamo</p>
+
+<table class="centertable noborder">
+<tr><td><i>f'</i>(<i>x</i>) &gt; 0</td> <td>per</td> <td><i>x</i> &lt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &lt; 0</td> <td>per</td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+</table>
+
+<p>Applicando il T. di Lagrange alla differenza <i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>), si ottiene</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>) = <i>f</i>(<i>c</i>)(<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>dove <i>c</i> è un punto compreso tra <i>x</i> e <i>x</i><sub>0</sub>.</p>
+
+<ol>
+	<li><p>Sia <i>x</i> &lt; <i>x</i><sub>0</sub>, allora</p>
+
+<div class="eq">
+<p><i>c</i> &lt; <i>x</i><sub>0</sub>, &emsp; <i>f'</i>(<i>c</i>) &gt; 0, &emsp; <i>f</i>(<i>c</i>)(<i>x</i> − <i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>e, di conseguenza,</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>ovvero</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &lt; <i>f</i>(<i>x</i><sub>0</sub>) &emsp;(<b>5.10.2</b>)</p>
+</div>
+
+</li>
+
+<li><p>Sia <i>x</i> &gt; <i>x</i><sub>0</sub>, allora</p>
+
+<div class="eq">
+<p><i>c</i> &gt; <i>x</i><sub>0</sub>, &emsp; <i>f'</i>(<i>c</i>) &lt; 0,&emsp; <i>f</i>(<i>c</i>)(<i>x</i> − <i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>e, di conseguenza,</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>ovvero</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &lt; <i>f</i>(<i>x</i><sub>0</sub>) &emsp;(<b>5.10.3</b>)</p>
+</div>
+
+<p>Le relazioni (5.10.2) e (5.10.3) mostrano che per tutti i valori di <i>x</i>, sufficientemente vicini a <i>x</i>, il valore della funzione è inferiore al valore della funzione nel punto <i>x</i><sub>0</sub>. Ciò significa proprio che la funzione ammette un massimo nel punto <i>x</i><sub>0</sub>. Analogamente si dimostra la seconda parte. &emsp;□.</p>
 
 <p>Suppose we want to find maxima and minima of the function <i>f</i>: [<i>a,b</i>] ⟶ ℝ. If <i>f</i> is differentiable we can proceed as follows</p>
 
@@ -36,14 +112,14 @@
 
 <section>
 
-<table>
+<table class="centertable">
 <tr><th colspan="2"><i>x</i><sub>0</sub> maximum point</th></tr>
 <tr><td>x &lt; <i>x</i><sub>0</sub></td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
 <tr><td><i>f'</i>(<i>x</i>) &ge; 0</td> <td><i>f'</i>(<i>x</i>) &le; 0</td></tr>
 <tr><td><i>f</i> ↗</td> <td><i>f</i> ↘</td> </tr>
 </table>
 
-<table>
+<table class="centertable">
 <tr><th colspan="2"><i>x</i><sub>0</sub> minimum point</th></tr>
 <tr><td>x &lt; <i>x</i><sub>0</sub></td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
 <tr><td><i>f'</i>(<i>x</i>) &ge; 0</td> <td><i>f'</i>(<i>x</i>) &le; 0</td></tr>

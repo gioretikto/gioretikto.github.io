@@ -21,7 +21,7 @@
 
 <h1>Limiti notevoli e sviluppi</h1>
 
-<p>Abbiamo visto che il processo di linearizzazione permette di approssimare una funzione derivabile, localmente, mediante la sua retta tangente, ossia una funzione lineare. D'altro canto, anche i "limiti notevoli" a suo tempo incontrati permettevano di scrivere simili risultati di approssimazione, per certe funzioni particolari. Ad es., per la funzione <i>y</i> = sin <i>x</i>, il processo di linearizzazione, in <i>x</i> = 0, porta a scrivere</p>
+<p>Abbiamo visto che il processo di linearizzazione permette di approssimare una funzione derivabile, localmente, mediante la sua retta tangente, ossia una funzione lineare. D'altro canto, anche i "<a href="notevoli.html">limiti notevoli</a>" a suo tempo incontrati permettevano di scrivere simili risultati di approssimazione, per certe funzioni particolari. Ad es., per la funzione <i>y</i> = sin <i>x</i>, il processo di linearizzazione, in <i>x</i> = 0, porta a scrivere</p>
 
 <div class="eq">
 <p>sin <i>x</i> = <i>x</i> + o(<i>x</i>)</p>
@@ -50,13 +50,13 @@
 
 <p>Analizziamo entrambne le direzioni.</p>
 
-<p><b>(⇒)</b> If f(x) ~ g(x), then f(x) = g(x) + o(g(x)). Dalla definizione di asintotico:
+<p><b>(⇒)</b> If f(x) ~ g(x), then f(x) = g(x) + o(g(x)). Dalla definizione di asintotico:</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i>) ~ <i>g</i>(<i>x</i>) significa che lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>)/<i>g</i>(<i>x</i>) = 1
 </div>
 
-<p>Goal: Show f(x) = g(x) + o(g(x)), which means</p>
+<p>Goal: Mostrare che f(x) = g(x) + o(g(x)); ciò significa</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
@@ -140,7 +140,7 @@
 
 <!-- $$\frac{f(x) - g(x)}{g(x)} = \frac{f(x)}{g(x)} - 1 $$ -->
 
-<p>Since lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>)/<i>g</i>(<i>x</i>) = 1, it follows that:</p>
+<p>Dato che lim<sub><i>x</i> &rarr; <i>x</i><sub>0</sub></sub> <i>f</i>(<i>x</i>)/<i>g</i>(<i>x</i>) = 1, segue che:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -180,7 +180,7 @@
 
 <!-- $$\lim_{x \to x_0} \left( \frac{f(x)}{g(x)} - 1 \right) = 0 $$ -->
 
-<p>which implies</p>
+<p>il ché implica</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
@@ -208,7 +208,7 @@
 
 <!-- $$\frac{f(x) - g(x)}{g(x)} \to 0 $$ -->
 
-<p>or equivalently,</p>
+<p>o equivalentemente,</p>
 
 <div class="eq">
 <p>f(x) = g(x) + o(g(x))</p>
@@ -349,13 +349,66 @@
 
 <!-- $$ \lim_{x \to x_0} \frac{f(x)}{g(x)} = 1 $$ -->
 
-<p>which is exactly the definition of <i>f</i>(<i>x</i>) ~ <i>g</i>(<i>x</i>).&emsp;□</p>
+<p>che è esattamente la definizione di <i>f</i>(<i>x</i>) ~ <i>g</i>(<i>x</i>).&emsp;□</p>
+
+<p>Questo permette di rileggere i limiti notevoli che abbiamo finora espresso con stime asintotiche, mediante uguaglianze che coinvolgono "o piccolo". Ad es.,</p>
+
+<div class="eq">
+<p>per <i>x</i> ⟶ 0<br>
+sin <i>x</i> ~ <i>x</i>, quindi sin <i>x</i> = <i>x</i> + o(<i>x</i>);<br>
+1 − cos <i>x</i> ~ <i>x</i><sup>2</sup>/2, quindi 1 − cos <i>x</i> = <i>x</i><sup>2</sup>/2 + o(<i>x</i><sup>2</sup>).</p>
+</div>
+
+<p>Riflettiamo sull'ultima: l'uguaglianza  1 − cos <i>x</i> = <i>x</i><sup>2</sup>/2 + o(<i>x</i><sup>2</sup>) si può riscrivere nella forma:</p>
+
+<div class="eq">
+<p>cos <i>x</i> = 1 − <i>x</i><sup>2</sup>/2 + o(<i>x</i><sup>2</sup>)</p>
+</div>
+
+<p>(questo è ovvio: abbiamo sostato dei termini da un membro a un altro di un'uguaglianza). Notiamo, invece, che la relazione asintotica 1 − cos <i>x</i> ~ <i>x</i><sup>2</sup>/2  non dice la stessa cosa della relazione cos <i>x</i> ~ 1 − <i>x</i><sup>2</sup>/2. Infatti, per <i>x</i> ⟶ 0, 1 − <i>x</i><sup>2</sup>/2 ~ 1, perciò la stima cos <i>x</i> ~ 1 − <i>x</i><sup>2</sup>/2 contiene la stessa informazione che dire semplicemente "cos <i>x</i> ⟶ 1", ed è altrettanto vera che la stima cos <i>x</i> ~ 1 + 50<i>x</i><sup>14</sup>! Questa osservazione mostra un vantaggio del simbolo "o piccolo" rispetto a quello di asintotico: un'uguaglianza si può scrivere in vari modi, è più facile da usare senza errori, rispetto ad una stima asintotica. <br> Per esercizio, riscriviamo mediante il simbolo di "o piccolo" i limiti notevoli, <i>e<sup>x</sup></i>, log (1 + <i>x</i>), <i>x<sup>&alpha;</sup></i> &radic;(1 + <i>x</i>):</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup></i> = 1 + <i>x</i> + o(<i>x</i>)<br>
+log (1 + <i>x</i>) = <i>x</i> − <i>x</i><sup>2</sup>/2 + o(<i>x</i><sup>2</sup>)<br></p>
+</div>
+
+<h2>Proprietà del simbolo di "o piccolo"</h2>
+
+<p>Ci si trova ad eseguire calcoli che coinvolgono o(<i>x<sup>n</sup></i>) (ad es. quando si opera su sviluppi di <a href="Taylor.html">Taylor-MacLaurin</a> con resto secondo Peano). Per procedere correttamente è utile comprendere alcune proprietà del simbolo di "o piccolo".</p>
+
+<p>Notiamo che ad es., per <i>x</i> ⟶ 0, <i>x</i><sup>2</sup> = o(<i>x</i>); <i>x</i><sup>3</sup> = o(<i>x</i>); <i>x</i><sup>3</sup> = o(<i>x</i><sup>2</sup>). Il simbolo di o(..) non denota quindi una particolare funzione, ma qualsiasi funzione abbia la proprietà espressa dalla definizione. Da questo fatto seguono alcune proprietà della relazione di "o piccolo" che possono apparire "strane". Ne illustriamo alcune su esempi che si incontrano frequentemente:</p>
+
+<div class="eq">
+<p>o(<i>x</i>) − o(<i>x</i>) = o(<i>x</i>)&emsp;(non fa zero!)<br>
+o(−3<i>x</i><sup>2</sup>) = o(<i>x</i><sup>2</sup>), &emsp; − o(<i>x</i>) = o(<i>x</i>) &emsp;(coefficienti numerici moltiplicativi sono irrilevanti)</p>
+</div>
+
+<p>Per <i>x</i> ⟶ 0, o(<i>x</i>) + o(<i>x</i><sup>2</sup>) = o(<i>x</i>) (l'errore più grossolano, cioè o(<i>x</i>), ingloba quello più fine). <br> Analogamente si avrebbe:</p>
+
+<div class="eq">
+<p>per <i>x</i> ⟶ +&infin;, o(<i>x</i>) + o(<i>x</i><sup>2</sup>) = o(<i>x</i><sup>2</sup>)</p>
+</div>
+
+<p>Il simbolo di "o piccolo" si comporta al seguente modo con somme e prodotti (verifiarlo in base alla definizione):</p>
+
+<div class="eq">
+<p><i>f</i> ⋅ o(<i>g</i>) = o(<i>f</i> ⋅ <i>g</i>), ad esesempio:<br><br>
+<i>x</i> ⋅ o(<i>x</i><sup>2</sup>) = o(<i>x</i><sup>3</sup>) &emsp; o(<i>x</i><sup>3</sup>)/<i>x</i> = o(<i>x</i><sup>2</sup>) &emsp; o(<i>x</i><sup>2</sup>)/<i>x</i><sup>2</sup> = o(1)
+</p>
+</div>
+
+<p>(ricordiamo che o(1) indica semplicemente una funzione che tende a zero per <i>x</i> ⟶ <i>x</i><sub>0</sub>, il punto considerato). Ed anche:</p>
+
+<div class="eq">
+<p>o(<i>f</i>) ⋅ o(<i>g</i>) = o(<i>f</i> ⋅ <i>g</i>), ad esempio:<br><br>
+<i>x</i> ⋅ o(<i>x</i><sup>2</sup>) = o(<i>x</i><sup>3</sup>)</p>
+</div>
 
 
 <section aria-label="End">
 <a href="df.html">&#171;Differenziale e approssimazione lineare; il simbolo di "o piccolo"</a>
 <a href="index.html">Index</a>
-<a href="Lagrange.html">T. di Lagrange &#187;</a>
+<a href="Taylor.html">Formula di Taylor-MacLaurin con resto secondo Peano &#187;</a>
 </section>
 
 </article>

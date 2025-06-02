@@ -21,10 +21,12 @@
 
 <h1>Fermat's Theorem</h1>
 
+<h2>Punti di estremo: punti di massimo e minimo assoluti e relativi</h2>
+
 <p>Richiamiamo le nozioni di massimo e minimo assoluti (o globali) e locali.</p>
 
 <ul>
-	<li><p>Si dice che <i>M</i> è massimo di <i>f</i> in [<i>a,b</i>] e <i>x</i><sub>0</sub> &in; [<i>a,b</i>] è <i>punto di massimo</i> se</p>
+	<li><p>Si dice che <i>M</i> è massimo assoluto di <i>f</i> in [<i>a,b</i>] e <i>x</i><sub>0</sub> &in; [<i>a,b</i>] è <i>punto di massimo assoluto</i> se</p>
 
 <div class="eq">
 <p><i>f</i>(<i>x</i><sub>0</sub>) = <i>M</i> &ge; <i>f</i>(<i>x</i>), &forall;<i>x</i> in [<i>a,b</i>]</p>
@@ -32,9 +34,9 @@
 
 </li>
 
-	<li><p>Analoga definizione per il <i>minimo</i>.</p></li>
+	<li><p>Analoga definizione per il <i>minimo</i> assoluto.</p></li>
 
-	<li><p>Si dice che <I>M</i> è massimo locale (o relativo) per <i>f</i> e che <i>x</i><sub>0</sub> è punto di massimo locale se:</p>
+	<li><p>Si dice che <i>M</i> è massimo locale (o relativo) per <i>f</i> e che <i>x</i><sub>0</sub> è punto di massimo locale se:</p>
 
 <div class="eq">
 <p>∃(<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> + &delta;) : <i>M</i> = <i>f</i>(<i>x</i><sub>0</sub>) &ge; <i>f</i>(<i>x</i>) &forall;<i>x</i> in (<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> + &delta;) ∩ [<i>a,b</i>]</p>
@@ -48,6 +50,11 @@
 <p>Notiamo espressamente che:</p>
 
 <ul>
+	<li><p>Per definire i punti di estremo (max e min assoluti e non) NON abbiamo utilizzato il concetto di derivata, ma solo il confronto dei valori <i>y</i> = <i>f</i>(<i>x</i>);</p></li>
+	<li><p>I punti di massimo relativo e minimo relativo sono detti punti di estremo relativo, mentre i punti di massimo e minimo assoluto sono detti punti di estremo assoluto;</p></li>
+	<li><p>Un punto di estremo assoluto è anche punto di estremo relativo, il viceversa non è sempre vero;</p></li>
+	<li><p>Un un punto di massimo o minimo relativo la funzione può essere NON derivabile;</p></li>
+	<li><p>Punti di cuspide sono sempre punti di massimo o di minimo relativo. Punti angolosi, non necessariamente sono punti di estremo;</p></li>
 	<li><p>il minimo e il massimo globale di <i>f</i> (se esistono) sono <i>unici</i> (naturalmente i punti di max e min possono essere più di uno);</p></li>
 	<li><p>massimi e minimi locali possono essere più di uno. Evidentemente ogni estremo globale è anche locale.</p></li>
 </ul>
@@ -277,7 +284,18 @@
 </figure>
 
 <p>Vi possono però essere punti stazionari che <i>non</i> sono di estremo. Ad es., la funzione <i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> ha <i>f</i>'(<i>x</i>) 3<i>x</i><sup>2</sup> che si annulla nell'origine, ma <i>x</i> = 0 non è punto di estremo. <br> Si tratta di un punto di <l>flesso</i> (o di flessione) a tangente orizzontale come si vedrà più avanti.</p>
-     
+
+<p><b>Osservazione 1</b>. Per definire un punto stazionario serve la definizione di derivata prima.</p>
+
+<p><b>Osservazione 2</b>. Un punto stazionario non è necessariamente un punto di massimo o di minimo relativo.</p>
+
+<p><b>Osservazione 3</b>. Non è detto che i punti di massimo e minimo relativo siano punti stazionari.</p>
+
+<figure>
+<img src="img/relativo_non_staz.png" alt="punto relativo non stazionario"/>
+<figcaption><i>x</i><sub>0</sub> è punto di min relativo. <i>f</i> <b>non</b> è derivabile in <i>x</i><sub>0</sub>. <br><i>x</i><sub>0</sub> <b>non</b> è punto stazionario.</figcaption>
+</figure>
+
 <section aria-label="End">
 <a href="D_inv.html">&#171;Derivata di una funzione inversa</a>
 <a href="index.html">Index</a>
