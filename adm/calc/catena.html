@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Derivata di una funzione composta">
+	<title>Derivata di una funzione composta</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Derivata di una funzione composta</h1>
+
+<p><b>Teorema 5.6.1</b> (<b>Regola della catena</b>) Sia <i>D,E</i> &subseteq; ℝ e <i>f</i>: <i>D</i> ⟶ ℝ, <i>g</i>: <i>E</i> ⟶ ℝ tali che <i>f</i>(<i>D</i>) &subseteq; <i>E</i>. Supponendo <i>x</i> is an interior point of <i>E</i>. If <i>f</i> is differentiable at <i>x</i> and <i>g</i> is differentible at <i>f</i>(<i>x</i>), then <i>g</i> ∘ <i>f</i> is differentiable at <i>x</i> and</p>
+
+<div class="eq">
+<p>(<i>g</i> ∘ <i>f</i>)'(<i>x</i>) = <i>g'</i>(<i>f</i>(<i>x</i>))<i>f'</i>(<i>x</i>)&emsp; (5.6.2)</p>
+</div>
+
+<p><b>Dim</b>. Si ha</p>
+
+<div class="eq">
+<p>(<i>g</i> ∘ <i>f</i>)(<i>x</i> + <i>h</i>) &minus; (<i>g</i> ∘ <i>f</i>)(<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i> + <i>h</i>)) &minus; <i>g</i>(<i>f</i>(<i>x</i>))</p>
+</div>
+
+<p>For the sake of simplifying the notation, let</p>
+
+<div class="eq">
+<p><i>k</i> = <i>f</i>(<i>x</i> + <i>h</i>) &minus; <i>f</i>(<i>x</i>)</p>
+<p><i>y</i> = <i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>then <i>f</i>(<i>x</i> + <i>h</i>) = <i>y</i> + <i>k</i>; from the continuity of <i>f</i> we have for <i>h</i> ⟶ 0 that <i>k</i> ⟶ 0. With the new notations</p>
+
+<div class="eq">
+<p><i>g</i>(<i>f</i>(<i>x</i> + <i>h</i>)) &minus; <i>g</i>(<i>f</i>(<i>x</i>)) = <i>g</i>(<i>y</i> + <i>k</i>) &minus; <i>g</i>(<i>y</i>)</p>
+</div>
+
+<p>The derivative of <i>g</i> is:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>k</mi>
+  </mfrac>
+</math>
+
+<p>which can be written as well, for <i>k</i> &ne; 0:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>k</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>k</mi>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>&#x3F5;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<p>Where <i>ε</i>(<i>k</i>) indicates a quntity that goes to zero for <i>k</i> ⟶ 0. By multiplying both sides of the former by <i>k</i>, we obtain</p>
+
+<div class="eq">
+<p><i>g</i>(<i>y</i> + <i>k</i>) &minus; <i>g</i>(<i>y</i>) = <i>g</i>' (<i>y</i>) ⋅ <i>k</i> + <i>&epsilon;</i>(<i>k</i>) ⋅ <i>k</i></p>
+</div>
+
+<p>which is perfeclty valid for <i>k</i> = 0 as well. Thus</p>
+
+<div class="eq">
+<p><i>g</i>(<i>f</i>(<i>x</i> + <i>h</i>)) &minus; <i>g</i>(<i>f</i>(<i>x</i>)) = <i>g</i>' (<i>y</i>) ⋅ <i>k</i> + <i>&epsilon;</i>(<i>k</i>) ⋅ <i>k</i></p>
+</div>
+
+<p>dividing by <i>h</i> and observing that <i>k</i>/<i>h</i> → <i>f</i>'(<i>x</i>), we have proved the claim.&emsp; □</p>
+
+<p>La (5.6.2) si chiama <i>regola della catena</i>; usando le notazioni (di Leibniz) d<i>f</i>/d<i>x</i> e d<i>g</i>/d<i>x</i> per le derivate di <i>f</i> e <i>g</i> e posto <i>z</i> = <i>g</i>(<i>y</i>), la (5.6.2) acquista una forma più significativa:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>z</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mtext>dz</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{\text{d}z}{\text{d}x} = \frac{\text{dz}}{\text{d}y} ⋅ \frac{\text{d}y}{\text{d}x} $$ -->
+
+<p>(come se d<i>y</i> si semplificasse). Se una variabile <i>z</i> depende dalla variabile <i>y</i>, la quale essa stessa dipende dalla vaiabile x (i.e. <i>y</i> e <i>z</i> sono variabili dipendenti), allora <i>z</i> dipende anch'essa da <i>x</i>, via the intermediate variable y. In this case, the chain rule is expressed as d z d x = d z d y ⋅ d y d x , {\displaystyle {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}},}. Infatti si ricordi che <i>f</i> ∘ <i>g</i> è definita come <i>f</i>(<i>g</i>(<i>x</i>)). La quantità <i>f′</i>(<i>g</i>(<i>x</i>)) è la derivata di <i>f</i> con <i>g</i> al posto di <i>x</i>, che si può scrivere come d<i>f</i>/d<i>g</i>. As usual, <i>g′</i>(<i>x</i>) = d<i>g</i>/d<i>x</i>. Then the formula above.</p>
+
+<p>Come suggerisce il nome di "regola della catena", questa può essere generalizzata alla composizione di un numero qualsiasi di funzioni, composte una con l'altra. Ad es., per tre funzioni si ha</p>
+
+<div class="eq">
+<p>[<i>f</i>(<i>g</i>(<i>h</i>(<i>x</i>)))]' = <i>f'</i>(<i>g</i>(<i>h</i>(<i>x</i>))) ⋅ <i>g'</i>(<i>h</i>(<i>x</i>)) ⋅ <i>h'</i>(<i>x</i>)</p>
+</div>
+
+<p>Per usare questa regola, assieme alle altre dell'algebra delle derivate, occorre imparare a <i>vedere</i> una funzione composta come composizione succesiva di funzioni più semplici. Per individuare le componenti può essere utile immaginare come si calcola la funzione composta mediante una calcolatrice tascabile.</p>
+
+<p><b>Esempio 5.6.4</b>. Si voglia derivare</p>
+
+<div class="eq">
+<p><i>w</i>(<i>x</i>) = (sen <i>x</i>)<sup>3</sup></p>
+</div>
+
+<p>Per calcolarla, occorre inserire il vlaore di <i>x</i>, calcolare sin <i>x</i> e poi elevare tutto al cubo. Posto <i>f</i>(<i>x</i>) = sin <i>x</i> e <i>g</i>(<i>y</i>) = <i>y</i><sup>3</sup>. Si ha allora <i>w</i>(<i>x</i>) = <i>g</i>(<i>f</i>(<i>x</i>)). Pertanto:</p>
+
+<div class="eq">
+<p><i>w</i> '(<i>x</i>) = 3 (sen <i>x</i>)<sup>2</sup> ⋅ cos <i>x</i>&emsp;■</p>
+</div>
+
+<p>usando la (5.6.3) si scriverebbe <i>y</i> = sin <i>x</i>, <i>w</i> = <i>y</i><sup>3</sup> e quindi</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>w</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mtext>dw</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>y</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>3</mn>
+  <msup>
+    <mi>y</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x22C5;</mo>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo>=</mo>
+  <mn>3</mn>
+  <mo stretchy="false">(</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x22C5;</mo>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+</math>
+
+<!-- $$ \frac{\text{d}w}{\text{d}y} = \frac{\text{dw}}{\text{d}y} ⋅ \frac{\text{d}y}{\text{d}x} = 3y^2 \cdot \cos x = 3(\sin x)^2 \cdot \cos x $$ -->
+
+<p><b>Esempio 5.6.4</b>. Derivata di <i>f</i>(<i>t</i>) = <i>A</i> sin(<i>&omega;t</i> + <i>&phi;</i>) e di <i>g</i>(<i>t</i>) = <i>A</i>e<sup>&minus;&alpha;t</sup> cos(<i>&omega;t</i> + <i>&phi;</i>). Per derivare <i>f</i> è sufficiente la r. della catena; Per <i>g</i> anche quella relativa alla derivazione del prodotto di funzioni.</p>
+
+<ul>
+	<li><p><i>f'</i>(<i>t</i>) = <i>A</i> d/d<i>t</i> sin(<i>&omega;t</i> + <i>&phi;</i>) = <i>A</i>cos (<i>&omega;t</i> + <i>&phi;</i>) ⋅ <i>&omega;</i> = <i>A&omega;</i>cos(<i>&omega;t</i> + &phi;)</p></li>
+	<li><p><i>g'</i>(<i>t</i>) =  <i>A</i> d/d<i>t</i>[e<sup>&minus;&alpha;t</sup> cos(<i>&omega;t</i> + &phi;)] = A {d/d<i>t</i> e<sup>&minus;&alpha;t</sup> ⋅ cos(<i>&omega;t</i> + &phi;) + e<sup>&minus;&alpha;t</sup> d/d<i>t</i> cos(<i>&omega;t</i> + &phi;)} = <i>A</i>{e<sup>&minus;&alpha;t</sup>(&minus;<i>&alpha;</i>) ⋅ cos(<i>&omega;t</i> + &phi;) + e<sup>&minus;&alpha;t</sup> (&minus; sin(<i>&omega;t</i> + <i>&phi;</i>) ⋅ &omega;)} = &minus;<i>A</i>e<sup>&minus;&alpha;t</sup>{&minus;&alpha; cos(<i>&omega;t</i> + &phi;) + sin(<i>&omega;t</i> + <i>&phi;</i>)}</p></li>
+</ul>
+
+<p><b>Examples 5.6.5</b>. If <i>w</i>(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> then <i>w</i> '(<i>x</i>) = e<sup>&minus;x<sup>2</sup></sup> ⋅ (&minus;2<i>x</i>).&emsp;■</p>
+
+<p><b>Esempio 5.6.6</b>. Possiamo ora completare la dimostrazione delle formule contenute nella tabella delle derivate di funzioni elementari.</p>
+
+<div class="eq">
+<p>(<i>a<sup>x</sup></i>)' = (e<sup>xlog<i>a</i></sup>)' = usando le formule per la derivata di <i>e<sup>t</sup></i> e la r. della catena = e<sup><i>x</i> log <i>a</i></sup> ⋅ log <i>a</i> = <i>a<sup>x</sup></i> log <i>a</i>.</p>
+</div>
+
+<p>Effettuando il cambiamento di base del logaritmo</p>
+
+<div class="eq">
+<p>(log<sub>a</sub> <i>x</i>)' = (log <i>x</i>/log<i>a</i>)' = usando le formule per la derivata di log <i>x</i> e per la derivata di <i>kf</i>(<i>x</i>) = 1/<i>x</i>log<i>a</i></p>
+</div>
+
+<p>Per le funzioni iperboliche, abbiamo invece</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi>sinh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <msup>
+            <mi>e</mi>
+            <mi>x</mi>
+          </msup>
+          <mo>&#x2212;</mo>
+          <msup>
+            <mi>e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x2212;</mo>
+              <mi>x</mi>
+            </mrow>
+          </msup>
+        </mrow>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>e</mi>
+    <mi>x</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+    </mrow>
+  </msup>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x2212;</mo>
+          <mi>x</mi>
+        </mrow>
+      </msup>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mo>=</mo>
+  <mi>cosh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+</math>
+
+<!-- $$(\sinh x)' = \left(\frac{e^x - e^{-x}}{2} \right)' = \frac{1}{2} (e^x - (-e^{-x})) = \frac{e^x - e^{-x}} {2} = \cosh x $$ -->
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi>cosh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <msup>
+            <mi>e</mi>
+            <mi>x</mi>
+          </msup>
+          <mo>&#x2212;</mo>
+          <msup>
+            <mi>e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mo>&#x2212;</mo>
+              <mi>x</mi>
+            </mrow>
+          </msup>
+        </mrow>
+        <mn>2</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>e</mi>
+    <mi>x</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+    </mrow>
+  </msup>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x2212;</mo>
+          <mi>x</mi>
+        </mrow>
+      </msup>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mo>=</mo>
+  <mi>sinh</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+</math>
+
+<!-- $$(\cosh x)' = \left(\frac{e^x - e^{-x}}{2} \right)' = \frac{1}{2} (e^x - (-e^{-x})) = \frac{e^x - e^{-x}} {2} = \sinh x $$ -->
+
+<p id="esp"><b>Esempio 5.6.7</b> (Derivata di funzioni del tipo <i>f</i>(<i>x</i>)<sup><i>g</i>(<i>x</i>)</sup>. I passaggi per il calcolo di (<i>a<sup>x</sup></i>)' si basano su un "trucco" di uso comune: riscrivere una funzione <i>f</i>(<i>x</i>)<sup><i>g</i>(<i>x</i>)</sup> con <i>f</i> &gt; 0 nella forma seguente:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>)<sup><i>g</i>(<i>x</i>)</sup> = e<sup><i>g</i>(<i>x</i>) log <i>f</i>(<i>x</i>)</sup></p>
+</div>
+
+<p>Si è sfruttata la definizione di logaritmo e<sup>log <i>A</i></sup> = <i>A</i> e la proprietà dei logaritmi log[<i>f</i>(<i>x</i>)<sup><i>g</i>(<i>x</i>)</sup>] = <i>g</i>(<i>x</i>) log <i>f</i>(<i>x</i>). Si può adesso calcolare la derivata di una funzione di questo tipo</p>
+ 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">[</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>g</mi>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mo stretchy="false">]</mo>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <mo stretchy="false">[</mo>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mi>l</mi>
+      <mi>o</mi>
+      <mi>g</mi>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msup>
+  <msup>
+    <mo stretchy="false">]</mo>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msup>
+  <mo>&#x22C5;</mo>
+  <mo stretchy="false">[</mo>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mo stretchy="false">]</mo>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </msup>
+  <mo stretchy="false">[</mo>
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">]</mo>
+</math>
+ 
+<!-- $$[f(x)^g(x)]' = [e^{g(x)log f(x)}]' = e^{g(x)\log f(x)} \cdot [g(x)\log f(x)]' = f(x)^{g(x)} [g'(x) \log f(x) + g(x) \frac{f'(x)} {f(x)} ] $$ -->
+
+<p>Ad es.:</p>
+
+<div class="eq">
+<p>(<i>x<sup>x</sup></i>)' = (e<sup><i>x</i> log<i>x</i></sup>)' = <i>x<sup>x</sup></i>[<i>x</i> log<i>x</i>]' = <i>x<sup>x</sup></i>(log <i>x</i> + 1)</p>
+</div>
+
+<p id="abs"><b>Esempio 5.6.8 (Valore assoluto di una funzione)</b>. Consideriamo una funzione del tipo:</p>
+
+<div class="eq">
+<p>|<i>f</i>(<i>x</i>)|</p>
+</div>
+
+<p>Sappiamo che il <a href="D_non.html">valore assoluto non è derivabile</a> là dove il suo argomento si annulla. Tuttavia, nei punti in cui <i>f</i>(<i>x</i>) &ne; 0, la derivazione di funzione composta dà:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo>=</mo>
+  <mtext>sign</mtext>
+  <mo stretchy="false">(</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>f</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <msup>
+            <mi>f</mi>
+            <mo data-mjx-alternate="1">&#x2032;</mo>
+          </msup>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+        </mtd>
+        <mtd>
+          <mtext>per&#xA0;</mtext>
+          <mi>f</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mo>&lt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$|f(x)|' = \text{sign} (f(x)) \cdot f'(x) = \begin{cases} f'(x) & \text{per } f(x) \gt 0 \\ -f'(x) & \text{per } f(x) \lt 0 \end{cases} $$ -->
+
+<p>In generale, ci aspettiamo che la funzione |<i>f</i>(<i>x</i>)| presenti punti angolosi, ove <i>f</i>(<i>x</i>) si annulla. Ad es., la funzione</p>
+
+<div class="eq">
+<p>e<sup>|<i>x</i> + 1|</p>
+</div>
+
+<p>ha un punto angoloso in <i>x</i> = &minus;1.&emsp;■</p>
+
+<p><b>Esempio 5.6.8 (Derivata di alcune funzioni logaritmiche)</b>. Le seguenti situazioni si presentano di frequente:</p>
+
+<div class="eq">
+<p>(log |<i>x</i>|)' = 1/|<i>x</i>| ⋅ sgn(<i>x</i>) = 1/<i>x</i> (senza modulo)<br>
+(log|<i>f</i>(<i>x</i>)|)' = <i>f'</i>(<i>x</i>)/<i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>(per la formula vista nell'esempio precedente e la derivazione di funzioni composte);</p>
+
+<div class="eq">
+<p>(log (<i>cx</i>))' = (log <i>x</i> + log <i>x</i>)' = 1/<i>x</i> (come la derivata di log <i>x</i>!);<br>
+[log(<i>ax</i> + <i>b</i>)/(<i>cx</i> + <i>d</i>)]' = (log (<i>ax</i> + <i>b</i>) &minus; log(<i>cx</i> + <i>d</i>))' = <i>a</i>/(<i>ax</i> + <i>b</i>) &minus;  <i>c</i>/(<i>cx</i> + <i>d</i>)</p>
+</div>
+
+<p>(ossia talvolta conviene usare le proprietà dei logaritmi per trasformare una funzione logaritmica <i>prima</i> di calcolarne la derivata).</p>
+
+<p>Il seguente esempio mette in luce le possibilità di calcolo connesse con la formula della catena.</p>
+
+<p><b>Esempio 5.6.7</b>. Un contenitore cilindrico con raggio di base <i>R</i> = 1 m e altezza 3 m è pieno d'acqua. Da un rubinetto posto in prossimità del fondo vengono prelevati 10 litri al minuto. Con quale velocità l'altezza dell'acqua decresce?<br>Sia <i>h</i> l'altezza (in decimetri) della colonna d'acqua e <i>V</i> il suo volume (in dm<sup>3</sup>). Vogliamo trovare d<i>h</i>/d<i>t</i>, sapendo che d<i>V</i>/d<i>t</i> = &minus;10 dm<sup>3</sup>/min. </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>V</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>V</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>h</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>h</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{\text{d}V}{\text{d}t} = \frac{\text{d}V}{\text{d}h} \cdot \frac{\text{d}h}{\text{d}t} $$ -->
+
+<p>Essendo <i>V</i> = 100 &pi; <i>h</i> dm<sup>3</sup> otteniamo d<i>V</i>/d<i>h</i> = 100&pi;dm<sup>2</sup> e infine</p>
+
+<div class="eq">
+<p>d<i>h</i>/d<i>t</i> = &minus;10/100 &pi; dm/min = &minus;1/10&pi; dm/min</p>
+</div>
+
+<h2 id="Dlog">Derivata logaritmica</h2>
+
+<p>Data <i>f</i> &gt; 0, si chiama <i>derivata logaritmica</i> di <i>f</i> la derivata di log <i>f</i>. In formule:</p>
+
+<div class="eq">
+<p>derivata logaritmica di <i>f</i> = [log <i>f</i>(<i>x</i>)]' = <i>f'</i>(<i>x</i>)/<i>f</i>(<i>x</i>)</p>
+</div>
+
+<p>La derivata logaritmica ha il significato di <i>tasso di incremento relativo</i> di <i>f</i> rispetto a <i>x</i>. <br> In casi concreti tale tasso è spesso più significativo del tasso assoluto di <i>f'</i>. Ad es., un incremento annuo di capitale di 1 mld. su un totale di 10 ha un effetto ben diverso di un incremento di 1 mld. su 1000 miliardi. Nel primo caso il tasso di variazione relativo è 1/10 nel secondo 1/1000, mentre uguali sono gli incrementi assoluti.<br> Per i motivi sopraesposti, quando interessa visualizzare gli incrementi relativi si ricorre a grafici in scala <i>semilogaritmica</i>: sull'asse delle ascisse si collocano i valori di <i>x</i>, mentre su quello delle ordinate quello di log <i>f</i>(<i>x</i>). A questo tipo di rappresentazione si ricorre anche quando <i>f</i>(<i>x</i>) cresce così rapidamente da richiedere una compessione troppo elevata della scala (unità di misura) sull'asse delle ordinate o in quella delle ascisse. Basi penare al garafico di <i>f</i>(<i>x</i>) = e<sup>x</sup> che in scala semilogaritmica coincide con ... la bisettrice del 1° quadrante:</p>
+
+<figure>
+<img src="img/semilog.png" alt="scala semilogaritmica"/>
+<figcaption>a) Grafico di <i>f</i>(<i>x</i>) = e<sup><i>x</i></sup> in scala normale; b) e in scala semilogaritmica.</figcaption>
+</figure>
+
+<p id="el">Altra variante possibile è quella dei grafici in scala logaritmica, in cui invece di <i>x</i> sull'asse delle ascisse si collocano i valori di log <i>x</i>; lo stesso si fa con <i>f</i> sull'asse delle ordinate. <br> La pendenza della retta tangente a un grafico in scala logaritmica (cioè la derivata di log <i>f</i> rispetto a log <i>x</i>) rapprsenta il tasso di variazione relativa di <i>f</i> rispetto a variazioni relative di <i>x</i>; questa quantità prende il nome di <i>elasticità</i> di <i>f</i> e si indica <i>E</i>(<i>x</i>).</p>
+
+<img src="img/elasticità.png" alt="Elasticità"/>
+
+<p>Per trovare l'espressione analitica di <i>E</i>(<i>x</i>), osserviamo che, per il teorema di derivazione delle funzioni composte, si ha, posto <i>u</i> = log <i>x</i>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>f</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>u</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>u</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\frac{\text{d} \log f}{\text{d}x} = \frac{\text{d} \log f}{\text{d}u} \cdot \frac{\text{d}u}{\text{d}x} $$ -->
+
+<p>ovvero</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mi>E</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{f'(x)}{f(x)} = E(x) \frac{1}{x} $$ -->
+
+<p>da cui si ricava</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>E</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>x</mi>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ E(x) = x \frac{f'(x)}{f(x)} $$ -->
+
+<p><b>Esempio 5.6.9</b>. Se <i>f</i>(<i>x</i>) = <i>x<sup>&alpha;</sup></i>, <i>x</i> &gt; 0,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>E</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>x</mi>
+  <mfrac>
+    <mrow>
+      <mi>&#x3B1;</mi>
+      <msup>
+        <mi>x</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>&#x3B1;</mi>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mi>&#x3B1;</mi>
+</math>
+
+<!-- $$ E(x) = x\frac{\alpha x^{\alpha-1}}{x^\alpha} = \alpha $$ -->
+
+<p>ossia le potenze hanno elasticità costante. In realtà, si può mostrare che sono le uniche funzioni ad avere questa proprietà.</p>
+
+<h2>Derivative of a periodic function</h2>
+
+<p>Let <i>f</i>: <i>I</i> ⟶ ℝ be a differentiable function, with period <i>T</i>, that is <i>f</i>(<i>x</i> + <i>T</i>) = <i>f</i>(<i>x</i>) &forall;<i>x</i> &in; <i>I</i>, then <i>f'</i> is also periodic with period <i>T</i>. We have  if <i>f</i> is differentiable at <i>x</i>,</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+    <mtr>
+      <mtd>
+        <msup>
+          <mi>f</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>T</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo movablelimits="true" form="prefix">lim</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>h</mi>
+            <mo stretchy="false">&#x2192;<!-- → --></mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>T</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>T</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd />
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <munder>
+          <mo movablelimits="true" form="prefix">lim</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>h</mi>
+            <mo stretchy="false">&#x2192;<!-- → --></mo>
+            <mn>0</mn>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>h</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mi>h</mi>
+        </mfrac>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd />
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <msup>
+          <mi>f</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<p>Let <i>f</i>: ℝ → ℝ be periodic with period <i>T</i>.</p>
+
+<ul>
+	<li><p>The range of <i>f</i> is precisely <i>f</i>([0,<i>T</i>]); in particular, if <i>f</i> is continuous, the range of <i>f</i> is bounded.</p></li>
+	<li><p>If f is differentiable, then f′ is periodic with period T.</p></li>
+</ul>
+
+<p><b>Example 1</b>. Verify whether <i>f</i>(<i>x</i>) = sin(<i>x</i><sup>2</sup>) is a periodic function. Note that <i>f</i>(<i>x</i>) = sin(<i>x</i><sup>2</sup>) is differentiable and <i>f′</i>(<i>x</i>)= 2<i>x</i> ⋅ cos(<i>x</i><sup>2</sup>) which is unbounded. Therefore, f′ cannot be periodic by the first point, and hence <i>f </i> cannot be periodic by the second point. &emsp; ■</p>
+
+<section aria-label="End">
+<a href="derivatives_algebra.html">«The algebra of derivatives</a>
+<a href="index.html">Index</a>
+<a href="D_inv.html">Derivata di una funzione inversa»</a>
+</section>
+
+</article>
+
+</body>
+</html>

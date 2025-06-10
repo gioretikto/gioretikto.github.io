@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Soluzione di alcuni problemi di massimo e minimo"/>
+	<title>Soluzione di alcuni problemi di massimo e minimo</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Soluzione di alcuni problemi di massimo e minimo</h1>
+
+<p>Uno degli usi più proficui del calcolo differenziale consiste nella ricerca dei massimi e minimi (in breve, nell'<i>ottimizzazione</i>) di una funzione. Ecco alcuni problemi di ottimizzazione in ambiti diversi.</p>
+
+<h2 id="Fermat">Legge della riflessione</h2>
+
+<p>Vogliamo ricavare la legge sugli angoli di riflessione dal principio di Fermat. A tale scopo consideriamo, in un mezzo omogeneo, un raggio luminoso riflesso da uno specchio curvo. Immaginiamo che la sezione dello specchio coincida con il grafico di una funzione <i>y</i> = <i>f</i>(<i>x</i>), derivabile. Possiamo sempre scegliere il sistema di riferimento in modo che il punto di riflessione sia l'origine (0,0) e che l'asse <i>x</i> sia diretto come la tangente allo specchio nell'origine. Di conseguenza abbiamo</p>
+
+<div class="eq">
+<p><i>f</i>(0) = 0, &emsp; <i>f'</i>(0) = 0</p>
+</div>
+
+<img src="img/riflessione.png" alt="riflessione"/>
+
+<p>Con riferimento alla figura sopra, <i>P</i> è un punto "sul raggio incidente" e <i>Q</i> è un punto "sul raggio riflesso". Il punto <i>A</i> è un altro punto sullo specchio. Quello che dobbiamo mostrare è che, poiché il tempo impiegato dal raggio per andare da <i>P</i> a <i>Q</i> è minimo (<b>principio di Fermat</b>: Fermat's principle states that the path taken by a ray between two given points is the path that can be traveled in the least time), deve risultare î = r̂.<br> Ora, la velocità della luce è costante in un mezzo omogeneo e non varia dopo la riflessione e, pertanto, minimizzare il tempo di percorrenza da <i>P</i> a <i>Q</i> equivale a minimizzare il percorso <i>S</i> = <span class="overline">PA</span> + <span class="overline">AQ</span>. <br> Siano (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) le coordinate di <i>P</i>(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) quelle di <i>Q</i> e (<i>x,f</i>(<i>x</i>)) quelle di <i>A</i>. <br> Si ha:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>0</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>0</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo>+</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mo stretchy="false">(</mo>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo>&#x2212;</mo>
+    <msub>
+      <mi>y</mi>
+      <mn>1</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$ S(x) = \sqrt {(x - x_0)^2 + (f(x) - y_0)^2} + \sqrt {(x - x_1)^2 + (f(x) - y_1)^2} $$ -->
+
+<p>La funzione <i>S</i> = <i>S</i>(<i>x</i>) deve avere un minimo in <i>x</i> = 0, ascissa del punto di flessione e perciò deve essere <i>S'</i>(0) = 0.<br>Essendo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>S</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mo stretchy="false">[</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>y</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">]</mo>
+      <mo>&#x22C5;</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <msqrt>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>y</mi>
+        <mn>0</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mo stretchy="false">[</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>y</mi>
+        <mn>1</mn>
+      </msub>
+      <mo stretchy="false">]</mo>
+      <mo>&#x22C5;</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <msqrt>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>y</mi>
+        <mn>1</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+</math>
+
+<!-- $$ S'(x) = \frac{(x - x_0) + [f(x) - y_0] \cdot f'(x)} {\sqrt {(x - x_0)^2 + (f(x) - y_0)^2}} + \frac{(x - x_1) + [f(x) - y_1] \cdot f'(x)} {\sqrt {(x - x_1)^2 + (f(x) - y_1)^2}} $$ -->
+
+<p>S'(0) = 0 equivale a (ricordando che <i>f</i>(0) = 0, &emsp; <i>f'</i>(0) = 0)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mtext>&emsp;(5.11.1)</mtext>
+</math>
+
+<!-- $$\frac{-x_0}{ \sqrt{x_0^2 + y_0^2}} + \frac{-x_1}{ \sqrt{x_1^2 + y_1^2}} = 0 $$ -->
+
+<p>Ma</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <msubsup>
+      <mi>x</mi>
+      <mn>0</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <msubsup>
+      <mi>y</mi>
+      <mn>0</mn>
+      <mn>2</mn>
+    </msubsup>
+  </msqrt>
+  <mo>=</mo>
+  <mover>
+    <mrow>
+      <mi>P</mi>
+      <mi>O</mi>
+    </mrow>
+    <mo accent="true">&#x2015;</mo>
+  </mover>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>e</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>=</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>i</mi>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+</math>
+
+<!-- $$\sqrt{x_0^2 + y_0^2} = \overline{PO} \quad \text{e} \quad \frac{-x_0}{ \sqrt{x_0^2 + y_0^2}} = \sin \hat{i} $$ -->
+
+<p>mentre</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <msubsup>
+      <mi>x</mi>
+      <mn>1</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <msubsup>
+      <mi>y</mi>
+      <mn>1</mn>
+      <mn>2</mn>
+    </msubsup>
+  </msqrt>
+  <mo>=</mo>
+  <mover>
+    <mrow>
+      <mi>Q</mi>
+      <mi>O</mi>
+    </mrow>
+    <mo accent="true">&#x2015;</mo>
+  </mover>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>e</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mfrac>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>=</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>r</mi>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+</math>
+
+<!-- $$\sqrt{x_1^2 + y_1^2} = \overline{QO} \quad \text{e} \quad \frac{x_1}{ \sqrt{x_1^2 + y_1^2}} = \sin \hat{r} $$ -->
+
+<p>Da (5.11.1) si deduce</p>
+
+<div class="eq">
+<p>sin î = sin r̂</p>
+</div>
+
+<p>che implica (essendo 0 &lt; î, r̂ &lt; &pi;/2), î = r̂. &emsp;■</p>
+
+<h2 id="Snell">Legge della rifrazione</h2>
+
+<p>Quando un raggio luminoso passa da un mezzo omogeneo a un altro (aria → acqua, ad es.) la sua velocità cambia. Supponiamo che i due mezzi siano separati da una superficie piana e che la velocità (scalare) nei due mezzi sia <i>v</i><sub>1</sub> nel primo e <i>v</i><sub>2</sub> nel secondo. <br> Nel passare da un mezzo all'altro, un raggio luminoso cambia direzione di propagazione (viene cioè <i>rifratto</i>) ma raggio incidente e raggio rifratto giacciono in un piano verticale alla superficie di separazione. <br> Fissiamo il sistema di riferimento in modo che l'asse <i>x</i> sia sulla superficie di separazione e che il punto di rifrazione sia l'origine. <br> Sia <i>P</i> = (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) un punto sul raggio incidente,  <i>Q</i> = (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) un punto sul raggio rifratto e <i>A</i> = (<i>x</i>, 0) un altro punto sull'asse <i>x</i>. <br> In base al principio di Fermat, il percorso <i>POQ</i>, scelto dal raggio luminoso, è quello che minimizza il tempo di percorrenza da <i>P</i> a <i>Q</i>.</p>
+
+<img src="img/rifrazione.png" alt="rifrazione"/>
+
+<p>Ora, per un qualunque percorso <i>PAQ</i> il tempo <i>T</i> = <i>T</i>(<i>x</i>) di percorrenza è dato da (tempo = spazio/velocità)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>T</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mover>
+      <mrow>
+        <mi>P</mi>
+        <mi>A</mi>
+      </mrow>
+      <mo accent="true">&#x2015;</mo>
+    </mover>
+    <msub>
+      <mi>v</mi>
+      <mn>1</mn>
+    </msub>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mover>
+      <mrow>
+        <mi>A</mi>
+        <mi>Q</mi>
+      </mrow>
+      <mo accent="true">&#x2015;</mo>
+    </mover>
+    <msub>
+      <mi>v</mi>
+      <mn>2</mn>
+    </msub>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <msqrt>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+    <msub>
+      <mi>v</mi>
+      <mn>1</mn>
+    </msub>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <msqrt>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+    <msub>
+      <mi>v</mi>
+      <mn>2</mn>
+    </msub>
+  </mfrac>
+</math>
+
+<!-- $$ T(x) = \frac{\overline{PA}} {v_1} + \frac{\overline{AQ}} {v_2} = \frac{\sqrt {(x-x_0)^2 + y_0^2}} {v_1} + \frac{\sqrt {(x-x_1)^2 + y_1^2}} {v_2}$$ -->
+
+<p>e quindi il principio di Fermat implica <i>T'</i>(0) = 0.</p>
+
+<p>Poiché</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>T</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>v</mi>
+        <mn>1</mn>
+      </msub>
+      <msqrt>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msubsup>
+          <mi>y</mi>
+          <mn>0</mn>
+          <mn>2</mn>
+        </msubsup>
+      </msqrt>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>v</mi>
+        <mn>2</mn>
+      </msub>
+      <msqrt>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2212;</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>1</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msubsup>
+          <mi>y</mi>
+          <mn>1</mn>
+          <mn>2</mn>
+        </msubsup>
+      </msqrt>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ T(x) = \frac{x-x_0}{ v_1 \sqrt{(x-x_0)^2 + y_0^2}} + \frac{x-x_1}{v_2 \sqrt{(x-x_1)^2 + y_1^2}} $$ -->
+
+<p>l'equazione <i>T'</i>(0) = 0 equivale a</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mn>1</mn>
+    <msub>
+      <mi>v</mi>
+      <mn>1</mn>
+    </msub>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msub>
+      <mi>v</mi>
+      <mn>2</mn>
+    </msub>
+  </mfrac>
+  <mfrac>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mtext>&emsp;(5.11.2)</mtext>
+</math>
+
+<!-- $$ \frac{1}{v_1} \frac{-x_0} {\sqrt{x_0^2 + y_0^2}} - \frac{1}{v_2} \frac{x_1} {\sqrt{x_1^2 + y_1^2}} = 0 $$ -->
+
+<p>Osservando che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>=</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>i</mi>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>e</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mfrac>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <msqrt>
+      <msubsup>
+        <mi>x</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <msubsup>
+        <mi>y</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+    </msqrt>
+  </mfrac>
+  <mo>=</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>r</mi>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+</math>
+
+<!-- $$ \frac{-x_0} {\sqrt{x_0^2 + y_0^2}} = \sin \hat{i} \quad \text{e} \quad \frac{x_1} {\sqrt{x_1^2 + y_1^2}} = \sin \hat{r} $$ -->
+
+<p>Dalla (5.11.2) si deduce</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>i</mi>
+          <mo stretchy="false">^</mo>
+        </mover>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mover>
+          <mi>r</mi>
+          <mo stretchy="false">^</mo>
+        </mover>
+      </mrow>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <msub>
+      <mi>v</mi>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mi>v</mi>
+      <mn>2</mn>
+    </msub>
+  </mfrac>
+</math>
+
+<!-- $$ \frac{\sin \hat{i}}{\sin \hat{r}} = \frac{v_1}{v_2} $$ -->
+
+<p>che si chiama <i>legge di Snell</i> della rifrazione.</p>
+
+<h2>Iscrizione di un cilindro all'interno di un cono</h2>
+
+<p>Iscrivere in un cono circolare retto di altezza <i>h</i> e raggio di base <i>R</i>, un cilindro di volume massimo.</p>
+
+<figure>
+<img src="img/cono.png" alt="cono"/>
+<figcaption><span class="overline">AC</span> = R, <span class="overline">CB</span> = <i>h</i>.</figcaption>
+</figure>
+
+<p>Con riferimento alla fig. 2, occorre scegliere <span class="overline">CH</span> = <i>x</i> in modo che il volume &pi;<span class="overline">CH</span> ⋅ <span class="overline">CD</span><sup>2</sup> sia massimo. Poiché i triangoli CAB e DAK sono simili, si ha <span class="overline">DA</span> = <i>x</i> ⋅ <i>R</i>/<i>h</i> e quindi <span class="overline">CD</span> = <i>R</i> &minus; <span class="overline">DA</span> = <i>R</i> &minus; <i>Rx</i>/<i>h</i>. <br> Il volume da massimizzare è quindi dato da</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>V</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>&#x3C0;</mi>
+  <mi>x</mi>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mi>R</mi>
+      <mo>&#x2212;</mo>
+      <mfrac>
+        <mrow>
+          <mi>R</mi>
+          <mi>x</mi>
+        </mrow>
+        <mi>h</mi>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mi>&#x3C0;</mi>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mi>R</mi>
+        <mi>h</mi>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mi>x</mi>
+  <mo>&#x22C5;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>h</mi>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mn>0</mn>
+  <mo>&lt;</mo>
+  <mi>x</mi>
+  <mo>&lt;</mo>
+  <mi>h</mi>
+</math>
+
+<!-- $$V(x) = \pi x \cdot \left(R - \frac{Rx}{h} \right)^2 = \pi \left(\frac{R}{h} \right)^2 x \cdot (h-x)^2 \quad 0 \lt x \lt h $$ -->
+
+<p>Si ha <i>V'</i>(<i>x</i>) = &pi;(<i>R</i>/<i>h</i>)<sup>2</sup> [(<i>h</i> &minus; <i>x</i>)<sup>2</sup> &minus; 2<i>x</i> (<i>h</i> &minus; <i>x</i>)]. Annullando <i>V'</i>(<i>x</i>) si trova</p>
+
+<div class="eq">
+<p>0 = (<i>h</i> &minus; <i>x</i>)<sup>2</sup> &minus; 2<i>x</i> (<i>h</i> &minus; <i>x</i>) = (<i>h</i> &minus; <i>x</i>) [<i>h</i> &minus; <i>x</i> &minus; 2<i>x</i>] = (<i>h</i> &minus; <i>x</i>) (<i>h</i> &minus; 3<i>x</i>)</p>
+</div>
+
+<p>da cui <i>x</i> = <i>h</i>/3, essendo <i>x</i> = <i>h</i> corrisponde a un cono degenere di volume 0. Poiché <i>V'</i>(<i>x</i>) &gt; 0 per <i>x</i> &lt; <i>h</i>/3, <i>x</i> = <i>h</i>/3 è effettivamente punto di massimo, corrispondente al volume</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>V</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mi>h</mi>
+      <mn>3</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mn>4</mn>
+    <mn>27</mn>
+  </mfrac>
+  <mi>&#x3C0;</mi>
+  <mi>h</mi>
+  <msup>
+    <mi>R</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$V\left(\frac{h}{3} \right) = \frac{4}{27} \pi h R^2 $$ -->
+
+<h2>Efficienza della produzione</h2>
+
+<p>Consideriamo ora il problema dell'efficienza della produzione di un dato bene, il cui costo medio (per unità di prodotto) sia <i>c</i>(<i>p</i>)/<i>p</i>. Per ottenre il massimo di efficienza occorre minimizzare il costo medio e perciò, supponendo la funzione <i>c</i> = <i>c</i>(<i>p</i>) derivabile dovrà essere</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mtext>d</mtext>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>p</mi>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <mi>c</mi>
+      <mo stretchy="false">(</mo>
+      <mi>p</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>p</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>c</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>p</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x22C5;</mo>
+      <mi>p</mi>
+      <mo>&#x2212;</mo>
+      <mi>c</mi>
+      <mo stretchy="false">(</mo>
+      <mi>p</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <msup>
+      <mi>p</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \frac{\text{d}} {\text{d}p} \frac{c(p)}{p} = \frac{c'(p) \cdot p - c(p)}{p^2} = 0 $$ -->
+
+<p>Se <i>p</i><sub>0</sub> è punto di minimo dovrà quindi verificarsi che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>c</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>p</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>c</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>p</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <msub>
+      <mi>p</mi>
+      <mn>0</mn>
+    </msub>
+  </mfrac>
+  <mtext>&emsp;(5.11.3)</mtext>
+</math>
+
+<!-- $$c'(p_0) = \frac{c(p_0)}{p_0} $$ -->
+
+
+<p>ossia: <b>costo marginale</b> = <b>costo medio</b>. La (5.11.3) si può riscrivere come <i>p</i><sub>0</sub>c'(p<sub>0</sub>)/c(<i>p</i><sub>0</sub>) = 1 e significa che l'<i>elasticità di c nel punti p<sub>0</sub></i> è uguale a 1. <br> </p>
+
+<figure>
+<img src="img/elast.png" alt="elasticità"/>
+<figcaption>tg <i>&omega;</i> = <i>c'</i>(<i>p</i><sub>0</sub>) = <i>c</i>(<i>p</i><sub>0</sub>)/<i>p</i><sub>0</sub>.</figcaption>
+</figure>
+
+<p>Se <i>p</i><sub>0</sub> verifica la (5.11.3), la retta <i>OQ</i>, di coefficiente angolare <i>c</i>(<i>p</i><sub>0</sub>)/<i>p</i><sub>0</sub>, coincide con la retta tangente al grafico di <i>c</i> = <i>c</i>(<i>p</i>) nel punto <i>Q</i>, di coefficiente angolare <i>c'</i>(<i>p</i><sub>0</sub>). <br>Queste condiderazioni indicano che non sempre esiste un punto <i>p</i><sub>0</sub> che soddisfa (5.11.3) e che, se esiste, può non essere unico (v. fig. b).</p>
+
+<figure>
+<img src="img/elasticità.png" alt="elasticità"/>
+<figcaption>a) Non esistono punti ad elasticità 1; b) <i>p</i><sub>0</sub> e <i>p</i><sub>1</sub> sono punti ad elasticità 1.</figcaption>
+</figure>
+
+<h2>Passaggio di un tubo attraverso un condott</h2>
+
+<p>Consideriamo il problema del passaggio di un tubo di lunghezza 4 m, con sezione trascurabile, attraverso il cunicolo in Fig. e scegliamo il riferimento cartesiano come in Fig.</p>
+
+<img src="img/tubo_cunicolo.png" alt="tubo cunicolo"/>
+
+<p>Riflettendo sul problema, si noterà subito che il passaggio è possibile se la lunghezxza del tubo è minore della minima lunghezza dei possibili segmenti <i>APB</i>. <br>L'equazione della retta <i>AP</i> è</p>
+
+<div class="eq">
+<p><i>y</i> = (<i>x</i> &minus; <i>a</i>)/(2 &minus; <i>a</i>)</p>
+</div>
+
+<p>Se <i>a</i> &gt; 2, la retta interseca il semiasse positivo delle <i>y</i> nel punto <i>B</i> = (0, <i>a</i>/(<i>a</i> &minus; 2). La lunghezza del segmento <i>AB</i>, da minimizzare, è data allora da:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>L</mi>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msqrt>
+    <msup>
+      <mi>a</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mrow data-mjx-texclass="INNER">
+        <mo data-mjx-texclass="OPEN">(</mo>
+        <mfrac>
+          <mi>a</mi>
+          <mrow>
+            <mi>a</mi>
+            <mo>&#x2212;</mo>
+            <mn>2</mn>
+          </mrow>
+        </mfrac>
+        <mo data-mjx-texclass="CLOSE">)</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math>
+
+<!-- $$L(a) = \sqrt{a^2 + \left (\frac{a}{a-2} \right)^2} $$ -->
+
+<p>Poiché la radice quadrata è una funzione crescente basterà minimizzare il suo argomento</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>L</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msup>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mi>a</mi>
+        <mrow>
+          <mi>a</mi>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mrow>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>a</mi>
+  <mo>&gt;</mo>
+  <mn>2</mn>
+</math>
+
+<!-- $$L_0(a) = a^2 + \left(\frac{a}{a-2} \right)^2 \quad a \gt 2 $$ -->
+
+<p>Si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>L</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>a</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>2</mn>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mi>a</mi>
+        <mo>&#x2212;</mo>
+        <mn>2</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>3</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$L'(a) = 2a \left(1 - \frac{2}{(a-2)^3} \right) $$ -->
+
+<p>L'(<i>a</i>) = 0 per (<i>a</i> &minus; 2)<sup>2</sup> = 2 cioè <i>a</i> = ∛2 + 2, che è punto di minimo come facilmente si verifica. La lunghezza minimia è quindi</p>
+
+<div class="eq">
+<p><i>L</i>(∛2 + 2) = sqrt(5 + 3 ∛4 + 3 ∛16) ≃ 4.16</p>
+</div>
+
+<p>Essendo 4.16 &gt; 4, il tubo può passare. &emsp; ■</p>
+
+<p>Trovare il massimo o il minimo di una funzione è anche un modo per <i>dimostrare disuguaglianze</i>, altra tipica appliczione del calcolo differenziale.</p>
+
+<p>Trovare la più piccola costante <i>c<sub>n</sub></i> &gt; 0 per cui è versa la seguente disuguaglianza:</p>
+
+<div class="eq">
+<p>(<i>a</i> + <i>b</i>)<sup><i>n</i></sup> &le; <i>c<sub>n</sub></i> (<i>a<sup>n</sup></i> + <i>b<sup>n</sup></i>) &emsp;&forall;<i>a,b</i> &gt; 0</p>
+</div>
+
+<p>(dove <i>n</i> è un intero positivo fissato).</p>
+
+<p>Anzitutto osserviamo che, per <i>a,b</i> &gt; 0, è sempre</p>
+
+<div class="eq">
+<p>(<i>a</i> + <i>b</i>)<sup><i>n</i></sup> (<i>a</i> + <I>b</i>)<sup><i>n</i></sup></p>
+</div>
+
+<p>(basta sviluppare la potenza di (<i>a</i> + <i>b</i>)); si chiede di dimostrare che vale anche una disuguaglianza di segno opposto, per una opportuna costante <i>c<sub>n</sub></i>. Si osservi che la costante <i>più piccola</i> per cui questo è vero è la costante <i>migliore</i>, cioè quella per cui la disuguaglianza dà l'informazione più precisa. Anzitutto riduciamo il problema ad un problema in una sola variabile anziché due: basta raccogliere <i>b<sup>n</sup></i> ad ambo i membri e semplificare:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mi>b</mi>
+    </mfrac>
+    <mo>+</mo>
+    <mn>1</mn>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x2264;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msup>
+      <mrow data-mjx-texclass="INNER">
+        <mo data-mjx-texclass="OPEN">(</mo>
+        <mfrac>
+          <mi>a</mi>
+          <mi>b</mi>
+        </mfrac>
+        <mo data-mjx-texclass="CLOSE">)</mo>
+      </mrow>
+      <mi>n</mi>
+    </msup>
+    <mo>+</mo>
+    <mn>1</mn>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ \left( \frac{a}{b} + 1 \right) \le \left( \left(\frac{a}{b} \right)^n + 1 \right) $$ -->
+
+<p>e porre <i>t</i> = <i>a</i>/<i>b</i>:</p>
+
+<div class="eq">
+<p>(1 + <i>t</i>)<sup><i>n</i></sup> &le; <i>c<sub>n</sub></i>(<i>t<sup>n</sup></i> + 1)</p>
+</div>
+
+<p>Sia ora</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>t</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$f(t) = \frac{(t + 1)^n}{t^n +1} $$ -->
+
+<p>La disuguaglianze da dimostrare è <i>f</i>(<i>t</i>) &le; <i>c<sub>n</sub></i> per ogni <i>t</i> &gt; 0, e la minima costante per cui questo è vero è il <i>massimo di f in</i> (0, &infin;). Ci siamo ricondotti ad un consueto problema di massimizzazione di una funzione di una variabile. Calcoliamo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mi>n</mi>
+      <msup>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>t</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>t</mi>
+        <mi>n</mi>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>t</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2265;</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>per&#xA0;</mtext>
+  <mi>t</mi>
+  <mo>&#x2264;</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$f'(t) = \frac{n(t+1)^{n-1} - n t^{n-1} (t + 1)^n} { (t^n +1)^2 } = \frac{n(t+1)^{n-1}}{(t^n +1)^2} (1 - t^{n-1} ) \ge 0 \quad \text{per } t \le 1 $$ -->
+
+<p>Quindi <i>t</i> = 1 è il punto di massimo, e il massimo è</p>
+
+<div class="eq">
+<p><i>c<sub>n</sub></i> = <i>f</i>(1) = 2<sup><i>n</i> &minus; 1</sup></p>
+</div>
+
+<section aria-label="End">
+<a href="maxmin.html">&#171;Ricerca di massimi e minimi</a>
+<a href="index.html">Index</a>
+<a href="Hopital.html">Il T. di de l'Hospital &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

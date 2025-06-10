@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Formula di Taylor-MacLaurin con resto secondo Lagrange">
+	<title>Formula di Taylor-MacLaurin con resto secondo Lagrange</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Formula di Taylor-MacLaurin con resto secondo Lagrange</h1>
+
+<p>Nella formula di Taylor con resto secondo Peano, l'informazione che abbiamo sull'errore commesso nell'approssimare <i>f</i> col suo polinomio di Taylor-MacLaurin è di tipo dinamico: al tendere a zero dell'incremento (<i>x</i> − <i>x</i><sub>0</sub>), sappiamo che il resto tende a zero più rapidamente di (<i>x</i> − <i>x</i><sub>0</sub>)<sup><i>n</i></sup>. Questa informazione, come abbiamo visto, è utile ad es. nel calcolo dei limiti. Per un valore fissato dell'incremento (<i>x</i> − <i>x</i><sub>0</sub>), però, la formula di Taylor con resto secondo Peano non dice nulla sull'entità dell'errore commesso. In varie questioni di calcolo approssimato è essenziale invece stimare l'errore che si commettte approssimando una funzione col suo polinomio di Taylor-MacLaurin, quando l'incremento (<i>x</i> − <i>x</i><sub>0</sub>) ha un valore fissato, o un valore che non supera una soglia fissata. <br> Ad es., sappiamo che il polinomio di Taylor-MacLaurin al 3° ordine di <i>e<sup>x</sup></i> è</p>
+
+<div class="eq">
+<p><i>T</i><sub>3</sub>(<i>x</i>) = 1 + <i>x</i> + <i>x</i><sup>2</sup>/2 + <i>x</i><sup>3</sup>/6</p>
+</div>
+
+<p>Se volessimo utilizzare questo fatto per calcolare un valore approssimato di &radic;<i>e</i>, ossia pensassimo di approssimare</p>
+
+<div class="eq">
+<p>e<sup>1/2</sup> con <i>T</i><sub>3</sub> (1/2) = 79/48</p>
+</div>
+
+<p>come potremmo stimare <i>a priori</i> (ossia senza conoscenere già il valore vero di &radi;<i>e</i>) di quanto stiamo sbagliando?<br> A questo tipo di problema risponde il prossimo teorema, che dà un modo alternativo di quantificare l'errore di approssimazione commesso:</p>
+
+<p><b>Teorema 5.20.1 (Formula di Taylor all'ordine <i>n</i> con resto secondo Lagrange)</b>. Sia <i>f</i> : [<i>a,b</i>] ⟶ ℝ derivabile <i>n</i> + 1 volte in [<i>a,b</i>], e sia <i>x</i><sub>0</sub> &in; [<i>a,b</i>]. Allora esiste un punto <i>c</i> compreso tra <i>x</i><sub>0</sub> e <i>x</i> tale che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+<mtext>&emsp;(5.20.2)</mtext>
+</math>
+
+<!-- $$ f(x) = T_{n,x_0}(x) + \frac{f^{(n+1)} (c)} {(n+1)!} (x - x_0)^{n+1} $$ -->
+
+<p>La formula precedente si dice "formula di Taylor (o di MacLaurin se <i>x</i><sub>0</sub> = 0) di ordine <i>n</i>, con resto secondo Lagrange".</p>
+
+<p>La formula ha la struttura:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>T<sub>n</sub></i>(<i>x</i>) + <i>R<sub>n</sub></i>(<i>x</i>) <br>
+funzione da approssimare = polinomio approssimante + errore di approssimazione</p>
+</div>
+
+<p>dove l'errore di approssimazione è il termine <i>f</i><sup>(<i>n</i>+1)</sup>(<i>c</i>)/(<i>n</i> +1)! (<i>x</i> − <i>x</i><sub>0</sub>)<sup><i>n</i>+1</sup>, detto <i>resto secondo Lagrange</i>.<br> Per <i>n</i> = 0, la formula di Taylo scritta sopra coincide col <a href="Lagrange.html">Teorema di Lagrange</a>. <br> Si noti che il punto <i>c</i> dipende da <i>x</i><sub>0</sub>,<i>x</i> e <i>n</i>, ed è compreso tra <i>x</i><sub>0</sub> e <i>x</i>. Se si riesce a dimostrare che |<i>f</i><sup>(<i>n</i> + 1)</sup>| &le; <i>M</i> per ogni <i>t</i> compreso tra <i>x</i><sub>0</sub> e <i>x</i>, allora la formula di Taylor con resto secondo Lagrange dice che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mi>M</mi>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>5.20.2
+  </msub>
+  <msup>
+    <mo stretchy="false">|</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+</math>
+
+<!-- $$|f(x) - T_{n,x_0}(x)| \le \frac{M}{(n+1)!} |x - x_0|^{n+1} $$ -->
+
+<p>che è appunto una stima dell'errore di approssimazione commesso.</p>
+
+<p><b>Esempio 5.20.3</b> Torniamo al problema di approssimare &radic;<i>e</i> mediante la formula di Taylor. Ponendo, nella (5.20.2), <i>f</i>(<i>x</i>) = <i>e<sup>x</sup></i>, <i>x</i><sub>0</sub> = 0, <i>x</i> = 1/2, <i>n</i> = 1/3, otteniamo</p>
+
+<div class="eq">
+<p>&radic;e = T<sub>3</sub>(1/2) + e<sup>c</sup>/4! (1/2)<sup>4</sup></p>
+</div>
+
+<p>Poiché per 0 &le; <i>c</i> &le; 1/2 è <i>e<sup>c</sup></i> &le; &radic;e &le; &radic;3, si ottiene</p>
+
+<div class="eq">
+<p>|&radic;e − T<sub>3</sub>(1/2)| &le; &radic;2/(2<sup>4</sup> ⋅ 4!) ≃ 0.0045</p>
+</div>
+
+<p>Questo significa che approssimando &radi;e con il valore 79/48 si commette un errore non superiore a 0.0045. &emsp;■</p>
+
+<p><b>Dimostrazione del Teorema 5.20.1</b> Proviamo la (5.20.2) nel caso <i>n</i> = 1. Ponendo per comodità <i>x</i><sub>0</sub> = <i>a</i>, <i>x</i> = <i>b</i> l'enunciato diviede: se <i>f</i>: [<i>a,b</i>] ⟶ ℝ è derivabile 2 volte in [<i>a,b</i>], allora esiste un punto <i>c</i> &in; [<i>a,b</i>] tale che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>b</i>) = <i>f</i>(<i>a</i>) + <i>f'</i>(<i>a</i>) (<i>b</i> − <i>a</i>) + <i>f''</i>(<i>c</i>)/2(<i>b</i> − <i>a</i>)<sup>2</sup></p>
+</div>
+
+<p>Poniamo <i>f</i>(<i>b</i>) &minus; {<i>f</i>(<i>a</i>) + <i>f'</i>(<i>a</i>) (<i>b</i> − <i>a</i>)} = <i>k</i>(<i>b</i> − <i>a</i>)<sup>2</sup> e cerchiamo di determinare la forma di <i>k</i>.<br>Consideriamo la funzione</p>
+
+<div class="eq">
+<p><i>g</i>(<i>x</i>) = <i>f</i>(<i>b</i>) &minus; <i>f</i>(<i>x</i>) &minus; <i>f'</i>(<i>x</i>)(<i>b</i> &minus; <i>x</i>) &minus; <i>k</i>(<i>b</i> &minus; <i>x</i>)<sup>2</sup></p>
+</div>
+
+<p>e aplichiamo ad essa il T. del valor medio. Poiché <i>g</i>(<i>b</i>) = <i>g</i>(<i>a</i>) = 0 (la seconda uguaglianza segue dalla definizione di <i>k</i>) si trova che ∃<i>c</i> &in; (<i>a,b</i>) tale che</p>
+
+<div class="eq">
+<p>0 = [<i>g</i>(<i>b</i>) &minus; <i>g</i>(<i>a</i>)]/(<i>b</i> &minus; <i>a</i>) = <i>g'</i>(<i>c</i>)</p>
+</div>
+
+<p>Ma <i>g′</i>(<i>x</i>) = <i>f'</i>(<i>x</i>) &minus; <i>f''</i>(<i>x</i>)(<i>b</i> &minus; <i>x</i>) + 2<i>k</i>(<i>b</i> &minus; <i>x</i>) = (<i>b</i> &minus; <i>x</i>) = (<i>b</i> &minus; <i>x</i>)[2<i>k</i> &minus; <i>f''</i>(<i>x</i>)] e quindi <i>g'</i>(<i>c</i>) = 0 implica, essendo <i>c</i> &ne; <i>b</i>:</p>
+
+<div class="eq">
+<p><i>k</i> = <i>f′′</i>(<i>c</i>)/2</p>
+</div>
+
+<p>Con lo stesso metodo si può dimostrare la (5.20.2) per <i>n</i> qualsiasi. Definiamo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>j</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>j</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>j</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mi>k</mi>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+</math>
+
+<!-- $$g(x) = f(b) - \sum_{j=0}^n \frac{f^{(j)}(x) (b-x)^j} {j!} - k(b-x)^{n+1} $$ -->
+
+<p>con <i>k</i> definito implicitamente dall'identità</p>
+
+<div class="eq">
+<p><i>f</i>(<i>b</i>) &minus; <i>T<sub>n,a</sub></i>(<i>b</i>) = <i>k</i>(<i>b</i> &minus; <i>a</i>)<sup><i>n</i>+1</sup> &emsp;(5.20.3)</p>
+</div>
+
+<p>Ora si procede così:</p>
+
+<ol type="a">
+	<li><p>Si verifica che <i>g</i>(<i>b</i>) = <i>g</i>(<i>a</i>) = 0</p>
+	
+<div class="eq">
+<p><i>g</i>(<i>b</i>) = <i>f</i>(<i>b</i>) - <i>f</i>(<i>b</i>) = 0<br>
+<i>g</i>(<i>a</i>) = <i>f</i>(<i>b</i>) &minus; <i>T<sub>n,a</sub></i>(<i>b</i>) &minus; <i>k</i>(<i>b</i> &minus; <i>a</i>)<sup><i>n</i> +1</sup> = 0 per definizione di <i>k</i>.</p>
+</div>
+
+</li>
+
+<li><p>Si applica il T. di Lagrange a <i>g</i> in [<i>a,b</i>], e si mostra che l'affermazione "∃<i>c</i> &in; (<i>a,b</i>) tale che <i>g′</i>(<i>c</i>) = 0 è esattamente la (5.20.2). Cominiamo a calcolare <i>g′</i>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msup>
+          <mi>g</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>j</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mo stretchy="false">(</mo>
+                <mi>j</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <mi>b</mi>
+            <mo>&#x2212;</mo>
+            <mi>x</mi>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mi>j</mi>
+            </msup>
+          </mrow>
+          <mrow>
+            <mi>j</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>j</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mo stretchy="false">(</mo>
+                <mi>j</mi>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <mi>b</mi>
+            <mo>&#x2212;</mo>
+            <mi>x</mi>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mrow data-mjx-texclass="ORD">
+                <mi>j</mi>
+                <mo>&#x2212;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+          <mrow>
+            <mo stretchy="false">(</mo>
+            <mi>j</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+            <mo stretchy="false">)</mo>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <mi>k</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+        <mi>x</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>j</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mo stretchy="false">(</mo>
+                <mi>j</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <mi>b</mi>
+            <mo>&#x2212;</mo>
+            <mi>x</mi>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mi>j</mi>
+            </msup>
+          </mrow>
+          <mrow>
+            <mi>j</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>j</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>&#x2212;</mo>
+            <mn>1</mn>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mo stretchy="false">(</mo>
+                <mi>j</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <mi>b</mi>
+            <mo>&#x2212;</mo>
+            <mi>x</mi>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mi>j</mi>
+            </msup>
+          </mrow>
+          <mrow>
+            <mi>j</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <mi>k</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+        <mi>x</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+            <mo stretchy="false">(</mo>
+            <mi>b</mi>
+            <mo>&#x2212;</mo>
+            <mi>x</mi>
+            <msup>
+              <mo stretchy="false">)</mo>
+              <mi>n</mi>
+            </msup>
+          </mrow>
+          <mrow>
+            <mi>n</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <mi>k</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+        <mi>x</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- $$\begin{align} g'(x) &= -\sum_{j=1}^{n} \frac{f^{(j+1)}(x)(b-x)^j}{j!} + \sum_{j=1}^{n} \frac{f^{(j)}(x)(b-x)^{j-1}}{(j-1)!} + k(n+1)(b-x)^n \\&= -\sum_{j=0}^{n} \frac{f^{(j+1)}(x)(b-x)^j}{j!} + \sum_{j=0}^{n-1} \frac{f^{(j+1)}(x)(b-x)^j}{j!} + k(n+1)(b-x)^n \\&=
+-\frac{f^{(n+1)}(x)(b-x)^n}{n!} + k(n+1)(b-x)^n
+\end{align} $$ -->
+
+<p>(dove nel secondo passaggio abbiamo eseguito una traslazione di indici nella sommatoria). <br> <i>g′</i>(<i>c</i>) = 0 significa:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>c</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mi>k</mi>
+  <mo stretchy="false">(</mo>
+  <mi>n</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo>&#x2212;</mo>
+  <mi>c</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$-\frac{f^{(n+1)}(c)(b-c)^n}{n!} + k(n+1)(b-c)^n = 0$$ -->
+
+<p>ossia</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>k</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>c</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$k = \frac{f^{(n+1)}(c)}{(n+1)!}$$ -->
+
+<p>che insierita nella (5.20.3) dà la tesi.</p></li>
+
+</ol>
+
+<p><b>Example 5.20.4</b>. The 3rd degree Taylor approximation for sin <i>x</i> with <i>x</i><sub>0</sub> = 0 is sin <i>x</i> ≈ <i>x</i> − <i>x</i><sup>3</sup>/3!. This gives an estimate for the value of sin (1) which is</p>
+
+<div class="eq">
+<p>sin 1 ≈ 1 − 1<sup>3</sup>/3!<br>
+≈ 1 − 0.1666.. = 0.8333...</p>
+</div>
+
+<p>But how accurate is this? The remainder formula tells us that the error R<sub>3</sub>(1) is given by</p>
+
+<div class="eq">
+<p>R<sub>3</sub>(1) = (sin <i>x</i>)<sup>(4)</sup>(<i>c</i>) (1)<sup>4</sup>/4!</p>
+</div>
+
+<p>for some <i>c</i> with 0 &le; <i>c</i> &le; 1. We don't know what this <i>c</i> is, but amazingly enough, we don't need to know what it is in order to bound R<sub>3</sub>(1). Sine the fourth derivative (sin x)<sup>(4)</sup> is equal to sin <i>x</i>, and the values of sin <i>x</i> are always beteween −1 and 1, we know that |(sin <i>x</i>)<sup>(4)</sup>(<i>c</i>)| &le; 1. So</p>
+
+<div class="eq">
+<p>|R<sub>3</sub>(1)| &le; 1/4! = 1/24 &le; 0.042</p>
+</div>
+
+<p>The error is no large than this number, no matter what the value of <i>c</i> might be. The remainder formula tells us that the true value of sin (1) lies between (0.8333... - 0.042) and (0.8333... + 0.042). Just to verify this, note that the actual value of sin (1) is 0.8414709848079..., which is within this range. &emsp;■</p>
+
+<h2>Formula di Taylor e convessità</h2>
+
+<p>Consideriamo la formula (5.20.2) con <i>n</i> = 1:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>f</i>(<i>x</i><sub>0</sub>) + <i>f'</i>(<i>x</i>)(<i>x</i> &minus; <i>x</i><sub>0</sub>) + <i>f′′</i>(<i>c</i>)/2 (<i>x</i> &minus; <i>x</i><sub>0</sub>)<sup>2</sup></p>
+</div>
+
+<p>e supponiamo che in ogni punto di (<i>a,b</i>) si abbia <i>f′′</i>(<i>x</i>) &ge; 0, ovvero <i>f</i> si convessa in (<i>a,b</i>). Allora si ha <i>f′′</i>(<i>c</i>)/2 (<i>x</i> &minus; <i>x</i><sub>0</sub>)<sup>2</sup> &ge; 0 e perciò si può scrivere, per ogni coppia di punti <i>x</i><sub>0</sub>,<i>x</i> &in; (<i>a,b</i>):</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &ge;  <i>f</i>(<i>x</i><sub>0</sub>) + <i>f′</i>(<i>x</i>)(<i>x</i> &minus; <i>x</i><sub>0</sub>) &emsp;(5.20.5)</p>
+</div>
+
+<p>La (5.20.5) significa geometricamente che il grafico di <i>f</i>(<i>x</i>) si mantiene in tutto (<i>a,b</i>) sopra il grafico della sua retta tangente in <i>x</i><sub>0</sub> (e questo vale per ogni scelta del punto <i>x</i><sub>0</sub> &in; (<i>a,b</i>)). Abbiamo dunque dimostrato che se una funzione (due volte derivabile) è convessa, è anche "convessa per tangenti" (v. <a href="concavità.html">T. 5.15.7</a>). <br>Se invece <i>f</i> è concava, ossia <i>f′′</i>(<i>x</i>) &le; 0 in tutto (<i>a,b</i>), la disuguaglianza (5.20.5) vale con "&le;" anziché &ge;: il grafico di <i>f</i>(<i>x</i>) si mantiene in tutto (<i>a,b</i>) sotto il grafico della sua retta tangente in <i>x</i><sub>0</sub>.</p>
+
+
+<section aria-label="End">
+<a href="Taylor.html">&#171;Formula di Taylor-MacLaurin con resto secondo Peano</a>
+<a href="index.html">Index</a>
+<a href="Taylor_Lagrange.html">Risoluzione approssimata di equazioni: il metodo di Newton &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

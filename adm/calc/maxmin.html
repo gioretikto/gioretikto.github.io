@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Finding the maximum/minimum values of a function"/>
+	<title>Finding the maximum/minimum values of a function</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Massimo e minimo di una funzione</h1>
+
+<p>Lo studio della funzione nei punti critici è basato sul teorema seguente.</p>
+
+<p><b>Teorema Teorema 5.10.1 (condizioni sufficienti per l'esistenza di un estremo)</b>. <i>f</i>: [<i>a,b</i>] ⟶ ℝ una funzione continua nell'intervallo [<i>a,b</i>] contentenente il punto critico <i>x</i><sub>0</sub> e derivabile in ogni punto di questo intervallo (tranne, al più, nel punto <i>x</i><sub>0</sub>). Se la derivata cambia il segno da più a meno quando passa da sinitra a destra del punto critico, la funzione ha un massimo per <i>x</i> = <i>x</i><sub>0</sub>. Se invece la derivata cambia il segno da meno a più, quando passa da sinistra a destra del punto <i>x</i><sub>0</sub>, la funzione ha un minimo in questo punto. <br> Così se <b>a)</b></p>
+
+<table class="centertable noborder">
+<tr><td><i>f'</i>(<i>x</i>) &gt; 0</td> <td>per</td> <td><i>x</i> &lt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &lt; 0</td> <td>per</td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+</table>
+
+<p>la funzione ammette un <i>massimo</i> nel punto <i>x</i><sub>1</sub>.</p>
+
+<p>Se <b>b)</b></p>
+
+<table class="centertable noborder">
+<tr><td><i>f'</i>(<i>x</i>) &lt; 0</td> <td>per</td> <td><i>x</i> &lt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &gt; 0</td> <td>per</td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+</table>
+
+<p>la funzione ammette in <i>minimo</i> nel punto <i>x</i><sub>0</sub>. Inoltre, si deve tener presente che le condizioni a) e b) debbono corrispondere a tutti i valori di <i>x</i> sufficientemente vicini a <i>x</i><sub>0</sub>, cioè a tutti i punti di un intorno sufficientemente piccolo del punto critico <i>x</i><sub>0</sub>.</p>
+
+<p><b>Dim.</b> Supponiamo dapprima che la derivata cambi il segno da più a meno, cioè per tutti gli <i>x</i> sufficientemente vicini al punto <i>x</i><sub>0</sub> abbiamo</p>
+
+<table class="centertable noborder">
+<tr><td><i>f'</i>(<i>x</i>) &gt; 0</td> <td>per</td> <td><i>x</i> &lt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &lt; 0</td> <td>per</td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+</table>
+
+<p>Applicando il T. di Lagrange alla differenza <i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>), si ottiene</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>) = <i>f</i>(<i>c</i>)(<i>x</i> − <i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>dove <i>c</i> è un punto compreso tra <i>x</i> e <i>x</i><sub>0</sub>.</p>
+
+<ol>
+	<li><p>Sia <i>x</i> &lt; <i>x</i><sub>0</sub>, allora</p>
+
+<div class="eq">
+<p><i>c</i> &lt; <i>x</i><sub>0</sub>, &emsp; <i>f'</i>(<i>c</i>) &gt; 0, &emsp; <i>f</i>(<i>c</i>)(<i>x</i> − <i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>e, di conseguenza,</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>ovvero</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &lt; <i>f</i>(<i>x</i><sub>0</sub>) &emsp;(<b>5.10.2</b>)</p>
+</div>
+
+</li>
+
+<li><p>Sia <i>x</i> &gt; <i>x</i><sub>0</sub>, allora</p>
+
+<div class="eq">
+<p><i>c</i> &gt; <i>x</i><sub>0</sub>, &emsp; <i>f'</i>(<i>c</i>) &lt; 0,&emsp; <i>f</i>(<i>c</i>)(<i>x</i> − <i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>e, di conseguenza,</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>) &lt; 0</p>
+</div>
+
+<p>ovvero</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) &lt; <i>f</i>(<i>x</i><sub>0</sub>) &emsp;(<b>5.10.3</b>)</p>
+</div>
+
+<p>Le relazioni (5.10.2) e (5.10.3) mostrano che per tutti i valori di <i>x</i>, sufficientemente vicini a <i>x</i>, il valore della funzione è inferiore al valore della funzione nel punto <i>x</i><sub>0</sub>. Ciò significa proprio che la funzione ammette un massimo nel punto <i>x</i><sub>0</sub>. Analogamente si dimostra la seconda parte. &emsp;□.</p>
+
+<p>Suppose we want to find maxima and minima of the function <i>f</i>: [<i>a,b</i>] ⟶ ℝ. If <i>f</i> is differentiable we can proceed as follows</p>
+
+<ol>
+	<li><p>Calculate the values <i>f</i>(<i>a</i>) and <i>f</i>(<i>b</i>).</p></li>
+	<li><p>Calculate <i>f'</i>(<i>x</i>) and solve the equation <i>f</i>'(<i>x</i>) = 0 to find the stationary points.</p></li>
+	<li><p>If there are no stationary points then <i>f</i>(<i>a</i>) and <i>f</i>(<i>b</i>) are extreme values. Conversely if <i>x</i><sub>0</sub> &in; (<i>a,b</i>) is a stationary point, that is <i>f'</i>(<i>x</i><sub>0</sub>) = 0.</p>
+
+<ul>
+	<li><p>If in a left neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &ge; 0 and in a right neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &le; 0, then <i>x</i><sub>0</sub> is a point of local maximum.</p></li>
+
+	<li><p>If in a left neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &le; 0 and in a right neighborhood of <i>x</i><sub>0</sub> we have <i>f'</i>(<i>x</i>) &ge; 0, then <i>x</i><sub>0</sub> is a point of local minimum.</p></li>
+</ul>
+
+<section>
+
+<table class="centertable">
+<tr><th colspan="2"><i>x</i><sub>0</sub> maximum point</th></tr>
+<tr><td>x &lt; <i>x</i><sub>0</sub></td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &ge; 0</td> <td><i>f'</i>(<i>x</i>) &le; 0</td></tr>
+<tr><td><i>f</i> ↗</td> <td><i>f</i> ↘</td> </tr>
+</table>
+
+<table class="centertable">
+<tr><th colspan="2"><i>x</i><sub>0</sub> minimum point</th></tr>
+<tr><td>x &lt; <i>x</i><sub>0</sub></td> <td><i>x</i> &gt; <i>x</i><sub>0</sub></td></tr>
+<tr><td><i>f'</i>(<i>x</i>) &ge; 0</td> <td><i>f'</i>(<i>x</i>) &le; 0</td></tr>
+<tr><td><i>f</i>↘ </td> <td><i>f</i>↗ </td> </tr>
+</table>
+
+</section>
+
+<figure>
+<img src="img/maxmin.png" alt="studio segno derivata prima"/>
+<figcaption>Segno della derivata prima e comportamento della funzione</figcaption>
+</figure>
+
+</li>
+
+<li><p>Once found the extrema we evaluate the function at these points and compare their values with those of <i>f</i>(<i>a</i>) and <i>f</i>(<i>b</i>)</p></li>
+
+</ol>
+
+<p><b>Esempio 5.10.1</b>. Sia <i>f</i>(<i>x</i>) = <i>xe</i><sup>−<i>x</i><sup>2</sup></sup> con <i>x</i> &in; [0,2]. Find the global maxima and minima of <i>f</i>.</p>
+
+<ol>
+	<li><p><i>f</i>(0) = 0, <i>f</i>(2) = 2e<sup>−4</sup>.</p></li>
+	<li><p><i>f</i>'(<i>x</i>) = <i>e</i><sup>−<i>x</i><sup>2</sup></sup> + <i>xe</i><sup>−<i>x</i><sup>2</sup></sup>(−2<i>x</i>) = <i>e</i><sup>−<i>x</i><sup>2</sup></sup>(1 − 2<i>x</i><sup>2</sup>)</p>
+
+<div class="eq">
+<p><i>f</i>'(<i>x</i>) = 0 &emsp;⇔&emsp; 1 − 2<i>x</i><sup>2</sup> = 0  &emsp;⇒&emsp; <i>x</i> = &pm; 1/√2.</p>
+</div>
+
+<p>Solo <i>x</i><sub>0</sub> = +1/√2 &in; [0,2] e perciò è questo l'unico punto stazionario.</p></li>
+
+<li><p>Studiamo ora il segno di <i>f'</i>, vicino a <i>x</i><sub>0</sub> = 1/√2:</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) &ge; 0 per 2<i>x</i><sup>2</sup> &le; 1 &ge;0 &emsp;for&emsp; −1/√2 &le; <i>x</i> &le; 1/√2</p>
+</div>
+
+<p>Si deduce quindi che <i>x</i><sub>0</sub> = 1/√2 è punto di massimo locale.</p></li>
+
+<li><p>Since there's only a stationary point we can compare the value of <i>f</i> 1/√2 with those at the boundaries:</p>
+
+<p><i>f</i>(1/√2) = 1/√2 ⋅ e<sup>−1/2</sup> = 1/1/√(2e) è maggiore sia di <i>f</i>(0) = 0 che di <i>f</i>(2) = 2/e<sup>4</sup>. Si conclude quindi che:</p>
+
+<div class="eq">
+<p><i>f</i>(0) = 0 &emsp; è minimo globale<br>
+<i>f</i>(1/√2) è massimo globale</p>
+</div>
+
+</li>
+
+<p>Si noti che in questo caso, il fatto che esista un solo punto stazionario con ordinata maggiore di quella agli estremi dell'intervallo, permette di trarre le stesse conclusioni anche senza lo studio del segno della derivata prima. <br> Un grafico qualitativo di <i>f</i> è il seguente</p>
+
+<figure>
+<img src="img/xeminus_x2.png" alt="xex^(-x^2)"/>
+<figcaption>Grafico in [0,2] di <i>f</i>(<i>x</i>) = <i>x</i>e<sup>&minus;x<sup>2</sup></i></sup>; si noti che <i>f</i>(<i>x</i>) ~ <i>x</i> &rarr; 0.</figcaption>
+</figure>
+
+<p>Se volessimo studiare i max e min locali di <i>f</i>(<i>x</i>) su tutto ℝ, il segno della derivata prima ci direbbe che</p>
+
+<div class="eq">
+<p><i>x</i> = 1/√2 è punto di max locale; &emsp;<i>x</i> = &minus;1/√2 è un punto di min locale&emsp;■</p>
+</div>
+
+<p id="diffr"><b>Esempio 5.10.2</b>. (Figura di diffrazione della luce attraverso una fenditura). Un fascio di luce che attraversa una piccola fenditura la cui larghezza è dello stesso ordine di grandezza della lunghezza d'onda della luce, produce, su uno schermo su cui incide, una figura di interferenza. <br>L'intensità luminosa in un punto dello schermo è data dalla funzione:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>I</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>I</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mfrac>
+            <mi>&#x3D5;</mi>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mfrac>
+          <mi>&#x3D5;</mi>
+          <mn>2</mn>
+        </mfrac>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$ I = I_0 \left(\frac{\sin \frac{\phi}{2}} {\frac{\phi}{2}} \right)^2 $$ -->
+
+<p>dove <i>I</i><sub>0</sub> è l'intensità massima (che si ottiene nel punto centrale) e l'angolo <i>&phi;</i> è collegato alla differenza di fase tra le due onde luminose che passano ai due estremi della fenditura. Cerchiamo i massimi e minimi di <i>I</i> in funzione di <i>&phi;</i>. Anzitutto, conviene porre <i>t</i> = &phi;/2 e cercare massimi e minimi della funzione</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>I</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>I</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mi>t</mi>
+        </mrow>
+        <mi>t</mi>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$ I = I_0 \left(\frac{\sin t} {t} \right)^2 $$ -->
+
+<p>(questo significa semplicemente cambiare scala sull'asse <i>&phi;</i>; basterà ricordare poi che <i>&phi;</i> = 2<i>t</i>). Il grafico qualitativo di questa funzione può essere tracciato facilmente, senza calcoli: la funzione sin <i>t</i>/<i>t</i> è pari, vale 1 in 0, ha infinite oscillazioni smorzate per <i>t</i> &rarr; &infin;; di conseguenza la funzione <i>I</i> = <i>I</i><sub>0</sub> (sin <i>t</i>/<i>t</i>)<sup>2</sup> è pari, non negativa, vale <i>I</i><sub>0</sub> in 0, ed ha infinite oscillazioni smorzata:</p>
+
+<img src="img/I_diffrazione.png" alt="intensità diffrazione"/>
+
+<p>Vediamo quindi che <i>I</i> ha infiniti punti di minimo, nei punti in cui si annulla, <i>t</i> = <i>k</i>&pi; (cioè <i>&phi;</i> = 2<i>k</i>&pi;), e infiniti punti di massimo, di cui il massimo assoluto è per <i>t</i> = 0 (<i>&phi;</i> = 0), e vale <i>I</i><sub>0</sub>. Il problema è determinare gli altri punti di massimo relativo. Questi si trovano risolvendo l'equazione</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>I</mi>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>ossia</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>I</mi>
+    <mn>0</mn>
+  </msub>
+  <mn>2</mn>
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>t</mi>
+    </mrow>
+    <mi>t</mi>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <mi>t</mi>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>t</mi>
+        <mo>&#x2212;</mo>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">&#x2061;</mo>
+        <mi>t</mi>
+      </mrow>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\frac{\text{d}I}{\text{d}t} = 0 \quad \text{ossia} \quad I_02 \frac{\sin t}{t}\left ( \frac{t \cos t - \sin t}{t^2} \right) = 0 $$ -->
+
+<p>Il fattore sin <i>t</i> si annulla nei punti di minimo che già conosciamo; i punti di massimo sono dunque le soluzioni di</p>
+
+<div class="eq">
+<p><i>t</i> cos <i>t</i> &minus; sin <i>t</i> = 0</p>
+</div>
+
+<p>equazione che non può essere risolta in modo esatto, ma che si studia facilmente con un <i>confronto grafico</i>: riscritta nella forma</p>
+
+<div class="eq">
+<p><i>t</i> = tg <i>t</i></p>
+</div>
+
+<p>possiamo osservare dal grafico delle funzioni <i>t</i>, tg <i>t</i>, dove sono collocate le soluzioni.</p>
+
+<img src="img/x_equal_tanx.png" alt="x = tan x"/>
+
+<p>Il primo punto positivo di max si trova poco prima di 3&pi;/2; il secondo poco prima di 5&pi;/2, e così via; più ci si allontana dall'origine, più questi punti tendono a coincidere esattamente con i valori <i>t</i> =  3&pi;/2 + <i>k</i>&pi; (quindi <i>&phi;</I> = 3&pi; + 2<i>k</i>&pi;). Dunque ogni punto di massimo si trova approssimativamente a metà strada tra due punti di minimo succesivi. I valori dei max relativi saranno all'incirca</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>I</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>3</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mi>&#x3C0;</mi>
+    <mo>+</mo>
+    <mi>k</mi>
+    <mi>&#x3C0;</mi>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <msub>
+      <mi>I</mi>
+      <mn>0</mn>
+    </msub>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mfrac>
+        <mn>3</mn>
+        <mn>2</mn>
+      </mfrac>
+      <mi>&#x3C0;</mi>
+      <mo>+</mo>
+      <mi>k</mi>
+      <mi>&#x3C0;</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ I \left(\frac{3}{2} \pi + k \pi \right) = \frac{I_0}{(\frac{3}{2} \pi + k \pi)^2} $$ -->
+
+<p>Una localizzazione più precisa delle sol uziono dell'equazione <i>t</i> = tg <i>t</i> si potrà dare con il <a href="Newton.html">metodo di Newton</a>.</p>
+
+<h2>Successioni monotone</h2>
+
+<p>Come abbiamo visto nel cap. 3, le successioni monotone hanno importanti proprietà. D'altro canto, non sempre è facile dimostrare la monotonia di una successione per via algebrica. Il calcolo differenziale ci offre un metodo utile.</p>
+
+<p><b>Esempio 5.10.3</b>. Sia <i>a<sub>n</sub></i> = log <i>n</i>/<i>n</i>. Sappiamo che <i>a<sub>n</sub></i> &ge; 0 e <i>a<sub>n</sub></i> ⟶ 0 (per confronto tra infiniti). Per definizione, ciò significa che</p>
+
+<div class="eq">
+<p><i>a</i><sub><i>n</i>+1</sub> &le; <i>a<sub>n</sub></i> &emsp;i.e.&emsp; log(n+1)/(n+1) &le; log <i>n</i>/<i>n</i></p>
+</div>
+
+<p>Poiché al crescere di <i>n</i> sia il numeratore che il denominatore crescono, non è facile provare questa disuguaglianza. D'altro canto, sia</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = log <i>x</i>/<i>x</i> &emsp;for&emsp; <i>x</i> &gt; 0</p>
+</div>
+
+<p>(Ora la variabile <i>x</i> inon è un interno, ma un numero reale!). Calcoliamo</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) = [1 − log <i>x</i>]/<i>x</i><sup>2</sup> &emsp;for&emsp; <i>x</i> &ge; <i>e</i></p>
+</div>
+
+<p>Ne segue che <i>f</i> è decrescente per <i>x</i> &ge; <i>e</i>; di conseguenza la successione <i>a<sub>n</sub></i> = <i>f</i>(<i>n</i>) è decrescente per <i>n</i> &ge; 3 (il primo intero &gt; e). Nel cap. 5, parlando di <i>serie a segni alterni</i>, vedremo un'applicazione di questa osesrvazione:/p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>2</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mfrac>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>n</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=2}^\infty = (-1)^n \frac{\log n}{n} $$ -->
+
+<p>It is an alternating series and since <i>a<sub>n</sub></i> = log <i>n</i>/<i>n</i> is positive, infinitesimal, and as proved monotonically decreasing, by <a href="alternating_series.html">Leibniz Criterion</a>. The monotoniciy is paramount to prove the convergence of the series.&emsp;■</p>
+
+<p>Il passaggio "dal discreto al continuo" (ciè dagli interi ai reali) è un modo per avere a disposizione gli strumenti del calcolo differenziale. Attenzione a non usare indiscriminatamente questo espediente. Si ragioni sul fatto che in quest omodo <i>non si potrebbe</i> studiare la monotonia di successioni come</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+    <msup>
+      <mn>2</mn>
+      <mi>n</mi>
+    </msup>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>n</mi>
+        <mn>3</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>2</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <msup>
+      <mn>3</mn>
+      <mi>n</mi>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$\frac{n!}{2^n} \qquad \frac{n^2 + (-1)^n}{n^3 + 1} \qquad \frac{n+(-2)^n}{3^n} $$ -->
+
+<section aria-label="End">
+<a href="Lagrange.html">&#171;Il T. di Lagrange</a>
+<a href="index.html">Index</a>
+<a href="D_probl.html">Soluzione di alcuni problemi di massimo e minimo &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
