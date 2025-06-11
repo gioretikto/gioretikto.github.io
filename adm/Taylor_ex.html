@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Esercizi su Taylor">
+	<title>Esercizi su Taylor</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Esercizi su Taylor</h1>
+
+<ol>
+	<li><p>La velocità <i>v</i>(<i>t</i>) di un corpo di massa <i>m</i> che cade nell'aria è regolata dalla legge</p>
+	
+<div class="eq">
+<p><i>v</i>(<i>t</i>) = <i>mg</i>/<i>h</i> (1 &minus; e<sup>&minus;<i>ht</i>/<i>m</i></sup>)</p>
+</div>
+
+<p>dove <i>g</i> è l'accelerazione di gravità e <i>h</i> un coefficiente che esprime l'attrito dell'aria. (Questo è vero se si assume la forza di attrito proporzionale alla velocità). Linearizzando l'espressione, si trovi come varia la velocità nei primi istanti di caduta. (Cioè si approssimi <i>v</i>(<i>t</i>) per <i>t</i> &rarr; 0). L'approssimazione così ottenuta è per eccesso o per difetto? Per rispondere, si scriva ora l'approssimazione al second'ordine (mediante formula di Taylor), e si confrontino le due espressioni.</p>
+
+<p><b>Soluzione</b>. Utilizzando la serie di Taylor al primo ordine, otteniamo:</p>
+
+<div class="eq">
+<p><i>v</i>(<i>t</i>) ≈ <i>gt</i></p>
+</div>
+
+<p>L'approssimazione al secondo ordine è:</p>
+
+<div class="eq">
+<p><i>v</i>(<i>t</i>) ≈ <i>gt</i> &minus; (<i>gh</i>/2<i>m</i>)<i>t</i><sup>2</sup></p>
+</div>
+
+<p>L'approssimazione al primo ordine è per eccesso rispetto alla velocità reale nei primi istanti di caduta, poiché non tiene conto del termine correttivo &minus; (<i>gh</i>/2<i>m</i>)<i>t</i><sup>2</sup>
+​ che riduce leggermente la velocità.</p>
+
+</li>
+
+<li><p>(Cfr. l'esercizio precedente). Se si assume invece la forza di attrito proporzionale al quadrato della velocità, la velocità del corpo in caduta risulta:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>v</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mfrac>
+      <mrow>
+        <mi>m</mi>
+        <mi>g</mi>
+      </mrow>
+      <mi>h</mi>
+    </mfrac>
+  </msqrt>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+          <msqrt>
+            <mfrac>
+              <mrow>
+                <mi>g</mi>
+                <mi>h</mi>
+              </mrow>
+              <mi>m</mi>
+            </mfrac>
+          </msqrt>
+          <mi>t</mi>
+        </mrow>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+          <msqrt>
+            <mfrac>
+              <mrow>
+                <mi>g</mi>
+                <mi>h</mi>
+              </mrow>
+              <mi>m</mi>
+            </mfrac>
+          </msqrt>
+          <mi>t</mi>
+        </mrow>
+      </msup>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ v(t) = \sqrt{\frac{mg}{h}} \cdot \frac{e^{2\sqrt{\frac{gh}{m}}t} - 1}{e^{2\sqrt{\frac{gh}{m}}t} + 1} $$ -->
+
+<p>con lo stesso significato dei simboli (il coefficiente <i>h</i> ha ora dimensioni diverse). Linearizzando l'espressione, si trovi come varia la velocità nei primi istanti di caduta.</p>
+
+<p><b>Soluzione</b>. Sostituendo lo sviluppo di MacLaurin per <i>e<sup>x</sup></i> e semplificando si ottiene:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>v</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2248;</mo>
+  <msqrt>
+    <mfrac>
+      <mrow>
+        <mi>m</mi>
+        <mi>g</mi>
+      </mrow>
+      <mi>h</mi>
+    </mfrac>
+  </msqrt>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <msqrt>
+        <mfrac>
+          <mrow>
+            <mi>g</mi>
+            <mi>h</mi>
+          </mrow>
+          <mi>m</mi>
+        </mfrac>
+      </msqrt>
+      <mi>t</mi>
+    </mrow>
+    <mrow>
+      <mn>1</mn>
+      <mo>+</mo>
+      <msqrt>
+        <mfrac>
+          <mrow>
+            <mi>g</mi>
+            <mi>h</mi>
+          </mrow>
+          <mi>m</mi>
+        </mfrac>
+      </msqrt>
+      <mi>t</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>g</mi>
+      <mi>t</mi>
+    </mrow>
+    <mrow>
+      <msqrt>
+        <mfrac>
+          <mrow>
+            <mi>g</mi>
+            <mi>h</mi>
+          </mrow>
+          <mi>m</mi>
+        </mfrac>
+      </msqrt>
+      <mi>t</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$v(t) \approx \sqrt{\frac{mg}{h}} \cdot \frac{\sqrt{\frac{gh}{m}} t}{1 + \sqrt{\frac{gh}{m}} t}  = \frac{gt} {\sqrt{\frac{gh}{m}}t+ 1} $$ -->
+
+<p>Per <i>t</i> &rarr; 0 possiamo trascurare il termine sotto radice a denominatore, per cui <i>v</i>(<i>t</i>) ≈ <i>gt</i>.</p></li>
+
+<li><p>L'oscillazione di una pallina fissata all'estremità di una molla e libera di muoversi su una retta è descritta dalla funzione:</p>
+
+<div class="eq">
+<p><i>x</i> = <i>Ae</i><sup>&minus;<i>kt</i></sup> cos (<i>&omega;t</i>)</p>
+</div>
+
+<p>con <i>A,k,&omega;</i> costanti positive. Linearizzando l'espressione, si approssimi <i>x</i>(<i>t</i>) per <i>t</i> &rarr; 0. L'approssimazione così ottenuta è per eccesso o per difetto? Per rispondere, si scriva ora l'approssimazione al second'ordine, e si confrontino le due espressioni.</p>
+
+<p><b>Soluzione</b>. Al primo ordine e<sup>&minus;<i>kt</i></sup> ≈ 1 &minus; <i>kt</i> e cos(&omega;<i>t</i>) ≈ 1. Quindi al primo ordine</p>
+
+<div class="eq">
+<p><i>x</i>(<i>t</i>) = <i>A</i>(1 &minus;<i>kt</i>)</p>
+</div>
+
+<p>Al secondo ordine e<sup>&minus;<i>kt</i></sup> ≈ 1 &minus; <i>kt</i> + (<i>kt</i>/2)<sup>2</sup> e cos(&omega;<i>t</i>) ≈ 1 &minus; (&omega;<i>t</i>)<sup>2</sup>/2. Quindi</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>x</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>A</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mi>k</mi>
+    <mi>t</mi>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>k</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mi>t</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>&#x3C9;</mi>
+          <mn>2</mn>
+        </msup>
+        <msup>
+          <mi>t</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>t</mi>
+    <mn>3</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$x(t) = A \left( 1- kt + \frac{k^2t^2}{2} \right) (1 - \frac{\omega^2t^2}{2} + \o(t^3) $$ -->
+
+<p>moltiplicando, i termini <i>kt</i> ⋅ <i>&omega;</i><sup>2</sup><i>t</i><sup>2</sup>/2 e successivi sono di ordine superiore a 2 (cioè almeno <i>t</i><sup>3</sup>), quindi li tralasciamo. Rimane:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>x</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>A</mi>
+  <mo>&#x2212;</mo>
+  <mi>A</mi>
+  <mi>k</mi>
+  <mi>t</mi>
+  <mo>+</mo>
+  <mi>A</mi>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>k</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>&#x3C9;</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <msup>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$x(t) = A - Akt + A \frac{k^2-\omega^2}{2} t^2 $$ -->
+
+<p>La differenza tra l'approssimazione al secondo ordiene e quella al primo è:</p>
+
+<div class="eq">
+<p><i>x</i><sub>2</sub> &minus; <i>x</i><sub>lin</sub> ≈<i>A</i>(<i>k</i><sup>2</sup> &minus; <i>&omega;</i><sup>2</sup>)<i>t</i><sup>2</sup>/2</p>
+</div>
+
+<ul>
+	<li><p>se <i>k</i><sup>2</sup> &gt; &omega;<sup>2</sup>, allora <i>k</i><sup>2</sup> &minus; <i>&omega;</i><sup>2</sup> &gt;0 e il termine al 2° ordine è positivo, quindi</p>
+	
+<div class="eq">
+<p><i>x</i><sub>lin</sub> &gt; <i>x</i><sub>2</sub></p>
+</div>
+
+<p>La linearizzazione è <b>per difetto</b> (sotto stima la funzione).</p></li>
+	
+	<li><p>se <i>k</i><sup>2</sup> &lt; &omega;<sup>2</sup>, allora <i>k</i><sup>2</sup> &minus; <i>&omega;</i><sup>2</sup> &lt;0 e il termine al 2° ordine è negativo, quindi</p>
+	
+<div class="eq">
+<p><i>x</i><sub>lin</sub> &lt; <i>x</i><sub>2</sub></p>
+</div>
+
+<p>La linearizzazione è <b>per eccesso</b> (sovrastima la funzione).</p></li>
+
+<li><p>Usando la formula di Taylor al secon'ordine col resto secondo Lagrange, si dia una maggiorazione del massimo errore che si commette approssimando sin <i>x</i> con <i>x</i>, quando 0 &le; <i>x</i> &le; &pi;/6, e si precisi se l'errore commesso è per eccesso o per difetto. <br> Il massimo errore commesso è in realtà per <i>x</i> = &pi;/6: si calcoli questo errore. Il risultato è coerente con la stima effettuata?</p>
+
+<p><b>Soluzione</b>. La formula di Taylor al secondo ordine di una funzione <i>f</i>(<i>x</i>) intorno a un punto <i>a</i> è:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>f</i>(<i>a</i>) + <i>f'</i>(<i>a</i>) (<i>x</i> &minus; <i>a</i>) + <i>f</i>''(<i>c</i>)(<i>x</i> &minus; <i>a</i>)<sup>2</sup>/2</p>
+</div>
+
+<p>dove <i>c</i> è un punto compreso tra <i>a</i> e <i>x</i>, e il termine di errore (resto) è rappresentato da:</p>
+
+<div class="eq">
+<p><i>R</i><sub>2</sub>(<i>x</i>) = <i>f''</i>(<i>c</i>)(<i>x</i> &minus; <i>a</i>)<sup>2</sup>/2</p>
+</div>
+
+<p>Volendo approssimare sin <i>x</i> con <i>x</i> poniamo <i>a</i> = 0, ottenendo</p>
+
+<div class="eq">
+<p>sin <i>x</i> = <i>x</i> + <i>R</i><sub>2</sub>(<i>x</i>)</p>
+</div>
+
+<p>In particolare:</p>
+
+<div class="eq">
+<p><i>R</i><sub>2</sub>(<i>x</i>) = &minus;sin(<i>c</i>)<i>x</i><sup>2</sup>/2</p>
+</div>
+
+<p>per qualche <i>c</i> &in; [0,<i>x</i>]. La grandezza dell'errore è determinata dalla grandezza di ∣cos⁡(<i>c</i>)|. Il massimo valore che cos(<i>c</i>) può assumere è per <i>c</i> = 0. Quindi il massimo errore, nell'intervallo 0 &le; <i>x</i> &lt; &pi;/6, si ha quando <i>x</i> = &pi;/6:</p>
+
+<div class="eq">
+<p><i>R</i><sub>2</sub>(&pi;/6) = &minus;1/6 ⋅ (&pi;/6)<sup>3</sup> ≈ −0.0239</p>
+</div>
+
+<p>Il valore dell'errore è negativo, il che significa che l'approssimazione di sin(<i>x</i>) con <i>x</i> è per difetto. L'errore calcolato risulta negativo, il che è coerente con il fatto che sin⁡(<i>x</i>) è sempre minore di <i>x</i> per <i>x</i> > 0 nell'intervallo 0 ≤ <i>x</i> ≤ π/6​.&emsp;■</p></li>
+
+<li><p>Usando la formula di Taylor al second'ordine col resto secondo Lagrange, si dia una maggiorazione del massimo errore che si commette approssimando &radic;(1 + <i>x</i>) con 1 + <i>x</i>/2, quando 0 &le; <i>x</i> &le; 1/2, e si precisi se l'errore commesso è per eccesso o per difetto. <br> Il massimo errore commesso è in realtà per <i>x</i> = 1/2: si calcoli questo errore. Il risultato è coerente con la stima effettuata?</p>
+
+<p><b>Soluzione</b>. Lo sviluppo al 2° ordine con resto secondo Lagrange è:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mi>x</mi>
+  </msqrt>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mfrac>
+    <mi>x</mi>
+    <mn>2</mn>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mn>8</mn>
+  </mfrac>
+  <mo>+</mo>
+  <msub>
+    <mi>R</mi>
+    <mn>3</mn>
+  </msub>
+</math>
+
+<!-- $$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + R_3 $$ -->
+
+<p>dove il resto di terzo ordine, secondo Lagrange, è dato da:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>R</mi>
+    <mn>3</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mn>3</mn>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>&#x3BE;</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>x</mi>
+    <mn>3</mn>
+  </msup>
+</math>
+
+<!-- $$R_3(x) = \frac{f^{(3)}(\xi)}{3!} x^3$$ -->
+
+<div class="eq">
+<p><i>f</i>′(<i>x</i>) = 1/2⋅(1+x)<sup>&minus;1/2</sup><br>
+<i>f</i>′′(<i>x</i>) = −1/4⋅(1+x)<sup>&minus;3/2</sup><br>
+<i>f</i>′′′(<i>x</i>) = 3/8(1+<i>x</i>)<sup>&minus;5/2</sup>
+</div>
+
+<p>Quindi, il resto si scrive come:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>R</mi>
+    <mn>3</mn>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mn>3</mn>
+    <mrow>
+      <mn>8</mn>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mi>&#x3BE;</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>5</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+    <mn>6</mn>
+  </mfrac>
+</math>
+
+<!-- $$R_3(x) = \frac{3}{8(1+\xi)^{5/2}} \cdot \frac{x^3}{6}$$ -->
+
+<p>Poiché il termine &minus;<i>x</i><sup>2</sup>/8 e R<sub>2</sub>(<i>x</i>) hanno segno discorde. L'errore massimo è dato:</p>
+
+<div class="eq">
+<p>E<sub>max</sub> = |&minus;<i>x</i><sup>2</sup>/8| + min(R<sub>2</sub>(<i>x</i>))</p>
+</div>
+
+<p>Per massimizzare E<sub>max</sub> occorre scegliere <i>x</i> = 1/2 e &xi; = 0. Si ha quindi</p>
+
+<div class="eq">
+<p>(1/2)<sup>2</sup>/8 = 1/32 = 0.03125</p>
+</div>
+
+<p>e</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>R</mi>
+    <mn>3</mn>
+    <mrow data-mjx-texclass="ORD">
+      <mo data-mjx-texclass="OP" movablelimits="true">max</mo>
+    </mrow>
+  </msubsup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>3</mn>
+    <mrow>
+      <mn>8</mn>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mn>0</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>5</mn>
+          <mrow data-mjx-texclass="ORD">
+            <mo>/</mo>
+          </mrow>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>2</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+    <mn>6</mn>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>3</mn>
+    <mn>8</mn>
+  </mfrac>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>48</mn>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>3</mn>
+    <mn>384</mn>
+  </mfrac>
+  <mo>&#x2248;</mo>
+  <mn>0.0078</mn>
+  <mo>.</mo>
+</math>
+
+<!-- $$R_3^{\max} = \frac{3}{8(1+0)^{5/2}} \cdot \frac{(1/2)^3}{6} = \frac{3}{8} \cdot \frac{1}{48} = \frac{3}{384} \approx 0.0078. $$ -->
+
+<p>Quindi, l'errore totale massimo è:</p>
+
+<div class="eq">
+<p>E<sub>max</sub> ⁡≈ 0.03125+0.0078 ≈ 0.039</p>
+</div>
+
+<p>Il termine di errore principale −<i>x</i><sup>2</sup>/8 è negativo, il che indica che l'approssimazione iniziasle è per eccesso.&emsp;■</p></li>
+
+<li><p>Dimostrare, sfruttando la definizione dei simboli di "o piccolo" e di "asintotico", tutte le proprietà enunciate nel par. <a href="sviluppi.html">Proprietà del simbolo di o piccolo"</a>.</p></li>
+
+<li><p>Calcolare il limite</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$ \lim_{x \to 0} \frac{e^x - \sin x -\cos x - x^2}{x^3} $$ -->
+
+<p>Utilizzando le formule di MacLaurin per esponenziale, seno e coseno, scritte all'ordine 3</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup></i> = 1 + <i>x</i> + <i>x</i><sup>2</sup>/2 + <i>x</i><sup>3</sup>/6 + o(<i>x</i><sup>3</sup>)<br>
+sin <i>x</i> = <i>x</i> − <i>x</i><sup>3</sup>/6 + o(<i>x</i><sup>3</sup>)<br>
+cos <i>x</i> = 1 − <i>x</i><sup>2</sup>/2 + + o(<i>x</i><sup>3</sup>)</p>
+</div>
+
+<p>La scelta di utilizzare gli sviluppi fino al terzo ordine, dipende dal fatto che a denominatore compare <i>x</i><sup>3</sup>. Tenendo conto del fatto che o(<i>x</i><sup>3</sup>) = &pm; o(<i>x</i><sup>3</sup>) = o(<i>x</i><sup>3</sup>), otteniamo che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>e</mi>
+    <mi>x</mi>
+  </msup>
+  <mo>&#x2212;</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mn>2</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+    <mn>6</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>x</mi>
+    <mn>3</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+    <mn>6</mn>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mn>2</mn>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+    <mn>3</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>x</mi>
+    <mn>3</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ e^x - \sin x -\cos x - x^2 = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + o(x^3) - x + \frac{x^3}{6} - 1 + \frac{x^2}{2} - x^2 = \frac{x^3}{3} + o(x^3) $$ -->
+
+<p>Si ha quindi</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+      </msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>3</mn>
+      <mo>+</mo>
+      <mi>o</mi>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+      </msup>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+      </msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>3</mn>
+    </mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>3</mn>
+  </mfrac>
+</math>
+
+<!-- $$ \lim_{x \to 0} \frac{e^x - \sin x -\cos x - x^2}{x^3} = \lim_{x \to 0} \frac{x^3/3 + o(x^3)}{x^3} = \lim_{x \to 0} \frac{x^3/3}{x^3} = \frac{1}{3} $$ -->
+
+<li><p>Calcolare il segente limite</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mroot>
+        <mrow>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <msup>
+            <mi>x</mi>
+            <mn>3</mn>
+          </msup>
+        </mrow>
+        <mn>6</mn>
+      </mroot>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>sin</mi>
+        <mn>2</mn>
+      </msup>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$ \lim_{x \to 0} \frac{e^x \cos x - \sin x - \sqrt[6]{1-x^3}}{x^2 - \sin^2 x} $$ -->
+
+<p>Per capire sino a che ordine è opportuno sviluppare numeratore e denominatore, conviene partire dal denominatore che è più semplice. Dall'uguaglianza asintotica abbiamo che</p>
+
+<div class="eq">
+<p><i>x</i><sup>2</sup> − sin<sup>2</sup><i>x</i> = <i>x</i><sup>2</sup> − (<i>x</i><sup>2</sup> − <i>x</i><sup>4</sup>/3 + o(<i>x</i><sup>4</sup>) = <i>x</i><sup>4</sup>/3 + o(x<sup>4</sup>)</p>
+</div>
+
+<p>quindi sarà opportuno sviluppare anche il numeratore sino al 4° ordine. Osserviamo che la funzione (1 − <i>x</i><sup>3</sup>)<sup>1/6</sup> può essere sviluppata a partire dallo sviluppo (1 + <i>t</i>)<sup>&alpha;</sup> con <i>&alpha;</i> = 1/6 e <i>t</i> = −<i>x</i><sup>3</sup>; si ha che</p>
+
+<div class="eq">
+<p>(1 − <i>x</i><sup>3</sup>)<sup>1/6</sup> = 1 + 1/6 (−<i>x</i><sup>3</sup>) + 1/2 ⋅ 1/6 ⋅ (1/6 − 1) (−<i>x</i><sup>3</sup>)<sup>2</sup> + o(<i>x</i><sup>3</sup>)<sup>2</sup> + o(<i>x</i><sup>6</sup>) = 1 −<i>x</i><sup>3</sup>/6 − 5<i>x</i><sup>6</sup>/72 + o(<i>x</i><sup>6</sup>)</p>
+</div>
+
+<p>Ci feremeremo al 4° ordine quindi possiamo scartare il termine <i>x</i><sup>6</sup> e il relativo o-piccolo, sostituendo tutto con un o(<i>x</i><sup>4</sup>). In definitiva abbiamo che</p>
+
+<div class="eq">
+<p>(1 − <i>x</i><sup>3</sup>)<sup>1/6</sup> = 1 −<i>x</i><sup>3</sup>/6 + o(<i>x</i><sup>3</sup>)</p>
+</div>
+
+<p>Analogamente, abbiamo che</p>
+
+<div class="eq">
+<p>sin <i>x</i> = <i>x</i> − <i>x</i><sup>3</sup>/6 + o(<i>x</i><sup>3</sup>)</p>
+</div>
+
+<p>dal momento che nello sviluppo di MacLauring di sin <i>x</i> non compare alcun termine di ordine 4. Rimane da calcolare lo sviluppo di MacLauring al quarto ordine della funzione e<sup>x</sup> cos <i>x</i>.</p>
+
+<div class="eq">
+<p>e<sup>x</sup> cos <i>x</i> = (1 + <i>x</i> + <i>x</i><sup>2</sup>/2 + <i>x</i><sup>3</sup>/6 + <i>x</i><sup>4</sup>/24 + o(<i>x</i><sup>4</sup>)) ( 1 − <i>x</i><sup>2</sup>/2 + <i>x</i><sup>4</sup>/24  + o(<i>x</i><sup>4</sup>))</p>
+</div>
+
+<p>Per scrivere tutti i 24 termini che comparirebbero da questo prodotto come abbiamo già detto è opportuno individuare in prima istanza l'ordine più basso dei termini con o-piccolo. Di conseguenza, nello scrivere il risultato finale del prodotto, scriviamo subito o(x<sup>4</sup>) e scartiamo man mano che li incontriamo, tutti gli altri termini contenenti o-piccolo e tutte le potenze di ordine strettamente maggiore di 4:</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup></i> cos <i>x</i> = o(<i>x</i><sup>4</sup>) + 1 −<i>x</i><sup>2</sup>/2 + <i>x</i><sup>4</sup>/24 + <i>x</i> − <i>x</i><sup>3</sup>/6 + <i>x</i><sup>2</sup>/2 − <i>x</i><sup>4</sup>/4 + <i>x</i><sup>3</sup>/6 + <i>x</i><sup>4</sup>/24 = 1 + <i>x</i> −x<sup>3</sup>/2 −x<sup>4</sup>/6 + o(x<sup>4</sup>)</p>
+</div>
+
+<p>Vediamo che, al primo passo, abbiamo dovuto calcolare solo 10 dei 24 termini previsti. Ora mettendo assieme le informazioni ottenute possiamo scrivere lo sviluppo di MacLauring al 4° ordine del numeratore</p>
+
+<div class="eq">
+<p><i>e<sup>x</sup></i> cos <i>x</i> − sin <i>x</i> − (1 − <i>x</i><sup>3</sup>)<sup>1/6</sup> = 1 + <i>x</i> − <i>x</i><sup>3</sup>/2 − <i>x</i><sup>4</sup>/6 + o(<i>x</i><sup>4</sup>) − (<i>x</i> −<i>x</i><sup>3</sup>/6) − (1 − <i>x</i><sup>3</sup>/6) = <i>x</i><sup>4</sup>/6 + o(<i>x</i><sup>4</sup>)</p>
+</div>
+
+<p>Il risultato finale è dunque</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+      </msup>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mroot>
+        <mrow>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <msup>
+            <mi>x</mi>
+            <mn>3</mn>
+          </msup>
+        </mrow>
+        <mn>6</mn>
+      </mroot>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>sin</mi>
+        <mn>2</mn>
+      </msup>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>4</mn>
+      </msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>6</mn>
+      <mo>+</mo>
+      <mi>o</mi>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>4</mn>
+      </msup>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>4</mn>
+      </msup>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>3</mn>
+      <mo>+</mo>
+      <mi>o</mi>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>4</mn>
+      </msup>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+</math>
+
+<!--  $$ \lim_{x \to 0} \frac{e^x \cos x - \sin x - \sqrt[6]{1-x^3}}{x^2 - \sin^2 x} = \lim_{x \to 0} \frac{-x^4/6 + o(x^4)}{x^4/3 + o(x^4)} = -\frac{1}{2}$$ -->
+
+<p>Calcolare i seguenti limiti utilizzando opportunamente, se necessario, gli sviluppi di Taylor.</p>
+
+<ol>
+	<li>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <msqrt>
+        <mn>1</mn>
+        <mo>+</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </msqrt>
+    </mrow>
+    <mroot>
+      <mi>x</mi>
+      <mn>4</mn>
+    </mroot>
+  </mfrac>
+</math>
+
+	<!-- $$ \lim_{x \to +\infty} \frac{\log \sqrt{ 1 + x^2}}{\sqrt[4]{x}} $$  -->
+
+<p><b>Solutione</b>. Per <i>x</i> → +∞, possiamo approssimare:</p>
+
+<div class="eq">
+<p>log (1 + <i>x</i><sup>2</sup>) &approx; log <i>x</i><sup>2</sup> = 2 log <i>x</i> &approx; log <i>x</i></p>
+</div>
+
+<p>Pertanto, il limite si riduce a:</p>
+
+<div class="eq">
+<p>lim<sub><i>x</i> &rarr; +&infin;</sub> log <i>x</i>/<i>x</i><sup>1/4</sup></p>
+</div>
+
+<p>A questo punto, osserviamo che la funzione log⁡ <i>x</i> cresce molto più lentamente di x<sup>1/4</sup>, e dunque il rapporto tende a zero. Oppure possiamo applicare De L'Hôpital</p>
+
+<div class="eq">
+<p>lim<sub><i>x</i> &rarr; +&infin;</sub> (1/<i>x</i>)/[(1/4)<i>x</i><sup>−3/4</sup>] = lim<sub><i>x</i> &rarr; +&infin;</sub> (4/<i>x</i>) ⋅ (<i>x</i><sup>3/4</sup>) = 4lim<sub><i>x</i> &rarr; +&infin;</sub> <i>x</i><sup>−1/4</sup> = 0&emsp;■</p>
+</div>
+
+</li>
+
+<li> 
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msup>
+    <mi>x</mi>
+    <mi>&#x3B1;</mi>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mn>2</mn>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mn>3</mn>
+  </msqrt>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{x \to +\infty} x^\alpha (\sqrt{x^2 + 2x + 3} - x - 1) $$ -->
+
+<p><b>Soluzione</b>. Possiamo riscrivere il termine sotto radice come</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mn>2</mn>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mn>3</mn>
+  </msqrt>
+  <mo>=</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mfrac>
+        <mn>2</mn>
+        <mi>x</mi>
+      </mfrac>
+      <mo>+</mo>
+      <mfrac>
+        <mn>3</mn>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+  </msqrt>
+</math>
+
+<!-- $$\sqrt{x^2 + 2x + 3} = \sqrt{x^2 \left(1 + \frac{2}{x} + \frac{3}{x^2}\right)}$$ -->
+
+<p>Poiché</p>
+
+<div class="eq">
+<p>&radic;(1 + <i>y</i>) = 1 + <i>y</i>/2 + o(<i>y</i>)</p>
+</div>
+
+<p>Possiamo usare tale sviluppo e riscrivere come</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mn>2</mn>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mn>3</mn>
+  </msqrt>
+  <mo>=</mo>
+  <mi>x</mi>
+  <msqrt>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mfrac>
+      <mn>2</mn>
+      <mi>x</mi>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>3</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mfrac>
+  </msqrt>
+  <mo>=</mo>
+  <mi>x</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>x</mi>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>3</mn>
+      <mrow>
+        <mn>2</mn>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mi>o</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mfrac>
+    <mn>3</mn>
+    <mrow>
+      <mn>2</mn>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\sqrt{x^2 + 2x + 3} = x \sqrt{1 + \frac{2}{x} + \frac{3}{x^2}} = x \left(1 + \frac{1}{x} + \frac{3}{2x^2} + o(x) \right) = x + 1 + \frac{3}{2x} + o(x) $$ -->
+
+<p>Quindi sottraendo <i>x</i>+1, abbiamo: 3/(2<i>x</i>) + o(<i>x</i>). Ora consideriamo il limite dato:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msup>
+    <mi>x</mi>
+    <mi>&#x3B1;</mi>
+  </msup>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mn>3</mn>
+    <mrow>
+      <mn>2</mn>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to +\infty} x^\alpha \cdot \frac{3}{2x} $$ -->
+
+<p>La convergenza del limite dipende dal valore di <i>α</i>:</p>
+
+<ul>
+	<li><p>Se <i>α</i> − 1 &lt; 0, allora <i>x</i><sup>α−1</sup> → 0 <i>x</i><sup>&alpha; - 1</sup> ⟶ 0 e il limite è zero;</p></li>
+	<li><p>Se <i>α</i> − 1 &gt; 0, allora <i>x</i><sup>α−1</sup> → +∞ <i>x</i><sup>&alpha; - 1</sup> ⟶ +&infin; e il limite è infinito;</p></li>
+	<li><p>Se <i>α</i> = 1, il limite è costante e vale 3/2.&emsp;■</p></li>
+</ul>
+
+</li>
+
+<li><p>Calcolare</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mo stretchy="false">(</mo>
+  <msqrt>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mn>1</mn>
+  </msqrt>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{x \to \infty} (\sqrt{x^2 + x + 1} - x) $$ -->
+
+<p>Con gli stessi passaggi del limite precedente</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>2</mn>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mn>2</mn>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+</math>
+
+<!-- $$\lim_{x \to \infty} (x + \frac{1}{2} + \frac{1}{2x} - x) = \lim_{x \to \infty} \left(\frac{1}{2} + \frac{1}{2x} \right) = \frac{1}{2}$$ -->
+</li>
+
+<li><p>Sviluppare in serie di Taylor in vicinanza di <i>x</i> = 0 all'ordine 5 le seguenti funzioni:</p>
+
+<div class="eq">
+<p>sin <i>x</i>/<i>x</i>, &emsp; log(1 + cos <i>x</i>) &emsp; 1/cos <i>x</i> &emsp; 1/&radic;(3 + <i>x</i>)</p>
+</div>
+
+<li><p>Nell'esempio 5.10.2 (diffrazione della luce attraverso una fenditura) abbiamo visto che la ricerca dei max e min dell'intensità luminosa nella figura di intereferenza per la luce che attraversa una fenditura porta a risolvere l'equazione tg <i>t</i> = <i>t</i>. Calcolare col metodo di Newton un valore approssimato della prima soluzione positiva di tale equazione, che si trova (come mostra il grafico) poco prima di 3&pi;/2. <br> (Suggerimento: applicare il metodo alla funzione <i>f</i>(<i>t</i>) = tg <i>t</i> &minus; <i>t</i> sull'intervallo [5&pi;/4, 3&pi;/2 &minus; 0.1], usando come valore iniziale <i>a</i> = 3&pi;/2 &minus; 0.1. Calcolare le iterate con l'aiuto di un PC).</p>
+
+<p><b>Soluzione</b>. 
+
+<code>
+<pre>import math
+
+# Funzione f(t) = tan(t) - t
+def f(t):
+    return math.tan(t) - t
+
+# Derivata di f(t), che è tan^2(t)
+def f_prime(t):
+    return math.tan(t)**2
+
+# Metodo di Newton
+def newton_method(t0, tol=1e-6, max_iter=100):
+    t = t0
+    print(f"Inizio iterazioni con t0 = {t}")
+    for i in range(max_iter):
+        t_new = t - f(t) / f_prime(t)
+        # Stampa usando t_0, t_1, t_2, ...
+        print(f"Iterazione {i+1}: t_{i} = {t}, t_{i+1} = {t_new}")
+        
+        # Verifica se la convergenza è avvenuta
+        if abs(t_new - t) < tol:
+            print(f"Convergenza raggiunta dopo {i+1} iterazioni.")
+            return t_new
+        t = t_new
+    raise ValueError("Il metodo di Newton non è convergente.")
+
+# Inizializzazione
+t0 = 3 * math.pi / 2 - 0.1  # Valore iniziale
+# Calcoliamo la radice con il metodo di Newton
+root = newton_method(t0)
+
+print(f"La soluzione trovata è t = {root}")
+</pre>
+</code>
+</li>
+
+<li><p>Calcolare con approssimazione l'unica soluzione reale dell'equazione log <i>x</i> = 1/<i>x</i>. A tal fine:<p>
+
+<ol type="a">
+	<li><p>Mostrare che il metodo di Newton è applicabile sull'inervallo [1,2];</p></li>
+	<li><p>Scrivere esplicitamente l'algoritmo iterativo;</p></li>
+	<li><p>Calcolare esplicitamente le prime iterazioni, finché le prime due crifre decimali si stabilizzano.</p></li>
+</ol>
+
+<p><b>Soluzione</b>. Parte (a): Verificare che il metodo di Newton è applicabile sull'intervallo [1,2]. Per applicare il metodo di Newton, dobbiamo risolvere l'equazione log⁡(x)=1xlog(x)=x1​, che può essere riscritta come:</p>
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = log⁡(<i>x</i>) −1/<i>x</i> = 0</p>
+</div>
+
+<p><b>Derivata prima</b>. </p>
+
+<div class="eq">
+<p><i>f</i>′(<i>x</i>) = 1/<i>x</i> −(−1/<i>x</i><sup>2</sup>​) = 1/<i>x</i> + 1/<i>x</i><sup>2</sup></p>
+</div>
+
+<p>Ora dobbiamo verificare che <i>f</i>(<i>x</i>) sia continua e che <i>f′</i>(<i>x</i>) non si annulli su [1,2], in modo che il metodo di Newton possa essere applicato. <i>f</i> è continua per <i>x</i> &gt; 0 e <i>f′</i>(<i>x</i>) &gt; 0 &in; [1,2]. <br> Il metodo di Newton per trovare la radice di <i>f</i>(<i>x</i>) = log⁡(<i>x</i>) − 1/<i>x</i> = 0 è dato dalla formula iterativa:</p>
+
+<div class="eq">
+<p><i>x</i><sub><i>n</i>+1</sub> = <i>x<sub>n</sub></i> − <i>f</i>(<i>x<sub>n</sub></i>)/<i>f′</i>(<i>x<sub>n</sub></i>)</p>
+</div>
+
+<p>Sostituendo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <msub>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msub>
+      <mo>&#x2212;</mo>
+      <mfrac>
+        <mn>1</mn>
+        <msub>
+          <mi>x</mi>
+          <mi>n</mi>
+        </msub>
+      </mfrac>
+    </mrow>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>x</mi>
+          <mi>n</mi>
+        </msub>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <msubsup>
+        <mi>x</mi>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msubsup>
+    </mfrac>
+  </mfrac>
+</math>
+
+<!-- $$x_{n+1} = x_n - \frac{\log x_n - \frac{1}{x_n}}{\frac{x_n + 1}{x_n^2}} $$ -->
+
+<p>Moltiplicando numeratore e denominatore, si può riscrivere come:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>x</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>&#x2212;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mi>log</mi>
+    <mo data-mjx-texclass="NONE">&#x2061;</mo>
+    <msub>
+      <mi>x</mi>
+      <mi>n</mi>
+    </msub>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <msubsup>
+      <mi>x</mi>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msubsup>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mi>n</mi>
+      </msub>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$x_{n+1} = x_n - \left(\log x_n - \frac{1}{x_n}\right) \cdot \frac{x_n^2}{x_n + 1} $$ -->
+
+</li>
+
+<li><p>Siano <i>f,g</i> due funzioni definite su tutto ℝ, derivabili due volte. Supponiamo che <i>f</i> sia convessa e <i>g</i> concava, su tutto ℝ. Utilizzando le proprietà geometriche enunciate nel paragrafo sulla <a href="concavità.html">convessità</a>, dimostrare che <i>f</i> e <i>g</i> non possono avere più di due interesezioni.</p>
+
+<p><b>Soluzione</b>. Per dimostrare che le funzioni f e g non possono avere più di due intersezioni, possiamo utilizzare le proprietà geometriche della convessità e concavità. Convessità e concavità: Una funzione f è convessa se la sua derivata seconda f′′(x) è non negativa (f′′(x) ≥ 0, &forall;<i>x</i> ∈ ℝ. Una funzione <i>g</i> è concava se la sua derivata seconda <i>g</i>′′(<i>x</i>) è non positiva (g′′(x) ≤ 0) &forall;<i>x</i> ∈
+ℝ. Differenza delle funzioni:<br> Consideriamo la funzione h(x) = f(x) − g(x). La derivata seconda di <i>h</i> è:</p>
+
+<div class="eq">
+<p>h′′(<i>x</i>) = f′′(<i>x</i>) − g′′(<i>x</i>)</p>
+</div>
+
+<p>Poiché <i>f</i> è convessa, <i>f</i>′′(<i>x</i>) ≥ 0. Poiché <i>g</i> è concava, g′′(<i>x</i>) ≤ 0. Quindi:</p>
+
+<div class="eq">
+<p><i>h</i>′′(<i>x</i>) = <i>f</i>′′(<i>x</i>) − <i>g</i>′′(<i>x</i>) ≥ 0</p>
+</div>
+
+<p>Questo implica che <i>h</i>(<i>x</i>) è una funzione convessa.</p>
+
+<p><b>Numero di intersezioni</b>: Le intersezioni tra <i>f</i> e <i>g</i> corrispondono ai punti in cui <i>h</i>(<i>x</i>) = 0. Poiché <i>h</i>(<i>x</i>) è una funzione convessa, può avere al massimo due zeri reali. Questo è dovuto al fatto che una funzione convessa può intersecare l'asse <i>x</i> al massimo due volte (una volta in salita e una volta in discesa). Pertanto, le funzioni <i>f</i> e <i>g</i> non possono avere più di due intersezioni.&emsp;□</p></li>
+
+<li><p>Sviluppare in serie di Taylor in vicinanza di <i>x</i> = 0 all'ordine 5 le seguenti funzioni:</p>
+
+<div class="eq">
+<p>sin <i>x</i>/<i>x</i> &emsp; log(1 + cos <i>x</i>) &emsp; 1/cos <i>x</i> &emsp; 1/&radic;(3+<i>x</i>)</p>
+</div>
+
+<ul>
+	<li><p>Per sviluppare la funzione sin <i>x</i>/<i>x</i> in serie di MacLaurin, possiamo partire dalla serie di MacLaurin per sin⁡ <i>x</i> e poi dividere ogni termine per <i>x</i>. Quindi, la serie di MacLaurin per  sin <i>x</i>/<i>x</i></p>
+	
+	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mn>3</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>4</mn>
+    </msup>
+    <mrow>
+      <mn>5</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>6</mn>
+    </msup>
+    <mrow>
+      <mn>7</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo>+</mo>
+  <mo>&#x22EF;</mo>
+</math>
+	
+	<!-- $$\frac{\sin x}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \cdots $$ -->
+
+</li>
+
+<li><p>Scriviamo log (1 + <i>y</i>), <i>y</i> = cos <i>x</i>, la cui espansione al 5° ordine è:</p>
+
+<div class="eq">
+<p><i>y</i> = cos <i>x</i> = 1 − <i>x</i><sup>2</sup>/2 + <i>x</i><sup>4</sup>/24 + o(<i>x</i><sup>6</sup>)</p>
+</div>
+
+<p>Sostituita in log(1 + <i>y</i>), abbiamo</p>
+
+<div class="eq">
+<p>log (1 + <i>y</i>) = log (1 + 1 − <i>x</i><sup>2</sup>/2 + <i>x</i><sup>4</sup>/24 + o(<i>x</i><sup>6</sup>))</p>
+</div>
+
+<p>Sviluppiamo log⁡(2 − <i>u</i>) attorno a <i>u</i> = 0, con <i>u</i> = <i>x</i><sup>2</sup>/2 − <i>x</i><sup>4</sup>/24</p>
+
+<div class="eq">
+<p>log⁡(2 − <i>u</i>) = log 2 + (−<i>u</i>/2) − <i>u</i><sup>2</sup>/8 + o(u<sup>3</sup>)</p>
+</div>
+
+<p>Risostituendo <i>u</i>, abbiamo</p>
+
+<div class="eq">
+<p>log⁡(1+ cos <i>⁡x</i>) = log⁡ 2 −<i>x</i><sup>2</sup>/4 + <i>x</i><sup>4</sup>/48 + (<i>x</i><sup>6</sup>)&emsp;■</p>
+</div>
+
+</li>
+
+</ul>
+
+</ol>
+
+<section aria-label="End">
+<a href="sviluppi.html">&#171;Limiti notevoli e sviluppi</a>
+<a href="index.html">Index</a>
+<a href="Taylor_ex.html">Esercizi su Taylor &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+
