@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Differenziale e approssimazione lineare; il simbolo di o piccolo"/>
+	<title>Differenziale e approssimazione lineare; il simbolo di "o piccolo"</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Differenziale e approssimazione lineare; il simbolo di "o piccolo"</h1>
+
+<p>Un'operazione molto frequente sia in matematica che nelle sue applicazioni è quella di <i>linearizzazione</i>. <br> Sostanzialmente si tratta di approssimare una data quantità, che dipende in modo non lineare da una o più variabili, con una che dipende da queste linearmente. <br> Naturalmente, come in tutti i tipi di approssimazione, occorre fornire informazioni (qualitative o quantitative) sull'errore commesso. <br> Un esempio elementare di linearizzazione consiste nell'approssimare l'incremento subìto da una data funzione <i>f</i>, in conseguenza di una variazione del suo argomento da <i>x</i><sub>0</sub> a <i>x</i><sub>0</sub> + d<i>x</i>, sostituendo alla funzione stessa la retta tangente nel punto i>x</i><sub>0</sub>.<br> Precisamente <i>f</i>: (<i>a, b</i>) → ℝ derivabile in un punto <i>x</i><sub>0</sub> e diamo a <i>x</i><sub>0</sub> un incremento d<i>x</i> (che pensiamo molto piccolo in valore assoluto, cioè |d<i>x</i>| « 1). In conseguenza, <i>f</i> subisce un incremento</p>
+
+<div class="eq">
+<p>&Delta;<i>f</i> = <i>f</i>(<i>x</i><sub>0</sub> + d<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>che, in generale, pensando <i>x</i><sub>0</sub> fissato, non è proporzionale a d<i>x</i> ossia non è lineare rispetto a d<i>x</i>. <br> Come indicato in fig.1, sostituiamo al grafico di <i>f</i>, vicino a <i>x</i>, la retta tangente nel punto <i>P</i> = (<i>x</i><sub>0</sub>, <i>f</i>(<i>x</i><sub>0</sub>)).</p>
+
+<figure>
+<img src="img/approx.png" alt="approssimazione funzione retta tangente" />
+<figcaption><b>Fig.1</b> d<i>f</i> = tg <i>&alpha;</i></figcaption>
+</figure>
+
+<p>l'incremento valutato lungo la retta tangente è pari alla lunghezza (con segno!) del segmento <i>QR</i> e cioè uguale a tg <i>&alpha;</i> ⋅ d<i>x</i>, ovvero <i>f'</i>(<i>x</i><sub>0</sub>) d<i>x</i>, ricordando che <i>f'</i>(<i>x</i><sub>0</sub>) = tg <i>&alpha;</i>. Tale incremento, è proporzionale a <i>dx</i>, prende il nome di <i><b>differenziale</b></i> di <i>f</i> nel punto <i>x<sub>0</sub></i> e si indica col simbolo d<i>f</i>(<i>x</i><sub>0</sub>):</p>
+
+<div class="box">
+<p>d<i>f</i>(<i>x</i><sub>0</sub>) = <i>f'</i>(<i>x</i><sub>0</sub>)d<i>x</i></p>
+</div>
+
+<p>Qual è l'errore commesso nell'approssimazione? In altri termini, che cosa si può dire sulla differenza tra &Delta;<i>f</i> e d<i>f</i>(<i>x</i><sub>0</sub>)? <br> Per rispondere, è sufficiente ricorrere alla definizione di derivata</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mtext>d</mtext>
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>+</mo>
+      <mtext>d</mtext>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\lim_{\text{d}x \to 0} \frac{f(x_0 + \text{d}x) - f(x_0)} {\text{d}x} = f'(x_0) $$ -->
+
+<p>si può scrivere:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo>+</mo>
+      <mtext>d</mtext>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>&#x2212;</mo>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>&#x3B5;</mi>
+  <mo stretchy="false">(</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+<mtext>&emsp;(5.17.1)</mtext>
+</math>
+
+<!-- $$ \frac{f(x_0 + \text{d}x) - f(x_0)}{\text{d}x} = f'(x_0) + \varepsilon(\text{d}x) $$ -->
+
+<p>dove &epsilon;(d<i>x</i>) indica una quantità che tende a zero se d<i>x</i> ⟶ 0, e cioè un <i>infinitesimo</i> per d<i>x</i> → 0. <br> Moltiplicando per d<i>x</i>, dalla (5.17.1) si ottiene infine</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i><sub>0</sub> + d<i>x</i>) −<i>f</i>(<i>x</i><sub>0</sub>) = <i>f'</i>(<i>x</i><sub>0</sub>) d<i>x</i> + d<i>x</i> ⋅ <i>&epsilon;</i>(d<i>x</i>)</p>
+</div>
+
+<p>e equivalentemente:</p>
+
+<div class="eq">
+<p>&Delta;<i>f</i> − d<i>f</i>(<i>x</i><sub>0</sub>) = d<i>x</i> ⋅ <i>&epsilon;</i>(d<i>x</i>)</p>
+</div>
+
+<p>La quantità d<i>x</i> ⋅ <i>&epsilon;</i>(d<i>x</i>) è una quantità che, divisa per d<i>x</i>, tende a zero: questo significa che d<i>x</i> ⋅ <i>&epsilon;</i>(d<i>x</i>) 
+ è <i>infinitesimo di ordine superiore rispetto a dx</i>. Introduciamo un simbolo utile a indicare sinteticamente questa circostanza:</p>
+
+<p><b>Definition 5.17.2</b>. Date due funzioni <i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>), definite in un intorno di <i>x</i><sub>0</sub>, si dice che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = o(<i>g</i>(<i>x</i>)) per <i>x</i> ⟶ <i>x</i><sub>0</sub></p>
+</div>
+
+<p>(si legge "<i>f</i>(<i>x</i>) è o piccolo di <i>g</i>(<i>x</i>)") se</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>per&#xA0;</mtext>
+  <mi>x</mi>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+</math>
+ 
+<!--$$ \frac{f(x)}{g(x)} \to 0 \quad \text{per } x \to x_0 $$ -->
+
+</div>
+
+<p>Se <i>g</i>(<i>x</i>) è un infinitesimo, dire che <i>f</i>(<i>x</i>) = o(<i>g</i>(<i>x</i>)) significa che <i>f</i>(<i>x</i>) è infinitesimo di ordine superiore rispetto a <i>g</i>(<i>x</i>). Ad es., per <i>x</i> &rarr; 0, <i>x</i><sup>2</sup> = o(<i>x</i>), e<sup>−1/<i>x</i><sup>2</sup></sup> = o(<i>x</i><sup>4</sup>), ecc. In particolare, il simbolo o(1) denota semplicemente una quantità infinitesima.&emsp;□</p>
+
+<p>Con questa simbologia, si scrive:</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i><sub>0</sub> + d<i>x</i>) − <i>f</i>(<i>x</i><sub>0</sub>) = <i>f'</i>(<i>x</i><sub>0</sub>)d<i>x</i> + o(d<i>x</i>) &emsp;per d<i>x</i> ⟶ 0</p>
+</div>
+
+<p>o, più sinteticamente:</p>
+
+<div class="eq">
+<p>&Delta;<i>f</i>(<i>x</i><sub>0</sub>) = d<i>f</i>(<i>x</i><sub>0</sub>) + o(d<i>x</i>) &emsp;per d<i>x</i> ⟶ 0 &emsp;(5.17.3)</p>
+</div>
+
+<p>La (5.17.3) esprime quella che si chiama un'approssimazione di &Delta;<i>f</i> al prim'ordine. Si scrive anche, talvolta,</p>
+
+<div class="eq">
+<p>&Delta;<i>f</i> ≈ d<i>f</i> al prim'ordine, vicino a <i>x</i><sub>0</sub></p>
+</div>
+
+<p>Le regole di calcolo dei differenziali sono analoghe a quelle di derivazione.</p>
+
+<div class="box">
+<p>d(<i>f</i> &pm; <i>g</i>) = d<i>f</i> &pm; d<i>g</i><br>
+d(<i>f</i> ⋅ <i>g</i>) = g d<i>f</i> + <i>f</i>d<i>g</i><br>
+d(<i>f</i>/<i>g</i>) = (gd<i>f</i> − <i>f</i>d<i>g</i>)/<i>g</i><sup>2</sup></p>
+</div>
+
+<p>Si noti poi che d<i>f</i>/<i>f</i> = dlog|<i>f</i>| = differenziale logaritmico di <i>f</i>.</p>
+
+<p><b>Example 5.17.4</b>. Consideriamo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msqrt>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mi>x</mi>
+  </msqrt>
+</math>
+
+<!-- $$f(x) = \sqrt{1+x} $$ -->
+
+<p>e approssimiamo al primo ordine <i>f</i>(<i>x</i>) − <i>f</i>(0) = &radic;(1 + <i>x</i>) − 1.<br> Essendo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>2</mn>
+      <msqrt>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mi>x</mi>
+      </msqrt>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mn>0</mn>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+</math>
+
+<!-- $$f'(x) = \frac{1}{2\sqrt{1+x}} \quad \quad f'(0) = \frac{1}{2} $$ -->
+
+<p>si ha</p>
+
+<div class="box">
+<p>&radic;(1 + <i>x</i>) - 1 ≈ <i>x</i>/2&emsp; al primo ordine&emsp;(5.17.5)</p>
+</div>
+
+<p>o anche</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msqrt>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mi>x</mi>
+  </msqrt>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>for&#xA0;</mtext>
+  <mi>x</mi>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \sqrt{1+x} = 1 + \frac{1}{2} x + o(x), \quad \text{for } x \to 0 $$ -->
+
+<p>Più in generale <i>f</i>(<i>x</i>) = (1 + <i>x</i>)<sup><i>&alpha;</i></sup>, si ha</p>
+
+<div class="eq">
+<p><i>f'</i>(<i>x</i>) = &alpha;(1 + <i>x</i>)<sup><i>&alpha;</i> − 1</sup> &emsp;&emsp; <i>f'</i>(0) = <i>&alpha;</i></p>
+</div>
+
+<p>e quindi ritroviamo</p>
+
+<div class="box">
+<p>(1 + <i>x</i>)<sup>&alpha;</sup> − 1 ≈ &alpha;<i>x</i>.&emsp; al primo ordine&emsp;(5.17.6)■</p>
+</div>
+
+<p id="dipolo"><b>Esempio 5.17.6. Potenziale di un dipolo elettrico</b>. Un'interessante applicazione della (5.17.5) si trova nel calcolo dell'approssimazione al primo ordine del potenziale creato da un dipolo elettrico. <br> Con riferimento alla fig. 2, consideriamo un dipolo costituito da due cariche +<i>q</i> e −<i>q</i> concentrate in due punti <i>R</i> e <i>S</i> rispettivamente, a distanza 2<i>a</i> l'una dall'altra.</p>
+
+<figure>
+<img src="img/dipolo.png" alt="dipolo elettrico"/>
+<figcaption><b>Fig. 2</b></figcaption>
+</figure>
+
+<p>Se <i>P</i> è un punto a distanza <i>r</i> dal punto medio <i>O</i> e a distanza <i>r</i><sub>1</sub> da <i>R</i>, <i>r</i><sub>2</sub> da <i>S</i>, il potenziale in <i>P</i> è assegnato dalla formula (in opportune unità di misura)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>V</mi>
+  <mo stretchy="false">(</mo>
+  <mi>P</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mi>q</mi>
+    <mrow>
+      <mn>4</mn>
+      <mi>&#x3C0;</mi>
+      <msub>
+        <mi>&#x3F5;</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub>
+        <mi>r</mi>
+        <mn>1</mn>
+      </msub>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub>
+        <mi>r</mi>
+        <mn>2</mn>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$V(P) = \frac{q}{4\pi\epsilon_0} \left(\frac{1}{r_1} - \frac{1}{r_2} \right) $$ -->
+
+<p>Vogliamo valutare il potenziale quando <i>a</i> ≼ <i>r</i> (<i>a</i> molto minore di <i>r</i>), mantenendo costante il momento di dipolo <i>&mu;</i> = <i>a</i> ⋅ <i>q</i>. <br>Dal Teorema di Carno in trigonometria, si ha:</p>
+
+<div class="eq">
+<p><i>r</i><sub>1</sub><sup>2</sup> = <i>r</i><sup>2</sup> + <i>a</i><sup>2</sup> &minus; 2<i>ar</i> cos<i>&theta;</i> = <i>r</i><sup>2</sup> [1 + (&minus;2<i>a</i>/<i>r</i> cos <i>&theta;</i> + <i>a</i><sup>2</sup>/<i>r</i><sup>2</sup>)]<br>
+<i>r</i><sub>2</sub><sup>2</sup> = <i>r</i><sup>2</sup> + <i>a</i><sup>2</sup> + 2<i>ar</i> cos<i>&theta;</i> = <i>r</i><sup>2</sup> [1 + (2<i>a</i>/<i>r</i> cos <i>&theta;</i> + <i>a</i><sup>2</sup>/<i>r</i><sup>2</sup>)]</p>
+</div>
+
+<p>Ricordiamo ora che, se <i>x</i> è vicino a zero, &radic;(1 + <i>x</i>) ≈ 1 + <i>x</i>/2 al primo ordine e quindi, essendo <i>a</i>/<i>r</i> vicino a zero e <i>a</i>/<i>r</i> ≼ <i>a</i><sup>2</sup>/<i>r</i><sup>2</sup>, si può scrivere, al primo ordine:</p>
+
+<div class="eq">
+<p><i>r</i><sub>1</sub> ≈ (1 &minus; <i>a</i>/<i>r</i> cos <i>&theta;</i>)&emsp;&emsp; <i>r</i><sub>2</sub> ≈ (1 + <i>a</i>/<i>r</i> cos <i>&theta;</i>)</p>
+</div>
+
+<p>Ne segue che, al primo ordine, <i>r</i><sub>1</sub> &minus; <i>r</i><sub>2</sub> ≈ 2<i>a</i>cos <i>&theta;</i>, <i>r</i><sub>1</sub> <i>r</i><sub>2</sub> ≈ <i>r</i><sup>2</sup> e infine</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>V</mi>
+  <mo stretchy="false">(</mo>
+  <mi>P</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mi>q</mi>
+    <mrow>
+      <mn>4</mn>
+      <mi>&#x3C0;</mi>
+      <msub>
+        <mi>&#x3F5;</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub>
+        <mi>r</mi>
+        <mn>1</mn>
+      </msub>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub>
+        <mi>r</mi>
+        <mn>2</mn>
+      </msub>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mi>q</mi>
+    <mrow>
+      <mn>4</mn>
+      <mi>&#x3C0;</mi>
+      <msub>
+        <mi>&#x3F5;</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>r</mi>
+        <mn>2</mn>
+      </msub>
+      <mo>&#x2212;</mo>
+      <msub>
+        <mi>r</mi>
+        <mn>1</mn>
+      </msub>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>r</mi>
+        <mn>1</mn>
+      </msub>
+      <msub>
+        <mi>r</mi>
+        <mn>2</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>&#x2248;</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>a</mi>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>&#x3B8;</mi>
+    </mrow>
+    <msup>
+      <mi>r</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mfrac>
+    <mi>q</mi>
+    <mrow>
+      <mn>4</mn>
+      <mi>&#x3C0;</mi>
+      <msub>
+        <mi>&#x3F5;</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>&#x3BC;</mi>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>&#x3B8;</mi>
+    </mrow>
+    <mrow>
+      <mn>4</mn>
+      <mi>&#x3C0;</mi>
+      <msub>
+        <mi>e</mi>
+        <mn>0</mn>
+      </msub>
+      <msup>
+        <mi>r</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$V(P) = \frac{q}{4\pi\epsilon_0} \left(\frac{1}{r_1} - \frac{1}{r_2} \right) = \frac{q}{4\pi\epsilon_0} \frac{r_2 - r_1}{r_1r_2} \approx \frac{2a \cos \theta}{r^2} \frac{q}{4\pi\epsilon_0} = \frac{2\mu \cos \theta} {4\pi e_0 r^2} $$ -->
+
+<p>che è l'approssimazione cercata. Si noti la dipendenza da <i>r</i> e dall'anaolo <i>&theta;</i>. &emsp;■</p>
+
+<p id="dipolo"><b>Esempio 5.17.7. Oscillazioni del pendolo</b>. Una massa puntiforme <i>m</i> oscilla, appesa a un filo di lunghezza <i>l</i>. Detto <i>&theta;</i>(<i>t</i>) l'angolo formato dal filo con la verticale all'istante <i>t</i>, la forza agente sul punto nella direzione del moto è &minus;<i>mg</i> sin<i>&theta;</i>. <br> D'altro canto, questa forza deve uguagliare, per la seconda legge della dinamica, il prodotto della massa per l'accelerazione, pari a <i>ml</i>&theta;''. Si ottiene quindi l'equazione</p>
+
+<div class="eq">
+<p><i>ml</i>&theta;'' = &minus;<i>mg</i> sin<i>&theta;</i></p>
+</div>
+
+<p>ossia</p>
+
+<div class="eq">
+<p><i>&theta;''</i> = &minus;<i>g</i>/<i>l</i> sin<i>&theta;</i></p>
+</div>
+
+<p>Tale equazione è difficile da studiare direttamente. Se però vogliamo studiare solo le piccole oscillazioni del punto attorno all'equilibrio, potremo assumere che <i>&theta;</i> sia piccolo; si può allora studiare in prima approssimazione l'equazione linearizzata</p>
+
+<div class="eq">
+<p><i>&theta;''</i> = &minus;<i>g</i>/<i>l</i> <i>&theta;</i></p>
+</div>
+
+<p>(abbiamo sfruttato sin <i>&theta;</i> ≈ <i>&theta;</i>, al primo ordine, per <i>&theta;</i> piccolo). Questa può essere risolta completamente. Si trova (ponendo <i>&omega;</i><sup>2</sup> = <i>g</i>/<i>l</i>)</p>
+
+<div class="eq">
+<p><i>&theta;</i>(<i>t</i>) = <i>A</i> cos(<i>&omega;t</i> + <i>&theta;</i><sub>0</sub>)</p>
+</div>
+
+<p><i>&theta;</i><sub>0</sub>, <i>A</i> costanti da determinarsi mediante le condizioni iniziali del sistema. (Si verifichi che le funzioni <i>&theta;</i>(<i>t</i>) trovate risolvono effettivamente l'equazione. Studiando le equazioni differenziali, si proverà che effettivamente non vi sono altre soluzioni.&emsp;■</p>
+
+<p id="E"><b>Esempio 5.17.8. Energia cinetica e relativistica</b>. Nella meccanica classica, l'energia cinetica di un punto materiale di massa <i>m</i> in movimento, con velocità scalare <i>v</i>, è data da</p>
+
+<div class="eq">
+<p><i>E</i><sub>c</sub> = <i>mv</i><sup>2</sup>/2</p>
+</div>
+
+<p>La teoria della relatività modifica varie definizione e leggi della meccanica classica. Anzitutto, la massa <i>m</i> non è più costante, ma dipende dalla velocità, secondo la legge:</p>
+
+<div class="eq">
+<p><i>m</i> = <i>m</i><sub>0</sub>/&radic;(1 &minus; <i>v</i><sup>2</sup>/<i>c</i><sup>2</sup>)</p>
+</div>
+
+<p>dove <i>c</i> è la velocità della luce nel vuoto e <i>m</i><sub>0</sub> è la "massa a riposo" della particella (questa è costante); in secondo luogo, vale la famosa equazione dell'energia:</p>
+
+<div class="eq">
+<p><i>E</i> = <i>mc</i><sup>2</sup></p>
+</div>
+
+<p>L'energia a riposo della particella è invece</p>
+
+<div class="eq">
+<p><i>E</i> = <i>m</i><sub>0</sub><i>c</i><sup>2</sup></p>
+</div>
+
+<p>e l'energia cinetica relativistica, è per definizione pari a (<i>E</i> &minus; <i>E</i><sub>0</sub>). Sostituiamo ad <i>m</i> la sua espressione e troviamo <i>E</i> come funzione della velocità della particella:</p>
+
+<div class="eq">
+<p><i>E</i> = <i>m</i><sub>0</sub><i>c</i><sup>2</sup>/&radic;(1 &minus; <i>v</i><sup>2</sup>/<i>c</i><sup>2</sup>)</p>
+</div>
+
+<p>Nell'ipotesi che la velocità della particella sia piccola rispetto a quella, elevatissima, della luce, <i>v</i>/<i>c</i> sarà molto piccolo. Linearizzamo allora l'espressione trovata come funzione di (<i>v</i>/<i>c</i>)<sup>2</sup> (usando 5.17.6 con <i>&alpha;</i> = &minus;1/2):</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>E</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>m</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mi>c</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x22C5;</mo>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mi>v</mi>
+        <mi>c</mi>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>2</mn>
+    </mrow>
+  </msup>
+  <mo>&#x2248;</mo>
+  <msub>
+    <mi>m</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mi>c</mi>
+    <mn>2</mn>
+  </msup>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mfrac>
+      <msup>
+        <mi>v</mi>
+        <mn>2</mn>
+      </msup>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <msub>
+    <mi>m</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mi>c</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <msub>
+    <mi>m</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mi>v</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <msub>
+    <mi>E</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>E</mi>
+    <mi>c</mi>
+  </msub>
+</math>
+
+<!-- $$ E = m_0 c^2 \cdot (1 - \left(\frac{v}{c} \right)^2)^{-1/2} \approx m_0c^2 \left(1 + \frac{1}{2} \frac{v^2}{c^2} \right) = m_0c^2 + \frac{1}{2} m_0 v^2 = E_0 + E_c $$ -->
+
+<p>dove <i>E</i><sub>0</sub> è l'energia a riposo della particella, ed <i>E<sub>c</sub></i> l'energia cinetica classica. L'energia cinetica relativistica, che per definizione è pari a <i>E</i> &minus; <i>E</i><sub>0</sub>, nell'approssimazione valida per velocità piccole rispetto a quella della luce coincide dunque con l'energia cinetica classica. &emsp;■</p>
+
+<section aria-label="End">
+<a href="derivative.html">&#171;Derivative</a>
+<a href="index.html">Index</a>
+<a href="sviluppi.html">Limiti notevoli e sviluppi &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

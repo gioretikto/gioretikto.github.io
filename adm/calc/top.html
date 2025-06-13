@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Topologia"/>
+	<title>Topologia</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Topologia</h1>
+
+<p>We call a subset <i>A</i> of real line an <b>interval</b> if, whenever we have distinct point <i>a,b</i> &in; <i>A</i>, then all points which are greater than <i>a</i> and less than <i>b</i> also lie in <i>A</i>.</p>
+
+<p><b>Definition 2.10.1</b>. Let <i>a</i> and <i>b</i> two real numbers such that <i>a</i> &le; <i>b</i>. We call <b>closed interval</b> the set</p>
+
+<div class="eq">
+<p>[<i>a,b</i>] = {<i>x</i> &in; ℝ | <i>a</i> &le; <i>x</i> &le; <i>b</i>}</p>
+</div>
+
+<p>If <i>a</i> &lt; <i>b</i>, we call <b>open interval</b> of extremes <i>a</i> and <i>b</i>, the set</p>
+
+<div class="eq">
+<p>(<i>a,b</i>) = {<i>x</i> &in; ℝ | <i>a</i> &lt; <i>x</i> &lt; <i>b</i>}</p>
+</div>
+
+<p>An equivalent notation for this set is ]<i>a,b</i>[. &emsp;□</p>
+
+<p>It's possible to exclude from the interval one extreme, obtaining the <i>semi-opened interval to the right</i> of extremes <i>a</i> and <i>b</i></p>
+
+<div class="eq">
+<p>[<i>a,b</i>) = {<i>x</i> &in; ℝ | <i>a</i> &le; <i>x</i> &lt; <i>b</i>}</p>
+</div>
+
+<p>or <i>semi-opened interval to the left</i></p>
+
+<div class="eq">
+<p>(<i>a,b</i>] = {<i>x</i> &in; ℝ | <i>a</i> &lt; <i>x</i> &le; <i>b</i>}</p>
+</div>
+
+<p>The intervals presented above are all example of <b>bounded</b> intervals; There are also <b>unbounded</b> (or infinite) intervals;</p>
+
+<p><b>Definition 2.10.2</b>. We define the <b>infinite intervals</b></p>
+
+<div class="eq">
+<p>(<i>a</i>, ∞) = {<i>x</i> ∈ ℝ : <i>x</i> > <i>a</i>},<br>
+[<i>a</i>, ∞) = {x ∈ ℝ : x ≥ a},<br>
+(−∞, <i>b</i>) = {x ∈ ℝ : x < b},<br>
+(−∞, b] = {<i>x</i> ∈ ℝ : x ≤ b},<br>
+(−∞, ∞) = ℝ.</p>
+</div>
+
+<p>In particular if <i>a</i> = <i>b</i>, we have a <b>degenerate interval</b>; A singleton {<i>a</i>} is a degenerale interval. &emsp;□</p>
+
+<p>The symbol −∞ and +∞ do not indicate real numbers; they allow to extended the ordering of real numbers with the convention that −∞ &lt; <i>x</i> and <i>x</i> &lt; +∞ for each <i>x</i> ∈ ℝ. In some cases we set</p>
+
+<div class="eq">
+<p>(−∞ , +∞) = ℝ</p>
+</div>
+
+<p>Si può dimostrare che gli intervalli, limitati o illimitati, sono tutti e soli i sottoinsiemi <i>I</i> di ℝ che soddisfano la seguente proprietà caratteristica (detta <i>connessione</i>): presi comunque tre numeri reali</p>
+
+<div class="eq">
+<p><i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>x</i><sub>3</sub>, se <i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>, <i>x</i><sub>3</sub> &in; <i>I</i>, allora <i>x</i><sub>2</sub> &in; <i>I</i></p>
+</div>
+
+<p>Nel seguito capiterà di considerare il prodotto cartesiano di due (o più) intervalli, cui si può dare il significato geometrico di rettangolo (in due dimensioni) o parallelepipedo (in tre dimensioni).</p>
+
+<p id="intorno"><b>Definition 2.10.3</b> Siano <i>x</i><sub>0</sub> &in; ℝ e <i>r</i> &gt;0. Si chiama <b>intorno di centro <i>x</i><sub>0</sub> e raggio <i>r</i></b>, l'intervalllo aperto (<i>x</i><sub>0</sub> − <i>r</i>, <i>x</i><sub>0</sub> + <i>r</i>). Si ha</p>
+
+<div class="eq">
+<p>(<i>x</i><sub>0</sub> − <i>r</i>, <i>x</i><sub>0</sub> + <i>r</i>) = {<i>x</i> &in; ℝ: <i>x</i><sub>0</sub> − <i>r</i> &lt; <i>x</i> &lt; <i>x</i><sub>0</sub> + <i>r</i>} = <br>
+{<i>x</i> &in; ℝ:  − <i>r</i> &lt; <i>x</i> − <i>x</i><sub>0</sub> &lt; <i>r</i>} = <br>
+{<i>x</i> &in;  ℝ: |<i>x</i> − <i>x</i><sub>0</sub>| &lt; <i>r</i>}</p>
+</div>
+
+<p>Talvolta denoteremo questo intorno con il simbolo <i>I<sub>r</sub></i> (<i>x</i><sub>0</sub>). <br> Si chiama <b>intorno destro di <i>x</i><sub>0</sub> di raggio <i>r</i></b> l'intervallo aperto (<i>x</i><sub>0</sub>, <i>x</i><sub>0</sub> + <i>r</i>). <br> Si chiama <b>intorno sinistro di <i>x</i><sub>0</sub> di raggio <i>r</i></b> l'intervallo aperto (<i>x</i><sub>0</sub> − <i>r</i>).&emsp;■</p>
+
+<figure>
+<img src="img/I.png" alt="intorno">
+<figcaption>Un intorno di <i>x</i><sub>0</sub> è dato da un "intervallino" contenente <i>x</i><sub>0</sub>.</figcaption>
+</figure>
+
+<h2 id="pa">Punto di accumulazione</h2>
+
+<p><b>Definizione 2.10.4 (Punto di accumulazione)</b>. Sia <i>A</i> &subseteq; ℝ. Diremo che <i>x</i><sub>0</sub> &in; ℝ è un <i>punto di accumulazione</i> di <i>A</i> se <b>ogni</b> <a href="top.html#intorno">intorno</a> di <i>x</i><sub>0</sub> contiene punti di <i>A</i> distinti da <i>x</i><sub>0</sub> stesso, cioè &forall;<i>&delta;</i> &gt; 0 si ha [(<i>x</i><sub>0</sub> − &delta;, <i>x</i><sub>0</sub> + &delta;) \ {<i>x</i><sub>0</sub>}] ∩ <i>A</i> &ne; 0.&emsp;□</p>
+
+<p><b>Esempio 4.2</b> Consideriamo l'insieme</p>
+
+<div class="eq">
+<p><i>A</i> = {1/<i>n</i> : <i>n</i> &in; ℕ, <i>n</i> &ge; 1}</p>
+</div>
+
+<p>Allora 0 è un punto di accumulazione di <i>A</i> pur non essendo un punto di <i>A</i>, in quanto a un suo qualsiasi intorno I<sub>r</sub>(0) = (−<i>r,r</i>) appartengono tutti gli infiniti elementi 1/<i>n</i> dell'insieme <i>A</i> per cui è 1/<i>n</i> &lt; <i>r</i>. Ogni altro punto <i>x</i> &ne; 0 (v. fig. per es., <i>x</i> = 1/3) non è di accumulazione, dato che si può sempre determinare un suo intorno che non contenga (altri) punti di <i>A</i> &emsp;■</p>
+
+<img src="img/accumulazione.png" alt="punto di accumulazione"/>
+
+<p>Come altro esempio, se <i>A</i> = (<i>a,b</i>) \ <i>x</i><sub>0</sub> con <i>x</i><sub>0</sub> &in; [<i>a,b</i>], allora tutti i punti dell'intervallo chiuso [<i>a,b</i>] sono di accumulazione per <i>A</i>; in particolare <i>x</i><sub>0</sub>, pur non appartenendo ad <i>A</i>, è di accumulazione per <i>A</i>.</p>
+
+<p><b>Definizione 2.10.5</b>. Un punto <i>a</i>, appartenente a un insieme <i>A</i> &subset; ℝ, è detto <b>isolato</b> quando non è di accumulazione per <i>A</i>, ovvero quando esiste un suo intorno al quale non appartiente alcun altro elemento di <i>A</i>. &emsp;□</p>
+
+<p><b>Remark</b>. If <i>x</i><sub>0</sub> is an accumultaion point of <i>A</i> &subset; ℝ, then for each &epsilon; > 0 the intersection B<sub>&epsilon;</sub>(<i>x</i><sub>0</sub>) ∩ <i>A</i> is infinite. That is the definition implies that every neighborhood of <i>x</i><sub>0</sub> contains an inifnite number of points of <i>A</i>. For if on the contrary it only contained a finite number of points of <i>A</i>, say <i>a</i><sub>1</sub>, <i>a<sub>n</sub></i>, we could find a smaller neighborhood of <i>x</i><sub>0</sub> that does not contain <i>a</i><sub>1</sub>, <i>a<sub>n</sub></i> as indicated as follows.</p>
+
+<div class="eq">
+<p>________(____<i>a</i><sub>2</sub>____<i>a</i><sub>3</sub>__(<i>x</i><sub>0</sub>)___<i>a</i><sub>1</sub>_____)___</p>
+</div>
+
+<p>Intuitively this means that by zooming in an infinite number of times at <i>x</i><sub>0</sub> we continue to see points of <i>A</i> (different from <i>x<sub>0</sub></i>) at all magnifications no matter how deep you zoom in.</p>
+
+<p>If we reformulate the definition to include this; we can drop the clause excluding <i>x</i><sub>0</sub>: <i>x</i><sub>0</sub> is an accumulation point of <i>A</i> if every neighborhood of <i>x</i><sub>0</sub> contains infinitely many points of <i>A</i>.</p>
+
+<p>To clarify the definition of accumulation point, examine the following cases:</p>
+
+<img src="img/acc.png" alt="punti accumulazione e non" />
+
+<p>The set {1,1/2,1/4,...} has 0 as accumulation point; in fact 0 is the only accumulation point of this set. The set of integers ha no accumulation point, for no number has infinite number of integers nearby.</p>
+
+<section aria-label="End">
+<a href="abs.html">&#171;Valore assoluto. Disuguaglianza triangolare</a>
+<a href="index.html">Index</a>
+<a href="radici.html">Radici &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

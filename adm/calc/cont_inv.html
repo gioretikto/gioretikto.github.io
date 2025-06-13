@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Continuità e invertibilità">
+	<title>Continuità e invertibilità</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Continuità e invertibilità</h1>
+
+<p>Sia <i>f</i>: <i>I</i> &rarr; ℝ, con <i>I</i> intervallo. Occupiamoci ancora del problema dell'invertibilità di <i>f</i>, vedendo ora il problema dal punto di vista della continuità.<br> Sappiamo già che una funzione definita su un intervallo e strettamente monotona è invertibile (con inversa monotona). Sappiamo anche che il viceversa non è generalmente vero: esistono funzioni invertibili su un intervallo, e non monotone (v. figura seguente).</p>
+
+<img src="img/cont_inv.png" alt="continuità e invertibilità"/>
+
+<p>Tuttavia, se aggiungiamo l'ipotesi della continuità nel teorema varrà anche viceversa:</p>
+
+<p><b>Teorema 4.10.1</b>. Sia <i>f</i>: <i>I</i> &rarr; ℝ, con <i>I</i> intervallo, una funzione continua in <i>I</i>. Allora <i>f</i> è invertibile in <i>I</i> se e solo se è strettamente monotona. In tal caso la sua inversa è ancora strettamente monotona e continua.</p>
+
+<p><b>Dim</b>. Sappiamo già che se <i>f</i> è strettamente monotona è invertibile (indipendentemente dalle ipotesi che <i>f</i> sia continua, e che sia definita su un intervallo). Mostriamo che vale il viceversa, ossia che se è continua e invertibile, allora è strettamente monotona. Supponendo per assurdo, che non sia strettamente monotona, allora esistonto tre punti <i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>x</i><sub>3</sub> in <i>I</i> tali che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i><sub>1</sub>) &lt; <i>f</i>(<i>x</i><sub>2</sub>) e <i>f</i>(<i>x</i><sub>2</sub>) &gt; <i>f</i>(<i>x</i><sub>3</sub>)</p>
+</div>
+
+<p>oppure tali che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i><sub>1</sub>) &gt; <i>f</i>(<i>x</i><sub>2</sub>) e <i>f</i>(<i>x</i><sub>2</sub>) &lt; <i>f</i>(<i>x</i><sub>3</sub>)</p>
+</div>
+
+<p>Per fissare le idee, supponiamo che valga la prima delle due alternative (nell'altro caso si ragionerà analogamente). Confrontiamo i valori di <i>f</i>(<i>x</i><sub>1</sub>) e <i>f</i>(<i>x</i><sub>3</sub>); non possono essere uguali perché <i>f</i> per ipotesi è invertibile, dunque <i>f</i>(<i>x</i><sub>1</sub>) &lt; <i>f</i>(<i>x</i><sub>3</sub>) oppure <i>f</i>(<i>x</i><sub>1</sub>) &gt; <i>f</i>(<i>x</i><sub>3</sub>). Di nuovo, per fissare le idee supponiamo che valga la prima delle due alternative (nell'altro caso di ragionerà analogamente). Dunque sappiamo che:</p>
+
+<div class="eq">
+<p><i>x</i><sub>1</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>x</i><sub>3</sub> e <i>f</i>(<i>x</i><sub>1</sub>) &lt; <i>f</i>(<i>x</i><sub>3</sub>) &lt; <i>f</i>(<i>x</i><sub>2</sub>)</p>
+</div>
+
+<p>Poiché <i>f</i> è continua, per il <a href="W.html#int">T. dei valori intermedi</a> ∃<i>x</i><sub>0</sub> &in; (<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>) tale che <i>f</i>(<i>x</i><sub>0</sub>) = <i>f</i>(<i>x</i><sub>3</sub>). Poiché <i>x</i><sub>0</sub> &ne; <i>x</i><sub>3</sub> (<i>x</i><sub>0</sub> &lt; <i>x</i><sub>2</sub> &lt; <i>x</i><sub>3</sub>), ne segue che <i>f</i> non può essere invertibile, assurdo. <br>Questo dimostra la prima parte del teorema. Sia <i>f</i> continua, strettamente monotona e quindi invertibile in <i>I</i>, e sia <i>g</i> la sua funzione inversa, ancora strettamente monotona e invertibile. Provimao che <i>g</i> è continua. Per quanto osservato dopo il teorema di monotonia, la funzione <i>g</i>, strettamente monotona, o è continua, oppure ha dei punti di discontinuità a salto. In tale caso l'immagine di <i>g</i> non è un intervallo (ma è l'unione di almeno due intervalli disgiunti), il che è assurdo preché tale immagine è <i>I</i>. Dunque <i>g</i> è continua. &emsp;■</p>
+
+<p>Si noti che nella dimostrazione del teorema precedente si sono utilizzati sia il T. dei valori intermedi, sia il T. di monotonia per le funzioni. Di nuovo, quindi, abbiamo fatto implictamente uso, in modo essenziale, dell'assioma di continuità di ℝ. Il teorema appena dimostrato significa in particolare che:</p>
+
+<blockquote>Una funzione continua e invertibile su un intervallo, ha inversa continua</blockquote>
+
+<p>Questo fatto completa la dimostrazione del teorema di continuità delle funzioni elementari; infatti:</p>
+
+<p>la continuità di <i>a<sup>x</sup></i> implica la continuità di log<sub>a</sub><i>x</i>; la continuità di sin <i>x</i>, cos <i>x</i>, tg <i>x</i> implica la continuità di arcsin <i>x</i>, arcos <i>x</i>, arctg <i>x</i>.</p>
+
+<section aria-label="End">
+<a href="lim.html">«Il concetto di limite</a>
+<a href="index.html">Index</a>
+<a href="lim_T.html">Tereomi sui limiti»</a>
+</section>
+
+</article>
+
+</body>
+</html>
