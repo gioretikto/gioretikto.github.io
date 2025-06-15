@@ -2388,8 +2388,149 @@ print(f"La soluzione trovata è t = {root}")
 
 <li><p>Fare un esempio di funzione derivabile <i>n</i> volte ma non <i>n</i> &minus; 1 volte, per <i>n</i> intero positivo qualsiasi.</p>
 
-</ol>
+<p><b>Soluzione</b>. Si consideri la funzione</p>
 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>x</mi>
+            <mi>n</mi>
+          </msup>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mi>x</mi>
+          <mo>&#x2265;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mi>x</mi>
+          <mo>&lt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$f(x) = \begin{cases} x^n, & x \geq 0 \\ 0, & x < 0 \end{cases} $$ -->
+
+<p>La derivata prima è:</p>
+
+<div class="eq">
+<p><i>f</i>′(<i>x</i>) = <i>nx</i><sup><i>n</i>−1</sup>, <i>x</i> ≥ 0</p>
+</div>
+
+<p>Confrontando il limite destro e sinistro, si trova che la derivata prima esiste ed è continua.</p>
+
+<p>La derivata di ordine <i>n</i>−1,</p>
+
+<div class="eq">
+<p><i>f</i><sup>(<i>n</i>−1)</sup>(<i>x</i>) = <i>n</i>!<i>x</i></p>
+</div>
+
+<p>il limite destro (<i>x</i> ⟶ 0<sup>+</sup>) dà 0 e quello sinistro anche (Per <i>x</i><0, la funzione è identicamente zero. Questo significa che tutte le sue derivate a sinistra sono uguali a zero). <br> La derivata di ordine <i>n</i>, è</p>
+
+<div class="eq">
+<p><i>f</i><sup>(<i>n</i>)</sup>(<i>x</i>) = <i>n</i></p>
+</div>
+
+<p>che ha un salto rispetto alla derivata sinistra, che è sempre zero.&emsp;■</p></li>
+
+<li><p>Si consideri la funzione</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>f</mi>
+    <mi>&#x3B1;</mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>x</mi>
+            <mi>&#x3B1;</mi>
+          </msup>
+          <mi>sin</mi>
+          <mo data-mjx-texclass="NONE">&#x2061;</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mi>x</mi>
+          </mfrac>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+          <mo>,</mo>
+        </mtd>
+        <mtd>
+          <mi>x</mi>
+          <mo>&#x2264;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!--  $$f_\alpha (x) = \begin{cases} x^\alpha \sin \frac{1}{x}, & x \gt 0 \\ 0, & x \le 0 \end{cases} $$ -->
+
+<p>Stabilire per quali valori del parametro reale <i>&alpha;</i>, la funzione <i>f<sub>&alpha;</sub></i>: è limitata; è continua; è derivabile in 0; ha derivata prima continua in 0; è derivabile due volte.</p>
+
+<p><b>Soluzione</b>. La funzione è limitata se esiste una costante <i>M</i> tale che ∣f<sup>α</sup>(x)∣ ≤ <i>M</i> &forall;<i>x</i>. Studiamo per <i>x</i> &gt; 0, dato che per <i>x</i> &le; 0, <i>f</i> è costantemente zero.</p>
+
+<div class="eq">
+<p>−1 &le; sin 1/x è &le; 1, </p>
+</div>
+
+<p>moltiplicando per <i>x<sup>&alpha;</sup></i>:</p>
+
+<div class="eq">
+<p>−x<sup>&alpha;</sup> &le; <i>x<sup>&alpha;</sup></i> sin 1/<i>x</i> &le; x<sup>&alpha;</sup> </p>
+</div>
+
+<p>Notiamo che per <i>x</i> ⟶ 0<sup>+</sup>:</p>
+
+<ul>
+	<li><p>se <i>&alpha;</i> = 0; <i>x<sup>&alpha;</sup></i> = 1, quindi f è limitata;</p></li>
+	<li><p>se <i>&alpha;</i> &gt; 0; <i>f</i> tende a zero quindi è limitata;</p></li>
+	<li><p>se <i>&alpha;</i> &lt; 0; <i>f</i> diverge quindi non può essere limitata;</p></li>
+</ul>
+
+<p><b>Continuità</b>. f(0) = 0. Dobbiamo verificare che:</p>
+
+
+&emsp;■</p></li>
 
 <section aria-label="End">
 <a href="sviluppi.html">&#171;Limiti notevoli e sviluppi</a>
