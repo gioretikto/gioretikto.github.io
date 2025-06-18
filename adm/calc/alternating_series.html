@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Alternating Series"/>
+	<title>Alternating Series</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Alternating Series</h1>
+
+<p>The convergence tests described in the last section apply only to series with positive terms. Of particular importance are <b>alternating series</b>, whose terms alternate in sign. For example:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>3</mn>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>4</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>5</mn>
+  </mfrac>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>6</mn>
+  </mfrac>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mfrac>
+    <mn>1</mn>
+    <mi>n</mi>
+  </mfrac>
+</math>
+
+<!-- $$ 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \ldots = \sum_{n=1}^\infty (-1)^{n-1} \frac{1}{n} $$ -->
+
+<p>We see from these examples that the <i>n</i>th term of an alternating series is of the form</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> = (−1)<sup><i>n</i>−1</sup> <i>b<sub>n</sub></i></p>
+</div>
+
+<p>where <i>b<sub>n</sub></i> is a positive sequence (we have <i>b<sub>n</sub></i> = <i>a<sub>n</sub></i>). The following test says that if the terms of an alternating series decrease toward 0 in
+absolute value, then the series converges.</p>
+
+<p><b>Proposition 3.4.1</b> (<b>Leibniz Criterion</b>). An alternating series &Sigma;<sub>n</sub> (−1)<sup><i>n</i> − 1</sup> <i>b<sub>n</sub></i> is convergent if it satisfies the following conditions:</p>
+
+<ol type="i">
+	<li><p><i>b</i><sub><i>n</i>+1</sub></i> &le; <i>b<sub>n</sub></i>, &emsp; &forall;<i>n</i> &emsp;(the sequence <i>b<sub>n</sub></i> is decreasing)</p></li>
+	<li><p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>b<sub>n</sub></i> = 0.</p></li>
+</ol>
+
+<p><b>Proof</b>. To prove this, we examine the even partial sums</p>
+
+<div class="eq">
+<p><i>s</i><sub>2<i>n</i></sub> = <i>b</i><sub>1</sub> − <i>b</i><sub>2</sub> + <i>b</i><sub>3</sub> − ... − <i>b</i><sub>2<i>n</i></sub><br>
+<i>s</i><sub>2<i>n</i> + 2</sub> = <i>s</i><sub>2<i>n</i></sub> + (<i>b</i><sub>2<i>n</i> + 1</sub> − <i>b</i><sub>2<i>n</i> + 2</sub>).</p>
+</div>
+
+<p>Since <i>b</i><sub>2<i>n</i> +1</sub> &gt; <i>b</i><sub>2<i>n</i> + 2</sub>, we have</p>
+
+<div class="eq">
+<p><i>s</i><sub>2<i>n</i> + 2</sub> &gt; <i>s</i><sub>2<i>n</i></sub></p>
+</div>
+
+<p>On the other hand,</p>
+
+<div class="eq">
+<p><i>s</i><sub>2<i>n</i> + 2</sub> = <i>a</i><sub>1</sub> − (<i>b</i><sub>2</sub> − <i>b</i><sub>3</sub>) − (<i>b</i><sub>4</sub> − <i>b</i><sub>5</sub>) − ... − <i>b</i><sub>2<i>n</i> + 2</sub></p>
+</div>
+
+<p>Eeach pair in the brackets is positive, then</p>
+
+<div class="eq">
+<p><i>s</i><sub>2<i>n</i> + 2</sub> &lt; <i>b</i><sub>1</sub></p>
+</div>
+
+<p>With the even partial sums bounded <i>s</i><sub>2<i>n</i></sub> &lt; <i>s</i><sub>2<i>n</i> + 2</sub> &lt; <i>b</i><sub>1</sub>; therefore the sequence {<i>s</i><sub>2<i>n</i></sub>} of even partial sums is increasing and bounded above. It is therefore convergent by the <a href="sequences_limit.html#mst">Monotone Sequence Theorem</a>. Let’s call its limit <i>s</i>, that is,</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>s</i><sub>2<i>n</i></sub> = <i>s</i></p>
+</div>
+
+<p>Now we compute the limit of the odd partial sums:</p>
+
+<div class="eq">
+<p>lim<sub><i>n</i> ⟶ &infin;</sub> <i>s</i><sub>2<i>n</i>+1</sub> = lim<sub><i>n</i> ⟶ &infin;</sub> (<i>s</i><sub>2<i>n</i></sub> + b<sub>2<i>n</i>+1</sub>) = lim<sub><i>n</i> ⟶ &infin;</sub> <i>s</i><sub>2<i>n</i></sub> + lim<sub><i>n</i> ⟶ &infin;</sub> <i>b</i><sub>2<i>n</i>+1</sub><br>
+= <i>s</i> + 0 = <i>s</i></p>
+</div>
+
+<p>Since both the even and odd partial sums converge to <i>s</i>, we have lim<sub><i>n</i> ⟶ &infin;</sub> <i>s<sub>n</sub></i> = <i>s</i>. &emsp;□</p>
+
+<p><b>Definition 3.4.2</b>. A series &Sigma; <i>a<sub>n</sub></i> is said to be <i>absolutely convergent</i> if the series of the moduli of its terms &Sigma; |<i>a<sub>n</sub></i>| is convergent. &emsp;□</p>
+
+<p><b>Theorem 3.4.3</b>. If a series is absolutely convergent, then it is convergent.</p>
+
+<p><b>Proof</b>. Since &Sigma; |<i>a<sub>n</sub></i>| is convergent, it satisfies <a href="series.html#Cauchy">Cauchy criterion</a>, that is, for all &epsilon; &gt; 0 there is some <i>N</i> such that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mi>m</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mi>&#x3B5;</mi>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo>&gt;</mo>
+  <mi>m</mi>
+  <mo>&#x2265;</mo>
+  <mi>N</mi>
+</math>
+
+<!-- $$\sum_{k=m+1}^n |a_k| \lt \varepsilon, \qquad n \gt m \ge N$$ -->
+
+<p>Since</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>k</mi>
+        <mo>=</mo>
+        <mi>m</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>n</mi>
+    </munderover>
+    <msub>
+      <mi>a</mi>
+      <mi>k</mi>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>&#x2264;</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mi>m</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>&lt;</mo>
+  <mi>&#x3B5;</mi>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo>&gt;</mo>
+  <mi>m</mi>
+  <mo>&#x2265;</mo>
+  <mi>N</mi>
+</math>
+
+<!-- $$ \left |\sum_{k=m+1}^n a_k \right| \le  \sum_{k=m+1}^n |a_k| \lt \varepsilon, \qquad n \gt m \ge N$$ -->
+
+<p>Then the series &Sigma; <i>a<sub>n</sub></i> satisfies as well the Cauchy criterion, therefore it converges. &emsp;□</p>
+
+<p>In other words, absolute convergence implies convergence, but the converse is not true as the following example illustrates.</p>
+
+<p><b>Example 3.4.3</b>. The series &Sigma; (−1)<sup><i>n</i></sup>/<i>n<sup>&alpha;</sup></i>, with <i>&alpha;</i> &gt; 1 is absolutely convergent. Indeed we have</p>
+
+<div class="eq">
+<p>|(−1)<sup><i>n</i></sup>/<i>n<sup>&alpha;</sup></i>| = 1/<i>n<sup>&alpha;</sup></i></p>
+</div>
+
+<p>The series &Sigma; 1/<i>n<sup>&alpha;</sup></i> is converge for <i>&alpha;</i> &gt; 1. If <i>&alpha;</i> = 1, nothing we can conclude on its convergence, since the series &Sigma; 1/<i>n</i> (harmonic series) is divergent. &emsp;■</p>
+
+<section aria-label="End">
+<a href="e.html">&#171;The e number</a>
+<a href="index.html">Index</a>
+<a href="exercises_series.html">Exercises on series&#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>

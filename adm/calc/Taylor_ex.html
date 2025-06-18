@@ -2507,35 +2507,1365 @@ print(f"La soluzione trovata è t = {root}")
 
 <p>Stabilire per quali valori del parametro reale <i>&alpha;</i>, la funzione <i>f<sub>&alpha;</sub></i>: è limitata; è continua; è derivabile in 0; ha derivata prima continua in 0; è derivabile due volte.</p>
 
-<p><b>Soluzione</b>. La funzione è limitata se esiste una costante <i>M</i> tale che ∣f<sup>α</sup>(x)∣ ≤ <i>M</i> &forall;<i>x</i>. Studiamo per <i>x</i> &gt; 0, dato che per <i>x</i> &le; 0, <i>f</i> è costantemente zero.</p>
+<p><b>Soluzione</b>. La funzione è limitata se esiste una costante <i>M</i> tale che ∣<i>f</i><sub>α</sub>(<i>x</i>)∣ ≤ <i>M</i> &forall;<i>x</i>. Studiamo per <i>x</i> &gt; 0, dato che per <i>x</i> &le; 0, <i>f</i> è costantemente zero.</p>
 
 <div class="eq">
-<p>−1 &le; sin 1/x è &le; 1, </p>
+<p>−1 &le; sin 1/<i>x</i> è &le; 1, </p>
 </div>
 
 <p>moltiplicando per <i>x<sup>&alpha;</sup></i>:</p>
 
 <div class="eq">
-<p>−x<sup>&alpha;</sup> &le; <i>x<sup>&alpha;</sup></i> sin 1/<i>x</i> &le; x<sup>&alpha;</sup> </p>
+<p>−<i>x<sup>&alpha;</sup></i> &le; <i>x<sup>&alpha;</sup></i> sin 1/<i>x</i> &le; <i>x<sup>&alpha;</sup></i></p>
 </div>
 
 <p>Notiamo che per <i>x</i> ⟶ 0<sup>+</sup>:</p>
 
 <ul>
-	<li><p>se <i>&alpha;</i> = 0; <i>x<sup>&alpha;</sup></i> = 1, quindi f è limitata;</p></li>
+	<li><p>se <i>&alpha;</i> = 0; <i>x<sup>&alpha;</sup></i> = 1, quindi <i>f</i> è limitata;</p></li>
 	<li><p>se <i>&alpha;</i> &gt; 0; <i>f</i> tende a zero quindi è limitata;</p></li>
 	<li><p>se <i>&alpha;</i> &lt; 0; <i>f</i> diverge quindi non può essere limitata;</p></li>
 </ul>
 
-<p><b>Continuità</b>. f(0) = 0. Dobbiamo verificare che:</p>
+<p><b>Continuità</b>. <i>f</i>(0) = 0. Quindi, dobbiamo verificare che:</p>
 
+<div class="eq">
+<p>lim<sub><i>x</i> &rarr; 0</sub> <i>f</i>(<i>x</i>) = 0</p>
+</div>
 
-&emsp;■</p></li>
+<p>Per quanto visto al punto precedente, per <i>x</i> ⟶ 0<sup>+</sup> f tende a zero se <i>&alpha;</i> &gt; 0;. Se <i>α</i> ≤ 0, il limite non esiste (α = 0) o non è finito (α &lt; 0).</p>
+
+<p><b>Derivabilità</b>. Dalla definizione della funzione, la derivata sinistra è sempre nulla. Calcoliamo la derivata destra in 0:</p>
+
+<div class="eq">
+<p><i>f<sub>α</sub>′</i>(0<sup>+</sup>) = lim⁡ <sub>x→0<sup>+</sup></sub> [<i>f<sub>α</sub></i>(<i>x</i>) − <i>f<sub>α</sub></i>(0)]/<i>x</i></p>
+</div>
+
+<p>Come prima, il limite esiste (ed è 0) se α−1 > 0, cioè α > 1.</p>
+
+<p><b>Continuità della derivata prima in 0.</b> La derivata prima è continua in <i>x</i> = 0 se lim<sub><i>x</i> → 0<sup>+</sup></sub> <i>f<sub>α</sub>′</i>(<i>x</i>) = <i>f<sub>α</sub>′</i>(0). <br> Calcoliamo la derivata prima per <i>x</i> > 0:</p>
+
+<div class="eq">
+<p>f<sub>α</sub>′(<i>x</i>) = (<i>x<sup>α</sup></i> sin⁡ 1/<i>x</i>)′ = <i>αx</i><sup><i>α</i>−1</sup> sin ⁡1/<i>x</i> + <i>x<sup>α</sup></i> cos⁡ 1/<i>x</i> (−1/x<sup>2</sup>).</p>
+</div>
+
+<p>Quindi</p>
+
+<div class="eq">
+<p>f<sub>α</sub>′(<i>x</i>) = <i>αx</i><sup><i>α</i>−1</sup> sin ⁡1/<i>x</i> − x<sup>α−2</sup> cos ⁡1/<i>x</i></p>
+</div>
+
+<p>Per studiare la continuità di <i>f<sub>α</sub></i>′​ in 0, esaminiamo il limite</p>
+
+<div class="eq">
+<p>lim⁡ <sub><i>x</i> → 0<sup>+</sup></sub> f<sub>α</sub>′(<i>x</i>)</p>
+</div>
+
+<p>Consideriamo i due termini separatamente:</p>
+
+<ul>
+    <li><p>αx<sup>α−1</sup> sin⁡(1/<i>x</i>): tende a 0 se α−1 > 0 ⇒ α > 1.</p></li>
+    <li><p>−x<sup>α−2</sup> cos⁡(1/<i>x</i>): tende a 0 se α−2 > 0 ⇒ α > 2.</p></li>
+</ul>
+
+<p>Quindi per avere</p>
+
+<div class="eq">
+<p>lim⁡ <sub><i>x</i> → 0<sup>+</sup></sub> f<sub>α</sub>′(<i>x</i>) = 0</p>
+</div>
+
+<p>serve <i>α</i> > 2.</p>
+
+<p>Dato che abbiamo già detto che la derivata in 0 esiste e vale 0 per <i>α</i> > 1, ma affinché la derivata sia continua in 0 serve il limite del valore della derivata per x→0 uguale al valore della derivata in 0, cioè 0, quindi serve <i>α</i> > 2.</p>
+
+<p><b>Derivabilità due volte in 0</b>. La funzione è derivabile due volte se <i>f<sub>α</sub>′</i>(<i>x</i>) è derivabile.</p>
+
+<ul>
+	<li><p>Per x > 0, f<sub>α</sub>′′(<i>x</i>) include termini come x<sup>α−2</sup> e x<sup>α−3</sup>;</p></li>
+	<li><p>Se α > 3, questi termini tendono a 0 quando <i>x</i> → 0;</p></li>
+	<li><p>Se α ≤ 3, il limite non esiste o non è 0;</p></li>
+	<li><p>Quindi, la funzione è derivabile due volte per α > 3.&emsp;■</p></li>
+</ul>
+
+</li>
+
+<li><p>Dimostrare la seguente relazione tra i polinomi di MacLauring di <i>f</i> e <i>f'</i> (relazione che abbiamo utilizzato nella trasformazione della formula di Taylor con resto secondo Peano):</p>
+
+<div class="eq">
+<p><i>T′<sub>n,f</sub></i> (<i>x</i>) = <i>T</i><sub><i>n</i> &minus;1,<i>f′</i></sub> (<i>x</i>)</p>
+</div>
+
+<p><b>Soluzione</b>. Il polinomio di Maclaurin di grado <i>n</i> per la funzione <i>f</i> è definito come:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>x</mi>
+    <mi>k</mi>
+  </msup>
+</math>
+
+<!-- $$T_{n,f}(x) = \sum_{k=0}^{n} \frac{f^{(k)}(0)}{k!} x^k $$ -->
+
+<p>Calcoliamo <i>T′<sub>n,f</sub></i> (<i>x</i>):</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>k</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+</math>
+
+<!-- $$ T'_{n,f}(x) = \sum_{k=1}^{n} \frac{f^{(k)}(0)}{(k-1)!} x^{k-1} $$ -->
+
+<p><b>Cambio indice</b>. Poniamo <i>j</i> = <i>k</i> − 1. Allora:</p>
+
+<ul>
+	<li><p>Quando k=1, j = 0;</p></li>
+	<li><p>Quando k=n, j = n−1.</p></li>
+</ul>
+
+<p>La somma diventa:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+    </mrow>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msubsup>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>j</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+    </mrow>
+  </msup>
+</math>
+
+<!-- $$ T'_{n,f}(x) = \sum_{j=0}^{n-1} \frac{f^{(j+1)}(0)}{j!} x^{j} $$ -->
+
+<p><b>Polinomio di Maclaurin di grado <i>n</i> - 1 per <i>f'</i></b>. Il polinomio di Maclaurin di grado <i>n</i> - 1 per la funzione derivata <i>f'</i> è:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow>
+          <mo data-mjx-alternate="1" data-mjx-pseudoscript="true">&#x2032;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">(</mo>
+            <mi>j</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>j</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msup>
+</math>
+
+<!-- $$T_{n-1,f'}(x) = \sum_{j=0}^{n-1} \frac{f'^{(j)}(0)}{j!} x^j$$ -->
+
+<p>Ma:</p>
+
+<div class="eq">
+<p>f'<sup>(j)</sup>(0) = f<sup>(j+1)</sup>(0)</p>
+</div>
+
+<p>da cui:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>T</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mn>0</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>j</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msup>
+</math>
+
+<!-- $$T_{n-1,f'}(x) = \sum_{j=0}^{n-1} \frac{f^{(j+1)}(0)}{j!} x^j $$ -->
+
+<p>che è esattamente quello che abbiamo trovato per <i>T<sub>n,f′</sub></i>(<i>x</i>), qed.&emsp;□</p></li>
+
+<li><p>Dimostrare che dato un qualsiasi polinomio di grado <i>n</i>,</p>
+
+<div class="eq">
+<p><i>p</i>(<i>x</i>) = <i>a<sub>n</sub>x<sup>n</sup></i> + <i>a</i><sub><i>n</i> &minus; 1</sub> <i>x</i><sup><i>n</i> &minus; 1</sup> + ... + <i>a</i><sub>0</sub></p>
+</div>
+
+<p>e, assegnato un punto <i>x</i><sub>0</sub> &in; ℝ, si può esprimere <i>p<sub>n</sub></i> anche nella forma di polinomio di grado <i>n</i> centrato in <i>x</i><sub>0</sub>.</p>
+
+<div class="eq">
+<p><i>p</i>(<i>x</i>) = <i>b<sub>n</sub></i> (<i>x</i> &minus; <i>x</i><sub>0</sub>)<sup><i>n</i></sup> + <i>b</i><sub><i>n</i> &minus;1</sub> (<i>x</i> &minus; <i>x</i><sub>0</sub>)<sup><i>n</i> &minus;1</sup> + ... + <i>b</i><sub>0</sub></p>
+</div>
+
+<p>per opportuni coefficienti <i>b<sub>k</sub></i> determinati dai coefficienti <i>a<sub>k</sub></i>. (Questo fatto è implicitamente utilizzato nel provare il Teorema che caratterizza il polinomio di Taylor).</p></li>
+
+<li><p>Per trovare i coefficienti <i>b<sub>k</sub></i> ed epsrimere <i>p</i>(<i>x</i>) nella forma centrata in <i>x</i><sub>0</sub>, espandiano il polinomio in serie di Taylor,</p> 
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>p</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+    </mrow>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>p</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>k</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>k</mi>
+  </msup>
+</math>
+
+<!-- $$ p(x) = \sum_{k=0}^{n} \frac{p^{(k)}(x_0)}{k!} (x - x_0)^k $$ -->
+
+<p>I coefficienti <i>b<sub>k</sub></i>, sono quindi dati dalle derivate di <i>p</i>(<i>x</i>) valutate in <i>x</i><sub>0</sub>:</p>
+
+<div class="eq">
+<p><i>b<sub>k</sub></i> = <i>p</i><sup>(<i>k</i>)</sup>(<i>x</i><sub>0</sub>)/<i>k</i>!</p>
+</div>
+
+<p>Quindi, per ogni <i>k</i> da 0 a <i>n</i>, possiamo calcolare <i>b<sub>k</sub></i>, utilizzando le derivate di <i>p</i>(<i>x</i>) in <i>x</i><sub>0</sub>. Questo dimostra che possiamo esprimere <i>p</i>(<i>x</i>) ​nella forma centrata in <i>x</i><sub>0</sub> con i coefficienti <i>b<sub>k</sub></i> determinati dai coefficienti <i>a<sub>k</sub></i>.&emsp; ■</p></li>
+
+<li><p id="2a">a) Sia <i>f</i> una funzione invertibile in (<i>a,b</i>), e <i>g</i> la  sua funzione inversa. Nell'ipotesi che <i>f</i> sia derivabile 2 volte in <i>x</i><sub>0</sub> &in; (<i>a,b</i>) con <i>f′</i>(<i>x</i><sub>0</sub>) &ne; 0, dimostrare la formula</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2033;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2033;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mtext>con&#xA0;</mtext>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ g''(x_0) = -\frac{f''(x_0)}{f'(x_0)^3} \quad (\text{con } y_0 = f(x_0)) $$ -->
+
+<p>b) Sapendo che</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = <i>a</i> + <i>b</i>(<i>x</i> &minus; <i>x</i><sub>0</sub>) + <i>c</i> (<i>x</i> &minus; <i>x</i><sub>0</sub>)<sup>2</sup> + o(<i>x</i> &minus; <i>x</i><sub>0</sub>)<sup>2</sup></p>
+</div>
+
+<p>scrivere lo sviluppo di Taylor al 2° ordine per <i>g</i> centrato in <i>y</i><sub>0</sub>, in funzione dei coefficienti <i>a,b,c</i>.</p>
+
+<p id="3a">c) Supponendo che <i>f</i> sia 3 volte derivabile in <i>x</i><sub>0</sub>, calcolare anche <i>g′′′</i>(<i>y</i><sub>0</sub>).</p>
+
+<p><b>Soluzione</b>. a) <b>Definizione di funzione inversa</b>: Se <i>g</i> è la funzione inversa di <i>f</i>, allora</p>
+
+<div class="eq">
+<p><i>g</i>(<i>f</i>(<i>x</i>)) = <i>x</i>, &forall;<i>x</i> &in; dom <i>f</i></p> 
+</div>
+
+<p>Derivando entrambi i membri rispetto a <i>x</i>, otteniamo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">[</mo>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">[</mo>
+  <mi>x</mi>
+  <mo stretchy="false">]</mo>
+</math>
+
+<!-- $$\frac{d}{dx}[g(f(x))] = \frac{d}{dx}[x] $$ -->
+
+<p>Per la regola della catena, otteniamo:</p>
+
+<div class="eq">
+<p><i>g</i>'(<i>f</i>(<i>x</i>)) ⋅ <i>f</i>'(<i>x</i>) = 1</p>
+</div>
+
+<p>In particolare, per (<i>x</i> = <i>x</i><sub>0</sub>), abbiamo:</p>
+
+<div class="eq">
+<p><i>g</i>'(<i>f</i>(<i>x</i><sub>0</sub>)) ⋅ <i>f</i>'(<i>x</i><sub>0</sub>) = 1</p>
+</div>
+
+<p>Poiché (<i>y</i><sub>0</sub> = <i>f</i>(<i>x</i><sub>0</sub>)), possiamo scrivere:</p>
+
+<div class="eq">
+<p>g'(<i>y</i><sub>0</sub>) ⋅ <i>f</i>'(<i>x</i><sub>0</sub>) = 1</p>
+</div>
+
+<p>Da cui ricaviamo:</p>
+
+<div class="eq">
+<p><i>g</i>'(<i>y</i><sub>0</sub>) = 1/<i>f</i>'(x<sub>0</sub>)
+</div>
+
+<p><b>Passaggio 2</b>: Derivata seconda della funzione inversa</p>
+
+<p>Deriviamo nuovamente rispetto a <i>x</i> l'equazione g'(<i>f</i>(<i>x</i>)) ⋅ f'(<i>x</i>) = 1:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <mi>x</mi>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msup>
+      <mi>g</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">)</mo>
+    <mo>&#x22C5;</mo>
+    <msup>
+      <mi>f</mi>
+      <mo data-mjx-alternate="1">&#x2032;</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$\frac{d}{dx} \left( g'(f(x)) \cdot f'(x) \right) = 0$$ -->
+
+<p>Applicando la regola del prodotto, otteniamo:</p>
+
+<div class="eq">
+<p><i>g</i>''(<i>f</i>(<i>x</i>)) ⋅ (<i>f</i>'(<i>x</i>))<sup>2</sup> + <i>g</i>'(f(<i>x</i>)) ⋅ <i>f</i>''(<i>x</i>) = 0</p>
+</div>
+
+<p>Per (<i>x</i> = <i>x</i><sub>0</sub>), con (y<sub>0</sub> = f(<i>x</i><sub>0</sub>)), otteniamo:</p>
+
+<div class="eq">
+<p><i>g</i>''(<i>y</i><sub>0</sub>) ⋅ (f'(<i>x</i><sub>0</sub>))<sup>2</sup> + g'(<i>y</i><sub>0</sub>) ⋅ <i>f</i>''(<i>x</i><sub>0</sub>) = 0</p>
+</div>
+
+<p>Sostituendo (g'(<i>y</i><sub>0</sub>) = 1/<i>f</i>'(<i>x</i><sub>0</sub>), otteniamo:</p>
+
+<div class="eq">
+<p><i>g</i>''(<i>y</i><sub>0</sub>) ⋅ (<i>f</i>'(<i>x</i><sub>0</sub>))<sup>2</sup> + 1/f'(<i>x</i><sub>0</sub>) ⋅ f''(<i>x</i><sub>0</sub>) = 0</p>
+</div>
+
+<p>Risolvendo per <i>g</i>''(y<sub>0</sub>):</p>
+
+<div class="eq">
+<p><i>g</i>''(<i>y</i><sub>0</sub>) ⋅ (<i>f</i>'(<i>x</i><sub>0</sub>))<sup>2</sup> = -<i>f</i>''(<i>x</i><sub>0</sub>)/f'(<i>x</i><sub>0</sub>)</p>
+</div>
+
+<p>Da cui:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2033;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2033;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$g''(y_0) = - \frac{f''(x_0)}{(f'(x_0))^3} $$ -->
+
+<p>b) Le derivate di <i>f</i> sono</p>
+
+<div class="eq">
+<p><i>f′</i>(<i>x</i>) = <i>b</i> + 2<i>c</i>(<i>x</i> − <i>x</i><sub>0</sub>​) + o(<i>x</i> − <i>x</i><sub>0</sub>​)<br>
+<p><i>f′′</i>(<i>x</i>) = 2<i>c</i> + o(1)</p>
+</div>
+
+<p>Le relazioni tra <i>g</i> e <i>f</i>:</p>
+
+<div class="eq">
+<p><i>g</i>(<i>y</i><sub>0</sub>) = <i>x</i><sub>0</sub>, &emsp;poiché <i>f</i>(<i>x</i><sub>0</sub>) = <i>y</i><sub>0</sub><br>
+<i>g</i>′(<i>y</i><sub>0</sub>​) = 1/<i>f</i> ′(<i>x</i><sub>0</sub>​) ​= 1/<i>b</i>​.<br>
+<i><i>g</i>′′</i>(<i>y</i><sub>0</sub>) = −<i>f ′′</i>(<i>x</i><sub>0</sub>)(<i>f′</i>(<i>x</i><sub>0</sub>))<sup>3</sup> = −2<i>c</i>/<i>b</i><sup>3</sup></p>
+</div>
+
+<p>Lo sviluppo di Taylor per <i>g</i> centrato in <i>y</i><sub>0</sub> al secondo ordine è:</p>
+
+<div class="eq">
+<p><i>g</i>(<i>y</i>) = <i>x</i><sub>0</sub> + 1/<i>b</i> (<i>y</i> &minus; <i>y</i><sub>0</sub>) &minus; <i>c</i>/<i>b</i><sup>3</sup> (<i>y</i> &minus; <i>y</i><sub>0</sub>)<sup>2</sup> + o((<i>y</i> &minus; <i>y</i><sub>0</sub>)<sup>2</sup>)</p>
+</div>
+
+<p><b>c)</b>. Possiamo partire dalla derivata seconda già calcolata della funzione inversa <i>g</i> per trovare la derivata terza <i>g</i>′′′(<i>y</i><sub>0</sub>). Sappiamo che:</p>
+
+<div class="eq">
+<p><i>g</i>′′(<i>y</i><sub>0</sub>) = −<i>f</i>′′(<i>x</i><sub>0</sub>)/(f′(<i>x</i><sub>0</sub>))<sup>3</sup></p>
+</div>
+
+<p>Per trovare <i>g′′′</i>(<i>y</i><sub>0</sub>), dobbiamo derivare <i>g′′</i>(<i>y</i><sub>0</sub>) rispetto a <i>y</i><sub>0</sub>. Utilizziamo la regola della catena e ricordiamo che <i>y</i><sub>0</sub> = <i>f</i>(<i>x</i><sub>0</sub>) = <i>f</i>(<i>x</i><sub>0</sub>) e <i>x</i><sub>0</sub> = <i>g</i>(<i>y</i><sub>0</sub>). <br> Deriviamo <i>g</i>′′(<i>y</i><sub>0</sub>) usando la regola della catena:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2034;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <msub>
+        <mi>y</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2033;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>3</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$g'''(y_0) = -\frac{d}{dy_0} \left( \frac{f''(x_0)}{(f'(x_0))^3} \right) $$ -->
+
+​<p>Poiché <i>x</i><sub>0</sub> = <i>g</i>(<i>y</i><sub>0</sub>), abbiamo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <msub>
+        <mi>y</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2033;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2034;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <mfrac>
+    <mrow>
+      <mi>d</mi>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+    <mrow>
+      <mi>d</mi>
+      <msub>
+        <mi>y</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2034;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\frac{d}{dy_0} f''(x_0) = f'''(x_0) \cdot \frac{dx_0}{dy_0} = f'''(x_0) \cdot g'(y_0) $$ -->
+
+<p>e</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>d</mi>
+    <mrow>
+      <mi>d</mi>
+      <msub>
+        <mi>y</mi>
+        <mn>0</mn>
+      </msub>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>3</mn>
+  </msup>
+  <mo>=</mo>
+  <mn>3</mn>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mi>f</mi>
+    <mo data-mjx-alternate="1">&#x2033;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>&#x22C5;</mo>
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2032;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$ \frac{d}{dy_0} (f'(x_0))^3 = 3 (f'(x_0))^2 \cdot f''(x_0) \cdot g'(y_0) $$ -->
+
+<p>Sostituendo <i>g'</i>(<i>y</i><sub>0</sub>) = 1/<i>f'</i>(<i>x</i><sub>0</sub>):</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2034;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2034;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22C5;</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mo data-mjx-alternate="1">&#x2032;</mo>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <msub>
+              <mi>x</mi>
+              <mn>0</mn>
+            </msub>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </mfrac>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>3</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mn>3</mn>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+        <mo>&#x22C5;</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2033;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22C5;</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mo data-mjx-alternate="1">&#x2032;</mo>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <msub>
+              <mi>x</mi>
+              <mn>0</mn>
+            </msub>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </mfrac>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>6</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$g'''(y_0) = -\left( \frac{f'''(x_0) \cdot \frac{1}{f'(x_0)}}{(f'(x_0))^3} - \frac{3 (f'(x_0))^2 \cdot f''(x_0) \cdot \frac{1}{f'(x_0)}}{(f'(x_0))^6} \right)$$ -->
+
+<p>Semplificando, otteniamo la terza derivata della funzione inversa <i>g</i> in <i>y</i><sub>0</sub>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>g</mi>
+    <mo data-mjx-alternate="1">&#x2034;</mo>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>y</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2034;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>4</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <mn>3</mn>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2033;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>f</mi>
+          <mo data-mjx-alternate="1">&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mn>5</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+
+<!-- $$ g'''(y_0) = -\left( \frac{f'''(x_0)}{(f'(x_0))^4} - \frac{3 f''(x_0)^2}{(f'(x_0))^5} \right) $$ -->
+
+</li>
+
+<li><p>La formula di Taylor fornisce un ulteriore criterio per lo studio della natura dei punti stazionari. Sia <i>f</i> una funzione derivabile tutte le volte che ci occorrerà in <i>x</i><sub>0</sub>, e sia &emsp;&emsp;<i>f'</i>(<i>x</i><sub>0</sub>) = 0. Dimostrare che:<br> se il minimo intero <i>n</i> per cui risulta <i>f</i><sup>(<i>n</i>)</sup>(<i>x</i><sub>0</sub>) &ne; 0 è pari, allora <i>x</i><sub>0</sub> è un punto di massimo o minimo relativo, e precisamente: è di massimo (minimo) se <i>f</i><sup>(<i>n</i>)</sup>(<i>x</i><sub>0</sub>) &lt; 0 (&gt; 0); se invece il minimo intero <i>n</i> per cui risulta <i>f</i><sup>(<i>n</i>)</sup>(<i>x</i><sub>0</sub>) &ne; 0  è dispari, allora <i>x</i><sub>0</sub> non è un estremante.</p>
+
+<p><b>Soluzione</b>. Dato che <i>f ′</i>(<i>x</i><sub>0</sub>) = 0, la serie di Taylor si semplifica a:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2032;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mn>1</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo data-mjx-alternate="1">&#x2033;</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mn>2</mn>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mo>&#x22EF;</mo>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>n</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msub>
+        <mi>x</mi>
+        <mn>0</mn>
+      </msub>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo>+</mo>
+  <mi>o</mi>
+  <mo stretchy="false">(</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+  </msub>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + o((x−x_0)^n))$$ -->
+
+<p>Consideriamo il minimo intero <i>n</i> per cui <i>f<sup>(n)</sup></i>(<i>x</i><sub>0</sub>) ≠ 0</p>
+
+<!-- $$f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x - x_0) + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + o((x−x_0)^n))$$ -->
+
+<p>Ora possiamo analizzare la natura del punto <i>x</i><sub>0</sub>:</p>
+
+<ol>
+	<li><p><b>Caso <i>n</i> pari</b>. Il termine (<i>x</i> - <i>x</i><sub>0</sub>)<sup><i>n</i></sup> è sempre positivo per <i>x</i> &ne; <i>x</i><sub>0</sub>, quindi :</p>
+	
+	<ul>
+			<li><p>Se <i>f<sup>(n)</sup></i>(<i>x</i><sub>0</sub>) &gt; 0, <i>f</i>(<i>x</i>) &minus; <i>f</i>(<i>x</i><sub>0</sub>) &gt; 0 questo implica che <i>x</i><sub>0</sub> è un punto di minimo relativo;</p></li>
+			<li><p>Se <i>f<sup>(n)</sup></i>(<i>x</i><sub>0</sub>) &lt; 0, <i>f</i>(<i>x</i>) &minus; <i>f</i>(<i>x</i><sub>0</sub>) &lt; 0 questo implica che <i>x</i><sub>0</sub> è un punto di minimo relativo;</p></li>
+	</ul>
+	
+	</li>
+	
+		<li><p><b>Caso <i>n</i> dispari</b>. Il segno del termine (<i>x</i> - <i>x</i><sub>0</sub>)<sup><i>n</i></sup> dipende dal segno di <i>x</i> &minus; <i>x</i><sub>0</sub>; Questo implica che 
+<i>f</i>(<i>x</i>) cambia segno intorno a <i>x</i><sub>0</sub>, quindi <i>x</i><sub>0</sub> non è un punto di massimo o minimo relativo. </p></li>
+</ol>
+	
+</ol>
+
+</ol>
 
 <section aria-label="End">
 <a href="sviluppi.html">&#171;Limiti notevoli e sviluppi</a>
 <a href="index.html">Index</a>
-<a href="Taylor_ex.html">Esercizi su Taylor &#187;</a>
+<a href="sn.html">Serie &#187;</a>
 </section>
 
 </article>
