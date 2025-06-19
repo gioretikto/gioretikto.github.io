@@ -269,7 +269,311 @@
 
 <!-- $$s_n = 1 + q + q^2 + \ldots + q^n = \frac{1 - q^{n+1}}{1 - q} $$ -->
 
-<p>Se invece <i>q</i> = 1 abbiamo <i>s<sub>n</sub></i> = <i>n</i> 1. Prendendo il limite, per <i>n</i>
+<p>Se invece <i>q</i> = 1 abbiamo <i>s<sub>n</sub></i> = <i>n</i> 1. Prendendo il limite, per <i>n</i></p>
+
+<p>Se invece <i>q</i> = 1 abbiamo <i>s<sub>n</sub></i> = <i>n</i> + 1. Prendendo il limite, per <i>n</i> &rarr; +&infin;, otteniamo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>s</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>1</mn>
+              <mo>&#x2212;</mo>
+              <mi>q</mi>
+            </mrow>
+          </mfrac>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+          <mo stretchy="false">|</mo>
+          <mi>q</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">|</mo>
+          </mrow>
+          <mo>&lt;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mo>+</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+          <mi>q</mi>
+          <mo>&#x2265;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mtext>non esiste</mtext>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+          <mi>q</mi>
+          <mo>&#x2264;</mo>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$
+\sum_{n=0}^{\infty} q^n \text{è}  
+\begin{cases}
+\text{convergente (con somma } \frac{1}{{1-q}) & \tect{se} |q| \lt 1 \\
+\text{divergente a} +\infty & \text{se}  q \ge 1\\
+irregolare &\text{se} q \le -1
+\end{cases}
+$$-->
+
+<p>e pertanto la serie</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munderover>
+  <msup>
+    <mi>q</mi>
+    <mi>n</mi>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>&#xE8;</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">{</mo>
+    <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+      <mtr>
+        <mtd>
+          <mtext>convergente</mtext>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mtext>con somma&#xA0;</mtext>
+            <mfrac>
+              <mn>1</mn>
+              <mrow>
+                <mn>1</mn>
+                <mo>&#x2212;</mo>
+                <mi>q</mi>
+              </mrow>
+            </mfrac>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+          <mo stretchy="false">|</mo>
+          <mi>q</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">|</mo>
+          </mrow>
+          <mo>&lt;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mtext>divergente a&#xA0;</mtext>
+          <mo>+</mo>
+          <mi mathvariant="normal">&#x221E;</mi>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+          <mi>q</mi>
+          <mo>&#x2265;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mtext>irregolare</mtext>
+        </mtd>
+        <mtd>
+          <mtext>se&#xA0;</mtext>
+          <mi>q</mi>
+          <mo>&#x2264;</mo>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math>
+
+<!-- $$\sum_{n=0}^{\infty} q^n \quad \text{è} \quad
+\begin{cases}
+\text{convergente} \left( \text{con somma } \frac{1}{1 - q} \right) & \text{se } |q| < 1 \\
+\text{divergente a } +\infty & \text{se } q \geq 1 \\
+\text{irregolare} & \text{se } q \leq -1
+\end{cases} $$ -->
+
+<p><b>Esempio 6.1.7</b> (Serie armonica) È la serie:</p>
+
+<!-- $$\sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \ldots + \frac{1}{n} + \ldots $$ -->
+
+<p>Dimostreremo, che la successione <i>s<sub>n</sub></i> delle somme parziali è &ge; log(<i>n</i> + 1) (e perciò, in particolare, tende a +&infin;).&emsp; ■</p>
+
+<p><b>Esempio 6.1.8</b> (Serie di Mengoli) È la serie:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=1}^\infty \frac{1}{n(n+1)} $$ -->
+
+<p>Osservando che 1/[n(<i>n</i> + 1)] = 1/<i>n</i> &minus; 1/(<i>n</i> + 1), si riesce a dare un'espressione semplice alla successione <i>s<sub>n</sub></i>:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mi>n</mi>
+      <mo stretchy="false">(</mo>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>n</mi>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>4</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+  <mo>=</mo>
+  <mn>1</mn>
+ <mtext>&emsp;■</mtext>
+</math>
+
+<!-- $$ \sum_{n=1}^\infty \frac{1}{n(n+1)} = \sum_{n=1}^\infty \left( \frac{1}{n} - \frac{1}{n+1} \right) = \left(1 - \frac{1}{2} \right) + \left(\frac{1}{2} -  \frac{1}{3}\right) + \left(\frac{1}{3} -  \frac{1}{4}\right) + \ldots = 1$$ -->
+
 
 <p>If we add the terms of an infinite sequanece {<i>a<sub>n</sub></i>}, we get an expression of the form</p>
 
@@ -659,6 +963,7 @@
 </math>
 
 <!-- $$S_{2n} - S_n = \frac{1}{n+1} + \frac{1}{n+2} + \ldots + \frac{1}{2n} \gt \frac{n}{2n} = \frac{1}{2} $$ -->
+
 
 <p>thus the Cauchy criterion fails for any <i>&epsilon;</i> &lt; 1/2; the harmonic series diverges. &emsp;■</p>
 
