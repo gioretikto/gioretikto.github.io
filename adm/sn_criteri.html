@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Serie a termini non negativi"/>
+	<title>Serie a termini non negativi</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Serie a termini non negativi</h1>
+
+<p>Per una serie a termini non negativi si hanno alcuni semplici criteri sufficienti di convergenza. Cominciamo con l'osservare che la succesione delle somme parziali di una tale serie sarà crescente, poiché</p>
+
+<div class="eq">
+<p><i>s</i><sub><i>n</i> + 1</sub> = <i>s<sub>n</sub></i> + <i>a</i><sub>n</sub> + 1</sub> &ge; <i>s<sub>n</sub></i></p>
+</div>
+
+<p>Perciò, per il T. sull'esistenza del limite di una <i>successione monotona</i>, esiste lim<sub><i>n</i> &rarr; +&infin;</sub> <i>s<sub>n</sub></i>: tale limite è finito oppure +&infin; a seconda che la successione {<i>s<sub>n</sub></i>} sia limitata opure no. In ogni caso risulta:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mrow data-mjx-texclass="ORD">
+        <mi>n</mi>
+        <mo accent="false" stretchy="false">&#x2192;</mo>
+        <mi mathvariant="normal">&#x221E;</mi>
+      </mrow>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>s</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">sup</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mtable data-mjx-smallmatrix="true" columnspacing="0em" rowspacing="0.1em">
+        <mtr>
+          <mtd>
+            <mi>n</mi>
+            <mo>&#x2208;</mo>
+            <mi mathvariant="double-struck">N</mi>
+          </mtd>
+        </mtr>
+      </mtable>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>s</mi>
+    <mi>n</mi>
+  </msub>
+</math>
+
+<!-- $$\lim_{{n \to \infty}} s_n = \sup_{\substack{n \in \mathbb{N}}} s_n $$ -->
+
+<p>Possiamo perciò affermare che:</p>
+
+<div class="box">
+<p>una serie &Sigma;<i>a<sub>n</sub></i> a termini non negativi è convergente o è divergente a +&infin;. Essa converge se e solo se la successione delle somme parziali <i>n</i>-esime è limitata.</p>
+</div>
+
+<h3>Criterio del confronto</h3>
+
+<p id="cfn"><b>Teorema 6.2.1</b> Siano &Sum; <i>a<sub>n</sub></i> e &Sum; <i>b<sub>n</sub></i> due serie a termini non negativi e tali che</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> &le; <i>b<sub>n</sub>,</i> &emsp;definitivamente</p>
+</div>
+
+<p>Allora valgono le seguenti implicazioni</p>
+
+<ol type="i">
+	<li><p>&Sum; <i>b<sub>n</sub></i> convergente &emsp;⇒&emsp; &Sum; <i>a<sub>n</sub></i> convergente.</p></li>
+	<li><p>&Sum; <i>a<sub>n</sub></i> divergente &emsp;⇒&emsp; &Sum; <i>b<sub>n</sub></i> divergente.</p></li>
+</ul>
+
+<p>La serie &Sum; <i>b<sub>n</sub></i> viene detta <i>maggiorante</i>, la &Sum; <i>a<sub>n</sub></i> <i>minorante</i>.</p>
+
+<p><b>Dim.</b> Sia:</p>
+
+<div class="eq">
+<p><i>s<sub>n</sub></i> = &Sum; <i>a<sub>k</sub></i>; &emsp;&emsp;<i>s<sub>n</sub>*</i> = &Sum; <i>b<sub>k</sub></i></p>
+</div>
+
+<p>Poiché 0 &le; <i>a<sub>k</sub></i> &le; <i>b<sub>k</sub></i> per ogni <i>k</i>, sommando membro a membro le disuguaglianze per <i>k</i> da 1 a <i>n</i>, si ottiene 0 &le; <i>s<sub>n</sub></i> &le; <i>s*<sub>n</sub></i>. Sappiamo già che una serie a termini positivi è regolare, ossia o converge o diverge (non può oscillare). Dunque le affermazioni i) e ii) sono logicamente equivalenti, perciò basta dimostrare la seconda, che è immediata perché: dire che &Sum; <i>a<sub>n</sub></i> diverge, significa, per definizione di serie divergente, che <i>s<sub>n</sub></i> &rarr; +&infin;. <br> D'altro canto è <i>s<sub>n</sub></i> &le; <i>s*<sub>n</sub></i>, perciò, per il criterio del confronto per le successioni, anche <i>s*<sub>n</sub></i> &rarr; +&infin;, ossia &Sum; <i>b<sub>k</sub></i> diverge.&emsp;□</p>
+
+<p><b>Esempio 6.2.2</b>. La serie, </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>n</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>con&#xA0;</mtext>
+  <mi>&#x3B1;</mi>
+  <mo>&#x2264;</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\sum_{n=1}^\infty \frac{1}{n^\alpha}, \quad \text{con } \alpha \le 1$$ -->
+
+<p>è divergente.<br> Infatti l'affermazione è vera per <i>&alpha;</i> = 1 (serie armonica); per <i>&alpha;</i> &lt; 1 la serie data è maggiorante della serie armonica, perciò diverge. &emsp;□</p>
+
+<h3>Criterio del confronto asintotico</h3>
+
+<p><b>Teorema 6.2.3</b>. Se le due successioni (a termini positivi) {<i>a<sub>n</sub></i>} e {<i>b<sub>n</sub></i>} sono asintotiche,</p>
+
+<div class="eq">
+<p>{<i>a<sub>n</sub></i>} ~ {<i>b<sub>n</sub></i>}</p>
+</div>
+
+<p>allora le corrispondenti serie &Sigma;<i>a<sub>n</sub></i> e &Sigma;<i>b<sub>n</sub></i> hanno lo stesso carattere, cioè o sono entrambe convergenti o sono entrambe divergenti.</p>
+
+<p><b>Dim</b>. <i>a<sub>n</sub></i> ~ <i>b<sub>n</sub></i> per <i>n</i> &rarr; &infin; significa che <i>a<sub>n</sub></i>/<i>b<sub>n</sub></i> &rarr; 1 per <i>n</i> &rarr; &infin;; questo implica che &forall;<i>&epsilon;</i> &gt; 0 sia definitivamente 1 &minus; &espilon; &lt; <i>a<sub>n</sub></i>/<i>b<sub>n</sub></i> &lt; 1 + &epsilon;, ad es. (scegliendo &epsilon; = 1/2) che sia</p>
+
+<div class="eq">
+<p>1/2 &lt; <i>a<sub>n</sub></i>/<i>b<sub>n</sub></i> &lt; 3/2</p>
+</div>
+
+<p>ossia (poiché per ipotesi <i>b<sub>n</sub></i> &gt; 0)</p>
+
+<div class="eq">
+<p><i>b<sub>n</sub></i>/2 &lt; <i>a<sub>n</sub></i> &lt; <i>3b<sub>n</sub></i>/2 &emsp;definitivamente</p>
+</div>
+
+<p>Per il T. del confronto, la prima delle due disuguaglianze implica che se &Sigma;<i>a<sub>n</sub></i> converge, anche &Sigma;<i>b<sub>n</sub></i> converge, mentre la seconda implica che se &Sigma; <i>a<sub>n</sub></i> diverge, anche &Sigma;<i>b<sub>n</sub></i> diverge. <br> Questo significa appunto che le serie hanno lo stesso carattere.&emsp;□</p>
+
+<p><b>Esempio 6.2.4</b>. La serie &Sigma; 1/<i>n</i><sup>2</sup> converge perché 1/<i>n</i><sup>2</sup> ~ 1/[<i>n</i>(<i>n</i> + 1)] e la serie &Sigma; 1/<i>n</i>(<i>n</i> + 1) (di Mengoli) converge.</p>
+
+<p><b>Esempio 6.2.5</b>. La serie &Sigma; 1/<i>n<sup>&alpha;</sup></i> con <i>&alpha;</i> &ge; 2 converge per il criterio del confronto: 1/<i>n<sup>&alpha;</sup></i> &le; 1/<i>n</i><sup>2</sup> e &Sigma; 1/<i>n</i><sup>2</sup> converge.</p>
+
+<p>Abbiamo quindi stabilito il carattere della <i>serie armonica generalizzata</i> &Sigma; 1/<i>n<sup>&alpha;</sup></i> per <i>&alpha;</i> &ge; 2 (convergente) e per <i>&alpha;</i> &le; 1 (divergente). Si può dimostrare (unva prova di questo fatto sarà fornita successivamente) che nei casi intermedi (1 &lt; &alpha; &lt; 2) c'è ancora convergenza. <br> Ricapitolando:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <menclose notation="box">
+    <mrow data-mjx-texclass="ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow data-mjx-texclass="ORD">
+          <munderover>
+            <mo data-mjx-texclass="OP">&#x2211;</mo>
+            <mrow data-mjx-texclass="ORD">
+              <mi>n</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi mathvariant="normal">&#x221E;</mi>
+          </munderover>
+          <mfrac>
+            <mn>1</mn>
+            <msup>
+              <mi>n</mi>
+              <mi>&#x3B1;</mi>
+            </msup>
+          </mfrac>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+          <mtext>converge se&#xA0;</mtext>
+          <mi>&#x3B1;</mi>
+          <mo>&gt;</mo>
+          <mn>1</mn>
+          <mo>;</mo>
+          <mtext>diverge se&#xA0;</mtext>
+          <mi>&#x3B1;</mi>
+          <mo>&#x2264;</mo>
+          <mn>1</mn>
+        </mrow>
+      </mstyle>
+    </mrow>
+  </menclose>
+</math>
+
+<!-- $$\boxed{ $$\sum_{n=1}^\infty \frac{1}{n^\alpha} \quad \text{converge se } \alpha \gt 1; \text{diverge se } \alpha \le 1} $$ -->
+
+<p><b>Esempio 6.2.6</b>. La serie &Sigma; (5<i>n</i> + cos <i>n</i>)/(3 + 2<i>n</i><sup>3</sup>) converge, perché (5<i>n</i> + cos <i>n</i>)/(3 + 2<i>n</i><sup>3</sup>) ~ 5/2 ⋅ 1/<i>n</i><sup>2</sup>. (Ovviamente la costante moltiplicativa è ininfluente sul carattere della serie).&emsp;■<p>
+
+
+
+e la serie &Sigma; 1/<i>n</i>(<i>n</i> + 1) (di Mengoli) converge.</p>
+
+
+<p>allora le corrispondenti serie &Sigma;<i>a<sub>n</sub></i> e &Sigma;<i>b<sub>n</sub></i> hanno lo stesso carattere, cioè o sono entrambe convergenti o sono entrambe divergenti.</p>
+
+<p>thus Cauchy criterion is satisfied by &Sum; <i>a<sub>n</sub></i> too. Therefore it converges &emsp;□</p>
+
+<section aria-label="End">
+<a href="syllable.html">&#171;The Syllable</a>
+<a href="index.html">Index</a>
+<a href="series_tests.html">Elementary Convergence Tests &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
