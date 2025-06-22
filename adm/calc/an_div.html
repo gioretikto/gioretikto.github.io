@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Successioni divergenti. Successioni irregolari"/>
+	<title>Successioni divergenti. Successioni irregolari</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+	</ul>
+</nav>3.2.1
+
+<article>
+
+<h1>Successioni divergenti. Successioni irregolari</h1>
+
+<p><b>Definizione 3.2.1</b>. Quando, al crescere di <i>n</i>, una successione supera definitivamente qualunque numero <i>M</i> &gt; 0 fissato, diremo che <i>diverge</i> a +&infin;; se invece scende al di sotto di −<i>M</i> diremo che diverge a −&infin;. Ossia se esiste un numero <i>N</i> tale che <i>a<sub>n</sub></i> &gt; <i>M</i> per ogni <i>n</i> &gt; <i>N</i>. In tal caso si dice che la successione {<i>a<sub>n</sub></i>} ha limite +&infin;, e scriveremo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{n\to\infty} a_n = +\infty$$ -->
+
+<p>Analogamente {<i>a<sub>n</sub></i>} diverge a &minus;&infin; se per ogni <i>M</i> &gt; esiste <i>N</i> tale che <i>a<sub>n</sub></i> &lt; &minus;<i>M</i> per ogni <i>n</i> &gt; <i>N</i>, in simboli</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{n\to\infty} a_n = -\infty $$ -->
+
+<p id="inf">Questi simboli +&infin; e &minus;&infin;, non sono numeri. Se rappresentiamo i numeri reali sulla retta euclidea, ogni numero corrisponde a un punto e ogni punto a un numero. Con i simboli +&infin; e &minus;&infin; conveniamo di indicare due "punti", uno (+&infin;) sta alla destra di ogni punto di ℝ e l'altro (&minus;&infin;) alla sinistra; a questi due punti non corrisponde però alcun numero (in altre parole, non possiamo definire sui simboli +&infin; e &minus;&infin; le operazioni di somma e prodotto cone le proprietà dell'<a href="../alg/rings.html">anello</a>, anche se, come vredremo, potremo fare "parzialmente" queste operazioni).<br>L'insieme dei numeri reali ℝ con l'aggiunta dei due elementi {+&infin;} e {&minus;&infin;} sarà indicato con ℝ<sup>*</sup></p>
+
+<div class="eq">
+<p>ℝ<sup>*</sup> = ℝ &cup; {+&infin;} &cup; {&minus;&infin;}</p>
+</div>
+
+<p>L'operazione di limite risulta completamente significativa se ambientata in ℝ<sup>*</sup> invece che in ℝ; cioè il limite di una successione può essere un numero reale ℓ oppure +&infin; e &minus;&infin;; le successioni il cui limite è un numero reale si dicono <i>convergenti</i>, quele il cui limite è +&infin; oppure &minus;&infin; si dicono <i>divergenti</i>. La successione canonica {<i>n</i>} degli interi naturali evidentemente diverge a +&infin;; così pure la successione {2<sup><i>n</i></sup>}. <br>Infinite osserviamo che ci sono successioni che non ricadano in nessuna delle categorie precedenti, cioè non sono convergenti né divergenti; per es. la successione {(&minus;1)<sup><i>n</i></sup>} oppure {(&minus;2)<sup><i>n</i></sup>} (si noti che la prima è limitata e la seconda no). Tali successioni si diranno <i>irregolari</i> o <i>indeterminate</i>. Per esse l'operazione di limite non è definita, ovvero <i>il loro limite non esiste</i>.</p>
+
+<h3>Insiemi non limitati</h3>
+
+<p>È comodo adottare la convenzione introdotta per i limiti anche per il sup e per l'inf, estendendo la definizione di queste quantità nel modo seguente:</p>
+
+<p><b>Definizione 3.2.2</b>. Se l'insieme <i>E</i> &subseteq; ℝ non è limitato superiormente (inferiormente) diremo che</p>
+
+<div class="eq">
+<p>sup <i>E</i> = +&infin; (inf <i>E</i> = &infin;)&emsp;□</p>
+</div>
+
+<p>In questo modo la proprietà <i>R</i><sub>4</sub> dei numeri reali può essere enunciata così:</p>
+
+<blockquote>
+ogni insieme <i>E</i> &subseteq; ℝ non vuoto  è dotato di estremo superiore e inferiore; sup <i>E</i> (inf <i>E</i>) è un numero se <i>E</i> è limitato superiormente (inferiormente), altrimenti è +&infin; (&minus;&infin;).
+</blockquote>
+
+<h3 id="infinitesimo">Infinitesimi e infiniti</h3>
+
+<p>Una successione <i>a<sub>n</sub></i> tendente a zero si dice <i>infinitesima</i>. Ad es., sono infinitesime le successioni {1/<i>n</i>}, {1/<i>n</i><sup>2</sup>}, ...<br> Il concetto di infinitesimo gioca un ruolo centrale ed è fondamentale anche per avere un'<i>immagine intuitiva</i> corretta ed efficace dei concetti del calcolo infinitesimale. L'idea chiave a cui prstare attenzione è la seguente:</p>
+
+<blockquote>"infinitesimo" non è un "numero infintamente piccolo" (concetto privo di senso, se non si vuole che denoti semplicemente il numero 0) ma una <i>quantità variabile</i> (succession o, come vedremo funzione), che <i>diviene indefinitamente piccola</i>.</blockquote>
+
+<p>Analogamente, una successione <i>a<sub>n</sub></i> tendente a &pm;&infin; si dice <i>infinita</i>. Ad es., {<i>n</i><sup>2</sup>}, {<i>n</i>!} sono infiniti. <br> Talvolta è possibile precisare se una successione convergente si avvicina al suo limite <i>per eccesso</i> o <i>per difetto</i>. Questo concetto è precisato dalla prossima.</p>
+
+<p><b>Definizione 3.2.3.</b> Si dice che la successione {<i>a<sub>n</sub></i>} tende a ℓ &in; ℝ <i>per eccesso</i> (<i>per difetto</i>), e si scrive</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <msup>
+    <mi>&#x2113;</mi>
+    <mo>+</mo>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>oppure</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <msup>
+    <mi>&#x2113;</mi>
+    <mo>+</mo>
+  </msup>
+  <mtext>per</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{n\to +\infty} a_n = \ell^+ \quad \text{oppure}\quad a_n \to \ell^+ \text{per}\quad n \to +\infty $$ -->
+
+<p>rispettivamente:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <msup>
+    <mi>&#x2113;</mi>
+    <mo>&#x2212;</mo>
+  </msup>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>oppure</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <msup>
+    <mi>&#x2113;</mi>
+    <mo>&#x2212;</mo>
+  </msup>
+  <mtext>per</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>n</mi>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{n\to +\infty} a_n = \ell^- \quad \text{oppure}\quad a_n \to \ell^- \text{per}\quad n \to +\infty $$ -->
+
+<p>se per ogni <i>&epsilon;</i> &gt; 0 si ha che</p>
+
+<div class="eq">
+<p>0 &le; <i>a<sub>n</sub></i> &minus; <i>ℓ</i> &lt; <i>&epsilon;</i> definitivamente</p>
+</div>
+
+<p>(rispettivamente:</p>
+
+<div class="eq">
+<p>0 &le; <i>ℓ</i> &minus; <i>a<sub>n</sub></i> &lt; <i>&epsilon;</i> definitivamente</p>
+</div>
+
+<p>In sostanza, dire che <i>a<sub>n</sub></i> &rarr; <i>ℓ</i><sup>+</sup> significa affermare che <i>a<sub>n</sub></i> &rarr; <i>ℓ</i> e inoltre che <i>a<sub>n</sub></i> &ge; <i>ℓ</i> definitivamente; dunque <i>a<sub>n</sub></i> si avvicina ad <i>ℓ</i> "da sopra", ossia approssima <i>ℓ</i> per eccesso. <br>Si rifletta sui prossimi esempio:</p>
+
+<p><b>Esempio 3.2.4</b>.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mn>1</mn>
+    <mi>n</mi>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mn>0</mn>
+    <mo>+</mo>
+  </msup>
+</math>
+
+<!-- $$ \lim_{n\to +\infty} \frac{1}{n} = 0^+ $$ -->
+
+<p><b>Esempio 3.2.5</b>. </p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mi>n</mi>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+  </msup>
+</math>
+
+<!-- $$ \lim_{n\to +\infty} \frac{n}{n+1} = 1^- $$ -->
+
+<p><b>Esempio 3.2.6</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mo>+</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ \lim_{n\to +\infty} \frac{(-1)^n}{n} = 0 $$ -->
+
+<p>in questo caso non si può affermare né che <i>a<sub>n</sub></i> &rarr; 0 né che <i>a<sub>n</sub></i> &rarr; 0<sup>&minus;</sup>.</p>
+
+<section aria-label="End">
+<a href="an.html">&#171;Successioni</a>
+<a href="index.html">Index</a>
+<a href="an_monotone.html">Successioni monotone &#187;</a>
+</section>
+</article>
+
+</body>
+</html>

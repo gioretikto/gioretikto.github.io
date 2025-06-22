@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Successioni"/>
+	<title>Successioni</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Mathematical Analysis</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Successioni</h1>
+
+<p>Consideriamo l'insieme ℕ degli interi non negativi ordiano secondo l'ordine naturale.</p>
+
+<div class="eq">
+<p>ℕ: 0, 1, 2, 3, ..., <i>n</i></p>
+</div>
+
+<p>Questo è l'esempio canonico di successione. Stabiliamo ora una legge che associa, a ogni elemento di ℕ (o da un certo intero in poi) un numero (reale):</p>
+
+<div class="eq">
+<p><i>n</i> ⟼ <i>a<sub>n</sub></i></p>
+</div>
+
+<p>Chiameremo <i>successione</i> una tale corrispondenza. <br> Una successione può dunque vedersi come una funzione</p>
+
+<div class="eq">
+<p><i>f</i> : ℕ → ℝ<br>
+<i>f</i>: <i>n</i> ⟼ <i>a<sub>n</sub></i></p>
+</div>
+
+<p>(o eventualmente, <i>f</i>: {<i>n</i> &in; ℕ: <i>n</i> &ge; <i>n</i><sub>0</sub>} ⟶ ℝ, per un certo <i>n</i><sub>0</sub> fissato). Il fatto che il dominio della funzione <i>f</i> sia l'insieme dei naturali, rende possibile visualizzare la successione enumerando i suoi valori, nell'ordine in cui essi si succedono al crescere di <i>n</i>:</p>
+
+<div class="eq">
+<p><i>a</i><sub>0</sub>,<i>a</i><sub>1</sub>,<i>a</i><sub>2</sub>,<i>a</i><sub>3</sub>, ... ,<i>a<sub>n</sub></i>, ...</p>
+</div>
+
+<table class="noborder centertable">
+<cation>Esempio 3.1.1</b></caption>
+<tr><td><i>n</i> &ge; 0</td> <td><i>n</i> ⟼ <i>n</i><sup>2</sup></td> <td>0,1,4,9,16,..</td></tr>
+<tr><td><i>n</i> &ge; 0</td> <td>(−1)<sup><i>n</i></sup></td> <td>−1, 1, −1, 1, −1, ...</td></tr>
+<tr><td><i>n</i> &ge; 1</td> <td><i>n</i> ⟼ 2<sup>1/<i>n</i></sup></td> <td>2,&radic;2,2<sup>1/3</sup>, 2<sup>1/4</sup>..</td></tr>
+<tr><td><i>n</i> &ge; 1</td> <td><i>n</i> ⟼ 1/<i>n</i></td> <td>1,1/2,1/3,1/4,...</td></tr>
+<tr><td><i>n</i> &ge; 2</td> <td><i>n</i> ⟼ (<i>n</i> + 1)/(<i>n</i> − 1)</td> <td>3,2,5/3,6/4,7/5, ...</td></tr>
+<tr><td><i>n</i> &ge; 0</td> <td><i>n</i> ⟼ 4</td> <td>4,4,4,. (successione costante)</td></tr>
+</table>
+
+<p>Possiamo rappresentare graficamente questa corrispondenza con i punti del piano cartesiamo di coordinate (<i>n,a<sub>n</sub></i>).</p>
+
+<img src="img/an.png" alt="grafico di una successione"/>
+
+<p>Sottolineamo che la successione è nota quando è nota la legge che, dato l'intero <i>n</i>, determina il numero <i>a<sub>n</sub></i> associato a qull'intero. Per indicare una successione useremo i simboli</p>
+
+<div class="eq">
+<p><i>n</i> ⟼ <i>a<sub>n</sub></i> &emsp;oppure&emsp; {<i>a<sub>n</sub></i>}</p>
+</div>
+
+<p>precisando l'insieme in cui varia l'indice <i>n</i> (tutto ℕ o da un certo intero in poi).</p>
+
+<p>Una successione {<i>a<sub>n</sub></i>} si dirà</p>
+
+<ul>
+	<li><p><i>limitata inferiormente</i>: ∃<i>m</i> &in; ℝ: <i>a<sub>n</sub></i> &ge; <i>m</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
+	<li><p><i>limitata superiormente</i>: ∃<i>M</i> &in; ℝ: <i>a<sub>n</sub></i> &le; <i>M</i>, &emsp; &forall;<i>n</i> &in; ℕ;</p></li>
+	<li><p><i>limitata</i>: ∃<i>m</i>,<i>M</i> &in; ℝ : <i>m</i> &le; <i>a<sub>n</sub></i> &le; <i>M</i> &forall;<i>n</i> &in; ℕ;</p></li>
+</ul>
+
+<p>Per esempio, la successione {(−1)<sup><i>n</i></sup>)} è limitata; esistonto infatti due numeri {−1, 1}; lo stesso per {1/<i>n</i>}: superiormente da 1 e inferiormente da 0; {<i>n</i><sup>2</sup>} è limitata inferiormente; {(−2)<sup>n</sup>)} non è limitata.</p>
+
+<p>L'operazione che vogliamo definire (il <i>limite</i>) consente di rispondere in forma rigorosa alla domanda: <i>come si comportano i numeri {<i>a<sub>n</sub></i>} quando n diventa sempre più grande</i>?</p>
+
+<p id="def"><b>Definizione 3.1.2</b>. Diciamo che una successione {<i>a<sub>n</sub></i>} possiede (o acquista) <b>definitivamente</b> una certa proprietà P(<i>n</i>) se
+
+<div class="eq">
+<p>∃<i>n</i><sub>0</sub> &in; ℕ : &forall;<i>n</i> &ge; <i>n</i><sub>0</sub> P(<i>n</i>) è vera. &emsp;□</p>
+</div>
+
+<p>Per esempio la proprietà:</p>
+
+<div class="eq">
+<p>P(<i>n</i>) = <i>n</i><sup>2</sup> − 10<i>n</i> + 1 ≥ 0</p>
+</div>
+
+<p>vale definitivamente in quanto</p>
+
+<div class="eq">
+<p><i>n</i><sup>2</sup> − 10n + 1 ≥ 0 ⇔ <i>n</i> ≥ 5 + √24 ⇔ <i>n</i> ≥ 10</p>
+</div>
+
+<p>Notiamo per esempio che la proprietà</p>
+
+<div class="eq">
+<p>Q(<i>n</i>) = "(−1)<sup><i>n</i></sup> &gt; 0</p>
+</div>
+
+<p>pur essendo vera per infiniti <i>n</i> (cioè per tutti gli <i>n</i> pari), non è definitivamente vera, in quanto è falso per tutti gli interi dispari.</p>
+
+<p><b>Definizione 3.1.3</b>. Una proprietà P(<i>n</i>) definita per <i>n</i> intero è detta valere <b>frequentemente</b>, o <b>per infiniti</b> <i>n</i>, se</p>
+
+<div class="eq">
+<p>∀n<sub>0</sub> ∃<i>n</i> ≥ <i>n</i><sub>0</sub> : P(<i>n</i>) è vera.</p>
+</div>
+
+<p>Quindi, come già detto, (−1)<sup><i>n</i></sup> è frequentemente &gt; 0 (dato che comunque fissato <i>n</i><sub>0</sub> in ℕ c'è un <i>n</i> pari con <i>n</i> &ge; <i>n</i><sub>0</sub>, e quindi (−1)<sup><i>n</i></sup> &gt; 0. Peraltro è anche vero che (−1)<sup><i>n</i></sup> è frequentemente &lt; 0.</p>
+
+<p>Notiamo che</p>
+
+<div class="eq">
+<p><sup>¬</sup>(P(<i>n</i>) vale definitivamente) ⇔ <sup>¬</sup>(∃<i>n</i><sub>0</sub>: &forall;<i>n</i> &ge; <i>n</i><sub>0</sub> P(<i>n</i>)) ⇔ &forall;<i>n</i><sub>0</sub> ∃<i>n</i> &ge; <i>n</i><sub>0</sub> : <sup>¬</sup>P(<i>n</i>) ⇔ <sup>¬</sup>P(<i>n</i>) vale frequentemente</p>
+</div>
+
+<p>(o anche P(<i>n</i>) è frequentemente falsa). Analogamente:</p>
+
+<div class="eq">
+<p><sup>¬</sup>(P(<i>n</i>) vale frequentemente) ↔ <sup>¬</sup>P(<i>n</i>) vale definitivamente</p>
+</div>
+
+<p>(o anche P(<i>n</i>) è definitivamente falsa).</p>
+
+<h2 id="lim">Successioni convergenti</h2>
+
+<p>A natural inquiry abount a sequence {<i>a<sub>n</sub></i>} is whether the terms <i>a<sub>n</sub></i> come close to any real number when <i>n</i> is extremely large. This is what is known as the convergence of a sequence.</p>
+
+<p><b>Definizione 3.1.4</b>. (<i>Limite di una successione</i>) Una successione {<i>a<sub>n</sub></i>} si dice <i>convergente</i> se esiste un numero <i>ℓ</i> &in; ℝ, con questa proprietà: qualunque sia <i>&epsilon;</i> &gt; 0 risulta definitivamente:</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; &epsilon;, &emsp; &forall;<i>n</i> &ge; <i>n</i><sub>0</sub></p>
+</div>
+
+<p>In altre parole. per ogni <i>&epsilon;</i> &gt; 0 si può trovare un intero <i>n</i><sub>0</sub> (che naturalmente dipenderà in generale da questo <i>&epsilon;</i>) tale che la disuguaglianza scritta sopra sia valida. <br> Scriveremo</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mi>&#x2113;</mi>
+</math>
+
+<!-- $$\lim_{n\to \infty} a_n = \ell $$ -->
+
+<p>Si osservi che, dalla definizione di <a href="abs.html">valore assoluto</a> (cfr. <a href="ex_1.html">esercizio 1</a>), la relazione |<i>a<sub>n</sub></i> − <i>ℓ</i>| &lt; <i>&epsilon;</i> si può riscrivere come</p>
+
+<div class="eq">
+<p><i>ℓ</i> − <i>&epsilon;</i> &lt; <i>a<sub>n</sub></i> &lt; <i>ℓ</i> + <i>&epsilon;</i></p>
+</div>
+
+<p>da questa relazione appare chiaro che <i>ogni successione convergente è anche limitata</i>. La condizione di convergenza significa quindi che, fissata una striscia orizzontale [<i>ℓ</i> &minus; &epsilon;, <i>ℓ</i> + <i>&epsilon;</i>] "comunqe stretta", da un certo indice in poi i punti della successione non escono più da questa striscia. Da questa osservazione risulta chiaramente che: <i>ogni successione convergente è limitata</i>.</p>
+
+<p><b>Unicità del limite</b>. Se la successione {<i>a<sub>n</sub></i>} è convergente, ad essa è associato perciò il numero <i>ℓ</i>. Si osservi che tale numero è unicio, poihcé, se ve ne fossere due, <i>ℓ</i><sub>1</sub> e <i>ℓ</i><sub>2</sub>, associati alla medesima successione, risulterebbe definitivamente (applicando la disuguaglianza triangolare)</p>
+
+<div class="eq">
+<p>|<i>ℓ</i><sub>1</sub> − <i>ℓ</i><sub>2</sub>| = |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i> + <i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub>| &le; |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i>| + |<i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub>| &lt; 2<i>&epsilon;</i></p>
+</div>
+
+<p>ma tale disuguaglianza, potendo noi scegliere <i>&epsilon;</i> come vogliamo, può sussitere solo se <i>ℓ</i><sub>1</sub> = <i>ℓ</i><sub>2</sub>.</p>
+
+<p><b>Esempio 3.1.5</b>. Mostriamo che</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\lim_{n \to \infty} \frac{n+1}{n-1} = 1$$ -->
+
+<p>(cosa che si può facilmente intuire osservando l'andamento della successione). Delle due disuguaglianze</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B5;</mi>
+  <mo>&lt;</mo>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mfrac>
+  <mo>&lt;</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mi>&#x3B5;</mi>
+</math>
+
+<!-- $$ 1 - \varepsilon \lt \frac{n+1}{n-1} \lt 1 + \varepsilon $$ -->
+
+<p>quella di sinistra è sempre soddisfatta, mentre quella di destra è soddisfatta per</p>
+
+<div class="eq">
+<p><i>n</i> &gt; (2 + <i>&epsilon;</i>)/<i>&epsilon;</i></p>
+</div>
+
+<p>Fissato <i>&epsilon;</i> &gt; 0, basterà scegliere <i>n</i><sub>0</sub> = (2 + <i>&epsilon;</i>)/<i>&epsilon;</i> (o ugugale al primo intero &gt; (2 + <i>&epsilon;</i>)/<i>&epsilon;</i>) per soddisfare la condizione richiesta dalla definizione di limite.&emsp;■</p>
+
+<p><b>Esempio 3.1.6</b>. Per mostrare che 2<sup>1/<i>n</i></sup> per <i>n</i> &rarr; &infin;, si studiano le disuguaglianze</p>
+
+<div class="eq">
+<p>1 − <i>&epsilon;</i> &lt; 2<sup>1/<i>n</i></sup> &lt; 1 + <i>&epsilon;</i></p>
+</div>
+
+<p>Quella di sinistra è sempre soddisfastta; quella di destra, prendendo il logarito (in base 2) di ambo i membri, si scrive</p>
+
+<div class="eq">
+<p>1/<i>n</i> &lt; log<sub>2</sub>(1 + <i>&epsilon;</i>)</p>
+</div>
+
+<p>ed è soddisfatta se <i>n</i> &gt; 1/log<sub>2</sub>(1 + <i>&epsilon;</i>). Si sceglie perciò <i>n</i><sub>0</sub> = 1/log<sub>2</sub>(1 + <i>&epsilon;</i>). &emsp;■</p>
+
+<p>Non risultato invece convergenti le prime due successioni dell'esempio 3.1.1. Esse sono però molto diverse tra loro e conviene introdurre definizioni che ne mettano in risalto la differenza.</p>
+
+<p><b>Esempio 3.1.4</b>. Sia <i>a<sub>n</sub></i> = 1/<i>n</i>, <i>n</i> = 1, 2, .... Allora la successione converge a 0. Sia <i>&epsilon;</i> > 0 e si scelga <i>N</i> con l'intero successivo a 1/<i>&epsilon;</i> (we use the <a href="R.html">Archimedean property</a>, se <i>r,&epsilon;</i> are positive real numbers, ∃<i>n</i>: <i>n&epsilon;</i> &gt; <i>r</i>). If <i>n</i> > <i>N</i> then</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i> − 0| = |<i>a<sub>n</sub></i>| = 1/<i>n</i> &lt; 1/<i>N</i> &lt; &epsilon;</p>
+</div>
+
+<p>proving the claim. &emsp;■</p>
+
+<p><b>Esempio 3.1.7</b>. The sequence <i>a<sub>n</sub></i> = (<i>n</i><sup>2</sup> + 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) has limit 1; indeed</p>
+
+<div class="eq">
+<p>1 − (<i>n</i><sup>2</sup> + 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) = 2(<i>n</i> − 1)/(<i>n</i><sup>2</sup> + 2<i>n</i> − 1) &lt; 2<i>n</i>/<i>n</i><sup>2</sup> = 2/<i>n</i> &lt; &epsilon;</p>
+</div>
+
+<p>for <i>n</i> &gt; 2/<i>&epsilon;</i>. It is not generally necessary to find the least <i>n</i><sub>0</sub> such that the previous relation is satisfied. &emsp;■</p>
+
+<p>In some cases ∞ or −∞ can be regarded as “limits” of a sequence {<i>a<sub>n</sub></i>}. We say that {<i>a<sub>n</sub></i>} <b>tends to</b> ∞ or <b>diverges</b> to ∞ if for every <i>α</i> ∈ ℝ, there is <i>n</i><sub>0</sub> ∈ ℕ such that <i>a<sub>n</sub></i> &gt; <i>α</i> for all <i>n</i> ≥ <i>n</i><sub>0</sub>, and then ∞ if {<i>a<sub>n</sub></i>} does not tend to ∞. Similarly, we say that {<i>a<sub>n</sub></i>} <b>tends</b> to −∞ or <b>diverges</b> to −∞ if for every <i>β</i> ∈ ℝ, there is <i>n</i><sub>0</sub> ∈ ℕ such that <i>a<sub>n</sub></i> &lt; <i>&beta;</i> for all <i>n</i> ≥ <i>n</i><sub>0</sub>
+, and we write <i>a<sub>n</sub></i> → −∞.</p>
+
+<p><b>Teorema 3.1.8</b> Every convergent sequence in ℝ is bounded. The converse is not true.</p>
+
+<p><b>Dim</b>. Sia {<i>a<sub>n</sub></i>} convergente a <i>ℓ</i>. Se <i>&epsilon;</i> = 1, ∃<i>N</i> &in; ℕ:</p>
+
+<div class="eq">
+<p><i>n</i> &ge; <i>N</i> &emsp;⇒&emsp; |<i>a<sub>n</sub></i> − <i>ℓ</i>| = 1</p>
+</div>
+
+<p>The triangle inequality yields</p>
+
+<div class="eq">
+<p>|<i>a<sub>n</sub></i>| − |<i>L</i>| &le; |<i>a<sub>n</sub></i> − <i>ℓ</i>|</p>
+</div>
+
+<p>it follows |<i>a<sub>n</sub></i>| &le; 1 + |<i>ℓ</i>| for all <i>n</i> &gt; <i>N</i>. Now, set</p>
+
+<div class="eq">
+<p><i>K</i> = sup {|<i>a</i><sub>1</sub>|, |<i>a</i><sub>2</sub>|, ..., |<i>a<sub>n</sub></i>|, |<i>ℓ</i>| + 1}</p>
+</div>
+
+<p>Thus |<i>a<sub>n</sub></i>| &le; <i>K</i> for all <i>n</i> &in; ℕ. In other words {<i>a<sub>n</sub></i>} is bounded by −<i>K</i> and <i>K</i>. &emsp;□</p>
+
+<p>Is the converse of the above theorem true? No, as the following example shows. We will show later that a bounded <i>monotone</i> sequence converges.</p>
+
+<p><b>Exmaple 3.1.7</b> {(−1)<sup><i>n</i></sup>)} is bounded by 1 but does not have a unique limit. Suppose that (−1)<sup><i>n</i></sup> ⟶ <i>ℓ</i> as <i>n</i> ⟶ &infin;. Given <i>&epsilon;</i> = 1/2, then there is an <i>N</i> &in; ℕ such that <i>n</i> &ge; <i>N</i> implies |(−1)<sup><i>n</i></sup> − <i>ℓ</i>| &lt; &epsilon; For <i>n</i> odd this implies |1 + <i>ℓ</i>| = |−1 −<i>ℓ</i>| &lt; 1/2 and for <i>n</i> even this implies |1 − <i>ℓ</i>| &lt; 1/2. Hence</p>
+
+<div class="eq">
+<p>2 = |1 + 1| = |(1 − <i>ℓ</i>) + (1 + <i>ℓ</i>)| &le; |1 − <i>ℓ</i>| + |1 + <i>ℓ</i>| &lt; 1/2 + 1/2 = 1</p>
+</div>
+
+<p>This implies 2 &lt; 1, a contradiction. Therefore, the sequence (−1)<sup><i>n</i></sup> does not converge. &emsp;■</p>
+
+<p><b>Theorem 3.1.8</b>. (<b>Monotone Sequence Theorem</b>). A bounded and monotone sequence converges to its supremum as <i>n</i> ⟶ &infin;.</p>
+
+<p><b>Proof</b>. Let {<i>a<sub>n</sub></i>} a sequence bounded above, whose least upper bound <i>&alpha;</i> = sup <i>a<sub>n</sub></i> exists as a real number. Suppose <i>&epsilon;</i> &gt; 0 is given; since <i>&alpha;</i> is the <i>least</i> upper bound of {<i>a<sub>n</sub></i>} there must exist <i>n</i><sub>0</sub> &in; ℕ such that</p>
+
+<div class="eq">
+<p><i>n</i> &ge; <i>n</i><sub>0</sub> &emsp;⇒&emsp; <i>a<sub>n</sub></i> &gt; <i>&alpha;</i> − <i>&epsilon;</i> &emsp;⟶&emsp; <i>a<sub>n</sub></i> − <i>&alpha;</i> &lt; − <i>&epsilon;</i> &emsp;or &emsp; <i>&alpha;</i> − <i>a<sub>n</sub></i> &lt; <i>&epsilon;</i></p>
+</div>
+
+<p>or equivalently</p>
+
+<div class="eq">
+<p><i>n</i> &ge; <i>n</i><sub>0</sub> &emsp;⇒&emsp; |<i>a<sub>n</sub></i> − <i>&alpha;</i>| &lt; <i>&epsilon;</i></p>
+</div>
+
+<p>thus {<i>a<sub>n</sub></i>} converges to <i>&alpha;</i> as <i>n</i> ⟶ &infin;. &emsp;□</p>
+
+<p>Our recipe for finding the limit of a sequence {<i>a<sub>n</sub></i>} is therefore to show that {<i>a<sub>n</sub></i>} is monotone and bounded.</p>
+
+<p id="AP"><b>Example 3.1.8</b> (AP). An arithmetic sequence or arithmetic progression (AP) is a sequence in which each term after the first term is formed by adding a constant number to the preceding term. Consider the sequence 1, 4, 7, 10,... where each term is obtained from the previous term by adding the constant value 3. The general form of a term in this sequence is <i>a<sub>n</sub></i> = 3<i>n</i> − 2. The general form of an <i>arithmetic sequence</i> is given by</p>
+
+<div class="eq">
+<p><i>a</i><sub>1</sub>,  <i>a</i><sub>1</sub> + <i>d</i>, <i>a</i><sub>1</sub> + 2<i>d</i>,  <i>a</i><sub>1</sub> + 3<i>d</i>, ...,  <i>a</i><sub>1</sub> + (<i>n</i> − 1)<i>d</i></p>
+</div>
+
+<p>The <i>n</i>th term of an A.P. is given by</p>
+
+<div class="eq">
+<p><i>a<sub>n</sub></i> = <i>a</i><sub>1</sub> + (<i>n</i> − 1)<i>d</i></p>
+</div>
+
+<p>The value <i>a</i><sub>1</sub> is the initial term in the sequence, and the value <i>d</i> is the constant difference between a term and its successor. In the above example we have <i>a</i> = 1 and <i>d</i> = 3.</p>
+
+<p>By mathematical induction method, we prove that hte sum S<sub>n</sub>, of the first <i>n</i> terms of arithmetic progression is calculated by the formula</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>a</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mi>n</mi>
+</math>
+
+<!-- $$S_n = \frac{a_1+a_n}{2}n $$ -->
+
+<ol>
+	<li><p>For <i>n</i> = 1, we obtain S<sub>1</sub> = (1/2) (a<sub>1</sub> + a<sub>1</sub>) = a<sub>1</sub>.</p>
+	<li><p>Assume that the formula for <i>S<sub>n</sub></i> holds for all positive integers <i>n</i> &ge; 1, then we'll prove the formula for <i>n</i> + 1, that is</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>a</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>a</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mi>n</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+</math>
+
+<p>We have that <i>S</i><sub><i>n</i>+1</sub> = <i>S<sub>n</sub></i> + <i>a</i><sub><i>n</i>+1</sub> and according to the inductive hyphothesys S<sub>n</sub> =(a<sub>1</sub> + a<sub>n</sub>)<i>n</i>/2. Then</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>S</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>a</mi>
+              <mi>n</mi>
+            </msub>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+        <mi>n</mi>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">[</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+        <msub>
+          <mi>a</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">[</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mi>d</mi>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <mi>n</mi>
+        <mi>d</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">[</mo>
+        <mn>2</mn>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mi>n</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mi>d</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mi></mi>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <mi>n</mi>
+        <mi>d</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>a</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+
+<!-- \begin{align*}S_{n+1} &= \frac{a_1 + a_n}{2}n + a_{n+1} = \frac12 [(a_1+a_n)n + 2a_{n+1}] =\\ &= \frac12 [(a_1 + a_1 + (n-1)d)n + 2(a_1+nd)] = \frac12 [2a_1(n+1) + n(n+1)d] = \\ &= \frac12 (a_1+a_1+nd)(n+1) = \frac{a_1+ a_{n+1}}{2} (n+1). \end{align*} -->
+
+<p>completing the proof. &emsp;■</p></li>
+
+</ol>
+
+<section aria-label="End">
+<a href="R.html">&#171;The Real System</a>
+<a href="index.html">Index</a>
+<a href="an_div.html">Successioni divergenti. Successioni irregolari &#187;</a>
+</section>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Improper Integrals"/>
+    <title>Improper Integrals</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a class="navbar" href="../../index.html">Home</a></li>
+        <li><a class="navbar" href="index.html">Index</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+
+<h1>Improper Integrals</h1>
+
+<p>The concept of Riemann integral as we have developed, requires that the range of integration if finite and the integrand remains bounded in that domain. If either (or both) of these assumptions is not satisfied it is necessary to attach a new interpretation to the integral. <br> In the case the integrand <i>f</i> becomes ifinite in the interval <i>a</i> &le; <i>x</i> &le; <i>b</i>, i.e. <i>f</i> has points of <i>infinite discontinuity</i> (singular points) in [<i>a,b</i>], or the limits of integration (or infinite </p>
+
+<p>An <b>improper integral</b> is a definite integral that possesses one or more of the following properties:</p>
+
+<ol type="i">
+	<li><p>the interval of integration is either semi-infinite or infinite in lenght <i>i.e.</i> of the form [<i>a</i>; &infin;]</p></li>
+	<li><p>the integrand becomes infinite at an interior point of the interval of integration;</p></li>
+	<li><p>the integrand becomes infinite at an ened point of the interval of integration.</p></li>
+</ol>
+
+<p><b>Example</b>. Verify that the following is not an improper integral</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mn>1</mn>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mi>x</mi>
+  </mfrac>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ \int_0^1 \frac{\sin x}{x} \text{d} x $$  -->
+
+<p>is an example of proper integral since</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mi>sin</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>x</mi>
+    </mrow>
+    <mi>x</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+</math>
+
+<!-- $$\lim_{x\to 0} \frac{\sin x}{x} = 1 $$ -->
+
+<p><b>Definition 6.1.1</b>. Let <i>f</i> : [<i>a,b</i>) ⟶  ℝ, a continuous function, such that</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mi>b</mi>
+        <mo>&#x2212;</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>+</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$ \lim_{x \to b^-} f(x) = +\infty $$ -->
+
+<p>We define the improper integral, ∫<sup><sup><i>b</i></sup></sup><sub><sub><i>a</i></sub> <i>f</i>(<i>x</i>) d<i>x</i>, as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B5;</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\int_a^b f(x)\, \text{d}x = \lim_{\varepsilon \to 0} \int_a^{b-\varepsilon} f(x)\, \text{d}x$$ -->
+
+<p>If there limit exists we say the improper integral <i>converges</i>. If the limit is &pm;&infin; we say that the integral <i>diverges</i>. If, however, no such limit exists, we say that the improper integral <i>does not exists</i>. An analogous definition can be given for <i>f</i> : (<i>a,b</i>] ⟶  ℝ. &emsp;□</p>
+
+<p>An analogous definition is given if <i>f</i>: (<i>a, b</i>] ⟶  ℝ, is continuos and</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mi>a</mi>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo>&#xB1;</mo>
+  <mi mathvariant="normal">&#x221E;</mi>
+</math>
+
+<!-- $$\lim_{x \to a^+} f(x) = \pm \infty $$ -->
+
+<p>We let</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mo>=</mo>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B5;</mi>
+      <mo accent="false" stretchy="false">&#x2192;</mo>
+      <msup>
+        <mn>0</mn>
+        <mo>+</mo>
+      </msup>
+    </mrow>
+  </munder>
+  <msub>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>a</mi>
+      <mo>+</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msub>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$\int_a^b = f(x) \text{d}x = \lim_{\varepsilon \to 0^+} \int_{a+\varepsilon} f(x) \text{d}x $$ -->
+
+<p><b>Example 6.1.2</b>. Calculate the following integral</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3B1;</mi>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B1;</mi>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\int_a^b \frac{\text{d}x}{(b-x)^\alpha} \quad (\alpha \gt 0)$$ -->
+
+<p>Case &alpha; = 1. We have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3B1;</mi>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mo stretchy="false">[</mo>
+  <mo>&#x2212;</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo>&#x2212;</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <msubsup>
+    <mo stretchy="false">]</mo>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msubsup>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B5;</mi>
+  <mo>+</mo>
+  <mi>log</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo>&#x2212;</mo>
+  <mi>a</mi>
+  <mo stretchy="false">)</mo>
+</math>
+
+<!-- $$\int_a^{b-\varepsilon} \frac{\text{d}x}{(b-x)^\alpha} = [-\log(b -x)]_a^{b-\varepsilon} = -\log \varepsilon + \log (b-a) $$  -->
+
+<p>lim<sub>&epsilon; ⟶0<sup>+</sup></sub> [log &epsilon; + log(<i>b</i> − <i>a</i>)] = &infin;</p>
+
+<p>Thus the integral is <i>divergent</i>.</p>
+
+<p><b>Case</b> &alpha; &ne; 1. We have</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>&#x3B1;</mi>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B1;</mi>
+    </mrow>
+  </mfrac>
+  <msubsup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">[</mo>
+      <mo>&#x2212;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>x</mi>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mi>&#x3B1;</mi>
+        </mrow>
+      </msup>
+      <mo data-mjx-texclass="CLOSE">]</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>a</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msubsup>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B1;</mi>
+    </mrow>
+  </mfrac>
+  <mo stretchy="false">[</mo>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>&#x3B5;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B1;</mi>
+    </mrow>
+  </msup>
+  <mo>+</mo>
+  <mo stretchy="false">(</mo>
+  <mi>b</mi>
+  <mo>&#x2212;</mo>
+  <mi>a</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B1;</mi>
+    </mrow>
+  </msup>
+  <mo stretchy="false">]</mo>
+</math>
+
+<!-- $$\int_a^{b-\varepsilon} \frac{\text{d}x}{(b-x)^\alpha} = \frac{1}{1-\alpha} \left[-(b-x)^{1-\alpha} \right]_{a}^{b- \varepsilon} = \frac{1}{1-\alpha}[-\varepsilon^{1-\alpha} + (b-a)^{1-\alpha}] $$ -->
+
+<div class="eq">
+<p>lim<sub>&epsilon; ⟶ 0<sup>+</sup></sub> [−&epsilon;<sup>1−&alpha;</sup> + (<i>b</i> −<i>a</i>)<sup>1−&alpha;</sup>] = <br>
+ = &infin;&emsp; if &alpha; &gt; 1<br>
+ = (<i>b</i> − <i>a</i>)<sup>1 − &alpha;</sup>/(1 − &alpha;) &emsp; if &alpha; &lt; 1. &emsp;■</p>
+</div>
+
+<p>Several convergence (or divergence) criteria are now discussed.</p>
+
+<p><b>Theorem 6.1.3</b> (Comparison Test with Non-negative functions). Let <i>f</i> and <i>g</i> to continuous functions <i>f,g</i> : [<i>a,b</i>) ⟶  ℝ, such that</p>
+
+<div class="eq">
+<p>lim<sub><i>x</i> ⟶ <i>b</i><sup>−</sup></sub> <i>f</i>(<i>x</i>) = lim<sub><i>x</i> ⟶ <i>b</i><sup>−</sup></sub> <i>g</i>(<i>x</i>) = +&infin;</p>
+</div>
+
+<p>if 0 &le; <i>f</i>(<i>x</i>) &le; <i>g</i>(<i>x</i>) in [<i>a,b</i>), then</p>
+
+<div class="eq">
+<p>g &emsp; integrable &emsp; ⇒ &emsp; <i>f</i> &emsp; integrable<br>
+<i>f</i> &emsp; not integrable &emsp; ⇒ &emsp; <i>g</i> &emsp; not integrable</p>
+</div>
+
+<p>Indeed by the monocity integral property</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>0</mn>
+  <mo>&#x2264;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msubsup>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mo>&#x2264;</mo>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>b</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B5;</mi>
+    </mrow>
+  </msubsup>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+</math>
+
+<!-- $$ 0 \le \int_a^{b-\varepsilon} f(x) \, \text{d}x \le \int_a^{b-\varepsilon} g(x) \, \text{d}x $$ -->
+
+<p>and passing to the limit as <i>&epsilon;</i> ⟶ 0<sup>+</sup>, the claim is proved. &emsp;□</p>
+
+<p><b>Theorem 6.1.4</b> (Asymptotic Comparison Test with Non-negative functions). Let <i>f</i> and <i>g</i> to continuous functions <i>f,g</i> : [<i>a,b</i>) ⟶  ℝ, such that</p>
+
+<div class="eq">
+<p><i>g</i> &gt; 0, <i>g</i> &gt; 0 and <i>f</i> ~ <i>g</i> for <i>x</i> ⟶ <i>b<sup>−</sup></i></p>
+</div>
+
+<p>then</p>
+
+<div class="eq">
+<p><i>f</i> &emsp; integrable &emsp; ⇐⇒ &emsp; <i>g</i> &emsp; integrable&emsp;■</p>
+</div>
+
+<p>The same criteria hold for <i>f,g</i> ⟶ &infin; for for <i>x</i> ⟶ <i>a</i><sup>+</sup> or if <i>f,g</i> ⟶ −&infin;. In this last case the inequalities of the comparison test are among the absolute values of <i>f</i> and <i>g</i>. </p>
+
+<p><b>Example 6.1.5</b>. Consider the following integral</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mn>1</mn>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mroot>
+      <mrow>
+        <mn>1</mn>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mn>3</mn>
+    </mroot>
+  </mfrac>
+</math>
+
+<!-- $$\int_0^1 \frac{\text{d}x} {\sqrt[3]{1-x^2}} $$ -->
+
+<p>The integrand can be written as</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mroot>
+      <mrow>
+        <mn>1</mn>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mn>3</mn>
+    </mroot>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mrow>
+      <mroot>
+        <mrow>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mi>x</mi>
+        </mrow>
+        <mn>3</mn>
+      </mroot>
+      <mroot>
+        <mrow>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <mi>x</mi>
+        </mrow>
+        <mn>3</mn>
+      </mroot>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$f(x) = \frac{\text{d}x} {\sqrt[3]{1-x^2}} = \frac{1} {\sqrt[3]{1-x} \sqrt[3]{1-x} }$$ -->
+
+<p>is a continuos and positive function in [<i>a,b</i>] and tends to +&infin; fro <i>x</i> ⟶ 1<sup>−</sup>. Further</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x223C;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mroot>
+      <mn>2</mn>
+      <mn>3</mn>
+    </mroot>
+  </mfrac>
+  <mfrac>
+    <mn>1</mn>
+    <mroot>
+      <mrow>
+        <mn>1</mn>
+        <mo>&#x2212;</mo>
+        <mi>x</mi>
+      </mrow>
+      <mn>3</mn>
+    </mroot>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>for</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>x</mi>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <msup>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+  </msup>
+</math>
+
+<!--$$f(x) \sim \frac{1}{\sqrt[3]{2}} \frac{1} {\sqrt[3]{1-x}} \quad \text{for} \quad x \to 1^- $$ -->
+
+<p>We knwon that the function <i>g</i>(<i>x</i>) = 1/(2(1 − <i>x</i>)<sup>1/3</sup> is positive and integrable (example 6.1.2 case &alpha; = 1/3), then <i>f</i> as well is integrable. The integral is hence convergent. &emsp;■</p>
+
+<p><b>Example 6.1.5</b>. Consider the integral</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>1</mn>
+    <mn>3</mn>
+  </msubsup>
+  <mfrac>
+    <mrow>
+      <mtext>d</mtext>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <mn>5</mn>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mn>4</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\int_1^3 \frac{\text{d}x}{x^2 -5x +4} $$ -->
+
+<p>The integrand can be written as</p>
+
+<p>it is a negative and continuous function in [1,3] and tends to −&infin; for <i>x</i> ⟶ 1<sup>+</sup>. Observe that −<i>f</i>(<i>x</i>) ~ 1/3(<i>x</i> − 1) and that <i>g</i>(<i>x</i>) = 1/3(<i>x</i> −1). We knwon that the function <i>g</i>(<i>x</i>) = 1/3(<i>x</i> −1) is positive and not integrable (example 6.1.2 case &alpha; = 1). Then it follows that also −<i>f</i> and <i>f</i> are not integrable. The integral is divergent to −&infin;&emsp;■</p>
+
+<p>The comparison test and asymptotic comparison test apply only to constant sign integrands in analogy to what we studied for <a href="series.html">alternating sign series</a>. A function might be unbounded for <i>x</i> ⟶ <i>a</i><sup>+</sup> without being constant sign. For example</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msqrt>
+      <mi>x</mi>
+    </msqrt>
+  </mfrac>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+</math>
+
+<!-- $$f(x) = \frac{1}{\sqrt{x}} \sin \frac{1}{x} $$ -->
+
+<p>is unbounded for <i>x</i> ⟶ 0<sup>+</sup>, but it doesn't tend to &pm;&infin; and its sign is not constant. For this kind of situations the followin holds true</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>convergent</mtext>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">&#x21D2;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mi>a</mi>
+    <mi>b</mi>
+  </msubsup>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>d</mtext>
+  <mi>x</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>convergent</mtext>
+</math>
+
+<!-- $$\int_a^b |f(x)|\,\text{d}x \quad \text{convergent} \quad \Rightarrow \quad \int_a^b |f(x)|\,\text{d}x \quad \text{convergent} $$ -->
+
+<p>If <i>f</i> is integrable on [<i>a,b</i>] then <i>f</i> is said absolutely integrable on [<i>a,b</i>].</p>
+
+<p><b>Example 6.1.6</b>. The integral</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mo data-mjx-texclass="OP">&#x222B;</mo>
+    <mn>0</mn>
+    <mn>1</mn>
+  </msubsup>
+  <mfrac>
+    <mn>1</mn>
+    <msqrt>
+      <mi>x</mi>
+    </msqrt>
+  </mfrac>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+  </mfrac>
+</math>
+
+<!-- $$ \int_0^1 \frac{1}{\sqrt{x}} \sin \frac{1}{x} $$ -->
+
+<p>converges since</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msqrt>
+        <mi>x</mi>
+      </msqrt>
+    </mfrac>
+    <mi>sin</mi>
+    <mo data-mjx-texclass="NONE">&#x2061;</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>x</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msqrt>
+      <mi>x</mi>
+    </msqrt>
+  </mfrac>
+</math>
+
+<!-- $$ \left |\frac{1}{\sqrt{x}} \sin \frac{1}{x} \right| \le \frac{1}{\sqrt{x}} $$ -->
+
+<p>which has a convergent integral. &emsp;■</p>
+
+<section aria-label="End">
+<a href="epoxides.html">&#171;Epoxides</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides&#187;</a>
+</section>
+
+</div>
+
+</body>
+</html>

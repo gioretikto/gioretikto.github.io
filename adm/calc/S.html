@@ -90,7 +90,7 @@
 </math>
 
 <!-- $$\sum_{i=1}^{10}  \frac{1}{i} = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + + \frac{1}{10}$$ -->
-
+progressione geometrica per cui il primo termine vale 2 e la ragione vale ¾.
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munderover>
     <mo data-mjx-texclass="OP">&#x2211;</mo>
@@ -502,11 +502,306 @@
 
 <p>La dimostrazione di queste proprietà è un esercizio di trascrizione: basta, cioè, scrivere per esteso che cosa indcia ciascuna sommatoria ed eseguire qualche passaggio elementare.</p>
 
-<h2 id="prog">Somma di una progressione geometrica</h2>
+<h2 id="prog">Progressione geometriche</h2>
 
-<p>Si dice che <i>n</i> termini sono in <i>progressione geoemetrica</i> se il rapporto tra ogni termine (a partire dal secondo) e il precedente è costante. Tale costante si dice <i>ragione</i> della progressione. S il primo termine è <i>a</i> e la ragione è <i>q</i>, i termmini successivi saranno <i>aq</i>, <i>aq</i><sup>2</sup>, <i>aq</i><sup>3</sup>, e così via.</p>
+<p>Una <b>progressione geometrica</b> è una <a href="an.html">successione di numeri reali</a> tali che il rapporto tra due termini consecutivi della successione è costante.</p>
 
-<p><b>Proposizione 1.2.3</b> Per la somma dei primi termini della progressione geometrica di ragione <i>q</i> &ne; 1 (e <i>a</i> = 1), vale la formula:</p>
+<div class="eq">
+<p><i>a, aq, aq</i><sup>2</sup>, <i>aq</i><sup>3</sup>, ..., <i>aq<sup>n</sup></i></p>
+</div>
+
+<p>dove <i>a</i> è detto <i>primo termine</i>, e <i>q</i> la costante detta <b>ragione</b> della progressione: se la ragione è positiva e maggiore di 1, la successione è crescente; se la ragione è compresa tra zero e 1 (1 escluso), la succesione è decrescente; se la ragione è uguale a 1 la successione è costante (tutti i suoi termini sono uguali); se la ragione è negativa la successione è <i>oscillante</i> (i suoi termini sono alternativamente positivi e negativi). <br> Simbolicamente, indicando con an il termine <i>n</i>-esimo della successione e con <i>q</i> la sua ragione, possiamo
+scrivere:</p>
+
+<div class="eq">
+<p><i>a</i><sub>1</sub><br>
+<i>a</i><sub>2</sub> = <i>a</i><sub>1</sub><i>q</i><br>
+<i>a</i><sub>3</sub> = <i>a</i><sub>2</sub><i>q</i> = <i>a</i><sub>1</sub><i>qq</i> = <i>a</i><sub>1</sub><i>q</i><sup>2</sup><br>
+<i>a</i><sub>4</sub> = <i>a</i><sub>3</sub><i>q</i> = <i>a</i><sub>1</sub>q<sup>2</sup><i>q</i> = <i>a</i><sup>1</sup>q<sup>3</sup><br>
+...<br>
+<i>a<sub>n</sub></i> = <i>a</i><sub><i>n</i>−1</sub> <i>q</i> = <i>a</i><sub>1</sub><i>q</i><sup><i>n</i>-2</sup><i>q</i> = <i>a</i><sub>1</sub>q<sup><i>n</i>-1</sup></p>
+</div>
+
+<p>dove l’ultima espressione:</p>
+
+<div class="box">
+<p><i>a<sub>n</sub></i> = <i>a</i><sub>1</sub><i>q</i><sup><i>n</i>-1</sup>&emsp;(1.2.3)</p>
+</div>
+
+<p>fornisce una relazione generale per calcolare il termine <i>n</i>-esimo, <i>a<sub>n</sub></i> di una progressione geometrica di cui si conosce il primo termine <i>a</i><sub>1</sub> e la ragione <i>q</i>.</p>
+
+<p>Ad esempio</p>
+
+<table class="noborder centertable">
+<tr><th>Progressione</th> <th>Ragione</th></tr>
+<tr><td>1,3,9,27,81, ...</td> <td>3</td></tr>
+<tr><td>16/27, −8/9, 4/3, −2, ...</td> <td>−3/2</td></tr>
+<tr><td><i>x</i>, <i>x</i><sup>2</sup>, <i>x</i><sup>3</sup>, <i>x</i><sup>4</sup> ...</td> <td>x</td></tr>
+</table>
+
+<p><b>Esempio 1.2.4</b> Calcolare il quinto termine di una progressione geometrica per cui il primo termine vale 2 e la ragione vale ¾.</p>
+
+<p>Applicando la formula precedente, abbiamo subito:</p>
+
+<div class="eq">
+<p><i>a</i><sub>5</sub> = <i>a</i><sub>1</sub><i>q</i><sup>4</sup> = 2 x (3/4) = 2 x 81/256 = 81/128&emsp;■</p>
+</div>
+
+<p id="C"><b>Esempio 1.2.5</b> Calcoliamo l’interesse composto di un capitale <i>C</i><sub>0</sub> depositato in banca per <i>n</i> anni con un interesse percentuale annuo uguale a <i>i</i>. <br> Alla fine di ogni anno abbiamo la seguente situazione:</p>
+
+<table class="noborder centertable">
+<tr><th>Anno</th> <th>Capitale</th> 
+<tr><td>1</td> <td><i>C</i><sub>0</sub> + <i>i</i> <i>C</i><sub>0</sub> = <i>C</i><sub>0</sub>(1+<i>i</i>) = <i>C</i><sub>1</sub></td></tr>
+<tr><th>2</th> <td><i>C</i><sub>1</sub> + <i>i</i> <i>C</i><sub>1</sub> = <i>C</i><sub>0</sub>(1+<i>i</i>) + <i>i</i><i>C</i><sub>0</sub>(1+<i>i</i>) = <i>C</i><sub>0</sub>(1+<i>i</i>)(1+<i>i</i>) = <i>C</i><sub>0</sub>(1+<i>i</i>)<sup>2</sup> = <i>C</i><sub>2</sub></td></tr>
+<tr><th>3</th> <td><i>C</i><sub>2</sub> + <i>i</i><i>C</i><sub>2</sub> = <i>C</i><sub>0</sub>(1+<i>i</i>)<sup>2</sup> + <i>i</i><i>C</i><sub>0</sub>(1+<i>i</i>)<sup>2</sup> = <i>C</i><sub>0</sub>(1+<i>i</i>)<sup>2</sup> (1+<i>i</i>) = <i>C</i><sub>0</sub>(1+<i>i</i>)<sup>3</sup> = <i>C</i><sub>3</sub></td></tr>
+<tr><td>...</td> <td>...</td></tr>
+<tr><th>n</th> <td><i>C</i><sub>0</sub>(1+<i>i</i>)<sup>n</sup> = <i>C</i><sub>n</sub></td></tr>
+</table>
+
+<p>Possiamo allora notare che</p>
+
+<ul>
+	<li><p>la successione:</p>
+
+<div class="eq">
+<p><i>C</i><sub>0</sub>, <i>C</i><sub>1</sub>, <i>C</i><sub>2</sub>, <i>C</i><sub>3</sub>,..., <i>C</i><sub>n</sub></p>
+</div>
+
+<p>è una progressione geometrica il cui primo termine è <i>C</i><sub>0</sub> e la cui ragione è 1 + <i>i</i>;</p></li>
+
+<li><p>il capitale <i>C</i><sub>n</sub> alla fine dell’<i>n</i>-simo anno di deposito è dato da</p>
+
+<div class="eq">
+<p><i>C</i><sub>n</sub> = <i>C</i><sub>0</sub> (1 + <i>i</i>)<sup><i>n</i></sup></p>
+</div>
+
+<p>Allora se <i>C</i><sub>0</sub> = 1 ML (un milione di lire) e <i>i</i> = 8%, dopo 10 anni il capitale sarà uguale a:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>C</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>10</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>&#xD7;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mfrac>
+        <mn>8</mn>
+        <mn>100</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>10</mn>
+    </mrow>
+  </msup>
+  <mtext>ML</mtext>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mn>108</mn>
+        <mn>100</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>10</mn>
+    </mrow>
+  </msup>
+  <mo>&#x2248;</mo>
+  <mn>2.158</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>ML</mtext>
+</math>
+
+<!-- $$C_{10} = 1 \times \left(1 + \frac{8}{100}\right)^{10} \text{ML} = \left(\frac{108}{100} \right)^{10} \approx 2.158 \, \text{ML} $$ -->
+
+<p>cioè quasi raddoppiato (ma certamente svalutato!).&emsp;■</p></li>
+</ul>
+
+<p>La relazione (1.2.3) può essere utilizzata per calcolare uno qualunque degli elementi presenti a partire dagli altri. Così possiamo scrivere anche le relazioni:</p>
+
+<div class="eq">
+<p><i>a</i><sub>1</sub> = <i>a<sub>n</sub></i>/<i>q</i><sup><i>n</i> − 1</sup>&emsp;(1.2.6)</p>
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>q</mi>
+  <mo>=</mo>
+  <mroot>
+    <mfrac>
+      <msub>
+        <mi>a</mi>
+        <mi>n</mi>
+      </msub>
+      <msub>
+        <mi>a</mi>
+        <mn>1</mn>
+      </msub>
+    </mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </mroot>
+<mtext>&emsp;(1.2.4)</mtext>
+</math>
+
+<!-- $$q = \sqrt[n-1] {\frac{a_n}{a_1}} $$ -->
+
+<div class="eq">
+<p><i>n</i> = log<sub>q</sub>(<i>a<sub>n</sub></i>/<i>a</i><sub>1</sub>) + 1&emsp;(1.2.7)</p>
+</div>
+
+<p><b>Esempio 1.2.5</b> Calcolare la ragione di una progressione geometrica di cui si conosce il primo termine uguale a 4 ed il quinto termine uguale a 128.</p>
+
+<p>Applicando la formula (1.2.4) precedente, abbiamo subito:</p>
+
+<div class="eq">
+<p><i>q</i> = (128/4)<sup>1/4</sup> = 32<sup>1/4</sup> = 2(2)<sup>1/4</sup>.&emsp;■</p>
+</div>
+
+<p><b>Esempio 1.2.6</b> Di una progressione geometrica si sa che il primo termine vale 72, che il suo termine <i>n</i>-simo vale 1 e che la ragione vale 8/27. Calcolare <i>n</i>.</p>
+
+<p>Applicando la formula (1.2.4) precedente, abbiamo subito:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>n</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>log</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mfrac>
+        <mn>72</mn>
+        <mn>8</mn>
+      </mfrac>
+      <mn>27</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <msub>
+    <mi>log</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mn>243</mn>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <msub>
+    <mi>log</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mrow data-mjx-texclass="ORD">
+    <mo>/</mo>
+  </mrow>
+  <mn>5</mn>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>5</mn>
+    </mrow>
+  </msup>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <mn>5</mn>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <mn>6</mn>
+</math>
+
+<!-- $$n = \log_{1/3} \left(\frac{\frac{72}{8}}{27}\right) + 1 = \log_{1/3} (243) + 1 = \log_{1/3} (1/5)^{-5} + 1 = 5 + 1 = 6 $$ -->
+
+<h3>Somma di una progressione geometrica</h3>
+
+<p>Calcoliamo la somma <i>S<sub>n</sub></i> dei primi <i>n</i> termini di una progressione geometrica. Possiamo scrivere:</p>
+
+<div class="eq">
+<i>S<sub>n</sub></i> = <i>a</i><sub>1</sub> + <i>a</i><sub>1</sub><i>q</i> + <i>a</i><sub>1</sub>q<sup>2</sup> + ... + <i>a</i><sub>1</sub>q<sup>n − 1</sup><br>
+<i>qS<sub>n</sub></i> = <i>a</i><sub>1</sub><i>q</i> + <i>a</i><sub>1</sub>q<sup>2</sup> + <i>a</i><sub>1</sub><i>q</i><sup>3</sup> + ... + a<sub>1</sub>q<sup>n − 1</sup> + <i>a</i><sub>1</sub><i>q<sup>n</sup></i><br>
+e, sottraendo membro a membro:<br>
+<i>S<sub>n</sub></i> = <i>q</i>S<sub>n</sub> = <i>a</i><sub>1</sub> − <i>a</i><sub>1</sub><i>q<sup>n</sup></i> ⇒ <i>S<sub>n</sub></i> (1 − <i>q</i>) = <i>a</i><sub>1</sub> (1 − <i>q<sup>n</sup></i>) ⇒<br>
+infine,</p>
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>1</mn>
+  </msub>
+  <mfrac>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>q</mi>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <mi>q</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$S_n = a_1 \frac{1 - q^n}{1-q} $$ -->
+
+<p>Usiamo le proprietà del simbolo di sommatoria per provare il seguente caso particolare della precedente:</p>
+
+<p><b>Proposizione 1.2.7</b> Per la somma dei primi termini della progressione geometrica di ragione <i>q</i> &ne; 1 (e <i>a</i> = 1), vale la formula:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munderover>
@@ -743,6 +1038,7 @@
 </math>
 
 <!-- $$ \begin{align}(1-q) \sum_{k=0}^n q^k &=\sum_{k=0}^n q^k - q\sum_{k=0}^nq^k = \\ &= \sum_{k=0}^n q^k - \sum_{k=0}^n q^{k+1} = \sum_{k=0}^n q^k - \sum_{k=1}^{n+1} q^k = \\ &= 1 + \sum_{k=1}^n q^k - \left( \sum_{k=1}^n q^k + q^{n+1} \right) = 1 - q^{n+1} \end{align}$$ -->
+
 
 <section aria-label="End">
 <a href="Lagrange.html">&#171;The Mean Value Theorem</a>

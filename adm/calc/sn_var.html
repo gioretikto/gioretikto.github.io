@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Serie a termini di segno variabile"/>
+	<title>Serie a termini di segno variabile</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Serie a termini di segno variabile</h1>
+
+<p>Veniamo ora allo studio delle serie a temrini di segno qualsiasi. Diamo anzitutto una definizione.</p>
+
+<p><b>Definizione 6.2.1</b>. Una serie &Sigma;<i>a<sub>n</sub></i> si dirà assolutamente convergente se converge la serie (a termini non negativi) &Sigma;|<i>a<sub>n</sub></i>|.&emsp;□</p>
+
+<p>Vale il seguente teorema:</p>
+
+<p><b>Teorema 6.2.2</b>. Se la serie &Sigma;<i>a<sub>k</sub></i> converge assolutamente, allora converge.</p>
+
+<p><b>Dim</b>. Lo proveremo come conseguenza del teorema di monotonia, decomponendo il termine genrale della serie nella sua parte positiva e negativa. Per ogni <i>k</i>, definiamo:</p>
+
+<div class="eq">
+<p><i>s<sub>n</sub></i><sup>+</sup> = somma dei soli termini <i>a<sub>k</sub></i> &ge; 0, per <i>k</i> = 0, 1, ..., <i>n</i><br>
+<i>s<sub>n</sub></i><sup>−</sup> = somma dei soli termini <i>a<sub>k</sub></i> &ge; 0, per <i>k</i> = 0, 1, ..., <i>n</i>
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>s</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+</math>
+
+<!-- $$s_n = \sum_{k=0}^n a_k $$ -->
+
+<p>Poiché <i>s<sub>n</sub></i> = <i>s<sub>n</sub></i><sup>+</sup> − <i>s<sub>n</sub></i><sup>−</sup>, sarà sufficiente mostrare che le successioni <i>s<sub>n</sub></i><sup>+</sup> e <i>s<sub>n</sub></i><sup>−</sup> sono convergenti per concludere che <i>s<sub>n</sub></i> converge, e quindi che la serie &Sigma;<i>a<sub>k</sub></i> converge.<br> Osserviamo che <i>s<sub>n</sub></i><sup>+</sup> e <i>s<sub>n</sub></i><sup>−</sup> sono successioni monotone non decrescenti (aumentando <i>n</i> di un'unità si somma ad <i>s<sub>n</sub></i><sup>+</sup>, <i>s<sub>n</sub></i><sup>−</sup> una quantità positiiva, oppure non si somma nulla). Inoltre, per la disuguaglianza triangolare:</p>
+
+<p>D'altro canto, per ipotesi la serie &Sigma;<i>a<sub>k</sub></i> converge assolutamente, ossia |&Sigma;<i>a<sub>k</sub></i>| converge, e quindi la quantità |&Sigma;<i>a<sub>k</sub></i>| è limitata; perciò le successioni <i>s<sub>n</sub></i><sup>+</sup>, <i>s<sub>n</sub></i><sup>−</sup> sono superiormente limitate e non decrescenti, e pertanto convergono, per il teorema di monotonia. Il teorema è così dimostrato. &emsp;□</p>
+
+<p>Dunque la convergenza assoluta impolica la convergenza (ordinaria), detta anche <i>convergenza semplice</i>; il viceversa non è vero.</p>
+
+<p><b>Esempio</b>. La serie &Sigma; (−1)<sup><i>n</i></sup>/<i>n<sup>&alpha;</sup></i>, con <i>&alpha;</i> &gt; 1 è convergente, anzi assolutamente convergente. Infatti si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+      <msup>
+        <mi>n</mi>
+        <mi>&#x3B1;</mi>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>n</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$\left| \frac{(-1)^n}{n^\alpha} \right| = \frac{1}{n^\alpha} $$ -->
+
+<p>e la seie &Sigma; 1/<i>n<sup>&alpha;</sup></i> è convergente per <i>&alpha;</i>. Se <i>&alpha;</i> = 1 nulla, per il momento, possiamo concludere circa la convergenza della serie data, poiché la serie dei valori assoluti corrispondente è la serie armonica, che è divergente.&emsp;■</p>
+
+<p>Mostreremo ora che &Sigma; (−1)<sup><i>n</i></sup>/<i>n</i> è convergente, fornendo così un esempio di serie convergente, ma non assolutamente convergente.</p>
+
+<h2>Serie a termini di segno alternato. Criterio di Leibniz</h2>
+
+<p>Tra le serie a termini di segno variabile, un caso particolarmente semplice è costituito dalle serie <i>a segni alterni</i>, per le quali vale il seguente criterio di convergenza:</p>
+
+<p><b>Teorema</b> (Criterio di Leibniz) Sia data la serie</p>
+
+$$\sum_{n=0} (-1)^n a_n \quad \text{con } a_n \ge 0 \forall n$$
+
+<section aria-label="End">
+<a href="sequences.html">&#171;Sequences</a>
+<a href="index.html">Index</a>
+<a href="sequnces_theorems.html">Fundamental theorems on sequences &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+
