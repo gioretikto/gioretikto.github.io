@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Serie a termini di segno variabile"/>
+	<title>Serie a termini di segno variabile</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Serie a termini di segno variabile</h1>
+
+<p>Veniamo ora allo studio delle serie a temrini di segno qualsiasi. Diamo anzitutto una definizione.</p>
+
+<p><b>Definizione 6.2.1</b>. Una serie &Sigma;<i>a<sub>n</sub></i> si dirà assolutamente convergente se converge la serie (a termini non negativi) &Sigma;|<i>a<sub>n</sub></i>|.&emsp;□</p>
+
+<p>Vale il seguente teorema:</p>
+
+<p><b>Teorema 6.2.2</b>. Se la serie &Sigma;<i>a<sub>k</sub></i> converge assolutamente, allora converge.</p>
+
+<p><b>Dim</b>. Lo proveremo come conseguenza del <a href="an_mon.html">teorema di monotonia</a>, decomponendo il termine genrale della serie nella sua parte positiva e negativa. Per ogni <i>k</i>, definiamo:</p>
+
+<div class="eq">
+<p><i>s<sub>n</sub></i><sup>+</sup> = somma dei soli termini <i>a<sub>k</sub></i> &ge; 0, per <i>k</i> = 0, 1, ..., <i>n</i><br>
+<i>s<sub>n</sub></i><sup>−</sup> = &minus; (somma dei soli termini <i>a<sub>k</sub></i> &lt; 0, per <i>k</i> = 0, 1, ..., <i>n</i>)</p>
+</div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>s</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+</math>
+
+<!-- $$s_n = \sum_{k=0}^n a_k $$ -->
+
+<p>Poiché <i>s<sub>n</sub></i> = <i>s<sub>n</sub></i><sup>+</sup> − <i>s<sub>n</sub></i><sup>−</sup>, sarà sufficiente mostrare che le successioni <i>s<sub>n</sub></i><sup>+</sup> e <i>s<sub>n</sub></i><sup>−</sup> sono convergenti per concludere che <i>s<sub>n</sub></i> converge, e quindi che la serie &Sigma;<i>a<sub>k</sub></i> converge.<br> Osserviamo che <i>s<sub>n</sub></i><sup>+</sup> e <i>s<sub>n</sub></i><sup>−</sup> sono successioni monotone non decrescenti (aumentando <i>n</i> di un'unità si somma ad <i>s<sub>n</sub></i><sup>+</sup>, <i>s<sub>n</sub></i><sup>−</sup> una quantità positiiva, oppure non si somma nulla). Inoltre, per la disuguaglianza triangolare:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>s</mi>
+    <mi>n</mi>
+    <mo>+</mo>
+  </msubsup>
+  <mo>&#x2264;</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>;</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msubsup>
+    <mi>s</mi>
+    <mi>n</mi>
+    <mo>&#x2212;</mo>
+  </msubsup>
+  <mo>&#x2264;</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>n</mi>
+  </munderover>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">|</mo>
+</math>
+
+<!-- $$s_n^+ \le \sum_{k=0}^n |a_k|; \quad s_n^- \le \sum_{k=0}^n |a_k| $$ -->
+
+<p>D'altro canto, per ipotesi la serie &Sigma;<i>a<sub>k</sub></i> converge assolutamente, ossia |&Sigma;<i>a<sub>k</sub></i>| converge, e quindi la quantità |&Sigma;<i>a<sub>k</sub></i>| è limitata; perciò le successioni <i>s<sub>n</sub></i><sup>+</sup>, <i>s<sub>n</sub></i><sup>−</sup> sono superiormente limitate e non decrescenti, e pertanto convergono, per il teorema di monotonia. Il teorema è così dimostrato. &emsp;□</p>
+
+<p>Dunque la convergenza assoluta implica la convergenza (ordinaria), detta anche <i>convergenza semplice</i>; il viceversa non è vero.</p>
+
+<p><b>Esempio 6.2.3</b>. La serie &Sigma; (−1)<sup><i>n</i></sup>/<i>n<sup>&alpha;</sup></i>, con <i>&alpha;</i> &gt; 1 è convergente, anzi assolutamente convergente. Infatti si ha</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">|</mo>
+    <mfrac>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+      <msup>
+        <mi>n</mi>
+        <mi>&#x3B1;</mi>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msup>
+      <mi>n</mi>
+      <mi>&#x3B1;</mi>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$\left| \frac{(-1)^n}{n^\alpha} \right| = \frac{1}{n^\alpha} $$ -->
+
+<p>e la seie &Sigma; 1/<i>n<sup>&alpha;</sup></i> è convergente per <i>&alpha;</i> &gt; 1. Se <i>&alpha;</i> = 1 nulla, per il momento, possiamo concludere circa la convergenza della serie data, poiché la serie dei valori assoluti corrispondente è la serie armonica, che è divergente.&emsp;■</p>
+
+<p>Mostreremo ora che &Sigma; (−1)<sup><i>n</i></sup>/<i>n</i> è convergente, fornendo così un esempio di serie convergente, ma non assolutamente convergente.</p>
+
+<h2>Serie a termini di segno alternato. Criterio di Leibniz</h2>
+
+<p>Tra le serie a termini di segno variabile, un caso particolarmente semplice è costituito dalle serie <i>a segni alterni</i>, per le quali vale il seguente criterio di convergenza:</p>
+
+<p><b>Teorema 6.2.4 (Criterio di Leibniz)</b> Sia data la serie</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mtext>con&#xA0;</mtext>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>&#x2265;</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi mathvariant="normal">&#x2200;</mi>
+  <mi>n</mi>
+</math>
+
+<!-- $$\sum_{n=0}^\infty (-1)^n a_n \quad \text{con } a_n \ge 0 \, \forall n$$ -->
+
+<p>Se:</p>
+
+<ol type="i">
+	<li><p>la successione {<i>a<sub>n</sub></i>} è decrescente;</p></li>
+	<li><p><i>a<sub>n</sub></i> &rarr; 0 per <i>n</i> &rarr; &infin;</p>
+	
+	<p>allora la serie è convergente. Inoltre, le somme parziali di indice pari approssimano la somma per eccesso, quelle di indice dispari per difetto; il resto della serie è maggiorato, in valore assoluto, dal primo termine trascurato. In formule, detta <i>s</i> la somma della serie, si ha:</p>
+	
+	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>s</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>k</mi>
+        </msup>
+        <msub>
+          <mi>a</mi>
+          <mi>k</mi>
+        </msub>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mo stretchy="false">&#x2193;</mo>
+        <mi>s</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>s</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">&#x2211;</mo>
+          <mrow data-mjx-texclass="ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </munderover>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>k</mi>
+        </msup>
+        <msub>
+          <mi>a</mi>
+          <mi>k</mi>
+        </msub>
+        <mstyle scriptlevel="0">
+          <mspace width="1em"></mspace>
+        </mstyle>
+        <mo stretchy="false">&#x2191;</mo>
+        <mi>s</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mo stretchy="false">|</mo>
+        <msub>
+          <mi>R</mi>
+          <mi>n</mi>
+        </msub>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">|</mo>
+          <munderover>
+            <mo data-mjx-texclass="OP">&#x2211;</mo>
+            <mrow data-mjx-texclass="ORD">
+              <mi>k</mi>
+              <mo>=</mo>
+              <mi>n</mi>
+            </mrow>
+            <mrow data-mjx-texclass="ORD">
+              <mi mathvariant="normal">&#x221E;</mi>
+            </mrow>
+          </munderover>
+          <mo stretchy="false">(</mo>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+          <msup>
+            <mo stretchy="false">)</mo>
+            <mi>k</mi>
+          </msup>
+          <msub>
+            <mi>a</mi>
+            <mi>k</mi>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">|</mo>
+        </mrow>
+        <mo>&#x2264;</mo>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+	
+	<!-- $$ \begin{align}
+s_{2n} = \sum_{k=0}^{2n} (-1)^k a_k \quad \downarrow s\\
+s_{2n+1} = \sum_{k=0}^{2n+1} (-1)^k a_k \quad \uparrow s\\
+|R_n| = \left| \sum_{k=n}^{\infty} (-1)^k a_k \right| \leq a_n
+\end{align}
+$$-->
+
+<p>(il simbolo ↓<i>s</i> indica che la somma parziale s<sub>2n</sub> converge a <i>s</i> dall'alto. In altre parole, le somme parziali con un numero pari di termini (s<sub>2n</sub>) si avvicinano al valore limite <i>s</i>
+diminuendo.</p></li>
+
+</ol>
+
+<p>Osserviamo che, analogamente a quanto osservato riguardo ai criteri di convergenza per le serie a termini positivi, il criterio di Leibniz può essere applicato anche se i termini sono <i>definitivamente</i> di segno alterno e la successione <i>a<sub>n</sub></i> è definitivamente decrescente. <br> Si noti che la successione delle somme parziali di una serie a segni alterni ha la forma:</p>
+
+<div class="eq">
+<p><i>s</i><sub>1</sub> = &minus;<i>a</i><sub>1</sub><br>
+<i>s</i><sub>2</sub> = &minus;<i>a</i><sub>1</sub> + <i>a</i><sub>2</sub><br>
+<i>s</i><sub>3</sub> = &minus;<i>a</i><sub>1</sub> + <i>a</i><sub>2</sub> &minus; <i>a</i><sub>3</sub><br>
+.......................................<br>
+<i>s<sub>n</sub></i> = &minus;<i>a</i><sub>1</sub> + <i>a</i><sub>2</sub> &minus; <i>a</i><sub>3</sub> + ... + (&minus;1)<sup><i>n</i></sup><i>a<sub>n</sub></i></p>
+</div>
+
+<p>dove gli <i>a<sub>i</sub></i> sono tutti &ge; 0. Se allora la successione <i>a<sub>n</sub></i> tende a zero monotonamente, l'andamento di <i>a<sub>n</sub></i> e di <i>s<sub>n</sub></i> è del tipo descritto dalla figura seguente, che sostanzialmente contiene la dimostrazione del criterio di Leibniz:</p>
+
+<img src="img/Leibniz.png" alt="criterio di Leibniz"/>
+
+<p><b>Dim</b>. Consideriamo la successione delle somme parziali, <i>s<sub>n</sub></i>, e le due successioni, estratta da questa, <i>s</i><sub>2<i>n</i></sub> e <i>s</i><sub>2<i>n</i>+1</sub>. Consideriamo dapprima la successione s<sub>2n</sub>, così formulata:</p>
+
+<div class="eq">
+<p><i>s</i><sub>0</sub> = <i>a</i><sub>0</sub><br>
+<i>s</i><sub>2</sub> = <i>s</i><sub>0</sub> &minus;<i>a</i><sub>1</sub> + <i>a</i><sub>2</sub> &le; <i>s</i><sub>0</sub> perché <i>a</i><sub>2</sub> &le; <i>a</i><sub>1</sub><br>
+<i>s</i><sub>4</sub> = <i>s</i><sub>2</sub> &minus;<i>a</i><sub>3</sub> + <i>a</i><sub>4</sub> &le; <i>s</i><sub>2</sub> perché <i>a</i><sub>4</sub> &le; <i>a</i><sub>3</sub><br>
+.......................................</p>
+</div>
+
+<p>Come si vede, la successione {<i>s<sub>2n</sub></i>} è monotona decrescente. In modo analogo si dimostra che la successione {<i>s</i><sub>2<i>n</i>+1</sub>} è monotona crescente. Inoltre,</p>
+
+<div class="eq">
+<p><i>s</i><sub>1</sub> &le; <i>s</i><sub>2<i>n</i>+1</sub> = <i>s</i><sub>2<i>n</i></sub> &minus; <i>a</i><sub>2<i>n</i>+1</sub> &le; <i>s</i><sub>2<i>n</i></sub> &le; <i>s</i><sub>0</sub></p>
+</div>
+
+<p>perciò {<i>s</i><sub>2<i>n</i>+1</sub>} è superiormente limitata e {<i>s<sub>2n</sub></i>}  è inferiormente limtiata. Le due successioni sono quindi convergenti, per il teorema di monotonia; possiamo anche dire che convergono allo stesso limite, perché</p>
+
+<div class="eq">
+<p>0 &le; <i>s</i><sub>2<i>n</i></sub> &minus; <i>s</i><sub>2<i>n</i>+1</sub>  &le; <i>a</i><sub>2<i>n</i> + 1</sub> &rarr; 0</p>
+</div>
+	
+<p>Detto <i>s</i> questo limite comune, abbiamo allora provato le (i). Inoltre, dal fatto che <i>s</i><sub>2<i>n</i>+1</sub> &rarr; <i>s</i> e <i>s</i><sub>2<i>n</i></sub> &rarr; <i>s</i> si deduce che 
+<i>s<sub>n</sub></i> &rarr; <i>s</i>.<br> Proviamo ora (ii). Poichè <i>s</i><sub>2<i>n</i>+1</sub> ↑ <i>s</i> e  <i>s</i><sub>2<i>n</i></sub> ↓ <i>s</i>, possiamo scrivere</p>
+
+<div class="eq">
+<p><i>s</i><sub>2<i>n</i> &minus; 1</sub> &le; <i>s</i> &le; <i>s</i><sub>2<i>n</i></sub><br>
+<i>s</i><sub>2<i>n</i> + 1</sub> &le; <i>s</i> &le; <i>s</i><sub>2<i>n</i></sub></p>
+</div>
+
+<p>da cui si deduce</p>
+
+<div class="eq">
+<p>0 &le; <i>s</i> &minus; <i>s</i><sub>2<i>n</i> &minus; 1</sub> &le; <i>s</i><sub>2<i>n</i></sub> &minus; <i>s</i><sub>2<i>n</i> &minus; 1</sub> = <i>a</i><sub>2<i>n</i></sub><br>
+0 &le; <i>s</i><sub>2<i>n</i></sub> &minus; <i>s</i> &le; s<sub>2<i>n</i></sub> &minus; <i>s</i><sub>2<i>n</i> + 1</sub> = <i>a</i><sub>2<i>n</i>+1</sub></p>
+</div>
+
+<p>Perciò (per <i>n</i> sia pari che dispari) si ha</p>
+
+<div class="eq">
+<p>|<i>R<sub>n</sub></i>| = |<i>s</i> &minus; <i>s</i><sub><i>n</i> &minus; 1</sub>| &le; <i>a<sub>n</sub></i></p>
+</div>
+
+<p>che è la (ii).&emsp;□</p>
+
+<p><b>Teorema 6.2.5</b> Applicando il criterio di Leibniz osserviamo che le serie</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+        </mrow>
+      </msup>
+    </mrow>
+    <mrow>
+      <mi>n</mi>
+      <mo>!</mo>
+    </mrow>
+  </mfrac>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=0}^\infty  \frac{(-1)^{n}}{n!} \quad \sum_{n=0}^\infty \frac{(-1)^{n+1}}{n} $$ -->
+
+<p>sono entrambe convergenti (la prima è assolutamente convergente, la seconda no). La prima serie è rapidamente convergente. Sommando infatti i primi 6 termini della serie</p>
+
+<div class="eq">
+<p>1 &minus; 1 + 1/2 &minus; 1/6 + 1/24 &minus; 1/120 = 11/30 = 0.3<span class="overline">6</span></p>
+</div>
+
+<p>si ottiene un valore per difetto della somma con un errore che non supera a 1/6! = 1/720. <br>Mostreremo (par.xx) che tale somma è 1/<i>e</i>.<br> La seconda serie è lentamente convergente; per avere un valore della somma approssimato (per eccesso) a meno di 1/100 bisogna sommare 99 termini! Come vedremo (par.xx), la somma si dquesta serie è log 2; ma la serie non è adatta al calcolo apprissimato di questo numero.</p>
+
+<p><b>Esempio 6.2.6</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+      <mi>n</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mi>n</mi>
+    </mrow>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=0}^\infty  \frac{(-1)^n n-1}{n^2+n} $$ -->
+
+<p>È una serie a segni alterni, <i>a<sub>n</sub></i> = (<i>n</i> &minus; 1)/<i>n</i>(<i>n</i> + 1) è positivo e tende a zero. Poiché <i>a<sub>n</sub></i> ~ 1/<i>n</i>, la serie non converge assolutamente; vediamo dunque se è applicabile il criterio di Leibniz. Dobbiamo verificare se è decrescente, ovvero:</p>
+
+<div class="eq">
+<p><i>a</i><sub><i>n</i>+1</sub > &le; <i>a<sub>n</sub></i><br>
+<i>n</i>/(<i>n</i> + 1)(<i>n</i> + 2) &le; (<i>n</i> &minus; 1)/<i>n</i>(<i>n</i> + 1)</p>
+</div>
+
+<p>ossia</p>
+
+<div class="eq">
+<p><i>n</i><sup>2</sup> &le; <i>n</i><sup>2</sup> + <i>n</i> &minus; 2</p>
+</div>
+
+<p>vero per <i>n</i> &ge; 2. Dunque si può applicare il criterio di Leibniz e concludere che la serie converge.&emsp;■</p>
+
+<p><b>Esempio 6.2.7</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>2</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mfrac>
+    <mrow>
+      <mi>log</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>n</mi>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=2}^\infty (-1)^n \frac{\log n}{n} $$ -->
+
+<p>Si tratta di una serie a segni alterni, poiché <i>a<sub>n</sub></i> = log<i>n</i>/<i>n</i> è positiva; inoltre <i>a<sub>n</sub></i> &rarr; 0 (gerarchia degli infiniti). La serie non converge assolutamente, perché log<i>n</i>/<i>n</i> &gt; 1/<i>n</i> (e &Sigma; 1/<i>n</i> diverge); vediamo se è applicabile il criterio di Leibniz. In questo caso non è facile provare la monotonia della succession per via puramente algebrica, cioè studiando la disequazione</p>
+
+<div class="eq">
+<p><i>a</i><sub><i>n</i>+1</sub > &le; <i>a<sub>n</sub></i><br>
+log(<i>n</i>+1)/(<i>n</i> + 1) &le; log<i>n</i>/<i>n</i></p>
+</div>
+
+<p>È più comodo invece studiare la monotonia della successione <i>a<sub>n</sub></i> mediante il calcolo differenziale: posto</p>
+
+<div class="eq">
+<p><i>f</i>(<i>x</i>) = log <i>x</i>/<i>x</i> &emsp; per <i>x</i> &gt; 0</p>
+</div>
+
+<p>(con <i>x</i> variabile reale), calcoliamo:</p>
+
+<div class="eq">
+<p><i>f</i>'(<i>x</i>) = (1 &minus; log <i>x</i>)/<i>x</i><sup>2</sup> &le; 0 per <i>x</i> &ge; <i>e</i></p>
+</div>
+
+<p>Ne segue che <i>f</i> è decrescente per <i>x</i> &ge; <i>e</i>; di conseguenza la succesisone <i>a<sub>n</sub></i> = <i>f</i>(<i>n</i>) è decrescente almeno per <i>n</i> &ge; 3 (il primo intero <i>e</i>). Pertanto, per il criterio di Leibniz la serie converge. &emsp;■</p>
+
+<p><b>Esempio 6.2.8</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>n</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=1}^\infty \frac{n+1 + (-1)^n + n^2}{n^3} $$ -->
+
+<p>Scriviamo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>n</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mi>n</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <msup>
+      <mi>n</mi>
+      <mn>3</mn>
+    </msup>
+  </mfrac>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+</math>
+
+<!-- $$\sum_{n=1}^\infty \frac{n+1 + (-1)^n + n^2}{n^3} = \sum_{n=1}^\infty \frac{n+1}{n^3} + \sum_{n=1}^\infty \frac{(-1)^n}{n} $$ -->
+
+<p>La prima serie converge perché è a termini positivi e <i>a<sub>n</sub></i> ~ 1/<i>n</i><sup>2</sup>; la seconda converge per il criterio di Leibniz; quindi la serie di partenza converge. Abbiamo qui usato un fatto generale:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>se&#xA0;</mtext>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>converge e&#xA0;</mtext>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>converge, allora&#xA0;</mtext>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>converge</mtext>
+</math>
+
+<!-- $$ \text{se } \sum_{n=1}^\infty a_k \,\text{converge e } \sum_{n=1}^\infty b_k\, \text{converge, allora } \sum_{n=1}^\infty (a_k + b_k)\, \text{converge}$$ -->
+
+<p>come si verifica vedendo la serie come limite della successione delle somme parziali, e applicando il teorema sul limite della somma.</p>
+
+<p><b>Esempio 6.2.9</b></p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mrow>
+        <msqrt>
+          <mi>n</mi>
+        </msqrt>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+</math>
+
+<!-- $$ \sum_{n=1}^\infty (-1)^n \left[\frac{\sqrt{n} + (-1)^n}{n} \right] $$ -->
+
+<p>Scriviamo:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mi>n</mi>
+  </msup>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mfrac>
+      <mrow>
+        <msqrt>
+          <mi>n</mi>
+        </msqrt>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;</mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mi>n</mi>
+        </msup>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <msqrt>
+      <mi>n</mi>
+    </msqrt>
+  </mfrac>
+  <mo>+</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mfrac>
+    <mn>1</mn>
+    <mi>n</mi>
+  </mfrac>
+</math>
+
+<!-- $$ \sum_{n=1}^\infty (-1)^n \left[\frac{\sqrt{n} + (-1)^n}{n} \right] = \sum_{n=1}^\infty \frac{(-1)^n}{\sqrt{n}} + \sum_{n=1}^\infty \frac{1}{n} $$-->
+
+<p>La prima serie converge per il criterio di Leibniz; la seconda diverge (serie armonica); quindi la serie di partenza diverge. Più in generale:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtext>se&#xA0;</mtext>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>converge e&#xA0;</mtext>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msub>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>diverge, allora&#xA0;</mtext>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi>a</mi>
+    <mi>k</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>b</mi>
+    <mi>k</mi>
+  </msub>
+  <mo stretchy="false">)</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mtext>diverge</mtext>
+</math>
+
+<!-- $$ \text{se } \sum_{n=1}^\infty a_k \,\text{converge e } \sum_{n=1}^\infty b_k\, \text{diverge, allora } \sum_{n=1}^\infty (a_k + b_k)\, \text{diverge}$$ -->
+
+<p>per lo stesso argomento usato nell'esempio precedente.<br> Questo esempio è interessante anche per il seguente motivo. Si noti che:</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msqrt>
+        <mi>n</mi>
+      </msqrt>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+      <msup>
+        <mo stretchy="false">)</mo>
+        <mi>n</mi>
+      </msup>
+    </mrow>
+    <mi>n</mi>
+  </mfrac>
+  <mo>&#x2265;</mo>
+  <mn>0</mn>
+  <mtext>&#xA0;e&#xA0;</mtext>
+  <msub>
+    <mi>a</mi>
+    <mi>n</mi>
+  </msub>
+  <mo accent="false" stretchy="false">&#x2192;</mo>
+  <mn>0</mn>
+</math>
+
+<!-- $$ a_n = \frac{\sqrt{n} + (-1)^n}{n} \ge 0 \text{ e } a_n \to 0 $$ -->
+
+<p>Dunque la serie di partenza è una serie a segni alterni, e il suo termine generale tende a zero. Se affermassimo che essa converge per il criterio di Leibniz, diremmo il falso (abbiamo visto che la serie diverge). Il punto è che non abbiamo verificato l'altra ipotesi del criterio di Leibniz, ossia che (&radic;<i>n</i> + (&minus;1)<sup><i>n</i></sup>)/<i>n</i> sia <i>monotona decrescente</i>. Evidentemente, quest'ipotesi non è verificata. (Per esercizio si calcolino i primi 10 valori della successione, e si osservi cosa accade).</p>
+
+<section aria-label="End">
+<a href="sn_criteri.html">&#171;Serie a termini non negativi</a>
+<a href="index.html">Index</a>
+<a href="sequnces_theorems.html">Fundamental theorems on sequences &#187;</a>
+</section>
+
+</article>
+
+</body>
+</html>
+

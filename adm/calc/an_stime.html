@@ -21,7 +21,9 @@
 
 <h1>Confronti e stime asintotiche</h1>
 
-<p>Abbiamo visto che una successione che tende a 0 è un <i>infinitesimo</i>; una successione che diverge (a +&infin;, a &minus;&infin;) si dice <i>infinito</i>. Quando due successioni sono entrambe infinitesimi o entrambe infiniti, è utile poter stabilire un confronto tra di esse, per capire quale delle due tenda "più rapidamente" a 0 o all'infinito. <br>Esempi di infiniti sono le successioni:</p>
+<p>Abbiamo visto che una successione che tende a 0 è un <i>infinitesimo</i>; una successione che diverge (a +&infin;, a &minus;&infin;) si dice <i>infinito</i>. Quando due successioni sono entrambe infinitesimi o entrambe infiniti, è utile poter stabilire un confronto tra di esse, per capire quale delle due tenda "più rapidamente" a 0 o all'infinito.</p>
+
+<p>Esempi di infiniti sono le successioni:</p>
 
 <div class="eq">
 <p>{log <i>n</i>}&emsp; {&radic;<i>n</i>} &emsp; {<i>n</i><sup>2</sup>} &emsp; {2<sup><i>n</i></sup>}</p>
@@ -136,9 +138,7 @@
 <p>se <i>a<sub>n</sub></i> ~ <i>a'<sub>n</sub></i>, <i>b<sub>n</sub></i> ~ <i>b'<sub>n</sub></i>, <i>c<sub>n</sub></i> ~ <i>c'<sub>n</sub></i> &emsp;allora&emsp; <i>a<sub>b<sub>n</sub></i>/<i>c<sub>n</sub></i> ~ <i>a'<sub>b'<sub>n</sub></i>/<i>c'<sub>n</sub></i></p>
 </div>
 
-<p>Attenzione: lo stesso non vale per le somme o per l'esponenziale.</p>
-
-</li>
+<p>Attenzione: lo stesso <i>non vale</i> per le somme o per l'esponenziale.</p></li>
 
 </ol>
 
@@ -211,6 +211,56 @@
 </ol>
 
 <p>Un tipico modo per mostrare che <i>a<sub>n</sub></i> ~ <i>b<sub>n</sub></i> consiste nello scrivere <i>a<sub>n</sub></i> = <i>b<sub>n</sub>c<sub>n</sub></i> con <i>c<sub>n</sub></i> &rarr; 1. Ad es.</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>2</mn>
+  <msup>
+    <mi>n</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mn>3</mn>
+  <mi>n</mi>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>=</mo>
+  <mn>2</mn>
+  <msup>
+    <mi>n</mi>
+    <mn>2</mn>
+  </msup>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mfrac>
+      <mn>3</mn>
+      <mi>n</mi>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mn>2</mn>
+        <msup>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>&#x223C;</mo>
+  <mn>2</mn>
+  <msup>
+    <mi>n</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+<!-- $$ 2n^2 + 3n + 1 = 2n^2 \left(1 + \frac{3}{n} + \frac{1}{2n^2} \right) \sim 2n^2 $$ -->
+
+<p>perché (1 + 3/n + 1/2<i>n</i><sup>2</sup>) &rarr; 1.</p>
 
 <p><b>Osservazione</b>. Il fatto che la relazione di asintotico soddisfi le tre proprietà di rifflessività, simmetria e transitività fa di essa una <a href="rel.html">relazione di equivalenza</a>.</p>
 
@@ -462,6 +512,7 @@
 <!-- $$ \begin{align} \frac{\log_b n}{n^{\alpha/2}} &\lt \frac{2}{\alpha} \log_b 2 \\ \frac{\log_b n}{n^\alpha} &= \frac{\log_b n}{n^{\alpha/2}} \cdot \frac{1}{n^{\alpha/2}} \le \frac{2}{\alpha} \log_b 2 \cdot \frac{1}{n^{\alpha/2}} \end{align}$$ -->
 
 <p>Per il teorema del confronto, log<sub><i>b</i></sub>/<i>n<sup>&alpha;</sup></i> &rarr; 0, e la prima relazione è dimostrata. <br> Applichiamo ora questo risultato sostituendo all'intero <i>n</i>, l'intero 2<sup><i>n</i></sup>. Avremo:</p>
+
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mn>0</mn>
   <mo>=</mo>
@@ -596,343 +647,7 @@
 
 <p>Infatti per il risultato precedente <i>n</i>/(<i>n<sup>&alpha;</sup></i>)<sup><i>n</i></sup> &rarr; 0 (la base <i>b<sup>&alpha;</sup></i> è ancora un numero &gt; 1), quindi anche (<i>n</i>/(<i>n<sup>&alpha;</sup></i>)<sup><i>n</i></sup>)<sup><i>&alpha;</i></sup> &rarr; 0.&emsp;□</p>
 
-<p>Often times we can't just compute lim<sub><i>n</i> ⟶ &infin;</sub> <i>a<sub>n</sub></i> because it turns out to be &infin;. We introduce some notation for comparing the orders of magnitude of two sequences. This will also be useful in comparing the relative growth rates of sequences. For instance it might be said that the function <i>n</i> grows faster than log <i>n</i> but slower than <i>n</i><sup>2</sup>. Let (<i>a<sub>n</sub></i>) and (<i>b<sub>n</sub></i>) be any sequences in ℝ.</p>
-
-<p><b>Definition 2.3.1</b>. Let {<i>a<sub>n</sub></i>} convergent to <i>L</i> for <i>n</i> ⟶ &infin;. If there are <i>K</i> &gt; 0 and <i>n</i><sub>0</sub> ∈ ℕ such that</p>
-
-<div class="eq">
-<p>|<i>a<sub>n</sub></i>| &le; <i>K</i>|<i>b<sub>n</sub></i>| for all <i>n</i> &ge; <i>n</i><sub>0</sub>, &emsp; then we write <i>a<sub>n</sub></i> = O(<i>b<sub>n</sub></i>)&emsp;□</p>
-</div>
-
-<p>One reads the statement “<i>a<sub>n</sub></i> = O(<i>b<sub>n</sub></i>)” as “(<i>a<sub>n</sub></i>) is big-oh of (<i>b<sub>n</sub></i>)”. Writing <i>a<sub>n</sub></i> = O(<i>b<sub>n</sub></i>) means, in rough terms, that the sequence <i>a<sub>n</sub></i> grows no faster than the test sequence <i>b<sub>n</sub></i>. If <i>a<sub>n</sub></i> = 2<i>n</i> + 50 then we see that <i>a<sub>n</sub></i> = O(<i>n</i><sup>2</sup>). The role of <i>K</i> in the definition is to allow us to no have to distinguish between test sequences e.g. <i>n</i><sup>2</sup> and 2<i>n</i><sup>2</sup>, since 2<i>n</i><sup>2</sup> = O(<i>n</i><sup>2</sup>).</p>
-
-<p>If <i>b<sub>n</sub></i> = 1 for all large <i>n</i>, then we simply write <i>a<sub>n</sub></i> = O(1), and this means that the sequence (<i>a<sub>n</sub></i>) is bounded.</p>
-
-<p><b>Definition 2.3.2</b> If for every <i>&epsilon;</i> &gt; 0, there is <i>n</i><sub>0</sub> ∈ ℕ such that</p>
-
-<div class="eq">
-<p>|<i>a<sub>n</sub></i>| &le; <i>&epsilon;</i>|<i>b<sub>n</sub></i>| for all <i>n</i> &ge; <i>n</i><sub>0</sub>, &emsp; then we write <i>a<sub>n</sub></i> = o(<i>b<sub>n</sub></i>)&emsp;□</p>
-</div>
-
-<p>One reads the statement “<i>a<sub>n</sub></i> = o(<i>b<sub>n</sub></i>) as “(<i>a<sub>n</sub></i>) is little-oh of (<i>b<sub>n</sub></i>)”. If <i>b<sub>n</sub></i> &ne; 0 for all large <i>n</i>, then a<sub>n</sub> = o(<i>b<sub>n</sub></i>) means that lim<sub><i>n</i>→∞</sub> (a<sub>n</sub>/b<sub>n</sub>) exists and is zero. In particular, if <i>b<sub>n</sub></i> = 1 for all large <i>n</i>, then we simply write a<sub>n</sub> = o(1), and this means that <i>a<sub>n</sub></i> → 0. For example,</p>
-
-<div class="eq">
-<p>(−1)<sup><i>n</i></sup>/<i>n</i> = o(1), &emsp;10<i>n</i> + 100 = o(<i>n</i>√<i>n</i>), &emsp;and </p>
-</div>
-
-<p><b>Definition 2.3.3</b>. Suppose <i>b<sub>n</sub></i> &ne; 0 for all large <i>n</i>. We say that {<i>a<sub>n</sub></i>} is <b>asymptotically equivalent</b> to {<i>b<sub>n</sub></i>} and write <i>a<sub>n</sub></i> ∼ <i>b<sub>n</sub></i> if</p>
-
-<div class="eq">
-<p>lim<sub>n→∞</sub> (<i>a<sub>n</sub></i>/<i>b<sub>n</sub></i>) = 1. &emsp;□</p>
-</div>
-
-<p>For example,</p>
-
-<div class="eq">
-<p><i>n</i> + 1/<i>n</i> ~ <i>n</i>, &emsp; <i>n</i><sup>2</sup> + 50<i>n</i> + 100 ~ <i>n</i><sup>2</sup></p>
-</div>
-
-<p>Finally, suppose {<i>b<sub>n</sub></i>} is monotonic and <i>b<sub>n</sub></i> &gt; 0 for all large <i>n</i>. We say that {<i>a<sub>n</sub></i>} and {<i>b<sub>n</sub></i>} have the same growth rate if a<sub>n</sub> ∼ <i>ℓb<sub>n</sub></i> for some <i>ℓ</i> ∈ R with ℓ &ne; 0. In case <i>a<sub>n</sub></i> = o(<i>b<sub>n</sub></i>), then we say that the growth rate of (a<sub>n</sub>) is less than the growth rate of (<i>b<sub>n</sub></i>). On the other hand, if a<sub>n</sub> = O(<i>b<sub>n</sub></i>), then we say that the <b>growth rate</b> of {<i>a<sub>n</sub></i>} is at most the growth rate of {<i>b<sub>n</sub></i>}. </p>
-
-<p>The notations O( ) and o( ) stand for <i>collections</i> of functions. It is unfortunate that the symbol "=" is used here since, there is no actual equality. </p>
-
-<ul>
-	<li><p>O(<i>b<sub>n</sub></i>): the set of sequences that grow no more rapidly than a positive multiple (K) of <i>b<sub>n</sub></i>;</p></li>
-	<li><p>o(<i>b<sub>n</sub></i>): the set of sequences that grow less rapidly than a positive multiple (K) of <i>b<sub>n</sub></i>.</p></li>
-</ul>
-
-<p>We'll show later that</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mtable displaystyle="true" columnalign="right left right left" columnspacing="0em 0em 0em 0em" rowspacing="3pt">
-    <mtr>
-      <mtd></mtd>
-      <mtd>
-        <mi></mi>
-        <munder>
-          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-          <mrow data-mjx-texclass="ORD">
-            <mi>n</mi>
-            <mo accent="false" stretchy="false">&#x2192;</mo>
-            <mi mathvariant="normal">&#x221E;</mi>
-          </mrow>
-        </munder>
-        <mfrac>
-          <mrow>
-            <msub>
-              <mi>log</mi>
-              <mi>a</mi>
-            </msub>
-            <mo data-mjx-texclass="NONE">&#x2061;</mo>
-            <mi>n</mi>
-          </mrow>
-          <msup>
-            <mi>n</mi>
-            <mi>a</mi>
-          </msup>
-        </mfrac>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mtd>
-      <mtd></mtd>
-      <mtd></mtd>
-    </mtr>
-    <mtr>
-      <mtd></mtd>
-      <mtd></mtd>
-      <mtd></mtd>
-      <mtd>
-        <mstyle scriptlevel="0">
-          <mspace width="1em"></mspace>
-        </mstyle>
-        <mi mathvariant="normal">&#x2200;</mi>
-        <mi>a</mi>
-        <mo>&gt;</mo>
-        <mn>0</mn>
-        <mo>,</mo>
-        <mi>a</mi>
-        <mo>&gt;</mo>
-        <mn>1</mn>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd></mtd>
-      <mtd>
-        <mi></mi>
-        <munder>
-          <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-          <mrow data-mjx-texclass="ORD">
-            <mi>n</mi>
-            <mo accent="false" stretchy="false">&#x2192;</mo>
-            <mi mathvariant="normal">&#x221E;</mi>
-          </mrow>
-        </munder>
-        <mfrac>
-          <msup>
-            <mi>n</mi>
-            <mi>a</mi>
-          </msup>
-          <msup>
-            <mi>a</mi>
-            <mi>n</mi>
-          </msup>
-        </mfrac>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mtd>
-      <mtd></mtd>
-      <mtd></mtd>
-    </mtr>
-  </mtable>
-</math>
-
-<!-- $$\begin{alignedat}{2} & \lim_{n\to\infty} \frac{\log_a n} {n^a} = 0 && \\ &&&  \quad \forall a > 0, a > 1 \\ & \lim_{n\to\infty} \frac{n^a} {a^n} = 0 && \end{alignedat} $$ -->
-
-<p><b>Example 2.3.4</b>.</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <mn>3</mn>
-      <msup>
-        <mi>n</mi>
-        <mn>3</mn>
-      </msup>
-      <mo>+</mo>
-      <mn>5</mn>
-      <mi>n</mi>
-      <mo>+</mo>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
-      <mn>7</mn>
-      <mo stretchy="false">(</mo>
-      <mi>n</mi>
-      <mo>+</mo>
-      <mn>1</mn>
-      <msup>
-        <mo stretchy="false">)</mo>
-        <mn>3</mn>
-      </msup>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mo stretchy="false">[</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-      <mo stretchy="false">]</mo>
-    </mrow>
-    <mrow>
-      <mo stretchy="false">[</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-      <mo stretchy="false">]</mo>
-    </mrow>
-  </mfrac>
-</math>
-
-<!-- $$ \lim_{n \to \infty} \frac{3n^3 + 5n + 1}{7(n+1)^3} = \frac{[\infty]}{[\infty]} $$ -->
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <mrow>
-      <mn>3</mn>
-      <msup>
-        <mi>n</mi>
-        <mn>3</mn>
-      </msup>
-      <mo>+</mo>
-      <mn>5</mn>
-      <mi>n</mi>
-      <mo>+</mo>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
-      <mn>7</mn>
-      <mo stretchy="false">(</mo>
-      <mi>n</mi>
-      <mo>+</mo>
-      <mn>1</mn>
-      <msup>
-        <mo stretchy="false">)</mo>
-        <mn>3</mn>
-      </msup>
-    </mrow>
-  </mfrac>
-  <mo>&#x223C;</mo>
-  <mfrac>
-    <mrow>
-      <mn>3</mn>
-      <msup>
-        <mi>n</mi>
-        <mn>3</mn>
-      </msup>
-    </mrow>
-    <mrow>
-      <mn>7</mn>
-      <msup>
-        <mi>n</mi>
-        <mn>3</mn>
-      </msup>
-    </mrow>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mn>3</mn>
-    <mn>7</mn>
-  </mfrac>
-</math>
-
-<!--$$ \frac{3n^3 + 5n + 1}{7(n+1)^3} \sim \frac{3n^3}{7n^3} = \frac{3}{7} $$ -->
-
-<p>hence the sequence tends to 3/7. &emsp;■</p>
-
-<p><b>Example 2.3.5</b>.</p>
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <munder>
-    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>n</mi>
-      <mo accent="false" stretchy="false">&#x2192;</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-    </mrow>
-  </munder>
-  <mfrac>
-    <mrow>
-      <msup>
-        <mn>3</mn>
-        <mi>n</mi>
-      </msup>
-      <mo>+</mo>
-      <mi>n</mi>
-    </mrow>
-    <msup>
-      <mn>3</mn>
-      <mrow data-mjx-texclass="ORD">
-        <mi>n</mi>
-        <mo>+</mo>
-        <mn>1</mn>
-      </mrow>
-    </msup>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mo stretchy="false">[</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-      <mo stretchy="false">]</mo>
-    </mrow>
-    <mrow>
-      <mo stretchy="false">[</mo>
-      <mi mathvariant="normal">&#x221E;</mi>
-      <mo stretchy="false">]</mo>
-    </mrow>
-  </mfrac>
-</math>
-
-<!-- $$ \lim_{n \to \infty} \frac{3^n + n}{3^{n+1}} = \frac{[\infty]}{[\infty]} $$ -->
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mfrac>
-    <mrow>
-      <msup>
-        <mn>3</mn>
-        <mi>n</mi>
-      </msup>
-      <mo>+</mo>
-      <mi>n</mi>
-    </mrow>
-    <msup>
-      <mn>3</mn>
-      <mrow data-mjx-texclass="ORD">
-        <mi>n</mi>
-        <mo>+</mo>
-        <mn>1</mn>
-      </mrow>
-    </msup>
-  </mfrac>
-  <mo>&#x223C;</mo>
-  <mfrac>
-    <msup>
-      <mn>3</mn>
-      <mi>n</mi>
-    </msup>
-    <msup>
-      <mn>3</mn>
-      <mrow data-mjx-texclass="ORD">
-        <mi>n</mi>
-        <mo>+</mo>
-        <mn>1</mn>
-      </mrow>
-    </msup>
-  </mfrac>
-  <mo>=</mo>
-  <mfrac>
-    <mn>1</mn>
-    <mn>3</mn>
-  </mfrac>
-</math>
-
-<!-- $$ \frac{3^n + n}{3^{n+1}}  \sim \frac{3^n}{3^{n+1}}  = \frac{1}{3}  $$  -->
-
-<p>This because 3<sup><i>n</i></sup> + <i>n</i> = 3<sup><i>n</i></sup> (1 + <i>n</i>/3<sup><i>n</i></sup>) ~ 3<sup><i>n</i></sup>. And <i>n</i>/3<sup><i>n</i></sup> ⟶ 0. &emsp;■</p>
-
-<p><b>Example 2.3.6</b>. lim<sub><i>n</i> ⟶ &infin;</sub> <i>n</i><sup>1/<i>n</i></sup> = [&infin;<sup>0</sup>].</p>
-
-<p><i>n</i><sup>1/<i>n</i></sup> = <i>e</i><sup>log <i>n</i><sup>1/<i>n</i></sup></sup> = <i>e</i><sup>log <i>n</i>/<i>n</i></sup> ⟶ <i>e</i><sup>0</sup> = 1.</p>
-
-<p>Where we used the fact that lim<sub><i>n</i> ⟶ &infin;</sub> log <i>n</i>/<i>n</i> ⟶ 0. &emsp;■</p>
-
-<p id="ratio"><b>Teorema 2.3.7. (Criterio del rapporto)</b> Sia <i>a<sub>n</sub></i> una successione positiva (cioè <i>a<sub>n</sub></i> &gt; 0 &forall;<i>n</i>). Se esiste</p>
+<p id="ra"><b>Teorema 2.3.7. (Criterio del rapporto)</b> Sia <i>a<sub>n</sub></i> una successione positiva (cioè <i>a<sub>n</sub></i> &gt; 0 &forall;<i>n</i>). Se esiste</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <munder>
@@ -965,7 +680,7 @@
 
 <ul>
 	<li><p>se ℓ &lt; 1, allora <i>a<sub>n</sub></i> &rarr; 0;</p></li>
-	<li><p>se ℓ &gt; 1 (ed eventualmente ℓ = + &infin;), allora <i>a<sub>n</sub></i> &rarr; +&infin;.</p></li>
+	<li><p>se ℓ &gt; 1 (ed eventualmente ℓ = +&infin;), allora <i>a<sub>n</sub></i> &rarr; +&infin;.</p></li>
 </ul>
 
 <p>Il teorema precedente riconduce lo studio del rattere di una successione positiva, <i>a<sub>n</sub></i>, al calcolo del limite di un'altra successione, la successione (dei rapporti), <i>a</i><sub><i>n</i>+1</sub>/<i>a<sub>n</sub></i>. In certi casi quest'ultima è più semplice da studiare di quella di partenza, come vedremo negli esmepio. Si osservi che nel caso <i>ℓ</i> = 1, il teorema non permette di concludere nulla.</p>

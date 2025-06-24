@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Fundamental theorems on sequences"/>
-	<title>Fundamental theorems on sequences</title>
+	<meta name="description" content="Calcolo dei limiti. Teoremi fondamentali"/>
+	<title>Calcolo dei limiti. Teoremi fondamentali</title>
 	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
 </head>
 
@@ -19,11 +19,11 @@
 
 <article>
 
-<h1>Fundamental theorems on sequences</h1>
+<h1>Calcolo dei limiti. Teoremi fondamentali</h1>
 
 <p>Tratteremo ora i teoremi basilari sul calcolo dei limiti. Le dimostrazioni si basano sulla deifnizione di limite, sull'uso di <i>disuguaglianze</i>, e sull'uso di proprietà <i>definitivamente vere</i>. In particolare, questi toeremi illustrano la relazione tra l'operazione di limite e le strutture algebriche e d'ordine presenti in ℝ. <br> Cominciamo ad esaminare le proprietà dell'operazione di limite rispetto alle <i>operazioni algebriche</i>. Quando il limite esiste finito, si dimostra un risultato semplice e naturale: l'operazione di limite commuta con queste operazioni, cioè:</p>
 
-<p><b>Teorema 3.3.1</b> (Algebra dei limiti) Se <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>b<sub>n</sub></i> &rarr; <i>b</i> allora</p>
+<p><b>Teorema 3.4.1</b> (Algebra dei limiti) Se <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>b<sub>n</sub></i> &rarr; <i>b</i> allora</p>
 
 <ol>
 	<li><p><i>a<sub>n</sub></i> &pm; <i>b<sub>n</sub></i> &rarr; <i>a</i> &pm; <i>b</i></p></li>
@@ -338,7 +338,7 @@ $$ -->
 </li>
 </ol>
 
-<p id="segno"><b>Teorema 3.3.2</b>. (<i>Permanenza del segno</i>) Se <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>a</i> &gt; 0 (<i>a</i> &lt; 0) allora <i>a<sub>n</sub></i> &gt; 0, definitivamente (<i>a<sub>n</sub></i> &lt; 0 definitivamente).</p>
+<p id="segno"><b>Teorema 3.4.2 (di Permanenza del segno, 1<sup>a</sup> forma)</b> Se <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>a</i> &gt; 0 (<i>a</i> &lt; 0) allora <i>a<sub>n</sub></i> &gt; 0, definitivamente (<i>a<sub>n</sub></i> &lt; 0 definitivamente).</p>
 
 <p><b>Dim</b>. Fissato <i>&epsilon;</i> &gt; 0, per definizione di limite abbiamo che</p>
 
@@ -354,15 +354,23 @@ $$ -->
 
 <p>Poiché <i>a</i> &gt; 0, possiamo scegliere <i>&epsilon;</i> &gt;0 in modo che sia anche <i>a</i> &minus; <i>&epsilon;</i> &gt; 0, allora la disuguaglianza <i>a</i> &minus; <i>&epsilon;</i> &lt; <i>a<sub>n</sub></i> mostra che <i>a<sub>n</sub></i> &gt; 0 definitivamente. In modo analogo si dimostra il caso <i>a</i> &lt; 0. &emsp;□</p>
 
-<p><b>Corollario 3.3.3</b>. Se <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>a<sub>n</sub></i> &ge; 0 definitivamente, allora <i>a</i> &ge; 0. </p>
+<p><b>Teorema 3.4.3 (di Permanenza del segno, 2<sup>a</sup> forma)</b> Se <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>a<sub>n</sub></i> &ge; 0 definitivamente, allora <i>a</i> &ge; 0. Più in generale</p>
 
-<p><b>Dim</b>. Per assurdo, se <i>a</i> &lt; <i>a</i> allora dal Teorema della permanenza del segno avremo che esiste <i>&nu;</i> &in; ℕ tale che <i>a<sub>n</sub></i> &lt; 0 per ogni <i>n</i> &le; <i>&nu;</i>, in contraddizione con <i>a<sub>n</sub></i> &ge; 0 &forall;<i>n</i> &in; ℕ. &emsp;□</p>
+<div class="eq">
+<p>se <i>a<sub>n</sub></i> &rarr; <i>a</i>, <i>b<sub>n</sub></i> &rarr; <i>b</i> e <i>a<sub>n</sub></i> &ge; <i>b<sub>n</sub></i> definitivamente, allora <i>a</i> &ge; <i>b</i>.</p>
+</div>
 
-<p><b>Corollario 3.3.4</b>. Se <i>a<sub>n</sub></i> &rarr; <i>a</i>, <i>b<sub>n</sub></i> &rarr; <i>b</i> e <i>a<sub>n</sub></i> &ge; <i>b<sub>n</sub></i> definitivamente, allora <i>a</i> &ge; <i>b</i>.</p>
+<p><b>Dim</b>. Segue dal teorema precedente. Infatti, se per assurdo fosse <i>a</i> &lt; 0, dal teorema precedente si avrebbe <i>a<sub>n</sub></i> &lt; 0 definitivamente, il che è incompatibile con l'ipotesi che sia <i>a<sub>n</sub></i> &ge; 0 definitivamente. Questo dimostra la prima affermazione del teorema. Applicando ora questa proprietà alla differenza <i>a<sub>n</sub></i> &minus; <i>b<sub>n</sub></i> si ottiene anche la seconda affermazione. Infatti:</p>
 
-<p><b>Dim.</b> Basta applicare il precedente corollario alla successione <i>c<sub>n</sub></i> = <i>a<sub>n</sub></i> &minus; <i>b<sub>n</sub></i>. &emsp;□</p>
+<div class="eq">
+<p><i>a<sub>n</sub></i> &ge; <i>b<sub>n</sub></i> definitivamente ⇒ <i>a<sub>n</sub></i> &minus; <i>b<sub>n</sub></i> definitivamente,</p>
+</div>
 
-<p><b>Teorema 3.3.5 (Del confronto)</b> Se <i>a<sub>n</sub></i> &le; <i>b<sub>n</sub></i> &le; <i>c<sub>n</sub></i> definitivamente e</p>
+<p>e poiché <i>a<sub>n</sub></i> &minus; <i>b<sub>n</sub></i> &rarr; <i>a</i> &minus; <i>b</i> (teorema sull'algebra dei limiti), si conclude <i>a</i> &minus; <i>b</i> &ge; 0, ovvero <i>a</i> &ge; <i>b</i>. &emsp;□</p>
+
+<p>L'ultima relazione significa che in una disuguaglianza tra due successioni si può passare al limite ad ambo i membri, mantenendo il segno &le;. Si noti che in generale , invece, nel passaggio al limite non si conserva il segno di disuguaglianza <i>stretta</i>: ad es., anche se gli <i>a<sub>n</sub></i> sono strettamente positivi, il loro limite <i>a</i> è positivo o <i>nullo</i>, come mostra il semplice esempio 1/<i>n</i> &rarr; 0.<br> È utile anche la seguente proposizione:</p>
+
+<p id="cfr"><b>Teorema 3.4.4 (Del confronto)</b> Se <i>a<sub>n</sub></i> &le; <i>b<sub>n</sub></i> &le; <i>c<sub>n</sub></i> definitivamente e</p>
 
 <div class="eq">
 <p><i>a<sub>n</sub></i> &rarr; ℓ, <i>c<sub>n</sub></i> &rarr; ℓ &in; ℝ</p>
@@ -370,7 +378,7 @@ $$ -->
 
 <p>allora anche <i>b<sub>n</sub></i> &rarr; ℓ.</p>
 
-<p><b>Dim.</b>. Fissiamo <i>&epsilon;</i> &gt; 0. Allora definitivamente si ha</p>
+<p><b>Dim.</b> Fissiamo <i>&epsilon;</i> &gt; 0. Allora definitivamente si ha</p>
 
 <div class="eq">
 <p>ℓ &minus; <i>&epsilon;</i> &lt; <i>a<sub>n</sub></i> &lt; ℓ + <i>&epsilon;</i>;  ℓ &minus; <i>&epsilon;</i>; &lt; <i>c<sub>n</sub></i> &lt; ℓ + <i>&epsilon;</i>;</p>
@@ -390,20 +398,9 @@ $$ -->
 
 <p>Dunque <i>b<sub>n</sub></i> &rarr;ℓ. &emsp;□</p>
 
-<p><b>Theorem 3.3.6</b> (<i>Uniqueness of the limit</i>). If {<i>a<sub>n</sub></i>} is a convergent sequence with limit ℓ, there are no other limits.</p>
-
-<p><b>Proof</b>. Suppose there exist two limits ℓ<sub>1</sub> and ℓ<sub>2</sub> for the same sequence. By using triangular inequality:</p>
-
-<div class="eq">
-<p>|<i>ℓ</i><sub>1</sub> − <i>ℓ</i><sub>2</sub></i>|  = |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i> + <i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub>| &le; |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i>| + |<i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub></i>| &lt; 2<i>&epsilon;</i></p>
-</div>
-
-<p>Since <i>&epsilon;</i> is a real positive number (can be chosen to be arbitrarily small), this inequality can only hold if <i>ℓ</i><sub>1</sub> = <i>ℓ</i><sub>2</sub>. &emsp;□</p>
-
-
 <p>Il precedente risultato viene anche detto <i>Teorema dei due carabinieri</i> in quanto le successioni {<i>a<sub>n</sub></i>} e {<i>c<sub>n</sub></i>} possono essere paragonate a due carabinieri che accompagnano il delinquente {<i>b<sub>n</sub></i>} in galera.</p>
 
-<p><b>Corollario</b></p>
+<p><b>Corollario 3.4.5</b></p>
 
 <ol>
 	<li><p>Se |<i>b<sub>n</sub></i>| &le; <i>c<sub>n</sub></i> definitivamente e <i>c<sub>n</sub></i> &rarr; 0, allora anche <i>b<sub>n</sub></i> &rarr; 0;</p></li>
@@ -423,7 +420,7 @@ $$ -->
 <p>Poiché <i>c<sub>n</sub></i> &rarr; 0, anche <i>K</i>|<i>c<sub>n</sub></i>| &rarr; 0, e per il punto 1 si conclude che <i>b<sub>n</sub>c<sub>n</sub></i> &rarr; 0.&emsp;□</p></li>
 </ol>
 
-<p><b>Example 3.3.7</b>. To illustrate the squeeze theorem, we find the limit of the following sequence (sin <i>n</i>)/<i>n</i> as <i>n</i> → ∞. Recall that the sine function has range [−1, +1] so</p>
+<p><b>Esempio 3.4.6</b>. To illustrate the squeeze theorem, we find the limit of the following sequence (sin <i>n</i>)/<i>n</i> as <i>n</i> → ∞. Recall that the sine function has range [−1, +1] so</p>
 
 <div class="eq">
 <p>−1 &le; sin <i>n</i> &le; 1</p>
@@ -437,7 +434,7 @@ $$ -->
 
 <p>The flanking sequences are −1∕<i>n</i> and 1∕<i>n</i>, and both of them converge to 0 as <i>n</i> → ∞. Therefore, {<i>a<sub>n</sub></i>} converges to 0 too. &emsp;■</p>
 
-<p><b>Esempio</b>. Limiti che si presentano nella forma di rapporto di due espressioni, ognuna costituita dalla somma di potenze di <i>n</i>:</p>
+<p><b>Esempio 3.4.7</b>. Limiti che si presentano nella forma di rapporto di due espressioni, ognuna costituita dalla somma di potenze di <i>n</i>:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
@@ -629,22 +626,22 @@ $$ -->
 
 <p>Pertanto la successioni tra parantesi tende a 1; d'altro canto 1/√<i>n</i> &rarr; 0, perciò la successione di partenza tende a zero.&emsp;■</p>
 
-<p><b>Esempio 3.3.8</b>. La successione sin <i>n</i>/<i>n</i> è il prodotto di 1/<i>n</i> (convergente) e sin <i>n</i> (irregolare); quindi il teorema sull'algebra dei limiti non è applicabile. Tuttavia è applicabile l'ultimo corollario: la successione 1/<i>n</i> è infinitesima mentre |sin <i>n</i>| &le; 1, perciò sin <i>n</i>/<i>n</i> &rarr; 0.&emsp;■</p>
+<p><b>Esempio 3.4.8</b>. La successione sin <i>n</i>/<i>n</i> è il prodotto di 1/<i>n</i> (convergente) e sin <i>n</i> (irregolare); quindi il teorema sull'algebra dei limiti non è applicabile. Tuttavia è applicabile l'ultimo corollario: la successione 1/<i>n</i> è infinitesima mentre |sin <i>n</i>| &le; 1, perciò sin <i>n</i>/<i>n</i> &rarr; 0.&emsp;■</p>
 
 <p id="arit">Fin qui abbiamo visto teoremi che operano su coppie di successioni entrambe convergenti o comunque limitate. Consideriamo ora il caso in cui i limiti sono +&infin; o &minus;&infin;. Supponiamo, per es., che <i>a<sub>n</sub></i> &rarr; <i>a</i> e <i>b<sub>n</sub></i> &rarr; +&infin;; allora è facile (e intuitivo) vedere che <i>a<sub>n</sub></i> + <i>b<sub>n</sub></i> &rarr; +&infin;. Abbrevieremo questa scrittura così: <i>a</i> + &infin; = &infin;. Ragionando in maniera analoga possiamo compendiare le regole per il limite della somma (o differenza) di due successioni delle quali una o entrambe sono divergenti con le scritture seguenti:</p>
 
 <div class="eq">
-<p><i>a</i> + &infin; = &infin;<br>
+<p><i>a</i> + &infin; = +&infin;<br>
 <i>a</i> &minus; &infin; = &minus;&infin;<br>
-&infin; + &infin; = &infin;<br>
+&infin; + &infin; = +&infin;<br>
 &minus;&infin; &minus; &infin; = &minus;&infin;</p>
 </div>
 
 <p>Analogamente per il prodotto (o il rapporto) abbiamo le regole seguenti; il segno di &infin; va determinato con la ususale regolae dei segni:</p>
 
 <div class="eq">
-<p><i>a</i> ⋅ &infin; = &infin;<br>
-<i>a</i>/0 = &infin;<br>
+<p><i>a</i> ⋅ &infin; = &infin; &emsp;(<i>a</i> &ne; 0)<br>
+<i>a</i>/0 = &infin; &emsp;(<i>a</i> &ne; 0)<br>
 <i>a</i>/&infin; = 0</p>
 </div>
 
@@ -658,7 +655,7 @@ $$ -->
 
 <p>Le precedenti regole prendono il nome di "aritmetizzazione parziale del simboli di infinito".</p>
 
-<p><b>Dim.</b>. Proviamo ad es. che:</p>
+<p><b>Dim.</b> Proviamo ad es. che:</p>
 
 <div class="eq">
 <p><i>a<sub>n</sub></i> &rarr; &infin;, <i>b<sub>n</sub></i> &rarr; <i>b</i> &in; ℝ, ⇒ <i>b<sub>n</sub></i>/<i>a<sub>n</sub></i> &rarr; 0</p>
@@ -692,7 +689,7 @@ $$ -->
 
 <p>Queste espressioni si chiamano <i>forme di indecisione</i>, poiché nessuna regola può essere stabilita a priori per determinare il risultato, come vedremo negli esempi sotto illustrati. <br>Le regole sopra elencate (e la mancanza di regole per le forme di indeterminazione) confermano la natura particolare dei "punti" +&infin; e &minus;&infin;, che non possono essere considerati "numeri" poiché non rispettano le proprietà delle operazioni dell'anello.</p>
 
-<p><b>Esempio 3.3.9</b>. sqrt(<i>n</i> + 1) &minus; sqrt(<i>n</i> &minus; 1): forma di indecisione del tipo +&infin; e &minus;&infin;. <br>Moltiplicando e dividendo per sqrt(<i>n</i> + 1) + sqrt(<i>n</i> &minus; 1) si trova</p>
+<p><b>Esempio 3.4.9</b>. sqrt(<i>n</i> + 1) &minus; sqrt(<i>n</i> &minus; 1): forma di indecisione del tipo +&infin; e &minus;&infin;. <br>Moltiplicando e dividendo per sqrt(<i>n</i> + 1) + sqrt(<i>n</i> &minus; 1) si trova</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mo>&#x2026;</mo>
@@ -763,7 +760,7 @@ $$ -->
 
 <!-- $$ \ldots = \frac{(\sqrt{n+1} - \sqrt{n-1}) (\sqrt{n+1} + \sqrt{n-1})}{\sqrt{n+1} + \sqrt{n-1}} = \frac{2}{\sqrt{n+1} + \sqrt{n-1}} \to 0 $$ -->
 
-<p><b>Esempio 3.3.10</b>. Limiti di successioni che si presentano nella forma <i>a<sub>n</sub><sup>b<sub>n</sub></sup></i> si trattano più facilmente considerando la successione dei logaritmi (per fissare le idee, in base 10)</p>
+<p><b>Esempio 3.4.10</b>. Limiti di successioni che si presentano nella forma <i>a<sub>n</sub><sup>b<sub>n</sub></sup></i> si trattano più facilmente considerando la successione dei logaritmi (per fissare le idee, in base 10)</p>
 
 <div class="eq">
 <p>log<sub>10</sub> <i>a<sub>n</sub><sup>b<sub>n</sub></sup></i> = <i>b<sub>n</sub></i> log<sub>10</sub> <i>a<sub>n</sub></i></p>
@@ -776,6 +773,16 @@ $$ -->
 </div>
 
 <p>sono altrettante forme di indecisione, corrispondenti (passando al logaritmo) alla forma di indecisione 0 ⋅ &infin;.</p>
+
+<p><b>Theorem 3.4.6</b> (<i>Uniqueness of the limit</i>). If {<i>a<sub>n</sub></i>} is a convergent sequence with limit ℓ, there are no other limits.</p>
+
+<p><b>Proof</b>. Suppose there exist two limits ℓ<sub>1</sub> and ℓ<sub>2</sub> for the same sequence. By using triangular inequality:</p>
+
+<div class="eq">
+<p>|<i>ℓ</i><sub>1</sub> − <i>ℓ</i><sub>2</sub></i>|  = |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i> + <i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub>| &le; |<i>ℓ</i><sub>1</sub> − <i>a<sub>n</sub></i>| + |<i>a<sub>n</sub></i> − <i>ℓ</i><sub>2</sub></i>| &lt; 2<i>&epsilon;</i></p>
+</div>
+
+<p>Since <i>&epsilon;</i> is a real positive number (can be chosen to be arbitrarily small), this inequality can only hold if <i>ℓ</i><sub>1</sub> = <i>ℓ</i><sub>2</sub>. &emsp;□</p>
 
 <section aria-label="End">
 <a href="sequences_limit.html">&#171;Convergence of sequences</a>
