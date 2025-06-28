@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Le rette perpendicolari">
+	<title>Le rette perpendicolari</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Le rette perpendicolari</h1>
+
+<p>Abbiamo già visto che rette incidenti si intersecano in un solo punto. Esse incontrandosi  formano quattro angoli a due a due congruenti in quanto opposti al vertice. Se tutti e quattro gli angoli sono congruenti, allora ognuno è un angolo retto.</p>
+
+<p>Diamo allora la seguente definizione.</p>
+
+<p><b>Definizione</b>. Due rette incidenti sono <b>perpendicolari</b> se incontrandosi formano quattro angoli retti.&emsp;□</p>
+
+<p>Per indicare che la retta <i>a</i> è perpendicolare alla retta <i>b</i>, scriviamo <i>a</i> ⊥ <i>b</i>.<br>Due rette incidenti non perpendicolari sono <b>oblique</b>.</p>
+
+<img src="img/perpendicolari.png" alt="perpendicolari"/>
+
+<p><b>Teorema (dell'esistenza e dell'unicità della perpendicolare)</b> Per un punto <i>P</i> del piano passa una e una sola retta <i>b</i> perpendicolare a una retta data <i>a</i>.</p>
+
+<p><b>Ipotesi</b>. 1 <i>P</i> punto del piano. 2. <i>a</i> retta del piano.<br><b>Tesi</b>. 1. Esiste una retta <i>b</i> ⊥ <i>a</i> passante per <i>p</i>; 2. la retta <i>b</i> è unica.</p>
+
+<p>L'espressione <i>una e una sola</i> indica due concetti, esistenza e unicità. Nel teorema sono perciò presenti due tesi, che vanno entrambe dimostrate partendo dalle stesse ipotesi.</p>
+
+<p><b>Dim</b>. Si presentano due casi: il punto <i>P</i> appartiene alla retta <i>a</i>, oppure non le appartiene.</p>
+
+<ol>
+	<li><p><b>Il punto non appartiene alla retta: <i>P</i> &notin; <i>a</i></b>.</p>
+
+	<p><b>Dimostriamo la tesi 1</b>. Per dimostrare l'esistenza della retta è sufficiente indicare la costruzione e dimostare che la retta cercata è proprio la perpendicolare. Preso un punto <i>P</i> esterno alla retta:</p>
+
+<ul>
+	<li><p>tracciamo una circonferenza con centro <i>P</i> che intersechi <i>a</i> in <i>B</i> e in <i>C</i>: <i>BP</i> ≅ <i>PC</i> perché raggi;</p></li>
+	<li><p>di <i>BC</i> consideriamo il punto medio <i>A</i>, che esiste ed è unico per il postulato di unicità del punto medio;</p></li>
+	<li><p>congiungiamo <i>P</i> con <i>A</i>.</p></li>
+</ul>
+
+<img src="img/perpendicolari_dim.png" alt="perpendicolari dimostrazione"/>
+
+<p>Per costruzione il triangolo <i>BPC</i> è isoscele e <i>PA</i> è la medesima relativa alla base <i>BC</i>. <br> In un triangolo isoscele la mediana e l'altezza rispetto alla base coincidono, qundi <i>AP</i> è la perpendicolare cercata.</p></li>
+
+<p><b>Dimostriamo la tesi 2</b>: Per dimostrare l'unicità della perpendicolare dobbiamo provare che non ne esiste un'altra. <br>Osserviamo che l'angolo <i>BÂC</i> è piatto e la retta <i>PA</i> lo divide in due angoli retti, quindi <i>PA</i> è bisettrice dell'angolo piatto. Per il postulato dell'unicità della bisettrice, deduciamo che la retta perpendicolare ad <i>a</i> passante per <i>P</i> è unica.</p>
+
+</li>
+
+<li><p><b>Il punto appartiene alla retta: <i>P</i> &in; <i>a</i></b>. <br> <b>Dimostriamo la tesi 1</b>: Preso <i>P</i> sulla retta <i>a</i>:</p>
+
+<img src="img/perpendicolari_dim2.png" alt="perpendicolari dimostrazione"/>
+
+<ul>
+	<li><p>tracciamo con centro <i>P</i> due archi di una circonferenza di raggio <i>r</i> qualsiasi che incontrino <i>a</i> in <i>B</i> e in <i>C</i>: <i>PB</i> ≅ <i>PC</i> perché raggi della stessa circonferenza;</p></li>
+	<li><p>con centri <i>B</i> e <i>C</i>  tracciamo due archi di circonferenza con lo stesso raggio, maggiore di <i>r</i>, che si incontrino in <i>D</i>;</p></li>
+	<li><p>congiungiamo <i>D</i> con <i>B</i> e <i>C</i>: <i>BD</i> ≅ <i>DC</i> perché raggi uguali delle due circonferenze;</p></li>
+	<li><p>congiungiamo <i>D</i> con <i>P</i>.</p></li>
+</ul>
+
+<p>Per costruzione il triangolo <i>BDC</i> è isoscele e <i>DP</i> è la mediana relativa alla base <i>BC</i>, quindi la mediana e l'altezza rispetto alla base coincidono, perciò <i>PD</i> è la perpendicolare cercata.</p>
+
+<p><b>Dimostriamo la tesi 2</b>. La tesi dell'unicità della perpendicolare si dimostra con un ragionamento analogo a quello utilizzato nel caso precedente.&emsp;□</p>
+
+<h2 id="proiezione">Le proiezioni ortogonali e la distanza</h2>
+
+<p><b>Definizione</b>. Dati un punto <i>P</i> e una retta <i>r</i>, il punto <i>H</i> di intersezione tra la retta <i>r</i> e la sua perpendicolare passante per <i>P</i> si chiama <b>proiezione ortogonale</b> di <i>P</i> sulla retta <i>r</i>, o anche piede della perpendicolare condotta da <i>P</i> a <i>r</i>.&emsp;□</p>
+
+<figure>
+<img src="img/proiezione_ortogonale_punto.png" alt="proiezione ortogonale di un punto"/>
+<figcaption><i>H</i> è la proiezione del punto <i>P</i> su <i>r</i>.</figcaption>
+</figure>
+
+<p><b>Definizione</b>. Si chiama <b>proiezione ortogonale</b> o <b>proiezione</b> di un segmento su una retta fissata <i>r</i> il segmento della retta <i>r</i> avente per estremi le proiezioni degli estremi del segmento dato.</p>
+
+<figure>
+<img src="img/proiezione_ortogonale.png" alt="proiezione ortogonale/">
+<figcaption><i>A'B'</i> è la proiezione del segmento <i>AB</i> su <i>r</i>.</figcaption>
+</figure>
+
+<h2>La distanza di un punto da una retta</h2>
+
+<p><b>Teorema</b>. Il segmento perpendicolare condotta da un punto a una retta è minore di ogni segmento obliquod condotto dallo stesso punto alla setessa retta.</p>
+
+<p><b>Dim.</b> Dimostriamo che la distanza di un punto <i>P</i> da una retta <i>r</i> è la lunghezza minimia fra quelle dei segmenti che hanno per estremi il punto <i>P</i> e un punto della retta <i>r</i>. Consideraiamo un altro punto, <i>R</i> sulla retta <i>r</i>. Il triangolo PHR è un triangolo rettrangolo perchè per ipotesi PH è perpendicolare a <i>r</i>. Quindi l'angolo in R è sicuramente maggiore di ciascuno degli altri due e di conseguenza anche il segmento PR opposto all'angolo R è maggiore di ciascuno degli altri due (<a href="triangoli_disuguaglianze.html">. T. xx</a>). &emsp;□</p>
+
+<img src="img/d_min.png" alt="distanza minima"/>
+
+<p id="d"><b>Definizione</b>. La <b>distanza di un punto da una retta</b> è la lunghezza del segmento che ha per estremi il punto stesso e la proiezione del punto sulla alla retta. &emsp;□</p>
+
+<p id="ax"><b>Definizione</b>. L'<b>asse di un segmento</b> è la retta perpendicolare al segmento nel suo punto medio.&emsp;□</p>
+
+<section aria-label="End">
+<a href="epoxides.html">«Epoxides</a>
+<a href="index.html">Index</a>
+<a href="parallele.html">Le rette parallele»</a>
+</section>
+
+</article>
+
+</body>
+</html>
