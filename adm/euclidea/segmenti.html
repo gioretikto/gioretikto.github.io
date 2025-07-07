@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Le operazioni con i segmenti e con gli angoli">
+	<title>Le operazioni con i segmenti e con gli angoli</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" media="screen">
+</head>
+
+<body>
+
+<nav>
+	<ul>
+		<li><a class="navbar" href="../../index.html">Home</a></li>
+		<li><a class="navbar" href="index.html">Index</a></li>
+	</ul>
+</nav>
+
+<article>
+
+<h1>Le operazioni con i segmenti e con gli angoli</h1>
+
+<h2>Il confronto di segmenti</h2>
+
+<p>Confrontare due segmenti significa stabilire se sono o non sono congruenti e, in quest’ultimo caso, quale dei due è maggiore.</p>
+
+<p>Per effettuare il confronto basta sovrapporre i segmenti in modo che due loro estremi coincidano.</p>
+
+<ul>
+	<li><p>Se anche il secondo estremo coincide, i segmenti sono <b>congruenti</b>. Nell’esempio in figura a, scriviamo: <i>AB</i> ≅ <i>OP</i>.</p></li>
+	<li><p>Se il secondo estremo di uno risulta interno all’altro (figura b), i due segmenti <b>non</b> sono <b>congruenti</b>. Scriviamo:</p>
+	
+<div class="eq">
+<p><i>AB</i> &lt; <i>CD</i> (<i>AB</i> minore di <i>CD</i>), <i>CD</i> &gt; <i>AB</i> (<i>CD</i> maggiore di <i>AB</i>).</p>
+</div>
+
+</li>
+</ul>
+
+<p id="equi"><b>Costruzione per detrminare un punto equidistante da du punti dati</b> Dato un segmento <i>AB</i>, cerchiamo un punto <i>C</i> equidistante da A e da B, avente come distanza quella del segmento stesso.</p>
+
+<figure>
+<img src="img/equi_P_costruzione.png" alt="Costruzione per detrminare un punto equidistanet da du punti dati"/>
+<figcaption><b>Fig.1</b>.</figcaption>
+</figure>
+
+<p>Nella costruzione della figura 1<i>b</i> usiamo il postulato della circonferenza. Nella figura 1<i>c</i> utilizziamo la definizione di circonferenza.</p>
+
+<h2 id="add">L’addizione fra segmenti</h2>
+
+<p><b>Definizione 1.3.1 (Somma di segmenti)</b>. Dati due segmenti <i>adiacenti</i> <i>AB</i> e <i>BC</i>, la loro somma è il segmento <i>AC</i>, che ha per estremi i loro estremi non comuni.&emsp;□</p>
+
+<p>Scriviamo: AB + BC = <i>AC</i>.</p>
+
+<p>Per estendere questa definizione a due segmenti qualsiasi (figura 13), basta considerare due segmenti adiacenti che siano congruenti a quelli dati.</p>
+
+<p>Puoi verificare con esempi che l’addizione fra segmenti gode delle proprietà commutativa e associativa. Inoltre, esiste l’elemento neutro, che è il segmento nullo.</p>
+
+<p>Valgono inoltre le seguenti proprietà. Dati quattro segmenti <i>AB, CD, EF, GH</i>:</p>
+
+<ol>
+	<li><p>se AB ≅ CD ed EF ≅ GH, allora AB EF ≅ CD + GH, ossia somme di segmenti congruenti sono congruenti;</p></li>
+	<li><p>se AB &gt; CD ed <i>EF</i> &gt; <i>GH</i>, allora AB + EF &gt; CD + GH, se AB &lt; CD ed EF &lt; GH, allora AB + EF &lt; CD + GH, ossia somme di segmenti disuguali nello stesso senso sono disuguali nello stesso senso.</p></li>
+</ol>
+
+<h2>Multipli e sottomultipli di segmenti</h2>
+
+<p><b>Definizione 1.3.2</b> Si chiama <b>multiplo</b> di un segmento <i>a</i>, secondo il numero naturale <i>n</i> &gt; 1, un segmento <i>b</i> congruente alla somma di <i>n</i> segmenti congruenti ad <i>a</i>.&emsp;□</p>
+
+<p>Scriviamo: <i>b</i> = <i>na</i>.</p>
+
+<p>Se <i>n</i> = 1, possiamo estendere la definizione, considerando in questo caso, come multiplo di <i>a, a</i> stesso. Se <i>n</i> = 0, <i>b</i> è il segmento nullo.</p>
+
+<p>Nella relazione precedente possiamo anche dire che <i>a</i> è <b>sottomultiplo</b> di <i>b</i> secondo il numero <i>n</i> (con <i>n</i> &ne; 0).</p>
+
+<p>Scriviamo:</p>
+
+<div class="eq">
+<p><i>a</i> = <i>n</i>/<i>b</i> oppure <i>a</i> = <i>b</i>/<i>n</i></p>
+</div>
+
+<p>Inoltre, con <i>m</i> numero naturale, la scrittura <i>c</i> = <i>mb</i>/<i>n</i> (con <i>n</i> &ne; 0) significa: <i>c</i> = <i>mb</i>/<i>n</i> = <i>m</i>(<i>b</i>/<i>n</i>).</p>
+
+<p>Valgono i seguenti postulati.</p>
+
+<p id="Eu"><b>Postulato 1.3.3 (Postulato di Eudosso-Archimde per i segmenti)</b> Dati due segmenti, che non siano congruenti o nulli, esiste sempre un segmento multiplo del minore che supera il maggiore.</b>
+
+<p><b>Postulato 1.3.4 (Postulato di divisibilità dei segmenti)</b> Dato un segmento, esiste il suo sottomultiplo secondo un qualsiasi numero naturale&emsp;□.</p>
+
+<h2>Il punto medio di un segmento</h2>
+
+<p id="M"><b>Definizione 1.3.5 (Punto medio di un segmento)</b> Il punto medio di un segmento è quel suo punto che lo divide in due segmenti congruenti.&emsp;□</p>
+
+<p><b>Postulato 1.3.6 (Unicità del punto medio)</b> Esiste sempre il punto medio di un segmento ed è unico.</p>
+
+<figure>
+<img src="img/M_segmento.png" alt="punto medio del segmento"/>
+<figcaption><b>Fig.2</b>.</figcaption>
+</figure>
+
+<p>Questo è un primo esempio di costruzione con <i>riga e compasso</i>. La riga non è graduata e quindi non permette di misurare le lunghezze.</p>
+
+<p>A questa costruzione non possiamo in questo momento dare una giustificazione completa. erché congiungendo i punti <i>C</i> e <i>D</i> otteniamo proprio il punto medio di <i>AB</i>? Vedremo che ciò è collegato alle proprietà del parallelogramma e del rombo.</p>
+
+<h2 id="diff">La sottrazione fra segmenti</h2>
+
+<p><b>Definizione 1.3.6 (Differenza di segmenti)</b>. Dati i segmenti <i>AB</i> e <i>AC</i> (con <i>AC</i> &gt; <i>AB</i> o <i>AC</i> ≅ <i>AB</i>), la <b>differenza</b> fra <i>AC</i> e <i>AB</i> è il segmento che, addizionato ad <i>AB</i>, dà come somma AC.&emsp;□</p>
+
+<p>Scriviamo: AC &minus; <i>AB</i> = <i>BC</i>.<br>Dati quattro segmenti <i>AB, CD, EF, GH</i>, vale la seguente proprietà:<br> se <i>AB</i> ≅ <i>CD</i> ed <i>EF</i> ≅ <i>GH</i> (con <i>AB</i> &gt; <i>EF</i>), allora <i>AB</i> &minus; <i>EF</i> ≅ <i>CD</i> &minus; <i>GH</i>, ossia differenze di segmenti ordinatamente congruenti sono congruenti.</p>
+
+<h2>Il confronto di angoli</h2>
+
+<p>Confrontare due angoli significa stabilire se sono o non sono congruenti e, in quest’ultimo caso, verificare quale dei due è maggiore.</p>
+
+<p>Per effettuare il confronto basta sovrapporre un angolo all’altro, in modo che coincidano i due vertici e un lato.</p>
+
+<ul>
+	<li><p>Se anche il secondo lato risulta sovrapposto, come nella figura a, i due angoli sono congruenti. Scriviamo:</p>
+	
+<div class="eq">
+<p>&alpha; ≅ &beta;</p>
+</div>
+</li>
+
+<li><p>Se il secondo lato di un angolo risulta interno all’altro, come nella figura <i>b</i>, i due angoli non sono congruenti. Scriviamo:</p>
+
+<div class="eq">
+<p><i>&alpha;</i> &lt; <i>&beta;</i> (<i>&alpha;</i> minore di <i>&beta;</i>) &emsp;oppure&emsp; <i>&beta;</i> &gt; <i>&alpha;</i> (<i>&beta;</i> maggiore di <i>&alpha;</i>)</p>
+</div>
+</li>
+
+<figure>
+<img src="img/costruzione_angolo_congr.png" alt="costruzione angolo congruente"/>
+<figcaption><b>Fig. 3</b>. Costruzione per disegnare un angolo congruente a un angolo dato</figcaption>
+</figure>
+
+<p>Oltre al postulato della circonferenza, nella figura 16 utilizziamo il postulato del passaggio di una retta per due punti. Esso garantisce la possibilità di tracciare <i>OD</i>. Tuttavia, come possiamo essere sicuri che l’angolo costruito è congruente a quello dato? otremo rispondere a questa domanda solo dopo aver esaminato il terzo criterio di congruenza dei triangoli.</p>
+
+<h2>L’ampiezza degli angoli</h2>
+
+<p>La relazione di congruenza fra angoli fa sì che si possa ripartire l’insieme di tutti gli angoli del piano in classi di angoli congruenti fra loro. La caratteristica comune agli angoli appartenenti a una stessa classe si chiama ampiezza. Ogni classe, costituita da angoli congruenti, individua una e una sola ampiezza. In altre parole, due angoli congruenti hanno la stessa ampiezza.</p>
+
+<h2>L’addizione fra angoli</h2>
+
+<p><b>Definizione 1.3.7 (Somma di angolo)</b>. Dati due angoli <i>consecutivi</i> <i>aV̂b</i> e <i>bV̂c</i>, la loro <b>somma</b> è l'angolo <i>aV̂c</i>, che ha per lati i loro lati non comuni.&emsp;□</p>
+
+<p>Scriviamo: <i>aV̂b</i> + <i>bV̂c</i> = <i>aV̂c</i>.</p>
+
+<img src="img/somma_angoli.png" alt="addizione di angoli"/>
+
+<p>Dati quattro angoli <i>&alpha;, &beta;, &gamma;, &delta;</i>, per l’addizione valgono le seguenti proprietà:</p>
+
+<ol>
+	<li><p>se <i>&alpha;</i> ≅ <i>&beta;</i> e <i>&gamma;</i> ≅ <i>&delta;</i> allora <i>&alpha;</i> + <i>&gamma;</i> ≅ <i>&beta;</i> + <i>&delta;</i>, ossia somme di angoli con
+gruenti sono congruenti;</p></li>
+	<li><p>se <i>&alpha;</i> &gt; <i>&beta;</i> e <i>&gamma;</i> &gt; <i>&delta;</i> allora <i>&alpha;</i> + <i>&gamma;</i> &gt; <i>&beta;</i> + <i>&delta;</i>, se <i>&alpha;</i> &lt; <i>&beta;</i> e <i>&gamma;</i> &lt; <i>&delta;</i> allora <i>&alpha;</i> + <i>&gamma;</i> &lt; <i>&beta;</i> + <i>&delta;</i>, ossia somme di angoli disuguali nello stesso senso sono disuguali nello stesso senso.</p></li>
+</ol>
+
+<h2>Multipli e sottomultipli di angoli</h2>
+
+<p>Si chiama <b>multiplo</b> di un angolo <i>&alpha;</i>, secondo il numero naturale <i>n</i> &gt; 1, un angolo &beta; che sia la somma di <i>n</i> angoli congruenti ad <i>&alpha;</i>.</p>
+
+<p>Scriviamo: <i>&beta;</i> = <i>n&alpha;</i>.<br>Se <i>n</i> = 1, possiamo estendere la definizione, considerando in questo caso, come multiplo di <i>&alpha;</i>, <i>&alpha;</i> stesso. Se <i>n</i> = 0, è l’angolo nullo.<br> Nella relazione precedente possiamo anche dire che è sottomultiplo di secondo il numero <i>n</i> (con <i>n</i> &ne; 0).</p>
+
+<p>Scriviamo: <i>&alpha;</i> = <i>&beta;</i>/<i>n</i> oppure <i>&alpha;</i> = <i>&beta;</i>/<i>n</i>. <br> Inoltre, con <i>m</i> numero naturale, la scrittura <i>&gamma;</i> = <i>&beta;m</i>/<i>n</i> (con <i>n</i> &ne; 0) significa: <i>&gamma;</i> = <i>m&beta;</i>/<i>n</i> = <i>m</i>(<i>&beta;</i>/<i>n</i>).</p>
+
+<p>Valgono i seguenti postulati.</p>
+
+<p><b>Postulato 1.3.7 (di Eudosso-Archimede per gli angoli)</b> Dati due angoli, che non siano congruenti o nulli, esiste sempre un angolo multiplo del minore che supera il maggiore.</p>
+
+<p><b>Postulato 1.3.8 (di divisibilità degli angoli)</b> Dato un angolo, esiste il suo sottomultiplo secondo un qualsiasi numero naturale.</p>
+
+<p id="bis"><b>Definizione 1.3.9</b>. La <b>bisettrice di un angolo</b> è la semiretta uscente dal vertice che divide l'angolo in due angoli congruenti.&emsp;□</p>
+
+<p><b>Postulato 1.3.10 (Unicità della bisettrice)</b>. Per un qualsiasi angolo esiste ed è unica la bisettrice.</p>
+
+<figure>
+<img src="img/costruzione_bisettrice.png" alt="costruzione di una bisettrice"/>
+<figcaption>Costruzione della bisettrice di un angolo</figcaption>
+</figure>
+
+<p><b>Osservazione</b>. Non tutte le costruzioni geometriche sono possibili usando solamente riga e compasso. Per esempio, non è possibile dividere un angolo in tre angoli congruenti con questi due soli strumenti.</p>
+
+<h2>La sottrazione fra angoli</h2>
+
+<p><b>Definizione 1.3.11 (Differenza di angoli)</b>. Dati gli angoli <i>&alpha;</i> e <i>&beta;</i> (con <i>&alpha;</i> &gt; <i>&beta;</i> o <i>&alpha;</i> ≅ <i>&beta;</i>), la differenza fra <i>&alpha;</i> e <i>&beta;</i> è l’angolo che, addizionato a <i>&beta;</i>, dà come somma <i>&alpha;</i>.</p>
+
+<p>Scriviamo: <i>&alpha;</i> &minus; <i>&beta;</i> = <i>&gamma;</i>.<br>
+Dati quattro angoli <i>&alpha;, &beta;, &gamma;, &delta;</i> vale la seguente proprietà:<br> se <i>&alpha;</i> ≅ <i>&beta;</i> e <i>&gamma;</i> ≅ <i>&delta;</i> (con <i>&alpha;</i> &gt; <i>&gamma;</i>), allora <i>&alpha;</i> &minus; <i>&gamma;</i> ≅ <i>&beta;</i> &minus; <i>&delta;</i>, ossia differenze di angoli ordinatamente congruenti sono congruenti.</p>
+
+<h2>Angoli retti, acuti, ottusi</h2>
+
+<p><b>Definizione 1.3.12 (Angolo retto, acuto, ottuso)</b>. Ogni angolo:</p>
+
+<ul>
+	<li><p>metà di un angolo piatto è un angolo retto;</p></li>
+	<li><p>minore di un angolo retto è un angolo acuto;</p></li>
+	<li><p>maggiore di un angolo retto e minore di un angolo piatto è ottuso.</p></li>
+</ul>
+
+<p>Indicheremo l’angolo retto con P̂/2, o anche con R̂.<br> Poiché tutti gli angoli piatti sono congruenti, anche tutti gli angoli retti sono congruenti fra loro.
+Inoltre, possiamo vedere l’angolo giro come il doppio di un angolo piatto e indicarlo quindi con 2P̂.</p>
+
+<p>Due angoli sono <b>supplementari</b> se la loro somma è un angolo piatto.<br> Due angoli sono <b>complementari</b> se la loro somma è un angolo retto.<br> Due angoli sono <b>esplementari</b> se la loro somma è un angolo giro.</p>
+
+<h2>Angoli complementari di uno stesso angolo</h2>
+
+<p><b>Teorema 1.3.13</b> Se due angoli sono complementari di uno stesso angolo, o di angoli congruenti, allora sono congruenti.</p>
+
+<p><b>Ipotesi</b>: <b>1</b>. <i>&alpha;</i> + <i>&gamma;</i> ≅ R̂ <b>2</b>. <i>&beta;</i> + <i>&gamma;</i> ≅ R̂ <br> <b>Tesi</b>. <i>&alpha;</i> ≅ <i>&beta;</i></p>
+
+<p><b>Dim</b>. Per l'ipotesi 1: <i>&alpha;</i> + <i>&gamma;</i> ≅ R̂, da cui <i>&alpha;</i> ≅ <i>&gamma;</i> &minus; R̂.<br>
+Per l'ipotesi 2: <i>&beta;</i> + <i>&gamma;</i> ≅ R̂, da cui <i>&beta;</i> ≅ R̂ &minus; <i>&gamma;</i>.<br>
+Poiché tutti gli angoli retti sono congruenti fra loro e differenze di angoli congruenti sono congruenti, si deduce che <i>&alpha;</i> ≅ <i>&beta;</i>.&emsp;□</p>
+
+<h2>Gli angoli opposti al vertice</h2>
+
+<p><b>Definizione 1.3.14 (Angoli opposti al vertice</b>) Due angoli si dicono opposti al vertice se hanno in comune il vertice e i lati di un angolo sono i prolungamenti dei lati dell’altro.&emsp;□</p>
+
+<p><b>Definizione 1.3.15 (Teorema degli angoli opposti al vertice</b>) Se due angoli sono opposti al vertice, allora sono congruenti.</p>
+
+<p><b>Ipotesi</b> <i>&alpha;</i> e <i>&beta;</i> opposti al vertice.<br> <b>Tesi</b>. <i>&alpha;</i> ≅ <i>&beta;</i></p>
+
+<p><b>Dim</b>. </p>
+
+<img src="img/T_angoli_opposti_V.png" alt="angoli opposti al vertice"/>
+
+<p><i>&alpha;</i> + <i>&gamma;</i> ≅ P̂ poiché adiacenti, <i>quindi</i> <i>&alpha;</i> ≅ P̂ &minus; <i>&gamma;</i>;<br>
+<i>&beta;</i> + <i>&gamma;</i> ≅ P̂ poiché adiacenti, <i>quindi</i> <i>&beta;</i> ≅ P̂ &minus; <i>&gamma;</i>;<br>
+Poiché tutti gli angoli piatti sono congruenti fra loro e differenze di angoli congruenti sono congruenti, si deduce che <i>&alpha;</i> ≅ <i>&beta;</i>.&emsp;□</p>
+
+<p>Nel dimostrare il teorema precedente abbiamo anche dimostrato che <b>angoli supplementari dello stesso angolo o di angoli congruenti</b>,, sono congruenti, utilizzando uno schema analogo a quello del teorema degli angoli complementari di uno stesso angolo o di angoli congruenti.</p>
+
+<section aria-label="End">
+<a href="enti.html">«Enti fondamentali</a>
+<a href="index.html">Index</a>
+<a href="sulfides.html">Sulfides»</a>
+</section>
+
+</article>
+
+</body>
+</html>
