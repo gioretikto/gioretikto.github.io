@@ -21,9 +21,22 @@
 
 <h1>Teorema di Talete</h1>
 
-<p>Teorema di Talete: “Un fascio di rette parallele tagliate da due trasversali genera coppie di segmenti direttamente proporzionali”.</p>
+<p><b>Definizione 3.10.1</b> (<b>Fascio improprio di rette</b>) Un fascio improprio di rette è l’insieme di tutte le rette parallele a una retta data.&emsp;□</p>
 
-<p>o meglio "Dato una fascio di rette parallele tagliate da due trasversali, sulle trasversali si vengono a formare due classi di segmenti ordinatamente e direttamente proporzionali".</p>
+<p>Una retta che interseca una retta del fascio le interseca tutte. Essa è detta <b>trasversale</b> del fascio.<br> Quando le trasversali sono due, i punti in cui ogni retta del fascio interseca le trasversali sono detti corrispondenti. I segmenti corrispondenti sono quelli che hanno per estremi punti corrispondenti. La <i>corrispondenza è biunivoca</i> ed è detta <b>corrispondenza di Talete</b>.</p>
+
+<figure>
+<img src="img/Talete.png" alt="Talete"/>
+<figcaption>Sono corrispondenti i punti <i>A</i> e <i>A'</i>, <i>B</i> e <i>B'</i>, <i>C</i> e <i>C'</i>. I segmenti <i>AB</i> e <i>A'B'</i>, <i>BC</i> e <i>B'C'</i> sono corrispondenti.</figcaption>
+</figure>
+
+<h2>Il teorema del fascio di rette parallele</h2>
+
+<p><b>Teorema 3.10.2</b> (<b>del fascio di rette parallele</b> o <b>di Talete</b>) Dato un fascio di rette parallele tagliato da due trasversali, a segmenti congruenti su una trasversale corrispondono segmenti congruenti sull’altra trasversale.</p>
+
+<img src="img/Talete2.png" alt="Talete"/>
+
+<p>Il Teorema di Talete, nella sua formulazione più generale, afferma che se un fascio di rette parallele interseca due trasversali, allora i segmenti che si formano su una trasversale sono in proporzione con i segmenti corrispondenti sull'altra trasversale. Questo significa che se, su una trasversale, due segmenti sono congruenti, allora i segmenti corrispondenti sull'altra trasversale sono anch'essi congruenti.</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
@@ -63,9 +76,7 @@
 
 <!-- $$ \frac{AB}{A'B'} = \frac{BC} {B'C'} $$ -->
 
-<img src="img/Talete.png" alt="Talete"/>
-
-<p>Non finisce qui: consideriamo i segmenti somma AC e A'C'. Il teorema di Talete ci dice anche che:</p>
+<p>Non finisce qui: consideriamo i segmenti somma <i>AC</i> e <i>A'C'</i>. Il teorema di Talete ci dice anche che:</p>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mfrac>
@@ -151,26 +162,107 @@
 
 <!-- $$ \frac{AC}{A'C'} = \frac {AB+BC}{A'B'+B'C'} = \frac{AB} {A'B'} = \frac{BC}{B'C'}$$ -->
 
+<p><b>Ipotesi</b></p>
+
+<ol>
+	<li><p><i>a</i> // <i>b</i> // <i>c</i>;</p></li>
+	<li><p><i>r</i> e <i>s</i> sono trasversali del fascio;</p></li>
+	<li><p><i>A,B,C</i> &in; <i>r</i>;</p></li>
+	<li><p><i>AB</i> ≅ <i>BC</i>;</p></li>
+	<li><p><i>A',B',C'</i> sono i corrispondenti di <i>A,B,C</i>.</p></li>
+</ol>
+
+<p><b>Tesi</b>. <i>A'B'</i> ≅ <i>B'C'</i>;</p>
+
+<p><b>Dim.</b> Distinguiamo due casi.</p>
+
+<h3>Primo caso: <i>r</i> e <i>s</i> sono parallele.</h3>
+
+<p><i>AA'B'B</i> (fig. sotto) è un parallelogramma, quindi i lati opposti sono congruenti. In particolare <i>AB</i> ≅ <i>A'B'</i>. <br>Anche <i>BB'C'C</i> è un parallelogramma, quindi <i>BC</i> ≅ <i>B'C'</i>; <i>AB</i> ≅ <i>BC</i> per ipotesi, pertanto anche <i>A'B'</i> ≅ <i>B'C'</i>, per la proprietà transitiva della congruenza.</p>
+
+<img src="img/Talete_dim.png" alt="T. Talete dimostrazione"/>
+
+<h3>Secondo caso: <i>r</i> e <i>s</i> sono incidenti.</h3>
+
+<img src="img/Talete_dim2.png" alt="T. Talete dimostrazione"/>
+
+<p>Il quadrilatero <i>DB'C'C</i> (figura <i>b</i>) è un parallelogramma, per costruzione, quindi <i>CD</i> ≅ <i>C'B'</i>, perché lati opposti di un parallelogramma. Anche il quadrilatero <i>FA'B'B</i> è un parallelogramma per costruzione, quindi <i>BF</i> ≅ <i>B'A'</i>.</p>
+
+<p>Consideriamo i triangoli <i>AFB</i> e <i>BDC</i>.</p>
+
+<img src="img/Talete_dim2.png" alt="T. Talete dimostrazione"/>
+
+<p>Essi hanno:</p>
+
+<ul>
+	<li><p><i>AB</i> ≅ <i>BC</i>, per ipotesi;</p></li>
+	<li><p><i>&alpha;</i> ≅ <i>&alpha;'</i>, perché corrispondenti delle rette parallele <i>a</i> e <i>b</i>, tagliate dalla trasversaale <i>r</i>;</p></li>
+	<li><p><i>&beta;</i> ≅ <i>&beta;'</i>, perché corrispondenti delle rette parallele <i>s</i> e <i>s'</i>, tagliate dalla trasversaale <i>r</i>;</p></li>
+</ul>
+
+<p>Quindi i triangoli sono congruenti per il secondo criterio. In particolare, risulta <i>BF</i> ≅ <i>CD</i>.</p>
+
+<p>Dalle conseguenze <i>BF</i> ≅ <i>CD</i> e <i>BF</i> ≅ <i>A'B'</i> deduciamo che <i>CD</i> ≅ <i>A'B'</i>, per la proprietà transitiva. <br> Da <i>CD</i> ≅ <i>A'B'</i> e <i>CD</i> ≅ <i>B'C'</i> concludiamo che <i>A'B'</i> ≅ <i>B'C'</i>.&emsp;□</p>
+
 <h2>Conseguenze del Teorema di Talete sui triangoli: Corollari del Teorema di Talete</h2>
 
-<p><b>Teorema della retta parallela</b>. Una retta parallela ad un lato di un triangolo taglia gli altri due lati del triangolo in modo
+<p><b>Corollario 3.10.3</b> (o <b>Teorema della retta parallela</b>). Una retta parallela ad un lato di un triangolo taglia gli altri due lati del triangolo in modo
 proporzionale.</p>
 
 <img src="img/Talete_corollario.png" alt="Corollario T. Talete"/>
 
+<p>Da questo corrollatio ne deriva immediatamente il seguente.</p>
+
+<p><b>Corollario 3.10.3</b> Se in un triangolo tracciamo la retta passante per il punto medio di un lato e parallela a un altro lato, essa incontra anche il terzo lato nel suo punto medio.</p>
+
+<figure>
+<img src="img/Talete_corollario2.png" alt="Corollario T. Talete"/>
+<figcaption>La retta <i>b</i> è la parallela al lato <i>AB</i> e passa per il punto medio M di AC. Disegniamo la retta per C parallela ad AB. Sulla trasversale <i>AC</i> i due segmenti <i>AM</i> e <i>CM</i> sono congruenti, quindi sulla trasversale BC i segmenti corrispondenti BN e CN sono anch’essi congruenti.</figcaption>
+</figure>
+
 <p>Vale anche il Viceversa:</p>
 
-<p><b>Teorema inverso della parallela</b>. Se una retta taglia due lati di un triangolo in modo proporzionale, allora è parallela al terzo lato del triangolo</p>
+<p><b>Corollario 3.10.4</b> (o <b>Teorema inverso della parallela</b>). Se una retta taglia due lati di un triangolo in modo proporzionale, allora è parallela al terzo lato del triangolo</p>
 
 <img src="img/Talete_inv.png" alt="Teorema di Talete inverso"/>
 
-<p><b>Teorema della bisettrice dell'angolo interno di un triangolo</b>. La bisettrice dell'angolo interno di un triangolo divide il lato opposto in parti proporzionali agli altri due lati</p>
+<p>Da questo corrollario ne derivata direttamente un altro:</p>
+
+<p><b>Corollario 3.10.5</b> Se in un triangolo si congiungono i punti medi di due lati, il segmento che si ottiene è parallelo al terzo lato e congruente alla sua metà.</p>
+
+<img src="img/corollario_inv_parallela.png" alt="corollario inverso della parallela"/
+
+<p><b>Ipotesi</b>.</p>
+
+<ol>
+	<li><p><i>ABC</i> è un triangolo;</p></li>
+	<li><p><i>AM</i> ≅ <i>MC</i>;</p></li>
+	<li><p><i>BN</i> ≅ <i>NC</i>;</p></li>
+</ol>
+
+<p><b>Tesi</b> <b>1</b>. <i>MN</i> // <i>AB</i>; <b>2</b>. <i>MN</i> ≅ <i>AB</i>/2.</p>
+
+<p><b>Dim</b>.</p>
+
+<img src="img/corollario_inv_parallela_dim.png" alt="corollatio T. inverso della parallela"/>
+
+<ol>
+	<li><p>Tracciamo la retta passante per <i>M</i> parallela al lato AB (figura sopra). Essa incontra <i>BC</i> nel suo punto medio, per il corollario del teorema del fascio di rette parallele.</p></li>
+
+	<li><p>Disegniamo la retta passante per N parallela al lato <i>AC</i> (figura b). Essa incontra il lato AB nel punto L, che, per il corollario del teorema del fascio di rette, è il punto medio di <i>AB</i>. Pertanto <i>AL</i> ≅ <i>LB</i>.</p></li>
+	
+	<p>Il quadrilatero <i>ALNM</i> è, per costruzione, un parallelogramma, quindi <i>MN</i> ≅ <i>AL</i>.</p>
+	
+	<p>Dalle conseguenze <i>MN</i> ≅ <I>AL</i> e <i>AL</i> ≅ <i>LB</i> deduciamo che <i>MN</i> ≅ <i>AB</i>/2.&emsp;□</p></li>
+</ol>
+	
+<p><b>Teorema 3.10.6 (della bisettrice dell'angolo interno di un triangolo)</b>. La bisettrice dell'angolo interno di un triangolo divide il lato opposto in parti proporzionali agli altri due lati</p>
 
 <img src="img/T_bisettrice_interno.png" alt="Teorema della bisettrice di un angolo interno"/>
 
 <p><b>Ipotesi</b>: BAD = DAC.<br><b>Tesi</b>AB : AC = BD : DC.</p>
 
-<p><b>Dim.</b>.</p>
+<p><b>Dim.</b></p>
 
 <ol>
 	<li><p>Si costruisce AE = AC, prolungando il segmento BA oltre A;</p></li>
@@ -203,6 +295,42 @@ proporzionale.</p>
 
 <p>Questa proporzione è proprio l’obiettivo della dimostrazione! In altre parole, l'applicazione di Talete permette di concludere che i segmenti sulle trasversali sono in proporzione, grazie alla costruzione delle rette parallele.&emsp;□</p>
 
+
+<h2>Il segmento con estremi nei punti medi dei lati di un trapezio</h2>
+
+<p><b>Teorema 3.10.7</b> In un trapezio, il segmento congiungente i punti medi dei lati obliqui è parallelo alle due basi e congruente alla loro semisomma.</p>
+
+<img src="img/trap_segmento_punti_M.png" alt="trapezio segmenti punti medi">
+
+<p><b>Ipotesi</b>:</p>
+
+<ol>
+	<li><p><i>ABCD</i> è un trapezio;</p></li>
+	<li><p>DM ≅ MA;</p></li>
+	<li><p>CN ≅ NB.</p></li>
+</ol>
+
+<p><b>Tesi</b> <b>1.</b> <i>MN</i> ⁄⁄ <i>AB</i> ⁄⁄ <i>DC</i>; <b>2.</b> <i>MN</i> ≅ (<i>AB</i> + <i>DC</i>)/2.</p>
+
+<p><b>Dim</b>.</p>
+
+<img src="img/trap_seg_punti_M_dim.png" alt="dimostrazione segmento con estremi nei punti medi dei lati di un trapezio">
+
+<ol>
+	<li><p>Tracciamo per <i>M</i> la parallela ad <i>AB</i> e <i>DC</i> (figura <i>a</i>). Essendo <i>DM</i> ≅ <i>MA</i> per l’ipotesi 2, essa incontra <i>CB</i> nel suo punto medio (per il corollario del teorema del fascio di rette parallele), che per l’unicità del punto medio di un segmento deve essere <i>N</i>. Quindi <i>MN</i> ⁄⁄ <i>AB</i> ⁄⁄ <i>DC</i>.</p></li>
+
+	<li><p>Tracciamo la diagonale <i>AC</i> che intersechi <i>MN</i> in <i>P</i>. <br> Per il T. precedente, risulta:</p>
+	
+	<ul>
+		<li><p>nel triangolo <i>ABC</i>, <i>NP</i> ≅ <i>AB</i>/2;</p></li>
+		<li><p>nel triangolo <i>DAC</i>, <i>PM</i> ≅ <i>DC</i>/2;</p></li>
+	</ul>
+	
+	<p>Quindi, sommando membro a membro:</p>
+	
+	<div class="eq">
+<p><i>MN</i> + <i>PM</i> ≅ (<i>AB</i> + <i>DC</i>)/2  &emsp;ovvero&emsp; <i>NM</i> ≅ (<i>AB</i> + <i>CD</i>)/2.&emsp;□</p>
+</div>
 
 <h2>Similar triangles</h2>
 
@@ -248,9 +376,9 @@ angle at <i>C</i> = angle at <i>C'</i> = (&gamma;)</p>
 <p>Thais is, corresponding sides of triangles <i>ABC</i> and <i>A'B'C'</i> opposite to the angles <i>&beta;</i> and <i>&gamma;</i> are proportional.</p>
 
 <section aria-label="End">
-<a href="epoxides.html">«Epoxides</a>
+<a href="trapezio.html">«Il trapezio</a>
 <a href="index.html">Index</a>
-<a href="sulfides.html">Sulfides»</a>
+<a href="sulfides.html">Rette, piani, poliedri»</a>
 </section>
 
 </article>
